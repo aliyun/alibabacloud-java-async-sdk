@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRecordInfoResponseBody</p>
  */
 public class DescribeDomainRecordInfoResponseBody extends TeaModel {
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @NameInMap("Locked")
+    @com.aliyun.core.annotation.NameInMap("Locked")
     private Boolean locked;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("PunyCode")
+    @com.aliyun.core.annotation.NameInMap("PunyCode")
     private String punyCode;
 
-    @NameInMap("RR")
+    @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private String recordId;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TTL")
+    @com.aliyun.core.annotation.NameInMap("TTL")
     private Long TTL;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private DescribeDomainRecordInfoResponseBody(Builder builder) {

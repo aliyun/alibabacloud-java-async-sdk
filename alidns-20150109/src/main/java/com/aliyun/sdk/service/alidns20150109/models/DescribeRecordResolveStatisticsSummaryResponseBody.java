@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecordResolveStatisticsSummaryResponseBody</p>
  */
 public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private java.util.List < Statistics> statistics;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeRecordResolveStatisticsSummaryResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeRecordResolveStatisticsSummaryResponseBody extends TeaModel
     } 
 
     public static class Statistics extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
         private Statistics(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmAccessStrategyResponseBody</p>
  */
 public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
-    @NameInMap("AccessMode")
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
     private String accessMode;
 
-    @NameInMap("AccessStatus")
+    @com.aliyun.core.annotation.NameInMap("AccessStatus")
     private String accessStatus;
 
-    @NameInMap("DefaultAddrPoolMonitorStatus")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolMonitorStatus")
     private String defaultAddrPoolMonitorStatus;
 
-    @NameInMap("DefaultAddrPoolName")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolName")
     private String defaultAddrPoolName;
 
-    @NameInMap("DefaultAddrPoolStatus")
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolStatus")
     private String defaultAddrPoolStatus;
 
-    @NameInMap("DefultAddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("DefultAddrPoolId")
     private String defultAddrPoolId;
 
-    @NameInMap("FailoverAddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolId")
     private String failoverAddrPoolId;
 
-    @NameInMap("FailoverAddrPoolMonitorStatus")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolMonitorStatus")
     private String failoverAddrPoolMonitorStatus;
 
-    @NameInMap("FailoverAddrPoolName")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolName")
     private String failoverAddrPoolName;
 
-    @NameInMap("FailoverAddrPoolStatus")
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolStatus")
     private String failoverAddrPoolStatus;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StrategyId")
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
     private String strategyId;
 
-    @NameInMap("StrategyMode")
+    @com.aliyun.core.annotation.NameInMap("StrategyMode")
     private String strategyMode;
 
-    @NameInMap("StrategyName")
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
     private String strategyName;
 
     private DescribeGtmAccessStrategyResponseBody(Builder builder) {
@@ -356,16 +355,16 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
     } 
 
     public static class Line extends TeaModel {
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -457,7 +456,7 @@ public class DescribeGtmAccessStrategyResponseBody extends TeaModel {
 
     }
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < Line> line;
 
         private Lines(Builder builder) {

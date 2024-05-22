@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyHichinaDomainDNSResponseBody</p>
  */
 public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
-    @NameInMap("NewDnsServers")
+    @com.aliyun.core.annotation.NameInMap("NewDnsServers")
     private NewDnsServers newDnsServers;
 
-    @NameInMap("OriginalDnsServers")
+    @com.aliyun.core.annotation.NameInMap("OriginalDnsServers")
     private OriginalDnsServers originalDnsServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyHichinaDomainDNSResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
     } 
 
     public static class NewDnsServers extends TeaModel {
-        @NameInMap("DnsServer")
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
 
         private NewDnsServers(Builder builder) {
@@ -133,7 +132,7 @@ public class ModifyHichinaDomainDNSResponseBody extends TeaModel {
 
     }
     public static class OriginalDnsServers extends TeaModel {
-        @NameInMap("DnsServer")
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
 
         private OriginalDnsServers(Builder builder) {

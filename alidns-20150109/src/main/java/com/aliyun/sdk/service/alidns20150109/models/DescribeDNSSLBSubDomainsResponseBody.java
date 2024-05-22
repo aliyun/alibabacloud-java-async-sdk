@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDNSSLBSubDomainsResponseBody</p>
  */
 public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlbSubDomains")
+    @com.aliyun.core.annotation.NameInMap("SlbSubDomains")
     private SlbSubDomains slbSubDomains;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDNSSLBSubDomainsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
     } 
 
     public static class LineAlgorithm extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Open")
+        @com.aliyun.core.annotation.NameInMap("Open")
         private Boolean open;
 
         private LineAlgorithm(Builder builder) {
@@ -197,7 +196,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
     }
     public static class LineAlgorithms extends TeaModel {
-        @NameInMap("LineAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("LineAlgorithm")
         private java.util.List < LineAlgorithm> lineAlgorithm;
 
         private LineAlgorithms(Builder builder) {
@@ -238,19 +237,19 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
     }
     public static class SlbSubDomain extends TeaModel {
-        @NameInMap("LineAlgorithms")
+        @com.aliyun.core.annotation.NameInMap("LineAlgorithms")
         private LineAlgorithms lineAlgorithms;
 
-        @NameInMap("Open")
+        @com.aliyun.core.annotation.NameInMap("Open")
         private Boolean open;
 
-        @NameInMap("RecordCount")
+        @com.aliyun.core.annotation.NameInMap("RecordCount")
         private Long recordCount;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SlbSubDomain(Builder builder) {
@@ -359,7 +358,7 @@ public class DescribeDNSSLBSubDomainsResponseBody extends TeaModel {
 
     }
     public static class SlbSubDomains extends TeaModel {
-        @NameInMap("SlbSubDomain")
+        @com.aliyun.core.annotation.NameInMap("SlbSubDomain")
         private java.util.List < SlbSubDomain> slbSubDomain;
 
         private SlbSubDomains(Builder builder) {

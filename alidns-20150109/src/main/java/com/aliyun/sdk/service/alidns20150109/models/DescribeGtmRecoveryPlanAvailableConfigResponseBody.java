@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmRecoveryPlanAvailableConfigResponseBody</p>
  */
 public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGtmRecoveryPlanAvailableConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
     } 
 
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private AddrPool(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     }
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
         private java.util.List < AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
@@ -174,13 +173,13 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("AddrPools")
+        @com.aliyun.core.annotation.NameInMap("AddrPools")
         private AddrPools addrPools;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
         private Instance(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeGtmRecoveryPlanAvailableConfigResponseBody extends TeaModel
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {

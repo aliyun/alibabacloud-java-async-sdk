@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsThreatStatisticsResponseBody</p>
  */
 public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePdnsThreatStatisticsResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class DescribePdnsThreatStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DohTotalCount")
+        @com.aliyun.core.annotation.NameInMap("DohTotalCount")
         private Long dohTotalCount;
 
-        @NameInMap("DomainCount")
+        @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("LatestThreatTime")
+        @com.aliyun.core.annotation.NameInMap("LatestThreatTime")
         private Long latestThreatTime;
 
-        @NameInMap("MaxThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("MaxThreatLevel")
         private String maxThreatLevel;
 
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatType")
+        @com.aliyun.core.annotation.NameInMap("ThreatType")
         private String threatType;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UdpTotalCount")
+        @com.aliyun.core.annotation.NameInMap("UdpTotalCount")
         private Long udpTotalCount;
 
         private Data(Builder builder) {

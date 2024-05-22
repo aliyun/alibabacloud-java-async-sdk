@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsThreatLogsResponseBody</p>
  */
 public class DescribePdnsThreatLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < Logs> logs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePdnsThreatLogsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribePdnsThreatLogsResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatTime")
+        @com.aliyun.core.annotation.NameInMap("ThreatTime")
         private String threatTime;
 
-        @NameInMap("ThreatType")
+        @com.aliyun.core.annotation.NameInMap("ThreatType")
         private String threatType;
 
         private Logs(Builder builder) {

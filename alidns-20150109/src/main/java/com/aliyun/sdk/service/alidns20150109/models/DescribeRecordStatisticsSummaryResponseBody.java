@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecordStatisticsSummaryResponseBody</p>
  */
 public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private Statistics statistics;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeRecordStatisticsSummaryResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
     } 
 
     public static class Statistic extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("SubDomain")
+        @com.aliyun.core.annotation.NameInMap("SubDomain")
         private String subDomain;
 
         private Statistic(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeRecordStatisticsSummaryResponseBody extends TeaModel {
 
     }
     public static class Statistics extends TeaModel {
-        @NameInMap("Statistic")
+        @com.aliyun.core.annotation.NameInMap("Statistic")
         private java.util.List < Statistic> statistic;
 
         private Statistics(Builder builder) {

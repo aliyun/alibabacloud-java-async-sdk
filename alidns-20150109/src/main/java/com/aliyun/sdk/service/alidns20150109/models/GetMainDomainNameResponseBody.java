@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMainDomainNameResponseBody</p>
  */
 public class GetMainDomainNameResponseBody extends TeaModel {
-    @NameInMap("DomainLevel")
+    @com.aliyun.core.annotation.NameInMap("DomainLevel")
     private Long domainLevel;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("RR")
+    @com.aliyun.core.annotation.NameInMap("RR")
     private String rr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMainDomainNameResponseBody(Builder builder) {

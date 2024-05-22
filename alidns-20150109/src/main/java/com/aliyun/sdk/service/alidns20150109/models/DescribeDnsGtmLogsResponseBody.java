@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmLogsResponseBody</p>
  */
 public class DescribeDnsGtmLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private Logs logs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDnsGtmLogsResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
     } 
 
     public static class Log extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("EntityName")
+        @com.aliyun.core.annotation.NameInMap("EntityName")
         private String entityName;
 
-        @NameInMap("EntityType")
+        @com.aliyun.core.annotation.NameInMap("EntityType")
         private String entityType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OperAction")
+        @com.aliyun.core.annotation.NameInMap("OperAction")
         private String operAction;
 
-        @NameInMap("OperTime")
+        @com.aliyun.core.annotation.NameInMap("OperTime")
         private String operTime;
 
-        @NameInMap("OperTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OperTimestamp")
         private Long operTimestamp;
 
         private Log(Builder builder) {
@@ -333,7 +332,7 @@ public class DescribeDnsGtmLogsResponseBody extends TeaModel {
 
     }
     public static class Logs extends TeaModel {
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private java.util.List < Log> log;
 
         private Logs(Builder builder) {

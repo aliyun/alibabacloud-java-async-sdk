@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainNsResponseBody</p>
  */
 public class DescribeDomainNsResponseBody extends TeaModel {
-    @NameInMap("AllAliDns")
+    @com.aliyun.core.annotation.NameInMap("AllAliDns")
     private Boolean allAliDns;
 
-    @NameInMap("DetectFailedReasonCode")
+    @com.aliyun.core.annotation.NameInMap("DetectFailedReasonCode")
     private String detectFailedReasonCode;
 
-    @NameInMap("DnsServers")
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
     private DnsServers dnsServers;
 
-    @NameInMap("ExpectDnsServers")
+    @com.aliyun.core.annotation.NameInMap("ExpectDnsServers")
     private ExpectDnsServers expectDnsServers;
 
-    @NameInMap("IncludeAliDns")
+    @com.aliyun.core.annotation.NameInMap("IncludeAliDns")
     private Boolean includeAliDns;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainNsResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
     } 
 
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
 
         private DnsServers(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeDomainNsResponseBody extends TeaModel {
 
     }
     public static class ExpectDnsServers extends TeaModel {
-        @NameInMap("ExpectDnsServer")
+        @com.aliyun.core.annotation.NameInMap("ExpectDnsServer")
         private java.util.List < String > expectDnsServer;
 
         private ExpectDnsServers(Builder builder) {

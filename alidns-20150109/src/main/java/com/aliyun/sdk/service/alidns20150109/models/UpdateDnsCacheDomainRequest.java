@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDnsCacheDomainRequest</p>
  */
 public class UpdateDnsCacheDomainRequest extends Request {
-    @Query
-    @NameInMap("CacheTtlMax")
-    @Validation(maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMax")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 30)
     private Integer cacheTtlMax;
 
-    @Query
-    @NameInMap("CacheTtlMin")
-    @Validation(maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMin")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 30)
     private Integer cacheTtlMin;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("SourceDnsServer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDnsServer")
     private java.util.List < SourceDnsServer> sourceDnsServer;
 
-    @Query
-    @NameInMap("SourceEdns")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEdns")
     private String sourceEdns;
 
-    @Query
-    @NameInMap("SourceProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceProtocol")
     private String sourceProtocol;
 
     private UpdateDnsCacheDomainRequest(Builder builder) {
@@ -234,10 +233,10 @@ public class UpdateDnsCacheDomainRequest extends Request {
     } 
 
     public static class SourceDnsServer extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private SourceDnsServer(Builder builder) {

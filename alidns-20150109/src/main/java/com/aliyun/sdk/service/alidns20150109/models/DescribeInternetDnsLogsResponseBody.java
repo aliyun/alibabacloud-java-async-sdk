@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInternetDnsLogsResponseBody</p>
  */
 public class DescribeInternetDnsLogsResponseBody extends TeaModel {
-    @NameInMap("Complete")
+    @com.aliyun.core.annotation.NameInMap("Complete")
     private Boolean complete;
 
-    @NameInMap("CurPage")
+    @com.aliyun.core.annotation.NameInMap("CurPage")
     private Integer curPage;
 
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private Logs logs;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
-    @NameInMap("TotalSize")
+    @com.aliyun.core.annotation.NameInMap("TotalSize")
     private Integer totalSize;
 
     private DescribeInternetDnsLogsResponseBody(Builder builder) {
@@ -172,7 +171,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
     } 
 
     public static class Value extends TeaModel {
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private java.util.List < String > value;
 
         private Value(Builder builder) {
@@ -213,35 +212,38 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
     }
     public static class Log extends TeaModel {
-        @NameInMap("DnsMsgId")
+        @com.aliyun.core.annotation.NameInMap("DnsMsgId")
         private String dnsMsgId;
 
-        @NameInMap("LogTime")
+        @com.aliyun.core.annotation.NameInMap("LogTime")
         private Long logTime;
 
-        @NameInMap("QueryName")
+        @com.aliyun.core.annotation.NameInMap("QueryName")
         private String queryName;
 
-        @NameInMap("QueryType")
+        @com.aliyun.core.annotation.NameInMap("QueryType")
         private String queryType;
 
-        @NameInMap("Rt")
+        @com.aliyun.core.annotation.NameInMap("Rt")
         private Integer rt;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("SourceIp")
+        @com.aliyun.core.annotation.NameInMap("SourceIp")
         private String sourceIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubnetIp")
+        @com.aliyun.core.annotation.NameInMap("SubnetIp")
         private String subnetIp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Value value;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
+        private String zoneName;
 
         private Log(Builder builder) {
             this.dnsMsgId = builder.dnsMsgId;
@@ -254,6 +256,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             this.status = builder.status;
             this.subnetIp = builder.subnetIp;
             this.value = builder.value;
+            this.zoneName = builder.zoneName;
         }
 
         public static Builder builder() {
@@ -334,6 +337,13 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             return this.value;
         }
 
+        /**
+         * @return zoneName
+         */
+        public String getZoneName() {
+            return this.zoneName;
+        }
+
         public static final class Builder {
             private String dnsMsgId; 
             private Long logTime; 
@@ -345,6 +355,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
             private String status; 
             private String subnetIp; 
             private Value value; 
+            private String zoneName; 
 
             /**
              * DnsMsgId.
@@ -426,6 +437,14 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * ZoneName.
+             */
+            public Builder zoneName(String zoneName) {
+                this.zoneName = zoneName;
+                return this;
+            }
+
             public Log build() {
                 return new Log(this);
             } 
@@ -434,7 +453,7 @@ public class DescribeInternetDnsLogsResponseBody extends TeaModel {
 
     }
     public static class Logs extends TeaModel {
-        @NameInMap("Log")
+        @com.aliyun.core.annotation.NameInMap("Log")
         private java.util.List < Log> log;
 
         private Logs(Builder builder) {

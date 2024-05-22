@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsUserInfoResponseBody</p>
  */
 public class DescribePdnsUserInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserInfo")
+    @com.aliyun.core.annotation.NameInMap("UserInfo")
     private UserInfo userInfo;
 
     private DescribePdnsUserInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePdnsUserInfoResponseBody extends TeaModel {
     } 
 
     public static class UserInfo extends TeaModel {
-        @NameInMap("AvailableService")
+        @com.aliyun.core.annotation.NameInMap("AvailableService")
         private String availableService;
 
-        @NameInMap("PdnsId")
+        @com.aliyun.core.annotation.NameInMap("PdnsId")
         private Long pdnsId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StoppedService")
+        @com.aliyun.core.annotation.NameInMap("StoppedService")
         private String stoppedService;
 
         private UserInfo(Builder builder) {

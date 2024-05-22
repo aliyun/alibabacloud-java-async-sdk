@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsAccountSummaryResponseBody</p>
  */
 public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePdnsAccountSummaryResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribePdnsAccountSummaryResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DomainCount")
+        @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;
 
-        @NameInMap("HttpCount")
+        @com.aliyun.core.annotation.NameInMap("HttpCount")
         private Long httpCount;
 
-        @NameInMap("HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("HttpsCount")
         private Long httpsCount;
 
-        @NameInMap("SubDomainCount")
+        @com.aliyun.core.annotation.NameInMap("SubDomainCount")
         private Long subDomainCount;
 
-        @NameInMap("ThreatCount")
+        @com.aliyun.core.annotation.NameInMap("ThreatCount")
         private Long threatCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private Data(Builder builder) {

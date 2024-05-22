@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDohDomainStatisticsSummaryResponseBody</p>
  */
 public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private java.util.List < Statistics> statistics;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDohDomainStatisticsSummaryResponseBody(Builder builder) {
@@ -152,31 +151,31 @@ public class DescribeDohDomainStatisticsSummaryResponseBody extends TeaModel {
     } 
 
     public static class Statistics extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("HttpCount")
+        @com.aliyun.core.annotation.NameInMap("HttpCount")
         private Long httpCount;
 
-        @NameInMap("HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("HttpsCount")
         private Long httpsCount;
 
-        @NameInMap("IpCount")
+        @com.aliyun.core.annotation.NameInMap("IpCount")
         private Long ipCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("V4HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpCount")
         private Long v4HttpCount;
 
-        @NameInMap("V4HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpsCount")
         private Long v4HttpsCount;
 
-        @NameInMap("V6HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpCount")
         private Long v6HttpCount;
 
-        @NameInMap("V6HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpsCount")
         private Long v6HttpsCount;
 
         private Statistics(Builder builder) {

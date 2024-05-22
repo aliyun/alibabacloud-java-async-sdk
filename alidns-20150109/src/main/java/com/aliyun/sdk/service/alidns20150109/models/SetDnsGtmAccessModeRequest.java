@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDnsGtmAccessModeRequest</p>
  */
 public class SetDnsGtmAccessModeRequest extends Request {
-    @Query
-    @NameInMap("AccessMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessMode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StrategyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyId;
 
     private SetDnsGtmAccessModeRequest(Builder builder) {

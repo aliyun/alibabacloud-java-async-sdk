@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIspFlushCacheInstancesResponseBody</p>
  */
 public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
-    @NameInMap("IspFlushCacheInstances")
+    @com.aliyun.core.annotation.NameInMap("IspFlushCacheInstances")
     private java.util.List < IspFlushCacheInstances> ispFlushCacheInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeIspFlushCacheInstancesResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
     } 
 
     public static class QuotaInfo extends TeaModel {
-        @NameInMap("InstanceQuota")
+        @com.aliyun.core.annotation.NameInMap("InstanceQuota")
         private Integer instanceQuota;
 
-        @NameInMap("InstanceQuotaUsed")
+        @com.aliyun.core.annotation.NameInMap("InstanceQuotaUsed")
         private Integer instanceQuotaUsed;
 
         private QuotaInfo(Builder builder) {
@@ -213,28 +212,28 @@ public class DescribeIspFlushCacheInstancesResponseBody extends TeaModel {
 
     }
     public static class IspFlushCacheInstances extends TeaModel {
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpireTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ExpireTimestamp")
         private Long expireTimestamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("QuotaInfo")
+        @com.aliyun.core.annotation.NameInMap("QuotaInfo")
         private QuotaInfo quotaInfo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
         private IspFlushCacheInstances(Builder builder) {

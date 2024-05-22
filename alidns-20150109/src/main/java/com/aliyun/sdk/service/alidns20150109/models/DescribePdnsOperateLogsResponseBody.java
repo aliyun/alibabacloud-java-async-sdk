@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsOperateLogsResponseBody</p>
  */
 public class DescribePdnsOperateLogsResponseBody extends TeaModel {
-    @NameInMap("Logs")
+    @com.aliyun.core.annotation.NameInMap("Logs")
     private java.util.List < Logs> logs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePdnsOperateLogsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribePdnsOperateLogsResponseBody extends TeaModel {
     } 
 
     public static class Logs extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("OperateTime")
+        @com.aliyun.core.annotation.NameInMap("OperateTime")
         private String operateTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
         private Logs(Builder builder) {

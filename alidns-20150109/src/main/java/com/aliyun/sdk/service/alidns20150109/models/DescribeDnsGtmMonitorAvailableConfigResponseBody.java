@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmMonitorAvailableConfigResponseBody</p>
  */
 public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("DomainIpv4IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("DomainIpv4IspCityNodes")
     private DomainIpv4IspCityNodes domainIpv4IspCityNodes;
 
-    @NameInMap("DomainIpv6IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("DomainIpv6IspCityNodes")
     private DomainIpv6IspCityNodes domainIpv6IspCityNodes;
 
-    @NameInMap("Ipv4IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("Ipv4IspCityNodes")
     private Ipv4IspCityNodes ipv4IspCityNodes;
 
-    @NameInMap("Ipv6IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("Ipv6IspCityNodes")
     private Ipv6IspCityNodes ipv6IspCityNodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDnsGtmMonitorAvailableConfigResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
     } 
 
     public static class Ips extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
         private Ips(Builder builder) {
@@ -173,28 +172,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class DomainIpv4IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("DefaultSelected")
+        @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private Ips ips;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private DomainIpv4IspCityNode(Builder builder) {
@@ -359,7 +358,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class DomainIpv4IspCityNodes extends TeaModel {
-        @NameInMap("DomainIpv4IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("DomainIpv4IspCityNode")
         private java.util.List < DomainIpv4IspCityNode> domainIpv4IspCityNode;
 
         private DomainIpv4IspCityNodes(Builder builder) {
@@ -400,7 +399,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class DomainIpv6IspCityNodeIps extends TeaModel {
-        @NameInMap("ip")
+        @com.aliyun.core.annotation.NameInMap("ip")
         private java.util.List < String > ip;
 
         private DomainIpv6IspCityNodeIps(Builder builder) {
@@ -441,28 +440,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class DomainIpv6IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("DefaultSelected")
+        @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private DomainIpv6IspCityNodeIps ips;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private DomainIpv6IspCityNode(Builder builder) {
@@ -627,7 +626,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class DomainIpv6IspCityNodes extends TeaModel {
-        @NameInMap("DomainIpv6IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("DomainIpv6IspCityNode")
         private java.util.List < DomainIpv6IspCityNode> domainIpv6IspCityNode;
 
         private DomainIpv6IspCityNodes(Builder builder) {
@@ -668,7 +667,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv4IspCityNodeIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
         private Ipv4IspCityNodeIps(Builder builder) {
@@ -709,28 +708,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv4IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("DefaultSelected")
+        @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private Ipv4IspCityNodeIps ips;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private Ipv4IspCityNode(Builder builder) {
@@ -895,7 +894,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv4IspCityNodes extends TeaModel {
-        @NameInMap("Ipv4IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("Ipv4IspCityNode")
         private java.util.List < Ipv4IspCityNode> ipv4IspCityNode;
 
         private Ipv4IspCityNodes(Builder builder) {
@@ -936,7 +935,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv6IspCityNodeIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
         private Ipv6IspCityNodeIps(Builder builder) {
@@ -977,28 +976,28 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv6IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("DefaultSelected")
+        @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private Ipv6IspCityNodeIps ips;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private Ipv6IspCityNode(Builder builder) {
@@ -1163,7 +1162,7 @@ public class DescribeDnsGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class Ipv6IspCityNodes extends TeaModel {
-        @NameInMap("Ipv6IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("Ipv6IspCityNode")
         private java.util.List < Ipv6IspCityNode> ipv6IspCityNode;
 
         private Ipv6IspCityNodes(Builder builder) {

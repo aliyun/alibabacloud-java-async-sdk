@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDohUserInfoResponseBody</p>
  */
 public class DescribeDohUserInfoResponseBody extends TeaModel {
-    @NameInMap("DomainCount")
+    @com.aliyun.core.annotation.NameInMap("DomainCount")
     private Integer domainCount;
 
-    @NameInMap("PdnsId")
+    @com.aliyun.core.annotation.NameInMap("PdnsId")
     private Long pdnsId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubDomainCount")
+    @com.aliyun.core.annotation.NameInMap("SubDomainCount")
     private Integer subDomainCount;
 
     private DescribeDohUserInfoResponseBody(Builder builder) {

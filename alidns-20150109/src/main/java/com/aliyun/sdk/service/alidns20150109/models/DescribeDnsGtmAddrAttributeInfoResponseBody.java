@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmAddrAttributeInfoResponseBody</p>
  */
 public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
-    @NameInMap("Addr")
+    @com.aliyun.core.annotation.NameInMap("Addr")
     private Addr addr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDnsGtmAddrAttributeInfoResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
     } 
 
     public static class AttributeInfo extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private AttributeInfo(Builder builder) {
@@ -193,10 +192,10 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
     }
     public static class AddrAddr extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private String addr;
 
-        @NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private AttributeInfo attributeInfo;
 
         private AddrAddr(Builder builder) {
@@ -254,7 +253,7 @@ public class DescribeDnsGtmAddrAttributeInfoResponseBody extends TeaModel {
 
     }
     public static class Addr extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private java.util.List < AddrAddr> addr;
 
         private Addr(Builder builder) {

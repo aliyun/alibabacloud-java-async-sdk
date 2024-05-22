@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmAccessStrategyAvailableConfigResponseBody</p>
  */
 public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("AddrPools")
+    @com.aliyun.core.annotation.NameInMap("AddrPools")
     private AddrPools addrPools;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuggestSetDefaultLine")
+    @com.aliyun.core.annotation.NameInMap("SuggestSetDefaultLine")
     private Boolean suggestSetDefaultLine;
 
     private DescribeGtmAccessStrategyAvailableConfigResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
     } 
 
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("AddrPoolName")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolName")
         private String addrPoolName;
 
         private AddrPool(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
     }
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
         private java.util.List < AddrPool> addrPool;
 
         private AddrPools(Builder builder) {
@@ -214,22 +213,22 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
     }
     public static class Line extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Line(Builder builder) {
@@ -359,7 +358,7 @@ public class DescribeGtmAccessStrategyAvailableConfigResponseBody extends TeaMod
 
     }
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < Line> line;
 
         private Lines(Builder builder) {

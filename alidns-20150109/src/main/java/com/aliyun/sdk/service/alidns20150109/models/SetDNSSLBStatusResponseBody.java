@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetDNSSLBStatusResponseBody</p>
  */
 public class SetDNSSLBStatusResponseBody extends TeaModel {
-    @NameInMap("Open")
+    @com.aliyun.core.annotation.NameInMap("Open")
     private Boolean open;
 
-    @NameInMap("RecordCount")
+    @com.aliyun.core.annotation.NameInMap("RecordCount")
     private Long recordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetDNSSLBStatusResponseBody(Builder builder) {

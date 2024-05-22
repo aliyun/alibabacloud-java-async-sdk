@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsCacheDomainsResponseBody</p>
  */
 public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private java.util.List < Domains> domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDnsCacheDomainsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
     } 
 
     public static class SourceDnsServers extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private SourceDnsServers(Builder builder) {
@@ -193,52 +192,52 @@ public class DescribeDnsCacheDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("CacheTtlMax")
+        @com.aliyun.core.annotation.NameInMap("CacheTtlMax")
         private Integer cacheTtlMax;
 
-        @NameInMap("CacheTtlMin")
+        @com.aliyun.core.annotation.NameInMap("CacheTtlMin")
         private Integer cacheTtlMin;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpireTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ExpireTimestamp")
         private Long expireTimestamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("SourceDnsServers")
+        @com.aliyun.core.annotation.NameInMap("SourceDnsServers")
         private java.util.List < SourceDnsServers> sourceDnsServers;
 
-        @NameInMap("SourceEdns")
+        @com.aliyun.core.annotation.NameInMap("SourceEdns")
         private String sourceEdns;
 
-        @NameInMap("SourceProtocol")
+        @com.aliyun.core.annotation.NameInMap("SourceProtocol")
         private String sourceProtocol;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
         private Domains(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsThreatStatisticResponseBody</p>
  */
 public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePdnsThreatStatisticResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribePdnsThreatStatisticResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DohTotalCount")
+        @com.aliyun.core.annotation.NameInMap("DohTotalCount")
         private Long dohTotalCount;
 
-        @NameInMap("ThreatLevel")
+        @com.aliyun.core.annotation.NameInMap("ThreatLevel")
         private String threatLevel;
 
-        @NameInMap("ThreatType")
+        @com.aliyun.core.annotation.NameInMap("ThreatType")
         private String threatType;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("UdpTotalCount")
+        @com.aliyun.core.annotation.NameInMap("UdpTotalCount")
         private Long udpTotalCount;
 
         private Data(Builder builder) {

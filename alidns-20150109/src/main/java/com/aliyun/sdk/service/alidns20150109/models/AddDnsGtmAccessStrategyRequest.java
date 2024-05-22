@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDnsGtmAccessStrategyRequest</p>
  */
 public class AddDnsGtmAccessStrategyRequest extends Request {
-    @Query
-    @NameInMap("DefaultAddrPool")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPool")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DefaultAddrPool> defaultAddrPool;
 
-    @Query
-    @NameInMap("DefaultAddrPoolType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultAddrPoolType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String defaultAddrPoolType;
 
-    @Query
-    @NameInMap("DefaultLatencyOptimization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultLatencyOptimization")
     private String defaultLatencyOptimization;
 
-    @Query
-    @NameInMap("DefaultLbaStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultLbaStrategy")
     private String defaultLbaStrategy;
 
-    @Query
-    @NameInMap("DefaultMaxReturnAddrNum")
-    @Validation(maximum = 8, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultMaxReturnAddrNum")
+    @com.aliyun.core.annotation.Validation(maximum = 8, minimum = 1)
     private Integer defaultMaxReturnAddrNum;
 
-    @Query
-    @NameInMap("DefaultMinAvailableAddrNum")
-    @Validation(required = true, maximum = 400, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultMinAvailableAddrNum")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 400, minimum = 1)
     private Integer defaultMinAvailableAddrNum;
 
-    @Query
-    @NameInMap("FailoverAddrPool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPool")
     private java.util.List < FailoverAddrPool> failoverAddrPool;
 
-    @Query
-    @NameInMap("FailoverAddrPoolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverAddrPoolType")
     private String failoverAddrPoolType;
 
-    @Query
-    @NameInMap("FailoverLatencyOptimization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverLatencyOptimization")
     private String failoverLatencyOptimization;
 
-    @Query
-    @NameInMap("FailoverLbaStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverLbaStrategy")
     private String failoverLbaStrategy;
 
-    @Query
-    @NameInMap("FailoverMaxReturnAddrNum")
-    @Validation(maximum = 8, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverMaxReturnAddrNum")
+    @com.aliyun.core.annotation.Validation(maximum = 8, minimum = 1)
     private Integer failoverMaxReturnAddrNum;
 
-    @Query
-    @NameInMap("FailoverMinAvailableAddrNum")
-    @Validation(maximum = 400, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailoverMinAvailableAddrNum")
+    @com.aliyun.core.annotation.Validation(maximum = 400, minimum = 1)
     private Integer failoverMinAvailableAddrNum;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private String lines;
 
-    @Query
-    @NameInMap("StrategyMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyMode;
 
-    @Query
-    @NameInMap("StrategyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StrategyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String strategyName;
 
     private AddDnsGtmAccessStrategyRequest(Builder builder) {
@@ -477,10 +476,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
     } 
 
     public static class DefaultAddrPool extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
         private DefaultAddrPool(Builder builder) {
@@ -538,10 +537,10 @@ public class AddDnsGtmAccessStrategyRequest extends Request {
 
     }
     public static class FailoverAddrPool extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
         private FailoverAddrPool(Builder builder) {

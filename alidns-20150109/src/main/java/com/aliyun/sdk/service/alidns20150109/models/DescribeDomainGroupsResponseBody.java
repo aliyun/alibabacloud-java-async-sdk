@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainGroupsResponseBody</p>
  */
 public class DescribeDomainGroupsResponseBody extends TeaModel {
-    @NameInMap("DomainGroups")
+    @com.aliyun.core.annotation.NameInMap("DomainGroups")
     private DomainGroups domainGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainGroupsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
     } 
 
     public static class DomainGroup extends TeaModel {
-        @NameInMap("DomainCount")
+        @com.aliyun.core.annotation.NameInMap("DomainCount")
         private Long domainCount;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private DomainGroup(Builder builder) {
@@ -217,7 +216,7 @@ public class DescribeDomainGroupsResponseBody extends TeaModel {
 
     }
     public static class DomainGroups extends TeaModel {
-        @NameInMap("DomainGroup")
+        @com.aliyun.core.annotation.NameInMap("DomainGroup")
         private java.util.List < DomainGroup> domainGroup;
 
         private DomainGroups(Builder builder) {

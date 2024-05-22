@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRecordLogsResponseBody</p>
  */
 public class DescribeRecordLogsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RecordLogs")
+    @com.aliyun.core.annotation.NameInMap("RecordLogs")
     private RecordLogs recordLogs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeRecordLogsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
     } 
 
     public static class RecordLog extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private String actionTime;
 
-        @NameInMap("ActionTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ActionTimestamp")
         private Long actionTimestamp;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private RecordLog(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeRecordLogsResponseBody extends TeaModel {
 
     }
     public static class RecordLogs extends TeaModel {
-        @NameInMap("RecordLog")
+        @com.aliyun.core.annotation.NameInMap("RecordLog")
         private java.util.List < RecordLog> recordLog;
 
         private RecordLogs(Builder builder) {

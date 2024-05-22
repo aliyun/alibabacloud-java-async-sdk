@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDnsGtmAddressPoolRequest</p>
  */
 public class UpdateDnsGtmAddressPoolRequest extends Request {
-    @Query
-    @NameInMap("Addr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Addr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Addr> addr;
 
-    @Query
-    @NameInMap("AddrPoolId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addrPoolId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LbaStrategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LbaStrategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lbaStrategy;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private UpdateDnsGtmAddressPoolRequest(Builder builder) {
@@ -169,21 +168,21 @@ public class UpdateDnsGtmAddressPoolRequest extends Request {
     } 
 
     public static class Addr extends TeaModel {
-        @NameInMap("Addr")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Addr")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String addr;
 
-        @NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private String attributeInfo;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Mode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mode;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Addr(Builder builder) {

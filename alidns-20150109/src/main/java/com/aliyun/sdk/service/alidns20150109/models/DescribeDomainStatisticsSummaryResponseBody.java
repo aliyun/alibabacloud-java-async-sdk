@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainStatisticsSummaryResponseBody</p>
  */
 public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private Statistics statistics;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDomainStatisticsSummaryResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
     } 
 
     public static class Statistic extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("resolveAnalysisStatus")
+        @com.aliyun.core.annotation.NameInMap("resolveAnalysisStatus")
         private String resolveAnalysisStatus;
 
         private Statistic(Builder builder) {
@@ -243,7 +242,11 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * resolveAnalysisStatus.
+             * Indicates whether the DNS traffic analysis feature is enabled for the domain name. Valid values:
+             * <p>
+             * 
+             * *   OPEN
+             * *   CLOSE
              */
             public Builder resolveAnalysisStatus(String resolveAnalysisStatus) {
                 this.resolveAnalysisStatus = resolveAnalysisStatus;
@@ -258,7 +261,7 @@ public class DescribeDomainStatisticsSummaryResponseBody extends TeaModel {
 
     }
     public static class Statistics extends TeaModel {
-        @NameInMap("Statistic")
+        @com.aliyun.core.annotation.NameInMap("Statistic")
         private java.util.List < Statistic> statistic;
 
         private Statistics(Builder builder) {

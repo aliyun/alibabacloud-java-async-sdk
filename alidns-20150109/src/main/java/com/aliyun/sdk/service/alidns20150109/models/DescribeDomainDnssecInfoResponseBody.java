@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainDnssecInfoResponseBody</p>
  */
 public class DescribeDomainDnssecInfoResponseBody extends TeaModel {
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @NameInMap("Digest")
+    @com.aliyun.core.annotation.NameInMap("Digest")
     private String digest;
 
-    @NameInMap("DigestType")
+    @com.aliyun.core.annotation.NameInMap("DigestType")
     private String digestType;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DsRecord")
+    @com.aliyun.core.annotation.NameInMap("DsRecord")
     private String dsRecord;
 
-    @NameInMap("Flags")
+    @com.aliyun.core.annotation.NameInMap("Flags")
     private String flags;
 
-    @NameInMap("KeyTag")
+    @com.aliyun.core.annotation.NameInMap("KeyTag")
     private String keyTag;
 
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeDomainDnssecInfoResponseBody(Builder builder) {

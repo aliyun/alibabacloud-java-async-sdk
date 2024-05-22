@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDohAccountStatisticsResponseBody</p>
  */
 public class DescribeDohAccountStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Statistics")
+    @com.aliyun.core.annotation.NameInMap("Statistics")
     private java.util.List < Statistics> statistics;
 
     private DescribeDohAccountStatisticsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeDohAccountStatisticsResponseBody extends TeaModel {
     } 
 
     public static class Statistics extends TeaModel {
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("V4HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpCount")
         private Long v4HttpCount;
 
-        @NameInMap("V4HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V4HttpsCount")
         private Long v4HttpsCount;
 
-        @NameInMap("V6HttpCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpCount")
         private Long v6HttpCount;
 
-        @NameInMap("V6HttpsCount")
+        @com.aliyun.core.annotation.NameInMap("V6HttpsCount")
         private Long v6HttpsCount;
 
         private Statistics(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBatchResultDetailResponseBody</p>
  */
 public class DescribeBatchResultDetailResponseBody extends TeaModel {
-    @NameInMap("BatchResultDetails")
+    @com.aliyun.core.annotation.NameInMap("BatchResultDetails")
     private BatchResultDetails batchResultDetails;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeBatchResultDetailResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
     } 
 
     public static class BatchResultDetail extends TeaModel {
-        @NameInMap("BatchType")
+        @com.aliyun.core.annotation.NameInMap("BatchType")
         private String batchType;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("NewRr")
+        @com.aliyun.core.annotation.NameInMap("NewRr")
         private String newRr;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("OperateDateStr")
+        @com.aliyun.core.annotation.NameInMap("OperateDateStr")
         private String operateDateStr;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Rr")
+        @com.aliyun.core.annotation.NameInMap("Rr")
         private String rr;
 
-        @NameInMap("RrStatus")
+        @com.aliyun.core.annotation.NameInMap("RrStatus")
         private String rrStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private String ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private BatchResultDetail(Builder builder) {
@@ -473,7 +472,7 @@ public class DescribeBatchResultDetailResponseBody extends TeaModel {
 
     }
     public static class BatchResultDetails extends TeaModel {
-        @NameInMap("BatchResultDetail")
+        @com.aliyun.core.annotation.NameInMap("BatchResultDetail")
         private java.util.List < BatchResultDetail> batchResultDetail;
 
         private BatchResultDetails(Builder builder) {

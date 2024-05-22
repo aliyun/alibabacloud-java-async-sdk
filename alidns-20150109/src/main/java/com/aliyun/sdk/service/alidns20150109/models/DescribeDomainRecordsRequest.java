@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRecordsRequest</p>
  */
 public class DescribeDomainRecordsRequest extends Request {
-    @Query
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @Query
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Long pageSize;
 
-    @Query
-    @NameInMap("RRKeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RRKeyWord")
     private String RRKeyWord;
 
-    @Query
-    @NameInMap("SearchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("TypeKeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TypeKeyWord")
     private String typeKeyWord;
 
-    @Query
-    @NameInMap("ValueKeyWord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValueKeyWord")
     private String valueKeyWord;
 
     private DescribeDomainRecordsRequest(Builder builder) {

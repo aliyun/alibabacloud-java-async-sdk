@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTransferDomainsResponseBody</p>
  */
 public class DescribeTransferDomainsResponseBody extends TeaModel {
-    @NameInMap("DomainTransfers")
+    @com.aliyun.core.annotation.NameInMap("DomainTransfers")
     private DomainTransfers domainTransfers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeTransferDomainsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
     } 
 
     public static class DomainTransfer extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("FromUserId")
+        @com.aliyun.core.annotation.NameInMap("FromUserId")
         private Long fromUserId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("TargetUserId")
+        @com.aliyun.core.annotation.NameInMap("TargetUserId")
         private Long targetUserId;
 
         private DomainTransfer(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeTransferDomainsResponseBody extends TeaModel {
 
     }
     public static class DomainTransfers extends TeaModel {
-        @NameInMap("DomainTransfer")
+        @com.aliyun.core.annotation.NameInMap("DomainTransfer")
         private java.util.List < DomainTransfer> domainTransfer;
 
         private DomainTransfers(Builder builder) {

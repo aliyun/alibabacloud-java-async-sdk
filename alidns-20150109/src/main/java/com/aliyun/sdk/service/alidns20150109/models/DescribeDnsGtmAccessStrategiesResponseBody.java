@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmAccessStrategiesResponseBody</p>
  */
 public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Strategies")
+    @com.aliyun.core.annotation.NameInMap("Strategies")
     private Strategies strategies;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDnsGtmAccessStrategiesResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
     } 
 
     public static class EffectiveAddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private EffectiveAddrPool(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     }
     public static class EffectiveAddrPools extends TeaModel {
-        @NameInMap("EffectiveAddrPool")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPool")
         private java.util.List < EffectiveAddrPool> effectiveAddrPool;
 
         private EffectiveAddrPools(Builder builder) {
@@ -294,16 +293,16 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     }
     public static class Line extends TeaModel {
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -395,7 +394,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     }
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < Line> line;
 
         private Lines(Builder builder) {
@@ -436,31 +435,31 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     }
     public static class Strategy extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("EffectiveAddrPoolGroupType")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPoolGroupType")
         private String effectiveAddrPoolGroupType;
 
-        @NameInMap("EffectiveAddrPoolType")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPoolType")
         private String effectiveAddrPoolType;
 
-        @NameInMap("EffectiveAddrPools")
+        @com.aliyun.core.annotation.NameInMap("EffectiveAddrPools")
         private EffectiveAddrPools effectiveAddrPools;
 
-        @NameInMap("EffectiveLbaStrategy")
+        @com.aliyun.core.annotation.NameInMap("EffectiveLbaStrategy")
         private String effectiveLbaStrategy;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private Lines lines;
 
-        @NameInMap("StrategyId")
+        @com.aliyun.core.annotation.NameInMap("StrategyId")
         private String strategyId;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
         private Strategy(Builder builder) {
@@ -650,7 +649,7 @@ public class DescribeDnsGtmAccessStrategiesResponseBody extends TeaModel {
 
     }
     public static class Strategies extends TeaModel {
-        @NameInMap("Strategy")
+        @com.aliyun.core.annotation.NameInMap("Strategy")
         private java.util.List < Strategy> strategy;
 
         private Strategies(Builder builder) {

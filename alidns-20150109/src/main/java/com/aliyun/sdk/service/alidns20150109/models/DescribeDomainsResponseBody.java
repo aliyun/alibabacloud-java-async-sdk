@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainsResponseBody</p>
  */
 public class DescribeDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private Domains domains;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     } 
 
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
 
         private DnsServers(Builder builder) {
@@ -173,10 +172,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -234,7 +233,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -275,67 +274,67 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Domain extends TeaModel {
-        @NameInMap("AliDomain")
+        @com.aliyun.core.annotation.NameInMap("AliDomain")
         private Boolean aliDomain;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DnsServers")
+        @com.aliyun.core.annotation.NameInMap("DnsServers")
         private DnsServers dnsServers;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainLoggingSwitchStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainLoggingSwitchStatus")
         private String domainLoggingSwitchStatus;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("InstanceEndTime")
+        @com.aliyun.core.annotation.NameInMap("InstanceEndTime")
         private String instanceEndTime;
 
-        @NameInMap("InstanceExpired")
+        @com.aliyun.core.annotation.NameInMap("InstanceExpired")
         private Boolean instanceExpired;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("PunyCode")
+        @com.aliyun.core.annotation.NameInMap("PunyCode")
         private String punyCode;
 
-        @NameInMap("RecordCount")
+        @com.aliyun.core.annotation.NameInMap("RecordCount")
         private Long recordCount;
 
-        @NameInMap("RegistrantEmail")
+        @com.aliyun.core.annotation.NameInMap("RegistrantEmail")
         private String registrantEmail;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Starmark")
+        @com.aliyun.core.annotation.NameInMap("Starmark")
         private Boolean starmark;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private Domain(Builder builder) {
@@ -716,7 +715,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;
 
         private Domains(Builder builder) {

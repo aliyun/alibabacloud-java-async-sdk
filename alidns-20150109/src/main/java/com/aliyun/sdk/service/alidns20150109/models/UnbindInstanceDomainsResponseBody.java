@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnbindInstanceDomainsResponseBody</p>
  */
 public class UnbindInstanceDomainsResponseBody extends TeaModel {
-    @NameInMap("FailedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
     private Integer failedCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
     private UnbindInstanceDomainsResponseBody(Builder builder) {

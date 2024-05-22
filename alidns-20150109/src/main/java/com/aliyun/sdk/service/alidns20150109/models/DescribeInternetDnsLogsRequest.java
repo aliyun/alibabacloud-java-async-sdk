@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInternetDnsLogsRequest</p>
  */
 public class DescribeInternetDnsLogsRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountId")
+    private Long accountId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Module")
     private String module;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryCondition")
     private String queryCondition;
 
-    @Query
-    @NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
     private DescribeInternetDnsLogsRequest(Builder builder) {
         super(builder);
+        this.accountId = builder.accountId;
         this.domainName = builder.domainName;
         this.endTimestamp = builder.endTimestamp;
         this.lang = builder.lang;
@@ -67,6 +71,13 @@ public class DescribeInternetDnsLogsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountId
+     */
+    public Long getAccountId() {
+        return this.accountId;
     }
 
     /**
@@ -126,6 +137,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeInternetDnsLogsRequest, Builder> {
+        private Long accountId; 
         private String domainName; 
         private Long endTimestamp; 
         private String lang; 
@@ -141,6 +153,7 @@ public class DescribeInternetDnsLogsRequest extends Request {
 
         private Builder(DescribeInternetDnsLogsRequest request) {
             super(request);
+            this.accountId = request.accountId;
             this.domainName = request.domainName;
             this.endTimestamp = request.endTimestamp;
             this.lang = request.lang;
@@ -150,6 +163,15 @@ public class DescribeInternetDnsLogsRequest extends Request {
             this.queryCondition = request.queryCondition;
             this.startTimestamp = request.startTimestamp;
         } 
+
+        /**
+         * AccountId.
+         */
+        public Builder accountId(Long accountId) {
+            this.putQueryParameter("AccountId", accountId);
+            this.accountId = accountId;
+            return this;
+        }
 
         /**
          * DomainName.

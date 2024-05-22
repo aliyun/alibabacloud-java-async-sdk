@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIspFlushCacheTaskResponseBody</p>
  */
 public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("FlushCacheResults")
+    @com.aliyun.core.annotation.NameInMap("FlushCacheResults")
     private java.util.List < FlushCacheResults> flushCacheResults;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("Isp")
+    @com.aliyun.core.annotation.NameInMap("Isp")
     private String isp;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskStatus")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
     private String taskStatus;
 
     private DescribeIspFlushCacheTaskResponseBody(Builder builder) {
@@ -232,16 +231,16 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
     } 
 
     public static class Answers extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Record")
+        @com.aliyun.core.annotation.NameInMap("Record")
         private String record;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Long ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Answers(Builder builder) {
@@ -333,16 +332,16 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
 
     }
     public static class DnsNodes extends TeaModel {
-        @NameInMap("Answers")
+        @com.aliyun.core.annotation.NameInMap("Answers")
         private java.util.List < Answers> answers;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("SpName")
+        @com.aliyun.core.annotation.NameInMap("SpName")
         private String spName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DnsNodes(Builder builder) {
@@ -434,10 +433,10 @@ public class DescribeIspFlushCacheTaskResponseBody extends TeaModel {
 
     }
     public static class FlushCacheResults extends TeaModel {
-        @NameInMap("DnsNodes")
+        @com.aliyun.core.annotation.NameInMap("DnsNodes")
         private java.util.List < DnsNodes> dnsNodes;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private FlushCacheResults(Builder builder) {

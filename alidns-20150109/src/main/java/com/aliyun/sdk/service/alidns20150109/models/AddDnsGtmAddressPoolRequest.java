@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDnsGtmAddressPoolRequest</p>
  */
 public class AddDnsGtmAddressPoolRequest extends Request {
-    @Query
-    @NameInMap("Addr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Addr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Addr> addr;
 
-    @Query
-    @NameInMap("EvaluationCount")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer evaluationCount;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Interval")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer interval;
 
-    @Query
-    @NameInMap("IspCityNode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspCityNode")
     private java.util.List < IspCityNode> ispCityNode;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("LbaStrategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LbaStrategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String lbaStrategy;
 
-    @Query
-    @NameInMap("MonitorExtendInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorExtendInfo")
     private String monitorExtendInfo;
 
-    @Query
-    @NameInMap("MonitorStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MonitorStatus")
     private String monitorStatus;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @Query
-    @NameInMap("Timeout")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer timeout;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private AddDnsGtmAddressPoolRequest(Builder builder) {
@@ -420,22 +419,22 @@ public class AddDnsGtmAddressPoolRequest extends Request {
     } 
 
     public static class Addr extends TeaModel {
-        @NameInMap("Addr")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Addr")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String addr;
 
-        @NameInMap("AttributeInfo")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeInfo;
 
-        @NameInMap("LbaWeight")
+        @com.aliyun.core.annotation.NameInMap("LbaWeight")
         private Integer lbaWeight;
 
-        @NameInMap("Mode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Mode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mode;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Addr(Builder builder) {
@@ -558,10 +557,10 @@ public class AddDnsGtmAddressPoolRequest extends Request {
 
     }
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
         private IspCityNode(Builder builder) {

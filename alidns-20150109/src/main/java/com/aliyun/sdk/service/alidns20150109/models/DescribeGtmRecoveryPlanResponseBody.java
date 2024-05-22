@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmRecoveryPlanResponseBody</p>
  */
 public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("FaultAddrPoolNum")
+    @com.aliyun.core.annotation.NameInMap("FaultAddrPoolNum")
     private Integer faultAddrPoolNum;
 
-    @NameInMap("FaultAddrPools")
+    @com.aliyun.core.annotation.NameInMap("FaultAddrPools")
     private FaultAddrPools faultAddrPools;
 
-    @NameInMap("LastExecuteTime")
+    @com.aliyun.core.annotation.NameInMap("LastExecuteTime")
     private String lastExecuteTime;
 
-    @NameInMap("LastExecuteTimestamp")
+    @com.aliyun.core.annotation.NameInMap("LastExecuteTimestamp")
     private Long lastExecuteTimestamp;
 
-    @NameInMap("LastRollbackTime")
+    @com.aliyun.core.annotation.NameInMap("LastRollbackTime")
     private String lastRollbackTime;
 
-    @NameInMap("LastRollbackTimestamp")
+    @com.aliyun.core.annotation.NameInMap("LastRollbackTimestamp")
     private Long lastRollbackTimestamp;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RecoveryPlanId")
+    @com.aliyun.core.annotation.NameInMap("RecoveryPlanId")
     private Long recoveryPlanId;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
     private DescribeGtmRecoveryPlanResponseBody(Builder builder) {
@@ -332,13 +331,13 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
     } 
 
     public static class Addr extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Addr(Builder builder) {
@@ -413,7 +412,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class Addrs extends TeaModel {
-        @NameInMap("Addr")
+        @com.aliyun.core.annotation.NameInMap("Addr")
         private java.util.List < Addr> addr;
 
         private Addrs(Builder builder) {
@@ -454,16 +453,16 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class FaultAddrPool extends TeaModel {
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("AddrPoolName")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolName")
         private String addrPoolName;
 
-        @NameInMap("Addrs")
+        @com.aliyun.core.annotation.NameInMap("Addrs")
         private Addrs addrs;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private FaultAddrPool(Builder builder) {
@@ -555,7 +554,7 @@ public class DescribeGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class FaultAddrPools extends TeaModel {
-        @NameInMap("FaultAddrPool")
+        @com.aliyun.core.annotation.NameInMap("FaultAddrPool")
         private java.util.List < FaultAddrPool> faultAddrPool;
 
         private FaultAddrPools(Builder builder) {

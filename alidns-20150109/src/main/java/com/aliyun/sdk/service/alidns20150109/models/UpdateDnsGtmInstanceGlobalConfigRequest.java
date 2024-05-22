@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateDnsGtmInstanceGlobalConfigRequest</p>
  */
 public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
-    @Query
-    @NameInMap("AlertConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertConfig")
     private java.util.List < AlertConfig> alertConfig;
 
-    @Query
-    @NameInMap("AlertGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertGroup")
     private String alertGroup;
 
-    @Query
-    @NameInMap("CnameType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameType")
     private String cnameType;
 
-    @Query
-    @NameInMap("ForceUpdate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceUpdate")
     private Boolean forceUpdate;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PublicCnameMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicCnameMode")
     private String publicCnameMode;
 
-    @Query
-    @NameInMap("PublicRr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicRr")
     private String publicRr;
 
-    @Query
-    @NameInMap("PublicUserDomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicUserDomainName")
     private String publicUserDomainName;
 
-    @Query
-    @NameInMap("PublicZoneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicZoneName")
     private String publicZoneName;
 
-    @Query
-    @NameInMap("Ttl")
-    @Validation(maximum = 9999999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999, minimum = 1)
     private Integer ttl;
 
     private UpdateDnsGtmInstanceGlobalConfigRequest(Builder builder) {
@@ -339,16 +338,16 @@ public class UpdateDnsGtmInstanceGlobalConfigRequest extends Request {
     } 
 
     public static class AlertConfig extends TeaModel {
-        @NameInMap("DingtalkNotice")
+        @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
 
-        @NameInMap("EmailNotice")
+        @com.aliyun.core.annotation.NameInMap("EmailNotice")
         private Boolean emailNotice;
 
-        @NameInMap("NoticeType")
+        @com.aliyun.core.annotation.NameInMap("NoticeType")
         private String noticeType;
 
-        @NameInMap("SmsNotice")
+        @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
         private AlertConfig(Builder builder) {

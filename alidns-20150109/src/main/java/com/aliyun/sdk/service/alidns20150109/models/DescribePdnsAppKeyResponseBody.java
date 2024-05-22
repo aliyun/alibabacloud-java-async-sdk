@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePdnsAppKeyResponseBody</p>
  */
 public class DescribePdnsAppKeyResponseBody extends TeaModel {
-    @NameInMap("AppKey")
+    @com.aliyun.core.annotation.NameInMap("AppKey")
     private AppKey appKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePdnsAppKeyResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePdnsAppKeyResponseBody extends TeaModel {
     } 
 
     public static class AppKey extends TeaModel {
-        @NameInMap("AppKeyId")
+        @com.aliyun.core.annotation.NameInMap("AppKeyId")
         private String appKeyId;
 
-        @NameInMap("AppKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AppKeySecret")
         private String appKeySecret;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private AppKey(Builder builder) {

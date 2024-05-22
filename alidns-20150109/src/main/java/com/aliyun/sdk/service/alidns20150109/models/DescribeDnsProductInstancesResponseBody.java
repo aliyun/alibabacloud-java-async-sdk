@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsProductInstancesResponseBody</p>
  */
 public class DescribeDnsProductInstancesResponseBody extends TeaModel {
-    @NameInMap("DnsProducts")
+    @com.aliyun.core.annotation.NameInMap("DnsProducts")
     private DnsProducts dnsProducts;
 
-    @NameInMap("DomainType")
+    @com.aliyun.core.annotation.NameInMap("DomainType")
     private String domainType;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDnsProductInstancesResponseBody(Builder builder) {
@@ -156,103 +155,103 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
     } 
 
     public static class DnsProduct extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("BindCount")
+        @com.aliyun.core.annotation.NameInMap("BindCount")
         private Long bindCount;
 
-        @NameInMap("BindDomainCount")
+        @com.aliyun.core.annotation.NameInMap("BindDomainCount")
         private Long bindDomainCount;
 
-        @NameInMap("BindDomainUsedCount")
+        @com.aliyun.core.annotation.NameInMap("BindDomainUsedCount")
         private Long bindDomainUsedCount;
 
-        @NameInMap("BindUsedCount")
+        @com.aliyun.core.annotation.NameInMap("BindUsedCount")
         private Long bindUsedCount;
 
-        @NameInMap("DDosDefendFlow")
+        @com.aliyun.core.annotation.NameInMap("DDosDefendFlow")
         private Long dDosDefendFlow;
 
-        @NameInMap("DDosDefendQuery")
+        @com.aliyun.core.annotation.NameInMap("DDosDefendQuery")
         private Long dDosDefendQuery;
 
-        @NameInMap("DnsSLBCount")
+        @com.aliyun.core.annotation.NameInMap("DnsSLBCount")
         private Long dnsSLBCount;
 
-        @NameInMap("DnsSecurity")
+        @com.aliyun.core.annotation.NameInMap("DnsSecurity")
         private String dnsSecurity;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
-        @NameInMap("Gslb")
+        @com.aliyun.core.annotation.NameInMap("Gslb")
         private Boolean gslb;
 
-        @NameInMap("ISPLines")
+        @com.aliyun.core.annotation.NameInMap("ISPLines")
         private String ISPLines;
 
-        @NameInMap("ISPRegionLines")
+        @com.aliyun.core.annotation.NameInMap("ISPRegionLines")
         private String ISPRegionLines;
 
-        @NameInMap("InBlackHole")
+        @com.aliyun.core.annotation.NameInMap("InBlackHole")
         private Boolean inBlackHole;
 
-        @NameInMap("InClean")
+        @com.aliyun.core.annotation.NameInMap("InClean")
         private Boolean inClean;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MonitorFrequency")
+        @com.aliyun.core.annotation.NameInMap("MonitorFrequency")
         private Long monitorFrequency;
 
-        @NameInMap("MonitorNodeCount")
+        @com.aliyun.core.annotation.NameInMap("MonitorNodeCount")
         private Long monitorNodeCount;
 
-        @NameInMap("MonitorTaskCount")
+        @com.aliyun.core.annotation.NameInMap("MonitorTaskCount")
         private Long monitorTaskCount;
 
-        @NameInMap("OverseaDDosDefendFlow")
+        @com.aliyun.core.annotation.NameInMap("OverseaDDosDefendFlow")
         private Long overseaDDosDefendFlow;
 
-        @NameInMap("OverseaLine")
+        @com.aliyun.core.annotation.NameInMap("OverseaLine")
         private String overseaLine;
 
-        @NameInMap("PaymentType")
+        @com.aliyun.core.annotation.NameInMap("PaymentType")
         private String paymentType;
 
-        @NameInMap("RegionLines")
+        @com.aliyun.core.annotation.NameInMap("RegionLines")
         private Boolean regionLines;
 
-        @NameInMap("SearchEngineLines")
+        @com.aliyun.core.annotation.NameInMap("SearchEngineLines")
         private String searchEngineLines;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("SubDomainLevel")
+        @com.aliyun.core.annotation.NameInMap("SubDomainLevel")
         private Long subDomainLevel;
 
-        @NameInMap("TTLMinValue")
+        @com.aliyun.core.annotation.NameInMap("TTLMinValue")
         private Long TTLMinValue;
 
-        @NameInMap("URLForwardCount")
+        @com.aliyun.core.annotation.NameInMap("URLForwardCount")
         private Long URLForwardCount;
 
-        @NameInMap("VersionCode")
+        @com.aliyun.core.annotation.NameInMap("VersionCode")
         private String versionCode;
 
-        @NameInMap("VersionName")
+        @com.aliyun.core.annotation.NameInMap("VersionName")
         private String versionName;
 
         private DnsProduct(Builder builder) {
@@ -851,7 +850,7 @@ public class DescribeDnsProductInstancesResponseBody extends TeaModel {
 
     }
     public static class DnsProducts extends TeaModel {
-        @NameInMap("DnsProduct")
+        @com.aliyun.core.annotation.NameInMap("DnsProduct")
         private java.util.List < DnsProduct> dnsProduct;
 
         private DnsProducts(Builder builder) {

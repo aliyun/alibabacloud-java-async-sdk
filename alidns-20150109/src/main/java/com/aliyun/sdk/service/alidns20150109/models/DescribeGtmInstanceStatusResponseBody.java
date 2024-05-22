@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmInstanceStatusResponseBody</p>
  */
 public class DescribeGtmInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("AddrNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrNotAvailableNum")
     private Integer addrNotAvailableNum;
 
-    @NameInMap("AddrPoolNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrPoolNotAvailableNum")
     private Integer addrPoolNotAvailableNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StatusReason")
+    @com.aliyun.core.annotation.NameInMap("StatusReason")
     private String statusReason;
 
-    @NameInMap("StrategyNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("StrategyNotAvailableNum")
     private Integer strategyNotAvailableNum;
 
-    @NameInMap("SwitchToFailoverStrategyNum")
+    @com.aliyun.core.annotation.NameInMap("SwitchToFailoverStrategyNum")
     private Integer switchToFailoverStrategyNum;
 
     private DescribeGtmInstanceStatusResponseBody(Builder builder) {

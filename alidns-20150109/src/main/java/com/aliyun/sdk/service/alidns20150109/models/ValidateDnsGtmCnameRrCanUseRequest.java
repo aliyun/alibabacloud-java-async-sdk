@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValidateDnsGtmCnameRrCanUseRequest</p>
  */
 public class ValidateDnsGtmCnameRrCanUseRequest extends Request {
-    @Query
-    @NameInMap("CnameMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cnameMode;
 
-    @Query
-    @NameInMap("CnameRr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameRr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cnameRr;
 
-    @Query
-    @NameInMap("CnameType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cnameType;
 
-    @Query
-    @NameInMap("CnameZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnameZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cnameZone;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private ValidateDnsGtmCnameRrCanUseRequest(Builder builder) {

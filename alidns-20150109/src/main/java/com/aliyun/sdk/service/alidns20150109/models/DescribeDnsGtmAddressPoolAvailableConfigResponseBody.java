@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmAddressPoolAvailableConfigResponseBody</p>
  */
 public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("AttributeInfos")
+    @com.aliyun.core.annotation.NameInMap("AttributeInfos")
     private AttributeInfos attributeInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDnsGtmAddressPoolAvailableConfigResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
     } 
 
     public static class AttributeInfo extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private AttributeInfo(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeDnsGtmAddressPoolAvailableConfigResponseBody extends TeaMod
 
     }
     public static class AttributeInfos extends TeaModel {
-        @NameInMap("AttributeInfo")
+        @com.aliyun.core.annotation.NameInMap("AttributeInfo")
         private java.util.List < AttributeInfo> attributeInfo;
 
         private AttributeInfos(Builder builder) {

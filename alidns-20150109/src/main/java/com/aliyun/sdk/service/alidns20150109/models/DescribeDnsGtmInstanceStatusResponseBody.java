@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmInstanceStatusResponseBody</p>
  */
 public class DescribeDnsGtmInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("AddrAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrAvailableNum")
     private Integer addrAvailableNum;
 
-    @NameInMap("AddrNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrNotAvailableNum")
     private Integer addrNotAvailableNum;
 
-    @NameInMap("AddrPoolGroupNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("AddrPoolGroupNotAvailableNum")
     private Integer addrPoolGroupNotAvailableNum;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StrategyNotAvailableNum")
+    @com.aliyun.core.annotation.NameInMap("StrategyNotAvailableNum")
     private Integer strategyNotAvailableNum;
 
-    @NameInMap("SwitchToFailoverStrategyNum")
+    @com.aliyun.core.annotation.NameInMap("SwitchToFailoverStrategyNum")
     private Integer switchToFailoverStrategyNum;
 
     private DescribeDnsGtmInstanceStatusResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PreviewGtmRecoveryPlanResponseBody</p>
  */
 public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("Previews")
+    @com.aliyun.core.annotation.NameInMap("Previews")
     private Previews previews;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private PreviewGtmRecoveryPlanResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
     } 
 
     public static class SwitchInfo extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("StrategyName")
+        @com.aliyun.core.annotation.NameInMap("StrategyName")
         private String strategyName;
 
         private SwitchInfo(Builder builder) {
@@ -213,7 +212,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class SwitchInfos extends TeaModel {
-        @NameInMap("SwitchInfo")
+        @com.aliyun.core.annotation.NameInMap("SwitchInfo")
         private java.util.List < SwitchInfo> switchInfo;
 
         private SwitchInfos(Builder builder) {
@@ -254,16 +253,16 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class Preview extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SwitchInfos")
+        @com.aliyun.core.annotation.NameInMap("SwitchInfos")
         private SwitchInfos switchInfos;
 
-        @NameInMap("UserDomainName")
+        @com.aliyun.core.annotation.NameInMap("UserDomainName")
         private String userDomainName;
 
         private Preview(Builder builder) {
@@ -355,7 +354,7 @@ public class PreviewGtmRecoveryPlanResponseBody extends TeaModel {
 
     }
     public static class Previews extends TeaModel {
-        @NameInMap("Preview")
+        @com.aliyun.core.annotation.NameInMap("Preview")
         private java.util.List < Preview> preview;
 
         private Previews(Builder builder) {

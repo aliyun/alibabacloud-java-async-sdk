@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBatchResultCountResponseBody</p>
  */
 public class DescribeBatchResultCountResponseBody extends TeaModel {
-    @NameInMap("BatchType")
+    @com.aliyun.core.annotation.NameInMap("BatchType")
     private String batchType;
 
-    @NameInMap("FailedCount")
+    @com.aliyun.core.annotation.NameInMap("FailedCount")
     private Integer failedCount;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private Long taskId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeBatchResultCountResponseBody(Builder builder) {

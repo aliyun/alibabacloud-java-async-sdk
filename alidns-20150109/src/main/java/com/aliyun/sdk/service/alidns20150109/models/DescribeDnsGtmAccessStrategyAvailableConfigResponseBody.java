@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmAccessStrategyAvailableConfigResponseBody</p>
  */
 public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("DomainAddrPools")
+    @com.aliyun.core.annotation.NameInMap("DomainAddrPools")
     private DomainAddrPools domainAddrPools;
 
-    @NameInMap("Ipv4AddrPools")
+    @com.aliyun.core.annotation.NameInMap("Ipv4AddrPools")
     private Ipv4AddrPools ipv4AddrPools;
 
-    @NameInMap("Ipv6AddrPools")
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddrPools")
     private Ipv6AddrPools ipv6AddrPools;
 
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private Lines lines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SelectedDomainLines")
+    @com.aliyun.core.annotation.NameInMap("SelectedDomainLines")
     private SelectedDomainLines selectedDomainLines;
 
-    @NameInMap("SelectedIpv4Lines")
+    @com.aliyun.core.annotation.NameInMap("SelectedIpv4Lines")
     private SelectedIpv4Lines selectedIpv4Lines;
 
-    @NameInMap("SelectedIpv6Lines")
+    @com.aliyun.core.annotation.NameInMap("SelectedIpv6Lines")
     private SelectedIpv6Lines selectedIpv6Lines;
 
-    @NameInMap("SuggestSetDefaultLine")
+    @com.aliyun.core.annotation.NameInMap("SuggestSetDefaultLine")
     private Boolean suggestSetDefaultLine;
 
     private DescribeDnsGtmAccessStrategyAvailableConfigResponseBody(Builder builder) {
@@ -212,13 +211,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
     } 
 
     public static class DomainAddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DomainAddrPool(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class DomainAddrPools extends TeaModel {
-        @NameInMap("DomainAddrPool")
+        @com.aliyun.core.annotation.NameInMap("DomainAddrPool")
         private java.util.List < DomainAddrPool> domainAddrPool;
 
         private DomainAddrPools(Builder builder) {
@@ -334,13 +333,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Ipv4AddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Ipv4AddrPool(Builder builder) {
@@ -415,7 +414,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Ipv4AddrPools extends TeaModel {
-        @NameInMap("Ipv4AddrPool")
+        @com.aliyun.core.annotation.NameInMap("Ipv4AddrPool")
         private java.util.List < Ipv4AddrPool> ipv4AddrPool;
 
         private Ipv4AddrPools(Builder builder) {
@@ -456,13 +455,13 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Ipv6AddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Ipv6AddrPool(Builder builder) {
@@ -537,7 +536,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Ipv6AddrPools extends TeaModel {
-        @NameInMap("Ipv6AddrPool")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddrPool")
         private java.util.List < Ipv6AddrPool> ipv6AddrPool;
 
         private Ipv6AddrPools(Builder builder) {
@@ -578,19 +577,19 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Line extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private Line(Builder builder) {
@@ -699,7 +698,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class Lines extends TeaModel {
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private java.util.List < Line> line;
 
         private Lines(Builder builder) {
@@ -740,7 +739,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class SelectedDomainLines extends TeaModel {
-        @NameInMap("SelectedDomainLine")
+        @com.aliyun.core.annotation.NameInMap("SelectedDomainLine")
         private java.util.List < String > selectedDomainLine;
 
         private SelectedDomainLines(Builder builder) {
@@ -781,7 +780,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class SelectedIpv4Lines extends TeaModel {
-        @NameInMap("SelectedIpv4Line")
+        @com.aliyun.core.annotation.NameInMap("SelectedIpv4Line")
         private java.util.List < String > selectedIpv4Line;
 
         private SelectedIpv4Lines(Builder builder) {
@@ -822,7 +821,7 @@ public class DescribeDnsGtmAccessStrategyAvailableConfigResponseBody extends Tea
 
     }
     public static class SelectedIpv6Lines extends TeaModel {
-        @NameInMap("SelectedIpv6Line")
+        @com.aliyun.core.annotation.NameInMap("SelectedIpv6Line")
         private java.util.List < String > selectedIpv6Line;
 
         private SelectedIpv6Lines(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainLogsResponseBody</p>
  */
 public class DescribeDomainLogsResponseBody extends TeaModel {
-    @NameInMap("DomainLogs")
+    @com.aliyun.core.annotation.NameInMap("DomainLogs")
     private DomainLogs domainLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainLogsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
     } 
 
     public static class DomainLog extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionTime")
+        @com.aliyun.core.annotation.NameInMap("ActionTime")
         private String actionTime;
 
-        @NameInMap("ActionTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ActionTimestamp")
         private Long actionTimestamp;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DomainLog(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeDomainLogsResponseBody extends TeaModel {
 
     }
     public static class DomainLogs extends TeaModel {
-        @NameInMap("DomainLog")
+        @com.aliyun.core.annotation.NameInMap("DomainLog")
         private java.util.List < DomainLog> domainLog;
 
         private DomainLogs(Builder builder) {

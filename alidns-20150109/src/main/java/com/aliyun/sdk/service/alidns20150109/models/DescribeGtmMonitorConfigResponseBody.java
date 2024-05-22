@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmMonitorConfigResponseBody</p>
  */
 public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
     private Integer evaluationCount;
 
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Integer interval;
 
-    @NameInMap("IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("IspCityNodes")
     private IspCityNodes ispCityNodes;
 
-    @NameInMap("MonitorConfigId")
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
     private String monitorConfigId;
 
-    @NameInMap("MonitorExtendInfo")
+    @com.aliyun.core.annotation.NameInMap("MonitorExtendInfo")
     private String monitorExtendInfo;
 
-    @NameInMap("ProtocolType")
+    @com.aliyun.core.annotation.NameInMap("ProtocolType")
     private String protocolType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private String updateTime;
 
-    @NameInMap("UpdateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
     private Long updateTimestamp;
 
     private DescribeGtmMonitorConfigResponseBody(Builder builder) {
@@ -292,22 +291,22 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
     } 
 
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("CountryName")
+        @com.aliyun.core.annotation.NameInMap("CountryName")
         private String countryName;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
         private IspCityNode(Builder builder) {
@@ -433,7 +432,7 @@ public class DescribeGtmMonitorConfigResponseBody extends TeaModel {
 
     }
     public static class IspCityNodes extends TeaModel {
-        @NameInMap("IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("IspCityNode")
         private java.util.List < IspCityNode> ispCityNode;
 
         private IspCityNodes(Builder builder) {

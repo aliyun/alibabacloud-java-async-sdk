@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSupportLinesResponseBody</p>
  */
 public class DescribeSupportLinesResponseBody extends TeaModel {
-    @NameInMap("RecordLines")
+    @com.aliyun.core.annotation.NameInMap("RecordLines")
     private RecordLines recordLines;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSupportLinesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
     } 
 
     public static class RecordLine extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineDisplayName")
+        @com.aliyun.core.annotation.NameInMap("LineDisplayName")
         private String lineDisplayName;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private RecordLine(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeSupportLinesResponseBody extends TeaModel {
 
     }
     public static class RecordLines extends TeaModel {
-        @NameInMap("RecordLine")
+        @com.aliyun.core.annotation.NameInMap("RecordLine")
         private java.util.List < RecordLine> recordLine;
 
         private RecordLines(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDnsGtmAddressPoolResponseBody</p>
  */
 public class AddDnsGtmAddressPoolResponseBody extends TeaModel {
-    @NameInMap("AddrPoolId")
+    @com.aliyun.core.annotation.NameInMap("AddrPoolId")
     private String addrPoolId;
 
-    @NameInMap("MonitorConfigId")
+    @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
     private String monitorConfigId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddDnsGtmAddressPoolResponseBody(Builder builder) {

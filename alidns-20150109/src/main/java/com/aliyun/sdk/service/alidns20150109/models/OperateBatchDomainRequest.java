@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperateBatchDomainRequest</p>
  */
 public class OperateBatchDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainRecordInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainRecordInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DomainRecordInfo> domainRecordInfo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private OperateBatchDomainRequest(Builder builder) {
@@ -124,35 +123,35 @@ public class OperateBatchDomainRequest extends Request {
     } 
 
     public static class DomainRecordInfo extends TeaModel {
-        @NameInMap("Domain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Domain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domain;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("NewRr")
+        @com.aliyun.core.annotation.NameInMap("NewRr")
         private String newRr;
 
-        @NameInMap("NewType")
+        @com.aliyun.core.annotation.NameInMap("NewType")
         private String newType;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Rr")
+        @com.aliyun.core.annotation.NameInMap("Rr")
         private String rr;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DomainRecordInfo(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmInstanceAddressPoolsResponseBody</p>
  */
 public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
-    @NameInMap("AddrPools")
+    @com.aliyun.core.annotation.NameInMap("AddrPools")
     private AddrPools addrPools;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeDnsGtmInstanceAddressPoolsResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
     } 
 
     public static class AddrPool extends TeaModel {
-        @NameInMap("AddrCount")
+        @com.aliyun.core.annotation.NameInMap("AddrCount")
         private Integer addrCount;
 
-        @NameInMap("AddrPoolId")
+        @com.aliyun.core.annotation.NameInMap("AddrPoolId")
         private String addrPoolId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("LbaStrategy")
+        @com.aliyun.core.annotation.NameInMap("LbaStrategy")
         private String lbaStrategy;
 
-        @NameInMap("MonitorConfigId")
+        @com.aliyun.core.annotation.NameInMap("MonitorConfigId")
         private String monitorConfigId;
 
-        @NameInMap("MonitorStatus")
+        @com.aliyun.core.annotation.NameInMap("MonitorStatus")
         private String monitorStatus;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
         private AddrPool(Builder builder) {
@@ -407,7 +406,7 @@ public class DescribeDnsGtmInstanceAddressPoolsResponseBody extends TeaModel {
 
     }
     public static class AddrPools extends TeaModel {
-        @NameInMap("AddrPool")
+        @com.aliyun.core.annotation.NameInMap("AddrPool")
         private java.util.List < AddrPool> addrPool;
 
         private AddrPools(Builder builder) {

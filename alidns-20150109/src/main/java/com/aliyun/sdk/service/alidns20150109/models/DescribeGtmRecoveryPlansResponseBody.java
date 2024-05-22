@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmRecoveryPlansResponseBody</p>
  */
 public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RecoveryPlans")
+    @com.aliyun.core.annotation.NameInMap("RecoveryPlans")
     private RecoveryPlans recoveryPlans;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeGtmRecoveryPlansResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
     } 
 
     public static class RecoveryPlan extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("FaultAddrPoolNum")
+        @com.aliyun.core.annotation.NameInMap("FaultAddrPoolNum")
         private Integer faultAddrPoolNum;
 
-        @NameInMap("LastExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("LastExecuteTime")
         private String lastExecuteTime;
 
-        @NameInMap("LastExecuteTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastExecuteTimestamp")
         private Long lastExecuteTimestamp;
 
-        @NameInMap("LastRollbackTime")
+        @com.aliyun.core.annotation.NameInMap("LastRollbackTime")
         private String lastRollbackTime;
 
-        @NameInMap("LastRollbackTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastRollbackTimestamp")
         private Long lastRollbackTimestamp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RecoveryPlanId")
+        @com.aliyun.core.annotation.NameInMap("RecoveryPlanId")
         private Long recoveryPlanId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
         private RecoveryPlan(Builder builder) {
@@ -438,7 +437,7 @@ public class DescribeGtmRecoveryPlansResponseBody extends TeaModel {
 
     }
     public static class RecoveryPlans extends TeaModel {
-        @NameInMap("RecoveryPlan")
+        @com.aliyun.core.annotation.NameInMap("RecoveryPlan")
         private java.util.List < RecoveryPlan> recoveryPlan;
 
         private RecoveryPlans(Builder builder) {

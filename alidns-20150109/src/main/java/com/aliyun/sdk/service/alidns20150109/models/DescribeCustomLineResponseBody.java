@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCustomLineResponseBody</p>
  */
 public class DescribeCustomLineResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private Long id;
 
-    @NameInMap("IpSegmentList")
+    @com.aliyun.core.annotation.NameInMap("IpSegmentList")
     private java.util.List < IpSegmentList> ipSegmentList;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCustomLineResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeCustomLineResponseBody extends TeaModel {
     } 
 
     public static class IpSegmentList extends TeaModel {
-        @NameInMap("EndIp")
+        @com.aliyun.core.annotation.NameInMap("EndIp")
         private String endIp;
 
-        @NameInMap("StartIp")
+        @com.aliyun.core.annotation.NameInMap("StartIp")
         private String startIp;
 
         private IpSegmentList(Builder builder) {

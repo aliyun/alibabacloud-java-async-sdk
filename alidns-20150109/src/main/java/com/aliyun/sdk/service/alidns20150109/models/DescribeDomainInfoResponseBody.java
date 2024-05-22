@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,79 +11,79 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainInfoResponseBody</p>
  */
 public class DescribeDomainInfoResponseBody extends TeaModel {
-    @NameInMap("AliDomain")
+    @com.aliyun.core.annotation.NameInMap("AliDomain")
     private Boolean aliDomain;
 
-    @NameInMap("AvailableTtls")
+    @com.aliyun.core.annotation.NameInMap("AvailableTtls")
     private AvailableTtls availableTtls;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DnsServers")
+    @com.aliyun.core.annotation.NameInMap("DnsServers")
     private DnsServers dnsServers;
 
-    @NameInMap("DomainId")
+    @com.aliyun.core.annotation.NameInMap("DomainId")
     private String domainId;
 
-    @NameInMap("DomainLoggingSwitchStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainLoggingSwitchStatus")
     private String domainLoggingSwitchStatus;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @NameInMap("InBlackHole")
+    @com.aliyun.core.annotation.NameInMap("InBlackHole")
     private Boolean inBlackHole;
 
-    @NameInMap("InClean")
+    @com.aliyun.core.annotation.NameInMap("InClean")
     private Boolean inClean;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("LineType")
+    @com.aliyun.core.annotation.NameInMap("LineType")
     private String lineType;
 
-    @NameInMap("MinTtl")
+    @com.aliyun.core.annotation.NameInMap("MinTtl")
     private Long minTtl;
 
-    @NameInMap("PunyCode")
+    @com.aliyun.core.annotation.NameInMap("PunyCode")
     private String punyCode;
 
-    @NameInMap("RecordLineTreeJson")
+    @com.aliyun.core.annotation.NameInMap("RecordLineTreeJson")
     private String recordLineTreeJson;
 
-    @NameInMap("RecordLines")
+    @com.aliyun.core.annotation.NameInMap("RecordLines")
     private RecordLines recordLines;
 
-    @NameInMap("RegionLines")
+    @com.aliyun.core.annotation.NameInMap("RegionLines")
     private Boolean regionLines;
 
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SlaveDns")
+    @com.aliyun.core.annotation.NameInMap("SlaveDns")
     private Boolean slaveDns;
 
-    @NameInMap("SubDomain")
+    @com.aliyun.core.annotation.NameInMap("SubDomain")
     private Boolean subDomain;
 
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private DescribeDomainInfoResponseBody(Builder builder) {
@@ -536,7 +535,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
     } 
 
     public static class AvailableTtls extends TeaModel {
-        @NameInMap("AvailableTtl")
+        @com.aliyun.core.annotation.NameInMap("AvailableTtl")
         private java.util.List < String > availableTtl;
 
         private AvailableTtls(Builder builder) {
@@ -577,7 +576,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     }
     public static class DnsServers extends TeaModel {
-        @NameInMap("DnsServer")
+        @com.aliyun.core.annotation.NameInMap("DnsServer")
         private java.util.List < String > dnsServer;
 
         private DnsServers(Builder builder) {
@@ -618,16 +617,16 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     }
     public static class RecordLine extends TeaModel {
-        @NameInMap("FatherCode")
+        @com.aliyun.core.annotation.NameInMap("FatherCode")
         private String fatherCode;
 
-        @NameInMap("LineCode")
+        @com.aliyun.core.annotation.NameInMap("LineCode")
         private String lineCode;
 
-        @NameInMap("LineDisplayName")
+        @com.aliyun.core.annotation.NameInMap("LineDisplayName")
         private String lineDisplayName;
 
-        @NameInMap("LineName")
+        @com.aliyun.core.annotation.NameInMap("LineName")
         private String lineName;
 
         private RecordLine(Builder builder) {
@@ -719,7 +718,7 @@ public class DescribeDomainInfoResponseBody extends TeaModel {
 
     }
     public static class RecordLines extends TeaModel {
-        @NameInMap("RecordLine")
+        @com.aliyun.core.annotation.NameInMap("RecordLine")
         private java.util.List < RecordLine> recordLine;
 
         private RecordLines(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainRecordsResponseBody</p>
  */
 public class DescribeDomainRecordsResponseBody extends TeaModel {
-    @NameInMap("DomainRecords")
+    @com.aliyun.core.annotation.NameInMap("DomainRecords")
     private DomainRecords domainRecords;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainRecordsResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
     } 
 
     public static class Record extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private String line;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private Boolean locked;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Long priority;
 
-        @NameInMap("RR")
+        @com.aliyun.core.annotation.NameInMap("RR")
         private String rr;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TTL")
+        @com.aliyun.core.annotation.NameInMap("TTL")
         private Long TTL;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private Record(Builder builder) {
@@ -433,7 +432,7 @@ public class DescribeDomainRecordsResponseBody extends TeaModel {
 
     }
     public static class DomainRecords extends TeaModel {
-        @NameInMap("Record")
+        @com.aliyun.core.annotation.NameInMap("Record")
         private java.util.List < Record> record;
 
         private DomainRecords(Builder builder) {

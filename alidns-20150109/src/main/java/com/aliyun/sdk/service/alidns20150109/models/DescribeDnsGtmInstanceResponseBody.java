@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDnsGtmInstanceResponseBody</p>
  */
 public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpireTimestamp")
+    @com.aliyun.core.annotation.NameInMap("ExpireTimestamp")
     private Long expireTimestamp;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SmsQuota")
+    @com.aliyun.core.annotation.NameInMap("SmsQuota")
     private Integer smsQuota;
 
-    @NameInMap("TaskQuota")
+    @com.aliyun.core.annotation.NameInMap("TaskQuota")
     private Integer taskQuota;
 
-    @NameInMap("UsedQuota")
+    @com.aliyun.core.annotation.NameInMap("UsedQuota")
     private UsedQuota usedQuota;
 
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
     private DescribeDnsGtmInstanceResponseBody(Builder builder) {
@@ -295,16 +294,16 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
     } 
 
     public static class AlertConfig extends TeaModel {
-        @NameInMap("DingtalkNotice")
+        @com.aliyun.core.annotation.NameInMap("DingtalkNotice")
         private Boolean dingtalkNotice;
 
-        @NameInMap("EmailNotice")
+        @com.aliyun.core.annotation.NameInMap("EmailNotice")
         private Boolean emailNotice;
 
-        @NameInMap("NoticeType")
+        @com.aliyun.core.annotation.NameInMap("NoticeType")
         private String noticeType;
 
-        @NameInMap("SmsNotice")
+        @com.aliyun.core.annotation.NameInMap("SmsNotice")
         private Boolean smsNotice;
 
         private AlertConfig(Builder builder) {
@@ -412,7 +411,7 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
 
     }
     public static class ConfigAlertConfig extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private java.util.List < AlertConfig> alertConfig;
 
         private ConfigAlertConfig(Builder builder) {
@@ -453,34 +452,34 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
 
     }
     public static class Config extends TeaModel {
-        @NameInMap("AlertConfig")
+        @com.aliyun.core.annotation.NameInMap("AlertConfig")
         private ConfigAlertConfig alertConfig;
 
-        @NameInMap("AlertGroup")
+        @com.aliyun.core.annotation.NameInMap("AlertGroup")
         private String alertGroup;
 
-        @NameInMap("CnameType")
+        @com.aliyun.core.annotation.NameInMap("CnameType")
         private String cnameType;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("PubicZoneName")
+        @com.aliyun.core.annotation.NameInMap("PubicZoneName")
         private String pubicZoneName;
 
-        @NameInMap("PublicCnameMode")
+        @com.aliyun.core.annotation.NameInMap("PublicCnameMode")
         private String publicCnameMode;
 
-        @NameInMap("PublicRr")
+        @com.aliyun.core.annotation.NameInMap("PublicRr")
         private String publicRr;
 
-        @NameInMap("PublicUserDomainName")
+        @com.aliyun.core.annotation.NameInMap("PublicUserDomainName")
         private String publicUserDomainName;
 
-        @NameInMap("StrategyMode")
+        @com.aliyun.core.annotation.NameInMap("StrategyMode")
         private String strategyMode;
 
-        @NameInMap("Ttl")
+        @com.aliyun.core.annotation.NameInMap("Ttl")
         private Integer ttl;
 
         private Config(Builder builder) {
@@ -685,16 +684,16 @@ public class DescribeDnsGtmInstanceResponseBody extends TeaModel {
 
     }
     public static class UsedQuota extends TeaModel {
-        @NameInMap("DingtalkUsedCount")
+        @com.aliyun.core.annotation.NameInMap("DingtalkUsedCount")
         private Integer dingtalkUsedCount;
 
-        @NameInMap("EmailUsedCount")
+        @com.aliyun.core.annotation.NameInMap("EmailUsedCount")
         private Integer emailUsedCount;
 
-        @NameInMap("SmsUsedCount")
+        @com.aliyun.core.annotation.NameInMap("SmsUsedCount")
         private Integer smsUsedCount;
 
-        @NameInMap("TaskUsedCount")
+        @com.aliyun.core.annotation.NameInMap("TaskUsedCount")
         private Integer taskUsedCount;
 
         private UsedQuota(Builder builder) {

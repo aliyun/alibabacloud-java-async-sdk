@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDnsCacheDomainRequest</p>
  */
 public class AddDnsCacheDomainRequest extends Request {
-    @Query
-    @NameInMap("CacheTtlMax")
-    @Validation(required = true, maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMax")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 86400, minimum = 30)
     private Integer cacheTtlMax;
 
-    @Query
-    @NameInMap("CacheTtlMin")
-    @Validation(required = true, maximum = 86400, minimum = 30)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CacheTtlMin")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 86400, minimum = 30)
     private Integer cacheTtlMin;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("SourceDnsServer")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceDnsServer")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SourceDnsServer> sourceDnsServer;
 
-    @Query
-    @NameInMap("SourceEdns")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceEdns")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceEdns;
 
-    @Query
-    @NameInMap("SourceProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceProtocol;
 
     private AddDnsCacheDomainRequest(Builder builder) {
@@ -261,12 +260,12 @@ public class AddDnsCacheDomainRequest extends Request {
     } 
 
     public static class SourceDnsServer extends TeaModel {
-        @NameInMap("Host")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Host")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String host;
 
-        @NameInMap("Port")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String port;
 
         private SourceDnsServer(Builder builder) {

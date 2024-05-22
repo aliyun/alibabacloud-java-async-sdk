@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmInstanceResponseBody</p>
  */
 public class DescribeGtmInstanceResponseBody extends TeaModel {
-    @NameInMap("AccessStrategyNum")
+    @com.aliyun.core.annotation.NameInMap("AccessStrategyNum")
     private Integer accessStrategyNum;
 
-    @NameInMap("AddressPoolNum")
+    @com.aliyun.core.annotation.NameInMap("AddressPoolNum")
     private Integer addressPoolNum;
 
-    @NameInMap("AlertGroup")
+    @com.aliyun.core.annotation.NameInMap("AlertGroup")
     private String alertGroup;
 
-    @NameInMap("Cname")
+    @com.aliyun.core.annotation.NameInMap("Cname")
     private String cname;
 
-    @NameInMap("CnameMode")
+    @com.aliyun.core.annotation.NameInMap("CnameMode")
     private String cnameMode;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
     private Long createTimestamp;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpireTimestamp")
+    @com.aliyun.core.annotation.NameInMap("ExpireTimestamp")
     private Long expireTimestamp;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("LbaStrategy")
+    @com.aliyun.core.annotation.NameInMap("LbaStrategy")
     private String lbaStrategy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @NameInMap("UserDomainName")
+    @com.aliyun.core.annotation.NameInMap("UserDomainName")
     private String userDomainName;
 
-    @NameInMap("VersionCode")
+    @com.aliyun.core.annotation.NameInMap("VersionCode")
     private String versionCode;
 
     private DescribeGtmInstanceResponseBody(Builder builder) {

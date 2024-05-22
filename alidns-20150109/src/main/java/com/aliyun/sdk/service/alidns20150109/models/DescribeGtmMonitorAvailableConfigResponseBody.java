@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alidns20150109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGtmMonitorAvailableConfigResponseBody</p>
  */
 public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
-    @NameInMap("IspCityNodes")
+    @com.aliyun.core.annotation.NameInMap("IspCityNodes")
     private IspCityNodes ispCityNodes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGtmMonitorAvailableConfigResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
     } 
 
     public static class IspCityNode extends TeaModel {
-        @NameInMap("CityCode")
+        @com.aliyun.core.annotation.NameInMap("CityCode")
         private String cityCode;
 
-        @NameInMap("CityName")
+        @com.aliyun.core.annotation.NameInMap("CityName")
         private String cityName;
 
-        @NameInMap("DefaultSelected")
+        @com.aliyun.core.annotation.NameInMap("DefaultSelected")
         private Boolean defaultSelected;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("IspCode")
+        @com.aliyun.core.annotation.NameInMap("IspCode")
         private String ispCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
-        @NameInMap("Mainland")
+        @com.aliyun.core.annotation.NameInMap("Mainland")
         private Boolean mainland;
 
         private IspCityNode(Builder builder) {
@@ -263,7 +262,7 @@ public class DescribeGtmMonitorAvailableConfigResponseBody extends TeaModel {
 
     }
     public static class IspCityNodes extends TeaModel {
-        @NameInMap("IspCityNode")
+        @com.aliyun.core.annotation.NameInMap("IspCityNode")
         private java.util.List < IspCityNode> ispCityNode;
 
         private IspCityNodes(Builder builder) {
