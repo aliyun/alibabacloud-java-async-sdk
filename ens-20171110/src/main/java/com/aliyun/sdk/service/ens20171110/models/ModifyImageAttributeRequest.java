@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageAttributeRequest</p>
  */
 public class ModifyImageAttributeRequest extends Request {
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("ImageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageName;
 
     private ModifyImageAttributeRequest(Builder builder) {

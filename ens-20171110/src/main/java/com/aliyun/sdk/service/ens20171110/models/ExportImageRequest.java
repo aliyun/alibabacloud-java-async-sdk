@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportImageRequest</p>
  */
 public class ExportImageRequest extends Request {
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("OSSBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSSBucket;
 
-    @Query
-    @NameInMap("OSSPrefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSPrefix")
     private String OSSPrefix;
 
-    @Query
-    @NameInMap("OSSRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OSSRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String OSSRegionId;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
     private ExportImageRequest(Builder builder) {

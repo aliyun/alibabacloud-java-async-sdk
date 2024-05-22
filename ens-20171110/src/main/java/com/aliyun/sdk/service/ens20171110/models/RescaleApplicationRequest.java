@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RescaleApplicationRequest</p>
  */
 public class RescaleApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("RescaleLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleLevel")
     private String rescaleLevel;
 
-    @Query
-    @NameInMap("RescaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleType;
 
-    @Query
-    @NameInMap("ResourceSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceSelector;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
-    @Query
-    @NameInMap("ToAppVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToAppVersion")
     private String toAppVersion;
 
     private RescaleApplicationRequest(Builder builder) {

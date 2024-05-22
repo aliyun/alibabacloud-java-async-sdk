@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEpnInstancesResponseBody</p>
  */
 public class DescribeEpnInstancesResponseBody extends TeaModel {
-    @NameInMap("EPNInstances")
+    @com.aliyun.core.annotation.NameInMap("EPNInstances")
     private EPNInstances EPNInstances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEpnInstancesResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
     } 
 
     public static class EPNInstance extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EPNInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
         private String EPNInstanceId;
 
-        @NameInMap("EPNInstanceName")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
         private String EPNInstanceName;
 
-        @NameInMap("EPNInstanceType")
+        @com.aliyun.core.annotation.NameInMap("EPNInstanceType")
         private String EPNInstanceType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("NetworkingModel")
+        @com.aliyun.core.annotation.NameInMap("NetworkingModel")
         private String networkingModel;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EPNInstance(Builder builder) {
@@ -363,7 +362,7 @@ public class DescribeEpnInstancesResponseBody extends TeaModel {
 
     }
     public static class EPNInstances extends TeaModel {
-        @NameInMap("EPNInstance")
+        @com.aliyun.core.annotation.NameInMap("EPNInstance")
         private java.util.List < EPNInstance> EPNInstance;
 
         private EPNInstances(Builder builder) {

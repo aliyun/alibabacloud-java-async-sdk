@@ -1,34 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TerminateWorkflowResponse} extends {@link TeaModel}
+ * {@link DeleteSDGResponse} extends {@link TeaModel}
  *
- * <p>TerminateWorkflowResponse</p>
+ * <p>DeleteSDGResponse</p>
  */
-public class TerminateWorkflowResponse extends Response {
-    @NameInMap("headers")
+public class DeleteSDGResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private TerminateWorkflowResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private DeleteSDGResponseBody body;
 
-    private TerminateWorkflowResponse(BuilderImpl builder) {
+    private DeleteSDGResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static TerminateWorkflowResponse create() {
+    public static DeleteSDGResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +53,35 @@ public class TerminateWorkflowResponse extends Response {
     /**
      * @return body
      */
-    public TerminateWorkflowResponseBody getBody() {
+    public DeleteSDGResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<TerminateWorkflowResponse, Builder> {
+    public interface Builder extends Response.Builder<DeleteSDGResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(TerminateWorkflowResponseBody body);
+        Builder body(DeleteSDGResponseBody body);
 
         @Override
-        TerminateWorkflowResponse build();
+        DeleteSDGResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TerminateWorkflowResponse, Builder>
+            extends Response.BuilderImpl<DeleteSDGResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private TerminateWorkflowResponseBody body; 
+        private DeleteSDGResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TerminateWorkflowResponse response) {
+        private BuilderImpl(DeleteSDGResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +110,14 @@ public class TerminateWorkflowResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(TerminateWorkflowResponseBody body) {
+        public Builder body(DeleteSDGResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public TerminateWorkflowResponse build() {
-            return new TerminateWorkflowResponse(this);
+        public DeleteSDGResponse build() {
+            return new DeleteSDGResponse(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeARMServerInstancesRequest</p>
  */
 public class DescribeARMServerInstancesRequest extends Request {
-    @Query
-    @NameInMap("AICSpecs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AICSpecs")
     private java.util.List < String > AICSpecs;
 
-    @Query
-    @NameInMap("DescribeAICInstances")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DescribeAICInstances")
     private Boolean describeAICInstances;
 
-    @Query
-    @NameInMap("EnsRegionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
     private java.util.List < String > ensRegionIds;
 
-    @Query
-    @NameInMap("MaxDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDate")
     private String maxDate;
 
-    @Query
-    @NameInMap("MinDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDate")
     private String minDate;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @Query
-    @NameInMap("OrderByParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByParams")
     private String orderByParams;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ServerIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerIds")
     private java.util.List < String > serverIds;
 
-    @Query
-    @NameInMap("ServerSpecs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerSpecs")
     private java.util.List < String > serverSpecs;
 
-    @Query
-    @NameInMap("States")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("States")
     private java.util.List < String > states;
 
     private DescribeARMServerInstancesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokeSecurityGroupRequest</p>
  */
 public class RevokeSecurityGroupRequest extends Request {
-    @Query
-    @NameInMap("IpProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ipProtocol;
 
-    @Query
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @Query
-    @NameInMap("PortRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portRange;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
-    @Query
-    @NameInMap("SourceCidrIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceCidrIp;
 
-    @Query
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     private String sourcePortRange;
 
     private RevokeSecurityGroupRequest(Builder builder) {

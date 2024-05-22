@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeARMServerInstancesResponseBody</p>
  */
 public class DescribeARMServerInstancesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Servers")
+    @com.aliyun.core.annotation.NameInMap("Servers")
     private java.util.List < Servers> servers;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeARMServerInstancesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
     } 
 
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkAttributes(Builder builder) {
@@ -213,10 +212,10 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     }
     public static class SdgDeployInfo extends TeaModel {
-        @NameInMap("SDGId")
+        @com.aliyun.core.annotation.NameInMap("SDGId")
         private String SDGId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SdgDeployInfo(Builder builder) {
@@ -279,37 +278,37 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     }
     public static class AICInstances extends TeaModel {
-        @NameInMap("Frequency")
+        @com.aliyun.core.annotation.NameInMap("Frequency")
         private Long frequency;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LatestAction")
+        @com.aliyun.core.annotation.NameInMap("LatestAction")
         private String latestAction;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NetworkAttributes")
+        @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
         private NetworkAttributes networkAttributes;
 
-        @NameInMap("Resolution")
+        @com.aliyun.core.annotation.NameInMap("Resolution")
         private String resolution;
 
-        @NameInMap("SdgDeployInfo")
+        @com.aliyun.core.annotation.NameInMap("SdgDeployInfo")
         private SdgDeployInfo sdgDeployInfo;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AICInstances(Builder builder) {
@@ -533,40 +532,40 @@ public class DescribeARMServerInstancesResponseBody extends TeaModel {
 
     }
     public static class Servers extends TeaModel {
-        @NameInMap("AICInstances")
+        @com.aliyun.core.annotation.NameInMap("AICInstances")
         private java.util.List < AICInstances> AICInstances;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("LatestAction")
+        @com.aliyun.core.annotation.NameInMap("LatestAction")
         private String latestAction;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Servers(Builder builder) {

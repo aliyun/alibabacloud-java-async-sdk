@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceInfoResponseBody</p>
  */
 public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResources")
+    @com.aliyun.core.annotation.NameInMap("SupportResources")
     private SupportResources supportResources;
 
     private DescribeAvailableResourceInfoResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private Integer imageSize;
 
         private Image(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {
@@ -214,7 +213,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class BandwidthTypes extends TeaModel {
-        @NameInMap("BandwidthType")
+        @com.aliyun.core.annotation.NameInMap("BandwidthType")
         private java.util.List < String > bandwidthType;
 
         private BandwidthTypes(Builder builder) {
@@ -255,7 +254,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class EnsRegionIds extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private java.util.List < String > ensRegionId;
 
         private EnsRegionIds(Builder builder) {
@@ -296,22 +295,22 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class EnsRegionId extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private EnsRegionId(Builder builder) {
@@ -437,7 +436,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class EnsRegionIdsExtends extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private java.util.List < EnsRegionId> ensRegionId;
 
         private EnsRegionIdsExtends(Builder builder) {
@@ -478,7 +477,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class InstanceSpeces extends TeaModel {
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private java.util.List < String > instanceSpec;
 
         private InstanceSpeces(Builder builder) {
@@ -519,7 +518,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class Isp extends TeaModel {
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private java.util.List < String > isp;
 
         private Isp(Builder builder) {
@@ -560,31 +559,31 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class SupportResource extends TeaModel {
-        @NameInMap("BandwidthTypes")
+        @com.aliyun.core.annotation.NameInMap("BandwidthTypes")
         private BandwidthTypes bandwidthTypes;
 
-        @NameInMap("DataDiskMaxSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskMaxSize")
         private Integer dataDiskMaxSize;
 
-        @NameInMap("DataDiskMinSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskMinSize")
         private Integer dataDiskMinSize;
 
-        @NameInMap("EnsRegionIds")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionIds")
         private EnsRegionIds ensRegionIds;
 
-        @NameInMap("EnsRegionIdsExtends")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionIdsExtends")
         private EnsRegionIdsExtends ensRegionIdsExtends;
 
-        @NameInMap("InstanceSpeces")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpeces")
         private InstanceSpeces instanceSpeces;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private Isp isp;
 
-        @NameInMap("SystemDiskMaxSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskMaxSize")
         private Integer systemDiskMaxSize;
 
-        @NameInMap("SystemDiskMinSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskMinSize")
         private Integer systemDiskMinSize;
 
         private SupportResource(Builder builder) {
@@ -761,7 +760,7 @@ public class DescribeAvailableResourceInfoResponseBody extends TeaModel {
 
     }
     public static class SupportResources extends TeaModel {
-        @NameInMap("SupportResource")
+        @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;
 
         private SupportResources(Builder builder) {

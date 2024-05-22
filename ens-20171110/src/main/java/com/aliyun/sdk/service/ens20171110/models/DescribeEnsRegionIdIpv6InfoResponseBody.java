@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsRegionIdIpv6InfoResponseBody</p>
  */
 public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportIpv6Info")
+    @com.aliyun.core.annotation.NameInMap("SupportIpv6Info")
     private SupportIpv6Info supportIpv6Info;
 
     private DescribeEnsRegionIdIpv6InfoResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     } 
 
     public static class SupportIpv6Info extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("SupportIpv6")
+        @com.aliyun.core.annotation.NameInMap("SupportIpv6")
         private Boolean supportIpv6;
 
         private SupportIpv6Info(Builder builder) {

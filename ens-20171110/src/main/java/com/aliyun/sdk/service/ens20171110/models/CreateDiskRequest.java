@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDiskRequest</p>
  */
 public class CreateDiskRequest extends Request {
-    @Query
-    @NameInMap("Category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("DiskName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskName")
     private String diskName;
 
-    @Query
-    @NameInMap("Encrypted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Encrypted")
     private Boolean encrypted;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("KMSKeyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KMSKeyId")
     private String KMSKeyId;
 
-    @Query
-    @NameInMap("Size")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Size")
     private String size;
 
-    @Query
-    @NameInMap("SnapshotId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotId")
     private String snapshotId;
 
     private CreateDiskRequest(Builder builder) {
@@ -160,8 +159,6 @@ public class CreateDiskRequest extends Request {
          * 
          * *   cloud_efficiency: ultra disk.
          * *   cloud_ssd: all-flash disk.
-         * *   local_hdd: local HDD.
-         * *   local_ssd: local SSD.
          */
         public Builder category(String category) {
             this.putQueryParameter("Category", category);
@@ -201,11 +198,7 @@ public class CreateDiskRequest extends Request {
         }
 
         /**
-         * The billing method of the instance. Valid values:
-         * <p>
-         * 
-         * *   PrePaid: subscription.
-         * *   PostPaid: pay-as-you-go.
+         * The billing method of the instance. Set the value to **PostPaid**.
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);

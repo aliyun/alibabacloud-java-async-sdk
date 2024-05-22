@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssignPrivateIpAddressesResponseBody</p>
  */
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
-    @NameInMap("AssignedPrivateIpAddressesSet")
+    @com.aliyun.core.annotation.NameInMap("AssignedPrivateIpAddressesSet")
     private AssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AssignPrivateIpAddressesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     } 
 
     public static class AssignedPrivateIpAddressesSet extends TeaModel {
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpSet")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
         private java.util.List < String > privateIpSet;
 
         private AssignedPrivateIpAddressesSet(Builder builder) {

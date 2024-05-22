@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAutoRenewAttributeResponseBody</p>
  */
 public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceRenewAttributes")
+    @com.aliyun.core.annotation.NameInMap("InstanceRenewAttributes")
     private InstanceRenewAttributes instanceRenewAttributes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceAutoRenewAttributeResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
     } 
 
     public static class InstanceRenewAttribute extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceRenewAttribute(Builder builder) {
@@ -177,7 +176,7 @@ public class DescribeInstanceAutoRenewAttributeResponseBody extends TeaModel {
 
     }
     public static class InstanceRenewAttributes extends TeaModel {
-        @NameInMap("InstanceRenewAttribute")
+        @com.aliyun.core.annotation.NameInMap("InstanceRenewAttribute")
         private java.util.List < InstanceRenewAttribute> instanceRenewAttribute;
 
         private InstanceRenewAttributes(Builder builder) {

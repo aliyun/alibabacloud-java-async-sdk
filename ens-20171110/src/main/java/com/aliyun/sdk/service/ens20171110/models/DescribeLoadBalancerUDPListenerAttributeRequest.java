@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerUDPListenerAttributeRequest</p>
  */
 public class DescribeLoadBalancerUDPListenerAttributeRequest extends Request {
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private DescribeLoadBalancerUDPListenerAttributeRequest(Builder builder) {

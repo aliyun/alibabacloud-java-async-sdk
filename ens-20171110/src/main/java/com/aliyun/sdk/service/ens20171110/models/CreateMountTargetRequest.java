@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMountTargetRequest</p>
  */
 public class CreateMountTargetRequest extends Request {
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("MountTargetName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MountTargetName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mountTargetName;
 
-    @Query
-    @NameInMap("NetWorkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetWorkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String netWorkId;
 
     private CreateMountTargetRequest(Builder builder) {

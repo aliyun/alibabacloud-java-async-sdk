@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkAclsResponseBody</p>
  */
 public class DescribeNetworkAclsResponseBody extends TeaModel {
-    @NameInMap("NetworkAcls")
+    @com.aliyun.core.annotation.NameInMap("NetworkAcls")
     private java.util.List < NetworkAcls> networkAcls;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeNetworkAclsResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     } 
 
     public static class EgressAclEntries extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private EgressAclEntries(Builder builder) {
@@ -286,7 +285,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The action to be performed on network traffic that matches the rule. Valid values:
+             * The action that is performed on network traffic that matches the rule. Valid values:
              * <p>
              * 
              * *   **accept**: allows the network traffic.
@@ -301,8 +300,8 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
              * The destination port range of the outbound rule.
              * <p>
              * 
-             * *   If **Protocol** in the outbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.
-             * *   If **Protocol** in the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 120/120 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
+             * *   If **Protocol** of the outbound rule is set to **all** or **icmp** the port range is **-1/-1**, which indicates all ports.
+             * *   If **Protocol** of the outbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -318,13 +317,13 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
-             * *   **icmp**
-             * *   **tcp**
-             * *   **udp**
-             * *   **all**
+             * *   **icmp**: ICMP.
+             * *   **tcp**: TCP.
+             * *   **udp**: UDP.
+             * *   **all**: all protocols.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -351,31 +350,31 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     }
     public static class IngressAclEntries extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NetworkAclEntryId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryId")
         private String networkAclEntryId;
 
-        @NameInMap("NetworkAclEntryName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
         private String networkAclEntryName;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private IngressAclEntries(Builder builder) {
@@ -520,8 +519,8 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
              * The destination port range of the inbound rule.
              * <p>
              * 
-             * *   If **Protocol** in the inbound rule is set to **all** or **icmp**, \*\*-1/-1\*\* is returned for this parameter. \*\*-1/-1\*\* indicates all ports.
-             * *   If **Protocol** in the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200 and 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
+             * *   If **Protocol** of the inbound rule is set to **all** or **icmp**, the port range is **-1/-1**, which indicates all ports.
+             * *   If **Protocol** of the inbound rule is set to **tcp** or **udp**, the port range is in the following format: **1/200** or **80/80**. 1/200 indicates port 1 to port 200. 80/80 indicates port 80. Valid values for a port: **1 to 65535**.
              */
             public Builder portRange(String portRange) {
                 this.portRange = portRange;
@@ -537,13 +536,13 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol. Valid values:
+             * The protocol type. Valid values:
              * <p>
              * 
-             * *   **icmp**
-             * *   **tcp**
-             * *   **udp**
-             * *   **all**
+             * *   **icmp**: ICMP.
+             * *   **tcp**: TCP.
+             * *   **udp**: UDP.
+             * *   **all**: all protocols.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -570,16 +569,16 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Resources(Builder builder) {
@@ -632,7 +631,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The ID of the ENS node.
+             * The ID of the edge node.
              */
             public Builder ensRegionId(String ensRegionId) {
                 this.ensRegionId = ensRegionId;
@@ -676,28 +675,28 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
 
     }
     public static class NetworkAcls extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EgressAclEntries")
+        @com.aliyun.core.annotation.NameInMap("EgressAclEntries")
         private java.util.List < EgressAclEntries> egressAclEntries;
 
-        @NameInMap("IngressAclEntries")
+        @com.aliyun.core.annotation.NameInMap("IngressAclEntries")
         private java.util.List < IngressAclEntries> ingressAclEntries;
 
-        @NameInMap("NetworkAclId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
-        @NameInMap("NetworkAclName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclName")
         private String networkAclName;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private java.util.List < Resources> resources;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NetworkAcls(Builder builder) {

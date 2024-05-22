@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMountTargetsResponseBody</p>
  */
 public class DescribeMountTargetsResponseBody extends TeaModel {
-    @NameInMap("MountTargets")
+    @com.aliyun.core.annotation.NameInMap("MountTargets")
     private java.util.List < MountTargets> mountTargets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeMountTargetsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     } 
 
     public static class MountTargets extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
 
-        @NameInMap("MountTargetName")
+        @com.aliyun.core.annotation.NameInMap("MountTargetName")
         private String mountTargetName;
 
-        @NameInMap("NetWorkId")
+        @com.aliyun.core.annotation.NameInMap("NetWorkId")
         private String netWorkId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MountTargets(Builder builder) {

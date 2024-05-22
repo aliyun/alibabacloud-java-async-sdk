@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DistApplicationDataRequest</p>
  */
 public class DistApplicationDataRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("Data")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Data")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String data;
 
-    @Query
-    @NameInMap("DistStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DistStrategy")
     private String distStrategy;
 
     private DistApplicationDataRequest(Builder builder) {

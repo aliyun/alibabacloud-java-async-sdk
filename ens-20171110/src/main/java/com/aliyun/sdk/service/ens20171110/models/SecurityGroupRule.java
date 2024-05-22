@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SecurityGroupRule</p>
  */
 public class SecurityGroupRule extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DestCidrIp")
+    @com.aliyun.core.annotation.NameInMap("DestCidrIp")
     private String destCidrIp;
 
-    @NameInMap("Direction")
+    @com.aliyun.core.annotation.NameInMap("Direction")
     private String direction;
 
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private String policy;
 
-    @NameInMap("PortRange")
+    @com.aliyun.core.annotation.NameInMap("PortRange")
     private String portRange;
 
-    @NameInMap("SourceCidrIp")
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
     private String sourceCidrIp;
 
-    @NameInMap("SourcePortRange")
+    @com.aliyun.core.annotation.NameInMap("SourcePortRange")
     private String sourcePortRange;
 
-    @NameInMap("priority")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("priority")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer priority;
 
     private SecurityGroupRule(Builder builder) {

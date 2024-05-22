@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataPushResultResponseBody</p>
  */
 public class DescribeDataPushResultResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PushResults")
+    @com.aliyun.core.annotation.NameInMap("PushResults")
     private PushResults pushResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataPushResultResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
     } 
 
     public static class RegionId extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StatusDescrip")
+        @com.aliyun.core.annotation.NameInMap("StatusDescrip")
         private String statusDescrip;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private RegionId(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     }
     public static class RegionIds extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < RegionId> regionId;
 
         private RegionIds(Builder builder) {
@@ -274,13 +273,13 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     }
     public static class StatusStat extends TeaModel {
-        @NameInMap("RegionIdCount")
+        @com.aliyun.core.annotation.NameInMap("RegionIdCount")
         private Integer regionIdCount;
 
-        @NameInMap("RegionIds")
+        @com.aliyun.core.annotation.NameInMap("RegionIds")
         private RegionIds regionIds;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StatusStat(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     }
     public static class StatusStatS extends TeaModel {
-        @NameInMap("StatusStat")
+        @com.aliyun.core.annotation.NameInMap("StatusStat")
         private java.util.List < StatusStat> statusStat;
 
         private StatusStatS(Builder builder) {
@@ -396,13 +395,13 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     }
     public static class PushResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StatusStatS")
+        @com.aliyun.core.annotation.NameInMap("StatusStatS")
         private StatusStatS statusStatS;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private PushResult(Builder builder) {
@@ -477,7 +476,7 @@ public class DescribeDataPushResultResponseBody extends TeaModel {
 
     }
     public static class PushResults extends TeaModel {
-        @NameInMap("PushResult")
+        @com.aliyun.core.annotation.NameInMap("PushResult")
         private java.util.List < PushResult> pushResult;
 
         private PushResults(Builder builder) {

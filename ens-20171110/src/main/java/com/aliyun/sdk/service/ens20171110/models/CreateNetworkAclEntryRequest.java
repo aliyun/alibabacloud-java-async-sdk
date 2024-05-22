@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkAclEntryRequest</p>
  */
 public class CreateNetworkAclEntryRequest extends Request {
-    @Query
-    @NameInMap("CidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrBlock;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("NetworkAclEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String networkAclEntryName;
 
-    @Query
-    @NameInMap("NetworkAclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAclId;
 
-    @Query
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
-    @Query
-    @NameInMap("PortRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PortRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String portRange;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("Protocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String protocol;
 
     private CreateNetworkAclEntryRequest(Builder builder) {

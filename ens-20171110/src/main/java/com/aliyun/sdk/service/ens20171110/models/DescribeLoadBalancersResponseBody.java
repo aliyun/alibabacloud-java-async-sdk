@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancersResponseBody</p>
  */
 public class DescribeLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     private LoadBalancers loadBalancers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLoadBalancersResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     } 
 
     public static class LoadBalancer extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private LoadBalancer(Builder builder) {
@@ -361,7 +360,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("LoadBalancer")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancer")
         private java.util.List < LoadBalancer> loadBalancer;
 
         private LoadBalancers(Builder builder) {

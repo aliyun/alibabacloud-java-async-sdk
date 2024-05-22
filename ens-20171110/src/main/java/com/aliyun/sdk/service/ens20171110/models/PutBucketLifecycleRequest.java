@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutBucketLifecycleRequest</p>
  */
 public class PutBucketLifecycleRequest extends Request {
-    @Query
-    @NameInMap("AllowSameActionOverlap")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowSameActionOverlap")
     private String allowSameActionOverlap;
 
-    @Query
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Query
-    @NameInMap("CreatedBeforeDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedBeforeDate")
     private String createdBeforeDate;
 
-    @Query
-    @NameInMap("ExpirationDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpirationDays")
     private Long expirationDays;
 
-    @Query
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private PutBucketLifecycleRequest(Builder builder) {

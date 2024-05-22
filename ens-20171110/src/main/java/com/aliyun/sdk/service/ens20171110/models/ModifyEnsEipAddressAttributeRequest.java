@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyEnsEipAddressAttributeRequest</p>
  */
 public class ModifyEnsEipAddressAttributeRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 10000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 1)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String name;
 
     private ModifyEnsEipAddressAttributeRequest(Builder builder) {

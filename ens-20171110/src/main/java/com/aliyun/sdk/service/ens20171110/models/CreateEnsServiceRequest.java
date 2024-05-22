@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEnsServiceRequest</p>
  */
 public class CreateEnsServiceRequest extends Request {
-    @Query
-    @NameInMap("EnsServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensServiceId;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
 
     private CreateEnsServiceRequest(Builder builder) {

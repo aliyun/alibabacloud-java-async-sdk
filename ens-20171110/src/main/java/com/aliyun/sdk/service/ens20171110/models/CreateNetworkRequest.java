@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkRequest</p>
  */
 public class CreateNetworkRequest extends Request {
-    @Query
-    @NameInMap("CidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrBlock;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("NetworkName")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String networkName;
 
     private CreateNetworkRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrePaidInstanceStockResponseBody</p>
  */
 public class DescribePrePaidInstanceStockResponseBody extends TeaModel {
-    @NameInMap("AvaliableCount")
+    @com.aliyun.core.annotation.NameInMap("AvaliableCount")
     private Integer avaliableCount;
 
-    @NameInMap("Cores")
+    @com.aliyun.core.annotation.NameInMap("Cores")
     private Integer cores;
 
-    @NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     private Integer dataDiskSize;
 
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @NameInMap("InstanceSpec")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpec")
     private String instanceSpec;
 
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Integer memory;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGap")
+    @com.aliyun.core.annotation.NameInMap("ResourceGap")
     private String resourceGap;
 
-    @NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
     private Integer systemDiskSize;
 
     private DescribePrePaidInstanceStockResponseBody(Builder builder) {

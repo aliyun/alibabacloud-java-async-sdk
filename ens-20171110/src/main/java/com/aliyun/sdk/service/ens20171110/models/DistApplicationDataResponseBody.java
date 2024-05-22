@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DistApplicationDataResponseBody</p>
  */
 public class DistApplicationDataResponseBody extends TeaModel {
-    @NameInMap("DistInstanceIds")
+    @com.aliyun.core.annotation.NameInMap("DistInstanceIds")
     private DistInstanceIds distInstanceIds;
 
-    @NameInMap("DistInstanceTotalCount")
+    @com.aliyun.core.annotation.NameInMap("DistInstanceTotalCount")
     private Integer distInstanceTotalCount;
 
-    @NameInMap("DistResults")
+    @com.aliyun.core.annotation.NameInMap("DistResults")
     private DistResults distResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DistApplicationDataResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
     } 
 
     public static class DistInstanceIds extends TeaModel {
-        @NameInMap("DistInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DistInstanceId")
         private java.util.List < String > distInstanceId;
 
         private DistInstanceIds(Builder builder) {
@@ -153,16 +152,16 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     }
     public static class DistResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private Integer resultCode;
 
-        @NameInMap("ResultDescrip")
+        @com.aliyun.core.annotation.NameInMap("ResultDescrip")
         private String resultDescrip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DistResult(Builder builder) {
@@ -254,7 +253,7 @@ public class DistApplicationDataResponseBody extends TeaModel {
 
     }
     public static class DistResults extends TeaModel {
-        @NameInMap("DistResult")
+        @com.aliyun.core.annotation.NameInMap("DistResult")
         private java.util.List < DistResult> distResult;
 
         private DistResults(Builder builder) {

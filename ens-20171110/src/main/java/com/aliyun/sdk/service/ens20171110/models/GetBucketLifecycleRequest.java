@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBucketLifecycleRequest</p>
  */
 public class GetBucketLifecycleRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Query
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private GetBucketLifecycleRequest(Builder builder) {
@@ -78,7 +77,7 @@ public class GetBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The ID of the rule to be queried. If this parameter is not specified, all rules are returned.
+         * The ID of the rule that you want to query. If this parameter is not specified, all rules are returned.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);

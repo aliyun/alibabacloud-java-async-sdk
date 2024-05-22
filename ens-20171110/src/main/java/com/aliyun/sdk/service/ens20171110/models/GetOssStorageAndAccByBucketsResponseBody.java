@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOssStorageAndAccByBucketsResponseBody</p>
  */
 public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
-    @NameInMap("BucketList")
+    @com.aliyun.core.annotation.NameInMap("BucketList")
     private java.util.List < BucketList> bucketList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetOssStorageAndAccByBucketsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
     } 
 
     public static class BucketList extends TeaModel {
-        @NameInMap("Acc")
+        @com.aliyun.core.annotation.NameInMap("Acc")
         private Long acc;
 
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("StorageUsageByte")
+        @com.aliyun.core.annotation.NameInMap("StorageUsageByte")
         private Long storageUsageByte;
 
         private BucketList(Builder builder) {
@@ -122,7 +121,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             private Long storageUsageByte; 
 
             /**
-             * The number of visits.
+             * The number of times that the bucket is accessed.
              */
             public Builder acc(Long acc) {
                 this.acc = acc;
@@ -130,7 +129,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * The bucket name.
+             * The name of the bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -138,7 +137,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * The storage usage of the cluster, in bytes.
+             * The storage usage of the bucket. Unit: bytes.
              */
             public Builder storageUsageByte(Long storageUsageByte) {
                 this.storageUsageByte = storageUsageByte;

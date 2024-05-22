@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoadBalancerResponseBody</p>
  */
 public class CreateLoadBalancerResponseBody extends TeaModel {
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private CreateLoadBalancerResponseBody(Builder builder) {

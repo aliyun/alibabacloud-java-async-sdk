@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateNetworkAclResponseBody</p>
  */
 public class CreateNetworkAclResponseBody extends TeaModel {
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateNetworkAclResponseBody(Builder builder) {

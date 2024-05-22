@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageInfosResponseBody</p>
  */
 public class DescribeImageInfosResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeImageInfosResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeImageInfosResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
-        @NameInMap("ComputeType")
+        @com.aliyun.core.annotation.NameInMap("ComputeType")
         private String computeType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private String imageSize;
 
-        @NameInMap("ImageVersion")
+        @com.aliyun.core.annotation.NameInMap("ImageVersion")
         private String imageVersion;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("OSType")
+        @com.aliyun.core.annotation.NameInMap("OSType")
         private String OSType;
 
         private Image(Builder builder) {
@@ -259,7 +258,7 @@ public class DescribeImageInfosResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {

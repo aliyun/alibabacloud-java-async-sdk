@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageSharePermissionResponseBody</p>
  */
 public class DescribeImageSharePermissionResponseBody extends TeaModel {
-    @NameInMap("Accounts")
+    @com.aliyun.core.annotation.NameInMap("Accounts")
     private Accounts accounts;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageSharePermissionResponseBody(Builder builder) {
@@ -152,7 +151,7 @@ public class DescribeImageSharePermissionResponseBody extends TeaModel {
     } 
 
     public static class Accounts extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private java.util.List < String > account;
 
         private Accounts(Builder builder) {

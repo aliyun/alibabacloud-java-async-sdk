@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoadBalancerRequest</p>
  */
 public class CreateLoadBalancerRequest extends Request {
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @Query
-    @NameInMap("LoadBalancerSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerSpec;
 
-    @Query
-    @NameInMap("NetworkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
     private CreateLoadBalancerRequest(Builder builder) {

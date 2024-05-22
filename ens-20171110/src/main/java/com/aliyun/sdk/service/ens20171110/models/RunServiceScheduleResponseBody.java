@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunServiceScheduleResponseBody</p>
  */
 public class RunServiceScheduleResponseBody extends TeaModel {
-    @NameInMap("CommandResults")
+    @com.aliyun.core.annotation.NameInMap("CommandResults")
     private CommandResults commandResults;
 
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @NameInMap("InstancePort")
+    @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestRepeated")
+    @com.aliyun.core.annotation.NameInMap("RequestRepeated")
     private String requestRepeated;
 
-    @NameInMap("TcpPorts")
+    @com.aliyun.core.annotation.NameInMap("TcpPorts")
     private Boolean tcpPorts;
 
     private RunServiceScheduleResponseBody(Builder builder) {
@@ -192,13 +191,13 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     } 
 
     public static class CommandResult extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("ResultMsg")
+        @com.aliyun.core.annotation.NameInMap("ResultMsg")
         private String resultMsg;
 
         private CommandResult(Builder builder) {
@@ -273,7 +272,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
 
     }
     public static class CommandResults extends TeaModel {
-        @NameInMap("CommandResult")
+        @com.aliyun.core.annotation.NameInMap("CommandResult")
         private java.util.List < CommandResult> commandResult;
 
         private CommandResults(Builder builder) {

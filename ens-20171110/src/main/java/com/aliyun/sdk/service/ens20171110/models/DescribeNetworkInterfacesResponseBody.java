@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkInterfacesResponseBody</p>
  */
 public class DescribeNetworkInterfacesResponseBody extends TeaModel {
-    @NameInMap("NetworkInterfaceSets")
+    @com.aliyun.core.annotation.NameInMap("NetworkInterfaceSets")
     private NetworkInterfaceSets networkInterfaceSets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNetworkInterfacesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
     } 
 
     public static class PrivateIpSet extends TeaModel {
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
         private PrivateIpSet(Builder builder) {
@@ -170,11 +169,11 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String privateIpAddress; 
 
             /**
-             * Indicates whether the IP address is the primary private IP address. Valid values:
+             * Specifies whether the private IP address is the primary private IP address. Valid values:
              * <p>
              * 
-             * *   true: The IP address is the primary private IP address.
-             * *   false: The IP address is the secondary private IP address.
+             * *   true
+             * *   false
              */
             public Builder primary(Boolean primary) {
                 this.primary = primary;
@@ -197,7 +196,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
     public static class PrivateIpSets extends TeaModel {
-        @NameInMap("PrivateIpSet")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSet")
         private java.util.List < PrivateIpSet> privateIpSet;
 
         private PrivateIpSets(Builder builder) {
@@ -238,7 +237,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroup")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroup")
         private java.util.List < String > securityGroup;
 
         private SecurityGroupIds(Builder builder) {
@@ -279,49 +278,49 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaceSet extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MacAddress")
+        @com.aliyun.core.annotation.NameInMap("MacAddress")
         private String macAddress;
 
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("NetworkInterfaceName")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceName")
         private String networkInterfaceName;
 
-        @NameInMap("PrimaryIp")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIp")
         private String primaryIp;
 
-        @NameInMap("PrimaryIpType")
+        @com.aliyun.core.annotation.NameInMap("PrimaryIpType")
         private String primaryIpType;
 
-        @NameInMap("PrivateIpSets")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpSets")
         private PrivateIpSets privateIpSets;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkInterfaceSet(Builder builder) {
@@ -473,7 +472,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * The time when the ENI was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mmZ format. The time is displayed in UTC. The format is yyyy-MM-ddThh:mmZ.
+             * The time when the ENI was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddThh:mmZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -481,7 +480,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the ENI.
+             * The description of ENI.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -497,7 +496,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the ENI is attached.
+             * The ID of the instance to which the ENI is bound.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -505,7 +504,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The media access control (MAC) address of the ENI.
+             * The MAC address of the ENI.
              */
             public Builder macAddress(String macAddress) {
                 this.macAddress = macAddress;
@@ -529,7 +528,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the ENI.
+             * The ENI name.
              */
             public Builder networkInterfaceName(String networkInterfaceName) {
                 this.networkInterfaceName = networkInterfaceName;
@@ -537,7 +536,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The primary private IP address.
+             * The private IP address of the server.
              */
             public Builder primaryIp(String primaryIp) {
                 this.primaryIp = primaryIp;
@@ -545,11 +544,11 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the primary IP address. Valid values:
+             * The primary private IP address. Valid values:
              * <p>
              * 
-             * *   **Public**: public endpoint.
-             * *   **Private**: internal endpoint.
+             * *   **Public**: public IP address.
+             * *   **Private**: internal IP address.
              */
             public Builder primaryIpType(String primaryIpType) {
                 this.primaryIpType = primaryIpType;
@@ -557,7 +556,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * Details about the private IP addresses.
+             * Details about the private IP address.
              */
             public Builder privateIpSets(PrivateIpSets privateIpSets) {
                 this.privateIpSets = privateIpSets;
@@ -565,7 +564,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
             }
 
             /**
-             * IDs of security groups.
+             * The ID of the security group.
              */
             public Builder securityGroupIds(SecurityGroupIds securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -615,7 +614,7 @@ public class DescribeNetworkInterfacesResponseBody extends TeaModel {
 
     }
     public static class NetworkInterfaceSets extends TeaModel {
-        @NameInMap("NetworkInterfaceSet")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceSet")
         private java.util.List < NetworkInterfaceSet> networkInterfaceSet;
 
         private NetworkInterfaceSets(Builder builder) {

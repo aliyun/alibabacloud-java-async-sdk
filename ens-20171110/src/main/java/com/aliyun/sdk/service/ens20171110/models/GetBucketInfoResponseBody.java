@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBucketInfoResponseBody</p>
  */
 public class GetBucketInfoResponseBody extends TeaModel {
-    @NameInMap("BucketInfo")
+    @com.aliyun.core.annotation.NameInMap("BucketInfo")
     private BucketInfo bucketInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetBucketInfoResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetBucketInfoResponseBody extends TeaModel {
     } 
 
     public static class BucketInfo extends TeaModel {
-        @NameInMap("BucketAcl")
+        @com.aliyun.core.annotation.NameInMap("BucketAcl")
         private String bucketAcl;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LogicalBucketType")
+        @com.aliyun.core.annotation.NameInMap("LogicalBucketType")
         private String logicalBucketType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
         private BucketInfo(Builder builder) {
@@ -158,7 +157,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             private String modifyTime; 
 
             /**
-             * The access control list (ACL) of the bucket.
+             * The ACL of the bucket.
              * <p>
              * 
              * *   **public-read-write**
@@ -187,7 +186,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bucket was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -203,7 +202,7 @@ public class GetBucketInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bucket was modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;

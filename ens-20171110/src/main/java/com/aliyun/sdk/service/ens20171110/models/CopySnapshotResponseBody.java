@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopySnapshotResponseBody</p>
  */
 public class CopySnapshotResponseBody extends TeaModel {
-    @NameInMap("AllocationId")
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
     private java.util.List < AllocationId> allocationId;
 
-    @NameInMap("BizStatusCode")
+    @com.aliyun.core.annotation.NameInMap("BizStatusCode")
     private String bizStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UnAllocationId")
+    @com.aliyun.core.annotation.NameInMap("UnAllocationId")
     private java.util.List < UnAllocationId> unAllocationId;
 
     private CopySnapshotResponseBody(Builder builder) {
@@ -116,10 +115,10 @@ public class CopySnapshotResponseBody extends TeaModel {
     } 
 
     public static class AllocationId extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private AllocationId(Builder builder) {
@@ -177,7 +176,7 @@ public class CopySnapshotResponseBody extends TeaModel {
 
     }
     public static class UnAllocationId extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
         private UnAllocationId(Builder builder) {

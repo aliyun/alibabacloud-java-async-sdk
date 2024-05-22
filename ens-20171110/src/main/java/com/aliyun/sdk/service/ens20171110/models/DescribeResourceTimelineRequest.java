@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceTimelineRequest</p>
  */
 public class DescribeResourceTimelineRequest extends Request {
-    @Query
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private String beginTime;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private DescribeResourceTimelineRequest(Builder builder) {

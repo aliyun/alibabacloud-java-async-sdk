@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerSpecResponseBody</p>
  */
 public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
-    @NameInMap("LoadBalancerSpecs")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpecs")
     private java.util.List < LoadBalancerSpecs> loadBalancerSpecs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLoadBalancerSpecResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeLoadBalancerSpecResponseBody extends TeaModel {
     } 
 
     public static class LoadBalancerSpecs extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("LoadBalancerSpec")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
         private String loadBalancerSpec;
 
         private LoadBalancerSpecs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateApplicationRequest</p>
  */
 public class CreateApplicationRequest extends Request {
-    @Query
-    @NameInMap("Template")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Template")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String template;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Integer timeout;
 
     private CreateApplicationRequest(Builder builder) {

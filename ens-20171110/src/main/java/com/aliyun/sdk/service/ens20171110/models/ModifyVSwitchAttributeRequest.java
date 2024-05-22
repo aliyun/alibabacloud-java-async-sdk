@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyVSwitchAttributeRequest</p>
  */
 public class ModifyVSwitchAttributeRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("VSwitchName")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String vSwitchName;
 
     private ModifyVSwitchAttributeRequest(Builder builder) {
@@ -88,7 +87,8 @@ public class ModifyVSwitchAttributeRequest extends Request {
          * The description of the vSwitch.
          * <p>
          * 
-         * The description must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
+         * *   The description must be 2 to 256 characters in length.
+         * *   The description cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -110,8 +110,7 @@ public class ModifyVSwitchAttributeRequest extends Request {
          * <p>
          * 
          * *   The name must be 2 to 128 characters in length.
-         * *   The name must start with a letter but cannot start with http:// or https://.
-         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * *   The name must start with a letter and cannot start with http:// or https://.
          */
         public Builder vSwitchName(String vSwitchName) {
             this.putQueryParameter("VSwitchName", vSwitchName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UdpConfig</p>
  */
 public class UdpConfig extends TeaModel {
-    @NameInMap("HashKey")
+    @com.aliyun.core.annotation.NameInMap("HashKey")
     private String hashKey;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
     private UdpConfig(Builder builder) {

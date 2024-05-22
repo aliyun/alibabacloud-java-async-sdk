@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSnatEntryRequest</p>
  */
 public class CreateSnatEntryRequest extends Request {
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
     private String snatEntryName;
 
-    @Query
-    @NameInMap("SnatIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatIp;
 
-    @Query
-    @NameInMap("SourceCIDR")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
-    @Query
-    @NameInMap("SourceNetworkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceNetworkId")
     private String sourceNetworkId;
 
-    @Query
-    @NameInMap("SourceVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceVSwitchId")
     private String sourceVSwitchId;
 
-    @Query
-    @NameInMap("StandbySnatIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbySnatIp")
     private String standbySnatIp;
 
     private CreateSnatEntryRequest(Builder builder) {

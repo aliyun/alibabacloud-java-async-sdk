@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsRegionIdResourceResponseBody</p>
  */
 public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
-    @NameInMap("EnsRegionIdResources")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionIdResources")
     private EnsRegionIdResources ensRegionIdResources;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEnsRegionIdResourceResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
     } 
 
     public static class EnsRegionIdResource extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("AreaCode")
+        @com.aliyun.core.annotation.NameInMap("AreaCode")
         private String areaCode;
 
-        @NameInMap("BizDate")
+        @com.aliyun.core.annotation.NameInMap("BizDate")
         private String bizDate;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("EnsRegionIdName")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionIdName")
         private String ensRegionIdName;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("InternetBandwidth")
+        @com.aliyun.core.annotation.NameInMap("InternetBandwidth")
         private Long internetBandwidth;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("VCpu")
+        @com.aliyun.core.annotation.NameInMap("VCpu")
         private Integer vCpu;
 
         private EnsRegionIdResource(Builder builder) {
@@ -339,7 +338,7 @@ public class DescribeEnsRegionIdResourceResponseBody extends TeaModel {
 
     }
     public static class EnsRegionIdResources extends TeaModel {
-        @NameInMap("EnsRegionIdResource")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionIdResource")
         private java.util.List < EnsRegionIdResource> ensRegionIdResource;
 
         private EnsRegionIdResources(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeForwardTableEntriesResponseBody</p>
  */
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
-    @NameInMap("ForwardTableEntries")
+    @com.aliyun.core.annotation.NameInMap("ForwardTableEntries")
     private java.util.List < ForwardTableEntries> forwardTableEntries;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private DescribeForwardTableEntriesResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     } 
 
     public static class ForwardTableEntries extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPort")
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
 
-        @NameInMap("ForwardEntryId")
+        @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
         private String forwardEntryId;
 
-        @NameInMap("ForwardEntryName")
+        @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
         private String forwardEntryName;
 
-        @NameInMap("HealthCheckPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
         private String healthCheckPort;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private String internalIp;
 
-        @NameInMap("InternalPort")
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
         private String internalPort;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("StandbyExternalIp")
+        @com.aliyun.core.annotation.NameInMap("StandbyExternalIp")
         private String standbyExternalIp;
 
-        @NameInMap("StandbyStatus")
+        @com.aliyun.core.annotation.NameInMap("StandbyStatus")
         private String standbyStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ForwardTableEntries(Builder builder) {

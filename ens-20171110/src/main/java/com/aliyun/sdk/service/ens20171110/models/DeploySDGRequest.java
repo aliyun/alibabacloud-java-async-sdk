@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeploySDGRequest</p>
  */
 public class DeploySDGRequest extends Request {
-    @Query
-    @NameInMap("DeploymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeploymentType")
     private String deploymentType;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("SDGId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SDGId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SDGId;
 
     private DeploySDGRequest(Builder builder) {
@@ -84,7 +83,11 @@ public class DeploySDGRequest extends Request {
         } 
 
         /**
-         * DeploymentType.
+         * The SDG deployment type. Valid values:
+         * <p>
+         * 
+         * *   common (default): read/write deployment. Data updates are written to disks.
+         * *   overlay: read/write splitting deployment. Content in SDGs is read-only. Data updates are written to the local storage of the instance.
          */
         public Builder deploymentType(String deploymentType) {
             this.putQueryParameter("DeploymentType", deploymentType);
@@ -93,7 +96,7 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances on which you want to deploy SDGs. You can deploy SDGs on a maximum of 100 instances at a time.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -103,7 +106,7 @@ public class DeploySDGRequest extends Request {
         }
 
         /**
-         * SDGId.
+         * The SDG ID. This parameter is used to create a disk, which is attached to an instance.
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);

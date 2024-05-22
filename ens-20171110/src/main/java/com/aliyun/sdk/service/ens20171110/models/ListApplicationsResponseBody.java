@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsResponseBody</p>
  */
 public class ListApplicationsResponseBody extends TeaModel {
-    @NameInMap("Applications")
+    @com.aliyun.core.annotation.NameInMap("Applications")
     private Applications applications;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListApplicationsResponseBody extends TeaModel {
     } 
 
     public static class App extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppInfo")
+        @com.aliyun.core.annotation.NameInMap("AppInfo")
         private String appInfo;
 
         private App(Builder builder) {
@@ -193,7 +192,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     }
     public static class AppList extends TeaModel {
-        @NameInMap("App")
+        @com.aliyun.core.annotation.NameInMap("App")
         private java.util.List < App> app;
 
         private AppList(Builder builder) {
@@ -234,10 +233,10 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     }
     public static class Application extends TeaModel {
-        @NameInMap("AppList")
+        @com.aliyun.core.annotation.NameInMap("AppList")
         private AppList appList;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
         private Application(Builder builder) {
@@ -295,7 +294,7 @@ public class ListApplicationsResponseBody extends TeaModel {
 
     }
     public static class Applications extends TeaModel {
-        @NameInMap("Application")
+        @com.aliyun.core.annotation.NameInMap("Application")
         private java.util.List < Application> application;
 
         private Applications(Builder builder) {

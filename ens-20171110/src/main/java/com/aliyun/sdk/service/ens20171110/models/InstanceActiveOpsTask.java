@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstanceActiveOpsTask</p>
  */
 public class InstanceActiveOpsTask extends TeaModel {
-    @NameInMap("InstanceActiveOpsTaskId")
+    @com.aliyun.core.annotation.NameInMap("InstanceActiveOpsTaskId")
     private String instanceActiveOpsTaskId;
 
-    @NameInMap("InstanceActiveOpsTaskStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceActiveOpsTaskStatus")
     private String instanceActiveOpsTaskStatus;
 
     private InstanceActiveOpsTask(Builder builder) {

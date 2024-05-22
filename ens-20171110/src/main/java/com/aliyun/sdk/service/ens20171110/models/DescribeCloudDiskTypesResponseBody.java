@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudDiskTypesResponseBody</p>
  */
 public class DescribeCloudDiskTypesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResources")
+    @com.aliyun.core.annotation.NameInMap("SupportResources")
     private SupportResources supportResources;
 
     private DescribeCloudDiskTypesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
     } 
 
     public static class SupportResource extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
         private SupportResource(Builder builder) {
@@ -139,7 +138,7 @@ public class DescribeCloudDiskTypesResponseBody extends TeaModel {
 
     }
     public static class SupportResources extends TeaModel {
-        @NameInMap("SupportResource")
+        @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;
 
         private SupportResources(Builder builder) {

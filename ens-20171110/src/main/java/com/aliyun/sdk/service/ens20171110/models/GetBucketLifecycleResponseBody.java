@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBucketLifecycleResponseBody</p>
  */
 public class GetBucketLifecycleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rule")
+    @com.aliyun.core.annotation.NameInMap("Rule")
     private java.util.List < Rule> rule;
 
     private GetBucketLifecycleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
     } 
 
     public static class Expiration extends TeaModel {
-        @NameInMap("CreatedBeforeDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedBeforeDate")
         private String createdBeforeDate;
 
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private String days;
 
         private Expiration(Builder builder) {
@@ -133,16 +132,16 @@ public class GetBucketLifecycleResponseBody extends TeaModel {
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private Expiration expiration;
 
-        @NameInMap("ID")
+        @com.aliyun.core.annotation.NameInMap("ID")
         private String id;
 
-        @NameInMap("Prefix")
+        @com.aliyun.core.annotation.NameInMap("Prefix")
         private String prefix;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Rule(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEnsRouteEntryRequest</p>
  */
 public class CreateEnsRouteEntryRequest extends Request {
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256, minLength = 2)
     private String description;
 
-    @Query
-    @NameInMap("DestinationCidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("RouteEntryName")
-    @Validation(maxLength = 128, minLength = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 2)
     private String routeEntryName;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private CreateEnsRouteEntryRequest(Builder builder) {

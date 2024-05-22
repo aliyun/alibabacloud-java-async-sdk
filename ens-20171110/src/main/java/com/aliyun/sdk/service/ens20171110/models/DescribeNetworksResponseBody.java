@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworksResponseBody</p>
  */
 public class DescribeNetworksResponseBody extends TeaModel {
-    @NameInMap("Networks")
+    @com.aliyun.core.annotation.NameInMap("Networks")
     private Networks networks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeNetworksResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
     } 
 
     public static class VSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
 
         private VSwitchIds(Builder builder) {
@@ -173,34 +172,34 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("NetworkAclId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAclId")
         private String networkAclId;
 
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
-        @NameInMap("NetworkName")
+        @com.aliyun.core.annotation.NameInMap("NetworkName")
         private String networkName;
 
-        @NameInMap("RouterTableId")
+        @com.aliyun.core.annotation.NameInMap("RouterTableId")
         private String routerTableId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private VSwitchIds vSwitchIds;
 
         private Network(Builder builder) {
@@ -398,7 +397,7 @@ public class DescribeNetworksResponseBody extends TeaModel {
 
     }
     public static class Networks extends TeaModel {
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private java.util.List < Network> network;
 
         private Networks(Builder builder) {

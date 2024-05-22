@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFileSystemsResponseBody</p>
  */
 public class DescribeFileSystemsResponseBody extends TeaModel {
-    @NameInMap("FileSystems")
+    @com.aliyun.core.annotation.NameInMap("FileSystems")
     private java.util.List < FileSystems> fileSystems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeFileSystemsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     } 
 
     public static class MountTargets extends TeaModel {
-        @NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
 
-        @NameInMap("MountTargetName")
+        @com.aliyun.core.annotation.NameInMap("MountTargetName")
         private String mountTargetName;
 
-        @NameInMap("NetWorkId")
+        @com.aliyun.core.annotation.NameInMap("NetWorkId")
         private String netWorkId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private MountTargets(Builder builder) {
@@ -239,37 +238,37 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     }
     public static class FileSystems extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
         private String fileSystemName;
 
-        @NameInMap("MeteredSize")
+        @com.aliyun.core.annotation.NameInMap("MeteredSize")
         private Long meteredSize;
 
-        @NameInMap("MountTargets")
+        @com.aliyun.core.annotation.NameInMap("MountTargets")
         private java.util.List < MountTargets> mountTargets;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private FileSystems(Builder builder) {

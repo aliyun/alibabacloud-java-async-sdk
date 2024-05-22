@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOssUsageDataResponseBody</p>
  */
 public class GetOssUsageDataResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UsageList")
+    @com.aliyun.core.annotation.NameInMap("UsageList")
     private java.util.List < UsageList> usageList;
 
     private GetOssUsageDataResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetOssUsageDataResponseBody extends TeaModel {
     } 
 
     public static class UsageList extends TeaModel {
-        @NameInMap("LanRxBw")
+        @com.aliyun.core.annotation.NameInMap("LanRxBw")
         private Long lanRxBw;
 
-        @NameInMap("LanTxBw")
+        @com.aliyun.core.annotation.NameInMap("LanTxBw")
         private Long lanTxBw;
 
-        @NameInMap("Point")
+        @com.aliyun.core.annotation.NameInMap("Point")
         private Long point;
 
-        @NameInMap("PointTs")
+        @com.aliyun.core.annotation.NameInMap("PointTs")
         private String pointTs;
 
-        @NameInMap("StorageUsageByte")
+        @com.aliyun.core.annotation.NameInMap("StorageUsageByte")
         private Long storageUsageByte;
 
-        @NameInMap("WanRxBw")
+        @com.aliyun.core.annotation.NameInMap("WanRxBw")
         private Long wanRxBw;
 
-        @NameInMap("WanTxBw")
+        @com.aliyun.core.annotation.NameInMap("WanTxBw")
         private Long wanTxBw;
 
         private UsageList(Builder builder) {
@@ -170,7 +169,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             private Long wanTxBw; 
 
             /**
-             * The inbound bandwidth over the intranet. Unit: bit/s.
+             * The inbound bandwidth over the internal network. Unit: bit/s.
              */
             public Builder lanRxBw(Long lanRxBw) {
                 this.lanRxBw = lanRxBw;
@@ -178,7 +177,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth over the intranet. Unit: bit/s.
+             * The outbound bandwidth over the internal network. Unit: bit/s.
              */
             public Builder lanTxBw(Long lanTxBw) {
                 this.lanTxBw = lanTxBw;
@@ -186,7 +185,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The number of time point within a day.
+             * The number of time points within a day.
              */
             public Builder point(Long point) {
                 this.point = point;
@@ -210,7 +209,7 @@ public class GetOssUsageDataResponseBody extends TeaModel {
             }
 
             /**
-             * The outbound bandwidth over the intranet. Unit: bit/s.
+             * The outbound bandwidth over the Internet. Unit: bit/s.
              */
             public Builder wanRxBw(Long wanRxBw) {
                 this.wanRxBw = wanRxBw;

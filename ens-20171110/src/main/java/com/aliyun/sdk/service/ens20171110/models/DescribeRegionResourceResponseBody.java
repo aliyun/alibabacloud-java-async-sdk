@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionResourceResponseBody</p>
  */
 public class DescribeRegionResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @NameInMap("Msg")
+    @com.aliyun.core.annotation.NameInMap("Msg")
     private String msg;
 
-    @NameInMap("Pager")
+    @com.aliyun.core.annotation.NameInMap("Pager")
     private Pager pager;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionResourceResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
     } 
 
     public static class ArmCard extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private ArmCard(Builder builder) {
@@ -393,40 +392,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Bandwidth extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Bandwidth(Builder builder) {
@@ -654,40 +653,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class BlockStorage extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private BlockStorage(Builder builder) {
@@ -915,40 +914,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Cpu(Builder builder) {
@@ -1176,40 +1175,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Gpu extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Gpu(Builder builder) {
@@ -1437,40 +1436,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Hdd extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Hdd(Builder builder) {
@@ -1698,46 +1697,46 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Ipv4s extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
-        @NameInMap("Vlan")
+        @com.aliyun.core.annotation.NameInMap("Vlan")
         private String vlan;
 
         private Ipv4s(Builder builder) {
@@ -1999,46 +1998,46 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Ipv6s extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private String display;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
-        @NameInMap("Vlan")
+        @com.aliyun.core.annotation.NameInMap("Vlan")
         private String vlan;
 
         private Ipv6s(Builder builder) {
@@ -2300,40 +2299,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Memory(Builder builder) {
@@ -2561,40 +2560,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Nvme extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Nvme(Builder builder) {
@@ -2822,40 +2821,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class OssStorage extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private OssStorage(Builder builder) {
@@ -3083,40 +3082,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Pangu extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Pangu(Builder builder) {
@@ -3344,40 +3343,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class PcfarmNum extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private PcfarmNum(Builder builder) {
@@ -3605,40 +3604,40 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Ssd extends TeaModel {
-        @NameInMap("Display")
+        @com.aliyun.core.annotation.NameInMap("Display")
         private Boolean display;
 
-        @NameInMap("OversellRatio")
+        @com.aliyun.core.annotation.NameInMap("OversellRatio")
         private Long oversellRatio;
 
-        @NameInMap("Remain")
+        @com.aliyun.core.annotation.NameInMap("Remain")
         private Long remain;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("ReserveDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisableTotal")
         private Long reserveDisableTotal;
 
-        @NameInMap("Reserved")
+        @com.aliyun.core.annotation.NameInMap("Reserved")
         private Long reserved;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("StatusDisableTotal")
+        @com.aliyun.core.annotation.NameInMap("StatusDisableTotal")
         private Long statusDisableTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Used")
+        @com.aliyun.core.annotation.NameInMap("Used")
         private Long used;
 
-        @NameInMap("UsedRatio")
+        @com.aliyun.core.annotation.NameInMap("UsedRatio")
         private Long usedRatio;
 
         private Ssd(Builder builder) {
@@ -3866,94 +3865,94 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AreaCode")
+        @com.aliyun.core.annotation.NameInMap("AreaCode")
         private String areaCode;
 
-        @NameInMap("AreaName")
+        @com.aliyun.core.annotation.NameInMap("AreaName")
         private String areaName;
 
-        @NameInMap("ArmCard")
+        @com.aliyun.core.annotation.NameInMap("ArmCard")
         private ArmCard armCard;
 
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < String > attributes;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Bandwidth bandwidth;
 
-        @NameInMap("BlockStorage")
+        @com.aliyun.core.annotation.NameInMap("BlockStorage")
         private BlockStorage blockStorage;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("CountryName")
+        @com.aliyun.core.annotation.NameInMap("CountryName")
         private String countryName;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Gpu gpu;
 
-        @NameInMap("Hdd")
+        @com.aliyun.core.annotation.NameInMap("Hdd")
         private Hdd hdd;
 
-        @NameInMap("HouseId")
+        @com.aliyun.core.annotation.NameInMap("HouseId")
         private String houseId;
 
-        @NameInMap("Ipv4s")
+        @com.aliyun.core.annotation.NameInMap("Ipv4s")
         private java.util.List < Ipv4s> ipv4s;
 
-        @NameInMap("Ipv6s")
+        @com.aliyun.core.annotation.NameInMap("Ipv6s")
         private java.util.List < Ipv6s> ipv6s;
 
-        @NameInMap("IspTypes")
+        @com.aliyun.core.annotation.NameInMap("IspTypes")
         private java.util.List < String > ispTypes;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Nvme")
+        @com.aliyun.core.annotation.NameInMap("Nvme")
         private Nvme nvme;
 
-        @NameInMap("OssStorage")
+        @com.aliyun.core.annotation.NameInMap("OssStorage")
         private OssStorage ossStorage;
 
-        @NameInMap("Pangu")
+        @com.aliyun.core.annotation.NameInMap("Pangu")
         private Pangu pangu;
 
-        @NameInMap("PcfarmNum")
+        @com.aliyun.core.annotation.NameInMap("PcfarmNum")
         private PcfarmNum pcfarmNum;
 
-        @NameInMap("Poc")
+        @com.aliyun.core.annotation.NameInMap("Poc")
         private Boolean poc;
 
-        @NameInMap("ProvinceCode")
+        @com.aliyun.core.annotation.NameInMap("ProvinceCode")
         private String provinceCode;
 
-        @NameInMap("ProvinceName")
+        @com.aliyun.core.annotation.NameInMap("ProvinceName")
         private String provinceName;
 
-        @NameInMap("ReserveDisable")
+        @com.aliyun.core.annotation.NameInMap("ReserveDisable")
         private Boolean reserveDisable;
 
-        @NameInMap("Ssd")
+        @com.aliyun.core.annotation.NameInMap("Ssd")
         private Ssd ssd;
 
-        @NameInMap("StatusDisable")
+        @com.aliyun.core.annotation.NameInMap("StatusDisable")
         private Boolean statusDisable;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
-        @NameInMap("Virtual")
+        @com.aliyun.core.annotation.NameInMap("Virtual")
         private String virtual;
 
         private Data(Builder builder) {
@@ -4487,13 +4486,13 @@ public class DescribeRegionResourceResponseBody extends TeaModel {
 
     }
     public static class Pager extends TeaModel {
-        @NameInMap("Page")
+        @com.aliyun.core.annotation.NameInMap("Page")
         private Long page;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Pager(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutBucketRequest</p>
  */
 public class PutBucketRequest extends Request {
-    @Body
-    @NameInMap("BucketAcl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BucketAcl")
     private String bucketAcl;
 
-    @Body
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Body
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @Body
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @Body
-    @NameInMap("LogicalBucketType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogicalBucketType")
     private String logicalBucketType;
 
     private PutBucketRequest(Builder builder) {

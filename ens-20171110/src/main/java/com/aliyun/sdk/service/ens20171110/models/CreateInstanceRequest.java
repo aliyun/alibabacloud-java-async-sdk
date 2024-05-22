@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,100 +11,100 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Query
-    @NameInMap("DataDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private String autoRenewPeriod;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("IpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
     private String ipType;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String period;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("PublicIpIdentification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIpIdentification")
     private Boolean publicIpIdentification;
 
-    @Query
-    @NameInMap("Quantity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String quantity;
 
-    @Query
-    @NameInMap("UniqueSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueSuffix")
     private Boolean uniqueSuffix;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private CreateInstanceRequest(Builder builder) {
@@ -627,7 +626,7 @@ public class CreateInstanceRequest extends Request {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
         private DataDisk(Builder builder) {
@@ -668,7 +667,7 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
         private SystemDisk(Builder builder) {

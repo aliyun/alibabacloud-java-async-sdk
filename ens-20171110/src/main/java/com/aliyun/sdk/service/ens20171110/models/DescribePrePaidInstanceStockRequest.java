@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePrePaidInstanceStockRequest</p>
  */
 public class DescribePrePaidInstanceStockRequest extends Request {
-    @Query
-    @NameInMap("DataDiskSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer dataDiskSize;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceSpec")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceSpec")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceSpec;
 
-    @Query
-    @NameInMap("SystemDiskSize")
-    @Validation(required = true, minimum = 20)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true, minimum = 20)
     private Integer systemDiskSize;
 
     private DescribePrePaidInstanceStockRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEnsSaleControlRequest</p>
  */
 public class DeleteEnsSaleControlRequest extends Request {
-    @Query
-    @NameInMap("AliUidAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUidAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliUidAccount;
 
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("SaleControls")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleControls")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SaleControls> saleControls;
 
     private DeleteEnsSaleControlRequest(Builder builder) {
@@ -120,12 +119,12 @@ public class DeleteEnsSaleControlRequest extends Request {
     } 
 
     public static class SaleControls extends TeaModel {
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
         private SaleControls(Builder builder) {

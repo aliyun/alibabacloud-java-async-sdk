@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupAttributeResponseBody</p>
  */
 public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private Permissions permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
     private DescribeSecurityGroupAttributeResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
     } 
 
     public static class Permission extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestCidrIp")
+        @com.aliyun.core.annotation.NameInMap("DestCidrIp")
         private String destCidrIp;
 
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("PortRange")
+        @com.aliyun.core.annotation.NameInMap("PortRange")
         private String portRange;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
-        @NameInMap("SourcePortRange")
+        @com.aliyun.core.annotation.NameInMap("SourcePortRange")
         private String sourcePortRange;
 
         private Permission(Builder builder) {
@@ -353,7 +352,7 @@ public class DescribeSecurityGroupAttributeResponseBody extends TeaModel {
 
     }
     public static class Permissions extends TeaModel {
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private java.util.List < Permission> permission;
 
         private Permissions(Builder builder) {

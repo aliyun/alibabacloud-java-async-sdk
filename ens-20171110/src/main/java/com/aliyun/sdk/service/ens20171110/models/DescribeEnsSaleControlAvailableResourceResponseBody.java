@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsSaleControlAvailableResourceResponseBody</p>
  */
 public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SaleControlAvailableResource")
+    @com.aliyun.core.annotation.NameInMap("SaleControlAvailableResource")
     private java.util.List < SaleControlAvailableResource> saleControlAvailableResource;
 
     private DescribeEnsSaleControlAvailableResourceResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
     } 
 
     public static class AvailableDiskType extends TeaModel {
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private AvailableDiskType(Builder builder) {
@@ -133,25 +132,25 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class AvailableRegion extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("EnsRegionName")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionName")
         private String ensRegionName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private AvailableRegion(Builder builder) {
@@ -294,16 +293,16 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class AvailableSpec extends TeaModel {
-        @NameInMap("Cores")
+        @com.aliyun.core.annotation.NameInMap("Cores")
         private String cores;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("SpecValue")
+        @com.aliyun.core.annotation.NameInMap("SpecValue")
         private String specValue;
 
         private AvailableSpec(Builder builder) {
@@ -395,10 +394,10 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class AvailableDefaultStorageType extends TeaModel {
-        @NameInMap("StorageName")
+        @com.aliyun.core.annotation.NameInMap("StorageName")
         private String storageName;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private AvailableDefaultStorageType(Builder builder) {
@@ -456,13 +455,13 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class AvailableSpecialStorageType extends TeaModel {
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("StorageName")
+        @com.aliyun.core.annotation.NameInMap("StorageName")
         private String storageName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
         private AvailableSpecialStorageType(Builder builder) {
@@ -537,10 +536,10 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class AvailableStorageType extends TeaModel {
-        @NameInMap("AvailableDefaultStorageType")
+        @com.aliyun.core.annotation.NameInMap("AvailableDefaultStorageType")
         private java.util.List < AvailableDefaultStorageType> availableDefaultStorageType;
 
-        @NameInMap("AvailableSpecialStorageType")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpecialStorageType")
         private java.util.List < java.util.List < AvailableSpecialStorageType> > availableSpecialStorageType;
 
         private AvailableStorageType(Builder builder) {
@@ -598,22 +597,22 @@ public class DescribeEnsSaleControlAvailableResourceResponseBody extends TeaMode
 
     }
     public static class SaleControlAvailableResource extends TeaModel {
-        @NameInMap("AvailableDiskType")
+        @com.aliyun.core.annotation.NameInMap("AvailableDiskType")
         private java.util.List < AvailableDiskType> availableDiskType;
 
-        @NameInMap("AvailableRegion")
+        @com.aliyun.core.annotation.NameInMap("AvailableRegion")
         private java.util.List < AvailableRegion> availableRegion;
 
-        @NameInMap("AvailableSpec")
+        @com.aliyun.core.annotation.NameInMap("AvailableSpec")
         private java.util.List < AvailableSpec> availableSpec;
 
-        @NameInMap("AvailableStorageType")
+        @com.aliyun.core.annotation.NameInMap("AvailableStorageType")
         private AvailableStorageType availableStorageType;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
         private SaleControlAvailableResource(Builder builder) {

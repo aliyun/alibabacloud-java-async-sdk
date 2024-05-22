@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypesResponseBody</p>
  */
 public class DescribeInstanceTypesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private InstanceTypes instanceTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
     } 
 
     public static class InstanceType extends TeaModel {
-        @NameInMap("CpuCoreCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCoreCount")
         private Integer cpuCoreCount;
 
-        @NameInMap("InstanceTypeId")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeId")
         private String instanceTypeId;
 
-        @NameInMap("InstanceTypeName")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeName")
         private String instanceTypeName;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private Integer memorySize;
 
         private InstanceType(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeInstanceTypesResponseBody extends TeaModel {
 
     }
     public static class InstanceTypes extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private java.util.List < InstanceType> instanceType;
 
         private InstanceTypes(Builder builder) {

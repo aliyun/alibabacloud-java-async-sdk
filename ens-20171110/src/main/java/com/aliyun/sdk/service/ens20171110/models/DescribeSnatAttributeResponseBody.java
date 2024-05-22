@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnatAttributeResponseBody</p>
  */
 public class DescribeSnatAttributeResponseBody extends TeaModel {
-    @NameInMap("CreationTime")
+    @com.aliyun.core.annotation.NameInMap("CreationTime")
     private String creationTime;
 
-    @NameInMap("DestCIDR")
+    @com.aliyun.core.annotation.NameInMap("DestCIDR")
     private String destCIDR;
 
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
     private String snatEntryId;
 
-    @NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
     private String snatEntryName;
 
-    @NameInMap("SnatIp")
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
     private String snatIp;
 
-    @NameInMap("SnatIps")
+    @com.aliyun.core.annotation.NameInMap("SnatIps")
     private java.util.List < SnatIps> snatIps;
 
-    @NameInMap("SourceCIDR")
+    @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
-    @NameInMap("StandbySnatIp")
+    @com.aliyun.core.annotation.NameInMap("StandbySnatIp")
     private String standbySnatIp;
 
-    @NameInMap("StandbyStatus")
+    @com.aliyun.core.annotation.NameInMap("StandbyStatus")
     private String standbyStatus;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeSnatAttributeResponseBody(Builder builder) {
@@ -328,13 +327,13 @@ public class DescribeSnatAttributeResponseBody extends TeaModel {
     } 
 
     public static class SnatIps extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SnatIps(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeviceServiceResponseBody</p>
  */
 public class DescribeDeviceServiceResponseBody extends TeaModel {
-    @NameInMap("AppMetaData")
+    @com.aliyun.core.annotation.NameInMap("AppMetaData")
     private AppMetaData appMetaData;
 
-    @NameInMap("AppStatus")
+    @com.aliyun.core.annotation.NameInMap("AppStatus")
     private AppStatus appStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDetailInfos")
+    @com.aliyun.core.annotation.NameInMap("ResourceDetailInfos")
     private java.util.List < ResourceDetailInfos> resourceDetailInfos;
 
-    @NameInMap("ResourceInfos")
+    @com.aliyun.core.annotation.NameInMap("ResourceInfos")
     private java.util.List < ResourceInfos> resourceInfos;
 
     private DescribeDeviceServiceResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
     } 
 
     public static class AppMetaData extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("AppStableVersion")
+        @com.aliyun.core.annotation.NameInMap("AppStableVersion")
         private String appStableVersion;
 
-        @NameInMap("AppType")
+        @com.aliyun.core.annotation.NameInMap("AppType")
         private String appType;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private AppMetaData(Builder builder) {
@@ -297,13 +296,13 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class AppStatus extends TeaModel {
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
 
-        @NameInMap("StatusDescrip")
+        @com.aliyun.core.annotation.NameInMap("StatusDescrip")
         private String statusDescrip;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private AppStatus(Builder builder) {
@@ -392,34 +391,34 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class ResourceDetailInfos extends TeaModel {
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("ID")
+        @com.aliyun.core.annotation.NameInMap("ID")
         private String id;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("ImageID")
+        @com.aliyun.core.annotation.NameInMap("ImageID")
         private String imageID;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("RegionID")
+        @com.aliyun.core.annotation.NameInMap("RegionID")
         private String regionID;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ResourceDetailInfos(Builder builder) {
@@ -613,16 +612,16 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("ContainerPorts")
+        @com.aliyun.core.annotation.NameInMap("ContainerPorts")
         private String containerPorts;
 
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("HostPorts")
+        @com.aliyun.core.annotation.NameInMap("HostPorts")
         private String hostPorts;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Network(Builder builder) {
@@ -718,13 +717,13 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class DeviceInfos extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private java.util.List < Network> network;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DeviceInfos(Builder builder) {
@@ -799,7 +798,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class InternalIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private InternalIps(Builder builder) {
@@ -840,7 +839,7 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class PublicIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private PublicIps(Builder builder) {
@@ -881,40 +880,40 @@ public class DescribeDeviceServiceResponseBody extends TeaModel {
 
     }
     public static class ResourceInfos extends TeaModel {
-        @NameInMap("AppVersion")
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
         private String appVersion;
 
-        @NameInMap("AreaCode")
+        @com.aliyun.core.annotation.NameInMap("AreaCode")
         private String areaCode;
 
-        @NameInMap("AreaName")
+        @com.aliyun.core.annotation.NameInMap("AreaName")
         private String areaName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeviceInfos")
+        @com.aliyun.core.annotation.NameInMap("DeviceInfos")
         private java.util.List < DeviceInfos> deviceInfos;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InternalIps")
+        @com.aliyun.core.annotation.NameInMap("InternalIps")
         private java.util.List < InternalIps> internalIps;
 
-        @NameInMap("PublicIps")
+        @com.aliyun.core.annotation.NameInMap("PublicIps")
         private java.util.List < PublicIps> publicIps;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
         private ResourceInfos(Builder builder) {

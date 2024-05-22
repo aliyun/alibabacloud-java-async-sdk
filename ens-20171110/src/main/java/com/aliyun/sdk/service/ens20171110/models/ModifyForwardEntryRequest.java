@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyForwardEntryRequest</p>
  */
 public class ModifyForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ForwardEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("HealthCheckPort")
-    @Validation(maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer healthCheckPort;
 
     private ModifyForwardEntryRequest(Builder builder) {

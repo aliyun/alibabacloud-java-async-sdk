@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopySDGResponseBody</p>
  */
 public class CopySDGResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CopySDGResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CopySDGResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data object.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class CopySDGResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class CopySDGResponseBody extends TeaModel {
     } 
 
     public static class FailedItems extends TeaModel {
-        @NameInMap("DestinationRegionId")
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
         private String destinationRegionId;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
         private FailedItems(Builder builder) {
@@ -110,7 +109,7 @@ public class CopySDGResponseBody extends TeaModel {
             private String errorMessage; 
 
             /**
-             * DestinationRegionId.
+             * The ID of the destination node.
              */
             public Builder destinationRegionId(String destinationRegionId) {
                 this.destinationRegionId = destinationRegionId;
@@ -118,7 +117,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -133,13 +132,13 @@ public class CopySDGResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("FailedCount")
+        @com.aliyun.core.annotation.NameInMap("FailedCount")
         private Long failedCount;
 
-        @NameInMap("FailedItems")
+        @com.aliyun.core.annotation.NameInMap("FailedItems")
         private java.util.List < FailedItems> failedItems;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Long successCount;
 
         private Result(Builder builder) {
@@ -183,7 +182,7 @@ public class CopySDGResponseBody extends TeaModel {
             private Long successCount; 
 
             /**
-             * FailedCount.
+             * The number of failed nodes.
              */
             public Builder failedCount(Long failedCount) {
                 this.failedCount = failedCount;
@@ -191,7 +190,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * FailedItems.
+             * Details of failed nodes.
              */
             public Builder failedItems(java.util.List < FailedItems> failedItems) {
                 this.failedItems = failedItems;
@@ -199,7 +198,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * SuccessCount.
+             * The number of successful nodes.
              */
             public Builder successCount(Long successCount) {
                 this.successCount = successCount;
@@ -214,13 +213,13 @@ public class CopySDGResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private Result result;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private Data(Builder builder) {
@@ -264,7 +263,7 @@ public class CopySDGResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Message.
+             * The response message. Success is returned for a successful request.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -272,7 +271,7 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * Result.
+             * The execution result of the synchronization request.
              */
             public Builder result(Result result) {
                 this.result = result;
@@ -280,7 +279,11 @@ public class CopySDGResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether all tasks are successful. Valid values:
+             * <p>
+             * 
+             * *   **true**: All tasks are successful.
+             * *   **false**: Failed tasks exist.
              */
             public Builder success(Boolean success) {
                 this.success = success;

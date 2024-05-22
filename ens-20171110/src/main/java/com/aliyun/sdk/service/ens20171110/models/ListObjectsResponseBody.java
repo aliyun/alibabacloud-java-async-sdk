@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListObjectsResponseBody</p>
  */
 public class ListObjectsResponseBody extends TeaModel {
-    @NameInMap("BucketName")
+    @com.aliyun.core.annotation.NameInMap("BucketName")
     private String bucketName;
 
-    @NameInMap("CommonPrefixes")
+    @com.aliyun.core.annotation.NameInMap("CommonPrefixes")
     private java.util.List < String > commonPrefixes;
 
-    @NameInMap("Contents")
+    @com.aliyun.core.annotation.NameInMap("Contents")
     private java.util.List < Contents> contents;
 
-    @NameInMap("ContinuationToken")
+    @com.aliyun.core.annotation.NameInMap("ContinuationToken")
     private String continuationToken;
 
-    @NameInMap("Delimiter")
+    @com.aliyun.core.annotation.NameInMap("Delimiter")
     private String delimiter;
 
-    @NameInMap("EncodingType")
+    @com.aliyun.core.annotation.NameInMap("EncodingType")
     private String encodingType;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("KeyCount")
+    @com.aliyun.core.annotation.NameInMap("KeyCount")
     private Long keyCount;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("MaxKeys")
+    @com.aliyun.core.annotation.NameInMap("MaxKeys")
     private Long maxKeys;
 
-    @NameInMap("NextContinuationToken")
+    @com.aliyun.core.annotation.NameInMap("NextContinuationToken")
     private String nextContinuationToken;
 
-    @NameInMap("NextMarker")
+    @com.aliyun.core.annotation.NameInMap("NextMarker")
     private String nextMarker;
 
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListObjectsResponseBody(Builder builder) {
@@ -316,16 +315,16 @@ public class ListObjectsResponseBody extends TeaModel {
     } 
 
     public static class Contents extends TeaModel {
-        @NameInMap("ETag")
+        @com.aliyun.core.annotation.NameInMap("ETag")
         private String eTag;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private Contents(Builder builder) {

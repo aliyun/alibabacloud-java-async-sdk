@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnatTableEntriesResponseBody</p>
  */
 public class DescribeSnatTableEntriesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatTableEntries")
+    @com.aliyun.core.annotation.NameInMap("SnatTableEntries")
     private java.util.List < SnatTableEntries> snatTableEntries;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnatTableEntriesResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeSnatTableEntriesResponseBody extends TeaModel {
     } 
 
     public static class SnatTableEntries extends TeaModel {
-        @NameInMap("NatGatewayId")
+        @com.aliyun.core.annotation.NameInMap("NatGatewayId")
         private String natGatewayId;
 
-        @NameInMap("SnatEntryId")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryId")
         private String snatEntryId;
 
-        @NameInMap("SnatEntryName")
+        @com.aliyun.core.annotation.NameInMap("SnatEntryName")
         private String snatEntryName;
 
-        @NameInMap("SnatIp")
+        @com.aliyun.core.annotation.NameInMap("SnatIp")
         private String snatIp;
 
-        @NameInMap("SourceCIDR")
+        @com.aliyun.core.annotation.NameInMap("SourceCIDR")
         private String sourceCIDR;
 
-        @NameInMap("StandbySnatIp")
+        @com.aliyun.core.annotation.NameInMap("StandbySnatIp")
         private String standbySnatIp;
 
-        @NameInMap("StandbyStatus")
+        @com.aliyun.core.annotation.NameInMap("StandbyStatus")
         private String standbyStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SnatTableEntries(Builder builder) {

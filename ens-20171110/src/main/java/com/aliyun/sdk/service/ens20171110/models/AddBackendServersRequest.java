@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddBackendServersRequest</p>
  */
 public class AddBackendServersRequest extends Request {
-    @Query
-    @NameInMap("BackendServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < BackendServers> backendServers;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private AddBackendServersRequest(Builder builder) {
@@ -99,22 +98,22 @@ public class AddBackendServersRequest extends Request {
     } 
 
     public static class BackendServers extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
-        @Validation(maximum = 65535)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer weight;
 
         private BackendServers(Builder builder) {

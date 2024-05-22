@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private java.util.List < BackendServers> backendServers;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @NameInMap("ListenerPorts")
+    @com.aliyun.core.annotation.NameInMap("ListenerPorts")
     private java.util.List < String > listenerPorts;
 
-    @NameInMap("ListenerPortsAndProtocols")
+    @com.aliyun.core.annotation.NameInMap("ListenerPortsAndProtocols")
     private java.util.List < ListenerPortsAndProtocols> listenerPortsAndProtocols;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @NameInMap("LoadBalancerSpec")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
     private String loadBalancerSpec;
 
-    @NameInMap("LoadBalancerStatus")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
     private String loadBalancerStatus;
 
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private DescribeLoadBalancerAttributeResponseBody(Builder builder) {
@@ -380,19 +379,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     } 
 
     public static class BackendServers extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServers(Builder builder) {
@@ -501,19 +500,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPortsAndProtocols extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ForwardPort")
+        @com.aliyun.core.annotation.NameInMap("ForwardPort")
         private Integer forwardPort;
 
-        @NameInMap("ListenerForward")
+        @com.aliyun.core.annotation.NameInMap("ListenerForward")
         private String listenerForward;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
         private ListenerPortsAndProtocols(Builder builder) {

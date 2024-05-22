@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeviceInternetPortResponseBody</p>
  */
 public class GetDeviceInternetPortResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("NetworkInfo")
+    @com.aliyun.core.annotation.NameInMap("NetworkInfo")
     private java.util.List < NetworkInfo> networkInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDeviceInternetPortResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class GetDeviceInternetPortResponseBody extends TeaModel {
     } 
 
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPort")
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private String internalIp;
 
-        @NameInMap("InternalPort")
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
         private String internalPort;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NetworkInfo(Builder builder) {

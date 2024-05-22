@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMeasurementDataResponseBody</p>
  */
 public class DescribeMeasurementDataResponseBody extends TeaModel {
-    @NameInMap("MeasurementDatas")
+    @com.aliyun.core.annotation.NameInMap("MeasurementDatas")
     private MeasurementDatas measurementDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeasurementDataResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
     } 
 
     public static class BandWidthFeeData extends TeaModel {
-        @NameInMap("CostCode")
+        @com.aliyun.core.annotation.NameInMap("CostCode")
         private String costCode;
 
-        @NameInMap("CostName")
+        @com.aliyun.core.annotation.NameInMap("CostName")
         private String costName;
 
-        @NameInMap("CostVal")
+        @com.aliyun.core.annotation.NameInMap("CostVal")
         private Integer costVal;
 
         private BandWidthFeeData(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class BandWidthFeeDatas extends TeaModel {
-        @NameInMap("BandWidthFeeData")
+        @com.aliyun.core.annotation.NameInMap("BandWidthFeeData")
         private java.util.List < BandWidthFeeData> bandWidthFeeData;
 
         private BandWidthFeeDatas(Builder builder) {
@@ -194,13 +193,13 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class ResourceFeeData extends TeaModel {
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("Storage")
+        @com.aliyun.core.annotation.NameInMap("Storage")
         private Integer storage;
 
-        @NameInMap("Vcpu")
+        @com.aliyun.core.annotation.NameInMap("Vcpu")
         private Integer vcpu;
 
         private ResourceFeeData(Builder builder) {
@@ -275,16 +274,16 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class ResourceFeeDataDetail extends TeaModel {
-        @NameInMap("CostCode")
+        @com.aliyun.core.annotation.NameInMap("CostCode")
         private String costCode;
 
-        @NameInMap("CostName")
+        @com.aliyun.core.annotation.NameInMap("CostName")
         private String costName;
 
-        @NameInMap("CostVal")
+        @com.aliyun.core.annotation.NameInMap("CostVal")
         private Integer costVal;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ResourceFeeDataDetail(Builder builder) {
@@ -381,7 +380,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class ResourceFeeDataDetails extends TeaModel {
-        @NameInMap("ResourceFeeDataDetail")
+        @com.aliyun.core.annotation.NameInMap("ResourceFeeDataDetail")
         private java.util.List < ResourceFeeDataDetail> resourceFeeDataDetail;
 
         private ResourceFeeDataDetails(Builder builder) {
@@ -422,25 +421,25 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class MeasurementData extends TeaModel {
-        @NameInMap("BandWidthFeeDatas")
+        @com.aliyun.core.annotation.NameInMap("BandWidthFeeDatas")
         private BandWidthFeeDatas bandWidthFeeDatas;
 
-        @NameInMap("ChargeModel")
+        @com.aliyun.core.annotation.NameInMap("ChargeModel")
         private String chargeModel;
 
-        @NameInMap("CostCycle")
+        @com.aliyun.core.annotation.NameInMap("CostCycle")
         private String costCycle;
 
-        @NameInMap("CostEndTime")
+        @com.aliyun.core.annotation.NameInMap("CostEndTime")
         private String costEndTime;
 
-        @NameInMap("CostStartTime")
+        @com.aliyun.core.annotation.NameInMap("CostStartTime")
         private String costStartTime;
 
-        @NameInMap("ResourceFeeData")
+        @com.aliyun.core.annotation.NameInMap("ResourceFeeData")
         private ResourceFeeData resourceFeeData;
 
-        @NameInMap("ResourceFeeDataDetails")
+        @com.aliyun.core.annotation.NameInMap("ResourceFeeDataDetails")
         private ResourceFeeDataDetails resourceFeeDataDetails;
 
         private MeasurementData(Builder builder) {
@@ -587,7 +586,7 @@ public class DescribeMeasurementDataResponseBody extends TeaModel {
 
     }
     public static class MeasurementDatas extends TeaModel {
-        @NameInMap("MeasurementData")
+        @com.aliyun.core.annotation.NameInMap("MeasurementData")
         private java.util.List < MeasurementData> measurementData;
 
         private MeasurementDatas(Builder builder) {

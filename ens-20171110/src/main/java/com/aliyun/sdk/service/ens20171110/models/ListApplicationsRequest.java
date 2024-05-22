@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Query
-    @NameInMap("AppVersions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
     private String appVersions;
 
-    @Query
-    @NameInMap("ClusterNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterNames")
     private String clusterNames;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("MaxDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxDate")
     private String maxDate;
 
-    @Query
-    @NameInMap("MinDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinDate")
     private String minDate;
 
-    @Query
-    @NameInMap("OutAppInfoParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutAppInfoParams")
     private String outAppInfoParams;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private ListApplicationsRequest(Builder builder) {

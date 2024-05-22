@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsRouteEntryListRequest</p>
  */
 public class DescribeEnsRouteEntryListRequest extends Request {
-    @Query
-    @NameInMap("DestinationCidrBlock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
     private String destinationCidrBlock;
 
-    @Query
-    @NameInMap("NextHopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopId")
     private String nextHopId;
 
-    @Query
-    @NameInMap("NextHopType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextHopType")
     private String nextHopType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RouteEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryId")
     private String routeEntryId;
 
-    @Query
-    @NameInMap("RouteEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryName")
     private String routeEntryName;
 
-    @Query
-    @NameInMap("RouteEntryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteEntryType")
     private String routeEntryType;
 
-    @Query
-    @NameInMap("RouteTableId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RouteTableId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
 
     private DescribeEnsRouteEntryListRequest(Builder builder) {

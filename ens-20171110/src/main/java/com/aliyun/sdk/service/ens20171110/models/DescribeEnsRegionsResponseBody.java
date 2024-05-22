@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsRegionsResponseBody</p>
  */
 public class DescribeEnsRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EnsRegions")
+    @com.aliyun.core.annotation.NameInMap("EnsRegions")
     private EnsRegions ensRegions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsRegionsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
     } 
 
     public static class EnsRegionsEnsRegions extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private EnsRegionsEnsRegions(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeEnsRegionsResponseBody extends TeaModel {
 
     }
     public static class EnsRegions extends TeaModel {
-        @NameInMap("EnsRegions")
+        @com.aliyun.core.annotation.NameInMap("EnsRegions")
         private java.util.List < EnsRegionsEnsRegions> ensRegions;
 
         private EnsRegions(Builder builder) {

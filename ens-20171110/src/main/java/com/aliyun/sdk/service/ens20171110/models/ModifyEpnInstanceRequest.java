@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyEpnInstanceRequest</p>
  */
 public class ModifyEpnInstanceRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String EPNInstanceId;
 
-    @Query
-    @NameInMap("EPNInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
     private String EPNInstanceName;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
     private Integer internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("NetworkingModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkingModel")
     private String networkingModel;
 
     private ModifyEpnInstanceRequest(Builder builder) {

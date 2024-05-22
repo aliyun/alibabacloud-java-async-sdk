@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEnsSaleControlRequest</p>
  */
 public class UpdateEnsSaleControlRequest extends Request {
-    @Query
-    @NameInMap("AliUidAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUidAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliUidAccount;
 
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("SaleControls")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleControls")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SaleControls> saleControls;
 
     private UpdateEnsSaleControlRequest(Builder builder) {
@@ -120,10 +119,10 @@ public class UpdateEnsSaleControlRequest extends Request {
     } 
 
     public static class ConditionControls extends TeaModel {
-        @NameInMap("ConditionControlModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
         private String conditionControlModuleCode;
 
-        @NameInMap("ConditionControlModuleValue")
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleValue")
         private String conditionControlModuleValue;
 
         private ConditionControls(Builder builder) {
@@ -181,13 +180,13 @@ public class UpdateEnsSaleControlRequest extends Request {
 
     }
     public static class ModuleValue extends TeaModel {
-        @NameInMap("ModuleMaxValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMaxValue")
         private String moduleMaxValue;
 
-        @NameInMap("ModuleMinValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleMinValue")
         private String moduleMinValue;
 
-        @NameInMap("ModuleValue")
+        @com.aliyun.core.annotation.NameInMap("ModuleValue")
         private java.util.List < String > moduleValue;
 
         private ModuleValue(Builder builder) {
@@ -262,26 +261,26 @@ public class UpdateEnsSaleControlRequest extends Request {
 
     }
     public static class SaleControls extends TeaModel {
-        @NameInMap("ConditionControls")
+        @com.aliyun.core.annotation.NameInMap("ConditionControls")
         private java.util.List < ConditionControls> conditionControls;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("ModuleValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ModuleValue moduleValue;
 
-        @NameInMap("Operator")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Operator")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String operator;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
         private SaleControls(Builder builder) {

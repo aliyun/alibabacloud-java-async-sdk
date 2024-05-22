@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyPairResponseBody</p>
  */
 public class CreateKeyPairResponseBody extends TeaModel {
-    @NameInMap("KeyPairFingerPrint")
+    @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
     private String keyPairFingerPrint;
 
-    @NameInMap("KeyPairId")
+    @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @NameInMap("PrivateKeyBody")
+    @com.aliyun.core.annotation.NameInMap("PrivateKeyBody")
     private String privateKeyBody;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateKeyPairResponseBody(Builder builder) {
@@ -118,7 +117,7 @@ public class CreateKeyPairResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

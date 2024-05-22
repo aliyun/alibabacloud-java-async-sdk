@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerUDPListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
-    @NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
     private Integer backendServerPort;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EipTransmit")
+    @com.aliyun.core.annotation.NameInMap("EipTransmit")
     private String eipTransmit;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckConnectTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
     private Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckExp")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
     private String healthCheckExp;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckReq")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
     private String healthCheckReq;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private Integer listenerPort;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     private DescribeLoadBalancerUDPListenerAttributeResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsEipAddressesRequest</p>
  */
 public class DescribeEnsEipAddressesRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
     private String allocationId;
 
-    @Query
-    @NameInMap("AssociatedInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
     private String associatedInstanceId;
 
-    @Query
-    @NameInMap("AssociatedInstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssociatedInstanceType")
     private String associatedInstanceType;
 
-    @Query
-    @NameInMap("EipAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipAddress")
     private String eipAddress;
 
-    @Query
-    @NameInMap("EipName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EipName")
     private String eipName;
 
-    @Query
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Standby")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Standby")
     private String standby;
 
     private DescribeEnsEipAddressesRequest(Builder builder) {

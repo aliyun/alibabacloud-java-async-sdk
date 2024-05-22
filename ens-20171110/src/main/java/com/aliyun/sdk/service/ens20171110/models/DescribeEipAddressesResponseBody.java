@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEipAddressesResponseBody</p>
  */
 public class DescribeEipAddressesResponseBody extends TeaModel {
-    @NameInMap("EipAddresses")
+    @com.aliyun.core.annotation.NameInMap("EipAddresses")
     private EipAddresses eipAddresses;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEipAddressesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
     } 
 
     public static class EipAddress extends TeaModel {
-        @NameInMap("Eip")
+        @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
 
-        @NameInMap("InstanceIdInternetIp")
+        @com.aliyun.core.annotation.NameInMap("InstanceIdInternetIp")
         private String instanceIdInternetIp;
 
         private EipAddress(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeEipAddressesResponseBody extends TeaModel {
 
     }
     public static class EipAddresses extends TeaModel {
-        @NameInMap("EipAddress")
+        @com.aliyun.core.annotation.NameInMap("EipAddress")
         private java.util.List < EipAddress> eipAddress;
 
         private EipAddresses(Builder builder) {

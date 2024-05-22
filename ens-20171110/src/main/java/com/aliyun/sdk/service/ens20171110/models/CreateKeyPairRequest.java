@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateKeyPairRequest</p>
  */
 public class CreateKeyPairRequest extends Request {
-    @Query
-    @NameInMap("KeyPairName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyPairName;
 
     private CreateKeyPairRequest(Builder builder) {

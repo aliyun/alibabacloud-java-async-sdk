@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateForwardEntryRequest</p>
  */
 public class CreateForwardEntryRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalIp;
 
-    @Query
-    @NameInMap("ExternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String externalPort;
 
-    @Query
-    @NameInMap("ForwardEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("HealthCheckPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckPort;
 
-    @Query
-    @NameInMap("InternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalPort;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("StandbyExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyExternalIp")
     private String standbyExternalIp;
 
     private CreateForwardEntryRequest(Builder builder) {

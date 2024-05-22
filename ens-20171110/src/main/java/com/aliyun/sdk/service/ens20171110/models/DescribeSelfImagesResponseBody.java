@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSelfImagesResponseBody</p>
  */
 public class DescribeSelfImagesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSelfImagesResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("ComputeType")
+        @com.aliyun.core.annotation.NameInMap("ComputeType")
         private String computeType;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("ImageSize")
+        @com.aliyun.core.annotation.NameInMap("ImageSize")
         private String imageSize;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OsVersion")
+        @com.aliyun.core.annotation.NameInMap("OsVersion")
         private String osVersion;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Image(Builder builder) {
@@ -379,7 +378,7 @@ public class DescribeSelfImagesResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {

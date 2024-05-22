@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeElbAvailableResourceInfoResponseBody</p>
  */
 public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("ElbAvailableResourceInfo")
+    @com.aliyun.core.annotation.NameInMap("ElbAvailableResourceInfo")
     private java.util.List < ElbAvailableResourceInfo> elbAvailableResourceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeElbAvailableResourceInfoResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     } 
 
     public static class ElbAvailableResourceInfo extends TeaModel {
-        @NameInMap("Area")
+        @com.aliyun.core.annotation.NameInMap("Area")
         private String area;
 
-        @NameInMap("CanBuyCount")
+        @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private String canBuyCount;
 
-        @NameInMap("EnName")
+        @com.aliyun.core.annotation.NameInMap("EnName")
         private String enName;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("LoadBalancerSpec")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
         private java.util.List < String > loadBalancerSpec;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
         private ElbAvailableResourceInfo(Builder builder) {

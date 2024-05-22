@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataDistResultResponseBody</p>
  */
 public class DescribeDataDistResultResponseBody extends TeaModel {
-    @NameInMap("DistResults")
+    @com.aliyun.core.annotation.NameInMap("DistResults")
     private DistResults distResults;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataDistResultResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
     } 
 
     public static class Instance extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StatusDescrip")
+        @com.aliyun.core.annotation.NameInMap("StatusDescrip")
         private String statusDescrip;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Instance(Builder builder) {
@@ -233,7 +232,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {
@@ -274,13 +273,13 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     }
     public static class StatusStat extends TeaModel {
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private Instances instances;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private StatusStat(Builder builder) {
@@ -362,7 +361,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     }
     public static class StatusStats extends TeaModel {
-        @NameInMap("StatusStat")
+        @com.aliyun.core.annotation.NameInMap("StatusStat")
         private java.util.List < StatusStat> statusStat;
 
         private StatusStats(Builder builder) {
@@ -403,13 +402,13 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     }
     public static class DistResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StatusStats")
+        @com.aliyun.core.annotation.NameInMap("StatusStats")
         private StatusStats statusStats;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private DistResult(Builder builder) {
@@ -484,7 +483,7 @@ public class DescribeDataDistResultResponseBody extends TeaModel {
 
     }
     public static class DistResults extends TeaModel {
-        @NameInMap("DistResult")
+        @com.aliyun.core.annotation.NameInMap("DistResult")
         private java.util.List < DistResult> distResult;
 
         private DistResults(Builder builder) {

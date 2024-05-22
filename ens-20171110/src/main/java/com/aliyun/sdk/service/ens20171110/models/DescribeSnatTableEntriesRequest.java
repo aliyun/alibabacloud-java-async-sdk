@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnatTableEntriesRequest</p>
  */
 public class DescribeSnatTableEntriesRequest extends Request {
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
     private String snatEntryId;
 
-    @Query
-    @NameInMap("SnatEntryName")
-    @Validation(maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryName")
+    @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String snatEntryName;
 
-    @Query
-    @NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
     private String snatIp;
 
-    @Query
-    @NameInMap("SourceCIDR")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCIDR")
     private String sourceCIDR;
 
     private DescribeSnatTableEntriesRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudDiskAvailableResourceInfoResponseBody</p>
  */
 public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResources")
+    @com.aliyun.core.annotation.NameInMap("SupportResources")
     private SupportResources supportResources;
 
     private DescribeCloudDiskAvailableResourceInfoResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
     } 
 
     public static class SupportResource extends TeaModel {
-        @NameInMap("CanBuyCount")
+        @com.aliyun.core.annotation.NameInMap("CanBuyCount")
         private Long canBuyCount;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DefaultDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DefaultDiskSize")
         private Long defaultDiskSize;
 
-        @NameInMap("DiskMaxSize")
+        @com.aliyun.core.annotation.NameInMap("DiskMaxSize")
         private Long diskMaxSize;
 
-        @NameInMap("DiskMinSize")
+        @com.aliyun.core.annotation.NameInMap("DiskMinSize")
         private Long diskMinSize;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("EnsRegionName")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionName")
         private String ensRegionName;
 
         private SupportResource(Builder builder) {
@@ -239,7 +238,7 @@ public class DescribeCloudDiskAvailableResourceInfoResponseBody extends TeaModel
 
     }
     public static class SupportResources extends TeaModel {
-        @NameInMap("SupportResource")
+        @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;
 
         private SupportResources(Builder builder) {

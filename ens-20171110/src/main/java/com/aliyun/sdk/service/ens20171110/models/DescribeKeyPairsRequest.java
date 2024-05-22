@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyPairsRequest</p>
  */
 public class DescribeKeyPairsRequest extends Request {
-    @Query
-    @NameInMap("KeyPairId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
     private DescribeKeyPairsRequest(Builder builder) {
@@ -96,7 +95,7 @@ public class DescribeKeyPairsRequest extends Request {
         } 
 
         /**
-         * KeyPairId.
+         * The ID of the key pair.
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);

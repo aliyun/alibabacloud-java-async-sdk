@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsNetLevelResponseBody</p>
  */
 public class DescribeEnsNetLevelResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EnsNetLevels")
+    @com.aliyun.core.annotation.NameInMap("EnsNetLevels")
     private EnsNetLevels ensNetLevels;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsNetLevelResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
     } 
 
     public static class EnsNetLevel extends TeaModel {
-        @NameInMap("EnsNetLevelCode")
+        @com.aliyun.core.annotation.NameInMap("EnsNetLevelCode")
         private String ensNetLevelCode;
 
         private EnsNetLevel(Builder builder) {
@@ -138,7 +137,7 @@ public class DescribeEnsNetLevelResponseBody extends TeaModel {
 
     }
     public static class EnsNetLevels extends TeaModel {
-        @NameInMap("EnsNetLevel")
+        @com.aliyun.core.annotation.NameInMap("EnsNetLevel")
         private java.util.List < EnsNetLevel> ensNetLevel;
 
         private EnsNetLevels(Builder builder) {

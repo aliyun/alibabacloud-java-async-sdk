@@ -1,34 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RetryWorkflowResponse} extends {@link TeaModel}
+ * {@link RemoveSDGResponse} extends {@link TeaModel}
  *
- * <p>RetryWorkflowResponse</p>
+ * <p>RemoveSDGResponse</p>
  */
-public class RetryWorkflowResponse extends Response {
-    @NameInMap("headers")
+public class RemoveSDGResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private RetryWorkflowResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private RemoveSDGResponseBody body;
 
-    private RetryWorkflowResponse(BuilderImpl builder) {
+    private RemoveSDGResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static RetryWorkflowResponse create() {
+    public static RemoveSDGResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +53,35 @@ public class RetryWorkflowResponse extends Response {
     /**
      * @return body
      */
-    public RetryWorkflowResponseBody getBody() {
+    public RemoveSDGResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<RetryWorkflowResponse, Builder> {
+    public interface Builder extends Response.Builder<RemoveSDGResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(RetryWorkflowResponseBody body);
+        Builder body(RemoveSDGResponseBody body);
 
         @Override
-        RetryWorkflowResponse build();
+        RemoveSDGResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<RetryWorkflowResponse, Builder>
+            extends Response.BuilderImpl<RemoveSDGResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private RetryWorkflowResponseBody body; 
+        private RemoveSDGResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(RetryWorkflowResponse response) {
+        private BuilderImpl(RemoveSDGResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +110,14 @@ public class RetryWorkflowResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(RetryWorkflowResponseBody body) {
+        public Builder body(RemoveSDGResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public RetryWorkflowResponse build() {
-            return new RetryWorkflowResponse(this);
+        public RemoveSDGResponse build() {
+            return new RemoveSDGResponse(this);
         } 
 
     } 

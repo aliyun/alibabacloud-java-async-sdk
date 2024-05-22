@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RescaleDeviceServiceRequest</p>
  */
 public class RescaleDeviceServiceRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("IpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
     private Integer ipType;
 
-    @Query
-    @NameInMap("RescaleLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleLevel;
 
-    @Query
-    @NameInMap("RescaleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RescaleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rescaleType;
 
-    @Body
-    @NameInMap("ResourceInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceInfo")
     private String resourceInfo;
 
-    @Body
-    @NameInMap("ResourceSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceSelector;
 
-    @Query
-    @NameInMap("ResourceSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSpec")
     private String resourceSpec;
 
-    @Query
-    @NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
     private String serviceId;
 
-    @Query
-    @NameInMap("Timeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeout")
     private Long timeout;
 
     private RescaleDeviceServiceRequest(Builder builder) {

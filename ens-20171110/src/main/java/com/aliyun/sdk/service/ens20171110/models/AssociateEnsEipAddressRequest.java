@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateEnsEipAddressRequest</p>
  */
 public class AssociateEnsEipAddressRequest extends Request {
-    @Query
-    @NameInMap("AllocationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String allocationId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @Query
-    @NameInMap("Standby")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Standby")
     private Boolean standby;
 
     private AssociateEnsEipAddressRequest(Builder builder) {

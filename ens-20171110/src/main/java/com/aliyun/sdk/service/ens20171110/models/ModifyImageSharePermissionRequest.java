@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyImageSharePermissionRequest</p>
  */
 public class ModifyImageSharePermissionRequest extends Request {
-    @Query
-    @NameInMap("AddAccounts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddAccounts")
     private String addAccounts;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("RemoveAccounts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveAccounts")
     private String removeAccounts;
 
     private ModifyImageSharePermissionRequest(Builder builder) {

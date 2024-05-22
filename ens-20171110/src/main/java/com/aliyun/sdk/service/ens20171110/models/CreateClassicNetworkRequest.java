@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClassicNetworkRequest</p>
  */
 public class CreateClassicNetworkRequest extends Request {
-    @Query
-    @NameInMap("CidrBlock")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cidrBlock;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("NetworkName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkName")
     private String networkName;
 
     private CreateClassicNetworkRequest(Builder builder) {
@@ -112,10 +111,7 @@ public class CreateClassicNetworkRequest extends Request {
         }
 
         /**
-         * The description of the listener. The description is **1** to **80** characters in length.
-         * <p>
-         * 
-         * >  The value cannot start with `http://` or `https://`.
+         * The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http:// or https://.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);

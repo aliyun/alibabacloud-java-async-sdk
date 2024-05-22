@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BucketInfo</p>
  */
 public class BucketInfo extends TeaModel {
-    @NameInMap("BucketAcl")
+    @com.aliyun.core.annotation.NameInMap("BucketAcl")
     private String bucketAcl;
 
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @NameInMap("Comment")
+    @com.aliyun.core.annotation.NameInMap("Comment")
     private String comment;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DataRedundancyType")
+    @com.aliyun.core.annotation.NameInMap("DataRedundancyType")
     private String dataRedundancyType;
 
-    @NameInMap("DispatcherType")
+    @com.aliyun.core.annotation.NameInMap("DispatcherType")
     private String dispatcherType;
 
-    @NameInMap("Endpoint")
+    @com.aliyun.core.annotation.NameInMap("Endpoint")
     private String endpoint;
 
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @NameInMap("ModifyTime")
+    @com.aliyun.core.annotation.NameInMap("ModifyTime")
     private String modifyTime;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("StorageClass")
+    @com.aliyun.core.annotation.NameInMap("StorageClass")
     private String storageClass;
 
     private BucketInfo(Builder builder) {

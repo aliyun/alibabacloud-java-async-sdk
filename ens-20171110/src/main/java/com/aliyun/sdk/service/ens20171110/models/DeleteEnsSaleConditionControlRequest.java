@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEnsSaleConditionControlRequest</p>
  */
 public class DeleteEnsSaleConditionControlRequest extends Request {
-    @Query
-    @NameInMap("AliUidAccount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUidAccount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aliUidAccount;
 
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("SaleControls")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SaleControls")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SaleControls> saleControls;
 
     private DeleteEnsSaleConditionControlRequest(Builder builder) {
@@ -120,12 +119,12 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
     } 
 
     public static class ConditionControls extends TeaModel {
-        @NameInMap("ConditionControlModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String conditionControlModuleCode;
 
-        @NameInMap("ConditionControlModuleValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConditionControlModuleValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String conditionControlModuleValue;
 
         private ConditionControls(Builder builder) {
@@ -183,16 +182,16 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
 
     }
     public static class SaleControls extends TeaModel {
-        @NameInMap("ConditionControls")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConditionControls")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < ConditionControls> conditionControls;
 
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
         private SaleControls(Builder builder) {

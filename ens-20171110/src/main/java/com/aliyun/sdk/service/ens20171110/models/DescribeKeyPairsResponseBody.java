@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeKeyPairsResponseBody</p>
  */
 public class DescribeKeyPairsResponseBody extends TeaModel {
-    @NameInMap("KeyPairs")
+    @com.aliyun.core.annotation.NameInMap("KeyPairs")
     private KeyPairs keyPairs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeKeyPairsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
     } 
 
     public static class KeyPair extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("KeyPairFingerPrint")
+        @com.aliyun.core.annotation.NameInMap("KeyPairFingerPrint")
         private String keyPairFingerPrint;
 
-        @NameInMap("KeyPairId")
+        @com.aliyun.core.annotation.NameInMap("KeyPairId")
         private String keyPairId;
 
-        @NameInMap("KeyPairName")
+        @com.aliyun.core.annotation.NameInMap("KeyPairName")
         private String keyPairName;
 
         private KeyPair(Builder builder) {
@@ -194,7 +193,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             private String keyPairName; 
 
             /**
-             * The time when the key pair was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The time when the key pair was created. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -210,7 +209,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
             }
 
             /**
-             * KeyPairId.
+             * The ID of the key pair.
              */
             public Builder keyPairId(String keyPairId) {
                 this.keyPairId = keyPairId;
@@ -233,7 +232,7 @@ public class DescribeKeyPairsResponseBody extends TeaModel {
 
     }
     public static class KeyPairs extends TeaModel {
-        @NameInMap("KeyPair")
+        @com.aliyun.core.annotation.NameInMap("KeyPair")
         private java.util.List < KeyPair> keyPair;
 
         private KeyPairs(Builder builder) {

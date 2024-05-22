@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSecurityGroupAttributeRequest</p>
  */
 public class DescribeSecurityGroupAttributeRequest extends Request {
-    @Query
-    @NameInMap("SecurityGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityGroupId;
 
     private DescribeSecurityGroupAttributeRequest(Builder builder) {

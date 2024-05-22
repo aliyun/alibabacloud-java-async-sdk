@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,108 +11,108 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoadBalancerHTTPSListenerRequest</p>
  */
 public class CreateLoadBalancerHTTPSListenerRequest extends Request {
-    @Query
-    @NameInMap("Cookie")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
-    @Query
-    @NameInMap("CookieTimeout")
-    @Validation(maximum = 86400, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
     private Integer cookieTimeout;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 80, minLength = 1)
     private String description;
 
-    @Query
-    @NameInMap("ForwardPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer forwardPort;
 
-    @Query
-    @NameInMap("HealthCheck")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheck;
 
-    @Query
-    @NameInMap("HealthCheckConnectPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer healthCheckConnectPort;
 
-    @Query
-    @NameInMap("HealthCheckDomain")
-    @Validation(maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
+    @com.aliyun.core.annotation.Validation(maxLength = 80, minLength = 1)
     private String healthCheckDomain;
 
-    @Query
-    @NameInMap("HealthCheckHttpCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
     private String healthCheckHttpCode;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @Query
-    @NameInMap("HealthCheckTimeout")
-    @Validation(maximum = 300, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
     private Integer healthCheckTimeout;
 
-    @Query
-    @NameInMap("HealthCheckURI")
-    @Validation(maxLength = 80, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
+    @com.aliyun.core.annotation.Validation(maxLength = 80, minLength = 1)
     private String healthCheckURI;
 
-    @Query
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("IdleTimeout")
-    @Validation(maximum = 60, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 60, minimum = 1)
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("ListenerForward")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerForward")
     private String listenerForward;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("RequestTimeout")
-    @Validation(maximum = 180, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 180, minimum = 1)
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @Query
-    @NameInMap("ServerCertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverCertificateId;
 
-    @Query
-    @NameInMap("StickySessionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StickySessionType")
     private String stickySessionType;
 
-    @Query
-    @NameInMap("UnhealthyThreshold")
-    @Validation(maximum = 10, minimum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer unhealthyThreshold;
 
     private CreateLoadBalancerHTTPSListenerRequest(Builder builder) {

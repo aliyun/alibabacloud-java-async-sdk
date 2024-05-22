@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetBackendServersRequest</p>
  */
 public class SetBackendServersRequest extends Request {
-    @Query
-    @NameInMap("BackendServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < BackendServers> backendServers;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private SetBackendServersRequest(Builder builder) {
@@ -70,10 +69,7 @@ public class SetBackendServersRequest extends Request {
         } 
 
         /**
-         * The list of backend servers that you want to add. You can add at most 20 backend servers.
-         * <p>
-         * 
-         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+         * The list of backend servers that you want to add. You can modify at most 20 backend servers.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -99,15 +95,15 @@ public class SetBackendServersRequest extends Request {
     } 
 
     public static class BackendServers extends TeaModel {
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(required = true, maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 100)
         private Integer weight;
 
         private BackendServers(Builder builder) {
@@ -151,7 +147,7 @@ public class SetBackendServersRequest extends Request {
             private Integer weight; 
 
             /**
-             * The ID of the instance that is used as the backend server.
+             * The ID of the instance that you want to use as the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -163,7 +159,7 @@ public class SetBackendServersRequest extends Request {
              * <p>
              * 
              * *   **ens**: ENS instance.
-             * *   **eni**: ENI.
+             * *   **eni**: Elastic Network Interface (ENI) instance.
              */
             public Builder type(String type) {
                 this.type = type;

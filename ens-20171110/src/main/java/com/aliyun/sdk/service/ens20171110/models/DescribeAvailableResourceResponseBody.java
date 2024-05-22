@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceResponseBody</p>
  */
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SupportResources")
+    @com.aliyun.core.annotation.NameInMap("SupportResources")
     private SupportResources supportResources;
 
     private DescribeAvailableResourceResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
         private Image(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {
@@ -214,19 +213,19 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportResource extends TeaModel {
-        @NameInMap("DataDiskSize")
+        @com.aliyun.core.annotation.NameInMap("DataDiskSize")
         private String dataDiskSize;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("SupportResourcesCount")
+        @com.aliyun.core.annotation.NameInMap("SupportResourcesCount")
         private String supportResourcesCount;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private String systemDiskSize;
 
         private SupportResource(Builder builder) {
@@ -335,7 +334,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportResources extends TeaModel {
-        @NameInMap("SupportResource")
+        @com.aliyun.core.annotation.NameInMap("SupportResource")
         private java.util.List < SupportResource> supportResource;
 
         private SupportResources(Builder builder) {

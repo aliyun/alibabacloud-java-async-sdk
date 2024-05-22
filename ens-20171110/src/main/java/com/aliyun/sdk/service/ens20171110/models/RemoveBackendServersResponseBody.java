@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveBackendServersResponseBody</p>
  */
 public class RemoveBackendServersResponseBody extends TeaModel {
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RemoveBackendServersResponseBody(Builder builder) {
@@ -50,10 +49,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The list of backend servers that you want to add. You can add at most 20 backend servers.
-         * <p>
-         * 
-         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+         * The list of backend servers that you want to add to the SLB instance.
          */
         public Builder backendServers(BackendServers backendServers) {
             this.backendServers = backendServers;
@@ -75,19 +71,19 @@ public class RemoveBackendServersResponseBody extends TeaModel {
     } 
 
     public static class BackendServer extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServer(Builder builder) {
@@ -165,7 +161,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance that is used as the backend server.
+             * The instance ID of the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -176,8 +172,8 @@ public class RemoveBackendServersResponseBody extends TeaModel {
              * The type of the backend server. Valid values:
              * <p>
              * 
-             * *   **ens**: ENS instance.
-             * *   **eni**: ENI.
+             * *   **ens**: an ENS instance.
+             * *   **eni**: an ENI.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -185,7 +181,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
+             * The weight of the backend server.
              * <p>
              * 
              * >  The value 0 indicates that requests are not forwarded to the backend server.
@@ -203,7 +199,7 @@ public class RemoveBackendServersResponseBody extends TeaModel {
 
     }
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;
 
         private BackendServers(Builder builder) {

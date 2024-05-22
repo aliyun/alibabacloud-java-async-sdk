@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReinitInstanceRequest</p>
  */
 public class ReinitInstanceRequest extends Request {
-    @Body
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
     private ReinitInstanceRequest(Builder builder) {
@@ -84,7 +83,7 @@ public class ReinitInstanceRequest extends Request {
         } 
 
         /**
-         * ImageId.
+         * The ID of the image file that is used to reset the instance.
          */
         public Builder imageId(String imageId) {
             this.putBodyParameter("ImageId", imageId);
@@ -93,7 +92,7 @@ public class ReinitInstanceRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -102,7 +101,10 @@ public class ReinitInstanceRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the instance.
+         * <p>
+         * 
+         * It must be 8 to 30 characters in length. It must include at least three of the following characters types: uppercase letters, lowercase letters, digits, and special characters. The following special character are supported: `()\"~! @#$%^&*-_+={}[]:;\"<>,.?/`
          */
         public Builder password(String password) {
             this.putBodyParameter("Password", password);

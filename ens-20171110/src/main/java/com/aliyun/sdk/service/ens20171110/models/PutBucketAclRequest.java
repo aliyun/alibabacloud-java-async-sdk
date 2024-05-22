@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutBucketAclRequest</p>
  */
 public class PutBucketAclRequest extends Request {
-    @Query
-    @NameInMap("BucketAcl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketAcl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketAcl;
 
-    @Query
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
     private PutBucketAclRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class PutBucketAclRequest extends Request {
         } 
 
         /**
-         * The ACL of the bucket.
+         * The access control list (ACL) of the bucket.
          * <p>
          * 
          * *   **public-read-write**

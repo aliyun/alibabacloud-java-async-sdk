@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceChargeTypeResponseBody</p>
  */
 public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private java.util.List < String > instanceIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyInstanceChargeTypeResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceIds.
+         * The IDs of the instances.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.instanceIds = instanceIds;
@@ -70,7 +69,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * OrderId.
+         * The ID of the order.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;
@@ -78,7 +77,7 @@ public class ModifyInstanceChargeTypeResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

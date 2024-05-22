@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyInstanceChargeTypeRequest</p>
  */
 public class ModifyInstanceChargeTypeRequest extends Request {
-    @Query
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("IncludeDataDisks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncludeDataDisks")
     private Boolean includeDataDisks;
 
-    @Query
-    @NameInMap("InstanceChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > instanceIds;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private String period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
     private ModifyInstanceChargeTypeRequest(Builder builder) {
@@ -140,7 +139,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Specifies whether to enable auto-payment when you change the billing method from pay-as-you-go to subscription. Valid values:
+         * <p>
+         * 
+         * true: enables auto-payment. Make sure that your account has sufficient balance.
+         * 
+         * false (default): does not enable auto-payment. The order is generated but not paid.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -149,7 +153,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * AutoRenew.
+         * Specifies whether to enable auto-renewal when you change the billing method from pay-as-you-go to subscription. Valid values:
+         * <p>
+         * 
+         * true
+         * 
+         * false
          */
         public Builder autoRenew(Boolean autoRenew) {
             this.putQueryParameter("AutoRenew", autoRenew);
@@ -158,7 +167,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * IncludeDataDisks.
+         * Specifies whether to change the billing method of all data disks that are created with the instance to subscription when you change the billing method of the instance from pay-as-you-go to subscription. Valid values:
+         * <p>
+         * 
+         * true
+         * 
+         * false (default)
          */
         public Builder includeDataDisks(Boolean includeDataDisks) {
             this.putQueryParameter("IncludeDataDisks", includeDataDisks);
@@ -167,7 +181,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceChargeType.
+         * The new billing method. Valid values:
+         * <p>
+         * 
+         * PrePaid
+         * 
+         * PostPaid (default)
          */
         public Builder instanceChargeType(String instanceChargeType) {
             this.putQueryParameter("InstanceChargeType", instanceChargeType);
@@ -176,7 +195,7 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the instances.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             String instanceIdsShrink = shrink(instanceIds, "InstanceIds", "json");
@@ -186,7 +205,12 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * Period.
+         * The subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Valid values:
+         * <p>
+         * 
+         * If the PeriodUnit parameter is set to Day, Period can only be set to 3.
+         * 
+         * If PeriodUnit is Month, Period can be set to 1 to 9 or 12.
          */
         public Builder period(String period) {
             this.putQueryParameter("Period", period);
@@ -195,7 +219,18 @@ public class ModifyInstanceChargeTypeRequest extends Request {
         }
 
         /**
-         * PeriodUnit.
+         * The unit of the subscription duration. This parameter is required if you set the InstanceChargeType parameter to PrePaid. Examples:
+         * <p>
+         * 
+         * Month
+         * 
+         * Day
+         * 
+         * Valid values:
+         * 
+         * *   Year
+         * *   Month
+         * *   Day
          */
         public Builder periodUnit(String periodUnit) {
             this.putQueryParameter("PeriodUnit", periodUnit);

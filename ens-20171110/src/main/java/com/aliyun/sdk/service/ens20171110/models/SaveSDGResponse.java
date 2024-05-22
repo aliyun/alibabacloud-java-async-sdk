@@ -1,34 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeWorkflowResponse} extends {@link TeaModel}
+ * {@link SaveSDGResponse} extends {@link TeaModel}
  *
- * <p>DescribeWorkflowResponse</p>
+ * <p>SaveSDGResponse</p>
  */
-public class DescribeWorkflowResponse extends Response {
-    @NameInMap("headers")
+public class SaveSDGResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    private DescribeWorkflowResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private SaveSDGResponseBody body;
 
-    private DescribeWorkflowResponse(BuilderImpl builder) {
+    private SaveSDGResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeWorkflowResponse create() {
+    public static SaveSDGResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -54,35 +53,35 @@ public class DescribeWorkflowResponse extends Response {
     /**
      * @return body
      */
-    public DescribeWorkflowResponseBody getBody() {
+    public SaveSDGResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeWorkflowResponse, Builder> {
+    public interface Builder extends Response.Builder<SaveSDGResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeWorkflowResponseBody body);
+        Builder body(SaveSDGResponseBody body);
 
         @Override
-        DescribeWorkflowResponse build();
+        SaveSDGResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeWorkflowResponse, Builder>
+            extends Response.BuilderImpl<SaveSDGResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeWorkflowResponseBody body; 
+        private SaveSDGResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeWorkflowResponse response) {
+        private BuilderImpl(SaveSDGResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -111,14 +110,14 @@ public class DescribeWorkflowResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeWorkflowResponseBody body) {
+        public Builder body(SaveSDGResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeWorkflowResponse build() {
-            return new DescribeWorkflowResponse(this);
+        public SaveSDGResponse build() {
+            return new SaveSDGResponse(this);
         } 
 
     } 

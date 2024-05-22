@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExportImageInfoResponseBody</p>
  */
 public class DescribeExportImageInfoResponseBody extends TeaModel {
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.NameInMap("Images")
     private Images images;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeExportImageInfoResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
     } 
 
     public static class Image extends TeaModel {
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ExportedImageURL")
+        @com.aliyun.core.annotation.NameInMap("ExportedImageURL")
         private String exportedImageURL;
 
-        @NameInMap("ImageExportStatus")
+        @com.aliyun.core.annotation.NameInMap("ImageExportStatus")
         private String imageExportStatus;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageOwnerAlias")
+        @com.aliyun.core.annotation.NameInMap("ImageOwnerAlias")
         private String imageOwnerAlias;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
         private Image(Builder builder) {
@@ -323,7 +322,7 @@ public class DescribeExportImageInfoResponseBody extends TeaModel {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private java.util.List < Image> image;
 
         private Images(Builder builder) {

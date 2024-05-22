@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>HttpConfig</p>
  */
 public class HttpConfig extends TeaModel {
-    @NameInMap("Cookie")
+    @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
-    @NameInMap("CookieTimeout")
-    @Validation(maximum = 86400, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
     private Integer cookieTimeout;
 
-    @NameInMap("IdleTimeout")
-    @Validation(maximum = 60, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 60, minimum = 1)
     private Integer idleTimeout;
 
-    @NameInMap("RequestTimeout")
-    @Validation(maximum = 180, minimum = 1)
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 180, minimum = 1)
     private Integer requestTimeout;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
     private String serverCertificateId;
 
-    @NameInMap("StickySession")
+    @com.aliyun.core.annotation.NameInMap("StickySession")
     private String stickySession;
 
-    @NameInMap("StickySessionType")
+    @com.aliyun.core.annotation.NameInMap("StickySessionType")
     private String stickySessionType;
 
-    @NameInMap("XForwardedFor")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor")
     private String xForwardedFor;
 
     private HttpConfig(Builder builder) {

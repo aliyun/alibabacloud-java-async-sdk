@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateARMServerInstancesRequest</p>
  */
 public class CreateARMServerInstancesRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true, maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 10, minimum = 1)
     private Integer amount;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoUseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
     private Boolean autoUseCoupon;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("Frequency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Frequency")
     private Integer frequency;
 
-    @Query
-    @NameInMap("ImageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("NameSpace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NameSpace")
     private String nameSpace;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String periodUnit;
 
-    @Query
-    @NameInMap("Resolution")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resolution")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resolution;
 
-    @Query
-    @NameInMap("ServerName")
-    @Validation(maxLength = 255)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerName")
+    @com.aliyun.core.annotation.Validation(maxLength = 255)
     private String serverName;
 
-    @Query
-    @NameInMap("ServerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverType;
 
     private CreateARMServerInstancesRequest(Builder builder) {

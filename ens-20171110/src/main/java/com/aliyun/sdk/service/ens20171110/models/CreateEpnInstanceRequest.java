@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEpnInstanceRequest</p>
  */
 public class CreateEpnInstanceRequest extends Request {
-    @Query
-    @NameInMap("EPNInstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
     private String EPNInstanceName;
 
-    @Query
-    @NameInMap("EPNInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String EPNInstanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetChargeType;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("NetworkingModel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkingModel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkingModel;
 
     private CreateEpnInstanceRequest(Builder builder) {

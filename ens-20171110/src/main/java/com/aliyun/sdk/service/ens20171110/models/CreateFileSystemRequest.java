@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileSystemRequest</p>
  */
 public class CreateFileSystemRequest extends Request {
-    @Query
-    @NameInMap("OrderDetails")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderDetails")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderDetails> orderDetails;
 
     private CreateFileSystemRequest(Builder builder) {
@@ -72,36 +71,36 @@ public class CreateFileSystemRequest extends Request {
     } 
 
     public static class OrderDetails extends TeaModel {
-        @NameInMap("ChargeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String chargeType;
 
-        @NameInMap("EnsRegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ensRegionId;
 
-        @NameInMap("FileSystemName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileSystemName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileSystemName;
 
-        @NameInMap("MountTargetDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mountTargetDomain;
 
-        @NameInMap("NetworkId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String networkId;
 
-        @NameInMap("OrderType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String orderType;
 
-        @NameInMap("ProtocolType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String protocolType;
 
-        @NameInMap("StorgeType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StorgeType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String storgeType;
 
         private OrderDetails(Builder builder) {

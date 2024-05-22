@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushApplicationDataResponseBody</p>
  */
 public class PushApplicationDataResponseBody extends TeaModel {
-    @NameInMap("PushResults")
+    @com.aliyun.core.annotation.NameInMap("PushResults")
     private PushResults pushResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PushApplicationDataResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class PushApplicationDataResponseBody extends TeaModel {
     } 
 
     public static class PushResult extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private Integer resultCode;
 
-        @NameInMap("ResultDescrip")
+        @com.aliyun.core.annotation.NameInMap("ResultDescrip")
         private String resultDescrip;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private PushResult(Builder builder) {
@@ -179,7 +178,7 @@ public class PushApplicationDataResponseBody extends TeaModel {
 
     }
     public static class PushResults extends TeaModel {
-        @NameInMap("PushResult")
+        @com.aliyun.core.annotation.NameInMap("PushResult")
         private java.util.List < PushResult> pushResult;
 
         private PushResults(Builder builder) {

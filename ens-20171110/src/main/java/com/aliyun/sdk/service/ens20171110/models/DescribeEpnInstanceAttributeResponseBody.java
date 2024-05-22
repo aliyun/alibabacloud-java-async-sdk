@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEpnInstanceAttributeResponseBody</p>
  */
 public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("ConfVersions")
+    @com.aliyun.core.annotation.NameInMap("ConfVersions")
     private java.util.List < ConfVersions> confVersions;
 
-    @NameInMap("EPNInstanceId")
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceId")
     private String EPNInstanceId;
 
-    @NameInMap("EPNInstanceName")
+    @com.aliyun.core.annotation.NameInMap("EPNInstanceName")
     private String EPNInstanceName;
 
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("NetworkingModel")
+    @com.aliyun.core.annotation.NameInMap("NetworkingModel")
     private String networkingModel;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VSwitches")
+    @com.aliyun.core.annotation.NameInMap("VSwitches")
     private java.util.List < VSwitches> vSwitches;
 
     private DescribeEpnInstanceAttributeResponseBody(Builder builder) {
@@ -177,10 +176,10 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
     } 
 
     public static class ConfVersions extends TeaModel {
-        @NameInMap("ConfVersion")
+        @com.aliyun.core.annotation.NameInMap("ConfVersion")
         private String confVersion;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
         private ConfVersions(Builder builder) {
@@ -238,25 +237,25 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private String publicIpAddress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Instances(Builder builder) {
@@ -409,16 +408,16 @@ public class DescribeEpnInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class VSwitches extends TeaModel {
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VSwitchName")
+        @com.aliyun.core.annotation.NameInMap("VSwitchName")
         private String vSwitchName;
 
         private VSwitches(Builder builder) {

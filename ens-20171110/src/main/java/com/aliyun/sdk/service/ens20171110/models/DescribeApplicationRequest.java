@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApplicationRequest</p>
  */
 public class DescribeApplicationRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("AppVersions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersions")
     private String appVersions;
 
-    @Query
-    @NameInMap("Level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Level")
     private String level;
 
-    @Query
-    @NameInMap("OutDetailStatParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutDetailStatParams")
     private String outDetailStatParams;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSelector")
+    private String resourceSelector;
 
     private DescribeApplicationRequest(Builder builder) {
         super(builder);
@@ -35,6 +38,7 @@ public class DescribeApplicationRequest extends Request {
         this.appVersions = builder.appVersions;
         this.level = builder.level;
         this.outDetailStatParams = builder.outDetailStatParams;
+        this.resourceSelector = builder.resourceSelector;
     }
 
     public static Builder builder() {
@@ -78,11 +82,19 @@ public class DescribeApplicationRequest extends Request {
         return this.outDetailStatParams;
     }
 
+    /**
+     * @return resourceSelector
+     */
+    public String getResourceSelector() {
+        return this.resourceSelector;
+    }
+
     public static final class Builder extends Request.Builder<DescribeApplicationRequest, Builder> {
         private String appId; 
         private String appVersions; 
         private String level; 
         private String outDetailStatParams; 
+        private String resourceSelector; 
 
         private Builder() {
             super();
@@ -94,6 +106,7 @@ public class DescribeApplicationRequest extends Request {
             this.appVersions = request.appVersions;
             this.level = request.level;
             this.outDetailStatParams = request.outDetailStatParams;
+            this.resourceSelector = request.resourceSelector;
         } 
 
         /**
@@ -138,6 +151,15 @@ public class DescribeApplicationRequest extends Request {
         public Builder outDetailStatParams(String outDetailStatParams) {
             this.putQueryParameter("OutDetailStatParams", outDetailStatParams);
             this.outDetailStatParams = outDetailStatParams;
+            return this;
+        }
+
+        /**
+         * ResourceSelector.
+         */
+        public Builder resourceSelector(String resourceSelector) {
+            this.putQueryParameter("ResourceSelector", resourceSelector);
+            this.resourceSelector = resourceSelector;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsResourceUsageRequest</p>
  */
 public class DescribeEnsResourceUsageRequest extends Request {
-    @Query
-    @NameInMap("ExpiredEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredEndTime")
     private String expiredEndTime;
 
-    @Query
-    @NameInMap("ExpiredStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredStartTime")
     private String expiredStartTime;
 
     private DescribeEnsResourceUsageRequest(Builder builder) {

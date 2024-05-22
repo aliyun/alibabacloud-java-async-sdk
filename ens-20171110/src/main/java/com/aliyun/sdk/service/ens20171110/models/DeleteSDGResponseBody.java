@@ -1,21 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RestartWorkflowResponseBody} extends {@link TeaModel}
+ * {@link DeleteSDGResponseBody} extends {@link TeaModel}
  *
- * <p>RestartWorkflowResponseBody</p>
+ * <p>DeleteSDGResponseBody</p>
  */
-public class RestartWorkflowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+public class DeleteSDGResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RestartWorkflowResponseBody(Builder builder) {
+    private DeleteSDGResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +22,7 @@ public class RestartWorkflowResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RestartWorkflowResponseBody create() {
+    public static DeleteSDGResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +37,15 @@ public class RestartWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RestartWorkflowResponseBody build() {
-            return new RestartWorkflowResponseBody(this);
+        public DeleteSDGResponseBody build() {
+            return new DeleteSDGResponseBody(this);
         } 
 
     } 

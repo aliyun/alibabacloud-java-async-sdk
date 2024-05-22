@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListObjectsRequest</p>
  */
 public class ListObjectsRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Query
-    @NameInMap("ContinuationToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContinuationToken")
     private String continuationToken;
 
-    @Query
-    @NameInMap("EncodingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncodingType")
     private String encodingType;
 
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxKeys")
     private Long maxKeys;
 
-    @Query
-    @NameInMap("Prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("StartAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartAfter")
     private String startAfter;
 
     private ListObjectsRequest(Builder builder) {

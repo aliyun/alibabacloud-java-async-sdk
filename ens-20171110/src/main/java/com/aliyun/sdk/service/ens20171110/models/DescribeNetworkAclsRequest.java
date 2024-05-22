@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkAclsRequest</p>
  */
 public class DescribeNetworkAclsRequest extends Request {
-    @Query
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @Query
-    @NameInMap("NetworkAclName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclName")
     private String networkAclName;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
     private DescribeNetworkAclsRequest(Builder builder) {
@@ -120,9 +119,6 @@ public class DescribeNetworkAclsRequest extends Request {
 
         /**
          * The name of the network ACL.
-         * <p>
-         * 
-         * The name must be 1 to 128 characters in length. The name cannot start with \*\*http:// **or** https://\*\*.
          */
         public Builder networkAclName(String networkAclName) {
             this.putQueryParameter("NetworkAclName", networkAclName);

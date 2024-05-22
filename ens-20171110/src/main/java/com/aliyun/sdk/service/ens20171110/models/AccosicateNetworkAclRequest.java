@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AccosicateNetworkAclRequest</p>
  */
 public class AccosicateNetworkAclRequest extends Request {
-    @Query
-    @NameInMap("NetworkAclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String networkAclId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Resource> resource;
 
     private AccosicateNetworkAclRequest(Builder builder) {
@@ -95,12 +94,12 @@ public class AccosicateNetworkAclRequest extends Request {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resource(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunServiceScheduleRequest</p>
  */
 public class RunServiceScheduleRequest extends Request {
-    @Query
-    @NameInMap("AppId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appId;
 
-    @Query
-    @NameInMap("ClientIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientIp;
 
-    @Query
-    @NameInMap("Directorys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Directorys")
     private String directorys;
 
-    @Query
-    @NameInMap("PodConfigName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodConfigName")
     private String podConfigName;
 
-    @Query
-    @NameInMap("PreLockedTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PreLockedTimeout")
     private Integer preLockedTimeout;
 
-    @Query
-    @NameInMap("ScheduleStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleStrategy")
     private String scheduleStrategy;
 
-    @Query
-    @NameInMap("ServiceAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceAction;
 
-    @Query
-    @NameInMap("ServiceCommands")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCommands")
     private String serviceCommands;
 
-    @Query
-    @NameInMap("Uuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uuid;
 
     private RunServiceScheduleRequest(Builder builder) {

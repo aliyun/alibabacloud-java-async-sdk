@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RescaleDeviceServiceResponseBody</p>
  */
 public class RescaleDeviceServiceResponseBody extends TeaModel {
-    @NameInMap("DeviceIds")
+    @com.aliyun.core.annotation.NameInMap("DeviceIds")
     private java.util.List < String > deviceIds;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceDetailInfos")
+    @com.aliyun.core.annotation.NameInMap("ResourceDetailInfos")
     private java.util.List < ResourceDetailInfos> resourceDetailInfos;
 
     private RescaleDeviceServiceResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class RescaleDeviceServiceResponseBody extends TeaModel {
     } 
 
     public static class ResourceDetailInfos extends TeaModel {
-        @NameInMap("ID")
+        @com.aliyun.core.annotation.NameInMap("ID")
         private String id;
 
-        @NameInMap("IP")
+        @com.aliyun.core.annotation.NameInMap("IP")
         private String ip;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("Mac")
+        @com.aliyun.core.annotation.NameInMap("Mac")
         private String mac;
 
-        @NameInMap("RegionID")
+        @com.aliyun.core.annotation.NameInMap("RegionID")
         private String regionID;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ResourceDetailInfos(Builder builder) {

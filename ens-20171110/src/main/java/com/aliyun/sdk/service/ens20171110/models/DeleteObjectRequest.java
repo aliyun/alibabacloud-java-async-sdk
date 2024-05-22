@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteObjectRequest</p>
  */
 public class DeleteObjectRequest extends Request {
-    @Query
-    @NameInMap("BucketName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucketName;
 
-    @Query
-    @NameInMap("ObjectKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String objectKey;
 
     private DeleteObjectRequest(Builder builder) {
@@ -79,7 +78,7 @@ public class DeleteObjectRequest extends Request {
         }
 
         /**
-         * The name of the source file.
+         * The name of the file.
          */
         public Builder objectKey(String objectKey) {
             this.putQueryParameter("ObjectKey", objectKey);

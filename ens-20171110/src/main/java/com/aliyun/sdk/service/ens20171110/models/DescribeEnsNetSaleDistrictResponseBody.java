@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsNetSaleDistrictResponseBody</p>
  */
 public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("EnsNetDistricts")
+    @com.aliyun.core.annotation.NameInMap("EnsNetDistricts")
     private EnsNetDistricts ensNetDistricts;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsNetSaleDistrictResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
     } 
 
     public static class EnsNetDistrict extends TeaModel {
-        @NameInMap("EnsRegionIdCount")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionIdCount")
         private String ensRegionIdCount;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
-        @NameInMap("NetDistrictCode")
+        @com.aliyun.core.annotation.NameInMap("NetDistrictCode")
         private String netDistrictCode;
 
-        @NameInMap("NetDistrictEnName")
+        @com.aliyun.core.annotation.NameInMap("NetDistrictEnName")
         private String netDistrictEnName;
 
-        @NameInMap("NetDistrictFatherCode")
+        @com.aliyun.core.annotation.NameInMap("NetDistrictFatherCode")
         private String netDistrictFatherCode;
 
-        @NameInMap("NetDistrictLevel")
+        @com.aliyun.core.annotation.NameInMap("NetDistrictLevel")
         private String netDistrictLevel;
 
-        @NameInMap("NetDistrictName")
+        @com.aliyun.core.annotation.NameInMap("NetDistrictName")
         private String netDistrictName;
 
         private EnsNetDistrict(Builder builder) {
@@ -258,7 +257,7 @@ public class DescribeEnsNetSaleDistrictResponseBody extends TeaModel {
 
     }
     public static class EnsNetDistricts extends TeaModel {
-        @NameInMap("EnsNetDistrict")
+        @com.aliyun.core.annotation.NameInMap("EnsNetDistrict")
         private java.util.List < EnsNetDistrict> ensNetDistrict;
 
         private EnsNetDistricts(Builder builder) {

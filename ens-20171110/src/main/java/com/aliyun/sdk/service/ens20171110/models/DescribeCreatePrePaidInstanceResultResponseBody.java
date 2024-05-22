@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCreatePrePaidInstanceResultResponseBody</p>
  */
 public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
-    @NameInMap("InstanceCreateResult")
+    @com.aliyun.core.annotation.NameInMap("InstanceCreateResult")
     private InstanceCreateResult instanceCreateResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCreatePrePaidInstanceResultResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeCreatePrePaidInstanceResultResponseBody extends TeaModel {
     } 
 
     public static class InstanceCreateResult extends TeaModel {
-        @NameInMap("InstanceCreateStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceCreateStatus")
         private String instanceCreateStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
         private InstanceCreateResult(Builder builder) {

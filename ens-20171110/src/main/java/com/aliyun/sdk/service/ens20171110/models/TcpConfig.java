@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,15 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TcpConfig</p>
  */
 public class TcpConfig extends TeaModel {
-    @NameInMap("EstablishedTimeout")
-    @Validation(maximum = 900, minimum = 10)
+    @com.aliyun.core.annotation.NameInMap("EstablishedTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 900, minimum = 10)
     private Integer establishedTimeout;
 
-    @NameInMap("PersistenceTimeout")
-    @Validation(maximum = 3600)
+    @com.aliyun.core.annotation.NameInMap("PersistenceTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 3600)
     private Integer persistenceTimeout;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
     private TcpConfig(Builder builder) {

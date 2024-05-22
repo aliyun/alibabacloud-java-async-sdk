@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBandwitdhByInternetChargeTypeResponseBody</p>
  */
 public class DescribeBandwitdhByInternetChargeTypeResponseBody extends TeaModel {
-    @NameInMap("BandwidthValue")
+    @com.aliyun.core.annotation.NameInMap("BandwidthValue")
     private Long bandwidthValue;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeStamp")
+    @com.aliyun.core.annotation.NameInMap("TimeStamp")
     private String timeStamp;
 
     private DescribeBandwitdhByInternetChargeTypeResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNetworkAttributeResponseBody</p>
  */
 public class DescribeNetworkAttributeResponseBody extends TeaModel {
-    @NameInMap("CidrBlock")
+    @com.aliyun.core.annotation.NameInMap("CidrBlock")
     private String cidrBlock;
 
-    @NameInMap("CloudResources")
+    @com.aliyun.core.annotation.NameInMap("CloudResources")
     private CloudResources cloudResources;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @NameInMap("NetworkAclId")
+    @com.aliyun.core.annotation.NameInMap("NetworkAclId")
     private String networkAclId;
 
-    @NameInMap("NetworkId")
+    @com.aliyun.core.annotation.NameInMap("NetworkId")
     private String networkId;
 
-    @NameInMap("NetworkName")
+    @com.aliyun.core.annotation.NameInMap("NetworkName")
     private String networkName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RouterTableId")
+    @com.aliyun.core.annotation.NameInMap("RouterTableId")
     private String routerTableId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private VSwitchIds vSwitchIds;
 
     private DescribeNetworkAttributeResponseBody(Builder builder) {
@@ -276,10 +275,10 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
     } 
 
     public static class CloudResourceSetType extends TeaModel {
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private CloudResourceSetType(Builder builder) {
@@ -337,7 +336,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
     }
     public static class CloudResources extends TeaModel {
-        @NameInMap("CloudResourceSetType")
+        @com.aliyun.core.annotation.NameInMap("CloudResourceSetType")
         private java.util.List < CloudResourceSetType> cloudResourceSetType;
 
         private CloudResources(Builder builder) {
@@ -378,7 +377,7 @@ public class DescribeNetworkAttributeResponseBody extends TeaModel {
 
     }
     public static class VSwitchIds extends TeaModel {
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private java.util.List < String > vSwitchId;
 
         private VSwitchIds(Builder builder) {

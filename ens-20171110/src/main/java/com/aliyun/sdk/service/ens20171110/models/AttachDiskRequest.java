@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachDiskRequest</p>
  */
 public class AttachDiskRequest extends Request {
-    @Query
-    @NameInMap("DeleteWithInstance")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteWithInstance")
     private String deleteWithInstance;
 
-    @Query
-    @NameInMap("DiskId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     private AttachDiskRequest(Builder builder) {
@@ -98,7 +97,7 @@ public class AttachDiskRequest extends Request {
         }
 
         /**
-         * The ID of the disk to be attached. The cloud disk and the instance must belong to the same zone.
+         * The ID of the disk to be attached. The cloud disk and the instance must belong to the same node.
          */
         public Builder diskId(String diskId) {
             this.putQueryParameter("DiskId", diskId);

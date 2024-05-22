@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteKeyPairsRequest</p>
  */
 public class DeleteKeyPairsRequest extends Request {
-    @Query
-    @NameInMap("KeyPairId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairId")
     private String keyPairId;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
     private DeleteKeyPairsRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class DeleteKeyPairsRequest extends Request {
         } 
 
         /**
-         * KeyPairId.
+         * The ID of the SSH key pair.
          */
         public Builder keyPairId(String keyPairId) {
             this.putQueryParameter("KeyPairId", keyPairId);
@@ -77,12 +76,12 @@ public class DeleteKeyPairsRequest extends Request {
         }
 
         /**
-         * The key pair name. The name must conform to the following naming conventions:
+         * The name of the key pair. The name must conform to the following naming conventions:
          * <p>
          * 
-         * *   The name must be 2 to 128 characters in length, and can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
-         * *   It can contain letters, digits, colons (:), underscores (\_), and hyphens (-). The name must start with a letter but cannot start with `http://` or `https://`.
-         * *   It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * *   The name must be 2 to 128 characters in length.
+         * *   The name must start with a letter and cannot start with `http://` or `https://`.
+         * *   The name can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
          * 
          * Before you delete a key pair, you can call the DescribeKeyPairs operation to query existing key pairs.
          */

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceResponseBody</p>
  */
 public class CreateInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("InstanceIds")
+    @com.aliyun.core.annotation.NameInMap("InstanceIds")
     private InstanceIds instanceIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateInstanceResponseBody(Builder builder) {
@@ -95,7 +94,7 @@ public class CreateInstanceResponseBody extends TeaModel {
     } 
 
     public static class InstanceIds extends TeaModel {
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private java.util.List < String > instanceId;
 
         private InstanceIds(Builder builder) {

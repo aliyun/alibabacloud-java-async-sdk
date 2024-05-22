@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionIspsResponseBody</p>
  */
 public class DescribeRegionIspsResponseBody extends TeaModel {
-    @NameInMap("Isps")
+    @com.aliyun.core.annotation.NameInMap("Isps")
     private java.util.List < Isps> isps;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRegionIspsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeRegionIspsResponseBody extends TeaModel {
     } 
 
     public static class Isps extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Isps(Builder builder) {

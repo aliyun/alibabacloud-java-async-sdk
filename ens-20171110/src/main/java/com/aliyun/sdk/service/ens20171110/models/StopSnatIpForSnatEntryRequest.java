@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopSnatIpForSnatEntryRequest</p>
  */
 public class StopSnatIpForSnatEntryRequest extends Request {
-    @Query
-    @NameInMap("SnatEntryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatEntryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatEntryId;
 
-    @Query
-    @NameInMap("SnatIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnatIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String snatIp;
 
     private StopSnatIpForSnatEntryRequest(Builder builder) {

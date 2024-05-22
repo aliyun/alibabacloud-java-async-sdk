@@ -170,6 +170,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateNetworkAclEntryResponse> createNetworkAclEntry(CreateNetworkAclEntryRequest request);
 
+    /**
+      * ## [](#)
+      * After you create an SDG, you must call the [SaveSDG](~~608126~~) operation to save the SDG. Otherwise, the SDG is unavailable.
+      *
+     */
+    CompletableFuture<CreateSDGResponse> createSDG(CreateSDGRequest request);
+
     CompletableFuture<CreateSecurityGroupResponse> createSecurityGroup(CreateSecurityGroupRequest request);
 
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
@@ -180,6 +187,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
+    /**
+      * *   Only the Alibaba Cloud Account ID owner of a bucket can delete the bucket from the account.
+      * *   You cannot delete buckets that store objects. You can only delete empty buckets.
+      *
+     */
     CompletableFuture<DeleteBucketResponse> deleteBucket(DeleteBucketRequest request);
 
     CompletableFuture<DeleteBucketLifecycleResponse> deleteBucketLifecycle(DeleteBucketLifecycleRequest request);
@@ -239,6 +251,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNetworkAclEntryResponse> deleteNetworkAclEntry(DeleteNetworkAclEntryRequest request);
 
     CompletableFuture<DeleteObjectResponse> deleteObject(DeleteObjectRequest request);
+
+    /**
+      * ## [](#)
+      * If all the SDGs corresponding to the original disk are deleted, the original disk is automatically cleared.
+      *
+     */
+    CompletableFuture<DeleteSDGResponse> deleteSDG(DeleteSDGRequest request);
 
     /**
       * Before you delete a security group, make sure that no instances exist in the security group.
@@ -468,6 +487,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSDGDeploymentStatusResponse> describeSDGDeploymentStatus(DescribeSDGDeploymentStatusRequest request);
 
+    CompletableFuture<DescribeSDGsResponse> describeSDGs(DescribeSDGsRequest request);
+
     CompletableFuture<DescribeSecurityGroupAttributeResponse> describeSecurityGroupAttribute(DescribeSecurityGroupAttributeRequest request);
 
     CompletableFuture<DescribeSecurityGroupsResponse> describeSecurityGroups(DescribeSecurityGroupsRequest request);
@@ -485,10 +506,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeUserBandWidthDataResponse> describeUserBandWidthData(DescribeUserBandWidthDataRequest request);
 
     CompletableFuture<DescribeVSwitchesResponse> describeVSwitches(DescribeVSwitchesRequest request);
-
-    CompletableFuture<DescribeWorkflowResponse> describeWorkflow(DescribeWorkflowRequest request);
-
-    CompletableFuture<DescribeWorkflowActivityResponse> describeWorkflowActivity(DescribeWorkflowActivityRequest request);
 
     CompletableFuture<DetachDiskResponse> detachDisk(DetachDiskRequest request);
 
@@ -567,6 +584,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyInstanceAutoRenewAttributeResponse> modifyInstanceAutoRenewAttribute(ModifyInstanceAutoRenewAttributeRequest request);
 
+    /**
+      * Before you call this operation, make sure that you fully understand the billing methods and pricing of ENS.
+      * The instances must be in the Running or Stopped state, and you have no overdue payments for them.
+      *
+     */
     CompletableFuture<ModifyInstanceChargeTypeResponse> modifyInstanceChargeType(ModifyInstanceChargeTypeRequest request);
 
     /**
@@ -659,6 +681,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemovePublicIpsFromEpnInstanceResponse> removePublicIpsFromEpnInstance(RemovePublicIpsFromEpnInstanceRequest request);
 
+    CompletableFuture<RemoveSDGResponse> removeSDG(RemoveSDGRequest request);
+
     CompletableFuture<RemoveVSwitchesFromEpnInstanceResponse> removeVSwitchesFromEpnInstance(RemoveVSwitchesFromEpnInstanceRequest request);
 
     CompletableFuture<RenewARMServerInstanceResponse> renewARMServerInstance(RenewARMServerInstanceRequest request);
@@ -687,10 +711,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RestartDeviceInstanceResponse> restartDeviceInstance(RestartDeviceInstanceRequest request);
 
-    CompletableFuture<RestartWorkflowResponse> restartWorkflow(RestartWorkflowRequest request);
-
-    CompletableFuture<RetryWorkflowResponse> retryWorkflow(RetryWorkflowRequest request);
-
     /**
       * *   In the security group-related API documents, inbound traffic refers to the traffic sent by the source and received by the destination.
       * *   You can determine an inbound security group rule by specifying one of the following groups of parameters. You cannot determine a security group rule by specifying only one parameter.
@@ -707,11 +727,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RollbackApplicationResponse> rollbackApplication(RollbackApplicationRequest request);
 
-    CompletableFuture<RollbackWorkflowResponse> rollbackWorkflow(RollbackWorkflowRequest request);
-
     CompletableFuture<RunInstancesResponse> runInstances(RunInstancesRequest request);
 
     CompletableFuture<RunServiceScheduleResponse> runServiceSchedule(RunServiceScheduleRequest request);
+
+    CompletableFuture<SaveSDGResponse> saveSDG(SaveSDGRequest request);
 
     /**
       * *   You can call this operation up to 100 times per second.
@@ -797,8 +817,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopLoadBalancerListenerResponse> stopLoadBalancerListener(StopLoadBalancerListenerRequest request);
 
     CompletableFuture<StopSnatIpForSnatEntryResponse> stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request);
-
-    CompletableFuture<TerminateWorkflowResponse> terminateWorkflow(TerminateWorkflowRequest request);
 
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 

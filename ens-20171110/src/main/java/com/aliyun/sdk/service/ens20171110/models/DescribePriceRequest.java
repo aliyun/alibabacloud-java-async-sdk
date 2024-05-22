@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePriceRequest</p>
  */
 public class DescribePriceRequest extends Request {
-    @Query
-    @NameInMap("DataDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Query
-    @NameInMap("DataDisks")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
     private java.util.List < DataDisks> dataDisks;
 
-    @Query
-    @NameInMap("EnsRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ensRegionId;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internetChargeType;
 
-    @Query
-    @NameInMap("Period")
-    @Validation(required = true, maximum = 12, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 12, minimum = 1)
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("Quantity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer quantity;
 
     private DescribePriceRequest(Builder builder) {
@@ -208,7 +207,7 @@ public class DescribePriceRequest extends Request {
         }
 
         /**
-         * The type of the instance.
+         * The specifications of instances.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -275,7 +274,7 @@ public class DescribePriceRequest extends Request {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -316,8 +315,8 @@ public class DescribePriceRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Size")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Size")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer size;
 
         private SystemDisk(Builder builder) {
@@ -358,10 +357,10 @@ public class DescribePriceRequest extends Request {
 
     }
     public static class DataDisks extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private DataDisks(Builder builder) {

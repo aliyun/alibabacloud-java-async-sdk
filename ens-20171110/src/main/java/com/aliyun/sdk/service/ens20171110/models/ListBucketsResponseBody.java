@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBucketsResponseBody</p>
  */
 public class ListBucketsResponseBody extends TeaModel {
-    @NameInMap("BucketInfos")
+    @com.aliyun.core.annotation.NameInMap("BucketInfos")
     private java.util.List < BucketInfos> bucketInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListBucketsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListBucketsResponseBody extends TeaModel {
     } 
 
     public static class BucketInfos extends TeaModel {
-        @NameInMap("BucketAcl")
+        @com.aliyun.core.annotation.NameInMap("BucketAcl")
         private String bucketAcl;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("LogicalBucketType")
+        @com.aliyun.core.annotation.NameInMap("LogicalBucketType")
         private String logicalBucketType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
         private BucketInfos(Builder builder) {

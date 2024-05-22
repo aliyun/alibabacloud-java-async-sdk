@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServcieScheduleResponseBody</p>
  */
 public class DescribeServcieScheduleResponseBody extends TeaModel {
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceIp")
+    @com.aliyun.core.annotation.NameInMap("InstanceIp")
     private String instanceIp;
 
-    @NameInMap("InstancePort")
+    @com.aliyun.core.annotation.NameInMap("InstancePort")
     private Integer instancePort;
 
-    @NameInMap("PodAbstractInfo")
+    @com.aliyun.core.annotation.NameInMap("PodAbstractInfo")
     private PodAbstractInfo podAbstractInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestRepeated")
+    @com.aliyun.core.annotation.NameInMap("RequestRepeated")
     private Boolean requestRepeated;
 
-    @NameInMap("TcpPorts")
+    @com.aliyun.core.annotation.NameInMap("TcpPorts")
     private String tcpPorts;
 
     private DescribeServcieScheduleResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
     } 
 
     public static class ContainerStatus extends TeaModel {
-        @NameInMap("ContainerId")
+        @com.aliyun.core.annotation.NameInMap("ContainerId")
         private String containerId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ContainerStatus(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
     }
     public static class ContainerStatuses extends TeaModel {
-        @NameInMap("ContainerStatus")
+        @com.aliyun.core.annotation.NameInMap("ContainerStatus")
         private java.util.List < ContainerStatus> containerStatus;
 
         private ContainerStatuses(Builder builder) {
@@ -294,22 +293,22 @@ public class DescribeServcieScheduleResponseBody extends TeaModel {
 
     }
     public static class PodAbstractInfo extends TeaModel {
-        @NameInMap("ContainerService")
+        @com.aliyun.core.annotation.NameInMap("ContainerService")
         private Boolean containerService;
 
-        @NameInMap("ContainerStatuses")
+        @com.aliyun.core.annotation.NameInMap("ContainerStatuses")
         private ContainerStatuses containerStatuses;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private Boolean name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private Boolean namespace;
 
-        @NameInMap("ResourceScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceScope")
         private Boolean resourceScope;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
         private PodAbstractInfo(Builder builder) {

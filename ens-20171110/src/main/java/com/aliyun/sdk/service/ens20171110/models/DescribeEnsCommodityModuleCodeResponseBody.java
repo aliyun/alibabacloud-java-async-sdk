@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsCommodityModuleCodeResponseBody</p>
  */
 public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
-    @NameInMap("CommodityCodesInfo")
+    @com.aliyun.core.annotation.NameInMap("CommodityCodesInfo")
     private java.util.List < CommodityCodesInfo> commodityCodesInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsCommodityModuleCodeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
     } 
 
     public static class ModuleCodesInfo extends TeaModel {
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
         private ModuleCodesInfo(Builder builder) {
@@ -133,10 +132,10 @@ public class DescribeEnsCommodityModuleCodeResponseBody extends TeaModel {
 
     }
     public static class CommodityCodesInfo extends TeaModel {
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ModuleCodesInfo")
+        @com.aliyun.core.annotation.NameInMap("ModuleCodesInfo")
         private java.util.List < ModuleCodesInfo> moduleCodesInfo;
 
         private CommodityCodesInfo(Builder builder) {

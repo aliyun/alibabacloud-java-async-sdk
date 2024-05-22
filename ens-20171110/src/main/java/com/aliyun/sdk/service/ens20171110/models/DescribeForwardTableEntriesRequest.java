@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeForwardTableEntriesRequest</p>
  */
 public class DescribeForwardTableEntriesRequest extends Request {
-    @Query
-    @NameInMap("ExternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalIp")
     private String externalIp;
 
-    @Query
-    @NameInMap("ForwardEntryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryId")
     private String forwardEntryId;
 
-    @Query
-    @NameInMap("ForwardEntryName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardEntryName")
     private String forwardEntryName;
 
-    @Query
-    @NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
     private String internalIp;
 
-    @Query
-    @NameInMap("IpProtocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
     private String ipProtocol;
 
-    @Query
-    @NameInMap("NatGatewayId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natGatewayId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
     private DescribeForwardTableEntriesRequest(Builder builder) {

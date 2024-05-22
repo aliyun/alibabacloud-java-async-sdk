@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private Instances instances;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class DescribeInstancesResponseBody extends TeaModel {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("device_type")
+        @com.aliyun.core.annotation.NameInMap("device_type")
         private String deviceType;
 
-        @NameInMap("disk_type")
+        @com.aliyun.core.annotation.NameInMap("disk_type")
         private String diskType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("storage")
+        @com.aliyun.core.annotation.NameInMap("storage")
         private Integer storage;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private DataDisk(Builder builder) {
@@ -386,7 +385,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class InstanceDataDisk extends TeaModel {
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
         private InstanceDataDisk(Builder builder) {
@@ -427,7 +426,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class InnerIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
 
         private InnerIpAddress(Builder builder) {
@@ -468,7 +467,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PrivateIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
 
         private PrivateIpAddress(Builder builder) {
@@ -509,13 +508,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class NetworkAttributes extends TeaModel {
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private String networkId;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private PrivateIpAddress privateIpAddress;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkAttributes(Builder builder) {
@@ -590,13 +589,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PrivateIpAddressesPrivateIpAddress extends TeaModel {
-        @NameInMap("GateWay")
+        @com.aliyun.core.annotation.NameInMap("GateWay")
         private String gateWay;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
         private PrivateIpAddressesPrivateIpAddress(Builder builder) {
@@ -671,7 +670,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PrivateIpAddresses extends TeaModel {
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private java.util.List < PrivateIpAddressesPrivateIpAddress> privateIpAddress;
 
         private PrivateIpAddresses(Builder builder) {
@@ -712,7 +711,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddress extends TeaModel {
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private java.util.List < String > ipAddress;
 
         private PublicIpAddress(Builder builder) {
@@ -753,13 +752,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddressesPublicIpAddress extends TeaModel {
-        @NameInMap("GateWay")
+        @com.aliyun.core.annotation.NameInMap("GateWay")
         private String gateWay;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
         private PublicIpAddressesPublicIpAddress(Builder builder) {
@@ -834,7 +833,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class PublicIpAddresses extends TeaModel {
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private java.util.List < PublicIpAddressesPublicIpAddress> publicIpAddress;
 
         private PublicIpAddresses(Builder builder) {
@@ -875,7 +874,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class SecurityGroupIds extends TeaModel {
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private java.util.List < String > securityGroupId;
 
         private SecurityGroupIds(Builder builder) {
@@ -916,31 +915,31 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("device_type")
+        @com.aliyun.core.annotation.NameInMap("device_type")
         private String deviceType;
 
-        @NameInMap("disk_type")
+        @com.aliyun.core.annotation.NameInMap("disk_type")
         private String diskType;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("storage")
+        @com.aliyun.core.annotation.NameInMap("storage")
         private Integer storage;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private SystemDisk(Builder builder) {
@@ -1131,10 +1130,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -1192,7 +1191,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class InstanceTags extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private InstanceTags(Builder builder) {
@@ -1233,85 +1232,92 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
+        private String autoReleaseTime;
+
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private String cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private InstanceDataDisk dataDisk;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private Integer disk;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InnerIpAddress")
+        @com.aliyun.core.annotation.NameInMap("InnerIpAddress")
         private InnerIpAddress innerIpAddress;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceResourceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceResourceType")
         private String instanceResourceType;
 
-        @NameInMap("InstanceTypeFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
         private String instanceTypeFamily;
 
-        @NameInMap("InternetMaxBandwidthIn")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthIn")
         private Integer internetMaxBandwidthIn;
 
-        @NameInMap("InternetMaxBandwidthOut")
+        @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
         private Integer internetMaxBandwidthOut;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Integer memory;
 
-        @NameInMap("NetworkAttributes")
+        @com.aliyun.core.annotation.NameInMap("NetworkAttributes")
         private NetworkAttributes networkAttributes;
 
-        @NameInMap("OSName")
+        @com.aliyun.core.annotation.NameInMap("OSName")
         private String OSName;
 
-        @NameInMap("PrivateIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddresses")
         private PrivateIpAddresses privateIpAddresses;
 
-        @NameInMap("PublicIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddress")
         private PublicIpAddress publicIpAddress;
 
-        @NameInMap("PublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("PublicIpAddresses")
         private PublicIpAddresses publicIpAddresses;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private SecurityGroupIds securityGroupIds;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+        private String spotStrategy;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SystemDisk")
+        @com.aliyun.core.annotation.NameInMap("SystemDisk")
         private SystemDisk systemDisk;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private InstanceTags tags;
 
         private Instance(Builder builder) {
+            this.autoReleaseTime = builder.autoReleaseTime;
             this.cpu = builder.cpu;
             this.creationTime = builder.creationTime;
             this.dataDisk = builder.dataDisk;
@@ -1335,6 +1341,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.publicIpAddresses = builder.publicIpAddresses;
             this.securityGroupIds = builder.securityGroupIds;
             this.specName = builder.specName;
+            this.spotStrategy = builder.spotStrategy;
             this.status = builder.status;
             this.systemDisk = builder.systemDisk;
             this.tags = builder.tags;
@@ -1346,6 +1353,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoReleaseTime
+         */
+        public String getAutoReleaseTime() {
+            return this.autoReleaseTime;
         }
 
         /**
@@ -1510,6 +1524,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotStrategy
+         */
+        public String getSpotStrategy() {
+            return this.spotStrategy;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1531,6 +1552,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String autoReleaseTime; 
             private String cpu; 
             private String creationTime; 
             private InstanceDataDisk dataDisk; 
@@ -1554,9 +1576,18 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private PublicIpAddresses publicIpAddresses; 
             private SecurityGroupIds securityGroupIds; 
             private String specName; 
+            private String spotStrategy; 
             private String status; 
             private SystemDisk systemDisk; 
             private InstanceTags tags; 
+
+            /**
+             * AutoReleaseTime.
+             */
+            public Builder autoReleaseTime(String autoReleaseTime) {
+                this.autoReleaseTime = autoReleaseTime;
+                return this;
+            }
 
             /**
              * The number of vCPUs.
@@ -1612,7 +1643,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * 
              * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
              * *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
-             * *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
+             * *   For other operating systems: The hostname must be 2 to 64 characters in length and can contain letters, digits, and hyphens (-). It can be separated by periods (.).
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1644,7 +1675,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the instance.
+             * The name of the virtual private cloud (VPC).
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1707,7 +1738,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information about the network.
+             * Details of the network.
              */
             public Builder networkAttributes(NetworkAttributes networkAttributes) {
                 this.networkAttributes = networkAttributes;
@@ -1763,7 +1794,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The status. Valid values:
+             * SpotStrategy.
+             */
+            public Builder spotStrategy(String spotStrategy) {
+                this.spotStrategy = spotStrategy;
+                return this;
+            }
+
+            /**
+             * The status of the instance. Valid values:
              * <p>
              * 
              * *   Running
@@ -1776,7 +1815,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information about the disk.
+             * Details of the system disk.
              */
             public Builder systemDisk(SystemDisk systemDisk) {
                 this.systemDisk = systemDisk;
@@ -1799,7 +1838,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private java.util.List < Instance> instance;
 
         private Instances(Builder builder) {

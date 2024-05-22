@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveBackendServersRequest</p>
  */
 public class RemoveBackendServersRequest extends Request {
-    @Query
-    @NameInMap("BackendServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < BackendServers> backendServers;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
     private RemoveBackendServersRequest(Builder builder) {
@@ -70,10 +69,7 @@ public class RemoveBackendServersRequest extends Request {
         } 
 
         /**
-         * The list of backend servers that you want to add. You can add at most 20 backend servers.
-         * <p>
-         * 
-         * >  Only ENS instances that are in the running state can be attached to the ELB instance as backend servers.
+         * The list of backend servers that you want to remove. You can remove up to 20 backend servers at a time.
          */
         public Builder backendServers(java.util.List < BackendServers> backendServers) {
             String backendServersShrink = shrink(backendServers, "BackendServers", "json");
@@ -99,22 +95,22 @@ public class RemoveBackendServersRequest extends Request {
     } 
 
     public static class BackendServers extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
-        @Validation(maximum = 65535)
+        @com.aliyun.core.annotation.NameInMap("Port")
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
-        @Validation(maximum = 100)
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
         private Integer weight;
 
         private BackendServers(Builder builder) {
@@ -192,7 +188,7 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The ID of the instance that is used as the backend server.
+             * The instance ID of the backend server.
              */
             public Builder serverId(String serverId) {
                 this.serverId = serverId;
@@ -203,8 +199,8 @@ public class RemoveBackendServersRequest extends Request {
              * The type of the backend server. Valid values:
              * <p>
              * 
-             * *   **ens**: ENS instance.
-             * *   **eni**: ENI.
+             * *   **ens**: an Edge Node Service (ENS) instance.
+             * *   **eni**: an elastic network interface (ENI).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -212,10 +208,7 @@ public class RemoveBackendServersRequest extends Request {
             }
 
             /**
-             * The weight of the backend server. Default value: 100. Valid values: **0** to **100**.
-             * <p>
-             * 
-             * >  The value 0 indicates that requests are not forwarded to the backend server.
+             * The weight of the backend server.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;

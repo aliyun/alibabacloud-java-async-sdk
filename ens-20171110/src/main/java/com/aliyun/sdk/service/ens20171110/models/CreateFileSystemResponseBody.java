@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileSystemResponseBody</p>
  */
 public class CreateFileSystemResponseBody extends TeaModel {
-    @NameInMap("AllocationId")
+    @com.aliyun.core.annotation.NameInMap("AllocationId")
     private java.util.List < String > allocationId;
 
-    @NameInMap("BizStatusCode")
+    @com.aliyun.core.annotation.NameInMap("BizStatusCode")
     private String bizStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UnAllocationId")
+    @com.aliyun.core.annotation.NameInMap("UnAllocationId")
     private java.util.List < String > unAllocationId;
 
     private CreateFileSystemResponseBody(Builder builder) {

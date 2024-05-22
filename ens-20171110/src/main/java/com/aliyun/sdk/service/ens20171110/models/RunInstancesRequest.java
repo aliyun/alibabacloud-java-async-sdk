@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,150 +11,159 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunInstancesRequest</p>
  */
 public class RunInstancesRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Long amount;
 
-    @Query
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
+    private String autoReleaseTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Query
-    @NameInMap("AutoUseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoUseCoupon")
     private String autoUseCoupon;
 
-    @Query
-    @NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
     private String billingCycle;
 
-    @Query
-    @NameInMap("Carrier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Carrier")
     private String carrier;
 
-    @Query
-    @NameInMap("DataDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataDisk")
     private java.util.List < DataDisk> dataDisk;
 
-    @Query
-    @NameInMap("EnsRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
-    @Query
-    @NameInMap("HostName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HostName")
     private String hostName;
 
-    @Query
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Query
-    @NameInMap("InstanceChargeStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeStrategy")
     private String instanceChargeStrategy;
 
-    @Query
-    @NameInMap("InstanceChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceChargeType;
 
-    @Query
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Query
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Query
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @Query
-    @NameInMap("InternetMaxBandwidthOut")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternetMaxBandwidthOut")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long internetMaxBandwidthOut;
 
-    @Query
-    @NameInMap("IpType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpType")
     private String ipType;
 
-    @Query
-    @NameInMap("KeyPairName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeyPairName")
     private String keyPairName;
 
-    @Query
-    @NameInMap("NetDistrictCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetDistrictCode")
     private String netDistrictCode;
 
-    @Query
-    @NameInMap("NetWorkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetWorkId")
     private String netWorkId;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("PasswordInherit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PrivateIpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
     private String privateIpAddress;
 
-    @Query
-    @NameInMap("PublicIpIdentification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PublicIpIdentification")
     private Boolean publicIpIdentification;
 
-    @Query
-    @NameInMap("ScheduleAreaLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleAreaLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scheduleAreaLevel;
 
-    @Query
-    @NameInMap("SchedulingPriceStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulingPriceStrategy")
     private String schedulingPriceStrategy;
 
-    @Query
-    @NameInMap("SchedulingStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SchedulingStrategy")
     private String schedulingStrategy;
 
-    @Query
-    @NameInMap("SecurityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityId")
     private String securityId;
 
-    @Query
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
+    private String spotStrategy;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UniqueSuffix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UniqueSuffix")
     private Boolean uniqueSuffix;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
     private RunInstancesRequest(Builder builder) {
         super(builder);
         this.amount = builder.amount;
+        this.autoReleaseTime = builder.autoReleaseTime;
         this.autoRenew = builder.autoRenew;
         this.autoUseCoupon = builder.autoUseCoupon;
         this.billingCycle = builder.billingCycle;
@@ -184,6 +192,7 @@ public class RunInstancesRequest extends Request {
         this.schedulingPriceStrategy = builder.schedulingPriceStrategy;
         this.schedulingStrategy = builder.schedulingStrategy;
         this.securityId = builder.securityId;
+        this.spotStrategy = builder.spotStrategy;
         this.systemDisk = builder.systemDisk;
         this.tag = builder.tag;
         this.uniqueSuffix = builder.uniqueSuffix;
@@ -209,6 +218,13 @@ public class RunInstancesRequest extends Request {
      */
     public Long getAmount() {
         return this.amount;
+    }
+
+    /**
+     * @return autoReleaseTime
+     */
+    public String getAutoReleaseTime() {
+        return this.autoReleaseTime;
     }
 
     /**
@@ -408,6 +424,13 @@ public class RunInstancesRequest extends Request {
     }
 
     /**
+     * @return spotStrategy
+     */
+    public String getSpotStrategy() {
+        return this.spotStrategy;
+    }
+
+    /**
      * @return systemDisk
      */
     public SystemDisk getSystemDisk() {
@@ -444,6 +467,7 @@ public class RunInstancesRequest extends Request {
 
     public static final class Builder extends Request.Builder<RunInstancesRequest, Builder> {
         private Long amount; 
+        private String autoReleaseTime; 
         private Boolean autoRenew; 
         private String autoUseCoupon; 
         private String billingCycle; 
@@ -472,6 +496,7 @@ public class RunInstancesRequest extends Request {
         private String schedulingPriceStrategy; 
         private String schedulingStrategy; 
         private String securityId; 
+        private String spotStrategy; 
         private SystemDisk systemDisk; 
         private java.util.List < Tag> tag; 
         private Boolean uniqueSuffix; 
@@ -485,6 +510,7 @@ public class RunInstancesRequest extends Request {
         private Builder(RunInstancesRequest request) {
             super(request);
             this.amount = request.amount;
+            this.autoReleaseTime = request.autoReleaseTime;
             this.autoRenew = request.autoRenew;
             this.autoUseCoupon = request.autoUseCoupon;
             this.billingCycle = request.billingCycle;
@@ -513,6 +539,7 @@ public class RunInstancesRequest extends Request {
             this.schedulingPriceStrategy = request.schedulingPriceStrategy;
             this.schedulingStrategy = request.schedulingStrategy;
             this.securityId = request.securityId;
+            this.spotStrategy = request.spotStrategy;
             this.systemDisk = request.systemDisk;
             this.tag = request.tag;
             this.uniqueSuffix = request.uniqueSuffix;
@@ -526,6 +553,19 @@ public class RunInstancesRequest extends Request {
         public Builder amount(Long amount) {
             this.putQueryParameter("Amount", amount);
             this.amount = amount;
+            return this;
+        }
+
+        /**
+         * The time when to automatically release the pay-as-you-go instance. Specify the time in the [ISO 8601](~~25696~~) standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time must be in Coordinated Universal Time (UTC).
+         * <p>
+         * 
+         * *   If the value of `ss` is not `00`, the start time is automatically rounded down to the nearest minute based on the value of `mm`.
+         * *   The specified time must be at least one hour later than the current time.
+         */
+        public Builder autoReleaseTime(String autoReleaseTime) {
+            this.putQueryParameter("AutoReleaseTime", autoReleaseTime);
+            this.autoReleaseTime = autoReleaseTime;
             return this;
         }
 
@@ -545,12 +585,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to use vouchers. Default values: true. Valid values:
-         * <p>
-         * 
-         * - true 
-         * 
-         * - false
+         * Specifies whether to use coupons. Default value: true.
          */
         public Builder autoUseCoupon(String autoUseCoupon) {
             this.putQueryParameter("AutoUseCoupon", autoUseCoupon);
@@ -562,9 +597,8 @@ public class RunInstancesRequest extends Request {
          * The billing cycle of computing resources of the instance. Only pay-as-you-go instances are supported. Valid values:
          * <p>
          * 
-         * *   Hour
-         * *   Day
-         * *   Month
+         * *   **Day**
+         * *   **Month**
          */
         public Builder billingCycle(String billingCycle) {
             this.putQueryParameter("BillingCycle", billingCycle);
@@ -585,7 +619,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The specification of the data disk.
+         * The specifications of the data disk.
          */
         public Builder dataDisk(java.util.List < DataDisk> dataDisk) {
             String dataDiskShrink = shrink(dataDisk, "DataDisk", "json");
@@ -696,12 +730,12 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * The type of IP address. Valid values:
+         * The type of the IP address. Valid values:
          * <p>
          * 
-         * *   **ipv4**: IPv4. This is the default value.
-         * *   **ipv6**: IPv6.
-         * *   **ipv4Andipv6**: IPv4 and IPv6.
+         * *   **ipv4** (default)
+         * *   **ipv6**
+         * *   **ipv4Andipv6**
          */
         public Builder ipType(String ipType) {
             this.putQueryParameter("IpType", ipType);
@@ -872,6 +906,21 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
+         * The bidding policy for the pay-as-you-go instance. This parameter is valid only when the `InstanceChargeType` parameter is set to `PostPaid`. Valid values:
+         * <p>
+         * 
+         * *   NoSpot: The instance is created as a regular pay-as-you-go instance.
+         * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bidding price.
+         * 
+         * Default value: NoSpot.
+         */
+        public Builder spotStrategy(String spotStrategy) {
+            this.putQueryParameter("SpotStrategy", spotStrategy);
+            this.spotStrategy = spotStrategy;
+            return this;
+        }
+
+        /**
          * The specification of the system disk.
          */
         public Builder systemDisk(SystemDisk systemDisk) {
@@ -882,7 +931,7 @@ public class RunInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -928,16 +977,16 @@ public class RunInstancesRequest extends Request {
     } 
 
     public static class DataDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("KMSKeyId")
+        @com.aliyun.core.annotation.NameInMap("KMSKeyId")
         private String KMSKeyId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private DataDisk(Builder builder) {
@@ -993,10 +1042,10 @@ public class RunInstancesRequest extends Request {
              * The category of the disk. Valid values:
              * <p>
              * 
-             * *   **cloud_efficiency**: ultra disk
-             * *   **cloud_ssd**: all-flash disk
-             * *   **local_hdd**: local HDD
-             * *   **local_ssd**: local SSD
+             * *   **cloud_efficiency**: ultra disk.
+             * *   **cloud_ssd**: all-flash disk.
+             * *   **local_hdd**: local HDD.
+             * *   **local_ssd**: local SSD.
              */
             public Builder category(String category) {
                 this.category = category;
@@ -1004,13 +1053,11 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Specifies whether to encrypt data disk N. Valid values:
+             * Specifies whether to encrypt the disk. Valid values:
              * <p>
              * 
-             * *   true: encrypts the data disk.
-             * *   false: does not encrypt the data disk.
-             * 
-             * Default value: false.
+             * *   true
+             * *   false (default)
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -1018,16 +1065,13 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * The ID of the Key Management Service (KMS) key that is used by the cloud disk. Valid values:
+             * The ID of the Key Management Service (KMS) key that is used for the disk. Valid values:
              * <p>
              * 
              * *   true
-             * *   false
+             * *   false (default)
              * 
-             * Default value: false.
-             * 
-             * 
-             * >  If you set the **Encrypted** parameter to **true**, the default service key is used when the **KMSKeyId** parameter is empty.
+             * >  If you set the Encrypted parameter to true, the default service key is used when the KMSKeyId parameter is empty.
              */
             public Builder KMSKeyId(String KMSKeyId) {
                 this.KMSKeyId = KMSKeyId;
@@ -1050,10 +1094,10 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class SystemDisk extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private SystemDisk(Builder builder) {
@@ -1111,10 +1155,10 @@ public class RunInstancesRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1149,7 +1193,7 @@ public class RunInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1157,7 +1201,7 @@ public class RunInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;

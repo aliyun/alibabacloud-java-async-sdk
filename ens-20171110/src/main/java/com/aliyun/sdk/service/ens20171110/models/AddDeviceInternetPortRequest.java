@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddDeviceInternetPortRequest</p>
  */
 public class AddDeviceInternetPortRequest extends Request {
-    @Query
-    @NameInMap("ISP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
     private String ISP;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("InternalIp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalIp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String internalIp;
 
-    @Query
-    @NameInMap("InternalPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPort")
     private String internalPort;
 
-    @Query
-    @NameInMap("NatType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NatType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String natType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private AddDeviceInternetPortRequest(Builder builder) {

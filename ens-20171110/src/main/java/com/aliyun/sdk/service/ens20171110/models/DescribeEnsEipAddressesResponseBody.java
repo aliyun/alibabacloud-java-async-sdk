@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsEipAddressesResponseBody</p>
  */
 public class DescribeEnsEipAddressesResponseBody extends TeaModel {
-    @NameInMap("EipAddresses")
+    @com.aliyun.core.annotation.NameInMap("EipAddresses")
     private EipAddresses eipAddresses;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeEnsEipAddressesResponseBody(Builder builder) {
@@ -132,49 +131,49 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     } 
 
     public static class EipAddress extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("AllocationTime")
+        @com.aliyun.core.annotation.NameInMap("AllocationTime")
         private String allocationTime;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("IpAddress")
+        @com.aliyun.core.annotation.NameInMap("IpAddress")
         private String ipAddress;
 
-        @NameInMap("IpStatus")
+        @com.aliyun.core.annotation.NameInMap("IpStatus")
         private String ipStatus;
 
-        @NameInMap("Isp")
+        @com.aliyun.core.annotation.NameInMap("Isp")
         private String isp;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Standby")
+        @com.aliyun.core.annotation.NameInMap("Standby")
         private Boolean standby;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private EipAddress(Builder builder) {
@@ -482,7 +481,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
 
     }
     public static class EipAddresses extends TeaModel {
-        @NameInMap("EipAddress")
+        @com.aliyun.core.annotation.NameInMap("EipAddress")
         private java.util.List < EipAddress> eipAddress;
 
         private EipAddresses(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private java.util.List < Snapshots> snapshots;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Snapshots extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SourceDiskCategory")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskCategory")
         private String sourceDiskCategory;
 
-        @NameInMap("SourceDiskId")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskId")
         private String sourceDiskId;
 
-        @NameInMap("SourceDiskType")
+        @com.aliyun.core.annotation.NameInMap("SourceDiskType")
         private String sourceDiskType;
 
-        @NameInMap("SourceEnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceEnsRegionId")
         private String sourceEnsRegionId;
 
-        @NameInMap("SourceSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SourceSnapshotId")
         private String sourceSnapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Snapshots(Builder builder) {

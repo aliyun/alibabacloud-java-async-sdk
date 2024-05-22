@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEpnBandWidthDataResponseBody</p>
  */
 public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
-    @NameInMap("MonitorData")
+    @com.aliyun.core.annotation.NameInMap("MonitorData")
     private MonitorData monitorData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEpnBandWidthDataResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
     } 
 
     public static class BandWidthMonitorData extends TeaModel {
-        @NameInMap("DownBandWidth")
+        @com.aliyun.core.annotation.NameInMap("DownBandWidth")
         private Long downBandWidth;
 
-        @NameInMap("InternetRX")
+        @com.aliyun.core.annotation.NameInMap("InternetRX")
         private Long internetRX;
 
-        @NameInMap("InternetTX")
+        @com.aliyun.core.annotation.NameInMap("InternetTX")
         private Long internetTX;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("UpBandWidth")
+        @com.aliyun.core.annotation.NameInMap("UpBandWidth")
         private Long upBandWidth;
 
         private BandWidthMonitorData(Builder builder) {
@@ -193,13 +192,13 @@ public class DescribeEpnBandWidthDataResponseBody extends TeaModel {
 
     }
     public static class MonitorData extends TeaModel {
-        @NameInMap("BandWidthMonitorData")
+        @com.aliyun.core.annotation.NameInMap("BandWidthMonitorData")
         private java.util.List < BandWidthMonitorData> bandWidthMonitorData;
 
-        @NameInMap("MaxDownBandWidth")
+        @com.aliyun.core.annotation.NameInMap("MaxDownBandWidth")
         private Long maxDownBandWidth;
 
-        @NameInMap("MaxUpBandWidth")
+        @com.aliyun.core.annotation.NameInMap("MaxUpBandWidth")
         private Long maxUpBandWidth;
 
         private MonitorData(Builder builder) {

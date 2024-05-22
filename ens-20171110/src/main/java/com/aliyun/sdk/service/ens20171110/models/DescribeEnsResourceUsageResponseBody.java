@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEnsResourceUsageResponseBody</p>
  */
 public class DescribeEnsResourceUsageResponseBody extends TeaModel {
-    @NameInMap("EnsResourceUsage")
+    @com.aliyun.core.annotation.NameInMap("EnsResourceUsage")
     private java.util.List < EnsResourceUsage> ensResourceUsage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEnsResourceUsageResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeEnsResourceUsageResponseBody extends TeaModel {
     } 
 
     public static class EnsResourceUsage extends TeaModel {
-        @NameInMap("ComputeResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ComputeResourceCount")
         private Integer computeResourceCount;
 
-        @NameInMap("CpuSum")
+        @com.aliyun.core.annotation.NameInMap("CpuSum")
         private Long cpuSum;
 
-        @NameInMap("DiskCount")
+        @com.aliyun.core.annotation.NameInMap("DiskCount")
         private Integer diskCount;
 
-        @NameInMap("DownCount")
+        @com.aliyun.core.annotation.NameInMap("DownCount")
         private Integer downCount;
 
-        @NameInMap("ExpiredCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiredCount")
         private Integer expiredCount;
 
-        @NameInMap("ExpiringCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiringCount")
         private Integer expiringCount;
 
-        @NameInMap("GpuSum")
+        @com.aliyun.core.annotation.NameInMap("GpuSum")
         private Long gpuSum;
 
-        @NameInMap("InstanceCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
-        @NameInMap("RunningCount")
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
         private Integer runningCount;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("StorageSum")
+        @com.aliyun.core.annotation.NameInMap("StorageSum")
         private Long storageSum;
 
         private EnsResourceUsage(Builder builder) {

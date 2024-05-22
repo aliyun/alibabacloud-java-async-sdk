@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSpecResponseBody</p>
  */
 public class DescribeInstanceSpecResponseBody extends TeaModel {
-    @NameInMap("BandwidthLimit")
+    @com.aliyun.core.annotation.NameInMap("BandwidthLimit")
     private Integer bandwidthLimit;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("DataDiskMaxSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskMaxSize")
     private Integer dataDiskMaxSize;
 
-    @NameInMap("DataDiskMinSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskMinSize")
     private Integer dataDiskMinSize;
 
-    @NameInMap("InstanceSpecs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSpecs")
     private InstanceSpecs instanceSpecs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemDiskMaxSize")
+    @com.aliyun.core.annotation.NameInMap("SystemDiskMaxSize")
     private Integer systemDiskMaxSize;
 
     private DescribeInstanceSpecResponseBody(Builder builder) {
@@ -172,16 +171,16 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
     } 
 
     public static class InstanceSpec extends TeaModel {
-        @NameInMap("Core")
+        @com.aliyun.core.annotation.NameInMap("Core")
         private String core;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
         private InstanceSpec(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeInstanceSpecResponseBody extends TeaModel {
 
     }
     public static class InstanceSpecs extends TeaModel {
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private java.util.List < InstanceSpec> instanceSpec;
 
         private InstanceSpecs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDisksResponseBody</p>
  */
 public class DescribeDisksResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Disks")
+    @com.aliyun.core.annotation.NameInMap("Disks")
     private Disks disks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDisksResponseBody(Builder builder) {
@@ -152,52 +151,52 @@ public class DescribeDisksResponseBody extends TeaModel {
     } 
 
     public static class DisksDisks extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DiskChargeType")
+        @com.aliyun.core.annotation.NameInMap("DiskChargeType")
         private String diskChargeType;
 
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskName")
+        @com.aliyun.core.annotation.NameInMap("DiskName")
         private String diskName;
 
-        @NameInMap("Encrypted")
+        @com.aliyun.core.annotation.NameInMap("Encrypted")
         private Boolean encrypted;
 
-        @NameInMap("EncryptedKeyId")
+        @com.aliyun.core.annotation.NameInMap("EncryptedKeyId")
         private String encryptedKeyId;
 
-        @NameInMap("EnsRegionId")
+        @com.aliyun.core.annotation.NameInMap("EnsRegionId")
         private String ensRegionId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Portable")
+        @com.aliyun.core.annotation.NameInMap("Portable")
         private Boolean portable;
 
-        @NameInMap("SerialId")
+        @com.aliyun.core.annotation.NameInMap("SerialId")
         private String serialId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DisksDisks(Builder builder) {
@@ -408,7 +407,11 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the cloud disk is encrypted.
+             * Indicates whether the cloud disk is encrypted. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder encrypted(Boolean encrypted) {
                 this.encrypted = encrypted;
@@ -416,7 +419,7 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * EncryptedKeyId.
+             * The ID of the Key Management Service (KMS) key that is used for the cloud disk.
              */
             public Builder encryptedKeyId(String encryptedKeyId) {
                 this.encryptedKeyId = encryptedKeyId;
@@ -448,17 +451,17 @@ public class DescribeDisksResponseBody extends TeaModel {
             }
 
             /**
-             * Specifies whether the cloud disk or the local disk is removable. Valid values:
+             * Indicates whether the cloud disk or local disk is removable. Valid values:
              * <p>
              * 
              * *   true: The disk is removable. A removable disk can independently exist and can be attached to or detached from an instance within the same zone.
              * *   false: The disk is not removable. A disk that is not removable cannot independently exist or be attached to or detached from an instance within the same zone.
              * 
-             * The **Portable** attribute of the following disks is **false**, and these disks share the same lifecycle with their associated instances:
+             * If disks are of the following categories or types, the **Portable** value is **false** and the disks have the same lifecycle as their attached instances:
              * 
-             * *   Local HDD.
-             * *   Local SSD.
-             * *   Data disk that uses the subscription billing method.
+             * *   Local HDDs
+             * *   Local SSDs
+             * *   Data disks that use the subscription billing method
              */
             public Builder portable(Boolean portable) {
                 this.portable = portable;
@@ -497,7 +500,7 @@ public class DescribeDisksResponseBody extends TeaModel {
              * *   Available: The disk can be attached.
              * *   Attaching: The disk is being attached.
              * *   Detaching: The disk is being detached.
-             * *   Creating: The image is being created.
+             * *   Creating: The disk is being created.
              * *   ReIniting: The disk is being reset.
              */
             public Builder status(String status) {
@@ -525,7 +528,7 @@ public class DescribeDisksResponseBody extends TeaModel {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < DisksDisks> disks;
 
         private Disks(Builder builder) {

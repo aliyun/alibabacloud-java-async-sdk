@@ -1,21 +1,20 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link RollbackWorkflowResponseBody} extends {@link TeaModel}
+ * {@link RemoveSDGResponseBody} extends {@link TeaModel}
  *
- * <p>RollbackWorkflowResponseBody</p>
+ * <p>RemoveSDGResponseBody</p>
  */
-public class RollbackWorkflowResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+public class RemoveSDGResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private RollbackWorkflowResponseBody(Builder builder) {
+    private RemoveSDGResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -23,7 +22,7 @@ public class RollbackWorkflowResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static RollbackWorkflowResponseBody create() {
+    public static RemoveSDGResponseBody create() {
         return builder().build();
     }
 
@@ -38,15 +37,15 @@ public class RollbackWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public RollbackWorkflowResponseBody build() {
-            return new RollbackWorkflowResponseBody(this);
+        public RemoveSDGResponseBody build() {
+            return new RemoveSDGResponseBody(this);
         } 
 
     } 

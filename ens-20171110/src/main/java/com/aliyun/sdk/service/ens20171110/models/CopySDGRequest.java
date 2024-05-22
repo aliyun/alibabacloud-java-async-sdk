@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ens20171110.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopySDGRequest</p>
  */
 public class CopySDGRequest extends Request {
-    @Query
-    @NameInMap("DestinationRegionIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestinationRegionIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > destinationRegionIds;
 
-    @Query
-    @NameInMap("SDGId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SDGId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SDGId;
 
     private CopySDGRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class CopySDGRequest extends Request {
         } 
 
         /**
-         * DestinationRegionIds.
+         * The destination nodes.
          */
         public Builder destinationRegionIds(java.util.List < String > destinationRegionIds) {
             String destinationRegionIdsShrink = shrink(destinationRegionIds, "DestinationRegionIds", "json");
@@ -80,7 +79,7 @@ public class CopySDGRequest extends Request {
         }
 
         /**
-         * SDGId.
+         * The ID of the SDG that you want to copy.
          */
         public Builder SDGId(String SDGId) {
             this.putQueryParameter("SDGId", SDGId);
