@@ -272,8 +272,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FlowLogName")
         private String flowLogName;
 
+        @com.aliyun.core.annotation.NameInMap("FlowLogVersion")
+        private String flowLogVersion;
+
         @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
+
+        @com.aliyun.core.annotation.NameInMap("LogFormatString")
+        private String logFormatString;
 
         @com.aliyun.core.annotation.NameInMap("LogStoreName")
         private String logStoreName;
@@ -293,19 +299,25 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TransitRouterAttachmentId")
         private String transitRouterAttachmentId;
 
+        @com.aliyun.core.annotation.NameInMap("TransitRouterId")
+        private String transitRouterId;
+
         private FlowLog(Builder builder) {
             this.cenId = builder.cenId;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.flowLogId = builder.flowLogId;
             this.flowLogName = builder.flowLogName;
+            this.flowLogVersion = builder.flowLogVersion;
             this.interval = builder.interval;
+            this.logFormatString = builder.logFormatString;
             this.logStoreName = builder.logStoreName;
             this.projectName = builder.projectName;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.tags = builder.tags;
             this.transitRouterAttachmentId = builder.transitRouterAttachmentId;
+            this.transitRouterId = builder.transitRouterId;
         }
 
         public static Builder builder() {
@@ -352,10 +364,24 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
         }
 
         /**
+         * @return flowLogVersion
+         */
+        public String getFlowLogVersion() {
+            return this.flowLogVersion;
+        }
+
+        /**
          * @return interval
          */
         public Long getInterval() {
             return this.interval;
+        }
+
+        /**
+         * @return logFormatString
+         */
+        public String getLogFormatString() {
+            return this.logFormatString;
         }
 
         /**
@@ -400,19 +426,29 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             return this.transitRouterAttachmentId;
         }
 
+        /**
+         * @return transitRouterId
+         */
+        public String getTransitRouterId() {
+            return this.transitRouterId;
+        }
+
         public static final class Builder {
             private String cenId; 
             private String creationTime; 
             private String description; 
             private String flowLogId; 
             private String flowLogName; 
+            private String flowLogVersion; 
             private Long interval; 
+            private String logFormatString; 
             private String logStoreName; 
             private String projectName; 
             private String regionId; 
             private String status; 
             private Tags tags; 
             private String transitRouterAttachmentId; 
+            private String transitRouterId; 
 
             /**
              * The ID of the CEN instance.
@@ -458,10 +494,26 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
             }
 
             /**
+             * FlowLogVersion.
+             */
+            public Builder flowLogVersion(String flowLogVersion) {
+                this.flowLogVersion = flowLogVersion;
+                return this;
+            }
+
+            /**
              * The time window for collecting log data. Unit: seconds. Valid values: **60** and **600**. Default value: **600**.
              */
             public Builder interval(Long interval) {
                 this.interval = interval;
+                return this;
+            }
+
+            /**
+             * LogFormatString.
+             */
+            public Builder logFormatString(String logFormatString) {
+                this.logFormatString = logFormatString;
                 return this;
             }
 
@@ -514,6 +566,14 @@ public class DescribeFlowlogsResponseBody extends TeaModel {
              */
             public Builder transitRouterAttachmentId(String transitRouterAttachmentId) {
                 this.transitRouterAttachmentId = transitRouterAttachmentId;
+                return this;
+            }
+
+            /**
+             * TransitRouterId.
+             */
+            public Builder transitRouterId(String transitRouterId) {
+                this.transitRouterId = transitRouterId;
                 return this;
             }
 
