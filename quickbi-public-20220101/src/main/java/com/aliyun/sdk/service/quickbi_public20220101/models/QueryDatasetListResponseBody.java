@@ -298,6 +298,9 @@ public class QueryDatasetListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
+        @com.aliyun.core.annotation.NameInMap("OpenOfflineAcceleration")
+        private Boolean openOfflineAcceleration;
+
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
@@ -321,6 +324,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             this.description = builder.description;
             this.directory = builder.directory;
             this.modifyTime = builder.modifyTime;
+            this.openOfflineAcceleration = builder.openOfflineAcceleration;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
             this.rowLevel = builder.rowLevel;
@@ -386,6 +390,13 @@ public class QueryDatasetListResponseBody extends TeaModel {
         }
 
         /**
+         * @return openOfflineAcceleration
+         */
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
+        }
+
+        /**
          * @return ownerId
          */
         public String getOwnerId() {
@@ -428,6 +439,7 @@ public class QueryDatasetListResponseBody extends TeaModel {
             private String description; 
             private Directory directory; 
             private String modifyTime; 
+            private Boolean openOfflineAcceleration; 
             private String ownerId; 
             private String ownerName; 
             private Boolean rowLevel; 
@@ -487,6 +499,14 @@ public class QueryDatasetListResponseBody extends TeaModel {
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
+                return this;
+            }
+
+            /**
+             * OpenOfflineAcceleration.
+             */
+            public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
+                this.openOfflineAcceleration = openOfflineAcceleration;
                 return this;
             }
 

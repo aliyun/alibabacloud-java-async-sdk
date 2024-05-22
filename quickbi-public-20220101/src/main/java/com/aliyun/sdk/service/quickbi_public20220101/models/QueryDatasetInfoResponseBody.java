@@ -808,6 +808,9 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeasureList")
         private java.util.List < MeasureList> measureList;
 
+        @com.aliyun.core.annotation.NameInMap("OpenOfflineAcceleration")
+        private Boolean openOfflineAcceleration;
+
         @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
@@ -836,6 +839,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.measureList = builder.measureList;
+            this.openOfflineAcceleration = builder.openOfflineAcceleration;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
             this.rowLevel = builder.rowLevel;
@@ -936,6 +940,13 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return openOfflineAcceleration
+         */
+        public Boolean getOpenOfflineAcceleration() {
+            return this.openOfflineAcceleration;
+        }
+
+        /**
          * @return ownerId
          */
         public String getOwnerId() {
@@ -983,6 +994,7 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModify; 
             private java.util.List < MeasureList> measureList; 
+            private Boolean openOfflineAcceleration; 
             private String ownerId; 
             private String ownerName; 
             private Boolean rowLevel; 
@@ -1092,6 +1104,14 @@ public class QueryDatasetInfoResponseBody extends TeaModel {
              */
             public Builder measureList(java.util.List < MeasureList> measureList) {
                 this.measureList = measureList;
+                return this;
+            }
+
+            /**
+             * OpenOfflineAcceleration.
+             */
+            public Builder openOfflineAcceleration(Boolean openOfflineAcceleration) {
+                this.openOfflineAcceleration = openOfflineAcceleration;
                 return this;
             }
 

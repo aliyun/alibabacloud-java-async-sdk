@@ -63,6 +63,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
 
+    CompletableFuture<CreateTicket4CopilotResponse> createTicket4Copilot(CreateTicket4CopilotRequest request);
+
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
     CompletableFuture<DelayTicketExpireTimeResponse> delayTicketExpireTime(DelayTicketExpireTimeRequest request);
