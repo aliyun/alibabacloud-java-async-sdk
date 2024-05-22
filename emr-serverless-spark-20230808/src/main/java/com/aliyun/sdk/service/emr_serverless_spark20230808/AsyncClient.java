@@ -19,9 +19,13 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<AddMembersResponse> addMembers(AddMembersRequest request);
+
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
+
+    CompletableFuture<GrantRoleToUsersResponse> grantRoleToUsers(GrantRoleToUsersRequest request);
 
     CompletableFuture<ListJobRunsResponse> listJobRuns(ListJobRunsRequest request);
 
