@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLdpsComputeGroupsResponseBody</p>
  */
 public class ListLdpsComputeGroupsResponseBody extends TeaModel {
-    @NameInMap("GroupList")
+    @com.aliyun.core.annotation.NameInMap("GroupList")
     private java.util.List < GroupList> groupList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListLdpsComputeGroupsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListLdpsComputeGroupsResponseBody extends TeaModel {
     } 
 
     public static class GroupList extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private java.util.Map < String, ? > properties;
 
         private GroupList(Builder builder) {

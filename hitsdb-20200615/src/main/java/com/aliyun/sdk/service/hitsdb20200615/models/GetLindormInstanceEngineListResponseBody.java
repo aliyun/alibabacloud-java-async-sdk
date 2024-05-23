@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLindormInstanceEngineListResponseBody</p>
  */
 public class GetLindormInstanceEngineListResponseBody extends TeaModel {
-    @NameInMap("EngineList")
+    @com.aliyun.core.annotation.NameInMap("EngineList")
     private java.util.List < EngineList> engineList;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLindormInstanceEngineListResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
     } 
 
     public static class NetInfoList extends TeaModel {
-        @NameInMap("AccessType")
+        @com.aliyun.core.annotation.NameInMap("AccessType")
         private Integer accessType;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private NetInfoList(Builder builder) {
@@ -193,10 +192,10 @@ public class GetLindormInstanceEngineListResponseBody extends TeaModel {
 
     }
     public static class EngineList extends TeaModel {
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("NetInfoList")
+        @com.aliyun.core.annotation.NameInMap("NetInfoList")
         private java.util.List < NetInfoList> netInfoList;
 
         private EngineList(Builder builder) {

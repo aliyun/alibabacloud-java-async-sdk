@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,166 +11,166 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLindormInstanceResponseBody</p>
  */
 public class GetLindormInstanceResponseBody extends TeaModel {
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("ArbiterVSwitchId")
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
     private String arbiterVSwitchId;
 
-    @NameInMap("ArbiterZoneId")
+    @com.aliyun.core.annotation.NameInMap("ArbiterZoneId")
     private String arbiterZoneId;
 
-    @NameInMap("ArchVersion")
+    @com.aliyun.core.annotation.NameInMap("ArchVersion")
     private String archVersion;
 
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("ColdStorage")
+    @com.aliyun.core.annotation.NameInMap("ColdStorage")
     private Integer coldStorage;
 
-    @NameInMap("CoreDiskCategory")
+    @com.aliyun.core.annotation.NameInMap("CoreDiskCategory")
     private String coreDiskCategory;
 
-    @NameInMap("CoreNum")
+    @com.aliyun.core.annotation.NameInMap("CoreNum")
     private Integer coreNum;
 
-    @NameInMap("CoreSingleStorage")
+    @com.aliyun.core.annotation.NameInMap("CoreSingleStorage")
     private Integer coreSingleStorage;
 
-    @NameInMap("CoreSpec")
+    @com.aliyun.core.annotation.NameInMap("CoreSpec")
     private String coreSpec;
 
-    @NameInMap("CreateMilliseconds")
+    @com.aliyun.core.annotation.NameInMap("CreateMilliseconds")
     private Long createMilliseconds;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("DeletionProtection")
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
     private String deletionProtection;
 
-    @NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
     private String diskCategory;
 
-    @NameInMap("DiskThreshold")
+    @com.aliyun.core.annotation.NameInMap("DiskThreshold")
     private String diskThreshold;
 
-    @NameInMap("DiskUsage")
+    @com.aliyun.core.annotation.NameInMap("DiskUsage")
     private String diskUsage;
 
-    @NameInMap("EnableBlob")
+    @com.aliyun.core.annotation.NameInMap("EnableBlob")
     private Boolean enableBlob;
 
-    @NameInMap("EnableCdc")
+    @com.aliyun.core.annotation.NameInMap("EnableCdc")
     private Boolean enableCdc;
 
-    @NameInMap("EnableCompute")
+    @com.aliyun.core.annotation.NameInMap("EnableCompute")
     private Boolean enableCompute;
 
-    @NameInMap("EnableKms")
+    @com.aliyun.core.annotation.NameInMap("EnableKms")
     private Boolean enableKms;
 
-    @NameInMap("EnableLTS")
+    @com.aliyun.core.annotation.NameInMap("EnableLTS")
     private Boolean enableLTS;
 
-    @NameInMap("EnableLsqlVersionV3")
+    @com.aliyun.core.annotation.NameInMap("EnableLsqlVersionV3")
     private Boolean enableLsqlVersionV3;
 
-    @NameInMap("EnableMLCtrl")
+    @com.aliyun.core.annotation.NameInMap("EnableMLCtrl")
     private Boolean enableMLCtrl;
 
-    @NameInMap("EnableSSL")
+    @com.aliyun.core.annotation.NameInMap("EnableSSL")
     private Boolean enableSSL;
 
-    @NameInMap("EnableShs")
+    @com.aliyun.core.annotation.NameInMap("EnableShs")
     private Boolean enableShs;
 
-    @NameInMap("EnableStream")
+    @com.aliyun.core.annotation.NameInMap("EnableStream")
     private Boolean enableStream;
 
-    @NameInMap("EngineList")
+    @com.aliyun.core.annotation.NameInMap("EngineList")
     private java.util.List < EngineList> engineList;
 
-    @NameInMap("EngineType")
+    @com.aliyun.core.annotation.NameInMap("EngineType")
     private Integer engineType;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpiredMilliseconds")
+    @com.aliyun.core.annotation.NameInMap("ExpiredMilliseconds")
     private Long expiredMilliseconds;
 
-    @NameInMap("InstanceAlias")
+    @com.aliyun.core.annotation.NameInMap("InstanceAlias")
     private String instanceAlias;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceStatus")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatus")
     private String instanceStatus;
 
-    @NameInMap("InstanceStorage")
+    @com.aliyun.core.annotation.NameInMap("InstanceStorage")
     private String instanceStorage;
 
-    @NameInMap("LogDiskCategory")
+    @com.aliyun.core.annotation.NameInMap("LogDiskCategory")
     private String logDiskCategory;
 
-    @NameInMap("LogNum")
+    @com.aliyun.core.annotation.NameInMap("LogNum")
     private Integer logNum;
 
-    @NameInMap("LogSingleStorage")
+    @com.aliyun.core.annotation.NameInMap("LogSingleStorage")
     private Integer logSingleStorage;
 
-    @NameInMap("LogSpec")
+    @com.aliyun.core.annotation.NameInMap("LogSpec")
     private String logSpec;
 
-    @NameInMap("MaintainEndTime")
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
     private String maintainEndTime;
 
-    @NameInMap("MaintainStartTime")
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
     private String maintainStartTime;
 
-    @NameInMap("MultiZoneCombination")
+    @com.aliyun.core.annotation.NameInMap("MultiZoneCombination")
     private String multiZoneCombination;
 
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("PrimaryVSwitchId")
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
     private String primaryVSwitchId;
 
-    @NameInMap("PrimaryZoneId")
+    @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
     private String primaryZoneId;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("ServiceType")
+    @com.aliyun.core.annotation.NameInMap("ServiceType")
     private String serviceType;
 
-    @NameInMap("StandbyVSwitchId")
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
     private String standbyVSwitchId;
 
-    @NameInMap("StandbyZoneId")
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
     private String standbyZoneId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VswitchId")
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
     private String vswitchId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private GetLindormInstanceResponseBody(Builder builder) {
@@ -1158,25 +1157,25 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     } 
 
     public static class EngineList extends TeaModel {
-        @NameInMap("CoreCount")
+        @com.aliyun.core.annotation.NameInMap("CoreCount")
         private String coreCount;
 
-        @NameInMap("CpuCount")
+        @com.aliyun.core.annotation.NameInMap("CpuCount")
         private String cpuCount;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("IsLastVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLastVersion")
         private Boolean isLastVersion;
 
-        @NameInMap("LatestVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestVersion")
         private String latestVersion;
 
-        @NameInMap("MemorySize")
+        @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private EngineList(Builder builder) {

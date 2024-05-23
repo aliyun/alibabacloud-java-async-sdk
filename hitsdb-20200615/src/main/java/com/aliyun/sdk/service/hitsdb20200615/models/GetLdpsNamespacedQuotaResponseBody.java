@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLdpsNamespacedQuotaResponseBody</p>
  */
 public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
-    @NameInMap("NamespacedQuotas")
+    @com.aliyun.core.annotation.NameInMap("NamespacedQuotas")
     private java.util.List < NamespacedQuotas> namespacedQuotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLdpsNamespacedQuotaResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetLdpsNamespacedQuotaResponseBody extends TeaModel {
     } 
 
     public static class NamespacedQuotas extends TeaModel {
-        @NameInMap("CpuAmount")
+        @com.aliyun.core.annotation.NameInMap("CpuAmount")
         private String cpuAmount;
 
-        @NameInMap("MemoryAmount")
+        @com.aliyun.core.annotation.NameInMap("MemoryAmount")
         private String memoryAmount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private String usedCpu;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private String usedMemory;
 
         private NamespacedQuotas(Builder builder) {

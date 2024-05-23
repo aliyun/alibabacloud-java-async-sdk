@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,184 +11,192 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLindormInstanceRequest</p>
  */
 public class CreateLindormInstanceRequest extends Request {
-    @Query
-    @NameInMap("ArbiterVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
     private String arbiterVSwitchId;
 
-    @Query
-    @NameInMap("ArbiterZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterZoneId")
     private String arbiterZoneId;
 
-    @Query
-    @NameInMap("ArchVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchVersion")
     private String archVersion;
 
-    @Query
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private String autoRenewDuration;
 
-    @Query
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @Query
-    @NameInMap("ColdStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColdStorage")
     private Integer coldStorage;
 
-    @Query
-    @NameInMap("CoreSingleStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreSingleStorage")
     private Integer coreSingleStorage;
 
-    @Query
-    @NameInMap("CoreSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreSpec")
     private String coreSpec;
 
-    @Query
-    @NameInMap("DiskCategory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskCategory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String diskCategory;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("FilestoreNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilestoreNum")
     private Integer filestoreNum;
 
-    @Query
-    @NameInMap("FilestoreSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FilestoreSpec")
     private String filestoreSpec;
 
-    @Query
-    @NameInMap("InstanceAlias")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceAlias")
     private String instanceAlias;
 
-    @Query
-    @NameInMap("InstanceStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceStorage")
     private String instanceStorage;
 
-    @Query
-    @NameInMap("LindormNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LindormNum")
     private Integer lindormNum;
 
-    @Query
-    @NameInMap("LindormSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LindormSpec")
     private String lindormSpec;
 
-    @Query
-    @NameInMap("LogDiskCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDiskCategory")
     private String logDiskCategory;
 
-    @Query
-    @NameInMap("LogNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogNum")
     private Integer logNum;
 
-    @Query
-    @NameInMap("LogSingleStorage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogSingleStorage")
     private Integer logSingleStorage;
 
-    @Query
-    @NameInMap("LogSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogSpec")
     private String logSpec;
 
-    @Query
-    @NameInMap("MultiZoneCombination")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LtsNum")
+    private String ltsNum;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LtsSpec")
+    private String ltsSpec;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiZoneCombination")
     private String multiZoneCombination;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long ownerId;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Query
-    @NameInMap("PrimaryVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
     private String primaryVSwitchId;
 
-    @Query
-    @NameInMap("PrimaryZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
     private String primaryZoneId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
-    @Validation(minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Validation(minimum = 1)
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecurityToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityToken")
     private String securityToken;
 
-    @Query
-    @NameInMap("SolrNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SolrNum")
     private Integer solrNum;
 
-    @Query
-    @NameInMap("SolrSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SolrSpec")
     private String solrSpec;
 
-    @Query
-    @NameInMap("StandbyVSwitchId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
     private String standbyVSwitchId;
 
-    @Query
-    @NameInMap("StandbyZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
     private String standbyZoneId;
 
-    @Query
-    @NameInMap("StreamNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamNum")
     private Integer streamNum;
 
-    @Query
-    @NameInMap("StreamSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamSpec")
     private String streamSpec;
 
-    @Query
-    @NameInMap("TsdbNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TsdbNum")
     private Integer tsdbNum;
 
-    @Query
-    @NameInMap("TsdbSpec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TsdbSpec")
     private String tsdbSpec;
 
-    @Query
-    @NameInMap("VPCId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VPCId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String VPCId;
 
-    @Query
-    @NameInMap("VSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vSwitchId;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private CreateLindormInstanceRequest(Builder builder) {
@@ -214,6 +221,8 @@ public class CreateLindormInstanceRequest extends Request {
         this.logNum = builder.logNum;
         this.logSingleStorage = builder.logSingleStorage;
         this.logSpec = builder.logSpec;
+        this.ltsNum = builder.ltsNum;
+        this.ltsSpec = builder.ltsSpec;
         this.multiZoneCombination = builder.multiZoneCombination;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -390,6 +399,20 @@ public class CreateLindormInstanceRequest extends Request {
      */
     public String getLogSpec() {
         return this.logSpec;
+    }
+
+    /**
+     * @return ltsNum
+     */
+    public String getLtsNum() {
+        return this.ltsNum;
+    }
+
+    /**
+     * @return ltsSpec
+     */
+    public String getLtsSpec() {
+        return this.ltsSpec;
     }
 
     /**
@@ -574,6 +597,8 @@ public class CreateLindormInstanceRequest extends Request {
         private Integer logNum; 
         private Integer logSingleStorage; 
         private String logSpec; 
+        private String ltsNum; 
+        private String ltsSpec; 
         private String multiZoneCombination; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -624,6 +649,8 @@ public class CreateLindormInstanceRequest extends Request {
             this.logNum = request.logNum;
             this.logSingleStorage = request.logSingleStorage;
             this.logSpec = request.logSpec;
+            this.ltsNum = request.ltsNum;
+            this.ltsSpec = request.ltsSpec;
             this.multiZoneCombination = request.multiZoneCombination;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -887,6 +914,24 @@ public class CreateLindormInstanceRequest extends Request {
         public Builder logSpec(String logSpec) {
             this.putQueryParameter("LogSpec", logSpec);
             this.logSpec = logSpec;
+            return this;
+        }
+
+        /**
+         * LtsNum.
+         */
+        public Builder ltsNum(String ltsNum) {
+            this.putQueryParameter("LtsNum", ltsNum);
+            this.ltsNum = ltsNum;
+            return this;
+        }
+
+        /**
+         * LtsSpec.
+         */
+        public Builder ltsSpec(String ltsSpec) {
+            this.putQueryParameter("LtsSpec", ltsSpec);
+            this.ltsSpec = ltsSpec;
             return this;
         }
 

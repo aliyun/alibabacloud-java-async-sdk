@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceIpWhiteListResponseBody</p>
  */
 public class GetInstanceIpWhiteListResponseBody extends TeaModel {
-    @NameInMap("GroupList")
+    @com.aliyun.core.annotation.NameInMap("GroupList")
     private java.util.List < GroupList> groupList;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("IpList")
+    @com.aliyun.core.annotation.NameInMap("IpList")
     private java.util.List < String > ipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceIpWhiteListResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
     } 
 
     public static class GroupList extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("SecurityIpList")
+        @com.aliyun.core.annotation.NameInMap("SecurityIpList")
         private String securityIpList;
 
         private GroupList(Builder builder) {

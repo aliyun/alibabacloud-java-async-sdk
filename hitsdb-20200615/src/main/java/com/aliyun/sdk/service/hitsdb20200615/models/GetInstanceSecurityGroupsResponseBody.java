@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceSecurityGroupsResponseBody</p>
  */
 public class GetInstanceSecurityGroupsResponseBody extends TeaModel {
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityGroups")
+    @com.aliyun.core.annotation.NameInMap("SecurityGroups")
     private java.util.List < String > securityGroups;
 
     private GetInstanceSecurityGroupsResponseBody(Builder builder) {

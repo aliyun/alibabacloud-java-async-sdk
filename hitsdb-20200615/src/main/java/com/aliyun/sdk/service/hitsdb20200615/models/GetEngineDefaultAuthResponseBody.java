@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEngineDefaultAuthResponseBody</p>
  */
 public class GetEngineDefaultAuthResponseBody extends TeaModel {
-    @NameInMap("AuthInfos")
+    @com.aliyun.core.annotation.NameInMap("AuthInfos")
     private java.util.List < AuthInfos> authInfos;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEngineDefaultAuthResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class GetEngineDefaultAuthResponseBody extends TeaModel {
     } 
 
     public static class AuthInfos extends TeaModel {
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private AuthInfos(Builder builder) {

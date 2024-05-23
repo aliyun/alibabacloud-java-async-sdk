@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hitsdb20200615.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLindormInstanceListResponseBody</p>
  */
 public class GetLindormInstanceListResponseBody extends TeaModel {
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < InstanceList> instanceList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private GetLindormInstanceListResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,72 +192,88 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
 
     }
     public static class InstanceList extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("CreateMilliseconds")
+        @com.aliyun.core.annotation.NameInMap("CreateMilliseconds")
         private Long createMilliseconds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EnableCompute")
+        @com.aliyun.core.annotation.NameInMap("EnableColumn")
+        private Boolean enableColumn;
+
+        @com.aliyun.core.annotation.NameInMap("EnableCompute")
         private Boolean enableCompute;
 
-        @NameInMap("EnableStream")
+        @com.aliyun.core.annotation.NameInMap("EnableLts")
+        private Boolean enableLts;
+
+        @com.aliyun.core.annotation.NameInMap("EnableMessage")
+        private Boolean enableMessage;
+
+        @com.aliyun.core.annotation.NameInMap("EnableStream")
         private Boolean enableStream;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EnableVector")
+        private Boolean enableVector;
+
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpiredMilliseconds")
+        @com.aliyun.core.annotation.NameInMap("ExpiredMilliseconds")
         private Long expiredMilliseconds;
 
-        @NameInMap("InstanceAlias")
+        @com.aliyun.core.annotation.NameInMap("InstanceAlias")
         private String instanceAlias;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceStorage")
+        @com.aliyun.core.annotation.NameInMap("InstanceStorage")
         private String instanceStorage;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private InstanceList(Builder builder) {
             this.aliUid = builder.aliUid;
             this.createMilliseconds = builder.createMilliseconds;
             this.createTime = builder.createTime;
+            this.enableColumn = builder.enableColumn;
             this.enableCompute = builder.enableCompute;
+            this.enableLts = builder.enableLts;
+            this.enableMessage = builder.enableMessage;
             this.enableStream = builder.enableStream;
+            this.enableVector = builder.enableVector;
             this.engineType = builder.engineType;
             this.expireTime = builder.expireTime;
             this.expiredMilliseconds = builder.expiredMilliseconds;
@@ -306,6 +321,13 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableColumn
+         */
+        public Boolean getEnableColumn() {
+            return this.enableColumn;
+        }
+
+        /**
          * @return enableCompute
          */
         public Boolean getEnableCompute() {
@@ -313,10 +335,31 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
         }
 
         /**
+         * @return enableLts
+         */
+        public Boolean getEnableLts() {
+            return this.enableLts;
+        }
+
+        /**
+         * @return enableMessage
+         */
+        public Boolean getEnableMessage() {
+            return this.enableMessage;
+        }
+
+        /**
          * @return enableStream
          */
         public Boolean getEnableStream() {
             return this.enableStream;
+        }
+
+        /**
+         * @return enableVector
+         */
+        public Boolean getEnableVector() {
+            return this.enableVector;
         }
 
         /**
@@ -428,8 +471,12 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             private Long aliUid; 
             private Long createMilliseconds; 
             private String createTime; 
+            private Boolean enableColumn; 
             private Boolean enableCompute; 
+            private Boolean enableLts; 
+            private Boolean enableMessage; 
             private Boolean enableStream; 
+            private Boolean enableVector; 
             private String engineType; 
             private String expireTime; 
             private Long expiredMilliseconds; 
@@ -471,6 +518,14 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * EnableColumn.
+             */
+            public Builder enableColumn(Boolean enableColumn) {
+                this.enableColumn = enableColumn;
+                return this;
+            }
+
+            /**
              * EnableCompute.
              */
             public Builder enableCompute(Boolean enableCompute) {
@@ -479,10 +534,34 @@ public class GetLindormInstanceListResponseBody extends TeaModel {
             }
 
             /**
+             * EnableLts.
+             */
+            public Builder enableLts(Boolean enableLts) {
+                this.enableLts = enableLts;
+                return this;
+            }
+
+            /**
+             * EnableMessage.
+             */
+            public Builder enableMessage(Boolean enableMessage) {
+                this.enableMessage = enableMessage;
+                return this;
+            }
+
+            /**
              * EnableStream.
              */
             public Builder enableStream(Boolean enableStream) {
                 this.enableStream = enableStream;
+                return this;
+            }
+
+            /**
+             * EnableVector.
+             */
+            public Builder enableVector(Boolean enableVector) {
+                this.enableVector = enableVector;
                 return this;
             }
 
