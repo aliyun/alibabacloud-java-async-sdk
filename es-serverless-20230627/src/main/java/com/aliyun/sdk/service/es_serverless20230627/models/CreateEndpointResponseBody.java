@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateAppResponseBody} extends {@link TeaModel}
+ * {@link CreateEndpointResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateAppResponseBody</p>
+ * <p>CreateEndpointResponseBody</p>
  */
-public class UpdateAppResponseBody extends TeaModel {
+public class CreateEndpointResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    private UpdateAppResponseBody(Builder builder) {
+    private CreateEndpointResponseBody(Builder builder) {
         this.requestId = builder.requestId;
         this.result = builder.result;
     }
@@ -26,7 +26,7 @@ public class UpdateAppResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateAppResponseBody create() {
+    public static CreateEndpointResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class UpdateAppResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * requestId.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -64,18 +64,18 @@ public class UpdateAppResponseBody extends TeaModel {
             return this;
         }
 
-        public UpdateAppResponseBody build() {
-            return new UpdateAppResponseBody(this);
+        public CreateEndpointResponseBody build() {
+            return new CreateEndpointResponseBody(this);
         } 
 
     } 
 
     public static class Result extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("instanceId")
-        private String instanceId;
+        @com.aliyun.core.annotation.NameInMap("endpointId")
+        private String endpointId;
 
         private Result(Builder builder) {
-            this.instanceId = builder.instanceId;
+            this.endpointId = builder.endpointId;
         }
 
         public static Builder builder() {
@@ -87,20 +87,20 @@ public class UpdateAppResponseBody extends TeaModel {
         }
 
         /**
-         * @return instanceId
+         * @return endpointId
          */
-        public String getInstanceId() {
-            return this.instanceId;
+        public String getEndpointId() {
+            return this.endpointId;
         }
 
         public static final class Builder {
-            private String instanceId; 
+            private String endpointId; 
 
             /**
-             * instanceId.
+             * endpointId.
              */
-            public Builder instanceId(String instanceId) {
-                this.instanceId = instanceId;
+            public Builder endpointId(String endpointId) {
+                this.endpointId = endpointId;
                 return this;
             }
 

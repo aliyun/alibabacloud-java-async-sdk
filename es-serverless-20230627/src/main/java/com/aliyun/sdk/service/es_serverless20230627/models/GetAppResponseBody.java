@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppResponseBody</p>
  */
 public class GetAppResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetAppResponseBody(Builder builder) {
@@ -71,35 +70,445 @@ public class GetAppResponseBody extends TeaModel {
 
     } 
 
+    public static class WhiteIpGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("ips")
+        private java.util.List < String > ips;
+
+        private WhiteIpGroup(Builder builder) {
+            this.groupName = builder.groupName;
+            this.ips = builder.ips;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static WhiteIpGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private java.util.List < String > ips; 
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * ips.
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
+                return this;
+            }
+
+            public WhiteIpGroup build() {
+                return new WhiteIpGroup(this);
+            } 
+
+        } 
+
+    }
+    public static class Network extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("port")
+        private Integer port;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
+        private java.util.List < WhiteIpGroup> whiteIpGroup;
+
+        private Network(Builder builder) {
+            this.domain = builder.domain;
+            this.enabled = builder.enabled;
+            this.port = builder.port;
+            this.type = builder.type;
+            this.whiteIpGroup = builder.whiteIpGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Network create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return whiteIpGroup
+         */
+        public java.util.List < WhiteIpGroup> getWhiteIpGroup() {
+            return this.whiteIpGroup;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private Boolean enabled; 
+            private Integer port; 
+            private String type; 
+            private java.util.List < WhiteIpGroup> whiteIpGroup; 
+
+            /**
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * whiteIpGroup.
+             */
+            public Builder whiteIpGroup(java.util.List < WhiteIpGroup> whiteIpGroup) {
+                this.whiteIpGroup = whiteIpGroup;
+                return this;
+            }
+
+            public Network build() {
+                return new Network(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateNetworkWhiteIpGroup extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("groupName")
+        private String groupName;
+
+        @com.aliyun.core.annotation.NameInMap("ips")
+        private java.util.List < String > ips;
+
+        private PrivateNetworkWhiteIpGroup(Builder builder) {
+            this.groupName = builder.groupName;
+            this.ips = builder.ips;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateNetworkWhiteIpGroup create() {
+            return builder().build();
+        }
+
+        /**
+         * @return groupName
+         */
+        public String getGroupName() {
+            return this.groupName;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
+        }
+
+        public static final class Builder {
+            private String groupName; 
+            private java.util.List < String > ips; 
+
+            /**
+             * groupName.
+             */
+            public Builder groupName(String groupName) {
+                this.groupName = groupName;
+                return this;
+            }
+
+            /**
+             * ips.
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
+                return this;
+            }
+
+            public PrivateNetworkWhiteIpGroup build() {
+                return new PrivateNetworkWhiteIpGroup(this);
+            } 
+
+        } 
+
+    }
+    public static class PrivateNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("enabled")
+        private Boolean enabled;
+
+        @com.aliyun.core.annotation.NameInMap("port")
+        private Integer port;
+
+        @com.aliyun.core.annotation.NameInMap("pvlEndpointId")
+        private String pvlEndpointId;
+
+        @com.aliyun.core.annotation.NameInMap("type")
+        private String type;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        private String vpcId;
+
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
+        private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup;
+
+        private PrivateNetwork(Builder builder) {
+            this.domain = builder.domain;
+            this.enabled = builder.enabled;
+            this.port = builder.port;
+            this.pvlEndpointId = builder.pvlEndpointId;
+            this.type = builder.type;
+            this.vpcId = builder.vpcId;
+            this.whiteIpGroup = builder.whiteIpGroup;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrivateNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return enabled
+         */
+        public Boolean getEnabled() {
+            return this.enabled;
+        }
+
+        /**
+         * @return port
+         */
+        public Integer getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return pvlEndpointId
+         */
+        public String getPvlEndpointId() {
+            return this.pvlEndpointId;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        /**
+         * @return whiteIpGroup
+         */
+        public java.util.List < PrivateNetworkWhiteIpGroup> getWhiteIpGroup() {
+            return this.whiteIpGroup;
+        }
+
+        public static final class Builder {
+            private String domain; 
+            private Boolean enabled; 
+            private Integer port; 
+            private String pvlEndpointId; 
+            private String type; 
+            private String vpcId; 
+            private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup; 
+
+            /**
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * enabled.
+             */
+            public Builder enabled(Boolean enabled) {
+                this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * port.
+             */
+            public Builder port(Integer port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * pvlEndpointId.
+             */
+            public Builder pvlEndpointId(String pvlEndpointId) {
+                this.pvlEndpointId = pvlEndpointId;
+                return this;
+            }
+
+            /**
+             * type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            /**
+             * vpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            /**
+             * whiteIpGroup.
+             */
+            public Builder whiteIpGroup(java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup) {
+                this.whiteIpGroup = whiteIpGroup;
+                return this;
+            }
+
+            public PrivateNetwork build() {
+                return new PrivateNetwork(this);
+            } 
+
+        } 
+
+    }
     public static class Result extends TeaModel {
-        @NameInMap("appId")
+        @com.aliyun.core.annotation.NameInMap("appId")
         private String appId;
 
-        @NameInMap("appName")
+        @com.aliyun.core.annotation.NameInMap("appName")
         private String appName;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("modifiedTime")
+        @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("network")
+        private java.util.List < Network> network;
+
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private String ownerId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("privateNetwork")
+        private java.util.List < PrivateNetwork> privateNetwork;
+
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private Result(Builder builder) {
@@ -109,7 +518,9 @@ public class GetAppResponseBody extends TeaModel {
             this.description = builder.description;
             this.instanceId = builder.instanceId;
             this.modifiedTime = builder.modifiedTime;
+            this.network = builder.network;
             this.ownerId = builder.ownerId;
+            this.privateNetwork = builder.privateNetwork;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.version = builder.version;
@@ -166,10 +577,24 @@ public class GetAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return network
+         */
+        public java.util.List < Network> getNetwork() {
+            return this.network;
+        }
+
+        /**
          * @return ownerId
          */
         public String getOwnerId() {
             return this.ownerId;
+        }
+
+        /**
+         * @return privateNetwork
+         */
+        public java.util.List < PrivateNetwork> getPrivateNetwork() {
+            return this.privateNetwork;
         }
 
         /**
@@ -200,7 +625,9 @@ public class GetAppResponseBody extends TeaModel {
             private String description; 
             private String instanceId; 
             private String modifiedTime; 
+            private java.util.List < Network> network; 
             private String ownerId; 
+            private java.util.List < PrivateNetwork> privateNetwork; 
             private String regionId; 
             private String status; 
             private String version; 
@@ -254,10 +681,26 @@ public class GetAppResponseBody extends TeaModel {
             }
 
             /**
+             * network.
+             */
+            public Builder network(java.util.List < Network> network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
              * ownerId.
              */
             public Builder ownerId(String ownerId) {
                 this.ownerId = ownerId;
+                return this;
+            }
+
+            /**
+             * privateNetwork.
+             */
+            public Builder privateNetwork(java.util.List < PrivateNetwork> privateNetwork) {
+                this.privateNetwork = privateNetwork;
                 return this;
             }
 

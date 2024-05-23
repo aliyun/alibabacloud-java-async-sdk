@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteAppResponse} extends {@link TeaModel}
+ * {@link CreateEndpointResponse} extends {@link TeaModel}
  *
- * <p>DeleteAppResponse</p>
+ * <p>CreateEndpointResponse</p>
  */
-public class DeleteAppResponse extends Response {
+public class CreateEndpointResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DeleteAppResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteAppResponseBody body;
+    private CreateEndpointResponseBody body;
 
-    private DeleteAppResponse(BuilderImpl builder) {
+    private CreateEndpointResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteAppResponse create() {
+    public static CreateEndpointResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DeleteAppResponse extends Response {
     /**
      * @return body
      */
-    public DeleteAppResponseBody getBody() {
+    public CreateEndpointResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteAppResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateEndpointResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteAppResponseBody body);
+        Builder body(CreateEndpointResponseBody body);
 
         @Override
-        DeleteAppResponse build();
+        CreateEndpointResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteAppResponse, Builder>
+            extends Response.BuilderImpl<CreateEndpointResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteAppResponseBody body; 
+        private CreateEndpointResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteAppResponse response) {
+        private BuilderImpl(CreateEndpointResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DeleteAppResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteAppResponseBody body) {
+        public Builder body(CreateEndpointResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteAppResponse build() {
-            return new DeleteAppResponse(this);
+        public CreateEndpointResponse build() {
+            return new CreateEndpointResponse(this);
         } 
 
     } 

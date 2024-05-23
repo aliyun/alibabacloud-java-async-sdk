@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.es_serverless20230627;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.es_serverless20230627.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -19,6 +20,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     }
 
     CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
+
+    CompletableFuture<CreateEndpointResponse> createEndpoint(CreateEndpointRequest request);
 
     CompletableFuture<DeleteAppResponse> deleteApp(DeleteAppRequest request);
 

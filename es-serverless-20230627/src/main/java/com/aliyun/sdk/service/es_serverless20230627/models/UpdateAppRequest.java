@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAppRequest</p>
  */
 public class UpdateAppRequest extends Request {
-    @Path
-    @NameInMap("appName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Body
-    @NameInMap("applyReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("applyReason")
     private String applyReason;
 
-    @Body
-    @NameInMap("authentication")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("authentication")
     private Authentication authentication;
 
-    @Body
-    @NameInMap("contactInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("contactInfo")
     private String contactInfo;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("limiterInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("limiterInfo")
     private LimiterInfo limiterInfo;
 
-    @Body
-    @NameInMap("network")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("network")
     private java.util.List < Network> network;
 
-    @Body
-    @NameInMap("privateNetwork")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("privateNetwork")
     private java.util.List < PrivateNetwork> privateNetwork;
 
     private UpdateAppRequest(Builder builder) {
@@ -232,10 +231,10 @@ public class UpdateAppRequest extends Request {
     } 
 
     public static class BasicAuth extends TeaModel {
-        @NameInMap("password")
+        @com.aliyun.core.annotation.NameInMap("password")
         private String password;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private BasicAuth(Builder builder) {
@@ -293,7 +292,7 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class Authentication extends TeaModel {
-        @NameInMap("basicAuth")
+        @com.aliyun.core.annotation.NameInMap("basicAuth")
         private java.util.List < BasicAuth> basicAuth;
 
         private Authentication(Builder builder) {
@@ -334,16 +333,16 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class Limiters extends TeaModel {
-        @NameInMap("maxValue")
+        @com.aliyun.core.annotation.NameInMap("maxValue")
         private Integer maxValue;
 
-        @NameInMap("minValue")
+        @com.aliyun.core.annotation.NameInMap("minValue")
         private Integer minValue;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("values")
+        @com.aliyun.core.annotation.NameInMap("values")
         private java.util.List < String > values;
 
         private Limiters(Builder builder) {
@@ -435,7 +434,7 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class LimiterInfo extends TeaModel {
-        @NameInMap("limiters")
+        @com.aliyun.core.annotation.NameInMap("limiters")
         private java.util.List < Limiters> limiters;
 
         private LimiterInfo(Builder builder) {
@@ -476,10 +475,10 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class WhiteIpGroup extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
         private WhiteIpGroup(Builder builder) {
@@ -537,19 +536,19 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("domain")
+        @com.aliyun.core.annotation.NameInMap("domain")
         private String domain;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("port")
+        @com.aliyun.core.annotation.NameInMap("port")
         private Integer port;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("whiteIpGroup")
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
         private java.util.List < WhiteIpGroup> whiteIpGroup;
 
         private Network(Builder builder) {
@@ -658,10 +657,10 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class PrivateNetworkWhiteIpGroup extends TeaModel {
-        @NameInMap("groupName")
+        @com.aliyun.core.annotation.NameInMap("groupName")
         private String groupName;
 
-        @NameInMap("ips")
+        @com.aliyun.core.annotation.NameInMap("ips")
         private java.util.List < String > ips;
 
         private PrivateNetworkWhiteIpGroup(Builder builder) {
@@ -719,19 +718,19 @@ public class UpdateAppRequest extends Request {
 
     }
     public static class PrivateNetwork extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("pvlEndpointId")
+        @com.aliyun.core.annotation.NameInMap("pvlEndpointId")
         private String pvlEndpointId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
-        @NameInMap("whiteIpGroup")
+        @com.aliyun.core.annotation.NameInMap("whiteIpGroup")
         private java.util.List < PrivateNetworkWhiteIpGroup> whiteIpGroup;
 
         private PrivateNetwork(Builder builder) {

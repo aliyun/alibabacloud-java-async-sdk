@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.es_serverless20230627.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppQuotaResponseBody</p>
  */
 public class GetAppQuotaResponseBody extends TeaModel {
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
     private GetAppQuotaResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetAppQuotaResponseBody extends TeaModel {
     } 
 
     public static class Limiters extends TeaModel {
-        @NameInMap("immutable")
+        @com.aliyun.core.annotation.NameInMap("immutable")
         private Boolean immutable;
 
-        @NameInMap("maxValue")
+        @com.aliyun.core.annotation.NameInMap("maxValue")
         private Long maxValue;
 
-        @NameInMap("minValue")
+        @com.aliyun.core.annotation.NameInMap("minValue")
         private Long minValue;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Limiters(Builder builder) {
@@ -173,7 +172,7 @@ public class GetAppQuotaResponseBody extends TeaModel {
 
     }
     public static class LimiterInfo extends TeaModel {
-        @NameInMap("limiters")
+        @com.aliyun.core.annotation.NameInMap("limiters")
         private java.util.List < Limiters> limiters;
 
         private LimiterInfo(Builder builder) {
@@ -214,10 +213,10 @@ public class GetAppQuotaResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("limiterInfo")
+        @com.aliyun.core.annotation.NameInMap("limiterInfo")
         private LimiterInfo limiterInfo;
 
-        @NameInMap("quotaInfo")
+        @com.aliyun.core.annotation.NameInMap("quotaInfo")
         private java.util.Map < String, ? > quotaInfo;
 
         private Result(Builder builder) {
