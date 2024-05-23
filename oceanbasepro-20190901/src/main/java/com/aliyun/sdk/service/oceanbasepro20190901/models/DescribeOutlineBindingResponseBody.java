@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOutlineBindingResponseBody</p>
  */
 public class DescribeOutlineBindingResponseBody extends TeaModel {
-    @NameInMap("OutlineBinding")
+    @com.aliyun.core.annotation.NameInMap("OutlineBinding")
     private OutlineBinding outlineBinding;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOutlineBindingResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeOutlineBindingResponseBody extends TeaModel {
     } 
 
     public static class OutlineBinding extends TeaModel {
-        @NameInMap("BindIndex")
+        @com.aliyun.core.annotation.NameInMap("BindIndex")
         private String bindIndex;
 
-        @NameInMap("BindPlan")
+        @com.aliyun.core.annotation.NameInMap("BindPlan")
         private String bindPlan;
 
-        @NameInMap("MaxConcurrent")
+        @com.aliyun.core.annotation.NameInMap("MaxConcurrent")
         private Integer maxConcurrent;
 
-        @NameInMap("OutlineId")
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private OutlineBinding(Builder builder) {

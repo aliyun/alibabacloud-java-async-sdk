@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectComponentsResponseBody</p>
  */
 public class DescribeProjectComponentsResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Cost")
+    @com.aliyun.core.annotation.NameInMap("Cost")
     private String cost;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeProjectComponentsResponseBody(Builder builder) {
@@ -252,43 +251,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
     } 
 
     public static class ErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetails(Builder builder) {
@@ -533,31 +532,31 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class FullImportComponents extends TeaModel {
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ErrorDetails> errorDetails;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private FullImportComponents(Builder builder) {
@@ -734,43 +733,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class FullVerifyComponentsErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private FullVerifyComponentsErrorDetails(Builder builder) {
@@ -1015,34 +1014,34 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class FullVerifyComponents extends TeaModel {
-        @NameInMap("ConsistentQuantity")
+        @com.aliyun.core.annotation.NameInMap("ConsistentQuantity")
         private Long consistentQuantity;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < FullVerifyComponentsErrorDetails> errorDetails;
 
-        @NameInMap("InconsistentQuantity")
+        @com.aliyun.core.annotation.NameInMap("InconsistentQuantity")
         private Long inconsistentQuantity;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RecordProgress")
+        @com.aliyun.core.annotation.NameInMap("RecordProgress")
         private Integer recordProgress;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private Long taskId;
 
         private FullVerifyComponents(Builder builder) {
@@ -1236,43 +1235,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class IncrSyncComponentsErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private IncrSyncComponentsErrorDetails(Builder builder) {
@@ -1517,43 +1516,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class IncrSyncComponents extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("CheckpointSampleTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CheckpointSampleTimestamp")
         private Long checkpointSampleTimestamp;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < IncrSyncComponentsErrorDetails> errorDetails;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtopics")
+        @com.aliyun.core.annotation.NameInMap("Subtopics")
         private java.util.List < String > subtopics;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Long tps;
 
         private IncrSyncComponents(Builder builder) {
@@ -1798,43 +1797,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class ReverseIncrSyncComponentsErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ReverseIncrSyncComponentsErrorDetails(Builder builder) {
@@ -2079,43 +2078,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class ReverseIncrSyncComponents extends TeaModel {
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("CheckpointSampleTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CheckpointSampleTimestamp")
         private Long checkpointSampleTimestamp;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ReverseIncrSyncComponentsErrorDetails> errorDetails;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModify")
+        @com.aliyun.core.annotation.NameInMap("GmtModify")
         private String gmtModify;
 
-        @NameInMap("Identity")
+        @com.aliyun.core.annotation.NameInMap("Identity")
         private String identity;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtopics")
+        @com.aliyun.core.annotation.NameInMap("Subtopics")
         private java.util.List < String > subtopics;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Long tps;
 
         private ReverseIncrSyncComponents(Builder builder) {
@@ -2360,43 +2359,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class ReverseStoreListErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ReverseStoreListErrorDetails(Builder builder) {
@@ -2641,64 +2640,64 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class ReverseStoreList extends TeaModel {
-        @NameInMap("BeginCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("BeginCheckpoint")
         private String beginCheckpoint;
 
-        @NameInMap("Conn")
+        @com.aliyun.core.annotation.NameInMap("Conn")
         private Long conn;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("EndCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EndCheckpoint")
         private String endCheckpoint;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ReverseStoreListErrorDetails> errorDetails;
 
-        @NameInMap("Gmt")
+        @com.aliyun.core.annotation.NameInMap("Gmt")
         private Long gmt;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("LatelyHeartbeatTimeSec")
+        @com.aliyun.core.annotation.NameInMap("LatelyHeartbeatTimeSec")
         private Long latelyHeartbeatTimeSec;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorePort")
+        @com.aliyun.core.annotation.NameInMap("StorePort")
         private Integer storePort;
 
-        @NameInMap("Subtopic")
+        @com.aliyun.core.annotation.NameInMap("Subtopic")
         private String subtopic;
 
-        @NameInMap("ToSwitch")
+        @com.aliyun.core.annotation.NameInMap("ToSwitch")
         private Boolean toSwitch;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Long tps;
 
         private ReverseStoreList(Builder builder) {
@@ -3062,43 +3061,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class StoreListErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private StoreListErrorDetails(Builder builder) {
@@ -3343,64 +3342,64 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class StoreList extends TeaModel {
-        @NameInMap("BeginCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("BeginCheckpoint")
         private String beginCheckpoint;
 
-        @NameInMap("Conn")
+        @com.aliyun.core.annotation.NameInMap("Conn")
         private Long conn;
 
-        @NameInMap("Delay")
+        @com.aliyun.core.annotation.NameInMap("Delay")
         private Long delay;
 
-        @NameInMap("EndCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("EndCheckpoint")
         private String endCheckpoint;
 
-        @NameInMap("ErrMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrMsg")
         private String errMsg;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < StoreListErrorDetails> errorDetails;
 
-        @NameInMap("Gmt")
+        @com.aliyun.core.annotation.NameInMap("Gmt")
         private Long gmt;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("LatelyHeartbeatTimeSec")
+        @com.aliyun.core.annotation.NameInMap("LatelyHeartbeatTimeSec")
         private Long latelyHeartbeatTimeSec;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorePort")
+        @com.aliyun.core.annotation.NameInMap("StorePort")
         private Integer storePort;
 
-        @NameInMap("Subtopic")
+        @com.aliyun.core.annotation.NameInMap("Subtopic")
         private String subtopic;
 
-        @NameInMap("ToSwitch")
+        @com.aliyun.core.annotation.NameInMap("ToSwitch")
         private Boolean toSwitch;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
-        @NameInMap("Tps")
+        @com.aliyun.core.annotation.NameInMap("Tps")
         private Long tps;
 
         private StoreList(Builder builder) {
@@ -3764,22 +3763,22 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("FullImportComponents")
+        @com.aliyun.core.annotation.NameInMap("FullImportComponents")
         private java.util.List < FullImportComponents> fullImportComponents;
 
-        @NameInMap("FullVerifyComponents")
+        @com.aliyun.core.annotation.NameInMap("FullVerifyComponents")
         private java.util.List < FullVerifyComponents> fullVerifyComponents;
 
-        @NameInMap("IncrSyncComponents")
+        @com.aliyun.core.annotation.NameInMap("IncrSyncComponents")
         private java.util.List < IncrSyncComponents> incrSyncComponents;
 
-        @NameInMap("ReverseIncrSyncComponents")
+        @com.aliyun.core.annotation.NameInMap("ReverseIncrSyncComponents")
         private java.util.List < ReverseIncrSyncComponents> reverseIncrSyncComponents;
 
-        @NameInMap("ReverseStoreList")
+        @com.aliyun.core.annotation.NameInMap("ReverseStoreList")
         private java.util.List < ReverseStoreList> reverseStoreList;
 
-        @NameInMap("StoreList")
+        @com.aliyun.core.annotation.NameInMap("StoreList")
         private java.util.List < StoreList> storeList;
 
         private Data(Builder builder) {
@@ -3905,43 +3904,43 @@ public class DescribeProjectComponentsResponseBody extends TeaModel {
 
     }
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetail(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantZonesReadResponseBody</p>
  */
 public class DescribeTenantZonesReadResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantZones")
+    @com.aliyun.core.annotation.NameInMap("TenantZones")
     private java.util.List < TenantZones> tenantZones;
 
     private DescribeTenantZonesReadResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeTenantZonesReadResponseBody extends TeaModel {
     } 
 
     public static class TenantZones extends TeaModel {
-        @NameInMap("IsElectable")
+        @com.aliyun.core.annotation.NameInMap("IsElectable")
         private Boolean isElectable;
 
-        @NameInMap("IsPrimary")
+        @com.aliyun.core.annotation.NameInMap("IsPrimary")
         private Boolean isPrimary;
 
-        @NameInMap("IsReadable")
+        @com.aliyun.core.annotation.NameInMap("IsReadable")
         private String isReadable;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private TenantZones(Builder builder) {

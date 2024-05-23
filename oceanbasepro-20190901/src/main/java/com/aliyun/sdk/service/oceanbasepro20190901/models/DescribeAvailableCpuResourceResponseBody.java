@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableCpuResourceResponseBody</p>
  */
 public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableCpuResourceResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAvailableCpuResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("MaxCpu")
+        @com.aliyun.core.annotation.NameInMap("MaxCpu")
         private Long maxCpu;
 
-        @NameInMap("MinCpu")
+        @com.aliyun.core.annotation.NameInMap("MinCpu")
         private Long minCpu;
 
-        @NameInMap("ReviewCode")
+        @com.aliyun.core.annotation.NameInMap("ReviewCode")
         private String reviewCode;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Long unitNum;
 
         private Data(Builder builder) {

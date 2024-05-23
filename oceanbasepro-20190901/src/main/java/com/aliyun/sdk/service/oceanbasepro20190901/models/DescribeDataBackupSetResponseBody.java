@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataBackupSetResponseBody</p>
  */
 public class DescribeDataBackupSetResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataBackupSetResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
     } 
 
     public static class DatabaseTablesList extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < String > tables;
 
         private DatabaseTablesList(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
     }
     public static class BackupObjects extends TeaModel {
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("DatabaseTablesList")
+        @com.aliyun.core.annotation.NameInMap("DatabaseTablesList")
         private java.util.List < DatabaseTablesList> databaseTablesList;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
         private BackupObjects(Builder builder) {
@@ -234,16 +233,16 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
     }
     public static class TableBackupResults extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private TableBackupResults(Builder builder) {
@@ -335,13 +334,13 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
     }
     public static class BackupResults extends TeaModel {
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("TableBackupResults")
+        @com.aliyun.core.annotation.NameInMap("TableBackupResults")
         private java.util.List < TableBackupResults> tableBackupResults;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
         private BackupResults(Builder builder) {
@@ -416,58 +415,58 @@ public class DescribeDataBackupSetResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BackupObjectType")
+        @com.aliyun.core.annotation.NameInMap("BackupObjectType")
         private String backupObjectType;
 
-        @NameInMap("BackupObjects")
+        @com.aliyun.core.annotation.NameInMap("BackupObjects")
         private java.util.List < BackupObjects> backupObjects;
 
-        @NameInMap("BackupResults")
+        @com.aliyun.core.annotation.NameInMap("BackupResults")
         private java.util.List < BackupResults> backupResults;
 
-        @NameInMap("Checkpoint")
+        @com.aliyun.core.annotation.NameInMap("Checkpoint")
         private String checkpoint;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private Integer dataSize;
 
-        @NameInMap("DataVersion")
+        @com.aliyun.core.annotation.NameInMap("DataVersion")
         private Integer dataVersion;
 
-        @NameInMap("DownloadTaskId")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
         private Long downloadTaskId;
 
-        @NameInMap("DownloadTaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskStatus")
         private String downloadTaskStatus;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private String policy;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("SetId")
+        @com.aliyun.core.annotation.NameInMap("SetId")
         private Integer setId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Validity")
+        @com.aliyun.core.annotation.NameInMap("Validity")
         private String validity;
 
         private Data(Builder builder) {

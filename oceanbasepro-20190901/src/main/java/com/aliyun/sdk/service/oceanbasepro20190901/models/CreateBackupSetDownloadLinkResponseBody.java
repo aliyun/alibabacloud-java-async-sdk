@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBackupSetDownloadLinkResponseBody</p>
  */
 public class CreateBackupSetDownloadLinkResponseBody extends TeaModel {
-    @NameInMap("DownloadTaskId")
+    @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
     private Long downloadTaskId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateBackupSetDownloadLinkResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantEncryptionResponseBody</p>
  */
 public class ModifyTenantEncryptionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantEncryption")
+    @com.aliyun.core.annotation.NameInMap("TenantEncryption")
     private TenantEncryption tenantEncryption;
 
     private ModifyTenantEncryptionResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ModifyTenantEncryptionResponseBody extends TeaModel {
     } 
 
     public static class TenantEncryption extends TeaModel {
-        @NameInMap("EncryptionType")
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private TenantEncryption(Builder builder) {

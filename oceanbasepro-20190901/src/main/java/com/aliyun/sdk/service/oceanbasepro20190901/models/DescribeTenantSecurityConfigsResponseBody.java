@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantSecurityConfigsResponseBody</p>
  */
 public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
-    @NameInMap("Configs")
+    @com.aliyun.core.annotation.NameInMap("Configs")
     private Configs configs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeTenantSecurityConfigsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
     } 
 
     public static class SecurityConfigs extends TeaModel {
-        @NameInMap("ConfigDescription")
+        @com.aliyun.core.annotation.NameInMap("ConfigDescription")
         private String configDescription;
 
-        @NameInMap("ConfigGroup")
+        @com.aliyun.core.annotation.NameInMap("ConfigGroup")
         private String configGroup;
 
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("Risk")
+        @com.aliyun.core.annotation.NameInMap("Risk")
         private Boolean risk;
 
-        @NameInMap("RiskDescription")
+        @com.aliyun.core.annotation.NameInMap("RiskDescription")
         private String riskDescription;
 
         private SecurityConfigs(Builder builder) {
@@ -193,16 +192,16 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
     }
     public static class TenantSecurityConfigs extends TeaModel {
-        @NameInMap("RiskCount")
+        @com.aliyun.core.annotation.NameInMap("RiskCount")
         private Integer riskCount;
 
-        @NameInMap("SecurityConfigs")
+        @com.aliyun.core.annotation.NameInMap("SecurityConfigs")
         private java.util.List < SecurityConfigs> securityConfigs;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
         private TenantSecurityConfigs(Builder builder) {
@@ -294,22 +293,22 @@ public class DescribeTenantSecurityConfigsResponseBody extends TeaModel {
 
     }
     public static class Configs extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TenantSecurityConfigs")
+        @com.aliyun.core.annotation.NameInMap("TenantSecurityConfigs")
         private java.util.List < TenantSecurityConfigs> tenantSecurityConfigs;
 
-        @NameInMap("TotalCheckCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCheckCount")
         private Integer totalCheckCount;
 
-        @NameInMap("TotalRiskCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRiskCount")
         private Integer totalRiskCount;
 
         private Configs(Builder builder) {

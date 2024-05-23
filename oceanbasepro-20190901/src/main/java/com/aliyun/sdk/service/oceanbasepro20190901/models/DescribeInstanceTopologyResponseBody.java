@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTopologyResponseBody</p>
  */
 public class DescribeInstanceTopologyResponseBody extends TeaModel {
-    @NameInMap("InstanceTopology")
+    @com.aliyun.core.annotation.NameInMap("InstanceTopology")
     private InstanceTopology instanceTopology;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTopologyResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     } 
 
     public static class Units extends TeaModel {
-        @NameInMap("EnableCancelMigrateUnit")
+        @com.aliyun.core.annotation.NameInMap("EnableCancelMigrateUnit")
         private Boolean enableCancelMigrateUnit;
 
-        @NameInMap("EnableMigrateUnit")
+        @com.aliyun.core.annotation.NameInMap("EnableMigrateUnit")
         private Boolean enableMigrateUnit;
 
-        @NameInMap("ManualMigrate")
+        @com.aliyun.core.annotation.NameInMap("ManualMigrate")
         private Boolean manualMigrate;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("ReplicaType")
+        @com.aliyun.core.annotation.NameInMap("ReplicaType")
         private String replicaType;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Float unitCpu;
 
-        @NameInMap("UnitDataSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDataSize")
         private Long unitDataSize;
 
-        @NameInMap("UnitId")
+        @com.aliyun.core.annotation.NameInMap("UnitId")
         private String unitId;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Float unitMemory;
 
-        @NameInMap("UnitStatus")
+        @com.aliyun.core.annotation.NameInMap("UnitStatus")
         private String unitStatus;
 
         private Units(Builder builder) {
@@ -297,16 +296,16 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class TenantZones extends TeaModel {
-        @NameInMap("IsPrimaryTenantZone")
-        private String isPrimaryTenantZone;
+        @com.aliyun.core.annotation.NameInMap("IsPrimaryTenantZone")
+        private Boolean isPrimaryTenantZone;
 
-        @NameInMap("TenantZoneId")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneId")
         private String tenantZoneId;
 
-        @NameInMap("TenantZoneRole")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneRole")
         private String tenantZoneRole;
 
-        @NameInMap("Units")
+        @com.aliyun.core.annotation.NameInMap("Units")
         private java.util.List < Units> units;
 
         private TenantZones(Builder builder) {
@@ -327,7 +326,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return isPrimaryTenantZone
          */
-        public String getIsPrimaryTenantZone() {
+        public Boolean getIsPrimaryTenantZone() {
             return this.isPrimaryTenantZone;
         }
 
@@ -353,7 +352,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private String isPrimaryTenantZone; 
+            private Boolean isPrimaryTenantZone; 
             private String tenantZoneId; 
             private String tenantZoneRole; 
             private java.util.List < Units> units; 
@@ -361,7 +360,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             /**
              * The maximum disk usage, in percentage.
              */
-            public Builder isPrimaryTenantZone(String isPrimaryTenantZone) {
+            public Builder isPrimaryTenantZone(Boolean isPrimaryTenantZone) {
                 this.isPrimaryTenantZone = isPrimaryTenantZone;
                 return this;
             }
@@ -398,34 +397,34 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Tenants extends TeaModel {
-        @NameInMap("PrimaryZoneDeployType")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
 
-        @NameInMap("TenantCpu")
+        @com.aliyun.core.annotation.NameInMap("TenantCpu")
         private Float tenantCpu;
 
-        @NameInMap("TenantDeployType")
+        @com.aliyun.core.annotation.NameInMap("TenantDeployType")
         private String tenantDeployType;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantMemory")
+        @com.aliyun.core.annotation.NameInMap("TenantMemory")
         private Float tenantMemory;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TenantStatus")
+        @com.aliyun.core.annotation.NameInMap("TenantStatus")
         private String tenantStatus;
 
-        @NameInMap("TenantUnitNum")
+        @com.aliyun.core.annotation.NameInMap("TenantUnitNum")
         private Integer tenantUnitNum;
 
-        @NameInMap("TenantZones")
+        @com.aliyun.core.annotation.NameInMap("TenantZones")
         private java.util.List < TenantZones> tenantZones;
 
         private Tenants(Builder builder) {
@@ -619,10 +618,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Integer totalCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Float usedCpu;
 
         private Cpu(Builder builder) {
@@ -680,10 +679,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Double totalDiskSize;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Double usedDiskSize;
 
         private DiskSize(Builder builder) {
@@ -751,10 +750,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Float usedMemory;
 
         private Memory(Builder builder) {
@@ -812,13 +811,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class NodeResource extends TeaModel {
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private DiskSize diskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
         private NodeResource(Builder builder) {
@@ -896,25 +895,25 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Nodes extends TeaModel {
-        @NameInMap("FullCopyId")
+        @com.aliyun.core.annotation.NameInMap("FullCopyId")
         private Long fullCopyId;
 
-        @NameInMap("NodeCopyId")
+        @com.aliyun.core.annotation.NameInMap("NodeCopyId")
         private Long nodeCopyId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeResource")
+        @com.aliyun.core.annotation.NameInMap("NodeResource")
         private java.util.List < NodeResource> nodeResource;
 
-        @NameInMap("NodeStatus")
+        @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
 
-        @NameInMap("ReadOnlyCopyId")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyCopyId")
         private Long readOnlyCopyId;
 
-        @NameInMap("ReplicaType")
+        @com.aliyun.core.annotation.NameInMap("ReplicaType")
         private String replicaType;
 
         private Nodes(Builder builder) {
@@ -1057,10 +1056,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class ZoneResourceDiskSize extends TeaModel {
-        @NameInMap("MaxDiskUsedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
         private java.util.List < String > maxDiskUsedObServer;
 
-        @NameInMap("MaxDiskUsedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
 
         private ZoneResourceDiskSize(Builder builder) {
@@ -1118,7 +1117,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class ZoneResource extends TeaModel {
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private ZoneResourceDiskSize diskSize;
 
         private ZoneResource(Builder builder) {
@@ -1159,19 +1158,19 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("Nodes")
+        @com.aliyun.core.annotation.NameInMap("Nodes")
         private java.util.List < Nodes> nodes;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ZoneDisk")
+        @com.aliyun.core.annotation.NameInMap("ZoneDisk")
         private String zoneDisk;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
-        @NameInMap("ZoneResource")
+        @com.aliyun.core.annotation.NameInMap("ZoneResource")
         private ZoneResource zoneResource;
 
         private Zones(Builder builder) {
@@ -1280,10 +1279,10 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class InstanceTopology extends TeaModel {
-        @NameInMap("Tenants")
+        @com.aliyun.core.annotation.NameInMap("Tenants")
         private java.util.List < Tenants> tenants;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < Zones> zones;
 
         private InstanceTopology(Builder builder) {

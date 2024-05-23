@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableMemResourceResponseBody</p>
  */
 public class DescribeAvailableMemResourceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableMemResourceResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeAvailableMemResourceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("MaxMem")
+        @com.aliyun.core.annotation.NameInMap("MaxMem")
         private Long maxMem;
 
-        @NameInMap("MinMem")
+        @com.aliyun.core.annotation.NameInMap("MinMem")
         private Long minMem;
 
-        @NameInMap("SafeMem")
+        @com.aliyun.core.annotation.NameInMap("SafeMem")
         private String safeMem;
 
-        @NameInMap("UsedMem")
+        @com.aliyun.core.annotation.NameInMap("UsedMem")
         private Long usedMem;
 
         private Data(Builder builder) {

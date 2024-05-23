@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasSQLPlansResponseBody</p>
  */
 public class DescribeOasSQLPlansResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOasSQLPlansResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
     } 
 
     public static class PlanExplain extends TeaModel {
-        @NameInMap("PlanJsonString")
+        @com.aliyun.core.annotation.NameInMap("PlanJsonString")
         private String planJsonString;
 
         private PlanExplain(Builder builder) {
@@ -113,109 +112,109 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
     }
     public static class Plans extends TeaModel {
-        @NameInMap("AvgApplicationWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgApplicationWaitTime")
         private Double avgApplicationWaitTime;
 
-        @NameInMap("AvgBufferGets")
+        @com.aliyun.core.annotation.NameInMap("AvgBufferGets")
         private Double avgBufferGets;
 
-        @NameInMap("AvgConcurrencyWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgConcurrencyWaitTime")
         private Double avgConcurrencyWaitTime;
 
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
-        @NameInMap("AvgDiskReads")
+        @com.aliyun.core.annotation.NameInMap("AvgDiskReads")
         private Double avgDiskReads;
 
-        @NameInMap("AvgDiskWrites")
+        @com.aliyun.core.annotation.NameInMap("AvgDiskWrites")
         private Double avgDiskWrites;
 
-        @NameInMap("AvgElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("AvgElapsedTime")
         private Double avgElapsedTime;
 
-        @NameInMap("AvgRowProcessed")
+        @com.aliyun.core.annotation.NameInMap("AvgRowProcessed")
         private Double avgRowProcessed;
 
-        @NameInMap("AvgUserIoWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AvgUserIoWaitTime")
         private Double avgUserIoWaitTime;
 
-        @NameInMap("CollectTimeUs")
+        @com.aliyun.core.annotation.NameInMap("CollectTimeUs")
         private Long collectTimeUs;
 
-        @NameInMap("DelayedLargeQueryPercentage")
+        @com.aliyun.core.annotation.NameInMap("DelayedLargeQueryPercentage")
         private Double delayedLargeQueryPercentage;
 
-        @NameInMap("ExecPs")
+        @com.aliyun.core.annotation.NameInMap("ExecPs")
         private Double execPs;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Long executions;
 
-        @NameInMap("FirstLoadTime")
+        @com.aliyun.core.annotation.NameInMap("FirstLoadTime")
         private String firstLoadTime;
 
-        @NameInMap("FirstLoadTimeUs")
+        @com.aliyun.core.annotation.NameInMap("FirstLoadTimeUs")
         private Long firstLoadTimeUs;
 
-        @NameInMap("HitDiagnosis")
+        @com.aliyun.core.annotation.NameInMap("HitDiagnosis")
         private Boolean hitDiagnosis;
 
-        @NameInMap("HitPercentage")
+        @com.aliyun.core.annotation.NameInMap("HitPercentage")
         private Double hitPercentage;
 
-        @NameInMap("LargeQueryPercentage")
+        @com.aliyun.core.annotation.NameInMap("LargeQueryPercentage")
         private Double largeQueryPercentage;
 
-        @NameInMap("MergedVersion")
+        @com.aliyun.core.annotation.NameInMap("MergedVersion")
         private Long mergedVersion;
 
-        @NameInMap("ObDbId")
+        @com.aliyun.core.annotation.NameInMap("ObDbId")
         private Long obDbId;
 
-        @NameInMap("ObServerId")
+        @com.aliyun.core.annotation.NameInMap("ObServerId")
         private Long obServerId;
 
-        @NameInMap("OutlineData")
+        @com.aliyun.core.annotation.NameInMap("OutlineData")
         private String outlineData;
 
-        @NameInMap("OutlineId")
+        @com.aliyun.core.annotation.NameInMap("OutlineId")
         private Long outlineId;
 
-        @NameInMap("PlanHash")
+        @com.aliyun.core.annotation.NameInMap("PlanHash")
         private String planHash;
 
-        @NameInMap("PlanId")
+        @com.aliyun.core.annotation.NameInMap("PlanId")
         private Long planId;
 
-        @NameInMap("PlanSize")
+        @com.aliyun.core.annotation.NameInMap("PlanSize")
         private Long planSize;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("PlanUnionHash")
+        @com.aliyun.core.annotation.NameInMap("PlanUnionHash")
         private String planUnionHash;
 
-        @NameInMap("SchemaVersion")
+        @com.aliyun.core.annotation.NameInMap("SchemaVersion")
         private Long schemaVersion;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private Long serverId;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("TableScan")
+        @com.aliyun.core.annotation.NameInMap("TableScan")
         private Boolean tableScan;
 
-        @NameInMap("TimeoutPercentage")
+        @com.aliyun.core.annotation.NameInMap("TimeoutPercentage")
         private Double timeoutPercentage;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private Plans(Builder builder) {
@@ -834,43 +833,43 @@ public class DescribeOasSQLPlansResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvgCpuTime")
+        @com.aliyun.core.annotation.NameInMap("AvgCpuTime")
         private Double avgCpuTime;
 
-        @NameInMap("Bounded")
+        @com.aliyun.core.annotation.NameInMap("Bounded")
         private Boolean bounded;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Long executions;
 
-        @NameInMap("FirstLoadTime")
+        @com.aliyun.core.annotation.NameInMap("FirstLoadTime")
         private String firstLoadTime;
 
-        @NameInMap("HitDiagnosis")
+        @com.aliyun.core.annotation.NameInMap("HitDiagnosis")
         private Boolean hitDiagnosis;
 
-        @NameInMap("HitPercentage")
+        @com.aliyun.core.annotation.NameInMap("HitPercentage")
         private Double hitPercentage;
 
-        @NameInMap("MergedVersion")
+        @com.aliyun.core.annotation.NameInMap("MergedVersion")
         private Long mergedVersion;
 
-        @NameInMap("PlanExplain")
+        @com.aliyun.core.annotation.NameInMap("PlanExplain")
         private PlanExplain planExplain;
 
-        @NameInMap("PlanHash")
+        @com.aliyun.core.annotation.NameInMap("PlanHash")
         private String planHash;
 
-        @NameInMap("PlanType")
+        @com.aliyun.core.annotation.NameInMap("PlanType")
         private String planType;
 
-        @NameInMap("PlanUnionHash")
+        @com.aliyun.core.annotation.NameInMap("PlanUnionHash")
         private String planUnionHash;
 
-        @NameInMap("Plans")
+        @com.aliyun.core.annotation.NameInMap("Plans")
         private java.util.List < Plans> plans;
 
-        @NameInMap("QuerySql")
+        @com.aliyun.core.annotation.NameInMap("QuerySql")
         private String querySql;
 
         private Data(Builder builder) {

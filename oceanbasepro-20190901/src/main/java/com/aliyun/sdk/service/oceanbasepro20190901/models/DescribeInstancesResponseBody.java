@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstancesResponseBody</p>
  */
 public class DescribeInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstancesResponseBody(Builder builder) {
@@ -92,29 +91,29 @@ public class DescribeInstancesResponseBody extends TeaModel {
     } 
 
     public static class DataDiskAutoScaleConfig extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Long maxDiskSize;
 
-        @NameInMap("ScaleStepInMerge")
-        private Long scaleStepInMerge;
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInMerge")
+        private Double scaleStepInMerge;
 
-        @NameInMap("ScaleStepInNormal")
-        private Long scaleStepInNormal;
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInNormal")
+        private Double scaleStepInNormal;
 
-        @NameInMap("UpperMergeThreshold")
-        private Long upperMergeThreshold;
+        @com.aliyun.core.annotation.NameInMap("UpperMergeThreshold")
+        private Double upperMergeThreshold;
 
-        @NameInMap("UpperScaleStrategy")
+        @com.aliyun.core.annotation.NameInMap("UpperScaleStrategy")
         private String upperScaleStrategy;
 
-        @NameInMap("UpperThreshold")
-        private Long upperThreshold;
+        @com.aliyun.core.annotation.NameInMap("UpperThreshold")
+        private Double upperThreshold;
 
-        @NameInMap("Upperbound")
-        private Long upperbound;
+        @com.aliyun.core.annotation.NameInMap("Upperbound")
+        private Double upperbound;
 
         private DataDiskAutoScaleConfig(Builder builder) {
             this.autoScale = builder.autoScale;
@@ -152,21 +151,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return scaleStepInMerge
          */
-        public Long getScaleStepInMerge() {
+        public Double getScaleStepInMerge() {
             return this.scaleStepInMerge;
         }
 
         /**
          * @return scaleStepInNormal
          */
-        public Long getScaleStepInNormal() {
+        public Double getScaleStepInNormal() {
             return this.scaleStepInNormal;
         }
 
         /**
          * @return upperMergeThreshold
          */
-        public Long getUpperMergeThreshold() {
+        public Double getUpperMergeThreshold() {
             return this.upperMergeThreshold;
         }
 
@@ -180,26 +179,26 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return upperThreshold
          */
-        public Long getUpperThreshold() {
+        public Double getUpperThreshold() {
             return this.upperThreshold;
         }
 
         /**
          * @return upperbound
          */
-        public Long getUpperbound() {
+        public Double getUpperbound() {
             return this.upperbound;
         }
 
         public static final class Builder {
             private Boolean autoScale; 
             private Long maxDiskSize; 
-            private Long scaleStepInMerge; 
-            private Long scaleStepInNormal; 
-            private Long upperMergeThreshold; 
+            private Double scaleStepInMerge; 
+            private Double scaleStepInNormal; 
+            private Double upperMergeThreshold; 
             private String upperScaleStrategy; 
-            private Long upperThreshold; 
-            private Long upperbound; 
+            private Double upperThreshold; 
+            private Double upperbound; 
 
             /**
              * Specifies whether to enable the automatic scaling of the data disk.
@@ -220,7 +219,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The size of scaling step during a major compaction.
              */
-            public Builder scaleStepInMerge(Long scaleStepInMerge) {
+            public Builder scaleStepInMerge(Double scaleStepInMerge) {
                 this.scaleStepInMerge = scaleStepInMerge;
                 return this;
             }
@@ -228,7 +227,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The size of scaling step during daily use.
              */
-            public Builder scaleStepInNormal(Long scaleStepInNormal) {
+            public Builder scaleStepInNormal(Double scaleStepInNormal) {
                 this.scaleStepInNormal = scaleStepInNormal;
                 return this;
             }
@@ -236,7 +235,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for major compactions.
              */
-            public Builder upperMergeThreshold(Long upperMergeThreshold) {
+            public Builder upperMergeThreshold(Double upperMergeThreshold) {
                 this.upperMergeThreshold = upperMergeThreshold;
                 return this;
             }
@@ -252,7 +251,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The maximum usage of the data disk, in percentage, that triggers the scaling of the data disk for daily use.
              */
-            public Builder upperThreshold(Long upperThreshold) {
+            public Builder upperThreshold(Double upperThreshold) {
                 this.upperThreshold = upperThreshold;
                 return this;
             }
@@ -260,7 +259,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The maximum space, in GB, to which the data disk can be scaled.
              */
-            public Builder upperbound(Long upperbound) {
+            public Builder upperbound(Double upperbound) {
                 this.upperbound = upperbound;
                 return this;
             }
@@ -273,13 +272,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class CapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacityUnit")
         private Integer usedCapacityUnit;
 
         private CapacityUnit(Builder builder) {
@@ -354,17 +353,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("OriginalTotalCpu")
-        private Long originalTotalCpu;
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
+        private Double originalTotalCpu;
 
-        @NameInMap("TotalCpu")
-        private Long totalCpu;
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
+        private Double totalCpu;
 
-        @NameInMap("UnitCpu")
-        private Long unitCpu;
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
+        private Double unitCpu;
 
-        @NameInMap("UsedCpu")
-        private Long usedCpu;
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
+        private Double usedCpu;
 
         private Cpu(Builder builder) {
             this.originalTotalCpu = builder.originalTotalCpu;
@@ -384,41 +383,41 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return originalTotalCpu
          */
-        public Long getOriginalTotalCpu() {
+        public Double getOriginalTotalCpu() {
             return this.originalTotalCpu;
         }
 
         /**
          * @return totalCpu
          */
-        public Long getTotalCpu() {
+        public Double getTotalCpu() {
             return this.totalCpu;
         }
 
         /**
          * @return unitCpu
          */
-        public Long getUnitCpu() {
+        public Double getUnitCpu() {
             return this.unitCpu;
         }
 
         /**
          * @return usedCpu
          */
-        public Long getUsedCpu() {
+        public Double getUsedCpu() {
             return this.usedCpu;
         }
 
         public static final class Builder {
-            private Long originalTotalCpu; 
-            private Long totalCpu; 
-            private Long unitCpu; 
-            private Long usedCpu; 
+            private Double originalTotalCpu; 
+            private Double totalCpu; 
+            private Double unitCpu; 
+            private Double usedCpu; 
 
             /**
              * The number of original CPU cores in the cluster.
              */
-            public Builder originalTotalCpu(Long originalTotalCpu) {
+            public Builder originalTotalCpu(Double originalTotalCpu) {
                 this.originalTotalCpu = originalTotalCpu;
                 return this;
             }
@@ -426,7 +425,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The total number of CPU cores of the cluster.
              */
-            public Builder totalCpu(Long totalCpu) {
+            public Builder totalCpu(Double totalCpu) {
                 this.totalCpu = totalCpu;
                 return this;
             }
@@ -434,7 +433,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The number of CPU cores of each replica node in the cluster.
              */
-            public Builder unitCpu(Long unitCpu) {
+            public Builder unitCpu(Double unitCpu) {
                 this.unitCpu = unitCpu;
                 return this;
             }
@@ -442,7 +441,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The number of CPU cores used in the cluster.
              */
-            public Builder usedCpu(Long usedCpu) {
+            public Builder usedCpu(Double usedCpu) {
                 this.usedCpu = usedCpu;
                 return this;
             }
@@ -455,16 +454,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
-        @NameInMap("OriginalTotalDiskSize")
-        private Long originalTotalDiskSize;
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
+        private Double originalTotalDiskSize;
 
-        @NameInMap("TotalDiskSize")
-        private Long totalDiskSize;
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
+        private Double totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
-        private Long unitDiskSize;
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
+        private Double unitDiskSize;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Long usedDiskSize;
 
         private DiskSize(Builder builder) {
@@ -485,21 +484,21 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return originalTotalDiskSize
          */
-        public Long getOriginalTotalDiskSize() {
+        public Double getOriginalTotalDiskSize() {
             return this.originalTotalDiskSize;
         }
 
         /**
          * @return totalDiskSize
          */
-        public Long getTotalDiskSize() {
+        public Double getTotalDiskSize() {
             return this.totalDiskSize;
         }
 
         /**
          * @return unitDiskSize
          */
-        public Long getUnitDiskSize() {
+        public Double getUnitDiskSize() {
             return this.unitDiskSize;
         }
 
@@ -511,15 +510,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long originalTotalDiskSize; 
-            private Long totalDiskSize; 
-            private Long unitDiskSize; 
+            private Double originalTotalDiskSize; 
+            private Double totalDiskSize; 
+            private Double unitDiskSize; 
             private Long usedDiskSize; 
 
             /**
              * The original size of the disk.
              */
-            public Builder originalTotalDiskSize(Long originalTotalDiskSize) {
+            public Builder originalTotalDiskSize(Double originalTotalDiskSize) {
                 this.originalTotalDiskSize = originalTotalDiskSize;
                 return this;
             }
@@ -527,7 +526,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The total storage space of the cluster, in GB.
              */
-            public Builder totalDiskSize(Long totalDiskSize) {
+            public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
                 return this;
             }
@@ -535,7 +534,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The storage space of each replica node in the cluster, in GB.
              */
-            public Builder unitDiskSize(Long unitDiskSize) {
+            public Builder unitDiskSize(Double unitDiskSize) {
                 this.unitDiskSize = unitDiskSize;
                 return this;
             }
@@ -556,16 +555,16 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("OriginalTotalMemory")
-        private Long originalTotalMemory;
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
+        private Double originalTotalMemory;
 
-        @NameInMap("TotalMemory")
-        private Long totalMemory;
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
+        private Double totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Long unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Long usedMemory;
 
         private Memory(Builder builder) {
@@ -586,14 +585,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * @return originalTotalMemory
          */
-        public Long getOriginalTotalMemory() {
+        public Double getOriginalTotalMemory() {
             return this.originalTotalMemory;
         }
 
         /**
          * @return totalMemory
          */
-        public Long getTotalMemory() {
+        public Double getTotalMemory() {
             return this.totalMemory;
         }
 
@@ -612,15 +611,15 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long originalTotalMemory; 
-            private Long totalMemory; 
+            private Double originalTotalMemory; 
+            private Double totalMemory; 
             private Long unitMemory; 
             private Long usedMemory; 
 
             /**
              * The original memory size of the cluster, in GB.
              */
-            public Builder originalTotalMemory(Long originalTotalMemory) {
+            public Builder originalTotalMemory(Double originalTotalMemory) {
                 this.originalTotalMemory = originalTotalMemory;
                 return this;
             }
@@ -628,7 +627,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             /**
              * The total memory size of the cluster, in GB.
              */
-            public Builder totalMemory(Long totalMemory) {
+            public Builder totalMemory(Double totalMemory) {
                 this.totalMemory = totalMemory;
                 return this;
             }
@@ -657,19 +656,19 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private CapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private DiskSize diskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("UnitCount")
+        @com.aliyun.core.annotation.NameInMap("UnitCount")
         private Long unitCount;
 
         private Resource(Builder builder) {
@@ -778,94 +777,94 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CpuArchitecture")
+        @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataDiskAutoScaleConfig")
+        @com.aliyun.core.annotation.NameInMap("DataDiskAutoScaleConfig")
         private DataDiskAutoScaleConfig dataDiskAutoScaleConfig;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private String diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EnableReadOnlyReplicaManagement")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplicaManagement")
         private Boolean enableReadOnlyReplicaManagement;
 
-        @NameInMap("EnableUpgradeNodes")
+        @com.aliyun.core.annotation.NameInMap("EnableUpgradeNodes")
         private Boolean enableUpgradeNodes;
 
-        @NameInMap("ExpireSeconds")
+        @com.aliyun.core.annotation.NameInMap("ExpireSeconds")
         private Integer expireSeconds;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InTempCapacityStatus")
+        @com.aliyun.core.annotation.NameInMap("InTempCapacityStatus")
         private Boolean inTempCapacityStatus;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRole")
+        @com.aliyun.core.annotation.NameInMap("InstanceRole")
         private String instanceRole;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("Mem")
+        @com.aliyun.core.annotation.NameInMap("Mem")
         private Long mem;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Long usedDiskSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Instances(Builder builder) {

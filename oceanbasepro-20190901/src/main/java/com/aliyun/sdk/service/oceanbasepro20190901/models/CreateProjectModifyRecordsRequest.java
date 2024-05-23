@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProjectModifyRecordsRequest</p>
  */
 public class CreateProjectModifyRecordsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Databases")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Databases")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Databases> databases;
 
-    @Body
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
     private CreateProjectModifyRecordsRequest(Builder builder) {
@@ -119,16 +118,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
     } 
 
     public static class AdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private AdbTableSchema(Builder builder) {
@@ -220,25 +219,25 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class SpecificTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private AdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificTables(Builder builder) {
@@ -381,16 +380,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class SpecificViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private SpecificViewsAdbTableSchema(Builder builder) {
@@ -482,25 +481,25 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class SpecificViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificViews(Builder builder) {
@@ -643,16 +642,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class TablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private TablesAdbTableSchema(Builder builder) {
@@ -744,25 +743,25 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private TablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Tables(Builder builder) {
@@ -905,16 +904,16 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class ViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private ViewsAdbTableSchema(Builder builder) {
@@ -1006,25 +1005,25 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class Views extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private ViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Views(Builder builder) {
@@ -1167,25 +1166,25 @@ public class CreateProjectModifyRecordsRequest extends Request {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SpecificTables")
+        @com.aliyun.core.annotation.NameInMap("SpecificTables")
         private java.util.List < SpecificTables> specificTables;
 
-        @NameInMap("SpecificViews")
+        @com.aliyun.core.annotation.NameInMap("SpecificViews")
         private java.util.List < SpecificViews> specificViews;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("Views")
+        @com.aliyun.core.annotation.NameInMap("Views")
         private java.util.List < Views> views;
 
         private Databases(Builder builder) {

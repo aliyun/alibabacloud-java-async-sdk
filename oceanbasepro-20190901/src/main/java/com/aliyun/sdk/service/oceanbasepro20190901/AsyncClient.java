@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<BatchKillProcessListResponse> batchKillProcessList(BatchKillProcessListRequest request);
+
     CompletableFuture<CancelProjectModifyRecordResponse> cancelProjectModifyRecord(CancelProjectModifyRecordRequest request);
 
     CompletableFuture<CreateBackupSetDownloadLinkResponse> createBackupSetDownloadLink(CreateBackupSetDownloadLinkRequest request);
@@ -132,6 +134,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeParametersResponse> describeParameters(DescribeParametersRequest request);
 
     CompletableFuture<DescribeParametersHistoryResponse> describeParametersHistory(DescribeParametersHistoryRequest request);
+
+    CompletableFuture<DescribeProcessStatsCompositionResponse> describeProcessStatsComposition(DescribeProcessStatsCompositionRequest request);
 
     CompletableFuture<DescribeProjectResponse> describeProject(DescribeProjectRequest request);
 
@@ -258,5 +262,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopProjectsByLabelResponse> stopProjectsByLabel(StopProjectsByLabelRequest request);
 
     CompletableFuture<SwitchoverInstanceResponse> switchoverInstance(SwitchoverInstanceRequest request);
+
+    CompletableFuture<UpdateProjectConfigResponse> updateProjectConfig(UpdateProjectConfigRequest request);
 
 }

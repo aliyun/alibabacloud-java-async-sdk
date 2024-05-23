@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantUserRolesResponseBody</p>
  */
 public class ModifyTenantUserRolesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantUser")
+    @com.aliyun.core.annotation.NameInMap("TenantUser")
     private TenantUser tenantUser;
 
     private ModifyTenantUserRolesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
     } 
 
     public static class UserRole extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("IsSuccess")
+        @com.aliyun.core.annotation.NameInMap("IsSuccess")
         private Boolean isSuccess;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private UserRole(Builder builder) {
@@ -182,13 +181,13 @@ public class ModifyTenantUserRolesResponseBody extends TeaModel {
 
     }
     public static class TenantUser extends TeaModel {
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("UserRole")
+        @com.aliyun.core.annotation.NameInMap("UserRole")
         private java.util.List < UserRole> userRole;
 
         private TenantUser(Builder builder) {

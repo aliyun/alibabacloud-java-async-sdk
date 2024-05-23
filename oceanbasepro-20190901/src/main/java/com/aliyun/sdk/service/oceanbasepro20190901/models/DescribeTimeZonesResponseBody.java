@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTimeZonesResponseBody</p>
  */
 public class DescribeTimeZonesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TimeZones")
+    @com.aliyun.core.annotation.NameInMap("TimeZones")
     private TimeZones timeZones;
 
     private DescribeTimeZonesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
         private List(Builder builder) {
@@ -135,10 +134,10 @@ public class DescribeTimeZonesResponseBody extends TeaModel {
 
     }
     public static class TimeZones extends TeaModel {
-        @NameInMap("Default")
+        @com.aliyun.core.annotation.NameInMap("Default")
         private String _default;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
         private TimeZones(Builder builder) {

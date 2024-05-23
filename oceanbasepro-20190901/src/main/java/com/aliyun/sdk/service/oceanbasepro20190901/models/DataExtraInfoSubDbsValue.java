@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataExtraInfoSubDbsValue</p>
  */
 public class DataExtraInfoSubDbsValue extends TeaModel {
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("TenantName")
+    @com.aliyun.core.annotation.NameInMap("TenantName")
     private String tenantName;
 
-    @NameInMap("DatabaseId")
+    @com.aliyun.core.annotation.NameInMap("DatabaseId")
     private String databaseId;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("MappingDatabaseName")
+    @com.aliyun.core.annotation.NameInMap("MappingDatabaseName")
     private String mappingDatabaseName;
 
-    @NameInMap("SourceClientId")
+    @com.aliyun.core.annotation.NameInMap("SourceClientId")
     private String sourceClientId;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private java.util.List < Tables> tables;
 
     private DataExtraInfoSubDbsValue(Builder builder) {
@@ -172,46 +171,46 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
     } 
 
     public static class Columns extends TeaModel {
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("Position")
+        @com.aliyun.core.annotation.NameInMap("Position")
         private Integer position;
 
-        @NameInMap("ColumnType")
+        @com.aliyun.core.annotation.NameInMap("ColumnType")
         private String columnType;
 
-        @NameInMap("RecordFieldType")
+        @com.aliyun.core.annotation.NameInMap("RecordFieldType")
         private String recordFieldType;
 
-        @NameInMap("RawColumnType")
+        @com.aliyun.core.annotation.NameInMap("RawColumnType")
         private String rawColumnType;
 
-        @NameInMap("ColumnKey")
+        @com.aliyun.core.annotation.NameInMap("ColumnKey")
         private String columnKey;
 
-        @NameInMap("Nullable")
+        @com.aliyun.core.annotation.NameInMap("Nullable")
         private Boolean nullable;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("DataLength")
+        @com.aliyun.core.annotation.NameInMap("DataLength")
         private Long dataLength;
 
-        @NameInMap("DataPrecision")
+        @com.aliyun.core.annotation.NameInMap("DataPrecision")
         private Integer dataPrecision;
 
-        @NameInMap("DataScale")
+        @com.aliyun.core.annotation.NameInMap("DataScale")
         private Integer dataScale;
 
-        @NameInMap("Encoding")
+        @com.aliyun.core.annotation.NameInMap("Encoding")
         private String encoding;
 
-        @NameInMap("ColumnComment")
+        @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
 
-        @NameInMap("IsGenerateField")
+        @com.aliyun.core.annotation.NameInMap("IsGenerateField")
         private Boolean isGenerateField;
 
         private Columns(Builder builder) {
@@ -473,22 +472,22 @@ public class DataExtraInfoSubDbsValue extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private String tableId;
 
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private String database;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("MappingTableName")
+        @com.aliyun.core.annotation.NameInMap("MappingTableName")
         private String mappingTableName;
 
-        @NameInMap("Instance")
+        @com.aliyun.core.annotation.NameInMap("Instance")
         private String instance;
 
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < Columns> columns;
 
         private Tables(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,85 +11,89 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Long autoRenewPeriod;
 
-    @Body
-    @NameInMap("ChargeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChargeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chargeType;
 
-    @Body
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpuArch")
+    private String cpuArch;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private Long diskSize;
 
-    @Body
-    @NameInMap("DiskType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DiskType")
     private String diskType;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("InstanceClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceClass;
 
-    @Body
-    @NameInMap("InstanceName")
-    @Validation(maxLength = 20)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 20)
     private String instanceName;
 
-    @Body
-    @NameInMap("IsolationOptimization")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsolationOptimization")
     private String isolationOptimization;
 
-    @Body
-    @NameInMap("ObVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ObVersion")
     private String obVersion;
 
-    @Body
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Long period;
 
-    @Body
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Body
-    @NameInMap("PrimaryInstance")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryInstance")
     private String primaryInstance;
 
-    @Body
-    @NameInMap("PrimaryRegion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryRegion")
     private String primaryRegion;
 
-    @Body
-    @NameInMap("ReplicaMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReplicaMode")
     private String replicaMode;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("Series")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Series")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String series;
 
-    @Body
-    @NameInMap("Zones")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Zones")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zones;
 
     private CreateInstanceRequest(Builder builder) {
@@ -99,6 +102,7 @@ public class CreateInstanceRequest extends Request {
         this.autoRenew = builder.autoRenew;
         this.autoRenewPeriod = builder.autoRenewPeriod;
         this.chargeType = builder.chargeType;
+        this.cpuArch = builder.cpuArch;
         this.diskSize = builder.diskSize;
         this.diskType = builder.diskType;
         this.dryRun = builder.dryRun;
@@ -155,6 +159,13 @@ public class CreateInstanceRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return cpuArch
+     */
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     /**
@@ -267,6 +278,7 @@ public class CreateInstanceRequest extends Request {
         private Boolean autoRenew; 
         private Long autoRenewPeriod; 
         private String chargeType; 
+        private String cpuArch; 
         private Long diskSize; 
         private String diskType; 
         private Boolean dryRun; 
@@ -293,6 +305,7 @@ public class CreateInstanceRequest extends Request {
             this.autoRenew = request.autoRenew;
             this.autoRenewPeriod = request.autoRenewPeriod;
             this.chargeType = request.chargeType;
+            this.cpuArch = request.cpuArch;
             this.diskSize = request.diskSize;
             this.diskType = request.diskType;
             this.dryRun = request.dryRun;
@@ -353,6 +366,15 @@ public class CreateInstanceRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putBodyParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * CpuArch.
+         */
+        public Builder cpuArch(String cpuArch) {
+            this.putBodyParameter("CpuArch", cpuArch);
+            this.cpuArch = cpuArch;
             return this;
         }
 

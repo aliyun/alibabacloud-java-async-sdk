@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class DataDiskAutoScaleConfig extends TeaModel {
-        @NameInMap("AutoScale")
+        @com.aliyun.core.annotation.NameInMap("AutoScale")
         private Boolean autoScale;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Long maxDiskSize;
 
-        @NameInMap("ScaleStepInMerge")
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInMerge")
         private Long scaleStepInMerge;
 
-        @NameInMap("ScaleStepInNormal")
+        @com.aliyun.core.annotation.NameInMap("ScaleStepInNormal")
         private Long scaleStepInNormal;
 
-        @NameInMap("UpperMergeThreshold")
+        @com.aliyun.core.annotation.NameInMap("UpperMergeThreshold")
         private Long upperMergeThreshold;
 
-        @NameInMap("UpperScaleStep")
+        @com.aliyun.core.annotation.NameInMap("UpperScaleStep")
         private String upperScaleStep;
 
-        @NameInMap("UpperScaleStrategy")
+        @com.aliyun.core.annotation.NameInMap("UpperScaleStrategy")
         private String upperScaleStrategy;
 
-        @NameInMap("UpperThreshold")
+        @com.aliyun.core.annotation.NameInMap("UpperThreshold")
         private Long upperThreshold;
 
-        @NameInMap("Upperbound")
+        @com.aliyun.core.annotation.NameInMap("Upperbound")
         private Long upperbound;
 
         private DataDiskAutoScaleConfig(Builder builder) {
@@ -273,13 +272,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class CapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacityUnit")
         private String usedCapacityUnit;
 
         private CapacityUnit(Builder builder) {
@@ -354,16 +353,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("OriginalTotalCpu")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
         private Long originalTotalCpu;
 
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Long totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Long unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Long usedCpu;
 
         private Cpu(Builder builder) {
@@ -455,28 +454,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
-        @NameInMap("DataUsedSize")
+        @com.aliyun.core.annotation.NameInMap("DataUsedSize")
         private Double dataUsedSize;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Double maxDiskSize;
 
-        @NameInMap("MaxDiskUsedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
         private java.util.List < String > maxDiskUsedObServer;
 
-        @NameInMap("MaxDiskUsedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
 
-        @NameInMap("OriginalTotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
         private Long originalTotalDiskSize;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Long usedDiskSize;
 
         private DiskSize(Builder builder) {
@@ -636,19 +635,19 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class LogDiskSize extends TeaModel {
-        @NameInMap("LogAssignedSize")
+        @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
-        @NameInMap("MaxLogAssignedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
         private java.util.List < String > maxLogAssignedObServer;
 
-        @NameInMap("MaxLogAssignedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
         private LogDiskSize(Builder builder) {
@@ -757,16 +756,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("OriginalTotalMemory")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Long unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Long usedMemory;
 
         private Memory(Builder builder) {
@@ -858,22 +857,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ReadOnlyResource extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private CapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private DiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
         private LogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("UnitCount")
+        @com.aliyun.core.annotation.NameInMap("UnitCount")
         private Long unitCount;
 
         private ReadOnlyResource(Builder builder) {
@@ -999,13 +998,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ResourceCapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacityUnit")
         private String usedCapacityUnit;
 
         private ResourceCapacityUnit(Builder builder) {
@@ -1080,16 +1079,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ResourceCpu extends TeaModel {
-        @NameInMap("OriginalTotalCpu")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalCpu")
         private Long originalTotalCpu;
 
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Long totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Long unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Long usedCpu;
 
         private ResourceCpu(Builder builder) {
@@ -1187,28 +1186,28 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ResourceDiskSize extends TeaModel {
-        @NameInMap("DataUsedSize")
+        @com.aliyun.core.annotation.NameInMap("DataUsedSize")
         private Double dataUsedSize;
 
-        @NameInMap("MaxDiskSize")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskSize")
         private Double maxDiskSize;
 
-        @NameInMap("MaxDiskUsedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedObServer")
         private java.util.List < String > maxDiskUsedObServer;
 
-        @NameInMap("MaxDiskUsedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxDiskUsedPercent")
         private Double maxDiskUsedPercent;
 
-        @NameInMap("OriginalTotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
         private Long originalTotalDiskSize;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Long usedDiskSize;
 
         private ResourceDiskSize(Builder builder) {
@@ -1379,22 +1378,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ResourceLogDiskSize extends TeaModel {
-        @NameInMap("LogAssignedSize")
+        @com.aliyun.core.annotation.NameInMap("LogAssignedSize")
         private String logAssignedSize;
 
-        @NameInMap("MaxLogAssignedObServer")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedObServer")
         private java.util.List < String > maxLogAssignedObServer;
 
-        @NameInMap("MaxLogAssignedPercent")
+        @com.aliyun.core.annotation.NameInMap("MaxLogAssignedPercent")
         private String maxLogAssignedPercent;
 
-        @NameInMap("OriginalTotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalDiskSize")
         private Integer originalTotalDiskSize;
 
-        @NameInMap("TotalDiskSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Long totalDiskSize;
 
-        @NameInMap("UnitDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UnitDiskSize")
         private Long unitDiskSize;
 
         private ResourceLogDiskSize(Builder builder) {
@@ -1520,16 +1519,16 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class ResourceMemory extends TeaModel {
-        @NameInMap("OriginalTotalMemory")
+        @com.aliyun.core.annotation.NameInMap("OriginalTotalMemory")
         private Long originalTotalMemory;
 
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Long unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Long usedMemory;
 
         private ResourceMemory(Builder builder) {
@@ -1621,22 +1620,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private ResourceCapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private ResourceCpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private ResourceDiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
         private ResourceLogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private ResourceMemory memory;
 
-        @NameInMap("UnitCount")
+        @com.aliyun.core.annotation.NameInMap("UnitCount")
         private Long unitCount;
 
         private Resource(Builder builder) {
@@ -1765,10 +1764,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class TenantCreatable extends TeaModel {
-        @NameInMap("DisableCreateTenantReason")
+        @com.aliyun.core.annotation.NameInMap("DisableCreateTenantReason")
         private String disableCreateTenantReason;
 
-        @NameInMap("EnableCreateTenant")
+        @com.aliyun.core.annotation.NameInMap("EnableCreateTenant")
         private Boolean enableCreateTenant;
 
         private TenantCreatable(Builder builder) {
@@ -1826,130 +1825,136 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("AutoUpgradeObVersion")
+        @com.aliyun.core.annotation.NameInMap("AutoUpgradeObVersion")
         private Boolean autoUpgradeObVersion;
 
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
-        @NameInMap("CpuArchitecture")
+        @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
         private String cpuArchitecture;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataDiskAutoScale")
+        @com.aliyun.core.annotation.NameInMap("DataDiskAutoScale")
         private Boolean dataDiskAutoScale;
 
-        @NameInMap("DataDiskAutoScaleConfig")
+        @com.aliyun.core.annotation.NameInMap("DataDiskAutoScaleConfig")
         private DataDiskAutoScaleConfig dataDiskAutoScaleConfig;
 
-        @NameInMap("DataMergeTime")
+        @com.aliyun.core.annotation.NameInMap("DataMergeTime")
         private String dataMergeTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EnableIsolationOptimization")
+        @com.aliyun.core.annotation.NameInMap("EnableIsolationOptimization")
         private Boolean enableIsolationOptimization;
 
-        @NameInMap("EnableProxyService")
+        @com.aliyun.core.annotation.NameInMap("EnableProxyService")
         private Boolean enableProxyService;
 
-        @NameInMap("EnableReadOnlyReplica")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
         private Boolean enableReadOnlyReplica;
 
-        @NameInMap("EnableReadOnlyReplicaManagement")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplicaManagement")
         private Boolean enableReadOnlyReplicaManagement;
 
-        @NameInMap("EnableUpgradeLogDisk")
+        @com.aliyun.core.annotation.NameInMap("EnableUpgradeLogDisk")
         private Boolean enableUpgradeLogDisk;
 
-        @NameInMap("ExclusiveUnitNumLimit")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveUnitNumLimit")
         private Integer exclusiveUnitNumLimit;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("InTempCapacityStatus")
+        @com.aliyun.core.annotation.NameInMap("InTempCapacityStatus")
         private Boolean inTempCapacityStatus;
 
-        @NameInMap("InstanceClass")
+        @com.aliyun.core.annotation.NameInMap("InstanceClass")
         private String instanceClass;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceRole")
+        @com.aliyun.core.annotation.NameInMap("InstanceRole")
         private String instanceRole;
 
-        @NameInMap("IsLatestObVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLatestObVersion")
         private Boolean isLatestObVersion;
 
-        @NameInMap("IsTrustEcs")
+        @com.aliyun.core.annotation.NameInMap("IsTrustEcs")
         private Boolean isTrustEcs;
 
-        @NameInMap("IsolationOptimization")
+        @com.aliyun.core.annotation.NameInMap("IsolationOptimization")
         private Boolean isolationOptimization;
 
-        @NameInMap("MaintainTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainTime")
         private String maintainTime;
 
-        @NameInMap("NodeNum")
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
         private String nodeNum;
 
-        @NameInMap("ObRpmVersion")
+        @com.aliyun.core.annotation.NameInMap("ObRpmVersion")
         private String obRpmVersion;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ProxyClusterId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryInstance")
+        private String primaryInstance;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryRegion")
+        private String primaryRegion;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyClusterId")
         private String proxyClusterId;
 
-        @NameInMap("ProxyServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ProxyServiceStatus")
         private String proxyServiceStatus;
 
-        @NameInMap("ReadOnlyResource")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyResource")
         private ReadOnlyResource readOnlyResource;
 
-        @NameInMap("ReplicaMode")
+        @com.aliyun.core.annotation.NameInMap("ReplicaMode")
         private String replicaMode;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private Resource resource;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("SharedUnitNumLimit")
+        @com.aliyun.core.annotation.NameInMap("SharedUnitNumLimit")
         private Integer sharedUnitNumLimit;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantCreatable")
+        @com.aliyun.core.annotation.NameInMap("TenantCreatable")
         private TenantCreatable tenantCreatable;
 
-        @NameInMap("UnitSpec")
+        @com.aliyun.core.annotation.NameInMap("UnitSpec")
         private String unitSpec;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
         private Instance(Builder builder) {
@@ -1983,6 +1988,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.nodeNum = builder.nodeNum;
             this.obRpmVersion = builder.obRpmVersion;
             this.payType = builder.payType;
+            this.primaryInstance = builder.primaryInstance;
+            this.primaryRegion = builder.primaryRegion;
             this.proxyClusterId = builder.proxyClusterId;
             this.proxyServiceStatus = builder.proxyServiceStatus;
             this.readOnlyResource = builder.readOnlyResource;
@@ -2216,6 +2223,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return primaryInstance
+         */
+        public String getPrimaryInstance() {
+            return this.primaryInstance;
+        }
+
+        /**
+         * @return primaryRegion
+         */
+        public String getPrimaryRegion() {
+            return this.primaryRegion;
+        }
+
+        /**
          * @return proxyClusterId
          */
         public String getProxyClusterId() {
@@ -2330,6 +2351,8 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private String nodeNum; 
             private String obRpmVersion; 
             private String payType; 
+            private String primaryInstance; 
+            private String primaryRegion; 
             private String proxyClusterId; 
             private String proxyServiceStatus; 
             private ReadOnlyResource readOnlyResource; 
@@ -2580,6 +2603,22 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder payType(String payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * PrimaryInstance.
+             */
+            public Builder primaryInstance(String primaryInstance) {
+                this.primaryInstance = primaryInstance;
+                return this;
+            }
+
+            /**
+             * PrimaryRegion.
+             */
+            public Builder primaryRegion(String primaryRegion) {
+                this.primaryRegion = primaryRegion;
                 return this;
             }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyTenantPrimaryZoneRequest</p>
  */
 public class ModifyTenantPrimaryZoneRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("MasterIntranetAddressZone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MasterIntranetAddressZone")
     private String masterIntranetAddressZone;
 
-    @Body
-    @NameInMap("PrimaryZone")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryZone")
     private String primaryZone;
 
-    @Body
-    @NameInMap("TenantEndpointDirectId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantEndpointDirectId")
     private String tenantEndpointDirectId;
 
-    @Body
-    @NameInMap("TenantEndpointId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantEndpointId")
     private String tenantEndpointId;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    @Body
-    @NameInMap("UserDirectVSwitchId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserDirectVSwitchId")
     private String userDirectVSwitchId;
 
-    @Body
-    @NameInMap("UserVSwitchId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVSwitchId")
     private String userVSwitchId;
 
-    @Body
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpcOwnerId")
+    private String userVpcOwnerId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ModifyTenantPrimaryZoneRequest(Builder builder) {
@@ -65,6 +68,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         this.tenantId = builder.tenantId;
         this.userDirectVSwitchId = builder.userDirectVSwitchId;
         this.userVSwitchId = builder.userVSwitchId;
+        this.userVpcOwnerId = builder.userVpcOwnerId;
         this.vpcId = builder.vpcId;
     }
 
@@ -145,6 +149,13 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
     }
 
     /**
+     * @return userVpcOwnerId
+     */
+    public String getUserVpcOwnerId() {
+        return this.userVpcOwnerId;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -161,6 +172,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         private String tenantId; 
         private String userDirectVSwitchId; 
         private String userVSwitchId; 
+        private String userVpcOwnerId; 
         private String vpcId; 
 
         private Builder() {
@@ -178,6 +190,7 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
             this.tenantId = request.tenantId;
             this.userDirectVSwitchId = request.userDirectVSwitchId;
             this.userVSwitchId = request.userVSwitchId;
+            this.userVpcOwnerId = request.userVpcOwnerId;
             this.vpcId = request.vpcId;
         } 
 
@@ -268,6 +281,15 @@ public class ModifyTenantPrimaryZoneRequest extends Request {
         public Builder userVSwitchId(String userVSwitchId) {
             this.putBodyParameter("UserVSwitchId", userVSwitchId);
             this.userVSwitchId = userVSwitchId;
+            return this;
+        }
+
+        /**
+         * UserVpcOwnerId.
+         */
+        public Builder userVpcOwnerId(String userVpcOwnerId) {
+            this.putBodyParameter("UserVpcOwnerId", userVpcOwnerId);
+            this.userVpcOwnerId = userVpcOwnerId;
             return this;
         }
 

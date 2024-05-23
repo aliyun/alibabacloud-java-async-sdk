@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSecurityConfigsResponseBody</p>
  */
 public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
-    @NameInMap("InstanceSecurityConfigs")
+    @com.aliyun.core.annotation.NameInMap("InstanceSecurityConfigs")
     private InstanceSecurityConfigs instanceSecurityConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceSecurityConfigsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
     } 
 
     public static class SecurityConfigs extends TeaModel {
-        @NameInMap("ConfigDescription")
+        @com.aliyun.core.annotation.NameInMap("ConfigDescription")
         private String configDescription;
 
-        @NameInMap("ConfigGroup")
+        @com.aliyun.core.annotation.NameInMap("ConfigGroup")
         private String configGroup;
 
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("Risk")
+        @com.aliyun.core.annotation.NameInMap("Risk")
         private Boolean risk;
 
-        @NameInMap("RiskDescription")
+        @com.aliyun.core.annotation.NameInMap("RiskDescription")
         private String riskDescription;
 
         private SecurityConfigs(Builder builder) {
@@ -193,22 +192,22 @@ public class DescribeInstanceSecurityConfigsResponseBody extends TeaModel {
 
     }
     public static class InstanceSecurityConfigs extends TeaModel {
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckTime")
+        @com.aliyun.core.annotation.NameInMap("CheckTime")
         private String checkTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("SecurityConfigs")
+        @com.aliyun.core.annotation.NameInMap("SecurityConfigs")
         private java.util.List < SecurityConfigs> securityConfigs;
 
-        @NameInMap("TotalCheckCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCheckCount")
         private Integer totalCheckCount;
 
-        @NameInMap("TotalRiskCount")
+        @com.aliyun.core.annotation.NameInMap("TotalRiskCount")
         private Integer totalRiskCount;
 
         private InstanceSecurityConfigs(Builder builder) {

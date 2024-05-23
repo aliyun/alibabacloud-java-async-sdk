@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCharsetResponseBody</p>
  */
 public class DescribeCharsetResponseBody extends TeaModel {
-    @NameInMap("Charset")
+    @com.aliyun.core.annotation.NameInMap("Charset")
     private java.util.List < Charset> charset;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCharsetResponseBody(Builder builder) {
@@ -79,10 +78,10 @@ public class DescribeCharsetResponseBody extends TeaModel {
     } 
 
     public static class Charset extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("Collations")
+        @com.aliyun.core.annotation.NameInMap("Collations")
         private java.util.List < String > collations;
 
         private Charset(Builder builder) {

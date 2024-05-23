@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantEncryptionResponseBody</p>
  */
 public class DescribeTenantEncryptionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantEncryptions")
+    @com.aliyun.core.annotation.NameInMap("TenantEncryptions")
     private java.util.List < TenantEncryptions> tenantEncryptions;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTenantEncryptionResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class DescribeTenantEncryptionResponseBody extends TeaModel {
     } 
 
     public static class TenantEncryptions extends TeaModel {
-        @NameInMap("EnableEncryption")
+        @com.aliyun.core.annotation.NameInMap("EnableEncryption")
         private Boolean enableEncryption;
 
-        @NameInMap("EncryptionKeyId")
+        @com.aliyun.core.annotation.NameInMap("EncryptionKeyId")
         private String encryptionKeyId;
 
-        @NameInMap("EncryptionType")
+        @com.aliyun.core.annotation.NameInMap("EncryptionType")
         private String encryptionType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TenantStatus")
+        @com.aliyun.core.annotation.NameInMap("TenantStatus")
         private String tenantStatus;
 
         private TenantEncryptions(Builder builder) {

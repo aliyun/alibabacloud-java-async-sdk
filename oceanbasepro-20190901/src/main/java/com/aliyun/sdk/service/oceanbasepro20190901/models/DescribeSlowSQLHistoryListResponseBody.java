@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlowSQLHistoryListResponseBody</p>
  */
 public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SlowSQLHistoryList")
+    @com.aliyun.core.annotation.NameInMap("SlowSQLHistoryList")
     private SlowSQLHistoryList slowSQLHistoryList;
 
     private DescribeSlowSQLHistoryListResponseBody(Builder builder) {
@@ -72,124 +71,124 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AffectedRows")
+        @com.aliyun.core.annotation.NameInMap("AffectedRows")
         private Double affectedRows;
 
-        @NameInMap("AppWaitTime")
+        @com.aliyun.core.annotation.NameInMap("AppWaitTime")
         private Double appWaitTime;
 
-        @NameInMap("BlockCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BlockCacheHit")
         private Double blockCacheHit;
 
-        @NameInMap("BlockIndexCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BlockIndexCacheHit")
         private Double blockIndexCacheHit;
 
-        @NameInMap("BloomFilterCacheHit")
+        @com.aliyun.core.annotation.NameInMap("BloomFilterCacheHit")
         private Double bloomFilterCacheHit;
 
-        @NameInMap("ClientIp")
+        @com.aliyun.core.annotation.NameInMap("ClientIp")
         private String clientIp;
 
-        @NameInMap("ConcurrencyWaitTime")
+        @com.aliyun.core.annotation.NameInMap("ConcurrencyWaitTime")
         private Double concurrencyWaitTime;
 
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Double cpuTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("DecodeTime")
+        @com.aliyun.core.annotation.NameInMap("DecodeTime")
         private Double decodeTime;
 
-        @NameInMap("DiskRead")
+        @com.aliyun.core.annotation.NameInMap("DiskRead")
         private Double diskRead;
 
-        @NameInMap("ElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("ElapsedTime")
         private Double elapsedTime;
 
-        @NameInMap("EndTimeUTCString")
+        @com.aliyun.core.annotation.NameInMap("EndTimeUTCString")
         private String endTimeUTCString;
 
-        @NameInMap("Event")
+        @com.aliyun.core.annotation.NameInMap("Event")
         private String event;
 
-        @NameInMap("ExecPerSecond")
+        @com.aliyun.core.annotation.NameInMap("ExecPerSecond")
         private Double execPerSecond;
 
-        @NameInMap("ExecuteTime")
+        @com.aliyun.core.annotation.NameInMap("ExecuteTime")
         private Double executeTime;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Double executions;
 
-        @NameInMap("FailTimes")
+        @com.aliyun.core.annotation.NameInMap("FailTimes")
         private Double failTimes;
 
-        @NameInMap("GetPlanTime")
+        @com.aliyun.core.annotation.NameInMap("GetPlanTime")
         private Double getPlanTime;
 
-        @NameInMap("IOWaitTime")
+        @com.aliyun.core.annotation.NameInMap("IOWaitTime")
         private Double IOWaitTime;
 
-        @NameInMap("LogicalRead")
+        @com.aliyun.core.annotation.NameInMap("LogicalRead")
         private Double logicalRead;
 
-        @NameInMap("MaxCpuTime")
+        @com.aliyun.core.annotation.NameInMap("MaxCpuTime")
         private Double maxCpuTime;
 
-        @NameInMap("MaxElapsedTime")
+        @com.aliyun.core.annotation.NameInMap("MaxElapsedTime")
         private Double maxElapsedTime;
 
-        @NameInMap("MemstoreReadRowCount")
+        @com.aliyun.core.annotation.NameInMap("MemstoreReadRowCount")
         private Double memstoreReadRowCount;
 
-        @NameInMap("MissPlans")
+        @com.aliyun.core.annotation.NameInMap("MissPlans")
         private Double missPlans;
 
-        @NameInMap("NetWaitTime")
+        @com.aliyun.core.annotation.NameInMap("NetWaitTime")
         private Double netWaitTime;
 
-        @NameInMap("NodeIp")
+        @com.aliyun.core.annotation.NameInMap("NodeIp")
         private String nodeIp;
 
-        @NameInMap("QueueTime")
+        @com.aliyun.core.annotation.NameInMap("QueueTime")
         private Double queueTime;
 
-        @NameInMap("RPCCount")
+        @com.aliyun.core.annotation.NameInMap("RPCCount")
         private Double RPCCount;
 
-        @NameInMap("RemotePlans")
+        @com.aliyun.core.annotation.NameInMap("RemotePlans")
         private Double remotePlans;
 
-        @NameInMap("RetryCount")
+        @com.aliyun.core.annotation.NameInMap("RetryCount")
         private Double retryCount;
 
-        @NameInMap("ReturnRows")
+        @com.aliyun.core.annotation.NameInMap("ReturnRows")
         private Double returnRows;
 
-        @NameInMap("RowCacheHit")
+        @com.aliyun.core.annotation.NameInMap("RowCacheHit")
         private Double rowCacheHit;
 
-        @NameInMap("ScheduleTime")
+        @com.aliyun.core.annotation.NameInMap("ScheduleTime")
         private Double scheduleTime;
 
-        @NameInMap("SqlId")
+        @com.aliyun.core.annotation.NameInMap("SqlId")
         private String sqlId;
 
-        @NameInMap("SqlType")
+        @com.aliyun.core.annotation.NameInMap("SqlType")
         private String sqlType;
 
-        @NameInMap("SsstoreReadRowCount")
+        @com.aliyun.core.annotation.NameInMap("SsstoreReadRowCount")
         private Double ssstoreReadRowCount;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TotalWaitTime")
+        @com.aliyun.core.annotation.NameInMap("TotalWaitTime")
         private Double totalWaitTime;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private List(Builder builder) {
@@ -893,10 +892,10 @@ public class DescribeSlowSQLHistoryListResponseBody extends TeaModel {
 
     }
     public static class SlowSQLHistoryList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
         private SlowSQLHistoryList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,90 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTenantRequest</p>
  */
 public class CreateTenantRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Charset")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Charset")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String charset;
 
-    @Body
-    @NameInMap("Cpu")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cpu")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer cpu;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CreateParams")
+    private java.util.Map < String, String > createParams;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("LogDisk")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LogDisk")
     private Long logDisk;
 
-    @Body
-    @NameInMap("Memory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Memory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer memory;
 
-    @Body
-    @NameInMap("PrimaryZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PrimaryZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryZone;
 
-    @Body
-    @NameInMap("ReadOnlyZoneList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReadOnlyZoneList")
     private String readOnlyZoneList;
 
-    @Body
-    @NameInMap("TenantMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantMode;
 
-    @Body
-    @NameInMap("TenantName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantName;
 
-    @Body
-    @NameInMap("TimeZone")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeZone")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timeZone;
 
-    @Body
-    @NameInMap("UnitNum")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UnitNum")
     private Integer unitNum;
 
-    @Body
-    @NameInMap("UserVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userVSwitchId;
 
-    @Body
-    @NameInMap("UserVpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userVpcId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpcOwnerId")
+    private String userVpcOwnerId;
 
     private CreateTenantRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.charset = builder.charset;
         this.cpu = builder.cpu;
+        this.createParams = builder.createParams;
         this.description = builder.description;
         this.instanceId = builder.instanceId;
         this.logDisk = builder.logDisk;
@@ -99,6 +107,7 @@ public class CreateTenantRequest extends Request {
         this.unitNum = builder.unitNum;
         this.userVSwitchId = builder.userVSwitchId;
         this.userVpcId = builder.userVpcId;
+        this.userVpcOwnerId = builder.userVpcOwnerId;
     }
 
     public static Builder builder() {
@@ -133,6 +142,13 @@ public class CreateTenantRequest extends Request {
      */
     public Integer getCpu() {
         return this.cpu;
+    }
+
+    /**
+     * @return createParams
+     */
+    public java.util.Map < String, String > getCreateParams() {
+        return this.createParams;
     }
 
     /**
@@ -219,10 +235,18 @@ public class CreateTenantRequest extends Request {
         return this.userVpcId;
     }
 
+    /**
+     * @return userVpcOwnerId
+     */
+    public String getUserVpcOwnerId() {
+        return this.userVpcOwnerId;
+    }
+
     public static final class Builder extends Request.Builder<CreateTenantRequest, Builder> {
         private String regionId; 
         private String charset; 
         private Integer cpu; 
+        private java.util.Map < String, String > createParams; 
         private String description; 
         private String instanceId; 
         private Long logDisk; 
@@ -235,6 +259,7 @@ public class CreateTenantRequest extends Request {
         private Integer unitNum; 
         private String userVSwitchId; 
         private String userVpcId; 
+        private String userVpcOwnerId; 
 
         private Builder() {
             super();
@@ -245,6 +270,7 @@ public class CreateTenantRequest extends Request {
             this.regionId = request.regionId;
             this.charset = request.charset;
             this.cpu = request.cpu;
+            this.createParams = request.createParams;
             this.description = request.description;
             this.instanceId = request.instanceId;
             this.logDisk = request.logDisk;
@@ -257,6 +283,7 @@ public class CreateTenantRequest extends Request {
             this.unitNum = request.unitNum;
             this.userVSwitchId = request.userVSwitchId;
             this.userVpcId = request.userVpcId;
+            this.userVpcOwnerId = request.userVpcOwnerId;
         } 
 
         /**
@@ -288,6 +315,16 @@ public class CreateTenantRequest extends Request {
         public Builder cpu(Integer cpu) {
             this.putBodyParameter("Cpu", cpu);
             this.cpu = cpu;
+            return this;
+        }
+
+        /**
+         * CreateParams.
+         */
+        public Builder createParams(java.util.Map < String, String > createParams) {
+            String createParamsShrink = shrink(createParams, "CreateParams", "json");
+            this.putBodyParameter("CreateParams", createParamsShrink);
+            this.createParams = createParams;
             return this;
         }
 
@@ -416,6 +453,15 @@ public class CreateTenantRequest extends Request {
         public Builder userVpcId(String userVpcId) {
             this.putBodyParameter("UserVpcId", userVpcId);
             this.userVpcId = userVpcId;
+            return this;
+        }
+
+        /**
+         * UserVpcOwnerId.
+         */
+        public Builder userVpcOwnerId(String userVpcOwnerId) {
+            this.putBodyParameter("UserVpcOwnerId", userVpcOwnerId);
+            this.userVpcOwnerId = userVpcOwnerId;
             return this;
         }
 

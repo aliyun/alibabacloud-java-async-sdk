@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupSetDownloadLinkResponseBody</p>
  */
 public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupSetDownloadLinkResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeBackupSetDownloadLinkResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BackupRestorableTime")
+        @com.aliyun.core.annotation.NameInMap("BackupRestorableTime")
         private String backupRestorableTime;
 
-        @NameInMap("BackupSetId")
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
         private String backupSetId;
 
-        @NameInMap("DownloadTaskCreateTime")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskCreateTime")
         private String downloadTaskCreateTime;
 
-        @NameInMap("DownloadTaskId")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskId")
         private Long downloadTaskId;
 
-        @NameInMap("DownloadTaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DownloadTaskStatus")
         private String downloadTaskStatus;
 
-        @NameInMap("InternalUrl")
+        @com.aliyun.core.annotation.NameInMap("InternalUrl")
         private String internalUrl;
 
-        @NameInMap("UrlAliveTime")
+        @com.aliyun.core.annotation.NameInMap("UrlAliveTime")
         private Long urlAliveTime;
 
-        @NameInMap("UrlExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("UrlExpiredTime")
         private String urlExpiredTime;
 
         private Data(Builder builder) {

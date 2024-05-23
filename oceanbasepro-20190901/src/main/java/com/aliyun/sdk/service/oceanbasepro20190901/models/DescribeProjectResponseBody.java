@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProjectResponseBody</p>
  */
 public class DescribeProjectResponseBody extends TeaModel {
-    @NameInMap("Advice")
+    @com.aliyun.core.annotation.NameInMap("Advice")
     private String advice;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Cost")
+    @com.aliyun.core.annotation.NameInMap("Cost")
     private String cost;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorDetail")
+    @com.aliyun.core.annotation.NameInMap("ErrorDetail")
     private ErrorDetail errorDetail;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeProjectResponseBody(Builder builder) {
@@ -252,22 +251,22 @@ public class DescribeProjectResponseBody extends TeaModel {
     } 
 
     public static class AlarmStats extends TeaModel {
-        @NameInMap("AlarmContent")
+        @com.aliyun.core.annotation.NameInMap("AlarmContent")
         private String alarmContent;
 
-        @NameInMap("Alarming")
+        @com.aliyun.core.annotation.NameInMap("Alarming")
         private Boolean alarming;
 
-        @NameInMap("OpenMonitor")
+        @com.aliyun.core.annotation.NameInMap("OpenMonitor")
         private Boolean openMonitor;
 
-        @NameInMap("RecentlyTriggerCount")
+        @com.aliyun.core.annotation.NameInMap("RecentlyTriggerCount")
         private Integer recentlyTriggerCount;
 
-        @NameInMap("RuleToRecentlyTriggerCount")
+        @com.aliyun.core.annotation.NameInMap("RuleToRecentlyTriggerCount")
         private java.util.Map < String, Integer > ruleToRecentlyTriggerCount;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
         private AlarmStats(Builder builder) {
@@ -393,37 +392,37 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class CommonTransferConfig extends TeaModel {
-        @NameInMap("ActiveActive")
+        @com.aliyun.core.annotation.NameInMap("ActiveActive")
         private Boolean activeActive;
 
-        @NameInMap("DataWorksBusinessName")
+        @com.aliyun.core.annotation.NameInMap("DataWorksBusinessName")
         private String dataWorksBusinessName;
 
-        @NameInMap("DatahubTopicType")
+        @com.aliyun.core.annotation.NameInMap("DatahubTopicType")
         private String datahubTopicType;
 
-        @NameInMap("MqPartition")
+        @com.aliyun.core.annotation.NameInMap("MqPartition")
         private Integer mqPartition;
 
-        @NameInMap("MqPartitionMode")
+        @com.aliyun.core.annotation.NameInMap("MqPartitionMode")
         private String mqPartitionMode;
 
-        @NameInMap("MqSerializerType")
+        @com.aliyun.core.annotation.NameInMap("MqSerializerType")
         private String mqSerializerType;
 
-        @NameInMap("RocketMqEnableMsgTrace")
+        @com.aliyun.core.annotation.NameInMap("RocketMqEnableMsgTrace")
         private Boolean rocketMqEnableMsgTrace;
 
-        @NameInMap("RocketMqMsgTags")
+        @com.aliyun.core.annotation.NameInMap("RocketMqMsgTags")
         private String rocketMqMsgTags;
 
-        @NameInMap("RocketMqProducerGroup")
+        @com.aliyun.core.annotation.NameInMap("RocketMqProducerGroup")
         private String rocketMqProducerGroup;
 
-        @NameInMap("RocketMqSendMsgTimeout")
+        @com.aliyun.core.annotation.NameInMap("RocketMqSendMsgTimeout")
         private Long rocketMqSendMsgTimeout;
 
-        @NameInMap("TableCategory")
+        @com.aliyun.core.annotation.NameInMap("TableCategory")
         private String tableCategory;
 
         private CommonTransferConfig(Builder builder) {
@@ -634,58 +633,58 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class ExtraInfo extends TeaModel {
-        @NameInMap("AccessObSource")
+        @com.aliyun.core.annotation.NameInMap("AccessObSource")
         private Boolean accessObSource;
 
-        @NameInMap("IgnoreUnsupportDdl")
+        @com.aliyun.core.annotation.NameInMap("IgnoreUnsupportDdl")
         private Boolean ignoreUnsupportDdl;
 
-        @NameInMap("IncrSyncTimestamp")
+        @com.aliyun.core.annotation.NameInMap("IncrSyncTimestamp")
         private Long incrSyncTimestamp;
 
-        @NameInMap("LogServiceStartCheckpoint")
+        @com.aliyun.core.annotation.NameInMap("LogServiceStartCheckpoint")
         private Long logServiceStartCheckpoint;
 
-        @NameInMap("MaxConnectorCount")
+        @com.aliyun.core.annotation.NameInMap("MaxConnectorCount")
         private Integer maxConnectorCount;
 
-        @NameInMap("MonitoringIncr")
+        @com.aliyun.core.annotation.NameInMap("MonitoringIncr")
         private Boolean monitoringIncr;
 
-        @NameInMap("OverwriteConfig")
+        @com.aliyun.core.annotation.NameInMap("OverwriteConfig")
         private Boolean overwriteConfig;
 
-        @NameInMap("ReverseSubtopics")
+        @com.aliyun.core.annotation.NameInMap("ReverseSubtopics")
         private java.util.List < String > reverseSubtopics;
 
-        @NameInMap("RunningProgress")
+        @com.aliyun.core.annotation.NameInMap("RunningProgress")
         private Integer runningProgress;
 
-        @NameInMap("RunningStep")
+        @com.aliyun.core.annotation.NameInMap("RunningStep")
         private String runningStep;
 
-        @NameInMap("SourceStoreKeptHour")
+        @com.aliyun.core.annotation.NameInMap("SourceStoreKeptHour")
         private Integer sourceStoreKeptHour;
 
-        @NameInMap("StoreIncr")
+        @com.aliyun.core.annotation.NameInMap("StoreIncr")
         private Boolean storeIncr;
 
-        @NameInMap("SubConds")
+        @com.aliyun.core.annotation.NameInMap("SubConds")
         private java.util.Map < String, java.util.List<DataExtraInfoSubCondsValue>> subConds;
 
-        @NameInMap("SubDbs")
+        @com.aliyun.core.annotation.NameInMap("SubDbs")
         private java.util.Map < String, java.util.List<DataExtraInfoSubDbsValue>> subDbs;
 
-        @NameInMap("SubIds")
+        @com.aliyun.core.annotation.NameInMap("SubIds")
         private java.util.Map < String, String > subIds;
 
-        @NameInMap("Subtopics")
+        @com.aliyun.core.annotation.NameInMap("Subtopics")
         private java.util.List < String > subtopics;
 
-        @NameInMap("SyncDelay")
+        @com.aliyun.core.annotation.NameInMap("SyncDelay")
         private Long syncDelay;
 
-        @NameInMap("SyncDelaySampleTimestamp")
+        @com.aliyun.core.annotation.NameInMap("SyncDelaySampleTimestamp")
         private Long syncDelaySampleTimestamp;
 
         private ExtraInfo(Builder builder) {
@@ -1015,28 +1014,28 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class FullTransferConfig extends TeaModel {
-        @NameInMap("AllowDestTableNotEmpty")
+        @com.aliyun.core.annotation.NameInMap("AllowDestTableNotEmpty")
         private Boolean allowDestTableNotEmpty;
 
-        @NameInMap("FullTransferSpeedMode")
+        @com.aliyun.core.annotation.NameInMap("FullTransferSpeedMode")
         private String fullTransferSpeedMode;
 
-        @NameInMap("FullVerifySpeedMode")
+        @com.aliyun.core.annotation.NameInMap("FullVerifySpeedMode")
         private String fullVerifySpeedMode;
 
-        @NameInMap("NonePkUkTruncateDstTable")
+        @com.aliyun.core.annotation.NameInMap("NonePkUkTruncateDstTable")
         private Boolean nonePkUkTruncateDstTable;
 
-        @NameInMap("ReadWorkerNum")
+        @com.aliyun.core.annotation.NameInMap("ReadWorkerNum")
         private Integer readWorkerNum;
 
-        @NameInMap("ThrottleIOPS")
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
         private Integer throttleIOPS;
 
-        @NameInMap("ThrottleRps")
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
         private Integer throttleRps;
 
-        @NameInMap("WriteWorkerNum")
+        @com.aliyun.core.annotation.NameInMap("WriteWorkerNum")
         private Integer writeWorkerNum;
 
         private FullTransferConfig(Builder builder) {
@@ -1196,31 +1195,31 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class IncrTransferConfig extends TeaModel {
-        @NameInMap("EnableIncrSyncStatistics")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrSyncStatistics")
         private Boolean enableIncrSyncStatistics;
 
-        @NameInMap("EnableSequencingWithinTxn")
+        @com.aliyun.core.annotation.NameInMap("EnableSequencingWithinTxn")
         private Boolean enableSequencingWithinTxn;
 
-        @NameInMap("IncrSyncConcurrency")
+        @com.aliyun.core.annotation.NameInMap("IncrSyncConcurrency")
         private Integer incrSyncConcurrency;
 
-        @NameInMap("RecordTypeWhiteList")
+        @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
         private java.util.List < String > recordTypeWhiteList;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("StoreLogKeptHour")
+        @com.aliyun.core.annotation.NameInMap("StoreLogKeptHour")
         private Integer storeLogKeptHour;
 
-        @NameInMap("SupportDDLTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
         private java.util.List < String > supportDDLTypes;
 
-        @NameInMap("ThrottleIOPS")
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
         private Integer throttleIOPS;
 
-        @NameInMap("ThrottleRps")
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
         private Integer throttleRps;
 
         private IncrTransferConfig(Builder builder) {
@@ -1397,10 +1396,10 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Labels(Builder builder) {
@@ -1458,31 +1457,31 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class ReverseIncrTransferConfig extends TeaModel {
-        @NameInMap("EnableIncrSyncStatistics")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrSyncStatistics")
         private Boolean enableIncrSyncStatistics;
 
-        @NameInMap("EnableSequencingWithinTxn")
+        @com.aliyun.core.annotation.NameInMap("EnableSequencingWithinTxn")
         private Boolean enableSequencingWithinTxn;
 
-        @NameInMap("IncrSyncConcurrency")
+        @com.aliyun.core.annotation.NameInMap("IncrSyncConcurrency")
         private Integer incrSyncConcurrency;
 
-        @NameInMap("RecordTypeWhiteList")
+        @com.aliyun.core.annotation.NameInMap("RecordTypeWhiteList")
         private java.util.List < String > recordTypeWhiteList;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("StoreLogKeptHour")
+        @com.aliyun.core.annotation.NameInMap("StoreLogKeptHour")
         private Integer storeLogKeptHour;
 
-        @NameInMap("SupportDDLTypes")
+        @com.aliyun.core.annotation.NameInMap("SupportDDLTypes")
         private java.util.List < String > supportDDLTypes;
 
-        @NameInMap("ThrottleIOPS")
+        @com.aliyun.core.annotation.NameInMap("ThrottleIOPS")
         private Integer throttleIOPS;
 
-        @NameInMap("ThrottleRps")
+        @com.aliyun.core.annotation.NameInMap("ThrottleRps")
         private Integer throttleRps;
 
         private ReverseIncrTransferConfig(Builder builder) {
@@ -1659,61 +1658,61 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SinkConnectInfo extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("ConnExtraAttributes")
+        @com.aliyun.core.annotation.NameInMap("ConnExtraAttributes")
         private Object connExtraAttributes;
 
-        @NameInMap("ConnectionInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnectionInfo")
         private String connectionInfo;
 
-        @NameInMap("DbEngine")
+        @com.aliyun.core.annotation.NameInMap("DbEngine")
         private String dbEngine;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointSide")
+        @com.aliyun.core.annotation.NameInMap("EndpointSide")
         private String endpointSide;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NlsLengthSemantics")
+        @com.aliyun.core.annotation.NameInMap("NlsLengthSemantics")
         private String nlsLengthSemantics;
 
-        @NameInMap("OcpName")
+        @com.aliyun.core.annotation.NameInMap("OcpName")
         private String ocpName;
 
-        @NameInMap("OperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("OperatingSystem")
         private String operatingSystem;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
         private String resourceOwner;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SinkConnectInfo(Builder builder) {
@@ -2060,61 +2059,61 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SourceConnectInfo extends TeaModel {
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("ConnExtraAttributes")
+        @com.aliyun.core.annotation.NameInMap("ConnExtraAttributes")
         private Object connExtraAttributes;
 
-        @NameInMap("ConnectionInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnectionInfo")
         private String connectionInfo;
 
-        @NameInMap("DbEngine")
+        @com.aliyun.core.annotation.NameInMap("DbEngine")
         private String dbEngine;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("EndpointSide")
+        @com.aliyun.core.annotation.NameInMap("EndpointSide")
         private String endpointSide;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NlsLengthSemantics")
+        @com.aliyun.core.annotation.NameInMap("NlsLengthSemantics")
         private String nlsLengthSemantics;
 
-        @NameInMap("OcpName")
+        @com.aliyun.core.annotation.NameInMap("OcpName")
         private String ocpName;
 
-        @NameInMap("OperatingSystem")
+        @com.aliyun.core.annotation.NameInMap("OperatingSystem")
         private String operatingSystem;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceOwner")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwner")
         private String resourceOwner;
 
-        @NameInMap("Timezone")
+        @com.aliyun.core.annotation.NameInMap("Timezone")
         private String timezone;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private SourceConnectInfo(Builder builder) {
@@ -2461,43 +2460,43 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class ErrorDetails extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetails(Builder builder) {
@@ -2742,19 +2741,19 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class StepsExtraInfo extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorDetails")
+        @com.aliyun.core.annotation.NameInMap("ErrorDetails")
         private java.util.List < ErrorDetails> errorDetails;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("ErrorParam")
+        @com.aliyun.core.annotation.NameInMap("ErrorParam")
         private java.util.Map < String, String > errorParam;
 
-        @NameInMap("FailedTime")
+        @com.aliyun.core.annotation.NameInMap("FailedTime")
         private String failedTime;
 
         private StepsExtraInfo(Builder builder) {
@@ -2863,31 +2862,31 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Steps extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private StepsExtraInfo extraInfo;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private Integer order;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Integer progress;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StepInfo")
+        @com.aliyun.core.annotation.NameInMap("StepInfo")
         private java.util.Map < String, ? > stepInfo;
 
         private Steps(Builder builder) {
@@ -3064,10 +3063,10 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class StructTransferConfig extends TeaModel {
-        @NameInMap("ByteCharConvertStrategy")
+        @com.aliyun.core.annotation.NameInMap("ByteCharConvertStrategy")
         private String byteCharConvertStrategy;
 
-        @NameInMap("DeferIndexCreation")
+        @com.aliyun.core.annotation.NameInMap("DeferIndexCreation")
         private Boolean deferIndexCreation;
 
         private StructTransferConfig(Builder builder) {
@@ -3125,16 +3124,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class AdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private AdbTableSchema(Builder builder) {
@@ -3226,25 +3225,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SpecificTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private AdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificTables(Builder builder) {
@@ -3387,16 +3386,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SpecificViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private SpecificViewsAdbTableSchema(Builder builder) {
@@ -3488,25 +3487,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SpecificViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private SpecificViews(Builder builder) {
@@ -3649,16 +3648,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class TablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private TablesAdbTableSchema(Builder builder) {
@@ -3750,25 +3749,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private TablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Tables(Builder builder) {
@@ -3911,16 +3910,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class ViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private ViewsAdbTableSchema(Builder builder) {
@@ -4012,25 +4011,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Views extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private ViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private Views(Builder builder) {
@@ -4173,31 +4172,31 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SpecificTables")
+        @com.aliyun.core.annotation.NameInMap("SpecificTables")
         private java.util.List < SpecificTables> specificTables;
 
-        @NameInMap("SpecificViews")
+        @com.aliyun.core.annotation.NameInMap("SpecificViews")
         private java.util.List < SpecificViews> specificViews;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Views")
+        @com.aliyun.core.annotation.NameInMap("Views")
         private java.util.List < Views> views;
 
         private Databases(Builder builder) {
@@ -4374,16 +4373,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class SpecificTablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private SpecificTablesAdbTableSchema(Builder builder) {
@@ -4475,25 +4474,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackSpecificTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private SpecificTablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackSpecificTables(Builder builder) {
@@ -4636,16 +4635,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackSpecificViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackSpecificViewsAdbTableSchema(Builder builder) {
@@ -4737,25 +4736,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackSpecificViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackSpecificViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackSpecificViews(Builder builder) {
@@ -4898,16 +4897,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackTablesAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackTablesAdbTableSchema(Builder builder) {
@@ -4999,25 +4998,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackTables extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackTablesAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackTables(Builder builder) {
@@ -5160,16 +5159,16 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackViewsAdbTableSchema extends TeaModel {
-        @NameInMap("DistributedKeys")
+        @com.aliyun.core.annotation.NameInMap("DistributedKeys")
         private java.util.List < String > distributedKeys;
 
-        @NameInMap("PartitionLifeCycle")
+        @com.aliyun.core.annotation.NameInMap("PartitionLifeCycle")
         private String partitionLifeCycle;
 
-        @NameInMap("PartitionStatement")
+        @com.aliyun.core.annotation.NameInMap("PartitionStatement")
         private String partitionStatement;
 
-        @NameInMap("PrimaryKeys")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
         private java.util.List < String > primaryKeys;
 
         private DatabasesBlackViewsAdbTableSchema(Builder builder) {
@@ -5261,25 +5260,25 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlackViews extends TeaModel {
-        @NameInMap("AdbTableSchema")
+        @com.aliyun.core.annotation.NameInMap("AdbTableSchema")
         private DatabasesBlackViewsAdbTableSchema adbTableSchema;
 
-        @NameInMap("FilterColumns")
+        @com.aliyun.core.annotation.NameInMap("FilterColumns")
         private java.util.List < String > filterColumns;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ShardColumns")
+        @com.aliyun.core.annotation.NameInMap("ShardColumns")
         private java.util.List < String > shardColumns;
 
-        @NameInMap("WhereClause")
+        @com.aliyun.core.annotation.NameInMap("WhereClause")
         private String whereClause;
 
         private DatabasesBlackViews(Builder builder) {
@@ -5422,31 +5421,31 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class DatabasesBlack extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MappedName")
+        @com.aliyun.core.annotation.NameInMap("MappedName")
         private String mappedName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SpecificTables")
+        @com.aliyun.core.annotation.NameInMap("SpecificTables")
         private java.util.List < DatabasesBlackSpecificTables> specificTables;
 
-        @NameInMap("SpecificViews")
+        @com.aliyun.core.annotation.NameInMap("SpecificViews")
         private java.util.List < DatabasesBlackSpecificViews> specificViews;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < DatabasesBlackTables> tables;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Views")
+        @com.aliyun.core.annotation.NameInMap("Views")
         private java.util.List < DatabasesBlackViews> views;
 
         private DatabasesBlack(Builder builder) {
@@ -5623,19 +5622,19 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class TransferMapping extends TeaModel {
-        @NameInMap("Databases")
+        @com.aliyun.core.annotation.NameInMap("Databases")
         private java.util.List < Databases> databases;
 
-        @NameInMap("DatabasesBlack")
+        @com.aliyun.core.annotation.NameInMap("DatabasesBlack")
         private java.util.List < DatabasesBlack> databasesBlack;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("TableAndViewBlackList")
+        @com.aliyun.core.annotation.NameInMap("TableAndViewBlackList")
         private java.util.List < String > tableAndViewBlackList;
 
-        @NameInMap("TableAndViewWhiteList")
+        @com.aliyun.core.annotation.NameInMap("TableAndViewWhiteList")
         private java.util.List < String > tableAndViewWhiteList;
 
         private TransferMapping(Builder builder) {
@@ -5744,46 +5743,46 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class WorkerGradeInfo extends TeaModel {
-        @NameInMap("AutoRenewal")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("DestRegion")
+        @com.aliyun.core.annotation.NameInMap("DestRegion")
         private String destRegion;
 
-        @NameInMap("DestType")
+        @com.aliyun.core.annotation.NameInMap("DestType")
         private String destType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Boolean expired;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Grade")
+        @com.aliyun.core.annotation.NameInMap("Grade")
         private String grade;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SourceRegion")
+        @com.aliyun.core.annotation.NameInMap("SourceRegion")
         private String sourceRegion;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
         private WorkerGradeInfo(Builder builder) {
@@ -6045,112 +6044,112 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AlarmStats")
+        @com.aliyun.core.annotation.NameInMap("AlarmStats")
         private AlarmStats alarmStats;
 
-        @NameInMap("CommonTransferConfig")
+        @com.aliyun.core.annotation.NameInMap("CommonTransferConfig")
         private CommonTransferConfig commonTransferConfig;
 
-        @NameInMap("DestConnId")
+        @com.aliyun.core.annotation.NameInMap("DestConnId")
         private String destConnId;
 
-        @NameInMap("EnableFullTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableFullTransfer")
         private Boolean enableFullTransfer;
 
-        @NameInMap("EnableFullVerify")
+        @com.aliyun.core.annotation.NameInMap("EnableFullVerify")
         private Boolean enableFullVerify;
 
-        @NameInMap("EnableIncrTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrTransfer")
         private Boolean enableIncrTransfer;
 
-        @NameInMap("EnableIncrVerify")
+        @com.aliyun.core.annotation.NameInMap("EnableIncrVerify")
         private Boolean enableIncrVerify;
 
-        @NameInMap("EnableReverseIncrTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableReverseIncrTransfer")
         private Boolean enableReverseIncrTransfer;
 
-        @NameInMap("EnableStructTransfer")
+        @com.aliyun.core.annotation.NameInMap("EnableStructTransfer")
         private Boolean enableStructTransfer;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private ExtraInfo extraInfo;
 
-        @NameInMap("FullTransferConfig")
+        @com.aliyun.core.annotation.NameInMap("FullTransferConfig")
         private FullTransferConfig fullTransferConfig;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtFinish")
+        @com.aliyun.core.annotation.NameInMap("GmtFinish")
         private String gmtFinish;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("GmtStart")
+        @com.aliyun.core.annotation.NameInMap("GmtStart")
         private String gmtStart;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Importance")
+        @com.aliyun.core.annotation.NameInMap("Importance")
         private String importance;
 
-        @NameInMap("IncrTransferConfig")
+        @com.aliyun.core.annotation.NameInMap("IncrTransferConfig")
         private IncrTransferConfig incrTransferConfig;
 
-        @NameInMap("IsMerging")
+        @com.aliyun.core.annotation.NameInMap("IsMerging")
         private Boolean isMerging;
 
-        @NameInMap("IsModifying")
+        @com.aliyun.core.annotation.NameInMap("IsModifying")
         private Boolean isModifying;
 
-        @NameInMap("IsSubProject")
+        @com.aliyun.core.annotation.NameInMap("IsSubProject")
         private Boolean isSubProject;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ReverseIncrTransferConfig")
+        @com.aliyun.core.annotation.NameInMap("ReverseIncrTransferConfig")
         private ReverseIncrTransferConfig reverseIncrTransferConfig;
 
-        @NameInMap("SinkConnectInfo")
+        @com.aliyun.core.annotation.NameInMap("SinkConnectInfo")
         private SinkConnectInfo sinkConnectInfo;
 
-        @NameInMap("SinkEndpointType")
+        @com.aliyun.core.annotation.NameInMap("SinkEndpointType")
         private String sinkEndpointType;
 
-        @NameInMap("SourceConnectInfo")
+        @com.aliyun.core.annotation.NameInMap("SourceConnectInfo")
         private SourceConnectInfo sourceConnectInfo;
 
-        @NameInMap("SourceEndpointType")
+        @com.aliyun.core.annotation.NameInMap("SourceEndpointType")
         private String sourceEndpointType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Steps")
+        @com.aliyun.core.annotation.NameInMap("Steps")
         private java.util.List < Steps> steps;
 
-        @NameInMap("StructTransferConfig")
+        @com.aliyun.core.annotation.NameInMap("StructTransferConfig")
         private StructTransferConfig structTransferConfig;
 
-        @NameInMap("TransferMapping")
+        @com.aliyun.core.annotation.NameInMap("TransferMapping")
         private TransferMapping transferMapping;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkerGradeId")
+        @com.aliyun.core.annotation.NameInMap("WorkerGradeId")
         private String workerGradeId;
 
-        @NameInMap("WorkerGradeInfo")
+        @com.aliyun.core.annotation.NameInMap("WorkerGradeInfo")
         private WorkerGradeInfo workerGradeInfo;
 
         private Data(Builder builder) {
@@ -6786,43 +6785,43 @@ public class DescribeProjectResponseBody extends TeaModel {
 
     }
     public static class ErrorDetail extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ExtraContext")
+        @com.aliyun.core.annotation.NameInMap("ExtraContext")
         private java.util.Map < String, ? > extraContext;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("MessageMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsContext")
         private java.util.Map < String, String > messageMcmsContext;
 
-        @NameInMap("MessageMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("MessageMcmsKey")
         private String messageMcmsKey;
 
-        @NameInMap("Proposal")
+        @com.aliyun.core.annotation.NameInMap("Proposal")
         private String proposal;
 
-        @NameInMap("ProposalMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsContext")
         private java.util.Map < String, String > proposalMcmsContext;
 
-        @NameInMap("ProposalMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ProposalMcmsKey")
         private String proposalMcmsKey;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReasonMcmsContext")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsContext")
         private java.util.Map < String, String > reasonMcmsContext;
 
-        @NameInMap("ReasonMcmsKey")
+        @com.aliyun.core.annotation.NameInMap("ReasonMcmsKey")
         private String reasonMcmsKey;
 
-        @NameInMap("UpstreamErrorDetail")
+        @com.aliyun.core.annotation.NameInMap("UpstreamErrorDetail")
         private Object upstreamErrorDetail;
 
         private ErrorDetail(Builder builder) {

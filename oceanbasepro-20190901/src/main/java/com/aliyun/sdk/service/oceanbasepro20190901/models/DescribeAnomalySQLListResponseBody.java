@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAnomalySQLListResponseBody</p>
  */
 public class DescribeAnomalySQLListResponseBody extends TeaModel {
-    @NameInMap("AnomalySQLList")
+    @com.aliyun.core.annotation.NameInMap("AnomalySQLList")
     private java.util.List < AnomalySQLList> anomalySQLList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeAnomalySQLListResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class DescribeAnomalySQLListResponseBody extends TeaModel {
     } 
 
     public static class AnomalySQLList extends TeaModel {
-        @NameInMap("CpuTime")
+        @com.aliyun.core.annotation.NameInMap("CpuTime")
         private Float cpuTime;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Diagnosis")
+        @com.aliyun.core.annotation.NameInMap("Diagnosis")
         private String diagnosis;
 
-        @NameInMap("DiagnosisRule")
+        @com.aliyun.core.annotation.NameInMap("DiagnosisRule")
         private String diagnosisRule;
 
-        @NameInMap("Executions")
+        @com.aliyun.core.annotation.NameInMap("Executions")
         private Long executions;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private Long key;
 
-        @NameInMap("RequestTime")
+        @com.aliyun.core.annotation.NameInMap("RequestTime")
         private Float requestTime;
 
-        @NameInMap("RequestTimeUTCString")
+        @com.aliyun.core.annotation.NameInMap("RequestTimeUTCString")
         private String requestTimeUTCString;
 
-        @NameInMap("SQLId")
+        @com.aliyun.core.annotation.NameInMap("SQLId")
         private String SQLId;
 
-        @NameInMap("SQLText")
+        @com.aliyun.core.annotation.NameInMap("SQLText")
         private String SQLText;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private AnomalySQLList(Builder builder) {

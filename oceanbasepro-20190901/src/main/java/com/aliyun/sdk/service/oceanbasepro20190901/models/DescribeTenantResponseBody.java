@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTenantResponseBody</p>
  */
 public class DescribeTenantResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tenant")
+    @com.aliyun.core.annotation.NameInMap("Tenant")
     private Tenant tenant;
 
     private DescribeTenantResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeTenantResponseBody extends TeaModel {
     } 
 
     public static class CapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacit")
         private Integer usedCapacit;
 
         private CapacityUnit(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Cpu extends TeaModel {
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Float totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Float unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Float usedCpu;
 
         private Cpu(Builder builder) {
@@ -234,7 +233,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class DiskSize extends TeaModel {
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Float usedDiskSize;
 
         private DiskSize(Builder builder) {
@@ -275,10 +274,10 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class LogDiskSize extends TeaModel {
-        @NameInMap("TotalLogDisk")
+        @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
 
-        @NameInMap("UnitLogDisk")
+        @com.aliyun.core.annotation.NameInMap("UnitLogDisk")
         private Integer unitLogDisk;
 
         private LogDiskSize(Builder builder) {
@@ -336,13 +335,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Float unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Float usedMemory;
 
         private Memory(Builder builder) {
@@ -417,22 +416,22 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class ReadOnlyResource extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private CapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Cpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private DiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
         private LogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
         private ReadOnlyResource(Builder builder) {
@@ -558,58 +557,58 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantConnections extends TeaModel {
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("ConnectionReplicaType")
+        @com.aliyun.core.annotation.NameInMap("ConnectionReplicaType")
         private String connectionReplicaType;
 
-        @NameInMap("ConnectionZones")
+        @com.aliyun.core.annotation.NameInMap("ConnectionZones")
         private java.util.List < String > connectionZones;
 
-        @NameInMap("EnableTransactionSplit")
+        @com.aliyun.core.annotation.NameInMap("EnableTransactionSplit")
         private Boolean enableTransactionSplit;
 
-        @NameInMap("InternetAddress")
+        @com.aliyun.core.annotation.NameInMap("InternetAddress")
         private String internetAddress;
 
-        @NameInMap("InternetAddressStatus")
+        @com.aliyun.core.annotation.NameInMap("InternetAddressStatus")
         private String internetAddressStatus;
 
-        @NameInMap("InternetPort")
+        @com.aliyun.core.annotation.NameInMap("InternetPort")
         private Integer internetPort;
 
-        @NameInMap("IntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
-        @NameInMap("IntranetAddressMasterZoneId")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressMasterZoneId")
         private String intranetAddressMasterZoneId;
 
-        @NameInMap("IntranetAddressSlaveZoneId")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressSlaveZoneId")
         private String intranetAddressSlaveZoneId;
 
-        @NameInMap("IntranetAddressStatus")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddressStatus")
         private String intranetAddressStatus;
 
-        @NameInMap("IntranetPort")
+        @com.aliyun.core.annotation.NameInMap("IntranetPort")
         private Integer intranetPort;
 
-        @NameInMap("MaxConnectionNum")
+        @com.aliyun.core.annotation.NameInMap("MaxConnectionNum")
         private Long maxConnectionNum;
 
-        @NameInMap("ParallelQueryDegree")
+        @com.aliyun.core.annotation.NameInMap("ParallelQueryDegree")
         private Long parallelQueryDegree;
 
-        @NameInMap("TenantEndpointId")
+        @com.aliyun.core.annotation.NameInMap("TenantEndpointId")
         private String tenantEndpointId;
 
-        @NameInMap("TransactionSplit")
+        @com.aliyun.core.annotation.NameInMap("TransactionSplit")
         private Boolean transactionSplit;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private TenantConnections(Builder builder) {
@@ -947,13 +946,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResourceCapacityUnit extends TeaModel {
-        @NameInMap("MaxCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacityUnit")
         private Integer maxCapacityUnit;
 
-        @NameInMap("MinCapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("MinCapacityUnit")
         private Integer minCapacityUnit;
 
-        @NameInMap("UsedCapacit")
+        @com.aliyun.core.annotation.NameInMap("UsedCapacit")
         private Integer usedCapacit;
 
         private TenantResourceCapacityUnit(Builder builder) {
@@ -1028,13 +1027,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResourceCpu extends TeaModel {
-        @NameInMap("TotalCpu")
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Float totalCpu;
 
-        @NameInMap("UnitCpu")
+        @com.aliyun.core.annotation.NameInMap("UnitCpu")
         private Float unitCpu;
 
-        @NameInMap("UsedCpu")
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Float usedCpu;
 
         private TenantResourceCpu(Builder builder) {
@@ -1119,7 +1118,7 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResourceDiskSize extends TeaModel {
-        @NameInMap("UsedDiskSize")
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Float usedDiskSize;
 
         private TenantResourceDiskSize(Builder builder) {
@@ -1160,10 +1159,10 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResourceLogDiskSize extends TeaModel {
-        @NameInMap("TotalLogDisk")
+        @com.aliyun.core.annotation.NameInMap("TotalLogDisk")
         private Integer totalLogDisk;
 
-        @NameInMap("UnitLogDisk")
+        @com.aliyun.core.annotation.NameInMap("UnitLogDisk")
         private Integer unitLogDisk;
 
         private TenantResourceLogDiskSize(Builder builder) {
@@ -1221,13 +1220,13 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResourceMemory extends TeaModel {
-        @NameInMap("TotalMemory")
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Float totalMemory;
 
-        @NameInMap("UnitMemory")
+        @com.aliyun.core.annotation.NameInMap("UnitMemory")
         private Float unitMemory;
 
-        @NameInMap("UsedMemory")
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Float usedMemory;
 
         private TenantResourceMemory(Builder builder) {
@@ -1307,22 +1306,22 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantResource extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private TenantResourceCapacityUnit capacityUnit;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private TenantResourceCpu cpu;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private TenantResourceDiskSize diskSize;
 
-        @NameInMap("LogDiskSize")
+        @com.aliyun.core.annotation.NameInMap("LogDiskSize")
         private TenantResourceLogDiskSize logDiskSize;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private TenantResourceMemory memory;
 
-        @NameInMap("UnitNum")
+        @com.aliyun.core.annotation.NameInMap("UnitNum")
         private Integer unitNum;
 
         private TenantResource(Builder builder) {
@@ -1453,22 +1452,22 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantZoneReplicas extends TeaModel {
-        @NameInMap("FullCopyId")
+        @com.aliyun.core.annotation.NameInMap("FullCopyId")
         private Integer fullCopyId;
 
-        @NameInMap("LogicZoneName")
+        @com.aliyun.core.annotation.NameInMap("LogicZoneName")
         private String logicZoneName;
 
-        @NameInMap("ReadOnlyCopyId")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyCopyId")
         private String readOnlyCopyId;
 
-        @NameInMap("ZoneCopyId")
+        @com.aliyun.core.annotation.NameInMap("ZoneCopyId")
         private Integer zoneCopyId;
 
-        @NameInMap("ZoneNodes")
+        @com.aliyun.core.annotation.NameInMap("ZoneNodes")
         private String zoneNodes;
 
-        @NameInMap("ZoneReplicaType")
+        @com.aliyun.core.annotation.NameInMap("ZoneReplicaType")
         private String zoneReplicaType;
 
         private TenantZoneReplicas(Builder builder) {
@@ -1594,16 +1593,16 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class TenantZones extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("TenantZoneId")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneId")
         private String tenantZoneId;
 
-        @NameInMap("TenantZoneReplicas")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneReplicas")
         private java.util.List < TenantZoneReplicas> tenantZoneReplicas;
 
-        @NameInMap("TenantZoneRole")
+        @com.aliyun.core.annotation.NameInMap("TenantZoneRole")
         private String tenantZoneRole;
 
         private TenantZones(Builder builder) {
@@ -1695,103 +1694,109 @@ public class DescribeTenantResponseBody extends TeaModel {
 
     }
     public static class Tenant extends TeaModel {
-        @NameInMap("AvailableZones")
+        @com.aliyun.core.annotation.NameInMap("AvailableZones")
         private java.util.List < String > availableZones;
 
-        @NameInMap("Charset")
+        @com.aliyun.core.annotation.NameInMap("Charset")
         private String charset;
 
-        @NameInMap("ClogServiceStatus")
+        @com.aliyun.core.annotation.NameInMap("ClogServiceStatus")
         private String clogServiceStatus;
 
-        @NameInMap("Collation")
+        @com.aliyun.core.annotation.NameInMap("Collation")
         private String collation;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataMergeTime")
+        @com.aliyun.core.annotation.NameInMap("DataMergeTime")
         private String dataMergeTime;
 
-        @NameInMap("DeployMode")
+        @com.aliyun.core.annotation.NameInMap("DeployMode")
         private String deployMode;
 
-        @NameInMap("DeployType")
+        @com.aliyun.core.annotation.NameInMap("DeployType")
         private String deployType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
-        @NameInMap("EnableBinlogService")
+        @com.aliyun.core.annotation.NameInMap("EnableBinlogService")
         private Boolean enableBinlogService;
 
-        @NameInMap("EnableClogService")
+        @com.aliyun.core.annotation.NameInMap("EnableClogService")
         private Boolean enableClogService;
 
-        @NameInMap("EnableInternetAddressService")
+        @com.aliyun.core.annotation.NameInMap("EnableInternetAddressService")
         private Boolean enableInternetAddressService;
 
-        @NameInMap("EnableParallelQuery")
+        @com.aliyun.core.annotation.NameInMap("EnableParallelQuery")
         private Boolean enableParallelQuery;
 
-        @NameInMap("EnableReadOnlyReplica")
+        @com.aliyun.core.annotation.NameInMap("EnableReadOnlyReplica")
         private Boolean enableReadOnlyReplica;
 
-        @NameInMap("EnableReadWriteSplit")
+        @com.aliyun.core.annotation.NameInMap("EnableReadWriteSplit")
         private Boolean enableReadWriteSplit;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MasterIntranetAddressZone")
+        @com.aliyun.core.annotation.NameInMap("LowerCaseTableNames")
+        private byte[] lowerCaseTableNames;
+
+        @com.aliyun.core.annotation.NameInMap("MasterIntranetAddressZone")
         private String masterIntranetAddressZone;
 
-        @NameInMap("MaxParallelQueryDegree")
+        @com.aliyun.core.annotation.NameInMap("MaxParallelQueryDegree")
         private Long maxParallelQueryDegree;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
         private String primaryZone;
 
-        @NameInMap("PrimaryZoneDeployType")
+        @com.aliyun.core.annotation.NameInMap("PrimaryZoneDeployType")
         private String primaryZoneDeployType;
 
-        @NameInMap("ReadOnlyResource")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyResource")
         private ReadOnlyResource readOnlyResource;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TenantConnections")
+        @com.aliyun.core.annotation.NameInMap("TenantConnections")
         private java.util.List < TenantConnections> tenantConnections;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantMode")
+        @com.aliyun.core.annotation.NameInMap("TenantMode")
         private String tenantMode;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TenantResource")
+        @com.aliyun.core.annotation.NameInMap("TenantResource")
         private TenantResource tenantResource;
 
-        @NameInMap("TenantZones")
+        @com.aliyun.core.annotation.NameInMap("TenantZones")
         private java.util.List < TenantZones> tenantZones;
 
-        @NameInMap("TimeZone")
+        @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private String version;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Tenant(Builder builder) {
@@ -1812,6 +1817,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.enableReadOnlyReplica = builder.enableReadOnlyReplica;
             this.enableReadWriteSplit = builder.enableReadWriteSplit;
             this.instanceType = builder.instanceType;
+            this.lowerCaseTableNames = builder.lowerCaseTableNames;
             this.masterIntranetAddressZone = builder.masterIntranetAddressZone;
             this.maxParallelQueryDegree = builder.maxParallelQueryDegree;
             this.payType = builder.payType;
@@ -1827,6 +1833,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.tenantResource = builder.tenantResource;
             this.tenantZones = builder.tenantZones;
             this.timeZone = builder.timeZone;
+            this.version = builder.version;
             this.vpcId = builder.vpcId;
         }
 
@@ -1958,6 +1965,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return lowerCaseTableNames
+         */
+        public byte[] getLowerCaseTableNames() {
+            return this.lowerCaseTableNames;
+        }
+
+        /**
          * @return masterIntranetAddressZone
          */
         public String getMasterIntranetAddressZone() {
@@ -2063,6 +2077,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return version
+         */
+        public String getVersion() {
+            return this.version;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -2087,6 +2108,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private Boolean enableReadOnlyReplica; 
             private Boolean enableReadWriteSplit; 
             private String instanceType; 
+            private byte[] lowerCaseTableNames; 
             private String masterIntranetAddressZone; 
             private Long maxParallelQueryDegree; 
             private String payType; 
@@ -2102,6 +2124,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private TenantResource tenantResource; 
             private java.util.List < TenantZones> tenantZones; 
             private String timeZone; 
+            private String version; 
             private String vpcId; 
 
             /**
@@ -2298,6 +2321,14 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * LowerCaseTableNames.
+             */
+            public Builder lowerCaseTableNames(byte[] lowerCaseTableNames) {
+                this.lowerCaseTableNames = lowerCaseTableNames;
+                return this;
+            }
+
+            /**
              * ```
              * <p>
              * http(s)://[Endpoint]/?Action=DescribeTenant
@@ -2484,6 +2515,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder timeZone(String timeZone) {
                 this.timeZone = timeZone;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(String version) {
+                this.version = version;
                 return this;
             }
 

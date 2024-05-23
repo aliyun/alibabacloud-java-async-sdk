@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOasSQLPlansRequest</p>
  */
 public class DescribeOasSQLPlansRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Body
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Body
-    @NameInMap("DynamicSql")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DynamicSql")
     private Boolean dynamicSql;
 
-    @Body
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SqlId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlanUnionHash")
+    private String planUnionHash;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReturnBriefInfo")
+    private Boolean returnBriefInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SqlId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sqlId;
 
-    @Body
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Body
-    @NameInMap("TenantId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
     private DescribeOasSQLPlansRequest(Builder builder) {
@@ -62,6 +69,8 @@ public class DescribeOasSQLPlansRequest extends Request {
         this.dynamicSql = builder.dynamicSql;
         this.endTime = builder.endTime;
         this.instanceId = builder.instanceId;
+        this.planUnionHash = builder.planUnionHash;
+        this.returnBriefInfo = builder.returnBriefInfo;
         this.sqlId = builder.sqlId;
         this.startTime = builder.startTime;
         this.tenantId = builder.tenantId;
@@ -123,6 +132,20 @@ public class DescribeOasSQLPlansRequest extends Request {
     }
 
     /**
+     * @return planUnionHash
+     */
+    public String getPlanUnionHash() {
+        return this.planUnionHash;
+    }
+
+    /**
+     * @return returnBriefInfo
+     */
+    public Boolean getReturnBriefInfo() {
+        return this.returnBriefInfo;
+    }
+
+    /**
      * @return sqlId
      */
     public String getSqlId() {
@@ -150,6 +173,8 @@ public class DescribeOasSQLPlansRequest extends Request {
         private Boolean dynamicSql; 
         private String endTime; 
         private String instanceId; 
+        private String planUnionHash; 
+        private Boolean returnBriefInfo; 
         private String sqlId; 
         private String startTime; 
         private String tenantId; 
@@ -166,6 +191,8 @@ public class DescribeOasSQLPlansRequest extends Request {
             this.dynamicSql = request.dynamicSql;
             this.endTime = request.endTime;
             this.instanceId = request.instanceId;
+            this.planUnionHash = request.planUnionHash;
+            this.returnBriefInfo = request.returnBriefInfo;
             this.sqlId = request.sqlId;
             this.startTime = request.startTime;
             this.tenantId = request.tenantId;
@@ -227,6 +254,24 @@ public class DescribeOasSQLPlansRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * PlanUnionHash.
+         */
+        public Builder planUnionHash(String planUnionHash) {
+            this.putBodyParameter("PlanUnionHash", planUnionHash);
+            this.planUnionHash = planUnionHash;
+            return this;
+        }
+
+        /**
+         * ReturnBriefInfo.
+         */
+        public Builder returnBriefInfo(Boolean returnBriefInfo) {
+            this.putBodyParameter("ReturnBriefInfo", returnBriefInfo);
+            this.returnBriefInfo = returnBriefInfo;
             return this;
         }
 

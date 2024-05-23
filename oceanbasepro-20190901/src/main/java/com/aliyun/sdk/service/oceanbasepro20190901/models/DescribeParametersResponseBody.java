@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.List < Parameters> parameters;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -75,34 +74,34 @@ public class DescribeParametersResponseBody extends TeaModel {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("AcceptableValue")
+        @com.aliyun.core.annotation.NameInMap("AcceptableValue")
         private java.util.List < String > acceptableValue;
 
-        @NameInMap("CurrentValue")
+        @com.aliyun.core.annotation.NameInMap("CurrentValue")
         private String currentValue;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NeedReboot")
+        @com.aliyun.core.annotation.NameInMap("NeedReboot")
         private Boolean needReboot;
 
-        @NameInMap("Readonly")
+        @com.aliyun.core.annotation.NameInMap("Readonly")
         private Boolean readonly;
 
-        @NameInMap("RejectedValue")
+        @com.aliyun.core.annotation.NameInMap("RejectedValue")
         private java.util.List < String > rejectedValue;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private Parameters(Builder builder) {

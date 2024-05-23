@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableZoneRequest</p>
  */
 public class DescribeAvailableZoneRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("DeployType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpuArch")
+    private String cpuArch;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeployType")
     private String deployType;
 
-    @Body
-    @NameInMap("InstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceType;
 
-    @Body
-    @NameInMap("ObVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ObVersion")
     private String obVersion;
 
-    @Body
-    @NameInMap("Series")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Series")
     private String series;
 
-    @Body
-    @NameInMap("Spec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Spec")
     private String spec;
 
     private DescribeAvailableZoneRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cpuArch = builder.cpuArch;
         this.deployType = builder.deployType;
         this.instanceType = builder.instanceType;
         this.obVersion = builder.obVersion;
@@ -65,6 +69,13 @@ public class DescribeAvailableZoneRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return cpuArch
+     */
+    public String getCpuArch() {
+        return this.cpuArch;
     }
 
     /**
@@ -104,6 +115,7 @@ public class DescribeAvailableZoneRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeAvailableZoneRequest, Builder> {
         private String regionId; 
+        private String cpuArch; 
         private String deployType; 
         private String instanceType; 
         private String obVersion; 
@@ -117,6 +129,7 @@ public class DescribeAvailableZoneRequest extends Request {
         private Builder(DescribeAvailableZoneRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cpuArch = request.cpuArch;
             this.deployType = request.deployType;
             this.instanceType = request.instanceType;
             this.obVersion = request.obVersion;
@@ -130,6 +143,15 @@ public class DescribeAvailableZoneRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CpuArch.
+         */
+        public Builder cpuArch(String cpuArch) {
+            this.putBodyParameter("CpuArch", cpuArch);
+            this.cpuArch = cpuArch;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oceanbasepro20190901.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSampleSqlRawTextsResponseBody</p>
  */
 public class DescribeSampleSqlRawTextsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSampleSqlRawTextsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeSampleSqlRawTextsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("SqlText")
+        @com.aliyun.core.annotation.NameInMap("SqlText")
         private java.util.List < String > sqlText;
 
         private Data(Builder builder) {
