@@ -307,7 +307,7 @@ public class MigrateDBInstanceRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary instance.
+         * The zone ID of the secondary node.
          */
         public Builder zoneIdForFollower(String zoneIdForFollower) {
             this.putQueryParameter("ZoneIdForFollower", zoneIdForFollower);

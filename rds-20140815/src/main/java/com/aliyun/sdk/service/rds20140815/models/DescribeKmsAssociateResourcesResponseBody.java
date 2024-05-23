@@ -61,7 +61,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the associated ApsaraDB RDS instance.
+         * The information about the associated ApsaraDB RDS instances.
          */
         public Builder associateDBInstances(java.util.List < AssociateDBInstances> associateDBInstances) {
             this.associateDBInstances = associateDBInstances;
@@ -178,7 +178,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The way in which the key is used. Return values:
+             * The purpose of the key. Valid values:
              * <p>
              * 
              * *   **DiskEncryption**: cloud disk encryption

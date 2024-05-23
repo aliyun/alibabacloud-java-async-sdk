@@ -296,7 +296,7 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * vswitchId.
+             * The vSwitch ID of the node.
              */
             public Builder vswitchId(String vswitchId) {
                 this.vswitchId = vswitchId;
@@ -304,7 +304,7 @@ public class CreateDBNodesRequest extends Request {
             }
 
             /**
-             * The zone ID of the node.
+             * The ID of the zone in which the node is deployed.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

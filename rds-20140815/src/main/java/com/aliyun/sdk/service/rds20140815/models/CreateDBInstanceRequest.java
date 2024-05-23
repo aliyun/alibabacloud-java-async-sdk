@@ -961,7 +961,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * A reserved parameter. You do not need to specify this parameter.
+         * A reserved parameter.
          */
         public Builder coldDataEnabled(Boolean coldDataEnabled) {
             this.putQueryParameter("ColdDataEnabled", coldDataEnabled);
@@ -1174,7 +1174,12 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * You can obtain the ID of the key in the Key Management Service (KMS) console or create a key. For more information, see [Create a CMK](~~181610~~).
          * 
-         * >  This parameter is optional when you create an instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
+         * > *   This parameter is not required when you create an RDS instance that runs MySQL, PostgreSQL, or SQL Server. You need to only specify the **RoleARN** parameter to create an instance that has cloud disk encryption enabled by using the obtained key ID.
+         * > *   You can configure RAM authorization to require a RAM user to enable cloud disk encryption when the RAM user is used to create an instance. If cloud disk encryption is disabled during the instance creation, the creation operation fails. To complete the configuration, you can attach the following policy to the RAM user: `{"Version":"1","Statement":[{"Effect":"Deny","Action":"rds:CreateDBInstance","Resource":"*","Condition":{"StringEquals":{"rds:DiskEncryptionRequired":"false"}}}]}`
+         * 
+         * 
+         * 
+         * ><warning>The configuration also affects the CreateOrder operation that is called to create instances in the console.></warning>
          */
         public Builder encryptionKey(String encryptionKey) {
             this.putQueryParameter("EncryptionKey", encryptionKey);
@@ -1206,7 +1211,7 @@ public class CreateDBInstanceRequest extends Request {
          *     *   Valid values when you set Engine to MySQL: **5.5**, **5.6**, **5.7**, and **8.0**
          *     *   Valid values when you set Engine to SQLServer: **08r2\_ent_ha** (cloud disks, discontinued), **2008r2** (local disks, discontinued), **2012** (SQL Server EE Basic), **2012\_ent_ha**, **2012\_std_ha**, **2012\_web**, **2014\_ent_ha**, **2014\_std_ha**, **2016\_ent_ha**, **2016\_std_ha**, **2016\_web**, **2017\_ent**, **2017\_std_ha**, **2017\_web**, **2019\_ent**, **2019\_std_ha**, **2019\_web**, **2022\_ent**, **2022\_std_ha**, and **2022\_web**
          *     *   Valid values when you set Engine to PostgreSQL: **10.0**, **11.0**, **12.0**, **13.0**, **14.0**, **15.0**, and **16.0**
-         *     *   Valid value if you set the Engine parameter to MariaDB: **10.3**
+         *     *   Valid values when you set Engine to MariaDB: **10.3**
          * 
          * *   Serverless instance
          * 
@@ -1222,7 +1227,7 @@ public class CreateDBInstanceRequest extends Request {
          * 
          * *   RDS instances that run SQL Server 2014 are not available for purchase on the international site (alibabacloud.com).
          * 
-         * *   ApsaraDB RDS for PostgreSQL instances for which Babelfish is enabled support only PostgreSQL 13.0, PostgreSQL 14.0, and PostgreSQL 15.0.
+         * *   Babelfish is supported only for ApsaraDB RDS for PostgreSQL instances that run PostgreSQL 15.
          */
         public Builder engineVersion(String engineVersion) {
             this.putQueryParameter("EngineVersion", engineVersion);
@@ -1563,7 +1568,7 @@ public class CreateDBInstanceRequest extends Request {
         }
 
         /**
-         * WhitelistTemplateList.
+         * The whitelists. If you enter more than one IP address or CIDR block, you must separate these IP addresses or CIDR blocks with commas (,). Do not add spaces preceding or following the commas. Example: `192.168.0.1,172.16.213.9`.
          */
         public Builder whitelistTemplateList(String whitelistTemplateList) {
             this.putQueryParameter("WhitelistTemplateList", whitelistTemplateList);

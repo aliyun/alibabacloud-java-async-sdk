@@ -778,6 +778,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BurstingEnabled")
         private Boolean burstingEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("CanTempUpgrade")
+        private Boolean canTempUpgrade;
+
         @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
@@ -952,6 +955,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TempDBInstanceId")
         private String tempDBInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("TempUpgradeTimeEnd")
+        private String tempUpgradeTimeEnd;
+
+        @com.aliyun.core.annotation.NameInMap("TempUpgradeTimeStart")
+        private String tempUpgradeTimeStart;
+
         @com.aliyun.core.annotation.NameInMap("TimeZone")
         private String timeZone;
 
@@ -984,6 +993,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.babelfishConfig = builder.babelfishConfig;
             this.bpeEnabled = builder.bpeEnabled;
             this.burstingEnabled = builder.burstingEnabled;
+            this.canTempUpgrade = builder.canTempUpgrade;
             this.category = builder.category;
             this.coldDataEnabled = builder.coldDataEnabled;
             this.collation = builder.collation;
@@ -1042,6 +1052,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.slaveZones = builder.slaveZones;
             this.superPermissionMode = builder.superPermissionMode;
             this.tempDBInstanceId = builder.tempDBInstanceId;
+            this.tempUpgradeTimeEnd = builder.tempUpgradeTimeEnd;
+            this.tempUpgradeTimeStart = builder.tempUpgradeTimeStart;
             this.timeZone = builder.timeZone;
             this.tips = builder.tips;
             this.tipsLevel = builder.tipsLevel;
@@ -1107,6 +1119,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public Boolean getBurstingEnabled() {
             return this.burstingEnabled;
+        }
+
+        /**
+         * @return canTempUpgrade
+         */
+        public Boolean getCanTempUpgrade() {
+            return this.canTempUpgrade;
         }
 
         /**
@@ -1516,6 +1535,20 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return tempUpgradeTimeEnd
+         */
+        public String getTempUpgradeTimeEnd() {
+            return this.tempUpgradeTimeEnd;
+        }
+
+        /**
+         * @return tempUpgradeTimeStart
+         */
+        public String getTempUpgradeTimeStart() {
+            return this.tempUpgradeTimeStart;
+        }
+
+        /**
          * @return timeZone
          */
         public String getTimeZone() {
@@ -1579,6 +1612,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private BabelfishConfig babelfishConfig; 
             private String bpeEnabled; 
             private Boolean burstingEnabled; 
+            private Boolean canTempUpgrade; 
             private String category; 
             private Boolean coldDataEnabled; 
             private String collation; 
@@ -1637,6 +1671,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private SlaveZones slaveZones; 
             private String superPermissionMode; 
             private String tempDBInstanceId; 
+            private String tempUpgradeTimeEnd; 
+            private String tempUpgradeTimeStart; 
             private String timeZone; 
             private String tips; 
             private Integer tipsLevel; 
@@ -1710,6 +1746,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder burstingEnabled(Boolean burstingEnabled) {
                 this.burstingEnabled = burstingEnabled;
+                return this;
+            }
+
+            /**
+             * CanTempUpgrade.
+             */
+            public Builder canTempUpgrade(Boolean canTempUpgrade) {
+                this.canTempUpgrade = canTempUpgrade;
                 return this;
             }
 
@@ -2267,6 +2311,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
+                return this;
+            }
+
+            /**
+             * TempUpgradeTimeEnd.
+             */
+            public Builder tempUpgradeTimeEnd(String tempUpgradeTimeEnd) {
+                this.tempUpgradeTimeEnd = tempUpgradeTimeEnd;
+                return this;
+            }
+
+            /**
+             * TempUpgradeTimeStart.
+             */
+            public Builder tempUpgradeTimeStart(String tempUpgradeTimeStart) {
+                this.tempUpgradeTimeStart = tempUpgradeTimeStart;
                 return this;
             }
 

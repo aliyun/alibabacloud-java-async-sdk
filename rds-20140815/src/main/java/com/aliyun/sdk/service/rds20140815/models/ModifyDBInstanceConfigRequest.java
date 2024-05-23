@@ -177,10 +177,11 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration item that you want to modify.
+         * The name of the configuration item that you want to modify. Valid values:
          * <p>
          * 
-         * *   **pgbouncer**
+         * *   **pgbouncer**. This configuration item is supported for ApsaraDB RDS for PostgreSQL instances.
+         * *   **clear_errorlog**. This configuration item is supported for ApsaraDB RDS for SQL Server instances.
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -189,11 +190,11 @@ public class ModifyDBInstanceConfigRequest extends Request {
         }
 
         /**
-         * The value of the configuration item that you want to modify.
+         * The value of the configuration item that you want to modify. Valid values:
          * <p>
          * 
-         * *   **true**
-         * *   **false**
+         * *   If you set ConfigName to pgbouncer, the valid values are **true** and **false**.
+         * *   If you set ConfigName to clear_errorlog, set the value to **1**. The value 1 indicates that error logs are cleaned up.
          */
         public Builder configValue(String configValue) {
             this.putQueryParameter("ConfigValue", configValue);

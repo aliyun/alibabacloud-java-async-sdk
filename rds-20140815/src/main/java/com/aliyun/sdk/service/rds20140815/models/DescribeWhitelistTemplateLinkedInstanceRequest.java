@@ -110,7 +110,7 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -119,7 +119,7 @@ public class DescribeWhitelistTemplateLinkedInstanceRequest extends Request {
         }
 
         /**
-         * The resource group ID.
+         * The resource group ID. You can leave this parameter empty.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -288,7 +288,7 @@ public class DescribeRenewalPriceRequest extends Request {
         }
 
         /**
-         * The type of the order that you want to place. Set the value to **BUY**.
+         * The type of order. Set the value to **BUY**.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);

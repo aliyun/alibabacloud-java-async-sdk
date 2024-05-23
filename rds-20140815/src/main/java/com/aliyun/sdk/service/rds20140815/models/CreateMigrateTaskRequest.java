@@ -213,10 +213,10 @@ public class CreateMigrateTaskRequest extends Request {
          * The consistency check method for the database. Valid values:
          * <p>
          * 
-         * *   **SyncExecuteDBCheck**: synchronous database check.
-         * *   **AsyncExecuteDBCheck**: asynchronous database check.
+         * *   **SyncExecuteDBCheck**: synchronous database check
+         * *   **AsyncExecuteDBCheck**: asynchronous database check
          * 
-         * Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2).
+         * Default value: **AsyncExecuteDBCheck** (compatible with SQL Server 2008 R2)
          * 
          * >  This parameter is valid when **IsOnlineDB** is set to **True**.
          */

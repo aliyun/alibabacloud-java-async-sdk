@@ -117,7 +117,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the vSwitches.
+         * The information about the vSwitch.
          */
         public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
             this.vSwitchs = vSwitchs;
@@ -289,7 +289,7 @@ public class DescribeVSwitchesResponseBody extends TeaModel {
              * The status of the vSwitch. Valid values:
              * <p>
              * 
-             * *   **Pending**: The vSwitch is being configured.
+             * *   **Pending**: The vSwitch is being specified.
              * *   **Available**: The vSwitch is available.
              */
             public Builder status(String status) {

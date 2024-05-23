@@ -133,7 +133,7 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The endpoint ID of the instance. You can call the [DescribeDBInstanceEndpoints](~~610488~~) operation to query the endpoint ID of the instance.
+         * The endpoint ID of the instance. You can call the DescribeDBInstanceEndpoints operation to query the endpoint ID.
          */
         public Builder DBInstanceEndpointId(String DBInstanceEndpointId) {
             this.putBodyParameter("DBInstanceEndpointId", DBInstanceEndpointId);
@@ -142,7 +142,7 @@ public class DeleteDBInstanceEndpointAddressRequest extends Request {
         }
 
         /**
-         * The ID of the instance. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);

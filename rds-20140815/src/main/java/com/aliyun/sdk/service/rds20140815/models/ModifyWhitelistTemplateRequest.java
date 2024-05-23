@@ -153,7 +153,7 @@ public class ModifyWhitelistTemplateRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. You can call the [DescribeRegions](~~26243~~) operation to query the most recent zone list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

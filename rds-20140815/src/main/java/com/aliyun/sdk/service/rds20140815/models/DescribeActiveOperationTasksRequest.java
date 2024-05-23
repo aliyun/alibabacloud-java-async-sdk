@@ -352,7 +352,7 @@ public class DescribeActiveOperationTasksRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Valid values: 1 to 100. Default value: 25.
+         * The number of entries per page. Default value: 25. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

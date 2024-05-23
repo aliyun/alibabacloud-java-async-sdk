@@ -319,7 +319,21 @@ public class DescribeHistoryEventsRequest extends Request {
         }
 
         /**
-         * The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values: SystemMaintenance.Reboot: The instance is restarted due to system maintenance. SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance. SystemFailure.Reboot: The instance is restarted due to a system error. SystemFailure.Redeploy: The instance is redeployed due to a system error. SystemFailure.Delete: The instance is released due to an instance creation failure. InstanceFailure.Reboot: The instance is restarted due to an instance error. InstanceExpiration.Stop: The subscription instance is stopped due to expiration. InstanceExpiration.Delete: The subscription instance is released due to expiration. AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment. AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment. For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.
+         * The system event type. This parameter takes effect only when InstanceEventType.N is not specified. Valid values:
+         * <p>
+         * 
+         * *   SystemMaintenance.Reboot: The instance is restarted due to system maintenance.
+         * *   SystemMaintenance.Redeploy: The instance is redeployed due to system maintenance.
+         * *   SystemFailure.Reboot: The instance is restarted due to a system error.
+         * *   SystemFailure.Redeploy: The instance is redeployed due to a system error.
+         * *   SystemFailure.Delete: The instance is released due to an instance creation failure.
+         * *   InstanceFailure.Reboot: The instance is restarted due to an instance error.
+         * *   InstanceExpiration.Stop: The subscription instance is stopped due to expiration.
+         * *   InstanceExpiration.Delete: The subscription instance is released due to expiration.
+         * *   AccountUnbalanced.Stop: The pay-as-you-go instance is stopped due to an overdue payment.
+         * *   AccountUnbalanced.Delete: The pay-as-you-go instance is released due to an overdue payment.
+         * 
+         * >  For more information, see Overview. The values of this parameter are applicable only to instance system events, but not to disk system events.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);

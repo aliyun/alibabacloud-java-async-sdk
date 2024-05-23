@@ -474,7 +474,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * The new storage capacity of the instance. Unit: GB. You can increase the storage capacity in increments of 5 GB. For more information, see [Primary ApsaraDB RDS instance types](~~26312~~). You can also call the DescribeAvailableClasses operation to query the storage capacity range that is supported by the new instance type.
          * <p>
          * 
-         * > *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass**.
+         * > *   You must specify at least one of the DBInstanceStorage and **DBInstanceClass** parameters.
          * > *   You can call the DescribeDBInstanceAttribute to query the current storage capacity of the instance.
          */
         public Builder DBInstanceStorage(Integer DBInstanceStorage) {
@@ -533,7 +533,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
          * The time when you want the change to take effect. Valid values:
          * <p>
          * 
-         * *   **Immediate**: This is the default value.
+         * *   **Immediate** (default)
          * *   **MaintainTime**: The effective time is within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.
          */
         public Builder effectiveTime(String effectiveTime) {
@@ -636,7 +636,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
         }
 
         /**
-         * The serverless instance specifications that you want to change.
+         * The specifications that you want to change for a serverless instance.
          */
         public Builder serverlessConfiguration(ServerlessConfiguration serverlessConfiguration) {
             String serverlessConfigurationShrink = shrink(serverlessConfiguration, "ServerlessConfiguration", "json");
@@ -775,7 +775,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             private Boolean switchForce; 
 
             /**
-             * Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values: Valid values:
+             * Specifies whether to enable the automatic start and stop feature for the serverless instance. Valid values:
              * <p>
              * 
              * *   **true**
@@ -819,7 +819,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable the forced scaling feature for the serverless instance.
+             * Specifies whether to enable the forced scaling feature for the serverless instance. Valid values:
              * <p>
              * 
              * *   **true**

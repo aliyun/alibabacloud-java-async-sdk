@@ -140,10 +140,10 @@ public class CopyDatabaseBetweenInstancesRequest extends Request {
         } 
 
         /**
-         * The ID of the backup set by which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.
+         * The ID of the backup set based on which you want to restore databases of the source instance. When you replicate databases by backup set, you can call the DescribeBackups operation to obtain the ID of the backup set.
          * <p>
          * 
-         * > : You must specify one of the **BackupId** and **RestoreTime** parameters.
+         * >  You must specify one of the **BackupId** and **RestoreTime** parameters.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);

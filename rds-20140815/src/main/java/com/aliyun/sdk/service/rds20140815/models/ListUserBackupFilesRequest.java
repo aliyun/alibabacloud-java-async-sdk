@@ -219,7 +219,7 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~26243~~) operation to query the most recent region list.
+         * The region ID. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -228,7 +228,7 @@ public class ListUserBackupFilesRequest extends Request {
         }
 
         /**
-         * The resource group ID. You can call the [DescribeDBInstanceAttribute](~~610394~~) to query the resource group ID.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

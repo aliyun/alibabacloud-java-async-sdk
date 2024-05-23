@@ -247,7 +247,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The type of the endpoint. Valid values:
+         * The endpoint type. Valid values:
          * <p>
          * 
          * *   Primary: read/write endpoint of the instance
@@ -260,7 +260,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -269,7 +269,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The information about the node that is configured for the endpoint.
+         * The information about the endpoint.
          */
         public Builder nodeItems(java.util.List < NodeItems> nodeItems) {
             String nodeItemsShrink = shrink(nodeItems, "NodeItems", "json");
@@ -300,7 +300,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The ID of the resource group. You can call the [DescribeDBInstanceAttribute](~~610394~~) to obtain the ID of the resource group.
+         * The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -327,7 +327,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
         }
 
         /**
-         * The virtual private cloud (VPC) ID of the internal endpoint.
+         * The VPC ID of the internal endpoint.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -395,7 +395,7 @@ public class CreateDBInstanceEndpointRequest extends Request {
             private Long weight; 
 
             /**
-             * The instance ID. You can call the [DescribeDBInstances](~~610396~~) operation to query the ID of the instance.
+             * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
              */
             public Builder DBInstanceId(String DBInstanceId) {
                 this.DBInstanceId = DBInstanceId;

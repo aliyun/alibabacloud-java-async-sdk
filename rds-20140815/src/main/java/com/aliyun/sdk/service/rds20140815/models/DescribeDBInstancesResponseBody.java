@@ -97,7 +97,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * The details of the instance.
+         * The information about the instances.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -889,11 +889,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * Indicates whether the buffer pool extension (BPE) feature is enabled. Valid values:
-             * <p>
-             * 
-             * *   **1**
-             * *   **0**
+             * A deprecated parameter.
              */
             public Builder bpeEnabled(String bpeEnabled) {
                 this.bpeEnabled = bpeEnabled;
@@ -964,7 +960,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceCPU.
+             * The number of CPU instances.
+             * <p>
+             * 
+             * Returns only when the InstanceLevel parameter is 1.
              */
             public Builder DBInstanceCPU(String DBInstanceCPU) {
                 this.DBInstanceCPU = DBInstanceCPU;
@@ -996,7 +995,10 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DBInstanceMemory.
+             * The memory size of the node. Unit: MB.
+             * <p>
+             * 
+             * Returns only when the InstanceLevel parameter is 1.
              */
             public Builder DBInstanceMemory(Integer DBInstanceMemory) {
                 this.DBInstanceMemory = DBInstanceMemory;
@@ -1032,7 +1034,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The role of the instance. Valid values:
+             * The type of the instance. Valid values:
              * <p>
              * 
              * *   **Primary**: primary instance
@@ -1046,7 +1048,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster to which the instances belong.
+             * The ID of the dedicated cluster.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -1054,7 +1056,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the dedicated cluster to which the instance belongs.
+             * The name of the dedicated cluster.
              */
             public Builder dedicatedHostGroupName(String dedicatedHostGroupName) {
                 this.dedicatedHostGroupName = dedicatedHostGroupName;
@@ -1209,11 +1211,11 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Whether IO acceleration is enabled. The value has the following meanings:
+             * Indicates whether the I/O acceleration feature is enabled. Valid values:
              * <p>
              * 
-             * - 1: enabled
-             * - 0: not enabled
+             * *   1: enabled
+             * *   0: disabled
              */
             public Builder ioAccelerationEnabled(String ioAccelerationEnabled) {
                 this.ioAccelerationEnabled = ioAccelerationEnabled;
@@ -1279,7 +1281,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the read-only instances that are attached to the primary instance. This parameter is returned only when the instance is a primary instance.
+             * The IDs of the read-only instances. This parameter is returned only when the instance is a primary instance and has the read-only instances attached.
              */
             public Builder readOnlyDBInstanceIds(ReadOnlyDBInstanceIds readOnlyDBInstanceIds) {
                 this.readOnlyDBInstanceIds = readOnlyDBInstanceIds;

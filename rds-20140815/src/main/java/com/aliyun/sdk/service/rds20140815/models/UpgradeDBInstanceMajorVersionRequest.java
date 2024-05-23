@@ -542,10 +542,10 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The zone ID of the new instance. You can call the DescribeRegions operation to query the zone ID.
+         * The ID of the zone to which the new primary instance belongs. You can call the DescribeRegions operation to query zone IDs.
          * <p>
          * 
-         * You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.
+         * You can select a zone that belongs to the region in which the original instance resides.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -554,12 +554,12 @@ public class UpgradeDBInstanceMajorVersionRequest extends Request {
         }
 
         /**
-         * The zone ID of the secondary instance for the new instance. You can specify this parameter only when the original instance runs RDS High-availability Edition.
+         * The ID of the zone to which the new secondary instance belongs. This parameter is available only when the original instance runs RDS High-availability Edition.
          * <p>
          * 
-         * You can select a zone that is different from the zone of the original instance but belongs to the region in which the original instance resides.
+         * You can select a zone that belongs to the region in which the original instance resides.
          * 
-         * You can call the DescribeRegions operation to query the zone ID.
+         * You can call the DescribeRegions operation to query zone IDs.
          */
         public Builder zoneIdSlave1(String zoneIdSlave1) {
             this.putQueryParameter("ZoneIdSlave1", zoneIdSlave1);
