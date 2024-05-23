@@ -53,6 +53,10 @@ public class UpdateProjectRequest extends Request {
     private String serviceRole;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
@@ -68,6 +72,7 @@ public class UpdateProjectRequest extends Request {
         this.projectMaxDatasetCount = builder.projectMaxDatasetCount;
         this.projectName = builder.projectName;
         this.serviceRole = builder.serviceRole;
+        this.tag = builder.tag;
         this.templateId = builder.templateId;
     }
 
@@ -155,6 +160,13 @@ public class UpdateProjectRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return templateId
      */
     public String getTemplateId() {
@@ -172,6 +184,7 @@ public class UpdateProjectRequest extends Request {
         private Long projectMaxDatasetCount; 
         private String projectName; 
         private String serviceRole; 
+        private java.util.List < Tag> tag; 
         private String templateId; 
 
         private Builder() {
@@ -190,6 +203,7 @@ public class UpdateProjectRequest extends Request {
             this.projectMaxDatasetCount = request.projectMaxDatasetCount;
             this.projectName = request.projectName;
             this.serviceRole = request.serviceRole;
+            this.tag = request.tag;
             this.templateId = request.templateId;
         } 
 
@@ -284,6 +298,16 @@ public class UpdateProjectRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TemplateId.
          */
         public Builder templateId(String templateId) {
@@ -299,4 +323,65 @@ public class UpdateProjectRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

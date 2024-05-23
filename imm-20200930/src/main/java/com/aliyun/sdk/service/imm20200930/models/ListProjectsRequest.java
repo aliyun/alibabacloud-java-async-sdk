@@ -27,12 +27,17 @@ public class ListProjectsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("Prefix")
     private String prefix;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private ListProjectsRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.prefix = builder.prefix;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -76,11 +81,19 @@ public class ListProjectsRequest extends Request {
         return this.prefix;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<ListProjectsRequest, Builder> {
         private String regionId; 
         private Long maxResults; 
         private String nextToken; 
         private String prefix; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -92,6 +105,7 @@ public class ListProjectsRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.prefix = request.prefix;
+            this.tag = request.tag;
         } 
 
         /**
@@ -130,6 +144,16 @@ public class ListProjectsRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            String tagShrink = shrink(tag, "Tag", "json");
+            this.putQueryParameter("Tag", tagShrink);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public ListProjectsRequest build() {
             return new ListProjectsRequest(this);
@@ -137,4 +161,65 @@ public class ListProjectsRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
