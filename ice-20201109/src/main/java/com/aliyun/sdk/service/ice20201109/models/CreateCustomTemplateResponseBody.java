@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomTemplateResponseBody</p>
  */
 public class CreateCustomTemplateResponseBody extends TeaModel {
-    @NameInMap("CustomTemplate")
+    @com.aliyun.core.annotation.NameInMap("CustomTemplate")
     private CustomTemplate customTemplate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCustomTemplateResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
     } 
 
     public static class CustomTemplate extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtype")
+        @com.aliyun.core.annotation.NameInMap("Subtype")
         private String subtype;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private CustomTemplate(Builder builder) {

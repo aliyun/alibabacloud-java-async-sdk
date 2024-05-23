@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitMediaCensorJobRequest</p>
  */
 public class SubmitMediaCensorJobRequest extends Request {
-    @Query
-    @NameInMap("Barrages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Barrages")
     private String barrages;
 
-    @Query
-    @NameInMap("CoverImages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverImages")
     private String coverImages;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
     private Input input;
 
-    @Query
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Query
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitMediaCensorJobRequest(Builder builder) {
@@ -279,10 +278,10 @@ public class SubmitMediaCensorJobRequest extends Request {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -340,10 +339,10 @@ public class SubmitMediaCensorJobRequest extends Request {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {

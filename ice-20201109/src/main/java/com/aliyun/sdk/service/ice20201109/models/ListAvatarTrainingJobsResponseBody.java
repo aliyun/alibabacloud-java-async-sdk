@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAvatarTrainingJobsResponseBody</p>
  */
 public class ListAvatarTrainingJobsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAvatarTrainingJobsResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
     } 
 
     public static class AvatarTrainingJobList extends TeaModel {
-        @NameInMap("AvatarDescription")
+        @com.aliyun.core.annotation.NameInMap("AvatarDescription")
         private String avatarDescription;
 
-        @NameInMap("AvatarId")
+        @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
 
-        @NameInMap("AvatarName")
+        @com.aliyun.core.annotation.NameInMap("AvatarName")
         private String avatarName;
 
-        @NameInMap("AvatarType")
+        @com.aliyun.core.annotation.NameInMap("AvatarType")
         private String avatarType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FirstTrainingTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTrainingTime")
         private String firstTrainingTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("LastTrainingTime")
+        @com.aliyun.core.annotation.NameInMap("LastTrainingTime")
         private String lastTrainingTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Portrait")
+        @com.aliyun.core.annotation.NameInMap("Portrait")
         private String portrait;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AvatarTrainingJobList(Builder builder) {
@@ -333,10 +332,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvatarTrainingJobList")
+        @com.aliyun.core.annotation.NameInMap("AvatarTrainingJobList")
         private java.util.List < AvatarTrainingJobList> avatarTrainingJobList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

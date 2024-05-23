@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchMediaByMultimodalResponseBody</p>
  */
 public class SearchMediaByMultimodalResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("MediaList")
+    @com.aliyun.core.annotation.NameInMap("MediaList")
     private java.util.List < MediaList> mediaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchMediaByMultimodalResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     } 
 
     public static class ClipInfo extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Double to;
 
         private ClipInfo(Builder builder) {
@@ -213,10 +212,10 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
 
     }
     public static class MediaList extends TeaModel {
-        @NameInMap("ClipInfo")
+        @com.aliyun.core.annotation.NameInMap("ClipInfo")
         private java.util.List < ClipInfo> clipInfo;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
         private MediaList(Builder builder) {

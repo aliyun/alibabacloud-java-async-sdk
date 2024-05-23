@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveRecordTemplateRequest</p>
  */
 public class UpdateLiveRecordTemplateRequest extends Request {
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("RecordFormat")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecordFormat")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RecordFormat> recordFormat;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private UpdateLiveRecordTemplateRequest(Builder builder) {
@@ -120,20 +119,20 @@ public class UpdateLiveRecordTemplateRequest extends Request {
     } 
 
     public static class RecordFormat extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Format")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private RecordFormat(Builder builder) {

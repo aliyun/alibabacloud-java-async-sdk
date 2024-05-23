@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveEditingJobResponseBody</p>
  */
 public class GetLiveEditingJobResponseBody extends TeaModel {
-    @NameInMap("LiveEditingJob")
+    @com.aliyun.core.annotation.NameInMap("LiveEditingJob")
     private LiveEditingJob liveEditingJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLiveEditingJobResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
     } 
 
     public static class LiveStreamConfig extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveStreamConfig(Builder builder) {
@@ -153,7 +152,7 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     }
     public static class MediaProduceConfig extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
         private MediaProduceConfig(Builder builder) {
@@ -194,25 +193,25 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     }
     public static class OutputMediaConfig extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Long bitrate;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("VodTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("VodTemplateGroupId")
         private String vodTemplateGroupId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OutputMediaConfig(Builder builder) {
@@ -355,49 +354,49 @@ public class GetLiveEditingJobResponseBody extends TeaModel {
 
     }
     public static class LiveEditingJob extends TeaModel {
-        @NameInMap("Clips")
+        @com.aliyun.core.annotation.NameInMap("Clips")
         private String clips;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("LiveStreamConfig")
+        @com.aliyun.core.annotation.NameInMap("LiveStreamConfig")
         private LiveStreamConfig liveStreamConfig;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaProduceConfig")
+        @com.aliyun.core.annotation.NameInMap("MediaProduceConfig")
         private MediaProduceConfig mediaProduceConfig;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputMediaConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputMediaConfig")
         private OutputMediaConfig outputMediaConfig;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private LiveEditingJob(Builder builder) {

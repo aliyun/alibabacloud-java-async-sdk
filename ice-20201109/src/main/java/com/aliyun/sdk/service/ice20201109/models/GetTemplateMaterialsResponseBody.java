@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateMaterialsResponseBody</p>
  */
 public class GetTemplateMaterialsResponseBody extends TeaModel {
-    @NameInMap("MaterialUrls")
+    @com.aliyun.core.annotation.NameInMap("MaterialUrls")
     private String materialUrls;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTemplateMaterialsResponseBody(Builder builder) {

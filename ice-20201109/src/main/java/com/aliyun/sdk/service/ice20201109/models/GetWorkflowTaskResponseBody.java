@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkflowTaskResponseBody</p>
  */
 public class GetWorkflowTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WorkflowTask")
+    @com.aliyun.core.annotation.NameInMap("WorkflowTask")
     private WorkflowTask workflowTask;
 
     private GetWorkflowTaskResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
     } 
 
     public static class Workflow extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WorkflowId")
+        @com.aliyun.core.annotation.NameInMap("WorkflowId")
         private String workflowId;
 
         private Workflow(Builder builder) {
@@ -213,28 +212,28 @@ public class GetWorkflowTaskResponseBody extends TeaModel {
 
     }
     public static class WorkflowTask extends TeaModel {
-        @NameInMap("ActivityResults")
+        @com.aliyun.core.annotation.NameInMap("ActivityResults")
         private String activityResults;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskInput")
+        @com.aliyun.core.annotation.NameInMap("TaskInput")
         private String taskInput;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("Workflow")
+        @com.aliyun.core.annotation.NameInMap("Workflow")
         private Workflow workflow;
 
         private WorkflowTask(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLiveSnapshotTemplateRequest</p>
  */
 public class CreateLiveSnapshotTemplateRequest extends Request {
-    @Body
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @Body
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @Body
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Body
-    @NameInMap("TimeInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeInterval;
 
     private CreateLiveSnapshotTemplateRequest(Builder builder) {

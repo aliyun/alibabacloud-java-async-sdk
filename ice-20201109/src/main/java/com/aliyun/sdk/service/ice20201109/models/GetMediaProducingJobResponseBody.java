@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaProducingJobResponseBody</p>
  */
 public class GetMediaProducingJobResponseBody extends TeaModel {
-    @NameInMap("MediaProducingJob")
+    @com.aliyun.core.annotation.NameInMap("MediaProducingJob")
     private MediaProducingJob mediaProducingJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaProducingJobResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class GetMediaProducingJobResponseBody extends TeaModel {
     } 
 
     public static class MediaProducingJob extends TeaModel {
-        @NameInMap("ClipsParam")
+        @com.aliyun.core.annotation.NameInMap("ClipsParam")
         private String clipsParam;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubJobMaterials")
+        @com.aliyun.core.annotation.NameInMap("SubJobMaterials")
         private String subJobMaterials;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private String timeline;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("VodMediaId")
+        @com.aliyun.core.annotation.NameInMap("VodMediaId")
         private String vodMediaId;
 
         private MediaProducingJob(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPlayInfoResponseBody</p>
  */
 public class GetPlayInfoResponseBody extends TeaModel {
-    @NameInMap("MediaBase")
+    @com.aliyun.core.annotation.NameInMap("MediaBase")
     private MediaBase mediaBase;
 
-    @NameInMap("PlayInfoList")
+    @com.aliyun.core.annotation.NameInMap("PlayInfoList")
     private java.util.List < PlayInfoList> playInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPlayInfoResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class GetPlayInfoResponseBody extends TeaModel {
     } 
 
     public static class MediaBase extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaTags")
+        @com.aliyun.core.annotation.NameInMap("MediaTags")
         private String mediaTags;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private MediaBase(Builder builder) {
@@ -293,73 +292,73 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     }
     public static class PlayInfoList extends TeaModel {
-        @NameInMap("BitDepth")
+        @com.aliyun.core.annotation.NameInMap("BitDepth")
         private Integer bitDepth;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Definition")
+        @com.aliyun.core.annotation.NameInMap("Definition")
         private String definition;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Long encrypt;
 
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("HDRType")
+        @com.aliyun.core.annotation.NameInMap("HDRType")
         private String HDRType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Long height;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("NarrowBandType")
+        @com.aliyun.core.annotation.NameInMap("NarrowBandType")
         private String narrowBandType;
 
-        @NameInMap("PlayURL")
+        @com.aliyun.core.annotation.NameInMap("PlayURL")
         private String playURL;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StreamTags")
+        @com.aliyun.core.annotation.NameInMap("StreamTags")
         private String streamTags;
 
-        @NameInMap("StreamType")
+        @com.aliyun.core.annotation.NameInMap("StreamType")
         private String streamType;
 
-        @NameInMap("TransTemplateType")
+        @com.aliyun.core.annotation.NameInMap("TransTemplateType")
         private String transTemplateType;
 
-        @NameInMap("WatermarkId")
+        @com.aliyun.core.annotation.NameInMap("WatermarkId")
         private String watermarkId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Long width;
 
         private PlayInfoList(Builder builder) {

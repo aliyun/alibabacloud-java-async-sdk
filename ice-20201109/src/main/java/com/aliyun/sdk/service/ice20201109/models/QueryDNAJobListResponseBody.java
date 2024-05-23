@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDNAJobListResponseBody</p>
  */
 public class QueryDNAJobListResponseBody extends TeaModel {
-    @NameInMap("JobList")
+    @com.aliyun.core.annotation.NameInMap("JobList")
     private java.util.List < JobList> jobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDNAJobListResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class QueryDNAJobListResponseBody extends TeaModel {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -133,40 +132,40 @@ public class QueryDNAJobListResponseBody extends TeaModel {
 
     }
     public static class JobList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DBId")
+        @com.aliyun.core.annotation.NameInMap("DBId")
         private String DBId;
 
-        @NameInMap("DNAResult")
+        @com.aliyun.core.annotation.NameInMap("DNAResult")
         private String DNAResult;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private JobList(Builder builder) {

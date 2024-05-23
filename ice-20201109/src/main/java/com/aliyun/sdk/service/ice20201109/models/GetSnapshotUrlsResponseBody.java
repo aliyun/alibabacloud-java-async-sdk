@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSnapshotUrlsResponseBody</p>
  */
 public class GetSnapshotUrlsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotUrls")
+    @com.aliyun.core.annotation.NameInMap("SnapshotUrls")
     private java.util.List < String > snapshotUrls;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("WebVTTUrl")
+    @com.aliyun.core.annotation.NameInMap("WebVTTUrl")
     private String webVTTUrl;
 
     private GetSnapshotUrlsResponseBody(Builder builder) {

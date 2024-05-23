@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSmartJobsResponseBody</p>
  */
 public class ListSmartJobsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmartJobList")
+    @com.aliyun.core.annotation.NameInMap("SmartJobList")
     private java.util.List < SmartJobList> smartJobList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListSmartJobsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
     } 
 
     public static class InputConfig extends TeaModel {
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private String inputFile;
 
-        @NameInMap("Keyword")
+        @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
 
         private InputConfig(Builder builder) {
@@ -193,10 +192,10 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     }
     public static class OutputConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private OutputConfig(Builder builder) {
@@ -254,40 +253,40 @@ public class ListSmartJobsResponseBody extends TeaModel {
 
     }
     public static class SmartJobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EditingConfig")
+        @com.aliyun.core.annotation.NameInMap("EditingConfig")
         private String editingConfig;
 
-        @NameInMap("InputConfig")
+        @com.aliyun.core.annotation.NameInMap("InputConfig")
         private InputConfig inputConfig;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobState")
+        @com.aliyun.core.annotation.NameInMap("JobState")
         private String jobState;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputConfig")
         private OutputConfig outputConfig;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private SmartJobList(Builder builder) {

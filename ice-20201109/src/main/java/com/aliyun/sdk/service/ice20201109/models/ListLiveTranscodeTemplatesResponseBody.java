@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveTranscodeTemplatesResponseBody</p>
  */
 public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateContentList")
+    @com.aliyun.core.annotation.NameInMap("TemplateContentList")
     private java.util.List < TemplateContentList> templateContentList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLiveTranscodeTemplatesResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
     } 
 
     public static class AudioParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
         private AudioParams(Builder builder) {
@@ -213,25 +212,25 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     }
     public static class VideoParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoParams(Builder builder) {
@@ -374,10 +373,10 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     }
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("AudioParams")
+        @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;
 
-        @NameInMap("VideoParams")
+        @com.aliyun.core.annotation.NameInMap("VideoParams")
         private VideoParams videoParams;
 
         private TemplateConfig(Builder builder) {
@@ -435,22 +434,22 @@ public class ListLiveTranscodeTemplatesResponseBody extends TeaModel {
 
     }
     public static class TemplateContentList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private TemplateConfig templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TemplateContentList(Builder builder) {

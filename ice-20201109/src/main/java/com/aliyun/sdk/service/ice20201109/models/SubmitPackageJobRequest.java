@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitPackageJobRequest</p>
  */
 public class SubmitPackageJobRequest extends Request {
-    @Query
-    @NameInMap("Inputs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Inputs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Inputs> inputs;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Output")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Output output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitPackageJobRequest(Builder builder) {
@@ -167,12 +166,12 @@ public class SubmitPackageJobRequest extends Request {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -230,8 +229,8 @@ public class SubmitPackageJobRequest extends Request {
 
     }
     public static class Inputs extends TeaModel {
-        @NameInMap("Input")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Input")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Input input;
 
         private Inputs(Builder builder) {
@@ -272,12 +271,12 @@ public class SubmitPackageJobRequest extends Request {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -335,10 +334,10 @@ public class SubmitPackageJobRequest extends Request {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {

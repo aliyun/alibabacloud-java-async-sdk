@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBatchMediaProducingJobsResponseBody</p>
  */
 public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
-    @NameInMap("EditingBatchJobList")
+    @com.aliyun.core.annotation.NameInMap("EditingBatchJobList")
     private java.util.List < EditingBatchJobList> editingBatchJobList;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListBatchMediaProducingJobsResponseBody(Builder builder) {
@@ -112,37 +111,37 @@ public class ListBatchMediaProducingJobsResponseBody extends TeaModel {
     } 
 
     public static class EditingBatchJobList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EditingConfig")
+        @com.aliyun.core.annotation.NameInMap("EditingConfig")
         private String editingConfig;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
-        @NameInMap("InputConfig")
+        @com.aliyun.core.annotation.NameInMap("InputConfig")
         private String inputConfig;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputConfig")
         private String outputConfig;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private EditingBatchJobList(Builder builder) {

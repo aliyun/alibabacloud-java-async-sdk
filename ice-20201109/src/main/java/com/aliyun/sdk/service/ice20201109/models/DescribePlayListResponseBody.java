@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayListResponseBody</p>
  */
 public class DescribePlayListResponseBody extends TeaModel {
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("PlayList")
+    @com.aliyun.core.annotation.NameInMap("PlayList")
     private java.util.List < PlayList> playList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private DescribePlayListResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class DescribePlayListResponseBody extends TeaModel {
     } 
 
     public static class PlayList extends TeaModel {
-        @NameInMap("FirstFrameDuration")
+        @com.aliyun.core.annotation.NameInMap("FirstFrameDuration")
         private String firstFrameDuration;
 
-        @NameInMap("PlayDuration")
+        @com.aliyun.core.annotation.NameInMap("PlayDuration")
         private String playDuration;
 
-        @NameInMap("PlayTs")
+        @com.aliyun.core.annotation.NameInMap("PlayTs")
         private String playTs;
 
-        @NameInMap("PlayType")
+        @com.aliyun.core.annotation.NameInMap("PlayType")
         private String playType;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StuckDuration")
+        @com.aliyun.core.annotation.NameInMap("StuckDuration")
         private String stuckDuration;
 
-        @NameInMap("TraceId")
+        @com.aliyun.core.annotation.NameInMap("TraceId")
         private String traceId;
 
-        @NameInMap("VideoDuration")
+        @com.aliyun.core.annotation.NameInMap("VideoDuration")
         private String videoDuration;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private PlayList(Builder builder) {

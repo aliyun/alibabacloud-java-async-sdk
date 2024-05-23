@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSmartVoiceGroupsResponseBody</p>
  */
 public class ListSmartVoiceGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VoiceGroups")
+    @com.aliyun.core.annotation.NameInMap("VoiceGroups")
     private java.util.List < VoiceGroups> voiceGroups;
 
     private ListSmartVoiceGroupsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     } 
 
     public static class VoiceList extends TeaModel {
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Voice")
+        @com.aliyun.core.annotation.NameInMap("Voice")
         private String voice;
 
-        @NameInMap("VoiceType")
+        @com.aliyun.core.annotation.NameInMap("VoiceType")
         private String voiceType;
 
-        @NameInMap("VoiceUrl")
+        @com.aliyun.core.annotation.NameInMap("VoiceUrl")
         private String voiceUrl;
 
         private VoiceList(Builder builder) {
@@ -233,10 +232,10 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
 
     }
     public static class VoiceGroups extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VoiceList")
+        @com.aliyun.core.annotation.NameInMap("VoiceList")
         private java.util.List < VoiceList> voiceList;
 
         private VoiceGroups(Builder builder) {

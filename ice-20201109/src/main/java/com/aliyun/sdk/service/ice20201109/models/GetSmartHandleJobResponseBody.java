@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSmartHandleJobResponseBody</p>
  */
 public class GetSmartHandleJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobResult")
+    @com.aliyun.core.annotation.NameInMap("JobResult")
     private JobResult jobResult;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmartJobInfo")
+    @com.aliyun.core.annotation.NameInMap("SmartJobInfo")
     private SmartJobInfo smartJobInfo;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private GetSmartHandleJobResponseBody(Builder builder) {
@@ -172,13 +171,13 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
     } 
 
     public static class JobResult extends TeaModel {
-        @NameInMap("AiResult")
+        @com.aliyun.core.annotation.NameInMap("AiResult")
         private String aiResult;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
         private JobResult(Builder builder) {
@@ -253,7 +252,7 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     }
     public static class InputConfig extends TeaModel {
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private String inputFile;
 
         private InputConfig(Builder builder) {
@@ -294,10 +293,10 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     }
     public static class OutputConfig extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private OutputConfig(Builder builder) {
@@ -355,28 +354,28 @@ public class GetSmartHandleJobResponseBody extends TeaModel {
 
     }
     public static class SmartJobInfo extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InputConfig")
+        @com.aliyun.core.annotation.NameInMap("InputConfig")
         private InputConfig inputConfig;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputConfig")
         private OutputConfig outputConfig;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private SmartJobInfo(Builder builder) {

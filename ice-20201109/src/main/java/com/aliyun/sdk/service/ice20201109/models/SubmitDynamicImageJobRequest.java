@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitDynamicImageJobRequest</p>
  */
 public class SubmitDynamicImageJobRequest extends Request {
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Output")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Output output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitDynamicImageJobRequest(Builder builder) {
@@ -192,12 +191,12 @@ public class SubmitDynamicImageJobRequest extends Request {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -255,12 +254,12 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -318,10 +317,10 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {
@@ -379,13 +378,13 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     }
     public static class TimeSpan extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private String end;
 
-        @NameInMap("Seek")
+        @com.aliyun.core.annotation.NameInMap("Seek")
         private String seek;
 
         private TimeSpan(Builder builder) {
@@ -460,25 +459,25 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     }
     public static class OverwriteParams extends TeaModel {
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private Integer fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("LongShortMode")
+        @com.aliyun.core.annotation.NameInMap("LongShortMode")
         private Boolean longShortMode;
 
-        @NameInMap("ScanMode")
+        @com.aliyun.core.annotation.NameInMap("ScanMode")
         private String scanMode;
 
-        @NameInMap("TimeSpan")
+        @com.aliyun.core.annotation.NameInMap("TimeSpan")
         private TimeSpan timeSpan;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OverwriteParams(Builder builder) {
@@ -621,11 +620,11 @@ public class SubmitDynamicImageJobRequest extends Request {
 
     }
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private TemplateConfig(Builder builder) {

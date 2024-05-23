@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCategoriesResponseBody</p>
  */
 public class GetCategoriesResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private Category category;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SubCategories")
+    @com.aliyun.core.annotation.NameInMap("SubCategories")
     private SubCategories subCategories;
 
-    @NameInMap("SubTotal")
+    @com.aliyun.core.annotation.NameInMap("SubTotal")
     private Long subTotal;
 
     private GetCategoriesResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class GetCategoriesResponseBody extends TeaModel {
     } 
 
     public static class Category extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Category(Builder builder) {
@@ -233,22 +232,22 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     }
     public static class SubCategoriesCategory extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("SubTotal")
+        @com.aliyun.core.annotation.NameInMap("SubTotal")
         private Long subTotal;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private SubCategoriesCategory(Builder builder) {
@@ -374,7 +373,7 @@ public class GetCategoriesResponseBody extends TeaModel {
 
     }
     public static class SubCategories extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private java.util.List < SubCategoriesCategory> category;
 
         private SubCategories(Builder builder) {

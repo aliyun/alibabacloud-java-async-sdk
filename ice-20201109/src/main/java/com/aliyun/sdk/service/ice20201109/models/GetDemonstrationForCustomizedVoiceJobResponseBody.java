@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDemonstrationForCustomizedVoiceJobResponseBody</p>
  */
 public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetDemonstrationForCustomizedVoiceJobResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
     } 
 
     public static class DemonstrationList extends TeaModel {
-        @NameInMap("AudioId")
+        @com.aliyun.core.annotation.NameInMap("AudioId")
         private Integer audioId;
 
-        @NameInMap("DemoAudio")
+        @com.aliyun.core.annotation.NameInMap("DemoAudio")
         private String demoAudio;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private DemonstrationList(Builder builder) {
@@ -173,7 +172,7 @@ public class GetDemonstrationForCustomizedVoiceJobResponseBody extends TeaModel 
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DemonstrationList")
+        @com.aliyun.core.annotation.NameInMap("DemonstrationList")
         private java.util.List < DemonstrationList> demonstrationList;
 
         private Data(Builder builder) {

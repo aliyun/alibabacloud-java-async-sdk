@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitLiveSnapshotJobRequest</p>
  */
 public class SubmitLiveSnapshotJobRequest extends Request {
-    @Body
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @Body
-    @NameInMap("JobName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("JobName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobName;
 
-    @Body
-    @NameInMap("SnapshotOutput")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SnapshotOutput")
+    @com.aliyun.core.annotation.Validation(required = true)
     private SnapshotOutput snapshotOutput;
 
-    @Body
-    @NameInMap("StreamInput")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
+    @com.aliyun.core.annotation.Validation(required = true)
     private StreamInput streamInput;
 
-    @Body
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
     private SubmitLiveSnapshotJobRequest(Builder builder) {
@@ -168,16 +167,16 @@ public class SubmitLiveSnapshotJobRequest extends Request {
     } 
 
     public static class SnapshotOutput extends TeaModel {
-        @NameInMap("Bucket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Bucket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String bucket;
 
-        @NameInMap("Endpoint")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endpoint;
 
-        @NameInMap("StorageType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("StorageType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String storageType;
 
         private SnapshotOutput(Builder builder) {
@@ -252,12 +251,12 @@ public class SubmitLiveSnapshotJobRequest extends Request {
 
     }
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Url")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String url;
 
         private StreamInput(Builder builder) {

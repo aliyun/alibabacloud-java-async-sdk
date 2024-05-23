@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetectAudioForCustomizedVoiceJobRequest</p>
  */
 public class DetectAudioForCustomizedVoiceJobRequest extends Request {
-    @Query
-    @NameInMap("AudioRecordId")
-    @Validation(required = true, maximum = 20, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AudioRecordId")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 20, minimum = 1)
     private Integer audioRecordId;
 
-    @Query
-    @NameInMap("RecordUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String recordUrl;
 
-    @Query
-    @NameInMap("VoiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String voiceId;
 
     private DetectAudioForCustomizedVoiceJobRequest(Builder builder) {

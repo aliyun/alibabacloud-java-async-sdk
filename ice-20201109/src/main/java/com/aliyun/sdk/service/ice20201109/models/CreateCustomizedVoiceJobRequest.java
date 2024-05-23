@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomizedVoiceJobRequest</p>
  */
 public class CreateCustomizedVoiceJobRequest extends Request {
-    @Query
-    @NameInMap("Gender")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gender")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gender;
 
-    @Query
-    @NameInMap("Scenario")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenario")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scenario;
 
-    @Query
-    @NameInMap("VoiceDesc")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceDesc")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String voiceDesc;
 
-    @Query
-    @NameInMap("VoiceId")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String voiceId;
 
-    @Query
-    @NameInMap("VoiceName")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoiceName")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String voiceName;
 
     private CreateCustomizedVoiceJobRequest(Builder builder) {

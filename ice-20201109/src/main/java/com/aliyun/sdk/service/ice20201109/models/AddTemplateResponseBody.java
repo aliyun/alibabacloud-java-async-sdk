@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTemplateResponseBody</p>
  */
 public class AddTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private Template template;
 
     private AddTemplateResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class AddTemplateResponseBody extends TeaModel {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("CreateSource")
+        @com.aliyun.core.annotation.NameInMap("CreateSource")
         private String createSource;
 
-        @NameInMap("ModifiedSource")
+        @com.aliyun.core.annotation.NameInMap("ModifiedSource")
         private String modifiedSource;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PreviewMedia")
+        @com.aliyun.core.annotation.NameInMap("PreviewMedia")
         private String previewMedia;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Template(Builder builder) {

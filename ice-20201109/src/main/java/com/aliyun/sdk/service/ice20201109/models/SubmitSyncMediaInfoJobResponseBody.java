@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSyncMediaInfoJobResponseBody</p>
  */
 public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
-    @NameInMap("MediaInfoJob")
+    @com.aliyun.core.annotation.NameInMap("MediaInfoJob")
     private MediaInfoJob mediaInfoJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitSyncMediaInfoJobResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Input(Builder builder) {
@@ -133,49 +132,49 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class AudioStreamInfoList extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("ChannelLayout")
+        @com.aliyun.core.annotation.NameInMap("ChannelLayout")
         private String channelLayout;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("SampleFmt")
+        @com.aliyun.core.annotation.NameInMap("SampleFmt")
         private String sampleFmt;
 
-        @NameInMap("SampleRate")
+        @com.aliyun.core.annotation.NameInMap("SampleRate")
         private String sampleRate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private AudioStreamInfoList(Builder builder) {
@@ -454,40 +453,40 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class FileBasicInfo extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileStatus")
+        @com.aliyun.core.annotation.NameInMap("FileStatus")
         private String fileStatus;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private FileBasicInfo(Builder builder) {
@@ -715,73 +714,73 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class VideoStreamInfoList extends TeaModel {
-        @NameInMap("Avg_fps")
+        @com.aliyun.core.annotation.NameInMap("Avg_fps")
         private String avgFps;
 
-        @NameInMap("Bit_rate")
+        @com.aliyun.core.annotation.NameInMap("Bit_rate")
         private String bitRate;
 
-        @NameInMap("Codec_long_name")
+        @com.aliyun.core.annotation.NameInMap("Codec_long_name")
         private String codecLongName;
 
-        @NameInMap("Codec_name")
+        @com.aliyun.core.annotation.NameInMap("Codec_name")
         private String codecName;
 
-        @NameInMap("Codec_tag")
+        @com.aliyun.core.annotation.NameInMap("Codec_tag")
         private String codecTag;
 
-        @NameInMap("Codec_tag_string")
+        @com.aliyun.core.annotation.NameInMap("Codec_tag_string")
         private String codecTagString;
 
-        @NameInMap("Codec_time_base")
+        @com.aliyun.core.annotation.NameInMap("Codec_time_base")
         private String codecTimeBase;
 
-        @NameInMap("Dar")
+        @com.aliyun.core.annotation.NameInMap("Dar")
         private String dar;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Has_b_frames")
+        @com.aliyun.core.annotation.NameInMap("Has_b_frames")
         private String hasBFrames;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Rotate")
+        @com.aliyun.core.annotation.NameInMap("Rotate")
         private String rotate;
 
-        @NameInMap("Sar")
+        @com.aliyun.core.annotation.NameInMap("Sar")
         private String sar;
 
-        @NameInMap("Start_time")
+        @com.aliyun.core.annotation.NameInMap("Start_time")
         private String startTime;
 
-        @NameInMap("Time_base")
+        @com.aliyun.core.annotation.NameInMap("Time_base")
         private String timeBase;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoStreamInfoList(Builder builder) {
@@ -1196,13 +1195,13 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class MediaInfoProperty extends TeaModel {
-        @NameInMap("AudioStreamInfoList")
+        @com.aliyun.core.annotation.NameInMap("AudioStreamInfoList")
         private java.util.List < AudioStreamInfoList> audioStreamInfoList;
 
-        @NameInMap("FileBasicInfo")
+        @com.aliyun.core.annotation.NameInMap("FileBasicInfo")
         private FileBasicInfo fileBasicInfo;
 
-        @NameInMap("VideoStreamInfoList")
+        @com.aliyun.core.annotation.NameInMap("VideoStreamInfoList")
         private java.util.List < VideoStreamInfoList> videoStreamInfoList;
 
         private MediaInfoProperty(Builder builder) {
@@ -1277,10 +1276,10 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {
@@ -1338,43 +1337,43 @@ public class SubmitSyncMediaInfoJobResponseBody extends TeaModel {
 
     }
     public static class MediaInfoJob extends TeaModel {
-        @NameInMap("Async")
+        @com.aliyun.core.annotation.NameInMap("Async")
         private Boolean async;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaInfoProperty")
+        @com.aliyun.core.annotation.NameInMap("MediaInfoProperty")
         private MediaInfoProperty mediaInfoProperty;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ScheduleConfig")
+        @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
         private ScheduleConfig scheduleConfig;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubmitResultJson")
+        @com.aliyun.core.annotation.NameInMap("SubmitResultJson")
         private java.util.Map < String, ? > submitResultJson;
 
-        @NameInMap("SubmitTime")
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
         private String submitTime;
 
-        @NameInMap("TriggerSource")
+        @com.aliyun.core.annotation.NameInMap("TriggerSource")
         private String triggerSource;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaInfoJob(Builder builder) {

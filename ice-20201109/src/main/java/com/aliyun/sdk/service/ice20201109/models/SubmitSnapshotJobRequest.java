@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSnapshotJobRequest</p>
  */
 public class SubmitSnapshotJobRequest extends Request {
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Input input;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Output")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Output")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Output output;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitSnapshotJobRequest(Builder builder) {
@@ -192,12 +191,12 @@ public class SubmitSnapshotJobRequest extends Request {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Input(Builder builder) {
@@ -255,12 +254,12 @@ public class SubmitSnapshotJobRequest extends Request {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -318,7 +317,7 @@ public class SubmitSnapshotJobRequest extends Request {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
         private ScheduleConfig(Builder builder) {
@@ -359,25 +358,25 @@ public class SubmitSnapshotJobRequest extends Request {
 
     }
     public static class SpriteSnapshotConfig extends TeaModel {
-        @NameInMap("CellHeight")
+        @com.aliyun.core.annotation.NameInMap("CellHeight")
         private Integer cellHeight;
 
-        @NameInMap("CellWidth")
+        @com.aliyun.core.annotation.NameInMap("CellWidth")
         private Integer cellWidth;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private Integer columns;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private Integer lines;
 
-        @NameInMap("Margin")
+        @com.aliyun.core.annotation.NameInMap("Margin")
         private Integer margin;
 
-        @NameInMap("Padding")
+        @com.aliyun.core.annotation.NameInMap("Padding")
         private Integer padding;
 
         private SpriteSnapshotConfig(Builder builder) {
@@ -520,37 +519,37 @@ public class SubmitSnapshotJobRequest extends Request {
 
     }
     public static class OverwriteParams extends TeaModel {
-        @NameInMap("BlackLevel")
+        @com.aliyun.core.annotation.NameInMap("BlackLevel")
         private Integer blackLevel;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("FrameType")
+        @com.aliyun.core.annotation.NameInMap("FrameType")
         private String frameType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("IsSptFrag")
+        @com.aliyun.core.annotation.NameInMap("IsSptFrag")
         private Boolean isSptFrag;
 
-        @NameInMap("PixelBlackThreshold")
+        @com.aliyun.core.annotation.NameInMap("PixelBlackThreshold")
         private Integer pixelBlackThreshold;
 
-        @NameInMap("SpriteSnapshotConfig")
+        @com.aliyun.core.annotation.NameInMap("SpriteSnapshotConfig")
         private SpriteSnapshotConfig spriteSnapshotConfig;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private Long time;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private OverwriteParams(Builder builder) {
@@ -761,11 +760,11 @@ public class SubmitSnapshotJobRequest extends Request {
 
     }
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private TemplateConfig(Builder builder) {

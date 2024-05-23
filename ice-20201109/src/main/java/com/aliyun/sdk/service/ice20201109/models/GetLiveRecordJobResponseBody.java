@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveRecordJobResponseBody</p>
  */
 public class GetLiveRecordJobResponseBody extends TeaModel {
-    @NameInMap("RecordJob")
+    @com.aliyun.core.annotation.NameInMap("RecordJob")
     private RecordJob recordJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLiveRecordJobResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
     } 
 
     public static class RecordOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RecordOutput(Builder builder) {
@@ -153,10 +152,10 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     }
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {
@@ -214,31 +213,31 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     }
     public static class RecordJob extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
-        @NameInMap("RecordOutput")
+        @com.aliyun.core.annotation.NameInMap("RecordOutput")
         private RecordOutput recordOutput;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StreamInput")
+        @com.aliyun.core.annotation.NameInMap("StreamInput")
         private StreamInput streamInput;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private RecordJob(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSmartSysAvatarModelsResponseBody</p>
  */
 public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmartSysAvatarModelList")
+    @com.aliyun.core.annotation.NameInMap("SmartSysAvatarModelList")
     private java.util.List < SmartSysAvatarModelList> smartSysAvatarModelList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSmartSysAvatarModelsResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListSmartSysAvatarModelsResponseBody extends TeaModel {
     } 
 
     public static class SmartSysAvatarModelList extends TeaModel {
-        @NameInMap("AvatarId")
+        @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
 
-        @NameInMap("AvatarName")
+        @com.aliyun.core.annotation.NameInMap("AvatarName")
         private String avatarName;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private Integer bitrate;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("OutputMask")
+        @com.aliyun.core.annotation.NameInMap("OutputMask")
         private Boolean outputMask;
 
-        @NameInMap("VideoUrl")
+        @com.aliyun.core.annotation.NameInMap("VideoUrl")
         private String videoUrl;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private SmartSysAvatarModelList(Builder builder) {

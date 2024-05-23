@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveSnapshotFilesResponseBody</p>
  */
 public class ListLiveSnapshotFilesResponseBody extends TeaModel {
-    @NameInMap("FileList")
+    @com.aliyun.core.annotation.NameInMap("FileList")
     private java.util.List < FileList> fileList;
 
-    @NameInMap("NextStartTime")
+    @com.aliyun.core.annotation.NameInMap("NextStartTime")
     private String nextStartTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListLiveSnapshotFilesResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     } 
 
     public static class FileList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("IsOverlay")
+        @com.aliyun.core.annotation.NameInMap("IsOverlay")
         private Boolean isOverlay;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("OssObject")
+        @com.aliyun.core.annotation.NameInMap("OssObject")
         private String ossObject;
 
         private FileList(Builder builder) {

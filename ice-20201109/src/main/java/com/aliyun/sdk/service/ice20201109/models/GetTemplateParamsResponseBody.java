@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateParamsResponseBody</p>
  */
 public class GetTemplateParamsResponseBody extends TeaModel {
-    @NameInMap("ParamList")
+    @com.aliyun.core.annotation.NameInMap("ParamList")
     private java.util.List < ParamList> paramList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private GetTemplateParamsResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class GetTemplateParamsResponseBody extends TeaModel {
     } 
 
     public static class ParamList extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CoverUrl")
+        @com.aliyun.core.annotation.NameInMap("CoverUrl")
         private String coverUrl;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("MediaUrl")
+        @com.aliyun.core.annotation.NameInMap("MediaUrl")
         private String mediaUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParamList(Builder builder) {

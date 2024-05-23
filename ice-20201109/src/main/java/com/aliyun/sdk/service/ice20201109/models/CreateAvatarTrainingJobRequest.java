@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAvatarTrainingJobRequest</p>
  */
 public class CreateAvatarTrainingJobRequest extends Request {
-    @Query
-    @NameInMap("AvatarDescription")
-    @Validation(maxLength = 1027)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarDescription")
+    @com.aliyun.core.annotation.Validation(maxLength = 1027)
     private String avatarDescription;
 
-    @Query
-    @NameInMap("AvatarName")
-    @Validation(required = true, maxLength = 7)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 7)
     private String avatarName;
 
-    @Query
-    @NameInMap("AvatarType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AvatarType")
     private String avatarType;
 
-    @Query
-    @NameInMap("Portrait")
-    @Validation(maxLength = 32, minLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Portrait")
+    @com.aliyun.core.annotation.Validation(maxLength = 32, minLength = 32)
     private String portrait;
 
-    @Query
-    @NameInMap("Thumbnail")
-    @Validation(maxLength = 512)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Thumbnail")
+    @com.aliyun.core.annotation.Validation(maxLength = 512)
     private String thumbnail;
 
-    @Query
-    @NameInMap("Transparent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transparent")
     private Boolean transparent;
 
-    @Query
-    @NameInMap("Video")
-    @Validation(maxLength = 32, minLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Video")
+    @com.aliyun.core.annotation.Validation(maxLength = 32, minLength = 32)
     private String video;
 
     private CreateAvatarTrainingJobRequest(Builder builder) {

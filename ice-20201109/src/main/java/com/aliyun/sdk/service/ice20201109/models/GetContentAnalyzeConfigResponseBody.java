@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetContentAnalyzeConfigResponseBody</p>
  */
 public class GetContentAnalyzeConfigResponseBody extends TeaModel {
-    @NameInMap("ContentAnalyzeConfig")
+    @com.aliyun.core.annotation.NameInMap("ContentAnalyzeConfig")
     private ContentAnalyzeConfig contentAnalyzeConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetContentAnalyzeConfigResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetContentAnalyzeConfigResponseBody extends TeaModel {
     } 
 
     public static class ContentAnalyzeConfig extends TeaModel {
-        @NameInMap("Auto")
+        @com.aliyun.core.annotation.NameInMap("Auto")
         private Boolean auto;
 
-        @NameInMap("SaveType")
+        @com.aliyun.core.annotation.NameInMap("SaveType")
         private String saveType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private ContentAnalyzeConfig(Builder builder) {

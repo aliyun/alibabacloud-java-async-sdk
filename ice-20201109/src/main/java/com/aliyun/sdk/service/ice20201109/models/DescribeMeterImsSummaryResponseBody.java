@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMeterImsSummaryResponseBody</p>
  */
 public class DescribeMeterImsSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMeterImsSummaryResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeMeterImsSummaryResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("EditingDuration")
+        @com.aliyun.core.annotation.NameInMap("EditingDuration")
         private String editingDuration;
 
-        @NameInMap("LiveEditDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveEditDuration")
         private String liveEditDuration;
 
-        @NameInMap("LiveRecordDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveRecordDuration")
         private String liveRecordDuration;
 
-        @NameInMap("LiveSnapshotCount")
+        @com.aliyun.core.annotation.NameInMap("LiveSnapshotCount")
         private String liveSnapshotCount;
 
-        @NameInMap("LiveTranscodeDuration")
+        @com.aliyun.core.annotation.NameInMap("LiveTranscodeDuration")
         private Long liveTranscodeDuration;
 
-        @NameInMap("MpsAiDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsAiDuration")
         private Long mpsAiDuration;
 
-        @NameInMap("MpsTranscodeDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsTranscodeDuration")
         private Long mpsTranscodeDuration;
 
-        @NameInMap("MpsTranscodeUHDDuration")
+        @com.aliyun.core.annotation.NameInMap("MpsTranscodeUHDDuration")
         private Long mpsTranscodeUHDDuration;
 
         private Data(Builder builder) {

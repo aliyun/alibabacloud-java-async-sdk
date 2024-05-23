@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTemplateResponseBody</p>
  */
 public class GetTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Template")
+    @com.aliyun.core.annotation.NameInMap("Template")
     private Template template;
 
     private GetTemplateResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetTemplateResponseBody extends TeaModel {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("ClipsParam")
+        @com.aliyun.core.annotation.NameInMap("ClipsParam")
         private String clipsParam;
 
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateSource")
+        @com.aliyun.core.annotation.NameInMap("CreateSource")
         private String createSource;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ModifiedSource")
+        @com.aliyun.core.annotation.NameInMap("ModifiedSource")
         private String modifiedSource;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PreviewMedia")
+        @com.aliyun.core.annotation.NameInMap("PreviewMedia")
         private String previewMedia;
 
-        @NameInMap("PreviewMediaStatus")
+        @com.aliyun.core.annotation.NameInMap("PreviewMediaStatus")
         private String previewMediaStatus;
 
-        @NameInMap("RelatedMediaids")
+        @com.aliyun.core.annotation.NameInMap("RelatedMediaids")
         private String relatedMediaids;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Template(Builder builder) {

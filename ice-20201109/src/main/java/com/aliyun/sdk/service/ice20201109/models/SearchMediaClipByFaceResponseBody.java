@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchMediaClipByFaceResponseBody</p>
  */
 public class SearchMediaClipByFaceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("MediaClipList")
+    @com.aliyun.core.annotation.NameInMap("MediaClipList")
     private java.util.List < MediaClipList> mediaClipList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchMediaClipByFaceResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
     } 
 
     public static class BoxPosition extends TeaModel {
-        @NameInMap("H")
+        @com.aliyun.core.annotation.NameInMap("H")
         private Integer h;
 
-        @NameInMap("W")
+        @com.aliyun.core.annotation.NameInMap("W")
         private Integer w;
 
-        @NameInMap("X")
+        @com.aliyun.core.annotation.NameInMap("X")
         private Integer x;
 
-        @NameInMap("Y")
+        @com.aliyun.core.annotation.NameInMap("Y")
         private Integer y;
 
         private BoxPosition(Builder builder) {
@@ -233,10 +232,10 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     }
     public static class TrackData extends TeaModel {
-        @NameInMap("BoxPosition")
+        @com.aliyun.core.annotation.NameInMap("BoxPosition")
         private BoxPosition boxPosition;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Float timestamp;
 
         private TrackData(Builder builder) {
@@ -294,13 +293,13 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     }
     public static class OccurrencesInfos extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Float endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Float startTime;
 
-        @NameInMap("TrackData")
+        @com.aliyun.core.annotation.NameInMap("TrackData")
         private java.util.List < TrackData> trackData;
 
         private OccurrencesInfos(Builder builder) {
@@ -375,19 +374,19 @@ public class SearchMediaClipByFaceResponseBody extends TeaModel {
 
     }
     public static class MediaClipList extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("LabelName")
+        @com.aliyun.core.annotation.NameInMap("LabelName")
         private String labelName;
 
-        @NameInMap("OccurrencesInfos")
+        @com.aliyun.core.annotation.NameInMap("OccurrencesInfos")
         private java.util.List < OccurrencesInfos> occurrencesInfos;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
         private MediaClipList(Builder builder) {

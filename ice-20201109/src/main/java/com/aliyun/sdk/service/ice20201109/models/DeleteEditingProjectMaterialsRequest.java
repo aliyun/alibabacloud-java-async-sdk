@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteEditingProjectMaterialsRequest</p>
  */
 public class DeleteEditingProjectMaterialsRequest extends Request {
-    @Query
-    @NameInMap("MaterialIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaterialIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String materialIds;
 
-    @Query
-    @NameInMap("MaterialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaterialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String materialType;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
     private DeleteEditingProjectMaterialsRequest(Builder builder) {

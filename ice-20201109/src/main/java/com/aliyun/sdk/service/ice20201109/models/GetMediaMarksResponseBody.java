@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaMarksResponseBody</p>
  */
 public class GetMediaMarksResponseBody extends TeaModel {
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("MediaMarks")
+    @com.aliyun.core.annotation.NameInMap("MediaMarks")
     private String mediaMarks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaMarksResponseBody(Builder builder) {

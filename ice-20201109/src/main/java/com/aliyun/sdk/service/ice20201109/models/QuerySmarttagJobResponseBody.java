@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmarttagJobResponseBody</p>
  */
 public class QuerySmarttagJobResponseBody extends TeaModel {
-    @NameInMap("JobStatus")
+    @com.aliyun.core.annotation.NameInMap("JobStatus")
     private String jobStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private Results results;
 
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private QuerySmarttagJobResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {
@@ -173,7 +172,7 @@ public class QuerySmarttagJobResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Results(Builder builder) {

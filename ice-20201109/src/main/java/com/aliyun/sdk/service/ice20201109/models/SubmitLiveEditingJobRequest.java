@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitLiveEditingJobRequest</p>
  */
 public class SubmitLiveEditingJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Clips")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Clips")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clips;
 
-    @Query
-    @NameInMap("LiveStreamConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamConfig")
     private String liveStreamConfig;
 
-    @Query
-    @NameInMap("MediaProduceConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaProduceConfig")
     private String mediaProduceConfig;
 
-    @Query
-    @NameInMap("OutputMediaConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputMediaConfig")
     private String outputMediaConfig;
 
-    @Query
-    @NameInMap("OutputMediaTarget")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputMediaTarget")
     private String outputMediaTarget;
 
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitLiveEditingJobRequest(Builder builder) {

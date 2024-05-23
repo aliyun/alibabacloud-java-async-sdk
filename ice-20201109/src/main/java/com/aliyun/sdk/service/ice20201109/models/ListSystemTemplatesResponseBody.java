@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSystemTemplatesResponseBody</p>
  */
 public class ListSystemTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SystemTemplateList")
+    @com.aliyun.core.annotation.NameInMap("SystemTemplateList")
     private java.util.List < SystemTemplateList> systemTemplateList;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListSystemTemplatesResponseBody(Builder builder) {
@@ -92,28 +91,28 @@ public class ListSystemTemplatesResponseBody extends TeaModel {
     } 
 
     public static class SystemTemplateList extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Subtype")
+        @com.aliyun.core.annotation.NameInMap("Subtype")
         private Integer subtype;
 
-        @NameInMap("SubtypeName")
+        @com.aliyun.core.annotation.NameInMap("SubtypeName")
         private String subtypeName;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("TypeName")
+        @com.aliyun.core.annotation.NameInMap("TypeName")
         private String typeName;
 
         private SystemTemplateList(Builder builder) {

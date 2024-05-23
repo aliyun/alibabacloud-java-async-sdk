@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,63 +11,63 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitDynamicChartJobRequest</p>
  */
 public class SubmitDynamicChartJobRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AxisParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AxisParams")
     private String axisParams;
 
-    @Query
-    @NameInMap("Background")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Background")
     private String background;
 
-    @Query
-    @NameInMap("ChartConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartConfig")
     private String chartConfig;
 
-    @Query
-    @NameInMap("ChartTitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartTitle")
     private String chartTitle;
 
-    @Query
-    @NameInMap("ChartType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChartType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chartType;
 
-    @Query
-    @NameInMap("DataSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSource")
     private String dataSource;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String input;
 
-    @Query
-    @NameInMap("OutputConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputConfig;
 
-    @Query
-    @NameInMap("Subtitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subtitle")
     private String subtitle;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("Unit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Unit")
     private String unit;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitDynamicChartJobRequest(Builder builder) {

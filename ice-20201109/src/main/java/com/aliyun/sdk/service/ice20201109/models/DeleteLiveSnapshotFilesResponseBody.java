@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLiveSnapshotFilesResponseBody</p>
  */
 public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
-    @NameInMap("DeleteFileResultList")
+    @com.aliyun.core.annotation.NameInMap("DeleteFileResultList")
     private java.util.List < DeleteFileResultList> deleteFileResultList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteLiveSnapshotFilesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     } 
 
     public static class DeleteFileResultList extends TeaModel {
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private DeleteFileResultList(Builder builder) {

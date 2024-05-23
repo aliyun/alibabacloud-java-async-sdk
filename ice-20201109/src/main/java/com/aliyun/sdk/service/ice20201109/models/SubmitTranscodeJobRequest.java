@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitTranscodeJobRequest</p>
  */
 public class SubmitTranscodeJobRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("InputGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < InputGroup> inputGroup;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OutputGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OutputGroup> outputGroup;
 
-    @Query
-    @NameInMap("ScheduleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScheduleConfig")
     private ScheduleConfig scheduleConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitTranscodeJobRequest(Builder builder) {
@@ -190,15 +189,15 @@ public class SubmitTranscodeJobRequest extends Request {
     } 
 
     public static class InputGroup extends TeaModel {
-        @NameInMap("InputUrl")
+        @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
 
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private InputGroup(Builder builder) {
@@ -273,15 +272,15 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("Media")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Media")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String media;
 
-        @NameInMap("OutputUrl")
+        @com.aliyun.core.annotation.NameInMap("OutputUrl")
         private String outputUrl;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Output(Builder builder) {
@@ -356,18 +355,18 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class CombineConfigs extends TeaModel {
-        @NameInMap("AudioIndex")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AudioIndex")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String audioIndex;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Double duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Double start;
 
-        @NameInMap("VideoIndex")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VideoIndex")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String videoIndex;
 
         private CombineConfigs(Builder builder) {
@@ -459,16 +458,16 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Encryption extends TeaModel {
-        @NameInMap("CipherText")
+        @com.aliyun.core.annotation.NameInMap("CipherText")
         private String cipherText;
 
-        @NameInMap("DecryptKeyUri")
+        @com.aliyun.core.annotation.NameInMap("DecryptKeyUri")
         private String decryptKeyUri;
 
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("KeyServiceType")
+        @com.aliyun.core.annotation.NameInMap("KeyServiceType")
         private String keyServiceType;
 
         private Encryption(Builder builder) {
@@ -560,10 +559,10 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class File extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private File(Builder builder) {
@@ -621,10 +620,10 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Timeline extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Timeline(Builder builder) {
@@ -682,25 +681,25 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class OverwriteParams extends TeaModel {
-        @NameInMap("Dx")
+        @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
 
-        @NameInMap("Dy")
+        @com.aliyun.core.annotation.NameInMap("Dy")
         private String dy;
 
-        @NameInMap("File")
+        @com.aliyun.core.annotation.NameInMap("File")
         private File file;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("ReferPos")
+        @com.aliyun.core.annotation.NameInMap("ReferPos")
         private String referPos;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private Timeline timeline;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private OverwriteParams(Builder builder) {
@@ -843,11 +842,11 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class ImageWatermarks extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private OverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private ImageWatermarks(Builder builder) {
@@ -905,10 +904,10 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class OverwriteParamsFile extends TeaModel {
-        @NameInMap("Media")
+        @com.aliyun.core.annotation.NameInMap("Media")
         private String media;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private OverwriteParamsFile(Builder builder) {
@@ -966,13 +965,13 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class SubtitlesOverwriteParams extends TeaModel {
-        @NameInMap("CharEnc")
+        @com.aliyun.core.annotation.NameInMap("CharEnc")
         private String charEnc;
 
-        @NameInMap("File")
+        @com.aliyun.core.annotation.NameInMap("File")
         private OverwriteParamsFile file;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
         private SubtitlesOverwriteParams(Builder builder) {
@@ -1047,11 +1046,11 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Subtitles extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private SubtitlesOverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private Subtitles(Builder builder) {
@@ -1109,34 +1108,34 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class TextWatermarksOverwriteParams extends TeaModel {
-        @NameInMap("Adaptive")
+        @com.aliyun.core.annotation.NameInMap("Adaptive")
         private String adaptive;
 
-        @NameInMap("BorderColor")
+        @com.aliyun.core.annotation.NameInMap("BorderColor")
         private String borderColor;
 
-        @NameInMap("BorderWidth")
+        @com.aliyun.core.annotation.NameInMap("BorderWidth")
         private Integer borderWidth;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("FontAlpha")
+        @com.aliyun.core.annotation.NameInMap("FontAlpha")
         private String fontAlpha;
 
-        @NameInMap("FontColor")
+        @com.aliyun.core.annotation.NameInMap("FontColor")
         private String fontColor;
 
-        @NameInMap("FontName")
+        @com.aliyun.core.annotation.NameInMap("FontName")
         private String fontName;
 
-        @NameInMap("FontSize")
+        @com.aliyun.core.annotation.NameInMap("FontSize")
         private Integer fontSize;
 
-        @NameInMap("Left")
+        @com.aliyun.core.annotation.NameInMap("Left")
         private String left;
 
-        @NameInMap("Top")
+        @com.aliyun.core.annotation.NameInMap("Top")
         private String top;
 
         private TextWatermarksOverwriteParams(Builder builder) {
@@ -1330,11 +1329,11 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class TextWatermarks extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TextWatermarksOverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private TextWatermarks(Builder builder) {
@@ -1392,16 +1391,16 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Volume extends TeaModel {
-        @NameInMap("IntegratedLoudnessTarget")
+        @com.aliyun.core.annotation.NameInMap("IntegratedLoudnessTarget")
         private String integratedLoudnessTarget;
 
-        @NameInMap("LoudnessRangeTarget")
+        @com.aliyun.core.annotation.NameInMap("LoudnessRangeTarget")
         private String loudnessRangeTarget;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
-        @NameInMap("TruePeak")
+        @com.aliyun.core.annotation.NameInMap("TruePeak")
         private String truePeak;
 
         private Volume(Builder builder) {
@@ -1493,25 +1492,25 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Audio extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Remove")
+        @com.aliyun.core.annotation.NameInMap("Remove")
         private String remove;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Volume volume;
 
         private Audio(Builder builder) {
@@ -1654,7 +1653,7 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Container extends TeaModel {
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
         private Container(Builder builder) {
@@ -1695,10 +1694,10 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Segment extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("ForceSegTime")
+        @com.aliyun.core.annotation.NameInMap("ForceSegTime")
         private String forceSegTime;
 
         private Segment(Builder builder) {
@@ -1756,7 +1755,7 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class MuxConfig extends TeaModel {
-        @NameInMap("Segment")
+        @com.aliyun.core.annotation.NameInMap("Segment")
         private Segment segment;
 
         private MuxConfig(Builder builder) {
@@ -1797,28 +1796,28 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class TransConfig extends TeaModel {
-        @NameInMap("AdjDarMethod")
+        @com.aliyun.core.annotation.NameInMap("AdjDarMethod")
         private String adjDarMethod;
 
-        @NameInMap("IsCheckAudioBitrate")
+        @com.aliyun.core.annotation.NameInMap("IsCheckAudioBitrate")
         private String isCheckAudioBitrate;
 
-        @NameInMap("IsCheckAudioBitrateFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckAudioBitrateFail")
         private String isCheckAudioBitrateFail;
 
-        @NameInMap("IsCheckReso")
+        @com.aliyun.core.annotation.NameInMap("IsCheckReso")
         private String isCheckReso;
 
-        @NameInMap("IsCheckResoFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckResoFail")
         private String isCheckResoFail;
 
-        @NameInMap("IsCheckVideoBitrate")
+        @com.aliyun.core.annotation.NameInMap("IsCheckVideoBitrate")
         private String isCheckVideoBitrate;
 
-        @NameInMap("IsCheckVideoBitrateFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckVideoBitrateFail")
         private String isCheckVideoBitrateFail;
 
-        @NameInMap("TransMode")
+        @com.aliyun.core.annotation.NameInMap("TransMode")
         private String transMode;
 
         private TransConfig(Builder builder) {
@@ -1978,58 +1977,58 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Video extends TeaModel {
-        @NameInMap("AbrMax")
+        @com.aliyun.core.annotation.NameInMap("AbrMax")
         private String abrMax;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Bufsize")
+        @com.aliyun.core.annotation.NameInMap("Bufsize")
         private String bufsize;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Crf")
+        @com.aliyun.core.annotation.NameInMap("Crf")
         private String crf;
 
-        @NameInMap("Crop")
+        @com.aliyun.core.annotation.NameInMap("Crop")
         private String crop;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("LongShortMode")
+        @com.aliyun.core.annotation.NameInMap("LongShortMode")
         private String longShortMode;
 
-        @NameInMap("Maxrate")
+        @com.aliyun.core.annotation.NameInMap("Maxrate")
         private String maxrate;
 
-        @NameInMap("Pad")
+        @com.aliyun.core.annotation.NameInMap("Pad")
         private String pad;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Preset")
+        @com.aliyun.core.annotation.NameInMap("Preset")
         private String preset;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Remove")
+        @com.aliyun.core.annotation.NameInMap("Remove")
         private String remove;
 
-        @NameInMap("ScanMode")
+        @com.aliyun.core.annotation.NameInMap("ScanMode")
         private String scanMode;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private Video(Builder builder) {
@@ -2359,19 +2358,19 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class TranscodeOverwriteParams extends TeaModel {
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
 
-        @NameInMap("Container")
+        @com.aliyun.core.annotation.NameInMap("Container")
         private Container container;
 
-        @NameInMap("MuxConfig")
+        @com.aliyun.core.annotation.NameInMap("MuxConfig")
         private MuxConfig muxConfig;
 
-        @NameInMap("TransConfig")
+        @com.aliyun.core.annotation.NameInMap("TransConfig")
         private TransConfig transConfig;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private Video video;
 
         private TranscodeOverwriteParams(Builder builder) {
@@ -2480,11 +2479,11 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class Transcode extends TeaModel {
-        @NameInMap("OverwriteParams")
+        @com.aliyun.core.annotation.NameInMap("OverwriteParams")
         private TranscodeOverwriteParams overwriteParams;
 
-        @NameInMap("TemplateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateId;
 
         private Transcode(Builder builder) {
@@ -2542,23 +2541,23 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class ProcessConfig extends TeaModel {
-        @NameInMap("CombineConfigs")
+        @com.aliyun.core.annotation.NameInMap("CombineConfigs")
         private java.util.List < CombineConfigs> combineConfigs;
 
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;
 
-        @NameInMap("ImageWatermarks")
+        @com.aliyun.core.annotation.NameInMap("ImageWatermarks")
         private java.util.List < ImageWatermarks> imageWatermarks;
 
-        @NameInMap("Subtitles")
+        @com.aliyun.core.annotation.NameInMap("Subtitles")
         private java.util.List < Subtitles> subtitles;
 
-        @NameInMap("TextWatermarks")
+        @com.aliyun.core.annotation.NameInMap("TextWatermarks")
         private java.util.List < TextWatermarks> textWatermarks;
 
-        @NameInMap("Transcode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Transcode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Transcode transcode;
 
         private ProcessConfig(Builder builder) {
@@ -2684,12 +2683,12 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class OutputGroup extends TeaModel {
-        @NameInMap("Output")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Output")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Output output;
 
-        @NameInMap("ProcessConfig")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ProcessConfig")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ProcessConfig processConfig;
 
         private OutputGroup(Builder builder) {
@@ -2747,10 +2746,10 @@ public class SubmitTranscodeJobRequest extends Request {
 
     }
     public static class ScheduleConfig extends TeaModel {
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
         private ScheduleConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMediaByURLRequest</p>
  */
 public class UploadMediaByURLRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("EntityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
-    @Query
-    @NameInMap("MediaMetaData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaMetaData")
     private String mediaMetaData;
 
-    @Query
-    @NameInMap("PostProcessConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostProcessConfig")
     private String postProcessConfig;
 
-    @Query
-    @NameInMap("UploadTargetConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadTargetConfig")
     private String uploadTargetConfig;
 
-    @Query
-    @NameInMap("UploadURLs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadURLs")
     private String uploadURLs;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private UploadMediaByURLRequest(Builder builder) {

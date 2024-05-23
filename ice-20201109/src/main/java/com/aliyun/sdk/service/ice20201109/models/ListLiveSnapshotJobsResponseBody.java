@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveSnapshotJobsResponseBody</p>
  */
 public class ListLiveSnapshotJobsResponseBody extends TeaModel {
-    @NameInMap("JobList")
+    @com.aliyun.core.annotation.NameInMap("JobList")
     private java.util.List < JobList> jobList;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLiveSnapshotJobsResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
     } 
 
     public static class SnapshotOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private SnapshotOutput(Builder builder) {
@@ -233,28 +232,28 @@ public class ListLiveSnapshotJobsResponseBody extends TeaModel {
 
     }
     public static class JobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobName")
+        @com.aliyun.core.annotation.NameInMap("JobName")
         private String jobName;
 
-        @NameInMap("SnapshotOutput")
+        @com.aliyun.core.annotation.NameInMap("SnapshotOutput")
         private SnapshotOutput snapshotOutput;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
         private JobList(Builder builder) {

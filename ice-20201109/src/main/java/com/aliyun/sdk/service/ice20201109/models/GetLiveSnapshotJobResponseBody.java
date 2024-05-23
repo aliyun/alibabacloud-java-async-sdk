@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveSnapshotJobResponseBody</p>
  */
 public class GetLiveSnapshotJobResponseBody extends TeaModel {
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobName")
+    @com.aliyun.core.annotation.NameInMap("JobName")
     private String jobName;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @NameInMap("SnapshotOutput")
+    @com.aliyun.core.annotation.NameInMap("SnapshotOutput")
     private SnapshotOutput snapshotOutput;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StreamInput")
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
     private StreamInput streamInput;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
     private Integer timeInterval;
 
     private GetLiveSnapshotJobResponseBody(Builder builder) {
@@ -312,13 +311,13 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     } 
 
     public static class SnapshotOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private SnapshotOutput(Builder builder) {
@@ -393,10 +392,10 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {

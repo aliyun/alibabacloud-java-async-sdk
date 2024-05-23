@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAllPublicMediaTagsResponseBody</p>
  */
 public class ListAllPublicMediaTagsResponseBody extends TeaModel {
-    @NameInMap("MediaTagList")
+    @com.aliyun.core.annotation.NameInMap("MediaTagList")
     private java.util.List < MediaTagList> mediaTagList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAllPublicMediaTagsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
     } 
 
     public static class Options extends TeaModel {
-        @NameInMap("OptionChineseName")
+        @com.aliyun.core.annotation.NameInMap("OptionChineseName")
         private String optionChineseName;
 
-        @NameInMap("OptionEnglishName")
+        @com.aliyun.core.annotation.NameInMap("OptionEnglishName")
         private String optionEnglishName;
 
-        @NameInMap("OptionId")
+        @com.aliyun.core.annotation.NameInMap("OptionId")
         private String optionId;
 
         private Options(Builder builder) {
@@ -153,16 +152,16 @@ public class ListAllPublicMediaTagsResponseBody extends TeaModel {
 
     }
     public static class MediaTagList extends TeaModel {
-        @NameInMap("MediaTagId")
+        @com.aliyun.core.annotation.NameInMap("MediaTagId")
         private String mediaTagId;
 
-        @NameInMap("MediaTagNameChinese")
+        @com.aliyun.core.annotation.NameInMap("MediaTagNameChinese")
         private String mediaTagNameChinese;
 
-        @NameInMap("MediaTagNameEnglish")
+        @com.aliyun.core.annotation.NameInMap("MediaTagNameEnglish")
         private String mediaTagNameEnglish;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private java.util.List < Options> options;
 
         private MediaTagList(Builder builder) {

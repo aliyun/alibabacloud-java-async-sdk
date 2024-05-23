@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveRecordTemplatesResponseBody</p>
  */
 public class ListLiveRecordTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RecordTemplateList")
+    @com.aliyun.core.annotation.NameInMap("RecordTemplateList")
     private java.util.List < RecordTemplateList> recordTemplateList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLiveRecordTemplatesResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     } 
 
     public static class RecordFormatList extends TeaModel {
-        @NameInMap("CycleDuration")
+        @com.aliyun.core.annotation.NameInMap("CycleDuration")
         private Integer cycleDuration;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("OssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("OssObjectPrefix")
         private String ossObjectPrefix;
 
-        @NameInMap("SliceDuration")
+        @com.aliyun.core.annotation.NameInMap("SliceDuration")
         private Integer sliceDuration;
 
-        @NameInMap("SliceOssObjectPrefix")
+        @com.aliyun.core.annotation.NameInMap("SliceOssObjectPrefix")
         private String sliceOssObjectPrefix;
 
         private RecordFormatList(Builder builder) {
@@ -273,22 +272,22 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
     }
     public static class RecordTemplateList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("LastModified")
+        @com.aliyun.core.annotation.NameInMap("LastModified")
         private String lastModified;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RecordFormatList")
+        @com.aliyun.core.annotation.NameInMap("RecordFormatList")
         private java.util.List < RecordFormatList> recordFormatList;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RecordTemplateList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaCensorJobDetailResponseBody</p>
  */
 public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
-    @NameInMap("MediaCensorJobDetail")
+    @com.aliyun.core.annotation.NameInMap("MediaCensorJobDetail")
     private MediaCensorJobDetail mediaCensorJobDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMediaCensorJobDetailResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
     } 
 
     public static class BarrageCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private BarrageCensorResult(Builder builder) {
@@ -173,16 +172,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private Result(Builder builder) {
@@ -274,7 +273,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class Results extends TeaModel {
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
         private Results(Builder builder) {
@@ -315,16 +314,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class CoverImageCensorResult extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("Results")
+        @com.aliyun.core.annotation.NameInMap("Results")
         private Results results;
 
         private CoverImageCensorResult(Builder builder) {
@@ -416,7 +415,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class CoverImageCensorResults extends TeaModel {
-        @NameInMap("CoverImageCensorResult")
+        @com.aliyun.core.annotation.NameInMap("CoverImageCensorResult")
         private java.util.List < CoverImageCensorResult> coverImageCensorResult;
 
         private CoverImageCensorResults(Builder builder) {
@@ -457,16 +456,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class DescCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private DescCensorResult(Builder builder) {
@@ -558,13 +557,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private Input(Builder builder) {
@@ -639,16 +638,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class TitleCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private TitleCensorResult(Builder builder) {
@@ -740,16 +739,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class CensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private CensorResult(Builder builder) {
@@ -841,7 +840,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class CensorResults extends TeaModel {
-        @NameInMap("CensorResult")
+        @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResult> censorResult;
 
         private CensorResults(Builder builder) {
@@ -882,16 +881,16 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class CensorResultsCensorResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Rate")
+        @com.aliyun.core.annotation.NameInMap("Rate")
         private String rate;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private CensorResultsCensorResult(Builder builder) {
@@ -983,7 +982,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class VideoTimelineCensorResults extends TeaModel {
-        @NameInMap("CensorResult")
+        @com.aliyun.core.annotation.NameInMap("CensorResult")
         private java.util.List < CensorResultsCensorResult> censorResult;
 
         private VideoTimelineCensorResults(Builder builder) {
@@ -1024,13 +1023,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class VideoTimeline extends TeaModel {
-        @NameInMap("CensorResults")
+        @com.aliyun.core.annotation.NameInMap("CensorResults")
         private VideoTimelineCensorResults censorResults;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private VideoTimeline(Builder builder) {
@@ -1105,7 +1104,7 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class VideoTimelines extends TeaModel {
-        @NameInMap("VideoTimeline")
+        @com.aliyun.core.annotation.NameInMap("VideoTimeline")
         private java.util.List < VideoTimeline> videoTimeline;
 
         private VideoTimelines(Builder builder) {
@@ -1146,13 +1145,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class VensorCensorResult extends TeaModel {
-        @NameInMap("CensorResults")
+        @com.aliyun.core.annotation.NameInMap("CensorResults")
         private CensorResults censorResults;
 
-        @NameInMap("NextPageToken")
+        @com.aliyun.core.annotation.NameInMap("NextPageToken")
         private String nextPageToken;
 
-        @NameInMap("VideoTimelines")
+        @com.aliyun.core.annotation.NameInMap("VideoTimelines")
         private VideoTimelines videoTimelines;
 
         private VensorCensorResult(Builder builder) {
@@ -1227,13 +1226,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class OutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private OutputFile(Builder builder) {
@@ -1308,13 +1307,13 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class VideoCensorConfig extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("OutputFile")
+        @com.aliyun.core.annotation.NameInMap("OutputFile")
         private OutputFile outputFile;
 
-        @NameInMap("VideoCensor")
+        @com.aliyun.core.annotation.NameInMap("VideoCensor")
         private String videoCensor;
 
         private VideoCensorConfig(Builder builder) {
@@ -1389,52 +1388,52 @@ public class QueryMediaCensorJobDetailResponseBody extends TeaModel {
 
     }
     public static class MediaCensorJobDetail extends TeaModel {
-        @NameInMap("BarrageCensorResult")
+        @com.aliyun.core.annotation.NameInMap("BarrageCensorResult")
         private BarrageCensorResult barrageCensorResult;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CoverImageCensorResults")
+        @com.aliyun.core.annotation.NameInMap("CoverImageCensorResults")
         private CoverImageCensorResults coverImageCensorResults;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DescCensorResult")
+        @com.aliyun.core.annotation.NameInMap("DescCensorResult")
         private DescCensorResult descCensorResult;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TitleCensorResult")
+        @com.aliyun.core.annotation.NameInMap("TitleCensorResult")
         private TitleCensorResult titleCensorResult;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("VensorCensorResult")
+        @com.aliyun.core.annotation.NameInMap("VensorCensorResult")
         private VensorCensorResult vensorCensorResult;
 
-        @NameInMap("VideoCensorConfig")
+        @com.aliyun.core.annotation.NameInMap("VideoCensorConfig")
         private VideoCensorConfig videoCensorConfig;
 
         private MediaCensorJobDetail(Builder builder) {

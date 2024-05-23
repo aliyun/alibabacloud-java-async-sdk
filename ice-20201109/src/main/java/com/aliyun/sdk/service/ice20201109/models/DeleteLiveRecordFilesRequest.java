@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLiveRecordFilesRequest</p>
  */
 public class DeleteLiveRecordFilesRequest extends Request {
-    @Query
-    @NameInMap("RecordIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > recordIds;
 
-    @Query
-    @NameInMap("RemoveFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveFile")
     private Boolean removeFile;
 
     private DeleteLiveRecordFilesRequest(Builder builder) {

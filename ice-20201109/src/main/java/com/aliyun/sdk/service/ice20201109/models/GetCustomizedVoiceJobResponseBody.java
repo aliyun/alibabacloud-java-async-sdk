@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCustomizedVoiceJobResponseBody</p>
  */
 public class GetCustomizedVoiceJobResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetCustomizedVoiceJobResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
     } 
 
     public static class CustomizedVoiceJob extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Gender")
+        @com.aliyun.core.annotation.NameInMap("Gender")
         private String gender;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Scenario")
+        @com.aliyun.core.annotation.NameInMap("Scenario")
         private String scenario;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VoiceDesc")
+        @com.aliyun.core.annotation.NameInMap("VoiceDesc")
         private String voiceDesc;
 
-        @NameInMap("VoiceId")
+        @com.aliyun.core.annotation.NameInMap("VoiceId")
         private String voiceId;
 
-        @NameInMap("VoiceName")
+        @com.aliyun.core.annotation.NameInMap("VoiceName")
         private String voiceName;
 
         private CustomizedVoiceJob(Builder builder) {
@@ -313,7 +312,7 @@ public class GetCustomizedVoiceJobResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CustomizedVoiceJob")
+        @com.aliyun.core.annotation.NameInMap("CustomizedVoiceJob")
         private CustomizedVoiceJob customizedVoiceJob;
 
         private Data(Builder builder) {

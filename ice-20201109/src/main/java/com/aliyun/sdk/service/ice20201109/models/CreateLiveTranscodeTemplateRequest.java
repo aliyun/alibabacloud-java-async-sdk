@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLiveTranscodeTemplateRequest</p>
  */
 public class CreateLiveTranscodeTemplateRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true, maxLength = 20, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 20, minLength = 1)
     private String name;
 
-    @Query
-    @NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
     private TemplateConfig templateConfig;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateLiveTranscodeTemplateRequest(Builder builder) {
@@ -119,19 +118,19 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
     } 
 
     public static class AudioParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
         private AudioParams(Builder builder) {
@@ -240,25 +239,25 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
 
     }
     public static class VideoParams extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoParams(Builder builder) {
@@ -401,10 +400,10 @@ public class CreateLiveTranscodeTemplateRequest extends Request {
 
     }
     public static class TemplateConfig extends TeaModel {
-        @NameInMap("AudioParams")
+        @com.aliyun.core.annotation.NameInMap("AudioParams")
         private AudioParams audioParams;
 
-        @NameInMap("VideoParams")
+        @com.aliyun.core.annotation.NameInMap("VideoParams")
         private VideoParams videoParams;
 
         private TemplateConfig(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCustomTemplateRequest</p>
  */
 public class GetCustomTemplateRequest extends Request {
-    @Query
-    @NameInMap("Subtype")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subtype")
     private Integer subtype;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private Integer type;
 
     private GetCustomTemplateRequest(Builder builder) {

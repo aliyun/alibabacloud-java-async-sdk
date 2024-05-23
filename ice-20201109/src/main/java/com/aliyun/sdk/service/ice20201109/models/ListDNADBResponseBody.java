@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDNADBResponseBody</p>
  */
 public class ListDNADBResponseBody extends TeaModel {
-    @NameInMap("DBList")
+    @com.aliyun.core.annotation.NameInMap("DBList")
     private java.util.List < DBList> DBList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDNADBResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListDNADBResponseBody extends TeaModel {
     } 
 
     public static class DBList extends TeaModel {
-        @NameInMap("DBId")
+        @com.aliyun.core.annotation.NameInMap("DBId")
         private String DBId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private Integer model;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DBList(Builder builder) {

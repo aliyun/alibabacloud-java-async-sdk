@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBatchMediaProducingJobResponseBody</p>
  */
 public class GetBatchMediaProducingJobResponseBody extends TeaModel {
-    @NameInMap("EditingBatchJob")
+    @com.aliyun.core.annotation.NameInMap("EditingBatchJob")
     private EditingBatchJob editingBatchJob;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetBatchMediaProducingJobResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     } 
 
     public static class SubJobList extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaURL")
+        @com.aliyun.core.annotation.NameInMap("MediaURL")
         private String mediaURL;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SubJobList(Builder builder) {
@@ -213,40 +212,40 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
     }
     public static class EditingBatchJob extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EditingConfig")
+        @com.aliyun.core.annotation.NameInMap("EditingConfig")
         private String editingConfig;
 
-        @NameInMap("Extend")
+        @com.aliyun.core.annotation.NameInMap("Extend")
         private String extend;
 
-        @NameInMap("InputConfig")
+        @com.aliyun.core.annotation.NameInMap("InputConfig")
         private String inputConfig;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private String jobType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("OutputConfig")
+        @com.aliyun.core.annotation.NameInMap("OutputConfig")
         private String outputConfig;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubJobList")
+        @com.aliyun.core.annotation.NameInMap("SubJobList")
         private java.util.List < SubJobList> subJobList;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private EditingBatchJob(Builder builder) {

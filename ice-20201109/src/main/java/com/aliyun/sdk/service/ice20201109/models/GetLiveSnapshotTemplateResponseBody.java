@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLiveSnapshotTemplateResponseBody</p>
  */
 public class GetLiveSnapshotTemplateResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("LastModified")
+    @com.aliyun.core.annotation.NameInMap("LastModified")
     private String lastModified;
 
-    @NameInMap("OverwriteFormat")
+    @com.aliyun.core.annotation.NameInMap("OverwriteFormat")
     private String overwriteFormat;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SequenceFormat")
+    @com.aliyun.core.annotation.NameInMap("SequenceFormat")
     private String sequenceFormat;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TimeInterval")
+    @com.aliyun.core.annotation.NameInMap("TimeInterval")
     private Integer timeInterval;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetLiveSnapshotTemplateResponseBody(Builder builder) {

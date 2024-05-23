@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveTranscodeJobsResponseBody</p>
  */
 public class ListLiveTranscodeJobsResponseBody extends TeaModel {
-    @NameInMap("JobList")
+    @com.aliyun.core.annotation.NameInMap("JobList")
     private java.util.List < JobList> jobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLiveTranscodeJobsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     } 
 
     public static class StreamInfos extends TeaModel {
-        @NameInMap("OutputUrl")
+        @com.aliyun.core.annotation.NameInMap("OutputUrl")
         private String outputUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private StreamInfos(Builder builder) {
@@ -153,7 +152,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     }
     public static class OutputStream extends TeaModel {
-        @NameInMap("StreamInfos")
+        @com.aliyun.core.annotation.NameInMap("StreamInfos")
         private java.util.List < StreamInfos> streamInfos;
 
         private OutputStream(Builder builder) {
@@ -194,10 +193,10 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     }
     public static class StreamInput extends TeaModel {
-        @NameInMap("InputUrl")
+        @com.aliyun.core.annotation.NameInMap("InputUrl")
         private String inputUrl;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private StreamInput(Builder builder) {
@@ -255,34 +254,34 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     }
     public static class JobList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OutputStream")
+        @com.aliyun.core.annotation.NameInMap("OutputStream")
         private OutputStream outputStream;
 
-        @NameInMap("StartMode")
+        @com.aliyun.core.annotation.NameInMap("StartMode")
         private Integer startMode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("StreamInput")
+        @com.aliyun.core.annotation.NameInMap("StreamInput")
         private StreamInput streamInput;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private JobList(Builder builder) {

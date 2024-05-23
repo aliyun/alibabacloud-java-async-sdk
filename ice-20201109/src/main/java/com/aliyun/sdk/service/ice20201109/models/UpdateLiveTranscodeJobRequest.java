@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLiveTranscodeJobRequest</p>
  */
 public class UpdateLiveTranscodeJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(maxLength = 128, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(maxLength = 128, minLength = 1)
     private String name;
 
-    @Query
-    @NameInMap("StreamInput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamInput")
     private StreamInput streamInput;
 
-    @Query
-    @NameInMap("TimedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimedConfig")
     private TimedConfig timedConfig;
 
-    @Query
-    @NameInMap("TranscodeOutput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeOutput")
     private TranscodeOutput transcodeOutput;
 
     private UpdateLiveTranscodeJobRequest(Builder builder) {
@@ -167,12 +166,12 @@ public class UpdateLiveTranscodeJobRequest extends Request {
     } 
 
     public static class StreamInput extends TeaModel {
-        @NameInMap("InputUrl")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InputUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String inputUrl;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private StreamInput(Builder builder) {
@@ -230,10 +229,10 @@ public class UpdateLiveTranscodeJobRequest extends Request {
 
     }
     public static class TimedConfig extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private TimedConfig(Builder builder) {
@@ -291,12 +290,12 @@ public class UpdateLiveTranscodeJobRequest extends Request {
 
     }
     public static class TranscodeOutput extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private TranscodeOutput(Builder builder) {

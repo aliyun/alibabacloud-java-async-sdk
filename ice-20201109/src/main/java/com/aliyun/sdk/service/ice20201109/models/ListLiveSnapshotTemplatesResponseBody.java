@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveSnapshotTemplatesResponseBody</p>
  */
 public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TemplateList")
+    @com.aliyun.core.annotation.NameInMap("TemplateList")
     private java.util.List < TemplateList> templateList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLiveSnapshotTemplatesResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     } 
 
     public static class TemplateList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TimeInterval")
+        @com.aliyun.core.annotation.NameInMap("TimeInterval")
         private Integer timeInterval;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TemplateList(Builder builder) {

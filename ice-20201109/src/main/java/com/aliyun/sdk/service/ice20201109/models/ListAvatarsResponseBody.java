@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAvatarsResponseBody</p>
  */
 public class ListAvatarsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListAvatarsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListAvatarsResponseBody extends TeaModel {
     } 
 
     public static class AvatarList extends TeaModel {
-        @NameInMap("AvatarDescription")
+        @com.aliyun.core.annotation.NameInMap("AvatarDescription")
         private String avatarDescription;
 
-        @NameInMap("AvatarId")
+        @com.aliyun.core.annotation.NameInMap("AvatarId")
         private String avatarId;
 
-        @NameInMap("AvatarName")
+        @com.aliyun.core.annotation.NameInMap("AvatarName")
         private String avatarName;
 
-        @NameInMap("AvatarType")
+        @com.aliyun.core.annotation.NameInMap("AvatarType")
         private String avatarType;
 
-        @NameInMap("Portrait")
+        @com.aliyun.core.annotation.NameInMap("Portrait")
         private String portrait;
 
-        @NameInMap("Thumbnail")
+        @com.aliyun.core.annotation.NameInMap("Thumbnail")
         private String thumbnail;
 
-        @NameInMap("Transparent")
+        @com.aliyun.core.annotation.NameInMap("Transparent")
         private Boolean transparent;
 
         private AvatarList(Builder builder) {
@@ -253,10 +252,10 @@ public class ListAvatarsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AvatarList")
+        @com.aliyun.core.annotation.NameInMap("AvatarList")
         private java.util.List < AvatarList> avatarList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

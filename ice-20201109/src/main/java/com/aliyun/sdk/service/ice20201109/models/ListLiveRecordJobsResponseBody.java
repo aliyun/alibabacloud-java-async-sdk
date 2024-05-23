@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveRecordJobsResponseBody</p>
  */
 public class ListLiveRecordJobsResponseBody extends TeaModel {
-    @NameInMap("LiveRecordJobs")
+    @com.aliyun.core.annotation.NameInMap("LiveRecordJobs")
     private java.util.List < LiveRecordJobs> liveRecordJobs;
 
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListLiveRecordJobsResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
     } 
 
     public static class RecordOutput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RecordOutput(Builder builder) {
@@ -233,10 +232,10 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
     }
     public static class StreamInput extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private StreamInput(Builder builder) {
@@ -294,31 +293,31 @@ public class ListLiveRecordJobsResponseBody extends TeaModel {
 
     }
     public static class LiveRecordJobs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
-        @NameInMap("RecordOutput")
+        @com.aliyun.core.annotation.NameInMap("RecordOutput")
         private RecordOutput recordOutput;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StreamInput")
+        @com.aliyun.core.annotation.NameInMap("StreamInput")
         private StreamInput streamInput;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private LiveRecordJobs(Builder builder) {

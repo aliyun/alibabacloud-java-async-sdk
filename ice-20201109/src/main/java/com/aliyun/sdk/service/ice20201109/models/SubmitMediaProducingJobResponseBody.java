@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ice20201109.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitMediaProducingJobResponseBody</p>
  */
 public class SubmitMediaProducingJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VodMediaId")
+    @com.aliyun.core.annotation.NameInMap("VodMediaId")
     private String vodMediaId;
 
     private SubmitMediaProducingJobResponseBody(Builder builder) {
