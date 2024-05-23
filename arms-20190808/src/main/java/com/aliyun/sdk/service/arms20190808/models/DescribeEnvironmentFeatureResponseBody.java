@@ -459,6 +459,9 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FeatureContainers")
         private java.util.List < FeatureContainers> featureContainers;
 
+        @com.aliyun.core.annotation.NameInMap("Ips")
+        private java.util.List < String > ips;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -477,6 +480,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         private FeatureStatus(Builder builder) {
             this.bindResourceId = builder.bindResourceId;
             this.featureContainers = builder.featureContainers;
+            this.ips = builder.ips;
             this.name = builder.name;
             this.namespace = builder.namespace;
             this.securityGroupId = builder.securityGroupId;
@@ -504,6 +508,13 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
          */
         public java.util.List < FeatureContainers> getFeatureContainers() {
             return this.featureContainers;
+        }
+
+        /**
+         * @return ips
+         */
+        public java.util.List < String > getIps() {
+            return this.ips;
         }
 
         /**
@@ -544,6 +555,7 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
         public static final class Builder {
             private String bindResourceId; 
             private java.util.List < FeatureContainers> featureContainers; 
+            private java.util.List < String > ips; 
             private String name; 
             private String namespace; 
             private String securityGroupId; 
@@ -563,6 +575,14 @@ public class DescribeEnvironmentFeatureResponseBody extends TeaModel {
              */
             public Builder featureContainers(java.util.List < FeatureContainers> featureContainers) {
                 this.featureContainers = featureContainers;
+                return this;
+            }
+
+            /**
+             * Ips.
+             */
+            public Builder ips(java.util.List < String > ips) {
+                this.ips = ips;
                 return this;
             }
 

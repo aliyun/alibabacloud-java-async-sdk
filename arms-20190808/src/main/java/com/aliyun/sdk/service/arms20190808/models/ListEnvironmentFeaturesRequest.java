@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class ListEnvironmentFeaturesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliyunLang")
+    private String aliyunLang;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnvironmentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
@@ -22,6 +26,7 @@ public class ListEnvironmentFeaturesRequest extends Request {
 
     private ListEnvironmentFeaturesRequest(Builder builder) {
         super(builder);
+        this.aliyunLang = builder.aliyunLang;
         this.environmentId = builder.environmentId;
         this.regionId = builder.regionId;
     }
@@ -40,6 +45,13 @@ public class ListEnvironmentFeaturesRequest extends Request {
     }
 
     /**
+     * @return aliyunLang
+     */
+    public String getAliyunLang() {
+        return this.aliyunLang;
+    }
+
+    /**
      * @return environmentId
      */
     public String getEnvironmentId() {
@@ -54,6 +66,7 @@ public class ListEnvironmentFeaturesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListEnvironmentFeaturesRequest, Builder> {
+        private String aliyunLang; 
         private String environmentId; 
         private String regionId; 
 
@@ -63,9 +76,19 @@ public class ListEnvironmentFeaturesRequest extends Request {
 
         private Builder(ListEnvironmentFeaturesRequest request) {
             super(request);
+            this.aliyunLang = request.aliyunLang;
             this.environmentId = request.environmentId;
             this.regionId = request.regionId;
         } 
+
+        /**
+         * AliyunLang.
+         */
+        public Builder aliyunLang(String aliyunLang) {
+            this.putQueryParameter("AliyunLang", aliyunLang);
+            this.aliyunLang = aliyunLang;
+            return this;
+        }
 
         /**
          * EnvironmentId.

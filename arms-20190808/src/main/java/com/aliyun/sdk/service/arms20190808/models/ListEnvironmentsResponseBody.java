@@ -789,7 +789,11 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * FeePackage.
+             * The payable resource plan. Valid values:
+             * <p>
+             * 
+             * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro. Default value: CS_Basic.
+             * *   Otherwise, leave the parameter empty.
              */
             public Builder feePackage(String feePackage) {
                 this.feePackage = feePackage;
@@ -829,14 +833,12 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * type of managed:
+             * Indicates whether agents or exporters are managed. Valid values:
              * <p>
              * 
-             * - none: not managed. default value of prometheus for ACK.
-             * 
-             * - agent: managed agent. default value of promehtues for ASK/ACS/AckOne.
-             * 
-             * - agent-exproter: managed agent and exporter. default of prometheus for Cloud.
+             * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
+             * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
+             * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
              */
             public Builder managedType(String managedType) {
                 this.managedType = managedType;
@@ -860,7 +862,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The region ID.
+             * The ID of the region where the Message Queue for RabbitMQ instance resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -876,7 +878,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -892,7 +894,7 @@ public class ListEnvironmentsResponseBody extends TeaModel {
             }
 
             /**
-             * The user ID.
+             * The ID of the user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
