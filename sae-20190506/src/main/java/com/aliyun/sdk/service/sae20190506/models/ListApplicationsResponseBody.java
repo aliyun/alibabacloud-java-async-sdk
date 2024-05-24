@@ -704,6 +704,9 @@ public class ListApplicationsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MseEnabled")
         private Boolean mseEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("MseNamespaceId")
+        private String mseNamespaceId;
+
         @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
@@ -730,6 +733,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             this.instances = builder.instances;
             this.mem = builder.mem;
             this.mseEnabled = builder.mseEnabled;
+            this.mseNamespaceId = builder.mseNamespaceId;
             this.namespaceId = builder.namespaceId;
             this.programmingLanguage = builder.programmingLanguage;
             this.regionId = builder.regionId;
@@ -816,6 +820,13 @@ public class ListApplicationsResponseBody extends TeaModel {
         }
 
         /**
+         * @return mseNamespaceId
+         */
+        public String getMseNamespaceId() {
+            return this.mseNamespaceId;
+        }
+
+        /**
          * @return namespaceId
          */
         public String getNamespaceId() {
@@ -861,6 +872,7 @@ public class ListApplicationsResponseBody extends TeaModel {
             private Integer instances; 
             private Integer mem; 
             private Boolean mseEnabled; 
+            private String mseNamespaceId; 
             private String namespaceId; 
             private String programmingLanguage; 
             private String regionId; 
@@ -944,6 +956,14 @@ public class ListApplicationsResponseBody extends TeaModel {
              */
             public Builder mseEnabled(Boolean mseEnabled) {
                 this.mseEnabled = mseEnabled;
+                return this;
+            }
+
+            /**
+             * MseNamespaceId.
+             */
+            public Builder mseNamespaceId(String mseNamespaceId) {
+                this.mseNamespaceId = mseNamespaceId;
                 return this;
             }
 
