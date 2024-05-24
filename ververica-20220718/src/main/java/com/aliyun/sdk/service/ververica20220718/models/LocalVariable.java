@@ -6,27 +6,27 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeploymentTarget} extends {@link TeaModel}
+ * {@link LocalVariable} extends {@link TeaModel}
  *
- * <p>DeploymentTarget</p>
+ * <p>LocalVariable</p>
  */
-public class DeploymentTarget extends TeaModel {
+public class LocalVariable extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @com.aliyun.core.annotation.NameInMap("namespace")
-    private String namespace;
+    @com.aliyun.core.annotation.NameInMap("value")
+    private String value;
 
-    private DeploymentTarget(Builder builder) {
+    private LocalVariable(Builder builder) {
         this.name = builder.name;
-        this.namespace = builder.namespace;
+        this.value = builder.value;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DeploymentTarget create() {
+    public static LocalVariable create() {
         return builder().build();
     }
 
@@ -38,15 +38,15 @@ public class DeploymentTarget extends TeaModel {
     }
 
     /**
-     * @return namespace
+     * @return value
      */
-    public String getNamespace() {
-        return this.namespace;
+    public String getValue() {
+        return this.value;
     }
 
     public static final class Builder {
         private String name; 
-        private String namespace; 
+        private String value; 
 
         /**
          * name.
@@ -57,15 +57,15 @@ public class DeploymentTarget extends TeaModel {
         }
 
         /**
-         * namespace.
+         * value.
          */
-        public Builder namespace(String namespace) {
-            this.namespace = namespace;
+        public Builder value(String value) {
+            this.value = value;
             return this;
         }
 
-        public DeploymentTarget build() {
-            return new DeploymentTarget(this);
+        public LocalVariable build() {
+            return new LocalVariable(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeploymentRestoreStrategy</p>
  */
 public class DeploymentRestoreStrategy extends TeaModel {
-    @NameInMap("allowNonRestoredState")
+    @com.aliyun.core.annotation.NameInMap("allowNonRestoredState")
     private Boolean allowNonRestoredState;
 
-    @NameInMap("jobStartTimeInMs")
+    @com.aliyun.core.annotation.NameInMap("jobStartTimeInMs")
     private Long jobStartTimeInMs;
 
-    @NameInMap("kind")
+    @com.aliyun.core.annotation.NameInMap("kind")
     private String kind;
 
-    @NameInMap("savepointId")
+    @com.aliyun.core.annotation.NameInMap("savepointId")
     private String savepointId;
 
     private DeploymentRestoreStrategy(Builder builder) {

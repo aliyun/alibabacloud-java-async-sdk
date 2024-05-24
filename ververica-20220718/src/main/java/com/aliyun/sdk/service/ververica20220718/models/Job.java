@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,88 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Job</p>
  */
 public class Job extends TeaModel {
-    @NameInMap("artifact")
+    @com.aliyun.core.annotation.NameInMap("artifact")
     private Artifact artifact;
 
-    @NameInMap("batchResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("batchResourceSetting")
     private BatchResourceSetting batchResourceSetting;
 
-    @NameInMap("creator")
+    @com.aliyun.core.annotation.NameInMap("createdAt")
+    private String createdAt;
+
+    @com.aliyun.core.annotation.NameInMap("creator")
     private String creator;
 
-    @NameInMap("creatorName")
+    @com.aliyun.core.annotation.NameInMap("creatorName")
     private String creatorName;
 
-    @NameInMap("deploymentId")
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
 
-    @NameInMap("deploymentName")
+    @com.aliyun.core.annotation.NameInMap("deploymentName")
     private String deploymentName;
 
-    @NameInMap("endTime")
+    @com.aliyun.core.annotation.NameInMap("endTime")
     private Long endTime;
 
-    @NameInMap("engineVersion")
+    @com.aliyun.core.annotation.NameInMap("engineVersion")
     private String engineVersion;
 
-    @NameInMap("executionMode")
+    @com.aliyun.core.annotation.NameInMap("executionMode")
     private String executionMode;
 
-    @NameInMap("flinkConf")
+    @com.aliyun.core.annotation.NameInMap("flinkConf")
     private java.util.Map < String, ? > flinkConf;
 
-    @NameInMap("jobId")
+    @com.aliyun.core.annotation.NameInMap("jobId")
     private String jobId;
 
-    @NameInMap("logging")
+    @com.aliyun.core.annotation.NameInMap("localVariables")
+    private java.util.List < LocalVariable > localVariables;
+
+    @com.aliyun.core.annotation.NameInMap("logging")
     private Logging logging;
 
-    @NameInMap("metric")
+    @com.aliyun.core.annotation.NameInMap("metric")
     private JobMetric metric;
 
-    @NameInMap("modifier")
+    @com.aliyun.core.annotation.NameInMap("modifiedAt")
+    private String modifiedAt;
+
+    @com.aliyun.core.annotation.NameInMap("modifier")
     private String modifier;
 
-    @NameInMap("modifierName")
+    @com.aliyun.core.annotation.NameInMap("modifierName")
     private String modifierName;
 
-    @NameInMap("namespace")
+    @com.aliyun.core.annotation.NameInMap("namespace")
     private String namespace;
 
-    @NameInMap("restoreStrategy")
+    @com.aliyun.core.annotation.NameInMap("restoreStrategy")
     private DeploymentRestoreStrategy restoreStrategy;
 
-    @NameInMap("sessionClusterName")
+    @com.aliyun.core.annotation.NameInMap("sessionClusterName")
     private String sessionClusterName;
 
-    @NameInMap("startTime")
+    @com.aliyun.core.annotation.NameInMap("startTime")
     private Long startTime;
 
-    @NameInMap("status")
+    @com.aliyun.core.annotation.NameInMap("status")
     private JobStatus status;
 
-    @NameInMap("streamingResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("streamingResourceSetting")
     private StreamingResourceSetting streamingResourceSetting;
 
-    @NameInMap("userFlinkConf")
+    @com.aliyun.core.annotation.NameInMap("userFlinkConf")
     private java.util.Map < String, ? > userFlinkConf;
+
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    private String workspace;
 
     private Job(Builder builder) {
         this.artifact = builder.artifact;
         this.batchResourceSetting = builder.batchResourceSetting;
+        this.createdAt = builder.createdAt;
         this.creator = builder.creator;
         this.creatorName = builder.creatorName;
         this.deploymentId = builder.deploymentId;
@@ -90,8 +102,10 @@ public class Job extends TeaModel {
         this.executionMode = builder.executionMode;
         this.flinkConf = builder.flinkConf;
         this.jobId = builder.jobId;
+        this.localVariables = builder.localVariables;
         this.logging = builder.logging;
         this.metric = builder.metric;
+        this.modifiedAt = builder.modifiedAt;
         this.modifier = builder.modifier;
         this.modifierName = builder.modifierName;
         this.namespace = builder.namespace;
@@ -101,6 +115,7 @@ public class Job extends TeaModel {
         this.status = builder.status;
         this.streamingResourceSetting = builder.streamingResourceSetting;
         this.userFlinkConf = builder.userFlinkConf;
+        this.workspace = builder.workspace;
     }
 
     public static Builder builder() {
@@ -123,6 +138,13 @@ public class Job extends TeaModel {
      */
     public BatchResourceSetting getBatchResourceSetting() {
         return this.batchResourceSetting;
+    }
+
+    /**
+     * @return createdAt
+     */
+    public String getCreatedAt() {
+        return this.createdAt;
     }
 
     /**
@@ -189,6 +211,13 @@ public class Job extends TeaModel {
     }
 
     /**
+     * @return localVariables
+     */
+    public java.util.List < LocalVariable > getLocalVariables() {
+        return this.localVariables;
+    }
+
+    /**
      * @return logging
      */
     public Logging getLogging() {
@@ -200,6 +229,13 @@ public class Job extends TeaModel {
      */
     public JobMetric getMetric() {
         return this.metric;
+    }
+
+    /**
+     * @return modifiedAt
+     */
+    public String getModifiedAt() {
+        return this.modifiedAt;
     }
 
     /**
@@ -265,9 +301,17 @@ public class Job extends TeaModel {
         return this.userFlinkConf;
     }
 
+    /**
+     * @return workspace
+     */
+    public String getWorkspace() {
+        return this.workspace;
+    }
+
     public static final class Builder {
         private Artifact artifact; 
         private BatchResourceSetting batchResourceSetting; 
+        private String createdAt; 
         private String creator; 
         private String creatorName; 
         private String deploymentId; 
@@ -277,8 +321,10 @@ public class Job extends TeaModel {
         private String executionMode; 
         private java.util.Map < String, ? > flinkConf; 
         private String jobId; 
+        private java.util.List < LocalVariable > localVariables; 
         private Logging logging; 
         private JobMetric metric; 
+        private String modifiedAt; 
         private String modifier; 
         private String modifierName; 
         private String namespace; 
@@ -288,6 +334,7 @@ public class Job extends TeaModel {
         private JobStatus status; 
         private StreamingResourceSetting streamingResourceSetting; 
         private java.util.Map < String, ? > userFlinkConf; 
+        private String workspace; 
 
         /**
          * artifact.
@@ -302,6 +349,14 @@ public class Job extends TeaModel {
          */
         public Builder batchResourceSetting(BatchResourceSetting batchResourceSetting) {
             this.batchResourceSetting = batchResourceSetting;
+            return this;
+        }
+
+        /**
+         * createdAt.
+         */
+        public Builder createdAt(String createdAt) {
+            this.createdAt = createdAt;
             return this;
         }
 
@@ -378,6 +433,14 @@ public class Job extends TeaModel {
         }
 
         /**
+         * localVariables.
+         */
+        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+            this.localVariables = localVariables;
+            return this;
+        }
+
+        /**
          * logging.
          */
         public Builder logging(Logging logging) {
@@ -390,6 +453,14 @@ public class Job extends TeaModel {
          */
         public Builder metric(JobMetric metric) {
             this.metric = metric;
+            return this;
+        }
+
+        /**
+         * modifiedAt.
+         */
+        public Builder modifiedAt(String modifiedAt) {
+            this.modifiedAt = modifiedAt;
             return this;
         }
 
@@ -462,6 +533,14 @@ public class Job extends TeaModel {
          */
         public Builder userFlinkConf(java.util.Map < String, ? > userFlinkConf) {
             this.userFlinkConf = userFlinkConf;
+            return this;
+        }
+
+        /**
+         * workspace.
+         */
+        public Builder workspace(String workspace) {
+            this.workspace = workspace;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BriefDeploymentTarget</p>
  */
 public class BriefDeploymentTarget extends TeaModel {
-    @NameInMap("mode")
+    @com.aliyun.core.annotation.NameInMap("mode")
     private String mode;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
     private BriefDeploymentTarget(Builder builder) {

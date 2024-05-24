@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDeploymentTargetsResponseBody</p>
  */
 public class ListDeploymentTargetsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < DeploymentTarget > data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("pageIndex")
+    @com.aliyun.core.annotation.NameInMap("pageIndex")
     private Integer pageIndex;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalSize")
+    @com.aliyun.core.annotation.NameInMap("totalSize")
     private Integer totalSize;
 
     private ListDeploymentTargetsResponseBody(Builder builder) {

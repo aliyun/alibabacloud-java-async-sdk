@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobsRequest</p>
  */
 public class ListJobsRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Query
-    @NameInMap("deploymentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentId;
 
-    @Query
-    @NameInMap("pageIndex")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageIndex")
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sortName")
+    private String sortName;
+
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private ListJobsRequest(Builder builder) {
@@ -42,6 +45,7 @@ public class ListJobsRequest extends Request {
         this.deploymentId = builder.deploymentId;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
+        this.sortName = builder.sortName;
         this.workspace = builder.workspace;
     }
 
@@ -87,6 +91,13 @@ public class ListJobsRequest extends Request {
     }
 
     /**
+     * @return sortName
+     */
+    public String getSortName() {
+        return this.sortName;
+    }
+
+    /**
      * @return workspace
      */
     public String getWorkspace() {
@@ -98,6 +109,7 @@ public class ListJobsRequest extends Request {
         private String deploymentId; 
         private Integer pageIndex; 
         private Integer pageSize; 
+        private String sortName; 
         private String workspace; 
 
         private Builder() {
@@ -110,6 +122,7 @@ public class ListJobsRequest extends Request {
             this.deploymentId = request.deploymentId;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
+            this.sortName = request.sortName;
             this.workspace = request.workspace;
         } 
 
@@ -146,6 +159,15 @@ public class ListJobsRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * sortName.
+         */
+        public Builder sortName(String sortName) {
+            this.putQueryParameter("sortName", sortName);
+            this.sortName = sortName;
             return this;
         }
 

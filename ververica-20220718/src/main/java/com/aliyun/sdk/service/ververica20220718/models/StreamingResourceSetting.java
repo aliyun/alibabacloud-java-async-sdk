@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StreamingResourceSetting</p>
  */
 public class StreamingResourceSetting extends TeaModel {
-    @NameInMap("basicResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("basicResourceSetting")
     private BasicResourceSetting basicResourceSetting;
 
-    @NameInMap("expertResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("expertResourceSetting")
     private ExpertResourceSetting expertResourceSetting;
 
-    @NameInMap("resourceSettingMode")
+    @com.aliyun.core.annotation.NameInMap("resourceSettingMode")
     private String resourceSettingMode;
 
     private StreamingResourceSetting(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BasicResourceSettingSpec</p>
  */
 public class BasicResourceSettingSpec extends TeaModel {
-    @NameInMap("cpu")
+    @com.aliyun.core.annotation.NameInMap("cpu")
     private Double cpu;
 
-    @NameInMap("memory")
+    @com.aliyun.core.annotation.NameInMap("memory")
     private String memory;
 
     private BasicResourceSettingSpec(Builder builder) {

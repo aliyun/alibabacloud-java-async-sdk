@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopJobRequestBody</p>
  */
 public class StopJobRequestBody extends TeaModel {
-    @NameInMap("stopStrategy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("stopStrategy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stopStrategy;
 
     private StopJobRequestBody(Builder builder) {

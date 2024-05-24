@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JobMetric</p>
  */
 public class JobMetric extends TeaModel {
-    @NameInMap("totalCpu")
+    @com.aliyun.core.annotation.NameInMap("totalCpu")
     private Double totalCpu;
 
-    @NameInMap("totalMemoryByte")
+    @com.aliyun.core.annotation.NameInMap("totalMemoryByte")
     private Long totalMemoryByte;
 
     private JobMetric(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Log4jLogger</p>
  */
 public class Log4jLogger extends TeaModel {
-    @NameInMap("loggerLevel")
+    @com.aliyun.core.annotation.NameInMap("loggerLevel")
     private String loggerLevel;
 
-    @NameInMap("loggerName")
+    @com.aliyun.core.annotation.NameInMap("loggerName")
     private String loggerName;
 
     private Log4jLogger(Builder builder) {

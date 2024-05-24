@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SqlArtifact</p>
  */
 public class SqlArtifact extends TeaModel {
-    @NameInMap("additionalDependencies")
+    @com.aliyun.core.annotation.NameInMap("additionalDependencies")
     private java.util.List < String > additionalDependencies;
 
-    @NameInMap("sqlScript")
+    @com.aliyun.core.annotation.NameInMap("sqlScript")
     private String sqlScript;
 
     private SqlArtifact(Builder builder) {

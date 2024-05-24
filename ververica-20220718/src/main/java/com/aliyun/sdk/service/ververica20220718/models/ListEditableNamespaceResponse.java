@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSavepointsResponse} extends {@link TeaModel}
+ * {@link ListEditableNamespaceResponse} extends {@link TeaModel}
  *
- * <p>ListSavepointsResponse</p>
+ * <p>ListEditableNamespaceResponse</p>
  */
-public class ListSavepointsResponse extends Response {
+public class ListEditableNamespaceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class ListSavepointsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListSavepointsResponseBody body;
+    private ListEditableNamespaceResponseBody body;
 
-    private ListSavepointsResponse(BuilderImpl builder) {
+    private ListEditableNamespaceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListSavepointsResponse create() {
+    public static ListEditableNamespaceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class ListSavepointsResponse extends Response {
     /**
      * @return body
      */
-    public ListSavepointsResponseBody getBody() {
+    public ListEditableNamespaceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListSavepointsResponse, Builder> {
+    public interface Builder extends Response.Builder<ListEditableNamespaceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListSavepointsResponseBody body);
+        Builder body(ListEditableNamespaceResponseBody body);
 
         @Override
-        ListSavepointsResponse build();
+        ListEditableNamespaceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListSavepointsResponse, Builder>
+            extends Response.BuilderImpl<ListEditableNamespaceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListSavepointsResponseBody body; 
+        private ListEditableNamespaceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListSavepointsResponse response) {
+        private BuilderImpl(ListEditableNamespaceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class ListSavepointsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListSavepointsResponseBody body) {
+        public Builder body(ListEditableNamespaceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListSavepointsResponse build() {
-            return new ListSavepointsResponse(this);
+        public ListEditableNamespaceResponse build() {
+            return new ListEditableNamespaceResponse(this);
         } 
 
     } 

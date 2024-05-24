@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JarArtifact</p>
  */
 public class JarArtifact extends TeaModel {
-    @NameInMap("additionalDependencies")
+    @com.aliyun.core.annotation.NameInMap("additionalDependencies")
     private java.util.List < String > additionalDependencies;
 
-    @NameInMap("entryClass")
+    @com.aliyun.core.annotation.NameInMap("entryClass")
     private String entryClass;
 
-    @NameInMap("jarUri")
+    @com.aliyun.core.annotation.NameInMap("jarUri")
     private String jarUri;
 
-    @NameInMap("mainArgs")
+    @com.aliyun.core.annotation.NameInMap("mainArgs")
     private String mainArgs;
 
     private JarArtifact(Builder builder) {

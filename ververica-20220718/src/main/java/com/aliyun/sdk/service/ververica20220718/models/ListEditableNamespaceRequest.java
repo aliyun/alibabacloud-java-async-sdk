@@ -6,43 +6,46 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListDeploymentTargetsRequest} extends {@link RequestModel}
+ * {@link ListEditableNamespaceRequest} extends {@link RequestModel}
  *
- * <p>ListDeploymentTargetsRequest</p>
+ * <p>ListEditableNamespaceRequest</p>
  */
-public class ListDeploymentTargetsRequest extends Request {
-    @com.aliyun.core.annotation.Path
+public class ListEditableNamespaceRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("namespace")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageIndex")
-    private Integer pageIndex;
+    private String pageIndex;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("pageSize")
-    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
-    private Integer pageSize;
+    private String pageSize;
 
-    @com.aliyun.core.annotation.Header
-    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("regionId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String workspace;
+    private String regionId;
 
-    private ListDeploymentTargetsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
+    private String workspaceId;
+
+    private ListEditableNamespaceRequest(Builder builder) {
         super(builder);
         this.namespace = builder.namespace;
         this.pageIndex = builder.pageIndex;
         this.pageSize = builder.pageSize;
-        this.workspace = builder.workspace;
+        this.regionId = builder.regionId;
+        this.workspaceId = builder.workspaceId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListDeploymentTargetsRequest create() {
+    public static ListEditableNamespaceRequest create() {
         return builder().build();
     }
 
@@ -61,47 +64,56 @@ public class ListDeploymentTargetsRequest extends Request {
     /**
      * @return pageIndex
      */
-    public Integer getPageIndex() {
+    public String getPageIndex() {
         return this.pageIndex;
     }
 
     /**
      * @return pageSize
      */
-    public Integer getPageSize() {
+    public String getPageSize() {
         return this.pageSize;
     }
 
     /**
-     * @return workspace
+     * @return regionId
      */
-    public String getWorkspace() {
-        return this.workspace;
+    public String getRegionId() {
+        return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListDeploymentTargetsRequest, Builder> {
+    /**
+     * @return workspaceId
+     */
+    public String getWorkspaceId() {
+        return this.workspaceId;
+    }
+
+    public static final class Builder extends Request.Builder<ListEditableNamespaceRequest, Builder> {
         private String namespace; 
-        private Integer pageIndex; 
-        private Integer pageSize; 
-        private String workspace; 
+        private String pageIndex; 
+        private String pageSize; 
+        private String regionId; 
+        private String workspaceId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListDeploymentTargetsRequest request) {
+        private Builder(ListEditableNamespaceRequest request) {
             super(request);
             this.namespace = request.namespace;
             this.pageIndex = request.pageIndex;
             this.pageSize = request.pageSize;
-            this.workspace = request.workspace;
+            this.regionId = request.regionId;
+            this.workspaceId = request.workspaceId;
         } 
 
         /**
          * namespace.
          */
         public Builder namespace(String namespace) {
-            this.putPathParameter("namespace", namespace);
+            this.putQueryParameter("namespace", namespace);
             this.namespace = namespace;
             return this;
         }
@@ -109,7 +121,7 @@ public class ListDeploymentTargetsRequest extends Request {
         /**
          * pageIndex.
          */
-        public Builder pageIndex(Integer pageIndex) {
+        public Builder pageIndex(String pageIndex) {
             this.putQueryParameter("pageIndex", pageIndex);
             this.pageIndex = pageIndex;
             return this;
@@ -118,24 +130,33 @@ public class ListDeploymentTargetsRequest extends Request {
         /**
          * pageSize.
          */
-        public Builder pageSize(Integer pageSize) {
+        public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * workspace.
+         * regionId.
          */
-        public Builder workspace(String workspace) {
-            this.putHeaderParameter("workspace", workspace);
-            this.workspace = workspace;
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("regionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * workspaceId.
+         */
+        public Builder workspaceId(String workspaceId) {
+            this.putQueryParameter("workspaceId", workspaceId);
+            this.workspaceId = workspaceId;
             return this;
         }
 
         @Override
-        public ListDeploymentTargetsRequest build() {
-            return new ListDeploymentTargetsRequest(this);
+        public ListEditableNamespaceRequest build() {
+            return new ListEditableNamespaceRequest(this);
         } 
 
     } 

@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.ververica20220718;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.ververica20220718.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -53,6 +54,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDeploymentTargetsResponse> listDeploymentTargets(ListDeploymentTargetsRequest request);
 
     CompletableFuture<ListDeploymentsResponse> listDeployments(ListDeploymentsRequest request);
+
+    CompletableFuture<ListEditableNamespaceResponse> listEditableNamespace(ListEditableNamespaceRequest request);
 
     CompletableFuture<ListEngineVersionMetadataResponse> listEngineVersionMetadata(ListEngineVersionMetadataRequest request);
 

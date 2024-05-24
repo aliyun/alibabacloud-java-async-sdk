@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EngineVersionSupportedFeatures</p>
  */
 public class EngineVersionSupportedFeatures extends TeaModel {
-    @NameInMap("supportNativeSavepoint")
+    @com.aliyun.core.annotation.NameInMap("supportNativeSavepoint")
     private Boolean supportNativeSavepoint;
 
-    @NameInMap("useForSqlDeployments")
+    @com.aliyun.core.annotation.NameInMap("useForSqlDeployments")
     private Boolean useForSqlDeployments;
 
     private EngineVersionSupportedFeatures(Builder builder) {

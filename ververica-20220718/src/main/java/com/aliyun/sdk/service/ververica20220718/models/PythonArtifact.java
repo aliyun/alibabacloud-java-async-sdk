@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PythonArtifact</p>
  */
 public class PythonArtifact extends TeaModel {
-    @NameInMap("additionalDependencies")
+    @com.aliyun.core.annotation.NameInMap("additionalDependencies")
     private java.util.List < String > additionalDependencies;
 
-    @NameInMap("additionalPythonArchives")
+    @com.aliyun.core.annotation.NameInMap("additionalPythonArchives")
     private java.util.List < String > additionalPythonArchives;
 
-    @NameInMap("additionalPythonLibraries")
+    @com.aliyun.core.annotation.NameInMap("additionalPythonLibraries")
     private java.util.List < String > additionalPythonLibraries;
 
-    @NameInMap("entryModule")
+    @com.aliyun.core.annotation.NameInMap("entryModule")
     private String entryModule;
 
-    @NameInMap("mainArgs")
+    @com.aliyun.core.annotation.NameInMap("mainArgs")
     private String mainArgs;
 
-    @NameInMap("pythonArtifactUri")
+    @com.aliyun.core.annotation.NameInMap("pythonArtifactUri")
     private String pythonArtifactUri;
 
     private PythonArtifact(Builder builder) {

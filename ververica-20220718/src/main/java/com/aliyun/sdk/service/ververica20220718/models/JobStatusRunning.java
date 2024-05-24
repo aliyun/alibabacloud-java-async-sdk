@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JobStatusRunning</p>
  */
 public class JobStatusRunning extends TeaModel {
-    @NameInMap("observedFlinkJobRestarts")
+    @com.aliyun.core.annotation.NameInMap("observedFlinkJobRestarts")
     private Long observedFlinkJobRestarts;
 
-    @NameInMap("observedFlinkJobStatus")
+    @com.aliyun.core.annotation.NameInMap("observedFlinkJobStatus")
     private String observedFlinkJobStatus;
 
     private JobStatusRunning(Builder builder) {

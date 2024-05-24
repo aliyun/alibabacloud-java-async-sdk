@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BriefResourceSetting</p>
  */
 public class BriefResourceSetting extends TeaModel {
-    @NameInMap("batchResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("batchResourceSetting")
     private BatchResourceSetting batchResourceSetting;
 
-    @NameInMap("flinkConf")
+    @com.aliyun.core.annotation.NameInMap("flinkConf")
     private java.util.Map < String, ? > flinkConf;
 
-    @NameInMap("streamingResourceSetting")
+    @com.aliyun.core.annotation.NameInMap("streamingResourceSetting")
     private StreamingResourceSetting streamingResourceSetting;
 
     private BriefResourceSetting(Builder builder) {

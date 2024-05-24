@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>JobStartParameters</p>
  */
 public class JobStartParameters extends TeaModel {
-    @NameInMap("deploymentId")
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
     private String deploymentId;
 
-    @NameInMap("resourceQueueName")
+    @com.aliyun.core.annotation.NameInMap("localVariables")
+    private java.util.List < LocalVariable > localVariables;
+
+    @com.aliyun.core.annotation.NameInMap("resourceQueueName")
     private String resourceQueueName;
 
-    @NameInMap("restoreStrategy")
+    @com.aliyun.core.annotation.NameInMap("restoreStrategy")
     private DeploymentRestoreStrategy restoreStrategy;
 
     private JobStartParameters(Builder builder) {
         this.deploymentId = builder.deploymentId;
+        this.localVariables = builder.localVariables;
         this.resourceQueueName = builder.resourceQueueName;
         this.restoreStrategy = builder.restoreStrategy;
     }
@@ -43,6 +46,13 @@ public class JobStartParameters extends TeaModel {
     }
 
     /**
+     * @return localVariables
+     */
+    public java.util.List < LocalVariable > getLocalVariables() {
+        return this.localVariables;
+    }
+
+    /**
      * @return resourceQueueName
      */
     public String getResourceQueueName() {
@@ -58,6 +68,7 @@ public class JobStartParameters extends TeaModel {
 
     public static final class Builder {
         private String deploymentId; 
+        private java.util.List < LocalVariable > localVariables; 
         private String resourceQueueName; 
         private DeploymentRestoreStrategy restoreStrategy; 
 
@@ -66,6 +77,14 @@ public class JobStartParameters extends TeaModel {
          */
         public Builder deploymentId(String deploymentId) {
             this.deploymentId = deploymentId;
+            return this;
+        }
+
+        /**
+         * localVariables.
+         */
+        public Builder localVariables(java.util.List < LocalVariable > localVariables) {
+            this.localVariables = localVariables;
             return this;
         }
 

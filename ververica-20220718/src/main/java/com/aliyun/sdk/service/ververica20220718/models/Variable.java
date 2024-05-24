@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Variable</p>
  */
 public class Variable extends TeaModel {
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("kind")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("kind")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String kind;
 
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @NameInMap("value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
     private Variable(Builder builder) {

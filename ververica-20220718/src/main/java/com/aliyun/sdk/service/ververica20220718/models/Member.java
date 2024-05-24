@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Member</p>
  */
 public class Member extends TeaModel {
-    @NameInMap("member")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("member")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String member;
 
-    @NameInMap("role")
+    @com.aliyun.core.annotation.NameInMap("role")
     private String role;
 
     private Member(Builder builder) {

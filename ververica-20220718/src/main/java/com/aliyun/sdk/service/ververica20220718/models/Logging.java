@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Logging</p>
  */
 public class Logging extends TeaModel {
-    @NameInMap("log4j2ConfigurationTemplate")
+    @com.aliyun.core.annotation.NameInMap("log4j2ConfigurationTemplate")
     private String log4j2ConfigurationTemplate;
 
-    @NameInMap("log4jLoggers")
+    @com.aliyun.core.annotation.NameInMap("log4jLoggers")
     private java.util.List < Log4jLogger > log4jLoggers;
 
-    @NameInMap("logReservePolicy")
+    @com.aliyun.core.annotation.NameInMap("logReservePolicy")
     private LogReservePolicy logReservePolicy;
 
-    @NameInMap("loggingProfile")
+    @com.aliyun.core.annotation.NameInMap("loggingProfile")
     private String loggingProfile;
 
     private Logging(Builder builder) {

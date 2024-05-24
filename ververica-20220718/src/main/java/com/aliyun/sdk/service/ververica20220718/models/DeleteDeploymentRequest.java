@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteDeploymentRequest</p>
  */
 public class DeleteDeploymentRequest extends Request {
-    @Path
-    @NameInMap("namespace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("namespace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespace;
 
-    @Path
-    @NameInMap("deploymentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deploymentId;
 
-    @Header
-    @NameInMap("workspace")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Header
+    @com.aliyun.core.annotation.NameInMap("workspace")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspace;
 
     private DeleteDeploymentRequest(Builder builder) {

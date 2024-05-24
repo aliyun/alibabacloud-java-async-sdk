@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ververica20220718.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EngineVersionMetadataIndex</p>
  */
 public class EngineVersionMetadataIndex extends TeaModel {
-    @NameInMap("defaultEngineVersion")
+    @com.aliyun.core.annotation.NameInMap("defaultEngineVersion")
     private String defaultEngineVersion;
 
-    @NameInMap("engineVersionMetadata")
+    @com.aliyun.core.annotation.NameInMap("engineVersionMetadata")
     private java.util.List < EngineVersionMetadata > engineVersionMetadata;
 
     private EngineVersionMetadataIndex(Builder builder) {
