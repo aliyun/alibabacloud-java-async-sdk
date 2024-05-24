@@ -69,7 +69,7 @@ public class CreateClusterNodePoolResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

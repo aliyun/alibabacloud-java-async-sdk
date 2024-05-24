@@ -39,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckControlPlaneLogEnableResponse> checkControlPlaneLogEnable(CheckControlPlaneLogEnableRequest request);
 
+    CompletableFuture<CheckServiceRoleResponse> checkServiceRole(CheckServiceRoleRequest request);
+
     CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request);
 
     /**
@@ -379,9 +381,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateControlPlaneLogResponse> updateControlPlaneLog(UpdateControlPlaneLogRequest request);
 
     /**
-      * **
-      * ****
-      * *   You can call this operation only with an Alibaba Cloud account. - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
+      * - You can call this operation only with an Alibaba Cloud account. 
+      * - If the kubeconfig file used by your cluster is revoked, the custom validity period of the kubeconfig file is reset. In this case, you need to call this API operation to reconfigure the validity period of the kubeconfig file.
       *
      */
     CompletableFuture<UpdateK8sClusterUserConfigExpireResponse> updateK8sClusterUserConfigExpire(UpdateK8sClusterUserConfigExpireRequest request);
