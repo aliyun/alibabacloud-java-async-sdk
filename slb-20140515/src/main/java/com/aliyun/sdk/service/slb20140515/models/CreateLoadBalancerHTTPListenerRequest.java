@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,183 +11,183 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoadBalancerHTTPListenerRequest</p>
  */
 public class CreateLoadBalancerHTTPListenerRequest extends Request {
-    @Query
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @Query
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @Query
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @Query
-    @NameInMap("BackendServerPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer backendServerPort;
 
-    @Query
-    @NameInMap("Bandwidth")
-    @Validation(maximum = 5120)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.Validation(maximum = 5120)
     private Integer bandwidth;
 
-    @Query
-    @NameInMap("Cookie")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
-    @Query
-    @NameInMap("CookieTimeout")
-    @Validation(maximum = 86400, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
     private Integer cookieTimeout;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ForwardPort")
-    @Validation(maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForwardPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535, minimum = 1)
     private Integer forwardPort;
 
-    @Query
-    @NameInMap("Gzip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Gzip")
     private String gzip;
 
-    @Query
-    @NameInMap("HealthCheck")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String healthCheck;
 
-    @Query
-    @NameInMap("HealthCheckConnectPort")
-    @Validation(maximum = 65535)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.Validation(maximum = 65535)
     private Integer healthCheckConnectPort;
 
-    @Query
-    @NameInMap("HealthCheckDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
     private String healthCheckDomain;
 
-    @Query
-    @NameInMap("HealthCheckHttpCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
     private String healthCheckHttpCode;
 
-    @Query
-    @NameInMap("HealthCheckInterval")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer healthCheckInterval;
 
-    @Query
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @Query
-    @NameInMap("HealthCheckTimeout")
-    @Validation(maximum = 300, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
     private Integer healthCheckTimeout;
 
-    @Query
-    @NameInMap("HealthCheckURI")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
     private String healthCheckURI;
 
-    @Query
-    @NameInMap("HealthyThreshold")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer healthyThreshold;
 
-    @Query
-    @NameInMap("IdleTimeout")
-    @Validation(maximum = 9999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 9999, minimum = 1)
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("ListenerForward")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerForward")
     private String listenerForward;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true, maximum = 65535, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 65535, minimum = 1)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("RequestTimeout")
-    @Validation(maximum = 9999, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 9999, minimum = 1)
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @Query
-    @NameInMap("StickySession")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StickySession")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stickySession;
 
-    @Query
-    @NameInMap("StickySessionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StickySessionType")
     private String stickySessionType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UnhealthyThreshold")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer unhealthyThreshold;
 
-    @Query
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @Query
-    @NameInMap("XForwardedFor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor")
     private String xForwardedFor;
 
-    @Query
-    @NameInMap("XForwardedFor_ClientSrcPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientSrcPort")
     private String xForwardedForClientSrcPort;
 
-    @Query
-    @NameInMap("XForwardedFor_SLBID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBID")
     private String xForwardedForSLBID;
 
-    @Query
-    @NameInMap("XForwardedFor_SLBIP")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBIP")
     private String xForwardedForSLBIP;
 
-    @Query
-    @NameInMap("XForwardedFor_SLBPORT")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBPORT")
     private String xForwardedForSLBPORT;
 
-    @Query
-    @NameInMap("XForwardedFor_proto")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_proto")
     private String xForwardedForProto;
 
     private CreateLoadBalancerHTTPListenerRequest(Builder builder) {
@@ -691,8 +690,8 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * The maximum bandwidth of the listener. Unit: Mbit/s. Valid values:
          * <p>
          * 
-         * *   **-1**: If you set the value to -1, the bandwidth of the listener is unlimited.
-         * *   **1** to **5120**: The sum of bandwidth values that you specify for all listeners of the CLB instance cannot exceed the maximum bandwidth of the CLB instance.
+         * *   **-1**: If -1 is returned, the bandwidth of the listener is unlimited.
+         * *   **1** to **5120**: The sum of the maximum bandwidth that you specify for all listeners of the CLB instance cannot exceed the maximum bandwidth of the CLB instance.
          * 
          * >  This parameter is available only in the Chinese mainland.
          */
@@ -752,11 +751,11 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable `Gzip` compression to compress specific types of files. Valid values:
+         * Specifies whether to enable `GZIP` compression to compress specific types of files. Valid values:
          * <p>
          * 
-         * *   **on** (default): yes
-         * *   **off**: no
+         * *   **on** (default)
+         * *   **off**
          */
         public Builder gzip(String gzip) {
             this.putQueryParameter("Gzip", gzip);
@@ -1082,8 +1081,8 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
          * Specifies whether to use the `X-Forwarded-For` header to retrieve client IP addresses. Valid values:
          * <p>
          * 
-         * *   **on** (default): yes
-         * *   **off**: no
+         * *   **on** (default)
+         * *   **off**
          */
         public Builder xForwardedFor(String xForwardedFor) {
             this.putQueryParameter("XForwardedFor", xForwardedFor);
@@ -1092,7 +1091,11 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * XForwardedFor_ClientSrcPort.
+         * Specifies whether to use the `XForwardedFor_ClientSrcPort` header to retrieve the client port. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder xForwardedForClientSrcPort(String xForwardedForClientSrcPort) {
             this.putQueryParameter("XForwardedFor_ClientSrcPort", xForwardedForClientSrcPort);
@@ -1101,10 +1104,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `SLB-ID` header to retrieve the ID of the CLB instance. Valid values:
+         * Indicates whether the `SLB-ID` header is used to retrieve the ID of the CLB instance. Valid values:
          * <p>
          * 
-         * *   **on**: yes
+         * *   **on**
          * *   **off** (default): no
          */
         public Builder xForwardedForSLBID(String xForwardedForSLBID) {
@@ -1114,10 +1117,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `SLB-IP` header to retrieve the virtual IP address (VIP) of the client. Valid values:
+         * Indicates whether the `SLB-IP` header is used to retrieve the virtual IP address (VIP) requested by the client. Valid values:
          * <p>
          * 
-         * *   **on**: yes
+         * *   **on**
          * *   **off** (default): no
          */
         public Builder xForwardedForSLBIP(String xForwardedForSLBIP) {
@@ -1127,7 +1130,11 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * XForwardedFor_SLBPORT.
+         * Specifies whether to use the `XForwardedFor_SLBPORT` header to retrieve the listener port of the CLB instance. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off**
          */
         public Builder xForwardedForSLBPORT(String xForwardedForSLBPORT) {
             this.putQueryParameter("XForwardedFor_SLBPORT", xForwardedForSLBPORT);
@@ -1136,10 +1143,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
         }
 
         /**
-         * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listening protocol. Valid values:
+         * Specifies whether to use the `X-Forwarded-Proto` header to retrieve the listener protocol. Valid values:
          * <p>
          * 
-         * *   **on**: yes
+         * *   **on**
          * *   **off** (default): no
          */
         public Builder xForwardedForProto(String xForwardedForProto) {
@@ -1156,10 +1163,10 @@ public class CreateLoadBalancerHTTPListenerRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

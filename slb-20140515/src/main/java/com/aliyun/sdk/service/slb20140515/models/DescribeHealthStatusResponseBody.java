@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHealthStatusResponseBody</p>
  */
 public class DescribeHealthStatusResponseBody extends TeaModel {
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeHealthStatusResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class BackendServer extends TeaModel {
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("ServerHealthStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerHealthStatus")
         private String serverHealthStatus;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
         private BackendServer(Builder builder) {
@@ -218,7 +217,7 @@ public class DescribeHealthStatusResponseBody extends TeaModel {
 
     }
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;
 
         private BackendServers(Builder builder) {

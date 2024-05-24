@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeListenerAccessControlAttributeResponseBody</p>
  */
 public class DescribeListenerAccessControlAttributeResponseBody extends TeaModel {
-    @NameInMap("AccessControlStatus")
+    @com.aliyun.core.annotation.NameInMap("AccessControlStatus")
     private String accessControlStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceItems")
+    @com.aliyun.core.annotation.NameInMap("SourceItems")
     private String sourceItems;
 
     private DescribeListenerAccessControlAttributeResponseBody(Builder builder) {

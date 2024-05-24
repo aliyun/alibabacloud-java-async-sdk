@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMasterSlaveServerGroupsResponseBody</p>
  */
 public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
-    @NameInMap("MasterSlaveServerGroups")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroups")
     private MasterSlaveServerGroups masterSlaveServerGroups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMasterSlaveServerGroupsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
     } 
 
     public static class Listener extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Listener(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class Listeners extends TeaModel {
-        @NameInMap("Listener")
+        @com.aliyun.core.annotation.NameInMap("Listener")
         private java.util.List < Listener> listener;
 
         private Listeners(Builder builder) {
@@ -174,7 +173,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class AssociatedObjects extends TeaModel {
-        @NameInMap("Listeners")
+        @com.aliyun.core.annotation.NameInMap("Listeners")
         private Listeners listeners;
 
         private AssociatedObjects(Builder builder) {
@@ -215,10 +214,10 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -276,7 +275,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -317,19 +316,19 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class MasterSlaveServerGroup extends TeaModel {
-        @NameInMap("AssociatedObjects")
+        @com.aliyun.core.annotation.NameInMap("AssociatedObjects")
         private AssociatedObjects associatedObjects;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MasterSlaveServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupId")
         private String masterSlaveServerGroupId;
 
-        @NameInMap("MasterSlaveServerGroupName")
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupName")
         private String masterSlaveServerGroupName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private MasterSlaveServerGroup(Builder builder) {
@@ -438,7 +437,7 @@ public class DescribeMasterSlaveServerGroupsResponseBody extends TeaModel {
 
     }
     public static class MasterSlaveServerGroups extends TeaModel {
-        @NameInMap("MasterSlaveServerGroup")
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroup")
         private java.util.List < MasterSlaveServerGroup> masterSlaveServerGroup;
 
         private MasterSlaveServerGroups(Builder builder) {

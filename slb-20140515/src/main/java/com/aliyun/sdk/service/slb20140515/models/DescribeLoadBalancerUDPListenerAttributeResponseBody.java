@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerUDPListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaModel {
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
     private Integer backendServerPort;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckConnectTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
     private Integer healthCheckConnectTimeout;
 
-    @NameInMap("HealthCheckExp")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
     private String healthCheckExp;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckReq")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
     private String healthCheckReq;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private Integer listenerPort;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("MasterSlaveServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupId")
     private String masterSlaveServerGroupId;
 
-    @NameInMap("ProxyProtocolV2Enabled")
+    @com.aliyun.core.annotation.NameInMap("ProxyProtocolV2Enabled")
     private Boolean proxyProtocolV2Enabled;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
     private DescribeLoadBalancerUDPListenerAttributeResponseBody(Builder builder) {
@@ -527,10 +526,10 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -588,7 +587,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

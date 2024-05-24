@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,145 +11,145 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerHTTPSListenerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaModel {
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclStatus")
+    @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
-    @NameInMap("AclType")
+    @com.aliyun.core.annotation.NameInMap("AclType")
     private String aclType;
 
-    @NameInMap("BackendServerPort")
+    @com.aliyun.core.annotation.NameInMap("BackendServerPort")
     private Integer backendServerPort;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("CACertificateId")
+    @com.aliyun.core.annotation.NameInMap("CACertificateId")
     private String CACertificateId;
 
-    @NameInMap("Cookie")
+    @com.aliyun.core.annotation.NameInMap("Cookie")
     private String cookie;
 
-    @NameInMap("CookieTimeout")
+    @com.aliyun.core.annotation.NameInMap("CookieTimeout")
     private Integer cookieTimeout;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DomainExtensions")
+    @com.aliyun.core.annotation.NameInMap("DomainExtensions")
     private DomainExtensions domainExtensions;
 
-    @NameInMap("EnableHttp2")
+    @com.aliyun.core.annotation.NameInMap("EnableHttp2")
     private String enableHttp2;
 
-    @NameInMap("Gzip")
+    @com.aliyun.core.annotation.NameInMap("Gzip")
     private String gzip;
 
-    @NameInMap("HealthCheck")
+    @com.aliyun.core.annotation.NameInMap("HealthCheck")
     private String healthCheck;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckDomain")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
     private String healthCheckDomain;
 
-    @NameInMap("HealthCheckHttpCode")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
     private String healthCheckHttpCode;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
     private Integer healthCheckTimeout;
 
-    @NameInMap("HealthCheckURI")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
     private String healthCheckURI;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
     private Integer listenerPort;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @NameInMap("SecurityStatus")
+    @com.aliyun.core.annotation.NameInMap("SecurityStatus")
     private String securityStatus;
 
-    @NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
     private String serverCertificateId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("StickySession")
+    @com.aliyun.core.annotation.NameInMap("StickySession")
     private String stickySession;
 
-    @NameInMap("StickySessionType")
+    @com.aliyun.core.annotation.NameInMap("StickySessionType")
     private String stickySessionType;
 
-    @NameInMap("TLSCipherPolicy")
+    @com.aliyun.core.annotation.NameInMap("TLSCipherPolicy")
     private String TLSCipherPolicy;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
-    @NameInMap("VServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("VServerGroupId")
     private String vServerGroupId;
 
-    @NameInMap("XForwardedFor")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor")
     private String xForwardedFor;
 
-    @NameInMap("XForwardedFor_ClientCertClientVerify")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientCertClientVerify")
     private String xForwardedForClientCertClientVerify;
 
-    @NameInMap("XForwardedFor_ClientCertFingerprint")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientCertFingerprint")
     private String xForwardedForClientCertFingerprint;
 
-    @NameInMap("XForwardedFor_ClientCertIssuerDN")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientCertIssuerDN")
     private String xForwardedForClientCertIssuerDN;
 
-    @NameInMap("XForwardedFor_ClientCertSubjectDN")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientCertSubjectDN")
     private String xForwardedForClientCertSubjectDN;
 
-    @NameInMap("XForwardedFor_ClientSrcPort")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_ClientSrcPort")
     private String xForwardedForClientSrcPort;
 
-    @NameInMap("XForwardedFor_SLBID")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBID")
     private String xForwardedForSLBID;
 
-    @NameInMap("XForwardedFor_SLBIP")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBIP")
     private String xForwardedForSLBIP;
 
-    @NameInMap("XForwardedFor_SLBPORT")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_SLBPORT")
     private String xForwardedForSLBPORT;
 
-    @NameInMap("XForwardedFor_proto")
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor_proto")
     private String xForwardedForProto;
 
     private DescribeLoadBalancerHTTPSListenerAttributeResponseBody(Builder builder) {
@@ -1114,13 +1113,13 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
     } 
 
     public static class DomainExtension extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainExtensionId")
+        @com.aliyun.core.annotation.NameInMap("DomainExtensionId")
         private String domainExtensionId;
 
-        @NameInMap("ServerCertificateId")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
         private String serverCertificateId;
 
         private DomainExtension(Builder builder) {
@@ -1195,7 +1194,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
     public static class DomainExtensions extends TeaModel {
-        @NameInMap("DomainExtension")
+        @com.aliyun.core.annotation.NameInMap("DomainExtension")
         private java.util.List < DomainExtension> domainExtension;
 
         private DomainExtensions(Builder builder) {
@@ -1236,19 +1235,19 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
     public static class Rule extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
         private Rule(Builder builder) {
@@ -1357,7 +1356,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {
@@ -1398,10 +1397,10 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -1459,7 +1458,7 @@ public class DescribeLoadBalancerHTTPSListenerAttributeResponseBody extends TeaM
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

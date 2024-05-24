@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMasterSlaveServerGroupResponseBody</p>
  */
 public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
-    @NameInMap("MasterSlaveBackendServers")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServers")
     private MasterSlaveBackendServers masterSlaveBackendServers;
 
-    @NameInMap("MasterSlaveServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupId")
     private String masterSlaveServerGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMasterSlaveServerGroupResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
     } 
 
     public static class MasterSlaveBackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private MasterSlaveBackendServer(Builder builder) {
@@ -240,7 +239,7 @@ public class CreateMasterSlaveServerGroupResponseBody extends TeaModel {
 
     }
     public static class MasterSlaveBackendServers extends TeaModel {
-        @NameInMap("MasterSlaveBackendServer")
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServer")
         private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer;
 
         private MasterSlaveBackendServers(Builder builder) {

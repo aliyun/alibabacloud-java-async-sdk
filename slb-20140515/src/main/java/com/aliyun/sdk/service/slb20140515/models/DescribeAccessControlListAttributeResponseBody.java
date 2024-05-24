@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessControlListAttributeResponseBody</p>
  */
 public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
-    @NameInMap("AclEntrys")
+    @com.aliyun.core.annotation.NameInMap("AclEntrys")
     private AclEntrys aclEntrys;
 
-    @NameInMap("AclId")
+    @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
-    @NameInMap("AclName")
+    @com.aliyun.core.annotation.NameInMap("AclName")
     private String aclName;
 
-    @NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("RelatedListeners")
+    @com.aliyun.core.annotation.NameInMap("RelatedListeners")
     private RelatedListeners relatedListeners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("TotalAclEntry")
+    @com.aliyun.core.annotation.NameInMap("TotalAclEntry")
     private Integer totalAclEntry;
 
     private DescribeAccessControlListAttributeResponseBody(Builder builder) {
@@ -236,10 +235,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
     } 
 
     public static class AclEntry extends TeaModel {
-        @NameInMap("AclEntryComment")
+        @com.aliyun.core.annotation.NameInMap("AclEntryComment")
         private String aclEntryComment;
 
-        @NameInMap("AclEntryIP")
+        @com.aliyun.core.annotation.NameInMap("AclEntryIP")
         private String aclEntryIP;
 
         private AclEntry(Builder builder) {
@@ -297,7 +296,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class AclEntrys extends TeaModel {
-        @NameInMap("AclEntry")
+        @com.aliyun.core.annotation.NameInMap("AclEntry")
         private java.util.List < AclEntry> aclEntry;
 
         private AclEntrys(Builder builder) {
@@ -338,16 +337,16 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class RelatedListener extends TeaModel {
-        @NameInMap("AclType")
+        @com.aliyun.core.annotation.NameInMap("AclType")
         private String aclType;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private RelatedListener(Builder builder) {
@@ -443,7 +442,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("RelatedListener")
+        @com.aliyun.core.annotation.NameInMap("RelatedListener")
         private java.util.List < RelatedListener> relatedListener;
 
         private RelatedListeners(Builder builder) {
@@ -484,10 +483,10 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -545,7 +544,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

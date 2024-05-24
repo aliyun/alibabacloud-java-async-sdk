@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTLSCipherPoliciesResponseBody</p>
  */
 public class ListTLSCipherPoliciesResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TLSCipherPolicies")
+    @com.aliyun.core.annotation.NameInMap("TLSCipherPolicies")
     private java.util.List < TLSCipherPolicies> TLSCipherPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListTLSCipherPoliciesResponseBody(Builder builder) {
@@ -140,13 +139,13 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
     } 
 
     public static class RelateListeners extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private RelateListeners(Builder builder) {
@@ -227,25 +226,25 @@ public class ListTLSCipherPoliciesResponseBody extends TeaModel {
 
     }
     public static class TLSCipherPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RelateListeners")
+        @com.aliyun.core.annotation.NameInMap("RelateListeners")
         private java.util.List < RelateListeners> relateListeners;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TLSVersions")
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
         private java.util.List < String > TLSVersions;
 
         private TLSCipherPolicies(Builder builder) {

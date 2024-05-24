@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRulesResponseBody</p>
  */
 public class DescribeRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private Rules rules;
 
     private DescribeRulesResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class DescribeRulesResponseBody extends TeaModel {
     } 
 
     public static class Rule extends TeaModel {
-        @NameInMap("Cookie")
+        @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
-        @NameInMap("CookieTimeout")
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
         private Integer cookieTimeout;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private String healthCheck;
 
-        @NameInMap("HealthCheckConnectPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         private Integer healthCheckConnectPort;
 
-        @NameInMap("HealthCheckDomain")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
         private String healthCheckDomain;
 
-        @NameInMap("HealthCheckHttpCode")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private String healthCheckHttpCode;
 
-        @NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckTimeout")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
         private Integer healthCheckTimeout;
 
-        @NameInMap("HealthCheckURI")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckURI")
         private String healthCheckURI;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("ListenerSync")
+        @com.aliyun.core.annotation.NameInMap("ListenerSync")
         private String listenerSync;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private String ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("Scheduler")
+        @com.aliyun.core.annotation.NameInMap("Scheduler")
         private String scheduler;
 
-        @NameInMap("StickySession")
+        @com.aliyun.core.annotation.NameInMap("StickySession")
         private String stickySession;
 
-        @NameInMap("StickySessionType")
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
         private String stickySessionType;
 
-        @NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("VServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("VServerGroupId")
         private String vServerGroupId;
 
         private Rule(Builder builder) {
@@ -574,7 +573,7 @@ public class DescribeRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Rule")
+        @com.aliyun.core.annotation.NameInMap("Rule")
         private java.util.List < Rule> rule;
 
         private Rules(Builder builder) {

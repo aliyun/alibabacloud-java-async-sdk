@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,112 +11,112 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancerAttributeResponseBody</p>
  */
 public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @NameInMap("AddressIPVersion")
+    @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
     private String addressIPVersion;
 
-    @NameInMap("AddressType")
+    @com.aliyun.core.annotation.NameInMap("AddressType")
     private String addressType;
 
-    @NameInMap("AutoReleaseTime")
+    @com.aliyun.core.annotation.NameInMap("AutoReleaseTime")
     private Long autoReleaseTime;
 
-    @NameInMap("BackendServers")
+    @com.aliyun.core.annotation.NameInMap("BackendServers")
     private BackendServers backendServers;
 
-    @NameInMap("Bandwidth")
+    @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimeStamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
     private Long createTimeStamp;
 
-    @NameInMap("DeleteProtection")
+    @com.aliyun.core.annotation.NameInMap("DeleteProtection")
     private String deleteProtection;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("EndTimeStamp")
+    @com.aliyun.core.annotation.NameInMap("EndTimeStamp")
     private Long endTimeStamp;
 
-    @NameInMap("InstanceChargeType")
+    @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
     private String instanceChargeType;
 
-    @NameInMap("InternetChargeType")
+    @com.aliyun.core.annotation.NameInMap("InternetChargeType")
     private String internetChargeType;
 
-    @NameInMap("ListenerPorts")
+    @com.aliyun.core.annotation.NameInMap("ListenerPorts")
     private ListenerPorts listenerPorts;
 
-    @NameInMap("ListenerPortsAndProtocal")
+    @com.aliyun.core.annotation.NameInMap("ListenerPortsAndProtocal")
     private ListenerPortsAndProtocal listenerPortsAndProtocal;
 
-    @NameInMap("ListenerPortsAndProtocol")
+    @com.aliyun.core.annotation.NameInMap("ListenerPortsAndProtocol")
     private ListenerPortsAndProtocol listenerPortsAndProtocol;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @NameInMap("LoadBalancerSpec")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
     private String loadBalancerSpec;
 
-    @NameInMap("LoadBalancerStatus")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
     private String loadBalancerStatus;
 
-    @NameInMap("MasterZoneId")
+    @com.aliyun.core.annotation.NameInMap("MasterZoneId")
     private String masterZoneId;
 
-    @NameInMap("ModificationProtectionReason")
+    @com.aliyun.core.annotation.NameInMap("ModificationProtectionReason")
     private String modificationProtectionReason;
 
-    @NameInMap("ModificationProtectionStatus")
+    @com.aliyun.core.annotation.NameInMap("ModificationProtectionStatus")
     private String modificationProtectionStatus;
 
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RegionIdAlias")
+    @com.aliyun.core.annotation.NameInMap("RegionIdAlias")
     private String regionIdAlias;
 
-    @NameInMap("RenewalCycUnit")
+    @com.aliyun.core.annotation.NameInMap("RenewalCycUnit")
     private String renewalCycUnit;
 
-    @NameInMap("RenewalDuration")
+    @com.aliyun.core.annotation.NameInMap("RenewalDuration")
     private Integer renewalDuration;
 
-    @NameInMap("RenewalStatus")
+    @com.aliyun.core.annotation.NameInMap("RenewalStatus")
     private String renewalStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SlaveZoneId")
+    @com.aliyun.core.annotation.NameInMap("SlaveZoneId")
     private String slaveZoneId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private DescribeLoadBalancerAttributeResponseBody(Builder builder) {
@@ -803,19 +802,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     } 
 
     public static class BackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private BackendServer(Builder builder) {
@@ -927,7 +926,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class BackendServers extends TeaModel {
-        @NameInMap("BackendServer")
+        @com.aliyun.core.annotation.NameInMap("BackendServer")
         private java.util.List < BackendServer> backendServer;
 
         private BackendServers(Builder builder) {
@@ -968,7 +967,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPorts extends TeaModel {
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private java.util.List < Integer > listenerPort;
 
         private ListenerPorts(Builder builder) {
@@ -1009,10 +1008,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPortAndProtocal extends TeaModel {
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocal")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocal")
         private String listenerProtocal;
 
         private ListenerPortAndProtocal(Builder builder) {
@@ -1070,7 +1069,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPortsAndProtocal extends TeaModel {
-        @NameInMap("ListenerPortAndProtocal")
+        @com.aliyun.core.annotation.NameInMap("ListenerPortAndProtocal")
         private java.util.List < ListenerPortAndProtocal> listenerPortAndProtocal;
 
         private ListenerPortsAndProtocal(Builder builder) {
@@ -1111,19 +1110,19 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPortAndProtocol extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ForwardPort")
+        @com.aliyun.core.annotation.NameInMap("ForwardPort")
         private Integer forwardPort;
 
-        @NameInMap("ListenerForward")
+        @com.aliyun.core.annotation.NameInMap("ListenerForward")
         private String listenerForward;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
         private ListenerPortAndProtocol(Builder builder) {
@@ -1232,7 +1231,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class ListenerPortsAndProtocol extends TeaModel {
-        @NameInMap("ListenerPortAndProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerPortAndProtocol")
         private java.util.List < ListenerPortAndProtocol> listenerPortAndProtocol;
 
         private ListenerPortsAndProtocol(Builder builder) {
@@ -1273,10 +1272,10 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -1340,7 +1339,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

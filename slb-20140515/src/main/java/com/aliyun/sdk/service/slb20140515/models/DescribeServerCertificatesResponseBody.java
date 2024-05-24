@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServerCertificatesResponseBody</p>
  */
 public class DescribeServerCertificatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerCertificates")
+    @com.aliyun.core.annotation.NameInMap("ServerCertificates")
     private ServerCertificates serverCertificates;
 
     private DescribeServerCertificatesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
     } 
 
     public static class SubjectAlternativeNames extends TeaModel {
-        @NameInMap("SubjectAlternativeName")
+        @com.aliyun.core.annotation.NameInMap("SubjectAlternativeName")
         private java.util.List < String > subjectAlternativeName;
 
         private SubjectAlternativeNames(Builder builder) {
@@ -113,10 +112,10 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -174,7 +173,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -215,49 +214,49 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
     }
     public static class ServerCertificate extends TeaModel {
-        @NameInMap("AliCloudCertificateId")
+        @com.aliyun.core.annotation.NameInMap("AliCloudCertificateId")
         private String aliCloudCertificateId;
 
-        @NameInMap("AliCloudCertificateName")
+        @com.aliyun.core.annotation.NameInMap("AliCloudCertificateName")
         private String aliCloudCertificateName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpireTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("ExpireTimeStamp")
         private Long expireTimeStamp;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("IsAliCloudCertificate")
+        @com.aliyun.core.annotation.NameInMap("IsAliCloudCertificate")
         private Integer isAliCloudCertificate;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("ServerCertificateId")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
         private String serverCertificateId;
 
-        @NameInMap("ServerCertificateName")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateName")
         private String serverCertificateName;
 
-        @NameInMap("SubjectAlternativeNames")
+        @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
         private SubjectAlternativeNames subjectAlternativeNames;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private ServerCertificate(Builder builder) {
@@ -540,7 +539,7 @@ public class DescribeServerCertificatesResponseBody extends TeaModel {
 
     }
     public static class ServerCertificates extends TeaModel {
-        @NameInMap("ServerCertificate")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificate")
         private java.util.List < ServerCertificate> serverCertificate;
 
         private ServerCertificates(Builder builder) {

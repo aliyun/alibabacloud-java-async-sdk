@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLoadBalancersResponseBody</p>
  */
 public class DescribeLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     private LoadBalancers loadBalancers;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLoadBalancersResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -234,82 +233,82 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancer extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("Bandwidth")
+        @com.aliyun.core.annotation.NameInMap("Bandwidth")
         private Integer bandwidth;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("DeleteProtection")
+        @com.aliyun.core.annotation.NameInMap("DeleteProtection")
         private String deleteProtection;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InternetChargeType")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeType")
         private String internetChargeType;
 
-        @NameInMap("InternetChargeTypeAlias")
+        @com.aliyun.core.annotation.NameInMap("InternetChargeTypeAlias")
         private String internetChargeTypeAlias;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerSpec")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerSpec")
         private String loadBalancerSpec;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("MasterZoneId")
+        @com.aliyun.core.annotation.NameInMap("MasterZoneId")
         private String masterZoneId;
 
-        @NameInMap("ModificationProtectionReason")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionReason")
         private String modificationProtectionReason;
 
-        @NameInMap("ModificationProtectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionStatus")
         private String modificationProtectionStatus;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionIdAlias")
+        @com.aliyun.core.annotation.NameInMap("RegionIdAlias")
         private String regionIdAlias;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SlaveZoneId")
+        @com.aliyun.core.annotation.NameInMap("SlaveZoneId")
         private String slaveZoneId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private LoadBalancer(Builder builder) {
@@ -822,7 +821,7 @@ public class DescribeLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("LoadBalancer")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancer")
         private java.util.List < LoadBalancer> loadBalancer;
 
         private LoadBalancers(Builder builder) {

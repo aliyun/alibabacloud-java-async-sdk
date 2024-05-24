@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainExtensionsResponseBody</p>
  */
 public class DescribeDomainExtensionsResponseBody extends TeaModel {
-    @NameInMap("DomainExtensions")
+    @com.aliyun.core.annotation.NameInMap("DomainExtensions")
     private DomainExtensions domainExtensions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDomainExtensionsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
     } 
 
     public static class DomainExtension extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainExtensionId")
+        @com.aliyun.core.annotation.NameInMap("DomainExtensionId")
         private String domainExtensionId;
 
-        @NameInMap("ServerCertificateId")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
         private String serverCertificateId;
 
         private DomainExtension(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeDomainExtensionsResponseBody extends TeaModel {
 
     }
     public static class DomainExtensions extends TeaModel {
-        @NameInMap("DomainExtension")
+        @com.aliyun.core.annotation.NameInMap("DomainExtension")
         private java.util.List < DomainExtension> domainExtension;
 
         private DomainExtensions(Builder builder) {

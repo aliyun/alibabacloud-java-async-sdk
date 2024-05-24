@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMasterSlaveServerGroupAttributeResponseBody</p>
  */
 public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaModel {
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
     private String loadBalancerId;
 
-    @NameInMap("MasterSlaveBackendServers")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServers")
     private MasterSlaveBackendServers masterSlaveBackendServers;
 
-    @NameInMap("MasterSlaveServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupId")
     private String masterSlaveServerGroupId;
 
-    @NameInMap("MasterSlaveServerGroupName")
+    @com.aliyun.core.annotation.NameInMap("MasterSlaveServerGroupName")
     private String masterSlaveServerGroupName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
     private DescribeMasterSlaveServerGroupAttributeResponseBody(Builder builder) {
@@ -172,22 +171,22 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
     } 
 
     public static class MasterSlaveBackendServer extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private MasterSlaveBackendServer(Builder builder) {
@@ -317,7 +316,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     }
     public static class MasterSlaveBackendServers extends TeaModel {
-        @NameInMap("MasterSlaveBackendServer")
+        @com.aliyun.core.annotation.NameInMap("MasterSlaveBackendServer")
         private java.util.List < MasterSlaveBackendServer> masterSlaveBackendServer;
 
         private MasterSlaveBackendServers(Builder builder) {
@@ -358,10 +357,10 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -419,7 +418,7 @@ public class DescribeMasterSlaveServerGroupAttributeResponseBody extends TeaMode
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

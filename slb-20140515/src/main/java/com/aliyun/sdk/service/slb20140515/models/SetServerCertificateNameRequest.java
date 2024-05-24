@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetServerCertificateNameRequest</p>
  */
 public class SetServerCertificateNameRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ServerCertificateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverCertificateId;
 
-    @Query
-    @NameInMap("ServerCertificateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerCertificateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverCertificateName;
 
     private SetServerCertificateNameRequest(Builder builder) {
@@ -159,10 +158,7 @@ public class SetServerCertificateNameRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the Server Load Balancer (SLB) instance belongs.
-         * <p>
-         * 
-         * To query the region ID, call [DescribeRegions](~~27584~~).
+         * The region ID of the Classic Load Balancer (CLB) instance. You can call the [DescribeRegions](~~2401682~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,10 +194,7 @@ public class SetServerCertificateNameRequest extends Request {
         }
 
         /**
-         * The name of the server certificate.
-         * <p>
-         * 
-         * The name must be 1 to 80 characters in length. It must start with an English letter. It can contain letters, numbers, periods (.), underscores (\_), and hyphens (-).
+         * The name of the third-party server certificate that you want to upload. The name must be 1 to 80 characters in length, and can contain letters, digits, hyphens (-), forward slashes (/), periods (.), underscores (\_), and asterisks (\*).
          */
         public Builder serverCertificateName(String serverCertificateName) {
             this.putQueryParameter("ServerCertificateName", serverCertificateName);

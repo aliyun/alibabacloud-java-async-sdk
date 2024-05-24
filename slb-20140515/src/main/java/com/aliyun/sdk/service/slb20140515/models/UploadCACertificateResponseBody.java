@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadCACertificateResponseBody</p>
  */
 public class UploadCACertificateResponseBody extends TeaModel {
-    @NameInMap("CACertificateId")
+    @com.aliyun.core.annotation.NameInMap("CACertificateId")
     private String CACertificateId;
 
-    @NameInMap("CACertificateName")
+    @com.aliyun.core.annotation.NameInMap("CACertificateName")
     private String CACertificateName;
 
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CreateTimeStamp")
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
     private Long createTimeStamp;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpireTimeStamp")
+    @com.aliyun.core.annotation.NameInMap("ExpireTimeStamp")
     private Long expireTimeStamp;
 
-    @NameInMap("Fingerprint")
+    @com.aliyun.core.annotation.NameInMap("Fingerprint")
     private String fingerprint;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
     private UploadCACertificateResponseBody(Builder builder) {

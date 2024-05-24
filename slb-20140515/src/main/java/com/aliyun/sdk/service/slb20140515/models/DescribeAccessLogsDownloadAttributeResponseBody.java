@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessLogsDownloadAttributeResponseBody</p>
  */
 public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
-    @NameInMap("LogsDownloadAttributes")
+    @com.aliyun.core.annotation.NameInMap("LogsDownloadAttributes")
     private LogsDownloadAttributes logsDownloadAttributes;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessLogsDownloadAttributeResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
     } 
 
     public static class LogsDownloadAttribute extends TeaModel {
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LogProject")
+        @com.aliyun.core.annotation.NameInMap("LogProject")
         private String logProject;
 
-        @NameInMap("LogStore")
+        @com.aliyun.core.annotation.NameInMap("LogStore")
         private String logStore;
 
-        @NameInMap("LogType")
+        @com.aliyun.core.annotation.NameInMap("LogType")
         private String logType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
         private LogsDownloadAttribute(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeAccessLogsDownloadAttributeResponseBody extends TeaModel {
 
     }
     public static class LogsDownloadAttributes extends TeaModel {
-        @NameInMap("LogsDownloadAttribute")
+        @com.aliyun.core.annotation.NameInMap("LogsDownloadAttribute")
         private java.util.List < LogsDownloadAttribute> logsDownloadAttribute;
 
         private LogsDownloadAttributes(Builder builder) {

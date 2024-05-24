@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.slb20140515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCACertificatesResponseBody</p>
  */
 public class DescribeCACertificatesResponseBody extends TeaModel {
-    @NameInMap("CACertificates")
+    @com.aliyun.core.annotation.NameInMap("CACertificates")
     private CACertificates CACertificates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCACertificatesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tag(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {
@@ -174,37 +173,37 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     }
     public static class CACertificate extends TeaModel {
-        @NameInMap("CACertificateId")
+        @com.aliyun.core.annotation.NameInMap("CACertificateId")
         private String CACertificateId;
 
-        @NameInMap("CACertificateName")
+        @com.aliyun.core.annotation.NameInMap("CACertificateName")
         private String CACertificateName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("ExpireTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("ExpireTimeStamp")
         private Long expireTimeStamp;
 
-        @NameInMap("Fingerprint")
+        @com.aliyun.core.annotation.NameInMap("Fingerprint")
         private String fingerprint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
 
         private CACertificate(Builder builder) {
@@ -421,7 +420,7 @@ public class DescribeCACertificatesResponseBody extends TeaModel {
 
     }
     public static class CACertificates extends TeaModel {
-        @NameInMap("CACertificate")
+        @com.aliyun.core.annotation.NameInMap("CACertificate")
         private java.util.List < CACertificate> CACertificate;
 
         private CACertificates(Builder builder) {
