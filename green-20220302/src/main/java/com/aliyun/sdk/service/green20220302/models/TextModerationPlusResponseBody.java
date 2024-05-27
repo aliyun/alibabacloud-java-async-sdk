@@ -114,8 +114,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Answer")
         private String answer;
 
+        @com.aliyun.core.annotation.NameInMap("HitLabel")
+        private String hitLabel;
+
+        @com.aliyun.core.annotation.NameInMap("HitLibName")
+        private String hitLibName;
+
         private Advice(Builder builder) {
             this.answer = builder.answer;
+            this.hitLabel = builder.hitLabel;
+            this.hitLibName = builder.hitLibName;
         }
 
         public static Builder builder() {
@@ -133,14 +141,46 @@ public class TextModerationPlusResponseBody extends TeaModel {
             return this.answer;
         }
 
+        /**
+         * @return hitLabel
+         */
+        public String getHitLabel() {
+            return this.hitLabel;
+        }
+
+        /**
+         * @return hitLibName
+         */
+        public String getHitLibName() {
+            return this.hitLibName;
+        }
+
         public static final class Builder {
             private String answer; 
+            private String hitLabel; 
+            private String hitLibName; 
 
             /**
              * Answer.
              */
             public Builder answer(String answer) {
                 this.answer = answer;
+                return this;
+            }
+
+            /**
+             * HitLabel.
+             */
+            public Builder hitLabel(String hitLabel) {
+                this.hitLabel = hitLabel;
+                return this;
+            }
+
+            /**
+             * HitLibName.
+             */
+            public Builder hitLibName(String hitLibName) {
+                this.hitLibName = hitLibName;
                 return this;
             }
 
