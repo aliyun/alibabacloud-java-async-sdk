@@ -150,6 +150,67 @@ public class GetQueueAttributesResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class Data extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ActiveMessages")
         private Long activeMessages;
@@ -184,6 +245,9 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("VisibilityTimeout")
         private Long visibilityTimeout;
 
@@ -199,6 +263,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
             this.pollingWaitSeconds = builder.pollingWaitSeconds;
             this.queueName = builder.queueName;
+            this.tags = builder.tags;
             this.visibilityTimeout = builder.visibilityTimeout;
         }
 
@@ -288,6 +353,13 @@ public class GetQueueAttributesResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return visibilityTimeout
          */
         public Long getVisibilityTimeout() {
@@ -306,6 +378,7 @@ public class GetQueueAttributesResponseBody extends TeaModel {
             private Long messageRetentionPeriod; 
             private Long pollingWaitSeconds; 
             private String queueName; 
+            private java.util.List < Tags> tags; 
             private Long visibilityTimeout; 
 
             /**
@@ -393,6 +466,14 @@ public class GetQueueAttributesResponseBody extends TeaModel {
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

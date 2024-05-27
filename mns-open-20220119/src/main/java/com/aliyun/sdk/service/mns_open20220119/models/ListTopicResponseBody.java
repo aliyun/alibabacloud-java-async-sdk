@@ -150,6 +150,67 @@ public class ListTopicResponseBody extends TeaModel {
 
     } 
 
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private Tags(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class PageData extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
@@ -169,6 +230,9 @@ public class ListTopicResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MessageRetentionPeriod")
         private Long messageRetentionPeriod;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("TopicInnerUrl")
         private String topicInnerUrl;
 
@@ -185,6 +249,7 @@ public class ListTopicResponseBody extends TeaModel {
             this.maxMessageSize = builder.maxMessageSize;
             this.messageCount = builder.messageCount;
             this.messageRetentionPeriod = builder.messageRetentionPeriod;
+            this.tags = builder.tags;
             this.topicInnerUrl = builder.topicInnerUrl;
             this.topicName = builder.topicName;
             this.topicUrl = builder.topicUrl;
@@ -241,6 +306,13 @@ public class ListTopicResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return topicInnerUrl
          */
         public String getTopicInnerUrl() {
@@ -268,6 +340,7 @@ public class ListTopicResponseBody extends TeaModel {
             private Long maxMessageSize; 
             private Long messageCount; 
             private Long messageRetentionPeriod; 
+            private java.util.List < Tags> tags; 
             private String topicInnerUrl; 
             private String topicName; 
             private String topicUrl; 
@@ -317,6 +390,14 @@ public class ListTopicResponseBody extends TeaModel {
              */
             public Builder messageRetentionPeriod(Long messageRetentionPeriod) {
                 this.messageRetentionPeriod = messageRetentionPeriod;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

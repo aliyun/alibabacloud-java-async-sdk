@@ -23,6 +23,10 @@ public class CreateTopicRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("MaxMessageSize")
     private Long maxMessageSize;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TopicName")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -33,6 +37,7 @@ public class CreateTopicRequest extends Request {
         this.regionId = builder.regionId;
         this.enableLogging = builder.enableLogging;
         this.maxMessageSize = builder.maxMessageSize;
+        this.tag = builder.tag;
         this.topicName = builder.topicName;
     }
 
@@ -71,6 +76,13 @@ public class CreateTopicRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return topicName
      */
     public String getTopicName() {
@@ -81,6 +93,7 @@ public class CreateTopicRequest extends Request {
         private String regionId; 
         private Boolean enableLogging; 
         private Long maxMessageSize; 
+        private java.util.List < Tag> tag; 
         private String topicName; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class CreateTopicRequest extends Request {
             this.regionId = request.regionId;
             this.enableLogging = request.enableLogging;
             this.maxMessageSize = request.maxMessageSize;
+            this.tag = request.tag;
             this.topicName = request.topicName;
         } 
 
@@ -123,6 +137,15 @@ public class CreateTopicRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * TopicName.
          */
         public Builder topicName(String topicName) {
@@ -138,4 +161,65 @@ public class CreateTopicRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }
