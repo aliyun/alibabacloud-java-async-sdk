@@ -107,7 +107,7 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -116,7 +116,7 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * SessionList.
+         * The list of sessions to close.
          */
         public Builder sessionList(String sessionList) {
             this.putBodyParameter("SessionList", sessionList);
@@ -125,7 +125,7 @@ public class BatchKillProcessListRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);

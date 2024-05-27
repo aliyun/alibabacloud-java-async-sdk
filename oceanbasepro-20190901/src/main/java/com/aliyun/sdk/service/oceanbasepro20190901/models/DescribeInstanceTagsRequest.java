@@ -90,7 +90,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The list of tags.
+         * The list of cluster IDs.
          */
         public Builder instanceIds(String instanceIds) {
             this.putBodyParameter("InstanceIds", instanceIds);
@@ -99,7 +99,7 @@ public class DescribeInstanceTagsRequest extends Request {
         }
 
         /**
-         * The returned response.
+         * The tags.
          */
         public Builder tags(String tags) {
             this.putBodyParameter("Tags", tags);

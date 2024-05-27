@@ -49,7 +49,7 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
         private java.util.List < TagResources> tagResources; 
 
         /**
-         * The resource ID.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The list of tags.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -121,7 +121,7 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * You can call this operation to view the tag value of a cluster.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -129,7 +129,7 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of the resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -137,7 +137,7 @@ public class DescribeInstanceTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The tag of the resource.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

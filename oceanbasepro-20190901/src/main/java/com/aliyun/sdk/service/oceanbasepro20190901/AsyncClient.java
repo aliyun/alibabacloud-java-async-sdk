@@ -49,6 +49,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSecurityIpGroupResponse> createSecurityIpGroup(CreateSecurityIpGroupRequest request);
 
+    CompletableFuture<CreateTagResponse> createTag(CreateTagRequest request);
+
+    CompletableFuture<CreateTagValueResponse> createTagValue(CreateTagValueRequest request);
+
     CompletableFuture<CreateTenantResponse> createTenant(CreateTenantRequest request);
 
     CompletableFuture<CreateTenantReadOnlyConnectionResponse> createTenantReadOnlyConnection(CreateTenantReadOnlyConnectionRequest request);
@@ -72,6 +76,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteProjectResponse> deleteProject(DeleteProjectRequest request);
 
     CompletableFuture<DeleteSecurityIpGroupResponse> deleteSecurityIpGroup(DeleteSecurityIpGroupRequest request);
+
+    CompletableFuture<DeleteTagResponse> deleteTag(DeleteTagRequest request);
+
+    CompletableFuture<DeleteTagValueResponse> deleteTagValue(DeleteTagValueRequest request);
 
     CompletableFuture<DeleteTenantSecurityIpGroupResponse> deleteTenantSecurityIpGroup(DeleteTenantSecurityIpGroupRequest request);
 
@@ -165,6 +173,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSlowSQLListResponse> describeSlowSQLList(DescribeSlowSQLListRequest request);
 
+    CompletableFuture<DescribeTagValuesResponse> describeTagValues(DescribeTagValuesRequest request);
+
     CompletableFuture<DescribeTenantResponse> describeTenant(DescribeTenantRequest request);
 
     CompletableFuture<DescribeTenantEncryptionResponse> describeTenantEncryption(DescribeTenantEncryptionRequest request);
@@ -224,6 +234,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyParametersResponse> modifyParameters(ModifyParametersRequest request);
 
     CompletableFuture<ModifySecurityIpsResponse> modifySecurityIps(ModifySecurityIpsRequest request);
+
+    CompletableFuture<ModifyTagNameResponse> modifyTagName(ModifyTagNameRequest request);
+
+    CompletableFuture<ModifyTagValueNameResponse> modifyTagValueName(ModifyTagValueNameRequest request);
 
     CompletableFuture<ModifyTenantEncryptionResponse> modifyTenantEncryption(ModifyTenantEncryptionRequest request);
 

@@ -175,7 +175,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * ClientIp.
+         * The IP address of the client.
          */
         public Builder clientIp(String clientIp) {
             this.putBodyParameter("ClientIp", clientIp);
@@ -184,7 +184,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -193,7 +193,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * ServerIp.
+         * The IP address of the server.
          */
         public Builder serverIp(String serverIp) {
             this.putBodyParameter("ServerIp", serverIp);
@@ -202,7 +202,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * SqlText.
+         * The SQL statement. It supports LIKE clauses, and you may specify only part of the clauses in the SQL statement.
          */
         public Builder sqlText(String sqlText) {
             this.putBodyParameter("SqlText", sqlText);
@@ -211,7 +211,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * Status.
+         * The state of the session.
          */
         public Builder status(String status) {
             this.putBodyParameter("Status", status);
@@ -220,7 +220,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * TenantId.
+         * The ID of the tenant.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -229,7 +229,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * UId.
+         * The user identifier (UID) of OceanBase Database.
          */
         public Builder uId(String uId) {
             this.putBodyParameter("UId", uId);
@@ -238,7 +238,7 @@ public class DescribeProcessStatsCompositionRequest extends Request {
         }
 
         /**
-         * Users.
+         * The username that you use to log in to the database.
          */
         public Builder users(String users) {
             this.putBodyParameter("Users", users);

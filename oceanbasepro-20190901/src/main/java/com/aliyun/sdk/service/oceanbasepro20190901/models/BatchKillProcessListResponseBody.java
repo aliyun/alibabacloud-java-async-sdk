@@ -49,7 +49,7 @@ public class BatchKillProcessListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The array of the return result.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class BatchKillProcessListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class BatchKillProcessListResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Success.
+             * Indicates whether the calling is successful.
              */
             public Builder success(Boolean success) {
                 this.success = success;
