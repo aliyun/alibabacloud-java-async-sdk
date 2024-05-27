@@ -29,12 +29,17 @@ public class RepairClusterNodePoolRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("nodes")
     private java.util.List < String > nodes;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("operations")
+    private java.util.List < Operations> operations;
+
     private RepairClusterNodePoolRequest(Builder builder) {
         super(builder);
         this.clusterId = builder.clusterId;
         this.nodepoolId = builder.nodepoolId;
         this.autoRestart = builder.autoRestart;
         this.nodes = builder.nodes;
+        this.operations = builder.operations;
     }
 
     public static Builder builder() {
@@ -78,11 +83,19 @@ public class RepairClusterNodePoolRequest extends Request {
         return this.nodes;
     }
 
+    /**
+     * @return operations
+     */
+    public java.util.List < Operations> getOperations() {
+        return this.operations;
+    }
+
     public static final class Builder extends Request.Builder<RepairClusterNodePoolRequest, Builder> {
         private String clusterId; 
         private String nodepoolId; 
         private Boolean autoRestart; 
         private java.util.List < String > nodes; 
+        private java.util.List < Operations> operations; 
 
         private Builder() {
             super();
@@ -94,6 +107,7 @@ public class RepairClusterNodePoolRequest extends Request {
             this.nodepoolId = request.nodepoolId;
             this.autoRestart = request.autoRestart;
             this.nodes = request.nodes;
+            this.operations = request.operations;
         } 
 
         /**
@@ -132,6 +146,15 @@ public class RepairClusterNodePoolRequest extends Request {
             return this;
         }
 
+        /**
+         * operations.
+         */
+        public Builder operations(java.util.List < Operations> operations) {
+            this.putBodyParameter("operations", operations);
+            this.operations = operations;
+            return this;
+        }
+
         @Override
         public RepairClusterNodePoolRequest build() {
             return new RepairClusterNodePoolRequest(this);
@@ -139,4 +162,65 @@ public class RepairClusterNodePoolRequest extends Request {
 
     } 
 
+    public static class Operations extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("args")
+        private java.util.List < String > args;
+
+        @com.aliyun.core.annotation.NameInMap("operation_id")
+        private String operationId;
+
+        private Operations(Builder builder) {
+            this.args = builder.args;
+            this.operationId = builder.operationId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Operations create() {
+            return builder().build();
+        }
+
+        /**
+         * @return args
+         */
+        public java.util.List < String > getArgs() {
+            return this.args;
+        }
+
+        /**
+         * @return operationId
+         */
+        public String getOperationId() {
+            return this.operationId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > args; 
+            private String operationId; 
+
+            /**
+             * args.
+             */
+            public Builder args(java.util.List < String > args) {
+                this.args = args;
+                return this;
+            }
+
+            /**
+             * operation_id.
+             */
+            public Builder operationId(String operationId) {
+                this.operationId = operationId;
+                return this;
+            }
+
+            public Operations build() {
+                return new Operations(this);
+            } 
+
+        } 
+
+    }
 }
