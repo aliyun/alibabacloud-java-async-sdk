@@ -90,6 +90,107 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
 
     } 
 
+    public static class NatRouteEntryList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DestinationCidr")
+        private String destinationCidr;
+
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
+        private String nextHopId;
+
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
+        private String nextHopType;
+
+        @com.aliyun.core.annotation.NameInMap("RouteTableId")
+        private String routeTableId;
+
+        private NatRouteEntryList(Builder builder) {
+            this.destinationCidr = builder.destinationCidr;
+            this.nextHopId = builder.nextHopId;
+            this.nextHopType = builder.nextHopType;
+            this.routeTableId = builder.routeTableId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static NatRouteEntryList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return destinationCidr
+         */
+        public String getDestinationCidr() {
+            return this.destinationCidr;
+        }
+
+        /**
+         * @return nextHopId
+         */
+        public String getNextHopId() {
+            return this.nextHopId;
+        }
+
+        /**
+         * @return nextHopType
+         */
+        public String getNextHopType() {
+            return this.nextHopType;
+        }
+
+        /**
+         * @return routeTableId
+         */
+        public String getRouteTableId() {
+            return this.routeTableId;
+        }
+
+        public static final class Builder {
+            private String destinationCidr; 
+            private String nextHopId; 
+            private String nextHopType; 
+            private String routeTableId; 
+
+            /**
+             * DestinationCidr.
+             */
+            public Builder destinationCidr(String destinationCidr) {
+                this.destinationCidr = destinationCidr;
+                return this;
+            }
+
+            /**
+             * NextHopId.
+             */
+            public Builder nextHopId(String nextHopId) {
+                this.nextHopId = nextHopId;
+                return this;
+            }
+
+            /**
+             * NextHopType.
+             */
+            public Builder nextHopType(String nextHopType) {
+                this.nextHopType = nextHopType;
+                return this;
+            }
+
+            /**
+             * RouteTableId.
+             */
+            public Builder routeTableId(String routeTableId) {
+                this.routeTableId = routeTableId;
+                return this;
+            }
+
+            public NatRouteEntryList build() {
+                return new NatRouteEntryList(this);
+            } 
+
+        } 
+
+    }
     public static class NatFirewallList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
@@ -105,6 +206,9 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("NatGatewayName")
         private String natGatewayName;
+
+        @com.aliyun.core.annotation.NameInMap("NatRouteEntryList")
+        private java.util.List < NatRouteEntryList> natRouteEntryList;
 
         @com.aliyun.core.annotation.NameInMap("ProxyId")
         private String proxyId;
@@ -133,6 +237,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             this.memberUid = builder.memberUid;
             this.natGatewayId = builder.natGatewayId;
             this.natGatewayName = builder.natGatewayName;
+            this.natRouteEntryList = builder.natRouteEntryList;
             this.proxyId = builder.proxyId;
             this.proxyName = builder.proxyName;
             this.proxyStatus = builder.proxyStatus;
@@ -183,6 +288,13 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
          */
         public String getNatGatewayName() {
             return this.natGatewayName;
+        }
+
+        /**
+         * @return natRouteEntryList
+         */
+        public java.util.List < NatRouteEntryList> getNatRouteEntryList() {
+            return this.natRouteEntryList;
         }
 
         /**
@@ -240,6 +352,7 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
             private Long memberUid; 
             private String natGatewayId; 
             private String natGatewayName; 
+            private java.util.List < NatRouteEntryList> natRouteEntryList; 
             private String proxyId; 
             private String proxyName; 
             private String proxyStatus; 
@@ -285,6 +398,14 @@ public class DescribeNatFirewallListResponseBody extends TeaModel {
              */
             public Builder natGatewayName(String natGatewayName) {
                 this.natGatewayName = natGatewayName;
+                return this;
+            }
+
+            /**
+             * NatRouteEntryList.
+             */
+            public Builder natRouteEntryList(java.util.List < NatRouteEntryList> natRouteEntryList) {
+                this.natRouteEntryList = natRouteEntryList;
                 return this;
             }
 

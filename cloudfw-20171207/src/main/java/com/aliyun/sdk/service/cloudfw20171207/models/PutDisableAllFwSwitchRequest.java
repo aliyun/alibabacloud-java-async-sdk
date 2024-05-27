@@ -91,10 +91,10 @@ public class PutDisableAllFwSwitchRequest extends Request {
         }
 
         /**
-         * The natural language of the request and response. Valid values:
+         * The language of the content within the request and response. Valid values: Valid values:
          * <p>
          * 
-         * *   **zh**: Chinese (default)
+         * *   **zh** (default): Chinese
          * *   **en**: English
          */
         public Builder lang(String lang) {

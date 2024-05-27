@@ -363,7 +363,7 @@ public class DescribeNatFirewallControlPolicyRequest extends Request {
          * <p>
          * 
          * *   **Permanent** (default): The policy always takes effect.
-         * *   **None**: The policy takes effect for only once.
+         * *   **None**: The policy takes effect only once.
          * *   **Daily**: The policy takes effect on a daily basis.
          * *   **Weekly**: The policy takes effect on a weekly basis.
          * *   **Monthly**: The policy takes effect on a monthly basis.
