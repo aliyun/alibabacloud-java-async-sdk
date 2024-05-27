@@ -179,6 +179,9 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
+        @com.aliyun.core.annotation.NameInMap("BusinessStatus")
+        private String businessStatus;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -232,6 +235,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         private PublicIpAddressPoolList(Builder builder) {
             this.bizType = builder.bizType;
+            this.businessStatus = builder.businessStatus;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
             this.ipAddressRemaining = builder.ipAddressRemaining;
@@ -264,6 +268,13 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
          */
         public String getBizType() {
             return this.bizType;
+        }
+
+        /**
+         * @return businessStatus
+         */
+        public String getBusinessStatus() {
+            return this.businessStatus;
         }
 
         /**
@@ -387,6 +398,7 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bizType; 
+            private String businessStatus; 
             private String creationTime; 
             private String description; 
             private Boolean ipAddressRemaining; 
@@ -414,6 +426,14 @@ public class ListPublicIpAddressPoolsResponseBody extends TeaModel {
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
+                return this;
+            }
+
+            /**
+             * BusinessStatus.
+             */
+            public Builder businessStatus(String businessStatus) {
+                this.businessStatus = businessStatus;
                 return this;
             }
 
