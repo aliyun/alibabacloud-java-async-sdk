@@ -1514,47 +1514,6 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
     }
-    public static class CssMetadata extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
-        private java.util.List < ComponentsMappings> componentsMappings;
-
-        private CssMetadata(Builder builder) {
-            this.componentsMappings = builder.componentsMappings;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CssMetadata create() {
-            return builder().build();
-        }
-
-        /**
-         * @return componentsMappings
-         */
-        public java.util.List < ComponentsMappings> getComponentsMappings() {
-            return this.componentsMappings;
-        }
-
-        public static final class Builder {
-            private java.util.List < ComponentsMappings> componentsMappings; 
-
-            /**
-             * ComponentsMappings.
-             */
-            public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
-                this.componentsMappings = componentsMappings;
-                return this;
-            }
-
-            public CssMetadata build() {
-                return new CssMetadata(this);
-            } 
-
-        } 
-
-    }
     public static class MeteringEntityExtraInfos extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
@@ -1737,6 +1696,269 @@ public class GetServiceResponseBody extends TeaModel {
         } 
 
     }
+    public static class CssMetadata extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
+        private java.util.List < ComponentsMappings> componentsMappings;
+
+        @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
+        private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
+
+        @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
+        private java.util.List < MeteringEntityMappings> meteringEntityMappings;
+
+        private CssMetadata(Builder builder) {
+            this.componentsMappings = builder.componentsMappings;
+            this.meteringEntityExtraInfos = builder.meteringEntityExtraInfos;
+            this.meteringEntityMappings = builder.meteringEntityMappings;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CssMetadata create() {
+            return builder().build();
+        }
+
+        /**
+         * @return componentsMappings
+         */
+        public java.util.List < ComponentsMappings> getComponentsMappings() {
+            return this.componentsMappings;
+        }
+
+        /**
+         * @return meteringEntityExtraInfos
+         */
+        public java.util.List < MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+            return this.meteringEntityExtraInfos;
+        }
+
+        /**
+         * @return meteringEntityMappings
+         */
+        public java.util.List < MeteringEntityMappings> getMeteringEntityMappings() {
+            return this.meteringEntityMappings;
+        }
+
+        public static final class Builder {
+            private java.util.List < ComponentsMappings> componentsMappings; 
+            private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
+
+            /**
+             * ComponentsMappings.
+             */
+            public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
+                this.componentsMappings = componentsMappings;
+                return this;
+            }
+
+            /**
+             * MeteringEntityExtraInfos.
+             */
+            public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
+                this.meteringEntityExtraInfos = meteringEntityExtraInfos;
+                return this;
+            }
+
+            /**
+             * MeteringEntityMappings.
+             */
+            public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
+                this.meteringEntityMappings = meteringEntityMappings;
+                return this;
+            }
+
+            public CssMetadata build() {
+                return new CssMetadata(this);
+            } 
+
+        } 
+
+    }
+    public static class MarketplaceMetadataMeteringEntityExtraInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EntityId")
+        private String entityId;
+
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        private String metricName;
+
+        @com.aliyun.core.annotation.NameInMap("Promql")
+        private String promql;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
+        private String type;
+
+        private MarketplaceMetadataMeteringEntityExtraInfos(Builder builder) {
+            this.entityId = builder.entityId;
+            this.metricName = builder.metricName;
+            this.promql = builder.promql;
+            this.type = builder.type;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarketplaceMetadataMeteringEntityExtraInfos create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityId
+         */
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        /**
+         * @return metricName
+         */
+        public String getMetricName() {
+            return this.metricName;
+        }
+
+        /**
+         * @return promql
+         */
+        public String getPromql() {
+            return this.promql;
+        }
+
+        /**
+         * @return type
+         */
+        public String getType() {
+            return this.type;
+        }
+
+        public static final class Builder {
+            private String entityId; 
+            private String metricName; 
+            private String promql; 
+            private String type; 
+
+            /**
+             * EntityId.
+             */
+            public Builder entityId(String entityId) {
+                this.entityId = entityId;
+                return this;
+            }
+
+            /**
+             * MetricName.
+             */
+            public Builder metricName(String metricName) {
+                this.metricName = metricName;
+                return this;
+            }
+
+            /**
+             * Promql.
+             */
+            public Builder promql(String promql) {
+                this.promql = promql;
+                return this;
+            }
+
+            /**
+             * Type.
+             */
+            public Builder type(String type) {
+                this.type = type;
+                return this;
+            }
+
+            public MarketplaceMetadataMeteringEntityExtraInfos build() {
+                return new MarketplaceMetadataMeteringEntityExtraInfos(this);
+            } 
+
+        } 
+
+    }
+    public static class MarketplaceMetadataMeteringEntityMappings extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EntityIds")
+        private String entityIds;
+
+        @com.aliyun.core.annotation.NameInMap("SpecificationName")
+        private String specificationName;
+
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
+        private String templateName;
+
+        private MarketplaceMetadataMeteringEntityMappings(Builder builder) {
+            this.entityIds = builder.entityIds;
+            this.specificationName = builder.specificationName;
+            this.templateName = builder.templateName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MarketplaceMetadataMeteringEntityMappings create() {
+            return builder().build();
+        }
+
+        /**
+         * @return entityIds
+         */
+        public String getEntityIds() {
+            return this.entityIds;
+        }
+
+        /**
+         * @return specificationName
+         */
+        public String getSpecificationName() {
+            return this.specificationName;
+        }
+
+        /**
+         * @return templateName
+         */
+        public String getTemplateName() {
+            return this.templateName;
+        }
+
+        public static final class Builder {
+            private String entityIds; 
+            private String specificationName; 
+            private String templateName; 
+
+            /**
+             * EntityIds.
+             */
+            public Builder entityIds(String entityIds) {
+                this.entityIds = entityIds;
+                return this;
+            }
+
+            /**
+             * SpecificationName.
+             */
+            public Builder specificationName(String specificationName) {
+                this.specificationName = specificationName;
+                return this;
+            }
+
+            /**
+             * TemplateName.
+             */
+            public Builder templateName(String templateName) {
+                this.templateName = templateName;
+                return this;
+            }
+
+            public MarketplaceMetadataMeteringEntityMappings build() {
+                return new MarketplaceMetadataMeteringEntityMappings(this);
+            } 
+
+        } 
+
+    }
     public static class SpecificationMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SpecificationCode")
         private String specificationCode;
@@ -1840,10 +2062,10 @@ public class GetServiceResponseBody extends TeaModel {
     }
     public static class MarketplaceMetadata extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeteringEntityExtraInfos")
-        private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos;
+        private java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos;
 
         @com.aliyun.core.annotation.NameInMap("MeteringEntityMappings")
-        private java.util.List < MeteringEntityMappings> meteringEntityMappings;
+        private java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings;
 
         @com.aliyun.core.annotation.NameInMap("SpecificationMappings")
         private java.util.List < SpecificationMappings> specificationMappings;
@@ -1865,14 +2087,14 @@ public class GetServiceResponseBody extends TeaModel {
         /**
          * @return meteringEntityExtraInfos
          */
-        public java.util.List < MeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
+        public java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> getMeteringEntityExtraInfos() {
             return this.meteringEntityExtraInfos;
         }
 
         /**
          * @return meteringEntityMappings
          */
-        public java.util.List < MeteringEntityMappings> getMeteringEntityMappings() {
+        public java.util.List < MarketplaceMetadataMeteringEntityMappings> getMeteringEntityMappings() {
             return this.meteringEntityMappings;
         }
 
@@ -1884,14 +2106,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos; 
-            private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
+            private java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos; 
+            private java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings; 
             private java.util.List < SpecificationMappings> specificationMappings; 
 
             /**
              * MeteringEntityExtraInfos.
              */
-            public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
+            public Builder meteringEntityExtraInfos(java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
                 return this;
             }
@@ -1899,7 +2121,7 @@ public class GetServiceResponseBody extends TeaModel {
             /**
              * MeteringEntityMappings.
              */
-            public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
+            public Builder meteringEntityMappings(java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
                 return this;
             }
