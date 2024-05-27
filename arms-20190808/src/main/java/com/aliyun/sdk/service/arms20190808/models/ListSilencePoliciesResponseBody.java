@@ -210,10 +210,14 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("State")
+        private String state;
+
         private SilencePolicies(Builder builder) {
             this.id = builder.id;
             this.matchingRules = builder.matchingRules;
             this.name = builder.name;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -245,10 +249,18 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private Long id; 
             private java.util.List < MatchingRules> matchingRules; 
             private String name; 
+            private String state; 
 
             /**
              * The ID of the silence policy.
@@ -271,6 +283,14 @@ public class ListSilencePoliciesResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * State.
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 

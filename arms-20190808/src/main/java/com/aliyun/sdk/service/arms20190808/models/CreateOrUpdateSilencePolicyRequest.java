@@ -28,12 +28,17 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
+    private String state;
+
     private CreateOrUpdateSilencePolicyRequest(Builder builder) {
         super(builder);
         this.id = builder.id;
         this.matchingRules = builder.matchingRules;
         this.name = builder.name;
         this.regionId = builder.regionId;
+        this.state = builder.state;
     }
 
     public static Builder builder() {
@@ -77,11 +82,19 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return state
+     */
+    public String getState() {
+        return this.state;
+    }
+
     public static final class Builder extends Request.Builder<CreateOrUpdateSilencePolicyRequest, Builder> {
         private Long id; 
         private String matchingRules; 
         private String name; 
         private String regionId; 
+        private String state; 
 
         private Builder() {
             super();
@@ -93,6 +106,7 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
             this.matchingRules = request.matchingRules;
             this.name = request.name;
             this.regionId = request.regionId;
+            this.state = request.state;
         } 
 
         /**
@@ -145,6 +159,15 @@ public class CreateOrUpdateSilencePolicyRequest extends Request {
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * State.
+         */
+        public Builder state(String state) {
+            this.putBodyParameter("State", state);
+            this.state = state;
             return this;
         }
 

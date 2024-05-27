@@ -205,6 +205,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
 
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
+        private Boolean readOnly;
+
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
@@ -259,6 +262,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.paymentType = builder.paymentType;
             this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
             this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
+            this.readOnly = builder.readOnly;
             this.regionId = builder.regionId;
             this.remoteReadInterUrl = builder.remoteReadInterUrl;
             this.remoteReadIntraUrl = builder.remoteReadIntraUrl;
@@ -358,6 +362,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getPushGatewayIntraUrl() {
             return this.pushGatewayIntraUrl;
+        }
+
+        /**
+         * @return readOnly
+         */
+        public Boolean getReadOnly() {
+            return this.readOnly;
         }
 
         /**
@@ -470,6 +481,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String paymentType; 
             private String pushGatewayInterUrl; 
             private String pushGatewayIntraUrl; 
+            private Boolean readOnly; 
             private String regionId; 
             private String remoteReadInterUrl; 
             private String remoteReadIntraUrl; 
@@ -580,6 +592,14 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
+                return this;
+            }
+
+            /**
+             * ReadOnly.
+             */
+            public Builder readOnly(Boolean readOnly) {
+                this.readOnly = readOnly;
                 return this;
             }
 
