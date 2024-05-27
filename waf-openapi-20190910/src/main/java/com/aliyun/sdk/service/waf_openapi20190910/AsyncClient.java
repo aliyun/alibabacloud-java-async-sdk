@@ -49,6 +49,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDomainRuleGroupResponse> describeDomainRuleGroup(DescribeDomainRuleGroupRequest request);
 
+    /**
+      * ## Usage notes
+      * You can call the DescribeInstanceInfo operation to query the information about the WAF instance within your Alibaba Cloud account. The information includes the ID, version, status, and expiration time of the instance.
+      *
+     */
     CompletableFuture<DescribeInstanceInfoResponse> describeInstanceInfo(DescribeInstanceInfoRequest request);
 
     CompletableFuture<DescribeInstanceSpecInfoResponse> describeInstanceSpecInfo(DescribeInstanceSpecInfoRequest request);

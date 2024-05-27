@@ -49,7 +49,7 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * InstanceInfo.
+         * The information about the WAF instance.
          */
         public Builder instanceInfo(InstanceInfo instanceInfo) {
             this.instanceInfo = instanceInfo;
@@ -57,7 +57,7 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -205,7 +205,10 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * EndDate.
+             * The expiration time of the WAF instance. This value is a UNIX timestamp. Unit: seconds.
+             * <p>
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder endDate(Long endDate) {
                 this.endDate = endDate;
@@ -213,7 +216,13 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InDebt.
+             * Indicates whether the WAF instance has overdue payments. Valid values:
+             * <p>
+             * 
+             * *   **0**: The instance has overdue payments.
+             * *   **1**: The instance does not have overdue payments.
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder inDebt(Integer inDebt) {
                 this.inDebt = inDebt;
@@ -221,7 +230,10 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the WAF instance.
+             * <p>
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -229,7 +241,11 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The activation status of WAF. Valid values:
+             * <p>
+             * 
+             * *   **0**: No WAF instances are purchased within the Alibaba Cloud account.
+             * *   **1**: A subscription WAF instance is purchased within the Alibaba Cloud account.
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
@@ -237,7 +253,13 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The region in which the WAF instance resides. Valid values:
+             * <p>
+             * 
+             * *   **cn**: a region in the Chinese mainland
+             * *   **cn-hongkong**: a region outside the Chinese mainland
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -245,7 +267,10 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * RemainDay.
+             * The number of remaining days before the trial period of the WAF instance ends.
+             * <p>
+             * 
+             * >  This parameter is returned only if the value of **Trial** is **1**. The value 1 indicates that the free trial of a WAF instance is activated.
              */
             public Builder remainDay(Integer remainDay) {
                 this.remainDay = remainDay;
@@ -253,7 +278,13 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the WAF instance expires. Valid values:
+             * <p>
+             * 
+             * *   **0**: The instance expires.
+             * *   **1**: The instance does not expire.
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -261,7 +292,10 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SubscriptionType.
+             * The billing method of the WAF instance: The value is fixed as **Subscription**.
+             * <p>
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder subscriptionType(String subscriptionType) {
                 this.subscriptionType = subscriptionType;
@@ -269,7 +303,13 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Trial.
+             * Indicates whether a WAF instance of the free trial edition is activated within the Alibaba Cloud account. Valid values:
+             * <p>
+             * 
+             * *   **0**: no
+             * *   **1**: yes
+             * 
+             * >  This parameter is returned only if a WAF instance of the free trial edition is activated within the Alibaba Cloud account.
              */
             public Builder trial(Integer trial) {
                 this.trial = trial;
@@ -277,7 +317,23 @@ public class DescribeInstanceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The edition of the WAF instance. Valid values:
+             * <p>
+             * 
+             * *   **version_pro_china**: a WAF Pro instance in the Chinese mainland
+             * *   **version_business_china**: a WAF Business instance in the Chinese mainland
+             * *   **version_enterprise_china**: a WAF Enterprise instance in the Chinese mainland
+             * *   **version_exclusive_china**: a WAF Exclusive instance in the Chinese mainland
+             * *   **version_hybrid_cloud_standard_china**: a Hybrid Cloud WAF instance in the Chinese mainland
+             * *   **version_pro_china**: a WAF Pro instance outside the Chinese mainland
+             * *   **version_business**: a WAF Business instance outside the Chinese mainland
+             * *   **version_enterprise**: a WAF Enterprise instance outside the Chinese mainland
+             * *   **version_exclusive**: a WAF Exclusive instance outside the Chinese mainland
+             * *   **version_hybrid_cloud_standard**: a Hybrid Cloud WAF instance outside the Chinese mainland
+             * 
+             * The preceding list contains all the editions of WAF instances within accounts that are created at the International site. If the returned version is not in the list, check whether your account is created at the International site.
+             * 
+             * >  If the value of **PayType** is **0**, this parameter is not returned. The value 0 indicates that no WAF instances are purchased.
              */
             public Builder version(String version) {
                 this.version = version;

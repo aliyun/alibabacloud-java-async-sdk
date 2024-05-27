@@ -81,7 +81,10 @@ public class DescribeInstanceInfoRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * If you do not configure this parameter, all WAF instances in the Chinese mainland or all WAF instances outside the Chinese mainland are queried.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -90,7 +93,11 @@ public class DescribeInstanceInfoRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the WAF instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -99,7 +106,7 @@ public class DescribeInstanceInfoRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the WAF instance belongs in Resource Management. If you do not configure this parameter, the WAF instance belongs to the default resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

@@ -58,6 +58,7 @@ public class DescribeRulesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RuleGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ruleGroupId;
 
     @com.aliyun.core.annotation.Query
