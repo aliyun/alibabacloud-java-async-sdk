@@ -544,6 +544,9 @@ public class DescribeApiDocResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BodyFormat")
         private String bodyFormat;
 
+        @com.aliyun.core.annotation.NameInMap("EscapePathParam")
+        private Boolean escapePathParam;
+
         @com.aliyun.core.annotation.NameInMap("PostBodyDescription")
         private String postBodyDescription;
 
@@ -561,6 +564,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
         private RequestConfig(Builder builder) {
             this.bodyFormat = builder.bodyFormat;
+            this.escapePathParam = builder.escapePathParam;
             this.postBodyDescription = builder.postBodyDescription;
             this.requestHttpMethod = builder.requestHttpMethod;
             this.requestMode = builder.requestMode;
@@ -581,6 +585,13 @@ public class DescribeApiDocResponseBody extends TeaModel {
          */
         public String getBodyFormat() {
             return this.bodyFormat;
+        }
+
+        /**
+         * @return escapePathParam
+         */
+        public Boolean getEscapePathParam() {
+            return this.escapePathParam;
         }
 
         /**
@@ -620,6 +631,7 @@ public class DescribeApiDocResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bodyFormat; 
+            private Boolean escapePathParam; 
             private String postBodyDescription; 
             private String requestHttpMethod; 
             private String requestMode; 
@@ -634,6 +646,14 @@ public class DescribeApiDocResponseBody extends TeaModel {
              */
             public Builder bodyFormat(String bodyFormat) {
                 this.bodyFormat = bodyFormat;
+                return this;
+            }
+
+            /**
+             * EscapePathParam.
+             */
+            public Builder escapePathParam(Boolean escapePathParam) {
+                this.escapePathParam = escapePathParam;
                 return this;
             }
 

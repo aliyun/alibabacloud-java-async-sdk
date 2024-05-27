@@ -1400,6 +1400,9 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BodyModel")
         private String bodyModel;
 
+        @com.aliyun.core.annotation.NameInMap("EscapePathParam")
+        private Boolean escapePathParam;
+
         @com.aliyun.core.annotation.NameInMap("PostBodyDescription")
         private String postBodyDescription;
 
@@ -1418,6 +1421,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         private RequestConfig(Builder builder) {
             this.bodyFormat = builder.bodyFormat;
             this.bodyModel = builder.bodyModel;
+            this.escapePathParam = builder.escapePathParam;
             this.postBodyDescription = builder.postBodyDescription;
             this.requestHttpMethod = builder.requestHttpMethod;
             this.requestMode = builder.requestMode;
@@ -1445,6 +1449,13 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
          */
         public String getBodyModel() {
             return this.bodyModel;
+        }
+
+        /**
+         * @return escapePathParam
+         */
+        public Boolean getEscapePathParam() {
+            return this.escapePathParam;
         }
 
         /**
@@ -1485,6 +1496,7 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
         public static final class Builder {
             private String bodyFormat; 
             private String bodyModel; 
+            private Boolean escapePathParam; 
             private String postBodyDescription; 
             private String requestHttpMethod; 
             private String requestMode; 
@@ -1504,6 +1516,14 @@ public class DescribeApiHistoryResponseBody extends TeaModel {
              */
             public Builder bodyModel(String bodyModel) {
                 this.bodyModel = bodyModel;
+                return this;
+            }
+
+            /**
+             * EscapePathParam.
+             */
+            public Builder escapePathParam(Boolean escapePathParam) {
+                this.escapePathParam = escapePathParam;
                 return this;
             }
 
