@@ -184,6 +184,15 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
 
+        @com.aliyun.core.annotation.NameInMap("CallsQueuingCanceled")
+        private String callsQueuingCanceled;
+
+        @com.aliyun.core.annotation.NameInMap("CallsQueuingFailure")
+        private String callsQueuingFailure;
+
+        @com.aliyun.core.annotation.NameInMap("CallsQueuingRerouted")
+        private String callsQueuingRerouted;
+
         @com.aliyun.core.annotation.NameInMap("CallsQueuingTimeout")
         private Long callsQueuingTimeout;
 
@@ -259,6 +268,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             this.callsBlindTransferOut = builder.callsBlindTransferOut;
             this.callsHandled = builder.callsHandled;
             this.callsOffered = builder.callsOffered;
+            this.callsQueuingCanceled = builder.callsQueuingCanceled;
+            this.callsQueuingFailure = builder.callsQueuingFailure;
+            this.callsQueuingRerouted = builder.callsQueuingRerouted;
             this.callsQueuingTimeout = builder.callsQueuingTimeout;
             this.callsServiceLevel10 = builder.callsServiceLevel10;
             this.callsServiceLevel20 = builder.callsServiceLevel20;
@@ -365,6 +377,27 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
          */
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        /**
+         * @return callsQueuingCanceled
+         */
+        public String getCallsQueuingCanceled() {
+            return this.callsQueuingCanceled;
+        }
+
+        /**
+         * @return callsQueuingFailure
+         */
+        public String getCallsQueuingFailure() {
+            return this.callsQueuingFailure;
+        }
+
+        /**
+         * @return callsQueuingRerouted
+         */
+        public String getCallsQueuingRerouted() {
+            return this.callsQueuingRerouted;
         }
 
         /**
@@ -526,6 +559,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long callsBlindTransferOut; 
             private Long callsHandled; 
             private Long callsOffered; 
+            private String callsQueuingCanceled; 
+            private String callsQueuingFailure; 
+            private String callsQueuingRerouted; 
             private Long callsQueuingTimeout; 
             private Long callsServiceLevel10; 
             private Long callsServiceLevel20; 
@@ -633,6 +669,30 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
+                return this;
+            }
+
+            /**
+             * CallsQueuingCanceled.
+             */
+            public Builder callsQueuingCanceled(String callsQueuingCanceled) {
+                this.callsQueuingCanceled = callsQueuingCanceled;
+                return this;
+            }
+
+            /**
+             * CallsQueuingFailure.
+             */
+            public Builder callsQueuingFailure(String callsQueuingFailure) {
+                this.callsQueuingFailure = callsQueuingFailure;
+                return this;
+            }
+
+            /**
+             * CallsQueuingRerouted.
+             */
+            public Builder callsQueuingRerouted(String callsQueuingRerouted) {
+                this.callsQueuingRerouted = callsQueuingRerouted;
                 return this;
             }
 
