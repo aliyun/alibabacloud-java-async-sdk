@@ -49,6 +49,10 @@ public class UpgradeDBClusterVersionRequest extends Request {
     private String targetDBRevisionVersionCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetProxyRevisionVersionCode")
+    private String targetProxyRevisionVersionCode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UpgradeLabel")
     private String upgradeLabel;
 
@@ -71,6 +75,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.targetDBRevisionVersionCode = builder.targetDBRevisionVersionCode;
+        this.targetProxyRevisionVersionCode = builder.targetProxyRevisionVersionCode;
         this.upgradeLabel = builder.upgradeLabel;
         this.upgradePolicy = builder.upgradePolicy;
         this.upgradeType = builder.upgradeType;
@@ -153,6 +158,13 @@ public class UpgradeDBClusterVersionRequest extends Request {
     }
 
     /**
+     * @return targetProxyRevisionVersionCode
+     */
+    public String getTargetProxyRevisionVersionCode() {
+        return this.targetProxyRevisionVersionCode;
+    }
+
+    /**
      * @return upgradeLabel
      */
     public String getUpgradeLabel() {
@@ -183,6 +195,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String targetDBRevisionVersionCode; 
+        private String targetProxyRevisionVersionCode; 
         private String upgradeLabel; 
         private String upgradePolicy; 
         private String upgradeType; 
@@ -202,6 +215,7 @@ public class UpgradeDBClusterVersionRequest extends Request {
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.targetDBRevisionVersionCode = request.targetDBRevisionVersionCode;
+            this.targetProxyRevisionVersionCode = request.targetProxyRevisionVersionCode;
             this.upgradeLabel = request.upgradeLabel;
             this.upgradePolicy = request.upgradePolicy;
             this.upgradeType = request.upgradeType;
@@ -299,6 +313,15 @@ public class UpgradeDBClusterVersionRequest extends Request {
         public Builder targetDBRevisionVersionCode(String targetDBRevisionVersionCode) {
             this.putQueryParameter("TargetDBRevisionVersionCode", targetDBRevisionVersionCode);
             this.targetDBRevisionVersionCode = targetDBRevisionVersionCode;
+            return this;
+        }
+
+        /**
+         * TargetProxyRevisionVersionCode.
+         */
+        public Builder targetProxyRevisionVersionCode(String targetProxyRevisionVersionCode) {
+            this.putQueryParameter("TargetProxyRevisionVersionCode", targetProxyRevisionVersionCode);
+            this.targetProxyRevisionVersionCode = targetProxyRevisionVersionCode;
             return this;
         }
 

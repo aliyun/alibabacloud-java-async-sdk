@@ -44,6 +44,9 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProxyRevisionVersion")
     private String proxyRevisionVersion;
 
+    @com.aliyun.core.annotation.NameInMap("ProxyRevisionVersionList")
+    private java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList;
+
     @com.aliyun.core.annotation.NameInMap("ProxyVersionStatus")
     private String proxyVersionStatus;
 
@@ -62,6 +65,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         this.isProxyLatestVersion = builder.isProxyLatestVersion;
         this.proxyLatestVersion = builder.proxyLatestVersion;
         this.proxyRevisionVersion = builder.proxyRevisionVersion;
+        this.proxyRevisionVersionList = builder.proxyRevisionVersionList;
         this.proxyVersionStatus = builder.proxyVersionStatus;
         this.requestId = builder.requestId;
     }
@@ -152,6 +156,13 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
     }
 
     /**
+     * @return proxyRevisionVersionList
+     */
+    public java.util.List < ProxyRevisionVersionList> getProxyRevisionVersionList() {
+        return this.proxyRevisionVersionList;
+    }
+
+    /**
      * @return proxyVersionStatus
      */
     public String getProxyVersionStatus() {
@@ -177,6 +188,7 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
         private String isProxyLatestVersion; 
         private String proxyLatestVersion; 
         private String proxyRevisionVersion; 
+        private java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList; 
         private String proxyVersionStatus; 
         private String requestId; 
 
@@ -294,6 +306,14 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
          */
         public Builder proxyRevisionVersion(String proxyRevisionVersion) {
             this.proxyRevisionVersion = proxyRevisionVersion;
+            return this;
+        }
+
+        /**
+         * ProxyRevisionVersionList.
+         */
+        public Builder proxyRevisionVersionList(java.util.List < ProxyRevisionVersionList> proxyRevisionVersionList) {
+            this.proxyRevisionVersionList = proxyRevisionVersionList;
             return this;
         }
 
@@ -426,6 +446,112 @@ public class DescribeDBClusterVersionResponseBody extends TeaModel {
 
             public DBRevisionVersionList build() {
                 return new DBRevisionVersionList(this);
+            } 
+
+        } 
+
+    }
+    public static class ProxyRevisionVersionList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
+        private String releaseNote;
+
+        @com.aliyun.core.annotation.NameInMap("ReleaseType")
+        private String releaseType;
+
+        @com.aliyun.core.annotation.NameInMap("RevisionVersionCode")
+        private String revisionVersionCode;
+
+        @com.aliyun.core.annotation.NameInMap("RevisionVersionName")
+        private String revisionVersionName;
+
+        private ProxyRevisionVersionList(Builder builder) {
+            this.releaseNote = builder.releaseNote;
+            this.releaseType = builder.releaseType;
+            this.revisionVersionCode = builder.revisionVersionCode;
+            this.revisionVersionName = builder.revisionVersionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ProxyRevisionVersionList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return releaseNote
+         */
+        public String getReleaseNote() {
+            return this.releaseNote;
+        }
+
+        /**
+         * @return releaseType
+         */
+        public String getReleaseType() {
+            return this.releaseType;
+        }
+
+        /**
+         * @return revisionVersionCode
+         */
+        public String getRevisionVersionCode() {
+            return this.revisionVersionCode;
+        }
+
+        /**
+         * @return revisionVersionName
+         */
+        public String getRevisionVersionName() {
+            return this.revisionVersionName;
+        }
+
+        public static final class Builder {
+            private String releaseNote; 
+            private String releaseType; 
+            private String revisionVersionCode; 
+            private String revisionVersionName; 
+
+            /**
+             * The release notes for the revision version.
+             */
+            public Builder releaseNote(String releaseNote) {
+                this.releaseNote = releaseNote;
+                return this;
+            }
+
+            /**
+             * The release status of the revision version. Valid values:
+             * <p>
+             * 
+             * *   **Stable**: The revision version is stable.
+             * *   **Old**: The revision version is outdated. We recommend that you do not update the cluster to this version.
+             * *   **HighRisk**: The revision version has critical defects. We recommend that you do not update the cluster to this version.
+             */
+            public Builder releaseType(String releaseType) {
+                this.releaseType = releaseType;
+                return this;
+            }
+
+            /**
+             * The code of the revision version of the database engine to which the cluster can be upgraded.
+             */
+            public Builder revisionVersionCode(String revisionVersionCode) {
+                this.revisionVersionCode = revisionVersionCode;
+                return this;
+            }
+
+            /**
+             * The revision version of the database engine.
+             */
+            public Builder revisionVersionName(String revisionVersionName) {
+                this.revisionVersionName = revisionVersionName;
+                return this;
+            }
+
+            public ProxyRevisionVersionList build() {
+                return new ProxyRevisionVersionList(this);
             } 
 
         } 
