@@ -94,6 +94,9 @@ public class ListDomainsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BucketType")
         private String bucketType;
 
+        @com.aliyun.core.annotation.NameInMap("Buckets")
+        private String buckets;
+
         @com.aliyun.core.annotation.NameInMap("Condition")
         private String condition;
 
@@ -141,6 +144,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
         private Domains(Builder builder) {
             this.bucketType = builder.bucketType;
+            this.buckets = builder.buckets;
             this.condition = builder.condition;
             this.crowdIds = builder.crowdIds;
             this.debugUsers = builder.debugUsers;
@@ -171,6 +175,13 @@ public class ListDomainsResponseBody extends TeaModel {
          */
         public String getBucketType() {
             return this.bucketType;
+        }
+
+        /**
+         * @return buckets
+         */
+        public String getBuckets() {
+            return this.buckets;
         }
 
         /**
@@ -280,6 +291,7 @@ public class ListDomainsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String bucketType; 
+            private String buckets; 
             private String condition; 
             private String crowdIds; 
             private String debugUsers; 
@@ -301,6 +313,14 @@ public class ListDomainsResponseBody extends TeaModel {
              */
             public Builder bucketType(String bucketType) {
                 this.bucketType = bucketType;
+                return this;
+            }
+
+            /**
+             * Buckets.
+             */
+            public Builder buckets(String buckets) {
+                this.buckets = buckets;
                 return this;
             }
 
