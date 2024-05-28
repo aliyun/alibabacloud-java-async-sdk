@@ -2284,6 +2284,9 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
+        @com.aliyun.core.annotation.NameInMap("AclIds")
+        private java.util.List < String > aclIds;
+
         @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
@@ -2334,6 +2337,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         private Listeners(Builder builder) {
             this.aclId = builder.aclId;
+            this.aclIds = builder.aclIds;
             this.aclStatus = builder.aclStatus;
             this.aclType = builder.aclType;
             this.backendServerPort = builder.backendServerPort;
@@ -2365,6 +2369,13 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
          */
         public String getAclId() {
             return this.aclId;
+        }
+
+        /**
+         * @return aclIds
+         */
+        public java.util.List < String > getAclIds() {
+            return this.aclIds;
         }
 
         /**
@@ -2481,6 +2492,7 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
 
         public static final class Builder {
             private String aclId; 
+            private java.util.List < String > aclIds; 
             private String aclStatus; 
             private String aclType; 
             private Integer backendServerPort; 
@@ -2503,6 +2515,14 @@ public class DescribeLoadBalancerListenersResponseBody extends TeaModel {
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
+                return this;
+            }
+
+            /**
+             * AclIds.
+             */
+            public Builder aclIds(java.util.List < String > aclIds) {
+                this.aclIds = aclIds;
                 return this;
             }
 

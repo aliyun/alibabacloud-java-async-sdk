@@ -14,6 +14,9 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
     @com.aliyun.core.annotation.NameInMap("AclId")
     private String aclId;
 
+    @com.aliyun.core.annotation.NameInMap("AclIds")
+    private AclIds aclIds;
+
     @com.aliyun.core.annotation.NameInMap("AclStatus")
     private String aclStatus;
 
@@ -82,6 +85,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
 
     private DescribeLoadBalancerUDPListenerAttributeResponseBody(Builder builder) {
         this.aclId = builder.aclId;
+        this.aclIds = builder.aclIds;
         this.aclStatus = builder.aclStatus;
         this.aclType = builder.aclType;
         this.backendServerPort = builder.backendServerPort;
@@ -119,6 +123,13 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
      */
     public String getAclId() {
         return this.aclId;
+    }
+
+    /**
+     * @return aclIds
+     */
+    public AclIds getAclIds() {
+        return this.aclIds;
     }
 
     /**
@@ -277,6 +288,7 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
 
     public static final class Builder {
         private String aclId; 
+        private AclIds aclIds; 
         private String aclStatus; 
         private String aclType; 
         private Integer backendServerPort; 
@@ -305,6 +317,14 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;
+            return this;
+        }
+
+        /**
+         * AclIds.
+         */
+        public Builder aclIds(AclIds aclIds) {
+            this.aclIds = aclIds;
             return this;
         }
 
@@ -525,6 +545,47 @@ public class DescribeLoadBalancerUDPListenerAttributeResponseBody extends TeaMod
 
     } 
 
+    public static class AclIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AclId")
+        private java.util.List < String > aclId;
+
+        private AclIds(Builder builder) {
+            this.aclId = builder.aclId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aclId
+         */
+        public java.util.List < String > getAclId() {
+            return this.aclId;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > aclId; 
+
+            /**
+             * The ID of the network ACL.
+             */
+            public Builder aclId(java.util.List < String > aclId) {
+                this.aclId = aclId;
+                return this;
+            }
+
+            public AclIds build() {
+                return new AclIds(this);
+            } 
+
+        } 
+
+    }
     public static class Tag extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
