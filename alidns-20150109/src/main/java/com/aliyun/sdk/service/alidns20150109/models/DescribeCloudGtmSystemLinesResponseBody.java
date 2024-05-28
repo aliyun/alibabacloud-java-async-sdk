@@ -1,0 +1,255 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.alidns20150109.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DescribeCloudGtmSystemLinesResponseBody} extends {@link TeaModel}
+ *
+ * <p>DescribeCloudGtmSystemLinesResponseBody</p>
+ */
+public class DescribeCloudGtmSystemLinesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("SystemLines")
+    private SystemLines systemLines;
+
+    @com.aliyun.core.annotation.NameInMap("SystemLinesTree")
+    private String systemLinesTree;
+
+    private DescribeCloudGtmSystemLinesResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.systemLines = builder.systemLines;
+        this.systemLinesTree = builder.systemLinesTree;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DescribeCloudGtmSystemLinesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return systemLines
+     */
+    public SystemLines getSystemLines() {
+        return this.systemLines;
+    }
+
+    /**
+     * @return systemLinesTree
+     */
+    public String getSystemLinesTree() {
+        return this.systemLinesTree;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private SystemLines systemLines; 
+        private String systemLinesTree; 
+
+        /**
+         * RequestId.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * SystemLines.
+         */
+        public Builder systemLines(SystemLines systemLines) {
+            this.systemLines = systemLines;
+            return this;
+        }
+
+        /**
+         * SystemLinesTree.
+         */
+        public Builder systemLinesTree(String systemLinesTree) {
+            this.systemLinesTree = systemLinesTree;
+            return this;
+        }
+
+        public DescribeCloudGtmSystemLinesResponseBody build() {
+            return new DescribeCloudGtmSystemLinesResponseBody(this);
+        } 
+
+    } 
+
+    public static class SystemLine extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
+        private String displayName;
+
+        @com.aliyun.core.annotation.NameInMap("IsAvailable")
+        private Boolean isAvailable;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("ParentCode")
+        private String parentCode;
+
+        private SystemLine(Builder builder) {
+            this.code = builder.code;
+            this.displayName = builder.displayName;
+            this.isAvailable = builder.isAvailable;
+            this.name = builder.name;
+            this.parentCode = builder.parentCode;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemLine create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return displayName
+         */
+        public String getDisplayName() {
+            return this.displayName;
+        }
+
+        /**
+         * @return isAvailable
+         */
+        public Boolean getIsAvailable() {
+            return this.isAvailable;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return parentCode
+         */
+        public String getParentCode() {
+            return this.parentCode;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String displayName; 
+            private Boolean isAvailable; 
+            private String name; 
+            private String parentCode; 
+
+            /**
+             * Code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * DisplayName.
+             */
+            public Builder displayName(String displayName) {
+                this.displayName = displayName;
+                return this;
+            }
+
+            /**
+             * IsAvailable.
+             */
+            public Builder isAvailable(Boolean isAvailable) {
+                this.isAvailable = isAvailable;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * ParentCode.
+             */
+            public Builder parentCode(String parentCode) {
+                this.parentCode = parentCode;
+                return this;
+            }
+
+            public SystemLine build() {
+                return new SystemLine(this);
+            } 
+
+        } 
+
+    }
+    public static class SystemLines extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SystemLine")
+        private java.util.List < SystemLine> systemLine;
+
+        private SystemLines(Builder builder) {
+            this.systemLine = builder.systemLine;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SystemLines create() {
+            return builder().build();
+        }
+
+        /**
+         * @return systemLine
+         */
+        public java.util.List < SystemLine> getSystemLine() {
+            return this.systemLine;
+        }
+
+        public static final class Builder {
+            private java.util.List < SystemLine> systemLine; 
+
+            /**
+             * SystemLine.
+             */
+            public Builder systemLine(java.util.List < SystemLine> systemLine) {
+                this.systemLine = systemLine;
+                return this;
+            }
+
+            public SystemLines build() {
+                return new SystemLines(this);
+            } 
+
+        } 
+
+    }
+}
