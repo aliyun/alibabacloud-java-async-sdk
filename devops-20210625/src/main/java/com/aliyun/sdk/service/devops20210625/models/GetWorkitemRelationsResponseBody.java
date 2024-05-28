@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkitemRelationsResponseBody</p>
  */
 public class GetWorkitemRelationsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("relationList")
+    @com.aliyun.core.annotation.NameInMap("relationList")
     private java.util.List < RelationList> relationList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetWorkitemRelationsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class GetWorkitemRelationsResponseBody extends TeaModel {
     } 
 
     public static class RelationList extends TeaModel {
-        @NameInMap("assignedTo")
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
         private String assignedTo;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("workitemTypeIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
         private String workitemTypeIdentifier;
 
         private RelationList(Builder builder) {

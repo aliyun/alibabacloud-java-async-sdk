@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFileRequest</p>
  */
 public class CreateFileRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("branchName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("branchName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String branchName;
 
-    @Body
-    @NameInMap("commitMessage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commitMessage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commitMessage;
 
-    @Body
-    @NameInMap("content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("encoding")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("encoding")
     private String encoding;
 
-    @Body
-    @NameInMap("filePath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filePath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String filePath;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private CreateFileRequest(Builder builder) {

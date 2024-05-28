@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SkipPipelineJobRunRequest</p>
  */
 public class SkipPipelineJobRunRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("pipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pipelineId;
 
-    @Path
-    @NameInMap("pipelineRunId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineRunId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pipelineRunId;
 
-    @Path
-    @NameInMap("jobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("jobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long jobId;
 
     private SkipPipelineJobRunRequest(Builder builder) {

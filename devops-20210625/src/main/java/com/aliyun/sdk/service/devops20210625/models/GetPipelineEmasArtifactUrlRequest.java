@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPipelineEmasArtifactUrlRequest</p>
  */
 public class GetPipelineEmasArtifactUrlRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("emasJobInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("emasJobInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String emasJobInstanceId;
 
-    @Path
-    @NameInMap("md5")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("md5")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String md5;
 
-    @Path
-    @NameInMap("pipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pipelineId;
 
-    @Path
-    @NameInMap("pipelineRunId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineRunId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pipelineRunId;
 
-    @Query
-    @NameInMap("serviceConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("serviceConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceConnectionId;
 
     private GetPipelineEmasArtifactUrlRequest(Builder builder) {

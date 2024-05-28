@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSearchCodePreviewRequest</p>
  */
 public class GetSearchCodePreviewRequest extends Request {
-    @Query
-    @NameInMap("docId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("docId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String docId;
 
-    @Query
-    @NameInMap("isDsl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("isDsl")
     private Boolean isDsl;
 
-    @Query
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private GetSearchCodePreviewRequest(Builder builder) {

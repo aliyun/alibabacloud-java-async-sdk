@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPipelineScanReportUrlRequest</p>
  */
 public class GetPipelineScanReportUrlRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("reportPath")
-    @Validation(required = true, maxLength = 1000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reportPath")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1000)
     private String reportPath;
 
     private GetPipelineScanReportUrlRequest(Builder builder) {

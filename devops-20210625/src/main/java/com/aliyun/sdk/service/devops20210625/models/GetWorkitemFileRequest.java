@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkitemFileRequest</p>
  */
 public class GetWorkitemFileRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
-    @Path
-    @NameInMap("fileIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("fileIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileIdentifier;
 
     private GetWorkitemFileRequest(Builder builder) {

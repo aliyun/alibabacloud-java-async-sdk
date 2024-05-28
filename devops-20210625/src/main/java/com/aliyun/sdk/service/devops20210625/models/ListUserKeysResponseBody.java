@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserKeysResponseBody</p>
  */
 public class ListUserKeysResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListUserKeysResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class ListUserKeysResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("expireTime")
+        @com.aliyun.core.annotation.NameInMap("expireTime")
         private String expireTime;
 
-        @NameInMap("fingerPrint")
+        @com.aliyun.core.annotation.NameInMap("fingerPrint")
         private String fingerPrint;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("keyScope")
+        @com.aliyun.core.annotation.NameInMap("keyScope")
         private String keyScope;
 
-        @NameInMap("lastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("lastUsedTime")
         private String lastUsedTime;
 
-        @NameInMap("publicKey")
+        @com.aliyun.core.annotation.NameInMap("publicKey")
         private String publicKey;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Result(Builder builder) {

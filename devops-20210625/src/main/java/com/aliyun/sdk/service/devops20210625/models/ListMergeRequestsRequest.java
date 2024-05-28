@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMergeRequestsRequest</p>
  */
 public class ListMergeRequestsRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("authorIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("authorIds")
     private String authorIds;
 
-    @Query
-    @NameInMap("createdAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createdAfter")
     private String createdAfter;
 
-    @Query
-    @NameInMap("createdBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createdBefore")
     private String createdBefore;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("groupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupIds")
     private String groupIds;
 
-    @Query
-    @NameInMap("labelIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("labelIds")
     private String labelIds;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("projectIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("projectIds")
     private String projectIds;
 
-    @Query
-    @NameInMap("reviewerIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("reviewerIds")
     private String reviewerIds;
 
-    @Query
-    @NameInMap("search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search")
     private String search;
 
-    @Query
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @Query
-    @NameInMap("state")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("state")
     private String state;
 
     private ListMergeRequestsRequest(Builder builder) {

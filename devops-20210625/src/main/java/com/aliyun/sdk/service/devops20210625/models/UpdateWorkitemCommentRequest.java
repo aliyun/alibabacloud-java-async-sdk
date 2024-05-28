@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWorkitemCommentRequest</p>
  */
 public class UpdateWorkitemCommentRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("commentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long commentId;
 
-    @Body
-    @NameInMap("content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("formatType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("formatType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String formatType;
 
-    @Body
-    @NameInMap("workitemIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemIdentifier;
 
     private UpdateWorkitemCommentRequest(Builder builder) {

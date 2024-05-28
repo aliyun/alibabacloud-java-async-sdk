@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LogPipelineJobRunResponseBody</p>
  */
 public class LogPipelineJobRunResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("log")
+    @com.aliyun.core.annotation.NameInMap("log")
     private Log log;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private LogPipelineJobRunResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class LogPipelineJobRunResponseBody extends TeaModel {
     } 
 
     public static class Log extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("more")
+        @com.aliyun.core.annotation.NameInMap("more")
         private Boolean more;
 
         private Log(Builder builder) {

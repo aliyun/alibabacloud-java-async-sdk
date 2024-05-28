@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAppMemberRequest</p>
  */
 public class DeleteAppMemberRequest extends Request {
-    @Path
-    @NameInMap("appName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appName")
     private String appName;
 
-    @Query
-    @NameInMap("organizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
     private String organizationId;
 
-    @Query
-    @NameInMap("subjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("subjectId")
     private String subjectId;
 
-    @Query
-    @NameInMap("subjectType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("subjectType")
     private String subjectType;
 
     private DeleteAppMemberRequest(Builder builder) {

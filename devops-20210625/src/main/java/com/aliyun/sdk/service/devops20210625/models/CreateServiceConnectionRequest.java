@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceConnectionRequest</p>
  */
 public class CreateServiceConnectionRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("authType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("authType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authType;
 
-    @Body
-    @NameInMap("connectionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("connectionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionName;
 
-    @Body
-    @NameInMap("connectionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("connectionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String connectionType;
 
-    @Body
-    @NameInMap("scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
-    @Body
-    @NameInMap("serviceAuthId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceAuthId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceAuthId;
 
     private CreateServiceConnectionRequest(Builder builder) {

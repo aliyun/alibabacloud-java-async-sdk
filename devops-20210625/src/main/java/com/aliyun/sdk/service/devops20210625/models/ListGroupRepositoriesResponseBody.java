@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupRepositoriesResponseBody</p>
  */
 public class ListGroupRepositoriesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListGroupRepositoriesResponseBody(Builder builder) {
@@ -152,79 +151,79 @@ public class ListGroupRepositoriesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("archived")
+        @com.aliyun.core.annotation.NameInMap("archived")
         private Boolean archived;
 
-        @NameInMap("commitCount")
+        @com.aliyun.core.annotation.NameInMap("commitCount")
         private Long commitCount;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private Long creatorId;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("httpUrl")
+        @com.aliyun.core.annotation.NameInMap("httpUrl")
         private String httpUrl;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("importUrl")
+        @com.aliyun.core.annotation.NameInMap("importUrl")
         private String importUrl;
 
-        @NameInMap("isStared")
+        @com.aliyun.core.annotation.NameInMap("isStared")
         private Boolean isStared;
 
-        @NameInMap("issuesEnabled")
+        @com.aliyun.core.annotation.NameInMap("issuesEnabled")
         private Boolean issuesEnabled;
 
-        @NameInMap("lastActivityAt")
+        @com.aliyun.core.annotation.NameInMap("lastActivityAt")
         private String lastActivityAt;
 
-        @NameInMap("mergeRequestsEnabled")
+        @com.aliyun.core.annotation.NameInMap("mergeRequestsEnabled")
         private Boolean mergeRequestsEnabled;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("namespaceId")
+        @com.aliyun.core.annotation.NameInMap("namespaceId")
         private Boolean namespaceId;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("privateFlag")
+        @com.aliyun.core.annotation.NameInMap("privateFlag")
         private Boolean privateFlag;
 
-        @NameInMap("snippetsEnabled")
+        @com.aliyun.core.annotation.NameInMap("snippetsEnabled")
         private Boolean snippetsEnabled;
 
-        @NameInMap("sshUrl")
+        @com.aliyun.core.annotation.NameInMap("sshUrl")
         private String sshUrl;
 
-        @NameInMap("starCount")
+        @com.aliyun.core.annotation.NameInMap("starCount")
         private Integer starCount;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
-        @NameInMap("webUrl")
+        @com.aliyun.core.annotation.NameInMap("webUrl")
         private String webUrl;
 
-        @NameInMap("wikiEnabled")
+        @com.aliyun.core.annotation.NameInMap("wikiEnabled")
         private Boolean wikiEnabled;
 
         private Result(Builder builder) {

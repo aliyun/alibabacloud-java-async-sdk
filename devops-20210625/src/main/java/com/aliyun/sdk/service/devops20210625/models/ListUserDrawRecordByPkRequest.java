@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserDrawRecordByPkRequest</p>
  */
 public class ListUserDrawRecordByPkRequest extends Request {
-    @Query
-    @NameInMap("aliyunPk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("aliyunPk")
     private String aliyunPk;
 
-    @Query
-    @NameInMap("drawGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("drawGroup")
     private String drawGroup;
 
-    @Query
-    @NameInMap("drawPoolName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("drawPoolName")
     private String drawPoolName;
 
     private ListUserDrawRecordByPkRequest(Builder builder) {

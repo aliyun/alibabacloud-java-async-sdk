@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOAuthTokenRequest</p>
  */
 public class CreateOAuthTokenRequest extends Request {
-    @Body
-    @NameInMap("clientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Body
-    @NameInMap("clientSecret")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("clientSecret")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientSecret;
 
-    @Body
-    @NameInMap("code")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @Body
-    @NameInMap("grantType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("grantType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String grantType;
 
-    @Body
-    @NameInMap("login")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("login")
     private String login;
 
-    @Body
-    @NameInMap("scope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scope;
 
     private CreateOAuthTokenRequest(Builder builder) {

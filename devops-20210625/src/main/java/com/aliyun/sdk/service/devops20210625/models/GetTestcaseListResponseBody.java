@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTestcaseListResponseBody</p>
  */
 public class GetTestcaseListResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("testcase")
+    @com.aliyun.core.annotation.NameInMap("testcase")
     private java.util.List < Testcase> testcase;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private GetTestcaseListResponseBody(Builder builder) {
@@ -192,10 +191,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
     } 
 
     public static class AssignedTo extends TeaModel {
-        @NameInMap("assignedToIdenttifier")
+        @com.aliyun.core.annotation.NameInMap("assignedToIdenttifier")
         private String assignedToIdenttifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private AssignedTo(Builder builder) {
@@ -253,16 +252,16 @@ public class GetTestcaseListResponseBody extends TeaModel {
 
     }
     public static class CustomFields extends TeaModel {
-        @NameInMap("fieldClassName")
+        @com.aliyun.core.annotation.NameInMap("fieldClassName")
         private String fieldClassName;
 
-        @NameInMap("fieldFormat")
+        @com.aliyun.core.annotation.NameInMap("fieldFormat")
         private String fieldFormat;
 
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private CustomFields(Builder builder) {
@@ -354,10 +353,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
 
     }
     public static class Space extends TeaModel {
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Space(Builder builder) {
@@ -415,10 +414,10 @@ public class GetTestcaseListResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tagIdentifier")
+        @com.aliyun.core.annotation.NameInMap("tagIdentifier")
         private String tagIdentifier;
 
         private Tags(Builder builder) {
@@ -476,28 +475,28 @@ public class GetTestcaseListResponseBody extends TeaModel {
 
     }
     public static class Testcase extends TeaModel {
-        @NameInMap("assignedTo")
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
         private AssignedTo assignedTo;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("customFields")
+        @com.aliyun.core.annotation.NameInMap("customFields")
         private java.util.List < CustomFields> customFields;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("space")
+        @com.aliyun.core.annotation.NameInMap("space")
         private Space space;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
         private Testcase(Builder builder) {

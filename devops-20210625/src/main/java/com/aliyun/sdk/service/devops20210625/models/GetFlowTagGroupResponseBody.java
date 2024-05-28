@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetFlowTagGroupResponseBody</p>
  */
 public class GetFlowTagGroupResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("flowTagGroup")
+    @com.aliyun.core.annotation.NameInMap("flowTagGroup")
     private FlowTagGroup flowTagGroup;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetFlowTagGroupResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
     } 
 
     public static class FlowTagList extends TeaModel {
-        @NameInMap("color")
+        @com.aliyun.core.annotation.NameInMap("color")
         private String color;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagList(Builder builder) {
@@ -253,19 +252,19 @@ public class GetFlowTagGroupResponseBody extends TeaModel {
 
     }
     public static class FlowTagGroup extends TeaModel {
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("flowTagList")
+        @com.aliyun.core.annotation.NameInMap("flowTagList")
         private java.util.List < FlowTagList> flowTagList;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagGroup(Builder builder) {

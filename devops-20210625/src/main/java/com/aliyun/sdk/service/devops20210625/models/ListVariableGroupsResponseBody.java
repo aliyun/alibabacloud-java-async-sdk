@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVariableGroupsResponseBody</p>
  */
 public class ListVariableGroupsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
-    @NameInMap("variableGroups")
+    @com.aliyun.core.annotation.NameInMap("variableGroups")
     private java.util.List < VariableGroups> variableGroups;
 
     private ListVariableGroupsResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class ListVariableGroupsResponseBody extends TeaModel {
     } 
 
     public static class RelatedPipelines extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private RelatedPipelines(Builder builder) {
@@ -233,13 +232,13 @@ public class ListVariableGroupsResponseBody extends TeaModel {
 
     }
     public static class Variables extends TeaModel {
-        @NameInMap("isEncrypted")
+        @com.aliyun.core.annotation.NameInMap("isEncrypted")
         private Boolean isEncrypted;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Variables(Builder builder) {
@@ -314,31 +313,31 @@ public class ListVariableGroupsResponseBody extends TeaModel {
 
     }
     public static class VariableGroups extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("relatedPipelines")
+        @com.aliyun.core.annotation.NameInMap("relatedPipelines")
         private java.util.List < RelatedPipelines> relatedPipelines;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
-        @NameInMap("variables")
+        @com.aliyun.core.annotation.NameInMap("variables")
         private java.util.List < Variables> variables;
 
         private VariableGroups(Builder builder) {

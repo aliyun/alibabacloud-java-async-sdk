@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserDrawRecordByPkResponseBody</p>
  */
 public class ListUserDrawRecordByPkResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListUserDrawRecordByPkResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListUserDrawRecordByPkResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("drawGroup")
+        @com.aliyun.core.annotation.NameInMap("drawGroup")
         private String drawGroup;
 
-        @NameInMap("drawPoolName")
+        @com.aliyun.core.annotation.NameInMap("drawPoolName")
         private String drawPoolName;
 
-        @NameInMap("drawResult")
+        @com.aliyun.core.annotation.NameInMap("drawResult")
         private String drawResult;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("taskGroupId")
+        @com.aliyun.core.annotation.NameInMap("taskGroupId")
         private String taskGroupId;
 
-        @NameInMap("uccId")
+        @com.aliyun.core.annotation.NameInMap("uccId")
         private String uccId;
 
         private Data(Builder builder) {

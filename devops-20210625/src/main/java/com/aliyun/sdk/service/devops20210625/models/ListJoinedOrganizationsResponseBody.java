@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJoinedOrganizationsResponseBody</p>
  */
 public class ListJoinedOrganizationsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("organizations")
+    @com.aliyun.core.annotation.NameInMap("organizations")
     private java.util.List < Organizations> organizations;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListJoinedOrganizationsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListJoinedOrganizationsResponseBody extends TeaModel {
     } 
 
     public static class Organizations extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isOrgAdmin")
+        @com.aliyun.core.annotation.NameInMap("isOrgAdmin")
         private Boolean isOrgAdmin;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Organizations(Builder builder) {

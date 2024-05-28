@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("creatorAccountId")
+    @com.aliyun.core.annotation.NameInMap("appTemplateDisplayName")
+    private String appTemplateDisplayName;
+
+    @com.aliyun.core.annotation.NameInMap("appTemplateName")
+    private String appTemplateName;
+
+    @com.aliyun.core.annotation.NameInMap("creatorAccountId")
     private String creatorAccountId;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
+        this.appTemplateDisplayName = builder.appTemplateDisplayName;
+        this.appTemplateName = builder.appTemplateName;
         this.creatorAccountId = builder.creatorAccountId;
         this.description = builder.description;
         this.gmtCreate = builder.gmtCreate;
@@ -41,6 +48,20 @@ public class GetApplicationResponseBody extends TeaModel {
 
     public static GetApplicationResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return appTemplateDisplayName
+     */
+    public String getAppTemplateDisplayName() {
+        return this.appTemplateDisplayName;
+    }
+
+    /**
+     * @return appTemplateName
+     */
+    public String getAppTemplateName() {
+        return this.appTemplateName;
     }
 
     /**
@@ -79,11 +100,29 @@ public class GetApplicationResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String appTemplateDisplayName; 
+        private String appTemplateName; 
         private String creatorAccountId; 
         private String description; 
         private String gmtCreate; 
         private String name; 
         private String requestId; 
+
+        /**
+         * appTemplateDisplayName.
+         */
+        public Builder appTemplateDisplayName(String appTemplateDisplayName) {
+            this.appTemplateDisplayName = appTemplateDisplayName;
+            return this;
+        }
+
+        /**
+         * appTemplateName.
+         */
+        public Builder appTemplateName(String appTemplateName) {
+            this.appTemplateName = appTemplateName;
+            return this;
+        }
 
         /**
          * creatorAccountId.

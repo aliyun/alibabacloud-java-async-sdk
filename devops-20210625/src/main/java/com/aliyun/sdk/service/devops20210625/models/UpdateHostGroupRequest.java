@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateHostGroupRequest</p>
  */
 public class UpdateHostGroupRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Body
-    @NameInMap("aliyunRegion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aliyunRegion")
     private String aliyunRegion;
 
-    @Body
-    @NameInMap("ecsLabelKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ecsLabelKey")
     private String ecsLabelKey;
 
-    @Body
-    @NameInMap("ecsLabelValue")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ecsLabelValue")
     private String ecsLabelValue;
 
-    @Body
-    @NameInMap("ecsType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ecsType")
     private String ecsType;
 
-    @Body
-    @NameInMap("envId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("envId")
     private String envId;
 
-    @Body
-    @NameInMap("machineInfos")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("machineInfos")
     private String machineInfos;
 
-    @Body
-    @NameInMap("name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("serviceConnectionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceConnectionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long serviceConnectionId;
 
-    @Body
-    @NameInMap("tagIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tagIds")
     private String tagIds;
 
-    @Body
-    @NameInMap("type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private UpdateHostGroupRequest(Builder builder) {

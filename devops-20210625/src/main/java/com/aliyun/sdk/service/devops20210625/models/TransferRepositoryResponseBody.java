@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TransferRepositoryResponseBody</p>
  */
 public class TransferRepositoryResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private TransferRepositoryResponseBody(Builder builder) {
@@ -132,61 +131,61 @@ public class TransferRepositoryResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("archived")
+        @com.aliyun.core.annotation.NameInMap("archived")
         private Boolean archived;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private Long creatorId;
 
-        @NameInMap("demoProject")
+        @com.aliyun.core.annotation.NameInMap("demoProject")
         private Boolean demoProject;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private Boolean encrypted;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastActivityAt")
+        @com.aliyun.core.annotation.NameInMap("lastActivityAt")
         private String lastActivityAt;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("namespaceId")
+        @com.aliyun.core.annotation.NameInMap("namespaceId")
         private Long namespaceId;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("starCount")
+        @com.aliyun.core.annotation.NameInMap("starCount")
         private Long starCount;
 
-        @NameInMap("starred")
+        @com.aliyun.core.annotation.NameInMap("starred")
         private Boolean starred;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
-        @NameInMap("webUrl")
+        @com.aliyun.core.annotation.NameInMap("webUrl")
         private String webUrl;
 
         private Result(Builder builder) {

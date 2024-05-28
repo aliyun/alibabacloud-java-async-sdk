@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMergeRequestPersonnelRequest</p>
  */
 public class UpdateMergeRequestPersonnelRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Path
-    @NameInMap("localId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("localId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long localId;
 
-    @Path
-    @NameInMap("personType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("personType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String personType;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("newUserIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("newUserIdList")
     private java.util.List < String > newUserIdList;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateMergeRequestPersonnelRequest(Builder builder) {

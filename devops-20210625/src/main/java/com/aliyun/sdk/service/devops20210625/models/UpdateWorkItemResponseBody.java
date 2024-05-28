@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWorkItemResponseBody</p>
  */
 public class UpdateWorkItemResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workitem")
+    @com.aliyun.core.annotation.NameInMap("workitem")
     private Workitem workitem;
 
     private UpdateWorkItemResponseBody(Builder builder) {
@@ -132,70 +131,70 @@ public class UpdateWorkItemResponseBody extends TeaModel {
     } 
 
     public static class Workitem extends TeaModel {
-        @NameInMap("assignedTo")
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
         private String assignedTo;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("document")
+        @com.aliyun.core.annotation.NameInMap("document")
         private String document;
 
-        @NameInMap("documentFormat")
+        @com.aliyun.core.annotation.NameInMap("documentFormat")
         private String documentFormat;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("logicalStatus")
+        @com.aliyun.core.annotation.NameInMap("logicalStatus")
         private String logicalStatus;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("parentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("parentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("serialNumber")
+        @com.aliyun.core.annotation.NameInMap("serialNumber")
         private String serialNumber;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("spaceName")
+        @com.aliyun.core.annotation.NameInMap("spaceName")
         private String spaceName;
 
-        @NameInMap("spaceType")
+        @com.aliyun.core.annotation.NameInMap("spaceType")
         private String spaceType;
 
-        @NameInMap("sprintIdentifier")
+        @com.aliyun.core.annotation.NameInMap("sprintIdentifier")
         private String sprintIdentifier;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusIdentifier")
         private String statusIdentifier;
 
-        @NameInMap("statusStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
-        @NameInMap("updateStatusAt")
+        @com.aliyun.core.annotation.NameInMap("updateStatusAt")
         private Long updateStatusAt;
 
-        @NameInMap("workitemTypeIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
         private String workitemTypeIdentifier;
 
         private Workitem(Builder builder) {

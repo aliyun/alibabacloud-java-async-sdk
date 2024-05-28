@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMergeRequestFilesReadsResponseBody</p>
  */
 public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListMergeRequestFilesReadsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
     } 
 
     public static class ReadUsers extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private ReadUsers(Builder builder) {
@@ -273,22 +272,22 @@ public class ListMergeRequestFilesReadsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("deletedFile")
+        @com.aliyun.core.annotation.NameInMap("deletedFile")
         private String deletedFile;
 
-        @NameInMap("newFile")
+        @com.aliyun.core.annotation.NameInMap("newFile")
         private Boolean newFile;
 
-        @NameInMap("newFilePath")
+        @com.aliyun.core.annotation.NameInMap("newFilePath")
         private String newFilePath;
 
-        @NameInMap("oldFilePath")
+        @com.aliyun.core.annotation.NameInMap("oldFilePath")
         private String oldFilePath;
 
-        @NameInMap("readUsers")
+        @com.aliyun.core.annotation.NameInMap("readUsers")
         private java.util.List < ReadUsers> readUsers;
 
-        @NameInMap("renamedFile")
+        @com.aliyun.core.annotation.NameInMap("renamedFile")
         private String renamedFile;
 
         private Result(Builder builder) {

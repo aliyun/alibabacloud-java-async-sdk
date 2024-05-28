@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateTestCaseRequest</p>
  */
 public class CreateTestCaseRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("assignedTo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignedTo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assignedTo;
 
-    @Body
-    @NameInMap("directoryIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryIdentifier;
 
-    @Body
-    @NameInMap("fieldValueList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fieldValueList")
     private java.util.List < FieldValueList> fieldValueList;
 
-    @Body
-    @NameInMap("priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("priority")
     private String priority;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Body
-    @NameInMap("subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < String > tags;
 
-    @Body
-    @NameInMap("testcaseStepContentInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("testcaseStepContentInfo")
     private TestcaseStepContentInfo testcaseStepContentInfo;
 
     private CreateTestCaseRequest(Builder builder) {
@@ -259,10 +258,10 @@ public class CreateTestCaseRequest extends Request {
     } 
 
     public static class FieldValueList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private FieldValueList(Builder builder) {
@@ -320,10 +319,10 @@ public class CreateTestCaseRequest extends Request {
 
     }
     public static class StepResultList extends TeaModel {
-        @NameInMap("expected")
+        @com.aliyun.core.annotation.NameInMap("expected")
         private String expected;
 
-        @NameInMap("step")
+        @com.aliyun.core.annotation.NameInMap("step")
         private String step;
 
         private StepResultList(Builder builder) {
@@ -381,14 +380,14 @@ public class CreateTestCaseRequest extends Request {
 
     }
     public static class TestcaseStepContentInfo extends TeaModel {
-        @NameInMap("precondition")
+        @com.aliyun.core.annotation.NameInMap("precondition")
         private String precondition;
 
-        @NameInMap("stepResultList")
+        @com.aliyun.core.annotation.NameInMap("stepResultList")
         private java.util.List < StepResultList> stepResultList;
 
-        @NameInMap("stepType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("stepType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String stepType;
 
         private TestcaseStepContentInfo(Builder builder) {

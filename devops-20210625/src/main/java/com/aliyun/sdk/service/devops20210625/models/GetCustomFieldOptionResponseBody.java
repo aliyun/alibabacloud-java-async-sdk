@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCustomFieldOptionResponseBody</p>
  */
 public class GetCustomFieldOptionResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("fileds")
+    @com.aliyun.core.annotation.NameInMap("fileds")
     private java.util.List < Fileds> fileds;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetCustomFieldOptionResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetCustomFieldOptionResponseBody extends TeaModel {
     } 
 
     public static class Fileds extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("level")
+        @com.aliyun.core.annotation.NameInMap("level")
         private Long level;
 
-        @NameInMap("position")
+        @com.aliyun.core.annotation.NameInMap("position")
         private Long position;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
-        @NameInMap("valueEn")
+        @com.aliyun.core.annotation.NameInMap("valueEn")
         private String valueEn;
 
         private Fileds(Builder builder) {

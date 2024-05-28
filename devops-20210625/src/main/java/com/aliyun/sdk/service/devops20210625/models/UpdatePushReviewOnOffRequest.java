@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePushReviewOnOffRequest</p>
  */
 public class UpdatePushReviewOnOffRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("trunkMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trunkMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean trunkMode;
 
     private UpdatePushReviewOnOffRequest(Builder builder) {

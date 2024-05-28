@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAppMemberRequest</p>
  */
 public class UpdateAppMemberRequest extends Request {
-    @Path
-    @NameInMap("appName")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("appName")
     private String appName;
 
-    @Body
-    @NameInMap("player")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("player")
     private Player player;
 
-    @Body
-    @NameInMap("roleNames")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("roleNames")
     private java.util.List < String > roleNames;
 
-    @Query
-    @NameInMap("organizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
     private String organizationId;
 
     private UpdateAppMemberRequest(Builder builder) {
@@ -139,10 +138,10 @@ public class UpdateAppMemberRequest extends Request {
     } 
 
     public static class Player extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Player(Builder builder) {

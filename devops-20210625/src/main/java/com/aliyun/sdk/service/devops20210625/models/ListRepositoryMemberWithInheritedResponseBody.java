@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepositoryMemberWithInheritedResponseBody</p>
  */
 public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListRepositoryMemberWithInheritedResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
     } 
 
     public static class Inherited extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private String visibilityLevel;
 
         private Inherited(Builder builder) {
@@ -293,28 +292,28 @@ public class ListRepositoryMemberWithInheritedResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("inherited")
+        @com.aliyun.core.annotation.NameInMap("inherited")
         private Inherited inherited;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Result(Builder builder) {

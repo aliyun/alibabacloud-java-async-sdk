@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectTemplatesResponseBody</p>
  */
 public class ListProjectTemplatesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("templates")
+    @com.aliyun.core.annotation.NameInMap("templates")
     private java.util.List < Templates> templates;
 
     private ListProjectTemplatesResponseBody(Builder builder) {
@@ -132,49 +131,49 @@ public class ListProjectTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Templates extends TeaModel {
-        @NameInMap("copyFrom")
+        @com.aliyun.core.annotation.NameInMap("copyFrom")
         private String copyFrom;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("icon")
+        @com.aliyun.core.annotation.NameInMap("icon")
         private String icon;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private String modifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameEn")
+        @com.aliyun.core.annotation.NameInMap("nameEn")
         private String nameEn;
 
-        @NameInMap("resourceCategory")
+        @com.aliyun.core.annotation.NameInMap("resourceCategory")
         private String resourceCategory;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("spaceType")
+        @com.aliyun.core.annotation.NameInMap("spaceType")
         private String spaceType;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private Long type;
 
         private Templates(Builder builder) {

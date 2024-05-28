@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceCredentialsResponseBody</p>
  */
 public class ListServiceCredentialsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("serviceCredentials")
+    @com.aliyun.core.annotation.NameInMap("serviceCredentials")
     private java.util.List < ServiceCredentials> serviceCredentials;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListServiceCredentialsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListServiceCredentialsResponseBody extends TeaModel {
     } 
 
     public static class ServiceCredentials extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("ownerName")
+        @com.aliyun.core.annotation.NameInMap("ownerName")
         private String ownerName;
 
-        @NameInMap("ownerStaffId")
+        @com.aliyun.core.annotation.NameInMap("ownerStaffId")
         private String ownerStaffId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private ServiceCredentials(Builder builder) {

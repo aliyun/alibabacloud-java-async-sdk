@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrganizationsRequest</p>
  */
 public class ListOrganizationsRequest extends Request {
-    @Query
-    @NameInMap("accessLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessLevel")
     private Integer accessLevel;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("minAccessLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minAccessLevel")
     private Integer minAccessLevel;
 
     private ListOrganizationsRequest(Builder builder) {

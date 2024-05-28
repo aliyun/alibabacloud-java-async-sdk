@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPushRulesResponseBody</p>
  */
 public class ListPushRulesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListPushRulesResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListPushRulesResponseBody extends TeaModel {
     } 
 
     public static class RuleInfos extends TeaModel {
-        @NameInMap("checkerName")
+        @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
 
-        @NameInMap("checkerType")
+        @com.aliyun.core.annotation.NameInMap("checkerType")
         private String checkerType;
 
-        @NameInMap("extraMessage")
+        @com.aliyun.core.annotation.NameInMap("extraMessage")
         private String extraMessage;
 
-        @NameInMap("fileRuleRegexes")
+        @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
         private java.util.List < String > fileRuleRegexes;
 
         private RuleInfos(Builder builder) {
@@ -253,16 +252,16 @@ public class ListPushRulesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private String gmtCreate;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private String gmtModified;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("ruleInfos")
+        @com.aliyun.core.annotation.NameInMap("ruleInfos")
         private java.util.List < RuleInfos> ruleInfos;
 
         private Result(Builder builder) {

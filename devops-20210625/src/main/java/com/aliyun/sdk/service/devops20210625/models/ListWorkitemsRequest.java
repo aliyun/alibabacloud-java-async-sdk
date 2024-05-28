@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkitemsRequest</p>
  */
 public class ListWorkitemsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Query
-    @NameInMap("extraConditions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("extraConditions")
     private String extraConditions;
 
-    @Query
-    @NameInMap("groupCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("groupCondition")
     private String groupCondition;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private String maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("searchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("searchType")
     private String searchType;
 
-    @Query
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Query
-    @NameInMap("spaceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceType;
 
     private ListWorkitemsRequest(Builder builder) {

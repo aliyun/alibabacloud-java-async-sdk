@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMergeRequestCommentsResponseBody</p>
  */
 public class ListMergeRequestCommentsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListMergeRequestCommentsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
     } 
 
     public static class Author extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private Author(Builder builder) {
@@ -293,25 +292,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class ChildCommentsAuthor extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private ChildCommentsAuthor(Builder builder) {
@@ -454,25 +453,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class FinalChildCommentsAuthor extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private FinalChildCommentsAuthor(Builder builder) {
@@ -615,25 +614,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class RelatedPatchSet extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("patchSetBizId")
+        @com.aliyun.core.annotation.NameInMap("patchSetBizId")
         private String patchSetBizId;
 
-        @NameInMap("patchSetName")
+        @com.aliyun.core.annotation.NameInMap("patchSetName")
         private String patchSetName;
 
-        @NameInMap("patchSetNo")
+        @com.aliyun.core.annotation.NameInMap("patchSetNo")
         private String patchSetNo;
 
-        @NameInMap("relatedMergeItemType")
+        @com.aliyun.core.annotation.NameInMap("relatedMergeItemType")
         private String relatedMergeItemType;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
         private RelatedPatchSet(Builder builder) {
@@ -776,46 +775,46 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class FinalChildComments extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private FinalChildCommentsAuthor author;
 
-        @NameInMap("commentBizId")
+        @com.aliyun.core.annotation.NameInMap("commentBizId")
         private String commentBizId;
 
-        @NameInMap("commentTime")
+        @com.aliyun.core.annotation.NameInMap("commentTime")
         private String commentTime;
 
-        @NameInMap("commentType")
+        @com.aliyun.core.annotation.NameInMap("commentType")
         private String commentType;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("deleted")
+        @com.aliyun.core.annotation.NameInMap("deleted")
         private Boolean deleted;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("lastEditTime")
+        @com.aliyun.core.annotation.NameInMap("lastEditTime")
         private String lastEditTime;
 
-        @NameInMap("lineNumber")
+        @com.aliyun.core.annotation.NameInMap("lineNumber")
         private String lineNumber;
 
-        @NameInMap("parentCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("parentCommentBizId")
         private String parentCommentBizId;
 
-        @NameInMap("relatedPatchSet")
+        @com.aliyun.core.annotation.NameInMap("relatedPatchSet")
         private RelatedPatchSet relatedPatchSet;
 
-        @NameInMap("resolved")
+        @com.aliyun.core.annotation.NameInMap("resolved")
         private Boolean resolved;
 
-        @NameInMap("rootCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("rootCommentBizId")
         private String rootCommentBizId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private FinalChildComments(Builder builder) {
@@ -1077,25 +1076,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class ChildCommentsRelatedPatchSet extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("patchSetBizId")
+        @com.aliyun.core.annotation.NameInMap("patchSetBizId")
         private String patchSetBizId;
 
-        @NameInMap("patchSetName")
+        @com.aliyun.core.annotation.NameInMap("patchSetName")
         private String patchSetName;
 
-        @NameInMap("patchSetNo")
+        @com.aliyun.core.annotation.NameInMap("patchSetNo")
         private String patchSetNo;
 
-        @NameInMap("relatedMergeItemType")
+        @com.aliyun.core.annotation.NameInMap("relatedMergeItemType")
         private String relatedMergeItemType;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
         private ChildCommentsRelatedPatchSet(Builder builder) {
@@ -1238,49 +1237,49 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class ChildComments extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private ChildCommentsAuthor author;
 
-        @NameInMap("commentBizId")
+        @com.aliyun.core.annotation.NameInMap("commentBizId")
         private String commentBizId;
 
-        @NameInMap("commentTime")
+        @com.aliyun.core.annotation.NameInMap("commentTime")
         private String commentTime;
 
-        @NameInMap("commentType")
+        @com.aliyun.core.annotation.NameInMap("commentType")
         private String commentType;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("deleted")
+        @com.aliyun.core.annotation.NameInMap("deleted")
         private Boolean deleted;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("finalChildComments")
+        @com.aliyun.core.annotation.NameInMap("finalChildComments")
         private java.util.List < FinalChildComments> finalChildComments;
 
-        @NameInMap("lastEditTime")
+        @com.aliyun.core.annotation.NameInMap("lastEditTime")
         private String lastEditTime;
 
-        @NameInMap("lineNumber")
+        @com.aliyun.core.annotation.NameInMap("lineNumber")
         private String lineNumber;
 
-        @NameInMap("parentCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("parentCommentBizId")
         private String parentCommentBizId;
 
-        @NameInMap("relatedPatchSet")
+        @com.aliyun.core.annotation.NameInMap("relatedPatchSet")
         private ChildCommentsRelatedPatchSet relatedPatchSet;
 
-        @NameInMap("resolved")
+        @com.aliyun.core.annotation.NameInMap("resolved")
         private Boolean resolved;
 
-        @NameInMap("rootCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("rootCommentBizId")
         private String rootCommentBizId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private ChildComments(Builder builder) {
@@ -1559,25 +1558,25 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class ResultRelatedPatchSet extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("patchSetBizId")
+        @com.aliyun.core.annotation.NameInMap("patchSetBizId")
         private String patchSetBizId;
 
-        @NameInMap("patchSetName")
+        @com.aliyun.core.annotation.NameInMap("patchSetName")
         private String patchSetName;
 
-        @NameInMap("patchSetNo")
+        @com.aliyun.core.annotation.NameInMap("patchSetNo")
         private String patchSetNo;
 
-        @NameInMap("relatedMergeItemType")
+        @com.aliyun.core.annotation.NameInMap("relatedMergeItemType")
         private String relatedMergeItemType;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
         private ResultRelatedPatchSet(Builder builder) {
@@ -1720,49 +1719,49 @@ public class ListMergeRequestCommentsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
 
-        @NameInMap("childComments")
+        @com.aliyun.core.annotation.NameInMap("childComments")
         private java.util.List < ChildComments> childComments;
 
-        @NameInMap("commentBizId")
+        @com.aliyun.core.annotation.NameInMap("commentBizId")
         private String commentBizId;
 
-        @NameInMap("commentTime")
+        @com.aliyun.core.annotation.NameInMap("commentTime")
         private String commentTime;
 
-        @NameInMap("commentType")
+        @com.aliyun.core.annotation.NameInMap("commentType")
         private String commentType;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("deleted")
+        @com.aliyun.core.annotation.NameInMap("deleted")
         private Boolean deleted;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("lastEditTime")
+        @com.aliyun.core.annotation.NameInMap("lastEditTime")
         private String lastEditTime;
 
-        @NameInMap("lineNumber")
+        @com.aliyun.core.annotation.NameInMap("lineNumber")
         private String lineNumber;
 
-        @NameInMap("parentCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("parentCommentBizId")
         private String parentCommentBizId;
 
-        @NameInMap("relatedPatchSet")
+        @com.aliyun.core.annotation.NameInMap("relatedPatchSet")
         private ResultRelatedPatchSet relatedPatchSet;
 
-        @NameInMap("resolved")
+        @com.aliyun.core.annotation.NameInMap("resolved")
         private Boolean resolved;
 
-        @NameInMap("rootCommentBizId")
+        @com.aliyun.core.annotation.NameInMap("rootCommentBizId")
         private String rootCommentBizId;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTestcaseListRequest</p>
  */
 public class GetTestcaseListRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Body
-    @NameInMap("directoryIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
     private String directoryIdentifier;
 
-    @Body
-    @NameInMap("maxResult")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("maxResult")
     private String maxResult;
 
-    @Body
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
     private GetTestcaseListRequest(Builder builder) {

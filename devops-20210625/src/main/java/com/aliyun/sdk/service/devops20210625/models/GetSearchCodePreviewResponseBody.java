@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSearchCodePreviewResponseBody</p>
  */
 public class GetSearchCodePreviewResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetSearchCodePreviewResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
     } 
 
     public static class HighlightTextMap extends TeaModel {
-        @NameInMap("clob")
+        @com.aliyun.core.annotation.NameInMap("clob")
         private String clob;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
         private HighlightTextMap(Builder builder) {
@@ -213,25 +212,25 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("branch")
+        @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
 
-        @NameInMap("checkinDate")
+        @com.aliyun.core.annotation.NameInMap("checkinDate")
         private String checkinDate;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("language")
+        @com.aliyun.core.annotation.NameInMap("language")
         private String language;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("repoPath")
+        @com.aliyun.core.annotation.NameInMap("repoPath")
         private String repoPath;
 
         private Source(Builder builder) {
@@ -374,13 +373,13 @@ public class GetSearchCodePreviewResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
 
-        @NameInMap("highlightTextMap")
+        @com.aliyun.core.annotation.NameInMap("highlightTextMap")
         private HighlightTextMap highlightTextMap;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private Source source;
 
         private Result(Builder builder) {

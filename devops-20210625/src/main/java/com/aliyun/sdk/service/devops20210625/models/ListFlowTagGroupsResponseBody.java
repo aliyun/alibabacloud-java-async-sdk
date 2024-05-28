@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFlowTagGroupsResponseBody</p>
  */
 public class ListFlowTagGroupsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("flowTagGroups")
+    @com.aliyun.core.annotation.NameInMap("flowTagGroups")
     private java.util.List < FlowTagGroups> flowTagGroups;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListFlowTagGroupsResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListFlowTagGroupsResponseBody extends TeaModel {
     } 
 
     public static class FlowTagGroups extends TeaModel {
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modiferAccountId")
+        @com.aliyun.core.annotation.NameInMap("modiferAccountId")
         private String modiferAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private FlowTagGroups(Builder builder) {

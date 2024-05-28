@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddWebhookRequest</p>
  */
 public class AddWebhookRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("enableSslVerification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("enableSslVerification")
     private Boolean enableSslVerification;
 
-    @Body
-    @NameInMap("mergeRequestsEvents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mergeRequestsEvents")
     private Boolean mergeRequestsEvents;
 
-    @Body
-    @NameInMap("noteEvents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("noteEvents")
     private Boolean noteEvents;
 
-    @Body
-    @NameInMap("pushEvents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pushEvents")
     private Boolean pushEvents;
 
-    @Body
-    @NameInMap("secretToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("secretToken")
     private String secretToken;
 
-    @Body
-    @NameInMap("tagPushEvents")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tagPushEvents")
     private Boolean tagPushEvents;
 
-    @Body
-    @NameInMap("url")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("url")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String url;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private AddWebhookRequest(Builder builder) {

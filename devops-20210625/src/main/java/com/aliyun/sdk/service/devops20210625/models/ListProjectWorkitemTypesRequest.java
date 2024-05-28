@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectWorkitemTypesRequest</p>
  */
 public class ListProjectWorkitemTypesRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("projectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Query
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Query
-    @NameInMap("spaceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("spaceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceType;
 
     private ListProjectWorkitemTypesRequest(Builder builder) {

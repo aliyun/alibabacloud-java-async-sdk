@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSearchCommitResponseBody</p>
  */
 public class ListSearchCommitResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListSearchCommitResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class ListSearchCommitResponseBody extends TeaModel {
     } 
 
     public static class HighlightTextMap extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("commitMessage")
+        @com.aliyun.core.annotation.NameInMap("commitMessage")
         private String commitMessage;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private HighlightTextMap(Builder builder) {
@@ -253,10 +252,10 @@ public class ListSearchCommitResponseBody extends TeaModel {
 
     }
     public static class Author extends TeaModel {
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Author(Builder builder) {
@@ -314,25 +313,25 @@ public class ListSearchCommitResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("author")
+        @com.aliyun.core.annotation.NameInMap("author")
         private Author author;
 
-        @NameInMap("authorTime")
+        @com.aliyun.core.annotation.NameInMap("authorTime")
         private String authorTime;
 
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("commitMessage")
+        @com.aliyun.core.annotation.NameInMap("commitMessage")
         private String commitMessage;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("repoPath")
+        @com.aliyun.core.annotation.NameInMap("repoPath")
         private String repoPath;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Source(Builder builder) {
@@ -475,13 +474,13 @@ public class ListSearchCommitResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("docId")
+        @com.aliyun.core.annotation.NameInMap("docId")
         private String docId;
 
-        @NameInMap("highlightTextMap")
+        @com.aliyun.core.annotation.NameInMap("highlightTextMap")
         private HighlightTextMap highlightTextMap;
 
-        @NameInMap("source")
+        @com.aliyun.core.annotation.NameInMap("source")
         private Source source;
 
         private Result(Builder builder) {

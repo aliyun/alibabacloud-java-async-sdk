@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkitemFileResponseBody</p>
  */
 public class GetWorkitemFileResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
-    @NameInMap("workitemFile")
+    @com.aliyun.core.annotation.NameInMap("workitemFile")
     private WorkitemFile workitemFile;
 
     private GetWorkitemFileResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetWorkitemFileResponseBody extends TeaModel {
     } 
 
     public static class WorkitemFile extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Integer size;
 
-        @NameInMap("suffix")
+        @com.aliyun.core.annotation.NameInMap("suffix")
         private String suffix;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private WorkitemFile(Builder builder) {

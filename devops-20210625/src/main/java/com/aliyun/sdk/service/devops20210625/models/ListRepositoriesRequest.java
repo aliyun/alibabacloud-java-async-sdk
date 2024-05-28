@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepositoriesRequest</p>
  */
 public class ListRepositoriesRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Query
-    @NameInMap("archived")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("archived")
     private Boolean archived;
 
-    @Query
-    @NameInMap("minAccessLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("minAccessLevel")
     private Integer minAccessLevel;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("page")
     private Long page;
 
-    @Query
-    @NameInMap("perPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("perPage")
     private Long perPage;
 
-    @Query
-    @NameInMap("search")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("search")
     private String search;
 
-    @Query
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
     private ListRepositoriesRequest(Builder builder) {

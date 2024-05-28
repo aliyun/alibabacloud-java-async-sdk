@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProjectMemberRequest</p>
  */
 public class UpdateProjectMemberRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("projectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("roleIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("roleIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String roleIdentifier;
 
-    @Body
-    @NameInMap("targetIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("targetIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetIdentifier;
 
-    @Body
-    @NameInMap("targetType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("targetType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetType;
 
-    @Body
-    @NameInMap("userIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userIdentifier;
 
-    @Body
-    @NameInMap("userType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("userType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userType;
 
     private UpdateProjectMemberRequest(Builder builder) {

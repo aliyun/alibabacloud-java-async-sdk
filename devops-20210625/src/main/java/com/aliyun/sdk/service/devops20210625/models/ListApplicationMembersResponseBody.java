@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationMembersResponseBody</p>
  */
 public class ListApplicationMembersResponseBody extends TeaModel {
-    @NameInMap("current")
+    @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @NameInMap("pages")
+    @com.aliyun.core.annotation.NameInMap("pages")
     private Long pages;
 
-    @NameInMap("records")
+    @com.aliyun.core.annotation.NameInMap("records")
     private java.util.List < Records> records;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListApplicationMembersResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class ListApplicationMembersResponseBody extends TeaModel {
     } 
 
     public static class RoleList extends TeaModel {
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private RoleList(Builder builder) {
@@ -213,22 +212,22 @@ public class ListApplicationMembersResponseBody extends TeaModel {
 
     }
     public static class Records extends TeaModel {
-        @NameInMap("avatar")
+        @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("roleList")
+        @com.aliyun.core.annotation.NameInMap("roleList")
         private java.util.List < RoleList> roleList;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Records(Builder builder) {

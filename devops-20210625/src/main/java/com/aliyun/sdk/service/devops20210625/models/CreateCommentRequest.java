@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCommentRequest</p>
  */
 public class CreateCommentRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("commentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commentType;
 
-    @Body
-    @NameInMap("content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("draft")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("draft")
     private Boolean draft;
 
-    @Body
-    @NameInMap("filePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filePath")
     private String filePath;
 
-    @Body
-    @NameInMap("lineNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("lineNumber")
     private Integer lineNumber;
 
-    @Body
-    @NameInMap("parentCommentBizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentCommentBizId")
     private String parentCommentBizId;
 
-    @Body
-    @NameInMap("patchSetBizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("patchSetBizId")
     private String patchSetBizId;
 
-    @Body
-    @NameInMap("resolved")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resolved")
     private Boolean resolved;
 
-    @Query
-    @NameInMap("localId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("localId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long localId;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("repositoryIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("repositoryIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repositoryIdentity;
 
     private CreateCommentRequest(Builder builder) {

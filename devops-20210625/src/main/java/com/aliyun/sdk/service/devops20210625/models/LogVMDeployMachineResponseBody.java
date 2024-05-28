@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LogVMDeployMachineResponseBody</p>
  */
 public class LogVMDeployMachineResponseBody extends TeaModel {
-    @NameInMap("deployMachineLog")
+    @com.aliyun.core.annotation.NameInMap("deployMachineLog")
     private DeployMachineLog deployMachineLog;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private LogVMDeployMachineResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class LogVMDeployMachineResponseBody extends TeaModel {
     } 
 
     public static class DeployMachineLog extends TeaModel {
-        @NameInMap("aliyunRegion")
+        @com.aliyun.core.annotation.NameInMap("aliyunRegion")
         private String aliyunRegion;
 
-        @NameInMap("deployBeginTime")
+        @com.aliyun.core.annotation.NameInMap("deployBeginTime")
         private Long deployBeginTime;
 
-        @NameInMap("deployEndTime")
+        @com.aliyun.core.annotation.NameInMap("deployEndTime")
         private Long deployEndTime;
 
-        @NameInMap("deployLog")
+        @com.aliyun.core.annotation.NameInMap("deployLog")
         private String deployLog;
 
-        @NameInMap("deployLogPath")
+        @com.aliyun.core.annotation.NameInMap("deployLogPath")
         private String deployLogPath;
 
         private DeployMachineLog(Builder builder) {

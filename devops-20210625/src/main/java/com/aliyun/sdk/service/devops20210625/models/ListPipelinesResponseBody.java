@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPipelinesResponseBody</p>
  */
 public class ListPipelinesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("pipelines")
+    @com.aliyun.core.annotation.NameInMap("pipelines")
     private java.util.List < Pipelines> pipelines;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListPipelinesResponseBody(Builder builder) {
@@ -172,19 +171,19 @@ public class ListPipelinesResponseBody extends TeaModel {
     } 
 
     public static class Pipelines extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private Long groupId;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private Long pipelineId;
 
-        @NameInMap("pipelineName")
+        @com.aliyun.core.annotation.NameInMap("pipelineName")
         private String pipelineName;
 
         private Pipelines(Builder builder) {

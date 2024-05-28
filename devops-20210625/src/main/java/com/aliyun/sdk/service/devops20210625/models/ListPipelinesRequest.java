@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPipelinesRequest</p>
  */
 public class ListPipelinesRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("createEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createEndTime")
     private Long createEndTime;
 
-    @Query
-    @NameInMap("createStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createStartTime")
     private Long createStartTime;
 
-    @Query
-    @NameInMap("creatorAccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("creatorAccountIds")
     private String creatorAccountIds;
 
-    @Query
-    @NameInMap("executeAccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("executeAccountIds")
     private String executeAccountIds;
 
-    @Query
-    @NameInMap("executeEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("executeEndTime")
     private Long executeEndTime;
 
-    @Query
-    @NameInMap("executeStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("executeStartTime")
     private Long executeStartTime;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("pipelineName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineName")
     private String pipelineName;
 
-    @Query
-    @NameInMap("statusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("statusList")
     private String statusList;
 
     private ListPipelinesRequest(Builder builder) {

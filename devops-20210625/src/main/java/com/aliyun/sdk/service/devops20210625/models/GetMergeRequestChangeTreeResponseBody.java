@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMergeRequestChangeTreeResponseBody</p>
  */
 public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetMergeRequestChangeTreeResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
     } 
 
     public static class ChangedFilesInfos extends TeaModel {
-        @NameInMap("addLines")
+        @com.aliyun.core.annotation.NameInMap("addLines")
         private Long addLines;
 
-        @NameInMap("binaryFile")
+        @com.aliyun.core.annotation.NameInMap("binaryFile")
         private Boolean binaryFile;
 
-        @NameInMap("delLines")
+        @com.aliyun.core.annotation.NameInMap("delLines")
         private Long delLines;
 
-        @NameInMap("deletedFile")
+        @com.aliyun.core.annotation.NameInMap("deletedFile")
         private Boolean deletedFile;
 
-        @NameInMap("newFile")
+        @com.aliyun.core.annotation.NameInMap("newFile")
         private Boolean newFile;
 
-        @NameInMap("newPath")
+        @com.aliyun.core.annotation.NameInMap("newPath")
         private String newPath;
 
-        @NameInMap("oldPath")
+        @com.aliyun.core.annotation.NameInMap("oldPath")
         private String oldPath;
 
-        @NameInMap("renamedFile")
+        @com.aliyun.core.annotation.NameInMap("renamedFile")
         private Boolean renamedFile;
 
         private ChangedFilesInfos(Builder builder) {
@@ -313,16 +312,16 @@ public class GetMergeRequestChangeTreeResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("changedFilesCount")
+        @com.aliyun.core.annotation.NameInMap("changedFilesCount")
         private Long changedFilesCount;
 
-        @NameInMap("changedFilesInfos")
+        @com.aliyun.core.annotation.NameInMap("changedFilesInfos")
         private java.util.List < ChangedFilesInfos> changedFilesInfos;
 
-        @NameInMap("totalAddLines")
+        @com.aliyun.core.annotation.NameInMap("totalAddLines")
         private Long totalAddLines;
 
-        @NameInMap("totalDelLines")
+        @com.aliyun.core.annotation.NameInMap("totalDelLines")
         private Long totalDelLines;
 
         private Result(Builder builder) {

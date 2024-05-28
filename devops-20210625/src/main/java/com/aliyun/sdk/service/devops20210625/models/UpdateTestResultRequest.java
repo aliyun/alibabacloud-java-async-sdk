@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTestResultRequest</p>
  */
 public class UpdateTestResultRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("testPlanIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("testPlanIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String testPlanIdentifier;
 
-    @Path
-    @NameInMap("testcaseIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("testcaseIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String testcaseIdentifier;
 
-    @Body
-    @NameInMap("executor")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("executor")
     private String executor;
 
-    @Body
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
     private UpdateTestResultRequest(Builder builder) {

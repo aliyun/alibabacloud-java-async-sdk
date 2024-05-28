@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProtectedBranchesRequest</p>
  */
 public class UpdateProtectedBranchesRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Path
-    @Body
-    @NameInMap("id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long id;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("allowMergeRoles")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowMergeRoles")
     private java.util.List < Integer > allowMergeRoles;
 
-    @Body
-    @NameInMap("allowMergeUserIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowMergeUserIds")
     private java.util.List < String > allowMergeUserIds;
 
-    @Body
-    @NameInMap("allowPushRoles")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowPushRoles")
     private java.util.List < Integer > allowPushRoles;
 
-    @Body
-    @NameInMap("allowPushUserIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("allowPushUserIds")
     private java.util.List < String > allowPushUserIds;
 
-    @Body
-    @NameInMap("branch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("branch")
     private String branch;
 
-    @Body
-    @NameInMap("mergeRequestSetting")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mergeRequestSetting")
     private MergeRequestSetting mergeRequestSetting;
 
-    @Body
-    @NameInMap("testSettingDTO")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("testSettingDTO")
     private TestSettingDTO testSettingDTO;
 
-    @Query
-    @NameInMap("organizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
     private String organizationId;
 
     private UpdateProtectedBranchesRequest(Builder builder) {
@@ -304,31 +303,31 @@ public class UpdateProtectedBranchesRequest extends Request {
     } 
 
     public static class MergeRequestSetting extends TeaModel {
-        @NameInMap("allowMergeRequestRoles")
+        @com.aliyun.core.annotation.NameInMap("allowMergeRequestRoles")
         private java.util.List < Integer > allowMergeRequestRoles;
 
-        @NameInMap("defaultAssignees")
+        @com.aliyun.core.annotation.NameInMap("defaultAssignees")
         private java.util.List < String > defaultAssignees;
 
-        @NameInMap("isAllowSelfApproval")
+        @com.aliyun.core.annotation.NameInMap("isAllowSelfApproval")
         private Boolean isAllowSelfApproval;
 
-        @NameInMap("isRequireDiscussionProcessed")
+        @com.aliyun.core.annotation.NameInMap("isRequireDiscussionProcessed")
         private Boolean isRequireDiscussionProcessed;
 
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("isResetApprovalWhenNewPush")
+        @com.aliyun.core.annotation.NameInMap("isResetApprovalWhenNewPush")
         private Boolean isResetApprovalWhenNewPush;
 
-        @NameInMap("minimumApproval")
+        @com.aliyun.core.annotation.NameInMap("minimumApproval")
         private Integer minimumApproval;
 
-        @NameInMap("mrMode")
+        @com.aliyun.core.annotation.NameInMap("mrMode")
         private String mrMode;
 
-        @NameInMap("whiteList")
+        @com.aliyun.core.annotation.NameInMap("whiteList")
         private String whiteList;
 
         private MergeRequestSetting(Builder builder) {
@@ -505,10 +504,10 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class CheckItems extends TeaModel {
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CheckItems(Builder builder) {
@@ -566,7 +565,7 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class CheckConfig extends TeaModel {
-        @NameInMap("checkItems")
+        @com.aliyun.core.annotation.NameInMap("checkItems")
         private java.util.List < CheckItems> checkItems;
 
         private CheckConfig(Builder builder) {
@@ -607,16 +606,16 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class CheckTaskQualityConfig extends TeaModel {
-        @NameInMap("bizNo")
+        @com.aliyun.core.annotation.NameInMap("bizNo")
         private String bizNo;
 
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("taskName")
+        @com.aliyun.core.annotation.NameInMap("taskName")
         private String taskName;
 
         private CheckTaskQualityConfig(Builder builder) {
@@ -708,10 +707,10 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class CodeGuidelinesDetection extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private CodeGuidelinesDetection(Builder builder) {
@@ -769,10 +768,10 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class SensitiveInfoDetection extends TeaModel {
-        @NameInMap("enabled")
+        @com.aliyun.core.annotation.NameInMap("enabled")
         private Boolean enabled;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
         private SensitiveInfoDetection(Builder builder) {
@@ -830,19 +829,19 @@ public class UpdateProtectedBranchesRequest extends Request {
 
     }
     public static class TestSettingDTO extends TeaModel {
-        @NameInMap("checkConfig")
+        @com.aliyun.core.annotation.NameInMap("checkConfig")
         private CheckConfig checkConfig;
 
-        @NameInMap("checkTaskQualityConfig")
+        @com.aliyun.core.annotation.NameInMap("checkTaskQualityConfig")
         private CheckTaskQualityConfig checkTaskQualityConfig;
 
-        @NameInMap("codeGuidelinesDetection")
+        @com.aliyun.core.annotation.NameInMap("codeGuidelinesDetection")
         private CodeGuidelinesDetection codeGuidelinesDetection;
 
-        @NameInMap("isRequired")
+        @com.aliyun.core.annotation.NameInMap("isRequired")
         private Boolean isRequired;
 
-        @NameInMap("sensitiveInfoDetection")
+        @com.aliyun.core.annotation.NameInMap("sensitiveInfoDetection")
         private SensitiveInfoDetection sensitiveInfoDetection;
 
         private TestSettingDTO(Builder builder) {

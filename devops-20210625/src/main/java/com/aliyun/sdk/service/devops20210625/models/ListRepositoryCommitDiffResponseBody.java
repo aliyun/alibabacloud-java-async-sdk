@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepositoryCommitDiffResponseBody</p>
  */
 public class ListRepositoryCommitDiffResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListRepositoryCommitDiffResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class ListRepositoryCommitDiffResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("aMode")
+        @com.aliyun.core.annotation.NameInMap("aMode")
         private String aMode;
 
-        @NameInMap("bMode")
+        @com.aliyun.core.annotation.NameInMap("bMode")
         private String bMode;
 
-        @NameInMap("deletedFile")
+        @com.aliyun.core.annotation.NameInMap("deletedFile")
         private Boolean deletedFile;
 
-        @NameInMap("diff")
+        @com.aliyun.core.annotation.NameInMap("diff")
         private String diff;
 
-        @NameInMap("isBinary")
+        @com.aliyun.core.annotation.NameInMap("isBinary")
         private Boolean isBinary;
 
-        @NameInMap("isNewLfs")
+        @com.aliyun.core.annotation.NameInMap("isNewLfs")
         private Boolean isNewLfs;
 
-        @NameInMap("isOldLfs")
+        @com.aliyun.core.annotation.NameInMap("isOldLfs")
         private Boolean isOldLfs;
 
-        @NameInMap("newFile")
+        @com.aliyun.core.annotation.NameInMap("newFile")
         private Boolean newFile;
 
-        @NameInMap("newId")
+        @com.aliyun.core.annotation.NameInMap("newId")
         private String newId;
 
-        @NameInMap("newPath")
+        @com.aliyun.core.annotation.NameInMap("newPath")
         private String newPath;
 
-        @NameInMap("oldId")
+        @com.aliyun.core.annotation.NameInMap("oldId")
         private String oldId;
 
-        @NameInMap("oldPath")
+        @com.aliyun.core.annotation.NameInMap("oldPath")
         private String oldPath;
 
-        @NameInMap("renamedFile")
+        @com.aliyun.core.annotation.NameInMap("renamedFile")
         private Boolean renamedFile;
 
         private Result(Builder builder) {

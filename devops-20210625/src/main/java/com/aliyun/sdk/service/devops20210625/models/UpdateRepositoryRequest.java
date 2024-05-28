@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRepositoryRequest</p>
  */
 public class UpdateRepositoryRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("adminSettingLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("adminSettingLanguage")
     private String adminSettingLanguage;
 
-    @Body
-    @NameInMap("avatar")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("avatar")
     private String avatar;
 
-    @Body
-    @NameInMap("buildsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildsEnabled")
     private Boolean buildsEnabled;
 
-    @Body
-    @NameInMap("checkEmail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("checkEmail")
     private Boolean checkEmail;
 
-    @Body
-    @NameInMap("defaultBranch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("defaultBranch")
     private String defaultBranch;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("id")
     private Long id;
 
-    @Body
-    @NameInMap("issuesEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("issuesEnabled")
     private Boolean issuesEnabled;
 
-    @Body
-    @NameInMap("mergeRequestsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mergeRequestsEnabled")
     private Boolean mergeRequestsEnabled;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("openCloneDownloadControl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("openCloneDownloadControl")
     private Boolean openCloneDownloadControl;
 
-    @Body
-    @NameInMap("path")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("path")
     private String path;
 
-    @Body
-    @NameInMap("projectCloneDownloadMethodList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectCloneDownloadMethodList")
     private java.util.List < ProjectCloneDownloadMethodList> projectCloneDownloadMethodList;
 
-    @Body
-    @NameInMap("projectCloneDownloadRoleList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("projectCloneDownloadRoleList")
     private java.util.List < ProjectCloneDownloadRoleList> projectCloneDownloadRoleList;
 
-    @Body
-    @NameInMap("snippetsEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("snippetsEnabled")
     private Boolean snippetsEnabled;
 
-    @Body
-    @NameInMap("visibilityLevel")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("visibilityLevel")
     private Integer visibilityLevel;
 
-    @Body
-    @NameInMap("wikiEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("wikiEnabled")
     private Boolean wikiEnabled;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private UpdateRepositoryRequest(Builder builder) {
@@ -509,10 +508,10 @@ public class UpdateRepositoryRequest extends Request {
     } 
 
     public static class ProjectCloneDownloadMethodList extends TeaModel {
-        @NameInMap("allowed")
+        @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;
 
-        @NameInMap("permissionCode")
+        @com.aliyun.core.annotation.NameInMap("permissionCode")
         private String permissionCode;
 
         private ProjectCloneDownloadMethodList(Builder builder) {
@@ -570,10 +569,10 @@ public class UpdateRepositoryRequest extends Request {
 
     }
     public static class ProjectCloneDownloadRoleList extends TeaModel {
-        @NameInMap("allowed")
+        @com.aliyun.core.annotation.NameInMap("allowed")
         private Boolean allowed;
 
-        @NameInMap("roleCode")
+        @com.aliyun.core.annotation.NameInMap("roleCode")
         private Integer roleCode;
 
         private ProjectCloneDownloadRoleList(Builder builder) {

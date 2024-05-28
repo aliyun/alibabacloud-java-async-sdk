@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWorkspaceRequest</p>
  */
 public class CreateWorkspaceRequest extends Request {
-    @Body
-    @NameInMap("codeUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("codeUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeUrl;
 
-    @Body
-    @NameInMap("codeVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("codeVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String codeVersion;
 
-    @Body
-    @NameInMap("filePath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("filePath")
     private String filePath;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("requestFrom")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("requestFrom")
     private String requestFrom;
 
-    @Body
-    @NameInMap("resourceIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceIdentifier")
     private String resourceIdentifier;
 
-    @Body
-    @NameInMap("reuse")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("reuse")
     private Boolean reuse;
 
-    @Body
-    @NameInMap("workspaceTemplate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workspaceTemplate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceTemplate;
 
     private CreateWorkspaceRequest(Builder builder) {

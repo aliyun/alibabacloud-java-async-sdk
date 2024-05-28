@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListHostGroupsRequest</p>
  */
 public class ListHostGroupsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("createEndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createEndTime")
     private Long createEndTime;
 
-    @Query
-    @NameInMap("createStartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createStartTime")
     private Long createStartTime;
 
-    @Query
-    @NameInMap("creatorAccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("creatorAccountIds")
     private String creatorAccountIds;
 
-    @Query
-    @NameInMap("ids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ids")
     private String ids;
 
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("pageOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageOrder")
     private String pageOrder;
 
-    @Query
-    @NameInMap("pageSort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSort")
     private String pageSort;
 
     private ListHostGroupsRequest(Builder builder) {

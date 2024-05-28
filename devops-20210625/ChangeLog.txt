@@ -1,3 +1,6 @@
+2024-05-28 Version: 4.0.32
+- Generated java-async 2021-06-25 for devops.
+
 2024-04-19 Version: 4.0.31
 - Generated java-async 2021-06-25 for devops.
 

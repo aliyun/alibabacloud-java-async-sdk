@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSearchCommitRequest</p>
  */
 public class ListSearchCommitRequest extends Request {
-    @Body
-    @NameInMap("keyword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("keyword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String keyword;
 
-    @Body
-    @NameInMap("order")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("order")
     private String order;
 
-    @Body
-    @NameInMap("page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("page")
     private Integer page;
 
-    @Body
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("repoPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("repoPath")
     private RepoPath repoPath;
 
-    @Body
-    @NameInMap("scope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("scope")
     private String scope;
 
-    @Body
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private ListSearchCommitRequest(Builder builder) {
@@ -233,13 +232,13 @@ public class ListSearchCommitRequest extends Request {
     } 
 
     public static class RepoPath extends TeaModel {
-        @NameInMap("matchType")
+        @com.aliyun.core.annotation.NameInMap("matchType")
         private String matchType;
 
-        @NameInMap("operatorType")
+        @com.aliyun.core.annotation.NameInMap("operatorType")
         private String operatorType;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private RepoPath(Builder builder) {

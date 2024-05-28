@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRepositoryWebhookResponseBody</p>
  */
 public class ListRepositoryWebhookResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListRepositoryWebhookResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class ListRepositoryWebhookResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("enableSslVerification")
+        @com.aliyun.core.annotation.NameInMap("enableSslVerification")
         private Boolean enableSslVerification;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastTestResult")
+        @com.aliyun.core.annotation.NameInMap("lastTestResult")
         private String lastTestResult;
 
-        @NameInMap("mergeRequestsEvents")
+        @com.aliyun.core.annotation.NameInMap("mergeRequestsEvents")
         private Boolean mergeRequestsEvents;
 
-        @NameInMap("noteEvents")
+        @com.aliyun.core.annotation.NameInMap("noteEvents")
         private Boolean noteEvents;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private Long projectId;
 
-        @NameInMap("pushEvents")
+        @com.aliyun.core.annotation.NameInMap("pushEvents")
         private Boolean pushEvents;
 
-        @NameInMap("secretToken")
+        @com.aliyun.core.annotation.NameInMap("secretToken")
         private String secretToken;
 
-        @NameInMap("tagPushEvents")
+        @com.aliyun.core.annotation.NameInMap("tagPushEvents")
         private Boolean tagPushEvents;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Result(Builder builder) {

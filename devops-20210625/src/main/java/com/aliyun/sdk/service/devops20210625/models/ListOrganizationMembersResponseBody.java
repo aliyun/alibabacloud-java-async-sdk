@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrganizationMembersResponseBody</p>
  */
 public class ListOrganizationMembersResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("members")
+    @com.aliyun.core.annotation.NameInMap("members")
     private java.util.List < Members> members;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListOrganizationMembersResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     } 
 
     public static class Identities extends TeaModel {
-        @NameInMap("externUid")
+        @com.aliyun.core.annotation.NameInMap("externUid")
         private String externUid;
 
-        @NameInMap("provider")
+        @com.aliyun.core.annotation.NameInMap("provider")
         private String provider;
 
         private Identities(Builder builder) {
@@ -233,46 +232,46 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
 
     }
     public static class Members extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("birthday")
+        @com.aliyun.core.annotation.NameInMap("birthday")
         private Long birthday;
 
-        @NameInMap("deptLists")
+        @com.aliyun.core.annotation.NameInMap("deptLists")
         private java.util.List < String > deptLists;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("hiredDate")
+        @com.aliyun.core.annotation.NameInMap("hiredDate")
         private Long hiredDate;
 
-        @NameInMap("identities")
+        @com.aliyun.core.annotation.NameInMap("identities")
         private Identities identities;
 
-        @NameInMap("jobNumber")
+        @com.aliyun.core.annotation.NameInMap("jobNumber")
         private String jobNumber;
 
-        @NameInMap("joinTime")
+        @com.aliyun.core.annotation.NameInMap("joinTime")
         private Long joinTime;
 
-        @NameInMap("lastVisitTime")
+        @com.aliyun.core.annotation.NameInMap("lastVisitTime")
         private Long lastVisitTime;
 
-        @NameInMap("mobile")
+        @com.aliyun.core.annotation.NameInMap("mobile")
         private String mobile;
 
-        @NameInMap("organizationMemberName")
+        @com.aliyun.core.annotation.NameInMap("organizationMemberName")
         private String organizationMemberName;
 
-        @NameInMap("organizationRoleId")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleId")
         private String organizationRoleId;
 
-        @NameInMap("organizationRoleName")
+        @com.aliyun.core.annotation.NameInMap("organizationRoleName")
         private String organizationRoleName;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
         private Members(Builder builder) {

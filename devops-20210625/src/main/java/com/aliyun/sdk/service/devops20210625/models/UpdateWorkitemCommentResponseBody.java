@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWorkitemCommentResponseBody</p>
  */
 public class UpdateWorkitemCommentResponseBody extends TeaModel {
-    @NameInMap("comment")
+    @com.aliyun.core.annotation.NameInMap("comment")
     private Comment comment;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
     private UpdateWorkitemCommentResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("account")
+        @com.aliyun.core.annotation.NameInMap("account")
         private String account;
 
-        @NameInMap("avatar")
+        @com.aliyun.core.annotation.NameInMap("avatar")
         private String avatar;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("realName")
+        @com.aliyun.core.annotation.NameInMap("realName")
         private String realName;
 
         private User(Builder builder) {
@@ -273,37 +272,37 @@ public class UpdateWorkitemCommentResponseBody extends TeaModel {
 
     }
     public static class Comment extends TeaModel {
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("formatType")
+        @com.aliyun.core.annotation.NameInMap("formatType")
         private String formatType;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("isTop")
+        @com.aliyun.core.annotation.NameInMap("isTop")
         private Boolean isTop;
 
-        @NameInMap("modifiedTime")
+        @com.aliyun.core.annotation.NameInMap("modifiedTime")
         private Long modifiedTime;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private Long parentId;
 
-        @NameInMap("targetIdentifier")
+        @com.aliyun.core.annotation.NameInMap("targetIdentifier")
         private String targetIdentifier;
 
-        @NameInMap("targetType")
+        @com.aliyun.core.annotation.NameInMap("targetType")
         private String targetType;
 
-        @NameInMap("topTime")
+        @com.aliyun.core.annotation.NameInMap("topTime")
         private Long topTime;
 
-        @NameInMap("user")
+        @com.aliyun.core.annotation.NameInMap("user")
         private User user;
 
         private Comment(Builder builder) {

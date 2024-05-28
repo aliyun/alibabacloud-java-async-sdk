@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTestResultListRequest</p>
  */
 public class GetTestResultListRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("testPlanIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("testPlanIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String testPlanIdentifier;
 
-    @Body
-    @NameInMap("conditions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("conditions")
     private String conditions;
 
-    @Body
-    @NameInMap("directoryIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryIdentifier;
 
     private GetTestResultListRequest(Builder builder) {

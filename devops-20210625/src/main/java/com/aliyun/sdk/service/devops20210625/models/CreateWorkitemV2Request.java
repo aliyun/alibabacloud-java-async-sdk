@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWorkitemV2Request</p>
  */
 public class CreateWorkitemV2Request extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("assignedTo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("assignedTo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String assignedTo;
 
-    @Body
-    @NameInMap("category")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("category")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String category;
 
-    @Body
-    @NameInMap("description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @Body
-    @NameInMap("fieldValueList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("fieldValueList")
     private java.util.List < FieldValueList> fieldValueList;
 
-    @Body
-    @NameInMap("parentIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("parentIdentifier")
     private String parentIdentifier;
 
-    @Body
-    @NameInMap("participants")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("participants")
     private java.util.List < String > participants;
 
-    @Body
-    @NameInMap("spaceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String spaceIdentifier;
 
-    @Body
-    @NameInMap("sprintIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sprintIdentifier")
     private String sprintIdentifier;
 
-    @Body
-    @NameInMap("subject")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subject")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subject;
 
-    @Body
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("tags")
     private java.util.List < String > tags;
 
-    @Body
-    @NameInMap("trackers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("trackers")
     private java.util.List < String > trackers;
 
-    @Body
-    @NameInMap("verifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("verifier")
     private String verifier;
 
-    @Body
-    @NameInMap("versions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("versions")
     private java.util.List < String > versions;
 
-    @Body
-    @NameInMap("workitemTypeIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workitemTypeIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workitemTypeIdentifier;
 
     private CreateWorkitemV2Request(Builder builder) {
@@ -398,10 +397,10 @@ public class CreateWorkitemV2Request extends Request {
     } 
 
     public static class FieldValueList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private FieldValueList(Builder builder) {

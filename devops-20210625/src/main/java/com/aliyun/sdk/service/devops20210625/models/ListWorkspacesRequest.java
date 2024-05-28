@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkspacesRequest</p>
  */
 public class ListWorkspacesRequest extends Request {
-    @Query
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("statusList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("statusList")
     private java.util.List < String > statusList;
 
-    @Query
-    @NameInMap("workspaceTemplateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("workspaceTemplateList")
     private java.util.List < String > workspaceTemplateList;
 
     private ListWorkspacesRequest(Builder builder) {

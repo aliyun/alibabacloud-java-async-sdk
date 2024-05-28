@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOAuthTokenResponseBody</p>
  */
 public class CreateOAuthTokenResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private String success;
 
     private CreateOAuthTokenResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class CreateOAuthTokenResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("accessToken")
+        @com.aliyun.core.annotation.NameInMap("accessToken")
         private String accessToken;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("tokenType")
+        @com.aliyun.core.annotation.NameInMap("tokenType")
         private String tokenType;
 
         private Result(Builder builder) {

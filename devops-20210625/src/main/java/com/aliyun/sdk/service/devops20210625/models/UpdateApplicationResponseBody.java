@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationResponseBody</p>
  */
 public class UpdateApplicationResponseBody extends TeaModel {
-    @NameInMap("creatorAccountId")
+    @com.aliyun.core.annotation.NameInMap("creatorAccountId")
     private String creatorAccountId;
 
-    @NameInMap("description")
+    @com.aliyun.core.annotation.NameInMap("description")
     private String description;
 
-    @NameInMap("gmtCreate")
+    @com.aliyun.core.annotation.NameInMap("gmtCreate")
     private String gmtCreate;
 
-    @NameInMap("name")
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private UpdateApplicationResponseBody(Builder builder) {

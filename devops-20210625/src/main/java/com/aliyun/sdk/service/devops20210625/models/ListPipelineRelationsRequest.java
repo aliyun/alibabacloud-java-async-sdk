@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPipelineRelationsRequest</p>
  */
 public class ListPipelineRelationsRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("pipelineId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineId")
     private Long pipelineId;
 
-    @Query
-    @NameInMap("relObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("relObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relObjectType;
 
     private ListPipelineRelationsRequest(Builder builder) {

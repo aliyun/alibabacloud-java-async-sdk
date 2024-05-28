@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectsResponseBody</p>
  */
 public class ListProjectsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Long maxResults;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("projects")
+    @com.aliyun.core.annotation.NameInMap("projects")
     private java.util.List < Projects> projects;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Long totalCount;
 
     private ListProjectsResponseBody(Builder builder) {
@@ -192,43 +191,43 @@ public class ListProjectsResponseBody extends TeaModel {
     } 
 
     public static class Projects extends TeaModel {
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("customCode")
+        @com.aliyun.core.annotation.NameInMap("customCode")
         private String customCode;
 
-        @NameInMap("deleteTime")
+        @com.aliyun.core.annotation.NameInMap("deleteTime")
         private Long deleteTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("icon")
+        @com.aliyun.core.annotation.NameInMap("icon")
         private String icon;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("logicalStatus")
+        @com.aliyun.core.annotation.NameInMap("logicalStatus")
         private String logicalStatus;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("scope")
+        @com.aliyun.core.annotation.NameInMap("scope")
         private String scope;
 
-        @NameInMap("statusStageIdentifier")
+        @com.aliyun.core.annotation.NameInMap("statusStageIdentifier")
         private String statusStageIdentifier;
 
-        @NameInMap("typeIdentifier")
+        @com.aliyun.core.annotation.NameInMap("typeIdentifier")
         private String typeIdentifier;
 
         private Projects(Builder builder) {

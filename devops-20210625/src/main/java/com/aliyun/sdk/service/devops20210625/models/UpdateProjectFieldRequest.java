@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateProjectFieldRequest</p>
  */
 public class UpdateProjectFieldRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
-    @Body
-    @NameInMap("statusIdentifier")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("statusIdentifier")
     private String statusIdentifier;
 
-    @Body
-    @NameInMap("updateBasicFieldRequestList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateBasicFieldRequestList")
     private java.util.List < UpdateBasicFieldRequestList> updateBasicFieldRequestList;
 
-    @Body
-    @NameInMap("updateForOpenApiList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("updateForOpenApiList")
     private java.util.List < UpdateForOpenApiList> updateForOpenApiList;
 
     private UpdateProjectFieldRequest(Builder builder) {
@@ -164,10 +163,10 @@ public class UpdateProjectFieldRequest extends Request {
     } 
 
     public static class UpdateBasicFieldRequestList extends TeaModel {
-        @NameInMap("propertyKey")
+        @com.aliyun.core.annotation.NameInMap("propertyKey")
         private String propertyKey;
 
-        @NameInMap("propertyValue")
+        @com.aliyun.core.annotation.NameInMap("propertyValue")
         private String propertyValue;
 
         private UpdateBasicFieldRequestList(Builder builder) {
@@ -225,10 +224,10 @@ public class UpdateProjectFieldRequest extends Request {
 
     }
     public static class UpdateForOpenApiList extends TeaModel {
-        @NameInMap("fieldIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fieldIdentifier")
         private String fieldIdentifier;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private UpdateForOpenApiList(Builder builder) {

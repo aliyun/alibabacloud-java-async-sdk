@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPipelineResponseBody</p>
  */
 public class GetPipelineResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("pipeline")
+    @com.aliyun.core.annotation.NameInMap("pipeline")
     private Pipeline pipeline;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetPipelineResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class GetPipelineResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("branch")
+        @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
 
-        @NameInMap("cloneDepth")
+        @com.aliyun.core.annotation.NameInMap("cloneDepth")
         private Long cloneDepth;
 
-        @NameInMap("credentialId")
+        @com.aliyun.core.annotation.NameInMap("credentialId")
         private Long credentialId;
 
-        @NameInMap("credentialLabel")
+        @com.aliyun.core.annotation.NameInMap("credentialLabel")
         private String credentialLabel;
 
-        @NameInMap("credentialType")
+        @com.aliyun.core.annotation.NameInMap("credentialType")
         private String credentialType;
 
-        @NameInMap("events")
+        @com.aliyun.core.annotation.NameInMap("events")
         private java.util.List < String > events;
 
-        @NameInMap("isBranchMode")
+        @com.aliyun.core.annotation.NameInMap("isBranchMode")
         private Boolean isBranchMode;
 
-        @NameInMap("isCloneDepth")
+        @com.aliyun.core.annotation.NameInMap("isCloneDepth")
         private Boolean isCloneDepth;
 
-        @NameInMap("isSubmodule")
+        @com.aliyun.core.annotation.NameInMap("isSubmodule")
         private Boolean isSubmodule;
 
-        @NameInMap("isTrigger")
+        @com.aliyun.core.annotation.NameInMap("isTrigger")
         private Boolean isTrigger;
 
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("namespace")
+        @com.aliyun.core.annotation.NameInMap("namespace")
         private String namespace;
 
-        @NameInMap("repo")
+        @com.aliyun.core.annotation.NameInMap("repo")
         private String repo;
 
-        @NameInMap("serviceConnectionId")
+        @com.aliyun.core.annotation.NameInMap("serviceConnectionId")
         private Long serviceConnectionId;
 
-        @NameInMap("triggerFilter")
+        @com.aliyun.core.annotation.NameInMap("triggerFilter")
         private String triggerFilter;
 
-        @NameInMap("webhook")
+        @com.aliyun.core.annotation.NameInMap("webhook")
         private String webhook;
 
         private Data(Builder builder) {
@@ -473,13 +472,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     }
     public static class Sources extends TeaModel {
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
 
-        @NameInMap("sign")
+        @com.aliyun.core.annotation.NameInMap("sign")
         private String sign;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Sources(Builder builder) {
@@ -554,13 +553,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     }
     public static class PipelineConfig extends TeaModel {
-        @NameInMap("flow")
+        @com.aliyun.core.annotation.NameInMap("flow")
         private String flow;
 
-        @NameInMap("settings")
+        @com.aliyun.core.annotation.NameInMap("settings")
         private String settings;
 
-        @NameInMap("sources")
+        @com.aliyun.core.annotation.NameInMap("sources")
         private java.util.List < Sources> sources;
 
         private PipelineConfig(Builder builder) {
@@ -635,10 +634,10 @@ public class GetPipelineResponseBody extends TeaModel {
 
     }
     public static class TagList extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private TagList(Builder builder) {
@@ -696,34 +695,34 @@ public class GetPipelineResponseBody extends TeaModel {
 
     }
     public static class Pipeline extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("envId")
+        @com.aliyun.core.annotation.NameInMap("envId")
         private Integer envId;
 
-        @NameInMap("envName")
+        @com.aliyun.core.annotation.NameInMap("envName")
         private String envName;
 
-        @NameInMap("groupId")
+        @com.aliyun.core.annotation.NameInMap("groupId")
         private Long groupId;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pipelineConfig")
+        @com.aliyun.core.annotation.NameInMap("pipelineConfig")
         private PipelineConfig pipelineConfig;
 
-        @NameInMap("tagList")
+        @com.aliyun.core.annotation.NameInMap("tagList")
         private java.util.List < TagList> tagList;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private Pipeline(Builder builder) {

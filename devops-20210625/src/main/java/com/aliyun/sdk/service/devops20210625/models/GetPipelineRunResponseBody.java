@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPipelineRunResponseBody</p>
  */
 public class GetPipelineRunResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("pipelineRun")
+    @com.aliyun.core.annotation.NameInMap("pipelineRun")
     private PipelineRun pipelineRun;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetPipelineRunResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("branch")
+        @com.aliyun.core.annotation.NameInMap("branch")
         private String branch;
 
-        @NameInMap("commint")
+        @com.aliyun.core.annotation.NameInMap("commint")
         private String commint;
 
-        @NameInMap("repo")
+        @com.aliyun.core.annotation.NameInMap("repo")
         private String repo;
 
         private Data(Builder builder) {
@@ -213,13 +212,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class Sources extends TeaModel {
-        @NameInMap("data")
+        @com.aliyun.core.annotation.NameInMap("data")
         private Data data;
 
-        @NameInMap("sign")
+        @com.aliyun.core.annotation.NameInMap("sign")
         private String sign;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Sources(Builder builder) {
@@ -294,13 +293,13 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class Actions extends TeaModel {
-        @NameInMap("disable")
+        @com.aliyun.core.annotation.NameInMap("disable")
         private Boolean disable;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private java.util.Map < String, ? > params;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Actions(Builder builder) {
@@ -375,25 +374,25 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class Jobs extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < Actions> actions;
 
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("params")
+        @com.aliyun.core.annotation.NameInMap("params")
         private String params;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Jobs(Builder builder) {
@@ -536,19 +535,19 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class StageInfo extends TeaModel {
-        @NameInMap("endTime")
+        @com.aliyun.core.annotation.NameInMap("endTime")
         private Long endTime;
 
-        @NameInMap("jobs")
+        @com.aliyun.core.annotation.NameInMap("jobs")
         private java.util.List < Jobs> jobs;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private Long startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private StageInfo(Builder builder) {
@@ -657,10 +656,10 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class Stages extends TeaModel {
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("stageInfo")
+        @com.aliyun.core.annotation.NameInMap("stageInfo")
         private StageInfo stageInfo;
 
         private Stages(Builder builder) {
@@ -718,37 +717,37 @@ public class GetPipelineRunResponseBody extends TeaModel {
 
     }
     public static class PipelineRun extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("creatorAccountId")
         private String creatorAccountId;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private Long pipelineId;
 
-        @NameInMap("pipelineRunId")
+        @com.aliyun.core.annotation.NameInMap("pipelineRunId")
         private Long pipelineRunId;
 
-        @NameInMap("sources")
+        @com.aliyun.core.annotation.NameInMap("sources")
         private java.util.List < Sources> sources;
 
-        @NameInMap("stageGroup")
+        @com.aliyun.core.annotation.NameInMap("stageGroup")
         private java.util.List < java.util.List < String > > stageGroup;
 
-        @NameInMap("stages")
+        @com.aliyun.core.annotation.NameInMap("stages")
         private java.util.List < Stages> stages;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("triggerMode")
+        @com.aliyun.core.annotation.NameInMap("triggerMode")
         private Integer triggerMode;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
         private PipelineRun(Builder builder) {

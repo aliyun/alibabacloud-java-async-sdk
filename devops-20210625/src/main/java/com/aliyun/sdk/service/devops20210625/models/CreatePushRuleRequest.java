@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePushRuleRequest</p>
  */
 public class CreatePushRuleRequest extends Request {
-    @Path
-    @NameInMap("repositoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("repositoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long repositoryId;
 
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("ruleInfos")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ruleInfos")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RuleInfos> ruleInfos;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private CreatePushRuleRequest(Builder builder) {
@@ -142,16 +141,16 @@ public class CreatePushRuleRequest extends Request {
     } 
 
     public static class RuleInfos extends TeaModel {
-        @NameInMap("checkerName")
+        @com.aliyun.core.annotation.NameInMap("checkerName")
         private String checkerName;
 
-        @NameInMap("checkerType")
+        @com.aliyun.core.annotation.NameInMap("checkerType")
         private String checkerType;
 
-        @NameInMap("extraMessage")
+        @com.aliyun.core.annotation.NameInMap("extraMessage")
         private String extraMessage;
 
-        @NameInMap("fileRuleRegexes")
+        @com.aliyun.core.annotation.NameInMap("fileRuleRegexes")
         private java.util.List < String > fileRuleRegexes;
 
         private RuleInfos(Builder builder) {

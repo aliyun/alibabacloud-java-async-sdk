@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCommitWithMultipleFilesRequest</p>
  */
 public class CreateCommitWithMultipleFilesRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("actions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("actions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Actions> actions;
 
-    @Body
-    @NameInMap("branch")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("branch")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String branch;
 
-    @Body
-    @NameInMap("commitMessage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commitMessage")
     private String commitMessage;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("repositoryIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("repositoryIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repositoryIdentity;
 
     private CreateCommitWithMultipleFilesRequest(Builder builder) {
@@ -189,16 +188,16 @@ public class CreateCommitWithMultipleFilesRequest extends Request {
     } 
 
     public static class Actions extends TeaModel {
-        @NameInMap("action")
+        @com.aliyun.core.annotation.NameInMap("action")
         private String action;
 
-        @NameInMap("content")
+        @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
-        @NameInMap("filePath")
+        @com.aliyun.core.annotation.NameInMap("filePath")
         private String filePath;
 
-        @NameInMap("previousPath")
+        @com.aliyun.core.annotation.NameInMap("previousPath")
         private String previousPath;
 
         private Actions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteResourceMemberRequest</p>
  */
 public class DeleteResourceMemberRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("resourceType")
-    @Validation(required = true, maximum = 999999999999999D, minimum = 1)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceType")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 999999999999999D, minimum = 1)
     private String resourceType;
 
-    @Path
-    @NameInMap("resourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("resourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long resourceId;
 
-    @Path
-    @NameInMap("accountId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("accountId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountId;
 
     private DeleteResourceMemberRequest(Builder builder) {

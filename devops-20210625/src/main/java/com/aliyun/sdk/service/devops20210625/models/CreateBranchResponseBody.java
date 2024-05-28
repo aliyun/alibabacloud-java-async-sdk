@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateBranchResponseBody</p>
  */
 public class CreateBranchResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private CreateBranchResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class CreateBranchResponseBody extends TeaModel {
     } 
 
     public static class Commit extends TeaModel {
-        @NameInMap("authorEmail")
+        @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("authorName")
+        @com.aliyun.core.annotation.NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("authoredDate")
+        @com.aliyun.core.annotation.NameInMap("authoredDate")
         private String authoredDate;
 
-        @NameInMap("committedDate")
+        @com.aliyun.core.annotation.NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("committerEmail")
+        @com.aliyun.core.annotation.NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("committerName")
+        @com.aliyun.core.annotation.NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("parentIds")
+        @com.aliyun.core.annotation.NameInMap("parentIds")
         private java.util.List < String > parentIds;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Commit(Builder builder) {
@@ -393,13 +392,13 @@ public class CreateBranchResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("commit")
+        @com.aliyun.core.annotation.NameInMap("commit")
         private Commit commit;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("protected")
+        @com.aliyun.core.annotation.NameInMap("protected")
         private Boolean _protected;
 
         private Result(Builder builder) {

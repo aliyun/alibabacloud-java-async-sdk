@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserResourcesResponseBody</p>
  */
 public class ListUserResourcesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("total")
+    @com.aliyun.core.annotation.NameInMap("total")
     private Long total;
 
     private ListUserResourcesResponseBody(Builder builder) {
@@ -152,37 +151,37 @@ public class ListUserResourcesResponseBody extends TeaModel {
     } 
 
     public static class GroupInfo extends TeaModel {
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("ownerId")
+        @com.aliyun.core.annotation.NameInMap("ownerId")
         private Long ownerId;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private Long parentId;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
         private GroupInfo(Builder builder) {
@@ -393,19 +392,19 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class GroupRole extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("cnRoleName")
+        @com.aliyun.core.annotation.NameInMap("cnRoleName")
         private String cnRoleName;
 
-        @NameInMap("enRoleName")
+        @com.aliyun.core.annotation.NameInMap("enRoleName")
         private String enRoleName;
 
-        @NameInMap("sourceId")
+        @com.aliyun.core.annotation.NameInMap("sourceId")
         private Long sourceId;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
         private GroupRole(Builder builder) {
@@ -514,10 +513,10 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class GroupInfos extends TeaModel {
-        @NameInMap("groupInfo")
+        @com.aliyun.core.annotation.NameInMap("groupInfo")
         private GroupInfo groupInfo;
 
-        @NameInMap("groupRole")
+        @com.aliyun.core.annotation.NameInMap("groupRole")
         private GroupRole groupRole;
 
         private GroupInfos(Builder builder) {
@@ -575,49 +574,49 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class RepositoryInfo extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("archived")
+        @com.aliyun.core.annotation.NameInMap("archived")
         private Boolean archived;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private Long creatorId;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("encrypted")
+        @com.aliyun.core.annotation.NameInMap("encrypted")
         private Boolean encrypted;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("lastActivityAt")
+        @com.aliyun.core.annotation.NameInMap("lastActivityAt")
         private String lastActivityAt;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("nameWithNamespace")
         private String nameWithNamespace;
 
-        @NameInMap("namespaceId")
+        @com.aliyun.core.annotation.NameInMap("namespaceId")
         private Long namespaceId;
 
-        @NameInMap("path")
+        @com.aliyun.core.annotation.NameInMap("path")
         private String path;
 
-        @NameInMap("pathWithNamespace")
+        @com.aliyun.core.annotation.NameInMap("pathWithNamespace")
         private String pathWithNamespace;
 
-        @NameInMap("updatedAt")
+        @com.aliyun.core.annotation.NameInMap("updatedAt")
         private String updatedAt;
 
-        @NameInMap("visibilityLevel")
+        @com.aliyun.core.annotation.NameInMap("visibilityLevel")
         private Integer visibilityLevel;
 
         private RepositoryInfo(Builder builder) {
@@ -896,19 +895,19 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class RepositoryRole extends TeaModel {
-        @NameInMap("accessLevel")
+        @com.aliyun.core.annotation.NameInMap("accessLevel")
         private Integer accessLevel;
 
-        @NameInMap("cnRoleName")
+        @com.aliyun.core.annotation.NameInMap("cnRoleName")
         private String cnRoleName;
 
-        @NameInMap("enRoleName")
+        @com.aliyun.core.annotation.NameInMap("enRoleName")
         private String enRoleName;
 
-        @NameInMap("sourceId")
+        @com.aliyun.core.annotation.NameInMap("sourceId")
         private Long sourceId;
 
-        @NameInMap("sourceType")
+        @com.aliyun.core.annotation.NameInMap("sourceType")
         private String sourceType;
 
         private RepositoryRole(Builder builder) {
@@ -1017,10 +1016,10 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class RepositoryInfos extends TeaModel {
-        @NameInMap("repositoryInfo")
+        @com.aliyun.core.annotation.NameInMap("repositoryInfo")
         private RepositoryInfo repositoryInfo;
 
-        @NameInMap("repositoryRole")
+        @com.aliyun.core.annotation.NameInMap("repositoryRole")
         private RepositoryRole repositoryRole;
 
         private RepositoryInfos(Builder builder) {
@@ -1078,22 +1077,22 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class UserInfo extends TeaModel {
-        @NameInMap("avatarUrl")
+        @com.aliyun.core.annotation.NameInMap("avatarUrl")
         private String avatarUrl;
 
-        @NameInMap("email")
+        @com.aliyun.core.annotation.NameInMap("email")
         private String email;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("state")
+        @com.aliyun.core.annotation.NameInMap("state")
         private String state;
 
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private UserInfo(Builder builder) {
@@ -1219,13 +1218,13 @@ public class ListUserResourcesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("groupInfos")
+        @com.aliyun.core.annotation.NameInMap("groupInfos")
         private java.util.List < GroupInfos> groupInfos;
 
-        @NameInMap("repositoryInfos")
+        @com.aliyun.core.annotation.NameInMap("repositoryInfos")
         private java.util.List < RepositoryInfos> repositoryInfos;
 
-        @NameInMap("userInfo")
+        @com.aliyun.core.annotation.NameInMap("userInfo")
         private UserInfo userInfo;
 
         private Result(Builder builder) {

@@ -155,6 +155,30 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<EnableDeployKeyResponse> enableDeployKey(EnableDeployKeyRequest request);
 
+    CompletableFuture<ExportInsightCustomValueResponse> exportInsightCustomValue(ExportInsightCustomValueRequest request);
+
+    CompletableFuture<ExportInsightExpectedWorkTimeResponse> exportInsightExpectedWorkTime(ExportInsightExpectedWorkTimeRequest request);
+
+    CompletableFuture<ExportInsightFieldResponse> exportInsightField(ExportInsightFieldRequest request);
+
+    CompletableFuture<ExportInsightSpaceResponse> exportInsightSpace(ExportInsightSpaceRequest request);
+
+    CompletableFuture<ExportInsightSpaceRefResponse> exportInsightSpaceRef(ExportInsightSpaceRefRequest request);
+
+    CompletableFuture<ExportInsightSprintResponse> exportInsightSprint(ExportInsightSprintRequest request);
+
+    CompletableFuture<ExportInsightTagRefResponse> exportInsightTagRef(ExportInsightTagRefRequest request);
+
+    CompletableFuture<ExportInsightWorkTimeResponse> exportInsightWorkTime(ExportInsightWorkTimeRequest request);
+
+    CompletableFuture<ExportInsightWorkitemStatusResponse> exportInsightWorkitemStatus(ExportInsightWorkitemStatusRequest request);
+
+    CompletableFuture<ExportInsightWorkitemStatusJoinWorkitemDefectExtraResponse> exportInsightWorkitemStatusJoinWorkitemDefectExtra(ExportInsightWorkitemStatusJoinWorkitemDefectExtraRequest request);
+
+    CompletableFuture<ExportInsightWorkitemVersionResponse> exportInsightWorkitemVersion(ExportInsightWorkitemVersionRequest request);
+
+    CompletableFuture<ExportWorkitemActivityResponse> exportWorkitemActivity(ExportWorkitemActivityRequest request);
+
     CompletableFuture<FrozenWorkspaceResponse> frozenWorkspace(FrozenWorkspaceRequest request);
 
     CompletableFuture<GetApplicationResponse> getApplication(GetApplicationRequest request);

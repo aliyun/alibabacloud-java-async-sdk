@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkitemAttachmentsResponseBody</p>
  */
 public class ListWorkitemAttachmentsResponseBody extends TeaModel {
-    @NameInMap("attachments")
+    @com.aliyun.core.annotation.NameInMap("attachments")
     private java.util.List < Attachments> attachments;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListWorkitemAttachmentsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListWorkitemAttachmentsResponseBody extends TeaModel {
     } 
 
     public static class Attachments extends TeaModel {
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("fileIdentifier")
+        @com.aliyun.core.annotation.NameInMap("fileIdentifier")
         private String fileIdentifier;
 
-        @NameInMap("fileName")
+        @com.aliyun.core.annotation.NameInMap("fileName")
         private String fileName;
 
-        @NameInMap("fileSuffix")
+        @com.aliyun.core.annotation.NameInMap("fileSuffix")
         private String fileSuffix;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private String size;
 
-        @NameInMap("url")
+        @com.aliyun.core.annotation.NameInMap("url")
         private String url;
 
         private Attachments(Builder builder) {

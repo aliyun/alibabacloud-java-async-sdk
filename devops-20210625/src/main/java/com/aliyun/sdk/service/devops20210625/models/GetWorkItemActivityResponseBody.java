@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWorkItemActivityResponseBody</p>
  */
 public class GetWorkItemActivityResponseBody extends TeaModel {
-    @NameInMap("activities")
+    @com.aliyun.core.annotation.NameInMap("activities")
     private java.util.List < Activities> activities;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetWorkItemActivityResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
     } 
 
     public static class NewValue extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("plainValue")
+        @com.aliyun.core.annotation.NameInMap("plainValue")
         private String plainValue;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private NewValue(Builder builder) {
@@ -213,13 +212,13 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
 
     }
     public static class OldValue extends TeaModel {
-        @NameInMap("displayValue")
+        @com.aliyun.core.annotation.NameInMap("displayValue")
         private String displayValue;
 
-        @NameInMap("plainValue")
+        @com.aliyun.core.annotation.NameInMap("plainValue")
         private String plainValue;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private OldValue(Builder builder) {
@@ -294,16 +293,16 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
 
     }
     public static class Property extends TeaModel {
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("propertyIdentifier")
+        @com.aliyun.core.annotation.NameInMap("propertyIdentifier")
         private String propertyIdentifier;
 
-        @NameInMap("propertyName")
+        @com.aliyun.core.annotation.NameInMap("propertyName")
         private String propertyName;
 
-        @NameInMap("propertyType")
+        @com.aliyun.core.annotation.NameInMap("propertyType")
         private String propertyType;
 
         private Property(Builder builder) {
@@ -395,34 +394,34 @@ public class GetWorkItemActivityResponseBody extends TeaModel {
 
     }
     public static class Activities extends TeaModel {
-        @NameInMap("actionType")
+        @com.aliyun.core.annotation.NameInMap("actionType")
         private String actionType;
 
-        @NameInMap("eventId")
+        @com.aliyun.core.annotation.NameInMap("eventId")
         private Long eventId;
 
-        @NameInMap("eventTime")
+        @com.aliyun.core.annotation.NameInMap("eventTime")
         private Long eventTime;
 
-        @NameInMap("eventType")
+        @com.aliyun.core.annotation.NameInMap("eventType")
         private String eventType;
 
-        @NameInMap("newValue")
+        @com.aliyun.core.annotation.NameInMap("newValue")
         private java.util.List < NewValue> newValue;
 
-        @NameInMap("oldValue")
+        @com.aliyun.core.annotation.NameInMap("oldValue")
         private java.util.List < OldValue> oldValue;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("parentEventId")
+        @com.aliyun.core.annotation.NameInMap("parentEventId")
         private Long parentEventId;
 
-        @NameInMap("property")
+        @com.aliyun.core.annotation.NameInMap("property")
         private Property property;
 
-        @NameInMap("resourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("resourceIdentifier")
         private String resourceIdentifier;
 
         private Activities(Builder builder) {

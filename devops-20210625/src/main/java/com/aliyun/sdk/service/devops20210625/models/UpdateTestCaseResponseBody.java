@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTestCaseResponseBody</p>
  */
 public class UpdateTestCaseResponseBody extends TeaModel {
-    @NameInMap("Testcase")
+    @com.aliyun.core.annotation.NameInMap("Testcase")
     private Testcase testcase;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private UpdateTestCaseResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class UpdateTestCaseResponseBody extends TeaModel {
     } 
 
     public static class AssignedTo extends TeaModel {
-        @NameInMap("assignIdentifier")
+        @com.aliyun.core.annotation.NameInMap("assignIdentifier")
         private String assignIdentifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("tbRoleId")
+        @com.aliyun.core.annotation.NameInMap("tbRoleId")
         private String tbRoleId;
 
         private AssignedTo(Builder builder) {
@@ -213,10 +212,10 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class Creator extends TeaModel {
-        @NameInMap("createIdentifier")
+        @com.aliyun.core.annotation.NameInMap("createIdentifier")
         private String createIdentifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Creator(Builder builder) {
@@ -274,13 +273,13 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class ExpectedResult extends TeaModel {
-        @NameInMap("expectContent")
+        @com.aliyun.core.annotation.NameInMap("expectContent")
         private String expectContent;
 
-        @NameInMap("expectContentType")
+        @com.aliyun.core.annotation.NameInMap("expectContentType")
         private String expectContentType;
 
-        @NameInMap("expectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("expectIdentifier")
         private String expectIdentifier;
 
         private ExpectedResult(Builder builder) {
@@ -355,13 +354,13 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class Precondition extends TeaModel {
-        @NameInMap("preContent")
+        @com.aliyun.core.annotation.NameInMap("preContent")
         private String preContent;
 
-        @NameInMap("preContentType")
+        @com.aliyun.core.annotation.NameInMap("preContentType")
         private String preContentType;
 
-        @NameInMap("preIdentifier")
+        @com.aliyun.core.annotation.NameInMap("preIdentifier")
         private String preIdentifier;
 
         private Precondition(Builder builder) {
@@ -436,13 +435,13 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class StepContent extends TeaModel {
-        @NameInMap("stepContent")
+        @com.aliyun.core.annotation.NameInMap("stepContent")
         private String stepContent;
 
-        @NameInMap("stepContentType")
+        @com.aliyun.core.annotation.NameInMap("stepContentType")
         private String stepContentType;
 
-        @NameInMap("stepIdentifier")
+        @com.aliyun.core.annotation.NameInMap("stepIdentifier")
         private String stepIdentifier;
 
         private StepContent(Builder builder) {
@@ -517,16 +516,16 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class DetailInfo extends TeaModel {
-        @NameInMap("expectedResult")
+        @com.aliyun.core.annotation.NameInMap("expectedResult")
         private ExpectedResult expectedResult;
 
-        @NameInMap("precondition")
+        @com.aliyun.core.annotation.NameInMap("precondition")
         private Precondition precondition;
 
-        @NameInMap("stepContent")
+        @com.aliyun.core.annotation.NameInMap("stepContent")
         private StepContent stepContent;
 
-        @NameInMap("stepType")
+        @com.aliyun.core.annotation.NameInMap("stepType")
         private String stepType;
 
         private DetailInfo(Builder builder) {
@@ -618,16 +617,16 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class Directory extends TeaModel {
-        @NameInMap("childIdentifier")
+        @com.aliyun.core.annotation.NameInMap("childIdentifier")
         private String childIdentifier;
 
-        @NameInMap("directoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("directoryIdentifier")
         private String directoryIdentifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("pathName")
+        @com.aliyun.core.annotation.NameInMap("pathName")
         private java.util.List < String > pathName;
 
         private Directory(Builder builder) {
@@ -719,10 +718,10 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class Modifier extends TeaModel {
-        @NameInMap("modifyIdentifier")
+        @com.aliyun.core.annotation.NameInMap("modifyIdentifier")
         private String modifyIdentifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Modifier(Builder builder) {
@@ -780,34 +779,34 @@ public class UpdateTestCaseResponseBody extends TeaModel {
 
     }
     public static class Testcase extends TeaModel {
-        @NameInMap("assignedTo")
+        @com.aliyun.core.annotation.NameInMap("assignedTo")
         private AssignedTo assignedTo;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private Creator creator;
 
-        @NameInMap("detailInfo")
+        @com.aliyun.core.annotation.NameInMap("detailInfo")
         private DetailInfo detailInfo;
 
-        @NameInMap("directory")
+        @com.aliyun.core.annotation.NameInMap("directory")
         private Directory directory;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("modifier")
+        @com.aliyun.core.annotation.NameInMap("modifier")
         private Modifier modifier;
 
-        @NameInMap("spaceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("spaceIdentifier")
         private String spaceIdentifier;
 
-        @NameInMap("spaceType")
+        @com.aliyun.core.annotation.NameInMap("spaceType")
         private String spaceType;
 
-        @NameInMap("subject")
+        @com.aliyun.core.annotation.NameInMap("subject")
         private String subject;
 
         private Testcase(Builder builder) {

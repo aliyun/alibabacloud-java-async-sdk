@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,59 +11,59 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCheckRunRequest</p>
  */
 public class UpdateCheckRunRequest extends Request {
-    @Query
-    @NameInMap("accessToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accessToken")
     private String accessToken;
 
-    @Body
-    @NameInMap("annotations")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("annotations")
     private java.util.List < Annotations> annotations;
 
-    @Body
-    @NameInMap("completedAt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("completedAt")
     private String completedAt;
 
-    @Body
-    @NameInMap("conclusion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("conclusion")
     private String conclusion;
 
-    @Body
-    @NameInMap("detailsUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("detailsUrl")
     private String detailsUrl;
 
-    @Body
-    @NameInMap("externalId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("externalId")
     private String externalId;
 
-    @Body
-    @NameInMap("name")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
-    @Body
-    @NameInMap("output")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("output")
     private Output output;
 
-    @Body
-    @NameInMap("startedAt")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("startedAt")
     private String startedAt;
 
-    @Body
-    @NameInMap("status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("status")
     private String status;
 
-    @Query
-    @NameInMap("checkRunId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("checkRunId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long checkRunId;
 
-    @Query
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("repositoryIdentity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("repositoryIdentity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repositoryIdentity;
 
     private UpdateCheckRunRequest(Builder builder) {
@@ -349,36 +348,36 @@ public class UpdateCheckRunRequest extends Request {
     } 
 
     public static class Annotations extends TeaModel {
-        @NameInMap("annotationLevel")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("annotationLevel")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String annotationLevel;
 
-        @NameInMap("endColumn")
+        @com.aliyun.core.annotation.NameInMap("endColumn")
         private Long endColumn;
 
-        @NameInMap("endLine")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("endLine")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long endLine;
 
-        @NameInMap("message")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("message")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String message;
 
-        @NameInMap("path")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("path")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String path;
 
-        @NameInMap("rawDetails")
+        @com.aliyun.core.annotation.NameInMap("rawDetails")
         private String rawDetails;
 
-        @NameInMap("startColumn")
+        @com.aliyun.core.annotation.NameInMap("startColumn")
         private Long startColumn;
 
-        @NameInMap("startLine")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("startLine")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long startLine;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Annotations(Builder builder) {
@@ -555,15 +554,15 @@ public class UpdateCheckRunRequest extends Request {
 
     }
     public static class Images extends TeaModel {
-        @NameInMap("alt")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("alt")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String alt;
 
-        @NameInMap("caption")
+        @com.aliyun.core.annotation.NameInMap("caption")
         private String caption;
 
-        @NameInMap("imageUrl")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("imageUrl")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String imageUrl;
 
         private Images(Builder builder) {
@@ -638,17 +637,17 @@ public class UpdateCheckRunRequest extends Request {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("images")
+        @com.aliyun.core.annotation.NameInMap("images")
         private java.util.List < Images> images;
 
-        @NameInMap("summary")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("summary")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String summary;
 
-        @NameInMap("text")
+        @com.aliyun.core.annotation.NameInMap("text")
         private String text;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Output(Builder builder) {

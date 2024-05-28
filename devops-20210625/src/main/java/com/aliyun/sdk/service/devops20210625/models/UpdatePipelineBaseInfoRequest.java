@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePipelineBaseInfoRequest</p>
  */
 public class UpdatePipelineBaseInfoRequest extends Request {
-    @Path
-    @NameInMap("organizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("organizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Path
-    @NameInMap("pipelineId")
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("pipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("envId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("envId")
     private Long envId;
 
-    @Query
-    @NameInMap("pipelineName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pipelineName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineName;
 
-    @Query
-    @NameInMap("tagList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tagList")
     private String tagList;
 
     private UpdatePipelineBaseInfoRequest(Builder builder) {

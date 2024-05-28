@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRepositoryTagResponseBody</p>
  */
 public class GetRepositoryTagResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetRepositoryTagResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetRepositoryTagResponseBody extends TeaModel {
     } 
 
     public static class Signature extends TeaModel {
-        @NameInMap("gpgKeyId")
+        @com.aliyun.core.annotation.NameInMap("gpgKeyId")
         private String gpgKeyId;
 
-        @NameInMap("verificationStatus")
+        @com.aliyun.core.annotation.NameInMap("verificationStatus")
         private String verificationStatus;
 
         private Signature(Builder builder) {
@@ -193,43 +192,43 @@ public class GetRepositoryTagResponseBody extends TeaModel {
 
     }
     public static class Commit extends TeaModel {
-        @NameInMap("authorEmail")
+        @com.aliyun.core.annotation.NameInMap("authorEmail")
         private String authorEmail;
 
-        @NameInMap("authorName")
+        @com.aliyun.core.annotation.NameInMap("authorName")
         private String authorName;
 
-        @NameInMap("authoredDate")
+        @com.aliyun.core.annotation.NameInMap("authoredDate")
         private String authoredDate;
 
-        @NameInMap("committedDate")
+        @com.aliyun.core.annotation.NameInMap("committedDate")
         private String committedDate;
 
-        @NameInMap("committerEmail")
+        @com.aliyun.core.annotation.NameInMap("committerEmail")
         private String committerEmail;
 
-        @NameInMap("committerName")
+        @com.aliyun.core.annotation.NameInMap("committerName")
         private String committerName;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("parentIds")
+        @com.aliyun.core.annotation.NameInMap("parentIds")
         private java.util.List < String > parentIds;
 
-        @NameInMap("shortId")
+        @com.aliyun.core.annotation.NameInMap("shortId")
         private String shortId;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private Signature signature;
 
-        @NameInMap("title")
+        @com.aliyun.core.annotation.NameInMap("title")
         private String title;
 
         private Commit(Builder builder) {
@@ -474,16 +473,16 @@ public class GetRepositoryTagResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("commit")
+        @com.aliyun.core.annotation.NameInMap("commit")
         private Commit commit;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("message")
+        @com.aliyun.core.annotation.NameInMap("message")
         private String message;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Result(Builder builder) {

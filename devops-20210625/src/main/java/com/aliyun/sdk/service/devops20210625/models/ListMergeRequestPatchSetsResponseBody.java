@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMergeRequestPatchSetsResponseBody</p>
  */
 public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private java.util.List < Result> result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListMergeRequestPatchSetsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListMergeRequestPatchSetsResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("commitId")
+        @com.aliyun.core.annotation.NameInMap("commitId")
         private String commitId;
 
-        @NameInMap("createdAt")
+        @com.aliyun.core.annotation.NameInMap("createdAt")
         private String createdAt;
 
-        @NameInMap("patchSetBizId")
+        @com.aliyun.core.annotation.NameInMap("patchSetBizId")
         private String patchSetBizId;
 
-        @NameInMap("patchSetName")
+        @com.aliyun.core.annotation.NameInMap("patchSetName")
         private String patchSetName;
 
-        @NameInMap("patchSetNo")
+        @com.aliyun.core.annotation.NameInMap("patchSetNo")
         private Long patchSetNo;
 
-        @NameInMap("relatedMergeItemType")
+        @com.aliyun.core.annotation.NameInMap("relatedMergeItemType")
         private String relatedMergeItemType;
 
-        @NameInMap("shortCommitId")
+        @com.aliyun.core.annotation.NameInMap("shortCommitId")
         private String shortCommitId;
 
         private Result(Builder builder) {

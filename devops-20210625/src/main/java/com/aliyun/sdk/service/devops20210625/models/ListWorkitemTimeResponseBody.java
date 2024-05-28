@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkitemTimeResponseBody</p>
  */
 public class ListWorkitemTimeResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private Long code;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workitemTime")
+    @com.aliyun.core.annotation.NameInMap("workitemTime")
     private java.util.List < WorkitemTime> workitemTime;
 
     private ListWorkitemTimeResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class ListWorkitemTimeResponseBody extends TeaModel {
     } 
 
     public static class WorkitemTime extends TeaModel {
-        @NameInMap("actualTime")
+        @com.aliyun.core.annotation.NameInMap("actualTime")
         private Float actualTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("gmtEnd")
+        @com.aliyun.core.annotation.NameInMap("gmtEnd")
         private Long gmtEnd;
 
-        @NameInMap("gmtModified")
+        @com.aliyun.core.annotation.NameInMap("gmtModified")
         private Long gmtModified;
 
-        @NameInMap("gmtStart")
+        @com.aliyun.core.annotation.NameInMap("gmtStart")
         private Long gmtStart;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("recordUser")
+        @com.aliyun.core.annotation.NameInMap("recordUser")
         private String recordUser;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("workitemIdentifier")
+        @com.aliyun.core.annotation.NameInMap("workitemIdentifier")
         private String workitemIdentifier;
 
         private WorkitemTime(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsRequest</p>
  */
 public class ListApplicationsRequest extends Request {
-    @Query
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("orderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("organizationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("organizationId")
     private String organizationId;
 
-    @Query
-    @NameInMap("pagination")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pagination")
     private String pagination;
 
-    @Query
-    @NameInMap("perPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("perPage")
     private Integer perPage;
 
-    @Query
-    @NameInMap("sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sort")
     private String sort;
 
     private ListApplicationsRequest(Builder builder) {

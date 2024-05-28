@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPipelineJobHistorysResponseBody</p>
  */
 public class ListPipelineJobHistorysResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("jobs")
+    @com.aliyun.core.annotation.NameInMap("jobs")
     private java.util.List < Jobs> jobs;
 
-    @NameInMap("nextToken")
+    @com.aliyun.core.annotation.NameInMap("nextToken")
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
     private ListPipelineJobHistorysResponseBody(Builder builder) {
@@ -172,31 +171,31 @@ public class ListPipelineJobHistorysResponseBody extends TeaModel {
     } 
 
     public static class Jobs extends TeaModel {
-        @NameInMap("executeNumber")
+        @com.aliyun.core.annotation.NameInMap("executeNumber")
         private Integer executeNumber;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("jobId")
+        @com.aliyun.core.annotation.NameInMap("jobId")
         private Long jobId;
 
-        @NameInMap("jobName")
+        @com.aliyun.core.annotation.NameInMap("jobName")
         private String jobName;
 
-        @NameInMap("operatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("operatorAccountId")
         private String operatorAccountId;
 
-        @NameInMap("pipelineId")
+        @com.aliyun.core.annotation.NameInMap("pipelineId")
         private Long pipelineId;
 
-        @NameInMap("pipelineRunId")
+        @com.aliyun.core.annotation.NameInMap("pipelineRunId")
         private Long pipelineRunId;
 
-        @NameInMap("sources")
+        @com.aliyun.core.annotation.NameInMap("sources")
         private String sources;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private Jobs(Builder builder) {

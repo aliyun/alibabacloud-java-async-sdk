@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceConnectionsResponseBody</p>
  */
 public class ListServiceConnectionsResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("serviceConnections")
+    @com.aliyun.core.annotation.NameInMap("serviceConnections")
     private java.util.List < ServiceConnections> serviceConnections;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListServiceConnectionsResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListServiceConnectionsResponseBody extends TeaModel {
     } 
 
     public static class ServiceConnections extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("ownerAccountId")
+        @com.aliyun.core.annotation.NameInMap("ownerAccountId")
         private Long ownerAccountId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private ServiceConnections(Builder builder) {

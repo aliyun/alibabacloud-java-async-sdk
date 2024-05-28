@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectWorkitemTypesResponseBody</p>
  */
 public class ListProjectWorkitemTypesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("workitemTypes")
+    @com.aliyun.core.annotation.NameInMap("workitemTypes")
     private java.util.List < WorkitemTypes> workitemTypes;
 
     private ListProjectWorkitemTypesResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class ListProjectWorkitemTypesResponseBody extends TeaModel {
     } 
 
     public static class WorkitemTypes extends TeaModel {
-        @NameInMap("addUser")
+        @com.aliyun.core.annotation.NameInMap("addUser")
         private String addUser;
 
-        @NameInMap("categoryIdentifier")
+        @com.aliyun.core.annotation.NameInMap("categoryIdentifier")
         private String categoryIdentifier;
 
-        @NameInMap("creator")
+        @com.aliyun.core.annotation.NameInMap("creator")
         private String creator;
 
-        @NameInMap("defaultType")
+        @com.aliyun.core.annotation.NameInMap("defaultType")
         private Boolean defaultType;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("gmtAdd")
+        @com.aliyun.core.annotation.NameInMap("gmtAdd")
         private Long gmtAdd;
 
-        @NameInMap("gmtCreate")
+        @com.aliyun.core.annotation.NameInMap("gmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nameEn")
+        @com.aliyun.core.annotation.NameInMap("nameEn")
         private String nameEn;
 
-        @NameInMap("systemDefault")
+        @com.aliyun.core.annotation.NameInMap("systemDefault")
         private Boolean systemDefault;
 
         private WorkitemTypes(Builder builder) {

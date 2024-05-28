@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVariableGroupResponseBody</p>
  */
 public class GetVariableGroupResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("variableGroup")
+    @com.aliyun.core.annotation.NameInMap("variableGroup")
     private VariableGroup variableGroup;
 
     private GetVariableGroupResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetVariableGroupResponseBody extends TeaModel {
     } 
 
     public static class RelatedPipelines extends TeaModel {
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private RelatedPipelines(Builder builder) {
@@ -193,13 +192,13 @@ public class GetVariableGroupResponseBody extends TeaModel {
 
     }
     public static class Variables extends TeaModel {
-        @NameInMap("isEncrypted")
+        @com.aliyun.core.annotation.NameInMap("isEncrypted")
         private Boolean isEncrypted;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Variables(Builder builder) {
@@ -274,31 +273,31 @@ public class GetVariableGroupResponseBody extends TeaModel {
 
     }
     public static class VariableGroup extends TeaModel {
-        @NameInMap("ccreatorAccountId")
+        @com.aliyun.core.annotation.NameInMap("ccreatorAccountId")
         private String ccreatorAccountId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("description")
+        @com.aliyun.core.annotation.NameInMap("description")
         private String description;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private Long id;
 
-        @NameInMap("modifierAccountId")
+        @com.aliyun.core.annotation.NameInMap("modifierAccountId")
         private String modifierAccountId;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("relatedPipelines")
+        @com.aliyun.core.annotation.NameInMap("relatedPipelines")
         private java.util.List < RelatedPipelines> relatedPipelines;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private Long updateTime;
 
-        @NameInMap("variables")
+        @com.aliyun.core.annotation.NameInMap("variables")
         private java.util.List < Variables> variables;
 
         private VariableGroup(Builder builder) {

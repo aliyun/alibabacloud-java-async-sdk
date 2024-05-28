@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MergeMergeRequestResponseBody</p>
  */
 public class MergeMergeRequestResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("result")
+    @com.aliyun.core.annotation.NameInMap("result")
     private Result result;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private MergeMergeRequestResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class MergeMergeRequestResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("bizId")
+        @com.aliyun.core.annotation.NameInMap("bizId")
         private String bizId;
 
-        @NameInMap("localId")
+        @com.aliyun.core.annotation.NameInMap("localId")
         private Long localId;
 
-        @NameInMap("mergedRevision")
+        @com.aliyun.core.annotation.NameInMap("mergedRevision")
         private String mergedRevision;
 
-        @NameInMap("projectId")
+        @com.aliyun.core.annotation.NameInMap("projectId")
         private Long projectId;
 
-        @NameInMap("result")
+        @com.aliyun.core.annotation.NameInMap("result")
         private Boolean result;
 
         private Result(Builder builder) {

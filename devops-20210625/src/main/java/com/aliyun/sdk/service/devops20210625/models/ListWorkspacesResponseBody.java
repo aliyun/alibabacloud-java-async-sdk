@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.devops20210625.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkspacesResponseBody</p>
  */
 public class ListWorkspacesResponseBody extends TeaModel {
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMessage")
+    @com.aliyun.core.annotation.NameInMap("errorMessage")
     private String errorMessage;
 
-    @NameInMap("maxResults")
+    @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
-    @NameInMap("nextToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("nextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextToken;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("totalCount")
+    @com.aliyun.core.annotation.NameInMap("totalCount")
     private Integer totalCount;
 
-    @NameInMap("workspaces")
+    @com.aliyun.core.annotation.NameInMap("workspaces")
     private java.util.List < Workspaces> workspaces;
 
     private ListWorkspacesResponseBody(Builder builder) {
@@ -193,31 +192,31 @@ public class ListWorkspacesResponseBody extends TeaModel {
     } 
 
     public static class Workspaces extends TeaModel {
-        @NameInMap("codeUrl")
+        @com.aliyun.core.annotation.NameInMap("codeUrl")
         private String codeUrl;
 
-        @NameInMap("codeVersion")
+        @com.aliyun.core.annotation.NameInMap("codeVersion")
         private String codeVersion;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("spec")
+        @com.aliyun.core.annotation.NameInMap("spec")
         private String spec;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private String template;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Workspaces(Builder builder) {
