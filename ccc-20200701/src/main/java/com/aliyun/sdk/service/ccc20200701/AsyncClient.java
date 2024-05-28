@@ -189,6 +189,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ImportAdminsResponse> importAdmins(ImportAdminsRequest request);
 
+    CompletableFuture<ImportCorpNumbersResponse> importCorpNumbers(ImportCorpNumbersRequest request);
+
     /**
       * @deprecated
       *
