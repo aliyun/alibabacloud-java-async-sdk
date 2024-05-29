@@ -15,32 +15,32 @@ public class AssociateWebCertRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Cert")
     private String cert;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CertId")
     private Integer certId;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CertIdentifier")
     private String certIdentifier;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CertRegion")
     private String certRegion;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Domain")
     @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
@@ -175,25 +175,19 @@ public class AssociateWebCertRequest extends Request {
         }
 
         /**
-         * The public key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Key**.
-         * <p>
-         * 
-         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
+         * Cert.
          */
         public Builder cert(String cert) {
-            this.putQueryParameter("Cert", cert);
+            this.putBodyParameter("Cert", cert);
             this.cert = cert;
             return this;
         }
 
         /**
-         * The ID of the certificate that you want to associate. If the certificate that you want to associate has been issued in Certificate Management Service, you can specify the certificate ID to associate the certificate.
-         * <p>
-         * 
-         * > If you specify the certificate ID, you do not need to specify a value for the **CertName**, **Cert**, and **Key** parameters.
+         * CertId.
          */
         public Builder certId(Integer certId) {
-            this.putQueryParameter("CertId", certId);
+            this.putBodyParameter("CertId", certId);
             this.certId = certId;
             return this;
         }
@@ -202,19 +196,16 @@ public class AssociateWebCertRequest extends Request {
          * CertIdentifier.
          */
         public Builder certIdentifier(String certIdentifier) {
-            this.putQueryParameter("CertIdentifier", certIdentifier);
+            this.putBodyParameter("CertIdentifier", certIdentifier);
             this.certIdentifier = certIdentifier;
             return this;
         }
 
         /**
-         * The name of the certificate that you want to associate. This parameter must be used together with the **Cert** and **Key** parameters.
-         * <p>
-         * 
-         * > If you specify a value for the **CertName**, **Cert**, and **Key** parameters, you do not need to specify a value for the **CertId** parameter.
+         * CertName.
          */
         public Builder certName(String certName) {
-            this.putQueryParameter("CertName", certName);
+            this.putBodyParameter("CertName", certName);
             this.certName = certName;
             return this;
         }
@@ -223,31 +214,25 @@ public class AssociateWebCertRequest extends Request {
          * CertRegion.
          */
         public Builder certRegion(String certRegion) {
-            this.putQueryParameter("CertRegion", certRegion);
+            this.putBodyParameter("CertRegion", certRegion);
             this.certRegion = certRegion;
             return this;
         }
 
         /**
-         * The domain name of the website.
-         * <p>
-         * 
-         * > A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
+         * Domain.
          */
         public Builder domain(String domain) {
-            this.putQueryParameter("Domain", domain);
+            this.putBodyParameter("Domain", domain);
             this.domain = domain;
             return this;
         }
 
         /**
-         * The private key of the certificate that you want to associate. This parameter must be used together with **CertName** and **Cert**.
-         * <p>
-         * 
-         * > If you specify **CertName**, **Cert**, and **Key**, you do not need to specify **CertId**.
+         * Key.
          */
         public Builder key(String key) {
-            this.putQueryParameter("Key", key);
+            this.putBodyParameter("Key", key);
             this.key = key;
             return this;
         }
