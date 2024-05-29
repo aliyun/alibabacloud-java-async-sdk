@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEiamInstancesResponseBody</p>
  */
 public class ListEiamInstancesResponseBody extends TeaModel {
-    @NameInMap("Instances")
+    @com.aliyun.core.annotation.NameInMap("Instances")
     private java.util.List < Instances> instances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListEiamInstancesResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class ListEiamInstancesResponseBody extends TeaModel {
     } 
 
     public static class Instances extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DeveloperAPIPrivateDomain")
+        @com.aliyun.core.annotation.NameInMap("DeveloperAPIPrivateDomain")
         private String developerAPIPrivateDomain;
 
-        @NameInMap("DeveloperAPIPublicDomain")
+        @com.aliyun.core.annotation.NameInMap("DeveloperAPIPublicDomain")
         private String developerAPIPublicDomain;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceStatus")
+        @com.aliyun.core.annotation.NameInMap("InstanceStatus")
         private String instanceStatus;
 
-        @NameInMap("InstanceVersion")
+        @com.aliyun.core.annotation.NameInMap("InstanceVersion")
         private String instanceVersion;
 
-        @NameInMap("OpenAPIPrivateDomain")
+        @com.aliyun.core.annotation.NameInMap("OpenAPIPrivateDomain")
         private String openAPIPrivateDomain;
 
-        @NameInMap("OpenAPIPublicDomain")
+        @com.aliyun.core.annotation.NameInMap("OpenAPIPublicDomain")
         private String openAPIPublicDomain;
 
-        @NameInMap("SSODomain")
+        @com.aliyun.core.annotation.NameInMap("SSODomain")
         private String SSODomain;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Instances(Builder builder) {

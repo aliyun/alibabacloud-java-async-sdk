@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordHistoryConfigurationRequest</p>
  */
 public class SetPasswordHistoryConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordHistoryMaxRetention")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordHistoryMaxRetention")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordHistoryMaxRetention;
 
-    @Query
-    @NameInMap("PasswordHistoryStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordHistoryStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String passwordHistoryStatus;
 
     private SetPasswordHistoryConfigurationRequest(Builder builder) {

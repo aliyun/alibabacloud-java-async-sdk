@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetForgetPasswordConfigurationResponseBody</p>
  */
 public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
-    @NameInMap("OpenForgetPasswordConfiguration")
+    @com.aliyun.core.annotation.NameInMap("OpenForgetPasswordConfiguration")
     private OpenForgetPasswordConfiguration openForgetPasswordConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetForgetPasswordConfigurationResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetForgetPasswordConfigurationResponseBody extends TeaModel {
     } 
 
     public static class OpenForgetPasswordConfiguration extends TeaModel {
-        @NameInMap("AuthenticationChannels")
+        @com.aliyun.core.annotation.NameInMap("AuthenticationChannels")
         private java.util.List < String > authenticationChannels;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Boolean enable;
 
-        @NameInMap("EnableEmail")
+        @com.aliyun.core.annotation.NameInMap("EnableEmail")
         private Boolean enableEmail;
 
-        @NameInMap("EnableSms")
+        @com.aliyun.core.annotation.NameInMap("EnableSms")
         private Boolean enableSms;
 
-        @NameInMap("ForgetPasswordStatus")
+        @com.aliyun.core.annotation.NameInMap("ForgetPasswordStatus")
         private String forgetPasswordStatus;
 
         private OpenForgetPasswordConfiguration(Builder builder) {

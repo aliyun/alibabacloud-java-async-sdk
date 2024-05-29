@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNetworkAccessEndpointResponseBody</p>
  */
 public class GetNetworkAccessEndpointResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessEndpoint")
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpoint")
     private NetworkAccessEndpoint networkAccessEndpoint;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNetworkAccessEndpointResponseBody(Builder builder) {
@@ -72,43 +71,43 @@ public class GetNetworkAccessEndpointResponseBody extends TeaModel {
     } 
 
     public static class NetworkAccessEndpoint extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("EgressPrivateIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("EgressPrivateIpAddresses")
         private java.util.List < String > egressPrivateIpAddresses;
 
-        @NameInMap("EgressPublicIpAddresses")
+        @com.aliyun.core.annotation.NameInMap("EgressPublicIpAddresses")
         private java.util.List < String > egressPublicIpAddresses;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkAccessEndpointId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
-        @NameInMap("NetworkAccessEndpointName")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointName")
         private String networkAccessEndpointName;
 
-        @NameInMap("NetworkAccessEndpointType")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointType")
         private String networkAccessEndpointType;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VSwitchIds")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
         private java.util.List < String > vSwitchIds;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
         private NetworkAccessEndpoint(Builder builder) {

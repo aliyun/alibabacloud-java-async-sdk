@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPasswordInitializationConfigurationResponseBody</p>
  */
 public class GetPasswordInitializationConfigurationResponseBody extends TeaModel {
-    @NameInMap("PasswordInitializationConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationConfiguration")
     private PasswordInitializationConfiguration passwordInitializationConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordInitializationConfigurationResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetPasswordInitializationConfigurationResponseBody extends TeaModel
     } 
 
     public static class PasswordInitializationConfiguration extends TeaModel {
-        @NameInMap("PasswordForcedUpdateStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
         private String passwordForcedUpdateStatus;
 
-        @NameInMap("PasswordInitializationNotificationChannels")
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationNotificationChannels")
         private java.util.List < String > passwordInitializationNotificationChannels;
 
-        @NameInMap("PasswordInitializationStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationStatus")
         private String passwordInitializationStatus;
 
-        @NameInMap("PasswordInitializationType")
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationType")
         private String passwordInitializationType;
 
         private PasswordInitializationConfiguration(Builder builder) {

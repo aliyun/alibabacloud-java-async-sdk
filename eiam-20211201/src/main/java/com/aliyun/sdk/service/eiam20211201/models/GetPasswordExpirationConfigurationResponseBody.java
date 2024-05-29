@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPasswordExpirationConfigurationResponseBody</p>
  */
 public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
-    @NameInMap("PasswordExpirationConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationConfiguration")
     private PasswordExpirationConfiguration passwordExpirationConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordExpirationConfigurationResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetPasswordExpirationConfigurationResponseBody extends TeaModel {
     } 
 
     public static class PasswordExpirationConfiguration extends TeaModel {
-        @NameInMap("PasswordExpirationAction")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
         private String passwordExpirationAction;
 
-        @NameInMap("PasswordExpirationNotificationChannels")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
         private java.util.List < String > passwordExpirationNotificationChannels;
 
-        @NameInMap("PasswordExpirationNotificationDuration")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
         private Integer passwordExpirationNotificationDuration;
 
-        @NameInMap("PasswordExpirationNotificationStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationStatus")
         private String passwordExpirationNotificationStatus;
 
-        @NameInMap("PasswordExpirationStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpirationStatus")
         private String passwordExpirationStatus;
 
-        @NameInMap("PasswordForcedUpdateDuration")
+        @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateDuration")
         private Integer passwordForcedUpdateDuration;
 
-        @NameInMap("PasswordValidMaxDay")
+        @com.aliyun.core.annotation.NameInMap("PasswordValidMaxDay")
         private Integer passwordValidMaxDay;
 
         private PasswordExpirationConfiguration(Builder builder) {

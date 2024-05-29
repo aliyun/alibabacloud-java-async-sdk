@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDomainResponseBody</p>
  */
 public class GetDomainResponseBody extends TeaModel {
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private Domain domain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDomainResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetDomainResponseBody extends TeaModel {
     } 
 
     public static class Filing extends TeaModel {
-        @NameInMap("IcpNumber")
+        @com.aliyun.core.annotation.NameInMap("IcpNumber")
         private String icpNumber;
 
         private Filing(Builder builder) {
@@ -113,31 +112,31 @@ public class GetDomainResponseBody extends TeaModel {
 
     }
     public static class Domain extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DefaultDomain")
+        @com.aliyun.core.annotation.NameInMap("DefaultDomain")
         private Boolean defaultDomain;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("Filing")
+        @com.aliyun.core.annotation.NameInMap("Filing")
         private Filing filing;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Domain(Builder builder) {

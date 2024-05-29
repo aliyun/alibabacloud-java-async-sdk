@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordInitializationConfigurationRequest</p>
  */
 public class SetPasswordInitializationConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordForcedUpdateStatus")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordForcedUpdateStatus;
 
-    @Query
-    @NameInMap("PasswordInitializationNotificationChannels")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationNotificationChannels")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private java.util.List < String > passwordInitializationNotificationChannels;
 
-    @Query
-    @NameInMap("PasswordInitializationStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String passwordInitializationStatus;
 
-    @Query
-    @NameInMap("PasswordInitializationType")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordInitializationType;
 
     private SetPasswordInitializationConfigurationRequest(Builder builder) {

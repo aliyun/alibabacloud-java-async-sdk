@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationClientSecretsResponseBody</p>
  */
 public class ListApplicationClientSecretsResponseBody extends TeaModel {
-    @NameInMap("ApplicationClientSecrets")
+    @com.aliyun.core.annotation.NameInMap("ApplicationClientSecrets")
     private java.util.List < ApplicationClientSecrets> applicationClientSecrets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApplicationClientSecretsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListApplicationClientSecretsResponseBody extends TeaModel {
     } 
 
     public static class ApplicationClientSecrets extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("LastUsedTime")
         private Long lastUsedTime;
 
-        @NameInMap("SecretId")
+        @com.aliyun.core.annotation.NameInMap("SecretId")
         private String secretId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ApplicationClientSecrets(Builder builder) {

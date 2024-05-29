@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrganizationalUnitsForApplicationResponseBody</p>
  */
 public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel {
-    @NameInMap("OrganizationalUnits")
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
     private java.util.List < OrganizationalUnits> organizationalUnits;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOrganizationalUnitsForApplicationResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListOrganizationalUnitsForApplicationResponseBody extends TeaModel 
     } 
 
     public static class OrganizationalUnits extends TeaModel {
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
         private OrganizationalUnits(Builder builder) {

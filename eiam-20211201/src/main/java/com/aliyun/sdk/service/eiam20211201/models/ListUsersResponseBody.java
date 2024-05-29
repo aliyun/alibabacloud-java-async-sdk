@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private ListUsersResponseBody(Builder builder) {
@@ -92,67 +91,67 @@ public class ListUsersResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("AccountExpireTime")
+        @com.aliyun.core.annotation.NameInMap("AccountExpireTime")
         private Long accountExpireTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EmailVerified")
+        @com.aliyun.core.annotation.NameInMap("EmailVerified")
         private Boolean emailVerified;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LockExpireTime")
+        @com.aliyun.core.annotation.NameInMap("LockExpireTime")
         private Long lockExpireTime;
 
-        @NameInMap("PasswordExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireTime")
         private Long passwordExpireTime;
 
-        @NameInMap("PasswordSet")
+        @com.aliyun.core.annotation.NameInMap("PasswordSet")
         private Boolean passwordSet;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PhoneNumberVerified")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
         private Boolean phoneNumberVerified;
 
-        @NameInMap("PhoneRegion")
+        @com.aliyun.core.annotation.NameInMap("PhoneRegion")
         private String phoneRegion;
 
-        @NameInMap("RegisterTime")
+        @com.aliyun.core.annotation.NameInMap("RegisterTime")
         private Long registerTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserExternalId")
+        @com.aliyun.core.annotation.NameInMap("UserExternalId")
         private String userExternalId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserSourceId")
+        @com.aliyun.core.annotation.NameInMap("UserSourceId")
         private String userSourceId;
 
-        @NameInMap("UserSourceType")
+        @com.aliyun.core.annotation.NameInMap("UserSourceType")
         private String userSourceType;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private Users(Builder builder) {

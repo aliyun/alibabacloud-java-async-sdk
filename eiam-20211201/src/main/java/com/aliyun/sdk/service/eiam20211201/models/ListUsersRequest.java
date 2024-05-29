@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,75 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersRequest</p>
  */
 public class ListUsersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("DisplayNameStartsWith")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayNameStartsWith")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayNameStartsWith;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String organizationalUnitId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String status;
 
-    @Query
-    @NameInMap("UserExternalId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userExternalId;
 
-    @Query
-    @NameInMap("UserIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIds")
     private java.util.List < String > userIds;
 
-    @Query
-    @NameInMap("UserSourceId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userSourceId;
 
-    @Query
-    @NameInMap("UserSourceType")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceType")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String userSourceType;
 
-    @Query
-    @NameInMap("UsernameStartsWith")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsernameStartsWith")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String usernameStartsWith;
 
     private ListUsersRequest(Builder builder) {

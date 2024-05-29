@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class CustomFields extends TeaModel {
-        @NameInMap("FieldName")
+        @com.aliyun.core.annotation.NameInMap("FieldName")
         private String fieldName;
 
-        @NameInMap("FieldValue")
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
         private String fieldValue;
 
         private CustomFields(Builder builder) {
@@ -133,13 +132,13 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class Groups extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private Groups(Builder builder) {
@@ -214,13 +213,13 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class OrganizationalUnits extends TeaModel {
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
-        @NameInMap("OrganizationalUnitName")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
         private String organizationalUnitName;
 
-        @NameInMap("Primary")
+        @com.aliyun.core.annotation.NameInMap("Primary")
         private Boolean primary;
 
         private OrganizationalUnits(Builder builder) {
@@ -295,82 +294,82 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class User extends TeaModel {
-        @NameInMap("AccountExpireTime")
+        @com.aliyun.core.annotation.NameInMap("AccountExpireTime")
         private Long accountExpireTime;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("CustomFields")
+        @com.aliyun.core.annotation.NameInMap("CustomFields")
         private java.util.List < CustomFields> customFields;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("EmailVerified")
+        @com.aliyun.core.annotation.NameInMap("EmailVerified")
         private Boolean emailVerified;
 
-        @NameInMap("Groups")
+        @com.aliyun.core.annotation.NameInMap("Groups")
         private java.util.List < Groups> groups;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LockExpireTime")
+        @com.aliyun.core.annotation.NameInMap("LockExpireTime")
         private Long lockExpireTime;
 
-        @NameInMap("OrganizationalUnits")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
         private java.util.List < OrganizationalUnits> organizationalUnits;
 
-        @NameInMap("PasswordExpireTime")
+        @com.aliyun.core.annotation.NameInMap("PasswordExpireTime")
         private Long passwordExpireTime;
 
-        @NameInMap("PasswordSet")
+        @com.aliyun.core.annotation.NameInMap("PasswordSet")
         private Boolean passwordSet;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PhoneNumberVerified")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
         private Boolean phoneNumberVerified;
 
-        @NameInMap("PhoneRegion")
+        @com.aliyun.core.annotation.NameInMap("PhoneRegion")
         private String phoneRegion;
 
-        @NameInMap("PreferredLanguage")
+        @com.aliyun.core.annotation.NameInMap("PreferredLanguage")
         private String preferredLanguage;
 
-        @NameInMap("PrimaryOrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryOrganizationalUnitId")
         private String primaryOrganizationalUnitId;
 
-        @NameInMap("RegisterTime")
+        @com.aliyun.core.annotation.NameInMap("RegisterTime")
         private Long registerTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("UserExternalId")
+        @com.aliyun.core.annotation.NameInMap("UserExternalId")
         private String userExternalId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserSourceId")
+        @com.aliyun.core.annotation.NameInMap("UserSourceId")
         private String userSourceId;
 
-        @NameInMap("UserSourceType")
+        @com.aliyun.core.annotation.NameInMap("UserSourceType")
         private String userSourceType;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private User(Builder builder) {

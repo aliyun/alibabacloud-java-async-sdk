@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetApplicationProvisioningConfigRequest</p>
  */
 public class SetApplicationProvisioningConfigRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ApplicationId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationId;
 
-    @Query
-    @NameInMap("CallbackProvisioningConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackProvisioningConfig")
     private CallbackProvisioningConfig callbackProvisioningConfig;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("ProvisionPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionPassword")
     private Boolean provisionPassword;
 
-    @Query
-    @NameInMap("ProvisionProtocolType")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvisionProtocolType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String provisionProtocolType;
 
-    @Query
-    @NameInMap("ScimProvisioningConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScimProvisioningConfig")
     private ScimProvisioningConfig scimProvisioningConfig;
 
     private SetApplicationProvisioningConfigRequest(Builder builder) {
@@ -219,16 +218,16 @@ public class SetApplicationProvisioningConfigRequest extends Request {
     } 
 
     public static class CallbackProvisioningConfig extends TeaModel {
-        @NameInMap("CallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("CallbackUrl")
         private String callbackUrl;
 
-        @NameInMap("EncryptKey")
+        @com.aliyun.core.annotation.NameInMap("EncryptKey")
         private String encryptKey;
 
-        @NameInMap("EncryptRequired")
+        @com.aliyun.core.annotation.NameInMap("EncryptRequired")
         private Boolean encryptRequired;
 
-        @NameInMap("ListenEventScopes")
+        @com.aliyun.core.annotation.NameInMap("ListenEventScopes")
         private java.util.List < String > listenEventScopes;
 
         private CallbackProvisioningConfig(Builder builder) {
@@ -324,19 +323,19 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
     }
     public static class AuthnParam extends TeaModel {
-        @NameInMap("AccessToken")
+        @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
 
-        @NameInMap("AuthnMethod")
+        @com.aliyun.core.annotation.NameInMap("AuthnMethod")
         private String authnMethod;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("ClientSecret")
+        @com.aliyun.core.annotation.NameInMap("ClientSecret")
         private String clientSecret;
 
-        @NameInMap("TokenEndpoint")
+        @com.aliyun.core.annotation.NameInMap("TokenEndpoint")
         private String tokenEndpoint;
 
         private AuthnParam(Builder builder) {
@@ -449,13 +448,13 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
     }
     public static class AuthnConfiguration extends TeaModel {
-        @NameInMap("AuthnMode")
+        @com.aliyun.core.annotation.NameInMap("AuthnMode")
         private String authnMode;
 
-        @NameInMap("AuthnParam")
+        @com.aliyun.core.annotation.NameInMap("AuthnParam")
         private AuthnParam authnParam;
 
-        @NameInMap("GrantType")
+        @com.aliyun.core.annotation.NameInMap("GrantType")
         private String grantType;
 
         private AuthnConfiguration(Builder builder) {
@@ -541,16 +540,16 @@ public class SetApplicationProvisioningConfigRequest extends Request {
 
     }
     public static class ScimProvisioningConfig extends TeaModel {
-        @NameInMap("AuthnConfiguration")
+        @com.aliyun.core.annotation.NameInMap("AuthnConfiguration")
         private AuthnConfiguration authnConfiguration;
 
-        @NameInMap("FullPushScopes")
+        @com.aliyun.core.annotation.NameInMap("FullPushScopes")
         private java.util.List < String > fullPushScopes;
 
-        @NameInMap("ProvisioningActions")
+        @com.aliyun.core.annotation.NameInMap("ProvisioningActions")
         private java.util.List < String > provisioningActions;
 
-        @NameInMap("ScimBaseUrl")
+        @com.aliyun.core.annotation.NameInMap("ScimBaseUrl")
         private String scimBaseUrl;
 
         private ScimProvisioningConfig(Builder builder) {

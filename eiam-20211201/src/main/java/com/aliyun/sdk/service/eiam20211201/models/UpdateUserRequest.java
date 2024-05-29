@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,57 +11,57 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CustomFields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
     private java.util.List < CustomFields> customFields;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("EmailVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean emailVerified;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneNumberVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean phoneNumberVerified;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String userId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String username;
 
     private UpdateUserRequest(Builder builder) {
@@ -309,16 +308,16 @@ public class UpdateUserRequest extends Request {
     } 
 
     public static class CustomFields extends TeaModel {
-        @NameInMap("FieldName")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldName;
 
-        @NameInMap("FieldValue")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldValue;
 
-        @NameInMap("Operation")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("Operation")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String operation;
 
         private CustomFields(Builder builder) {

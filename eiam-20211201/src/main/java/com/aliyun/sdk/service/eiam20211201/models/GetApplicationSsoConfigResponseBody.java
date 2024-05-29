@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationSsoConfigResponseBody</p>
  */
 public class GetApplicationSsoConfigResponseBody extends TeaModel {
-    @NameInMap("ApplicationSsoConfig")
+    @com.aliyun.core.annotation.NameInMap("ApplicationSsoConfig")
     private ApplicationSsoConfig applicationSsoConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationSsoConfigResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
     } 
 
     public static class CustomClaims extends TeaModel {
-        @NameInMap("ClaimName")
+        @com.aliyun.core.annotation.NameInMap("ClaimName")
         private String claimName;
 
-        @NameInMap("ClaimValueExpression")
+        @com.aliyun.core.annotation.NameInMap("ClaimValueExpression")
         private String claimValueExpression;
 
         private CustomClaims(Builder builder) {
@@ -133,49 +132,49 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class OidcSsoConfig extends TeaModel {
-        @NameInMap("AccessTokenEffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("AccessTokenEffectiveTime")
         private Long accessTokenEffectiveTime;
 
-        @NameInMap("CodeEffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("CodeEffectiveTime")
         private Long codeEffectiveTime;
 
-        @NameInMap("CustomClaims")
+        @com.aliyun.core.annotation.NameInMap("CustomClaims")
         private java.util.List < CustomClaims> customClaims;
 
-        @NameInMap("GrantScopes")
+        @com.aliyun.core.annotation.NameInMap("GrantScopes")
         private java.util.List < String > grantScopes;
 
-        @NameInMap("GrantTypes")
+        @com.aliyun.core.annotation.NameInMap("GrantTypes")
         private java.util.List < String > grantTypes;
 
-        @NameInMap("IdTokenEffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("IdTokenEffectiveTime")
         private Long idTokenEffectiveTime;
 
-        @NameInMap("PasswordAuthenticationSourceId")
+        @com.aliyun.core.annotation.NameInMap("PasswordAuthenticationSourceId")
         private String passwordAuthenticationSourceId;
 
-        @NameInMap("PasswordTotpMfaRequired")
+        @com.aliyun.core.annotation.NameInMap("PasswordTotpMfaRequired")
         private Boolean passwordTotpMfaRequired;
 
-        @NameInMap("PkceChallengeMethods")
+        @com.aliyun.core.annotation.NameInMap("PkceChallengeMethods")
         private java.util.List < String > pkceChallengeMethods;
 
-        @NameInMap("PkceRequired")
+        @com.aliyun.core.annotation.NameInMap("PkceRequired")
         private Boolean pkceRequired;
 
-        @NameInMap("PostLogoutRedirectUris")
+        @com.aliyun.core.annotation.NameInMap("PostLogoutRedirectUris")
         private java.util.List < String > postLogoutRedirectUris;
 
-        @NameInMap("RedirectUris")
+        @com.aliyun.core.annotation.NameInMap("RedirectUris")
         private java.util.List < String > redirectUris;
 
-        @NameInMap("RefreshTokenEffective")
+        @com.aliyun.core.annotation.NameInMap("RefreshTokenEffective")
         private Long refreshTokenEffective;
 
-        @NameInMap("ResponseTypes")
+        @com.aliyun.core.annotation.NameInMap("ResponseTypes")
         private java.util.List < String > responseTypes;
 
-        @NameInMap("SubjectIdExpression")
+        @com.aliyun.core.annotation.NameInMap("SubjectIdExpression")
         private String subjectIdExpression;
 
         private OidcSsoConfig(Builder builder) {
@@ -454,34 +453,34 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class ProtocolEndpointDomain extends TeaModel {
-        @NameInMap("Oauth2AuthorizationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("Oauth2AuthorizationEndpoint")
         private String oauth2AuthorizationEndpoint;
 
-        @NameInMap("Oauth2DeviceAuthorizationEndpoint")
+        @com.aliyun.core.annotation.NameInMap("Oauth2DeviceAuthorizationEndpoint")
         private String oauth2DeviceAuthorizationEndpoint;
 
-        @NameInMap("Oauth2RevokeEndpoint")
+        @com.aliyun.core.annotation.NameInMap("Oauth2RevokeEndpoint")
         private String oauth2RevokeEndpoint;
 
-        @NameInMap("Oauth2TokenEndpoint")
+        @com.aliyun.core.annotation.NameInMap("Oauth2TokenEndpoint")
         private String oauth2TokenEndpoint;
 
-        @NameInMap("Oauth2UserinfoEndpoint")
+        @com.aliyun.core.annotation.NameInMap("Oauth2UserinfoEndpoint")
         private String oauth2UserinfoEndpoint;
 
-        @NameInMap("OidcIssuer")
+        @com.aliyun.core.annotation.NameInMap("OidcIssuer")
         private String oidcIssuer;
 
-        @NameInMap("OidcJwksEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OidcJwksEndpoint")
         private String oidcJwksEndpoint;
 
-        @NameInMap("OidcLogoutEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OidcLogoutEndpoint")
         private String oidcLogoutEndpoint;
 
-        @NameInMap("SamlMetaEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SamlMetaEndpoint")
         private String samlMetaEndpoint;
 
-        @NameInMap("SamlSsoEndpoint")
+        @com.aliyun.core.annotation.NameInMap("SamlSsoEndpoint")
         private String samlSsoEndpoint;
 
         private ProtocolEndpointDomain(Builder builder) {
@@ -675,10 +674,10 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class AttributeStatements extends TeaModel {
-        @NameInMap("AttributeName")
+        @com.aliyun.core.annotation.NameInMap("AttributeName")
         private String attributeName;
 
-        @NameInMap("AttributeValueExpression")
+        @com.aliyun.core.annotation.NameInMap("AttributeValueExpression")
         private String attributeValueExpression;
 
         private AttributeStatements(Builder builder) {
@@ -736,31 +735,31 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class SamlSsoConfig extends TeaModel {
-        @NameInMap("AssertionSigned")
+        @com.aliyun.core.annotation.NameInMap("AssertionSigned")
         private Boolean assertionSigned;
 
-        @NameInMap("AttributeStatements")
+        @com.aliyun.core.annotation.NameInMap("AttributeStatements")
         private java.util.List < AttributeStatements> attributeStatements;
 
-        @NameInMap("DefaultRelayState")
+        @com.aliyun.core.annotation.NameInMap("DefaultRelayState")
         private String defaultRelayState;
 
-        @NameInMap("NameIdFormat")
+        @com.aliyun.core.annotation.NameInMap("NameIdFormat")
         private String nameIdFormat;
 
-        @NameInMap("NameIdValueExpression")
+        @com.aliyun.core.annotation.NameInMap("NameIdValueExpression")
         private String nameIdValueExpression;
 
-        @NameInMap("ResponseSigned")
+        @com.aliyun.core.annotation.NameInMap("ResponseSigned")
         private Boolean responseSigned;
 
-        @NameInMap("SignatureAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignatureAlgorithm")
         private String signatureAlgorithm;
 
-        @NameInMap("SpEntityId")
+        @com.aliyun.core.annotation.NameInMap("SpEntityId")
         private String spEntityId;
 
-        @NameInMap("SpSsoAcsUrl")
+        @com.aliyun.core.annotation.NameInMap("SpSsoAcsUrl")
         private String spSsoAcsUrl;
 
         private SamlSsoConfig(Builder builder) {
@@ -943,22 +942,22 @@ public class GetApplicationSsoConfigResponseBody extends TeaModel {
 
     }
     public static class ApplicationSsoConfig extends TeaModel {
-        @NameInMap("InitLoginType")
+        @com.aliyun.core.annotation.NameInMap("InitLoginType")
         private String initLoginType;
 
-        @NameInMap("InitLoginUrl")
+        @com.aliyun.core.annotation.NameInMap("InitLoginUrl")
         private String initLoginUrl;
 
-        @NameInMap("OidcSsoConfig")
+        @com.aliyun.core.annotation.NameInMap("OidcSsoConfig")
         private OidcSsoConfig oidcSsoConfig;
 
-        @NameInMap("ProtocolEndpointDomain")
+        @com.aliyun.core.annotation.NameInMap("ProtocolEndpointDomain")
         private ProtocolEndpointDomain protocolEndpointDomain;
 
-        @NameInMap("SamlSsoConfig")
+        @com.aliyun.core.annotation.NameInMap("SamlSsoConfig")
         private SamlSsoConfig samlSsoConfig;
 
-        @NameInMap("SsoStatus")
+        @com.aliyun.core.annotation.NameInMap("SsoStatus")
         private String ssoStatus;
 
         private ApplicationSsoConfig(Builder builder) {

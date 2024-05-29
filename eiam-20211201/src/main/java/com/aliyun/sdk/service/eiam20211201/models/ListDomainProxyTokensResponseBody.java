@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDomainProxyTokensResponseBody</p>
  */
 public class ListDomainProxyTokensResponseBody extends TeaModel {
-    @NameInMap("DomainProxyTokens")
+    @com.aliyun.core.annotation.NameInMap("DomainProxyTokens")
     private java.util.List < DomainProxyTokens> domainProxyTokens;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDomainProxyTokensResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListDomainProxyTokensResponseBody extends TeaModel {
     } 
 
     public static class DomainProxyTokens extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DomainId")
+        @com.aliyun.core.annotation.NameInMap("DomainId")
         private String domainId;
 
-        @NameInMap("DomainProxyToken")
+        @com.aliyun.core.annotation.NameInMap("DomainProxyToken")
         private String domainProxyToken;
 
-        @NameInMap("DomainProxyTokenId")
+        @com.aliyun.core.annotation.NameInMap("DomainProxyTokenId")
         private String domainProxyTokenId;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastUsedTime")
+        @com.aliyun.core.annotation.NameInMap("LastUsedTime")
         private Long lastUsedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private DomainProxyTokens(Builder builder) {

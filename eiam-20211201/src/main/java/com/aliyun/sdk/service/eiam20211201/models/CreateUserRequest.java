@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,80 +11,80 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CustomFields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomFields")
     private java.util.List < CustomFields> customFields;
 
-    @Query
-    @NameInMap("Description")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String description;
 
-    @Query
-    @NameInMap("DisplayName")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String email;
 
-    @Query
-    @NameInMap("EmailVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EmailVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean emailVerified;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("OrganizationalUnitIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnitIds")
     private java.util.List < String > organizationalUnitIds;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String password;
 
-    @Query
-    @NameInMap("PasswordInitializationConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordInitializationConfig")
     private PasswordInitializationConfig passwordInitializationConfig;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("PhoneNumberVerified")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberVerified")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private Boolean phoneNumberVerified;
 
-    @Query
-    @NameInMap("PhoneRegion")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneRegion")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String phoneRegion;
 
-    @Query
-    @NameInMap("PrimaryOrganizationalUnitId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryOrganizationalUnitId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String primaryOrganizationalUnitId;
 
-    @Query
-    @NameInMap("UserExternalId")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserExternalId")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String userExternalId;
 
-    @Query
-    @NameInMap("Username")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String username;
 
     private CreateUserRequest(Builder builder) {
@@ -427,12 +426,12 @@ public class CreateUserRequest extends Request {
     } 
 
     public static class CustomFields extends TeaModel {
-        @NameInMap("FieldName")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldName")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldName;
 
-        @NameInMap("FieldValue")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("FieldValue")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String fieldValue;
 
         private CustomFields(Builder builder) {
@@ -490,20 +489,20 @@ public class CreateUserRequest extends Request {
 
     }
     public static class PasswordInitializationConfig extends TeaModel {
-        @NameInMap("PasswordForcedUpdateStatus")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateStatus")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordForcedUpdateStatus;
 
-        @NameInMap("PasswordInitializationPolicyPriority")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationPolicyPriority")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordInitializationPolicyPriority;
 
-        @NameInMap("PasswordInitializationType")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordInitializationType")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordInitializationType;
 
-        @NameInMap("UserNotificationChannels")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("UserNotificationChannels")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private java.util.List < String > userNotificationChannels;
 
         private PasswordInitializationConfig(Builder builder) {

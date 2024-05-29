@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("Instance")
+    @com.aliyun.core.annotation.NameInMap("Instance")
     private Instance instance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class DefaultEndpoint extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DefaultEndpoint(Builder builder) {
@@ -137,13 +136,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class DomainConfig extends TeaModel {
-        @NameInMap("DefaultDomain")
+        @com.aliyun.core.annotation.NameInMap("DefaultDomain")
         private String defaultDomain;
 
-        @NameInMap("InitDomain")
+        @com.aliyun.core.annotation.NameInMap("InitDomain")
         private String initDomain;
 
-        @NameInMap("InitDomainAutoRedirectStatus")
+        @com.aliyun.core.annotation.NameInMap("InitDomainAutoRedirectStatus")
         private String initDomainAutoRedirectStatus;
 
         private DomainConfig(Builder builder) {
@@ -222,25 +221,25 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DefaultEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DefaultEndpoint")
         private DefaultEndpoint defaultEndpoint;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainConfig")
+        @com.aliyun.core.annotation.NameInMap("DomainConfig")
         private DomainConfig domainConfig;
 
-        @NameInMap("EgressAddresses")
+        @com.aliyun.core.annotation.NameInMap("EgressAddresses")
         private java.util.List < String > egressAddresses;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Instance(Builder builder) {

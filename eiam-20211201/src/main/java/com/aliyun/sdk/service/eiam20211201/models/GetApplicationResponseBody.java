@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class Application extends TeaModel {
-        @NameInMap("ApiInvokeStatus")
+        @com.aliyun.core.annotation.NameInMap("ApiInvokeStatus")
         private String apiInvokeStatus;
 
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationSourceType")
+        @com.aliyun.core.annotation.NameInMap("ApplicationSourceType")
         private String applicationSourceType;
 
-        @NameInMap("ApplicationTemplateId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationTemplateId")
         private String applicationTemplateId;
 
-        @NameInMap("AuthorizationType")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private String authorizationType;
 
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private String features;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LogoUrl")
+        @com.aliyun.core.annotation.NameInMap("LogoUrl")
         private String logoUrl;
 
-        @NameInMap("ManagedServiceCode")
+        @com.aliyun.core.annotation.NameInMap("ManagedServiceCode")
         private String managedServiceCode;
 
-        @NameInMap("ServiceManaged")
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
         private Boolean serviceManaged;
 
-        @NameInMap("SsoType")
+        @com.aliyun.core.annotation.NameInMap("SsoType")
         private String ssoType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Application(Builder builder) {

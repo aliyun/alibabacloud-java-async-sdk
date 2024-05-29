@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPasswordComplexityConfigurationResponseBody</p>
  */
 public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
-    @NameInMap("PasswordComplexityConfiguration")
+    @com.aliyun.core.annotation.NameInMap("PasswordComplexityConfiguration")
     private PasswordComplexityConfiguration passwordComplexityConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordComplexityConfigurationResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
     } 
 
     public static class PasswordComplexityRules extends TeaModel {
-        @NameInMap("PasswordCheckType")
+        @com.aliyun.core.annotation.NameInMap("PasswordCheckType")
         private String passwordCheckType;
 
         private PasswordComplexityRules(Builder builder) {
@@ -123,10 +122,10 @@ public class GetPasswordComplexityConfigurationResponseBody extends TeaModel {
 
     }
     public static class PasswordComplexityConfiguration extends TeaModel {
-        @NameInMap("PasswordComplexityRules")
+        @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
         private java.util.List < PasswordComplexityRules> passwordComplexityRules;
 
-        @NameInMap("PasswordMinLength")
+        @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
         private Integer passwordMinLength;
 
         private PasswordComplexityConfiguration(Builder builder) {

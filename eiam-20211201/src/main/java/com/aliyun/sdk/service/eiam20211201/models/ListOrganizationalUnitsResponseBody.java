@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrganizationalUnitsResponseBody</p>
  */
 public class ListOrganizationalUnitsResponseBody extends TeaModel {
-    @NameInMap("OrganizationalUnits")
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnits")
     private java.util.List < OrganizationalUnits> organizationalUnits;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListOrganizationalUnitsResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class ListOrganizationalUnitsResponseBody extends TeaModel {
     } 
 
     public static class OrganizationalUnits extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Leaf")
+        @com.aliyun.core.annotation.NameInMap("Leaf")
         private Boolean leaf;
 
-        @NameInMap("OrganizationalUnitExternalId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitExternalId")
         private String organizationalUnitExternalId;
 
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
-        @NameInMap("OrganizationalUnitName")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
         private String organizationalUnitName;
 
-        @NameInMap("OrganizationalUnitSourceId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitSourceId")
         private String organizationalUnitSourceId;
 
-        @NameInMap("OrganizationalUnitSourceType")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitSourceType")
         private String organizationalUnitSourceType;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private OrganizationalUnits(Builder builder) {

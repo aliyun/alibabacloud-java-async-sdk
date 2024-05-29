@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordExpirationConfigurationRequest</p>
  */
 public class SetPasswordExpirationConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordExpirationAction")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationAction")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordExpirationAction;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationChannels")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationChannels")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private java.util.List < String > passwordExpirationNotificationChannels;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationDuration")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationDuration")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordExpirationNotificationDuration;
 
-    @Query
-    @NameInMap("PasswordExpirationNotificationStatus")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationNotificationStatus")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private String passwordExpirationNotificationStatus;
 
-    @Query
-    @NameInMap("PasswordExpirationStatus")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordExpirationStatus")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String passwordExpirationStatus;
 
-    @Query
-    @NameInMap("PasswordForcedUpdateDuration")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordForcedUpdateDuration")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordForcedUpdateDuration;
 
-    @Query
-    @NameInMap("PasswordValidMaxDay")
-    @Validation(maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordValidMaxDay")
+    @com.aliyun.core.annotation.Validation(maxLength = 32)
     private Integer passwordValidMaxDay;
 
     private SetPasswordExpirationConfigurationRequest(Builder builder) {

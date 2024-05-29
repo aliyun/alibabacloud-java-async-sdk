@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersForGroupResponseBody</p>
  */
 public class ListUsersForGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private ListUsersForGroupResponseBody(Builder builder) {
@@ -92,10 +91,18 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceId")
+        private String groupMemberRelationSourceId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceType")
+        private String groupMemberRelationSourceType;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Users(Builder builder) {
+            this.groupMemberRelationSourceId = builder.groupMemberRelationSourceId;
+            this.groupMemberRelationSourceType = builder.groupMemberRelationSourceType;
             this.userId = builder.userId;
         }
 
@@ -108,6 +115,20 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
+         * @return groupMemberRelationSourceId
+         */
+        public String getGroupMemberRelationSourceId() {
+            return this.groupMemberRelationSourceId;
+        }
+
+        /**
+         * @return groupMemberRelationSourceType
+         */
+        public String getGroupMemberRelationSourceType() {
+            return this.groupMemberRelationSourceType;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -115,7 +136,25 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String groupMemberRelationSourceId; 
+            private String groupMemberRelationSourceType; 
             private String userId; 
+
+            /**
+             * GroupMemberRelationSourceId.
+             */
+            public Builder groupMemberRelationSourceId(String groupMemberRelationSourceId) {
+                this.groupMemberRelationSourceId = groupMemberRelationSourceId;
+                return this;
+            }
+
+            /**
+             * GroupMemberRelationSourceType.
+             */
+            public Builder groupMemberRelationSourceType(String groupMemberRelationSourceType) {
+                this.groupMemberRelationSourceType = groupMemberRelationSourceType;
+                return this;
+            }
 
             /**
              * The account ID.

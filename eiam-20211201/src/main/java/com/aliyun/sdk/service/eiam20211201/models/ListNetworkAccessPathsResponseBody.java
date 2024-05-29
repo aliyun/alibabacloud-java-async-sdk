@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListNetworkAccessPathsResponseBody</p>
  */
 public class ListNetworkAccessPathsResponseBody extends TeaModel {
-    @NameInMap("NetworkAccessPaths")
+    @com.aliyun.core.annotation.NameInMap("NetworkAccessPaths")
     private java.util.List < NetworkAccessPaths> networkAccessPaths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListNetworkAccessPathsResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class ListNetworkAccessPathsResponseBody extends TeaModel {
     } 
 
     public static class NetworkAccessPaths extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("NetworkAccessEndpointId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessEndpointId")
         private String networkAccessEndpointId;
 
-        @NameInMap("NetworkAccessPathId")
+        @com.aliyun.core.annotation.NameInMap("NetworkAccessPathId")
         private String networkAccessPathId;
 
-        @NameInMap("NetworkInterfaceId")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceId")
         private String networkInterfaceId;
 
-        @NameInMap("PrivateIpAddress")
+        @com.aliyun.core.annotation.NameInMap("PrivateIpAddress")
         private String privateIpAddress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private NetworkAccessPaths(Builder builder) {

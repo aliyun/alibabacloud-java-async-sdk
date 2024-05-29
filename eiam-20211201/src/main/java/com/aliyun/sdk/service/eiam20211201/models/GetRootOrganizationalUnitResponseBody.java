@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRootOrganizationalUnitResponseBody</p>
  */
 public class GetRootOrganizationalUnitResponseBody extends TeaModel {
-    @NameInMap("OrganizationalUnit")
+    @com.aliyun.core.annotation.NameInMap("OrganizationalUnit")
     private OrganizationalUnit organizationalUnit;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRootOrganizationalUnitResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetRootOrganizationalUnitResponseBody extends TeaModel {
     } 
 
     public static class OrganizationalUnit extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OrganizationalUnitId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitId")
         private String organizationalUnitId;
 
-        @NameInMap("OrganizationalUnitName")
+        @com.aliyun.core.annotation.NameInMap("OrganizationalUnitName")
         private String organizationalUnitName;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private OrganizationalUnit(Builder builder) {

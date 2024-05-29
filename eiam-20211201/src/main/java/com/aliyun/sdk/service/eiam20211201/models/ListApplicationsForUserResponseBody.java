@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsForUserResponseBody</p>
  */
 public class ListApplicationsForUserResponseBody extends TeaModel {
-    @NameInMap("Applications")
+    @com.aliyun.core.annotation.NameInMap("Applications")
     private java.util.List < Applications> applications;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListApplicationsForUserResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListApplicationsForUserResponseBody extends TeaModel {
     } 
 
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationId")
         private String applicationId;
 
-        @NameInMap("HasDirectAuthorization")
+        @com.aliyun.core.annotation.NameInMap("HasDirectAuthorization")
         private Boolean hasDirectAuthorization;
 
-        @NameInMap("HasInheritAuthorization")
+        @com.aliyun.core.annotation.NameInMap("HasInheritAuthorization")
         private Boolean hasInheritAuthorization;
 
         private Applications(Builder builder) {

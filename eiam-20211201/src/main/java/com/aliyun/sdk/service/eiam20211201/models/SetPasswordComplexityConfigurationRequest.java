@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordComplexityConfigurationRequest</p>
  */
 public class SetPasswordComplexityConfigurationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String instanceId;
 
-    @Query
-    @NameInMap("PasswordComplexityRules")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordComplexityRules")
     private java.util.List < PasswordComplexityRules> passwordComplexityRules;
 
-    @Query
-    @NameInMap("PasswordMinLength")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordMinLength")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private Integer passwordMinLength;
 
     private SetPasswordComplexityConfigurationRequest(Builder builder) {
@@ -141,8 +140,8 @@ public class SetPasswordComplexityConfigurationRequest extends Request {
     } 
 
     public static class PasswordComplexityRules extends TeaModel {
-        @NameInMap("PasswordCheckType")
-        @Validation(maxLength = 64)
+        @com.aliyun.core.annotation.NameInMap("PasswordCheckType")
+        @com.aliyun.core.annotation.Validation(maxLength = 64)
         private String passwordCheckType;
 
         private PasswordComplexityRules(Builder builder) {

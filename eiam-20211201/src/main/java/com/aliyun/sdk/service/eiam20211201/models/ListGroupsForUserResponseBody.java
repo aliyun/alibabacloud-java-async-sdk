@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListGroupsForUserResponseBody</p>
  */
 public class ListGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List < Groups> groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListGroupsForUserResponseBody(Builder builder) {
@@ -92,11 +91,19 @@ public class ListGroupsForUserResponseBody extends TeaModel {
     } 
 
     public static class Groups extends TeaModel {
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceId")
+        private String groupMemberRelationSourceId;
+
+        @com.aliyun.core.annotation.NameInMap("GroupMemberRelationSourceType")
+        private String groupMemberRelationSourceType;
 
         private Groups(Builder builder) {
             this.groupId = builder.groupId;
+            this.groupMemberRelationSourceId = builder.groupMemberRelationSourceId;
+            this.groupMemberRelationSourceType = builder.groupMemberRelationSourceType;
         }
 
         public static Builder builder() {
@@ -114,14 +121,46 @@ public class ListGroupsForUserResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        /**
+         * @return groupMemberRelationSourceId
+         */
+        public String getGroupMemberRelationSourceId() {
+            return this.groupMemberRelationSourceId;
+        }
+
+        /**
+         * @return groupMemberRelationSourceType
+         */
+        public String getGroupMemberRelationSourceType() {
+            return this.groupMemberRelationSourceType;
+        }
+
         public static final class Builder {
             private String groupId; 
+            private String groupMemberRelationSourceId; 
+            private String groupMemberRelationSourceType; 
 
             /**
              * The group ID.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * GroupMemberRelationSourceId.
+             */
+            public Builder groupMemberRelationSourceId(String groupMemberRelationSourceId) {
+                this.groupMemberRelationSourceId = groupMemberRelationSourceId;
+                return this;
+            }
+
+            /**
+             * GroupMemberRelationSourceType.
+             */
+            public Builder groupMemberRelationSourceType(String groupMemberRelationSourceType) {
+                this.groupMemberRelationSourceType = groupMemberRelationSourceType;
                 return this;
             }
 

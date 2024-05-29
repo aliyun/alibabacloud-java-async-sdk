@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eiam20211201.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGroupResponseBody</p>
  */
 public class GetGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetGroupResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetGroupResponseBody extends TeaModel {
     } 
 
     public static class Group extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupExternalId")
+        @com.aliyun.core.annotation.NameInMap("GroupExternalId")
         private String groupExternalId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupSourceId")
+        @com.aliyun.core.annotation.NameInMap("GroupSourceId")
         private String groupSourceId;
 
-        @NameInMap("GroupSourceType")
+        @com.aliyun.core.annotation.NameInMap("GroupSourceType")
         private String groupSourceType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private Group(Builder builder) {
