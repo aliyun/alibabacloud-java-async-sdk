@@ -285,6 +285,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryOrgTodoTasksResponse> queryOrgTodoTasks(QueryOrgTodoTasksRequest request);
 
+    CompletableFuture<QueryReportDetailResponse> queryReportDetail(QueryReportDetailRequest request);
+
     CompletableFuture<QueryScheduleConferenceResponse> queryScheduleConference(QueryScheduleConferenceRequest request);
 
     CompletableFuture<QueryScheduleConferenceInfoResponse> queryScheduleConferenceInfo(QueryScheduleConferenceInfoRequest request);

@@ -183,6 +183,9 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
     }
     public static class MoziConfVirtualExtraSetting extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CloudRecordOwnerUserId")
+        private String cloudRecordOwnerUserId;
+
         @com.aliyun.core.annotation.NameInMap("EnableChat")
         private Integer enableChat;
 
@@ -198,15 +201,32 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("LockNick")
         private Integer lockNick;
 
+        @com.aliyun.core.annotation.NameInMap("MinutesOwnerUserId")
+        private String minutesOwnerUserId;
+
+        @com.aliyun.core.annotation.NameInMap("PushAllMeetingRecords")
+        private Boolean pushAllMeetingRecords;
+
+        @com.aliyun.core.annotation.NameInMap("PushCloudRecordCard")
+        private Boolean pushCloudRecordCard;
+
+        @com.aliyun.core.annotation.NameInMap("PushMinutesCard")
+        private Boolean pushMinutesCard;
+
         @com.aliyun.core.annotation.NameInMap("WaitingRoom")
         private Integer waitingRoom;
 
         private MoziConfVirtualExtraSetting(Builder builder) {
+            this.cloudRecordOwnerUserId = builder.cloudRecordOwnerUserId;
             this.enableChat = builder.enableChat;
             this.enableWebAnonymousJoin = builder.enableWebAnonymousJoin;
             this.joinBeforeHost = builder.joinBeforeHost;
             this.lockMediaStatusMicMute = builder.lockMediaStatusMicMute;
             this.lockNick = builder.lockNick;
+            this.minutesOwnerUserId = builder.minutesOwnerUserId;
+            this.pushAllMeetingRecords = builder.pushAllMeetingRecords;
+            this.pushCloudRecordCard = builder.pushCloudRecordCard;
+            this.pushMinutesCard = builder.pushMinutesCard;
             this.waitingRoom = builder.waitingRoom;
         }
 
@@ -216,6 +236,13 @@ public class UpdateScheduleConfSettingsRequest extends Request {
 
         public static MoziConfVirtualExtraSetting create() {
             return builder().build();
+        }
+
+        /**
+         * @return cloudRecordOwnerUserId
+         */
+        public String getCloudRecordOwnerUserId() {
+            return this.cloudRecordOwnerUserId;
         }
 
         /**
@@ -254,6 +281,34 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         }
 
         /**
+         * @return minutesOwnerUserId
+         */
+        public String getMinutesOwnerUserId() {
+            return this.minutesOwnerUserId;
+        }
+
+        /**
+         * @return pushAllMeetingRecords
+         */
+        public Boolean getPushAllMeetingRecords() {
+            return this.pushAllMeetingRecords;
+        }
+
+        /**
+         * @return pushCloudRecordCard
+         */
+        public Boolean getPushCloudRecordCard() {
+            return this.pushCloudRecordCard;
+        }
+
+        /**
+         * @return pushMinutesCard
+         */
+        public Boolean getPushMinutesCard() {
+            return this.pushMinutesCard;
+        }
+
+        /**
          * @return waitingRoom
          */
         public Integer getWaitingRoom() {
@@ -261,12 +316,25 @@ public class UpdateScheduleConfSettingsRequest extends Request {
         }
 
         public static final class Builder {
+            private String cloudRecordOwnerUserId; 
             private Integer enableChat; 
             private Boolean enableWebAnonymousJoin; 
             private Integer joinBeforeHost; 
             private Integer lockMediaStatusMicMute; 
             private Integer lockNick; 
+            private String minutesOwnerUserId; 
+            private Boolean pushAllMeetingRecords; 
+            private Boolean pushCloudRecordCard; 
+            private Boolean pushMinutesCard; 
             private Integer waitingRoom; 
+
+            /**
+             * CloudRecordOwnerUserId.
+             */
+            public Builder cloudRecordOwnerUserId(String cloudRecordOwnerUserId) {
+                this.cloudRecordOwnerUserId = cloudRecordOwnerUserId;
+                return this;
+            }
 
             /**
              * EnableChat.
@@ -305,6 +373,38 @@ public class UpdateScheduleConfSettingsRequest extends Request {
              */
             public Builder lockNick(Integer lockNick) {
                 this.lockNick = lockNick;
+                return this;
+            }
+
+            /**
+             * MinutesOwnerUserId.
+             */
+            public Builder minutesOwnerUserId(String minutesOwnerUserId) {
+                this.minutesOwnerUserId = minutesOwnerUserId;
+                return this;
+            }
+
+            /**
+             * PushAllMeetingRecords.
+             */
+            public Builder pushAllMeetingRecords(Boolean pushAllMeetingRecords) {
+                this.pushAllMeetingRecords = pushAllMeetingRecords;
+                return this;
+            }
+
+            /**
+             * PushCloudRecordCard.
+             */
+            public Builder pushCloudRecordCard(Boolean pushCloudRecordCard) {
+                this.pushCloudRecordCard = pushCloudRecordCard;
+                return this;
+            }
+
+            /**
+             * PushMinutesCard.
+             */
+            public Builder pushMinutesCard(Boolean pushMinutesCard) {
+                this.pushMinutesCard = pushMinutesCard;
                 return this;
             }
 
