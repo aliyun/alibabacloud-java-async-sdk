@@ -34,6 +34,10 @@ public class UpdateAppGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private Integer version;
+
     private UpdateAppGroupRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -41,6 +45,7 @@ public class UpdateAppGroupRequest extends Request {
         this.maxConcurrency = builder.maxConcurrency;
         this.namespace = builder.namespace;
         this.regionId = builder.regionId;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -91,12 +96,20 @@ public class UpdateAppGroupRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return version
+     */
+    public Integer getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAppGroupRequest, Builder> {
         private String description; 
         private String groupId; 
         private Integer maxConcurrency; 
         private String namespace; 
         private String regionId; 
+        private Integer version; 
 
         private Builder() {
             super();
@@ -109,6 +122,7 @@ public class UpdateAppGroupRequest extends Request {
             this.maxConcurrency = request.maxConcurrency;
             this.namespace = request.namespace;
             this.regionId = request.regionId;
+            this.version = request.version;
         } 
 
         /**
@@ -153,6 +167,15 @@ public class UpdateAppGroupRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(Integer version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 

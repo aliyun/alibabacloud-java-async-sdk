@@ -150,12 +150,16 @@ public class ListGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
+        @com.aliyun.core.annotation.NameInMap("Version")
+        private Integer version;
+
         private AppGroups(Builder builder) {
             this.appGroupId = builder.appGroupId;
             this.appKey = builder.appKey;
             this.appName = builder.appName;
             this.description = builder.description;
             this.groupId = builder.groupId;
+            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -201,12 +205,20 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
+        /**
+         * @return version
+         */
+        public Integer getVersion() {
+            return this.version;
+        }
+
         public static final class Builder {
             private Long appGroupId; 
             private String appKey; 
             private String appName; 
             private String description; 
             private String groupId; 
+            private Integer version; 
 
             /**
              * The application group ID.
@@ -245,6 +257,14 @@ public class ListGroupsResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
+                return this;
+            }
+
+            /**
+             * Version.
+             */
+            public Builder version(Integer version) {
+                this.version = version;
                 return this;
             }
 

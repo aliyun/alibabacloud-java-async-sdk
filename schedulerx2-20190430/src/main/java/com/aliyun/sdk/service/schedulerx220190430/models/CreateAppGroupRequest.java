@@ -70,6 +70,10 @@ public class CreateAppGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScheduleBusyWorkers")
     private Boolean scheduleBusyWorkers;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Version")
+    private Integer version;
+
     private CreateAppGroupRequest(Builder builder) {
         super(builder);
         this.appKey = builder.appKey;
@@ -86,6 +90,7 @@ public class CreateAppGroupRequest extends Request {
         this.namespaceSource = builder.namespaceSource;
         this.regionId = builder.regionId;
         this.scheduleBusyWorkers = builder.scheduleBusyWorkers;
+        this.version = builder.version;
     }
 
     public static Builder builder() {
@@ -199,6 +204,13 @@ public class CreateAppGroupRequest extends Request {
         return this.scheduleBusyWorkers;
     }
 
+    /**
+     * @return version
+     */
+    public Integer getVersion() {
+        return this.version;
+    }
+
     public static final class Builder extends Request.Builder<CreateAppGroupRequest, Builder> {
         private String appKey; 
         private String appName; 
@@ -214,6 +226,7 @@ public class CreateAppGroupRequest extends Request {
         private String namespaceSource; 
         private String regionId; 
         private Boolean scheduleBusyWorkers; 
+        private Integer version; 
 
         private Builder() {
             super();
@@ -235,6 +248,7 @@ public class CreateAppGroupRequest extends Request {
             this.namespaceSource = request.namespaceSource;
             this.regionId = request.regionId;
             this.scheduleBusyWorkers = request.scheduleBusyWorkers;
+            this.version = request.version;
         } 
 
         /**
@@ -369,6 +383,15 @@ public class CreateAppGroupRequest extends Request {
         public Builder scheduleBusyWorkers(Boolean scheduleBusyWorkers) {
             this.putQueryParameter("ScheduleBusyWorkers", scheduleBusyWorkers);
             this.scheduleBusyWorkers = scheduleBusyWorkers;
+            return this;
+        }
+
+        /**
+         * Version.
+         */
+        public Builder version(Integer version) {
+            this.putQueryParameter("Version", version);
+            this.version = version;
             return this;
         }
 
