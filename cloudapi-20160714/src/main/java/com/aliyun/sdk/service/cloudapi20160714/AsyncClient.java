@@ -484,6 +484,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeImportOASTaskResponse> describeImportOASTask(DescribeImportOASTaskRequest request);
 
+    CompletableFuture<DescribeInstanceClusterInfoResponse> describeInstanceClusterInfo(DescribeInstanceClusterInfoRequest request);
+
+    CompletableFuture<DescribeInstanceClusterListResponse> describeInstanceClusterList(DescribeInstanceClusterListRequest request);
+
     CompletableFuture<DescribeInstanceDropConnectionsResponse> describeInstanceDropConnections(DescribeInstanceDropConnectionsRequest request);
 
     CompletableFuture<DescribeInstanceDropPacketResponse> describeInstanceDropPacket(DescribeInstanceDropPacketRequest request);
