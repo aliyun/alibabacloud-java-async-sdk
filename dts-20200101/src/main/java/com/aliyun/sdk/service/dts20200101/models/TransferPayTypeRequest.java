@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class TransferPayTypeRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
+    private Boolean autoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BuyCount")
     private String buyCount;
 
@@ -47,6 +51,7 @@ public class TransferPayTypeRequest extends Request {
 
     private TransferPayTypeRequest(Builder builder) {
         super(builder);
+        this.autoPay = builder.autoPay;
         this.buyCount = builder.buyCount;
         this.chargeType = builder.chargeType;
         this.dtsJobId = builder.dtsJobId;
@@ -68,6 +73,13 @@ public class TransferPayTypeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return autoPay
+     */
+    public Boolean getAutoPay() {
+        return this.autoPay;
     }
 
     /**
@@ -127,6 +139,7 @@ public class TransferPayTypeRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<TransferPayTypeRequest, Builder> {
+        private Boolean autoPay; 
         private String buyCount; 
         private String chargeType; 
         private String dtsJobId; 
@@ -142,6 +155,7 @@ public class TransferPayTypeRequest extends Request {
 
         private Builder(TransferPayTypeRequest request) {
             super(request);
+            this.autoPay = request.autoPay;
             this.buyCount = request.buyCount;
             this.chargeType = request.chargeType;
             this.dtsJobId = request.dtsJobId;
@@ -151,6 +165,15 @@ public class TransferPayTypeRequest extends Request {
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
         } 
+
+        /**
+         * AutoPay.
+         */
+        public Builder autoPay(Boolean autoPay) {
+            this.putQueryParameter("AutoPay", autoPay);
+            this.autoPay = autoPay;
+            return this;
+        }
 
         /**
          * The subscription length.
