@@ -11,8 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTextThemesRequest</p>
  */
 public class ListTextThemesRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("industry")
+    private String industry;
+
     private ListTextThemesRequest(Builder builder) {
         super(builder);
+        this.industry = builder.industry;
     }
 
     public static Builder builder() {
@@ -28,7 +33,15 @@ public class ListTextThemesRequest extends Request {
         return new Builder(this);
     }
 
+    /**
+     * @return industry
+     */
+    public String getIndustry() {
+        return this.industry;
+    }
+
     public static final class Builder extends Request.Builder<ListTextThemesRequest, Builder> {
+        private String industry; 
 
         private Builder() {
             super();
@@ -36,7 +49,17 @@ public class ListTextThemesRequest extends Request {
 
         private Builder(ListTextThemesRequest request) {
             super(request);
+            this.industry = request.industry;
         } 
+
+        /**
+         * industry.
+         */
+        public Builder industry(String industry) {
+            this.putQueryParameter("industry", industry);
+            this.industry = industry;
+            return this;
+        }
 
         @Override
         public ListTextThemesRequest build() {

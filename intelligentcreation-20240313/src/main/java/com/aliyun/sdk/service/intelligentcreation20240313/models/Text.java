@@ -24,6 +24,9 @@ public class Text extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("illustrationTaskIdList")
     private java.util.List < Long > illustrationTaskIdList;
 
+    @com.aliyun.core.annotation.NameInMap("publishStatus")
+    private String publishStatus;
+
     @com.aliyun.core.annotation.NameInMap("textContent")
     private String textContent;
 
@@ -41,9 +44,15 @@ public class Text extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String textStatus;
 
+    @com.aliyun.core.annotation.NameInMap("textStyleType")
+    private String textStyleType;
+
     @com.aliyun.core.annotation.NameInMap("textTaskId")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long textTaskId;
+
+    @com.aliyun.core.annotation.NameInMap("textThemes")
+    private java.util.List < String > textThemes;
 
     @com.aliyun.core.annotation.NameInMap("title")
     private String title;
@@ -61,12 +70,15 @@ public class Text extends TeaModel {
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
         this.illustrationTaskIdList = builder.illustrationTaskIdList;
+        this.publishStatus = builder.publishStatus;
         this.textContent = builder.textContent;
         this.textId = builder.textId;
         this.textIllustrationTag = builder.textIllustrationTag;
         this.textModeType = builder.textModeType;
         this.textStatus = builder.textStatus;
+        this.textStyleType = builder.textStyleType;
         this.textTaskId = builder.textTaskId;
+        this.textThemes = builder.textThemes;
         this.title = builder.title;
         this.userNameCreate = builder.userNameCreate;
         this.userNameModified = builder.userNameModified;
@@ -109,6 +121,13 @@ public class Text extends TeaModel {
     }
 
     /**
+     * @return publishStatus
+     */
+    public String getPublishStatus() {
+        return this.publishStatus;
+    }
+
+    /**
      * @return textContent
      */
     public String getTextContent() {
@@ -144,10 +163,24 @@ public class Text extends TeaModel {
     }
 
     /**
+     * @return textStyleType
+     */
+    public String getTextStyleType() {
+        return this.textStyleType;
+    }
+
+    /**
      * @return textTaskId
      */
     public Long getTextTaskId() {
         return this.textTaskId;
+    }
+
+    /**
+     * @return textThemes
+     */
+    public java.util.List < String > getTextThemes() {
+        return this.textThemes;
     }
 
     /**
@@ -176,12 +209,15 @@ public class Text extends TeaModel {
         private String gmtCreate; 
         private String gmtModified; 
         private java.util.List < Long > illustrationTaskIdList; 
+        private String publishStatus; 
         private String textContent; 
         private Long textId; 
         private Boolean textIllustrationTag; 
         private String textModeType; 
         private String textStatus; 
+        private String textStyleType; 
         private Long textTaskId; 
+        private java.util.List < String > textThemes; 
         private String title; 
         private String userNameCreate; 
         private String userNameModified; 
@@ -215,6 +251,14 @@ public class Text extends TeaModel {
          */
         public Builder illustrationTaskIdList(java.util.List < Long > illustrationTaskIdList) {
             this.illustrationTaskIdList = illustrationTaskIdList;
+            return this;
+        }
+
+        /**
+         * publishStatus.
+         */
+        public Builder publishStatus(String publishStatus) {
+            this.publishStatus = publishStatus;
             return this;
         }
 
@@ -259,10 +303,26 @@ public class Text extends TeaModel {
         }
 
         /**
+         * textStyleType.
+         */
+        public Builder textStyleType(String textStyleType) {
+            this.textStyleType = textStyleType;
+            return this;
+        }
+
+        /**
          * textTaskId.
          */
         public Builder textTaskId(Long textTaskId) {
             this.textTaskId = textTaskId;
+            return this;
+        }
+
+        /**
+         * textThemes.
+         */
+        public Builder textThemes(java.util.List < String > textThemes) {
+            this.textThemes = textThemes;
             return this;
         }
 

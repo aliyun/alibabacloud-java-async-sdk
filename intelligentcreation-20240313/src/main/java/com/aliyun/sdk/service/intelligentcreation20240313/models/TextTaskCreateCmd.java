@@ -17,6 +17,9 @@ public class TextTaskCreateCmd extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("idempotentId")
     private String idempotentId;
 
+    @com.aliyun.core.annotation.NameInMap("industry")
+    private String industry;
+
     @com.aliyun.core.annotation.NameInMap("introduction")
     private String introduction;
 
@@ -47,9 +50,13 @@ public class TextTaskCreateCmd extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("theme")
     private String theme;
 
+    @com.aliyun.core.annotation.NameInMap("themes")
+    private java.util.List < String > themes;
+
     private TextTaskCreateCmd(Builder builder) {
         this.contentRequirement = builder.contentRequirement;
         this.idempotentId = builder.idempotentId;
+        this.industry = builder.industry;
         this.introduction = builder.introduction;
         this.number = builder.number;
         this.point = builder.point;
@@ -59,6 +66,7 @@ public class TextTaskCreateCmd extends TeaModel {
         this.target = builder.target;
         this.textModeType = builder.textModeType;
         this.theme = builder.theme;
+        this.themes = builder.themes;
     }
 
     public static Builder builder() {
@@ -81,6 +89,13 @@ public class TextTaskCreateCmd extends TeaModel {
      */
     public String getIdempotentId() {
         return this.idempotentId;
+    }
+
+    /**
+     * @return industry
+     */
+    public String getIndustry() {
+        return this.industry;
     }
 
     /**
@@ -146,9 +161,17 @@ public class TextTaskCreateCmd extends TeaModel {
         return this.theme;
     }
 
+    /**
+     * @return themes
+     */
+    public java.util.List < String > getThemes() {
+        return this.themes;
+    }
+
     public static final class Builder {
         private String contentRequirement; 
         private String idempotentId; 
+        private String industry; 
         private String introduction; 
         private Integer number; 
         private String point; 
@@ -158,6 +181,7 @@ public class TextTaskCreateCmd extends TeaModel {
         private String target; 
         private String textModeType; 
         private String theme; 
+        private java.util.List < String > themes; 
 
         /**
          * contentRequirement.
@@ -172,6 +196,14 @@ public class TextTaskCreateCmd extends TeaModel {
          */
         public Builder idempotentId(String idempotentId) {
             this.idempotentId = idempotentId;
+            return this;
+        }
+
+        /**
+         * industry.
+         */
+        public Builder industry(String industry) {
+            this.industry = industry;
             return this;
         }
 
@@ -244,6 +276,14 @@ public class TextTaskCreateCmd extends TeaModel {
          */
         public Builder theme(String theme) {
             this.theme = theme;
+            return this;
+        }
+
+        /**
+         * themes.
+         */
+        public Builder themes(java.util.List < String > themes) {
+            this.themes = themes;
             return this;
         }
 
