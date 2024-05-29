@@ -527,6 +527,9 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("pathIndependentPercentageEnable")
+        private Boolean pathIndependentPercentageEnable;
+
         @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
@@ -547,6 +550,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             this.groupId = builder.groupId;
             this.id = builder.id;
             this.name = builder.name;
+            this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
             this.regionId = builder.regionId;
             this.status = builder.status;
             this.tag = builder.tag;
@@ -631,6 +635,13 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
+         * @return pathIndependentPercentageEnable
+         */
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -662,6 +673,7 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
             private Long groupId; 
             private Long id; 
             private String name; 
+            private Boolean pathIndependentPercentageEnable; 
             private String regionId; 
             private Integer status; 
             private String tag; 
@@ -743,6 +755,14 @@ public class CreateOrUpdateSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * pathIndependentPercentageEnable.
+             */
+            public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+                this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
                 return this;
             }
 

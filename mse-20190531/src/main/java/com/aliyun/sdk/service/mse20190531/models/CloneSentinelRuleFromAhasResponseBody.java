@@ -49,7 +49,7 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(java.util.Map < String, java.util.List<String>> data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class CloneSentinelRuleFromAhasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

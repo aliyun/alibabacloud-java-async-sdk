@@ -457,6 +457,9 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+        private Boolean pathIndependentPercentageEnable;
+
         @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
@@ -497,6 +500,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         private String tag;
 
         private Data(Builder builder) {
+            this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
             this.enable = builder.enable;
             this.enableRules = builder.enableRules;
             this.entryRule = builder.entryRule;
@@ -518,6 +522,13 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return pathIndependentPercentageEnable
+         */
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
         }
 
         /**
@@ -612,6 +623,7 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean pathIndependentPercentageEnable; 
             private Boolean enable; 
             private Boolean enableRules; 
             private String entryRule; 
@@ -625,6 +637,14 @@ public class QuerySwimmingLaneByIdResponseBody extends TeaModel {
             private String regionId; 
             private Integer status; 
             private String tag; 
+
+            /**
+             * PathIndependentPercentageEnable.
+             */
+            public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+                this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
+                return this;
+            }
 
             /**
              * enable.

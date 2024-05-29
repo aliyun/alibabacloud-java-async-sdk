@@ -105,7 +105,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
         }
 
         /**
-         * The response parameters.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -784,7 +784,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The URL of the HTTP request for the health check.
+             * The endpoint of the HTTP request for the health check.
              */
             public Builder httpHost(String httpHost) {
                 this.httpHost = httpHost;
@@ -1182,7 +1182,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             private java.util.List < Versions> versions; 
 
             /**
-             * The ID of the gateway.
+             * The gateway ID.
              */
             public Builder gatewayId(Long gatewayId) {
                 this.gatewayId = gatewayId;
@@ -1222,7 +1222,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the group.
+             * The group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -1280,7 +1280,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses.
+             * The list of IP addresses.
              */
             public Builder ips(java.util.List < String > ips) {
                 this.ips = ips;
@@ -1336,7 +1336,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The service port.
+             * The service port number.
              */
             public Builder servicePort(Long servicePort) {
                 this.servicePort = servicePort;
@@ -1360,7 +1360,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service source.
+             * The source type.
              */
             public Builder sourceType(String sourceType) {
                 this.sourceType = sourceType;
@@ -1368,7 +1368,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The array of unhealthy endpoints.
+             * The array of endpoints of unhealthy instances.
              */
             public Builder unhealthyEndpoints(java.util.List < String > unhealthyEndpoints) {
                 this.unhealthyEndpoints = unhealthyEndpoints;
@@ -1376,7 +1376,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * The service version.
              */
             public Builder versions(java.util.List < Versions> versions) {
                 this.versions = versions;
@@ -1469,7 +1469,7 @@ public class ListGatewayServiceResponseBody extends TeaModel {
             }
 
             /**
-             * The returned information.
+             * The data returned.
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;

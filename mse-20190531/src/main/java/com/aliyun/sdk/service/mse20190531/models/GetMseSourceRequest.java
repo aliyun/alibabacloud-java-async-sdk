@@ -130,7 +130,7 @@ public class GetMseSourceRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * VPC ID
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

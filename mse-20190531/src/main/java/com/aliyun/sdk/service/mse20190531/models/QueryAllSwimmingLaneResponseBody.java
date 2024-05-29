@@ -557,6 +557,67 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         } 
 
     }
+    public static class RouteIndependentPercentageList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private String percentage;
+
+        @com.aliyun.core.annotation.NameInMap("RouteId")
+        private String routeId;
+
+        private RouteIndependentPercentageList(Builder builder) {
+            this.percentage = builder.percentage;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteIndependentPercentageList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return percentage
+         */
+        public String getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeId
+         */
+        public String getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private String percentage; 
+            private String routeId; 
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(String percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteId.
+             */
+            public Builder routeId(String routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public RouteIndependentPercentageList build() {
+                return new RouteIndependentPercentageList(this);
+            } 
+
+        } 
+
+    }
     public static class GatewaySwimmingLaneRoute extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
@@ -576,6 +637,12 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RouteIdList")
         private java.util.List < Long > routeIdList;
 
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
+        private String routeIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
+        private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList;
+
         private GatewaySwimmingLaneRoute(Builder builder) {
             this.canaryModel = builder.canaryModel;
             this.conditions = builder.conditions;
@@ -583,6 +650,8 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.percentage = builder.percentage;
             this.routeIdList = builder.routeIdList;
+            this.routeIndependentPercentageEnable = builder.routeIndependentPercentageEnable;
+            this.routeIndependentPercentageList = builder.routeIndependentPercentageList;
         }
 
         public static Builder builder() {
@@ -635,6 +704,20 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             return this.routeIdList;
         }
 
+        /**
+         * @return routeIndependentPercentageEnable
+         */
+        public String getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        /**
+         * @return routeIndependentPercentageList
+         */
+        public java.util.List < RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
+        }
+
         public static final class Builder {
             private Integer canaryModel; 
             private java.util.List < Conditions> conditions; 
@@ -642,6 +725,8 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private String gatewayUniqueId; 
             private Integer percentage; 
             private java.util.List < Long > routeIdList; 
+            private String routeIndependentPercentageEnable; 
+            private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList; 
 
             /**
              * CanaryModel.
@@ -691,6 +776,22 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * RouteIndependentPercentageEnable.
+             */
+            public Builder routeIndependentPercentageEnable(String routeIndependentPercentageEnable) {
+                this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageList.
+             */
+            public Builder routeIndependentPercentageList(java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList) {
+                this.routeIndependentPercentageList = routeIndependentPercentageList;
+                return this;
+            }
+
             public GatewaySwimmingLaneRoute build() {
                 return new GatewaySwimmingLaneRoute(this);
             } 
@@ -723,6 +824,9 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
+        @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+        private Boolean pathIndependentPercentageEnable;
+
         @com.aliyun.core.annotation.NameInMap("RecordCanaryDetail")
         private Boolean recordCanaryDetail;
 
@@ -753,6 +857,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             this.messageQueueGrayEnable = builder.messageQueueGrayEnable;
             this.name = builder.name;
             this.namespace = builder.namespace;
+            this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
             this.recordCanaryDetail = builder.recordCanaryDetail;
             this.regionId = builder.regionId;
             this.tag = builder.tag;
@@ -827,6 +932,13 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
         }
 
         /**
+         * @return pathIndependentPercentageEnable
+         */
+        public Boolean getPathIndependentPercentageEnable() {
+            return this.pathIndependentPercentageEnable;
+        }
+
+        /**
          * @return recordCanaryDetail
          */
         public Boolean getRecordCanaryDetail() {
@@ -884,6 +996,7 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
             private Boolean messageQueueGrayEnable; 
             private String name; 
             private String namespace; 
+            private Boolean pathIndependentPercentageEnable; 
             private Boolean recordCanaryDetail; 
             private String regionId; 
             private String tag; 
@@ -953,6 +1066,14 @@ public class QueryAllSwimmingLaneResponseBody extends TeaModel {
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
+                return this;
+            }
+
+            /**
+             * PathIndependentPercentageEnable.
+             */
+            public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+                this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
                 return this;
             }
 

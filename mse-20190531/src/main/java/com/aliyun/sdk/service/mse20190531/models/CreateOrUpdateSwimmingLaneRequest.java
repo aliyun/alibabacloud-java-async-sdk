@@ -55,6 +55,10 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     private String namespace;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathIndependentPercentageEnable")
+    private Boolean pathIndependentPercentageEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
@@ -75,6 +79,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         this.id = builder.id;
         this.name = builder.name;
         this.namespace = builder.namespace;
+        this.pathIndependentPercentageEnable = builder.pathIndependentPercentageEnable;
         this.regionId = builder.regionId;
         this.tag = builder.tag;
     }
@@ -163,6 +168,13 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
     }
 
     /**
+     * @return pathIndependentPercentageEnable
+     */
+    public Boolean getPathIndependentPercentageEnable() {
+        return this.pathIndependentPercentageEnable;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -187,6 +199,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         private Long id; 
         private String name; 
         private String namespace; 
+        private Boolean pathIndependentPercentageEnable; 
         private String regionId; 
         private String tag; 
 
@@ -206,6 +219,7 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.id = request.id;
             this.name = request.name;
             this.namespace = request.namespace;
+            this.pathIndependentPercentageEnable = request.pathIndependentPercentageEnable;
             this.regionId = request.regionId;
             this.tag = request.tag;
         } 
@@ -304,6 +318,15 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
             this.namespace = namespace;
+            return this;
+        }
+
+        /**
+         * PathIndependentPercentageEnable.
+         */
+        public Builder pathIndependentPercentageEnable(Boolean pathIndependentPercentageEnable) {
+            this.putQueryParameter("PathIndependentPercentageEnable", pathIndependentPercentageEnable);
+            this.pathIndependentPercentageEnable = pathIndependentPercentageEnable;
             return this;
         }
 
@@ -764,6 +787,67 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         } 
 
     }
+    public static class RouteIndependentPercentageList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Percentage")
+        private Integer percentage;
+
+        @com.aliyun.core.annotation.NameInMap("RouteId")
+        private Long routeId;
+
+        private RouteIndependentPercentageList(Builder builder) {
+            this.percentage = builder.percentage;
+            this.routeId = builder.routeId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static RouteIndependentPercentageList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return percentage
+         */
+        public Integer getPercentage() {
+            return this.percentage;
+        }
+
+        /**
+         * @return routeId
+         */
+        public Long getRouteId() {
+            return this.routeId;
+        }
+
+        public static final class Builder {
+            private Integer percentage; 
+            private Long routeId; 
+
+            /**
+             * Percentage.
+             */
+            public Builder percentage(Integer percentage) {
+                this.percentage = percentage;
+                return this;
+            }
+
+            /**
+             * RouteId.
+             */
+            public Builder routeId(Long routeId) {
+                this.routeId = routeId;
+                return this;
+            }
+
+            public RouteIndependentPercentageList build() {
+                return new RouteIndependentPercentageList(this);
+            } 
+
+        } 
+
+    }
     public static class GatewaySwimmingLaneRouteJson extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CanaryModel")
         private Integer canaryModel;
@@ -783,6 +867,12 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RouteIdList")
         private java.util.List < Long > routeIdList;
 
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageEnable")
+        private Boolean routeIndependentPercentageEnable;
+
+        @com.aliyun.core.annotation.NameInMap("RouteIndependentPercentageList")
+        private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList;
+
         private GatewaySwimmingLaneRouteJson(Builder builder) {
             this.canaryModel = builder.canaryModel;
             this.conditions = builder.conditions;
@@ -790,6 +880,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             this.gatewayUniqueId = builder.gatewayUniqueId;
             this.percentage = builder.percentage;
             this.routeIdList = builder.routeIdList;
+            this.routeIndependentPercentageEnable = builder.routeIndependentPercentageEnable;
+            this.routeIndependentPercentageList = builder.routeIndependentPercentageList;
         }
 
         public static Builder builder() {
@@ -842,6 +934,20 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             return this.routeIdList;
         }
 
+        /**
+         * @return routeIndependentPercentageEnable
+         */
+        public Boolean getRouteIndependentPercentageEnable() {
+            return this.routeIndependentPercentageEnable;
+        }
+
+        /**
+         * @return routeIndependentPercentageList
+         */
+        public java.util.List < RouteIndependentPercentageList> getRouteIndependentPercentageList() {
+            return this.routeIndependentPercentageList;
+        }
+
         public static final class Builder {
             private Integer canaryModel; 
             private java.util.List < Conditions> conditions; 
@@ -849,6 +955,8 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
             private String gatewayUniqueId; 
             private Integer percentage; 
             private java.util.List < Long > routeIdList; 
+            private Boolean routeIndependentPercentageEnable; 
+            private java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList; 
 
             /**
              * CanaryModel.
@@ -895,6 +1003,22 @@ public class CreateOrUpdateSwimmingLaneRequest extends Request {
              */
             public Builder routeIdList(java.util.List < Long > routeIdList) {
                 this.routeIdList = routeIdList;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageEnable.
+             */
+            public Builder routeIndependentPercentageEnable(Boolean routeIndependentPercentageEnable) {
+                this.routeIndependentPercentageEnable = routeIndependentPercentageEnable;
+                return this;
+            }
+
+            /**
+             * RouteIndependentPercentageList.
+             */
+            public Builder routeIndependentPercentageList(java.util.List < RouteIndependentPercentageList> routeIndependentPercentageList) {
+                this.routeIndependentPercentageList = routeIndependentPercentageList;
                 return this;
             }
 

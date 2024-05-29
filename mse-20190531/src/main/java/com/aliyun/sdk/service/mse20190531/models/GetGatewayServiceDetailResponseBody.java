@@ -105,7 +105,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The details of the data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -201,7 +201,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The tag values.
+             * The tag value.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -322,7 +322,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was created.
+             * The creation time.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -330,7 +330,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the service was modified.
+             * The modification time.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -338,7 +338,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the port configuration.
+             * The port ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -476,7 +476,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The tags.
+             * The tag.
              */
             public Builder labels(java.util.List < Labels> labels) {
                 this.labels = labels;
@@ -565,7 +565,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * The service version.
              */
             public Builder serviceVersion(ServiceVersion serviceVersion) {
                 this.serviceVersion = serviceVersion;
@@ -638,7 +638,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the service.
+             * The type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1127,7 +1127,7 @@ public class GetGatewayServiceDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the service.
+             * The service version. This parameter is deprecated.
              */
             public Builder versions(java.util.List < Versions> versions) {
                 this.versions = versions;

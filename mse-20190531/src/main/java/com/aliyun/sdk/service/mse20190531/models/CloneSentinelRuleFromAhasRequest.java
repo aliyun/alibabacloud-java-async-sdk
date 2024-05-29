@@ -111,7 +111,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The language in which you want to display the results. Valid values: zh and en. zh indicates Chinese, which is the default value. en indicates English.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -120,7 +120,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * AhasNamespace.
+         * The namespace (environment) of Application High Availability Service (AHAS).
          */
         public Builder ahasNamespace(String ahasNamespace) {
             this.putQueryParameter("AhasNamespace", ahasNamespace);
@@ -129,7 +129,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * AppName.
+         * The application name.
          */
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
@@ -138,7 +138,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * IsAHASPublicRegion.
+         * Specifies whether AHAS is deployed in the Internet region.
          */
         public Builder isAHASPublicRegion(Boolean isAHASPublicRegion) {
             this.putQueryParameter("IsAHASPublicRegion", isAHASPublicRegion);
@@ -147,7 +147,7 @@ public class CloneSentinelRuleFromAhasRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
