@@ -17,9 +17,6 @@ public class GetServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApprovalType")
     private String approvalType;
 
-    @com.aliyun.core.annotation.NameInMap("BillEntityMappings")
-    private BillEntityMappings billEntityMappings;
-
     @com.aliyun.core.annotation.NameInMap("BuildInfo")
     private String buildInfo;
 
@@ -31,15 +28,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("CommodityCode")
     private String commodityCode;
-
-    @com.aliyun.core.annotation.NameInMap("CommodityEntities")
-    private java.util.List < CommodityEntities> commodityEntities;
-
-    @com.aliyun.core.annotation.NameInMap("CommoditySpecifications")
-    private java.util.List < CommoditySpecifications> commoditySpecifications;
-
-    @com.aliyun.core.annotation.NameInMap("ComponentsConfigs")
-    private java.util.List < ComponentsConfigs> componentsConfigs;
 
     @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
@@ -58,9 +46,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     @com.aliyun.core.annotation.NameInMap("Duration")
     private Long duration;
-
-    @com.aliyun.core.annotation.NameInMap("EntityAdditionalInfo")
-    private java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo;
 
     @com.aliyun.core.annotation.NameInMap("EntitySource")
     private java.util.Map < String, String > entitySource;
@@ -194,21 +179,16 @@ public class GetServiceResponseBody extends TeaModel {
     private GetServiceResponseBody(Builder builder) {
         this.alarmMetadata = builder.alarmMetadata;
         this.approvalType = builder.approvalType;
-        this.billEntityMappings = builder.billEntityMappings;
         this.buildInfo = builder.buildInfo;
         this.categories = builder.categories;
         this.commodity = builder.commodity;
         this.commodityCode = builder.commodityCode;
-        this.commodityEntities = builder.commodityEntities;
-        this.commoditySpecifications = builder.commoditySpecifications;
-        this.componentsConfigs = builder.componentsConfigs;
         this.createTime = builder.createTime;
         this.crossRegionConnectionStatus = builder.crossRegionConnectionStatus;
         this.defaultLicenseDays = builder.defaultLicenseDays;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
         this.duration = builder.duration;
-        this.entityAdditionalInfo = builder.entityAdditionalInfo;
         this.entitySource = builder.entitySource;
         this.isSupportOperated = builder.isSupportOperated;
         this.licenseMetadata = builder.licenseMetadata;
@@ -277,13 +257,6 @@ public class GetServiceResponseBody extends TeaModel {
     }
 
     /**
-     * @return billEntityMappings
-     */
-    public BillEntityMappings getBillEntityMappings() {
-        return this.billEntityMappings;
-    }
-
-    /**
      * @return buildInfo
      */
     public String getBuildInfo() {
@@ -309,27 +282,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public String getCommodityCode() {
         return this.commodityCode;
-    }
-
-    /**
-     * @return commodityEntities
-     */
-    public java.util.List < CommodityEntities> getCommodityEntities() {
-        return this.commodityEntities;
-    }
-
-    /**
-     * @return commoditySpecifications
-     */
-    public java.util.List < CommoditySpecifications> getCommoditySpecifications() {
-        return this.commoditySpecifications;
-    }
-
-    /**
-     * @return componentsConfigs
-     */
-    public java.util.List < ComponentsConfigs> getComponentsConfigs() {
-        return this.componentsConfigs;
     }
 
     /**
@@ -372,13 +324,6 @@ public class GetServiceResponseBody extends TeaModel {
      */
     public Long getDuration() {
         return this.duration;
-    }
-
-    /**
-     * @return entityAdditionalInfo
-     */
-    public java.util.Map < String, EntityAdditionalInfoValue > getEntityAdditionalInfo() {
-        return this.entityAdditionalInfo;
     }
 
     /**
@@ -685,21 +630,16 @@ public class GetServiceResponseBody extends TeaModel {
     public static final class Builder {
         private String alarmMetadata; 
         private String approvalType; 
-        private BillEntityMappings billEntityMappings; 
         private String buildInfo; 
         private String categories; 
         private Commodity commodity; 
         private String commodityCode; 
-        private java.util.List < CommodityEntities> commodityEntities; 
-        private java.util.List < CommoditySpecifications> commoditySpecifications; 
-        private java.util.List < ComponentsConfigs> componentsConfigs; 
         private String createTime; 
         private String crossRegionConnectionStatus; 
         private Long defaultLicenseDays; 
         private String deployMetadata; 
         private String deployType; 
         private Long duration; 
-        private java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo; 
         private java.util.Map < String, String > entitySource; 
         private Boolean isSupportOperated; 
         private String licenseMetadata; 
@@ -761,14 +701,6 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * BillEntityMappings.
-         */
-        public Builder billEntityMappings(BillEntityMappings billEntityMappings) {
-            this.billEntityMappings = billEntityMappings;
-            return this;
-        }
-
-        /**
          * BuildInfo.
          */
         public Builder buildInfo(String buildInfo) {
@@ -797,30 +729,6 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
-            return this;
-        }
-
-        /**
-         * CommodityEntities.
-         */
-        public Builder commodityEntities(java.util.List < CommodityEntities> commodityEntities) {
-            this.commodityEntities = commodityEntities;
-            return this;
-        }
-
-        /**
-         * CommoditySpecifications.
-         */
-        public Builder commoditySpecifications(java.util.List < CommoditySpecifications> commoditySpecifications) {
-            this.commoditySpecifications = commoditySpecifications;
-            return this;
-        }
-
-        /**
-         * ComponentsConfigs.
-         */
-        public Builder componentsConfigs(java.util.List < ComponentsConfigs> componentsConfigs) {
-            this.componentsConfigs = componentsConfigs;
             return this;
         }
 
@@ -869,14 +777,6 @@ public class GetServiceResponseBody extends TeaModel {
          */
         public Builder duration(Long duration) {
             this.duration = duration;
-            return this;
-        }
-
-        /**
-         * EntityAdditionalInfo.
-         */
-        public Builder entityAdditionalInfo(java.util.Map < String, EntityAdditionalInfoValue > entityAdditionalInfo) {
-            this.entityAdditionalInfo = entityAdditionalInfo;
             return this;
         }
 
@@ -1230,229 +1130,6 @@ public class GetServiceResponseBody extends TeaModel {
 
     } 
 
-    public static class Mappings extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("BillCode")
-        private String billCode;
-
-        @com.aliyun.core.annotation.NameInMap("Entity")
-        private String entity;
-
-        @com.aliyun.core.annotation.NameInMap("MeteringAssist")
-        private String meteringAssist;
-
-        private Mappings(Builder builder) {
-            this.billCode = builder.billCode;
-            this.entity = builder.entity;
-            this.meteringAssist = builder.meteringAssist;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Mappings create() {
-            return builder().build();
-        }
-
-        /**
-         * @return billCode
-         */
-        public String getBillCode() {
-            return this.billCode;
-        }
-
-        /**
-         * @return entity
-         */
-        public String getEntity() {
-            return this.entity;
-        }
-
-        /**
-         * @return meteringAssist
-         */
-        public String getMeteringAssist() {
-            return this.meteringAssist;
-        }
-
-        public static final class Builder {
-            private String billCode; 
-            private String entity; 
-            private String meteringAssist; 
-
-            /**
-             * BillCode.
-             */
-            public Builder billCode(String billCode) {
-                this.billCode = billCode;
-                return this;
-            }
-
-            /**
-             * Entity.
-             */
-            public Builder entity(String entity) {
-                this.entity = entity;
-                return this;
-            }
-
-            /**
-             * MeteringAssist.
-             */
-            public Builder meteringAssist(String meteringAssist) {
-                this.meteringAssist = meteringAssist;
-                return this;
-            }
-
-            public Mappings build() {
-                return new Mappings(this);
-            } 
-
-        } 
-
-    }
-    public static class MappingConfig extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Mappings")
-        private java.util.List < Mappings> mappings;
-
-        @com.aliyun.core.annotation.NameInMap("PredefinedParameters")
-        private String predefinedParameters;
-
-        @com.aliyun.core.annotation.NameInMap("TemplateName")
-        private String templateName;
-
-        private MappingConfig(Builder builder) {
-            this.mappings = builder.mappings;
-            this.predefinedParameters = builder.predefinedParameters;
-            this.templateName = builder.templateName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static MappingConfig create() {
-            return builder().build();
-        }
-
-        /**
-         * @return mappings
-         */
-        public java.util.List < Mappings> getMappings() {
-            return this.mappings;
-        }
-
-        /**
-         * @return predefinedParameters
-         */
-        public String getPredefinedParameters() {
-            return this.predefinedParameters;
-        }
-
-        /**
-         * @return templateName
-         */
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public static final class Builder {
-            private java.util.List < Mappings> mappings; 
-            private String predefinedParameters; 
-            private String templateName; 
-
-            /**
-             * Mappings.
-             */
-            public Builder mappings(java.util.List < Mappings> mappings) {
-                this.mappings = mappings;
-                return this;
-            }
-
-            /**
-             * PredefinedParameters.
-             */
-            public Builder predefinedParameters(String predefinedParameters) {
-                this.predefinedParameters = predefinedParameters;
-                return this;
-            }
-
-            /**
-             * TemplateName.
-             */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
-                return this;
-            }
-
-            public MappingConfig build() {
-                return new MappingConfig(this);
-            } 
-
-        } 
-
-    }
-    public static class BillEntityMappings extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("MappingConfig")
-        private java.util.List < MappingConfig> mappingConfig;
-
-        @com.aliyun.core.annotation.NameInMap("Type")
-        private String type;
-
-        private BillEntityMappings(Builder builder) {
-            this.mappingConfig = builder.mappingConfig;
-            this.type = builder.type;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static BillEntityMappings create() {
-            return builder().build();
-        }
-
-        /**
-         * @return mappingConfig
-         */
-        public java.util.List < MappingConfig> getMappingConfig() {
-            return this.mappingConfig;
-        }
-
-        /**
-         * @return type
-         */
-        public String getType() {
-            return this.type;
-        }
-
-        public static final class Builder {
-            private java.util.List < MappingConfig> mappingConfig; 
-            private String type; 
-
-            /**
-             * MappingConfig.
-             */
-            public Builder mappingConfig(java.util.List < MappingConfig> mappingConfig) {
-                this.mappingConfig = mappingConfig;
-                return this;
-            }
-
-            /**
-             * Type.
-             */
-            public Builder type(String type) {
-                this.type = type;
-                return this;
-            }
-
-            public BillEntityMappings build() {
-                return new BillEntityMappings(this);
-            } 
-
-        } 
-
-    }
     public static class ComponentsMappings extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Mappings")
         private java.util.Map < String, String > mappings;
@@ -2302,9 +1979,6 @@ public class GetServiceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MeteringEntities")
         private java.util.List < MeteringEntities> meteringEntities;
 
-        @com.aliyun.core.annotation.NameInMap("OrderTime")
-        private java.util.Map < String, java.util.List<String>> orderTime;
-
         @com.aliyun.core.annotation.NameInMap("SaasBoostMetadata")
         private String saasBoostMetadata;
 
@@ -2321,7 +1995,6 @@ public class GetServiceResponseBody extends TeaModel {
             this.cssMetadata = builder.cssMetadata;
             this.marketplaceMetadata = builder.marketplaceMetadata;
             this.meteringEntities = builder.meteringEntities;
-            this.orderTime = builder.orderTime;
             this.saasBoostMetadata = builder.saasBoostMetadata;
             this.specifications = builder.specifications;
             this.type = builder.type;
@@ -2378,13 +2051,6 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * @return orderTime
-         */
-        public java.util.Map < String, java.util.List<String>> getOrderTime() {
-            return this.orderTime;
-        }
-
-        /**
          * @return saasBoostMetadata
          */
         public String getSaasBoostMetadata() {
@@ -2412,7 +2078,6 @@ public class GetServiceResponseBody extends TeaModel {
             private CssMetadata cssMetadata; 
             private MarketplaceMetadata marketplaceMetadata; 
             private java.util.List < MeteringEntities> meteringEntities; 
-            private java.util.Map < String, java.util.List<String>> orderTime; 
             private String saasBoostMetadata; 
             private java.util.List < Specifications> specifications; 
             private String type; 
@@ -2466,14 +2131,6 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * OrderTime.
-             */
-            public Builder orderTime(java.util.Map < String, java.util.List<String>> orderTime) {
-                this.orderTime = orderTime;
-                return this;
-            }
-
-            /**
              * SaasBoostMetadata.
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
@@ -2499,229 +2156,6 @@ public class GetServiceResponseBody extends TeaModel {
 
             public Commodity build() {
                 return new Commodity(this);
-            } 
-
-        } 
-
-    }
-    public static class CommodityEntities extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EntityIds")
-        private java.util.List < String > entityIds;
-
-        @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
-        private String predefinedParameterName;
-
-        @com.aliyun.core.annotation.NameInMap("TemplateName")
-        private String templateName;
-
-        private CommodityEntities(Builder builder) {
-            this.entityIds = builder.entityIds;
-            this.predefinedParameterName = builder.predefinedParameterName;
-            this.templateName = builder.templateName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CommodityEntities create() {
-            return builder().build();
-        }
-
-        /**
-         * @return entityIds
-         */
-        public java.util.List < String > getEntityIds() {
-            return this.entityIds;
-        }
-
-        /**
-         * @return predefinedParameterName
-         */
-        public String getPredefinedParameterName() {
-            return this.predefinedParameterName;
-        }
-
-        /**
-         * @return templateName
-         */
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > entityIds; 
-            private String predefinedParameterName; 
-            private String templateName; 
-
-            /**
-             * EntityIds.
-             */
-            public Builder entityIds(java.util.List < String > entityIds) {
-                this.entityIds = entityIds;
-                return this;
-            }
-
-            /**
-             * PredefinedParameterName.
-             */
-            public Builder predefinedParameterName(String predefinedParameterName) {
-                this.predefinedParameterName = predefinedParameterName;
-                return this;
-            }
-
-            /**
-             * TemplateName.
-             */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
-                return this;
-            }
-
-            public CommodityEntities build() {
-                return new CommodityEntities(this);
-            } 
-
-        } 
-
-    }
-    public static class CommoditySpecifications extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("PredefinedParameterName")
-        private String predefinedParameterName;
-
-        @com.aliyun.core.annotation.NameInMap("SpecificationCode")
-        private String specificationCode;
-
-        @com.aliyun.core.annotation.NameInMap("TemplateName")
-        private String templateName;
-
-        private CommoditySpecifications(Builder builder) {
-            this.predefinedParameterName = builder.predefinedParameterName;
-            this.specificationCode = builder.specificationCode;
-            this.templateName = builder.templateName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static CommoditySpecifications create() {
-            return builder().build();
-        }
-
-        /**
-         * @return predefinedParameterName
-         */
-        public String getPredefinedParameterName() {
-            return this.predefinedParameterName;
-        }
-
-        /**
-         * @return specificationCode
-         */
-        public String getSpecificationCode() {
-            return this.specificationCode;
-        }
-
-        /**
-         * @return templateName
-         */
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public static final class Builder {
-            private String predefinedParameterName; 
-            private String specificationCode; 
-            private String templateName; 
-
-            /**
-             * PredefinedParameterName.
-             */
-            public Builder predefinedParameterName(String predefinedParameterName) {
-                this.predefinedParameterName = predefinedParameterName;
-                return this;
-            }
-
-            /**
-             * SpecificationCode.
-             */
-            public Builder specificationCode(String specificationCode) {
-                this.specificationCode = specificationCode;
-                return this;
-            }
-
-            /**
-             * TemplateName.
-             */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
-                return this;
-            }
-
-            public CommoditySpecifications build() {
-                return new CommoditySpecifications(this);
-            } 
-
-        } 
-
-    }
-    public static class ComponentsConfigs extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ComponentsMappings")
-        private java.util.Map < String, String > componentsMappings;
-
-        @com.aliyun.core.annotation.NameInMap("TemplateName")
-        private String templateName;
-
-        private ComponentsConfigs(Builder builder) {
-            this.componentsMappings = builder.componentsMappings;
-            this.templateName = builder.templateName;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static ComponentsConfigs create() {
-            return builder().build();
-        }
-
-        /**
-         * @return componentsMappings
-         */
-        public java.util.Map < String, String > getComponentsMappings() {
-            return this.componentsMappings;
-        }
-
-        /**
-         * @return templateName
-         */
-        public String getTemplateName() {
-            return this.templateName;
-        }
-
-        public static final class Builder {
-            private java.util.Map < String, String > componentsMappings; 
-            private String templateName; 
-
-            /**
-             * ComponentsMappings.
-             */
-            public Builder componentsMappings(java.util.Map < String, String > componentsMappings) {
-                this.componentsMappings = componentsMappings;
-                return this;
-            }
-
-            /**
-             * TemplateName.
-             */
-            public Builder templateName(String templateName) {
-                this.templateName = templateName;
-                return this;
-            }
-
-            public ComponentsConfigs build() {
-                return new ComponentsConfigs(this);
             } 
 
         } 
