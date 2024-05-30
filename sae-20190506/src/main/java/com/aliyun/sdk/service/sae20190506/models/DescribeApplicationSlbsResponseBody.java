@@ -185,6 +185,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     } 
 
     public static class Internet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
+        private String httpsCaCertId;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCertId")
         private String httpsCertId;
 
@@ -198,6 +201,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Integer targetPort;
 
         private Internet(Builder builder) {
+            this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
             this.protocol = builder.protocol;
@@ -210,6 +214,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Internet create() {
             return builder().build();
+        }
+
+        /**
+         * @return httpsCaCertId
+         */
+        public String getHttpsCaCertId() {
+            return this.httpsCaCertId;
         }
 
         /**
@@ -241,10 +252,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
             private String protocol; 
             private Integer targetPort; 
+
+            /**
+             * HttpsCaCertId.
+             */
+            public Builder httpsCaCertId(String httpsCaCertId) {
+                this.httpsCaCertId = httpsCaCertId;
+                return this;
+            }
 
             /**
              * The supported protocol.
@@ -286,6 +306,9 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     }
     public static class Intranet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
+        private String httpsCaCertId;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCertId")
         private String httpsCertId;
 
@@ -299,6 +322,7 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         private Integer targetPort;
 
         private Intranet(Builder builder) {
+            this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
             this.protocol = builder.protocol;
@@ -311,6 +335,13 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Intranet create() {
             return builder().build();
+        }
+
+        /**
+         * @return httpsCaCertId
+         */
+        public String getHttpsCaCertId() {
+            return this.httpsCaCertId;
         }
 
         /**
@@ -342,10 +373,19 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
             private String protocol; 
             private Integer targetPort; 
+
+            /**
+             * HttpsCaCertId.
+             */
+            public Builder httpsCaCertId(String httpsCaCertId) {
+                this.httpsCaCertId = httpsCaCertId;
+                return this;
+            }
 
             /**
              * The supported protocol.
