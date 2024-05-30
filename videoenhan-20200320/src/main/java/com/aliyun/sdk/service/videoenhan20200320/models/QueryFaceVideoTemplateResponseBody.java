@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.videoenhan20200320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryFaceVideoTemplateResponseBody</p>
  */
 public class QueryFaceVideoTemplateResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryFaceVideoTemplateResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
     } 
 
     public static class FaceInfos extends TeaModel {
-        @NameInMap("TemplateFaceID")
+        @com.aliyun.core.annotation.NameInMap("TemplateFaceID")
         private String templateFaceID;
 
-        @NameInMap("TemplateFaceURL")
+        @com.aliyun.core.annotation.NameInMap("TemplateFaceURL")
         private String templateFaceURL;
 
         private FaceInfos(Builder builder) {
@@ -133,22 +132,22 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
 
     }
     public static class Elements extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FaceInfos")
+        @com.aliyun.core.annotation.NameInMap("FaceInfos")
         private java.util.List < FaceInfos> faceInfos;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateURL")
+        @com.aliyun.core.annotation.NameInMap("TemplateURL")
         private String templateURL;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private Elements(Builder builder) {
@@ -274,10 +273,10 @@ public class QueryFaceVideoTemplateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Elements")
+        @com.aliyun.core.annotation.NameInMap("Elements")
         private java.util.List < Elements> elements;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {
