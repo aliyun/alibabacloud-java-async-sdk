@@ -60,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ConfigUdpReflectResponse> configUdpReflect(ConfigUdpReflectRequest request);
 
+    CompletableFuture<ConfigWebCCRuleV2Response> configWebCCRuleV2(ConfigWebCCRuleV2Request request);
+
     CompletableFuture<ConfigWebCCTemplateResponse> configWebCCTemplate(ConfigWebCCTemplateRequest request);
 
     CompletableFuture<ConfigWebIpSetResponse> configWebIpSet(ConfigWebIpSetRequest request);
@@ -451,6 +453,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeWebAreaBlockConfigsResponse> describeWebAreaBlockConfigs(DescribeWebAreaBlockConfigsRequest request);
 
     CompletableFuture<DescribeWebCCRulesResponse> describeWebCCRules(DescribeWebCCRulesRequest request);
+
+    CompletableFuture<DescribeWebCCRulesV2Response> describeWebCCRulesV2(DescribeWebCCRulesV2Request request);
 
     /**
       * You can call the DescribeWebCacheConfigs operation to query the Static Page Caching configurations of websites. The configurations include cache modes and custom caching rules.
