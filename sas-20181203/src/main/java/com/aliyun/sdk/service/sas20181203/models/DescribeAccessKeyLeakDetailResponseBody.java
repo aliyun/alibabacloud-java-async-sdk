@@ -448,12 +448,12 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The validity of the key associated with the AK. Value:
+         * The validity of the key that is associated with the AccessKey pair. Valid values:
          * <p>
          * 
-         * * 0: to be confirmed
-         * * 1: Valid
-         * * 2: Invalid
+         * *   **0**: to be confirmed.
+         * *   **1**: valid.
+         * *   **2**: invalid.
          */
         public Builder tokenValid(Integer tokenValid) {
             this.tokenValid = tokenValid;
@@ -481,7 +481,7 @@ public class DescribeAccessKeyLeakDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The time when the AK whitelist was added. Unit: milliseconds.
+         * The time when the AccessKey pair was added to the whitelist. Unit: milliseconds.
          */
         public Builder whitelistTime(Long whitelistTime) {
             this.whitelistTime = whitelistTime;

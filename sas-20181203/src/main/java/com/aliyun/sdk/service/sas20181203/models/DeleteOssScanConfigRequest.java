@@ -53,10 +53,10 @@ public class DeleteOssScanConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the policy.
+         * The configuration ID.
          * <p>
          * 
-         * >  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query the IDs of rules.
+         * >  You can call the [ListOssScanConfig](~~ListOssScanConfig~~) operation to query configuration IDs.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);

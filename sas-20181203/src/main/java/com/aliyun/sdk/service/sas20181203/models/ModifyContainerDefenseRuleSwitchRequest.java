@@ -67,7 +67,7 @@ public class ModifyContainerDefenseRuleSwitchRequest extends Request {
         } 
 
         /**
-         * The IDs of rules.
+         * The IDs of the rules.
          */
         public Builder ruleIds(java.util.List < Long > ruleIds) {
             this.putQueryParameter("RuleIds", ruleIds);

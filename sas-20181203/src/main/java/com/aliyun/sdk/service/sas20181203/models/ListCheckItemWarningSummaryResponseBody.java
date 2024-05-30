@@ -281,7 +281,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The list of the baseline categories of attribution.
+             * The types of the baselines to which the check item belongs.
              */
             public Builder affiliatedRiskTypes(java.util.List < String > affiliatedRiskTypes) {
                 this.affiliatedRiskTypes = affiliatedRiskTypes;
@@ -289,7 +289,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * The list of baselines attribution.
+             * The baselines to which the check item belongs.
              */
             public Builder affiliatedRisks(java.util.List < String > affiliatedRisks) {
                 this.affiliatedRisks = affiliatedRisks;
@@ -362,7 +362,7 @@ public class ListCheckItemWarningSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * EnableRisks.
+             * The baselines in which the check item is enabled.
              */
             public Builder enableRisks(java.util.List < String > enableRisks) {
                 this.enableRisks = enableRisks;

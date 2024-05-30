@@ -105,7 +105,7 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The total number of rules whose status was changed.
+         * The number of entries returned.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -121,7 +121,7 @@ public class ModifyContainerDefenseRuleSwitchResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;

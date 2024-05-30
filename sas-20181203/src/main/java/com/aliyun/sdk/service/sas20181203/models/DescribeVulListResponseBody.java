@@ -252,9 +252,9 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The asset importance score. Valid values:
              * <p>
              * 
-             * *   **2**: important asset
-             * *   **1**: common asset
-             * *   **0**: test asset
+             * *   **2**: important asset.
+             * *   **1**: common asset.
+             * *   **0**: test asset.
              */
             public Builder assetsFactor(String assetsFactor) {
                 this.assetsFactor = assetsFactor;
@@ -281,8 +281,8 @@ public class DescribeVulListResponseBody extends TeaModel {
              * Indicates whether the vulnerability priority score is calculated. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: no.
+             * *   **1**: yes.
              */
             public Builder isCalc(String isCalc) {
                 this.isCalc = isCalc;
@@ -487,7 +487,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * ExtendField.
+             * The extended information about the software package that has the vulnerability.
              */
             public Builder extendField(String extendField) {
                 this.extendField = extendField;
@@ -859,19 +859,19 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The status of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **1**: unfixed
-             * *   **2**: fix failed
-             * *   3: rollback failed
-             * *   **4**: being fixed
-             * *   **5**: being rolled back
-             * *   **6**: being verified
-             * *   **7**: fixed
-             * *   **8**: fixed and to be restarted
-             * *   **9**: rolled back
-             * *   **10**: ignored
-             * *   **11**: rolled back and to be restarted
-             * *   **12**: not found
-             * *   **20**: expired
+             * *   **1**: unfixed.
+             * *   **2**: fix failed.
+             * *   3: rollback failed.
+             * *   **4**: being fixed.
+             * *   **5**: being rolled back.
+             * *   **6**: being verified.
+             * *   **7**: fixed.
+             * *   **8**: fixed and to be restarted.
+             * *   **9**: rolled back.
+             * *   **10**: ignored.
+             * *   **11**: rolled back and to be restarted.
+             * *   **12**: not found.
+             * *   **20**: expired.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1343,12 +1343,12 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The edition of Security Center that is authorized to scan the asset. Valid values:
              * <p>
              * 
-             * *   **1**: Basic
-             * *   **6**: Anti-virus
-             * *   **5**: Advanced
-             * *   **3**: Enterprise
-             * *   **7**: Ultimate
-             * *   **10**: Value-added Plan
+             * *   **1**: Basic.
+             * *   **6**: Anti-virus.
+             * *   **5**: Advanced.
+             * *   **3**: Enterprise.
+             * *   **7**: Ultimate.
+             * *   **10**: Value-added Plan.
              */
             public Builder authVersion(String authVersion) {
                 this.authVersion = authVersion;
@@ -1491,9 +1491,9 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The priority to fix the vulnerability. Valid values:
              * <p>
              * 
-             * *   **asap**: high
-             * *   **later**: medium
-             * *   **nntf**: low
+             * *   **asap**: high.
+             * *   **later**: medium.
+             * *   **nntf**: low.
              * 
              * >  We recommend that you fix **high-risk** vulnerabilities at the earliest opportunity.
              */
@@ -1542,10 +1542,10 @@ public class DescribeVulListResponseBody extends TeaModel {
              * Indicates whether the application protection feature is supported. Valid values:
              * <p>
              * 
-             * *   **0**: no
-             * *   **1**: yes
+             * *   **0**: no.
+             * *   **1**: yes.
              * 
-             * >  If this parameter is not returned, the application protection is not supported.
+             * >  If this parameter is not returned, the application protection feature is not supported.
              */
             public Builder raspDefend(Integer raspDefend) {
                 this.raspDefend = raspDefend;
@@ -1556,10 +1556,10 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The protection mode of the application protection feature. Valid values:
              * <p>
              * 
-             * *   **0**: unprotected
-             * *   **1**: the Monitor mode
-             * *   **2**: the Block mode
-             * *   **3**: disabled
+             * *   **0**: unprotected.
+             * *   **1**: the Monitor mode.
+             * *   **2**: the Block mode.
+             * *   **3**: disabled.
              */
             public Builder raspStatus(Integer raspStatus) {
                 this.raspStatus = raspStatus;
@@ -1583,7 +1583,7 @@ public class DescribeVulListResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the vulnerability was fixed. Unit: milliseconds.
+             * The timestamp when the vulnerability was fixed. Unit: milliseconds. This parameter is returned only if you fix vulnerabilities in the Security Center console.
              */
             public Builder repairTs(Long repairTs) {
                 this.repairTs = repairTs;
@@ -1610,19 +1610,19 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The status of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **1**: unfixed
-             * *   **2**: fix failed
-             * *   **3**: rollback failed
-             * *   **4**: being fixed
-             * *   **5**: being rolled back
-             * *   **6**: being verified
-             * *   **7**: fixed
-             * *   **8**: fixed and to be restarted
-             * *   **9**: rolled back
-             * *   **10**: ignored
-             * *   **11**: rolled back and to be restarted
-             * *   **12**: not found
-             * *   **20**: expired
+             * *   **1**: unfixed.
+             * *   **2**: fix failed.
+             * *   **3**: rollback failed.
+             * *   **4**: being fixed.
+             * *   **5**: being rolled back.
+             * *   **6**: being verified.
+             * *   **7**: fixed.
+             * *   **8**: fixed and to be restarted.
+             * *   **9**: rolled back.
+             * *   **10**: ignored.
+             * *   **11**: rolled back and to be restarted.
+             * *   **12**: not found.
+             * *   **20**: expired.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -1641,12 +1641,12 @@ public class DescribeVulListResponseBody extends TeaModel {
              * The type of the vulnerability. Valid values:
              * <p>
              * 
-             * *   **cve**: Linux software vulnerability
-             * *   **sys**: Windows system vulnerability
-             * *   **cms**: Web-CMS vulnerability
-             * *   **emg**: urgent vulnerability
-             * *   **app**: application vulnerability
-             * *   **sca**: application vulnerability that is detected by using software component analysis
+             * *   **cve**: Linux software vulnerability.
+             * *   **sys**: Windows system vulnerability.
+             * *   **cms**: Web-CMS vulnerability.
+             * *   **emg**: urgent vulnerability.
+             * *   **app**: application vulnerability.
+             * *   **sca**: application vulnerability that is detected by using software component analysis.
              */
             public Builder type(String type) {
                 this.type = type;

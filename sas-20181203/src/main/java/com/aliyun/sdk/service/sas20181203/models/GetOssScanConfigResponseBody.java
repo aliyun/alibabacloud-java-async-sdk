@@ -49,7 +49,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -297,7 +297,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DecompressMaxFileCount.
+             * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
              */
             public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
                 this.decompressMaxFileCount = decompressMaxFileCount;
@@ -305,7 +305,7 @@ public class GetOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DecompressMaxLayer.
+             * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
              */
             public Builder decompressMaxLayer(Integer decompressMaxLayer) {
                 this.decompressMaxLayer = decompressMaxLayer;

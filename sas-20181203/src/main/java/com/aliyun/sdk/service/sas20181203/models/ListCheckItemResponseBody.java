@@ -442,7 +442,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * EstimatedCount.
+             * The estimated number of authorizations that will be consumed by this check item.
              */
             public Builder estimatedCount(Integer estimatedCount) {
                 this.estimatedCount = estimatedCount;

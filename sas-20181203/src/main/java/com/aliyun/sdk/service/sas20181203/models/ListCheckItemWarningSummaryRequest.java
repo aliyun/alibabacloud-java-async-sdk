@@ -350,7 +350,10 @@ public class ListCheckItemWarningSummaryRequest extends Request {
         }
 
         /**
-         * The UUID array of the servers.
+         * The UUIDs of the servers.
+         * <p>
+         * 
+         * >  You can call the [DescribeCloudCenterInstances](~~141932~~) operation to query the UUIDs of the servers.
          */
         public Builder uuidList(java.util.List < String > uuidList) {
             this.putQueryParameter("UuidList", uuidList);

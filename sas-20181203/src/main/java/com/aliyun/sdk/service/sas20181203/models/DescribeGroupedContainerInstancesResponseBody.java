@@ -474,7 +474,7 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created. Unit: milliseconds.
+             * The timestamp when the cluster was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -633,8 +633,8 @@ public class DescribeGroupedContainerInstancesResponseBody extends TeaModel {
              * Indicates whether risks were detected. Valid values:
              * <p>
              * 
-             * *   **NO**: No risks were detected.
-             * *   **YES**: Risks were detected.
+             * *   **NO**
+             * *   **YES**
              */
             public Builder riskStatus(String riskStatus) {
                 this.riskStatus = riskStatus;

@@ -68,7 +68,10 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         } 
 
         /**
-         * The ID of the AccessKey pair leak.
+         * The ID of the AccessKey pair leak event.
+         * <p>
+         * 
+         * > You can call the [DescribeAccesskeyLeakList](~~DescribeAccesskeyLeakList~~) operation to obtain the event ID.
          */
         public Builder id(Long id) {
             this.putQueryParameter("Id", id);
@@ -77,7 +80,10 @@ public class DescribeAccessKeyLeakDetailRequest extends Request {
         }
 
         /**
-         * ResourceDirectoryAccountId.
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to query the ID.
          */
         public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
             this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);

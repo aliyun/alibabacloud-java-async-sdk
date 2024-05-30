@@ -109,7 +109,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             private String errorStatus; 
 
             /**
-             * The error code returned.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -117,7 +117,7 @@ public class DescribeBackupMachineStatusResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned.
+             * The error message.
              */
             public Builder errorStatus(String errorStatus) {
                 this.errorStatus = errorStatus;

@@ -155,7 +155,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the server.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -173,7 +173,7 @@ public class DescribeBruteForceRecordsRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The name or IP address of the server to query.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

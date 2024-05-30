@@ -73,7 +73,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         private Integer usedCountSg; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +81,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCount.
+         * The number of vulnerabilities that are fixed by the vulnerability fixing feature.
          */
         public Builder usedCount(Integer usedCount) {
             this.usedCount = usedCount;
@@ -89,7 +89,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCountCn.
+         * The number of vulnerabilities that are fixed by the vulnerability fixing feature in China.
          */
         public Builder usedCountCn(Integer usedCountCn) {
             this.usedCountCn = usedCountCn;
@@ -97,7 +97,7 @@ public class DescribeFixUsedCountResponseBody extends TeaModel {
         }
 
         /**
-         * UsedCountSg.
+         * The number of vulnerabilities that are fixed by the vulnerability fixing feature outside China.
          */
         public Builder usedCountSg(Integer usedCountSg) {
             this.usedCountSg = usedCountSg;

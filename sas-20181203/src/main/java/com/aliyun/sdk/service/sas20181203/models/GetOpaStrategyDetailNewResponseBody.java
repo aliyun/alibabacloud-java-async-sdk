@@ -105,7 +105,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -693,7 +693,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The vulnerability ID.
+             * The ID of the vulnerability.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -701,7 +701,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             }
 
             /**
-             * The vulnerability name.
+             * The name of the vulnerability.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1049,7 +1049,7 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
             private java.util.List < String > namespaceList; 
 
             /**
-             * The ID of the cluster node to which the rule is applied.
+             * The rule instance ID of the cluster.
              */
             public Builder ackPolicyInstanceId(String ackPolicyInstanceId) {
                 this.ackPolicyInstanceId = ackPolicyInstanceId;
@@ -1060,8 +1060,8 @@ public class GetOpaStrategyDetailNewResponseBody extends TeaModel {
              * Indicates whether all namespaces are included. Valid values:
              * <p>
              * 
-             * *   **1**: All namespaces are included.
-             * *   **0**: Not all namespaces are included.
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder allNamespace(Integer allNamespace) {
                 this.allNamespace = allNamespace;

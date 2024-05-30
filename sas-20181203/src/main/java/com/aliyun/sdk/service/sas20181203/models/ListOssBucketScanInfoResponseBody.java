@@ -318,7 +318,10 @@ public class ListOssBucketScanInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DecompressStatus.
+             * Bucket decompression configuration status, valid values:
+             * <p>
+             * - **0**: Decompression not configured.
+             * - **1**: Decompression configured.
              */
             public Builder decompressStatus(Integer decompressStatus) {
                 this.decompressStatus = decompressStatus;

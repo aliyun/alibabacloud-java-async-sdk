@@ -49,7 +49,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
             private String itemName; 
 
             /**
-             * The key of the name for the image build risk item.
+             * The type key of the risky build command.
              */
             public Builder itemKey(String itemKey) {
                 this.itemKey = itemKey;
@@ -117,7 +117,7 @@ public class ListImageBuildRiskItemResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the name for the image build risk item.
+             * The type name of the risky build command.
              */
             public Builder itemName(String itemName) {
                 this.itemName = itemName;

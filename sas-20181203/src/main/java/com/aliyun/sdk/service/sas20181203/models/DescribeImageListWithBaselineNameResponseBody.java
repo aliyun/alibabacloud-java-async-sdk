@@ -103,6 +103,9 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
+        @com.aliyun.core.annotation.NameInMap("FirstScanTime")
+        private Long firstScanTime;
+
         @com.aliyun.core.annotation.NameInMap("HighRiskImage")
         private Integer highRiskImage;
 
@@ -192,6 +195,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             this.clusterName = builder.clusterName;
             this.containerId = builder.containerId;
             this.digest = builder.digest;
+            this.firstScanTime = builder.firstScanTime;
             this.highRiskImage = builder.highRiskImage;
             this.image = builder.image;
             this.imageCreate = builder.imageCreate;
@@ -256,6 +260,13 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
          */
         public String getDigest() {
             return this.digest;
+        }
+
+        /**
+         * @return firstScanTime
+         */
+        public Long getFirstScanTime() {
+            return this.firstScanTime;
         }
 
         /**
@@ -459,6 +470,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             private String clusterName; 
             private String containerId; 
             private String digest; 
+            private Long firstScanTime; 
             private Integer highRiskImage; 
             private String image; 
             private Long imageCreate; 
@@ -517,6 +529,14 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
              */
             public Builder digest(String digest) {
                 this.digest = digest;
+                return this;
+            }
+
+            /**
+             * FirstScanTime.
+             */
+            public Builder firstScanTime(Long firstScanTime) {
+                this.firstScanTime = firstScanTime;
                 return this;
             }
 

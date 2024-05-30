@@ -189,7 +189,10 @@ public class GetFileDetectResultResponseBody extends TeaModel {
             }
 
             /**
-             * Compress.
+             * Whether to identify as a compressed package. Valid values:
+             * <p>
+             * - **true**: Yes.
+             * - **false**: No.
              */
             public Builder compress(Boolean compress) {
                 this.compress = compress;

@@ -25,6 +25,10 @@ public class ModifyLogMetaStatusRequest extends Request {
     private String project;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     @com.aliyun.core.annotation.Validation(required = true)
     private String status;
@@ -34,6 +38,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         this.from = builder.from;
         this.logStore = builder.logStore;
         this.project = builder.project;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.status = builder.status;
     }
 
@@ -72,6 +77,13 @@ public class ModifyLogMetaStatusRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -82,6 +94,7 @@ public class ModifyLogMetaStatusRequest extends Request {
         private String from; 
         private String logStore; 
         private String project; 
+        private Long resourceDirectoryAccountId; 
         private String status; 
 
         private Builder() {
@@ -93,6 +106,7 @@ public class ModifyLogMetaStatusRequest extends Request {
             this.from = request.from;
             this.logStore = request.logStore;
             this.project = request.project;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.status = request.status;
         } 
 
@@ -126,6 +140,15 @@ public class ModifyLogMetaStatusRequest extends Request {
         public Builder project(String project) {
             this.putQueryParameter("Project", project);
             this.project = project;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

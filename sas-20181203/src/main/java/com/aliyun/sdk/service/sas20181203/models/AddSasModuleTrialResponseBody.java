@@ -49,7 +49,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The response parameters.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -157,7 +157,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The authorized quota.
+             * The purchased quota.
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -165,7 +165,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * AuthLimitList.
+             * List of purchased quotas.
              */
             public Builder authLimitList(String authLimitList) {
                 this.authLimitList = authLimitList;
@@ -189,7 +189,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             }
 
             /**
-             * The module code. Valid values:
+             * The code of the module. Valid values:
              * <p>
              * 
              * *   **vulFix**: vulnerability fixing
@@ -204,8 +204,8 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
              * The status of the trial use. Valid values:
              * <p>
              * 
-             * *   **1**: The feature is in trial use.
-             * *   **0**: The trial use ends.
+             * *   **1**: enabled
+             * *   **0**: finished
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -246,7 +246,7 @@ public class AddSasModuleTrialResponseBody extends TeaModel {
             private java.util.List < TrialRecordList> trialRecordList; 
 
             /**
-             * The trial use record.
+             * The information about the trial use.
              */
             public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;

@@ -276,7 +276,7 @@ public class ListObjectScanEventRequest extends Request {
         }
 
         /**
-         * ParentEventId.
+         * When a file is a subfile within a compressed package, the ParentEventId represents the alert of the compressed package itself.
          */
         public Builder parentEventId(Long parentEventId) {
             this.putQueryParameter("ParentEventId", parentEventId);

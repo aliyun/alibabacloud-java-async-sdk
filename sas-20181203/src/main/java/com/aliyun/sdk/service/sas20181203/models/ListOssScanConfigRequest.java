@@ -90,7 +90,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * The name of the config.
+         * The policy name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -99,7 +99,7 @@ public class ListOssScanConfigRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

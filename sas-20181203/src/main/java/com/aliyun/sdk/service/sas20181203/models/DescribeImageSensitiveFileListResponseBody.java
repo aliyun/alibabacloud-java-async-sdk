@@ -320,6 +320,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SensitiveFileName")
         private String sensitiveFileName;
 
+        @com.aliyun.core.annotation.NameInMap("UnprocessedNum")
+        private Integer unprocessedNum;
+
         private SensitiveFileList(Builder builder) {
             this.classKey = builder.classKey;
             this.className = builder.className;
@@ -329,6 +332,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             this.riskLevel = builder.riskLevel;
             this.sensitiveFileKey = builder.sensitiveFileKey;
             this.sensitiveFileName = builder.sensitiveFileName;
+            this.unprocessedNum = builder.unprocessedNum;
         }
 
         public static Builder builder() {
@@ -395,6 +399,13 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             return this.sensitiveFileName;
         }
 
+        /**
+         * @return unprocessedNum
+         */
+        public Integer getUnprocessedNum() {
+            return this.unprocessedNum;
+        }
+
         public static final class Builder {
             private String classKey; 
             private String className; 
@@ -404,6 +415,7 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
             private String riskLevel; 
             private String sensitiveFileKey; 
             private String sensitiveFileName; 
+            private Integer unprocessedNum; 
 
             /**
              * The key of the sensitive file type.
@@ -585,6 +597,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
              */
             public Builder sensitiveFileName(String sensitiveFileName) {
                 this.sensitiveFileName = sensitiveFileName;
+                return this;
+            }
+
+            /**
+             * UnprocessedNum.
+             */
+            public Builder unprocessedNum(Integer unprocessedNum) {
+                this.unprocessedNum = unprocessedNum;
                 return this;
             }
 

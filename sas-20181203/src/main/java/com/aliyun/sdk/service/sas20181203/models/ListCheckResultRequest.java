@@ -336,7 +336,7 @@ public class ListCheckResultRequest extends Request {
         }
 
         /**
-         * The number of entries per page. Maximum value : 100.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

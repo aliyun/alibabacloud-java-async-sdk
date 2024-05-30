@@ -61,7 +61,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 分页查询时，当前页显示的数据条数。
+         * The number of entries on the current page.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -69,7 +69,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         }
 
         /**
-         * 返回数据。
+         * The response parameters.
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -77,7 +77,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
         }
 
         /**
-         * 本次调用请求的ID，是由阿里云为该请求生成的唯一标识符，可用于排查和定位问题。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
             private String key; 
 
             /**
-             * 恶意样本类型显示名称。
+             * The display name of the malicious image sample type.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -137,7 +137,7 @@ public class DescribeMatchedMaliciousNamesResponseBody extends TeaModel {
             }
 
             /**
-             * 恶意样本类型Key。
+             * The key of the malicious image sample type.
              */
             public Builder key(String key) {
                 this.key = key;

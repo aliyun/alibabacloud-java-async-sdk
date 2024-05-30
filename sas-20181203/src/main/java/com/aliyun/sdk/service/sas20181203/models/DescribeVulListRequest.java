@@ -347,7 +347,7 @@ public class DescribeVulListRequest extends Request {
         }
 
         /**
-         * Ids.
+         * The IDs of vulnerabilities. You can specify up to 50 IDs. Separate multiple IDs with commas (,).
          */
         public Builder ids(String ids) {
             this.putQueryParameter("Ids", ids);

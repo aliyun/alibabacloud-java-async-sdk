@@ -53,7 +53,7 @@ public class ListImageBuildRiskItemRequest extends Request {
         } 
 
         /**
-         * The language of the content within the request and response. Default value: **zh**. Valid values:
+         * The language of the content within the request and response. Default value: zh. Valid values:
          * <p>
          * 
          * *   **zh**: Chinese

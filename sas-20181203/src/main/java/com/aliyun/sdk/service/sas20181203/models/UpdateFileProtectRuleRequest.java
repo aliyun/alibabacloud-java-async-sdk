@@ -170,7 +170,7 @@ public class UpdateFileProtectRuleRequest extends Request {
         }
 
         /**
-         * The operations performed on the files.
+         * The operations that you want to perform on the files.
          */
         public Builder fileOps(java.util.List < String > fileOps) {
             this.putQueryParameter("FileOps", fileOps);

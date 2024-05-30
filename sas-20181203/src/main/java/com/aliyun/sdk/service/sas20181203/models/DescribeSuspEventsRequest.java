@@ -821,7 +821,10 @@ public class DescribeSuspEventsRequest extends Request {
         }
 
         /**
-         * StrictMode.
+         * Whether it is strictly a mode flag.
+         * <p>
+         * - N: No
+         * - Y: Yes
          */
         public Builder strictMode(String strictMode) {
             this.putQueryParameter("StrictMode", strictMode);

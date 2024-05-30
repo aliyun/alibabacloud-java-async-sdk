@@ -129,7 +129,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The baseline ID.
+             * The ID of the baseline.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -190,7 +190,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             private String riskName; 
 
             /**
-             * The baseline ID.
+             * The ID of the baseline.
              */
             public Builder riskId(Long riskId) {
                 this.riskId = riskId;
@@ -507,7 +507,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The container ID.
+             * The ID of the container.
              */
             public Builder containerId(String containerId) {
                 this.containerId = containerId;
@@ -641,7 +641,7 @@ public class ListCheckItemWarningMachineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the asset that is scanned.
+             * The name of the asset on which the malicious image sample is detected.
              */
             public Builder targetName(String targetName) {
                 this.targetName = targetName;

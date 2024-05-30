@@ -705,7 +705,11 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * NewThreatAnalysis.
+         * Indicates whether the new version of the threat analysis and response feature is enabled. With the new version, you can purchase the amount of log data that you want to add to the feature and log storage capacity. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
          */
         public Builder newThreatAnalysis(Integer newThreatAnalysis) {
             this.newThreatAnalysis = newThreatAnalysis;
@@ -768,7 +772,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The timestamp when Security Center was expired. Unit: milliseconds. 
+         * The timestamp when the Security Center subscription ends. Unit: milliseconds.
          * <p>
          * 
          * >  If you do not renew the subscription within seven days after the expiration date, Security Center of a paid edition is automatically downgraded to Security Center Basic. In this case, you can no longer use the features of the paid edition or view the existing configurations or statistics such as DDoS alerts in Security Center. You must purchase Security Center of a paid edition to use relevant features. For more information, see [Purchase Security Center](~~42308~~).
@@ -835,7 +839,7 @@ public class DescribeVersionConfigResponseBody extends TeaModel {
         }
 
         /**
-         * ThreatAnalysisFlow.
+         * The amount of log data that you purchase for the threat analysis and response feature. Unit: GB-day.
          */
         public Builder threatAnalysisFlow(Integer threatAnalysisFlow) {
             this.threatAnalysisFlow = threatAnalysisFlow;

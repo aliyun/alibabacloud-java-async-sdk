@@ -49,7 +49,7 @@ public class StartHoneypotResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The data returned.
+         * The information about the honeypot.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class StartHoneypotResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -197,7 +197,7 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The display name of the honeypot image.
+             * The display name of the image.
              */
             public Builder honeypotImageDisplayName(String honeypotImageDisplayName) {
                 this.honeypotImageDisplayName = honeypotImageDisplayName;
@@ -213,7 +213,7 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the honeypot.
+             * The custom name of the honeypot.
              */
             public Builder honeypotName(String honeypotName) {
                 this.honeypotName = honeypotName;
@@ -229,7 +229,7 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the honeypot custom parameter.
+             * The ID of the custom configuration for the honeypot.
              */
             public Builder presetId(String presetId) {
                 this.presetId = presetId;
@@ -237,7 +237,7 @@ public class StartHoneypotResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the honeypot.
+             * The statuses of the honeypots.
              */
             public Builder state(java.util.List < String > state) {
                 this.state = state;

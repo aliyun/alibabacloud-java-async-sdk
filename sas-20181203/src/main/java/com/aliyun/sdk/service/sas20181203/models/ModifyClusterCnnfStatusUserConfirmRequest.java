@@ -67,7 +67,7 @@ public class ModifyClusterCnnfStatusUserConfirmRequest extends Request {
         } 
 
         /**
-         * The IDs of the clusters.
+         * The cluster IDs.
          */
         public Builder clusterIds(java.util.List < String > clusterIds) {
             this.putQueryParameter("ClusterIds", clusterIds);

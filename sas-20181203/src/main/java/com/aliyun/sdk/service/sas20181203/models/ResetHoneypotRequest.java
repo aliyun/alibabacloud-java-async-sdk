@@ -71,7 +71,7 @@ public class ResetHoneypotRequest extends Request {
          * The ID of the honeypot.
          * <p>
          * 
-         * > You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
+         * >  You can call the [ListHoneypot](~~ListHoneypot~~) operation to query the IDs of honeypots.
          */
         public Builder honeypotId(String honeypotId) {
             this.putQueryParameter("HoneypotId", honeypotId);
@@ -80,10 +80,11 @@ public class ResetHoneypotRequest extends Request {
         }
 
         /**
-         * The language of the content within the request and response. Valid values:
+         * The language of the content within the request and response. Default value: **zh**. Valid values:
          * <p>
-         * - **zh**: Chinese
-         * - **en**: English
+         * 
+         * *   **zh**: Chinese
+         * *   **en**: English
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);

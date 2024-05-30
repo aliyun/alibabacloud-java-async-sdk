@@ -16,9 +16,14 @@ public class GetLogMetaRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String logStore;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private GetLogMetaRequest(Builder builder) {
         super(builder);
         this.logStore = builder.logStore;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class GetLogMetaRequest extends Request {
         return this.logStore;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<GetLogMetaRequest, Builder> {
         private String logStore; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -51,6 +64,7 @@ public class GetLogMetaRequest extends Request {
         private Builder(GetLogMetaRequest request) {
             super(request);
             this.logStore = request.logStore;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -62,6 +76,15 @@ public class GetLogMetaRequest extends Request {
         public Builder logStore(String logStore) {
             this.putQueryParameter("LogStore", logStore);
             this.logStore = logStore;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

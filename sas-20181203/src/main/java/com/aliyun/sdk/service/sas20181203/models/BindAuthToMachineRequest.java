@@ -179,14 +179,14 @@ public class BindAuthToMachineRequest extends Request {
         } 
 
         /**
-         * The edition of Security Center that is authorized to protect the asset. Valid values:
+         * The edition of Security Center that is authorized to scan the asset. Valid values:
          * <p>
          * 
-         * *   **6**: Anti-virus edition
-         * *   **5**: Advanced edition
-         * *   **3**: Enterprise edition
-         * *   **7**: Ultimate edition
-         * *   **10**: Value-added Plan edition
+         * *   **6**: Anti-virus
+         * *   **5**: Advanced
+         * *   **3**: Enterprise
+         * *   **7**: Ultimate
+         * *   **10**: Value-added Plan
          */
         public Builder authVersion(Integer authVersion) {
             this.putQueryParameter("AuthVersion", authVersion);
@@ -245,7 +245,13 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * IsPreBind.
+         * Specifies whether to specify servers for protection when you purchase Security Center. Valid values:
+         * <p>
+         * 
+         * *   **0**: no
+         * *   **1**: yes
+         * 
+         * >  If you specify servers, the servers are automatically added to Security Center for protection after the purchase order is complete.
          */
         public Builder isPreBind(Integer isPreBind) {
             this.putQueryParameter("IsPreBind", isPreBind);
@@ -267,7 +273,14 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * NtmVersion.
+         * The edition of Security Center that you purchase in the order. Valid values:
+         * <p>
+         * 
+         * *   **level7**: Anti-virus
+         * *   **level3**: Advanced
+         * *   **level2**: Enterprise
+         * *   **level8**: Ultimate
+         * *   **level10**: Value-added Plan
          */
         public Builder ntmVersion(String ntmVersion) {
             this.putQueryParameter("NtmVersion", ntmVersion);
@@ -276,7 +289,7 @@ public class BindAuthToMachineRequest extends Request {
         }
 
         /**
-         * PreBindOrderId.
+         * The ID of the order in which Security Center is purchased and servers are specified for protection.
          */
         public Builder preBindOrderId(Long preBindOrderId) {
             this.putQueryParameter("PreBindOrderId", preBindOrderId);

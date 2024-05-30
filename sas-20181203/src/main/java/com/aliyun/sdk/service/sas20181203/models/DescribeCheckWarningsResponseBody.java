@@ -329,7 +329,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the alert that is triggered by the check item.
+             * The ID of the alert that is generated for the baseline check result.
              */
             public Builder checkWarningId(Long checkWarningId) {
                 this.checkWarningId = checkWarningId;
@@ -361,11 +361,11 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the fix is supported. Valid values:
+             * Indicates whether fixing is supported. Valid values:
              * <p>
              * 
-             * *   **0**: The fix is not supported.
-             * *   **1**: The fix is supported.
+             * *   **0**: Fixing is not supported.
+             * *   **1**: Fixing is supported.
              */
             public Builder fixStatus(Integer fixStatus) {
                 this.fixStatus = fixStatus;
@@ -389,7 +389,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The severity level of a risk item. Valid values:
+             * The risk level of the risk item. Valid values:
              * <p>
              * 
              * *   **high**
@@ -402,7 +402,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The description.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -413,11 +413,11 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
              * The status of the check item. Valid values:
              * <p>
              * 
-             * *   **1**: failed
-             * *   **2**: verifying
-             * *   **3**: passed
-             * *   **5**: expired
-             * *   **6**: ignored
+             * *   **1**: failed.
+             * *   **2**: verifying.
+             * *   **3**: passed.
+             * *   **5**: expired.
+             * *   **6**: ignored.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -433,7 +433,7 @@ public class DescribeCheckWarningsResponseBody extends TeaModel {
             }
 
             /**
-             * The UUID of the server on which the baseline check is performed.
+             * The ID of the server on which the baseline check is performed.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;

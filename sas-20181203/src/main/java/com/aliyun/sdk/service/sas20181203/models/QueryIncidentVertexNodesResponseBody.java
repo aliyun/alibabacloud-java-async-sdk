@@ -360,7 +360,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The edge properties. The value is in the text format.
+             * The properties of the edge. The value is in the text format.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -376,7 +376,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule for which the edge was created.
+             * The ID of the rule based on which the edge was created.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -423,7 +423,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the edge was created. Unit: milliseconds.
+             * The time when the edge was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -932,8 +932,8 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
              * The direction of the relationship. Valid values:
              * <p>
              * 
-             * *   **1**: forward
-             * *   **0**: reverse
+             * *   **1**: forward.
+             * *   **0**: reverse.
              */
             public Builder directed(Integer directed) {
                 this.directed = directed;
@@ -1363,7 +1363,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The display information about the node.
+             * The display information of the node.
              */
             public Builder displayInfo(java.util.List < DisplayInfo> displayInfo) {
                 this.displayInfo = displayInfo;
@@ -1371,7 +1371,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1382,8 +1382,8 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
              * The display language of the neighboring node. Valid values:
              * <p>
              * 
-             * *   **zh**: Chinese
-             * *   **en**: English
+             * *   **zh**: Chinese.
+             * *   **en**: English.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1391,7 +1391,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node name.
+             * The name of the node.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1407,7 +1407,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node properties. The value is in the text format.
+             * The properties of the node. The value is in the text format.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -1415,7 +1415,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node property.
+             * The property of the node.
              */
             public Builder property(java.util.Map < String, ? > property) {
                 this.property = property;
@@ -1423,7 +1423,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule for which the node was created.
+             * The ID of the rule based on which the node was created.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -1439,7 +1439,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The UNIX timestamp when the node was created. Unit: milliseconds.
+             * The time when the node was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -1447,7 +1447,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values include but are not limited to:
+             * The type of the node. Valid values include but are not limited to:
              * <p>
              * 
              * *   **process**
@@ -1470,7 +1470,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The node UUID.
+             * The UUID of the node.
              */
             public Builder uuid(String uuid) {
                 this.uuid = uuid;
@@ -1595,7 +1595,7 @@ public class QueryIncidentVertexNodesResponseBody extends TeaModel {
             }
 
             /**
-             * The detailed information about the node.
+             * The information about the node.
              */
             public Builder vertexList(java.util.List < VertexList> vertexList) {
                 this.vertexList = vertexList;

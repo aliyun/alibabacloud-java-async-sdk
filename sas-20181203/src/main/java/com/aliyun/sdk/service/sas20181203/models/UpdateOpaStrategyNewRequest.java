@@ -235,7 +235,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
         } 
 
         /**
-         * The rule configuration.
+         * The risks that you want to detect by using the rule.
          */
         public Builder alarmDetail(AlarmDetail alarmDetail) {
             String alarmDetailShrink = shrink(alarmDetail, "AlarmDetail", "json");
@@ -332,10 +332,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
         }
 
         /**
-         * The rule ID.
+         * The ID of the rule.
          * <p>
          * 
-         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the rule ID.
+         * >  You can call the [ListOpaClusterStrategyNew](~~2623574~~) operation to query the ID.
          */
         public Builder strategyId(Long strategyId) {
             this.putQueryParameter("StrategyId", strategyId);
@@ -435,7 +435,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The ID of the baseline check item.
              * <p>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID of the baseline check item.
+             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -446,7 +446,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The name of the baseline check item.
              * <p>
              * 
-             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name of the baseline check item.
+             * >  You can call the [GetOpaClusterBaseLineList](~~2539883~~) operation to query the name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -499,7 +499,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The baseline check configuration.
+             * The baseline check items.
              */
             public Builder item(java.util.List < Item> item) {
                 this.item = item;
@@ -691,7 +691,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The ID of the malicious sample.
              * <p>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID of the malicious sample.
+             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -702,7 +702,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
              * The name of the malicious sample.
              * <p>
              * 
-             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name of the malicious sample.
+             * >  You can call the [DescribeMatchedMaliciousNames](~~DescribeMatchedMaliciousNames~~) operation to query the name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -755,7 +755,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The configuration of malicious samples.
+             * The malicious samples.
              */
             public Builder item(java.util.List < MaliciousFileItem> item) {
                 this.item = item;
@@ -944,10 +944,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private String name; 
 
             /**
-             * The vulnerability ID.
+             * The ID of the vulnerability.
              * <p>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability ID.
+             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -955,10 +955,10 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The vulnerability name.
+             * The name of the vulnerability.
              * <p>
              * 
-             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the vulnerability name.
+             * >  You can call the [DescribeVulListPage](~~471928~~) operation to query the name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1092,7 +1092,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private java.util.List < String > riskLevel; 
 
             /**
-             * The information about the vulnerability.
+             * The vulnerabilities.
              */
             public Builder item(java.util.List < VulItem> item) {
                 this.item = item;
@@ -1197,7 +1197,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             private Vul vul; 
 
             /**
-             * The baseline check configuration.
+             * The baseline risks.
              */
             public Builder baseline(Baseline baseline) {
                 this.baseline = baseline;
@@ -1213,7 +1213,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The configuration of malicious samples.
+             * The malicious sample risks.
              */
             public Builder maliciousFile(MaliciousFile maliciousFile) {
                 this.maliciousFile = maliciousFile;
@@ -1229,7 +1229,7 @@ public class UpdateOpaStrategyNewRequest extends Request {
             }
 
             /**
-             * The vulnerability configuration.
+             * The vulnerability risks.
              */
             public Builder vul(Vul vul) {
                 this.vul = vul;

@@ -69,10 +69,10 @@ public class OperateSwitchStatusRequest extends Request {
         } 
 
         /**
-         * The rule ID.
+         * The ID of the rule.
          * <p>
          * 
-         * >  You can call the [ListContainerDefenseRule](~~2590599~~) operation to query the rule ID.
+         * >  You can call the ListContainerWebDefenseRule operation to query the IDs of rules.
          */
         public Builder ruleId(Long ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -81,10 +81,7 @@ public class OperateSwitchStatusRequest extends Request {
         }
 
         /**
-         * The rule status for container tamper-proofing. Valid values:
-         * <p>
-         * - **on**
-         * - **off**
+         * The status of the rule. Valid values: on and off.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

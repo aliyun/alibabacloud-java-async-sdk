@@ -181,7 +181,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * If the value of paramType is 2, this parameter provides the options that can be selected for paramType.
+             * The options that can be selected for the rule parameter if the value of ParamType is set to 2.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -233,7 +233,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
              * <p>
              * 
              * *   **1**: input
-             * *   **2**: select
+             * *   **2**: selection
              */
             public Builder paramType(Integer paramType) {
                 this.paramType = paramType;
@@ -338,7 +338,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the rule is included in the policy. Valid values:
+             * Indicates whether the rule can be selected. Valid values:
              * <p>
              * 
              * *   **1**: yes
@@ -350,7 +350,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the parameters of the rule.
+             * The rule parameters.
              */
             public Builder paramList(java.util.List < ParamList> paramList) {
                 this.paramList = paramList;
@@ -366,7 +366,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The rule ID.
              */
             public Builder ruleId(String ruleId) {
                 this.ruleId = ruleId;
@@ -467,7 +467,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of rules.
+             * The details of rules.
              */
             public Builder rules(java.util.List < Rules> rules) {
                 this.rules = rules;
@@ -564,7 +564,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The details about the custom check item.
+             * The details of custom check items.
              */
             public Builder checkDetails(java.util.List < CheckDetails> checkDetails) {
                 this.checkDetails = checkDetails;
@@ -572,11 +572,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the sub-risk item is selected. Valid values:
+             * Indicates whether the sub-check item is selected. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -680,11 +680,11 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the risk item is selected. Valid values:
+             * Indicates whether the check item is selected. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder on(Boolean on) {
                 this.on = on;
@@ -692,7 +692,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of sub-risk items.
+             * The information about sub-check items.
              */
             public Builder subTypes(java.util.List < SubTypes> subTypes) {
                 this.subTypes = subTypes;
@@ -930,7 +930,7 @@ public class DescribeStrategyDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist of risk items.
+             * The information about the whitelist of risk items.
              */
             public Builder riskTypeWhiteListQueryResultList(java.util.List < RiskTypeWhiteListQueryResultList> riskTypeWhiteListQueryResultList) {
                 this.riskTypeWhiteListQueryResultList = riskTypeWhiteListQueryResultList;

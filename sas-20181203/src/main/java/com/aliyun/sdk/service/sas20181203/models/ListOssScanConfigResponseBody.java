@@ -77,7 +77,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request, which is used to locate and troubleshoot issues.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -273,7 +273,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Whether to match all file prefixes.
+             * Indicates whether the prefixes of all objects are matched.
              */
             public Builder allKeyPrefix(Boolean allKeyPrefix) {
                 this.allKeyPrefix = allKeyPrefix;
@@ -281,7 +281,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of the buckets.
+             * The number of buckets.
              */
             public Builder bucketCount(Integer bucketCount) {
                 this.bucketCount = bucketCount;
@@ -289,7 +289,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the bucket.
+             * The names of the buckets.
              */
             public Builder bucketNameList(java.util.List < String > bucketNameList) {
                 this.bucketNameList = bucketNameList;
@@ -297,7 +297,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DecompressMaxFileCount.
+             * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
              */
             public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
                 this.decompressMaxFileCount = decompressMaxFileCount;
@@ -305,7 +305,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * DecompressMaxLayer.
+             * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
              */
             public Builder decompressMaxLayer(Integer decompressMaxLayer) {
                 this.decompressMaxLayer = decompressMaxLayer;
@@ -313,11 +313,11 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the check policy is enabled. Valid values:
+             * Indicates whether the policy is enabled. Valid values:
              * <p>
              * 
-             * *   **1**: enabled.
-             * *   **0**: disabled.
+             * *   **1**: yes
+             * *   **0**: no
              */
             public Builder enable(Integer enable) {
                 this.enable = enable;
@@ -325,7 +325,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The end time of the check. The time is in the HH:mm:ss format.
+             * The time when the scan ends. The time is in the HH:mm:ss format.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -333,7 +333,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the policy.
+             * The configuration ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -341,7 +341,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The prefix of the object that you want to check.
+             * The prefixes of the objects that are scanned.
              */
             public Builder keyPrefixList(java.util.List < String > keyPrefixList) {
                 this.keyPrefixList = keyPrefixList;
@@ -349,7 +349,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The suffix of the object that is checked.
+             * The suffixes of the objects that are scanned.
              */
             public Builder keySuffixList(java.util.List < String > keySuffixList) {
                 this.keySuffixList = keySuffixList;
@@ -357,7 +357,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the policy last update.
+             * The timestamp when the configuration was last modified.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -365,7 +365,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the policy.
+             * The configuration name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -373,7 +373,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The day when the check is performed. The value indicates the day of the week.
+             * The days on which the scan is executed in a week.
              */
             public Builder scanDayList(java.util.List < Integer > scanDayList) {
                 this.scanDayList = scanDayList;
@@ -381,7 +381,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The start time of the check. The time is in the HH:mm:ss format.
+             * The time when the scan starts. The time is in the HH:mm:ss format.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -446,7 +446,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The page number of the returned page.
+             * The page number.
              */
             public Builder currentPage(Integer currentPage) {
                 this.currentPage = currentPage;
@@ -454,7 +454,7 @@ public class ListOssScanConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries returned per page.
+             * The number of entries per page.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;

@@ -138,7 +138,7 @@ public class IgnoreCheckItemsRequest extends Request {
         } 
 
         /**
-         * The risk items.
+         * The information about check items.
          */
         public Builder checkAndRiskTypeList(java.util.List < CheckAndRiskTypeList> checkAndRiskTypeList) {
             this.putQueryParameter("CheckAndRiskTypeList", checkAndRiskTypeList);

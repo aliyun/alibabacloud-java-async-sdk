@@ -15,9 +15,14 @@ public class ModifyOpenLogShipperRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("From")
     private String from;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
     private ModifyOpenLogShipperRequest(Builder builder) {
         super(builder);
         this.from = builder.from;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
     }
 
     public static Builder builder() {
@@ -40,8 +45,16 @@ public class ModifyOpenLogShipperRequest extends Request {
         return this.from;
     }
 
+    /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
     public static final class Builder extends Request.Builder<ModifyOpenLogShipperRequest, Builder> {
         private String from; 
+        private Long resourceDirectoryAccountId; 
 
         private Builder() {
             super();
@@ -50,6 +63,7 @@ public class ModifyOpenLogShipperRequest extends Request {
         private Builder(ModifyOpenLogShipperRequest request) {
             super(request);
             this.from = request.from;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
         } 
 
         /**
@@ -64,6 +78,15 @@ public class ModifyOpenLogShipperRequest extends Request {
         public Builder from(String from) {
             this.putQueryParameter("From", from);
             this.from = from;
+            return this;
+        }
+
+        /**
+         * ResourceDirectoryAccountId.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 

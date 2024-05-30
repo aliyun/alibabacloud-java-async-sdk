@@ -430,7 +430,11 @@ public class ListCheckResultResponseBody extends TeaModel {
             }
 
             /**
-             * CheckSaleType.
+             * The type of the check item. Valid values:
+             * <p>
+             * 
+             * *   **0**: paid
+             * *   **1**: free
              */
             public Builder checkSaleType(Integer checkSaleType) {
                 this.checkSaleType = checkSaleType;
@@ -449,29 +453,29 @@ public class ListCheckResultResponseBody extends TeaModel {
              * The asset subtype of the cloud service. Valid values:
              * <p>
              * 
-             * *   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:
+             * *   If the **InstanceType** parameter is set to **ECS**, this parameter supports the following valid values:
              * 
              *     *   **INSTANCE**
              *     *   **DISK**
              *     *   **SECURITY_GROUP**
              * 
-             * *   If **InstanceType** is set to **ACR**, this parameter supports the following valid values:
+             * *   If the **InstanceType** parameter is set to **ACR**, this parameter supports the following valid values:
              * 
              *     *   **REPOSITORY_ENTERPRISE**
              *     *   **REPOSITORY_PERSON**
              * 
-             * *   If **InstanceType** is set to **RAM**, this parameter supports the following valid values:
+             * *   If the **InstanceType** parameter is set to **RAM**, this parameter supports the following valid values:
              * 
              *     *   **ALIAS**
              *     *   **USER**
              *     *   **POLICY**
              *     *   **GROUP**
              * 
-             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:
+             * *   If the **InstanceType** parameter is set to **WAF**, this parameter supports the following valid values:
              * 
              *     *   **DOMAIN**
              * 
-             * *   If **InstanceType** is set to other values, this parameter supports the following valid value:
+             * *   If the **InstanceType** parameter is set to other values, this parameter supports the following valid values:
              * 
              *     *   **INSTANCE**
              */

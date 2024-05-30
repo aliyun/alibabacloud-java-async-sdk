@@ -153,7 +153,11 @@ public class CreateFileDetectRequest extends Request {
         } 
 
         /**
-         * Decompress.
+         * Whether to decompress or not. Valid values:
+         * <p>
+         * 
+         * - true: To decompress.
+         * - false: Not to decompress.
          */
         public Builder decompress(Boolean decompress) {
             this.putQueryParameter("Decompress", decompress);
@@ -162,7 +166,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * DecompressMaxFileCount.
+         * The maximum number of files for decompression. The minimum value is 1, and the maximum value is 1000. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
          */
         public Builder decompressMaxFileCount(Integer decompressMaxFileCount) {
             this.putQueryParameter("DecompressMaxFileCount", decompressMaxFileCount);
@@ -171,7 +175,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * DecompressMaxLayer.
+         * The maximum level of decompression when dealing with nested compressed files with multiple levels. The minimum value is 1, and the maximum value is 5. If the decompression level exceeds the maximum, the decompression operation will be terminated, but the detection of decompressed files will not be affected.
          */
         public Builder decompressMaxLayer(Integer decompressMaxLayer) {
             this.putQueryParameter("DecompressMaxLayer", decompressMaxLayer);
@@ -198,7 +202,7 @@ public class CreateFileDetectRequest extends Request {
         }
 
         /**
-         * The key of the file that is stored in the Object Storage Service (OSS) bucket. If you specify the DownloadUrl parameter, you can leave this parameter empty. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
+         * The key of the file that is stored in the Object Storage Service (OSS) bucket. You can call the [CreateFileDetectUploadUrl](~~CreateFileDetectUploadUrl~~) operation to query the keys of files.
          */
         public Builder ossKey(String ossKey) {
             this.putQueryParameter("OssKey", ossKey);
