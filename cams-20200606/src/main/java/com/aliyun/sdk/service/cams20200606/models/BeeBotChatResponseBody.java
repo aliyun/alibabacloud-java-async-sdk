@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeeBotChatResponseBody</p>
  */
 public class BeeBotChatResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BeeBotChatResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class BeeBotChatResponseBody extends TeaModel {
     } 
 
     public static class RelatedKnowledges extends TeaModel {
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private String knowledgeId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private RelatedKnowledges(Builder builder) {
@@ -193,31 +192,31 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Knowledge extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("HitStatement")
+        @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("RelatedKnowledges")
+        @com.aliyun.core.annotation.NameInMap("RelatedKnowledges")
         private java.util.List < RelatedKnowledges> relatedKnowledges;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Knowledge(Builder builder) {
@@ -394,13 +393,13 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Recommends extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("KnowledgeId")
+        @com.aliyun.core.annotation.NameInMap("KnowledgeId")
         private String knowledgeId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Recommends(Builder builder) {
@@ -475,16 +474,16 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Slots extends TeaModel {
-        @NameInMap("Hit")
+        @com.aliyun.core.annotation.NameInMap("Hit")
         private Boolean hit;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Origin")
+        @com.aliyun.core.annotation.NameInMap("Origin")
         private String origin;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Slots(Builder builder) {
@@ -576,43 +575,43 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Text extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("DialogName")
+        @com.aliyun.core.annotation.NameInMap("DialogName")
         private String dialogName;
 
-        @NameInMap("Ext")
+        @com.aliyun.core.annotation.NameInMap("Ext")
         private java.util.Map < String, ? > ext;
 
-        @NameInMap("ExternalFlags")
+        @com.aliyun.core.annotation.NameInMap("ExternalFlags")
         private java.util.Map < String, ? > externalFlags;
 
-        @NameInMap("HitStatement")
+        @com.aliyun.core.annotation.NameInMap("HitStatement")
         private String hitStatement;
 
-        @NameInMap("IntentName")
+        @com.aliyun.core.annotation.NameInMap("IntentName")
         private String intentName;
 
-        @NameInMap("MetaData")
+        @com.aliyun.core.annotation.NameInMap("MetaData")
         private String metaData;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("Slots")
+        @com.aliyun.core.annotation.NameInMap("Slots")
         private java.util.List < Slots> slots;
 
-        @NameInMap("UserDefinedChatTitle")
+        @com.aliyun.core.annotation.NameInMap("UserDefinedChatTitle")
         private String userDefinedChatTitle;
 
         private Text(Builder builder) {
@@ -857,19 +856,19 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Messages extends TeaModel {
-        @NameInMap("AnswerSource")
+        @com.aliyun.core.annotation.NameInMap("AnswerSource")
         private String answerSource;
 
-        @NameInMap("AnswerType")
+        @com.aliyun.core.annotation.NameInMap("AnswerType")
         private String answerType;
 
-        @NameInMap("Knowledge")
+        @com.aliyun.core.annotation.NameInMap("Knowledge")
         private Knowledge knowledge;
 
-        @NameInMap("Recommends")
+        @com.aliyun.core.annotation.NameInMap("Recommends")
         private java.util.List < Recommends> recommends;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private Text text;
 
         private Messages(Builder builder) {
@@ -978,13 +977,13 @@ public class BeeBotChatResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("Messages")
+        @com.aliyun.core.annotation.NameInMap("Messages")
         private java.util.List < Messages> messages;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {

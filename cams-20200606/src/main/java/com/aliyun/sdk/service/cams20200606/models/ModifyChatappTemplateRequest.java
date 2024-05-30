@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyChatappTemplateRequest</p>
  */
 public class ModifyChatappTemplateRequest extends Request {
-    @Body
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Body
-    @NameInMap("Components")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Components")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Components> components;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("CustWabaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustWabaId")
     @Deprecated
     private String custWabaId;
 
-    @Body
-    @NameInMap("Example")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Example")
     private java.util.Map < String, String > example;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
-    @Body
-    @NameInMap("MessageSendTtlSeconds")
-    @Validation(maximum = 600, minimum = 60)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageSendTtlSeconds")
+    @com.aliyun.core.annotation.Validation(maximum = 600, minimum = 60)
     private Integer messageSendTtlSeconds;
 
-    @Body
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Body
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @Body
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private ModifyChatappTemplateRequest(Builder builder) {
@@ -333,44 +332,44 @@ public class ModifyChatappTemplateRequest extends Request {
     } 
 
     public static class Buttons extends TeaModel {
-        @NameInMap("AutofillText")
+        @com.aliyun.core.annotation.NameInMap("AutofillText")
         private String autofillText;
 
-        @NameInMap("CouponCode")
+        @com.aliyun.core.annotation.NameInMap("CouponCode")
         private String couponCode;
 
-        @NameInMap("FlowAction")
+        @com.aliyun.core.annotation.NameInMap("FlowAction")
         private String flowAction;
 
-        @NameInMap("FlowId")
+        @com.aliyun.core.annotation.NameInMap("FlowId")
         private String flowId;
 
-        @NameInMap("IsOptOut")
+        @com.aliyun.core.annotation.NameInMap("IsOptOut")
         private Boolean isOptOut;
 
-        @NameInMap("NavigateScreen")
+        @com.aliyun.core.annotation.NameInMap("NavigateScreen")
         private String navigateScreen;
 
-        @NameInMap("PackageName")
+        @com.aliyun.core.annotation.NameInMap("PackageName")
         private String packageName;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("SignatureHash")
+        @com.aliyun.core.annotation.NameInMap("SignatureHash")
         private String signatureHash;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("UrlType")
+        @com.aliyun.core.annotation.NameInMap("UrlType")
         private String urlType;
 
         private Buttons(Builder builder) {
@@ -636,20 +635,20 @@ public class ModifyChatappTemplateRequest extends Request {
 
     }
     public static class CardComponentsButtons extends TeaModel {
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("UrlType")
+        @com.aliyun.core.annotation.NameInMap("UrlType")
         private String urlType;
 
         private CardComponentsButtons(Builder builder) {
@@ -779,20 +778,20 @@ public class ModifyChatappTemplateRequest extends Request {
 
     }
     public static class CardComponents extends TeaModel {
-        @NameInMap("Buttons")
+        @com.aliyun.core.annotation.NameInMap("Buttons")
         private java.util.List < CardComponentsButtons> buttons;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private CardComponents(Builder builder) {
@@ -918,8 +917,8 @@ public class ModifyChatappTemplateRequest extends Request {
 
     }
     public static class Cards extends TeaModel {
-        @NameInMap("CardComponents")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CardComponents")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < CardComponents> cardComponents;
 
         private Cards(Builder builder) {
@@ -960,48 +959,48 @@ public class ModifyChatappTemplateRequest extends Request {
 
     }
     public static class Components extends TeaModel {
-        @NameInMap("AddSecretRecommendation")
+        @com.aliyun.core.annotation.NameInMap("AddSecretRecommendation")
         private Boolean addSecretRecommendation;
 
-        @NameInMap("Buttons")
+        @com.aliyun.core.annotation.NameInMap("Buttons")
         private java.util.List < Buttons> buttons;
 
-        @NameInMap("Caption")
+        @com.aliyun.core.annotation.NameInMap("Caption")
         private String caption;
 
-        @NameInMap("Cards")
+        @com.aliyun.core.annotation.NameInMap("Cards")
         private java.util.List < Cards> cards;
 
-        @NameInMap("CodeExpirationMinutes")
-        @Validation(maximum = 90, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("CodeExpirationMinutes")
+        @com.aliyun.core.annotation.Validation(maximum = 90, minimum = 1)
         private Integer codeExpirationMinutes;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
-        @NameInMap("FileName")
+        @com.aliyun.core.annotation.NameInMap("FileName")
         private String fileName;
 
-        @NameInMap("FileType")
+        @com.aliyun.core.annotation.NameInMap("FileType")
         private String fileType;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("HasExpiration")
+        @com.aliyun.core.annotation.NameInMap("HasExpiration")
         private Boolean hasExpiration;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
-        @NameInMap("ThumbUrl")
+        @com.aliyun.core.annotation.NameInMap("ThumbUrl")
         private String thumbUrl;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Components(Builder builder) {

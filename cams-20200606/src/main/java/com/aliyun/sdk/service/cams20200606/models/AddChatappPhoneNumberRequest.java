@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddChatappPhoneNumberRequest</p>
  */
 public class AddChatappPhoneNumberRequest extends Request {
-    @Body
-    @NameInMap("Cc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Cc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cc;
 
-    @Body
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Body
-    @NameInMap("PreValidateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreValidateId")
     private String preValidateId;
 
-    @Body
-    @NameInMap("VerifiedName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VerifiedName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String verifiedName;
 
     private AddChatappPhoneNumberRequest(Builder builder) {

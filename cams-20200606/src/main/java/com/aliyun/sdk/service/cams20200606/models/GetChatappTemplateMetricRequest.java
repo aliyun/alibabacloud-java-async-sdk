@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappTemplateMetricRequest</p>
  */
 public class GetChatappTemplateMetricRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("End")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("End")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long end;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Start")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Start")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long start;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private GetChatappTemplateMetricRequest(Builder builder) {

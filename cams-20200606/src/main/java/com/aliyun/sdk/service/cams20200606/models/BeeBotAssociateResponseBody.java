@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeeBotAssociateResponseBody</p>
  */
 public class BeeBotAssociateResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BeeBotAssociateResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class BeeBotAssociateResponseBody extends TeaModel {
     } 
 
     public static class Associate extends TeaModel {
-        @NameInMap("Meta")
+        @com.aliyun.core.annotation.NameInMap("Meta")
         private String meta;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Associate(Builder builder) {
@@ -193,13 +192,13 @@ public class BeeBotAssociateResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Associate")
+        @com.aliyun.core.annotation.NameInMap("Associate")
         private java.util.List < Associate> associate;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
-        @NameInMap("SessionId")
+        @com.aliyun.core.annotation.NameInMap("SessionId")
         private String sessionId;
 
         private Data(Builder builder) {

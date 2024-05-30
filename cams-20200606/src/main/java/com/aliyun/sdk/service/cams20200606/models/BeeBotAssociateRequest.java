@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeeBotAssociateRequest</p>
  */
 public class BeeBotAssociateRequest extends Request {
-    @Body
-    @NameInMap("ChatBotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChatBotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chatBotInstanceId;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("Perspective")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Perspective")
     private java.util.List < String > perspective;
 
-    @Body
-    @NameInMap("RecommendNum")
-    @Validation(maximum = 10, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecommendNum")
+    @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
     private Integer recommendNum;
 
-    @Body
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Body
-    @NameInMap("Utterance")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Utterance")
     private String utterance;
 
     private BeeBotAssociateRequest(Builder builder) {

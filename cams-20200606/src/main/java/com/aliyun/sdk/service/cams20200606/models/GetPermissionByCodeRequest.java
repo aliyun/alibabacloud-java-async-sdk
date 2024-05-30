@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPermissionByCodeRequest</p>
  */
 public class GetPermissionByCodeRequest extends Request {
-    @Body
-    @NameInMap("Code")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Code")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String code;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < String > permissions;
 
     private GetPermissionByCodeRequest(Builder builder) {

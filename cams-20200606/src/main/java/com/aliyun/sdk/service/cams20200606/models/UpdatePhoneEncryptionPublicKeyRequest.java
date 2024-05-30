@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePhoneEncryptionPublicKeyRequest</p>
  */
 public class UpdatePhoneEncryptionPublicKeyRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("EncryptionPublicKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EncryptionPublicKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String encryptionPublicKey;
 
-    @Body
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
     private UpdatePhoneEncryptionPublicKeyRequest(Builder builder) {

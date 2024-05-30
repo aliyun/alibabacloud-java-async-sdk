@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BeeBotChatRequest</p>
  */
 public class BeeBotChatRequest extends Request {
-    @Body
-    @NameInMap("ChatBotInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChatBotInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chatBotInstanceId;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("IntentName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IntentName")
     private String intentName;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("KnowledgeId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KnowledgeId")
     private String knowledgeId;
 
-    @Body
-    @NameInMap("Perspective")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Perspective")
     private java.util.List < String > perspective;
 
-    @Body
-    @NameInMap("SenderId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SenderId")
     private String senderId;
 
-    @Body
-    @NameInMap("SenderNick")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SenderNick")
     private String senderNick;
 
-    @Body
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Body
-    @NameInMap("Utterance")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Utterance")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String utterance;
 
-    @Body
-    @NameInMap("VendorParam")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VendorParam")
     private java.util.Map < String, ? > vendorParam;
 
     private BeeBotChatRequest(Builder builder) {

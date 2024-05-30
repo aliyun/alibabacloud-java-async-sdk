@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPhoneBusinessProfileRequest</p>
  */
 public class ModifyPhoneBusinessProfileRequest extends Request {
-    @Query
-    @NameInMap("About")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("About")
     private String about;
 
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("ProfilePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProfilePictureUrl")
     private String profilePictureUrl;
 
-    @Query
-    @NameInMap("Vertical")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vertical")
     private String vertical;
 
-    @Query
-    @NameInMap("Websites")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Websites")
     private java.util.List < String > websites;
 
     private ModifyPhoneBusinessProfileRequest(Builder builder) {

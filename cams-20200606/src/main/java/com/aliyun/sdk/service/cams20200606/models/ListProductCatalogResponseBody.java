@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductCatalogResponseBody</p>
  */
 public class ListProductCatalogResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.NameInMap("Model")
     private Model model;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private ListProductCatalogResponseBody(Builder builder) {
@@ -160,10 +159,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
     } 
 
     public static class Cursors extends TeaModel {
-        @NameInMap("After")
+        @com.aliyun.core.annotation.NameInMap("After")
         private String after;
 
-        @NameInMap("Before")
+        @com.aliyun.core.annotation.NameInMap("Before")
         private String before;
 
         private Cursors(Builder builder) {
@@ -221,7 +220,7 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     }
     public static class Paging extends TeaModel {
-        @NameInMap("Cursors")
+        @com.aliyun.core.annotation.NameInMap("Cursors")
         private Cursors cursors;
 
         private Paging(Builder builder) {
@@ -262,10 +261,10 @@ public class ListProductCatalogResponseBody extends TeaModel {
 
     }
     public static class Model extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private java.util.List < java.util.Map<String, ?>> data;
 
-        @NameInMap("Paging")
+        @com.aliyun.core.annotation.NameInMap("Paging")
         private Paging paging;
 
         private Model(Builder builder) {

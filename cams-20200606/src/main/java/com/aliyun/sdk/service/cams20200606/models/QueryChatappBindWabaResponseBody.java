@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryChatappBindWabaResponseBody</p>
  */
 public class QueryChatappBindWabaResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private Boolean success;
 
     private QueryChatappBindWabaResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
@@ -33,6 +35,7 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.success = builder.success;
     }
 
     public static Builder builder() {
@@ -78,12 +81,20 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return success
+     */
+    public Boolean getSuccess() {
+        return this.success;
+    }
+
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+        private Boolean success; 
 
         /**
          * The details about the access denial.
@@ -129,6 +140,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             return this;
         }
 
+        /**
+         * Success.
+         */
+        public Builder success(Boolean success) {
+            this.success = success;
+            return this;
+        }
+
         public QueryChatappBindWabaResponseBody build() {
             return new QueryChatappBindWabaResponseBody(this);
         } 
@@ -136,27 +155,35 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccountReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountReviewStatus")
         private String accountReviewStatus;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("AuthInternationalRateEligibility")
+        private java.util.Map < String, ? > authInternationalRateEligibility;
+
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MessageTemplateNamespace")
+        @com.aliyun.core.annotation.NameInMap("MessageTemplateNamespace")
         private String messageTemplateNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryBusinessLocation")
+        private String primaryBusinessLocation;
 
         private Data(Builder builder) {
             this.accountReviewStatus = builder.accountReviewStatus;
+            this.authInternationalRateEligibility = builder.authInternationalRateEligibility;
             this.currency = builder.currency;
             this.id = builder.id;
             this.messageTemplateNamespace = builder.messageTemplateNamespace;
             this.name = builder.name;
+            this.primaryBusinessLocation = builder.primaryBusinessLocation;
         }
 
         public static Builder builder() {
@@ -172,6 +199,13 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
          */
         public String getAccountReviewStatus() {
             return this.accountReviewStatus;
+        }
+
+        /**
+         * @return authInternationalRateEligibility
+         */
+        public java.util.Map < String, ? > getAuthInternationalRateEligibility() {
+            return this.authInternationalRateEligibility;
         }
 
         /**
@@ -202,12 +236,21 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
             return this.name;
         }
 
+        /**
+         * @return primaryBusinessLocation
+         */
+        public String getPrimaryBusinessLocation() {
+            return this.primaryBusinessLocation;
+        }
+
         public static final class Builder {
             private String accountReviewStatus; 
+            private java.util.Map < String, ? > authInternationalRateEligibility; 
             private String currency; 
             private String id; 
             private String messageTemplateNamespace; 
             private String name; 
+            private String primaryBusinessLocation; 
 
             /**
              * The review state of the WhatsApp Business account (WABA).
@@ -225,6 +268,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
              */
             public Builder accountReviewStatus(String accountReviewStatus) {
                 this.accountReviewStatus = accountReviewStatus;
+                return this;
+            }
+
+            /**
+             * AuthInternationalRateEligibility.
+             */
+            public Builder authInternationalRateEligibility(java.util.Map < String, ? > authInternationalRateEligibility) {
+                this.authInternationalRateEligibility = authInternationalRateEligibility;
                 return this;
             }
 
@@ -257,6 +308,14 @@ public class QueryChatappBindWabaResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * PrimaryBusinessLocation.
+             */
+            public Builder primaryBusinessLocation(String primaryBusinessLocation) {
+                this.primaryBusinessLocation = primaryBusinessLocation;
                 return this;
             }
 

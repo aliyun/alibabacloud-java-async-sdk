@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePhoneWebhookRequest</p>
  */
 public class UpdatePhoneWebhookRequest extends Request {
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("HttpFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HttpFlag")
     private String httpFlag;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
-    @Query
-    @NameInMap("QueueFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueFlag")
     private String queueFlag;
 
-    @Query
-    @NameInMap("StatusCallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatusCallbackUrl")
     private String statusCallbackUrl;
 
-    @Query
-    @NameInMap("UpCallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpCallbackUrl")
     private String upCallbackUrl;
 
     private UpdatePhoneWebhookRequest(Builder builder) {

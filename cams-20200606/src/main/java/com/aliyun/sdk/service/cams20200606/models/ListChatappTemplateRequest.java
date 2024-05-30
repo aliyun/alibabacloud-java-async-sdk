@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListChatappTemplateRequest</p>
  */
 public class ListChatappTemplateRequest extends Request {
-    @Query
-    @NameInMap("AuditStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditStatus")
     private String auditStatus;
 
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
+    private String code;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("CustWabaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustWabaId")
     @Deprecated
     private String custWabaId;
 
-    @Query
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private String templateType;
 
     private ListChatappTemplateRequest(Builder builder) {
         super(builder);
         this.auditStatus = builder.auditStatus;
+        this.code = builder.code;
         this.custSpaceId = builder.custSpaceId;
         this.custWabaId = builder.custWabaId;
         this.isvCode = builder.isvCode;
@@ -75,6 +79,13 @@ public class ListChatappTemplateRequest extends Request {
      */
     public String getAuditStatus() {
         return this.auditStatus;
+    }
+
+    /**
+     * @return code
+     */
+    public String getCode() {
+        return this.code;
     }
 
     /**
@@ -128,6 +139,7 @@ public class ListChatappTemplateRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListChatappTemplateRequest, Builder> {
         private String auditStatus; 
+        private String code; 
         private String custSpaceId; 
         private String custWabaId; 
         private String isvCode; 
@@ -143,6 +155,7 @@ public class ListChatappTemplateRequest extends Request {
         private Builder(ListChatappTemplateRequest request) {
             super(request);
             this.auditStatus = request.auditStatus;
+            this.code = request.code;
             this.custSpaceId = request.custSpaceId;
             this.custWabaId = request.custWabaId;
             this.isvCode = request.isvCode;
@@ -164,6 +177,15 @@ public class ListChatappTemplateRequest extends Request {
         public Builder auditStatus(String auditStatus) {
             this.putQueryParameter("AuditStatus", auditStatus);
             this.auditStatus = auditStatus;
+            return this;
+        }
+
+        /**
+         * Code.
+         */
+        public Builder code(String code) {
+            this.putQueryParameter("Code", code);
+            this.code = code;
             return this;
         }
 
@@ -247,12 +269,12 @@ public class ListChatappTemplateRequest extends Request {
     } 
 
     public static class Page extends TeaModel {
-        @NameInMap("Index")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Index")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer index;
 
-        @NameInMap("Size")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Size")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer size;
 
         private Page(Builder builder) {

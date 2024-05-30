@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,78 +11,78 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendChatappMassMessageRequest</p>
  */
 public class SendChatappMassMessageRequest extends Request {
-    @Body
-    @NameInMap("ChannelType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelType;
 
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("CustWabaId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustWabaId")
     @Deprecated
     private String custWabaId;
 
-    @Body
-    @NameInMap("FallBackContent")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackContent")
     private String fallBackContent;
 
-    @Body
-    @NameInMap("FallBackDuration")
-    @Validation(maximum = 43200, minimum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackDuration")
+    @com.aliyun.core.annotation.Validation(maximum = 43200, minimum = 10)
     private Integer fallBackDuration;
 
-    @Body
-    @NameInMap("FallBackId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackId")
     private String fallBackId;
 
-    @Body
-    @NameInMap("FallBackRule")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FallBackRule")
     private String fallBackRule;
 
-    @Body
-    @NameInMap("From")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("From")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String from;
 
-    @Body
-    @NameInMap("IsvCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsvCode")
     private String isvCode;
 
-    @Body
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Body
-    @NameInMap("Language")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Language")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String language;
 
-    @Body
-    @NameInMap("SenderList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SenderList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SenderList> senderList;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
-    @Body
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @Body
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Body
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @Body
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Long ttl;
 
     private SendChatappMassMessageRequest(Builder builder) {
@@ -452,10 +451,10 @@ public class SendChatappMassMessageRequest extends Request {
     } 
 
     public static class FlowAction extends TeaModel {
-        @NameInMap("FlowActionData")
+        @com.aliyun.core.annotation.NameInMap("FlowActionData")
         private java.util.Map < String, String > flowActionData;
 
-        @NameInMap("FlowToken")
+        @com.aliyun.core.annotation.NameInMap("FlowToken")
         private String flowToken;
 
         private FlowAction(Builder builder) {
@@ -513,7 +512,7 @@ public class SendChatappMassMessageRequest extends Request {
 
     }
     public static class ProductItems extends TeaModel {
-        @NameInMap("ProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ProductRetailerId")
         private String productRetailerId;
 
         private ProductItems(Builder builder) {
@@ -554,10 +553,10 @@ public class SendChatappMassMessageRequest extends Request {
 
     }
     public static class Sections extends TeaModel {
-        @NameInMap("ProductItems")
+        @com.aliyun.core.annotation.NameInMap("ProductItems")
         private java.util.List < ProductItems> productItems;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Sections(Builder builder) {
@@ -615,10 +614,10 @@ public class SendChatappMassMessageRequest extends Request {
 
     }
     public static class ProductAction extends TeaModel {
-        @NameInMap("Sections")
+        @com.aliyun.core.annotation.NameInMap("Sections")
         private java.util.List < Sections> sections;
 
-        @NameInMap("ThumbnailProductRetailerId")
+        @com.aliyun.core.annotation.NameInMap("ThumbnailProductRetailerId")
         private String thumbnailProductRetailerId;
 
         private ProductAction(Builder builder) {
@@ -676,20 +675,20 @@ public class SendChatappMassMessageRequest extends Request {
 
     }
     public static class SenderList extends TeaModel {
-        @NameInMap("FlowAction")
+        @com.aliyun.core.annotation.NameInMap("FlowAction")
         private FlowAction flowAction;
 
-        @NameInMap("Payload")
+        @com.aliyun.core.annotation.NameInMap("Payload")
         private java.util.List < String > payload;
 
-        @NameInMap("ProductAction")
+        @com.aliyun.core.annotation.NameInMap("ProductAction")
         private ProductAction productAction;
 
-        @NameInMap("TemplateParams")
+        @com.aliyun.core.annotation.NameInMap("TemplateParams")
         private java.util.Map < String, String > templateParams;
 
-        @NameInMap("To")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("To")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String to;
 
         private SenderList(Builder builder) {

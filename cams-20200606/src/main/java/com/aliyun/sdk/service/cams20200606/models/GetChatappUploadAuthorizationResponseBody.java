@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappUploadAuthorizationResponseBody</p>
  */
 public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetChatappUploadAuthorizationResponseBody(Builder builder) {
@@ -136,25 +135,25 @@ public class GetChatappUploadAuthorizationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AccessKeySecret")
+        @com.aliyun.core.annotation.NameInMap("AccessKeySecret")
         private String accessKeySecret;
 
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Dir")
+        @com.aliyun.core.annotation.NameInMap("Dir")
         private String dir;
 
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("Expire")
+        @com.aliyun.core.annotation.NameInMap("Expire")
         private Integer expire;
 
-        @NameInMap("SecurityToken")
+        @com.aliyun.core.annotation.NameInMap("SecurityToken")
         private String securityToken;
 
         private Data(Builder builder) {

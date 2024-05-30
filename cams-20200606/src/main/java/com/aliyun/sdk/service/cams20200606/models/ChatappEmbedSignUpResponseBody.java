@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChatappEmbedSignUpResponseBody</p>
  */
 public class ChatappEmbedSignUpResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Wabas")
+    @com.aliyun.core.annotation.NameInMap("Wabas")
     private java.util.List < Wabas> wabas;
 
     private ChatappEmbedSignUpResponseBody(Builder builder) {
@@ -136,19 +135,19 @@ public class ChatappEmbedSignUpResponseBody extends TeaModel {
     } 
 
     public static class Wabas extends TeaModel {
-        @NameInMap("AccountReviewStatus")
+        @com.aliyun.core.annotation.NameInMap("AccountReviewStatus")
         private String accountReviewStatus;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MessageTemplateNamespace")
+        @com.aliyun.core.annotation.NameInMap("MessageTemplateNamespace")
         private String messageTemplateNamespace;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Wabas(Builder builder) {

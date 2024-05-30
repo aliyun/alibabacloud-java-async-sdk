@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChatappSyncPhoneNumberResponseBody</p>
  */
 public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PhoneNumbers")
+    @com.aliyun.core.annotation.NameInMap("PhoneNumbers")
     private java.util.List < PhoneNumbers> phoneNumbers;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ChatappSyncPhoneNumberResponseBody(Builder builder) {
@@ -136,40 +135,40 @@ public class ChatappSyncPhoneNumberResponseBody extends TeaModel {
     } 
 
     public static class PhoneNumbers extends TeaModel {
-        @NameInMap("CodeVerificationStatus")
+        @com.aliyun.core.annotation.NameInMap("CodeVerificationStatus")
         private String codeVerificationStatus;
 
-        @NameInMap("MessagingLimitTier")
+        @com.aliyun.core.annotation.NameInMap("MessagingLimitTier")
         private String messagingLimitTier;
 
-        @NameInMap("NameStatus")
+        @com.aliyun.core.annotation.NameInMap("NameStatus")
         private String nameStatus;
 
-        @NameInMap("NewNameStatus")
+        @com.aliyun.core.annotation.NameInMap("NewNameStatus")
         private String newNameStatus;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("QualityRating")
+        @com.aliyun.core.annotation.NameInMap("QualityRating")
         private String qualityRating;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("StatusCallbackUrl")
         private String statusCallbackUrl;
 
-        @NameInMap("StatusQueue")
+        @com.aliyun.core.annotation.NameInMap("StatusQueue")
         private String statusQueue;
 
-        @NameInMap("UpCallbackUrl")
+        @com.aliyun.core.annotation.NameInMap("UpCallbackUrl")
         private String upCallbackUrl;
 
-        @NameInMap("UpQueue")
+        @com.aliyun.core.annotation.NameInMap("UpQueue")
         private String upQueue;
 
-        @NameInMap("VerifiedName")
+        @com.aliyun.core.annotation.NameInMap("VerifiedName")
         private String verifiedName;
 
         private PhoneNumbers(Builder builder) {

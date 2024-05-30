@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCommerceSettingRequest</p>
  */
 public class UpdateCommerceSettingRequest extends Request {
-    @Query
-    @NameInMap("CartEnable")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CartEnable")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean cartEnable;
 
-    @Query
-    @NameInMap("CatalogVisible")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CatalogVisible")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean catalogVisible;
 
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("PhoneNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNumber;
 
     private UpdateCommerceSettingRequest(Builder builder) {

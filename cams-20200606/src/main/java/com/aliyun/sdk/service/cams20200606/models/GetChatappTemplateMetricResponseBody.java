@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappTemplateMetricResponseBody</p>
  */
 public class GetChatappTemplateMetricResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetChatappTemplateMetricResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
     } 
 
     public static class Cliented extends TeaModel {
-        @NameInMap("ButtonContent")
+        @com.aliyun.core.annotation.NameInMap("ButtonContent")
         private String buttonContent;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Cliented(Builder builder) {
@@ -222,28 +221,28 @@ public class GetChatappTemplateMetricResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Cliented")
+        @com.aliyun.core.annotation.NameInMap("Cliented")
         private java.util.List < Cliented> cliented;
 
-        @NameInMap("DeliveredCount")
+        @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Language")
+        @com.aliyun.core.annotation.NameInMap("Language")
         private String language;
 
-        @NameInMap("ReadCount")
+        @com.aliyun.core.annotation.NameInMap("ReadCount")
         private Integer readCount;
 
-        @NameInMap("SentCount")
+        @com.aliyun.core.annotation.NameInMap("SentCount")
         private Integer sentCount;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Long start;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductCatalogRequest</p>
  */
 public class ListProductCatalogRequest extends Request {
-    @Query
-    @NameInMap("After")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("After")
     private String after;
 
-    @Query
-    @NameInMap("Before")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Before")
     private String before;
 
-    @Query
-    @NameInMap("BusinessId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long businessId;
 
-    @Query
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Query
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private String fields;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Long limit;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListProductCatalogRequest(Builder builder) {

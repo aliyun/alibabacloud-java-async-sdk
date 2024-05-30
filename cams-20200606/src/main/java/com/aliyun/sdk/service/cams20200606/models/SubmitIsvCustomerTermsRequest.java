@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitIsvCustomerTermsRequest</p>
  */
 public class SubmitIsvCustomerTermsRequest extends Request {
-    @Query
-    @NameInMap("BusinessDesc")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessDesc")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessDesc;
 
-    @Query
-    @NameInMap("ContactMail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactMail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactMail;
 
-    @Query
-    @NameInMap("CountryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String countryId;
 
-    @Query
-    @NameInMap("CustName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custName;
 
-    @Query
-    @NameInMap("CustSpaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String custSpaceId;
 
-    @Query
-    @NameInMap("IsvTerms")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsvTerms")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String isvTerms;
 
-    @Query
-    @NameInMap("OfficeAddress")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeAddress")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeAddress;
 
     private SubmitIsvCustomerTermsRequest(Builder builder) {

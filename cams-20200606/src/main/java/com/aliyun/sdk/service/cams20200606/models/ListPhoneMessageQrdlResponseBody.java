@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPhoneMessageQrdlResponseBody</p>
  */
 public class ListPhoneMessageQrdlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPhoneMessageQrdlResponseBody(Builder builder) {
@@ -112,22 +111,22 @@ public class ListPhoneMessageQrdlResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DeepLinkUrl")
+        @com.aliyun.core.annotation.NameInMap("DeepLinkUrl")
         private String deepLinkUrl;
 
-        @NameInMap("GenerateQrImage")
+        @com.aliyun.core.annotation.NameInMap("GenerateQrImage")
         private String generateQrImage;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PrefilledMessage")
+        @com.aliyun.core.annotation.NameInMap("PrefilledMessage")
         private String prefilledMessage;
 
-        @NameInMap("QrImageUrl")
+        @com.aliyun.core.annotation.NameInMap("QrImageUrl")
         private String qrImageUrl;
 
-        @NameInMap("QrdlCode")
+        @com.aliyun.core.annotation.NameInMap("QrdlCode")
         private String qrdlCode;
 
         private Data(Builder builder) {

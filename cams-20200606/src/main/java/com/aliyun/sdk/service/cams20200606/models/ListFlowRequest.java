@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFlowRequest</p>
  */
 public class ListFlowRequest extends Request {
-    @Body
-    @NameInMap("CustSpaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CustSpaceId")
     private String custSpaceId;
 
-    @Body
-    @NameInMap("FlowName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FlowName")
     private String flowName;
 
-    @Body
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
     private ListFlowRequest(Builder builder) {
@@ -117,10 +116,10 @@ public class ListFlowRequest extends Request {
     } 
 
     public static class Page extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private Page(Builder builder) {

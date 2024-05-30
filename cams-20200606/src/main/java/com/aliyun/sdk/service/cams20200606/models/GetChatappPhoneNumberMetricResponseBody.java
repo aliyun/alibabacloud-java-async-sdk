@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cams20200606.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetChatappPhoneNumberMetricResponseBody</p>
  */
 public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetChatappPhoneNumberMetricResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class GetChatappPhoneNumberMetricResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DeliveredCount")
+        @com.aliyun.core.annotation.NameInMap("DeliveredCount")
         private Integer deliveredCount;
 
-        @NameInMap("End")
+        @com.aliyun.core.annotation.NameInMap("End")
         private Long end;
 
-        @NameInMap("Granularity")
+        @com.aliyun.core.annotation.NameInMap("Granularity")
         private String granularity;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("SentCount")
+        @com.aliyun.core.annotation.NameInMap("SentCount")
         private Integer sentCount;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private Long start;
 
         private Data(Builder builder) {
