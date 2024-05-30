@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartReplicationJobRequest} extends {@link RequestModel}
+ * {@link DisableAccessTokenRequest} extends {@link RequestModel}
  *
- * <p>StartReplicationJobRequest</p>
+ * <p>DisableAccessTokenRequest</p>
  */
-public class StartReplicationJobRequest extends Request {
+public class DisableAccessTokenRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("AccessTokenId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String jobId;
+    private String accessTokenId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
@@ -24,9 +24,9 @@ public class StartReplicationJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    private StartReplicationJobRequest(Builder builder) {
+    private DisableAccessTokenRequest(Builder builder) {
         super(builder);
-        this.jobId = builder.jobId;
+        this.accessTokenId = builder.accessTokenId;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
     }
@@ -35,7 +35,7 @@ public class StartReplicationJobRequest extends Request {
         return new Builder();
     }
 
-    public static StartReplicationJobRequest create() {
+    public static DisableAccessTokenRequest create() {
         return builder().build();
     }
 
@@ -45,10 +45,10 @@ public class StartReplicationJobRequest extends Request {
     }
 
     /**
-     * @return jobId
+     * @return accessTokenId
      */
-    public String getJobId() {
-        return this.jobId;
+    public String getAccessTokenId() {
+        return this.accessTokenId;
     }
 
     /**
@@ -65,8 +65,8 @@ public class StartReplicationJobRequest extends Request {
         return this.resourceOwnerAccount;
     }
 
-    public static final class Builder extends Request.Builder<StartReplicationJobRequest, Builder> {
-        private String jobId; 
+    public static final class Builder extends Request.Builder<DisableAccessTokenRequest, Builder> {
+        private String accessTokenId; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
 
@@ -74,19 +74,19 @@ public class StartReplicationJobRequest extends Request {
             super();
         } 
 
-        private Builder(StartReplicationJobRequest request) {
+        private Builder(DisableAccessTokenRequest request) {
             super(request);
-            this.jobId = request.jobId;
+            this.accessTokenId = request.accessTokenId;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
-         * The migration job ID.
+         * The ID of the activation code.
          */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
+        public Builder accessTokenId(String accessTokenId) {
+            this.putQueryParameter("AccessTokenId", accessTokenId);
+            this.accessTokenId = accessTokenId;
             return this;
         }
 
@@ -109,8 +109,8 @@ public class StartReplicationJobRequest extends Request {
         }
 
         @Override
-        public StartReplicationJobRequest build() {
-            return new StartReplicationJobRequest(this);
+        public DisableAccessTokenRequest build() {
+            return new DisableAccessTokenRequest(this);
         } 
 
     } 

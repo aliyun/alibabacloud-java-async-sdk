@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteReplicationJobRequest</p>
  */
 public class DeleteReplicationJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
     private DeleteReplicationJobRequest(Builder builder) {
@@ -75,15 +74,15 @@ public class DeleteReplicationJobRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteReplicationJobRequest response) {
-            super(response);
-            this.jobId = response.jobId;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
+        private Builder(DeleteReplicationJobRequest request) {
+            super(request);
+            this.jobId = request.jobId;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
         } 
 
         /**
-         * JobId.
+         * The migration job ID.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);

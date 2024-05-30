@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UntagResourcesResponseBody} extends {@link TeaModel}
+ * {@link DisableAccessTokenResponseBody} extends {@link TeaModel}
  *
- * <p>UntagResourcesResponseBody</p>
+ * <p>DisableAccessTokenResponseBody</p>
  */
-public class UntagResourcesResponseBody extends TeaModel {
+public class DisableAccessTokenResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UntagResourcesResponseBody(Builder builder) {
+    private DisableAccessTokenResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class UntagResourcesResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UntagResourcesResponseBody create() {
+    public static DisableAccessTokenResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class UntagResourcesResponseBody extends TeaModel {
             return this;
         }
 
-        public UntagResourcesResponseBody build() {
-            return new UntagResourcesResponseBody(this);
+        public DisableAccessTokenResponseBody build() {
+            return new DisableAccessTokenResponseBody(this);
         } 
 
     } 

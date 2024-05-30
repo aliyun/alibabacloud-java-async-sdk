@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSourceServersResponseBody</p>
  */
 public class DescribeSourceServersResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceServers")
+    @com.aliyun.core.annotation.NameInMap("SourceServers")
     private SourceServers sourceServers;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSourceServersResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +93,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +101,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +109,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
-         * SourceServers.
+         * The information about the migration source.
          */
         public Builder sourceServers(SourceServers sourceServers) {
             this.sourceServers = sourceServers;
@@ -118,7 +117,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of migration sources returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -132,19 +131,19 @@ public class DescribeSourceServersResponseBody extends TeaModel {
     } 
 
     public static class Part extends TeaModel {
-        @NameInMap("CanBlock")
+        @com.aliyun.core.annotation.NameInMap("CanBlock")
         private Boolean canBlock;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("Need")
+        @com.aliyun.core.annotation.NameInMap("Need")
         private Boolean need;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("SizeBytes")
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
         private Long sizeBytes;
 
         private Part(Builder builder) {
@@ -206,7 +205,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * CanBlock.
+             * Indicates whether block replication is enabled for the data disk partition.
              */
             public Builder canBlock(Boolean canBlock) {
                 this.canBlock = canBlock;
@@ -214,7 +213,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * The device ID of the data disk partition.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -222,7 +221,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Need.
+             * Indicates whether the data disk partition must be selected.
              */
             public Builder need(Boolean need) {
                 this.need = need;
@@ -230,7 +229,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path of the data disk partition.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -238,7 +237,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SizeBytes.
+             * The size of the data disk partition. Unit: byte.
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -253,7 +252,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class Parts extends TeaModel {
-        @NameInMap("Part")
+        @com.aliyun.core.annotation.NameInMap("Part")
         private java.util.List < Part> part;
 
         private Parts(Builder builder) {
@@ -294,16 +293,16 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class DataDisk extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Parts")
+        @com.aliyun.core.annotation.NameInMap("Parts")
         private Parts parts;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Integer size;
 
         private DataDisk(Builder builder) {
@@ -356,7 +355,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Integer size; 
 
             /**
-             * Index.
+             * The index number of the data disk.
              */
             public Builder index(Integer index) {
                 this.index = index;
@@ -364,7 +363,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Parts.
+             * The information about the data disk partition.
              */
             public Builder parts(Parts parts) {
                 this.parts = parts;
@@ -372,7 +371,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path of the data disk.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -380,7 +379,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the data disk. Unit: GiB.
              */
             public Builder size(Integer size) {
                 this.size = size;
@@ -395,7 +394,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class DataDisks extends TeaModel {
-        @NameInMap("DataDisk")
+        @com.aliyun.core.annotation.NameInMap("DataDisk")
         private java.util.List < DataDisk> dataDisk;
 
         private DataDisks(Builder builder) {
@@ -436,19 +435,19 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class SystemDiskPart extends TeaModel {
-        @NameInMap("CanBlock")
+        @com.aliyun.core.annotation.NameInMap("CanBlock")
         private Boolean canBlock;
 
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("Need")
+        @com.aliyun.core.annotation.NameInMap("Need")
         private Boolean need;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("SizeBytes")
+        @com.aliyun.core.annotation.NameInMap("SizeBytes")
         private Long sizeBytes;
 
         private SystemDiskPart(Builder builder) {
@@ -510,7 +509,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private Long sizeBytes; 
 
             /**
-             * CanBlock.
+             * Indicates whether block replication is enabled for the system disk partition.
              */
             public Builder canBlock(Boolean canBlock) {
                 this.canBlock = canBlock;
@@ -518,7 +517,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Device.
+             * The device ID of the system disk partition.
              */
             public Builder device(String device) {
                 this.device = device;
@@ -526,7 +525,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Need.
+             * Indicates whether the system disk partition must be selected.
              */
             public Builder need(Boolean need) {
                 this.need = need;
@@ -534,7 +533,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The path of the system disk partition.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -542,7 +541,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SizeBytes.
+             * The size of the system disk partition. Unit: byte.
              */
             public Builder sizeBytes(Long sizeBytes) {
                 this.sizeBytes = sizeBytes;
@@ -557,7 +556,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class SystemDiskParts extends TeaModel {
-        @NameInMap("SystemDiskPart")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskPart")
         private java.util.List < SystemDiskPart> systemDiskPart;
 
         private SystemDiskParts(Builder builder) {
@@ -597,60 +596,174 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * The key of tag N that is added to the SMC resource. Valid values of N: 1 to 20
+             * <p>
+             * 
+             * You cannot specify empty strings as tag keys. It can be up to 64 characters in length and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * The value of tag N that is added to the SMC resource. Valid values of N: 1 to 20
+             * <p>
+             * 
+             * The tag key can be an empty string. It can be up to 64 characters in length and cannot contain http:// or https://.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private java.util.List < Tag> tag;
+
+        private Tags(Builder builder) {
+            this.tag = builder.tag;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tag
+         */
+        public java.util.List < Tag> getTag() {
+            return this.tag;
+        }
+
+        public static final class Builder {
+            private java.util.List < Tag> tag; 
+
+            /**
+             * Tag.
+             */
+            public Builder tag(java.util.List < Tag> tag) {
+                this.tag = tag;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class SourceServer extends TeaModel {
-        @NameInMap("AgentVersion")
+        @com.aliyun.core.annotation.NameInMap("AgentVersion")
         private String agentVersion;
 
-        @NameInMap("Architecture")
+        @com.aliyun.core.annotation.NameInMap("Architecture")
         private String architecture;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DataDisks")
+        @com.aliyun.core.annotation.NameInMap("DataDisks")
         private DataDisks dataDisks;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("HeartbeatRate")
+        @com.aliyun.core.annotation.NameInMap("HeartbeatRate")
         private Integer heartbeatRate;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("KernelLevel")
+        @com.aliyun.core.annotation.NameInMap("KernelLevel")
         private Integer kernelLevel;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("ReplicationDriver")
+        @com.aliyun.core.annotation.NameInMap("ReplicationDriver")
         private String replicationDriver;
 
-        @NameInMap("SourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+        private String resourceGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SourceId")
         private String sourceId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("StatusInfo")
+        @com.aliyun.core.annotation.NameInMap("StatusInfo")
         private String statusInfo;
 
-        @NameInMap("SystemDiskParts")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskParts")
         private SystemDiskParts systemDiskParts;
 
-        @NameInMap("SystemDiskSize")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
-        @NameInMap("SystemInfo")
+        @com.aliyun.core.annotation.NameInMap("SystemInfo")
         private String systemInfo;
+
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private Tags tags;
 
         private SourceServer(Builder builder) {
             this.agentVersion = builder.agentVersion;
@@ -665,12 +778,14 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             this.name = builder.name;
             this.platform = builder.platform;
             this.replicationDriver = builder.replicationDriver;
+            this.resourceGroupId = builder.resourceGroupId;
             this.sourceId = builder.sourceId;
             this.state = builder.state;
             this.statusInfo = builder.statusInfo;
             this.systemDiskParts = builder.systemDiskParts;
             this.systemDiskSize = builder.systemDiskSize;
             this.systemInfo = builder.systemInfo;
+            this.tags = builder.tags;
         }
 
         public static Builder builder() {
@@ -766,6 +881,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroupId
+         */
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        /**
          * @return sourceId
          */
         public String getSourceId() {
@@ -807,6 +929,13 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             return this.systemInfo;
         }
 
+        /**
+         * @return tags
+         */
+        public Tags getTags() {
+            return this.tags;
+        }
+
         public static final class Builder {
             private String agentVersion; 
             private String architecture; 
@@ -820,15 +949,17 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             private String name; 
             private String platform; 
             private String replicationDriver; 
+            private String resourceGroupId; 
             private String sourceId; 
             private String state; 
             private String statusInfo; 
             private SystemDiskParts systemDiskParts; 
             private Integer systemDiskSize; 
             private String systemInfo; 
+            private Tags tags; 
 
             /**
-             * AgentVersion.
+             * The version number of the SMC client.
              */
             public Builder agentVersion(String agentVersion) {
                 this.agentVersion = agentVersion;
@@ -836,7 +967,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Architecture.
+             * The system architecture of the migration source.
              */
             public Builder architecture(String architecture) {
                 this.architecture = architecture;
@@ -844,7 +975,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the migration source was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -852,7 +983,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * DataDisks.
+             * The data disk on the migration source.
              */
             public Builder dataDisks(DataDisks dataDisks) {
                 this.dataDisks = dataDisks;
@@ -860,7 +991,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the migration source.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -868,7 +999,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code of the migration source.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -876,7 +1007,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * HeartbeatRate.
+             * The interval at which heartbeats are sent from the SMC client. Unit: seconds.
              */
             public Builder heartbeatRate(Integer heartbeatRate) {
                 this.heartbeatRate = heartbeatRate;
@@ -884,7 +1015,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the last migration job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -892,7 +1023,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * KernelLevel.
+             * The kernel level of the migration source.
              */
             public Builder kernelLevel(Integer kernelLevel) {
                 this.kernelLevel = kernelLevel;
@@ -900,7 +1031,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the migration source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -908,7 +1039,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * Platform.
+             * The operating system of the migration source.
              */
             public Builder platform(String platform) {
                 this.platform = platform;
@@ -916,7 +1047,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * ReplicationDriver.
+             * The replication driver used for migration. Default value: SMT.
              */
             public Builder replicationDriver(String replicationDriver) {
                 this.replicationDriver = replicationDriver;
@@ -924,7 +1055,15 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SourceId.
+             * The resource group ID.
+             */
+            public Builder resourceGroupId(String resourceGroupId) {
+                this.resourceGroupId = resourceGroupId;
+                return this;
+            }
+
+            /**
+             * The ID of the migration source.
              */
             public Builder sourceId(String sourceId) {
                 this.sourceId = sourceId;
@@ -932,7 +1071,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the migration source.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -940,7 +1079,11 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * StatusInfo.
+             * The status information of the migration source. This parameter is returned if the migration source is in the Unavailable state. The value of this parameter consists of key-value pairs in the JSON format. Sample keys:
+             * <p>
+             * 
+             *     error_code: The error code.
+             *     error_msg: The error message.
              */
             public Builder statusInfo(String statusInfo) {
                 this.statusInfo = statusInfo;
@@ -948,7 +1091,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskParts.
+             * The information about the system disk partition.
              */
             public Builder systemDiskParts(SystemDiskParts systemDiskParts) {
                 this.systemDiskParts = systemDiskParts;
@@ -956,7 +1099,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SystemDiskSize.
+             * The system disk size of the migration source. Unit: GiB.
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
@@ -964,10 +1107,30 @@ public class DescribeSourceServersResponseBody extends TeaModel {
             }
 
             /**
-             * SystemInfo.
+             * The system information of the migration source. The value of this parameter consists of key-value pairs in the JSON format. The key-value pairs are extensible and have fixed keys. The JSON string does not exceed 1 KB in size. Sample keys:
+             * <p>
+             * 
+             *     agent_mode: The migration mode.
+             *     agent_type: The migration type.
+             *     client_type: The client type.
+             *     hostname: The host name.
+             *     ipv4: The IPv4 address.
+             *     ipv6: The IPv6 address.
+             *     .cores: The number of CPU cores.
+             *     cpu_usage: The CPU utilization.
+             *     memory: The memory size.
+             *     memory_usage: The memory usage.
              */
             public Builder systemInfo(String systemInfo) {
                 this.systemInfo = systemInfo;
+                return this;
+            }
+
+            /**
+             * The information about the tags.
+             */
+            public Builder tags(Tags tags) {
+                this.tags = tags;
                 return this;
             }
 
@@ -979,7 +1142,7 @@ public class DescribeSourceServersResponseBody extends TeaModel {
 
     }
     public static class SourceServers extends TeaModel {
-        @NameInMap("SourceServer")
+        @com.aliyun.core.annotation.NameInMap("SourceServer")
         private java.util.List < SourceServer> sourceServer;
 
         private SourceServers(Builder builder) {

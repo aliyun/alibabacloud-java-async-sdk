@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.smc20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSourceServerRequest</p>
  */
 public class DeleteSourceServerRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("SourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceId;
 
     private DeleteSourceServerRequest(Builder builder) {
@@ -88,16 +87,20 @@ public class DeleteSourceServerRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteSourceServerRequest response) {
-            super(response);
-            this.force = response.force;
-            this.ownerId = response.ownerId;
-            this.resourceOwnerAccount = response.resourceOwnerAccount;
-            this.sourceId = response.sourceId;
+        private Builder(DeleteSourceServerRequest request) {
+            super(request);
+            this.force = request.force;
+            this.ownerId = request.ownerId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.sourceId = request.sourceId;
         } 
 
         /**
-         * Force.
+         * Specifies whether to forcibly delete the migration source. Valid values:
+         * <p>
+         * 
+         * *   true: forcibly deletes the migration source and the migration job created for the migration source, and releases the intermediate resources of the migration job.
+         * *   false: does not delete the migration source if a migration job is created for the migration source.
          */
         public Builder force(Boolean force) {
             this.putQueryParameter("Force", force);
@@ -124,7 +127,7 @@ public class DeleteSourceServerRequest extends Request {
         }
 
         /**
-         * SourceId.
+         * The migration source ID.
          */
         public Builder sourceId(String sourceId) {
             this.putQueryParameter("SourceId", sourceId);

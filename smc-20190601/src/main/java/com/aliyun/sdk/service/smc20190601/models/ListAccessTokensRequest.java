@@ -6,14 +6,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifySourceServerAttributeRequest} extends {@link RequestModel}
+ * {@link ListAccessTokensRequest} extends {@link RequestModel}
  *
- * <p>ModifySourceServerAttributeRequest</p>
+ * <p>ListAccessTokensRequest</p>
  */
-public class ModifySourceServerAttributeRequest extends Request {
+public class ListAccessTokensRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Description")
-    private String description;
+    @com.aliyun.core.annotation.NameInMap("AccessTokenId")
+    private java.util.List < String > accessTokenId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
@@ -28,24 +28,23 @@ public class ModifySourceServerAttributeRequest extends Request {
     private String resourceOwnerAccount;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String sourceId;
+    @com.aliyun.core.annotation.NameInMap("Status")
+    private String status;
 
-    private ModifySourceServerAttributeRequest(Builder builder) {
+    private ListAccessTokensRequest(Builder builder) {
         super(builder);
-        this.description = builder.description;
+        this.accessTokenId = builder.accessTokenId;
         this.name = builder.name;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
-        this.sourceId = builder.sourceId;
+        this.status = builder.status;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifySourceServerAttributeRequest create() {
+    public static ListAccessTokensRequest create() {
         return builder().build();
     }
 
@@ -55,10 +54,10 @@ public class ModifySourceServerAttributeRequest extends Request {
     }
 
     /**
-     * @return description
+     * @return accessTokenId
      */
-    public String getDescription() {
-        return this.description;
+    public java.util.List < String > getAccessTokenId() {
+        return this.accessTokenId;
     }
 
     /**
@@ -83,43 +82,43 @@ public class ModifySourceServerAttributeRequest extends Request {
     }
 
     /**
-     * @return sourceId
+     * @return status
      */
-    public String getSourceId() {
-        return this.sourceId;
+    public String getStatus() {
+        return this.status;
     }
 
-    public static final class Builder extends Request.Builder<ModifySourceServerAttributeRequest, Builder> {
-        private String description; 
+    public static final class Builder extends Request.Builder<ListAccessTokensRequest, Builder> {
+        private java.util.List < String > accessTokenId; 
         private String name; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
-        private String sourceId; 
+        private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifySourceServerAttributeRequest request) {
+        private Builder(ListAccessTokensRequest request) {
             super(request);
-            this.description = request.description;
+            this.accessTokenId = request.accessTokenId;
             this.name = request.name;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
-            this.sourceId = request.sourceId;
+            this.status = request.status;
         } 
 
         /**
-         * The description of the migration source. The description can be up to 256 characters in length and cannot start with `http://` or `https://`.
+         * The information about activation codes.
          */
-        public Builder description(String description) {
-            this.putQueryParameter("Description", description);
-            this.description = description;
+        public Builder accessTokenId(java.util.List < String > accessTokenId) {
+            this.putQueryParameter("AccessTokenId", accessTokenId);
+            this.accessTokenId = accessTokenId;
             return this;
         }
 
         /**
-         * The name of the migration source. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with `http://` or `https://`. It can contain letters, digits, colons (:), underscores (\_), and hyphens (-).
+         * The name of the activation code.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -146,17 +145,22 @@ public class ModifySourceServerAttributeRequest extends Request {
         }
 
         /**
-         * The migration source ID.
+         * The status of the activation code. Valid values:
+         * <p>
+         * 
+         * *   activated
+         * *   unactivated
+         * *   expired
          */
-        public Builder sourceId(String sourceId) {
-            this.putQueryParameter("SourceId", sourceId);
-            this.sourceId = sourceId;
+        public Builder status(String status) {
+            this.putQueryParameter("Status", status);
+            this.status = status;
             return this;
         }
 
         @Override
-        public ModifySourceServerAttributeRequest build() {
-            return new ModifySourceServerAttributeRequest(this);
+        public ListAccessTokensRequest build() {
+            return new ListAccessTokensRequest(this);
         } 
 
     } 

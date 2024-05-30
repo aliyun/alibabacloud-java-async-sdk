@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link StartReplicationJobResponse} extends {@link TeaModel}
+ * {@link CreateAccessTokenResponse} extends {@link TeaModel}
  *
- * <p>StartReplicationJobResponse</p>
+ * <p>CreateAccessTokenResponse</p>
  */
-public class StartReplicationJobResponse extends Response {
+public class CreateAccessTokenResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class StartReplicationJobResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private StartReplicationJobResponseBody body;
+    private CreateAccessTokenResponseBody body;
 
-    private StartReplicationJobResponse(BuilderImpl builder) {
+    private CreateAccessTokenResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static StartReplicationJobResponse create() {
+    public static CreateAccessTokenResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class StartReplicationJobResponse extends Response {
     /**
      * @return body
      */
-    public StartReplicationJobResponseBody getBody() {
+    public CreateAccessTokenResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<StartReplicationJobResponse, Builder> {
+    public interface Builder extends Response.Builder<CreateAccessTokenResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(StartReplicationJobResponseBody body);
+        Builder body(CreateAccessTokenResponseBody body);
 
         @Override
-        StartReplicationJobResponse build();
+        CreateAccessTokenResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<StartReplicationJobResponse, Builder>
+            extends Response.BuilderImpl<CreateAccessTokenResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private StartReplicationJobResponseBody body; 
+        private CreateAccessTokenResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(StartReplicationJobResponse response) {
+        private BuilderImpl(CreateAccessTokenResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class StartReplicationJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(StartReplicationJobResponseBody body) {
+        public Builder body(CreateAccessTokenResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public StartReplicationJobResponse build() {
-            return new StartReplicationJobResponse(this);
+        public CreateAccessTokenResponse build() {
+            return new CreateAccessTokenResponse(this);
         } 
 
     } 
