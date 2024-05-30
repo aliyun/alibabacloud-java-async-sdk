@@ -97,7 +97,7 @@ public class ListLineageResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The structure returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can locate logs and troubleshoot issues based on the ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,11 @@ public class ListLineageResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -310,7 +314,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * Entity.
+             * The array of the entity structure.
              */
             public Builder entity(Entity entity) {
                 this.entity = entity;
@@ -371,7 +375,7 @@ public class ListLineageResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * DataEntityList.
+             * The array of the entity structure.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -379,7 +383,7 @@ public class ListLineageResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The pagination token that is used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

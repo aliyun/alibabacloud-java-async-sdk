@@ -73,7 +73,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The query results for compute engine instances that are returned on multiple pages.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -81,7 +81,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +89,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -281,7 +281,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private Long tenantId; 
 
             /**
-             * BindingProjectId.
+             * The ID of the workspace with which the compute engine instance is associated.
              */
             public Builder bindingProjectId(Integer bindingProjectId) {
                 this.bindingProjectId = bindingProjectId;
@@ -289,7 +289,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * BindingProjectName.
+             * The name of the workspace with which the compute engine instance is associated.
              */
             public Builder bindingProjectName(String bindingProjectName) {
                 this.bindingProjectName = bindingProjectName;
@@ -297,7 +297,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * CalcEngineType.
+             * The type of the compute engine instance. Valid values: `ODPS`, `EMR`, `BLINK`, `HOLO`, `MaxGraph`, `HYBRIDDB_FOR_POSTGRESQL`, `ADB_MYSQL`, and `HADOOP_CDH`.
              */
             public Builder calcEngineType(String calcEngineType) {
                 this.calcEngineType = calcEngineType;
@@ -305,7 +305,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * DwRegion.
+             * The region ID of the DataWorks workspace with which the compute engine instance is associated.
              */
             public Builder dwRegion(String dwRegion) {
                 this.dwRegion = dwRegion;
@@ -313,7 +313,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineId.
+             * The ID of the compute engine instance.
              */
             public Builder engineId(Integer engineId) {
                 this.engineId = engineId;
@@ -321,7 +321,132 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * EngineInfo.
+             * The details of the compute engine instance.
+             * <p>
+             * 
+             * *   ODPS
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "pubEndpoint": "service.cn.maxcompute.aliyun.com/api",
+             *       "endpoint": "service.cn.maxcompute.aliyun-inc.com/api",
+             *       "resourceGroupType": "ODPS",
+             *       "resourceGroupId": "361826516****",
+             *       "vpcEndpoint": "service.cn.maxcompute.aliyun-inc.com/api",
+             *       "projectName": "onefall_test_zjk",
+             *       "taskSameAsOwner": "true"
+             *     }
+             * 
+             * *   EMR
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "emrClusterId": "C-xxx",
+             *       "specs": "{\"emrClusterId\":\"C-xxx\",\"emrAccessMode\":\"simple\",\"emrResourceQueueName\":\"default\",\"emrProjectId\":\"FP-xxx\"}",
+             *       "endpoint": "emr.aliyuncs.com",
+             *       "emrResourceQueueName": "default",
+             *       "emrAccessMode": "simple",
+             *       "resourceGroupType": "DW",
+             *       "projectName": "xx-xxxx",
+             *       "emrProjectId": "FP-xxxx",
+             *       "taskSameAsOwner": "false"
+             *     }       
+             * 
+             * *   BLINK
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "bayesProjectId": "xxxx",
+             *       "bayesProjectName": "xc_blxxixxxnk_1",
+             *       "cluster": "xxxssxsx",
+             *       "endpoint": "https://stream.console.aliyun.com",
+             *       "engineType": "BLINK",
+             *       "name": "xsxsxxxxx",
+             *       "projectName": "xc_blxxxsxink_1",
+             *       "queue": "root.xc_blxsxxxxxxink_1",
+             *       "resourceGroupType": "DW",
+             *       "specs": "{\"cluster\":\"xxxxxx\",\"bayesProjectName\":\"xc_blxxixxxnk_1\",\"bayesProjectId\":\"ssxxxsa\",\"name\":\"sxsxsxxx\",\"queue\":\"root.sxxsxxsx\"}",
+             *       "taskSameAsOwner": false
+             *     }
+             * 
+             * *   HOLO
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "endpoint": "hgprecn-cn-xsxssxsx-cn-shanghai-internal.hologres.aliyuncs.com:80",
+             *       "engineType": "ODPS",
+             *       "odpsEndpoint": "hgprecn-cn-xsxssxxs-cn-shanghai-internal.hologres.aliyuncs.com:80",
+             *       "odpsProjectName": "xsxssxsxsx",
+             *       "projectName": "xsxssxsxsx",
+             *       "resourceGroupType": "DW",
+             *       "specs": "{\"pubEndpoint\":\"hgprecn-cn-xsxssxsxs-cn-shanghai.hologres.aliyuncs.com:80\",\"commonBuyInstanceId\":\"hgprecn-cn-xsxsxsxs\",\"project\":\"holo_upxsxgrade1\",\"common_buy_instance_id\":\"hgprecn-cn-xsxsxs\",\"endpoint\":\"hgprecn-cn-xsxxsxs-cn-shanghai-internal.hologres.aliyuncs.com:80\",\"port\":\"80\",\"host\":\"hgprecn-cn-xsxsxsxs-cn-shanghai-internal.hologres.aliyuncs.com\",\"vpcEndpoint\":\"hgprecn-cn-xsxsxsxs-cn-shanghai-vpc.hologres.aliyuncs.com:80\",\"authType\":2,\"region\":\"cn-shanghai\"}",
+             *       "taskSameAsOwner": false
+             *     }
+             * 
+             * *   MaxGraph
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "endpoint": "http://pre-graphcompute.aliyuncs.com",
+             *       "engineType": "ODPS",
+             *       "odpsEndpoint": "http://pre-graphcompute.aliyuncs.com",
+             *       "odpsProjectName": "xsxsxsxs",
+             *       "projectName": "xsxsxsxs",
+             *       "resourceGroupType": "DW",
+             *       "taskSameAsOwner": false
+             *     }
+             * 
+             * *   HYBRIDDB_FOR_POSTGRESQL
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "endpoint": "hybriddb_for_postgresql_mo12121ck_endpoint",
+             *       "engineType": "ODPS",
+             *       "odpsEndpoint": "hybriddb_for_postgresql_m121212ock_endpoint",
+             *       "odpsProjectName": "sxasaxsaxaxas",
+             *       "projectName": "sxasaxsaxaxas",
+             *       "resourceGroupType": "DW",
+             *       "specs": "{\"connectionString\":\"gp-xsxsxsxxs.gpdb.rds.aliyuncs.com\",\"database\":\"xsxsxxsxs\",\"password\":\"xxxxxxx\",\"instanceId\":\"gp-cdcdacdacda\",\"port\":\"3432\",\"ownerId\":\"12121212\",\"username\":\"sdasaddsa\"}",
+             *       "taskSameAsOwner": false
+             *     }
+             * 
+             * *   ADB_MYSQL
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "endpoint": "adb_mysql_mock_endpoint",
+             *       "engineType": "ODPS",
+             *       "odpsEndpoint": "adb_mysql_mock_endpoint",
+             *       "odpsProjectName": "am-xsaxaxa",
+             *       "projectName": "am-xsxsaxa",
+             *       "resourceGroupType": "DW",
+             *       "specs": "{\"connectionString\":\"am-xsaxsa.ads.aliyuncs.com:3306\",\"database\":\"xsaxsaxa\",\"password\":\"xsaxsaxassxsa\",\"instanceId\":\"am-xsaxsasx\",\"username\":\"xsaxsadsd\"}",
+             *       "taskSameAsOwner": false
+             *     }
+             * 
+             * *   HADOOP_CDH
+             * 
+             * <!---->
+             * 
+             *     {
+             *       "bindingBaseId": "xsaxsaxs",
+             *       "endpoint": "xsaaaaa",
+             *       "engineType": "ODPS",
+             *       "odpsEndpoint": "axsxaxssxs",
+             *       "odpsProjectName": "ssxxax",
+             *       "projectName": "xsaxsaxsa",
+             *       "resourceGroupId": 45208xxxxxx,
+             *       "resourceGroupType": "GATEWAY",
+             *       "specs": "{\"cluster\":{\"hive\":{\"hiveServer2Url\":\"jdbc:hive2://xxxxxxer-1-cn-shanghai-pre-kerberos-1:10000\",\"hiveMetastore\":\"thrift://xxxxxxxr-1-cn-shanghai-pre-kerberos-1:9083\",\"version\":\"2.1.1\"},\"configFiles\":{\"coreSite\":\"4534574xxxxxx\",\"hdfsSite\":\"453457919xxxxxxx\",\"mapredSite\":\"45345750xxxxxx\",\"yarnSite\":\"4534575xxxxx\",\"krb5Conf\":\"4534576xxxxx1\",\"hiveSite\":\"453457xxxxx20\"},\"spark\":{\"version\":\"2.4.0\"},\"cdh\":{\"version\":\"6.3.2\"},\"hdfs\":{\"version\":\"3.0.0\"},\"impala\":{\"impalaUrl\":\"jdbc:impala://cdh-xsxssxxsx-1-cn-shanghai-pre-kerberos-1:21050\",\"version\":\"3.2.0\"},\"yarn\":{\"YarnUrl\":\"http://cdh-xsxsxsxsxs-1-cn-shanghai-pre-kerberos-1:8032\",\"webUrl\":\"http://cdh-xsxsxssxxssx-1-cn-shanghai-pre-kerberos-1:8088\",\"version\":\"3.0.0\"},\"presto\":{\"prestoUrl\":\"jdbc:presto://cdh-xssxsxxsxsxs-1-cn-shanghai-pre-kerberos-1:8080/hive/default\",\"version\":\"0.244.1\"}},\"instanceId\":161sdads733,\"authDetail\":{\"principal\":\"hive@HADOOP. COM\",\"keytabFileId\":\"45345815xsxsxs3\",\"type\":\"kerberos\",\"username\":\"xsxsxsxsa@HADOOP. COM\"},\"resGroupStatus\":\"\",\"hadoopAuthType\":\"kerberos\",\"clusterIdentifier\":\"xssxsxsxsx\",\"clusterId\":xsxsx,\"resGroupId\":4520870619xsxssxxs,\"accessMode\":\"security\",\"authType\":2}",
+             *       "taskSameAsOwner": false
+             *     }
              */
             public Builder engineInfo(java.util.Map < String, ? > engineInfo) {
                 this.engineInfo = engineInfo;
@@ -329,7 +454,11 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The environment in which the compute engine instance runs. Valid values:
+             * <p>
+             * 
+             * *   DEV: development environment
+             * *   PRD: production environment
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -337,7 +466,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the compute engine instance was created. This value is a timestamp.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -345,7 +474,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefault.
+             * Indicates whether the compute engine instance is the default instance of the current compute engine type.
              */
             public Builder isDefault(Boolean isDefault) {
                 this.isDefault = isDefault;
@@ -353,7 +482,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The display name of the compute engine instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -361,7 +490,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * Region.
+             * The ID of the region in which the compute engine instance resides.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -369,7 +498,13 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * TaskAuthType.
+             * The identity that is used to access the compute engine instance. Valid values:
+             * <p>
+             * 
+             * *   USER: current user
+             * *   PROJECT: workspace executor
+             * *   SUBACCOUNT: RAM user
+             * *   STS_ROLE: Security Token Service (STS) role
              */
             public Builder taskAuthType(String taskAuthType) {
                 this.taskAuthType = taskAuthType;
@@ -377,7 +512,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantId.
+             * The ID of the tenant.
              */
             public Builder tenantId(Long tenantId) {
                 this.tenantId = tenantId;
@@ -454,7 +589,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * CalcEngines.
+             * The compute engine instances.
              */
             public Builder calcEngines(java.util.List < CalcEngines> calcEngines) {
                 this.calcEngines = calcEngines;
@@ -462,7 +597,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -470,7 +605,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -478,7 +613,7 @@ public class ListCalcEnginesResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of compute engine instances.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

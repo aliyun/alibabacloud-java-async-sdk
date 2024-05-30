@@ -97,7 +97,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * The business data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The error code returned.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
         }
 
         /**
-         * The business data returned.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -297,7 +297,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             private String tableGuid; 
 
             /**
-             * The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The comment.
              */
             public Builder comment(String comment) {
                 this.comment = comment;
@@ -305,7 +305,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the partition.
+             * The time when the partition was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -313,7 +313,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The comment.
+             * The size of the partition. Unit: bytes.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -321,7 +321,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The number of entries in the partition.
+             * The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
              */
             public Builder modifiedTime(Long modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -329,7 +329,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the metatable.
+             * The GUID of the partition.
              */
             public Builder partitionGuid(String partitionGuid) {
                 this.partitionGuid = partitionGuid;
@@ -337,7 +337,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * PartitionLocation.
+             * The location of the Hive partition.
              */
             public Builder partitionLocation(String partitionLocation) {
                 this.partitionLocation = partitionLocation;
@@ -345,7 +345,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the partition was modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * The name of the partition.
              */
             public Builder partitionName(String partitionName) {
                 this.partitionName = partitionName;
@@ -353,7 +353,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the partition.
+             * The path of the partition.
              */
             public Builder partitionPath(String partitionPath) {
                 this.partitionPath = partitionPath;
@@ -361,7 +361,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The location of the Hive partition.
+             * The type of the partition.
              */
             public Builder partitionType(String partitionType) {
                 this.partitionType = partitionType;
@@ -369,7 +369,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The GUID of the partition.
+             * The number of entries in the partition.
              */
             public Builder recordCount(Long recordCount) {
                 this.recordCount = recordCount;
@@ -377,7 +377,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuid.
+             * The GUID of the metatable.
              */
             public Builder tableGuid(String tableGuid) {
                 this.tableGuid = tableGuid;
@@ -454,7 +454,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The size of the partition. Unit: bytes.
+             * The list of partitions.
              */
             public Builder dataEntityList(java.util.List < DataEntityList> dataEntityList) {
                 this.dataEntityList = dataEntityList;
@@ -462,7 +462,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of partitions.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -470,7 +470,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The list of partitions.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -478,7 +478,7 @@ public class GetMetaTablePartitionResponseBody extends TeaModel {
             }
 
             /**
-             * The path of the partition.
+             * The total number of partitions.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

@@ -107,7 +107,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The ID of the request.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -116,7 +116,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The results that are returned.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -125,7 +125,7 @@ public class ListProjectMembersRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         * The DataWorks workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);

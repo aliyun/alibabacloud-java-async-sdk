@@ -113,7 +113,7 @@ public class ListTableThemeRequest extends Request {
         } 
 
         /**
-         * The ID of the region where the service is activated.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

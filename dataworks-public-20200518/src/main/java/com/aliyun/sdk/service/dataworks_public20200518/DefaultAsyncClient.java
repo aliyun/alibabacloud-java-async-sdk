@@ -296,10 +296,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
-      *
-     */
     @Override
     public CompletableFuture<CreateDISyncTaskResponse> createDISyncTask(CreateDISyncTaskRequest request) {
         try {
@@ -2041,10 +2037,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * ****
-      *
-     */
     @Override
     public CompletableFuture<GetMetaTableBasicInfoResponse> getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request) {
         try {
@@ -2158,7 +2150,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
       *
      */
     @Override
@@ -2453,6 +2445,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+      *
+     */
     @Override
     public CompletableFuture<GetRemindResponse> getRemind(GetRemindRequest request) {
         try {
@@ -3068,7 +3065,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can configure only one of the Creator, Administrator, and Follower parameters.
+      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
       *
      */
     @Override
@@ -3251,6 +3248,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
+      *
+     */
     @Override
     public CompletableFuture<ListProjectRolesResponse> listProjectRoles(ListProjectRolesRequest request) {
         try {

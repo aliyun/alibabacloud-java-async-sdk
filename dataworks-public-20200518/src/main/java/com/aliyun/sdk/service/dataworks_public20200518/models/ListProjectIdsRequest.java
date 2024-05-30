@@ -68,7 +68,7 @@ public class ListProjectIdsRequest extends Request {
         } 
 
         /**
-         * The ID of the region in which DataWorks is activated. For example, the ID of the China (Shanghai) region is cn-shanghai, and that of the China (Zhangjiakou) region is cn-zhangjiakou. The system automatically determines the value of this parameter based on the endpoint used to call the operation.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);

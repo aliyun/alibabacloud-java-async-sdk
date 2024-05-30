@@ -146,10 +146,10 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+         * The ID of the E-MapReduce (EMR) cluster. This parameter is required only if you set the DataSourceType parameter to emr.
          * <p>
          * 
-         * You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
+         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -158,29 +158,11 @@ public class GetMetaTableBasicInfoRequest extends Request {
         }
 
         /**
-         * The HTTP status code returned.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
             this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
-         * The type of the data source. Valid values: odps and emr.
-         */
-        public Builder databaseName(String databaseName) {
-            this.putQueryParameter("DatabaseName", databaseName);
-            this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * The error message returned.
-         */
-        public Builder extension(Boolean extension) {
-            this.putQueryParameter("Extension", extension);
-            this.extension = extension;
             return this;
         }
 
@@ -190,9 +172,9 @@ public class GetMetaTableBasicInfoRequest extends Request {
          * 
          * You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.
          */
-        public Builder tableGuid(String tableGuid) {
-            this.putQueryParameter("TableGuid", tableGuid);
-            this.tableGuid = tableGuid;
+        public Builder databaseName(String databaseName) {
+            this.putQueryParameter("DatabaseName", databaseName);
+            this.databaseName = databaseName;
             return this;
         }
 
@@ -203,6 +185,27 @@ public class GetMetaTableBasicInfoRequest extends Request {
          * The extended fields include ReadCount, FavoriteCount, and ViewCount.
          * 
          * This parameter takes effect only if you set the DataSourceType parameter to odps.
+         */
+        public Builder extension(Boolean extension) {
+            this.putQueryParameter("Extension", extension);
+            this.extension = extension;
+            return this;
+        }
+
+        /**
+         * The GUID of the MaxCompute table. Specify the GUID in the odps.projectName.tableName format.
+         */
+        public Builder tableGuid(String tableGuid) {
+            this.putQueryParameter("TableGuid", tableGuid);
+            this.tableGuid = tableGuid;
+            return this;
+        }
+
+        /**
+         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+         * <p>
+         * 
+         * You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);

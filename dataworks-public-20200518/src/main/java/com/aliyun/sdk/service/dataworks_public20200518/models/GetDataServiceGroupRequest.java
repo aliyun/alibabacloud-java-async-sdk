@@ -107,7 +107,7 @@ public class GetDataServiceGroupRequest extends Request {
         }
 
         /**
-         * The ID of the business process.
+         * The business process ID.
          */
         public Builder groupId(String groupId) {
             this.putBodyParameter("GroupId", groupId);

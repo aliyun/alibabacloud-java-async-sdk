@@ -191,7 +191,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. We recommend that you set this parameter to a UUID.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -200,7 +200,12 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * DisableDevelopment.
+         * Specifies whether to disable the Development role. Valid values:
+         * <p>
+         * 
+         * *   false: enables the Development role.
+         * *   true: disables the Development role.
+         * *   Default value: false.
          */
         public Builder disableDevelopment(Boolean disableDevelopment) {
             this.putQueryParameter("DisableDevelopment", disableDevelopment);
@@ -209,7 +214,12 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * IsAllowDownload.
+         * Specifies whether query result download from DataStudio is allowed. Valid values:
+         * <p>
+         * 
+         * *   1: allowed
+         * *   0: not allowed
+         * *   Default value: 1.
          */
         public Builder isAllowDownload(Integer isAllowDownload) {
             this.putQueryParameter("IsAllowDownload", isAllowDownload);
@@ -218,7 +228,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ProjectDescription.
+         * The description of the workspace.
          */
         public Builder projectDescription(String projectDescription) {
             this.putQueryParameter("ProjectDescription", projectDescription);
@@ -227,7 +237,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ProjectIdentifier.
+         * The name of the workspace. The name can contain letters, digits, and underscores (\_) and must start with a letter or digit.
          */
         public Builder projectIdentifier(String projectIdentifier) {
             this.putQueryParameter("ProjectIdentifier", projectIdentifier);
@@ -236,7 +246,12 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ProjectMode.
+         * The mode of the workspace. For more information about the differences between the modes of workspaces, see [Differences between workspaces in basic mode and workspaces in standard mode](~~85772~~). Valid values:
+         * <p>
+         * 
+         * *   2: basic mode
+         * *   3: standard mode
+         * *   Default value: 2.
          */
         public Builder projectMode(Integer projectMode) {
             this.putQueryParameter("ProjectMode", projectMode);
@@ -245,7 +260,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ProjectName.
+         * The display name of the workspace.
          */
         public Builder projectName(String projectName) {
             this.putQueryParameter("ProjectName", projectName);
@@ -254,7 +269,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -263,7 +278,7 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");
@@ -320,7 +335,7 @@ public class CreateProjectRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -328,7 +343,7 @@ public class CreateProjectRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

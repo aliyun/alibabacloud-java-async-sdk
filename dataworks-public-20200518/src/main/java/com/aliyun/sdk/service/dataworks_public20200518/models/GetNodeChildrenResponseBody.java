@@ -181,6 +181,9 @@ public class GetNodeChildrenResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SchedulerType")
         private String schedulerType;
 
+        @com.aliyun.core.annotation.NameInMap("StepType")
+        private String stepType;
+
         private Nodes(Builder builder) {
             this.baselineId = builder.baselineId;
             this.cronExpress = builder.cronExpress;
@@ -192,6 +195,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             this.projectId = builder.projectId;
             this.repeatability = builder.repeatability;
             this.schedulerType = builder.schedulerType;
+            this.stepType = builder.stepType;
         }
 
         public static Builder builder() {
@@ -272,6 +276,13 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             return this.schedulerType;
         }
 
+        /**
+         * @return stepType
+         */
+        public String getStepType() {
+            return this.stepType;
+        }
+
         public static final class Builder {
             private Long baselineId; 
             private String cronExpress; 
@@ -283,6 +294,7 @@ public class GetNodeChildrenResponseBody extends TeaModel {
             private Long projectId; 
             private Boolean repeatability; 
             private String schedulerType; 
+            private String stepType; 
 
             /**
              * The ID of the baseline.
@@ -371,6 +383,14 @@ public class GetNodeChildrenResponseBody extends TeaModel {
              */
             public Builder schedulerType(String schedulerType) {
                 this.schedulerType = schedulerType;
+                return this;
+            }
+
+            /**
+             * StepType.
+             */
+            public Builder stepType(String stepType) {
+                this.stepType = stepType;
                 return this;
             }
 

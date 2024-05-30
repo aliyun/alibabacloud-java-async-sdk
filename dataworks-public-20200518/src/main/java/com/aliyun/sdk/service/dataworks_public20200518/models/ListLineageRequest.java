@@ -134,7 +134,11 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * Direction.
+         * The lineage type. Valid values:
+         * <p>
+         * 
+         * *   up: ancestor lineage
+         * *   down: descendant lineage
          */
         public Builder direction(String direction) {
             this.putQueryParameter("Direction", direction);
@@ -143,7 +147,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * EntityQualifiedName.
+         * The unique identifier of the entity.
          */
         public Builder entityQualifiedName(String entityQualifiedName) {
             this.putQueryParameter("EntityQualifiedName", entityQualifiedName);
@@ -152,7 +156,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword of the entity name.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -161,7 +165,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -170,7 +174,7 @@ public class ListLineageRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

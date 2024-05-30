@@ -160,8 +160,14 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Connection")
         private String connection;
 
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        private Long createTime;
+
         @com.aliyun.core.annotation.NameInMap("CronExpress")
         private String cronExpress;
+
+        @com.aliyun.core.annotation.NameInMap("DeployDate")
+        private Long deployDate;
 
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
@@ -172,8 +178,17 @@ public class ListNodesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DqcType")
         private Integer dqcType;
 
+        @com.aliyun.core.annotation.NameInMap("FileId")
+        private Long fileId;
+
         @com.aliyun.core.annotation.NameInMap("FileType")
         private Integer fileType;
+
+        @com.aliyun.core.annotation.NameInMap("FileVersion")
+        private Integer fileVersion;
+
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
+        private Long modifyTime;
 
         @com.aliyun.core.annotation.NameInMap("NodeId")
         private Long nodeId;
@@ -218,11 +233,16 @@ public class ListNodesResponseBody extends TeaModel {
             this.baselineId = builder.baselineId;
             this.businessId = builder.businessId;
             this.connection = builder.connection;
+            this.createTime = builder.createTime;
             this.cronExpress = builder.cronExpress;
+            this.deployDate = builder.deployDate;
             this.description = builder.description;
             this.dqcDescription = builder.dqcDescription;
             this.dqcType = builder.dqcType;
+            this.fileId = builder.fileId;
             this.fileType = builder.fileType;
+            this.fileVersion = builder.fileVersion;
+            this.modifyTime = builder.modifyTime;
             this.nodeId = builder.nodeId;
             this.nodeName = builder.nodeName;
             this.ownerId = builder.ownerId;
@@ -268,10 +288,24 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return createTime
+         */
+        public Long getCreateTime() {
+            return this.createTime;
+        }
+
+        /**
          * @return cronExpress
          */
         public String getCronExpress() {
             return this.cronExpress;
+        }
+
+        /**
+         * @return deployDate
+         */
+        public Long getDeployDate() {
+            return this.deployDate;
         }
 
         /**
@@ -296,10 +330,31 @@ public class ListNodesResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileId
+         */
+        public Long getFileId() {
+            return this.fileId;
+        }
+
+        /**
          * @return fileType
          */
         public Integer getFileType() {
             return this.fileType;
+        }
+
+        /**
+         * @return fileVersion
+         */
+        public Integer getFileVersion() {
+            return this.fileVersion;
+        }
+
+        /**
+         * @return modifyTime
+         */
+        public Long getModifyTime() {
+            return this.modifyTime;
         }
 
         /**
@@ -397,11 +452,16 @@ public class ListNodesResponseBody extends TeaModel {
             private Long baselineId; 
             private Long businessId; 
             private String connection; 
+            private Long createTime; 
             private String cronExpress; 
+            private Long deployDate; 
             private String description; 
             private String dqcDescription; 
             private Integer dqcType; 
+            private Long fileId; 
             private Integer fileType; 
+            private Integer fileVersion; 
+            private Long modifyTime; 
             private Long nodeId; 
             private String nodeName; 
             private String ownerId; 
@@ -441,10 +501,26 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
+             * CreateTime.
+             */
+            public Builder createTime(Long createTime) {
+                this.createTime = createTime;
+                return this;
+            }
+
+            /**
              * The name of the workflow.
              */
             public Builder cronExpress(String cronExpress) {
                 this.cronExpress = cronExpress;
+                return this;
+            }
+
+            /**
+             * DeployDate.
+             */
+            public Builder deployDate(Long deployDate) {
+                this.deployDate = deployDate;
                 return this;
             }
 
@@ -473,10 +549,34 @@ public class ListNodesResponseBody extends TeaModel {
             }
 
             /**
+             * FileId.
+             */
+            public Builder fileId(Long fileId) {
+                this.fileId = fileId;
+                return this;
+            }
+
+            /**
              * FileType.
              */
             public Builder fileType(Integer fileType) {
                 this.fileType = fileType;
+                return this;
+            }
+
+            /**
+             * FileVersion.
+             */
+            public Builder fileVersion(Integer fileVersion) {
+                this.fileVersion = fileVersion;
+                return this;
+            }
+
+            /**
+             * ModifyTime.
+             */
+            public Builder modifyTime(Long modifyTime) {
+                this.modifyTime = modifyTime;
                 return this;
             }
 

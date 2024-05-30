@@ -61,7 +61,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The information that indicates whether the data synchronization task is created.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -69,7 +69,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values: true and false.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -141,7 +141,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * FileId.
+             * The ID of the data synchronization task that is created.
              */
             public Builder fileId(Long fileId) {
                 this.fileId = fileId;
@@ -149,7 +149,7 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message that is returned if the data synchronization task fails to be created. If the data synchronization task is successfully created, this parameter is not returned. If the data synchronization task fails to be created, an error message in the "Invalid path: Business Flow/xxxx/Data Integration" format is returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -157,7 +157,10 @@ public class CreateDISyncTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The creation status of the data synchronization task. Valid values:
+             * <p>
+             * - success 
+             * - fail
              */
             public Builder status(String status) {
                 this.status = status;

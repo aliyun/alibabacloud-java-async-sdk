@@ -174,10 +174,10 @@ public class GetMetaTablePartitionRequest extends Request {
         }
 
         /**
-         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
          * <p>
          * 
-         * You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
+         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -186,54 +186,11 @@ public class GetMetaTablePartitionRequest extends Request {
         }
 
         /**
-         * The field that is used to sort partitions in the metatable. Valid values: name and modify_time.
-         * <p>
-         * 
-         * By default, partitions in the metatable are sorted based on their creation time.
+         * The type of the data source. Valid values: odps and emr.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
             this.dataSourceType = dataSourceType;
-            return this;
-        }
-
-        /**
-         * The type of the data source. Valid values: odps and emr.
-         */
-        public Builder databaseName(String databaseName) {
-            this.putQueryParameter("DatabaseName", databaseName);
-            this.databaseName = databaseName;
-            return this;
-        }
-
-        /**
-         * The GUID of the metatable.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putQueryParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
-            return this;
-        }
-
-        /**
-         * The ID of the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
-         * <p>
-         * 
-         * You can log on to the [EMR console](https://emr.console.aliyun.com/?spm=a2c4g.11186623.0.0.965cc5c2GeiHet#/cn-hangzhou) to obtain the ID of the EMR cluster.
-         */
-        public Builder pageSize(Integer pageSize) {
-            this.putQueryParameter("PageSize", pageSize);
-            this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * The order in which partitions in the metatable are sorted. Valid values: asc and desc. Default value: desc.
-         */
-        public Builder sortCriterion(SortCriterion sortCriterion) {
-            String sortCriterionShrink = shrink(sortCriterion, "SortCriterion", "json");
-            this.putQueryParameter("SortCriterion", sortCriterionShrink);
-            this.sortCriterion = sortCriterion;
             return this;
         }
 
@@ -243,6 +200,43 @@ public class GetMetaTablePartitionRequest extends Request {
          * 
          * You can call the [ListMetaDB](~~185662~~) operation to query the name of the metadatabase.
          */
+        public Builder databaseName(String databaseName) {
+            this.putQueryParameter("DatabaseName", databaseName);
+            this.databaseName = databaseName;
+            return this;
+        }
+
+        /**
+         * The number of the page to return.
+         */
+        public Builder pageNumber(Integer pageNumber) {
+            this.putQueryParameter("PageNumber", pageNumber);
+            this.pageNumber = pageNumber;
+            return this;
+        }
+
+        /**
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
+         */
+        public Builder pageSize(Integer pageSize) {
+            this.putQueryParameter("PageSize", pageSize);
+            this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * The logic for sorting partitions in the metatable.
+         */
+        public Builder sortCriterion(SortCriterion sortCriterion) {
+            String sortCriterionShrink = shrink(sortCriterion, "SortCriterion", "json");
+            this.putQueryParameter("SortCriterion", sortCriterionShrink);
+            this.sortCriterion = sortCriterion;
+            return this;
+        }
+
+        /**
+         * The GUID of the metatable.
+         */
         public Builder tableGuid(String tableGuid) {
             this.putQueryParameter("TableGuid", tableGuid);
             this.tableGuid = tableGuid;
@@ -250,7 +244,10 @@ public class GetMetaTablePartitionRequest extends Request {
         }
 
         /**
-         * The logic for sorting partitions in the metatable.
+         * The name of the metatable in the EMR cluster. This parameter is required only if you set the DataSourceType parameter to emr.
+         * <p>
+         * 
+         * You can call the [GetMetaDBTableList](~~173916~~) operation to query the name of the metatable.
          */
         public Builder tableName(String tableName) {
             this.putQueryParameter("TableName", tableName);
@@ -304,7 +301,7 @@ public class GetMetaTablePartitionRequest extends Request {
             private String sortField; 
 
             /**
-             * The error message returned.
+             * The order in which partitions in the metatable are sorted. Valid values: asc and desc. Default value: desc.
              */
             public Builder order(String order) {
                 this.order = order;
@@ -312,7 +309,10 @@ public class GetMetaTablePartitionRequest extends Request {
             }
 
             /**
-             * The HTTP status code returned.
+             * The field that is used to sort partitions in the metatable. Valid values: name and modify_time.
+             * <p>
+             * 
+             * By default, partitions in the metatable are sorted based on their creation time.
              */
             public Builder sortField(String sortField) {
                 this.sortField = sortField;

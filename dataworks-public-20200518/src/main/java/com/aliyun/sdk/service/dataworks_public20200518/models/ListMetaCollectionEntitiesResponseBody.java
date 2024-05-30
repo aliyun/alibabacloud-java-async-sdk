@@ -97,7 +97,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The token that is used for the next query.
+         * The object returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The error message returned.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,10 +121,18 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
+            return this;
+        }
+
+        /**
+         * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
             return this;
         }
 
@@ -135,14 +143,6 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
          * true: The request was successful.
          * 
          * false: The request failed.
-         */
-        public Builder requestId(String requestId) {
-            this.requestId = requestId;
-            return this;
-        }
-
-        /**
-         * The error code returned.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -194,7 +194,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * The ID of the request. You can use the ID to query logs and troubleshoot issues.
+             * The entities.
              */
             public Builder entityList(java.util.List < Entity > entityList) {
                 this.entityList = entityList;
@@ -202,7 +202,7 @@ public class ListMetaCollectionEntitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The entities.
+             * The token that is used for the next query.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

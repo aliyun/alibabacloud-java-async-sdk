@@ -105,7 +105,7 @@ public class GetMetaTableListByCategoryRequest extends Request {
         }
 
         /**
-         * CategoryId.
+         * The ID of the category. You can call the [GetMetaCategory](~~173932~~) operation to query the ID of the category. Categories allow you to efficiently organize and manage tables by category. You can search for the desired table by category.
          */
         public Builder categoryId(Long categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -114,7 +114,7 @@ public class GetMetaTableListByCategoryRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -123,7 +123,7 @@ public class GetMetaTableListByCategoryRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 10. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

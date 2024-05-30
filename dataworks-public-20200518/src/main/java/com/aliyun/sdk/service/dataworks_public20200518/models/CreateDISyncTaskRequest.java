@@ -149,7 +149,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. This parameter can be left empty
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -158,7 +158,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * ProjectId.
+         * The DataWorks workspace ID. You can log on to the [DataWorks console](https://workbench.data.aliyun.com/console) and go to the Workspace page to obtain the workspace ID.
          */
         public Builder projectId(Long projectId) {
             this.putQueryParameter("ProjectId", projectId);
@@ -167,7 +167,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskContent.
+         * The configurations of the batch synchronization task to be created. Calling this API operation to create a batch synchronization task is equivalent to creating a batch synchronization task by using the code editor in the DataWorks console. For more information, see [Create a synchronization node by using the code editor](~~137717~~).
          */
         public Builder taskContent(String taskContent) {
             this.putQueryParameter("TaskContent", taskContent);
@@ -176,7 +176,7 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskName.
+         * The name of the data synchronization task.
          */
         public Builder taskName(String taskName) {
             this.putQueryParameter("TaskName", taskName);
@@ -185,7 +185,10 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskParam.
+         * The settings that specify the storage path of the data synchronization task and the resource group used by the task. The following parameters are supported:
+         * <p>
+         * - FileFolderPath: the storage path of the data synchronization task. 
+         * - ResourceGroup: the identifier of the resource group for Data Integration that is used by the data synchronization task. You can call the [ListResourceGroup](~~173913~~) operation to query the identifier of the resource group.
          */
         public Builder taskParam(String taskParam) {
             this.putQueryParameter("TaskParam", taskParam);
@@ -194,7 +197,9 @@ public class CreateDISyncTaskRequest extends Request {
         }
 
         /**
-         * TaskType.
+         * The type of the data synchronization task. 
+         * <p>
+         * Valid values: DI_OFFLINE, DI_REALTIME, and DI_SOLUTION.
          */
         public Builder taskType(String taskType) {
             this.putQueryParameter("TaskType", taskType);

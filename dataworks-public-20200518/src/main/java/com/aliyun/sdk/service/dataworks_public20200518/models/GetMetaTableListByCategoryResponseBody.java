@@ -97,7 +97,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The business data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -105,7 +105,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code returned.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -113,7 +113,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -121,7 +121,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -129,7 +129,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -213,7 +213,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * PageNumber.
+             * The page number of the returned page.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -221,7 +221,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * PageSize.
+             * The number of entries returned per page. Default value: 10. Maximum value: 100.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -229,7 +229,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TableGuidList.
+             * The returned result.
              */
             public Builder tableGuidList(java.util.List < String > tableGuidList) {
                 this.tableGuidList = tableGuidList;
@@ -237,7 +237,7 @@ public class GetMetaTableListByCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The total number of metatables.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;

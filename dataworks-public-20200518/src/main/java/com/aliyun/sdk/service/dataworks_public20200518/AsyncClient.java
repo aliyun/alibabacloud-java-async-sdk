@@ -59,10 +59,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDIJobResponse> createDIJob(CreateDIJobRequest request);
 
-    /**
-      * DataWorks allows you to use only the CreateDISyncTask operation to create a batch synchronization node in Data Integration. To create a real-time synchronization node or a synchronization solution, you must first call the [GenerateDISyncTaskConfigForCreating](~~383463~~) operation to generate the ID of an asynchronous thread and call the [QueryDISyncTaskConfigProcessResult](~~383465~~) operation to obtain the asynchronously generated parameters based on the ID. Then, you can call the CreateDISyncTask operation and use the parameters as request parameters to create a real-time synchronization node or a synchronization solution in Data Integration.
-      *
-     */
     CompletableFuture<CreateDISyncTaskResponse> createDISyncTask(CreateDISyncTaskRequest request);
 
     /**
@@ -376,10 +372,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetMetaDBTableListResponse> getMetaDBTableList(GetMetaDBTableListRequest request);
 
-    /**
-      * ****
-      *
-     */
     CompletableFuture<GetMetaTableBasicInfoResponse> getMetaTableBasicInfo(GetMetaTableBasicInfoRequest request);
 
     CompletableFuture<GetMetaTableChangeLogResponse> getMetaTableChangeLog(GetMetaTableChangeLogRequest request);
@@ -397,7 +389,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetMetaTableOutputResponse> getMetaTableOutput(GetMetaTableOutputRequest request);
 
     /**
-      * The operation that you want to perform. Set the value to **GetMetaTablePartition**.
+      * You can call this operation to query only the partitions of a metatable in a MaxCompute or E-MapReduce (EMR) compute engine instance.
       *
      */
     CompletableFuture<GetMetaTablePartitionResponse> getMetaTablePartition(GetMetaTablePartitionRequest request);
@@ -452,6 +444,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetQualityRuleResponse> getQualityRule(GetQualityRuleRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=GetRemind\\&type=RPC\\&version=2020-05-18)
+      *
+     */
     CompletableFuture<GetRemindResponse> getRemind(GetRemindRequest request);
 
     CompletableFuture<GetSensitiveDataResponse> getSensitiveData(GetSensitiveDataRequest request);
@@ -563,7 +560,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListMetaCollectionEntitiesResponse> listMetaCollectionEntities(ListMetaCollectionEntitiesRequest request);
 
     /**
-      * You can configure only one of the Creator, Administrator, and Follower parameters.
+      * The type can be ALBUM or ALBUM_CATEGORY. ALBUM indicates data albums. ALBUM_CATEGORY indicates categories.
       *
      */
     CompletableFuture<ListMetaCollectionsResponse> listMetaCollections(ListMetaCollectionsRequest request);
@@ -602,6 +599,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListProjectMembersResponse> listProjectMembers(ListProjectMembersRequest request);
 
+    /**
+      * ## Debugging
+      * [OpenAPI Explorer automatically calculates the signature value. For your convenience, we recommend that you call this operation in OpenAPI Explorer. OpenAPI Explorer dynamically generates the sample code of the operation for different SDKs.](https://api.aliyun.com/#product=dataworks-public\\&api=ListProjectRoles\\&type=RPC\\&version=2020-05-18)
+      *
+     */
     CompletableFuture<ListProjectRolesResponse> listProjectRoles(ListProjectRolesRequest request);
 
     CompletableFuture<ListProjectsResponse> listProjects(ListProjectsRequest request);

@@ -73,7 +73,7 @@ public class CreateProjectResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Data.
+         * The workspace ID.
          */
         public Builder data(Long data) {
             this.data = data;
@@ -81,7 +81,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code returned.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -89,7 +89,7 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the ID to locate logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,11 @@ public class CreateProjectResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true: The request was successful.
+         * *   false: The request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -133,10 +133,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The type of the entities.
-         * <p>
-         * 
-         * For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.
+         * The unique identifier of the collection.
          */
         public Builder collectionQualifiedName(String collectionQualifiedName) {
             this.putQueryParameter("CollectionQualifiedName", collectionQualifiedName);
@@ -145,7 +142,10 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The search keyword.
+         * The type of the entities.
+         * <p>
+         * 
+         * For example, if this parameter is set to maxcompute-table, the entity is a MaxCompute table.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -154,7 +154,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The paging information. This parameter specifies the start point of the query.
+         * The search keyword.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -163,7 +163,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The paging information. This parameter specifies the start point of the query.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -172,7 +172,7 @@ public class ListMetaCollectionEntitiesRequest extends Request {
         }
 
         /**
-         * The object returned.
+         * The number of entries to return on each page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

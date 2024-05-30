@@ -49,7 +49,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The number of entries returned per page. Default value: 10. Maximum value: 100.
+         * The results that are returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,10 +133,21 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String projectRoleType; 
 
             /**
-             * ProjectRoleCode.
+             * The code of the role.
+             * <p>
+             * 
+             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
              */
             public Builder projectRoleCode(String projectRoleCode) {
                 this.projectRoleCode = projectRoleCode;
+                return this;
+            }
+
+            /**
+             * The role ID.
+             */
+            public Builder projectRoleId(Integer projectRoleId) {
+                this.projectRoleId = projectRoleId;
                 return this;
             }
 
@@ -146,24 +157,17 @@ public class ListProjectMembersResponseBody extends TeaModel {
              * 
              * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
              */
-            public Builder projectRoleId(Integer projectRoleId) {
-                this.projectRoleId = projectRoleId;
-                return this;
-            }
-
-            /**
-             * ProjectRoleName.
-             */
             public Builder projectRoleName(String projectRoleName) {
                 this.projectRoleName = projectRoleName;
                 return this;
             }
 
             /**
-             * The code of the role.
+             * The type of the role. Valid values:
              * <p>
              * 
-             * DataWorks provides built-in roles and allows you to create custom roles based on your business requirements. For more information about roles, see [Overview of users, roles, and permissions](~~295463~~).
+             * *   0: SYSTEM, which indicates that the role is a built-in role.
+             * *   2: USER_CUSTOM, which indicates that the role is a custom role.
              */
             public Builder projectRoleType(String projectRoleType) {
                 this.projectRoleType = projectRoleType;
@@ -264,12 +268,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The type of the member. Valid values:
-             * <p>
-             * 
-             * *   1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.
-             * *   5: USER_UBACCOUNT, which indicates that the member is a RAM user.
-             * *   6: USER_STS_ROLE, which indicates that the member is a RAM role.
+             * The nickname of the member.
              */
             public Builder nick(String nick) {
                 this.nick = nick;
@@ -277,7 +276,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the member.
+             * The member ID.
              */
             public Builder projectMemberId(String projectMemberId) {
                 this.projectMemberId = projectMemberId;
@@ -285,7 +284,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The roles that are assigned to the member.
+             * The name of the member.
              */
             public Builder projectMemberName(String projectMemberName) {
                 this.projectMemberName = projectMemberName;
@@ -293,7 +292,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the role.
+             * The type of the member. Valid values:
+             * <p>
+             * 
+             * *   1: USER_ALIYUN, which indicates that the member is an Alibaba Cloud account.
+             * *   5: USER_UBACCOUNT, which indicates that the member is a RAM user.
+             * *   6: USER_STS_ROLE, which indicates that the member is a RAM role.
              */
             public Builder projectMemberType(String projectMemberType) {
                 this.projectMemberType = projectMemberType;
@@ -301,11 +305,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the role. Valid values:
-             * <p>
-             * 
-             * *   0: SYSTEM, which indicates that the role is a built-in role.
-             * *   2: USER_CUSTOM, which indicates that the role is a custom role.
+             * The roles that are assigned to the member.
              */
             public Builder projectRoleList(java.util.List < ProjectRoleList> projectRoleList) {
                 this.projectRoleList = projectRoleList;
@@ -313,7 +313,12 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The nickname of the member.
+             * The status of the member. Valid values:
+             * <p>
+             * 
+             * *   0: NORMAL, which indicates that the member is in a normal state.
+             * *   1: FORBIDDEN, which indicates that the member is disabled.
+             * *   2: DELETED, which indicates that the member is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -390,7 +395,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * The total number of entries returned.
+             * The page number.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;
@@ -398,7 +403,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The information of members in the DataWorks workspace.
+             * The number of entries per page. Valid values: 1 to 100. Default value: 10.
              */
             public Builder pageSize(Integer pageSize) {
                 this.pageSize = pageSize;
@@ -406,7 +411,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the member.
+             * The information of members in the DataWorks workspace.
              */
             public Builder projectMemberList(java.util.List < ProjectMemberList> projectMemberList) {
                 this.projectMemberList = projectMemberList;
@@ -414,12 +419,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the member. Valid values:
-             * <p>
-             * 
-             * *   0: NORMAL, which indicates that the member is in a normal state.
-             * *   1: FORBIDDEN, which indicates that the member is disabled.
-             * *   2: DELETED, which indicates that the member is deleted.
+             * The total number of entries returned.
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;
