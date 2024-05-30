@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,140 +11,140 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InitFaceVerifyRequest</p>
  */
 public class InitFaceVerifyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AuthId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuthId")
     private String authId;
 
-    @Query
-    @NameInMap("Birthday")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Birthday")
     private String birthday;
 
-    @Query
-    @NameInMap("CallbackToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackToken")
     private String callbackToken;
 
-    @Query
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertNo")
     private String certNo;
 
-    @Query
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Query
-    @NameInMap("CertifyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertifyId")
     private String certifyId;
 
-    @Query
-    @NameInMap("CertifyUrlStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertifyUrlStyle")
     private String certifyUrlStyle;
 
-    @Query
-    @NameInMap("CertifyUrlType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertifyUrlType")
     private String certifyUrlType;
 
-    @Body
-    @NameInMap("Crop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
-    @Query
-    @NameInMap("EncryptType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptType")
     private String encryptType;
 
-    @Body
-    @NameInMap("FaceContrastPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPicture")
     private String faceContrastPicture;
 
-    @Query
-    @NameInMap("FaceContrastPictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPictureUrl")
     private String faceContrastPictureUrl;
 
-    @Query
-    @NameInMap("FaceGuardOutput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceGuardOutput")
     private String faceGuardOutput;
 
-    @Query
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Query
-    @NameInMap("MetaInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetaInfo")
     private String metaInfo;
 
-    @Query
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Body
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
-    @Query
-    @NameInMap("OssBucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
-    @Query
-    @NameInMap("OssObjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObjectName")
     private String ossObjectName;
 
-    @Query
-    @NameInMap("OuterOrderNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterOrderNo")
     private String outerOrderNo;
 
-    @Query
-    @NameInMap("ProcedurePriority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcedurePriority")
     private String procedurePriority;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("RarelyCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RarelyCharacters")
     private String rarelyCharacters;
 
-    @Query
-    @NameInMap("ReadImg")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReadImg")
     private String readImg;
 
-    @Query
-    @NameInMap("ReturnUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnUrl")
     private String returnUrl;
 
-    @Query
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private Long sceneId;
 
-    @Query
-    @NameInMap("SuitableType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SuitableType")
     private String suitableType;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("ValidityDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ValidityDate")
     private String validityDate;
 
-    @Query
-    @NameInMap("VoluntaryCustomizedContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VoluntaryCustomizedContent")
     private String voluntaryCustomizedContent;
 
     private InitFaceVerifyRequest(Builder builder) {

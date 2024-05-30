@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InitFaceVerifyResponseBody</p>
  */
 public class InitFaceVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultObject")
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
     private ResultObject resultObject;
 
     private InitFaceVerifyResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class InitFaceVerifyResponseBody extends TeaModel {
     } 
 
     public static class ResultObject extends TeaModel {
-        @NameInMap("CertifyId")
+        @com.aliyun.core.annotation.NameInMap("CertifyId")
         private String certifyId;
 
-        @NameInMap("CertifyUrl")
+        @com.aliyun.core.annotation.NameInMap("CertifyUrl")
         private String certifyUrl;
 
         private ResultObject(Builder builder) {

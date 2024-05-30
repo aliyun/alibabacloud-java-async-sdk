@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVerifySettingRequest</p>
  */
 public class CreateVerifySettingRequest extends Request {
-    @Query
-    @NameInMap("BizName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizName;
 
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("GuideStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GuideStep")
     private Boolean guideStep;
 
-    @Query
-    @NameInMap("PrivacyStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrivacyStep")
     private Boolean privacyStep;
 
-    @Query
-    @NameInMap("ResultStep")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultStep")
     private Boolean resultStep;
 
-    @Query
-    @NameInMap("Solution")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Solution")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String solution;
 
     private CreateVerifySettingRequest(Builder builder) {

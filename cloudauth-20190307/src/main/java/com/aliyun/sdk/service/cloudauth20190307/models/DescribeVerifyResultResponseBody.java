@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVerifyResultResponseBody</p>
  */
 public class DescribeVerifyResultResponseBody extends TeaModel {
-    @NameInMap("AuthorityComparisionScore")
+    @com.aliyun.core.annotation.NameInMap("AuthorityComparisionScore")
     private Float authorityComparisionScore;
 
-    @NameInMap("FaceComparisonScore")
+    @com.aliyun.core.annotation.NameInMap("FaceComparisonScore")
     private Float faceComparisonScore;
 
-    @NameInMap("IdCardFaceComparisonScore")
+    @com.aliyun.core.annotation.NameInMap("IdCardFaceComparisonScore")
     private Float idCardFaceComparisonScore;
 
-    @NameInMap("Material")
+    @com.aliyun.core.annotation.NameInMap("Material")
     private Material material;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VerifyStatus")
+    @com.aliyun.core.annotation.NameInMap("VerifyStatus")
     private Integer verifyStatus;
 
     private DescribeVerifyResultResponseBody(Builder builder) {
@@ -152,34 +151,34 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
     } 
 
     public static class IdCardInfo extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Authority")
+        @com.aliyun.core.annotation.NameInMap("Authority")
         private String authority;
 
-        @NameInMap("BackImageUrl")
+        @com.aliyun.core.annotation.NameInMap("BackImageUrl")
         private String backImageUrl;
 
-        @NameInMap("Birth")
+        @com.aliyun.core.annotation.NameInMap("Birth")
         private String birth;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("FrontImageUrl")
+        @com.aliyun.core.annotation.NameInMap("FrontImageUrl")
         private String frontImageUrl;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Nationality")
+        @com.aliyun.core.annotation.NameInMap("Nationality")
         private String nationality;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
         private IdCardInfo(Builder builder) {
@@ -373,28 +372,28 @@ public class DescribeVerifyResultResponseBody extends TeaModel {
 
     }
     public static class Material extends TeaModel {
-        @NameInMap("FaceGlobalUrl")
+        @com.aliyun.core.annotation.NameInMap("FaceGlobalUrl")
         private String faceGlobalUrl;
 
-        @NameInMap("FaceImageUrl")
+        @com.aliyun.core.annotation.NameInMap("FaceImageUrl")
         private String faceImageUrl;
 
-        @NameInMap("FaceMask")
+        @com.aliyun.core.annotation.NameInMap("FaceMask")
         private Boolean faceMask;
 
-        @NameInMap("FaceQuality")
+        @com.aliyun.core.annotation.NameInMap("FaceQuality")
         private String faceQuality;
 
-        @NameInMap("IdCardInfo")
+        @com.aliyun.core.annotation.NameInMap("IdCardInfo")
         private IdCardInfo idCardInfo;
 
-        @NameInMap("IdCardName")
+        @com.aliyun.core.annotation.NameInMap("IdCardName")
         private String idCardName;
 
-        @NameInMap("IdCardNumber")
+        @com.aliyun.core.annotation.NameInMap("IdCardNumber")
         private String idCardNumber;
 
-        @NameInMap("VideoUrls")
+        @com.aliyun.core.annotation.NameInMap("VideoUrls")
         private java.util.List < String > videoUrls;
 
         private Material(Builder builder) {

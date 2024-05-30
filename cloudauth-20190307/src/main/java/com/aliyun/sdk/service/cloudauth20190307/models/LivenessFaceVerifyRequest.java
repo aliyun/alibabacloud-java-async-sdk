@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LivenessFaceVerifyRequest</p>
  */
 public class LivenessFaceVerifyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CertifyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertifyId")
     private String certifyId;
 
-    @Body
-    @NameInMap("Crop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
-    @Body
-    @NameInMap("DeviceToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceToken")
     private String deviceToken;
 
-    @Body
-    @NameInMap("FaceContrastPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPicture")
     private String faceContrastPicture;
 
-    @Body
-    @NameInMap("FaceContrastPictureUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPictureUrl")
     private String faceContrastPictureUrl;
 
-    @Body
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @Body
-    @NameInMap("Mobile")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mobile")
     private String mobile;
 
-    @Query
-    @NameInMap("Model")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Model")
     private String model;
 
-    @Body
-    @NameInMap("OssBucketName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
-    @Body
-    @NameInMap("OssObjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssObjectName")
     private String ossObjectName;
 
-    @Body
-    @NameInMap("OuterOrderNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OuterOrderNo")
     private String outerOrderNo;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private Long sceneId;
 
-    @Body
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private LivenessFaceVerifyRequest(Builder builder) {

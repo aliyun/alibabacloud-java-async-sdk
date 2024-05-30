@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetectFaceAttributesResponseBody</p>
  */
 public class DetectFaceAttributesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DetectFaceAttributesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
     } 
 
     public static class Headpose extends TeaModel {
-        @NameInMap("PitchAngle")
+        @com.aliyun.core.annotation.NameInMap("PitchAngle")
         private Float pitchAngle;
 
-        @NameInMap("RollAngle")
+        @com.aliyun.core.annotation.NameInMap("RollAngle")
         private Float rollAngle;
 
-        @NameInMap("YawAngle")
+        @com.aliyun.core.annotation.NameInMap("YawAngle")
         private Float yawAngle;
 
         private Headpose(Builder builder) {
@@ -213,10 +212,10 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class Smiling extends TeaModel {
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private Smiling(Builder builder) {
@@ -274,28 +273,28 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class FaceAttributes extends TeaModel {
-        @NameInMap("Blur")
+        @com.aliyun.core.annotation.NameInMap("Blur")
         private Float blur;
 
-        @NameInMap("Facequal")
+        @com.aliyun.core.annotation.NameInMap("Facequal")
         private Float facequal;
 
-        @NameInMap("Facetype")
+        @com.aliyun.core.annotation.NameInMap("Facetype")
         private String facetype;
 
-        @NameInMap("Glasses")
+        @com.aliyun.core.annotation.NameInMap("Glasses")
         private String glasses;
 
-        @NameInMap("Headpose")
+        @com.aliyun.core.annotation.NameInMap("Headpose")
         private Headpose headpose;
 
-        @NameInMap("Integrity")
+        @com.aliyun.core.annotation.NameInMap("Integrity")
         private Integer integrity;
 
-        @NameInMap("Respirator")
+        @com.aliyun.core.annotation.NameInMap("Respirator")
         private String respirator;
 
-        @NameInMap("Smiling")
+        @com.aliyun.core.annotation.NameInMap("Smiling")
         private Smiling smiling;
 
         private FaceAttributes(Builder builder) {
@@ -455,16 +454,16 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class FaceRect extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Left")
+        @com.aliyun.core.annotation.NameInMap("Left")
         private Integer left;
 
-        @NameInMap("Top")
+        @com.aliyun.core.annotation.NameInMap("Top")
         private Integer top;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private FaceRect(Builder builder) {
@@ -556,10 +555,10 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class FaceAttributesDetectInfo extends TeaModel {
-        @NameInMap("FaceAttributes")
+        @com.aliyun.core.annotation.NameInMap("FaceAttributes")
         private FaceAttributes faceAttributes;
 
-        @NameInMap("FaceRect")
+        @com.aliyun.core.annotation.NameInMap("FaceRect")
         private FaceRect faceRect;
 
         private FaceAttributesDetectInfo(Builder builder) {
@@ -617,7 +616,7 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class FaceInfos extends TeaModel {
-        @NameInMap("FaceAttributesDetectInfo")
+        @com.aliyun.core.annotation.NameInMap("FaceAttributesDetectInfo")
         private java.util.List < FaceAttributesDetectInfo> faceAttributesDetectInfo;
 
         private FaceInfos(Builder builder) {
@@ -658,13 +657,13 @@ public class DetectFaceAttributesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("FaceInfos")
+        @com.aliyun.core.annotation.NameInMap("FaceInfos")
         private FaceInfos faceInfos;
 
-        @NameInMap("ImgHeight")
+        @com.aliyun.core.annotation.NameInMap("ImgHeight")
         private Integer imgHeight;
 
-        @NameInMap("ImgWidth")
+        @com.aliyun.core.annotation.NameInMap("ImgWidth")
         private Integer imgWidth;
 
         private Data(Builder builder) {

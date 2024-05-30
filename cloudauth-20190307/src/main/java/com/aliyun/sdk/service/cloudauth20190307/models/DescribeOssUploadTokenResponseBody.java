@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOssUploadTokenResponseBody</p>
  */
 public class DescribeOssUploadTokenResponseBody extends TeaModel {
-    @NameInMap("OssUploadToken")
+    @com.aliyun.core.annotation.NameInMap("OssUploadToken")
     private OssUploadToken ossUploadToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOssUploadTokenResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeOssUploadTokenResponseBody extends TeaModel {
     } 
 
     public static class OssUploadToken extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("EndPoint")
+        @com.aliyun.core.annotation.NameInMap("EndPoint")
         private String endPoint;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private Long expired;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Secret")
+        @com.aliyun.core.annotation.NameInMap("Secret")
         private String secret;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
         private OssUploadToken(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CompareFaceVerifyRequest</p>
  */
 public class CompareFaceVerifyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Crop")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
-    @Body
-    @NameInMap("OuterOrderNo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OuterOrderNo")
     private String outerOrderNo;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private Long sceneId;
 
-    @Body
-    @NameInMap("SourceCertifyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceCertifyId")
     private String sourceCertifyId;
 
-    @Body
-    @NameInMap("SourceFaceContrastPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceFaceContrastPicture")
+    @com.aliyun.core.annotation.Validation(maxLength = 1048676)
     private String sourceFaceContrastPicture;
 
-    @Body
-    @NameInMap("SourceFaceContrastPictureUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceFaceContrastPictureUrl")
     private String sourceFaceContrastPictureUrl;
 
-    @Body
-    @NameInMap("SourceOssBucketName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceOssBucketName")
     private String sourceOssBucketName;
 
-    @Body
-    @NameInMap("SourceOssObjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceOssObjectName")
     private String sourceOssObjectName;
 
-    @Body
-    @NameInMap("TargetCertifyId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetCertifyId")
     private String targetCertifyId;
 
-    @Body
-    @NameInMap("TargetFaceContrastPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetFaceContrastPicture")
+    @com.aliyun.core.annotation.Validation(maxLength = 1048676)
     private String targetFaceContrastPicture;
 
-    @Body
-    @NameInMap("TargetFaceContrastPictureUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetFaceContrastPictureUrl")
     private String targetFaceContrastPictureUrl;
 
-    @Body
-    @NameInMap("TargetOssBucketName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetOssBucketName")
     private String targetOssBucketName;
 
-    @Body
-    @NameInMap("TargetOssObjectName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetOssObjectName")
     private String targetOssObjectName;
 
     private CompareFaceVerifyRequest(Builder builder) {

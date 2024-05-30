@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDeviceInfoRequest</p>
  */
 public class ModifyDeviceInfoRequest extends Request {
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private String duration;
 
-    @Query
-    @NameInMap("ExpiredDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiredDay")
     private String expiredDay;
 
-    @Query
-    @NameInMap("UserDeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDeviceId")
     private String userDeviceId;
 
     private ModifyDeviceInfoRequest(Builder builder) {

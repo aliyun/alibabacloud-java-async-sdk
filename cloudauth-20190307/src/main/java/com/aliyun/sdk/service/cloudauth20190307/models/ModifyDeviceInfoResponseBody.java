@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDeviceInfoResponseBody</p>
  */
 public class ModifyDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("BeginDay")
+    @com.aliyun.core.annotation.NameInMap("BeginDay")
     private String beginDay;
 
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @NameInMap("DeviceId")
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
     private String deviceId;
 
-    @NameInMap("ExpiredDay")
+    @com.aliyun.core.annotation.NameInMap("ExpiredDay")
     private String expiredDay;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserDeviceId")
+    @com.aliyun.core.annotation.NameInMap("UserDeviceId")
     private String userDeviceId;
 
     private ModifyDeviceInfoResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePageFaceVerifyDataResponseBody</p>
  */
 public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private String currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private String totalPage;
 
     private DescribePageFaceVerifyDataResponseBody(Builder builder) {
@@ -212,22 +211,22 @@ public class DescribePageFaceVerifyDataResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private String sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private String successCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private String totalCount;
 
         private Items(Builder builder) {

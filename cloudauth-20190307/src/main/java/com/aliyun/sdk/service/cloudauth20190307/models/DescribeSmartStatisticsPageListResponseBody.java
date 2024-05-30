@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSmartStatisticsPageListResponseBody</p>
  */
 public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeSmartStatisticsPageListResponseBody(Builder builder) {
@@ -152,25 +151,25 @@ public class DescribeSmartStatisticsPageListResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("PassRate")
+        @com.aliyun.core.annotation.NameInMap("PassRate")
         private String passRate;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private Long sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {

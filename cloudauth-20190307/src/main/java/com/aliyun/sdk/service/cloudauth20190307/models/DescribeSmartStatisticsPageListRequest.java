@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSmartStatisticsPageListRequest</p>
  */
 public class DescribeSmartStatisticsPageListRequest extends Request {
-    @Query
-    @NameInMap("CurrentPage")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currentPage;
 
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pageSize;
 
-    @Query
-    @NameInMap("SceneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sceneId;
 
-    @Query
-    @NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
     private String serviceCode;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
     private DescribeSmartStatisticsPageListRequest(Builder builder) {

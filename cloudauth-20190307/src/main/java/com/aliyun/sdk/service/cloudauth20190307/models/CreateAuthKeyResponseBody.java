@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAuthKeyResponseBody</p>
  */
 public class CreateAuthKeyResponseBody extends TeaModel {
-    @NameInMap("AuthKey")
+    @com.aliyun.core.annotation.NameInMap("AuthKey")
     private String authKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAuthKeyResponseBody(Builder builder) {

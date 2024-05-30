@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetectFaceAttributesRequest</p>
  */
 public class DetectFaceAttributesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Body
-    @NameInMap("MaterialValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaterialValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String materialValue;
 
     private DetectFaceAttributesRequest(Builder builder) {

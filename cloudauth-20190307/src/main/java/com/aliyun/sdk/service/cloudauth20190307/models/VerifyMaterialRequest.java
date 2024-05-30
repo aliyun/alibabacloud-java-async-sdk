@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyMaterialRequest</p>
  */
 public class VerifyMaterialRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("FaceImageUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceImageUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String faceImageUrl;
 
-    @Query
-    @NameInMap("IdCardBackImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardBackImageUrl")
     private String idCardBackImageUrl;
 
-    @Query
-    @NameInMap("IdCardFrontImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardFrontImageUrl")
     private String idCardFrontImageUrl;
 
-    @Query
-    @NameInMap("IdCardNumber")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String idCardNumber;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private VerifyMaterialRequest(Builder builder) {

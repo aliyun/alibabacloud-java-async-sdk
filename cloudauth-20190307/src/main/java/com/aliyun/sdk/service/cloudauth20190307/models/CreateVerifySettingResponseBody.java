@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVerifySettingResponseBody</p>
  */
 public class CreateVerifySettingResponseBody extends TeaModel {
-    @NameInMap("BizName")
+    @com.aliyun.core.annotation.NameInMap("BizName")
     private String bizName;
 
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Solution")
+    @com.aliyun.core.annotation.NameInMap("Solution")
     private String solution;
 
-    @NameInMap("StepList")
+    @com.aliyun.core.annotation.NameInMap("StepList")
     private java.util.List < String > stepList;
 
     private CreateVerifySettingResponseBody(Builder builder) {

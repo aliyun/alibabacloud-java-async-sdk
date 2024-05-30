@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeviceInfoResponseBody</p>
  */
 public class DescribeDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("DeviceInfoList")
+    @com.aliyun.core.annotation.NameInMap("DeviceInfoList")
     private DeviceInfoList deviceInfoList;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDeviceInfoResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
     } 
 
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("BeginDay")
+        @com.aliyun.core.annotation.NameInMap("BeginDay")
         private String beginDay;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("ExpiredDay")
+        @com.aliyun.core.annotation.NameInMap("ExpiredDay")
         private String expiredDay;
 
-        @NameInMap("UserDeviceId")
+        @com.aliyun.core.annotation.NameInMap("UserDeviceId")
         private String userDeviceId;
 
         private DeviceInfo(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeDeviceInfoResponseBody extends TeaModel {
 
     }
     public static class DeviceInfoList extends TeaModel {
-        @NameInMap("DeviceInfo")
+        @com.aliyun.core.annotation.NameInMap("DeviceInfo")
         private java.util.List < DeviceInfo> deviceInfo;
 
         private DeviceInfoList(Builder builder) {

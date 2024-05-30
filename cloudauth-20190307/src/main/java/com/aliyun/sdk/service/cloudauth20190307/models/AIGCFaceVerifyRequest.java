@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AIGCFaceVerifyRequest</p>
  */
 public class AIGCFaceVerifyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("FaceContrastPicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPicture")
     private String faceContrastPicture;
 
-    @Query
-    @NameInMap("FaceContrastPictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceContrastPictureUrl")
     private String faceContrastPictureUrl;
 
-    @Query
-    @NameInMap("OssBucketName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssBucketName")
     private String ossBucketName;
 
-    @Query
-    @NameInMap("OssObjectName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssObjectName")
     private String ossObjectName;
 
-    @Query
-    @NameInMap("OuterOrderNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OuterOrderNo")
     private String outerOrderNo;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("SceneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneId")
     private Long sceneId;
 
     private AIGCFaceVerifyRequest(Builder builder) {

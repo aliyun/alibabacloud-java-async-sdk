@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MobileOnlineTimeResponseBody</p>
  */
 public class MobileOnlineTimeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultObject")
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
     private ResultObject resultObject;
 
     private MobileOnlineTimeResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class MobileOnlineTimeResponseBody extends TeaModel {
     } 
 
     public static class ResultObject extends TeaModel {
-        @NameInMap("BizCode")
+        @com.aliyun.core.annotation.NameInMap("BizCode")
         private String bizCode;
 
-        @NameInMap("IspName")
+        @com.aliyun.core.annotation.NameInMap("IspName")
         private String ispName;
 
-        @NameInMap("TimeCode")
+        @com.aliyun.core.annotation.NameInMap("TimeCode")
         private String timeCode;
 
         private ResultObject(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CredentialVerifyRequest</p>
  */
 public class CredentialVerifyRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CertNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertNum")
     private String certNum;
 
-    @Query
-    @NameInMap("CredName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredName")
     private String credName;
 
-    @Query
-    @NameInMap("CredType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredType")
     private String credType;
 
-    @Query
-    @NameInMap("IdentifyNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentifyNum")
     private String identifyNum;
 
-    @Body
-    @NameInMap("ImageContext")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageContext")
     private String imageContext;
 
-    @Query
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Query
-    @NameInMap("IsCheck")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsCheck")
     private String isCheck;
 
-    @Query
-    @NameInMap("IsOCR")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsOCR")
     private String isOCR;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantId")
+    private String merchantId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private CredentialVerifyRequest(Builder builder) {
@@ -63,6 +66,7 @@ public class CredentialVerifyRequest extends Request {
         this.imageUrl = builder.imageUrl;
         this.isCheck = builder.isCheck;
         this.isOCR = builder.isOCR;
+        this.merchantId = builder.merchantId;
         this.userName = builder.userName;
     }
 
@@ -143,6 +147,13 @@ public class CredentialVerifyRequest extends Request {
     }
 
     /**
+     * @return merchantId
+     */
+    public String getMerchantId() {
+        return this.merchantId;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -159,6 +170,7 @@ public class CredentialVerifyRequest extends Request {
         private String imageUrl; 
         private String isCheck; 
         private String isOCR; 
+        private String merchantId; 
         private String userName; 
 
         private Builder() {
@@ -176,6 +188,7 @@ public class CredentialVerifyRequest extends Request {
             this.imageUrl = request.imageUrl;
             this.isCheck = request.isCheck;
             this.isOCR = request.isOCR;
+            this.merchantId = request.merchantId;
             this.userName = request.userName;
         } 
 
@@ -257,6 +270,15 @@ public class CredentialVerifyRequest extends Request {
         public Builder isOCR(String isOCR) {
             this.putQueryParameter("IsOCR", isOCR);
             this.isOCR = isOCR;
+            return this;
+        }
+
+        /**
+         * MerchantId.
+         */
+        public Builder merchantId(String merchantId) {
+            this.putQueryParameter("MerchantId", merchantId);
+            this.merchantId = merchantId;
             return this;
         }
 

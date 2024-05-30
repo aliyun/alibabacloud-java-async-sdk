@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CredentialVerifyResponseBody</p>
  */
 public class CredentialVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultObject")
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
     private ResultObject resultObject;
 
     private CredentialVerifyResponseBody(Builder builder) {
@@ -112,25 +111,29 @@ public class CredentialVerifyResponseBody extends TeaModel {
     } 
 
     public static class ResultObject extends TeaModel {
-        @NameInMap("OcrInfo")
+        @com.aliyun.core.annotation.NameInMap("MaterialInfo")
+        private String materialInfo;
+
+        @com.aliyun.core.annotation.NameInMap("OcrInfo")
         private String ocrInfo;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
-        @NameInMap("RiskScore")
+        @com.aliyun.core.annotation.NameInMap("RiskScore")
         private java.util.Map < String, String > riskScore;
 
-        @NameInMap("RiskTag")
+        @com.aliyun.core.annotation.NameInMap("RiskTag")
         private String riskTag;
 
-        @NameInMap("VerifyDetail")
+        @com.aliyun.core.annotation.NameInMap("VerifyDetail")
         private String verifyDetail;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
         private ResultObject(Builder builder) {
+            this.materialInfo = builder.materialInfo;
             this.ocrInfo = builder.ocrInfo;
             this.result = builder.result;
             this.riskScore = builder.riskScore;
@@ -145,6 +148,13 @@ public class CredentialVerifyResponseBody extends TeaModel {
 
         public static ResultObject create() {
             return builder().build();
+        }
+
+        /**
+         * @return materialInfo
+         */
+        public String getMaterialInfo() {
+            return this.materialInfo;
         }
 
         /**
@@ -190,12 +200,21 @@ public class CredentialVerifyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String materialInfo; 
             private String ocrInfo; 
             private String result; 
             private java.util.Map < String, String > riskScore; 
             private String riskTag; 
             private String verifyDetail; 
             private String verifyResult; 
+
+            /**
+             * MaterialInfo.
+             */
+            public Builder materialInfo(String materialInfo) {
+                this.materialInfo = materialInfo;
+                return this;
+            }
 
             /**
              * OcrInfo.

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVerifyTokenRequest</p>
  */
 public class DescribeVerifyTokenRequest extends Request {
-    @Query
-    @NameInMap("BizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizId;
 
-    @Query
-    @NameInMap("BizType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizType;
 
-    @Query
-    @NameInMap("CallbackSeed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackSeed")
     private String callbackSeed;
 
-    @Query
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @Query
-    @NameInMap("FaceRetainedImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceRetainedImageUrl")
     private String faceRetainedImageUrl;
 
-    @Query
-    @NameInMap("FailedRedirectUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FailedRedirectUrl")
     private String failedRedirectUrl;
 
-    @Query
-    @NameInMap("IdCardBackImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardBackImageUrl")
     private String idCardBackImageUrl;
 
-    @Query
-    @NameInMap("IdCardFrontImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardFrontImageUrl")
     private String idCardFrontImageUrl;
 
-    @Query
-    @NameInMap("IdCardNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardNumber")
     private String idCardNumber;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("PassedRedirectUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PassedRedirectUrl")
     private String passedRedirectUrl;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("UserIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserIp")
     private String userIp;
 
-    @Query
-    @NameInMap("UserPhoneNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserPhoneNumber")
     private String userPhoneNumber;
 
-    @Query
-    @NameInMap("UserRegistTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserRegistTime")
     private Long userRegistTime;
 
     private DescribeVerifyTokenRequest(Builder builder) {

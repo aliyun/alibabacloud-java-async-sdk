@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFaceVerifyResponseBody</p>
  */
 public class DescribeFaceVerifyResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultObject")
+    @com.aliyun.core.annotation.NameInMap("ResultObject")
     private ResultObject resultObject;
 
     private DescribeFaceVerifyResponseBody(Builder builder) {
@@ -112,28 +111,28 @@ public class DescribeFaceVerifyResponseBody extends TeaModel {
     } 
 
     public static class ResultObject extends TeaModel {
-        @NameInMap("DeviceRisk")
+        @com.aliyun.core.annotation.NameInMap("DeviceRisk")
         private String deviceRisk;
 
-        @NameInMap("DeviceToken")
+        @com.aliyun.core.annotation.NameInMap("DeviceToken")
         private String deviceToken;
 
-        @NameInMap("IdentityInfo")
+        @com.aliyun.core.annotation.NameInMap("IdentityInfo")
         private String identityInfo;
 
-        @NameInMap("MaterialInfo")
+        @com.aliyun.core.annotation.NameInMap("MaterialInfo")
         private String materialInfo;
 
-        @NameInMap("Passed")
+        @com.aliyun.core.annotation.NameInMap("Passed")
         private String passed;
 
-        @NameInMap("SubCode")
+        @com.aliyun.core.annotation.NameInMap("SubCode")
         private String subCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
-        @NameInMap("UserInfo")
+        @com.aliyun.core.annotation.NameInMap("UserInfo")
         private String userInfo;
 
         private ResultObject(Builder builder) {

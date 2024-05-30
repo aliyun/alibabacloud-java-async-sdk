@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth20190307.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAuthKeyRequest</p>
  */
 public class CreateAuthKeyRequest extends Request {
-    @Query
-    @NameInMap("AuthYears")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthYears")
     private Integer authYears;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("Test")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Test")
     private Boolean test;
 
-    @Query
-    @NameInMap("UserDeviceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserDeviceId")
     private String userDeviceId;
 
     private CreateAuthKeyRequest(Builder builder) {
