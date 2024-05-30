@@ -67,6 +67,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetTrackListByMailFromAndTagNameResponse> getTrackListByMailFromAndTagName(GetTrackListByMailFromAndTagNameRequest request);
 
+    CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
+
     CompletableFuture<ListUserSuppressionResponse> listUserSuppression(ListUserSuppressionRequest request);
 
     CompletableFuture<ModifyMailAddressResponse> modifyMailAddress(ModifyMailAddressRequest request);
@@ -104,5 +106,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SingleSendMailResponse> singleSendMail(SingleSendMailRequest request);
 
     CompletableFuture<UpdateIpProtectionResponse> updateIpProtection(UpdateIpProtectionRequest request);
+
+    CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request);
 
 }
