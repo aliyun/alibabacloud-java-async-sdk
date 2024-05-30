@@ -40,6 +40,10 @@ public class CreateEnvironmentRequest extends Request {
     private String feePackage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GrafanaWorkspaceId")
+    private String grafanaWorkspaceId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManagedType")
     private String managedType;
 
@@ -68,6 +72,7 @@ public class CreateEnvironmentRequest extends Request {
         this.environmentSubType = builder.environmentSubType;
         this.environmentType = builder.environmentType;
         this.feePackage = builder.feePackage;
+        this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
         this.managedType = builder.managedType;
         this.prometheusInstanceId = builder.prometheusInstanceId;
         this.regionId = builder.regionId;
@@ -131,6 +136,13 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return grafanaWorkspaceId
+     */
+    public String getGrafanaWorkspaceId() {
+        return this.grafanaWorkspaceId;
+    }
+
+    /**
      * @return managedType
      */
     public String getManagedType() {
@@ -172,6 +184,7 @@ public class CreateEnvironmentRequest extends Request {
         private String environmentSubType; 
         private String environmentType; 
         private String feePackage; 
+        private String grafanaWorkspaceId; 
         private String managedType; 
         private String prometheusInstanceId; 
         private String regionId; 
@@ -190,6 +203,7 @@ public class CreateEnvironmentRequest extends Request {
             this.environmentSubType = request.environmentSubType;
             this.environmentType = request.environmentType;
             this.feePackage = request.feePackage;
+            this.grafanaWorkspaceId = request.grafanaWorkspaceId;
             this.managedType = request.managedType;
             this.prometheusInstanceId = request.prometheusInstanceId;
             this.regionId = request.regionId;
@@ -293,6 +307,15 @@ public class CreateEnvironmentRequest extends Request {
         public Builder feePackage(String feePackage) {
             this.putQueryParameter("FeePackage", feePackage);
             this.feePackage = feePackage;
+            return this;
+        }
+
+        /**
+         * GrafanaWorkspaceId.
+         */
+        public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
+            this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
+            this.grafanaWorkspaceId = grafanaWorkspaceId;
             return this;
         }
 

@@ -78,7 +78,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         private String metricKey;
 
         @com.aliyun.core.annotation.NameInMap("N")
-        private Float n;
+        private Long n;
 
         @com.aliyun.core.annotation.NameInMap("Operator")
         private String operator;
@@ -119,7 +119,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * @return n
          */
-        public Float getN() {
+        public Long getN() {
             return this.n;
         }
 
@@ -140,7 +140,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String aggregate; 
             private String metricKey; 
-            private Float n; 
+            private Long n; 
             private String operator; 
             private String value; 
 
@@ -169,7 +169,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             /**
              * Indicates the last N minutes.
              */
-            public Builder n(Float n) {
+            public Builder n(Long n) {
                 this.n = n;
                 return this;
             }
@@ -770,7 +770,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         private Long alertGroup;
 
         @com.aliyun.core.annotation.NameInMap("AlertId")
-        private Float alertId;
+        private Long alertId;
 
         @com.aliyun.core.annotation.NameInMap("AlertName")
         private String alertName;
@@ -891,7 +891,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         /**
          * @return alertId
          */
-        public Float getAlertId() {
+        public Long getAlertId() {
             return this.alertId;
         }
 
@@ -1052,7 +1052,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
         public static final class Builder {
             private String alertCheckType; 
             private Long alertGroup; 
-            private Float alertId; 
+            private Long alertId; 
             private String alertName; 
             private AlertRuleContent alertRuleContent; 
             private String alertStatus; 
@@ -1104,7 +1104,7 @@ public class GetAlertRulesResponseBody extends TeaModel {
             /**
              * The ID of the alert rule.
              */
-            public Builder alertId(Float alertId) {
+            public Builder alertId(Long alertId) {
                 this.alertId = alertId;
                 return this;
             }

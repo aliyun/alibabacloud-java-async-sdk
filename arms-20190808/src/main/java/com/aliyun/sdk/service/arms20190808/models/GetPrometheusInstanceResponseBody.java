@@ -172,6 +172,9 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccessType")
+        private String accessType;
+
         @com.aliyun.core.annotation.NameInMap("ArchiveDuration")
         private Integer archiveDuration;
 
@@ -204,9 +207,6 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PushGatewayIntraUrl")
         private String pushGatewayIntraUrl;
-
-        @com.aliyun.core.annotation.NameInMap("ReadOnly")
-        private Boolean readOnly;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -251,6 +251,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         private String vpcId;
 
         private Data(Builder builder) {
+            this.accessType = builder.accessType;
             this.archiveDuration = builder.archiveDuration;
             this.authToken = builder.authToken;
             this.clusterId = builder.clusterId;
@@ -262,7 +263,6 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             this.paymentType = builder.paymentType;
             this.pushGatewayInterUrl = builder.pushGatewayInterUrl;
             this.pushGatewayIntraUrl = builder.pushGatewayIntraUrl;
-            this.readOnly = builder.readOnly;
             this.regionId = builder.regionId;
             this.remoteReadInterUrl = builder.remoteReadInterUrl;
             this.remoteReadIntraUrl = builder.remoteReadIntraUrl;
@@ -285,6 +285,13 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return accessType
+         */
+        public String getAccessType() {
+            return this.accessType;
         }
 
         /**
@@ -362,13 +369,6 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
          */
         public String getPushGatewayIntraUrl() {
             return this.pushGatewayIntraUrl;
-        }
-
-        /**
-         * @return readOnly
-         */
-        public Boolean getReadOnly() {
-            return this.readOnly;
         }
 
         /**
@@ -470,6 +470,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accessType; 
             private Integer archiveDuration; 
             private String authToken; 
             private String clusterId; 
@@ -481,7 +482,6 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String paymentType; 
             private String pushGatewayInterUrl; 
             private String pushGatewayIntraUrl; 
-            private Boolean readOnly; 
             private String regionId; 
             private String remoteReadInterUrl; 
             private String remoteReadIntraUrl; 
@@ -498,7 +498,17 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * The number of days for automatic archiving after storage expiration (optional values: 60, 90, 180, 365). 0 means not archive.
+             * 权限类型：
+             * <p>
+             * readWrite、readOnly、httpReadOnly
+             */
+            public Builder accessType(String accessType) {
+                this.accessType = accessType;
+                return this;
+            }
+
+            /**
+             * The number of days for which data is automatically archived after the storage expires. Valid values: 60, 90, 180, and 365. 0 indicates that the data is not archived.
              */
             public Builder archiveDuration(Integer archiveDuration) {
                 this.archiveDuration = archiveDuration;
@@ -530,12 +540,12 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * *   remote-write: Prometheus instance for Remote Write
+             * *   remote-write: general-purpose Prometheus instance
              * <p>
              * *   ecs: Prometheus instances for ECS
-             * *   cloud-monitor: Prometheus instance for cloud services (Chinese mainland)
-             * *   cloud-monitor: Prometheus instance for cloud services (regions outside the Chinese mainland)
-             * *   global-view: Prometheus instance for GlobalView
+             * *   cloud-monitor: Prometheus instance for Alibaba Cloud services in the Chinese mainland
+             * *   cloud-product: Prometheus instance for Alibaba Cloud services outside the Chinese mainland
+             * *   global-view: global aggregation instance
              * *   aliyun-cs: Prometheus instance for Container Service
              */
             public Builder clusterType(String clusterType) {
@@ -592,14 +602,6 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
              */
             public Builder pushGatewayIntraUrl(String pushGatewayIntraUrl) {
                 this.pushGatewayIntraUrl = pushGatewayIntraUrl;
-                return this;
-            }
-
-            /**
-             * ReadOnly.
-             */
-            public Builder readOnly(Boolean readOnly) {
-                this.readOnly = readOnly;
                 return this;
             }
 
@@ -668,7 +670,7 @@ public class GetPrometheusInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Storage duration (days).
+             * The data storage duration. Unit: days.
              */
             public Builder storageDuration(Integer storageDuration) {
                 this.storageDuration = storageDuration;

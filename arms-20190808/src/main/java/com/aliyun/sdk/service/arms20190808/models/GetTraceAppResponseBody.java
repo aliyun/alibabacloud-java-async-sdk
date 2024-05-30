@@ -138,11 +138,17 @@ public class GetTraceAppResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
+        private String clusterId;
+
         @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
         @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < String > labels;
+
+        @com.aliyun.core.annotation.NameInMap("Language")
+        private String language;
 
         @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
@@ -174,8 +180,10 @@ public class GetTraceAppResponseBody extends TeaModel {
         private TraceApp(Builder builder) {
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.clusterId = builder.clusterId;
             this.createTime = builder.createTime;
             this.labels = builder.labels;
+            this.language = builder.language;
             this.pid = builder.pid;
             this.regionId = builder.regionId;
             this.resourceGroupId = builder.resourceGroupId;
@@ -210,6 +218,13 @@ public class GetTraceAppResponseBody extends TeaModel {
         }
 
         /**
+         * @return clusterId
+         */
+        public String getClusterId() {
+            return this.clusterId;
+        }
+
+        /**
          * @return createTime
          */
         public Long getCreateTime() {
@@ -221,6 +236,13 @@ public class GetTraceAppResponseBody extends TeaModel {
          */
         public java.util.List < String > getLabels() {
             return this.labels;
+        }
+
+        /**
+         * @return language
+         */
+        public String getLanguage() {
+            return this.language;
         }
 
         /**
@@ -289,8 +311,10 @@ public class GetTraceAppResponseBody extends TeaModel {
         public static final class Builder {
             private Long appId; 
             private String appName; 
+            private String clusterId; 
             private Long createTime; 
             private java.util.List < String > labels; 
+            private String language; 
             private String pid; 
             private String regionId; 
             private String resourceGroupId; 
@@ -318,6 +342,14 @@ public class GetTraceAppResponseBody extends TeaModel {
             }
 
             /**
+             * ClusterId.
+             */
+            public Builder clusterId(String clusterId) {
+                this.clusterId = clusterId;
+                return this;
+            }
+
+            /**
              * The timestamp generated when the task was created.
              */
             public Builder createTime(Long createTime) {
@@ -330,6 +362,14 @@ public class GetTraceAppResponseBody extends TeaModel {
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
+                return this;
+            }
+
+            /**
+             * Language.
+             */
+            public Builder language(String language) {
+                this.language = language;
                 return this;
             }
 

@@ -157,7 +157,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The value of the tag
              */
             public Builder value(String value) {
                 this.value = value;
@@ -223,6 +223,9 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GrafanaFolderUrl")
         private String grafanaFolderUrl;
 
+        @com.aliyun.core.annotation.NameInMap("GrafanaWorkspaceId")
+        private String grafanaWorkspaceId;
+
         @com.aliyun.core.annotation.NameInMap("ManagedType")
         private String managedType;
 
@@ -265,6 +268,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             this.grafanaFolderTitle = builder.grafanaFolderTitle;
             this.grafanaFolderUid = builder.grafanaFolderUid;
             this.grafanaFolderUrl = builder.grafanaFolderUrl;
+            this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
             this.managedType = builder.managedType;
             this.prometheusInstanceId = builder.prometheusInstanceId;
             this.prometheusInstanceName = builder.prometheusInstanceName;
@@ -403,6 +407,13 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
         }
 
         /**
+         * @return grafanaWorkspaceId
+         */
+        public String getGrafanaWorkspaceId() {
+            return this.grafanaWorkspaceId;
+        }
+
+        /**
          * @return managedType
          */
         public String getManagedType() {
@@ -476,6 +487,7 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             private String grafanaFolderTitle; 
             private String grafanaFolderUid; 
             private String grafanaFolderUrl; 
+            private String grafanaWorkspaceId; 
             private String managedType; 
             private String prometheusInstanceId; 
             private String prometheusInstanceName; 
@@ -534,7 +546,50 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * DbInstanceStatus.
+             * The status of the database that is bound to the Prometheus instance.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   UNINSTALLING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   INSTALLING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   UNINSTALLED
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   RUNNING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   MODIFYING
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
              */
             public Builder dbInstanceStatus(String dbInstanceStatus) {
                 this.dbInstanceStatus = dbInstanceStatus;
@@ -583,7 +638,11 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
             }
 
             /**
-             * FeePackage.
+             * The payable resource plan. Valid values:
+             * <p>
+             * 
+             * *   If the EnvironmentType parameter is set to CS, set the value to CS_Basic or CS_Pro.
+             * *   Otherwise, leave the parameter empty.
              */
             public Builder feePackage(String feePackage) {
                 this.feePackage = feePackage;
@@ -627,6 +686,14 @@ public class DescribeEnvironmentResponseBody extends TeaModel {
              */
             public Builder grafanaFolderUrl(String grafanaFolderUrl) {
                 this.grafanaFolderUrl = grafanaFolderUrl;
+                return this;
+            }
+
+            /**
+             * grafana工作区id
+             */
+            public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
+                this.grafanaWorkspaceId = grafanaWorkspaceId;
                 return this;
             }
 

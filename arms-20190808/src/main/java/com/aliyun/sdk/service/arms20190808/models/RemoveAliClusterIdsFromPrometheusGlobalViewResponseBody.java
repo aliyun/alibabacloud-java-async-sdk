@@ -73,7 +73,7 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         private String requestId; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -89,7 +89,7 @@ public class RemoveAliClusterIdsFromPrometheusGlobalViewResponseBody extends Tea
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
