@@ -25,6 +25,10 @@ public class ListJobRunsRequest extends Request {
     private EndTime endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobRunDeploymentId")
+    private String jobRunDeploymentId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("jobRunId")
     private String jobRunId;
 
@@ -65,6 +69,7 @@ public class ListJobRunsRequest extends Request {
         this.workspaceId = builder.workspaceId;
         this.creator = builder.creator;
         this.endTime = builder.endTime;
+        this.jobRunDeploymentId = builder.jobRunDeploymentId;
         this.jobRunId = builder.jobRunId;
         this.maxResults = builder.maxResults;
         this.name = builder.name;
@@ -108,6 +113,13 @@ public class ListJobRunsRequest extends Request {
      */
     public EndTime getEndTime() {
         return this.endTime;
+    }
+
+    /**
+     * @return jobRunDeploymentId
+     */
+    public String getJobRunDeploymentId() {
+        return this.jobRunDeploymentId;
     }
 
     /**
@@ -177,6 +189,7 @@ public class ListJobRunsRequest extends Request {
         private String workspaceId; 
         private String creator; 
         private EndTime endTime; 
+        private String jobRunDeploymentId; 
         private String jobRunId; 
         private Integer maxResults; 
         private String name; 
@@ -196,6 +209,7 @@ public class ListJobRunsRequest extends Request {
             this.workspaceId = request.workspaceId;
             this.creator = request.creator;
             this.endTime = request.endTime;
+            this.jobRunDeploymentId = request.jobRunDeploymentId;
             this.jobRunId = request.jobRunId;
             this.maxResults = request.maxResults;
             this.name = request.name;
@@ -232,6 +246,15 @@ public class ListJobRunsRequest extends Request {
             String endTimeShrink = shrink(endTime, "endTime", "json");
             this.putQueryParameter("endTime", endTimeShrink);
             this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * jobRunDeploymentId.
+         */
+        public Builder jobRunDeploymentId(String jobRunDeploymentId) {
+            this.putQueryParameter("jobRunDeploymentId", jobRunDeploymentId);
+            this.jobRunDeploymentId = jobRunDeploymentId;
             return this;
         }
 

@@ -23,7 +23,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelJobRunResponse> cancelJobRun(CancelJobRunRequest request);
 
+    CompletableFuture<CreateSqlStatementResponse> createSqlStatement(CreateSqlStatementRequest request);
+
     CompletableFuture<GetJobRunResponse> getJobRun(GetJobRunRequest request);
+
+    CompletableFuture<GetSqlStatementResponse> getSqlStatement(GetSqlStatementRequest request);
 
     CompletableFuture<GrantRoleToUsersResponse> grantRoleToUsers(GrantRoleToUsersRequest request);
 
@@ -38,5 +42,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListWorkspacesResponse> listWorkspaces(ListWorkspacesRequest request);
 
     CompletableFuture<StartJobRunResponse> startJobRun(StartJobRunRequest request);
+
+    CompletableFuture<TerminateSqlStatementResponse> terminateSqlStatement(TerminateSqlStatementRequest request);
 
 }

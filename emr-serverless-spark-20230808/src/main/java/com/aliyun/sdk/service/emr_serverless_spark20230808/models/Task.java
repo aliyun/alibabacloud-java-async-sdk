@@ -43,6 +43,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("defaultSqlComputeId")
     private String defaultSqlComputeId;
 
+    @com.aliyun.core.annotation.NameInMap("deploymentId")
+    private String deploymentId;
+
     @com.aliyun.core.annotation.NameInMap("extraArtifactIds")
     private java.util.List < String > extraArtifactIds;
 
@@ -66,6 +69,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("hasCommited")
     @com.aliyun.core.annotation.Validation(required = true)
     private Boolean hasCommited;
+
+    @com.aliyun.core.annotation.NameInMap("isStreaming")
+    private Boolean isStreaming;
 
     @com.aliyun.core.annotation.NameInMap("jars")
     private java.util.List < String > jars;
@@ -117,6 +123,9 @@ public class Task extends TeaModel {
     @com.aliyun.core.annotation.Validation(required = true)
     private String sparkLogPath;
 
+    @com.aliyun.core.annotation.NameInMap("sparkSubmitClause")
+    private String sparkSubmitClause;
+
     @com.aliyun.core.annotation.NameInMap("sparkVersion")
     @com.aliyun.core.annotation.Validation(required = true)
     private String sparkVersion;
@@ -139,6 +148,7 @@ public class Task extends TeaModel {
         this.defaultDatabase = builder.defaultDatabase;
         this.defaultResourceQueueId = builder.defaultResourceQueueId;
         this.defaultSqlComputeId = builder.defaultSqlComputeId;
+        this.deploymentId = builder.deploymentId;
         this.extraArtifactIds = builder.extraArtifactIds;
         this.extraSparkSubmitParams = builder.extraSparkSubmitParams;
         this.files = builder.files;
@@ -146,6 +156,7 @@ public class Task extends TeaModel {
         this.gmtModified = builder.gmtModified;
         this.hasChanged = builder.hasChanged;
         this.hasCommited = builder.hasCommited;
+        this.isStreaming = builder.isStreaming;
         this.jars = builder.jars;
         this.lastRunResourceQueueId = builder.lastRunResourceQueueId;
         this.modifier = builder.modifier;
@@ -160,6 +171,7 @@ public class Task extends TeaModel {
         this.sparkExecutorMemory = builder.sparkExecutorMemory;
         this.sparkLogLevel = builder.sparkLogLevel;
         this.sparkLogPath = builder.sparkLogPath;
+        this.sparkSubmitClause = builder.sparkSubmitClause;
         this.sparkVersion = builder.sparkVersion;
         this.tags = builder.tags;
         this.type = builder.type;
@@ -244,6 +256,13 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return deploymentId
+     */
+    public String getDeploymentId() {
+        return this.deploymentId;
+    }
+
+    /**
      * @return extraArtifactIds
      */
     public java.util.List < String > getExtraArtifactIds() {
@@ -290,6 +309,13 @@ public class Task extends TeaModel {
      */
     public Boolean getHasCommited() {
         return this.hasCommited;
+    }
+
+    /**
+     * @return isStreaming
+     */
+    public Boolean getIsStreaming() {
+        return this.isStreaming;
     }
 
     /**
@@ -391,6 +417,13 @@ public class Task extends TeaModel {
     }
 
     /**
+     * @return sparkSubmitClause
+     */
+    public String getSparkSubmitClause() {
+        return this.sparkSubmitClause;
+    }
+
+    /**
      * @return sparkVersion
      */
     public String getSparkVersion() {
@@ -422,6 +455,7 @@ public class Task extends TeaModel {
         private String defaultDatabase; 
         private String defaultResourceQueueId; 
         private String defaultSqlComputeId; 
+        private String deploymentId; 
         private java.util.List < String > extraArtifactIds; 
         private String extraSparkSubmitParams; 
         private java.util.List < String > files; 
@@ -429,6 +463,7 @@ public class Task extends TeaModel {
         private String gmtModified; 
         private Boolean hasChanged; 
         private Boolean hasCommited; 
+        private Boolean isStreaming; 
         private java.util.List < String > jars; 
         private String lastRunResourceQueueId; 
         private Long modifier; 
@@ -443,6 +478,7 @@ public class Task extends TeaModel {
         private Long sparkExecutorMemory; 
         private String sparkLogLevel; 
         private String sparkLogPath; 
+        private String sparkSubmitClause; 
         private String sparkVersion; 
         private java.util.Map < String, String > tags; 
         private String type; 
@@ -528,6 +564,14 @@ public class Task extends TeaModel {
         }
 
         /**
+         * deploymentId.
+         */
+        public Builder deploymentId(String deploymentId) {
+            this.deploymentId = deploymentId;
+            return this;
+        }
+
+        /**
          * extraArtifactIds.
          */
         public Builder extraArtifactIds(java.util.List < String > extraArtifactIds) {
@@ -580,6 +624,14 @@ public class Task extends TeaModel {
          */
         public Builder hasCommited(Boolean hasCommited) {
             this.hasCommited = hasCommited;
+            return this;
+        }
+
+        /**
+         * isStreaming.
+         */
+        public Builder isStreaming(Boolean isStreaming) {
+            this.isStreaming = isStreaming;
             return this;
         }
 
@@ -692,6 +744,14 @@ public class Task extends TeaModel {
          */
         public Builder sparkLogPath(String sparkLogPath) {
             this.sparkLogPath = sparkLogPath;
+            return this;
+        }
+
+        /**
+         * sparkSubmitClause.
+         */
+        public Builder sparkSubmitClause(String sparkSubmitClause) {
+            this.sparkSubmitClause = sparkSubmitClause;
             return this;
         }
 
