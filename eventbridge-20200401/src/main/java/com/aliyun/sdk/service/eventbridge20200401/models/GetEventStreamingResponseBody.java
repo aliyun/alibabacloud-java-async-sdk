@@ -4580,6 +4580,287 @@ public class GetEventStreamingResponseBody extends TeaModel {
         } 
 
     }
+    public static class SourceApacheKafkaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Bootstraps")
+        private String bootstraps;
+
+        @com.aliyun.core.annotation.NameInMap("ConsumerGroup")
+        private String consumerGroup;
+
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
+        private String networkType;
+
+        @com.aliyun.core.annotation.NameInMap("OffsetReset")
+        private String offsetReset;
+
+        @com.aliyun.core.annotation.NameInMap("SaslMechanism")
+        private String saslMechanism;
+
+        @com.aliyun.core.annotation.NameInMap("SaslPassword")
+        private String saslPassword;
+
+        @com.aliyun.core.annotation.NameInMap("SaslUser")
+        private String saslUser;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private String securityGroupId;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityProtocol")
+        private String securityProtocol;
+
+        @com.aliyun.core.annotation.NameInMap("Topic")
+        private String topic;
+
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private String vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("ValueDataType")
+        private String valueDataType;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private String vpcId;
+
+        private SourceApacheKafkaParameters(Builder builder) {
+            this.bootstraps = builder.bootstraps;
+            this.consumerGroup = builder.consumerGroup;
+            this.networkType = builder.networkType;
+            this.offsetReset = builder.offsetReset;
+            this.saslMechanism = builder.saslMechanism;
+            this.saslPassword = builder.saslPassword;
+            this.saslUser = builder.saslUser;
+            this.securityGroupId = builder.securityGroupId;
+            this.securityProtocol = builder.securityProtocol;
+            this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.valueDataType = builder.valueDataType;
+            this.vpcId = builder.vpcId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SourceApacheKafkaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return bootstraps
+         */
+        public String getBootstraps() {
+            return this.bootstraps;
+        }
+
+        /**
+         * @return consumerGroup
+         */
+        public String getConsumerGroup() {
+            return this.consumerGroup;
+        }
+
+        /**
+         * @return networkType
+         */
+        public String getNetworkType() {
+            return this.networkType;
+        }
+
+        /**
+         * @return offsetReset
+         */
+        public String getOffsetReset() {
+            return this.offsetReset;
+        }
+
+        /**
+         * @return saslMechanism
+         */
+        public String getSaslMechanism() {
+            return this.saslMechanism;
+        }
+
+        /**
+         * @return saslPassword
+         */
+        public String getSaslPassword() {
+            return this.saslPassword;
+        }
+
+        /**
+         * @return saslUser
+         */
+        public String getSaslUser() {
+            return this.saslUser;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public String getSecurityGroupId() {
+            return this.securityGroupId;
+        }
+
+        /**
+         * @return securityProtocol
+         */
+        public String getSecurityProtocol() {
+            return this.securityProtocol;
+        }
+
+        /**
+         * @return topic
+         */
+        public String getTopic() {
+            return this.topic;
+        }
+
+        /**
+         * @return vSwitchIds
+         */
+        public String getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return valueDataType
+         */
+        public String getValueDataType() {
+            return this.valueDataType;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public String getVpcId() {
+            return this.vpcId;
+        }
+
+        public static final class Builder {
+            private String bootstraps; 
+            private String consumerGroup; 
+            private String networkType; 
+            private String offsetReset; 
+            private String saslMechanism; 
+            private String saslPassword; 
+            private String saslUser; 
+            private String securityGroupId; 
+            private String securityProtocol; 
+            private String topic; 
+            private String vSwitchIds; 
+            private String valueDataType; 
+            private String vpcId; 
+
+            /**
+             * Bootstraps.
+             */
+            public Builder bootstraps(String bootstraps) {
+                this.bootstraps = bootstraps;
+                return this;
+            }
+
+            /**
+             * ConsumerGroup.
+             */
+            public Builder consumerGroup(String consumerGroup) {
+                this.consumerGroup = consumerGroup;
+                return this;
+            }
+
+            /**
+             * NetworkType.
+             */
+            public Builder networkType(String networkType) {
+                this.networkType = networkType;
+                return this;
+            }
+
+            /**
+             * OffsetReset.
+             */
+            public Builder offsetReset(String offsetReset) {
+                this.offsetReset = offsetReset;
+                return this;
+            }
+
+            /**
+             * SaslMechanism.
+             */
+            public Builder saslMechanism(String saslMechanism) {
+                this.saslMechanism = saslMechanism;
+                return this;
+            }
+
+            /**
+             * SaslPassword.
+             */
+            public Builder saslPassword(String saslPassword) {
+                this.saslPassword = saslPassword;
+                return this;
+            }
+
+            /**
+             * SaslUser.
+             */
+            public Builder saslUser(String saslUser) {
+                this.saslUser = saslUser;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(String securityGroupId) {
+                this.securityGroupId = securityGroupId;
+                return this;
+            }
+
+            /**
+             * SecurityProtocol.
+             */
+            public Builder securityProtocol(String securityProtocol) {
+                this.securityProtocol = securityProtocol;
+                return this;
+            }
+
+            /**
+             * The name of the topic in which logs are stored. The topic corresponds to the topic reserved field in Simple Log Service.
+             */
+            public Builder topic(String topic) {
+                this.topic = topic;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(String vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * ValueDataType.
+             */
+            public Builder valueDataType(String valueDataType) {
+                this.valueDataType = valueDataType;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(String vpcId) {
+                this.vpcId = vpcId;
+                return this;
+            }
+
+            public SourceApacheKafkaParameters build() {
+                return new SourceApacheKafkaParameters(this);
+            } 
+
+        } 
+
+    }
     public static class SourceDTSParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BrokerUrl")
         private String brokerUrl;
@@ -5330,6 +5611,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
+        @com.aliyun.core.annotation.NameInMap("BodyDataType")
+        private String bodyDataType;
+
         @com.aliyun.core.annotation.NameInMap("GroupID")
         private String groupID;
 
@@ -5377,6 +5661,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         private SourceRocketMQParameters(Builder builder) {
             this.authType = builder.authType;
+            this.bodyDataType = builder.bodyDataType;
             this.groupID = builder.groupID;
             this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
@@ -5407,6 +5692,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
          */
         public String getAuthType() {
             return this.authType;
+        }
+
+        /**
+         * @return bodyDataType
+         */
+        public String getBodyDataType() {
+            return this.bodyDataType;
         }
 
         /**
@@ -5516,6 +5808,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static final class Builder {
             private String authType; 
+            private String bodyDataType; 
             private String groupID; 
             private String instanceEndpoint; 
             private String instanceId; 
@@ -5537,6 +5830,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
              */
             public Builder authType(String authType) {
                 this.authType = authType;
+                return this;
+            }
+
+            /**
+             * BodyDataType.
+             */
+            public Builder bodyDataType(String bodyDataType) {
+                this.bodyDataType = bodyDataType;
                 return this;
             }
 
@@ -5789,6 +6090,9 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SourceApacheKafkaParameters")
+        private SourceApacheKafkaParameters sourceApacheKafkaParameters;
+
         @com.aliyun.core.annotation.NameInMap("SourceDTSParameters")
         private SourceDTSParameters sourceDTSParameters;
 
@@ -5814,6 +6118,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         private SourceSLSParameters sourceSLSParameters;
 
         private Source(Builder builder) {
+            this.sourceApacheKafkaParameters = builder.sourceApacheKafkaParameters;
             this.sourceDTSParameters = builder.sourceDTSParameters;
             this.sourceKafkaParameters = builder.sourceKafkaParameters;
             this.sourceMNSParameters = builder.sourceMNSParameters;
@@ -5830,6 +6135,13 @@ public class GetEventStreamingResponseBody extends TeaModel {
 
         public static Source create() {
             return builder().build();
+        }
+
+        /**
+         * @return sourceApacheKafkaParameters
+         */
+        public SourceApacheKafkaParameters getSourceApacheKafkaParameters() {
+            return this.sourceApacheKafkaParameters;
         }
 
         /**
@@ -5889,6 +6201,7 @@ public class GetEventStreamingResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private SourceApacheKafkaParameters sourceApacheKafkaParameters; 
             private SourceDTSParameters sourceDTSParameters; 
             private SourceKafkaParameters sourceKafkaParameters; 
             private SourceMNSParameters sourceMNSParameters; 
@@ -5897,6 +6210,14 @@ public class GetEventStreamingResponseBody extends TeaModel {
             private SourceRabbitMQParameters sourceRabbitMQParameters; 
             private SourceRocketMQParameters sourceRocketMQParameters; 
             private SourceSLSParameters sourceSLSParameters; 
+
+            /**
+             * SourceApacheKafkaParameters.
+             */
+            public Builder sourceApacheKafkaParameters(SourceApacheKafkaParameters sourceApacheKafkaParameters) {
+                this.sourceApacheKafkaParameters = sourceApacheKafkaParameters;
+                return this;
+            }
 
             /**
              * The parameters that are returned if the event source is Data Transmission Service (DTS).
