@@ -863,10 +863,26 @@ public class DescribePriceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Duration")
         private Integer duration;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private String instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("OsType")
+        private String osType;
+
+        @com.aliyun.core.annotation.NameInMap("RootDiskId")
+        private String rootDiskId;
+
+        @com.aliyun.core.annotation.NameInMap("UserDiskId")
+        private String userDiskId;
+
         private BundleModels(Builder builder) {
             this.amount = builder.amount;
             this.bundleId = builder.bundleId;
             this.duration = builder.duration;
+            this.instanceType = builder.instanceType;
+            this.osType = builder.osType;
+            this.rootDiskId = builder.rootDiskId;
+            this.userDiskId = builder.userDiskId;
         }
 
         public static Builder builder() {
@@ -898,10 +914,42 @@ public class DescribePriceRequest extends Request {
             return this.duration;
         }
 
+        /**
+         * @return instanceType
+         */
+        public String getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return osType
+         */
+        public String getOsType() {
+            return this.osType;
+        }
+
+        /**
+         * @return rootDiskId
+         */
+        public String getRootDiskId() {
+            return this.rootDiskId;
+        }
+
+        /**
+         * @return userDiskId
+         */
+        public String getUserDiskId() {
+            return this.userDiskId;
+        }
+
         public static final class Builder {
             private Integer amount; 
             private String bundleId; 
             private Integer duration; 
+            private String instanceType; 
+            private String osType; 
+            private String rootDiskId; 
+            private String userDiskId; 
 
             /**
              * The number of the resources. Default value: 1.
@@ -924,6 +972,70 @@ public class DescribePriceRequest extends Request {
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
+                return this;
+            }
+
+            /**
+             * The resource specifications.
+             * <p>
+             * 
+             * *   If you set ResourceType to Desktop, set this parameter to one of the following values:
+             * 
+             *     *   ecd.basic.small
+             *     *   ecd.basic.large
+             *     *   ecd.advanced.large
+             *     *   ecd.advanced.xlarge
+             *     *   ecd.performance.2xlarge
+             *     *   ecd.graphics.xlarge
+             *     *   ecd.graphics.2xlarge
+             *     *   ecd.advanced.xlarge_s8d2
+             *     *   ecd.advanced.xlarge_s8d7
+             *     *   ecd.graphics.1g72c
+             *     *   eds.general.2c2g
+             *     *   eds.general.2c4g
+             *     *   eds.general.2c8g
+             *     *   eds.general.4c8g
+             *     *   eds.general.4c16g
+             *     *   eds.general.8c16g
+             *     *   eds.general.8c32g
+             *     *   eds.general.16c32g
+             * 
+             * *   If you set ResourceType to OfficeSite, set this parameter to large.
+             * 
+             * *   If you set ResourceType to Bandwidth, leave this parameter empty.
+             */
+            public Builder instanceType(String instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * The OS. Valid values:
+             * <p>
+             * 
+             * *   Windows
+             * *   Linux
+             * 
+             * Default value: Windows.
+             */
+            public Builder osType(String osType) {
+                this.osType = osType;
+                return this;
+            }
+
+            /**
+             * RootDiskId.
+             */
+            public Builder rootDiskId(String rootDiskId) {
+                this.rootDiskId = rootDiskId;
+                return this;
+            }
+
+            /**
+             * UserDiskId.
+             */
+            public Builder userDiskId(String userDiskId) {
+                this.userDiskId = userDiskId;
                 return this;
             }
 

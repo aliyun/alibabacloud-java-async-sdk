@@ -37,10 +37,6 @@ public class RenewDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceType")
-    private String resourceType;
-
     private RenewDesktopsRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
@@ -49,7 +45,6 @@ public class RenewDesktopsRequest extends Request {
         this.periodUnit = builder.periodUnit;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
-        this.resourceType = builder.resourceType;
     }
 
     public static Builder builder() {
@@ -107,13 +102,6 @@ public class RenewDesktopsRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return resourceType
-     */
-    public String getResourceType() {
-        return this.resourceType;
-    }
-
     public static final class Builder extends Request.Builder<RenewDesktopsRequest, Builder> {
         private Boolean autoPay; 
         private java.util.List < String > desktopId; 
@@ -121,7 +109,6 @@ public class RenewDesktopsRequest extends Request {
         private String periodUnit; 
         private String promotionId; 
         private String regionId; 
-        private String resourceType; 
 
         private Builder() {
             super();
@@ -135,7 +122,6 @@ public class RenewDesktopsRequest extends Request {
             this.periodUnit = request.periodUnit;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
-            this.resourceType = request.resourceType;
         } 
 
         /**
@@ -237,15 +223,6 @@ public class RenewDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * ResourceType.
-         */
-        public Builder resourceType(String resourceType) {
-            this.putQueryParameter("ResourceType", resourceType);
-            this.resourceType = resourceType;
             return this;
         }
 

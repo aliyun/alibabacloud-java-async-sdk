@@ -550,6 +550,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SubDomainName")
         private String subDomainName;
 
+        @com.aliyun.core.annotation.NameInMap("SubnetMode")
+        private String subnetMode;
+
         @com.aliyun.core.annotation.NameInMap("TotalEdsCount")
         private Long totalEdsCount;
 
@@ -611,6 +614,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.status = builder.status;
             this.subDnsAddress = builder.subDnsAddress;
             this.subDomainName = builder.subDomainName;
+            this.subnetMode = builder.subnetMode;
             this.totalEdsCount = builder.totalEdsCount;
             this.totalEdsCountForGroup = builder.totalEdsCountForGroup;
             this.trustPassword = builder.trustPassword;
@@ -922,6 +926,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return subnetMode
+         */
+        public String getSubnetMode() {
+            return this.subnetMode;
+        }
+
+        /**
          * @return totalEdsCount
          */
         public Long getTotalEdsCount() {
@@ -1006,6 +1017,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String status; 
             private java.util.List < String > subDnsAddress; 
             private String subDomainName; 
+            private String subnetMode; 
             private Long totalEdsCount; 
             private Long totalEdsCountForGroup; 
             private String trustPassword; 
@@ -1514,6 +1526,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder subDomainName(String subDomainName) {
                 this.subDomainName = subDomainName;
+                return this;
+            }
+
+            /**
+             * SubnetMode.
+             */
+            public Builder subnetMode(String subnetMode) {
+                this.subnetMode = subnetMode;
                 return this;
             }
 

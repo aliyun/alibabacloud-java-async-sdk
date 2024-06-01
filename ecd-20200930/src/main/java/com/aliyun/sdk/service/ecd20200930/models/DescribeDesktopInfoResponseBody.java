@@ -77,6 +77,9 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
 
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
+        private String desktopGroupId;
+
         @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
@@ -101,6 +104,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private Desktops(Builder builder) {
             this.connectionStatus = builder.connectionStatus;
             this.currentAppVersion = builder.currentAppVersion;
+            this.desktopGroupId = builder.desktopGroupId;
             this.desktopId = builder.desktopId;
             this.desktopStatus = builder.desktopStatus;
             this.managementFlag = builder.managementFlag;
@@ -130,6 +134,13 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
          */
         public String getCurrentAppVersion() {
             return this.currentAppVersion;
+        }
+
+        /**
+         * @return desktopGroupId
+         */
+        public String getDesktopGroupId() {
+            return this.desktopGroupId;
         }
 
         /**
@@ -184,6 +195,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         public static final class Builder {
             private String connectionStatus; 
             private String currentAppVersion; 
+            private String desktopGroupId; 
             private String desktopId; 
             private String desktopStatus; 
             private java.util.List < String > managementFlag; 
@@ -209,6 +221,14 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
+                return this;
+            }
+
+            /**
+             * DesktopGroupId.
+             */
+            public Builder desktopGroupId(String desktopGroupId) {
+                this.desktopGroupId = desktopGroupId;
                 return this;
             }
 
