@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetricsTrigger</p>
  */
 public class MetricsTrigger extends TeaModel {
-    @NameInMap("ConditionLogicOperator")
+    @com.aliyun.core.annotation.NameInMap("ConditionLogicOperator")
     private String conditionLogicOperator;
 
-    @NameInMap("Conditions")
+    @com.aliyun.core.annotation.NameInMap("Conditions")
     private java.util.List < TriggerCondition > conditions;
 
-    @NameInMap("CoolDownInterval")
+    @com.aliyun.core.annotation.NameInMap("CoolDownInterval")
     private Integer coolDownInterval;
 
-    @NameInMap("EvaluationCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer evaluationCount;
 
-    @NameInMap("TimeConstraints")
+    @com.aliyun.core.annotation.NameInMap("TimeConstraints")
     private java.util.List < TimeConstraint > timeConstraints;
 
-    @NameInMap("TimeWindow")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("TimeWindow")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeWindow;
 
     private MetricsTrigger(Builder builder) {

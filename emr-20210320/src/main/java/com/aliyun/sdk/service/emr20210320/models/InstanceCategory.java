@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstanceCategory</p>
  */
 public class InstanceCategory extends TeaModel {
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private String defaultValue;
 
-    @NameInMap("Keys")
+    @com.aliyun.core.annotation.NameInMap("Keys")
     private java.util.List < String > keys;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < String > values;
 
     private InstanceCategory(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecommendScalingRule</p>
  */
 public class RecommendScalingRule extends TeaModel {
-    @NameInMap("ActivityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ActivityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String activityType;
 
-    @NameInMap("AdjustmentValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer adjustmentValue;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("MaxSave")
+    @com.aliyun.core.annotation.NameInMap("MaxSave")
     private Float maxSave;
 
-    @NameInMap("MetricsTrigger")
+    @com.aliyun.core.annotation.NameInMap("MetricsTrigger")
     private MetricsTrigger metricsTrigger;
 
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @NameInMap("TimeTrigger")
+    @com.aliyun.core.annotation.NameInMap("TimeTrigger")
     private TimeTrigger timeTrigger;
 
-    @NameInMap("TriggerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerType;
 
     private RecommendScalingRule(Builder builder) {

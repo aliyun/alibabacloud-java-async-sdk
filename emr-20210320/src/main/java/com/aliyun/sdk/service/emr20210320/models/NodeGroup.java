@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeGroup</p>
  */
 public class NodeGroup extends TeaModel {
-    @NameInMap("AdditionalSecurityGroupIds")
+    @com.aliyun.core.annotation.NameInMap("AdditionalSecurityGroupIds")
     private java.util.List < String > additionalSecurityGroupIds;
 
-    @NameInMap("CostOptimizedConfig")
+    @com.aliyun.core.annotation.NameInMap("CostOptimizedConfig")
     private CostOptimizedConfig costOptimizedConfig;
 
-    @NameInMap("DataDisks")
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
     private java.util.List < DataDisk > dataDisks;
 
-    @NameInMap("DeploymentSetStrategy")
+    @com.aliyun.core.annotation.NameInMap("DeploymentSetStrategy")
     private String deploymentSetStrategy;
 
-    @NameInMap("GracefulShutdown")
+    @com.aliyun.core.annotation.NameInMap("GracefulShutdown")
     private Boolean gracefulShutdown;
 
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupState")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupState")
     private String nodeGroupState;
 
-    @NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
     private String nodeGroupType;
 
-    @NameInMap("NodeResizeStrategy")
+    @com.aliyun.core.annotation.NameInMap("NodeResizeStrategy")
     private String nodeResizeStrategy;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("RunningNodeCount")
+    @com.aliyun.core.annotation.NameInMap("RunningNodeCount")
     private Integer runningNodeCount;
 
-    @NameInMap("SpotBidPrices")
+    @com.aliyun.core.annotation.NameInMap("SpotBidPrices")
     private java.util.List < SpotBidPrice > spotBidPrices;
 
-    @NameInMap("SpotInstanceRemedy")
+    @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
     private Boolean spotInstanceRemedy;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private NodeGroupStateChangeReason stateChangeReason;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDisk systemDisk;
 
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
-    @NameInMap("WithPublicIp")
+    @com.aliyun.core.annotation.NameInMap("WithPublicIp")
     private Boolean withPublicIp;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private NodeGroup(Builder builder) {

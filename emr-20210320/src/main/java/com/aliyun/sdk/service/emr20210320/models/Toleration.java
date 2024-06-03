@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Toleration</p>
  */
 public class Toleration extends TeaModel {
-    @NameInMap("Effect")
+    @com.aliyun.core.annotation.NameInMap("Effect")
     private String effect;
 
-    @NameInMap("Key")
+    @com.aliyun.core.annotation.NameInMap("Key")
     private String key;
 
-    @NameInMap("Operator")
+    @com.aliyun.core.annotation.NameInMap("Operator")
     private String operator;
 
-    @NameInMap("Value")
+    @com.aliyun.core.annotation.NameInMap("Value")
     private String value;
 
     private Toleration(Builder builder) {

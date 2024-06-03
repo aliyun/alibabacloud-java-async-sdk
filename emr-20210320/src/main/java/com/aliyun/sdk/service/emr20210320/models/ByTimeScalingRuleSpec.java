@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ByTimeScalingRuleSpec</p>
  */
 public class ByTimeScalingRuleSpec extends TeaModel {
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("LaunchTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("LaunchTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long launchTime;
 
-    @NameInMap("RecurrenceType")
+    @com.aliyun.core.annotation.NameInMap("RecurrenceType")
     private String recurrenceType;
 
-    @NameInMap("RecurrenceValue")
+    @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
     private String recurrenceValue;
 
     private ByTimeScalingRuleSpec(Builder builder) {

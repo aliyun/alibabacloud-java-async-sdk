@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ByLoadScalingRuleSpec</p>
  */
 public class ByLoadScalingRuleSpec extends TeaModel {
-    @NameInMap("ComparisonOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comparisonOperator;
 
-    @NameInMap("EvaluationCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer evaluationCount;
 
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @NameInMap("Statistics")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statistics;
 
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double threshold;
 
-    @NameInMap("TimeWindow")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("TimeWindow")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeWindow;
 
     private ByLoadScalingRuleSpec(Builder builder) {

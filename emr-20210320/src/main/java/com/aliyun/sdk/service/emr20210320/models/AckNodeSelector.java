@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AckNodeSelector</p>
  */
 public class AckNodeSelector extends TeaModel {
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
-    @NameInMap("Taints")
+    @com.aliyun.core.annotation.NameInMap("Taints")
     private java.util.List < Taints> taints;
 
     private AckNodeSelector(Builder builder) {
@@ -72,10 +71,10 @@ public class AckNodeSelector extends TeaModel {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -133,13 +132,13 @@ public class AckNodeSelector extends TeaModel {
 
     }
     public static class Taints extends TeaModel {
-        @NameInMap("Effect")
+        @com.aliyun.core.annotation.NameInMap("Effect")
         private String effect;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Taints(Builder builder) {

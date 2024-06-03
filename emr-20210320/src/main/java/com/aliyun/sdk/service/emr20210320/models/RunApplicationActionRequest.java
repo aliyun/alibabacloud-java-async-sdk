@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunApplicationActionRequest</p>
  */
 public class RunApplicationActionRequest extends Request {
-    @Query
-    @NameInMap("ActionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ActionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String actionName;
 
-    @Query
-    @NameInMap("BatchSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BatchSize")
     private Integer batchSize;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("ComponentInstanceSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComponentInstanceSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ComponentInstanceSelector componentInstanceSelector;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("ExecuteStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExecuteStrategy")
     private String executeStrategy;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Long interval;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RollingExecute")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RollingExecute")
     private Boolean rollingExecute;
 
     private RunApplicationActionRequest(Builder builder) {
@@ -178,6 +177,7 @@ public class RunApplicationActionRequest extends Request {
          * *   config
          * *   restart
          * *   refresh_queues
+         * *   refresh_labels
          */
         public Builder actionName(String actionName) {
             this.putQueryParameter("ActionName", actionName);

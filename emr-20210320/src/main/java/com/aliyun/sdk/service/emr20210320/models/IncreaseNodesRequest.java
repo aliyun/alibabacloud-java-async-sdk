@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IncreaseNodesRequest</p>
  */
 public class IncreaseNodesRequest extends Request {
-    @Query
-    @NameInMap("ApplicationConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
     private java.util.List < ApplicationConfig > applicationConfigs;
 
-    @Query
-    @NameInMap("AutoPayOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoPayOrder")
     private Boolean autoPayOrder;
 
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("IncreaseNodeCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IncreaseNodeCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer increaseNodeCount;
 
-    @Query
-    @NameInMap("MinIncreaseNodeCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinIncreaseNodeCount")
     private Integer minIncreaseNodeCount;
 
-    @Query
-    @NameInMap("NodeGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeGroupId;
 
-    @Query
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private Integer paymentDuration;
 
-    @Query
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private IncreaseNodesRequest(Builder builder) {

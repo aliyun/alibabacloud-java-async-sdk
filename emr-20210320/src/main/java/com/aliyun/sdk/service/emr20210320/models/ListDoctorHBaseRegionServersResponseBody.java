@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDoctorHBaseRegionServersResponseBody</p>
  */
 public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorHBaseRegionServersResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
     } 
 
     public static class AvgGc extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private AvgGc(Builder builder) {
@@ -233,16 +232,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class CacheRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private CacheRatio(Builder builder) {
@@ -334,16 +333,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class DailyReadRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyReadRequest(Builder builder) {
@@ -435,16 +434,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyReadRequestDayGrowthRatio(Builder builder) {
@@ -536,16 +535,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class DailyWriteRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyWriteRequest(Builder builder) {
@@ -637,16 +636,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyWriteRequestDayGrowthRatio(Builder builder) {
@@ -738,16 +737,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class RegionCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private RegionCount(Builder builder) {
@@ -839,16 +838,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class TotalReadRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalReadRequest(Builder builder) {
@@ -940,16 +939,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class TotalRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalRequest(Builder builder) {
@@ -1041,16 +1040,16 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class TotalWriteRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalWriteRequest(Builder builder) {
@@ -1142,34 +1141,34 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class Metrics extends TeaModel {
-        @NameInMap("AvgGc")
+        @com.aliyun.core.annotation.NameInMap("AvgGc")
         private AvgGc avgGc;
 
-        @NameInMap("CacheRatio")
+        @com.aliyun.core.annotation.NameInMap("CacheRatio")
         private CacheRatio cacheRatio;
 
-        @NameInMap("DailyReadRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequest")
         private DailyReadRequest dailyReadRequest;
 
-        @NameInMap("DailyReadRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequestDayGrowthRatio")
         private DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio;
 
-        @NameInMap("DailyWriteRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequest")
         private DailyWriteRequest dailyWriteRequest;
 
-        @NameInMap("DailyWriteRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequestDayGrowthRatio")
         private DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
-        @NameInMap("RegionCount")
+        @com.aliyun.core.annotation.NameInMap("RegionCount")
         private RegionCount regionCount;
 
-        @NameInMap("TotalReadRequest")
+        @com.aliyun.core.annotation.NameInMap("TotalReadRequest")
         private TotalReadRequest totalReadRequest;
 
-        @NameInMap("TotalRequest")
+        @com.aliyun.core.annotation.NameInMap("TotalRequest")
         private TotalRequest totalRequest;
 
-        @NameInMap("TotalWriteRequest")
+        @com.aliyun.core.annotation.NameInMap("TotalWriteRequest")
         private TotalWriteRequest totalWriteRequest;
 
         private Metrics(Builder builder) {
@@ -1363,10 +1362,10 @@ public class ListDoctorHBaseRegionServersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
-        @NameInMap("RegionServerHost")
+        @com.aliyun.core.annotation.NameInMap("RegionServerHost")
         private String regionServerHost;
 
         private Data(Builder builder) {

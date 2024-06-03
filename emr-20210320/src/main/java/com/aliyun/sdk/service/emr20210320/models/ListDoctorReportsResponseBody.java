@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDoctorReportsResponseBody</p>
  */
 public class ListDoctorReportsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorReportsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListDoctorReportsResponseBody extends TeaModel {
     } 
 
     public static class SummaryReport extends TeaModel {
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
         private SummaryReport(Builder builder) {
@@ -213,13 +212,13 @@ public class ListDoctorReportsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ComponentTypes")
+        @com.aliyun.core.annotation.NameInMap("ComponentTypes")
         private java.util.List < String > componentTypes;
 
-        @NameInMap("DateTime")
+        @com.aliyun.core.annotation.NameInMap("DateTime")
         private String dateTime;
 
-        @NameInMap("SummaryReport")
+        @com.aliyun.core.annotation.NameInMap("SummaryReport")
         private SummaryReport summaryReport;
 
         private Data(Builder builder) {

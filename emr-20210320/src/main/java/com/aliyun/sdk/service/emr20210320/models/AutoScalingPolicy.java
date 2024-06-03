@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AutoScalingPolicy</p>
  */
 public class AutoScalingPolicy extends TeaModel {
-    @NameInMap("constraints")
+    @com.aliyun.core.annotation.NameInMap("constraints")
     private Constraints constraints;
 
-    @NameInMap("scalingRules")
+    @com.aliyun.core.annotation.NameInMap("scalingRules")
     private java.util.List < ScalingRule > scalingRules;
 
     private AutoScalingPolicy(Builder builder) {
@@ -72,10 +71,10 @@ public class AutoScalingPolicy extends TeaModel {
     } 
 
     public static class Constraints extends TeaModel {
-        @NameInMap("maxCapacity")
+        @com.aliyun.core.annotation.NameInMap("maxCapacity")
         private Integer maxCapacity;
 
-        @NameInMap("minCapacity")
+        @com.aliyun.core.annotation.NameInMap("minCapacity")
         private Integer minCapacity;
 
         private Constraints(Builder builder) {

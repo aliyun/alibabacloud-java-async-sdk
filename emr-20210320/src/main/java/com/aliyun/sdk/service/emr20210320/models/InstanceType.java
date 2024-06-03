@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstanceType</p>
  */
 public class InstanceType extends TeaModel {
-    @NameInMap("CpuArchitecture")
+    @com.aliyun.core.annotation.NameInMap("CpuArchitecture")
     private String cpuArchitecture;
 
-    @NameInMap("CpuCore")
+    @com.aliyun.core.annotation.NameInMap("CpuCore")
     private Integer cpuCore;
 
-    @NameInMap("InstanceCategory")
+    @com.aliyun.core.annotation.NameInMap("InstanceCategory")
     private String instanceCategory;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("InstanceTypeFamily")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeFamily")
     private String instanceTypeFamily;
 
-    @NameInMap("LocalStorageAmount")
+    @com.aliyun.core.annotation.NameInMap("LocalStorageAmount")
     private Integer localStorageAmount;
 
-    @NameInMap("LocalStorageCapacity")
+    @com.aliyun.core.annotation.NameInMap("LocalStorageCapacity")
     private Long localStorageCapacity;
 
-    @NameInMap("Optimized")
+    @com.aliyun.core.annotation.NameInMap("Optimized")
     private Boolean optimized;
 
     private InstanceType(Builder builder) {

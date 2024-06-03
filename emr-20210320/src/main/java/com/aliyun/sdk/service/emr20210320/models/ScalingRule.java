@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScalingRule</p>
  */
 public class ScalingRule extends TeaModel {
-    @NameInMap("ActivityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ActivityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String activityType;
 
-    @NameInMap("AdjustmentValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer adjustmentValue;
 
-    @NameInMap("MetricsTrigger")
+    @com.aliyun.core.annotation.NameInMap("MetricsTrigger")
     private MetricsTrigger metricsTrigger;
 
-    @NameInMap("MinAdjustmentValue")
-    private Integer minAdjustmentValue;
-
-    @NameInMap("RuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ruleName;
 
-    @NameInMap("TimeTrigger")
+    @com.aliyun.core.annotation.NameInMap("TimeTrigger")
     private TimeTrigger timeTrigger;
 
-    @NameInMap("TriggerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String triggerType;
 
     private ScalingRule(Builder builder) {
         this.activityType = builder.activityType;
         this.adjustmentValue = builder.adjustmentValue;
         this.metricsTrigger = builder.metricsTrigger;
-        this.minAdjustmentValue = builder.minAdjustmentValue;
         this.ruleName = builder.ruleName;
         this.timeTrigger = builder.timeTrigger;
         this.triggerType = builder.triggerType;
@@ -77,13 +72,6 @@ public class ScalingRule extends TeaModel {
     }
 
     /**
-     * @return minAdjustmentValue
-     */
-    public Integer getMinAdjustmentValue() {
-        return this.minAdjustmentValue;
-    }
-
-    /**
      * @return ruleName
      */
     public String getRuleName() {
@@ -108,7 +96,6 @@ public class ScalingRule extends TeaModel {
         private String activityType; 
         private Integer adjustmentValue; 
         private MetricsTrigger metricsTrigger; 
-        private Integer minAdjustmentValue; 
         private String ruleName; 
         private TimeTrigger timeTrigger; 
         private String triggerType; 
@@ -139,14 +126,6 @@ public class ScalingRule extends TeaModel {
          */
         public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
             this.metricsTrigger = metricsTrigger;
-            return this;
-        }
-
-        /**
-         * MinAdjustmentValue.
-         */
-        public Builder minAdjustmentValue(Integer minAdjustmentValue) {
-            this.minAdjustmentValue = minAdjustmentValue;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDoctorHDFSUGIResponseBody</p>
  */
 public class GetDoctorHDFSUGIResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDoctorHDFSUGIResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
     } 
 
     public static class TotalDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataSize(Builder builder) {
@@ -173,16 +172,16 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
 
     }
     public static class TotalDirCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDirCount(Builder builder) {
@@ -274,16 +273,16 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
 
     }
     public static class TotalFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileCount(Builder builder) {
@@ -375,13 +374,13 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
 
     }
     public static class Metrics extends TeaModel {
-        @NameInMap("TotalDataSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private TotalDataSize totalDataSize;
 
-        @NameInMap("TotalDirCount")
+        @com.aliyun.core.annotation.NameInMap("TotalDirCount")
         private TotalDirCount totalDirCount;
 
-        @NameInMap("TotalFileCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCount")
         private TotalFileCount totalFileCount;
 
         private Metrics(Builder builder) {
@@ -456,7 +455,7 @@ public class GetDoctorHDFSUGIResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
         private Data(Builder builder) {

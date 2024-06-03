@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDoctorHBaseTablesResponseBody</p>
  */
 public class ListDoctorHBaseTablesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorHBaseTablesResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
     } 
 
     public static class Analysis extends TeaModel {
-        @NameInMap("ReadRequestHotspotRegionList")
+        @com.aliyun.core.annotation.NameInMap("ReadRequestHotspotRegionList")
         private java.util.List < String > readRequestHotspotRegionList;
 
-        @NameInMap("ReadRequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("ReadRequestUnbalanceSuggestion")
         private String readRequestUnbalanceSuggestion;
 
-        @NameInMap("RequestHotspotRegionList")
+        @com.aliyun.core.annotation.NameInMap("RequestHotspotRegionList")
         private java.util.List < String > requestHotspotRegionList;
 
-        @NameInMap("RequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("RequestUnbalanceSuggestion")
         private String requestUnbalanceSuggestion;
 
-        @NameInMap("TableScore")
+        @com.aliyun.core.annotation.NameInMap("TableScore")
         private Integer tableScore;
 
-        @NameInMap("WriteRequestHotspotRegionList")
+        @com.aliyun.core.annotation.NameInMap("WriteRequestHotspotRegionList")
         private java.util.List < String > writeRequestHotspotRegionList;
 
-        @NameInMap("WriteRequestUnbalanceSuggestion")
+        @com.aliyun.core.annotation.NameInMap("WriteRequestUnbalanceSuggestion")
         private String writeRequestUnbalanceSuggestion;
 
         private Analysis(Builder builder) {
@@ -293,16 +292,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class ColdAccessDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdAccessDay(Builder builder) {
@@ -394,16 +393,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class ColdConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdConfigDay(Builder builder) {
@@ -495,16 +494,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class ColdDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataSize(Builder builder) {
@@ -596,16 +595,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class DailyReadRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyReadRequest(Builder builder) {
@@ -697,16 +696,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class DailyReadRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyReadRequestDayGrowthRatio(Builder builder) {
@@ -798,16 +797,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class DailyWriteRequest extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DailyWriteRequest(Builder builder) {
@@ -899,16 +898,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class DailyWriteRequestDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private DailyWriteRequestDayGrowthRatio(Builder builder) {
@@ -1000,16 +999,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class FreezeConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeConfigDay(Builder builder) {
@@ -1101,16 +1100,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class FreezeDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataSize(Builder builder) {
@@ -1202,16 +1201,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class HotDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataSize(Builder builder) {
@@ -1303,16 +1302,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class Locality extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private Locality(Builder builder) {
@@ -1404,16 +1403,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class ReadRequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ReadRequestBalance(Builder builder) {
@@ -1505,16 +1504,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class RegionBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RegionBalance(Builder builder) {
@@ -1606,16 +1605,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class RegionCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private RegionCount(Builder builder) {
@@ -1707,16 +1706,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class RegionCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RegionCountDayGrowthRatio(Builder builder) {
@@ -1808,16 +1807,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class RegionServerCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private RegionServerCount(Builder builder) {
@@ -1909,16 +1908,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class RequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private RequestBalance(Builder builder) {
@@ -2010,16 +2009,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class StoreFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private StoreFileCount(Builder builder) {
@@ -2111,16 +2110,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class StoreFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private StoreFileCountDayGrowthRatio(Builder builder) {
@@ -2212,16 +2211,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class TableSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TableSize(Builder builder) {
@@ -2313,16 +2312,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class TableSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TableSizeDayGrowthRatio(Builder builder) {
@@ -2414,16 +2413,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class WarmConfigDay extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmConfigDay(Builder builder) {
@@ -2515,16 +2514,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class WarmDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataSize(Builder builder) {
@@ -2616,16 +2615,16 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class WriteRequestBalance extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WriteRequestBalance(Builder builder) {
@@ -2717,76 +2716,76 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class Metrics extends TeaModel {
-        @NameInMap("ColdAccessDay")
+        @com.aliyun.core.annotation.NameInMap("ColdAccessDay")
         private ColdAccessDay coldAccessDay;
 
-        @NameInMap("ColdConfigDay")
+        @com.aliyun.core.annotation.NameInMap("ColdConfigDay")
         private ColdConfigDay coldConfigDay;
 
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private ColdDataSize coldDataSize;
 
-        @NameInMap("DailyReadRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequest")
         private DailyReadRequest dailyReadRequest;
 
-        @NameInMap("DailyReadRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyReadRequestDayGrowthRatio")
         private DailyReadRequestDayGrowthRatio dailyReadRequestDayGrowthRatio;
 
-        @NameInMap("DailyWriteRequest")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequest")
         private DailyWriteRequest dailyWriteRequest;
 
-        @NameInMap("DailyWriteRequestDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("DailyWriteRequestDayGrowthRatio")
         private DailyWriteRequestDayGrowthRatio dailyWriteRequestDayGrowthRatio;
 
-        @NameInMap("FreezeConfigDay")
+        @com.aliyun.core.annotation.NameInMap("FreezeConfigDay")
         private FreezeConfigDay freezeConfigDay;
 
-        @NameInMap("FreezeDataSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSize")
         private FreezeDataSize freezeDataSize;
 
-        @NameInMap("HotDataSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
         private HotDataSize hotDataSize;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private Locality locality;
 
-        @NameInMap("ReadRequestBalance")
+        @com.aliyun.core.annotation.NameInMap("ReadRequestBalance")
         private ReadRequestBalance readRequestBalance;
 
-        @NameInMap("RegionBalance")
+        @com.aliyun.core.annotation.NameInMap("RegionBalance")
         private RegionBalance regionBalance;
 
-        @NameInMap("RegionCount")
+        @com.aliyun.core.annotation.NameInMap("RegionCount")
         private RegionCount regionCount;
 
-        @NameInMap("RegionCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("RegionCountDayGrowthRatio")
         private RegionCountDayGrowthRatio regionCountDayGrowthRatio;
 
-        @NameInMap("RegionServerCount")
+        @com.aliyun.core.annotation.NameInMap("RegionServerCount")
         private RegionServerCount regionServerCount;
 
-        @NameInMap("RequestBalance")
+        @com.aliyun.core.annotation.NameInMap("RequestBalance")
         private RequestBalance requestBalance;
 
-        @NameInMap("StoreFileCount")
+        @com.aliyun.core.annotation.NameInMap("StoreFileCount")
         private StoreFileCount storeFileCount;
 
-        @NameInMap("StoreFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("StoreFileCountDayGrowthRatio")
         private StoreFileCountDayGrowthRatio storeFileCountDayGrowthRatio;
 
-        @NameInMap("TableSize")
+        @com.aliyun.core.annotation.NameInMap("TableSize")
         private TableSize tableSize;
 
-        @NameInMap("TableSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TableSizeDayGrowthRatio")
         private TableSizeDayGrowthRatio tableSizeDayGrowthRatio;
 
-        @NameInMap("WarmConfigDay")
+        @com.aliyun.core.annotation.NameInMap("WarmConfigDay")
         private WarmConfigDay warmConfigDay;
 
-        @NameInMap("WarmDataSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSize")
         private WarmDataSize warmDataSize;
 
-        @NameInMap("WriteRequestBalance")
+        @com.aliyun.core.annotation.NameInMap("WriteRequestBalance")
         private WriteRequestBalance writeRequestBalance;
 
         private Metrics(Builder builder) {
@@ -3218,13 +3217,13 @@ public class ListDoctorHBaseTablesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AckNode</p>
  */
 public class AckNode extends TeaModel {
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
     private AckNodeSelector nodeSelector;
 
     private AckNode(Builder builder) {

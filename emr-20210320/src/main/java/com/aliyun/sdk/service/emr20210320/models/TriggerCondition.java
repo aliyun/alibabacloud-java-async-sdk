@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TriggerCondition</p>
  */
 public class TriggerCondition extends TeaModel {
-    @NameInMap("ComparisonOperator")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String comparisonOperator;
 
-    @NameInMap("MetricName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("MetricName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metricName;
 
-    @NameInMap("Statistics")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Statistics")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String statistics;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tag > tags;
 
-    @NameInMap("Threshold")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Threshold")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double threshold;
 
     private TriggerCondition(Builder builder) {

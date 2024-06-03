@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunApplicationActionResponseBody</p>
  */
 public class RunApplicationActionResponseBody extends TeaModel {
-    @NameInMap("AbnInstances")
+    @com.aliyun.core.annotation.NameInMap("AbnInstances")
     private java.util.List < AbnInstances> abnInstances;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RunApplicationActionResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class RunApplicationActionResponseBody extends TeaModel {
     } 
 
     public static class AbnInstances extends TeaModel {
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private AbnInstances(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeGroupParam</p>
  */
 public class NodeGroupParam extends TeaModel {
-    @NameInMap("AutoPayOrder")
+    @com.aliyun.core.annotation.NameInMap("AutoPayOrder")
     private Boolean autoPayOrder;
 
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @NameInMap("AutoRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDurationUnit")
     private String autoRenewDurationUnit;
 
-    @NameInMap("DataDisks")
+    @com.aliyun.core.annotation.NameInMap("DataDisks")
     private java.util.List < DiskInfo > dataDisks;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("InstanceTypes")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypes")
     private java.util.List < String > instanceTypes;
 
-    @NameInMap("NodeCount")
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
     private Integer nodeCount;
 
-    @NameInMap("NodeGroupIndex")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupIndex")
     private Integer nodeGroupIndex;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
     private String nodeGroupType;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private Integer paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("SystemDisk")
+    @com.aliyun.core.annotation.NameInMap("SystemDisk")
     private SystemDiskParam systemDisk;
 
-    @NameInMap("VSwitchIds")
+    @com.aliyun.core.annotation.NameInMap("VSwitchIds")
     private java.util.List < String > vSwitchIds;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private NodeGroupParam(Builder builder) {

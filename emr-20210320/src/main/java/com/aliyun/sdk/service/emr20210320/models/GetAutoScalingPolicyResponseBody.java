@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoScalingPolicyResponseBody</p>
  */
 public class GetAutoScalingPolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingPolicy")
+    @com.aliyun.core.annotation.NameInMap("ScalingPolicy")
     private ScalingPolicy scalingPolicy;
 
     private GetAutoScalingPolicyResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
     } 
 
     public static class Constraints extends TeaModel {
-        @NameInMap("MaxCapacity")
+        @com.aliyun.core.annotation.NameInMap("MaxCapacity")
         private Integer maxCapacity;
 
-        @NameInMap("MinCapacity")
+        @com.aliyun.core.annotation.NameInMap("MinCapacity")
         private Integer minCapacity;
 
         private Constraints(Builder builder) {
@@ -133,28 +132,28 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     }
     public static class ScalingRules extends TeaModel {
-        @NameInMap("ActivityType")
+        @com.aliyun.core.annotation.NameInMap("ActivityType")
         private String activityType;
 
-        @NameInMap("AdjustmentType")
+        @com.aliyun.core.annotation.NameInMap("AdjustmentType")
         private String adjustmentType;
 
-        @NameInMap("AdjustmentValue")
+        @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
         private Integer adjustmentValue;
 
-        @NameInMap("MetricsTrigger")
+        @com.aliyun.core.annotation.NameInMap("MetricsTrigger")
         private MetricsTrigger metricsTrigger;
 
-        @NameInMap("MinAdjustmentValue")
+        @com.aliyun.core.annotation.NameInMap("MinAdjustmentValue")
         private Integer minAdjustmentValue;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("TimeTrigger")
+        @com.aliyun.core.annotation.NameInMap("TimeTrigger")
         private TimeTrigger timeTrigger;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
         private ScalingRules(Builder builder) {
@@ -322,19 +321,19 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
 
     }
     public static class ScalingPolicy extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Constraints")
+        @com.aliyun.core.annotation.NameInMap("Constraints")
         private Constraints constraints;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("ScalingPolicyId")
+        @com.aliyun.core.annotation.NameInMap("ScalingPolicyId")
         private String scalingPolicyId;
 
-        @NameInMap("ScalingRules")
+        @com.aliyun.core.annotation.NameInMap("ScalingRules")
         private java.util.List < ScalingRules> scalingRules;
 
         private ScalingPolicy(Builder builder) {

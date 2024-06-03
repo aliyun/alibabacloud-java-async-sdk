@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListReleaseVersionsResponseBody</p>
  */
 public class ListReleaseVersionsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ReleaseVersions")
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersions")
     private java.util.List < ReleaseVersions> releaseVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListReleaseVersionsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
     } 
 
     public static class ReleaseVersions extends TeaModel {
-        @NameInMap("IaasType")
+        @com.aliyun.core.annotation.NameInMap("IaasType")
         private String iaasType;
 
-        @NameInMap("ReleaseVersion")
+        @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
         private String releaseVersion;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
         private ReleaseVersions(Builder builder) {

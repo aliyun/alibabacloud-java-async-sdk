@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListComponentInstancesResponseBody</p>
  */
 public class ListComponentInstancesResponseBody extends TeaModel {
-    @NameInMap("ComponentInstances")
+    @com.aliyun.core.annotation.NameInMap("ComponentInstances")
     private java.util.List < ComponentInstances> componentInstances;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListComponentInstancesResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListComponentInstancesResponseBody extends TeaModel {
     } 
 
     public static class ComponentInstances extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("BizState")
+        @com.aliyun.core.annotation.NameInMap("BizState")
         private String bizState;
 
-        @NameInMap("CommissionState")
+        @com.aliyun.core.annotation.NameInMap("CommissionState")
         private String commissionState;
 
-        @NameInMap("ComponentInstanceState")
+        @com.aliyun.core.annotation.NameInMap("ComponentInstanceState")
         private String componentInstanceState;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("DesiredState")
+        @com.aliyun.core.annotation.NameInMap("DesiredState")
         private String desiredState;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
         private ComponentInstances(Builder builder) {

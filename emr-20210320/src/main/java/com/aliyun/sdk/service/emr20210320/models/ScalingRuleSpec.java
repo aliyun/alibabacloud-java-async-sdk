@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScalingRuleSpec</p>
  */
 public class ScalingRuleSpec extends TeaModel {
-    @NameInMap("AdjustmentValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer adjustmentValue;
 
-    @NameInMap("ByLoadScalingRuleSpec")
+    @com.aliyun.core.annotation.NameInMap("ByLoadScalingRuleSpec")
     private ByLoadScalingRuleSpec byLoadScalingRuleSpec;
 
-    @NameInMap("ByTimeScalingRuleSpec")
+    @com.aliyun.core.annotation.NameInMap("ByTimeScalingRuleSpec")
     private ByTimeScalingRuleSpec byTimeScalingRuleSpec;
 
-    @NameInMap("CoolDownInterval")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("CoolDownInterval")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer coolDownInterval;
 
-    @NameInMap("ScalingActivityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ScalingActivityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingActivityType;
 
-    @NameInMap("ScalingRuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingRuleName;
 
-    @NameInMap("ScalingRuleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ScalingRuleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scalingRuleType;
 
     private ScalingRuleSpec(Builder builder) {
@@ -177,28 +176,28 @@ public class ScalingRuleSpec extends TeaModel {
     } 
 
     public static class ByLoadScalingRuleSpec extends TeaModel {
-        @NameInMap("ComparisonOperator")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String comparisonOperator;
 
-        @NameInMap("EvaluationCount")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer evaluationCount;
 
-        @NameInMap("MetricName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MetricName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String metricName;
 
-        @NameInMap("Statistics")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Statistics")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String statistics;
 
-        @NameInMap("Threshold")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Threshold")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Double threshold;
 
-        @NameInMap("TimeWindow")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TimeWindow")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer timeWindow;
 
         private ByLoadScalingRuleSpec(Builder builder) {
@@ -324,17 +323,17 @@ public class ScalingRuleSpec extends TeaModel {
 
     }
     public static class ByTimeScalingRuleSpec extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("LaunchTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LaunchTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long launchTime;
 
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValue")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
         private String recurrenceValue;
 
         private ByTimeScalingRuleSpec(Builder builder) {

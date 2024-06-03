@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetricUnitValue</p>
  */
 public class MetricUnitValue extends TeaModel {
-    @NameInMap("MetricName")
+    @com.aliyun.core.annotation.NameInMap("MetricName")
     private String metricName;
 
-    @NameInMap("MetricUnit")
+    @com.aliyun.core.annotation.NameInMap("MetricUnit")
     private String metricUnit;
 
     private MetricUnitValue(Builder builder) {

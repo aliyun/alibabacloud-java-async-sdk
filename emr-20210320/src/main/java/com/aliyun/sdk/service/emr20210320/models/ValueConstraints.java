@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ValueConstraints</p>
  */
 public class ValueConstraints extends TeaModel {
-    @NameInMap("DefaultValue")
+    @com.aliyun.core.annotation.NameInMap("DefaultValue")
     private Integer defaultValue;
 
-    @NameInMap("End")
+    @com.aliyun.core.annotation.NameInMap("End")
     private Integer end;
 
-    @NameInMap("Start")
+    @com.aliyun.core.annotation.NameInMap("Start")
     private Integer start;
 
-    @NameInMap("Step")
+    @com.aliyun.core.annotation.NameInMap("Step")
     private Integer step;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < Integer > values;
 
     private ValueConstraints(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplicationConfig</p>
  */
 public class ApplicationConfig extends TeaModel {
-    @NameInMap("ApplicationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationName;
 
-    @NameInMap("ConfigFileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configFileName;
 
-    @NameInMap("ConfigItemKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configItemKey;
 
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
-    @NameInMap("ConfigScope")
+    @com.aliyun.core.annotation.NameInMap("ConfigScope")
     private String configScope;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
     private String nodeGroupName;
 
     private ApplicationConfig(Builder builder) {

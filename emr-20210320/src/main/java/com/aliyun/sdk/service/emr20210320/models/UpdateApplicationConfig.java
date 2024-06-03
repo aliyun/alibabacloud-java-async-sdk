@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationConfig</p>
  */
 public class UpdateApplicationConfig extends TeaModel {
-    @NameInMap("ConfigDescription")
+    @com.aliyun.core.annotation.NameInMap("ConfigDescription")
     private String configDescription;
 
-    @NameInMap("ConfigFileName")
+    @com.aliyun.core.annotation.NameInMap("ConfigFileName")
     private String configFileName;
 
-    @NameInMap("ConfigItemKey")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
     private String configItemKey;
 
-    @NameInMap("ConfigItemValue")
+    @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
     private String configItemValue;
 
     private UpdateApplicationConfig(Builder builder) {

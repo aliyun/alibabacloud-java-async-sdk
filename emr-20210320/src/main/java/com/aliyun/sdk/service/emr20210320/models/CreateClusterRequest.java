@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,75 +11,75 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Query
-    @NameInMap("ApplicationConfigs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
     private java.util.List < ApplicationConfig > applicationConfigs;
 
-    @Query
-    @NameInMap("Applications")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Applications")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Application > applications;
 
-    @Query
-    @NameInMap("BootstrapScripts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BootstrapScripts")
     private java.util.List < Script > bootstrapScripts;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterName;
 
-    @Query
-    @NameInMap("ClusterType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterType;
 
-    @Query
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @Query
-    @NameInMap("NodeAttributes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeAttributes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NodeAttributes nodeAttributes;
 
-    @Query
-    @NameInMap("NodeGroups")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeGroups")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NodeGroupConfig > nodeGroups;
 
-    @Query
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ReleaseVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String releaseVersion;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityMode")
     private String securityMode;
 
-    @Query
-    @NameInMap("SubscriptionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionConfig")
     private SubscriptionConfig subscriptionConfig;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tag > tags;
 
     private CreateClusterRequest(Builder builder) {
@@ -271,7 +270,7 @@ public class CreateClusterRequest extends Request {
         } 
 
         /**
-         * The configurations of the applications. Valid values of N: 1 to 1000.
+         * The application configurations. You can specify a maximum of 1,000 items.
          */
         public Builder applicationConfigs(java.util.List < ApplicationConfig > applicationConfigs) {
             this.putQueryParameter("ApplicationConfigs", applicationConfigs);
@@ -280,7 +279,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The applications that you want to add to the cluster. Valid values of N: 1 to 100.
+         * The applications. You can specify a maximum of 100 items.
          */
         public Builder applications(java.util.List < Application > applications) {
             this.putQueryParameter("Applications", applications);
@@ -289,7 +288,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The array of scripts for the bootstrap actions. Valid values of N: 1 to 10.
+         * The bootstrap actions. You can specify a maximum of 10 items.
          */
         public Builder bootstrapScripts(java.util.List < Script > bootstrapScripts) {
             this.putQueryParameter("BootstrapScripts", bootstrapScripts);
@@ -335,11 +334,11 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The deployment mode of applications in the cluster. Valid values:
+         * The deployment mode of master nodes in the cluster. Valid values:
          * <p>
          * 
-         * *   NORMAL: regular mode. A master node is deployed in the cluster.
-         * *   HA: high availability mode. At least three master nodes are deployed in the cluster.
+         * *   NORMAL: regular mode. This is the default value. A cluster that contains only one master node is created.
+         * *   HA: high availability (HA) mode. A cluster that contains three master nodes is created.
          */
         public Builder deployMode(String deployMode) {
             this.putQueryParameter("DeployMode", deployMode);
@@ -348,7 +347,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The attributes of all Elastic Compute Service (ECS) nodes in the cluster. The basic attributes of all ECS nodes in the cluster.
+         * The attributes of all ECS instances.
          */
         public Builder nodeAttributes(NodeAttributes nodeAttributes) {
             this.putQueryParameter("NodeAttributes", nodeAttributes);
@@ -357,7 +356,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The array of configurations of the node groups. Valid values of N: 1 to 100.
+         * The node groups. You can specify a maximum of 100 items.
          */
         public Builder nodeGroups(java.util.List < NodeGroupConfig > nodeGroups) {
             this.putQueryParameter("NodeGroups", nodeGroups);
@@ -381,7 +380,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The ID of the region in which you want to create the instance.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -411,8 +410,8 @@ public class CreateClusterRequest extends Request {
          * The security mode of the cluster. Valid values:
          * <p>
          * 
-         * *   NORMAL: regular mode. Kerberos is not enabled.
-         * *   KERBEROS: Kerberos mode. Kerberos is enabled.
+         * *   NORMAL: disables Kerberos authentication for the cluster. This is the default value.
+         * *   KERBEROS: enables Kerberos authentication for the cluster.
          */
         public Builder securityMode(String securityMode) {
             this.putQueryParameter("SecurityMode", securityMode);
@@ -421,7 +420,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The subscription configurations. This parameter is required when the PaymentType parameter is set to Subscription.
+         * The subscription configurations. This parameter is required only if you set the PaymentType parameter to Subscription.
          */
         public Builder subscriptionConfig(SubscriptionConfig subscriptionConfig) {
             this.putQueryParameter("SubscriptionConfig", subscriptionConfig);
@@ -430,7 +429,7 @@ public class CreateClusterRequest extends Request {
         }
 
         /**
-         * The tag that you want to add to the cloud desktop. Valid values of N: 0 to 20.
+         * The tags. You can specify a maximum of 20 items.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

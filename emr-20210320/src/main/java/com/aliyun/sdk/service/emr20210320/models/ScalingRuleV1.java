@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScalingRuleV1</p>
  */
 public class ScalingRuleV1 extends TeaModel {
-    @NameInMap("AdjustmentType")
+    @com.aliyun.core.annotation.NameInMap("AdjustmentType")
     private String adjustmentType;
 
-    @NameInMap("AdjustmentValue")
+    @com.aliyun.core.annotation.NameInMap("AdjustmentValue")
     private Integer adjustmentValue;
 
-    @NameInMap("CoolDownTime")
+    @com.aliyun.core.annotation.NameInMap("CoolDownTime")
     private Integer coolDownTime;
 
-    @NameInMap("RuleName")
+    @com.aliyun.core.annotation.NameInMap("RuleName")
     private String ruleName;
 
-    @NameInMap("RuleParam")
+    @com.aliyun.core.annotation.NameInMap("RuleParam")
     private RuleParam ruleParam;
 
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
-    @NameInMap("ScalingConfigBizId")
+    @com.aliyun.core.annotation.NameInMap("ScalingConfigBizId")
     private String scalingConfigBizId;
 
     private ScalingRuleV1(Builder builder) {
@@ -172,37 +171,37 @@ public class ScalingRuleV1 extends TeaModel {
     } 
 
     public static class RuleParam extends TeaModel {
-        @NameInMap("ComparisonOperator")
+        @com.aliyun.core.annotation.NameInMap("ComparisonOperator")
         private String comparisonOperator;
 
-        @NameInMap("EvaluationCount")
+        @com.aliyun.core.annotation.NameInMap("EvaluationCount")
         private Integer evaluationCount;
 
-        @NameInMap("LaunchExpirationTime")
+        @com.aliyun.core.annotation.NameInMap("LaunchExpirationTime")
         private Integer launchExpirationTime;
 
-        @NameInMap("LaunchTime")
+        @com.aliyun.core.annotation.NameInMap("LaunchTime")
         private String launchTime;
 
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("RecurrenceEndTime")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceEndTime")
         private String recurrenceEndTime;
 
-        @NameInMap("RecurrenceType")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceType")
         private String recurrenceType;
 
-        @NameInMap("RecurrenceValue")
+        @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
         private String recurrenceValue;
 
-        @NameInMap("Statistics")
+        @com.aliyun.core.annotation.NameInMap("Statistics")
         private String statistics;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Integer threshold;
 
         private RuleParam(Builder builder) {

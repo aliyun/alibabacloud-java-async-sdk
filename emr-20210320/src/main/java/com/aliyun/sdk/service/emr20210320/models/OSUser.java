@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OSUser</p>
  */
 public class OSUser extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private String group;
 
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private String user;
 
     private OSUser(Builder builder) {

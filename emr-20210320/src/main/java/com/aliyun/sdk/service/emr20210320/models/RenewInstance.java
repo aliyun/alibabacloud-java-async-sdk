@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RenewInstance</p>
  */
 public class RenewInstance extends TeaModel {
-    @NameInMap("EmrRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("EmrRenewDuration")
     private Integer emrRenewDuration;
 
-    @NameInMap("EmrRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("EmrRenewDurationUnit")
     private String emrRenewDurationUnit;
 
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @NameInMap("RenewDuration")
+    @com.aliyun.core.annotation.NameInMap("RenewDuration")
     private Integer renewDuration;
 
-    @NameInMap("RenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("RenewDurationUnit")
     private String renewDurationUnit;
 
     private RenewInstance(Builder builder) {

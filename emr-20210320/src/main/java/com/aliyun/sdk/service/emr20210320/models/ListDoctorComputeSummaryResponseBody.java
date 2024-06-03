@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDoctorComputeSummaryResponseBody</p>
  */
 public class ListDoctorComputeSummaryResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListDoctorComputeSummaryResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
     } 
 
     public static class Analysis extends TeaModel {
-        @NameInMap("HealthyJobCount")
+        @com.aliyun.core.annotation.NameInMap("HealthyJobCount")
         private Long healthyJobCount;
 
-        @NameInMap("NeedAttentionJobCount")
+        @com.aliyun.core.annotation.NameInMap("NeedAttentionJobCount")
         private Long needAttentionJobCount;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Integer score;
 
-        @NameInMap("ScoreDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("ScoreDayGrowthRatio")
         private Float scoreDayGrowthRatio;
 
-        @NameInMap("SubHealthyJobCount")
+        @com.aliyun.core.annotation.NameInMap("SubHealthyJobCount")
         private Long subHealthyJobCount;
 
-        @NameInMap("UnhealthyJobCount")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyJobCount")
         private Long unhealthyJobCount;
 
         private Analysis(Builder builder) {
@@ -273,16 +272,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class MemSeconds extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MemSeconds(Builder builder) {
@@ -374,16 +373,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class MemSecondsDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MemSecondsDayGrowthRatio(Builder builder) {
@@ -475,16 +474,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class MemUtilization extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MemUtilization(Builder builder) {
@@ -576,16 +575,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class ReadSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ReadSize(Builder builder) {
@@ -677,16 +676,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class VcoreSeconds extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private VcoreSeconds(Builder builder) {
@@ -778,16 +777,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class VcoreSecondsDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private VcoreSecondsDayGrowthRatio(Builder builder) {
@@ -879,16 +878,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class VcoreUtilization extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private VcoreUtilization(Builder builder) {
@@ -980,16 +979,16 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class WriteSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WriteSize(Builder builder) {
@@ -1081,28 +1080,28 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class Metrics extends TeaModel {
-        @NameInMap("MemSeconds")
+        @com.aliyun.core.annotation.NameInMap("MemSeconds")
         private MemSeconds memSeconds;
 
-        @NameInMap("MemSecondsDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("MemSecondsDayGrowthRatio")
         private MemSecondsDayGrowthRatio memSecondsDayGrowthRatio;
 
-        @NameInMap("MemUtilization")
+        @com.aliyun.core.annotation.NameInMap("MemUtilization")
         private MemUtilization memUtilization;
 
-        @NameInMap("ReadSize")
+        @com.aliyun.core.annotation.NameInMap("ReadSize")
         private ReadSize readSize;
 
-        @NameInMap("VcoreSeconds")
+        @com.aliyun.core.annotation.NameInMap("VcoreSeconds")
         private VcoreSeconds vcoreSeconds;
 
-        @NameInMap("VcoreSecondsDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("VcoreSecondsDayGrowthRatio")
         private VcoreSecondsDayGrowthRatio vcoreSecondsDayGrowthRatio;
 
-        @NameInMap("VcoreUtilization")
+        @com.aliyun.core.annotation.NameInMap("VcoreUtilization")
         private VcoreUtilization vcoreUtilization;
 
-        @NameInMap("WriteSize")
+        @com.aliyun.core.annotation.NameInMap("WriteSize")
         private WriteSize writeSize;
 
         private Metrics(Builder builder) {
@@ -1262,13 +1261,13 @@ public class ListDoctorComputeSummaryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
         private Data(Builder builder) {

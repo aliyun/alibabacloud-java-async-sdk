@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListScriptsResponseBody</p>
  */
 public class ListScriptsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Scripts")
+    @com.aliyun.core.annotation.NameInMap("Scripts")
     private java.util.List < Scripts> scripts;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListScriptsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class ListScriptsResponseBody extends TeaModel {
     } 
 
     public static class Scripts extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ExecutionFailStrategy")
+        @com.aliyun.core.annotation.NameInMap("ExecutionFailStrategy")
         private String executionFailStrategy;
 
-        @NameInMap("ExecutionMoment")
+        @com.aliyun.core.annotation.NameInMap("ExecutionMoment")
         private String executionMoment;
 
-        @NameInMap("ExecutionState")
+        @com.aliyun.core.annotation.NameInMap("ExecutionState")
         private String executionState;
 
-        @NameInMap("LastUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LastUpdateTime")
         private Long lastUpdateTime;
 
-        @NameInMap("NodeSelector")
+        @com.aliyun.core.annotation.NameInMap("NodeSelector")
         private NodeSelector nodeSelector;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ScriptArgs")
+        @com.aliyun.core.annotation.NameInMap("ScriptArgs")
         private String scriptArgs;
 
-        @NameInMap("ScriptId")
+        @com.aliyun.core.annotation.NameInMap("ScriptId")
         private String scriptId;
 
-        @NameInMap("ScriptName")
+        @com.aliyun.core.annotation.NameInMap("ScriptName")
         private String scriptName;
 
-        @NameInMap("ScriptPath")
+        @com.aliyun.core.annotation.NameInMap("ScriptPath")
         private String scriptPath;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Scripts(Builder builder) {

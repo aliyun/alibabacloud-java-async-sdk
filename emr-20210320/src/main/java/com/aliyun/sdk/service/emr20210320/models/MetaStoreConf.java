@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetaStoreConf</p>
  */
 public class MetaStoreConf extends TeaModel {
-    @NameInMap("DbPassword")
+    @com.aliyun.core.annotation.NameInMap("DbPassword")
     private String dbPassword;
 
-    @NameInMap("DbUrl")
+    @com.aliyun.core.annotation.NameInMap("DbUrl")
     private String dbUrl;
 
-    @NameInMap("DbUserName")
+    @com.aliyun.core.annotation.NameInMap("DbUserName")
     private String dbUserName;
 
     private MetaStoreConf(Builder builder) {

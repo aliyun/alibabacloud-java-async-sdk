@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAutoScalingActivityResponseBody</p>
  */
 public class GetAutoScalingActivityResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScalingActivity")
+    @com.aliyun.core.annotation.NameInMap("ScalingActivity")
     private ScalingActivity scalingActivity;
 
     private GetAutoScalingActivityResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetAutoScalingActivityResponseBody extends TeaModel {
     } 
 
     public static class ScalingActivity extends TeaModel {
-        @NameInMap("ActivityId")
+        @com.aliyun.core.annotation.NameInMap("ActivityId")
         private String activityId;
 
-        @NameInMap("ActivityResults")
+        @com.aliyun.core.annotation.NameInMap("ActivityResults")
         private java.util.List < ScalingActivityResult > activityResults;
 
-        @NameInMap("ActivityState")
+        @com.aliyun.core.annotation.NameInMap("ActivityState")
         private String activityState;
 
-        @NameInMap("ActivityType")
+        @com.aliyun.core.annotation.NameInMap("ActivityType")
         private String activityType;
 
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ExpectNum")
+        @com.aliyun.core.annotation.NameInMap("ExpectNum")
         private Integer expectNum;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeGroupName")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
-        @NameInMap("OperationId")
+        @com.aliyun.core.annotation.NameInMap("OperationId")
         private String operationId;
 
-        @NameInMap("RuleDetail")
+        @com.aliyun.core.annotation.NameInMap("RuleDetail")
         private ScalingRule ruleDetail;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private ScalingActivity(Builder builder) {

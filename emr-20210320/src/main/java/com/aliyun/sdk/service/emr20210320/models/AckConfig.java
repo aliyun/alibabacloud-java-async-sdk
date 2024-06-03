@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AckConfig</p>
  */
 public class AckConfig extends TeaModel {
-    @NameInMap("AckInstanceId")
+    @com.aliyun.core.annotation.NameInMap("AckInstanceId")
     private String ackInstanceId;
 
-    @NameInMap("CustomAnnotations")
+    @com.aliyun.core.annotation.NameInMap("CustomAnnotations")
     private java.util.List < Tag > customAnnotations;
 
-    @NameInMap("CustomLabels")
+    @com.aliyun.core.annotation.NameInMap("CustomLabels")
     private java.util.List < Tag > customLabels;
 
-    @NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     private Integer dataDiskSize;
 
-    @NameInMap("DataDiskStorageClass")
+    @com.aliyun.core.annotation.NameInMap("DataDiskStorageClass")
     private String dataDiskStorageClass;
 
-    @NameInMap("LimitCpu")
+    @com.aliyun.core.annotation.NameInMap("LimitCpu")
     private Float limitCpu;
 
-    @NameInMap("LimitMemory")
+    @com.aliyun.core.annotation.NameInMap("LimitMemory")
     private Float limitMemory;
 
-    @NameInMap("MountHostCgroup")
+    @com.aliyun.core.annotation.NameInMap("MountHostCgroup")
     private Boolean mountHostCgroup;
 
-    @NameInMap("Namespace")
+    @com.aliyun.core.annotation.NameInMap("Namespace")
     private String namespace;
 
-    @NameInMap("NodeSelectors")
+    @com.aliyun.core.annotation.NameInMap("NodeSelectors")
     private java.util.List < Tag > nodeSelectors;
 
-    @NameInMap("RequestCpu")
+    @com.aliyun.core.annotation.NameInMap("RequestCpu")
     private Float requestCpu;
 
-    @NameInMap("RequestMemory")
+    @com.aliyun.core.annotation.NameInMap("RequestMemory")
     private Float requestMemory;
 
-    @NameInMap("Tolerations")
+    @com.aliyun.core.annotation.NameInMap("Tolerations")
     private java.util.List < Toleration > tolerations;
 
     private AckConfig(Builder builder) {

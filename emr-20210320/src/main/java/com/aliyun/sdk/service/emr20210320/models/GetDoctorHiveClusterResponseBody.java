@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDoctorHiveClusterResponseBody</p>
  */
 public class GetDoctorHiveClusterResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDoctorHiveClusterResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
     } 
 
     public static class Analysis extends TeaModel {
-        @NameInMap("HiveDistributionScore")
+        @com.aliyun.core.annotation.NameInMap("HiveDistributionScore")
         private Integer hiveDistributionScore;
 
-        @NameInMap("HiveFormatScore")
+        @com.aliyun.core.annotation.NameInMap("HiveFormatScore")
         private Integer hiveFormatScore;
 
-        @NameInMap("HiveFrequencyScore")
+        @com.aliyun.core.annotation.NameInMap("HiveFrequencyScore")
         private Integer hiveFrequencyScore;
 
-        @NameInMap("HiveScore")
+        @com.aliyun.core.annotation.NameInMap("HiveScore")
         private Integer hiveScore;
 
         private Analysis(Builder builder) {
@@ -173,16 +172,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class Formats extends TeaModel {
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("FormatRatio")
+        @com.aliyun.core.annotation.NameInMap("FormatRatio")
         private Float formatRatio;
 
-        @NameInMap("FormatSize")
+        @com.aliyun.core.annotation.NameInMap("FormatSize")
         private Long formatSize;
 
-        @NameInMap("FormatSizeUnit")
+        @com.aliyun.core.annotation.NameInMap("FormatSizeUnit")
         private String formatSizeUnit;
 
         private Formats(Builder builder) {
@@ -274,16 +273,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class ColdDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataDayGrowthSize(Builder builder) {
@@ -375,16 +374,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class ColdDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ColdDataRatio(Builder builder) {
@@ -476,16 +475,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class ColdDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private ColdDataSize(Builder builder) {
@@ -577,16 +576,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class ColdDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private ColdDataSizeDayGrowthRatio(Builder builder) {
@@ -678,16 +677,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class DatabaseCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private DatabaseCount(Builder builder) {
@@ -779,16 +778,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class EmptyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileCount(Builder builder) {
@@ -880,16 +879,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class EmptyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private EmptyFileCountDayGrowthRatio(Builder builder) {
@@ -981,16 +980,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class EmptyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private EmptyFileDayGrowthCount(Builder builder) {
@@ -1082,16 +1081,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class EmptyFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private EmptyFileRatio(Builder builder) {
@@ -1183,16 +1182,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class FreezeDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataDayGrowthSize(Builder builder) {
@@ -1284,16 +1283,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class FreezeDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private FreezeDataRatio(Builder builder) {
@@ -1385,16 +1384,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class FreezeDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private FreezeDataSize(Builder builder) {
@@ -1486,16 +1485,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class FreezeDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private FreezeDataSizeDayGrowthRatio(Builder builder) {
@@ -1587,16 +1586,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class HotDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataDayGrowthSize(Builder builder) {
@@ -1688,16 +1687,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class HotDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private HotDataRatio(Builder builder) {
@@ -1789,16 +1788,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class HotDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private HotDataSize(Builder builder) {
@@ -1890,16 +1889,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class HotDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private HotDataSizeDayGrowthRatio(Builder builder) {
@@ -1991,16 +1990,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class LargeFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileCount(Builder builder) {
@@ -2092,16 +2091,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class LargeFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private LargeFileCountDayGrowthRatio(Builder builder) {
@@ -2193,16 +2192,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class LargeFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private LargeFileDayGrowthCount(Builder builder) {
@@ -2294,16 +2293,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class LargeFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private LargeFileRatio(Builder builder) {
@@ -2395,16 +2394,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class MediumFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileCount(Builder builder) {
@@ -2496,16 +2495,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class MediumFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MediumFileCountDayGrowthRatio(Builder builder) {
@@ -2597,16 +2596,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class MediumFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private MediumFileDayGrowthCount(Builder builder) {
@@ -2698,16 +2697,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class MediumFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private MediumFileRatio(Builder builder) {
@@ -2799,16 +2798,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class PartitionNum extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private PartitionNum(Builder builder) {
@@ -2900,16 +2899,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class SmallFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileCount(Builder builder) {
@@ -3001,16 +3000,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class SmallFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SmallFileCountDayGrowthRatio(Builder builder) {
@@ -3102,16 +3101,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class SmallFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private SmallFileDayGrowthCount(Builder builder) {
@@ -3203,16 +3202,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class SmallFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private SmallFileRatio(Builder builder) {
@@ -3304,16 +3303,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TableCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TableCount(Builder builder) {
@@ -3405,16 +3404,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TinyFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileCount(Builder builder) {
@@ -3506,16 +3505,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TinyFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TinyFileCountDayGrowthRatio(Builder builder) {
@@ -3607,16 +3606,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TinyFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TinyFileDayGrowthCount(Builder builder) {
@@ -3708,16 +3707,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TinyFileRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TinyFileRatio(Builder builder) {
@@ -3809,16 +3808,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataDayGrowthSize(Builder builder) {
@@ -3910,16 +3909,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalDataSize(Builder builder) {
@@ -4011,16 +4010,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalDataSizeDayGrowthRatio(Builder builder) {
@@ -4112,16 +4111,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalFileCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileCount(Builder builder) {
@@ -4213,16 +4212,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalFileCountDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private TotalFileCountDayGrowthRatio(Builder builder) {
@@ -4314,16 +4313,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class TotalFileDayGrowthCount extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private TotalFileDayGrowthCount(Builder builder) {
@@ -4415,16 +4414,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class WarmDataDayGrowthSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataDayGrowthSize(Builder builder) {
@@ -4516,16 +4515,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class WarmDataRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WarmDataRatio(Builder builder) {
@@ -4617,16 +4616,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class WarmDataSize extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Long value;
 
         private WarmDataSize(Builder builder) {
@@ -4718,16 +4717,16 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class WarmDataSizeDayGrowthRatio extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Float value;
 
         private WarmDataSizeDayGrowthRatio(Builder builder) {
@@ -4819,139 +4818,139 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class Metrics extends TeaModel {
-        @NameInMap("ColdDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataDayGrowthSize")
         private ColdDataDayGrowthSize coldDataDayGrowthSize;
 
-        @NameInMap("ColdDataRatio")
+        @com.aliyun.core.annotation.NameInMap("ColdDataRatio")
         private ColdDataRatio coldDataRatio;
 
-        @NameInMap("ColdDataSize")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSize")
         private ColdDataSize coldDataSize;
 
-        @NameInMap("ColdDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("ColdDataSizeDayGrowthRatio")
         private ColdDataSizeDayGrowthRatio coldDataSizeDayGrowthRatio;
 
-        @NameInMap("DatabaseCount")
+        @com.aliyun.core.annotation.NameInMap("DatabaseCount")
         private DatabaseCount databaseCount;
 
-        @NameInMap("EmptyFileCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCount")
         private EmptyFileCount emptyFileCount;
 
-        @NameInMap("EmptyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileCountDayGrowthRatio")
         private EmptyFileCountDayGrowthRatio emptyFileCountDayGrowthRatio;
 
-        @NameInMap("EmptyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileDayGrowthCount")
         private EmptyFileDayGrowthCount emptyFileDayGrowthCount;
 
-        @NameInMap("EmptyFileRatio")
+        @com.aliyun.core.annotation.NameInMap("EmptyFileRatio")
         private EmptyFileRatio emptyFileRatio;
 
-        @NameInMap("FreezeDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataDayGrowthSize")
         private FreezeDataDayGrowthSize freezeDataDayGrowthSize;
 
-        @NameInMap("FreezeDataRatio")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataRatio")
         private FreezeDataRatio freezeDataRatio;
 
-        @NameInMap("FreezeDataSize")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSize")
         private FreezeDataSize freezeDataSize;
 
-        @NameInMap("FreezeDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("FreezeDataSizeDayGrowthRatio")
         private FreezeDataSizeDayGrowthRatio freezeDataSizeDayGrowthRatio;
 
-        @NameInMap("HotDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataDayGrowthSize")
         private HotDataDayGrowthSize hotDataDayGrowthSize;
 
-        @NameInMap("HotDataRatio")
+        @com.aliyun.core.annotation.NameInMap("HotDataRatio")
         private HotDataRatio hotDataRatio;
 
-        @NameInMap("HotDataSize")
+        @com.aliyun.core.annotation.NameInMap("HotDataSize")
         private HotDataSize hotDataSize;
 
-        @NameInMap("HotDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("HotDataSizeDayGrowthRatio")
         private HotDataSizeDayGrowthRatio hotDataSizeDayGrowthRatio;
 
-        @NameInMap("LargeFileCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCount")
         private LargeFileCount largeFileCount;
 
-        @NameInMap("LargeFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("LargeFileCountDayGrowthRatio")
         private LargeFileCountDayGrowthRatio largeFileCountDayGrowthRatio;
 
-        @NameInMap("LargeFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("LargeFileDayGrowthCount")
         private LargeFileDayGrowthCount largeFileDayGrowthCount;
 
-        @NameInMap("LargeFileRatio")
+        @com.aliyun.core.annotation.NameInMap("LargeFileRatio")
         private LargeFileRatio largeFileRatio;
 
-        @NameInMap("MediumFileCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCount")
         private MediumFileCount mediumFileCount;
 
-        @NameInMap("MediumFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("MediumFileCountDayGrowthRatio")
         private MediumFileCountDayGrowthRatio mediumFileCountDayGrowthRatio;
 
-        @NameInMap("MediumFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("MediumFileDayGrowthCount")
         private MediumFileDayGrowthCount mediumFileDayGrowthCount;
 
-        @NameInMap("MediumFileRatio")
+        @com.aliyun.core.annotation.NameInMap("MediumFileRatio")
         private MediumFileRatio mediumFileRatio;
 
-        @NameInMap("PartitionNum")
+        @com.aliyun.core.annotation.NameInMap("PartitionNum")
         private PartitionNum partitionNum;
 
-        @NameInMap("SmallFileCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCount")
         private SmallFileCount smallFileCount;
 
-        @NameInMap("SmallFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("SmallFileCountDayGrowthRatio")
         private SmallFileCountDayGrowthRatio smallFileCountDayGrowthRatio;
 
-        @NameInMap("SmallFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("SmallFileDayGrowthCount")
         private SmallFileDayGrowthCount smallFileDayGrowthCount;
 
-        @NameInMap("SmallFileRatio")
+        @com.aliyun.core.annotation.NameInMap("SmallFileRatio")
         private SmallFileRatio smallFileRatio;
 
-        @NameInMap("TableCount")
+        @com.aliyun.core.annotation.NameInMap("TableCount")
         private TableCount tableCount;
 
-        @NameInMap("TinyFileCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCount")
         private TinyFileCount tinyFileCount;
 
-        @NameInMap("TinyFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TinyFileCountDayGrowthRatio")
         private TinyFileCountDayGrowthRatio tinyFileCountDayGrowthRatio;
 
-        @NameInMap("TinyFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TinyFileDayGrowthCount")
         private TinyFileDayGrowthCount tinyFileDayGrowthCount;
 
-        @NameInMap("TinyFileRatio")
+        @com.aliyun.core.annotation.NameInMap("TinyFileRatio")
         private TinyFileRatio tinyFileRatio;
 
-        @NameInMap("TotalDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataDayGrowthSize")
         private TotalDataDayGrowthSize totalDataDayGrowthSize;
 
-        @NameInMap("TotalDataSize")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSize")
         private TotalDataSize totalDataSize;
 
-        @NameInMap("TotalDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalDataSizeDayGrowthRatio")
         private TotalDataSizeDayGrowthRatio totalDataSizeDayGrowthRatio;
 
-        @NameInMap("TotalFileCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCount")
         private TotalFileCount totalFileCount;
 
-        @NameInMap("TotalFileCountDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("TotalFileCountDayGrowthRatio")
         private TotalFileCountDayGrowthRatio totalFileCountDayGrowthRatio;
 
-        @NameInMap("TotalFileDayGrowthCount")
+        @com.aliyun.core.annotation.NameInMap("TotalFileDayGrowthCount")
         private TotalFileDayGrowthCount totalFileDayGrowthCount;
 
-        @NameInMap("WarmDataDayGrowthSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataDayGrowthSize")
         private WarmDataDayGrowthSize warmDataDayGrowthSize;
 
-        @NameInMap("WarmDataRatio")
+        @com.aliyun.core.annotation.NameInMap("WarmDataRatio")
         private WarmDataRatio warmDataRatio;
 
-        @NameInMap("WarmDataSize")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSize")
         private WarmDataSize warmDataSize;
 
-        @NameInMap("WarmDataSizeDayGrowthRatio")
+        @com.aliyun.core.annotation.NameInMap("WarmDataSizeDayGrowthRatio")
         private WarmDataSizeDayGrowthRatio warmDataSizeDayGrowthRatio;
 
         private Metrics(Builder builder) {
@@ -5740,13 +5739,13 @@ public class GetDoctorHiveClusterResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private Analysis analysis;
 
-        @NameInMap("Formats")
+        @com.aliyun.core.annotation.NameInMap("Formats")
         private java.util.List < Formats> formats;
 
-        @NameInMap("Metrics")
+        @com.aliyun.core.annotation.NameInMap("Metrics")
         private Metrics metrics;
 
         private Data(Builder builder) {

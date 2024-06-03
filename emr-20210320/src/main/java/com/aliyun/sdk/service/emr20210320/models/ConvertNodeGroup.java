@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConvertNodeGroup</p>
  */
 public class ConvertNodeGroup extends TeaModel {
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("PaymentDuration")
+    @com.aliyun.core.annotation.NameInMap("PaymentDuration")
     private Integer paymentDuration;
 
-    @NameInMap("PaymentDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("PaymentDurationUnit")
     private String paymentDurationUnit;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
     private ConvertNodeGroup(Builder builder) {

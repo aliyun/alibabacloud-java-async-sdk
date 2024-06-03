@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeSelector</p>
  */
 public class NodeSelector extends TeaModel {
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
+    @Deprecated
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupName")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupIds")
+    private java.util.List < String > nodeGroupIds;
+
+    @com.aliyun.core.annotation.NameInMap("NodeGroupName")
+    @Deprecated
     private String nodeGroupName;
 
-    @NameInMap("NodeGroupTypes")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupNames")
+    private java.util.List < String > nodeGroupNames;
+
+    @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
     private java.util.List < String > nodeGroupTypes;
 
-    @NameInMap("NodeNames")
+    @com.aliyun.core.annotation.NameInMap("NodeNames")
     private java.util.List < String > nodeNames;
 
-    @NameInMap("NodeSelectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NodeSelectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeSelectType;
 
     private NodeSelector(Builder builder) {
         this.nodeGroupId = builder.nodeGroupId;
+        this.nodeGroupIds = builder.nodeGroupIds;
         this.nodeGroupName = builder.nodeGroupName;
+        this.nodeGroupNames = builder.nodeGroupNames;
         this.nodeGroupTypes = builder.nodeGroupTypes;
         this.nodeNames = builder.nodeNames;
         this.nodeSelectType = builder.nodeSelectType;
@@ -52,10 +61,24 @@ public class NodeSelector extends TeaModel {
     }
 
     /**
+     * @return nodeGroupIds
+     */
+    public java.util.List < String > getNodeGroupIds() {
+        return this.nodeGroupIds;
+    }
+
+    /**
      * @return nodeGroupName
      */
     public String getNodeGroupName() {
         return this.nodeGroupName;
+    }
+
+    /**
+     * @return nodeGroupNames
+     */
+    public java.util.List < String > getNodeGroupNames() {
+        return this.nodeGroupNames;
     }
 
     /**
@@ -81,7 +104,9 @@ public class NodeSelector extends TeaModel {
 
     public static final class Builder {
         private String nodeGroupId; 
+        private java.util.List < String > nodeGroupIds; 
         private String nodeGroupName; 
+        private java.util.List < String > nodeGroupNames; 
         private java.util.List < String > nodeGroupTypes; 
         private java.util.List < String > nodeNames; 
         private String nodeSelectType; 
@@ -95,10 +120,26 @@ public class NodeSelector extends TeaModel {
         }
 
         /**
+         * NodeGroupIds.
+         */
+        public Builder nodeGroupIds(java.util.List < String > nodeGroupIds) {
+            this.nodeGroupIds = nodeGroupIds;
+            return this;
+        }
+
+        /**
          * 节点组名称。当NodeSelectType取值NodeGroup，且参数NodeGroupId为空时生效，该参数生效。
          */
         public Builder nodeGroupName(String nodeGroupName) {
             this.nodeGroupName = nodeGroupName;
+            return this;
+        }
+
+        /**
+         * NodeGroupNames.
+         */
+        public Builder nodeGroupNames(java.util.List < String > nodeGroupNames) {
+            this.nodeGroupNames = nodeGroupNames;
             return this;
         }
 

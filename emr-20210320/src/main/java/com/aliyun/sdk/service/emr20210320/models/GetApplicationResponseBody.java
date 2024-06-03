@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetApplicationResponseBody</p>
  */
 public class GetApplicationResponseBody extends TeaModel {
-    @NameInMap("Application")
+    @com.aliyun.core.annotation.NameInMap("Application")
     private Application application;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetApplicationResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetApplicationResponseBody extends TeaModel {
     } 
 
     public static class ValueAttribute extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ValueIncrementStep")
+        @com.aliyun.core.annotation.NameInMap("ValueIncrementStep")
         private String valueIncrementStep;
 
-        @NameInMap("ValueMaximum")
+        @com.aliyun.core.annotation.NameInMap("ValueMaximum")
         private String valueMaximum;
 
-        @NameInMap("ValueMinimum")
+        @com.aliyun.core.annotation.NameInMap("ValueMinimum")
         private String valueMinimum;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
-        @NameInMap("ValueUnit")
+        @com.aliyun.core.annotation.NameInMap("ValueUnit")
         private String valueUnit;
 
         private ValueAttribute(Builder builder) {
@@ -213,13 +212,13 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class ActionParams extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("ValueAttribute")
+        @com.aliyun.core.annotation.NameInMap("ValueAttribute")
         private ValueAttribute valueAttribute;
 
         private ActionParams(Builder builder) {
@@ -294,22 +293,22 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class Actions extends TeaModel {
-        @NameInMap("ActionName")
+        @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
 
-        @NameInMap("ActionParams")
+        @com.aliyun.core.annotation.NameInMap("ActionParams")
         private java.util.List < ActionParams> actionParams;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private String command;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RunActionScope")
+        @com.aliyun.core.annotation.NameInMap("RunActionScope")
         private String runActionScope;
 
         private Actions(Builder builder) {
@@ -435,19 +434,19 @@ public class GetApplicationResponseBody extends TeaModel {
 
     }
     public static class Application extends TeaModel {
-        @NameInMap("Actions")
+        @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List < Actions> actions;
 
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationState")
+        @com.aliyun.core.annotation.NameInMap("ApplicationState")
         private String applicationState;
 
-        @NameInMap("ApplicationVersion")
+        @com.aliyun.core.annotation.NameInMap("ApplicationVersion")
         private String applicationVersion;
 
-        @NameInMap("CommunityVersion")
+        @com.aliyun.core.annotation.NameInMap("CommunityVersion")
         private String communityVersion;
 
         private Application(Builder builder) {

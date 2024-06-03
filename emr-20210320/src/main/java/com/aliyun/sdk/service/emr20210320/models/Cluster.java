@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Cluster</p>
  */
 public class Cluster extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("ClusterState")
+    @com.aliyun.core.annotation.NameInMap("ClusterState")
     private String clusterState;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("DeployMode")
+    @com.aliyun.core.annotation.NameInMap("DeployMode")
     private String deployMode;
 
-    @NameInMap("EmrDefaultRole")
+    @com.aliyun.core.annotation.NameInMap("EmrDefaultRole")
     private String emrDefaultRole;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("NodeAttributes")
+    @com.aliyun.core.annotation.NameInMap("NodeAttributes")
     private NodeAttributes nodeAttributes;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("ReadyTime")
+    @com.aliyun.core.annotation.NameInMap("ReadyTime")
     private Long readyTime;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("ReleaseVersion")
+    @com.aliyun.core.annotation.NameInMap("ReleaseVersion")
     private String releaseVersion;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("SecurityMode")
+    @com.aliyun.core.annotation.NameInMap("SecurityMode")
     private String securityMode;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private ClusterStateChangeReason stateChangeReason;
 
-    @NameInMap("SubscriptionConfig")
+    @com.aliyun.core.annotation.NameInMap("SubscriptionConfig")
     private SubscriptionConfig subscriptionConfig;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tag > tags;
 
     private Cluster(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>NodeCountConstraint</p>
  */
 public class NodeCountConstraint extends TeaModel {
-    @NameInMap("Max")
+    @com.aliyun.core.annotation.NameInMap("Max")
     private Integer max;
 
-    @NameInMap("Min")
+    @com.aliyun.core.annotation.NameInMap("Min")
     private Integer min;
 
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @NameInMap("Values")
+    @com.aliyun.core.annotation.NameInMap("Values")
     private java.util.List < Integer > values;
 
     private NodeCountConstraint(Builder builder) {

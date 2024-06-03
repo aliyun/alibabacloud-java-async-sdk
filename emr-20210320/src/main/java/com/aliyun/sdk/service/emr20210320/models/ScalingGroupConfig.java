@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ScalingGroupConfig</p>
  */
 public class ScalingGroupConfig extends TeaModel {
-    @NameInMap("DataDiskCategory")
+    @com.aliyun.core.annotation.NameInMap("DataDiskCategory")
     private String dataDiskCategory;
 
-    @NameInMap("DataDiskCount")
+    @com.aliyun.core.annotation.NameInMap("DataDiskCount")
     private Integer dataDiskCount;
 
-    @NameInMap("DataDiskSize")
+    @com.aliyun.core.annotation.NameInMap("DataDiskSize")
     private Long dataDiskSize;
 
-    @NameInMap("DefaultCoolDownTime")
+    @com.aliyun.core.annotation.NameInMap("DefaultCoolDownTime")
     private Long defaultCoolDownTime;
 
-    @NameInMap("InstanceTypeList")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeList")
     private java.util.List < InstanceTypeList> instanceTypeList;
 
-    @NameInMap("MultiAvailablePolicy")
+    @com.aliyun.core.annotation.NameInMap("MultiAvailablePolicy")
     private MultiAvailablePolicy multiAvailablePolicy;
 
-    @NameInMap("NodeOfflinePolicy")
+    @com.aliyun.core.annotation.NameInMap("NodeOfflinePolicy")
     private NodeOfflinePolicy nodeOfflinePolicy;
 
-    @NameInMap("PrivatePoolOptions")
+    @com.aliyun.core.annotation.NameInMap("PrivatePoolOptions")
     private PrivatePoolOptions privatePoolOptions;
 
-    @NameInMap("ScalingMaxSize")
+    @com.aliyun.core.annotation.NameInMap("ScalingMaxSize")
     private Integer scalingMaxSize;
 
-    @NameInMap("ScalingMinSize")
+    @com.aliyun.core.annotation.NameInMap("ScalingMinSize")
     private Integer scalingMinSize;
 
-    @NameInMap("SpotStrategy")
+    @com.aliyun.core.annotation.NameInMap("SpotStrategy")
     private String spotStrategy;
 
-    @NameInMap("SysDiskCategory")
+    @com.aliyun.core.annotation.NameInMap("SysDiskCategory")
     private String sysDiskCategory;
 
-    @NameInMap("SysDiskSize")
+    @com.aliyun.core.annotation.NameInMap("SysDiskSize")
     private Long sysDiskSize;
 
-    @NameInMap("TriggerMode")
+    @com.aliyun.core.annotation.NameInMap("TriggerMode")
     private String triggerMode;
 
     private ScalingGroupConfig(Builder builder) {
@@ -312,10 +311,10 @@ public class ScalingGroupConfig extends TeaModel {
     } 
 
     public static class InstanceTypeList extends TeaModel {
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Float spotPriceLimit;
 
         private InstanceTypeList(Builder builder) {
@@ -373,16 +372,16 @@ public class ScalingGroupConfig extends TeaModel {
 
     }
     public static class PolicyParam extends TeaModel {
-        @NameInMap("OnDemandBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandBaseCapacity")
         private Integer onDemandBaseCapacity;
 
-        @NameInMap("OnDemandPercentageAboveBaseCapacity")
+        @com.aliyun.core.annotation.NameInMap("OnDemandPercentageAboveBaseCapacity")
         private Integer onDemandPercentageAboveBaseCapacity;
 
-        @NameInMap("SpotInstancePools")
+        @com.aliyun.core.annotation.NameInMap("SpotInstancePools")
         private Integer spotInstancePools;
 
-        @NameInMap("SpotInstanceRemedy")
+        @com.aliyun.core.annotation.NameInMap("SpotInstanceRemedy")
         private Boolean spotInstanceRemedy;
 
         private PolicyParam(Builder builder) {
@@ -474,10 +473,10 @@ public class ScalingGroupConfig extends TeaModel {
 
     }
     public static class MultiAvailablePolicy extends TeaModel {
-        @NameInMap("PolicyParam")
+        @com.aliyun.core.annotation.NameInMap("PolicyParam")
         private PolicyParam policyParam;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private MultiAvailablePolicy(Builder builder) {
@@ -535,10 +534,10 @@ public class ScalingGroupConfig extends TeaModel {
 
     }
     public static class NodeOfflinePolicy extends TeaModel {
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("TimeoutMs")
+        @com.aliyun.core.annotation.NameInMap("TimeoutMs")
         private Long timeoutMs;
 
         private NodeOfflinePolicy(Builder builder) {
@@ -596,10 +595,10 @@ public class ScalingGroupConfig extends TeaModel {
 
     }
     public static class PrivatePoolOptions extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("MatchCriteria")
+        @com.aliyun.core.annotation.NameInMap("MatchCriteria")
         private String matchCriteria;
 
         private PrivatePoolOptions(Builder builder) {

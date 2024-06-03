@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Node</p>
  */
 public class Node extends TeaModel {
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private Boolean autoRenew;
 
-    @NameInMap("AutoRenewDuration")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDuration")
     private Integer autoRenewDuration;
 
-    @NameInMap("AutoRenewDurationUnit")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewDurationUnit")
     private String autoRenewDurationUnit;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private Long expireTime;
 
-    @NameInMap("InstanceType")
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
     private String instanceType;
 
-    @NameInMap("MaintenanceStatus")
+    @com.aliyun.core.annotation.NameInMap("MaintenanceStatus")
     private String maintenanceStatus;
 
-    @NameInMap("NodeGroupId")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupId")
     private String nodeGroupId;
 
-    @NameInMap("NodeGroupType")
+    @com.aliyun.core.annotation.NameInMap("NodeGroupType")
     private String nodeGroupType;
 
-    @NameInMap("NodeId")
+    @com.aliyun.core.annotation.NameInMap("NodeId")
     private String nodeId;
 
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @NameInMap("NodeState")
+    @com.aliyun.core.annotation.NameInMap("NodeState")
     private String nodeState;
 
-    @NameInMap("PrivateIp")
+    @com.aliyun.core.annotation.NameInMap("PrivateIp")
     private String privateIp;
 
-    @NameInMap("PublicIp")
+    @com.aliyun.core.annotation.NameInMap("PublicIp")
     private String publicIp;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private Node(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationsResponseBody</p>
  */
 public class ListApplicationsResponseBody extends TeaModel {
-    @NameInMap("Applications")
+    @com.aliyun.core.annotation.NameInMap("Applications")
     private java.util.List < Applications> applications;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationsResponseBody(Builder builder) {
@@ -132,17 +131,17 @@ public class ListApplicationsResponseBody extends TeaModel {
     } 
 
     public static class Applications extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ApplicationState")
+        @com.aliyun.core.annotation.NameInMap("ApplicationState")
         private String applicationState;
 
-        @NameInMap("ApplicationVersion")
+        @com.aliyun.core.annotation.NameInMap("ApplicationVersion")
         @Deprecated
         private String applicationVersion;
 
-        @NameInMap("CommunityVersion")
+        @com.aliyun.core.annotation.NameInMap("CommunityVersion")
         private String communityVersion;
 
         private Applications(Builder builder) {

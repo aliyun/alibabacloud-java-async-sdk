@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AutoScalingConstraints</p>
  */
 public class AutoScalingConstraints extends TeaModel {
-    @NameInMap("AutoScalingMetricUnits")
+    @com.aliyun.core.annotation.NameInMap("AutoScalingMetricUnits")
     private java.util.List < MetricUnitValue > autoScalingMetricUnits;
 
-    @NameInMap("DefaultMetricTriggeredRules")
+    @com.aliyun.core.annotation.NameInMap("DefaultMetricTriggeredRules")
     private java.util.List < ScalingRule > defaultMetricTriggeredRules;
 
-    @NameInMap("MaxAdjustmentValue")
+    @com.aliyun.core.annotation.NameInMap("MaxAdjustmentValue")
     private Integer maxAdjustmentValue;
 
-    @NameInMap("MaxByLoadRuleCount")
+    @com.aliyun.core.annotation.NameInMap("MaxByLoadRuleCount")
     private Integer maxByLoadRuleCount;
 
-    @NameInMap("MaxByTimeRuleCount")
+    @com.aliyun.core.annotation.NameInMap("MaxByTimeRuleCount")
     private Integer maxByTimeRuleCount;
 
-    @NameInMap("SupportMetricTags")
+    @com.aliyun.core.annotation.NameInMap("SupportMetricTags")
     private java.util.List < SupportMetricTags> supportMetricTags;
 
-    @NameInMap("SupportMetrics")
+    @com.aliyun.core.annotation.NameInMap("SupportMetrics")
     private java.util.List < String > supportMetrics;
 
-    @NameInMap("SupportRuleTypes")
+    @com.aliyun.core.annotation.NameInMap("SupportRuleTypes")
     private java.util.List < String > supportRuleTypes;
 
     private AutoScalingConstraints(Builder builder) {
@@ -192,10 +191,10 @@ public class AutoScalingConstraints extends TeaModel {
     } 
 
     public static class SupportMetricTags extends TeaModel {
-        @NameInMap("MetricName")
+        @com.aliyun.core.annotation.NameInMap("MetricName")
         private String metricName;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tag > tags;
 
         private SupportMetricTags(Builder builder) {

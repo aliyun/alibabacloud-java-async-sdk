@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ComponentLayout</p>
  */
 public class ComponentLayout extends TeaModel {
-    @NameInMap("ApplicationName")
+    @com.aliyun.core.annotation.NameInMap("ApplicationName")
     private String applicationName;
 
-    @NameInMap("ComponentName")
+    @com.aliyun.core.annotation.NameInMap("ComponentName")
     private String componentName;
 
-    @NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
     private NodeSelector nodeSelector;
 
     private ComponentLayout(Builder builder) {
@@ -92,29 +91,29 @@ public class ComponentLayout extends TeaModel {
     } 
 
     public static class NodeSelector extends TeaModel {
-        @NameInMap("NodeEndIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeEndIndex")
         private Integer nodeEndIndex;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeGroupIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupIndex")
         private Integer nodeGroupIndex;
 
-        @NameInMap("NodeGroupName")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupName")
         private String nodeGroupName;
 
-        @NameInMap("NodeGroupTypes")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupTypes")
         private java.util.List < String > nodeGroupTypes;
 
-        @NameInMap("NodeNames")
+        @com.aliyun.core.annotation.NameInMap("NodeNames")
         private java.util.List < String > nodeNames;
 
-        @NameInMap("NodeSelectType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NodeSelectType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String nodeSelectType;
 
-        @NameInMap("NodeStartIndex")
+        @com.aliyun.core.annotation.NameInMap("NodeStartIndex")
         private Integer nodeStartIndex;
 
         private NodeSelector(Builder builder) {

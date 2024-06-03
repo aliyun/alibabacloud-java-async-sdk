@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListApplicationConfigsResponseBody</p>
  */
 public class ListApplicationConfigsResponseBody extends TeaModel {
-    @NameInMap("ApplicationConfigs")
+    @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
     private java.util.List < ApplicationConfigs> applicationConfigs;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListApplicationConfigsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class ListApplicationConfigsResponseBody extends TeaModel {
     } 
 
     public static class ApplicationConfigs extends TeaModel {
-        @NameInMap("ApplicationName")
+        @com.aliyun.core.annotation.NameInMap("ApplicationName")
         private String applicationName;
 
-        @NameInMap("ConfigEffectState")
+        @com.aliyun.core.annotation.NameInMap("ConfigEffectState")
         private String configEffectState;
 
-        @NameInMap("ConfigFileName")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileName")
         private String configFileName;
 
-        @NameInMap("ConfigItemKey")
+        @com.aliyun.core.annotation.NameInMap("ConfigItemKey")
         private String configItemKey;
 
-        @NameInMap("ConfigItemValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigItemValue")
         private String configItemValue;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Custom")
+        @com.aliyun.core.annotation.NameInMap("Custom")
         private Boolean custom;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("InitValue")
+        @com.aliyun.core.annotation.NameInMap("InitValue")
         private String initValue;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("NodeGroupId")
+        @com.aliyun.core.annotation.NameInMap("NodeGroupId")
         private String nodeGroupId;
 
-        @NameInMap("NodeId")
+        @com.aliyun.core.annotation.NameInMap("NodeId")
         private String nodeId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private Long updateTime;
 
         private ApplicationConfigs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Operation</p>
  */
 public class Operation extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Long createTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("OperationId")
+    @com.aliyun.core.annotation.NameInMap("OperationId")
     private String operationId;
 
-    @NameInMap("OperationState")
+    @com.aliyun.core.annotation.NameInMap("OperationState")
     private String operationState;
 
-    @NameInMap("OperationType")
+    @com.aliyun.core.annotation.NameInMap("OperationType")
     private String operationType;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("StateChangeReason")
+    @com.aliyun.core.annotation.NameInMap("StateChangeReason")
     private OperationStateChangeReason stateChangeReason;
 
     private Operation(Builder builder) {

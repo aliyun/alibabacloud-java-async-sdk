@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.emr20210320.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Script</p>
  */
 public class Script extends TeaModel {
-    @NameInMap("ExecutionFailStrategy")
+    @com.aliyun.core.annotation.NameInMap("ExecutionFailStrategy")
     private String executionFailStrategy;
 
-    @NameInMap("ExecutionMoment")
+    @com.aliyun.core.annotation.NameInMap("ExecutionMoment")
     private String executionMoment;
 
-    @NameInMap("NodeSelector")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NodeSelector")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NodeSelector nodeSelector;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     @Deprecated
     private Integer priority;
 
-    @NameInMap("ScriptArgs")
+    @com.aliyun.core.annotation.NameInMap("ScriptArgs")
     private String scriptArgs;
 
-    @NameInMap("ScriptName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ScriptName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptName;
 
-    @NameInMap("ScriptPath")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("ScriptPath")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scriptPath;
 
     private Script(Builder builder) {
