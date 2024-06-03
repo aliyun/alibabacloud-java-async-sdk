@@ -1615,6 +1615,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("aliwsDicts")
         private java.util.List < AliwsDicts> aliwsDicts;
 
+        @com.aliyun.core.annotation.NameInMap("archType")
+        private String archType;
+
         @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
         private ClientNodeConfiguration clientNodeConfiguration;
 
@@ -1769,6 +1772,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
             this.advancedSetting = builder.advancedSetting;
             this.aliwsDicts = builder.aliwsDicts;
+            this.archType = builder.archType;
             this.clientNodeConfiguration = builder.clientNodeConfiguration;
             this.createdAt = builder.createdAt;
             this.dedicateMaster = builder.dedicateMaster;
@@ -1848,6 +1852,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
          */
         public java.util.List < AliwsDicts> getAliwsDicts() {
             return this.aliwsDicts;
+        }
+
+        /**
+         * @return archType
+         */
+        public String getArchType() {
+            return this.archType;
         }
 
         /**
@@ -2204,6 +2215,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Boolean advancedDedicateMaster; 
             private AdvancedSetting advancedSetting; 
             private java.util.List < AliwsDicts> aliwsDicts; 
+            private String archType; 
             private ClientNodeConfiguration clientNodeConfiguration; 
             private String createdAt; 
             private Boolean dedicateMaster; 
@@ -2276,6 +2288,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder aliwsDicts(java.util.List < AliwsDicts> aliwsDicts) {
                 this.aliwsDicts = aliwsDicts;
+                return this;
+            }
+
+            /**
+             * archType.
+             */
+            public Builder archType(String archType) {
+                this.archType = archType;
                 return this;
             }
 
