@@ -406,6 +406,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("password_area")
         private String passwordArea;
 
+        @com.aliyun.core.annotation.NameInMap("pdf_oss_url")
+        private String pdfOssUrl;
+
         @com.aliyun.core.annotation.NameInMap("purchaser_bank_account_info")
         private String purchaserBankAccountInfo;
 
@@ -473,6 +476,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             this.machineCode = builder.machineCode;
             this.ossUrl = builder.ossUrl;
             this.passwordArea = builder.passwordArea;
+            this.pdfOssUrl = builder.pdfOssUrl;
             this.purchaserBankAccountInfo = builder.purchaserBankAccountInfo;
             this.purchaserContactInfo = builder.purchaserContactInfo;
             this.purchaserName = builder.purchaserName;
@@ -626,6 +630,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return pdfOssUrl
+         */
+        public String getPdfOssUrl() {
+            return this.pdfOssUrl;
+        }
+
+        /**
          * @return purchaserBankAccountInfo
          */
         public String getPurchaserBankAccountInfo() {
@@ -756,6 +767,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private String machineCode; 
             private String ossUrl; 
             private String passwordArea; 
+            private String pdfOssUrl; 
             private String purchaserBankAccountInfo; 
             private String purchaserContactInfo; 
             private String purchaserName; 
@@ -914,6 +926,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder passwordArea(String passwordArea) {
                 this.passwordArea = passwordArea;
+                return this;
+            }
+
+            /**
+             * pdf_oss_url.
+             */
+            public Builder pdfOssUrl(String pdfOssUrl) {
+                this.pdfOssUrl = pdfOssUrl;
                 return this;
             }
 
