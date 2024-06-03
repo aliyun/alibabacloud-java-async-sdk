@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDirectoriesResponseBody</p>
  */
 public class ListDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Directories")
+    @com.aliyun.core.annotation.NameInMap("Directories")
     private java.util.List < Directories> directories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListDirectoriesResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListDirectoriesResponseBody extends TeaModel {
     } 
 
     public static class Directories extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Directories(Builder builder) {

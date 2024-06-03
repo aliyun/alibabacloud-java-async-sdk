@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPermissionPolicyToAccessConfigurationRequest</p>
  */
 public class AddPermissionPolicyToAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("InlinePolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InlinePolicyDocument")
     private String inlinePolicyDocument;
 
-    @Query
-    @NameInMap("PermissionPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicyName")
     private String permissionPolicyName;
 
-    @Query
-    @NameInMap("PermissionPolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicyType")
     private String permissionPolicyType;
 
     private AddPermissionPolicyToAccessConfigurationRequest(Builder builder) {

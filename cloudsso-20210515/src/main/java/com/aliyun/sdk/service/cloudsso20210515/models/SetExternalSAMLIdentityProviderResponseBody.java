@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetExternalSAMLIdentityProviderResponseBody</p>
  */
 public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLIdentityProviderConfiguration")
+    @com.aliyun.core.annotation.NameInMap("SAMLIdentityProviderConfiguration")
     private SAMLIdentityProviderConfiguration SAMLIdentityProviderConfiguration;
 
     private SetExternalSAMLIdentityProviderResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class SetExternalSAMLIdentityProviderResponseBody extends TeaModel {
     } 
 
     public static class SAMLIdentityProviderConfiguration extends TeaModel {
-        @NameInMap("CertificateIds")
+        @com.aliyun.core.annotation.NameInMap("CertificateIds")
         private java.util.List < String > certificateIds;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EncodedMetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
         private String encodedMetadataDocument;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("LoginUrl")
+        @com.aliyun.core.annotation.NameInMap("LoginUrl")
         private String loginUrl;
 
-        @NameInMap("SSOStatus")
+        @com.aliyun.core.annotation.NameInMap("SSOStatus")
         private String SSOStatus;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("WantRequestSigned")
+        @com.aliyun.core.annotation.NameInMap("WantRequestSigned")
         private Boolean wantRequestSigned;
 
         private SAMLIdentityProviderConfiguration(Builder builder) {

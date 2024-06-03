@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private ListUsersResponseBody(Builder builder) {
@@ -101,8 +100,8 @@ public class ListUsersResponseBody extends TeaModel {
          * Indicates whether the queried entries are truncated. Valid values:
          * <p>
          * 
-         * *   true: The queried entries are truncated.
-         * *   false: The queried entries are not truncated.
+         * *   true
+         * *   false
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -110,7 +109,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -118,10 +117,10 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The token that is returned for the next page.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          * <p>
          * 
-         * >  This parameter is returned only when the value of `IsTruncated` is `true`.
+         * >  This parameter is returned only when the `IsTruncated` parameter is `true`.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -129,7 +128,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -159,10 +158,10 @@ public class ListUsersResponseBody extends TeaModel {
     } 
 
     public static class ExternalId extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
         private ExternalId(Builder builder) {
@@ -197,7 +196,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * Id.
+             * The identifier of the user that is synchronized from an external IdP.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -205,7 +204,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -220,40 +219,40 @@ public class ListUsersResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("ExternalId")
+        @com.aliyun.core.annotation.NameInMap("ExternalId")
         private ExternalId externalId;
 
-        @NameInMap("FirstName")
+        @com.aliyun.core.annotation.NameInMap("FirstName")
         private String firstName;
 
-        @NameInMap("LastName")
+        @com.aliyun.core.annotation.NameInMap("LastName")
         private String lastName;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Users(Builder builder) {
@@ -378,7 +377,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the user was created.
+             * The time when the user was created. The value is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -410,7 +409,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalId.
+             * The identifier information about the user synchronized from an external IdP.
              */
             public Builder externalId(ExternalId externalId) {
                 this.externalId = externalId;
@@ -458,7 +457,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the user was modified.
+             * The time when the information about the user was modified. The value is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

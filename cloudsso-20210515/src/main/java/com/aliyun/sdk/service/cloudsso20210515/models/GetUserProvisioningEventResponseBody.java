@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserProvisioningEventResponseBody</p>
  */
 public class GetUserProvisioningEventResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserProvisioningEvent")
+    @com.aliyun.core.annotation.NameInMap("UserProvisioningEvent")
     private UserProvisioningEvent userProvisioningEvent;
 
     private GetUserProvisioningEventResponseBody(Builder builder) {
@@ -72,58 +71,58 @@ public class GetUserProvisioningEventResponseBody extends TeaModel {
     } 
 
     public static class UserProvisioningEvent extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DeletionStrategy")
+        @com.aliyun.core.annotation.NameInMap("DeletionStrategy")
         private String deletionStrategy;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DuplicationStrategy")
+        @com.aliyun.core.annotation.NameInMap("DuplicationStrategy")
         private String duplicationStrategy;
 
-        @NameInMap("ErrorCount")
+        @com.aliyun.core.annotation.NameInMap("ErrorCount")
         private Long errorCount;
 
-        @NameInMap("ErrorInfo")
+        @com.aliyun.core.annotation.NameInMap("ErrorInfo")
         private String errorInfo;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("LatestAsyncTime")
+        @com.aliyun.core.annotation.NameInMap("LatestAsyncTime")
         private String latestAsyncTime;
 
-        @NameInMap("PrincipalId")
+        @com.aliyun.core.annotation.NameInMap("PrincipalId")
         private String principalId;
 
-        @NameInMap("PrincipalName")
+        @com.aliyun.core.annotation.NameInMap("PrincipalName")
         private String principalName;
 
-        @NameInMap("PrincipalType")
+        @com.aliyun.core.annotation.NameInMap("PrincipalType")
         private String principalType;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("TargetId")
+        @com.aliyun.core.annotation.NameInMap("TargetId")
         private String targetId;
 
-        @NameInMap("TargetName")
+        @com.aliyun.core.annotation.NameInMap("TargetName")
         private String targetName;
 
-        @NameInMap("TargetPath")
+        @com.aliyun.core.annotation.NameInMap("TargetPath")
         private String targetPath;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserProvisioningId")
+        @com.aliyun.core.annotation.NameInMap("UserProvisioningId")
         private String userProvisioningId;
 
         private UserProvisioningEvent(Builder builder) {

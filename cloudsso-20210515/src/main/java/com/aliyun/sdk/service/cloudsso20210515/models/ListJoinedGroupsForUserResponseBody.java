@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJoinedGroupsForUserResponseBody</p>
  */
 public class ListJoinedGroupsForUserResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("JoinedGroups")
+    @com.aliyun.core.annotation.NameInMap("JoinedGroups")
     private java.util.List < JoinedGroups> joinedGroups;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListJoinedGroupsForUserResponseBody(Builder builder) {
@@ -159,22 +158,22 @@ public class ListJoinedGroupsForUserResponseBody extends TeaModel {
     } 
 
     public static class JoinedGroups extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("JoinTime")
+        @com.aliyun.core.annotation.NameInMap("JoinTime")
         private String joinTime;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private JoinedGroups(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceStatusResponseBody</p>
  */
 public class GetServiceStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceStatus")
+    @com.aliyun.core.annotation.NameInMap("ServiceStatus")
     private ServiceStatus serviceStatus;
 
     private GetServiceStatusResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetServiceStatusResponseBody extends TeaModel {
     } 
 
     public static class ServiceStatus extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("PrerequisiteCheckResult")
+        @com.aliyun.core.annotation.NameInMap("PrerequisiteCheckResult")
         private String prerequisiteCheckResult;
 
-        @NameInMap("RegionsInUse")
+        @com.aliyun.core.annotation.NameInMap("RegionsInUse")
         private java.util.List < String > regionsInUse;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ServiceStatus(Builder builder) {

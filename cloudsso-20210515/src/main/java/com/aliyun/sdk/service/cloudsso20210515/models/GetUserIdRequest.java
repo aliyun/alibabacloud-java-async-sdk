@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserIdRequest</p>
  */
 public class GetUserIdRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("ExternalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExternalId")
     private ExternalId externalId;
 
     private GetUserIdRequest(Builder builder) {
@@ -68,7 +67,7 @@ public class GetUserIdRequest extends Request {
         } 
 
         /**
-         * DirectoryId.
+         * The ID of the resource directory.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -77,7 +76,7 @@ public class GetUserIdRequest extends Request {
         }
 
         /**
-         * ExternalId.
+         * The identifier information about the user that is synchronized from an external identity provider (IdP).
          */
         public Builder externalId(ExternalId externalId) {
             String externalIdShrink = shrink(externalId, "ExternalId", "json");
@@ -94,10 +93,10 @@ public class GetUserIdRequest extends Request {
     } 
 
     public static class ExternalId extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
         private ExternalId(Builder builder) {
@@ -132,7 +131,7 @@ public class GetUserIdRequest extends Request {
             private String issuer; 
 
             /**
-             * Id.
+             * The identifier of the user that is synchronized from an external IdP.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -140,7 +139,7 @@ public class GetUserIdRequest extends Request {
             }
 
             /**
-             * Issuer.
+             * The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;

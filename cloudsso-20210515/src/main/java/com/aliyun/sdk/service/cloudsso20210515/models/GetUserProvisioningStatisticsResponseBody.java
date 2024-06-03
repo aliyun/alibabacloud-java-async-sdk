@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserProvisioningStatisticsResponseBody</p>
  */
 public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserProvisioningStatistics")
+    @com.aliyun.core.annotation.NameInMap("UserProvisioningStatistics")
     private UserProvisioningStatistics userProvisioningStatistics;
 
     private GetUserProvisioningStatisticsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetUserProvisioningStatisticsResponseBody extends TeaModel {
     } 
 
     public static class UserProvisioningStatistics extends TeaModel {
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("FailedEventCount")
+        @com.aliyun.core.annotation.NameInMap("FailedEventCount")
         private Long failedEventCount;
 
-        @NameInMap("LatestAsyncTime")
+        @com.aliyun.core.annotation.NameInMap("LatestAsyncTime")
         private String latestAsyncTime;
 
-        @NameInMap("OwnerPk")
+        @com.aliyun.core.annotation.NameInMap("OwnerPk")
         private String ownerPk;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private UserProvisioningStatistics(Builder builder) {

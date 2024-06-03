@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDirectorySAMLServiceProviderInfoResponseBody</p>
  */
 public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLServiceProvider")
+    @com.aliyun.core.annotation.NameInMap("SAMLServiceProvider")
     private SAMLServiceProvider SAMLServiceProvider;
 
     private GetDirectorySAMLServiceProviderInfoResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetDirectorySAMLServiceProviderInfoResponseBody extends TeaModel {
     } 
 
     public static class SAMLServiceProvider extends TeaModel {
-        @NameInMap("AcsUrl")
+        @com.aliyun.core.annotation.NameInMap("AcsUrl")
         private String acsUrl;
 
-        @NameInMap("AuthnSignAlgo")
+        @com.aliyun.core.annotation.NameInMap("AuthnSignAlgo")
         private String authnSignAlgo;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("EncodedMetadataDocument")
+        @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
         private String encodedMetadataDocument;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("SupportEncryptedAssertion")
+        @com.aliyun.core.annotation.NameInMap("SupportEncryptedAssertion")
         private Boolean supportEncryptedAssertion;
 
         private SAMLServiceProvider(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccessConfigurationsResponseBody</p>
  */
 public class ListAccessConfigurationsResponseBody extends TeaModel {
-    @NameInMap("AccessConfigurations")
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurations")
     private java.util.List < AccessConfigurations> accessConfigurations;
 
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListAccessConfigurationsResponseBody(Builder builder) {
@@ -159,28 +158,28 @@ public class ListAccessConfigurationsResponseBody extends TeaModel {
     } 
 
     public static class AccessConfigurations extends TeaModel {
-        @NameInMap("AccessConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
 
-        @NameInMap("AccessConfigurationName")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
         private String accessConfigurationName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RelayState")
+        @com.aliyun.core.annotation.NameInMap("RelayState")
         private String relayState;
 
-        @NameInMap("SessionDuration")
+        @com.aliyun.core.annotation.NameInMap("SessionDuration")
         private Integer sessionDuration;
 
-        @NameInMap("StatusNotifications")
+        @com.aliyun.core.annotation.NameInMap("StatusNotifications")
         private java.util.List < String > statusNotifications;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private AccessConfigurations(Builder builder) {

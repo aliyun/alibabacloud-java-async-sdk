@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMFAAuthenticationSettingsRequest</p>
  */
 public class UpdateMFAAuthenticationSettingsRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MFAAuthenticationSettings")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MFAAuthenticationSettings")
     private String MFAAuthenticationSettings;
 
-    @Query
-    @NameInMap("OperationForRiskLogin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
     private String operationForRiskLogin;
 
     private UpdateMFAAuthenticationSettingsRequest(Builder builder) {

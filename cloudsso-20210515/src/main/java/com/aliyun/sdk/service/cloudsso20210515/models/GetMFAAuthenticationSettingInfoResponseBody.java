@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMFAAuthenticationSettingInfoResponseBody</p>
  */
 public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
-    @NameInMap("MFAAuthenticationSettingInfo")
+    @com.aliyun.core.annotation.NameInMap("MFAAuthenticationSettingInfo")
     private MFAAuthenticationSettingInfo MFAAuthenticationSettingInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMFAAuthenticationSettingInfoResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetMFAAuthenticationSettingInfoResponseBody extends TeaModel {
     } 
 
     public static class MFAAuthenticationSettingInfo extends TeaModel {
-        @NameInMap("MfaAuthenticationAdvanceSettings")
+        @com.aliyun.core.annotation.NameInMap("MfaAuthenticationAdvanceSettings")
         private String mfaAuthenticationAdvanceSettings;
 
-        @NameInMap("OperationForRiskLogin")
+        @com.aliyun.core.annotation.NameInMap("OperationForRiskLogin")
         private String operationForRiskLogin;
 
         private MFAAuthenticationSettingInfo(Builder builder) {

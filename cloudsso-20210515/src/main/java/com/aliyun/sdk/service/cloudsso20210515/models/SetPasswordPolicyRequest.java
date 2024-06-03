@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordPolicyRequest</p>
  */
 public class SetPasswordPolicyRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("MaxLoginAttempts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxLoginAttempts")
     private Integer maxLoginAttempts;
 
-    @Query
-    @NameInMap("MaxPasswordAge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
     private Integer maxPasswordAge;
 
-    @Query
-    @NameInMap("MinPasswordDifferentChars")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinPasswordDifferentChars")
     private Integer minPasswordDifferentChars;
 
-    @Query
-    @NameInMap("MinPasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinPasswordLength")
     private Integer minPasswordLength;
 
-    @Query
-    @NameInMap("PasswordNotContainUsername")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordNotContainUsername")
     private Boolean passwordNotContainUsername;
 
-    @Query
-    @NameInMap("PasswordReusePrevention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
     private Integer passwordReusePrevention;
 
     private SetPasswordPolicyRequest(Builder builder) {

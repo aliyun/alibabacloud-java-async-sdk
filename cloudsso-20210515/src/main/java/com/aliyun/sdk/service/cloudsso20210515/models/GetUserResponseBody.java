@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserResponseBody</p>
  */
 public class GetUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private GetUserResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class GetUserResponseBody extends TeaModel {
     } 
 
     public static class ExternalId extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
         private ExternalId(Builder builder) {
@@ -110,7 +109,7 @@ public class GetUserResponseBody extends TeaModel {
             private String issuer; 
 
             /**
-             * Id.
+             * The identifier of the user that is synchronized from an external IdP.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -118,7 +117,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * Issuer.
+             * The method for external identity synchronization. Only System for Cross-domain Identity Management (SCIM) synchronization is supported.
              */
             public Builder issuer(String issuer) {
                 this.issuer = issuer;
@@ -133,40 +132,40 @@ public class GetUserResponseBody extends TeaModel {
 
     }
     public static class User extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("ExternalId")
+        @com.aliyun.core.annotation.NameInMap("ExternalId")
         private ExternalId externalId;
 
-        @NameInMap("FirstName")
+        @com.aliyun.core.annotation.NameInMap("FirstName")
         private String firstName;
 
-        @NameInMap("LastName")
+        @com.aliyun.core.annotation.NameInMap("LastName")
         private String lastName;
 
-        @NameInMap("ProvisionType")
+        @com.aliyun.core.annotation.NameInMap("ProvisionType")
         private String provisionType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -291,7 +290,7 @@ public class GetUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * The time when the user was created.
+             * The time when the user was created. The value is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -323,7 +322,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * ExternalId.
+             * The identifier information about the user synchronized from an external IdP.
              */
             public Builder externalId(ExternalId externalId) {
                 this.externalId = externalId;
@@ -371,7 +370,7 @@ public class GetUserResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the information about the user was modified.
+             * The time when the information about the user was modified. The value is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAccessConfigurationRequest</p>
  */
 public class UpdateAccessConfigurationRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("NewDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDescription")
     private String newDescription;
 
-    @Query
-    @NameInMap("NewRelayState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewRelayState")
     private String newRelayState;
 
-    @Query
-    @NameInMap("NewSessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewSessionDuration")
     private Integer newSessionDuration;
 
     private UpdateAccessConfigurationRequest(Builder builder) {

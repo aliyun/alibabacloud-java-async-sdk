@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPermissionPoliciesInAccessConfigurationResponseBody</p>
  */
 public class ListPermissionPoliciesInAccessConfigurationResponseBody extends TeaModel {
-    @NameInMap("PermissionPolicies")
+    @com.aliyun.core.annotation.NameInMap("PermissionPolicies")
     private java.util.List < PermissionPolicies> permissionPolicies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListPermissionPoliciesInAccessConfigurationResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListPermissionPoliciesInAccessConfigurationResponseBody extends Tea
     } 
 
     public static class PermissionPolicies extends TeaModel {
-        @NameInMap("AddTime")
+        @com.aliyun.core.annotation.NameInMap("AddTime")
         private String addTime;
 
-        @NameInMap("PermissionPolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyDocument")
         private String permissionPolicyDocument;
 
-        @NameInMap("PermissionPolicyName")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyName")
         private String permissionPolicyName;
 
-        @NameInMap("PermissionPolicyType")
+        @com.aliyun.core.annotation.NameInMap("PermissionPolicyType")
         private String permissionPolicyType;
 
         private PermissionPolicies(Builder builder) {

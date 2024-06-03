@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExternalSAMLIdPCertificatesResponseBody</p>
  */
 public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SAMLIdPCertificates")
+    @com.aliyun.core.annotation.NameInMap("SAMLIdPCertificates")
     private java.util.List < SAMLIdPCertificates> SAMLIdPCertificates;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListExternalSAMLIdPCertificatesResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class ListExternalSAMLIdPCertificatesResponseBody extends TeaModel {
     } 
 
     public static class SAMLIdPCertificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("Issuer")
+        @com.aliyun.core.annotation.NameInMap("Issuer")
         private String issuer;
 
-        @NameInMap("NotAfter")
+        @com.aliyun.core.annotation.NameInMap("NotAfter")
         private String notAfter;
 
-        @NameInMap("NotBefore")
+        @com.aliyun.core.annotation.NameInMap("NotBefore")
         private String notBefore;
 
-        @NameInMap("PublicKey")
+        @com.aliyun.core.annotation.NameInMap("PublicKey")
         private String publicKey;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("SignatureAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignatureAlgorithm")
         private String signatureAlgorithm;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private String subject;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
-        @NameInMap("X509Certificate")
+        @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private SAMLIdPCertificates(Builder builder) {

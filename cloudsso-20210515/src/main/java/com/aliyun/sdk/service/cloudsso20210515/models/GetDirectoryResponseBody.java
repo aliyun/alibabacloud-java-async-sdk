@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDirectoryResponseBody</p>
  */
 public class GetDirectoryResponseBody extends TeaModel {
-    @NameInMap("Directory")
+    @com.aliyun.core.annotation.NameInMap("Directory")
     private Directory directory;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDirectoryResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetDirectoryResponseBody extends TeaModel {
     } 
 
     public static class Directory extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Directory(Builder builder) {

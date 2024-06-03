@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDirectoryStatisticsResponseBody</p>
  */
 public class GetDirectoryStatisticsResponseBody extends TeaModel {
-    @NameInMap("DirectoryStatistics")
+    @com.aliyun.core.annotation.NameInMap("DirectoryStatistics")
     private DirectoryStatistics directoryStatistics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDirectoryStatisticsResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class GetDirectoryStatisticsResponseBody extends TeaModel {
     } 
 
     public static class DirectoryStatistics extends TeaModel {
-        @NameInMap("AccessAssignmentCount")
+        @com.aliyun.core.annotation.NameInMap("AccessAssignmentCount")
         private Integer accessAssignmentCount;
 
-        @NameInMap("AccessConfigurationCount")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationCount")
         private Integer accessConfigurationCount;
 
-        @NameInMap("AccessConfigurationQuota")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationQuota")
         private Integer accessConfigurationQuota;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("DirectoryName")
+        @com.aliyun.core.annotation.NameInMap("DirectoryName")
         private String directoryName;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("GroupQuota")
+        @com.aliyun.core.annotation.NameInMap("GroupQuota")
         private Integer groupQuota;
 
-        @NameInMap("InProgressTaskCount")
+        @com.aliyun.core.annotation.NameInMap("InProgressTaskCount")
         private Integer inProgressTaskCount;
 
-        @NameInMap("InlinePolicyPerAccessConfigurationQuota")
+        @com.aliyun.core.annotation.NameInMap("InlinePolicyPerAccessConfigurationQuota")
         private Integer inlinePolicyPerAccessConfigurationQuota;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("SCIMServerCredentialCount")
+        @com.aliyun.core.annotation.NameInMap("SCIMServerCredentialCount")
         private Integer SCIMServerCredentialCount;
 
-        @NameInMap("SCIMSyncEnabled")
+        @com.aliyun.core.annotation.NameInMap("SCIMSyncEnabled")
         private Boolean SCIMSyncEnabled;
 
-        @NameInMap("SSOEnabled")
+        @com.aliyun.core.annotation.NameInMap("SSOEnabled")
         private Boolean SSOEnabled;
 
-        @NameInMap("SystemPolicyPerAccessConfigurationQuota")
+        @com.aliyun.core.annotation.NameInMap("SystemPolicyPerAccessConfigurationQuota")
         private Integer systemPolicyPerAccessConfigurationQuota;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
-        @NameInMap("UserQuota")
+        @com.aliyun.core.annotation.NameInMap("UserQuota")
         private Integer userQuota;
 
         private DirectoryStatistics(Builder builder) {

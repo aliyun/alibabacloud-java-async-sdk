@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLoginPreferenceResponseBody</p>
  */
 public class GetLoginPreferenceResponseBody extends TeaModel {
-    @NameInMap("LoginPreference")
+    @com.aliyun.core.annotation.NameInMap("LoginPreference")
     private LoginPreference loginPreference;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetLoginPreferenceResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetLoginPreferenceResponseBody extends TeaModel {
     } 
 
     public static class LoginPreference extends TeaModel {
-        @NameInMap("LoginNetworkMasks")
+        @com.aliyun.core.annotation.NameInMap("LoginNetworkMasks")
         private String loginNetworkMasks;
 
         private LoginPreference(Builder builder) {

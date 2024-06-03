@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserMFAAuthenticationSettingsResponseBody</p>
  */
 public class GetUserMFAAuthenticationSettingsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserMFAAuthenticationSettings")
+    @com.aliyun.core.annotation.NameInMap("UserMFAAuthenticationSettings")
     private String userMFAAuthenticationSettings;
 
     private GetUserMFAAuthenticationSettingsResponseBody(Builder builder) {

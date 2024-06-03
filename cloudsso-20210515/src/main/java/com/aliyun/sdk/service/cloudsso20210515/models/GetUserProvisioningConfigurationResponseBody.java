@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserProvisioningConfigurationResponseBody</p>
  */
 public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserProvisioningConfiguration")
+    @com.aliyun.core.annotation.NameInMap("UserProvisioningConfiguration")
     private UserProvisioningConfiguration userProvisioningConfiguration;
 
     private GetUserProvisioningConfigurationResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetUserProvisioningConfigurationResponseBody extends TeaModel {
     } 
 
     public static class UserProvisioningConfiguration extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DefaultLandingPage")
+        @com.aliyun.core.annotation.NameInMap("DefaultLandingPage")
         private String defaultLandingPage;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("SessionDuration")
+        @com.aliyun.core.annotation.NameInMap("SessionDuration")
         private Integer sessionDuration;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private UserProvisioningConfiguration(Builder builder) {

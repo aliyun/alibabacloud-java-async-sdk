@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSCIMServerCredentialStatusResponseBody</p>
  */
 public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SCIMServerCredential")
+    @com.aliyun.core.annotation.NameInMap("SCIMServerCredential")
     private SCIMServerCredential SCIMServerCredential;
 
     private UpdateSCIMServerCredentialStatusResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class UpdateSCIMServerCredentialStatusResponseBody extends TeaModel {
     } 
 
     public static class SCIMServerCredential extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("CredentialType")
+        @com.aliyun.core.annotation.NameInMap("CredentialType")
         private String credentialType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private SCIMServerCredential(Builder builder) {

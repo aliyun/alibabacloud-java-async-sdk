@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAccessConfigurationResponseBody</p>
  */
 public class UpdateAccessConfigurationResponseBody extends TeaModel {
-    @NameInMap("AccessConfiguration")
+    @com.aliyun.core.annotation.NameInMap("AccessConfiguration")
     private AccessConfiguration accessConfiguration;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateAccessConfigurationResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class UpdateAccessConfigurationResponseBody extends TeaModel {
     } 
 
     public static class AccessConfiguration extends TeaModel {
-        @NameInMap("AccessConfigurationId")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
         private String accessConfigurationId;
 
-        @NameInMap("AccessConfigurationName")
+        @com.aliyun.core.annotation.NameInMap("AccessConfigurationName")
         private String accessConfigurationName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RelayState")
+        @com.aliyun.core.annotation.NameInMap("RelayState")
         private String relayState;
 
-        @NameInMap("SessionDuration")
+        @com.aliyun.core.annotation.NameInMap("SessionDuration")
         private Integer sessionDuration;
 
-        @NameInMap("StatusNotifications")
+        @com.aliyun.core.annotation.NameInMap("StatusNotifications")
         private java.util.List < String > statusNotifications;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private AccessConfiguration(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAccessAssignmentRequest</p>
  */
 public class DeleteAccessAssignmentRequest extends Request {
-    @Query
-    @NameInMap("AccessConfigurationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessConfigurationId")
     private String accessConfigurationId;
 
-    @Query
-    @NameInMap("DeprovisionStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeprovisionStrategy")
     private String deprovisionStrategy;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("PrincipalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalId")
     private String principalId;
 
-    @Query
-    @NameInMap("PrincipalType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrincipalType")
     private String principalType;
 
-    @Query
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @Query
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private DeleteAccessAssignmentRequest(Builder builder) {

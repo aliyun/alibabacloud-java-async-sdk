@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetExternalSAMLIdentityProviderRequest</p>
  */
 public class SetExternalSAMLIdentityProviderRequest extends Request {
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EncodedMetadataDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncodedMetadataDocument")
     private String encodedMetadataDocument;
 
-    @Query
-    @NameInMap("EntityId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityId")
     private String entityId;
 
-    @Query
-    @NameInMap("LoginUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginUrl")
     private String loginUrl;
 
-    @Query
-    @NameInMap("SSOStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSOStatus")
     private String SSOStatus;
 
-    @Query
-    @NameInMap("WantRequestSigned")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WantRequestSigned")
     private Boolean wantRequestSigned;
 
-    @Query
-    @NameInMap("X509Certificate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("X509Certificate")
     private String x509Certificate;
 
     private SetExternalSAMLIdentityProviderRequest(Builder builder) {

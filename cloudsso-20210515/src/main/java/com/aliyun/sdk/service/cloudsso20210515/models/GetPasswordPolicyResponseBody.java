@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPasswordPolicyResponseBody</p>
  */
 public class GetPasswordPolicyResponseBody extends TeaModel {
-    @NameInMap("PasswordPolicy")
+    @com.aliyun.core.annotation.NameInMap("PasswordPolicy")
     private PasswordPolicy passwordPolicy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPasswordPolicyResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class GetPasswordPolicyResponseBody extends TeaModel {
     } 
 
     public static class PasswordPolicy extends TeaModel {
-        @NameInMap("HardExpire")
+        @com.aliyun.core.annotation.NameInMap("HardExpire")
         private Boolean hardExpire;
 
-        @NameInMap("MaxLoginAttempts")
+        @com.aliyun.core.annotation.NameInMap("MaxLoginAttempts")
         private Integer maxLoginAttempts;
 
-        @NameInMap("MaxPasswordAge")
+        @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
         private Integer maxPasswordAge;
 
-        @NameInMap("MaxPasswordLength")
+        @com.aliyun.core.annotation.NameInMap("MaxPasswordLength")
         private Integer maxPasswordLength;
 
-        @NameInMap("MinPasswordDifferentChars")
+        @com.aliyun.core.annotation.NameInMap("MinPasswordDifferentChars")
         private Integer minPasswordDifferentChars;
 
-        @NameInMap("MinPasswordLength")
+        @com.aliyun.core.annotation.NameInMap("MinPasswordLength")
         private Integer minPasswordLength;
 
-        @NameInMap("PasswordNotContainUsername")
+        @com.aliyun.core.annotation.NameInMap("PasswordNotContainUsername")
         private Boolean passwordNotContainUsername;
 
-        @NameInMap("PasswordReusePrevention")
+        @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
         private Integer passwordReusePrevention;
 
-        @NameInMap("RequireLowerCaseChars")
+        @com.aliyun.core.annotation.NameInMap("RequireLowerCaseChars")
         private Boolean requireLowerCaseChars;
 
-        @NameInMap("RequireNumbers")
+        @com.aliyun.core.annotation.NameInMap("RequireNumbers")
         private Boolean requireNumbers;
 
-        @NameInMap("RequireSymbols")
+        @com.aliyun.core.annotation.NameInMap("RequireSymbols")
         private Boolean requireSymbols;
 
-        @NameInMap("RequireUpperCaseChars")
+        @com.aliyun.core.annotation.NameInMap("RequireUpperCaseChars")
         private Boolean requireUpperCaseChars;
 
         private PasswordPolicy(Builder builder) {

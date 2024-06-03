@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudsso20210515.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListMFADevicesForUserResponseBody</p>
  */
 public class ListMFADevicesForUserResponseBody extends TeaModel {
-    @NameInMap("MFADevices")
+    @com.aliyun.core.annotation.NameInMap("MFADevices")
     private java.util.List < MFADevices> MFADevices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCounts")
+    @com.aliyun.core.annotation.NameInMap("TotalCounts")
     private Integer totalCounts;
 
     private ListMFADevicesForUserResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class ListMFADevicesForUserResponseBody extends TeaModel {
     } 
 
     public static class MFADevices extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceName")
+        @com.aliyun.core.annotation.NameInMap("DeviceName")
         private String deviceName;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private MFADevices(Builder builder) {
