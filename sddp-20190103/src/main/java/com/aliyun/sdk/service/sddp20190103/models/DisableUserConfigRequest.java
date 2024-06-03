@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DisableUserConfigRequest</p>
  */
 public class DisableUserConfigRequest extends Request {
-    @Query
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @Query
-    @NameInMap("FeatureType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureType")
     private Integer featureType;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
     private DisableUserConfigRequest(Builder builder) {

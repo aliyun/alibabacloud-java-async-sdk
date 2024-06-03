@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataLimitSetResponseBody</p>
  */
 public class DescribeDataLimitSetResponseBody extends TeaModel {
-    @NameInMap("DataLimitSet")
+    @com.aliyun.core.annotation.NameInMap("DataLimitSet")
     private DataLimitSet dataLimitSet;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataLimitSetResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
     } 
 
     public static class DataLimitList extends TeaModel {
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("CheckStatusName")
+        @com.aliyun.core.annotation.NameInMap("CheckStatusName")
         private String checkStatusName;
 
-        @NameInMap("Connector")
+        @com.aliyun.core.annotation.NameInMap("Connector")
         private String connector;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private DataLimitList(Builder builder) {
@@ -332,10 +331,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     }
     public static class OssBucketList extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private OssBucketList(Builder builder) {
@@ -393,10 +392,10 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     }
     public static class RegionList extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private RegionList(Builder builder) {
@@ -454,22 +453,22 @@ public class DescribeDataLimitSetResponseBody extends TeaModel {
 
     }
     public static class DataLimitSet extends TeaModel {
-        @NameInMap("DataLimitList")
+        @com.aliyun.core.annotation.NameInMap("DataLimitList")
         private java.util.List < DataLimitList> dataLimitList;
 
-        @NameInMap("OssBucketList")
+        @com.aliyun.core.annotation.NameInMap("OssBucketList")
         private java.util.List < OssBucketList> ossBucketList;
 
-        @NameInMap("RegionList")
+        @com.aliyun.core.annotation.NameInMap("RegionList")
         private java.util.List < RegionList> regionList;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DataLimitSet(Builder builder) {

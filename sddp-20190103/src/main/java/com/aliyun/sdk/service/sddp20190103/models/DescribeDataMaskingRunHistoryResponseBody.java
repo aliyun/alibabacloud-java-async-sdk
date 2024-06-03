@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataMaskingRunHistoryResponseBody</p>
  */
 public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataMaskingRunHistoryResponseBody(Builder builder) {
@@ -132,61 +131,61 @@ public class DescribeDataMaskingRunHistoryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("ConflictCount")
+        @com.aliyun.core.annotation.NameInMap("ConflictCount")
         private Long conflictCount;
 
-        @NameInMap("DstType")
+        @com.aliyun.core.annotation.NameInMap("DstType")
         private Integer dstType;
 
-        @NameInMap("DstTypeCode")
+        @com.aliyun.core.annotation.NameInMap("DstTypeCode")
         private String dstTypeCode;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("FailCode")
+        @com.aliyun.core.annotation.NameInMap("FailCode")
         private String failCode;
 
-        @NameInMap("FailMsg")
+        @com.aliyun.core.annotation.NameInMap("FailMsg")
         private String failMsg;
 
-        @NameInMap("HasDownloadFile")
+        @com.aliyun.core.annotation.NameInMap("HasDownloadFile")
         private Integer hasDownloadFile;
 
-        @NameInMap("HasSubProcess")
+        @com.aliyun.core.annotation.NameInMap("HasSubProcess")
         private Integer hasSubProcess;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("MaskingCount")
+        @com.aliyun.core.annotation.NameInMap("MaskingCount")
         private Long maskingCount;
 
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Integer percentage;
 
-        @NameInMap("RunIndex")
+        @com.aliyun.core.annotation.NameInMap("RunIndex")
         private Integer runIndex;
 
-        @NameInMap("SrcTableName")
+        @com.aliyun.core.annotation.NameInMap("SrcTableName")
         private String srcTableName;
 
-        @NameInMap("SrcType")
+        @com.aliyun.core.annotation.NameInMap("SrcType")
         private Integer srcType;
 
-        @NameInMap("SrcTypeCode")
+        @com.aliyun.core.annotation.NameInMap("SrcTypeCode")
         private String srcTypeCode;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Items(Builder builder) {

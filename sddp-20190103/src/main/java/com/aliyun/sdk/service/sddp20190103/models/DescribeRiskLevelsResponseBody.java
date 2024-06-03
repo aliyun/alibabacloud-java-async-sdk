@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRiskLevelsResponseBody</p>
  */
 public class DescribeRiskLevelsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskLevelList")
+    @com.aliyun.core.annotation.NameInMap("RiskLevelList")
     private java.util.List < RiskLevelList> riskLevelList;
 
     private DescribeRiskLevelsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeRiskLevelsResponseBody extends TeaModel {
     } 
 
     public static class RiskLevelList extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReferenceNum")
+        @com.aliyun.core.annotation.NameInMap("ReferenceNum")
         private Integer referenceNum;
 
         private RiskLevelList(Builder builder) {

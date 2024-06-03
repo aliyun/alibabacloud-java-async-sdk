@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRulesResponseBody</p>
  */
 public class DescribeRulesResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeRulesResponseBody(Builder builder) {
@@ -132,82 +131,82 @@ public class DescribeRulesResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentCategory")
+        @com.aliyun.core.annotation.NameInMap("ContentCategory")
         private String contentCategory;
 
-        @NameInMap("CustomType")
+        @com.aliyun.core.annotation.NameInMap("CustomType")
         private Integer customType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("HitTotalCount")
+        @com.aliyun.core.annotation.NameInMap("HitTotalCount")
         private Integer hitTotalCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("LoginName")
+        @com.aliyun.core.annotation.NameInMap("LoginName")
         private String loginName;
 
-        @NameInMap("MajorKey")
+        @com.aliyun.core.annotation.NameInMap("MajorKey")
         private String majorKey;
 
-        @NameInMap("MatchType")
+        @com.aliyun.core.annotation.NameInMap("MatchType")
         private Integer matchType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("StatExpress")
+        @com.aliyun.core.annotation.NameInMap("StatExpress")
         private String statExpress;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("SupportForm")
+        @com.aliyun.core.annotation.NameInMap("SupportForm")
         private Integer supportForm;
 
-        @NameInMap("Target")
+        @com.aliyun.core.annotation.NameInMap("Target")
         private String target;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("WarnLevel")
+        @com.aliyun.core.annotation.NameInMap("WarnLevel")
         private Integer warnLevel;
 
         private Items(Builder builder) {

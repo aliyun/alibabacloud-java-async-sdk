@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataObjectsResponseBody</p>
  */
 public class DescribeDataObjectsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataObjectsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
     } 
 
     public static class ModelTags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ModelTags(Builder builder) {
@@ -193,19 +192,19 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     }
     public static class RuleList extends TeaModel {
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleList(Builder builder) {
@@ -314,55 +313,58 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastScanTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
+        private Long lastModifiedTime;
+
+        @com.aliyun.core.annotation.NameInMap("LastScanTime")
         private Long lastScanTime;
 
-        @NameInMap("MemberAccount")
+        @com.aliyun.core.annotation.NameInMap("MemberAccount")
         private Long memberAccount;
 
-        @NameInMap("ModelTags")
+        @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ObjectFileCategory")
+        @com.aliyun.core.annotation.NameInMap("ObjectFileCategory")
         private String objectFileCategory;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private Items(Builder builder) {
@@ -370,6 +372,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             this.id = builder.id;
             this.instanceDescription = builder.instanceDescription;
             this.instanceId = builder.instanceId;
+            this.lastModifiedTime = builder.lastModifiedTime;
             this.lastScanTime = builder.lastScanTime;
             this.memberAccount = builder.memberAccount;
             this.modelTags = builder.modelTags;
@@ -419,6 +422,13 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
          */
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return lastModifiedTime
+         */
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
         }
 
         /**
@@ -517,6 +527,7 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
             private String id; 
             private String instanceDescription; 
             private String instanceId; 
+            private Long lastModifiedTime; 
             private Long lastScanTime; 
             private Long memberAccount; 
             private java.util.List < ModelTags> modelTags; 
@@ -560,6 +571,14 @@ public class DescribeDataObjectsResponseBody extends TeaModel {
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * LastModifiedTime.
+             */
+            public Builder lastModifiedTime(Long lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
                 return this;
             }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeColumnsV2ResponseBody</p>
  */
 public class DescribeColumnsV2ResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeColumnsV2ResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
     } 
 
     public static class ModelTags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ModelTags(Builder builder) {
@@ -193,64 +192,64 @@ public class DescribeColumnsV2ResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("ModelTags")
+        @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OdpsRiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("OdpsRiskLevelName")
         private String odpsRiskLevelName;
 
-        @NameInMap("OdpsRiskLevelValue")
+        @com.aliyun.core.annotation.NameInMap("OdpsRiskLevelValue")
         private Integer odpsRiskLevelValue;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("RevisionId")
+        @com.aliyun.core.annotation.NameInMap("RevisionId")
         private Long revisionId;
 
-        @NameInMap("RevisionStatus")
+        @com.aliyun.core.annotation.NameInMap("RevisionStatus")
         private Long revisionStatus;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
-        @NameInMap("SensLevelName")
+        @com.aliyun.core.annotation.NameInMap("SensLevelName")
         private String sensLevelName;
 
-        @NameInMap("Sensitive")
+        @com.aliyun.core.annotation.NameInMap("Sensitive")
         private Boolean sensitive;
 
-        @NameInMap("TableId")
+        @com.aliyun.core.annotation.NameInMap("TableId")
         private Long tableId;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Items(Builder builder) {

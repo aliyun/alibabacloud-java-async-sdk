@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEventTypesResponseBody</p>
  */
 public class DescribeEventTypesResponseBody extends TeaModel {
-    @NameInMap("EventTypeList")
+    @com.aliyun.core.annotation.NameInMap("EventTypeList")
     private java.util.List < EventTypeList> eventTypeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeEventTypesResponseBody(Builder builder) {
@@ -75,37 +74,37 @@ public class DescribeEventTypesResponseBody extends TeaModel {
     } 
 
     public static class SubTypeList extends TeaModel {
-        @NameInMap("AdaptedProduct")
+        @com.aliyun.core.annotation.NameInMap("AdaptedProduct")
         private String adaptedProduct;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ConfigCode")
+        @com.aliyun.core.annotation.NameInMap("ConfigCode")
         private String configCode;
 
-        @NameInMap("ConfigContentType")
+        @com.aliyun.core.annotation.NameInMap("ConfigContentType")
         private Integer configContentType;
 
-        @NameInMap("ConfigDescription")
+        @com.aliyun.core.annotation.NameInMap("ConfigDescription")
         private String configDescription;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EventHitCount")
+        @com.aliyun.core.annotation.NameInMap("EventHitCount")
         private Integer eventHitCount;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private SubTypeList(Builder builder) {
@@ -324,19 +323,19 @@ public class DescribeEventTypesResponseBody extends TeaModel {
 
     }
     public static class EventTypeList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SubTypeList")
+        @com.aliyun.core.annotation.NameInMap("SubTypeList")
         private java.util.List < SubTypeList> subTypeList;
 
         private EventTypeList(Builder builder) {

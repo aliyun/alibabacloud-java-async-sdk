@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDocTypesResponseBody</p>
  */
 public class DescribeDocTypesResponseBody extends TeaModel {
-    @NameInMap("DocTypeList")
+    @com.aliyun.core.annotation.NameInMap("DocTypeList")
     private java.util.List < DocTypeList> docTypeList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDocTypesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDocTypesResponseBody extends TeaModel {
     } 
 
     public static class DocTypeList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private Long code;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private DocTypeList(Builder builder) {

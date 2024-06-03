@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataMaskingTasksResponseBody</p>
  */
 public class DescribeDataMaskingTasksResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataMaskingTasksResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("DstMemberAccount")
+        @com.aliyun.core.annotation.NameInMap("DstMemberAccount")
         private Long dstMemberAccount;
 
-        @NameInMap("DstPath")
+        @com.aliyun.core.annotation.NameInMap("DstPath")
         private String dstPath;
 
-        @NameInMap("DstType")
+        @com.aliyun.core.annotation.NameInMap("DstType")
         private Integer dstType;
 
-        @NameInMap("DstTypeCode")
+        @com.aliyun.core.annotation.NameInMap("DstTypeCode")
         private String dstTypeCode;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("HasUnfinishProcess")
+        @com.aliyun.core.annotation.NameInMap("HasUnfinishProcess")
         private Boolean hasUnfinishProcess;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OriginalTable")
+        @com.aliyun.core.annotation.NameInMap("OriginalTable")
         private Boolean originalTable;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("RunCount")
+        @com.aliyun.core.annotation.NameInMap("RunCount")
         private Integer runCount;
 
-        @NameInMap("SrcMemberAccount")
+        @com.aliyun.core.annotation.NameInMap("SrcMemberAccount")
         private Long srcMemberAccount;
 
-        @NameInMap("SrcPath")
+        @com.aliyun.core.annotation.NameInMap("SrcPath")
         private String srcPath;
 
-        @NameInMap("SrcType")
+        @com.aliyun.core.annotation.NameInMap("SrcType")
         private Integer srcType;
 
-        @NameInMap("SrcTypeCode")
+        @com.aliyun.core.annotation.NameInMap("SrcTypeCode")
         private String srcTypeCode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private Integer triggerType;
 
         private Items(Builder builder) {

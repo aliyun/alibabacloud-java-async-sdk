@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceSourcesResponseBody</p>
  */
 public class DescribeInstanceSourcesResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeInstanceSourcesResponseBody(Builder builder) {
@@ -132,79 +131,79 @@ public class DescribeInstanceSourcesResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("AutoScan")
+        @com.aliyun.core.annotation.NameInMap("AutoScan")
         private Integer autoScan;
 
-        @NameInMap("CanModifyUserName")
+        @com.aliyun.core.annotation.NameInMap("CanModifyUserName")
         private Boolean canModifyUserName;
 
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("DatamaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DatamaskStatus")
         private Integer datamaskStatus;
 
-        @NameInMap("DbName")
+        @com.aliyun.core.annotation.NameInMap("DbName")
         private String dbName;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSize")
+        @com.aliyun.core.annotation.NameInMap("InstanceSize")
         private Long instanceSize;
 
-        @NameInMap("LastModifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastModifyTime")
         private Long lastModifyTime;
 
-        @NameInMap("LastModifyUserId")
+        @com.aliyun.core.annotation.NameInMap("LastModifyUserId")
         private String lastModifyUserId;
 
-        @NameInMap("LogStoreDay")
+        @com.aliyun.core.annotation.NameInMap("LogStoreDay")
         private Integer logStoreDay;
 
-        @NameInMap("PasswordStatus")
+        @com.aliyun.core.annotation.NameInMap("PasswordStatus")
         private Integer passwordStatus;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private Long productId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("SamplingSize")
+        @com.aliyun.core.annotation.NameInMap("SamplingSize")
         private Integer samplingSize;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Items(Builder builder) {

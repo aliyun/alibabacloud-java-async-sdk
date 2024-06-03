@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTablesResponseBody</p>
  */
 public class DescribeTablesResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeTablesResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeTablesResponseBody extends TeaModel {
     } 
 
     public static class RuleList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
         private RuleList(Builder builder) {
@@ -220,55 +219,55 @@ public class DescribeTablesResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private Long creationTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
-        @NameInMap("Sensitive")
+        @com.aliyun.core.annotation.NameInMap("Sensitive")
         private Boolean sensitive;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("SensitiveRatio")
+        @com.aliyun.core.annotation.NameInMap("SensitiveRatio")
         private String sensitiveRatio;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Items(Builder builder) {

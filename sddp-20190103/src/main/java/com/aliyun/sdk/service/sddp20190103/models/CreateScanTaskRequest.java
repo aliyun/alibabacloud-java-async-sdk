@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateScanTaskRequest</p>
  */
 public class CreateScanTaskRequest extends Request {
-    @Query
-    @NameInMap("DataLimitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataLimitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long dataLimitId;
 
-    @Query
-    @NameInMap("FeatureType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeatureType")
     private Integer featureType;
 
-    @Query
-    @NameInMap("IntervalDay")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalDay")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer intervalDay;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OssScanPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OssScanPath")
     private String ossScanPath;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long resourceType;
 
-    @Query
-    @NameInMap("RunHour")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunHour")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer runHour;
 
-    @Query
-    @NameInMap("RunMinute")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RunMinute")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer runMinute;
 
-    @Query
-    @NameInMap("ScanRange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer scanRange;
 
-    @Query
-    @NameInMap("ScanRangeContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScanRangeContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scanRangeContent;
 
-    @Query
-    @NameInMap("SourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceIp")
     private String sourceIp;
 
-    @Query
-    @NameInMap("TaskName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskName;
 
-    @Query
-    @NameInMap("TaskUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskUserName")
     private String taskUserName;
 
     private CreateScanTaskRequest(Builder builder) {

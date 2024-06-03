@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataObjectColumnDetailResponseBody</p>
  */
 public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataObjectColumnDetailResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
     } 
 
     public static class ModelTags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ModelTags(Builder builder) {
@@ -193,37 +192,37 @@ public class DescribeDataObjectColumnDetailResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < String > categories;
 
-        @NameInMap("ColumnComment")
+        @com.aliyun.core.annotation.NameInMap("ColumnComment")
         private String columnComment;
 
-        @NameInMap("ColumnName")
+        @com.aliyun.core.annotation.NameInMap("ColumnName")
         private String columnName;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("ModelTags")
+        @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private Boolean primaryKey;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleId")
+        @com.aliyun.core.annotation.NameInMap("RuleId")
         private Long ruleId;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private Items(Builder builder) {

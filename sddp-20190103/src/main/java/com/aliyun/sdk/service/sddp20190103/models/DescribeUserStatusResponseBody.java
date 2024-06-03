@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserStatusResponseBody</p>
  */
 public class DescribeUserStatusResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserStatus")
+    @com.aliyun.core.annotation.NameInMap("UserStatus")
     private UserStatus userStatus;
 
     private DescribeUserStatusResponseBody(Builder builder) {
@@ -72,64 +71,64 @@ public class DescribeUserStatusResponseBody extends TeaModel {
     } 
 
     public static class UserStatus extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("AuditClosable")
+        @com.aliyun.core.annotation.NameInMap("AuditClosable")
         private Boolean auditClosable;
 
-        @NameInMap("AuditReleasable")
+        @com.aliyun.core.annotation.NameInMap("AuditReleasable")
         private Boolean auditReleasable;
 
-        @NameInMap("Authed")
+        @com.aliyun.core.annotation.NameInMap("Authed")
         private Boolean authed;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("DataManagerRole")
+        @com.aliyun.core.annotation.NameInMap("DataManagerRole")
         private Integer dataManagerRole;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceNum")
+        @com.aliyun.core.annotation.NameInMap("InstanceNum")
         private Integer instanceNum;
 
-        @NameInMap("InstanceTotalCount")
+        @com.aliyun.core.annotation.NameInMap("InstanceTotalCount")
         private Long instanceTotalCount;
 
-        @NameInMap("LabStatus")
+        @com.aliyun.core.annotation.NameInMap("LabStatus")
         private Integer labStatus;
 
-        @NameInMap("OssTotalSize")
+        @com.aliyun.core.annotation.NameInMap("OssTotalSize")
         private Long ossTotalSize;
 
-        @NameInMap("ProtectionDays")
+        @com.aliyun.core.annotation.NameInMap("ProtectionDays")
         private Integer protectionDays;
 
-        @NameInMap("Purchased")
+        @com.aliyun.core.annotation.NameInMap("Purchased")
         private Boolean purchased;
 
-        @NameInMap("ReleaseDays")
+        @com.aliyun.core.annotation.NameInMap("ReleaseDays")
         private Integer releaseDays;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private Long releaseTime;
 
-        @NameInMap("RemainDays")
+        @com.aliyun.core.annotation.NameInMap("RemainDays")
         private Integer remainDays;
 
-        @NameInMap("Trail")
+        @com.aliyun.core.annotation.NameInMap("Trail")
         private Boolean trail;
 
-        @NameInMap("UseAgentAudit")
+        @com.aliyun.core.annotation.NameInMap("UseAgentAudit")
         private Boolean useAgentAudit;
 
-        @NameInMap("UseInstanceNum")
+        @com.aliyun.core.annotation.NameInMap("UseInstanceNum")
         private Integer useInstanceNum;
 
-        @NameInMap("UseOssSize")
+        @com.aliyun.core.annotation.NameInMap("UseOssSize")
         private Long useOssSize;
 
         private UserStatus(Builder builder) {

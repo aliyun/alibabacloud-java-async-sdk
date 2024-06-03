@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOssObjectsResponseBody</p>
  */
 public class DescribeOssObjectsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeOssObjectsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
     } 
 
     public static class RuleList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
         private RuleList(Builder builder) {
@@ -220,52 +219,55 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Long category;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("FileCategoryCode")
+        @com.aliyun.core.annotation.NameInMap("FileCategoryCode")
         private Long fileCategoryCode;
 
-        @NameInMap("FileCategoryName")
+        @com.aliyun.core.annotation.NameInMap("FileCategoryName")
         private String fileCategoryName;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private Long instanceId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("LastModifiedTime")
+        private Long lastModifiedTime;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
-        @NameInMap("SensitiveCount")
+        @com.aliyun.core.annotation.NameInMap("SensitiveCount")
         private Integer sensitiveCount;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
         private Items(Builder builder) {
@@ -277,6 +279,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             this.fileId = builder.fileId;
             this.id = builder.id;
             this.instanceId = builder.instanceId;
+            this.lastModifiedTime = builder.lastModifiedTime;
             this.name = builder.name;
             this.regionId = builder.regionId;
             this.riskLevelId = builder.riskLevelId;
@@ -352,6 +355,13 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastModifiedTime
+         */
+        public Long getLastModifiedTime() {
+            return this.lastModifiedTime;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -416,6 +426,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             private String fileId; 
             private String id; 
             private Long instanceId; 
+            private Long lastModifiedTime; 
             private String name; 
             private String regionId; 
             private Long riskLevelId; 
@@ -486,6 +497,14 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
              */
             public Builder instanceId(Long instanceId) {
                 this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * LastModifiedTime.
+             */
+            public Builder lastModifiedTime(Long lastModifiedTime) {
+                this.lastModifiedTime = lastModifiedTime;
                 return this;
             }
 

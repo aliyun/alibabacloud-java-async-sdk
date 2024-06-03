@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataLimitsResponseBody</p>
  */
 public class DescribeDataLimitsResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDataLimitsResponseBody(Builder builder) {
@@ -132,124 +131,124 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("AutoScan")
+        @com.aliyun.core.annotation.NameInMap("AutoScan")
         private Integer autoScan;
 
-        @NameInMap("CheckStatus")
+        @com.aliyun.core.annotation.NameInMap("CheckStatus")
         private Integer checkStatus;
 
-        @NameInMap("CheckStatusName")
+        @com.aliyun.core.annotation.NameInMap("CheckStatusName")
         private String checkStatusName;
 
-        @NameInMap("DatamaskStatus")
+        @com.aliyun.core.annotation.NameInMap("DatamaskStatus")
         private Integer datamaskStatus;
 
-        @NameInMap("DbVersion")
+        @com.aliyun.core.annotation.NameInMap("DbVersion")
         private String dbVersion;
 
-        @NameInMap("Enable")
+        @com.aliyun.core.annotation.NameInMap("Enable")
         private Integer enable;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("EventStatus")
+        @com.aliyun.core.annotation.NameInMap("EventStatus")
         private Integer eventStatus;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastFinishedTime")
+        @com.aliyun.core.annotation.NameInMap("LastFinishedTime")
         private Long lastFinishedTime;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("LogStoreDay")
+        @com.aliyun.core.annotation.NameInMap("LogStoreDay")
         private Integer logStoreDay;
 
-        @NameInMap("MemberAccount")
+        @com.aliyun.core.annotation.NameInMap("MemberAccount")
         private Long memberAccount;
 
-        @NameInMap("NextStartTime")
+        @com.aliyun.core.annotation.NameInMap("NextStartTime")
         private Long nextStartTime;
 
-        @NameInMap("OcrStatus")
+        @com.aliyun.core.annotation.NameInMap("OcrStatus")
         private Integer ocrStatus;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ProcessStatus")
+        @com.aliyun.core.annotation.NameInMap("ProcessStatus")
         private Integer processStatus;
 
-        @NameInMap("ProcessTotalCount")
+        @com.aliyun.core.annotation.NameInMap("ProcessTotalCount")
         private Integer processTotalCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private Long resourceType;
 
-        @NameInMap("ResourceTypeCode")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeCode")
         private String resourceTypeCode;
 
-        @NameInMap("SamplingSize")
+        @com.aliyun.core.annotation.NameInMap("SamplingSize")
         private Integer samplingSize;
 
-        @NameInMap("SecurityGroupIdList")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIdList")
         private java.util.List < String > securityGroupIdList;
 
-        @NameInMap("SupportAudit")
+        @com.aliyun.core.annotation.NameInMap("SupportAudit")
         private Boolean supportAudit;
 
-        @NameInMap("SupportDatamask")
+        @com.aliyun.core.annotation.NameInMap("SupportDatamask")
         private Boolean supportDatamask;
 
-        @NameInMap("SupportEvent")
+        @com.aliyun.core.annotation.NameInMap("SupportEvent")
         private Boolean supportEvent;
 
-        @NameInMap("SupportOcr")
+        @com.aliyun.core.annotation.NameInMap("SupportOcr")
         private Boolean supportOcr;
 
-        @NameInMap("SupportScan")
+        @com.aliyun.core.annotation.NameInMap("SupportScan")
         private Boolean supportScan;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("VSwitchIdList")
+        @com.aliyun.core.annotation.NameInMap("VSwitchIdList")
         private java.util.List < String > vSwitchIdList;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private Items(Builder builder) {

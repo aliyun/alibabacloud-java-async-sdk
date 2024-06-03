@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOssObjectDetailV2ResponseBody</p>
  */
 public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
-    @NameInMap("OssObjectDetail")
+    @com.aliyun.core.annotation.NameInMap("OssObjectDetail")
     private OssObjectDetail ossObjectDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOssObjectDetailV2ResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
     } 
 
     public static class ModelTags extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private ModelTags(Builder builder) {
@@ -133,22 +132,22 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
     }
     public static class RuleList extends TeaModel {
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("ModelTags")
+        @com.aliyun.core.annotation.NameInMap("ModelTags")
         private java.util.List < ModelTags> modelTags;
 
-        @NameInMap("RiskLevelId")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelId")
         private Long riskLevelId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleName")
+        @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
         private RuleList(Builder builder) {
@@ -274,22 +273,22 @@ public class DescribeOssObjectDetailV2ResponseBody extends TeaModel {
 
     }
     public static class OssObjectDetail extends TeaModel {
-        @NameInMap("BucketName")
+        @com.aliyun.core.annotation.NameInMap("BucketName")
         private String bucketName;
 
-        @NameInMap("CategoryName")
+        @com.aliyun.core.annotation.NameInMap("CategoryName")
         private String categoryName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RiskLevelName")
+        @com.aliyun.core.annotation.NameInMap("RiskLevelName")
         private String riskLevelName;
 
-        @NameInMap("RuleList")
+        @com.aliyun.core.annotation.NameInMap("RuleList")
         private java.util.List < RuleList> ruleList;
 
         private OssObjectDetail(Builder builder) {

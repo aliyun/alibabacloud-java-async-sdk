@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sddp20190103.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParentInstanceResponseBody</p>
  */
 public class DescribeParentInstanceResponseBody extends TeaModel {
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeParentInstanceResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("AuthStatus")
+        @com.aliyun.core.annotation.NameInMap("AuthStatus")
         private Integer authStatus;
 
-        @NameInMap("ClusterStatus")
+        @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
-        @NameInMap("ConnectNode")
+        @com.aliyun.core.annotation.NameInMap("ConnectNode")
         private String connectNode;
 
-        @NameInMap("DbNum")
+        @com.aliyun.core.annotation.NameInMap("DbNum")
         private String dbNum;
 
-        @NameInMap("EngineType")
+        @com.aliyun.core.annotation.NameInMap("EngineType")
         private String engineType;
 
-        @NameInMap("InstanceDescription")
+        @com.aliyun.core.annotation.NameInMap("InstanceDescription")
         private String instanceDescription;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSize")
+        @com.aliyun.core.annotation.NameInMap("InstanceSize")
         private Long instanceSize;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("MemberAccount")
+        @com.aliyun.core.annotation.NameInMap("MemberAccount")
         private Long memberAccount;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("SupportConnectNodes")
+        @com.aliyun.core.annotation.NameInMap("SupportConnectNodes")
         private String supportConnectNodes;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("TenantName")
+        @com.aliyun.core.annotation.NameInMap("TenantName")
         private String tenantName;
 
-        @NameInMap("UnConnectDbCount")
+        @com.aliyun.core.annotation.NameInMap("UnConnectDbCount")
         private String unConnectDbCount;
 
-        @NameInMap("UnSupportOneClickAuthReason")
+        @com.aliyun.core.annotation.NameInMap("UnSupportOneClickAuthReason")
         private String unSupportOneClickAuthReason;
 
         private Items(Builder builder) {
