@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLoginTokenResponseBody</p>
  */
 public class GetLoginTokenResponseBody extends TeaModel {
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @NameInMap("Industry")
+    @com.aliyun.core.annotation.NameInMap("Industry")
     private String industry;
 
-    @NameInMap("KeepAliveToken")
+    @com.aliyun.core.annotation.NameInMap("KeepAliveToken")
     private String keepAliveToken;
 
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @NameInMap("LoginToken")
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
     private String loginToken;
 
-    @NameInMap("NextStage")
+    @com.aliyun.core.annotation.NameInMap("NextStage")
     private String nextStage;
 
-    @NameInMap("Phone")
+    @com.aliyun.core.annotation.NameInMap("PasswordStrategy")
+    private PasswordStrategy passwordStrategy;
+
+    @com.aliyun.core.annotation.NameInMap("Phone")
     private String phone;
 
-    @NameInMap("Props")
+    @com.aliyun.core.annotation.NameInMap("Props")
     private java.util.Map < String, String > props;
 
-    @NameInMap("QrCodePng")
+    @com.aliyun.core.annotation.NameInMap("QrCodePng")
     private String qrCodePng;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    private String reason;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RiskVerifyInfo")
+    @com.aliyun.core.annotation.NameInMap("RiskVerifyInfo")
     private RiskVerifyInfo riskVerifyInfo;
 
-    @NameInMap("Secret")
+    @com.aliyun.core.annotation.NameInMap("Secret")
     private String secret;
 
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private Long tenantId;
 
-    @NameInMap("WindowDisplayMode")
+    @com.aliyun.core.annotation.NameInMap("WindowDisplayMode")
     private String windowDisplayMode;
 
     private GetLoginTokenResponseBody(Builder builder) {
@@ -68,9 +73,11 @@ public class GetLoginTokenResponseBody extends TeaModel {
         this.label = builder.label;
         this.loginToken = builder.loginToken;
         this.nextStage = builder.nextStage;
+        this.passwordStrategy = builder.passwordStrategy;
         this.phone = builder.phone;
         this.props = builder.props;
         this.qrCodePng = builder.qrCodePng;
+        this.reason = builder.reason;
         this.requestId = builder.requestId;
         this.riskVerifyInfo = builder.riskVerifyInfo;
         this.secret = builder.secret;
@@ -137,6 +144,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
     }
 
     /**
+     * @return passwordStrategy
+     */
+    public PasswordStrategy getPasswordStrategy() {
+        return this.passwordStrategy;
+    }
+
+    /**
      * @return phone
      */
     public String getPhone() {
@@ -155,6 +169,13 @@ public class GetLoginTokenResponseBody extends TeaModel {
      */
     public String getQrCodePng() {
         return this.qrCodePng;
+    }
+
+    /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
     }
 
     /**
@@ -207,9 +228,11 @@ public class GetLoginTokenResponseBody extends TeaModel {
         private String label; 
         private String loginToken; 
         private String nextStage; 
+        private PasswordStrategy passwordStrategy; 
         private String phone; 
         private java.util.Map < String, String > props; 
         private String qrCodePng; 
+        private String reason; 
         private String requestId; 
         private RiskVerifyInfo riskVerifyInfo; 
         private String secret; 
@@ -281,6 +304,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
         }
 
         /**
+         * PasswordStrategy.
+         */
+        public Builder passwordStrategy(PasswordStrategy passwordStrategy) {
+            this.passwordStrategy = passwordStrategy;
+            return this;
+        }
+
+        /**
          * Enter the mobile number of the convenience user. For an AD user, null is returned.
          */
         public Builder phone(String phone) {
@@ -304,6 +335,14 @@ public class GetLoginTokenResponseBody extends TeaModel {
          */
         public Builder qrCodePng(String qrCodePng) {
             this.qrCodePng = qrCodePng;
+            return this;
+        }
+
+        /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.reason = reason;
             return this;
         }
 
@@ -367,17 +406,78 @@ public class GetLoginTokenResponseBody extends TeaModel {
 
     } 
 
+    public static class PasswordStrategy extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TenantAlternativeChars")
+        private java.util.List < String > tenantAlternativeChars;
+
+        @com.aliyun.core.annotation.NameInMap("TenantPasswordLength")
+        private String tenantPasswordLength;
+
+        private PasswordStrategy(Builder builder) {
+            this.tenantAlternativeChars = builder.tenantAlternativeChars;
+            this.tenantPasswordLength = builder.tenantPasswordLength;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PasswordStrategy create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tenantAlternativeChars
+         */
+        public java.util.List < String > getTenantAlternativeChars() {
+            return this.tenantAlternativeChars;
+        }
+
+        /**
+         * @return tenantPasswordLength
+         */
+        public String getTenantPasswordLength() {
+            return this.tenantPasswordLength;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > tenantAlternativeChars; 
+            private String tenantPasswordLength; 
+
+            /**
+             * TenantAlternativeChars.
+             */
+            public Builder tenantAlternativeChars(java.util.List < String > tenantAlternativeChars) {
+                this.tenantAlternativeChars = tenantAlternativeChars;
+                return this;
+            }
+
+            /**
+             * TenantPasswordLength.
+             */
+            public Builder tenantPasswordLength(String tenantPasswordLength) {
+                this.tenantPasswordLength = tenantPasswordLength;
+                return this;
+            }
+
+            public PasswordStrategy build() {
+                return new PasswordStrategy(this);
+            } 
+
+        } 
+
+    }
     public static class RiskVerifyInfo extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("LastLockDuration")
+        @com.aliyun.core.annotation.NameInMap("LastLockDuration")
         private Long lastLockDuration;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private String locked;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private RiskVerifyInfo(Builder builder) {

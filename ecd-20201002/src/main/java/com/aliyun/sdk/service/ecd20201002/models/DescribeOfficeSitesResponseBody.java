@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeOfficeSitesResponseBody</p>
  */
 public class DescribeOfficeSitesResponseBody extends TeaModel {
-    @NameInMap("OfficeSites")
+    @com.aliyun.core.annotation.NameInMap("OfficeSites")
     private java.util.List < OfficeSites> officeSites;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeOfficeSitesResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     } 
 
     public static class OfficeSites extends TeaModel {
-        @NameInMap("DesktopAccessType")
+        @com.aliyun.core.annotation.NameInMap("DesktopAccessType")
         private String desktopAccessType;
 
-        @NameInMap("DesktopVpcEndpoint")
+        @com.aliyun.core.annotation.NameInMap("DesktopVpcEndpoint")
         private String desktopVpcEndpoint;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("OfficeSiteType")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteType")
         private String officeSiteType;
 
-        @NameInMap("ProviderId")
+        @com.aliyun.core.annotation.NameInMap("ProviderId")
         private String providerId;
 
-        @NameInMap("SsoServiceUrl")
+        @com.aliyun.core.annotation.NameInMap("SsoServiceUrl")
         private String ssoServiceUrl;
 
         private OfficeSites(Builder builder) {

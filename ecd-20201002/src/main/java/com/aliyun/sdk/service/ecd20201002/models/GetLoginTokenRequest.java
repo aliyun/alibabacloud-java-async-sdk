@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,78 +11,78 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetLoginTokenRequest</p>
  */
 public class GetLoginTokenRequest extends Request {
-    @Query
-    @NameInMap("AuthenticationCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationCode")
     private String authenticationCode;
 
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("ClientOS")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientOS")
     private String clientOS;
 
-    @Query
-    @NameInMap("ClientType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
     private String clientType;
 
-    @Query
-    @NameInMap("ClientVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientVersion")
     private String clientVersion;
 
-    @Query
-    @NameInMap("CurrentStage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentStage")
     private String currentStage;
 
-    @Query
-    @NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
     private String directoryId;
 
-    @Query
-    @NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
     private String endUserId;
 
-    @Query
-    @NameInMap("KeepAlive")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAlive")
     private Boolean keepAlive;
 
-    @Query
-    @NameInMap("KeepAliveToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeepAliveToken")
     private String keepAliveToken;
 
-    @Query
-    @NameInMap("NewPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPassword")
     private String newPassword;
 
-    @Query
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OldPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPassword")
     private String oldPassword;
 
-    @Query
-    @NameInMap("Password")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Query
-    @NameInMap("TokenCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TokenCode")
     private String tokenCode;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private GetLoginTokenRequest(Builder builder) {

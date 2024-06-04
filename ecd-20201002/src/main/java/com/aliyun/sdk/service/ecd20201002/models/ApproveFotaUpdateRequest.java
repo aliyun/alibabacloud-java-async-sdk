@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApproveFotaUpdateRequest</p>
  */
 public class ApproveFotaUpdateRequest extends Request {
-    @Query
-    @NameInMap("AppVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appVersion;
 
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private ApproveFotaUpdateRequest(Builder builder) {

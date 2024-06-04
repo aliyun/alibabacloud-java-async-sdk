@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGlobalDesktopsResponseBody</p>
  */
 public class DescribeGlobalDesktopsResponseBody extends TeaModel {
-    @NameInMap("Desktops")
+    @com.aliyun.core.annotation.NameInMap("Desktops")
     private java.util.List < Desktops> desktops;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeGlobalDesktopsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
     } 
 
     public static class Clients extends TeaModel {
-        @NameInMap("ClientType")
+        @com.aliyun.core.annotation.NameInMap("ClientType")
         private String clientType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Clients(Builder builder) {
@@ -165,28 +164,28 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class DesktopTimers extends TeaModel {
-        @NameInMap("AllowClientSetting")
+        @com.aliyun.core.annotation.NameInMap("AllowClientSetting")
         private Boolean allowClientSetting;
 
-        @NameInMap("CronExpression")
+        @com.aliyun.core.annotation.NameInMap("CronExpression")
         private String cronExpression;
 
-        @NameInMap("Enforce")
+        @com.aliyun.core.annotation.NameInMap("Enforce")
         private Boolean enforce;
 
-        @NameInMap("ExecutionTime")
+        @com.aliyun.core.annotation.NameInMap("ExecutionTime")
         private String executionTime;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Integer interval;
 
-        @NameInMap("OperationType")
+        @com.aliyun.core.annotation.NameInMap("OperationType")
         private String operationType;
 
-        @NameInMap("ResetType")
+        @com.aliyun.core.annotation.NameInMap("ResetType")
         private String resetType;
 
-        @NameInMap("TimerType")
+        @com.aliyun.core.annotation.NameInMap("TimerType")
         private String timerType;
 
         private DesktopTimers(Builder builder) {
@@ -346,13 +345,13 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class Disks extends TeaModel {
-        @NameInMap("DiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskId")
         private String diskId;
 
-        @NameInMap("DiskSize")
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
         private Integer diskSize;
 
-        @NameInMap("DiskType")
+        @com.aliyun.core.annotation.NameInMap("DiskType")
         private String diskType;
 
         private Disks(Builder builder) {
@@ -427,31 +426,31 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class FotaUpdate extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private String channel;
 
-        @NameInMap("CurrentAppVersion")
+        @com.aliyun.core.annotation.NameInMap("CurrentAppVersion")
         private String currentAppVersion;
 
-        @NameInMap("Force")
+        @com.aliyun.core.annotation.NameInMap("Force")
         private Boolean force;
 
-        @NameInMap("NewAppVersion")
+        @com.aliyun.core.annotation.NameInMap("NewAppVersion")
         private String newAppVersion;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("ReleaseNote")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNote")
         private String releaseNote;
 
-        @NameInMap("ReleaseNoteEn")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteEn")
         private String releaseNoteEn;
 
-        @NameInMap("ReleaseNoteJp")
+        @com.aliyun.core.annotation.NameInMap("ReleaseNoteJp")
         private String releaseNoteJp;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
         private FotaUpdate(Builder builder) {
@@ -628,10 +627,10 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class Sessions extends TeaModel {
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EstablishmentTime")
+        @com.aliyun.core.annotation.NameInMap("EstablishmentTime")
         private String establishmentTime;
 
         private Sessions(Builder builder) {
@@ -689,118 +688,118 @@ public class DescribeGlobalDesktopsResponseBody extends TeaModel {
 
     }
     public static class Desktops extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Clients")
+        @com.aliyun.core.annotation.NameInMap("Clients")
         private java.util.List < Clients> clients;
 
-        @NameInMap("ConnectionStatus")
+        @com.aliyun.core.annotation.NameInMap("ConnectionStatus")
         private String connectionStatus;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Integer cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DesktopGroupId")
+        @com.aliyun.core.annotation.NameInMap("DesktopGroupId")
         private String desktopGroupId;
 
-        @NameInMap("DesktopId")
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
         private String desktopId;
 
-        @NameInMap("DesktopName")
+        @com.aliyun.core.annotation.NameInMap("DesktopName")
         private String desktopName;
 
-        @NameInMap("DesktopStatus")
+        @com.aliyun.core.annotation.NameInMap("DesktopStatus")
         private String desktopStatus;
 
-        @NameInMap("DesktopTimers")
+        @com.aliyun.core.annotation.NameInMap("DesktopTimers")
         private java.util.List < DesktopTimers> desktopTimers;
 
-        @NameInMap("DesktopType")
+        @com.aliyun.core.annotation.NameInMap("DesktopType")
         private String desktopType;
 
-        @NameInMap("DirectoryId")
+        @com.aliyun.core.annotation.NameInMap("DirectoryId")
         private String directoryId;
 
-        @NameInMap("Disks")
+        @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("EndUserIds")
+        @com.aliyun.core.annotation.NameInMap("EndUserIds")
         private java.util.List < String > endUserIds;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FotaUpdate")
+        @com.aliyun.core.annotation.NameInMap("FotaUpdate")
         private FotaUpdate fotaUpdate;
 
-        @NameInMap("GpuMemory")
+        @com.aliyun.core.annotation.NameInMap("GpuMemory")
         private Integer gpuMemory;
 
-        @NameInMap("HibernationBeta")
+        @com.aliyun.core.annotation.NameInMap("HibernationBeta")
         private Boolean hibernationBeta;
 
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("LastStartTime")
+        @com.aliyun.core.annotation.NameInMap("LastStartTime")
         private String lastStartTime;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("ManagementFlags")
+        @com.aliyun.core.annotation.NameInMap("ManagementFlags")
         private java.util.List < String > managementFlags;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Long memory;
 
-        @NameInMap("NetworkInterfaceIp")
+        @com.aliyun.core.annotation.NameInMap("NetworkInterfaceIp")
         private String networkInterfaceIp;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
-        @NameInMap("Os")
+        @com.aliyun.core.annotation.NameInMap("Os")
         private String os;
 
-        @NameInMap("OsType")
+        @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
-        @NameInMap("Platform")
+        @com.aliyun.core.annotation.NameInMap("Platform")
         private String platform;
 
-        @NameInMap("PolicyGroupId")
+        @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
         private String policyGroupId;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("RealDesktopId")
+        @com.aliyun.core.annotation.NameInMap("RealDesktopId")
         private String realDesktopId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SessionType")
+        @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
-        @NameInMap("Sessions")
+        @com.aliyun.core.annotation.NameInMap("Sessions")
         private java.util.List < Sessions> sessions;
 
-        @NameInMap("SupportHibernation")
+        @com.aliyun.core.annotation.NameInMap("SupportHibernation")
         private Boolean supportHibernation;
 
-        @NameInMap("UserCustomName")
+        @com.aliyun.core.annotation.NameInMap("UserCustomName")
         private String userCustomName;
 
         private Desktops(Builder builder) {

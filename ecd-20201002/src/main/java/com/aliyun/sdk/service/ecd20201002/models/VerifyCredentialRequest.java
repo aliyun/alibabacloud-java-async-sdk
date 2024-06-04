@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyCredentialRequest</p>
  */
 public class VerifyCredentialRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("Credential")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Credential")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String credential;
 
-    @Query
-    @NameInMap("CredentialType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CredentialType")
     private String credentialType;
 
-    @Query
-    @NameInMap("EncryptedKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedKey")
     private String encryptedKey;
 
-    @Query
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
     private VerifyCredentialRequest(Builder builder) {

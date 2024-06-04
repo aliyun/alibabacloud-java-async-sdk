@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangePasswordResponseBody</p>
  */
 public class ChangePasswordResponseBody extends TeaModel {
-    @NameInMap("LoginToken")
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
     private String loginToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ChangePasswordResponseBody(Builder builder) {

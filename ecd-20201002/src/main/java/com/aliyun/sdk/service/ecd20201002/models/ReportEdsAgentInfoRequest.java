@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReportEdsAgentInfoRequest</p>
  */
 public class ReportEdsAgentInfoRequest extends Request {
-    @Query
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @Query
-    @NameInMap("DesktopId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DesktopId")
     private String desktopId;
 
-    @Query
-    @NameInMap("EcsInstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EcsInstanceId")
     private String ecsInstanceId;
 
-    @Query
-    @NameInMap("EdsAgentInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdsAgentInfo")
     private String edsAgentInfo;
 
     private ReportEdsAgentInfoRequest(Builder builder) {

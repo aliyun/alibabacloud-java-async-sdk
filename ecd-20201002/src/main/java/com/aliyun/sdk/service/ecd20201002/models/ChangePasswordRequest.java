@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangePasswordRequest</p>
  */
 public class ChangePasswordRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("EndUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endUserId;
 
-    @Query
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Query
-    @NameInMap("NewPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String newPassword;
 
-    @Query
-    @NameInMap("OfficeSiteId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String officeSiteId;
 
-    @Query
-    @NameInMap("OldPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String oldPassword;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
     private ChangePasswordRequest(Builder builder) {

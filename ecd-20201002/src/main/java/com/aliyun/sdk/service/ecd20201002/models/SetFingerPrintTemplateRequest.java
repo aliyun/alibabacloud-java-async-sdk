@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetFingerPrintTemplateRequest</p>
  */
 public class SetFingerPrintTemplateRequest extends Request {
-    @Query
-    @NameInMap("ClientId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EncryptedFingerPrintTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedFingerPrintTemplate")
     private String encryptedFingerPrintTemplate;
 
-    @Query
-    @NameInMap("EncryptedKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedKey")
     private String encryptedKey;
 
-    @Query
-    @NameInMap("FingerPrintTemplate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FingerPrintTemplate")
     private String fingerPrintTemplate;
 
-    @Query
-    @NameInMap("LoginToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginToken;
 
-    @Query
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SessionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sessionId;
 
     private SetFingerPrintTemplateRequest(Builder builder) {

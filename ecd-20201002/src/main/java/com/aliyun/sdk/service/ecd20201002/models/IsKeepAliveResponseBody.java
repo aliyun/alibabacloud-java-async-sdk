@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IsKeepAliveResponseBody</p>
  */
 public class IsKeepAliveResponseBody extends TeaModel {
-    @NameInMap("IsKeepAlive")
+    @com.aliyun.core.annotation.NameInMap("IsKeepAlive")
     private Boolean isKeepAlive;
 
-    @NameInMap("OfficeSiteId")
+    @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
     private String officeSiteId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TenantId")
+    @com.aliyun.core.annotation.NameInMap("TenantId")
     private String tenantId;
 
     private IsKeepAliveResponseBody(Builder builder) {

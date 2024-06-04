@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetFingerPrintTemplateResponseBody</p>
  */
 public class SetFingerPrintTemplateResponseBody extends TeaModel {
-    @NameInMap("EncryptedPassword")
+    @com.aliyun.core.annotation.NameInMap("EncryptedPassword")
     private String encryptedPassword;
 
-    @NameInMap("Index")
+    @com.aliyun.core.annotation.NameInMap("Index")
     private Integer index;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SetFingerPrintTemplateResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ecd20201002.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFingerPrintTemplatesResponseBody</p>
  */
 public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
-    @NameInMap("FingerPrintTemplates")
+    @com.aliyun.core.annotation.NameInMap("FingerPrintTemplates")
     private java.util.List < FingerPrintTemplates> fingerPrintTemplates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFingerPrintTemplatesResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeFingerPrintTemplatesResponseBody extends TeaModel {
     } 
 
     public static class FingerPrintTemplates extends TeaModel {
-        @NameInMap("ClientId")
+        @com.aliyun.core.annotation.NameInMap("ClientId")
         private String clientId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EndUserId")
+        @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("LoginTime")
+        @com.aliyun.core.annotation.NameInMap("LoginTime")
         private String loginTime;
 
-        @NameInMap("OfficeSiteId")
+        @com.aliyun.core.annotation.NameInMap("OfficeSiteId")
         private String officeSiteId;
 
         private FingerPrintTemplates(Builder builder) {
