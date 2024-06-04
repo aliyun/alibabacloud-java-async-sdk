@@ -41,6 +41,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreatePostpaidInstanceResponse> createPostpaidInstance(CreatePostpaidInstanceRequest request);
 
+    CompletableFuture<DeleteApisecAbnormalResponse> deleteApisecAbnormal(DeleteApisecAbnormalRequest request);
+
+    CompletableFuture<DeleteApisecEventResponse> deleteApisecEvent(DeleteApisecEventRequest request);
+
     CompletableFuture<DeleteDefenseResourceGroupResponse> deleteDefenseResourceGroup(DeleteDefenseResourceGroupRequest request);
 
     CompletableFuture<DeleteDefenseRuleResponse> deleteDefenseRule(DeleteDefenseRuleRequest request);
@@ -54,6 +58,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteMemberAccountResponse> deleteMemberAccount(DeleteMemberAccountRequest request);
 
     CompletableFuture<DescribeAccountDelegatedStatusResponse> describeAccountDelegatedStatus(DescribeAccountDelegatedStatusRequest request);
+
+    CompletableFuture<DescribeApisecAbnormalDomainStatisticResponse> describeApisecAbnormalDomainStatistic(DescribeApisecAbnormalDomainStatisticRequest request);
+
+    CompletableFuture<DescribeApisecAssetTrendResponse> describeApisecAssetTrend(DescribeApisecAssetTrendRequest request);
+
+    CompletableFuture<DescribeApisecEventDomainStatisticResponse> describeApisecEventDomainStatistic(DescribeApisecEventDomainStatisticRequest request);
+
+    CompletableFuture<DescribeApisecSensitiveDomainStatisticResponse> describeApisecSensitiveDomainStatistic(DescribeApisecSensitiveDomainStatisticRequest request);
 
     CompletableFuture<DescribeCertDetailResponse> describeCertDetail(DescribeCertDetailRequest request);
 

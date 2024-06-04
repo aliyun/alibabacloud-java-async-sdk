@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProductInstancesResponseBody</p>
  */
 public class DescribeProductInstancesResponseBody extends TeaModel {
-    @NameInMap("ProductInstances")
+    @com.aliyun.core.annotation.NameInMap("ProductInstances")
     private java.util.List < ProductInstances> productInstances;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeProductInstancesResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateName")
+        @com.aliyun.core.annotation.NameInMap("CertificateName")
         private String certificateName;
 
         private Certificates(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     }
     public static class ResourcePorts extends TeaModel {
-        @NameInMap("Certificates")
+        @com.aliyun.core.annotation.NameInMap("Certificates")
         private java.util.List < Certificates> certificates;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private ResourcePorts(Builder builder) {
@@ -238,25 +237,25 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
 
     }
     public static class ProductInstances extends TeaModel {
-        @NameInMap("OwnerUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
-        @NameInMap("ResourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
-        @NameInMap("ResourceIp")
+        @com.aliyun.core.annotation.NameInMap("ResourceIp")
         private String resourceIp;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourcePorts")
+        @com.aliyun.core.annotation.NameInMap("ResourcePorts")
         private java.util.List < ResourcePorts> resourcePorts;
 
-        @NameInMap("ResourceProduct")
+        @com.aliyun.core.annotation.NameInMap("ResourceProduct")
         private String resourceProduct;
 
-        @NameInMap("ResourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
         private String resourceRegionId;
 
         private ProductInstances(Builder builder) {

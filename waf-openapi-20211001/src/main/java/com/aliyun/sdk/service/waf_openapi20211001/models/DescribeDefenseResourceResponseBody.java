@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDefenseResourceResponseBody</p>
  */
 public class DescribeDefenseResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private Resource resource;
 
     private DescribeDefenseResourceResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class DescribeDefenseResourceResponseBody extends TeaModel {
     } 
 
     public static class Resource extends TeaModel {
-        @NameInMap("AcwCookieStatus")
+        @com.aliyun.core.annotation.NameInMap("AcwCookieStatus")
         private Integer acwCookieStatus;
 
-        @NameInMap("AcwSecureStatus")
+        @com.aliyun.core.annotation.NameInMap("AcwSecureStatus")
         private Integer acwSecureStatus;
 
-        @NameInMap("AcwV3SecureStatus")
+        @com.aliyun.core.annotation.NameInMap("AcwV3SecureStatus")
         private Integer acwV3SecureStatus;
 
-        @NameInMap("CustomHeaders")
+        @com.aliyun.core.annotation.NameInMap("CustomHeaders")
         private java.util.List < String > customHeaders;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.Map < String, ? > detail;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("OwnerUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
-        @NameInMap("Pattern")
+        @com.aliyun.core.annotation.NameInMap("Pattern")
         private String pattern;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("ResourceOrigin")
+        @com.aliyun.core.annotation.NameInMap("ResourceOrigin")
         private String resourceOrigin;
 
-        @NameInMap("XffStatus")
+        @com.aliyun.core.annotation.NameInMap("XffStatus")
         private Integer xffStatus;
 
         private Resource(Builder builder) {

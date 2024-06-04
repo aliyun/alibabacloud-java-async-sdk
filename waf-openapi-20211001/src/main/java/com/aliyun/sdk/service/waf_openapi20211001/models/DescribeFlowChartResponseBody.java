@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFlowChartResponseBody</p>
  */
 public class DescribeFlowChartResponseBody extends TeaModel {
-    @NameInMap("FlowChart")
+    @com.aliyun.core.annotation.NameInMap("FlowChart")
     private java.util.List < FlowChart> flowChart;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFlowChartResponseBody(Builder builder) {
@@ -72,76 +71,76 @@ public class DescribeFlowChartResponseBody extends TeaModel {
     } 
 
     public static class FlowChart extends TeaModel {
-        @NameInMap("AclCustomBlockSum")
+        @com.aliyun.core.annotation.NameInMap("AclCustomBlockSum")
         private Long aclCustomBlockSum;
 
-        @NameInMap("AclCustomReportsSum")
+        @com.aliyun.core.annotation.NameInMap("AclCustomReportsSum")
         private Long aclCustomReportsSum;
 
-        @NameInMap("AntiScanBlockSum")
+        @com.aliyun.core.annotation.NameInMap("AntiScanBlockSum")
         private Long antiScanBlockSum;
 
-        @NameInMap("AntibotBlockSum")
+        @com.aliyun.core.annotation.NameInMap("AntibotBlockSum")
         private Long antibotBlockSum;
 
-        @NameInMap("AntibotReportSum")
+        @com.aliyun.core.annotation.NameInMap("AntibotReportSum")
         private String antibotReportSum;
 
-        @NameInMap("AntiscanReportsSum")
+        @com.aliyun.core.annotation.NameInMap("AntiscanReportsSum")
         private Long antiscanReportsSum;
 
-        @NameInMap("BlacklistBlockSum")
+        @com.aliyun.core.annotation.NameInMap("BlacklistBlockSum")
         private String blacklistBlockSum;
 
-        @NameInMap("BlacklistReportsSum")
+        @com.aliyun.core.annotation.NameInMap("BlacklistReportsSum")
         private Long blacklistReportsSum;
 
-        @NameInMap("CcCustomBlockSum")
+        @com.aliyun.core.annotation.NameInMap("CcCustomBlockSum")
         private Long ccCustomBlockSum;
 
-        @NameInMap("CcCustomReportsSum")
+        @com.aliyun.core.annotation.NameInMap("CcCustomReportsSum")
         private Long ccCustomReportsSum;
 
-        @NameInMap("CcSystemBlocksSum")
+        @com.aliyun.core.annotation.NameInMap("CcSystemBlocksSum")
         private Long ccSystemBlocksSum;
 
-        @NameInMap("CcSystemReportsSum")
+        @com.aliyun.core.annotation.NameInMap("CcSystemReportsSum")
         private Long ccSystemReportsSum;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("InBytes")
+        @com.aliyun.core.annotation.NameInMap("InBytes")
         private Long inBytes;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("MaxPv")
+        @com.aliyun.core.annotation.NameInMap("MaxPv")
         private Long maxPv;
 
-        @NameInMap("OutBytes")
+        @com.aliyun.core.annotation.NameInMap("OutBytes")
         private Long outBytes;
 
-        @NameInMap("RatelimitBlockSum")
+        @com.aliyun.core.annotation.NameInMap("RatelimitBlockSum")
         private Long ratelimitBlockSum;
 
-        @NameInMap("RatelimitReportSum")
+        @com.aliyun.core.annotation.NameInMap("RatelimitReportSum")
         private Long ratelimitReportSum;
 
-        @NameInMap("RegionBlockBlocksSum")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockBlocksSum")
         private Long regionBlockBlocksSum;
 
-        @NameInMap("RegionBlockReportsSum")
+        @com.aliyun.core.annotation.NameInMap("RegionBlockReportsSum")
         private Long regionBlockReportsSum;
 
-        @NameInMap("RobotCount")
+        @com.aliyun.core.annotation.NameInMap("RobotCount")
         private Long robotCount;
 
-        @NameInMap("WafBlockSum")
+        @com.aliyun.core.annotation.NameInMap("WafBlockSum")
         private Long wafBlockSum;
 
-        @NameInMap("WafReportSum")
+        @com.aliyun.core.annotation.NameInMap("WafReportSum")
         private String wafReportSum;
 
         private FlowChart(Builder builder) {

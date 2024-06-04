@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePeakTrendResponseBody</p>
  */
 public class DescribePeakTrendResponseBody extends TeaModel {
-    @NameInMap("FlowChart")
+    @com.aliyun.core.annotation.NameInMap("FlowChart")
     private java.util.List < FlowChart> flowChart;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePeakTrendResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribePeakTrendResponseBody extends TeaModel {
     } 
 
     public static class FlowChart extends TeaModel {
-        @NameInMap("AclSum")
+        @com.aliyun.core.annotation.NameInMap("AclSum")
         private Long aclSum;
 
-        @NameInMap("AntiScanSum")
+        @com.aliyun.core.annotation.NameInMap("AntiScanSum")
         private Long antiScanSum;
 
-        @NameInMap("CcSum")
+        @com.aliyun.core.annotation.NameInMap("CcSum")
         private Long ccSum;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("WafSum")
+        @com.aliyun.core.annotation.NameInMap("WafSum")
         private Long wafSum;
 
         private FlowChart(Builder builder) {

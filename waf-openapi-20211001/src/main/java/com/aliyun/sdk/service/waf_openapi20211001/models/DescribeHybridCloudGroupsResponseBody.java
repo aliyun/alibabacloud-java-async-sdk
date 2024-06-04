@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeHybridCloudGroupsResponseBody</p>
  */
 public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private java.util.List < Groups> groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeHybridCloudGroupsResponseBody(Builder builder) {
@@ -92,37 +91,37 @@ public class DescribeHybridCloudGroupsResponseBody extends TeaModel {
     } 
 
     public static class Groups extends TeaModel {
-        @NameInMap("BackSourceMark")
+        @com.aliyun.core.annotation.NameInMap("BackSourceMark")
         private String backSourceMark;
 
-        @NameInMap("ContinentsValue")
+        @com.aliyun.core.annotation.NameInMap("ContinentsValue")
         private Integer continentsValue;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private Integer groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("GroupType")
+        @com.aliyun.core.annotation.NameInMap("GroupType")
         private String groupType;
 
-        @NameInMap("LoadBalanceIp")
+        @com.aliyun.core.annotation.NameInMap("LoadBalanceIp")
         private String loadBalanceIp;
 
-        @NameInMap("LocationId")
+        @com.aliyun.core.annotation.NameInMap("LocationId")
         private Long locationId;
 
-        @NameInMap("OperatorValue")
+        @com.aliyun.core.annotation.NameInMap("OperatorValue")
         private Integer operatorValue;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private String ports;
 
-        @NameInMap("RegionCodeValue")
+        @com.aliyun.core.annotation.NameInMap("RegionCodeValue")
         private Integer regionCodeValue;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Groups(Builder builder) {

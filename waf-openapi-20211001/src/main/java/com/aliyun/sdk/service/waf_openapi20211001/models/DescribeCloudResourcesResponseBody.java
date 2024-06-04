@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudResourcesResponseBody</p>
  */
 public class DescribeCloudResourcesResponseBody extends TeaModel {
-    @NameInMap("CloudResources")
+    @com.aliyun.core.annotation.NameInMap("CloudResources")
     private java.util.List < CloudResources> cloudResources;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCloudResourcesResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     } 
 
     public static class CloudResources extends TeaModel {
-        @NameInMap("OwnerUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
-        @NameInMap("ResourceDomain")
+        @com.aliyun.core.annotation.NameInMap("ResourceDomain")
         private String resourceDomain;
 
-        @NameInMap("ResourceFunction")
+        @com.aliyun.core.annotation.NameInMap("ResourceFunction")
         private String resourceFunction;
 
-        @NameInMap("ResourceInstance")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstance")
         private String resourceInstance;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceProduct")
+        @com.aliyun.core.annotation.NameInMap("ResourceProduct")
         private String resourceProduct;
 
-        @NameInMap("ResourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("ResourceRegionId")
         private String resourceRegionId;
 
-        @NameInMap("ResourceRouteName")
+        @com.aliyun.core.annotation.NameInMap("ResourceRouteName")
         private String resourceRouteName;
 
-        @NameInMap("ResourceService")
+        @com.aliyun.core.annotation.NameInMap("ResourceService")
         private String resourceService;
 
         private CloudResources(Builder builder) {

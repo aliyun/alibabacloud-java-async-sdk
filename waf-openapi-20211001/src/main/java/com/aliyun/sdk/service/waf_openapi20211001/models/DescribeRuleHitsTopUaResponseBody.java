@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRuleHitsTopUaResponseBody</p>
  */
 public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleHitsTopUa")
+    @com.aliyun.core.annotation.NameInMap("RuleHitsTopUa")
     private java.util.List < RuleHitsTopUa> ruleHitsTopUa;
 
     private DescribeRuleHitsTopUaResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeRuleHitsTopUaResponseBody extends TeaModel {
     } 
 
     public static class RuleHitsTopUa extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
-        @NameInMap("Ua")
+        @com.aliyun.core.annotation.NameInMap("Ua")
         private String ua;
 
         private RuleHitsTopUa(Builder builder) {

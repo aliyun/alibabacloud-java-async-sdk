@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertsResponseBody</p>
  */
 public class DescribeCertsResponseBody extends TeaModel {
-    @NameInMap("Certs")
+    @com.aliyun.core.annotation.NameInMap("Certs")
     private java.util.List < Certs> certs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeCertsResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeCertsResponseBody extends TeaModel {
     } 
 
     public static class Certs extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("IsChainCompleted")
+        @com.aliyun.core.annotation.NameInMap("IsChainCompleted")
         private Boolean isChainCompleted;
 
         private Certs(Builder builder) {

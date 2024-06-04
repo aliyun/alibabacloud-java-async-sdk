@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDomainRequest</p>
  */
 public class CreateDomainRequest extends Request {
-    @Query
-    @NameInMap("AccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessType")
     private String accessType;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Listen")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listen")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Listen listen;
 
-    @Query
-    @NameInMap("Redirect")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Redirect")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Redirect redirect;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
     private CreateDomainRequest(Builder builder) {
@@ -226,55 +225,55 @@ public class CreateDomainRequest extends Request {
     } 
 
     public static class Listen extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CipherSuite")
+        @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Integer cipherSuite;
 
-        @NameInMap("CustomCiphers")
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List < String > customCiphers;
 
-        @NameInMap("EnableTLSv3")
+        @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
 
-        @NameInMap("ExclusiveIp")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
-        @NameInMap("FocusHttps")
+        @com.aliyun.core.annotation.NameInMap("FocusHttps")
         private Boolean focusHttps;
 
-        @NameInMap("Http2Enabled")
+        @com.aliyun.core.annotation.NameInMap("Http2Enabled")
         private Boolean http2Enabled;
 
-        @NameInMap("HttpPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
         private java.util.List < Integer > httpPorts;
 
-        @NameInMap("HttpsPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
         private java.util.List < Integer > httpsPorts;
 
-        @NameInMap("IPv6Enabled")
+        @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
 
-        @NameInMap("ProtectionResource")
+        @com.aliyun.core.annotation.NameInMap("ProtectionResource")
         private String protectionResource;
 
-        @NameInMap("SM2AccessOnly")
+        @com.aliyun.core.annotation.NameInMap("SM2AccessOnly")
         private Boolean sM2AccessOnly;
 
-        @NameInMap("SM2CertId")
+        @com.aliyun.core.annotation.NameInMap("SM2CertId")
         private String sM2CertId;
 
-        @NameInMap("SM2Enabled")
+        @com.aliyun.core.annotation.NameInMap("SM2Enabled")
         private Boolean sM2Enabled;
 
-        @NameInMap("TLSVersion")
+        @com.aliyun.core.annotation.NameInMap("TLSVersion")
         private String TLSVersion;
 
-        @NameInMap("XffHeaderMode")
+        @com.aliyun.core.annotation.NameInMap("XffHeaderMode")
         private Integer xffHeaderMode;
 
-        @NameInMap("XffHeaders")
+        @com.aliyun.core.annotation.NameInMap("XffHeaders")
         private java.util.List < String > xffHeaders;
 
         private Listen(Builder builder) {
@@ -630,10 +629,10 @@ public class CreateDomainRequest extends Request {
 
     }
     public static class RequestHeaders extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequestHeaders(Builder builder) {
@@ -691,58 +690,58 @@ public class CreateDomainRequest extends Request {
 
     }
     public static class Redirect extends TeaModel {
-        @NameInMap("Backends")
+        @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < String > backends;
 
-        @NameInMap("CnameEnabled")
+        @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
 
-        @NameInMap("ConnectTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer connectTimeout;
 
-        @NameInMap("FocusHttpBackend")
+        @com.aliyun.core.annotation.NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
 
-        @NameInMap("Keepalive")
+        @com.aliyun.core.annotation.NameInMap("Keepalive")
         private Boolean keepalive;
 
-        @NameInMap("KeepaliveRequests")
-        @Validation(maximum = 1000, minimum = 60)
+        @com.aliyun.core.annotation.NameInMap("KeepaliveRequests")
+        @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 60)
         private Integer keepaliveRequests;
 
-        @NameInMap("KeepaliveTimeout")
-        @Validation(maximum = 3600, minimum = 10)
+        @com.aliyun.core.annotation.NameInMap("KeepaliveTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
         private Integer keepaliveTimeout;
 
-        @NameInMap("Loadbalance")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Loadbalance")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String loadbalance;
 
-        @NameInMap("ReadTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ReadTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
 
-        @NameInMap("RequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("RequestHeaders")
         private java.util.List < RequestHeaders> requestHeaders;
 
-        @NameInMap("Retry")
+        @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
 
-        @NameInMap("RoutingRules")
+        @com.aliyun.core.annotation.NameInMap("RoutingRules")
         private String routingRules;
 
-        @NameInMap("SniEnabled")
+        @com.aliyun.core.annotation.NameInMap("SniEnabled")
         private Boolean sniEnabled;
 
-        @NameInMap("SniHost")
+        @com.aliyun.core.annotation.NameInMap("SniHost")
         private String sniHost;
 
-        @NameInMap("WriteTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("WriteTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
-        @NameInMap("XffProto")
+        @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
 
         private Redirect(Builder builder) {

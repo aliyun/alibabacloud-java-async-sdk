@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePunishedDomainsResponseBody</p>
  */
 public class DescribePunishedDomainsResponseBody extends TeaModel {
-    @NameInMap("PunishedDomains")
+    @com.aliyun.core.annotation.NameInMap("PunishedDomains")
     private java.util.List < String > punishedDomains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePunishedDomainsResponseBody(Builder builder) {

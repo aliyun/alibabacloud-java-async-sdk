@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRuleGroupsResponseBody</p>
  */
 public class DescribeRuleGroupsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleGroups")
+    @com.aliyun.core.annotation.NameInMap("RuleGroups")
     private java.util.List < RuleGroups> ruleGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeRuleGroupsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class DescribeRuleGroupsResponseBody extends TeaModel {
     } 
 
     public static class RuleGroups extends TeaModel {
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("IsSubscribe")
+        @com.aliyun.core.annotation.NameInMap("IsSubscribe")
         private Integer isSubscribe;
 
-        @NameInMap("ParentRuleGroupId")
+        @com.aliyun.core.annotation.NameInMap("ParentRuleGroupId")
         private Long parentRuleGroupId;
 
-        @NameInMap("RuleGroupId")
+        @com.aliyun.core.annotation.NameInMap("RuleGroupId")
         private Long ruleGroupId;
 
-        @NameInMap("RuleGroupName")
+        @com.aliyun.core.annotation.NameInMap("RuleGroupName")
         private String ruleGroupName;
 
-        @NameInMap("RuleTotalCount")
+        @com.aliyun.core.annotation.NameInMap("RuleTotalCount")
         private Integer ruleTotalCount;
 
         private RuleGroups(Builder builder) {

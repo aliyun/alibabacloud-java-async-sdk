@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWafSourceIpSegmentResponseBody</p>
  */
 public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WafSourceIp")
+    @com.aliyun.core.annotation.NameInMap("WafSourceIp")
     private WafSourceIp wafSourceIp;
 
     private DescribeWafSourceIpSegmentResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeWafSourceIpSegmentResponseBody extends TeaModel {
     } 
 
     public static class WafSourceIp extends TeaModel {
-        @NameInMap("IPv4")
+        @com.aliyun.core.annotation.NameInMap("IPv4")
         private java.util.List < String > iPv4;
 
-        @NameInMap("IPv6")
+        @com.aliyun.core.annotation.NameInMap("IPv6")
         private java.util.List < String > iPv6;
 
         private WafSourceIp(Builder builder) {

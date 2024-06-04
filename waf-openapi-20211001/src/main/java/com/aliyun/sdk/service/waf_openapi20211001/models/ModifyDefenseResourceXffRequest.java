@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDefenseResourceXffRequest</p>
  */
 public class ModifyDefenseResourceXffRequest extends Request {
-    @Query
-    @NameInMap("AcwCookieStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcwCookieStatus")
     private Integer acwCookieStatus;
 
-    @Query
-    @NameInMap("AcwSecureStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcwSecureStatus")
     private Integer acwSecureStatus;
 
-    @Query
-    @NameInMap("AcwV3SecureStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcwV3SecureStatus")
     private Integer acwV3SecureStatus;
 
-    @Query
-    @NameInMap("CustomHeaders")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomHeaders")
     private java.util.List < String > customHeaders;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Resource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resource;
 
-    @Query
-    @NameInMap("ResourceManagerResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    @Query
-    @NameInMap("XffStatus")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XffStatus")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer xffStatus;
 
     private ModifyDefenseResourceXffRequest(Builder builder) {

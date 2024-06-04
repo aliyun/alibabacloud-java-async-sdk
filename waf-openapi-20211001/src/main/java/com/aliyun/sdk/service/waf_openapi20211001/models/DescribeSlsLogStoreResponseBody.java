@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSlsLogStoreResponseBody</p>
  */
 public class DescribeSlsLogStoreResponseBody extends TeaModel {
-    @NameInMap("LogStoreName")
+    @com.aliyun.core.annotation.NameInMap("LogStoreName")
     private String logStoreName;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("Quota")
+    @com.aliyun.core.annotation.NameInMap("Quota")
     private Long quota;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Ttl")
+    @com.aliyun.core.annotation.NameInMap("Ttl")
     private Integer ttl;
 
-    @NameInMap("Used")
+    @com.aliyun.core.annotation.NameInMap("Used")
     private Long used;
 
     private DescribeSlsLogStoreResponseBody(Builder builder) {

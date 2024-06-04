@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDomainsResponseBody</p>
  */
 public class DescribeDomainsResponseBody extends TeaModel {
-    @NameInMap("Domains")
+    @com.aliyun.core.annotation.NameInMap("Domains")
     private java.util.List < Domains> domains;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDomainsResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
     } 
 
     public static class Http extends TeaModel {
-        @NameInMap("Backend")
+        @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
 
         private Http(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Https extends TeaModel {
-        @NameInMap("Backend")
+        @com.aliyun.core.annotation.NameInMap("Backend")
         private String backend;
 
         private Https(Builder builder) {
@@ -174,10 +173,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Backeds extends TeaModel {
-        @NameInMap("Http")
+        @com.aliyun.core.annotation.NameInMap("Http")
         private java.util.List < Http> http;
 
-        @NameInMap("Https")
+        @com.aliyun.core.annotation.NameInMap("Https")
         private java.util.List < Https> https;
 
         private Backeds(Builder builder) {
@@ -235,10 +234,10 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class ListenPorts extends TeaModel {
-        @NameInMap("Http")
+        @com.aliyun.core.annotation.NameInMap("Http")
         private java.util.List < Long > http;
 
-        @NameInMap("Https")
+        @com.aliyun.core.annotation.NameInMap("Https")
         private java.util.List < Long > https;
 
         private ListenPorts(Builder builder) {
@@ -296,22 +295,22 @@ public class DescribeDomainsResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("Backeds")
+        @com.aliyun.core.annotation.NameInMap("Backeds")
         private Backeds backeds;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("ListenPorts")
+        @com.aliyun.core.annotation.NameInMap("ListenPorts")
         private ListenPorts listenPorts;
 
-        @NameInMap("ResourceManagerResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
         private String resourceManagerResourceGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Domains(Builder builder) {

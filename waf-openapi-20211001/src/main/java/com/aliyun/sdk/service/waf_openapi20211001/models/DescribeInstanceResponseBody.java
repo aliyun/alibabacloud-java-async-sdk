@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private Details details;
 
-    @NameInMap("Edition")
+    @com.aliyun.core.annotation.NameInMap("Edition")
     private String edition;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("InDebt")
+    @com.aliyun.core.annotation.NameInMap("InDebt")
     private String inDebt;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -249,157 +248,157 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class Details extends TeaModel {
-        @NameInMap("AclRuleMaxIpCount")
+        @com.aliyun.core.annotation.NameInMap("AclRuleMaxIpCount")
         private Long aclRuleMaxIpCount;
 
-        @NameInMap("AntiScan")
+        @com.aliyun.core.annotation.NameInMap("AntiScan")
         private Boolean antiScan;
 
-        @NameInMap("AntiScanTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("AntiScanTemplateMaxCount")
         private Long antiScanTemplateMaxCount;
 
-        @NameInMap("BackendMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BackendMaxCount")
         private Long backendMaxCount;
 
-        @NameInMap("BaseWafGroup")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroup")
         private Boolean baseWafGroup;
 
-        @NameInMap("BaseWafGroupRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroupRuleInTemplateMaxCount")
         private Long baseWafGroupRuleInTemplateMaxCount;
 
-        @NameInMap("BaseWafGroupRuleTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BaseWafGroupRuleTemplateMaxCount")
         private Long baseWafGroupRuleTemplateMaxCount;
 
-        @NameInMap("Bot")
+        @com.aliyun.core.annotation.NameInMap("Bot")
         private Boolean bot;
 
-        @NameInMap("BotApp")
+        @com.aliyun.core.annotation.NameInMap("BotApp")
         private String botApp;
 
-        @NameInMap("BotTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("BotTemplateMaxCount")
         private Long botTemplateMaxCount;
 
-        @NameInMap("BotWeb")
+        @com.aliyun.core.annotation.NameInMap("BotWeb")
         private String botWeb;
 
-        @NameInMap("CnameResourceMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CnameResourceMaxCount")
         private Long cnameResourceMaxCount;
 
-        @NameInMap("CustomResponse")
+        @com.aliyun.core.annotation.NameInMap("CustomResponse")
         private Boolean customResponse;
 
-        @NameInMap("CustomResponseRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomResponseRuleInTemplateMaxCount")
         private Long customResponseRuleInTemplateMaxCount;
 
-        @NameInMap("CustomResponseTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomResponseTemplateMaxCount")
         private Long customResponseTemplateMaxCount;
 
-        @NameInMap("CustomRule")
+        @com.aliyun.core.annotation.NameInMap("CustomRule")
         private Boolean customRule;
 
-        @NameInMap("CustomRuleAction")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleAction")
         private String customRuleAction;
 
-        @NameInMap("CustomRuleCondition")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleCondition")
         private String customRuleCondition;
 
-        @NameInMap("CustomRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleInTemplateMaxCount")
         private Long customRuleInTemplateMaxCount;
 
-        @NameInMap("CustomRuleRatelimitor")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleRatelimitor")
         private String customRuleRatelimitor;
 
-        @NameInMap("CustomRuleTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("CustomRuleTemplateMaxCount")
         private Long customRuleTemplateMaxCount;
 
-        @NameInMap("DefenseGroupMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseGroupMaxCount")
         private Long defenseGroupMaxCount;
 
-        @NameInMap("DefenseObjectInGroupMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectInGroupMaxCount")
         private Long defenseObjectInGroupMaxCount;
 
-        @NameInMap("DefenseObjectInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectInTemplateMaxCount")
         private Long defenseObjectInTemplateMaxCount;
 
-        @NameInMap("DefenseObjectMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DefenseObjectMaxCount")
         private Long defenseObjectMaxCount;
 
-        @NameInMap("Dlp")
+        @com.aliyun.core.annotation.NameInMap("Dlp")
         private Boolean dlp;
 
-        @NameInMap("DlpRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DlpRuleInTemplateMaxCount")
         private Long dlpRuleInTemplateMaxCount;
 
-        @NameInMap("DlpTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("DlpTemplateMaxCount")
         private Long dlpTemplateMaxCount;
 
-        @NameInMap("ExclusiveIp")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
-        @NameInMap("Gslb")
+        @com.aliyun.core.annotation.NameInMap("Gslb")
         private Boolean gslb;
 
-        @NameInMap("HttpPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
         private String httpPorts;
 
-        @NameInMap("HttpsPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
         private String httpsPorts;
 
-        @NameInMap("IpBlacklist")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklist")
         private Boolean ipBlacklist;
 
-        @NameInMap("IpBlacklistIpInRuleMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistIpInRuleMaxCount")
         private Long ipBlacklistIpInRuleMaxCount;
 
-        @NameInMap("IpBlacklistRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistRuleInTemplateMaxCount")
         private Long ipBlacklistRuleInTemplateMaxCount;
 
-        @NameInMap("IpBlacklistTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("IpBlacklistTemplateMaxCount")
         private Long ipBlacklistTemplateMaxCount;
 
-        @NameInMap("Ipv6")
+        @com.aliyun.core.annotation.NameInMap("Ipv6")
         private Boolean ipv6;
 
-        @NameInMap("LogService")
+        @com.aliyun.core.annotation.NameInMap("LogService")
         private Boolean logService;
 
-        @NameInMap("MajorProtection")
+        @com.aliyun.core.annotation.NameInMap("MajorProtection")
         private Boolean majorProtection;
 
-        @NameInMap("MajorProtectionTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("MajorProtectionTemplateMaxCount")
         private Long majorProtectionTemplateMaxCount;
 
-        @NameInMap("Tamperproof")
+        @com.aliyun.core.annotation.NameInMap("Tamperproof")
         private Boolean tamperproof;
 
-        @NameInMap("TamperproofRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("TamperproofRuleInTemplateMaxCount")
         private Long tamperproofRuleInTemplateMaxCount;
 
-        @NameInMap("TamperproofTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("TamperproofTemplateMaxCount")
         private Long tamperproofTemplateMaxCount;
 
-        @NameInMap("VastIpBlacklistInFileMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistInFileMaxCount")
         private Long vastIpBlacklistInFileMaxCount;
 
-        @NameInMap("VastIpBlacklistInOperationMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistInOperationMaxCount")
         private Long vastIpBlacklistInOperationMaxCount;
 
-        @NameInMap("VastIpBlacklistMaxCount")
+        @com.aliyun.core.annotation.NameInMap("VastIpBlacklistMaxCount")
         private Long vastIpBlacklistMaxCount;
 
-        @NameInMap("Whitelist")
+        @com.aliyun.core.annotation.NameInMap("Whitelist")
         private Boolean whitelist;
 
-        @NameInMap("WhitelistLogical")
+        @com.aliyun.core.annotation.NameInMap("WhitelistLogical")
         private String whitelistLogical;
 
-        @NameInMap("WhitelistRuleCondition")
+        @com.aliyun.core.annotation.NameInMap("WhitelistRuleCondition")
         private String whitelistRuleCondition;
 
-        @NameInMap("WhitelistRuleInTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("WhitelistRuleInTemplateMaxCount")
         private Long whitelistRuleInTemplateMaxCount;
 
-        @NameInMap("WhitelistTemplateMaxCount")
+        @com.aliyun.core.annotation.NameInMap("WhitelistTemplateMaxCount")
         private Long whitelistTemplateMaxCount;
 
         private Details(Builder builder) {

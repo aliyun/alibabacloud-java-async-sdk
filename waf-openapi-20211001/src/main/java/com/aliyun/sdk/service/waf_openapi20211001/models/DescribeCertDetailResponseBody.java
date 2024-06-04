@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertDetailResponseBody</p>
  */
 public class DescribeCertDetailResponseBody extends TeaModel {
-    @NameInMap("CertDetail")
+    @com.aliyun.core.annotation.NameInMap("CertDetail")
     private CertDetail certDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCertDetailResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeCertDetailResponseBody extends TeaModel {
     } 
 
     public static class CertDetail extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertIdentifier")
+        @com.aliyun.core.annotation.NameInMap("CertIdentifier")
         private String certIdentifier;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private java.util.List < String > sans;
 
         private CertDetail(Builder builder) {

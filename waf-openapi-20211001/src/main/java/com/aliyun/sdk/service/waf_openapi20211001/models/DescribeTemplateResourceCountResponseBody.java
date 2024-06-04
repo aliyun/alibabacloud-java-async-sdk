@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTemplateResourceCountResponseBody</p>
  */
 public class DescribeTemplateResourceCountResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceCount")
+    @com.aliyun.core.annotation.NameInMap("ResourceCount")
     private java.util.List < ResourceCount> resourceCount;
 
     private DescribeTemplateResourceCountResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeTemplateResourceCountResponseBody extends TeaModel {
     } 
 
     public static class ResourceCount extends TeaModel {
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("SingleCount")
+        @com.aliyun.core.annotation.NameInMap("SingleCount")
         private Integer singleCount;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
         private ResourceCount(Builder builder) {

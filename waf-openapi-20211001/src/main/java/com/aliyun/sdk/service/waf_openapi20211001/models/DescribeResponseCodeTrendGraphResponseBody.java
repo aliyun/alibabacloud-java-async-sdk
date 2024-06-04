@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResponseCodeTrendGraphResponseBody</p>
  */
 public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResponseCodes")
+    @com.aliyun.core.annotation.NameInMap("ResponseCodes")
     private java.util.List < ResponseCodes> responseCodes;
 
     private DescribeResponseCodeTrendGraphResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeResponseCodeTrendGraphResponseBody extends TeaModel {
     } 
 
     public static class ResponseCodes extends TeaModel {
-        @NameInMap("302Pv")
+        @com.aliyun.core.annotation.NameInMap("302Pv")
         private Long code302Pv;
 
-        @NameInMap("405Pv")
+        @com.aliyun.core.annotation.NameInMap("405Pv")
         private Long code405Pv;
 
-        @NameInMap("444Pv")
+        @com.aliyun.core.annotation.NameInMap("444Pv")
         private Long code444Pv;
 
-        @NameInMap("499Pv")
+        @com.aliyun.core.annotation.NameInMap("499Pv")
         private Long code499Pv;
 
-        @NameInMap("5xxPv")
+        @com.aliyun.core.annotation.NameInMap("5xxPv")
         private Long code5xxPv;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
         private ResponseCodes(Builder builder) {

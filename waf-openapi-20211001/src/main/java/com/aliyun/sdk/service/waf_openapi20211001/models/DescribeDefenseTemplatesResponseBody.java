@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDefenseTemplatesResponseBody</p>
  */
 public class DescribeDefenseTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeDefenseTemplatesResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class DescribeDefenseTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Templates extends TeaModel {
-        @NameInMap("DefenseScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseScene")
         private String defenseScene;
 
-        @NameInMap("DefenseSubScene")
+        @com.aliyun.core.annotation.NameInMap("DefenseSubScene")
         private String defenseSubScene;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private Long templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateOrigin")
+        @com.aliyun.core.annotation.NameInMap("TemplateOrigin")
         private String templateOrigin;
 
-        @NameInMap("TemplateStatus")
+        @com.aliyun.core.annotation.NameInMap("TemplateStatus")
         private Integer templateStatus;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private Templates(Builder builder) {

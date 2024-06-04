@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.waf_openapi20211001.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDomainRequest</p>
  */
 public class ModifyDomainRequest extends Request {
-    @Query
-    @NameInMap("AccessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessType")
     private String accessType;
 
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("Listen")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Listen")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Listen listen;
 
-    @Query
-    @NameInMap("Redirect")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Redirect")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Redirect redirect;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     private ModifyDomainRequest(Builder builder) {
@@ -202,55 +201,55 @@ public class ModifyDomainRequest extends Request {
     } 
 
     public static class Listen extends TeaModel {
-        @NameInMap("CertId")
+        @com.aliyun.core.annotation.NameInMap("CertId")
         private String certId;
 
-        @NameInMap("CipherSuite")
+        @com.aliyun.core.annotation.NameInMap("CipherSuite")
         private Integer cipherSuite;
 
-        @NameInMap("CustomCiphers")
+        @com.aliyun.core.annotation.NameInMap("CustomCiphers")
         private java.util.List < String > customCiphers;
 
-        @NameInMap("EnableTLSv3")
+        @com.aliyun.core.annotation.NameInMap("EnableTLSv3")
         private Boolean enableTLSv3;
 
-        @NameInMap("ExclusiveIp")
+        @com.aliyun.core.annotation.NameInMap("ExclusiveIp")
         private Boolean exclusiveIp;
 
-        @NameInMap("FocusHttps")
+        @com.aliyun.core.annotation.NameInMap("FocusHttps")
         private Boolean focusHttps;
 
-        @NameInMap("Http2Enabled")
+        @com.aliyun.core.annotation.NameInMap("Http2Enabled")
         private Boolean http2Enabled;
 
-        @NameInMap("HttpPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpPorts")
         private java.util.List < Integer > httpPorts;
 
-        @NameInMap("HttpsPorts")
+        @com.aliyun.core.annotation.NameInMap("HttpsPorts")
         private java.util.List < Integer > httpsPorts;
 
-        @NameInMap("IPv6Enabled")
+        @com.aliyun.core.annotation.NameInMap("IPv6Enabled")
         private Boolean iPv6Enabled;
 
-        @NameInMap("ProtectionResource")
+        @com.aliyun.core.annotation.NameInMap("ProtectionResource")
         private String protectionResource;
 
-        @NameInMap("SM2AccessOnly")
+        @com.aliyun.core.annotation.NameInMap("SM2AccessOnly")
         private Boolean sM2AccessOnly;
 
-        @NameInMap("SM2CertId")
+        @com.aliyun.core.annotation.NameInMap("SM2CertId")
         private String sM2CertId;
 
-        @NameInMap("SM2Enabled")
+        @com.aliyun.core.annotation.NameInMap("SM2Enabled")
         private Boolean sM2Enabled;
 
-        @NameInMap("TLSVersion")
+        @com.aliyun.core.annotation.NameInMap("TLSVersion")
         private String TLSVersion;
 
-        @NameInMap("XffHeaderMode")
+        @com.aliyun.core.annotation.NameInMap("XffHeaderMode")
         private Integer xffHeaderMode;
 
-        @NameInMap("XffHeaders")
+        @com.aliyun.core.annotation.NameInMap("XffHeaders")
         private java.util.List < String > xffHeaders;
 
         private Listen(Builder builder) {
@@ -613,10 +612,10 @@ public class ModifyDomainRequest extends Request {
 
     }
     public static class RequestHeaders extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RequestHeaders(Builder builder) {
@@ -674,58 +673,58 @@ public class ModifyDomainRequest extends Request {
 
     }
     public static class Redirect extends TeaModel {
-        @NameInMap("Backends")
+        @com.aliyun.core.annotation.NameInMap("Backends")
         private java.util.List < String > backends;
 
-        @NameInMap("CnameEnabled")
+        @com.aliyun.core.annotation.NameInMap("CnameEnabled")
         private Boolean cnameEnabled;
 
-        @NameInMap("ConnectTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ConnectTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer connectTimeout;
 
-        @NameInMap("FocusHttpBackend")
+        @com.aliyun.core.annotation.NameInMap("FocusHttpBackend")
         private Boolean focusHttpBackend;
 
-        @NameInMap("Keepalive")
+        @com.aliyun.core.annotation.NameInMap("Keepalive")
         private Boolean keepalive;
 
-        @NameInMap("KeepaliveRequests")
-        @Validation(maximum = 1000, minimum = 60)
+        @com.aliyun.core.annotation.NameInMap("KeepaliveRequests")
+        @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 60)
         private Integer keepaliveRequests;
 
-        @NameInMap("KeepaliveTimeout")
-        @Validation(maximum = 3600, minimum = 10)
+        @com.aliyun.core.annotation.NameInMap("KeepaliveTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 10)
         private Integer keepaliveTimeout;
 
-        @NameInMap("Loadbalance")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Loadbalance")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String loadbalance;
 
-        @NameInMap("ReadTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("ReadTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer readTimeout;
 
-        @NameInMap("RequestHeaders")
+        @com.aliyun.core.annotation.NameInMap("RequestHeaders")
         private java.util.List < RequestHeaders> requestHeaders;
 
-        @NameInMap("Retry")
+        @com.aliyun.core.annotation.NameInMap("Retry")
         private Boolean retry;
 
-        @NameInMap("RoutingRules")
+        @com.aliyun.core.annotation.NameInMap("RoutingRules")
         private String routingRules;
 
-        @NameInMap("SniEnabled")
+        @com.aliyun.core.annotation.NameInMap("SniEnabled")
         private Boolean sniEnabled;
 
-        @NameInMap("SniHost")
+        @com.aliyun.core.annotation.NameInMap("SniHost")
         private String sniHost;
 
-        @NameInMap("WriteTimeout")
-        @Validation(maximum = 3600, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("WriteTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 3600, minimum = 1)
         private Integer writeTimeout;
 
-        @NameInMap("XffProto")
+        @com.aliyun.core.annotation.NameInMap("XffProto")
         private Boolean xffProto;
 
         private Redirect(Builder builder) {
@@ -886,11 +885,11 @@ public class ModifyDomainRequest extends Request {
             private Boolean xffProto; 
 
             /**
-             * An array of the IP addresses or domain names of the origin servers. You can specify only one type of address. If you use the domain name type, only IPv4 is supported.
+             * The IP addresses or domain names of the origin server. You can use only one of the address types. If you use the domain name type, the domain name can be resolved only to an IPv4 address.
              * <p>
              * 
-             * *   If you use the IP address type, specify the value of this parameter in the \["ip1","ip2",...] format. You can add up to 20 IP addresses.
-             * *   If you use the domain name type, specify the value of this parameter in the \["domain"] format. You can add up to 20 domain names.
+             * *   If you use the IP address type, specify the value in the \["ip1","ip2",...] format. You can enter up to 20 IP addresses.
+             * *   If you use the domain name type, specify the value in the \["domain"] format. You can enter up to 20 domain names.
              */
             public Builder backends(java.util.List < String > backends) {
                 this.backends = backends;
@@ -910,7 +909,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The connection timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -918,11 +917,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests of the domain name. This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
+             * Specifies whether to enable HTTPS to HTTP redirection for back-to-origin requests. This parameter is available only if you specify **HttpsPorts**. Valid values:
              * <p>
              * 
-             * *   **true:** enables HTTPS to HTTP redirection for back-to-origin requests of the domain name.
-             * *   **false:** disables HTTPS to HTTP redirection for back-to-origin requests of the domain name.
+             * *   **true**
+             * *   **false**
              */
             public Builder focusHttpBackend(Boolean focusHttpBackend) {
                 this.focusHttpBackend = focusHttpBackend;
@@ -933,8 +932,8 @@ public class ModifyDomainRequest extends Request {
              * Specifies whether to enable the persistent connection feature. Valid values:
              * <p>
              * 
-             * *   **true:** enables the persistent connection feature. This is the default value.
-             * *   **false:** disables the persistent connection feature.
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder keepalive(Boolean keepalive) {
                 this.keepalive = keepalive;
@@ -945,7 +944,7 @@ public class ModifyDomainRequest extends Request {
              * The number of reused persistent connections. Valid values: 60 to 1000.
              * <p>
              * 
-             * >  This parameter specifies the number of reused persistent connections when you enable the persistent connection feature.
+             * >  This parameter specifies the number of reused persistent connections after you enable the persistent connection feature.
              */
             public Builder keepaliveRequests(Integer keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -953,10 +952,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of persistent connections that are in the Idle state. Valid values: 1 to 60. Default value: 15. Unit: seconds.
+             * The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
              * <p>
              * 
-             * >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+             * >  This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is released.
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -964,12 +963,12 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The load balancing algorithm that you want to use when WAF forwards requests to the origin server. Valid values:
+             * The load balancing algorithm that you want to use to forward requests to the origin server. Valid values:
              * <p>
              * 
-             * *   **ip_hash:** the IP hash algorithm.
-             * *   **roundRobin:** the round-robin algorithm.
-             * *   **leastTime:** the least response time algorithm. You can select this value only when you set the **ProtectionResource** parameter to **gslb**.
+             * *   **ip_hash**
+             * *   **roundRobin**
+             * *   **leastTime** You can set the parameter to this value only if you set **ProtectionResource** to **gslb**.
              */
             public Builder loadbalance(String loadbalance) {
                 this.loadbalance = loadbalance;
@@ -977,7 +976,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The read timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -985,10 +984,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The key-value pairs that you want to use to mark the requests that pass through the WAF instance.
+             * The custom header field that you want to use to label requests that are processed by WAF.
              * <p>
              * 
-             * WAF automatically adds the key-value pairs to the request headers to identify the requests that pass through WAF.
+             * When a request passes through WAF, the custom header field is automatically used to label the request. This way, the backend service can identify requests that are processed by WAF.
              */
             public Builder requestHeaders(java.util.List < RequestHeaders> requestHeaders) {
                 this.requestHeaders = requestHeaders;
@@ -996,11 +995,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether WAF retries to forward requests when requests fail to be forwarded to the origin server. Valid values:
+             * Specifies whether WAF retries forwarding requests to the origin server when the requests fail to be forwarded to the origin server. Valid values:
              * <p>
              * 
-             * *   **true:** WAF retries to forward requests. This is the default value.
-             * *   **false:** WAF does not retry to forward requests.
+             * *   **true** (default)
+             * *   **false**
              */
             public Builder retry(Boolean retry) {
                 this.retry = retry;
@@ -1021,11 +1020,11 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only when you specify the **HttpsPorts** parameter. Valid values:
+             * Specifies whether to enable origin Server Name Indication (SNI). This parameter is available only if you specify **HttpsPorts**. Valid values:
              * <p>
              * 
-             * *   **true:** enables origin SNI.
-             * *   **false:** disables origin SNI. This is the default value.
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder sniEnabled(Boolean sniEnabled) {
                 this.sniEnabled = sniEnabled;
@@ -1033,10 +1032,10 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The value of the custom SNI field. If you do not specify this parameter, the value of the **Host** field in the request header is automatically used. If you want WAF to use an SNI field value that is different from the value of the Host field in back-to-origin requests, you can specify a custom value for the SNI field.
+             * The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
              * <p>
              * 
-             * >  If you set the **SniEnabled** parameter to true, this parameter is required.
+             * >  This parameter is required only if you set **SniEnalbed** to xxx.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1044,7 +1043,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * The write timeout period. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -1052,7 +1051,7 @@ public class ModifyDomainRequest extends Request {
             }
 
             /**
-             * Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+             * Specifies whether to use the X-Forward-For-Proto header to identify the protocol used by WAF to forward requests to the origin server. Valid values:
              * <p>
              * 
              * *   **true** (default)
