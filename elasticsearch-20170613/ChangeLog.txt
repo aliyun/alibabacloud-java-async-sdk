@@ -1,3 +1,6 @@
+2024-06-04 Version: 2.0.3
+- Add archtype to instance.
+
 2024-06-03 Version: 2.0.2
 - Generated java-async 2017-06-13 for elasticsearch.
 

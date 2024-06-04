@@ -1070,6 +1070,9 @@ public class ListInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("advancedDedicateMaster")
         private Boolean advancedDedicateMaster;
 
+        @com.aliyun.core.annotation.NameInMap("archType")
+        private String archType;
+
         @com.aliyun.core.annotation.NameInMap("clientNodeConfiguration")
         private ClientNodeConfiguration clientNodeConfiguration;
 
@@ -1153,6 +1156,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
         private Result(Builder builder) {
             this.advancedDedicateMaster = builder.advancedDedicateMaster;
+            this.archType = builder.archType;
             this.clientNodeConfiguration = builder.clientNodeConfiguration;
             this.createdAt = builder.createdAt;
             this.dedicateMaster = builder.dedicateMaster;
@@ -1195,6 +1199,13 @@ public class ListInstanceResponseBody extends TeaModel {
          */
         public Boolean getAdvancedDedicateMaster() {
             return this.advancedDedicateMaster;
+        }
+
+        /**
+         * @return archType
+         */
+        public String getArchType() {
+            return this.archType;
         }
 
         /**
@@ -1388,6 +1399,7 @@ public class ListInstanceResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean advancedDedicateMaster; 
+            private String archType; 
             private ClientNodeConfiguration clientNodeConfiguration; 
             private String createdAt; 
             private Boolean dedicateMaster; 
@@ -1425,6 +1437,14 @@ public class ListInstanceResponseBody extends TeaModel {
              */
             public Builder advancedDedicateMaster(Boolean advancedDedicateMaster) {
                 this.advancedDedicateMaster = advancedDedicateMaster;
+                return this;
+            }
+
+            /**
+             * archType.
+             */
+            public Builder archType(String archType) {
+                this.archType = archType;
                 return this;
             }
 
