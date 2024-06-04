@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListEcsSpecsResponseBody</p>
  */
 public class ListEcsSpecsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EcsSpecs")
+    @com.aliyun.core.annotation.NameInMap("EcsSpecs")
     private java.util.List < EcsSpecs> ecsSpecs;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListEcsSpecsResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -233,40 +232,40 @@ public class ListEcsSpecsResponseBody extends TeaModel {
 
     }
     public static class EcsSpecs extends TeaModel {
-        @NameInMap("AcceleratorType")
+        @com.aliyun.core.annotation.NameInMap("AcceleratorType")
         private String acceleratorType;
 
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private Long CPU;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private Long GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("InstanceBandwidthRx")
+        @com.aliyun.core.annotation.NameInMap("InstanceBandwidthRx")
         private Long instanceBandwidthRx;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("IsAvailable")
+        @com.aliyun.core.annotation.NameInMap("IsAvailable")
         private Boolean isAvailable;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Double price;
 
-        @NameInMap("SystemDiskCapacity")
+        @com.aliyun.core.annotation.NameInMap("SystemDiskCapacity")
         private Long systemDiskCapacity;
 
         private EcsSpecs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceStatisticsRequest</p>
  */
 public class ListInstanceStatisticsRequest extends Request {
-    @Query
-    @NameInMap("WorkspaceIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceIds;
 
     private ListInstanceStatisticsRequest(Builder builder) {

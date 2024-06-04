@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateIdleInstanceCullerRequest</p>
  */
 public class CreateIdleInstanceCullerRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("CpuPercentThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CpuPercentThreshold")
     private Integer cpuPercentThreshold;
 
-    @Body
-    @NameInMap("GpuPercentThreshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GpuPercentThreshold")
     private Integer gpuPercentThreshold;
 
-    @Body
-    @NameInMap("MaxIdleTimeInMinutes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxIdleTimeInMinutes")
     private Integer maxIdleTimeInMinutes;
 
     private CreateIdleInstanceCullerRequest(Builder builder) {

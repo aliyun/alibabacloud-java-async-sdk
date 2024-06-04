@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForwardInfo</p>
  */
 public class ForwardInfo extends TeaModel {
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @NameInMap("EipAllocationId")
+    @com.aliyun.core.annotation.NameInMap("EipAllocationId")
     private String eipAllocationId;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @NameInMap("SSHPublicKey")
+    @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
     private ForwardInfo(Builder builder) {

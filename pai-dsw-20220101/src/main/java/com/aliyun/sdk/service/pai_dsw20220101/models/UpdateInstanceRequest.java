@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,77 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("CloudDisks")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List < CloudDisks> cloudDisks;
 
-    @Body
-    @NameInMap("Datasets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
-    @Body
-    @NameInMap("DisassociateDatasets")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateDatasets")
     private Boolean disassociateDatasets;
 
-    @Body
-    @NameInMap("DisassociateDriver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateDriver")
     private Boolean disassociateDriver;
 
-    @Body
-    @NameInMap("DisassociateForwardInfos")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateForwardInfos")
     private Boolean disassociateForwardInfos;
 
-    @Body
-    @NameInMap("DisassociateVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisassociateVpc")
     private Boolean disassociateVpc;
 
-    @Body
-    @NameInMap("Driver")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
-    @Body
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @Body
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @Body
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @Body
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @Body
-    @NameInMap("RequestedResource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RequestedResource")
     private RequestedResource requestedResource;
 
-    @Body
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Body
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @Body
-    @NameInMap("WorkspaceSource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceSource")
     private String workspaceSource;
 
     private UpdateInstanceRequest(Builder builder) {
@@ -462,10 +461,10 @@ public class UpdateInstanceRequest extends Request {
     } 
 
     public static class CloudDisks extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
         private CloudDisks(Builder builder) {
@@ -523,10 +522,10 @@ public class UpdateInstanceRequest extends Request {
 
     }
     public static class Datasets extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private Datasets(Builder builder) {
@@ -584,19 +583,19 @@ public class UpdateInstanceRequest extends Request {
 
     }
     public static class RequestedResource extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private String GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SharedMemory")
+        @com.aliyun.core.annotation.NameInMap("SharedMemory")
         private String sharedMemory;
 
         private RequestedResource(Builder builder) {
@@ -705,22 +704,22 @@ public class UpdateInstanceRequest extends Request {
 
     }
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
-        @NameInMap("ForwardInfos")
+        @com.aliyun.core.annotation.NameInMap("ForwardInfos")
         private java.util.List < ForwardInfo > forwardInfos;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {

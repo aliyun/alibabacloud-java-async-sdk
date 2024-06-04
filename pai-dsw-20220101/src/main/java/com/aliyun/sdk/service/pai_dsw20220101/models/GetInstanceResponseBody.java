@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,136 +11,136 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("AcceleratorType")
+    @com.aliyun.core.annotation.NameInMap("AcceleratorType")
     private String acceleratorType;
 
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @NameInMap("AccumulatedRunningTimeInMs")
+    @com.aliyun.core.annotation.NameInMap("AccumulatedRunningTimeInMs")
     private Long accumulatedRunningTimeInMs;
 
-    @NameInMap("CloudDisks")
+    @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List < CloudDisks> cloudDisks;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Datasets")
+    @com.aliyun.core.annotation.NameInMap("Datasets")
     private java.util.List < Datasets> datasets;
 
-    @NameInMap("Driver")
+    @com.aliyun.core.annotation.NameInMap("Driver")
     private String driver;
 
-    @NameInMap("EcsSpec")
+    @com.aliyun.core.annotation.NameInMap("EcsSpec")
     private String ecsSpec;
 
-    @NameInMap("EnvironmentVariables")
+    @com.aliyun.core.annotation.NameInMap("EnvironmentVariables")
     private java.util.Map < String, String > environmentVariables;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("IdleInstanceCuller")
+    @com.aliyun.core.annotation.NameInMap("IdleInstanceCuller")
     private IdleInstanceCuller idleInstanceCuller;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageName")
+    @com.aliyun.core.annotation.NameInMap("ImageName")
     private String imageName;
 
-    @NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
     private String imageUrl;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("InstanceShutdownTimer")
+    @com.aliyun.core.annotation.NameInMap("InstanceShutdownTimer")
     private InstanceShutdownTimer instanceShutdownTimer;
 
-    @NameInMap("InstanceSnapshotList")
+    @com.aliyun.core.annotation.NameInMap("InstanceSnapshotList")
     private java.util.List < InstanceSnapshotList> instanceSnapshotList;
 
-    @NameInMap("InstanceUrl")
+    @com.aliyun.core.annotation.NameInMap("InstanceUrl")
     private String instanceUrl;
 
-    @NameInMap("JupyterlabUrl")
+    @com.aliyun.core.annotation.NameInMap("JupyterlabUrl")
     private String jupyterlabUrl;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Labels> labels;
 
-    @NameInMap("LatestSnapshot")
+    @com.aliyun.core.annotation.NameInMap("LatestSnapshot")
     private LatestSnapshot latestSnapshot;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("NodeErrorRecovery")
+    @com.aliyun.core.annotation.NameInMap("NodeErrorRecovery")
     private NodeErrorRecovery nodeErrorRecovery;
 
-    @NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("PaymentType")
     private String paymentType;
 
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private Long priority;
 
-    @NameInMap("ReasonCode")
+    @com.aliyun.core.annotation.NameInMap("ReasonCode")
     private String reasonCode;
 
-    @NameInMap("ReasonMessage")
+    @com.aliyun.core.annotation.NameInMap("ReasonMessage")
     private String reasonMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RequestedResource")
+    @com.aliyun.core.annotation.NameInMap("RequestedResource")
     private RequestedResource requestedResource;
 
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TerminalUrl")
+    @com.aliyun.core.annotation.NameInMap("TerminalUrl")
     private String terminalUrl;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
-    @NameInMap("UserVpc")
+    @com.aliyun.core.annotation.NameInMap("UserVpc")
     private UserVpc userVpc;
 
-    @NameInMap("WebIDEUrl")
+    @com.aliyun.core.annotation.NameInMap("WebIDEUrl")
     private String webIDEUrl;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
-    @NameInMap("WorkspaceSource")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceSource")
     private String workspaceSource;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -912,16 +911,16 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class CloudDisks extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
         private CloudDisks(Builder builder) {
@@ -1013,10 +1012,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Datasets extends TeaModel {
-        @NameInMap("DatasetId")
+        @com.aliyun.core.annotation.NameInMap("DatasetId")
         private String datasetId;
 
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
         private Datasets(Builder builder) {
@@ -1074,19 +1073,19 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class IdleInstanceCuller extends TeaModel {
-        @NameInMap("CpuPercentThreshold")
+        @com.aliyun.core.annotation.NameInMap("CpuPercentThreshold")
         private Integer cpuPercentThreshold;
 
-        @NameInMap("GpuPercentThreshold")
+        @com.aliyun.core.annotation.NameInMap("GpuPercentThreshold")
         private Integer gpuPercentThreshold;
 
-        @NameInMap("IdleTimeInMinutes")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeInMinutes")
         private Integer idleTimeInMinutes;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MaxIdleTimeInMinutes")
+        @com.aliyun.core.annotation.NameInMap("MaxIdleTimeInMinutes")
         private Integer maxIdleTimeInMinutes;
 
         private IdleInstanceCuller(Builder builder) {
@@ -1195,19 +1194,19 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class InstanceShutdownTimer extends TeaModel {
-        @NameInMap("DueTime")
+        @com.aliyun.core.annotation.NameInMap("DueTime")
         private String dueTime;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RemainingTimeInMs")
+        @com.aliyun.core.annotation.NameInMap("RemainingTimeInMs")
         private Long remainingTimeInMs;
 
         private InstanceShutdownTimer(Builder builder) {
@@ -1316,31 +1315,31 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class InstanceSnapshotList extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("ReasonMessage")
+        @com.aliyun.core.annotation.NameInMap("ReasonMessage")
         private String reasonMessage;
 
-        @NameInMap("RepositoryUrl")
+        @com.aliyun.core.annotation.NameInMap("RepositoryUrl")
         private String repositoryUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private InstanceSnapshotList(Builder builder) {
@@ -1517,10 +1516,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -1578,31 +1577,31 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class LatestSnapshot extends TeaModel {
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageName")
+        @com.aliyun.core.annotation.NameInMap("ImageName")
         private String imageName;
 
-        @NameInMap("ImageUrl")
+        @com.aliyun.core.annotation.NameInMap("ImageUrl")
         private String imageUrl;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
-        @NameInMap("ReasonMessage")
+        @com.aliyun.core.annotation.NameInMap("ReasonMessage")
         private String reasonMessage;
 
-        @NameInMap("RepositoryUrl")
+        @com.aliyun.core.annotation.NameInMap("RepositoryUrl")
         private String repositoryUrl;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private LatestSnapshot(Builder builder) {
@@ -1779,13 +1778,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class NodeErrorRecovery extends TeaModel {
-        @NameInMap("autoSwitchCountdownSeconds")
+        @com.aliyun.core.annotation.NameInMap("autoSwitchCountdownSeconds")
         private Long autoSwitchCountdownSeconds;
 
-        @NameInMap("enableAutoSwitchOnNodeError")
+        @com.aliyun.core.annotation.NameInMap("enableAutoSwitchOnNodeError")
         private Boolean enableAutoSwitchOnNodeError;
 
-        @NameInMap("hasNodeError")
+        @com.aliyun.core.annotation.NameInMap("hasNodeError")
         private Boolean hasNodeError;
 
         private NodeErrorRecovery(Builder builder) {
@@ -1860,19 +1859,19 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class RequestedResource extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private String CPU;
 
-        @NameInMap("GPU")
+        @com.aliyun.core.annotation.NameInMap("GPU")
         private String GPU;
 
-        @NameInMap("GPUType")
+        @com.aliyun.core.annotation.NameInMap("GPUType")
         private String GPUType;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private String memory;
 
-        @NameInMap("SharedMemory")
+        @com.aliyun.core.annotation.NameInMap("SharedMemory")
         private String sharedMemory;
 
         private RequestedResource(Builder builder) {
@@ -1981,22 +1980,22 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class UserVpc extends TeaModel {
-        @NameInMap("DefaultRoute")
+        @com.aliyun.core.annotation.NameInMap("DefaultRoute")
         private String defaultRoute;
 
-        @NameInMap("ExtendedCIDRs")
+        @com.aliyun.core.annotation.NameInMap("ExtendedCIDRs")
         private java.util.List < String > extendedCIDRs;
 
-        @NameInMap("ForwardInfos")
+        @com.aliyun.core.annotation.NameInMap("ForwardInfos")
         private java.util.List < ForwardInfoResponse > forwardInfos;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private UserVpc(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserConfigResponseBody</p>
  */
 public class GetUserConfigResponseBody extends TeaModel {
-    @NameInMap("AccountSufficient")
+    @com.aliyun.core.annotation.NameInMap("AccountSufficient")
     private Boolean accountSufficient;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("EnableEciDisk")
+    @com.aliyun.core.annotation.NameInMap("EnableEciDisk")
     private Boolean enableEciDisk;
 
-    @NameInMap("FreeTier")
+    @com.aliyun.core.annotation.NameInMap("FreeTier")
     private FreeTier freeTier;
 
-    @NameInMap("FreeTierSpecAvailable")
+    @com.aliyun.core.annotation.NameInMap("FreeTierSpecAvailable")
     private Boolean freeTierSpecAvailable;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetUserConfigResponseBody(Builder builder) {
@@ -212,40 +211,40 @@ public class GetUserConfigResponseBody extends TeaModel {
     } 
 
     public static class FreeTier extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("InitBaseUnit")
+        @com.aliyun.core.annotation.NameInMap("InitBaseUnit")
         private String initBaseUnit;
 
-        @NameInMap("InitBaseValue")
+        @com.aliyun.core.annotation.NameInMap("InitBaseValue")
         private Double initBaseValue;
 
-        @NameInMap("InitShowUnit")
+        @com.aliyun.core.annotation.NameInMap("InitShowUnit")
         private String initShowUnit;
 
-        @NameInMap("InitShowValue")
+        @com.aliyun.core.annotation.NameInMap("InitShowValue")
         private String initShowValue;
 
-        @NameInMap("IsFreeTierUser")
+        @com.aliyun.core.annotation.NameInMap("IsFreeTierUser")
         private Boolean isFreeTierUser;
 
-        @NameInMap("PeriodBaseUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodBaseUnit")
         private String periodBaseUnit;
 
-        @NameInMap("PeriodBaseValue")
+        @com.aliyun.core.annotation.NameInMap("PeriodBaseValue")
         private Double periodBaseValue;
 
-        @NameInMap("PeriodShowUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodShowUnit")
         private String periodShowUnit;
 
-        @NameInMap("PeriodShowValue")
+        @com.aliyun.core.annotation.NameInMap("PeriodShowValue")
         private String periodShowValue;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private FreeTier(Builder builder) {

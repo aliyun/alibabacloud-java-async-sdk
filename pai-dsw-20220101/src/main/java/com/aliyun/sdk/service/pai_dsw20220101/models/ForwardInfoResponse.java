@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pai_dsw20220101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForwardInfoResponse</p>
  */
 public class ForwardInfoResponse extends Response {
-    @NameInMap("ConnectInfo")
+    @com.aliyun.core.annotation.NameInMap("ConnectInfo")
     private ConnectInfo connectInfo;
 
-    @NameInMap("ContainerName")
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
     private String containerName;
 
-    @NameInMap("EipAllocationId")
+    @com.aliyun.core.annotation.NameInMap("EipAllocationId")
     private String eipAllocationId;
 
-    @NameInMap("Enable")
+    @com.aliyun.core.annotation.NameInMap("Enable")
     private Boolean enable;
 
-    @NameInMap("NatGatewayId")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayId")
     private String natGatewayId;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private String port;
 
-    @NameInMap("SSHPublicKey")
+    @com.aliyun.core.annotation.NameInMap("SSHPublicKey")
     private String SSHPublicKey;
 
     private ForwardInfoResponse(BuilderImpl builder) {
@@ -220,10 +219,10 @@ public class ForwardInfoResponse extends Response {
     } 
 
     public static class Internet extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private Internet(Builder builder) {
@@ -281,10 +280,10 @@ public class ForwardInfoResponse extends Response {
 
     }
     public static class Intranet extends TeaModel {
-        @NameInMap("Endpoint")
+        @com.aliyun.core.annotation.NameInMap("Endpoint")
         private String endpoint;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
         private Intranet(Builder builder) {
@@ -342,16 +341,16 @@ public class ForwardInfoResponse extends Response {
 
     }
     public static class ConnectInfo extends TeaModel {
-        @NameInMap("Internet")
+        @com.aliyun.core.annotation.NameInMap("Internet")
         private Internet internet;
 
-        @NameInMap("Intranet")
+        @com.aliyun.core.annotation.NameInMap("Intranet")
         private Intranet intranet;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
 
         private ConnectInfo(Builder builder) {
