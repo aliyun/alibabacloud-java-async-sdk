@@ -1904,6 +1904,9 @@ public class GetMediaInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReferenceId")
         private String referenceId;
 
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
+        private String snapshots;
+
         @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
@@ -1938,6 +1941,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             this.mediaType = builder.mediaType;
             this.modifiedTime = builder.modifiedTime;
             this.referenceId = builder.referenceId;
+            this.snapshots = builder.snapshots;
             this.source = builder.source;
             this.spriteImages = builder.spriteImages;
             this.status = builder.status;
@@ -2060,6 +2064,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshots
+         */
+        public String getSnapshots() {
+            return this.snapshots;
+        }
+
+        /**
          * @return source
          */
         public String getSource() {
@@ -2117,6 +2128,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
             private String mediaType; 
             private String modifiedTime; 
             private String referenceId; 
+            private String snapshots; 
             private String source; 
             private String spriteImages; 
             private String status; 
@@ -2241,6 +2253,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
              */
             public Builder referenceId(String referenceId) {
                 this.referenceId = referenceId;
+                return this;
+            }
+
+            /**
+             * Snapshots.
+             */
+            public Builder snapshots(String snapshots) {
+                this.snapshots = snapshots;
                 return this;
             }
 
