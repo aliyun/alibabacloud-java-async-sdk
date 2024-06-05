@@ -710,7 +710,12 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewDuration.
+         * The auto-renewal duration. Unit: month.
+         * <p>
+         * 
+         * Valid values: **1** to **12**.
+         * 
+         * >  This parameter is available only when the **AutoRenewal** parameter is set to **true**.
          */
         public Builder autoRenewDuration(String autoRenewDuration) {
             this.putQueryParameter("AutoRenewDuration", autoRenewDuration);
@@ -719,7 +724,15 @@ public class CreateLindormInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenewal.
+         * Specifies whether to enable auto-renewal for the instance. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables auto-renewal.
+         * *   **false**: disables auto-renewal.
+         * 
+         * Default value: false.
+         * 
+         * >  This parameter is available only when the **PayType** parameter is set to **PREPAY**.
          */
         public Builder autoRenewal(Boolean autoRenewal) {
             this.putQueryParameter("AutoRenewal", autoRenewal);

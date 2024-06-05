@@ -201,7 +201,7 @@ public class UpdateInstanceIpWhiteListRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the IP whitelist. Default value: user.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

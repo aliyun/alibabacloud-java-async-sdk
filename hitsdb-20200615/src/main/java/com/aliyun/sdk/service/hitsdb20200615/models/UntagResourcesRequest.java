@@ -192,17 +192,17 @@ public class UntagResourcesRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove all tags from the instance. Valid values:
+         * Specifies whether to remove all tags from the instances. Valid values:
          * <p>
          * 
          * *   **true**: Remove all tags from the instances.
          * *   **false**: Do not remove all tags from the instances.
          * 
-         * > 
+         * >  The default value of this parameter is false.
          * 
-         * *   The default value of this parameter is false.
          * 
-         * *   If you specify the TagKey parameter together with this parameter, this parameter does not take effect.
+         * 
+         * *   If you specify this parameter together with the TagKey parameter, this parameter does not take effect.
          */
         public Builder all(Boolean all) {
             this.putQueryParameter("All", all);

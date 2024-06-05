@@ -71,6 +71,9 @@ public class GetLindormInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("EnableKms")
     private Boolean enableKms;
 
+    @com.aliyun.core.annotation.NameInMap("EnableLProxy")
+    private Boolean enableLProxy;
+
     @com.aliyun.core.annotation.NameInMap("EnableLTS")
     private Boolean enableLTS;
 
@@ -194,6 +197,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         this.enableCdc = builder.enableCdc;
         this.enableCompute = builder.enableCompute;
         this.enableKms = builder.enableKms;
+        this.enableLProxy = builder.enableLProxy;
         this.enableLTS = builder.enableLTS;
         this.enableLsqlVersionV3 = builder.enableLsqlVersionV3;
         this.enableMLCtrl = builder.enableMLCtrl;
@@ -376,6 +380,13 @@ public class GetLindormInstanceResponseBody extends TeaModel {
      */
     public Boolean getEnableKms() {
         return this.enableKms;
+    }
+
+    /**
+     * @return enableLProxy
+     */
+    public Boolean getEnableLProxy() {
+        return this.enableLProxy;
     }
 
     /**
@@ -637,6 +648,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         private Boolean enableCdc; 
         private Boolean enableCompute; 
         private Boolean enableKms; 
+        private Boolean enableLProxy; 
         private Boolean enableLTS; 
         private Boolean enableLsqlVersionV3; 
         private Boolean enableMLCtrl; 
@@ -697,11 +709,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 部署架构，取值：
+         * The architecture of the instance. Valid values:
          * <p>
          * 
-         * - **1.0**：单可用区。
-         * - **2.0**：多可用区。
+         * *   **1.0**: The instance is deployed in a single zone.
+         * *   **2.0**: The instance is deployed across multiple zones.
          */
         public Builder archVersion(String archVersion) {
             this.archVersion = archVersion;
@@ -820,7 +832,10 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableBlob.
+         * Indicates whether LBlob is enabled for the instance. Valid values:
+         * <p>
+         * 
+         * true: LBlob is enabled for the instance. false: LBlob is not enabled for the instance.
          */
         public Builder enableBlob(Boolean enableBlob) {
             this.enableBlob = enableBlob;
@@ -852,11 +867,19 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * 实例是否开通LTS引擎，返回值：
+         * EnableLProxy.
+         */
+        public Builder enableLProxy(Boolean enableLProxy) {
+            this.enableLProxy = enableLProxy;
+            return this;
+        }
+
+        /**
+         * Indicates whether the LTS engine is activated for the instance. Valid values:
          * <p>
          * 
-         * - **true**：开通LTS引擎。
-         * - **false**：未开通LTS引擎。
+         * *   **true**: The LTS engine is activated for the instance.
+         * *   **false**: The LTS engine is not activated for the instance.
          */
         public Builder enableLTS(Boolean enableLTS) {
             this.enableLTS = enableLTS;
@@ -864,7 +887,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableLsqlVersionV3.
+         * Indicates whether LindormTable of the instance supports LindormSQL V3 that is compatible with MySQL. By default, LindormTable of instances that are purchased after October 24, 2023 supports LindormSQL V3. If your instance is purchased before this date and want to enable LindormSQL V3, contact the technical support.
+         * <p>
+         * 
+         * *   True: LindormTable supports LindormSQL V3.
+         * *   False: LindormTable does not support LindormSQL V3.
          */
         public Builder enableLsqlVersionV3(Boolean enableLsqlVersionV3) {
             this.enableLsqlVersionV3 = enableLsqlVersionV3;
@@ -872,7 +899,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableMLCtrl.
+         * Indicates whether AI control nodes are enabled for the instance.
+         * <p>
+         * 
+         * *   True: AI control nodes are enabled for the instance.
+         * *   False: AI control nodes are not enabled for the instance.
          */
         public Builder enableMLCtrl(Boolean enableMLCtrl) {
             this.enableMLCtrl = enableMLCtrl;
@@ -1255,7 +1286,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * CoreCount.
+             * The number of engine nodes.
              */
             public Builder coreCount(String coreCount) {
                 this.coreCount = coreCount;
@@ -1263,7 +1294,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * CpuCount.
+             * The number of CPU cores on the engine node.
              */
             public Builder cpuCount(String cpuCount) {
                 this.cpuCount = cpuCount;
@@ -1271,7 +1302,15 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Engine.
+             * The engine type. Valid values:
+             * <p>
+             * 
+             * *   **lindorm**: LindormTable.
+             * *   **tsdb**: LindormTSDB.
+             * *   **solr**: LindormSearch.
+             * *   **store**: LindormDFS.
+             * *   **bds** :Lindorm Tunnel Service (LTS).
+             * *   **compute**: Lindorm Distributed Processing System (LDPS).
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1279,7 +1318,11 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IsLastVersion.
+             * Indicates whether the version of the engine is the latest. Valid values:
+             * <p>
+             * 
+             * *   **true**: The version of the engine is the latest.
+             * *   **false**: The version of the engine is not the latest.
              */
             public Builder isLastVersion(Boolean isLastVersion) {
                 this.isLastVersion = isLastVersion;
@@ -1287,7 +1330,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * The latest version number of the engine.
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -1295,7 +1338,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * MemorySize.
+             * The memory size of the engine nodes
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
@@ -1303,7 +1346,7 @@ public class GetLindormInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the engine.
              */
             public Builder version(String version) {
                 this.version = version;

@@ -73,7 +73,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * GroupList.
+         * The details about the IP address whitelists.
          */
         public Builder groupList(java.util.List < GroupList> groupList) {
             this.groupList = groupList;
@@ -149,7 +149,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             private String securityIpList; 
 
             /**
-             * GroupName.
+             * The name of the IP address whitelist.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -157,7 +157,7 @@ public class GetInstanceIpWhiteListResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityIpList.
+             * The IP addresses in the whitelist.
              */
             public Builder securityIpList(String securityIpList) {
                 this.securityIpList = securityIpList;

@@ -90,6 +90,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
+    /**
+      * If a tag is not added to any Lindorm instance, it is deleted.
+      *
+     */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateInstanceIpWhiteListResponse> updateInstanceIpWhiteList(UpdateInstanceIpWhiteListRequest request);
