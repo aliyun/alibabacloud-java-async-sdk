@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAclEntriesResponseBody</p>
  */
 public class ListAclEntriesResponseBody extends TeaModel {
-    @NameInMap("AclEntries")
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
     private java.util.List < AclEntries> aclEntries;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAclEntriesResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListAclEntriesResponseBody extends TeaModel {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Entry")
+        @com.aliyun.core.annotation.NameInMap("Entry")
         private String entry;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AclEntries(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAclsResponseBody</p>
  */
 public class ListAclsResponseBody extends TeaModel {
-    @NameInMap("Acls")
+    @com.aliyun.core.annotation.NameInMap("Acls")
     private java.util.List < Acls> acls;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAclsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListAclsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,28 +196,28 @@ public class ListAclsResponseBody extends TeaModel {
 
     }
     public static class Acls extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("AclName")
+        @com.aliyun.core.annotation.NameInMap("AclName")
         private String aclName;
 
-        @NameInMap("AclStatus")
+        @com.aliyun.core.annotation.NameInMap("AclStatus")
         private String aclStatus;
 
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
-        @NameInMap("ConfigManagedEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConfigManagedEnabled")
         private Boolean configManagedEnabled;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Acls(Builder builder) {

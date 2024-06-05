@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenerCertificatesResponseBody</p>
  */
 public class ListListenerCertificatesResponseBody extends TeaModel {
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListListenerCertificatesResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class ListListenerCertificatesResponseBody extends TeaModel {
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Certificates(Builder builder) {

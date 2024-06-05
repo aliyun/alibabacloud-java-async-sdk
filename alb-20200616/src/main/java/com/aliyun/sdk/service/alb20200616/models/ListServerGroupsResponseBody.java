@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServerGroupsResponseBody</p>
  */
 public class ListServerGroupsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerGroups")
+    @com.aliyun.core.annotation.NameInMap("ServerGroups")
     private java.util.List < ServerGroups> serverGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServerGroupsResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
     } 
 
     public static class ConnectionDrainConfig extends TeaModel {
-        @NameInMap("ConnectionDrainEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainEnabled")
         private Boolean connectionDrainEnabled;
 
-        @NameInMap("ConnectionDrainTimeout")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
         private Integer connectionDrainTimeout;
 
         private ConnectionDrainConfig(Builder builder) {
@@ -197,40 +196,40 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class HealthCheckConfig extends TeaModel {
-        @NameInMap("HealthCheckCodes")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
         private java.util.List < String > healthCheckCodes;
 
-        @NameInMap("HealthCheckConnectPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         private Integer healthCheckConnectPort;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckHost")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
         private String healthCheckHost;
 
-        @NameInMap("HealthCheckHttpVersion")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
         private String healthCheckHttpVersion;
 
-        @NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckMethod")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
         private String healthCheckMethod;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("HealthCheckTimeout")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
         private Integer healthCheckTimeout;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
 
         private HealthCheckConfig(Builder builder) {
@@ -497,10 +496,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class SlowStartConfig extends TeaModel {
-        @NameInMap("SlowStartDuration")
+        @com.aliyun.core.annotation.NameInMap("SlowStartDuration")
         private Integer slowStartDuration;
 
-        @NameInMap("SlowStartEnabled")
+        @com.aliyun.core.annotation.NameInMap("SlowStartEnabled")
         private Boolean slowStartEnabled;
 
         private SlowStartConfig(Builder builder) {
@@ -558,16 +557,16 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class StickySessionConfig extends TeaModel {
-        @NameInMap("Cookie")
+        @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
-        @NameInMap("CookieTimeout")
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
         private Integer cookieTimeout;
 
-        @NameInMap("StickySessionEnabled")
+        @com.aliyun.core.annotation.NameInMap("StickySessionEnabled")
         private Boolean stickySessionEnabled;
 
-        @NameInMap("StickySessionType")
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
         private String stickySessionType;
 
         private StickySessionConfig(Builder builder) {
@@ -670,10 +669,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -731,10 +730,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class UchConfig extends TeaModel {
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UchConfig(Builder builder) {
@@ -792,67 +791,67 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class ServerGroups extends TeaModel {
-        @NameInMap("ConfigManagedEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConfigManagedEnabled")
         private Boolean configManagedEnabled;
 
-        @NameInMap("ConnectionDrainConfig")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainConfig")
         private ConnectionDrainConfig connectionDrainConfig;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("HealthCheckConfig")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
         private HealthCheckConfig healthCheckConfig;
 
-        @NameInMap("Ipv6Enabled")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Enabled")
         private Boolean ipv6Enabled;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RelatedLoadBalancerIds")
+        @com.aliyun.core.annotation.NameInMap("RelatedLoadBalancerIds")
         private java.util.List < String > relatedLoadBalancerIds;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Scheduler")
+        @com.aliyun.core.annotation.NameInMap("Scheduler")
         private String scheduler;
 
-        @NameInMap("ServerCount")
+        @com.aliyun.core.annotation.NameInMap("ServerCount")
         private Integer serverCount;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("ServerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupName")
         private String serverGroupName;
 
-        @NameInMap("ServerGroupStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupStatus")
         private String serverGroupStatus;
 
-        @NameInMap("ServerGroupType")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupType")
         private String serverGroupType;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SlowStartConfig")
+        @com.aliyun.core.annotation.NameInMap("SlowStartConfig")
         private SlowStartConfig slowStartConfig;
 
-        @NameInMap("StickySessionConfig")
+        @com.aliyun.core.annotation.NameInMap("StickySessionConfig")
         private StickySessionConfig stickySessionConfig;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("UchConfig")
+        @com.aliyun.core.annotation.NameInMap("UchConfig")
         private UchConfig uchConfig;
 
-        @NameInMap("UpstreamKeepaliveEnabled")
+        @com.aliyun.core.annotation.NameInMap("UpstreamKeepaliveEnabled")
         private Boolean upstreamKeepaliveEnabled;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ServerGroups(Builder builder) {

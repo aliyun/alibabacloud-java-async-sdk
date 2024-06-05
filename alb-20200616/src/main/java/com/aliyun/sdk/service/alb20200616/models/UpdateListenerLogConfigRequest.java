@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateListenerLogConfigRequest</p>
  */
 public class UpdateListenerLogConfigRequest extends Request {
-    @Query
-    @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogRecordCustomizedHeadersEnabled")
     private Boolean accessLogRecordCustomizedHeadersEnabled;
 
-    @Query
-    @NameInMap("AccessLogTracingConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessLogTracingConfig")
     private AccessLogTracingConfig accessLogTracingConfig;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
     private UpdateListenerLogConfigRequest(Builder builder) {
@@ -178,14 +177,14 @@ public class UpdateListenerLogConfigRequest extends Request {
     } 
 
     public static class AccessLogTracingConfig extends TeaModel {
-        @NameInMap("TracingEnabled")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TracingEnabled")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Boolean tracingEnabled;
 
-        @NameInMap("TracingSample")
+        @com.aliyun.core.annotation.NameInMap("TracingSample")
         private Integer tracingSample;
 
-        @NameInMap("TracingType")
+        @com.aliyun.core.annotation.NameInMap("TracingType")
         private String tracingType;
 
         private AccessLogTracingConfig(Builder builder) {

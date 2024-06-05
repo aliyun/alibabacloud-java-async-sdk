@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenerCertificatesRequest</p>
  */
 public class ListListenerCertificatesRequest extends Request {
-    @Query
-    @NameInMap("CertificateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateIds")
+    private java.util.List < String > certificateIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertificateType")
     private String certificateType;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListListenerCertificatesRequest(Builder builder) {
         super(builder);
+        this.certificateIds = builder.certificateIds;
         this.certificateType = builder.certificateType;
         this.listenerId = builder.listenerId;
         this.maxResults = builder.maxResults;
@@ -49,6 +53,13 @@ public class ListListenerCertificatesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return certificateIds
+     */
+    public java.util.List < String > getCertificateIds() {
+        return this.certificateIds;
     }
 
     /**
@@ -80,6 +91,7 @@ public class ListListenerCertificatesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ListListenerCertificatesRequest, Builder> {
+        private java.util.List < String > certificateIds; 
         private String certificateType; 
         private String listenerId; 
         private Integer maxResults; 
@@ -91,11 +103,21 @@ public class ListListenerCertificatesRequest extends Request {
 
         private Builder(ListListenerCertificatesRequest request) {
             super(request);
+            this.certificateIds = request.certificateIds;
             this.certificateType = request.certificateType;
             this.listenerId = request.listenerId;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
         } 
+
+        /**
+         * CertificateIds.
+         */
+        public Builder certificateIds(java.util.List < String > certificateIds) {
+            this.putQueryParameter("CertificateIds", certificateIds);
+            this.certificateIds = certificateIds;
+            return this;
+        }
 
         /**
          * The type of the certificate. Valid values: **Ca** and **Server**.

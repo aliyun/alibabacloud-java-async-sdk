@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAScriptsResponseBody</p>
  */
 public class CreateAScriptsResponseBody extends TeaModel {
-    @NameInMap("AScriptIds")
+    @com.aliyun.core.annotation.NameInMap("AScriptIds")
     private java.util.List < AScriptIds> aScriptIds;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAScriptsResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class CreateAScriptsResponseBody extends TeaModel {
     } 
 
     public static class AScriptIds extends TeaModel {
-        @NameInMap("AScriptId")
+        @com.aliyun.core.annotation.NameInMap("AScriptId")
         private String aScriptId;
 
         private AScriptIds(Builder builder) {

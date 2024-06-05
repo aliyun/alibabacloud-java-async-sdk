@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateServerGroupAttributeRequest</p>
  */
 public class UpdateServerGroupAttributeRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConnectionDrainConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConnectionDrainConfig")
     private ConnectionDrainConfig connectionDrainConfig;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("HealthCheckConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConfig")
     private HealthCheckConfig healthCheckConfig;
 
-    @Query
-    @NameInMap("Scheduler")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scheduler")
     private String scheduler;
 
-    @Query
-    @NameInMap("ServerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupId;
 
-    @Query
-    @NameInMap("ServerGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupName")
     private String serverGroupName;
 
-    @Query
-    @NameInMap("ServiceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
 
-    @Query
-    @NameInMap("SlowStartConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlowStartConfig")
     private SlowStartConfig slowStartConfig;
 
-    @Query
-    @NameInMap("StickySessionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StickySessionConfig")
     private StickySessionConfig stickySessionConfig;
 
-    @Query
-    @NameInMap("UchConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UchConfig")
     private UchConfig uchConfig;
 
-    @Query
-    @NameInMap("UpstreamKeepaliveEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpstreamKeepaliveEnabled")
     private Boolean upstreamKeepaliveEnabled;
 
     private UpdateServerGroupAttributeRequest(Builder builder) {
@@ -341,10 +340,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
     } 
 
     public static class ConnectionDrainConfig extends TeaModel {
-        @NameInMap("ConnectionDrainEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainEnabled")
         private Boolean connectionDrainEnabled;
 
-        @NameInMap("ConnectionDrainTimeout")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
         private Integer connectionDrainTimeout;
 
         private ConnectionDrainConfig(Builder builder) {
@@ -402,45 +401,45 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     }
     public static class HealthCheckConfig extends TeaModel {
-        @NameInMap("HealthCheckCodes")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
         private java.util.List < String > healthCheckCodes;
 
-        @NameInMap("HealthCheckConnectPort")
-        @Validation(maximum = 65535)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
+        @com.aliyun.core.annotation.Validation(maximum = 65535)
         private Integer healthCheckConnectPort;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckHost")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
         private String healthCheckHost;
 
-        @NameInMap("HealthCheckHttpVersion")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
         private String healthCheckHttpVersion;
 
-        @NameInMap("HealthCheckInterval")
-        @Validation(maximum = 50, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckMethod")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
         private String healthCheckMethod;
 
-        @NameInMap("HealthCheckPath")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
         private String healthCheckPath;
 
-        @NameInMap("HealthCheckProtocol")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
         private String healthCheckProtocol;
 
-        @NameInMap("HealthCheckTimeout")
-        @Validation(maximum = 300, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 300, minimum = 1)
         private Integer healthCheckTimeout;
 
-        @NameInMap("HealthyThreshold")
-        @Validation(maximum = 10, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
         private Integer healthyThreshold;
 
-        @NameInMap("UnhealthyThreshold")
-        @Validation(maximum = 10, minimum = 2)
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
         private Integer unhealthyThreshold;
 
         private HealthCheckConfig(Builder builder) {
@@ -731,10 +730,10 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     }
     public static class SlowStartConfig extends TeaModel {
-        @NameInMap("SlowStartDuration")
+        @com.aliyun.core.annotation.NameInMap("SlowStartDuration")
         private Integer slowStartDuration;
 
-        @NameInMap("SlowStartEnabled")
+        @com.aliyun.core.annotation.NameInMap("SlowStartEnabled")
         private Boolean slowStartEnabled;
 
         private SlowStartConfig(Builder builder) {
@@ -792,17 +791,17 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     }
     public static class StickySessionConfig extends TeaModel {
-        @NameInMap("Cookie")
+        @com.aliyun.core.annotation.NameInMap("Cookie")
         private String cookie;
 
-        @NameInMap("CookieTimeout")
-        @Validation(maximum = 86400, minimum = 1)
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+        @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 1)
         private Integer cookieTimeout;
 
-        @NameInMap("StickySessionEnabled")
+        @com.aliyun.core.annotation.NameInMap("StickySessionEnabled")
         private Boolean stickySessionEnabled;
 
-        @NameInMap("StickySessionType")
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
         private String stickySessionType;
 
         private StickySessionConfig(Builder builder) {
@@ -919,12 +918,12 @@ public class UpdateServerGroupAttributeRequest extends Request {
 
     }
     public static class UchConfig extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Value")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String value;
 
         private UchConfig(Builder builder) {

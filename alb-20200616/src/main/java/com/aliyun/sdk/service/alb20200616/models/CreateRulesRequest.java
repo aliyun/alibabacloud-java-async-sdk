@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRulesRequest</p>
  */
 public class CreateRulesRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Query
-    @NameInMap("Rules")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rules")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Rules> rules;
 
     private CreateRulesRequest(Builder builder) {
@@ -150,22 +149,22 @@ public class CreateRulesRequest extends Request {
     } 
 
     public static class CorsConfig extends TeaModel {
-        @NameInMap("AllowCredentials")
+        @com.aliyun.core.annotation.NameInMap("AllowCredentials")
         private String allowCredentials;
 
-        @NameInMap("AllowHeaders")
+        @com.aliyun.core.annotation.NameInMap("AllowHeaders")
         private java.util.List < String > allowHeaders;
 
-        @NameInMap("AllowMethods")
+        @com.aliyun.core.annotation.NameInMap("AllowMethods")
         private java.util.List < String > allowMethods;
 
-        @NameInMap("AllowOrigin")
+        @com.aliyun.core.annotation.NameInMap("AllowOrigin")
         private java.util.List < String > allowOrigin;
 
-        @NameInMap("ExposeHeaders")
+        @com.aliyun.core.annotation.NameInMap("ExposeHeaders")
         private java.util.List < String > exposeHeaders;
 
-        @NameInMap("MaxAge")
+        @com.aliyun.core.annotation.NameInMap("MaxAge")
         private Long maxAge;
 
         private CorsConfig(Builder builder) {
@@ -298,13 +297,13 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class FixedResponseConfig extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentType")
+        @com.aliyun.core.annotation.NameInMap("ContentType")
         private String contentType;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
         private FixedResponseConfig(Builder builder) {
@@ -386,10 +385,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class ServerGroupStickySession extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Timeout")
+        @com.aliyun.core.annotation.NameInMap("Timeout")
         private Integer timeout;
 
         private ServerGroupStickySession(Builder builder) {
@@ -451,10 +450,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private ServerGroupTuples(Builder builder) {
@@ -516,10 +515,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupStickySession")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupStickySession")
         private ServerGroupStickySession serverGroupStickySession;
 
-        @NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
@@ -577,13 +576,13 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class InsertHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private InsertHeaderConfig(Builder builder) {
@@ -679,22 +678,22 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class RedirectConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("HttpCode")
+        @com.aliyun.core.annotation.NameInMap("HttpCode")
         private String httpCode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RedirectConfig(Builder builder) {
@@ -858,7 +857,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class RemoveHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private RemoveHeaderConfig(Builder builder) {
@@ -903,13 +902,13 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class RewriteConfig extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Query")
+        @com.aliyun.core.annotation.NameInMap("Query")
         private String query;
 
         private RewriteConfig(Builder builder) {
@@ -1011,10 +1010,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class TrafficLimitConfig extends TeaModel {
-        @NameInMap("PerIpQps")
+        @com.aliyun.core.annotation.NameInMap("PerIpQps")
         private Integer perIpQps;
 
-        @NameInMap("QPS")
+        @com.aliyun.core.annotation.NameInMap("QPS")
         private Integer QPS;
 
         private TrafficLimitConfig(Builder builder) {
@@ -1075,7 +1074,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class MirrorGroupConfigServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private MirrorGroupConfigServerGroupTuples(Builder builder) {
@@ -1116,7 +1115,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class MirrorGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         private java.util.List < MirrorGroupConfigServerGroupTuples> serverGroupTuples;
 
         private MirrorGroupConfig(Builder builder) {
@@ -1157,10 +1156,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class TrafficMirrorConfig extends TeaModel {
-        @NameInMap("MirrorGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("MirrorGroupConfig")
         private MirrorGroupConfig mirrorGroupConfig;
 
-        @NameInMap("TargetType")
+        @com.aliyun.core.annotation.NameInMap("TargetType")
         private String targetType;
 
         private TrafficMirrorConfig(Builder builder) {
@@ -1221,39 +1220,39 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class RuleActions extends TeaModel {
-        @NameInMap("CorsConfig")
+        @com.aliyun.core.annotation.NameInMap("CorsConfig")
         private CorsConfig corsConfig;
 
-        @NameInMap("FixedResponseConfig")
+        @com.aliyun.core.annotation.NameInMap("FixedResponseConfig")
         private FixedResponseConfig fixedResponseConfig;
 
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("InsertHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("InsertHeaderConfig")
         private InsertHeaderConfig insertHeaderConfig;
 
-        @NameInMap("Order")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Order")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer order;
 
-        @NameInMap("RedirectConfig")
+        @com.aliyun.core.annotation.NameInMap("RedirectConfig")
         private RedirectConfig redirectConfig;
 
-        @NameInMap("RemoveHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("RemoveHeaderConfig")
         private RemoveHeaderConfig removeHeaderConfig;
 
-        @NameInMap("RewriteConfig")
+        @com.aliyun.core.annotation.NameInMap("RewriteConfig")
         private RewriteConfig rewriteConfig;
 
-        @NameInMap("TrafficLimitConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficLimitConfig")
         private TrafficLimitConfig trafficLimitConfig;
 
-        @NameInMap("TrafficMirrorConfig")
+        @com.aliyun.core.annotation.NameInMap("TrafficMirrorConfig")
         private TrafficMirrorConfig trafficMirrorConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private RuleActions(Builder builder) {
@@ -1480,10 +1479,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class Values extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Values(Builder builder) {
@@ -1551,7 +1550,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class CookieConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < Values> values;
 
         private CookieConfig(Builder builder) {
@@ -1592,10 +1591,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class HeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private HeaderConfig(Builder builder) {
@@ -1658,7 +1657,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class HostConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private HostConfig(Builder builder) {
@@ -1699,7 +1698,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class MethodConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private MethodConfig(Builder builder) {
@@ -1740,7 +1739,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class PathConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private PathConfig(Builder builder) {
@@ -1781,10 +1780,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class QueryStringConfigValues extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QueryStringConfigValues(Builder builder) {
@@ -1850,7 +1849,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class QueryStringConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < QueryStringConfigValues> values;
 
         private QueryStringConfig(Builder builder) {
@@ -1891,10 +1890,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class ResponseHeaderConfig extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private ResponseHeaderConfig(Builder builder) {
@@ -1957,7 +1956,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class ResponseStatusCodeConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private ResponseStatusCodeConfig(Builder builder) {
@@ -1998,7 +1997,7 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class SourceIpConfig extends TeaModel {
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < String > values;
 
         private SourceIpConfig(Builder builder) {
@@ -2039,35 +2038,35 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class RuleConditions extends TeaModel {
-        @NameInMap("CookieConfig")
+        @com.aliyun.core.annotation.NameInMap("CookieConfig")
         private CookieConfig cookieConfig;
 
-        @NameInMap("HeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("HeaderConfig")
         private HeaderConfig headerConfig;
 
-        @NameInMap("HostConfig")
+        @com.aliyun.core.annotation.NameInMap("HostConfig")
         private HostConfig hostConfig;
 
-        @NameInMap("MethodConfig")
+        @com.aliyun.core.annotation.NameInMap("MethodConfig")
         private MethodConfig methodConfig;
 
-        @NameInMap("PathConfig")
+        @com.aliyun.core.annotation.NameInMap("PathConfig")
         private PathConfig pathConfig;
 
-        @NameInMap("QueryStringConfig")
+        @com.aliyun.core.annotation.NameInMap("QueryStringConfig")
         private QueryStringConfig queryStringConfig;
 
-        @NameInMap("ResponseHeaderConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseHeaderConfig")
         private ResponseHeaderConfig responseHeaderConfig;
 
-        @NameInMap("ResponseStatusCodeConfig")
+        @com.aliyun.core.annotation.NameInMap("ResponseStatusCodeConfig")
         private ResponseStatusCodeConfig responseStatusCodeConfig;
 
-        @NameInMap("SourceIpConfig")
+        @com.aliyun.core.annotation.NameInMap("SourceIpConfig")
         private SourceIpConfig sourceIpConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private RuleConditions(Builder builder) {
@@ -2272,10 +2271,10 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -2333,26 +2332,26 @@ public class CreateRulesRequest extends Request {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("Priority")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Priority")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Integer priority;
 
-        @NameInMap("RuleActions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleActions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < RuleActions> ruleActions;
 
-        @NameInMap("RuleConditions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleConditions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < RuleConditions> ruleConditions;
 
-        @NameInMap("RuleName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RuleName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String ruleName;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Rules(Builder builder) {

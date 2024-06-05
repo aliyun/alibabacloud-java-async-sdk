@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSystemSecurityPoliciesResponseBody</p>
  */
 public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
     private java.util.List < SecurityPolicies> securityPolicies;
 
     private ListSystemSecurityPoliciesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListSystemSecurityPoliciesResponseBody extends TeaModel {
     } 
 
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("TLSVersions")
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
         private java.util.List < String > TLSVersions;
 
         private SecurityPolicies(Builder builder) {

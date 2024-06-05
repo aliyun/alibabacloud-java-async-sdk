@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReplaceServersInServerGroupRequest</p>
  */
 public class ReplaceServersInServerGroupRequest extends Request {
-    @Query
-    @NameInMap("AddedServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddedServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AddedServers> addedServers;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("RemovedServers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemovedServers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < RemovedServers> removedServers;
 
-    @Query
-    @NameInMap("ServerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupId;
 
     private ReplaceServersInServerGroupRequest(Builder builder) {
@@ -177,23 +176,23 @@ public class ReplaceServersInServerGroupRequest extends Request {
     } 
 
     public static class AddedServers extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private Integer weight;
 
         private AddedServers(Builder builder) {
@@ -333,17 +332,17 @@ public class ReplaceServersInServerGroupRequest extends Request {
 
     }
     public static class RemovedServers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("ServerType")
+        @com.aliyun.core.annotation.NameInMap("ServerType")
         private String serverType;
 
         private RemovedServers(Builder builder) {

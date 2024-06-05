@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddEntriesToAclRequest</p>
  */
 public class AddEntriesToAclRequest extends Request {
-    @Query
-    @NameInMap("AclEntries")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclEntries")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AclEntries> aclEntries;
 
-    @Query
-    @NameInMap("AclId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AclId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aclId;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
     private AddEntriesToAclRequest(Builder builder) {
@@ -150,11 +149,11 @@ public class AddEntriesToAclRequest extends Request {
     } 
 
     public static class AclEntries extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Entry")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Entry")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String entry;
 
         private AclEntries(Builder builder) {

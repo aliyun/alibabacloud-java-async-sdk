@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSecurityPoliciesResponseBody</p>
  */
 public class ListSecurityPoliciesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
     private java.util.List < SecurityPolicies> securityPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSecurityPoliciesResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -197,28 +196,28 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
 
     }
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private java.util.List < String > ciphers;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("SecurityPolicyName")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
         private String securityPolicyName;
 
-        @NameInMap("SecurityPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyStatus")
         private String securityPolicyStatus;
 
-        @NameInMap("TLSVersions")
+        @com.aliyun.core.annotation.NameInMap("TLSVersions")
         private java.util.List < String > TLSVersions;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private SecurityPolicies(Builder builder) {

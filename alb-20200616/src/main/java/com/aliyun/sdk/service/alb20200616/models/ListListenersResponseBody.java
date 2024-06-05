@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenersResponseBody</p>
  */
 public class ListListenersResponseBody extends TeaModel {
-    @NameInMap("Listeners")
+    @com.aliyun.core.annotation.NameInMap("Listeners")
     private java.util.List < Listeners> listeners;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListListenersResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class ListListenersResponseBody extends TeaModel {
     } 
 
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private ServerGroupTuples(Builder builder) {
@@ -173,7 +172,7 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
@@ -214,10 +213,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class DefaultActions extends TeaModel {
-        @NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private DefaultActions(Builder builder) {
@@ -275,13 +274,13 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class AccessLogTracingConfig extends TeaModel {
-        @NameInMap("TracingEnabled")
+        @com.aliyun.core.annotation.NameInMap("TracingEnabled")
         private Boolean tracingEnabled;
 
-        @NameInMap("TracingSample")
+        @com.aliyun.core.annotation.NameInMap("TracingSample")
         private Integer tracingSample;
 
-        @NameInMap("TracingType")
+        @com.aliyun.core.annotation.NameInMap("TracingType")
         private String tracingType;
 
         private AccessLogTracingConfig(Builder builder) {
@@ -368,10 +367,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class LogConfig extends TeaModel {
-        @NameInMap("AccessLogRecordCustomizedHeadersEnabled")
+        @com.aliyun.core.annotation.NameInMap("AccessLogRecordCustomizedHeadersEnabled")
         private Boolean accessLogRecordCustomizedHeadersEnabled;
 
-        @NameInMap("AccessLogTracingConfig")
+        @com.aliyun.core.annotation.NameInMap("AccessLogTracingConfig")
         private AccessLogTracingConfig accessLogTracingConfig;
 
         private LogConfig(Builder builder) {
@@ -433,10 +432,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class QuicConfig extends TeaModel {
-        @NameInMap("QuicListenerId")
+        @com.aliyun.core.annotation.NameInMap("QuicListenerId")
         private String quicListenerId;
 
-        @NameInMap("QuicUpgradeEnabled")
+        @com.aliyun.core.annotation.NameInMap("QuicUpgradeEnabled")
         private Boolean quicUpgradeEnabled;
 
         private QuicConfig(Builder builder) {
@@ -503,10 +502,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -564,49 +563,49 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForClientCertClientVerifyAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyAlias")
         private String xForwardedForClientCertClientVerifyAlias;
 
-        @NameInMap("XForwardedForClientCertClientVerifyEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyEnabled")
         private Boolean xForwardedForClientCertClientVerifyEnabled;
 
-        @NameInMap("XForwardedForClientCertFingerprintAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintAlias")
         private String xForwardedForClientCertFingerprintAlias;
 
-        @NameInMap("XForwardedForClientCertFingerprintEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintEnabled")
         private Boolean xForwardedForClientCertFingerprintEnabled;
 
-        @NameInMap("XForwardedForClientCertIssuerDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNAlias")
         private String xForwardedForClientCertIssuerDNAlias;
 
-        @NameInMap("XForwardedForClientCertIssuerDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNEnabled")
         private Boolean xForwardedForClientCertIssuerDNEnabled;
 
-        @NameInMap("XForwardedForClientCertSubjectDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNAlias")
         private String xForwardedForClientCertSubjectDNAlias;
 
-        @NameInMap("XForwardedForClientCertSubjectDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNEnabled")
         private Boolean xForwardedForClientCertSubjectDNEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsEnabled")
         private Boolean xForwardedForClientSourceIpsEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsTrusted")
         private String xForwardedForClientSourceIpsTrusted;
 
-        @NameInMap("XForwardedForClientSrcPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSrcPortEnabled")
         private Boolean xForwardedForClientSrcPortEnabled;
 
-        @NameInMap("XForwardedForEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForEnabled")
         private Boolean xForwardedForEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XForwardedForSLBIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBIdEnabled")
         private Boolean xForwardedForSLBIdEnabled;
 
-        @NameInMap("XForwardedForSLBPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBPortEnabled")
         private Boolean xForwardedForSLBPortEnabled;
 
         private XForwardedForConfig(Builder builder) {
@@ -968,52 +967,52 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class Listeners extends TeaModel {
-        @NameInMap("DefaultActions")
+        @com.aliyun.core.annotation.NameInMap("DefaultActions")
         private java.util.List < DefaultActions> defaultActions;
 
-        @NameInMap("GzipEnabled")
+        @com.aliyun.core.annotation.NameInMap("GzipEnabled")
         private Boolean gzipEnabled;
 
-        @NameInMap("Http2Enabled")
+        @com.aliyun.core.annotation.NameInMap("Http2Enabled")
         private Boolean http2Enabled;
 
-        @NameInMap("IdleTimeout")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
         private Integer idleTimeout;
 
-        @NameInMap("ListenerDescription")
+        @com.aliyun.core.annotation.NameInMap("ListenerDescription")
         private String listenerDescription;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("ListenerStatus")
+        @com.aliyun.core.annotation.NameInMap("ListenerStatus")
         private String listenerStatus;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LogConfig")
+        @com.aliyun.core.annotation.NameInMap("LogConfig")
         private LogConfig logConfig;
 
-        @NameInMap("QuicConfig")
+        @com.aliyun.core.annotation.NameInMap("QuicConfig")
         private QuicConfig quicConfig;
 
-        @NameInMap("RequestTimeout")
+        @com.aliyun.core.annotation.NameInMap("RequestTimeout")
         private Integer requestTimeout;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("XForwardedForConfig")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
         private XForwardedForConfig xForwardedForConfig;
 
         private Listeners(Builder builder) {

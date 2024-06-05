@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AssociateAdditionalCertificatesWithListenerRequest</p>
  */
 public class AssociateAdditionalCertificatesWithListenerRequest extends Request {
-    @Query
-    @NameInMap("Certificates")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
     private AssociateAdditionalCertificatesWithListenerRequest(Builder builder) {
@@ -150,8 +149,8 @@ public class AssociateAdditionalCertificatesWithListenerRequest extends Request 
     } 
 
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String certificateId;
 
         private Certificates(Builder builder) {

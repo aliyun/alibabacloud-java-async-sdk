@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAclRelationsResponseBody</p>
  */
 public class ListAclRelationsResponseBody extends TeaModel {
-    @NameInMap("AclRelations")
+    @com.aliyun.core.annotation.NameInMap("AclRelations")
     private java.util.List < AclRelations> aclRelations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAclRelationsResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListAclRelationsResponseBody extends TeaModel {
     } 
 
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RelatedListeners(Builder builder) {
@@ -198,10 +197,10 @@ public class ListAclRelationsResponseBody extends TeaModel {
 
     }
     public static class AclRelations extends TeaModel {
-        @NameInMap("AclId")
+        @com.aliyun.core.annotation.NameInMap("AclId")
         private String aclId;
 
-        @NameInMap("RelatedListeners")
+        @com.aliyun.core.annotation.NameInMap("RelatedListeners")
         private java.util.List < RelatedListeners> relatedListeners;
 
         private AclRelations(Builder builder) {

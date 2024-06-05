@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAScriptsRequest</p>
  */
 public class UpdateAScriptsRequest extends Request {
-    @Query
-    @NameInMap("AScripts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AScripts")
     private java.util.List < AScripts> aScripts;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
     private UpdateAScriptsRequest(Builder builder) {
@@ -125,17 +124,17 @@ public class UpdateAScriptsRequest extends Request {
     } 
 
     public static class AScripts extends TeaModel {
-        @NameInMap("AScriptId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AScriptId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String aScriptId;
 
-        @NameInMap("AScriptName")
+        @com.aliyun.core.annotation.NameInMap("AScriptName")
         private String aScriptName;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
         private AScripts(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetHealthCheckTemplateAttributeResponseBody</p>
  */
 public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
-    @NameInMap("HealthCheckCodes")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckCodes")
     private java.util.List < String > healthCheckCodes;
 
-    @NameInMap("HealthCheckConnectPort")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
     private Integer healthCheckConnectPort;
 
-    @NameInMap("HealthCheckHost")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHost")
     private String healthCheckHost;
 
-    @NameInMap("HealthCheckHttpVersion")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckHttpVersion")
     private String healthCheckHttpVersion;
 
-    @NameInMap("HealthCheckInterval")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
     private Integer healthCheckInterval;
 
-    @NameInMap("HealthCheckMethod")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckMethod")
     private String healthCheckMethod;
 
-    @NameInMap("HealthCheckPath")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckPath")
     private String healthCheckPath;
 
-    @NameInMap("HealthCheckProtocol")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckProtocol")
     private String healthCheckProtocol;
 
-    @NameInMap("HealthCheckTemplateId")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateId")
     private String healthCheckTemplateId;
 
-    @NameInMap("HealthCheckTemplateName")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTemplateName")
     private String healthCheckTemplateName;
 
-    @NameInMap("HealthCheckTimeout")
+    @com.aliyun.core.annotation.NameInMap("HealthCheckTimeout")
     private Integer healthCheckTimeout;
 
-    @NameInMap("HealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
     private Integer healthyThreshold;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
-    @NameInMap("UnhealthyThreshold")
+    @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
     private GetHealthCheckTemplateAttributeResponseBody(Builder builder) {
@@ -383,10 +382,10 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoadBalancerRequest</p>
  */
 public class CreateLoadBalancerRequest extends Request {
-    @Query
-    @NameInMap("AddressAllocatedMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressAllocatedMode")
     private String addressAllocatedMode;
 
-    @Query
-    @NameInMap("AddressIpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
     private String addressIpVersion;
 
-    @Query
-    @NameInMap("AddressType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DeletionProtectionEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtectionEnabled")
     private Boolean deletionProtectionEnabled;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("LoadBalancerBillingConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerBillingConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private LoadBalancerBillingConfig loadBalancerBillingConfig;
 
-    @Query
-    @NameInMap("LoadBalancerEdition")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerEdition")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerEdition;
 
-    @Query
-    @NameInMap("LoadBalancerName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
     private String loadBalancerName;
 
-    @Query
-    @NameInMap("ModificationProtectionConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModificationProtectionConfig")
     private ModificationProtectionConfig modificationProtectionConfig;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneMappings")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneMappings")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ZoneMappings> zoneMappings;
 
     private CreateLoadBalancerRequest(Builder builder) {
@@ -407,11 +406,11 @@ public class CreateLoadBalancerRequest extends Request {
     } 
 
     public static class LoadBalancerBillingConfig extends TeaModel {
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("PayType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PayType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String payType;
 
         private LoadBalancerBillingConfig(Builder builder) {
@@ -472,10 +471,10 @@ public class CreateLoadBalancerRequest extends Request {
 
     }
     public static class ModificationProtectionConfig extends TeaModel {
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ModificationProtectionConfig(Builder builder) {
@@ -542,10 +541,10 @@ public class CreateLoadBalancerRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -603,18 +602,18 @@ public class CreateLoadBalancerRequest extends Request {
 
     }
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("IntranetAddress")
+        @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
 
-        @NameInMap("VSwitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String zoneId;
 
         private ZoneMappings(Builder builder) {

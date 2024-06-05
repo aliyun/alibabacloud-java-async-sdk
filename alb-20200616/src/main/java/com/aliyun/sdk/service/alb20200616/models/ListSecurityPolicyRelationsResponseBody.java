@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSecurityPolicyRelationsResponseBody</p>
  */
 public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecrityPolicyRelations")
+    @com.aliyun.core.annotation.NameInMap("SecrityPolicyRelations")
     private java.util.List < SecrityPolicyRelations> secrityPolicyRelations;
 
     private ListSecurityPolicyRelationsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
     } 
 
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
         private RelatedListeners(Builder builder) {
@@ -173,10 +172,10 @@ public class ListSecurityPolicyRelationsResponseBody extends TeaModel {
 
     }
     public static class SecrityPolicyRelations extends TeaModel {
-        @NameInMap("RelatedListeners")
+        @com.aliyun.core.annotation.NameInMap("RelatedListeners")
         private java.util.List < RelatedListeners> relatedListeners;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
         private SecrityPolicyRelations(Builder builder) {

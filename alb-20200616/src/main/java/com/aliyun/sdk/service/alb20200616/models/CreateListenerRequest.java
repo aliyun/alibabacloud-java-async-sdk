@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,80 +11,80 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateListenerRequest</p>
  */
 public class CreateListenerRequest extends Request {
-    @Query
-    @NameInMap("CaCertificates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaCertificates")
     private java.util.List < CaCertificates> caCertificates;
 
-    @Query
-    @NameInMap("CaEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CaEnabled")
     private Boolean caEnabled;
 
-    @Query
-    @NameInMap("Certificates")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Certificates")
     private java.util.List < Certificates> certificates;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DefaultActions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DefaultActions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < DefaultActions> defaultActions;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("GzipEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GzipEnabled")
     private Boolean gzipEnabled;
 
-    @Query
-    @NameInMap("Http2Enabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Http2Enabled")
     private Boolean http2Enabled;
 
-    @Query
-    @NameInMap("IdleTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdleTimeout")
     private Integer idleTimeout;
 
-    @Query
-    @NameInMap("ListenerDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerDescription")
     private String listenerDescription;
 
-    @Query
-    @NameInMap("ListenerPort")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerPort")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer listenerPort;
 
-    @Query
-    @NameInMap("ListenerProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerProtocol;
 
-    @Query
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Query
-    @NameInMap("QuicConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QuicConfig")
     private QuicConfig quicConfig;
 
-    @Query
-    @NameInMap("RequestTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestTimeout")
     private Integer requestTimeout;
 
-    @Query
-    @NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
     private String securityPolicyId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("XForwardedForConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedForConfig")
     private XForwardedForConfig xForwardedForConfig;
 
     private CreateListenerRequest(Builder builder) {
@@ -516,7 +515,7 @@ public class CreateListenerRequest extends Request {
     } 
 
     public static class CaCertificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
         private CaCertificates(Builder builder) {
@@ -557,7 +556,7 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class Certificates extends TeaModel {
-        @NameInMap("CertificateId")
+        @com.aliyun.core.annotation.NameInMap("CertificateId")
         private String certificateId;
 
         private Certificates(Builder builder) {
@@ -598,8 +597,8 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class ServerGroupTuples extends TeaModel {
-        @NameInMap("ServerGroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverGroupId;
 
         private ServerGroupTuples(Builder builder) {
@@ -640,8 +639,8 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class ForwardGroupConfig extends TeaModel {
-        @NameInMap("ServerGroupTuples")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerGroupTuples")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < ServerGroupTuples> serverGroupTuples;
 
         private ForwardGroupConfig(Builder builder) {
@@ -682,12 +681,12 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class DefaultActions extends TeaModel {
-        @NameInMap("ForwardGroupConfig")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ForwardGroupConfig")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ForwardGroupConfig forwardGroupConfig;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private DefaultActions(Builder builder) {
@@ -748,10 +747,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class QuicConfig extends TeaModel {
-        @NameInMap("QuicListenerId")
+        @com.aliyun.core.annotation.NameInMap("QuicListenerId")
         private String quicListenerId;
 
-        @NameInMap("QuicUpgradeEnabled")
+        @com.aliyun.core.annotation.NameInMap("QuicUpgradeEnabled")
         private Boolean quicUpgradeEnabled;
 
         private QuicConfig(Builder builder) {
@@ -818,10 +817,10 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -879,49 +878,49 @@ public class CreateListenerRequest extends Request {
 
     }
     public static class XForwardedForConfig extends TeaModel {
-        @NameInMap("XForwardedForClientCertClientVerifyAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyAlias")
         private String xForwardedForClientCertClientVerifyAlias;
 
-        @NameInMap("XForwardedForClientCertClientVerifyEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertClientVerifyEnabled")
         private Boolean xForwardedForClientCertClientVerifyEnabled;
 
-        @NameInMap("XForwardedForClientCertFingerprintAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintAlias")
         private String xForwardedForClientCertFingerprintAlias;
 
-        @NameInMap("XForwardedForClientCertFingerprintEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertFingerprintEnabled")
         private Boolean xForwardedForClientCertFingerprintEnabled;
 
-        @NameInMap("XForwardedForClientCertIssuerDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNAlias")
         private String xForwardedForClientCertIssuerDNAlias;
 
-        @NameInMap("XForwardedForClientCertIssuerDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertIssuerDNEnabled")
         private Boolean xForwardedForClientCertIssuerDNEnabled;
 
-        @NameInMap("XForwardedForClientCertSubjectDNAlias")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNAlias")
         private String xForwardedForClientCertSubjectDNAlias;
 
-        @NameInMap("XForwardedForClientCertSubjectDNEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientCertSubjectDNEnabled")
         private Boolean xForwardedForClientCertSubjectDNEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsEnabled")
         private Boolean xForwardedForClientSourceIpsEnabled;
 
-        @NameInMap("XForwardedForClientSourceIpsTrusted")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSourceIpsTrusted")
         private String xForwardedForClientSourceIpsTrusted;
 
-        @NameInMap("XForwardedForClientSrcPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForClientSrcPortEnabled")
         private Boolean xForwardedForClientSrcPortEnabled;
 
-        @NameInMap("XForwardedForEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForEnabled")
         private Boolean xForwardedForEnabled;
 
-        @NameInMap("XForwardedForProtoEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForProtoEnabled")
         private Boolean xForwardedForProtoEnabled;
 
-        @NameInMap("XForwardedForSLBIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBIdEnabled")
         private Boolean xForwardedForSLBIdEnabled;
 
-        @NameInMap("XForwardedForSLBPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("XForwardedForSLBPortEnabled")
         private Boolean xForwardedForSLBPortEnabled;
 
         private XForwardedForConfig(Builder builder) {

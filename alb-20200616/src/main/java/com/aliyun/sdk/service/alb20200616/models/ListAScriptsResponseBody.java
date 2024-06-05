@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alb20200616.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAScriptsResponseBody</p>
  */
 public class ListAScriptsResponseBody extends TeaModel {
-    @NameInMap("AScripts")
+    @com.aliyun.core.annotation.NameInMap("AScripts")
     private java.util.List < AScripts> aScripts;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAScriptsResponseBody(Builder builder) {
@@ -140,25 +139,25 @@ public class ListAScriptsResponseBody extends TeaModel {
     } 
 
     public static class AScripts extends TeaModel {
-        @NameInMap("AScriptId")
+        @com.aliyun.core.annotation.NameInMap("AScriptId")
         private String aScriptId;
 
-        @NameInMap("AScriptName")
+        @com.aliyun.core.annotation.NameInMap("AScriptName")
         private String aScriptName;
 
-        @NameInMap("AScriptStatus")
+        @com.aliyun.core.annotation.NameInMap("AScriptStatus")
         private String aScriptStatus;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("ScriptContent")
+        @com.aliyun.core.annotation.NameInMap("ScriptContent")
         private String scriptContent;
 
         private AScripts(Builder builder) {
