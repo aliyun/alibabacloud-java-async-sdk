@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataFlowsResponseBody</p>
  */
 public class DescribeDataFlowsResponseBody extends TeaModel {
-    @NameInMap("DataFlowInfo")
+    @com.aliyun.core.annotation.NameInMap("DataFlowInfo")
     private DataFlowInfo dataFlowInfo;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDataFlowsResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
     } 
 
     public static class AutoRefresh extends TeaModel {
-        @NameInMap("RefreshPath")
+        @com.aliyun.core.annotation.NameInMap("RefreshPath")
         private String refreshPath;
 
         private AutoRefresh(Builder builder) {
@@ -142,7 +141,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
     }
     public static class DataFlowAutoRefresh extends TeaModel {
-        @NameInMap("AutoRefresh")
+        @com.aliyun.core.annotation.NameInMap("AutoRefresh")
         private java.util.List < AutoRefresh> autoRefresh;
 
         private DataFlowAutoRefresh(Builder builder) {
@@ -183,56 +182,56 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
     }
     public static class DataFlow extends TeaModel {
-        @NameInMap("AutoRefresh")
+        @com.aliyun.core.annotation.NameInMap("AutoRefresh")
         private DataFlowAutoRefresh autoRefresh;
 
-        @NameInMap("AutoRefreshInterval")
+        @com.aliyun.core.annotation.NameInMap("AutoRefreshInterval")
         private Long autoRefreshInterval;
 
-        @NameInMap("AutoRefreshPolicy")
+        @com.aliyun.core.annotation.NameInMap("AutoRefreshPolicy")
         private String autoRefreshPolicy;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataFlowId")
+        @com.aliyun.core.annotation.NameInMap("DataFlowId")
         private String dataFlowId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemPath")
+        @com.aliyun.core.annotation.NameInMap("FileSystemPath")
         private String fileSystemPath;
 
-        @NameInMap("FsetDescription")
+        @com.aliyun.core.annotation.NameInMap("FsetDescription")
         private String fsetDescription;
 
-        @NameInMap("FsetId")
+        @com.aliyun.core.annotation.NameInMap("FsetId")
         private String fsetId;
 
-        @NameInMap("SourceSecurityType")
+        @com.aliyun.core.annotation.NameInMap("SourceSecurityType")
         private String sourceSecurityType;
 
-        @NameInMap("SourceStorage")
+        @com.aliyun.core.annotation.NameInMap("SourceStorage")
         private String sourceStorage;
 
-        @NameInMap("SourceStoragePath")
-        @Validation(maxLength = 1024)
+        @com.aliyun.core.annotation.NameInMap("SourceStoragePath")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024)
         private String sourceStoragePath;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Throughput")
+        @com.aliyun.core.annotation.NameInMap("Throughput")
         private Long throughput;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private DataFlow(Builder builder) {
@@ -612,7 +611,7 @@ public class DescribeDataFlowsResponseBody extends TeaModel {
 
     }
     public static class DataFlowInfo extends TeaModel {
-        @NameInMap("DataFlow")
+        @com.aliyun.core.annotation.NameInMap("DataFlow")
         private java.util.List < DataFlow> dataFlow;
 
         private DataFlowInfo(Builder builder) {

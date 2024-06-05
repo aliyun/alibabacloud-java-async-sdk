@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRecentlyRecycledDirectoriesResponseBody</p>
  */
 public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
-    @NameInMap("Entries")
+    @com.aliyun.core.annotation.NameInMap("Entries")
     private java.util.List < Entries> entries;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRecentlyRecycledDirectoriesResponseBody(Builder builder) {
@@ -95,16 +94,16 @@ public class ListRecentlyRecycledDirectoriesResponseBody extends TeaModel {
     } 
 
     public static class Entries extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("LastDeleteTime")
+        @com.aliyun.core.annotation.NameInMap("LastDeleteTime")
         private String lastDeleteTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private Entries(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMountedClientsResponseBody</p>
  */
 public class DescribeMountedClientsResponseBody extends TeaModel {
-    @NameInMap("Clients")
+    @com.aliyun.core.annotation.NameInMap("Clients")
     private Clients clients;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeMountedClientsResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
     } 
 
     public static class Client extends TeaModel {
-        @NameInMap("ClientIP")
+        @com.aliyun.core.annotation.NameInMap("ClientIP")
         private String clientIP;
 
         private Client(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeMountedClientsResponseBody extends TeaModel {
 
     }
     public static class Clients extends TeaModel {
-        @NameInMap("Client")
+        @com.aliyun.core.annotation.NameInMap("Client")
         private java.util.List < Client> client;
 
         private Clients(Builder builder) {

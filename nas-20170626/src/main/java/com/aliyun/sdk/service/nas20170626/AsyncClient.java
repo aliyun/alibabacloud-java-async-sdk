@@ -120,7 +120,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-      * *   Only advanced Extreme NAS file systems support this feature.
+      * *   Only advanced Extreme NAS file systems support the snapshot feature.
       * *   You can create a maximum of 100 automatic snapshot policies in each region for an Alibaba Cloud account.
       * *   If an auto snapshot is being created when the scheduled time for a new auto snapshot arrives, the creation of the new snapshot is skipped. This occurs if the file system stores a large volume of data. For example, you have scheduled auto snapshots to be created at 09:00:00, 10:00:00, 11:00:00, and 12:00:00 for a file system. The system starts to create an auto snapshot at 09:00:00 and does not complete the process until 10:20:00. The process takes 80 minutes because the file system has a large volume of data. In this case, the system does not create an auto snapshot at 10:00:00, but creates an auto snapshot at 11:00:00.
       * *   A maximum of 128 auto snapshots can be created for a file system. If the upper limit is reached, the earliest auto snapshot is deleted. This rule does not apply to manual snapshots.
@@ -293,7 +293,7 @@ public interface AsyncClient extends SdkAutoCloseable {
       * *   If the file system expires when a snapshot is being created, the file system is released and the snapshot is deleted.
       * *   When you create a snapshot for a file system, the I/O performance of the file system may be degraded for a short period of time. We recommend that you create snapshots during off-peak hours.
       * *   A snapshot is a backup of a file system at a specific point in time. After you create a snapshot, incremental data that is generated in the file system will not be synchronized to the snapshot.
-      * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to an overdue payment. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
+      * *   Manually created snapshots will not be deleted until 15 days after the service is suspended due to overdue payments. We recommend that you delete unnecessary snapshots at regular intervals to prevent extra fees incurred by the snapshots.
       *
      */
     CompletableFuture<CreateSnapshotResponse> createSnapshot(CreateSnapshotRequest request);
@@ -314,7 +314,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-      * *   Only advanced Extreme NAS file systems support this feature.
+      * *   Only advanced Extreme NAS file systems support the snapshot feature.
       * *   If you delete an automatic snapshot policy that is applied to a file system, snapshots for the file system are no longer created based on the policy.
       *
      */
@@ -397,7 +397,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   The snapshot feature is in public preview and is provided free of charge. [Apsara File Storage NAS Service Level Agreement (SLA)](https://www.alibabacloud.com/help/legal/latest/network-attached-storage-service-level-agreement) is not guaranteed in public preview.
-      * *   Only advanced Extreme NAS file systems support this feature.
+      * *   Only advanced Extreme NAS file systems support the snapshot feature.
       *
      */
     CompletableFuture<DescribeAutoSnapshotTasksResponse> describeAutoSnapshotTasks(DescribeAutoSnapshotTasksRequest request);

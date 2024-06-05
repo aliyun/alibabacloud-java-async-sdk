@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDataFlowTasksResponseBody</p>
  */
 public class DescribeDataFlowTasksResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TaskInfo")
+    @com.aliyun.core.annotation.NameInMap("TaskInfo")
     private TaskInfo taskInfo;
 
     private DescribeDataFlowTasksResponseBody(Builder builder) {
@@ -92,55 +91,55 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
-        @NameInMap("ConflictPolicy")
+        @com.aliyun.core.annotation.NameInMap("ConflictPolicy")
         private String conflictPolicy;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataFlowId")
+        @com.aliyun.core.annotation.NameInMap("DataFlowId")
         private String dataFlowId;
 
-        @NameInMap("DataType")
+        @com.aliyun.core.annotation.NameInMap("DataType")
         private String dataType;
 
-        @NameInMap("Directory")
+        @com.aliyun.core.annotation.NameInMap("Directory")
         private String directory;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("FileSystemPath")
+        @com.aliyun.core.annotation.NameInMap("FileSystemPath")
         private String fileSystemPath;
 
-        @NameInMap("FilesystemId")
+        @com.aliyun.core.annotation.NameInMap("FilesystemId")
         private String filesystemId;
 
-        @NameInMap("FsPath")
+        @com.aliyun.core.annotation.NameInMap("FsPath")
         private String fsPath;
 
-        @NameInMap("Originator")
+        @com.aliyun.core.annotation.NameInMap("Originator")
         private String originator;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private Long progress;
 
-        @NameInMap("ReportPath")
+        @com.aliyun.core.annotation.NameInMap("ReportPath")
         private String reportPath;
 
-        @NameInMap("SourceStorage")
+        @com.aliyun.core.annotation.NameInMap("SourceStorage")
         private String sourceStorage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Task(Builder builder) {
@@ -499,7 +498,7 @@ public class DescribeDataFlowTasksResponseBody extends TeaModel {
 
     }
     public static class TaskInfo extends TeaModel {
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
 
         private TaskInfo(Builder builder) {

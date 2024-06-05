@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSnapshotsResponseBody</p>
  */
 public class DescribeSnapshotsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Snapshots")
+    @com.aliyun.core.annotation.NameInMap("Snapshots")
     private Snapshots snapshots;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeSnapshotsResponseBody(Builder builder) {
@@ -132,51 +131,59 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Snapshot extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private Integer encryptType;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
+        private String fileSystemType;
+
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RemainTime")
+        @com.aliyun.core.annotation.NameInMap("RemainTime")
         private Integer remainTime;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private Integer retentionDays;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("SnapshotName")
+        @com.aliyun.core.annotation.NameInMap("SnapshotName")
         private String snapshotName;
 
-        @NameInMap("SourceFileSystemId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotType")
+        private String snapshotType;
+
+        @com.aliyun.core.annotation.NameInMap("SourceFileSystemId")
         private String sourceFileSystemId;
 
-        @NameInMap("SourceFileSystemSize")
+        @com.aliyun.core.annotation.NameInMap("SourceFileSystemSize")
         private Long sourceFileSystemSize;
 
-        @NameInMap("SourceFileSystemVersion")
+        @com.aliyun.core.annotation.NameInMap("SourceFileSystemVersion")
         private String sourceFileSystemVersion;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Snapshot(Builder builder) {
             this.createTime = builder.createTime;
             this.description = builder.description;
             this.encryptType = builder.encryptType;
+            this.fileSystemType = builder.fileSystemType;
             this.progress = builder.progress;
             this.remainTime = builder.remainTime;
             this.retentionDays = builder.retentionDays;
             this.snapshotId = builder.snapshotId;
             this.snapshotName = builder.snapshotName;
+            this.snapshotType = builder.snapshotType;
             this.sourceFileSystemId = builder.sourceFileSystemId;
             this.sourceFileSystemSize = builder.sourceFileSystemSize;
             this.sourceFileSystemVersion = builder.sourceFileSystemVersion;
@@ -210,6 +217,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
          */
         public Integer getEncryptType() {
             return this.encryptType;
+        }
+
+        /**
+         * @return fileSystemType
+         */
+        public String getFileSystemType() {
+            return this.fileSystemType;
         }
 
         /**
@@ -248,6 +262,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         }
 
         /**
+         * @return snapshotType
+         */
+        public String getSnapshotType() {
+            return this.snapshotType;
+        }
+
+        /**
          * @return sourceFileSystemId
          */
         public String getSourceFileSystemId() {
@@ -279,11 +300,13 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             private String createTime; 
             private String description; 
             private Integer encryptType; 
+            private String fileSystemType; 
             private String progress; 
             private Integer remainTime; 
             private Integer retentionDays; 
             private String snapshotId; 
             private String snapshotName; 
+            private String snapshotType; 
             private String sourceFileSystemId; 
             private Long sourceFileSystemSize; 
             private String sourceFileSystemVersion; 
@@ -319,6 +342,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
              */
             public Builder encryptType(Integer encryptType) {
                 this.encryptType = encryptType;
+                return this;
+            }
+
+            /**
+             * FileSystemType.
+             */
+            public Builder fileSystemType(String fileSystemType) {
+                this.fileSystemType = fileSystemType;
                 return this;
             }
 
@@ -377,6 +408,14 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
+             * SnapshotType.
+             */
+            public Builder snapshotType(String snapshotType) {
+                this.snapshotType = snapshotType;
+                return this;
+            }
+
+            /**
              * The ID of the source file system.
              * <p>
              * 
@@ -429,7 +468,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < Snapshot> snapshot;
 
         private Snapshots(Builder builder) {

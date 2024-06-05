@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessPointRequest</p>
  */
 public class CreateAccessPointRequest extends Request {
-    @Query
-    @NameInMap("AccessGroup")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessGroup")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accessGroup;
 
-    @Query
-    @NameInMap("AccessPointName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccessPointName")
     private String accessPointName;
 
-    @Query
-    @NameInMap("EnabledRam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnabledRam")
     private Boolean enabledRam;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("OwnerGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerGroupId")
     private Integer ownerGroupId;
 
-    @Query
-    @NameInMap("OwnerUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUserId")
     private Integer ownerUserId;
 
-    @Query
-    @NameInMap("Permission")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Permission")
     private String permission;
 
-    @Query
-    @NameInMap("PosixGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PosixGroupId")
     private Integer posixGroupId;
 
-    @Query
-    @NameInMap("PosixSecondaryGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PosixSecondaryGroupIds")
     private String posixSecondaryGroupIds;
 
-    @Query
-    @NameInMap("PosixUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PosixUserId")
     private Integer posixUserId;
 
-    @Query
-    @NameInMap("RootDirectory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDirectory")
     private String rootDirectory;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
-    @Query
-    @NameInMap("VswId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VswId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vswId;
 
     private CreateAccessPointRequest(Builder builder) {

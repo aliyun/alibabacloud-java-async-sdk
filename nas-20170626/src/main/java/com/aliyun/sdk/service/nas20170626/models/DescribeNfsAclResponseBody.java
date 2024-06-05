@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNfsAclResponseBody</p>
  */
 public class DescribeNfsAclResponseBody extends TeaModel {
-    @NameInMap("Acl")
+    @com.aliyun.core.annotation.NameInMap("Acl")
     private Acl acl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNfsAclResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeNfsAclResponseBody extends TeaModel {
     } 
 
     public static class Acl extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
         private Acl(Builder builder) {

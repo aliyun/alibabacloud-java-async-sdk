@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAutoSnapshotPolicyRequest</p>
  */
 public class CreateAutoSnapshotPolicyRequest extends Request {
-    @Query
-    @NameInMap("AutoSnapshotPolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyName")
     private String autoSnapshotPolicyName;
 
-    @Query
-    @NameInMap("FileSystemType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemType;
 
-    @Query
-    @NameInMap("RepeatWeekdays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RepeatWeekdays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String repeatWeekdays;
 
-    @Query
-    @NameInMap("RetentionDays")
-    @Validation(maximum = 65536)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RetentionDays")
+    @com.aliyun.core.annotation.Validation(maximum = 65536)
     private Integer retentionDays;
 
-    @Query
-    @NameInMap("TimePoints")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TimePoints")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String timePoints;
 
     private CreateAutoSnapshotPolicyRequest(Builder builder) {

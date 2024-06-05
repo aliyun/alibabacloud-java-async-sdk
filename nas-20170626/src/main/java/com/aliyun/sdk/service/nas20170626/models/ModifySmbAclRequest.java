@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySmbAclRequest</p>
  */
 public class ModifySmbAclRequest extends Request {
-    @Query
-    @NameInMap("EnableAnonymousAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableAnonymousAccess")
     private Boolean enableAnonymousAccess;
 
-    @Query
-    @NameInMap("EncryptData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptData")
     private Boolean encryptData;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("HomeDirPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HomeDirPath")
     private String homeDirPath;
 
-    @Query
-    @NameInMap("Keytab")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keytab")
     private String keytab;
 
-    @Query
-    @NameInMap("KeytabMd5")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeytabMd5")
     private String keytabMd5;
 
-    @Query
-    @NameInMap("RejectUnencryptedAccess")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RejectUnencryptedAccess")
     private Boolean rejectUnencryptedAccess;
 
-    @Query
-    @NameInMap("SuperAdminSid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SuperAdminSid")
     private String superAdminSid;
 
     private ModifySmbAclRequest(Builder builder) {

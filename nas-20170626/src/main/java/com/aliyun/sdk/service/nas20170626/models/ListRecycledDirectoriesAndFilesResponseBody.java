@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRecycledDirectoriesAndFilesResponseBody</p>
  */
 public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
-    @NameInMap("Entries")
+    @com.aliyun.core.annotation.NameInMap("Entries")
     private java.util.List < Entries> entries;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRecycledDirectoriesAndFilesResponseBody(Builder builder) {
@@ -95,31 +94,31 @@ public class ListRecycledDirectoriesAndFilesResponseBody extends TeaModel {
     } 
 
     public static class Entries extends TeaModel {
-        @NameInMap("ATime")
+        @com.aliyun.core.annotation.NameInMap("ATime")
         private String aTime;
 
-        @NameInMap("CTime")
+        @com.aliyun.core.annotation.NameInMap("CTime")
         private String cTime;
 
-        @NameInMap("DeleteTime")
+        @com.aliyun.core.annotation.NameInMap("DeleteTime")
         private String deleteTime;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("Inode")
+        @com.aliyun.core.annotation.NameInMap("Inode")
         private String inode;
 
-        @NameInMap("MTime")
+        @com.aliyun.core.annotation.NameInMap("MTime")
         private String mTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Entries(Builder builder) {

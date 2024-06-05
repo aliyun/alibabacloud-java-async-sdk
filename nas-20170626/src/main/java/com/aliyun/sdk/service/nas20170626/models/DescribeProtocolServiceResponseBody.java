@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProtocolServiceResponseBody</p>
  */
 public class DescribeProtocolServiceResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ProtocolServices")
+    @com.aliyun.core.annotation.NameInMap("ProtocolServices")
     private java.util.List < ProtocolServices> protocolServices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeProtocolServiceResponseBody(Builder builder) {
@@ -92,43 +91,43 @@ public class DescribeProtocolServiceResponseBody extends TeaModel {
     } 
 
     public static class ProtocolServices extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("InstanceBaseThroughput")
+        @com.aliyun.core.annotation.NameInMap("InstanceBaseThroughput")
         private Integer instanceBaseThroughput;
 
-        @NameInMap("InstanceBurstThroughput")
+        @com.aliyun.core.annotation.NameInMap("InstanceBurstThroughput")
         private Integer instanceBurstThroughput;
 
-        @NameInMap("InstanceRAM")
+        @com.aliyun.core.annotation.NameInMap("InstanceRAM")
         private Integer instanceRAM;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("MountTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MountTargetCount")
         private Integer mountTargetCount;
 
-        @NameInMap("ProtocolServiceId")
+        @com.aliyun.core.annotation.NameInMap("ProtocolServiceId")
         private String protocolServiceId;
 
-        @NameInMap("ProtocolSpec")
+        @com.aliyun.core.annotation.NameInMap("ProtocolSpec")
         private String protocolSpec;
 
-        @NameInMap("ProtocolThroughput")
+        @com.aliyun.core.annotation.NameInMap("ProtocolThroughput")
         private Integer protocolThroughput;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ProtocolServices(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessRulesResponseBody</p>
  */
 public class DescribeAccessRulesResponseBody extends TeaModel {
-    @NameInMap("AccessRules")
+    @com.aliyun.core.annotation.NameInMap("AccessRules")
     private AccessRules accessRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessRulesResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
     } 
 
     public static class AccessRule extends TeaModel {
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("AccessRuleId")
+        @com.aliyun.core.annotation.NameInMap("AccessRuleId")
         private String accessRuleId;
 
-        @NameInMap("FileSystemType")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
         private String fileSystemType;
 
-        @NameInMap("Ipv6SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("Ipv6SourceCidrIp")
         private String ipv6SourceCidrIp;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private Integer priority;
 
-        @NameInMap("RWAccess")
+        @com.aliyun.core.annotation.NameInMap("RWAccess")
         private String RWAccess;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SourceCidrIp")
+        @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
         private String sourceCidrIp;
 
-        @NameInMap("UserAccess")
+        @com.aliyun.core.annotation.NameInMap("UserAccess")
         private String userAccess;
 
         private AccessRule(Builder builder) {
@@ -353,7 +352,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
 
     }
     public static class AccessRules extends TeaModel {
-        @NameInMap("AccessRule")
+        @com.aliyun.core.annotation.NameInMap("AccessRule")
         private java.util.List < AccessRule> accessRule;
 
         private AccessRules(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,62 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDataFlowRequest</p>
  */
 public class CreateDataFlowRequest extends Request {
-    @Query
-    @NameInMap("AutoRefreshInterval")
-    @Validation(maximum = 525600, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRefreshInterval")
+    @com.aliyun.core.annotation.Validation(maximum = 525600, minimum = 5)
     private Long autoRefreshInterval;
 
-    @Query
-    @NameInMap("AutoRefreshPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRefreshPolicy")
     private String autoRefreshPolicy;
 
-    @Query
-    @NameInMap("AutoRefreshs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRefreshs")
     private java.util.List < AutoRefreshs> autoRefreshs;
 
-    @Query
-    @NameInMap("ClientToken")
-    @Validation(maxLength = 64, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 1)
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("FileSystemPath")
-    @Validation(maxLength = 1023, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemPath")
+    @com.aliyun.core.annotation.Validation(maxLength = 1023, minLength = 1)
     private String fileSystemPath;
 
-    @Query
-    @NameInMap("FsetId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsetId")
     private String fsetId;
 
-    @Query
-    @NameInMap("SourceSecurityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceSecurityType")
     private String sourceSecurityType;
 
-    @Query
-    @NameInMap("SourceStorage")
-    @Validation(required = true, maxLength = 128)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceStorage")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 128)
     private String sourceStorage;
 
-    @Query
-    @NameInMap("SourceStoragePath")
-    @Validation(maxLength = 1023, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceStoragePath")
+    @com.aliyun.core.annotation.Validation(maxLength = 1023, minLength = 1)
     private String sourceStoragePath;
 
-    @Query
-    @NameInMap("Throughput")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Throughput")
     private Long throughput;
 
     private CreateDataFlowRequest(Builder builder) {
@@ -404,8 +403,8 @@ public class CreateDataFlowRequest extends Request {
     } 
 
     public static class AutoRefreshs extends TeaModel {
-        @NameInMap("RefreshPath")
-        @Validation(maxLength = 1024, minLength = 2)
+        @com.aliyun.core.annotation.NameInMap("RefreshPath")
+        @com.aliyun.core.annotation.Validation(maxLength = 1024, minLength = 2)
         private String refreshPath;
 
         private AutoRefreshs(Builder builder) {

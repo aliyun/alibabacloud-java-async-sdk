@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDirQuotasResponseBody</p>
  */
 public class DescribeDirQuotasResponseBody extends TeaModel {
-    @NameInMap("DirQuotaInfos")
+    @com.aliyun.core.annotation.NameInMap("DirQuotaInfos")
     private java.util.List < DirQuotaInfos> dirQuotaInfos;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeDirQuotasResponseBody(Builder builder) {
@@ -132,25 +131,28 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
     } 
 
     public static class UserQuotaInfos extends TeaModel {
-        @NameInMap("FileCountLimit")
+        @com.aliyun.core.annotation.NameInMap("FileCountLimit")
         private Long fileCountLimit;
 
-        @NameInMap("FileCountReal")
+        @com.aliyun.core.annotation.NameInMap("FileCountReal")
         private Long fileCountReal;
 
-        @NameInMap("QuotaType")
+        @com.aliyun.core.annotation.NameInMap("QuotaType")
         private String quotaType;
 
-        @NameInMap("SizeLimit")
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
         private Long sizeLimit;
 
-        @NameInMap("SizeReal")
+        @com.aliyun.core.annotation.NameInMap("SizeReal")
         private Long sizeReal;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("SizeRealInByte")
+        private Long sizeRealInByte;
+
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserType")
+        @com.aliyun.core.annotation.NameInMap("UserType")
         private String userType;
 
         private UserQuotaInfos(Builder builder) {
@@ -159,6 +161,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             this.quotaType = builder.quotaType;
             this.sizeLimit = builder.sizeLimit;
             this.sizeReal = builder.sizeReal;
+            this.sizeRealInByte = builder.sizeRealInByte;
             this.userId = builder.userId;
             this.userType = builder.userType;
         }
@@ -207,6 +210,13 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
         }
 
         /**
+         * @return sizeRealInByte
+         */
+        public Long getSizeRealInByte() {
+            return this.sizeRealInByte;
+        }
+
+        /**
          * @return userId
          */
         public String getUserId() {
@@ -226,6 +236,7 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             private String quotaType; 
             private Long sizeLimit; 
             private Long sizeReal; 
+            private Long sizeRealInByte; 
             private String userId; 
             private String userType; 
 
@@ -270,6 +281,14 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
             }
 
             /**
+             * SizeRealInByte.
+             */
+            public Builder sizeRealInByte(Long sizeRealInByte) {
+                this.sizeRealInByte = sizeRealInByte;
+                return this;
+            }
+
+            /**
              * The ID of the user that you specify to create a quota for the directory. The value depends on the value of the UserType parameter. Valid values: Uid and Gid.
              */
             public Builder userId(String userId) {
@@ -297,16 +316,16 @@ public class DescribeDirQuotasResponseBody extends TeaModel {
 
     }
     public static class DirQuotaInfos extends TeaModel {
-        @NameInMap("DirInode")
+        @com.aliyun.core.annotation.NameInMap("DirInode")
         private String dirInode;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UserQuotaInfos")
+        @com.aliyun.core.annotation.NameInMap("UserQuotaInfos")
         private java.util.List < UserQuotaInfos> userQuotaInfos;
 
         private DirQuotaInfos(Builder builder) {

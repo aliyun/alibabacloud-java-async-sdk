@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMountTargetsResponseBody</p>
  */
 public class DescribeMountTargetsResponseBody extends TeaModel {
-    @NameInMap("MountTargets")
+    @com.aliyun.core.annotation.NameInMap("MountTargets")
     private MountTargets mountTargets;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeMountTargetsResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
     } 
 
     public static class ClientMasterNode extends TeaModel {
-        @NameInMap("DefaultPasswd")
+        @com.aliyun.core.annotation.NameInMap("DefaultPasswd")
         private String defaultPasswd;
 
-        @NameInMap("EcsId")
+        @com.aliyun.core.annotation.NameInMap("EcsId")
         private String ecsId;
 
-        @NameInMap("EcsIp")
+        @com.aliyun.core.annotation.NameInMap("EcsIp")
         private String ecsIp;
 
         private ClientMasterNode(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     }
     public static class ClientMasterNodes extends TeaModel {
-        @NameInMap("ClientMasterNode")
+        @com.aliyun.core.annotation.NameInMap("ClientMasterNode")
         private java.util.List < ClientMasterNode> clientMasterNode;
 
         private ClientMasterNodes(Builder builder) {
@@ -254,31 +253,31 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     }
     public static class MountTarget extends TeaModel {
-        @NameInMap("AccessGroup")
+        @com.aliyun.core.annotation.NameInMap("AccessGroup")
         private String accessGroup;
 
-        @NameInMap("ClientMasterNodes")
+        @com.aliyun.core.annotation.NameInMap("ClientMasterNodes")
         private ClientMasterNodes clientMasterNodes;
 
-        @NameInMap("DualStackMountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
         private String dualStackMountTargetDomain;
 
-        @NameInMap("IPVersion")
+        @com.aliyun.core.annotation.NameInMap("IPVersion")
         private String IPVersion;
 
-        @NameInMap("MountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
         private String mountTargetDomain;
 
-        @NameInMap("NetworkType")
+        @com.aliyun.core.annotation.NameInMap("NetworkType")
         private String networkType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VswId")
+        @com.aliyun.core.annotation.NameInMap("VswId")
         private String vswId;
 
         private MountTarget(Builder builder) {
@@ -471,7 +470,7 @@ public class DescribeMountTargetsResponseBody extends TeaModel {
 
     }
     public static class MountTargets extends TeaModel {
-        @NameInMap("MountTarget")
+        @com.aliyun.core.annotation.NameInMap("MountTarget")
         private java.util.List < MountTarget> mountTarget;
 
         private MountTargets(Builder builder) {

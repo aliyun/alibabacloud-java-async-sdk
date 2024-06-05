@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyFilesetRequest</p>
  */
 public class ModifyFilesetRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+    private Boolean deletionProtection;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("FsetId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FsetId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fsetId;
 
     private ModifyFilesetRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
+        this.deletionProtection = builder.deletionProtection;
         this.description = builder.description;
         this.dryRun = builder.dryRun;
         this.fileSystemId = builder.fileSystemId;
@@ -61,6 +65,13 @@ public class ModifyFilesetRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    /**
+     * @return deletionProtection
+     */
+    public Boolean getDeletionProtection() {
+        return this.deletionProtection;
     }
 
     /**
@@ -93,6 +104,7 @@ public class ModifyFilesetRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyFilesetRequest, Builder> {
         private String clientToken; 
+        private Boolean deletionProtection; 
         private String description; 
         private Boolean dryRun; 
         private String fileSystemId; 
@@ -105,6 +117,7 @@ public class ModifyFilesetRequest extends Request {
         private Builder(ModifyFilesetRequest request) {
             super(request);
             this.clientToken = request.clientToken;
+            this.deletionProtection = request.deletionProtection;
             this.description = request.description;
             this.dryRun = request.dryRun;
             this.fileSystemId = request.fileSystemId;
@@ -122,6 +135,15 @@ public class ModifyFilesetRequest extends Request {
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
+            return this;
+        }
+
+        /**
+         * DeletionProtection.
+         */
+        public Builder deletionProtection(Boolean deletionProtection) {
+            this.putQueryParameter("DeletionProtection", deletionProtection);
+            this.deletionProtection = deletionProtection;
             return this;
         }
 

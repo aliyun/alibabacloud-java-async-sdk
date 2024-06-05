@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotTasksResponseBody</p>
  */
 public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotTasks")
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotTasks")
     private AutoSnapshotTasks autoSnapshotTasks;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoSnapshotTasksResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
     } 
 
     public static class AutoSnapshotTask extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("SourceFileSystemId")
+        @com.aliyun.core.annotation.NameInMap("SourceFileSystemId")
         private String sourceFileSystemId;
 
         private AutoSnapshotTask(Builder builder) {
@@ -193,7 +192,7 @@ public class DescribeAutoSnapshotTasksResponseBody extends TeaModel {
 
     }
     public static class AutoSnapshotTasks extends TeaModel {
-        @NameInMap("AutoSnapshotTask")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotTask")
         private java.util.List < AutoSnapshotTask> autoSnapshotTask;
 
         private AutoSnapshotTasks(Builder builder) {

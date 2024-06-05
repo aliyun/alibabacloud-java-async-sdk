@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMountTargetResponseBody</p>
  */
 public class CreateMountTargetResponseBody extends TeaModel {
-    @NameInMap("MountTargetDomain")
+    @com.aliyun.core.annotation.NameInMap("MountTargetDomain")
     private String mountTargetDomain;
 
-    @NameInMap("MountTargetExtra")
+    @com.aliyun.core.annotation.NameInMap("MountTargetExtra")
     private MountTargetExtra mountTargetExtra;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateMountTargetResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class CreateMountTargetResponseBody extends TeaModel {
     } 
 
     public static class MountTargetExtra extends TeaModel {
-        @NameInMap("DualStackMountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("DualStackMountTargetDomain")
         private String dualStackMountTargetDomain;
 
         private MountTargetExtra(Builder builder) {

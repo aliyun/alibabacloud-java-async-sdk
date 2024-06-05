@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,11 +11,11 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessPointResponseBody</p>
  */
 public class DescribeAccessPointResponseBody extends TeaModel {
-    @NameInMap("AccessPoint")
+    @com.aliyun.core.annotation.NameInMap("AccessPoint")
     private AccessPoint accessPoint;
 
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private DescribeAccessPointResponseBody(Builder builder) {
@@ -73,13 +72,13 @@ public class DescribeAccessPointResponseBody extends TeaModel {
     } 
 
     public static class PosixUser extends TeaModel {
-        @NameInMap("PosixGroupId")
+        @com.aliyun.core.annotation.NameInMap("PosixGroupId")
         private Integer posixGroupId;
 
-        @NameInMap("PosixSecondaryGroupIds")
+        @com.aliyun.core.annotation.NameInMap("PosixSecondaryGroupIds")
         private java.util.List < Integer > posixSecondaryGroupIds;
 
-        @NameInMap("PosixUserId")
+        @com.aliyun.core.annotation.NameInMap("PosixUserId")
         private Integer posixUserId;
 
         private PosixUser(Builder builder) {
@@ -154,13 +153,13 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     }
     public static class RootPathPermission extends TeaModel {
-        @NameInMap("OwnerGroupId")
+        @com.aliyun.core.annotation.NameInMap("OwnerGroupId")
         private Integer ownerGroupId;
 
-        @NameInMap("OwnerUserId")
+        @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private Integer ownerUserId;
 
-        @NameInMap("Permission")
+        @com.aliyun.core.annotation.NameInMap("Permission")
         private String permission;
 
         private RootPathPermission(Builder builder) {
@@ -235,55 +234,55 @@ public class DescribeAccessPointResponseBody extends TeaModel {
 
     }
     public static class AccessPoint extends TeaModel {
-        @NameInMap("ARN")
+        @com.aliyun.core.annotation.NameInMap("ARN")
         private String ARN;
 
-        @NameInMap("AccessGroup")
+        @com.aliyun.core.annotation.NameInMap("AccessGroup")
         private String accessGroup;
 
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
-        @NameInMap("AccessPointName")
+        @com.aliyun.core.annotation.NameInMap("AccessPointName")
         private String accessPointName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EnabledRam")
+        @com.aliyun.core.annotation.NameInMap("EnabledRam")
         private Boolean enabledRam;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("PosixUser")
+        @com.aliyun.core.annotation.NameInMap("PosixUser")
         private PosixUser posixUser;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RootPath")
+        @com.aliyun.core.annotation.NameInMap("RootPath")
         private String rootPath;
 
-        @NameInMap("RootPathPermission")
+        @com.aliyun.core.annotation.NameInMap("RootPathPermission")
         private RootPathPermission rootPathPermission;
 
-        @NameInMap("RootPathStatus")
+        @com.aliyun.core.annotation.NameInMap("RootPathStatus")
         private String rootPathStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private AccessPoint(Builder builder) {

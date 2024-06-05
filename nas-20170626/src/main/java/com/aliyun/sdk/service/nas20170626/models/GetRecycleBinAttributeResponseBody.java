@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRecycleBinAttributeResponseBody</p>
  */
 public class GetRecycleBinAttributeResponseBody extends TeaModel {
-    @NameInMap("RecycleBinAttribute")
+    @com.aliyun.core.annotation.NameInMap("RecycleBinAttribute")
     private RecycleBinAttribute recycleBinAttribute;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRecycleBinAttributeResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetRecycleBinAttributeResponseBody extends TeaModel {
     } 
 
     public static class RecycleBinAttribute extends TeaModel {
-        @NameInMap("EnableTime")
+        @com.aliyun.core.annotation.NameInMap("EnableTime")
         private String enableTime;
 
-        @NameInMap("ReservedDays")
+        @com.aliyun.core.annotation.NameInMap("ReservedDays")
         private Long reservedDays;
 
-        @NameInMap("SecondarySize")
+        @com.aliyun.core.annotation.NameInMap("SecondarySize")
         private Long secondarySize;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private RecycleBinAttribute(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccessGroupsResponseBody</p>
  */
 public class DescribeAccessGroupsResponseBody extends TeaModel {
-    @NameInMap("AccessGroups")
+    @com.aliyun.core.annotation.NameInMap("AccessGroups")
     private AccessGroups accessGroups;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAccessGroupsResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
     } 
 
     public static class AccessGroup extends TeaModel {
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("AccessGroupType")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupType")
         private String accessGroupType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemType")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
         private String fileSystemType;
 
-        @NameInMap("MountTargetCount")
+        @com.aliyun.core.annotation.NameInMap("MountTargetCount")
         private Integer mountTargetCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RuleCount")
+        @com.aliyun.core.annotation.NameInMap("RuleCount")
         private Integer ruleCount;
 
         private AccessGroup(Builder builder) {
@@ -313,7 +312,7 @@ public class DescribeAccessGroupsResponseBody extends TeaModel {
 
     }
     public static class AccessGroups extends TeaModel {
-        @NameInMap("AccessGroup")
+        @com.aliyun.core.annotation.NameInMap("AccessGroup")
         private java.util.List < AccessGroup> accessGroup;
 
         private AccessGroups(Builder builder) {

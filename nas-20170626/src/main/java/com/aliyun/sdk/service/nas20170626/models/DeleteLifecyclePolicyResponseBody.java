@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLifecyclePolicyResponseBody</p>
  */
 public class DeleteLifecyclePolicyResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DeleteLifecyclePolicyResponseBody(Builder builder) {
@@ -58,13 +57,13 @@ public class DeleteLifecyclePolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request is successful.
+         * Indicates whether the request was successful.
          * <p>
          * 
          * Valid values:
          * 
          * *   true
-         * *   false: The request failed.
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessPointResponseBody</p>
  */
 public class CreateAccessPointResponseBody extends TeaModel {
-    @NameInMap("AccessPoint")
+    @com.aliyun.core.annotation.NameInMap("AccessPoint")
     private AccessPoint accessPoint;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAccessPointResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class CreateAccessPointResponseBody extends TeaModel {
     } 
 
     public static class AccessPoint extends TeaModel {
-        @NameInMap("AccessPointDomain")
+        @com.aliyun.core.annotation.NameInMap("AccessPointDomain")
         private String accessPointDomain;
 
-        @NameInMap("AccessPointId")
+        @com.aliyun.core.annotation.NameInMap("AccessPointId")
         private String accessPointId;
 
         private AccessPoint(Builder builder) {

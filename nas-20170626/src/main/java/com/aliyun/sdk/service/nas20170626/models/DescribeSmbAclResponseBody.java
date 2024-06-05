@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSmbAclResponseBody</p>
  */
 public class DescribeSmbAclResponseBody extends TeaModel {
-    @NameInMap("Acl")
+    @com.aliyun.core.annotation.NameInMap("Acl")
     private Acl acl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSmbAclResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeSmbAclResponseBody extends TeaModel {
     } 
 
     public static class Acl extends TeaModel {
-        @NameInMap("EnableAnonymousAccess")
+        @com.aliyun.core.annotation.NameInMap("EnableAnonymousAccess")
         private Boolean enableAnonymousAccess;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EncryptData")
+        @com.aliyun.core.annotation.NameInMap("EncryptData")
         private Boolean encryptData;
 
-        @NameInMap("HomeDirPath")
+        @com.aliyun.core.annotation.NameInMap("HomeDirPath")
         private String homeDirPath;
 
-        @NameInMap("RejectUnencryptedAccess")
+        @com.aliyun.core.annotation.NameInMap("RejectUnencryptedAccess")
         private Boolean rejectUnencryptedAccess;
 
-        @NameInMap("SuperAdminSid")
+        @com.aliyun.core.annotation.NameInMap("SuperAdminSid")
         private String superAdminSid;
 
         private Acl(Builder builder) {

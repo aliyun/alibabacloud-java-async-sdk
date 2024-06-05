@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDirectoryOrFilePropertiesResponseBody</p>
  */
 public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
-    @NameInMap("Entry")
+    @com.aliyun.core.annotation.NameInMap("Entry")
     private Entry entry;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDirectoryOrFilePropertiesResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
     } 
 
     public static class Entry extends TeaModel {
-        @NameInMap("ATime")
+        @com.aliyun.core.annotation.NameInMap("ATime")
         private String aTime;
 
-        @NameInMap("CTime")
+        @com.aliyun.core.annotation.NameInMap("CTime")
         private String cTime;
 
-        @NameInMap("HasArchiveFile")
+        @com.aliyun.core.annotation.NameInMap("HasArchiveFile")
         private Boolean hasArchiveFile;
 
-        @NameInMap("HasInfrequentAccessFile")
+        @com.aliyun.core.annotation.NameInMap("HasInfrequentAccessFile")
         private Boolean hasInfrequentAccessFile;
 
-        @NameInMap("Inode")
+        @com.aliyun.core.annotation.NameInMap("Inode")
         private String inode;
 
-        @NameInMap("MTime")
+        @com.aliyun.core.annotation.NameInMap("MTime")
         private String mTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RetrieveTime")
+        @com.aliyun.core.annotation.NameInMap("RetrieveTime")
         private String retrieveTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Entry(Builder builder) {

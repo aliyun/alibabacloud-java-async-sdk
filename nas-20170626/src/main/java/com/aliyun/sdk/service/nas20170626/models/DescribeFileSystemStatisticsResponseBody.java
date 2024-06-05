@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFileSystemStatisticsResponseBody</p>
  */
 public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
-    @NameInMap("FileSystemStatistics")
+    @com.aliyun.core.annotation.NameInMap("FileSystemStatistics")
     private FileSystemStatistics fileSystemStatistics;
 
-    @NameInMap("FileSystems")
+    @com.aliyun.core.annotation.NameInMap("FileSystems")
     private FileSystems fileSystems;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeFileSystemStatisticsResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
     } 
 
     public static class FileSystemStatistic extends TeaModel {
-        @NameInMap("ExpiredCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiredCount")
         private Integer expiredCount;
 
-        @NameInMap("ExpiringCount")
+        @com.aliyun.core.annotation.NameInMap("ExpiringCount")
         private Integer expiringCount;
 
-        @NameInMap("FileSystemType")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
         private String fileSystemType;
 
-        @NameInMap("MeteredSize")
+        @com.aliyun.core.annotation.NameInMap("MeteredSize")
         private Long meteredSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private FileSystemStatistic(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     }
     public static class FileSystemStatistics extends TeaModel {
-        @NameInMap("FileSystemStatistic")
+        @com.aliyun.core.annotation.NameInMap("FileSystemStatistic")
         private java.util.List < FileSystemStatistic> fileSystemStatistic;
 
         private FileSystemStatistics(Builder builder) {
@@ -322,16 +321,16 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     }
     public static class Package extends TeaModel {
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("PackageId")
+        @com.aliyun.core.annotation.NameInMap("PackageId")
         private String packageId;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Package(Builder builder) {
@@ -423,7 +422,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     }
     public static class Packages extends TeaModel {
-        @NameInMap("Package")
+        @com.aliyun.core.annotation.NameInMap("Package")
         private java.util.List < Package> _package;
 
         private Packages(Builder builder) {
@@ -464,49 +463,49 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     }
     public static class FileSystem extends TeaModel {
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("FileSystemType")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
         private String fileSystemType;
 
-        @NameInMap("MeteredIASize")
+        @com.aliyun.core.annotation.NameInMap("MeteredIASize")
         private Long meteredIASize;
 
-        @NameInMap("MeteredSize")
+        @com.aliyun.core.annotation.NameInMap("MeteredSize")
         private Long meteredSize;
 
-        @NameInMap("Packages")
+        @com.aliyun.core.annotation.NameInMap("Packages")
         private Packages packages;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private FileSystem(Builder builder) {
@@ -832,7 +831,7 @@ public class DescribeFileSystemStatisticsResponseBody extends TeaModel {
 
     }
     public static class FileSystems extends TeaModel {
-        @NameInMap("FileSystem")
+        @com.aliyun.core.annotation.NameInMap("FileSystem")
         private java.util.List < FileSystem> fileSystem;
 
         private FileSystems(Builder builder) {

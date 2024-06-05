@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeProtocolMountTargetResponseBody</p>
  */
 public class DescribeProtocolMountTargetResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ProtocolMountTargets")
+    @com.aliyun.core.annotation.NameInMap("ProtocolMountTargets")
     private java.util.List < ProtocolMountTargets> protocolMountTargets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeProtocolMountTargetResponseBody(Builder builder) {
@@ -92,40 +91,40 @@ public class DescribeProtocolMountTargetResponseBody extends TeaModel {
     } 
 
     public static class ProtocolMountTargets extends TeaModel {
-        @NameInMap("AccessGroupName")
+        @com.aliyun.core.annotation.NameInMap("AccessGroupName")
         private String accessGroupName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExportId")
+        @com.aliyun.core.annotation.NameInMap("ExportId")
         private String exportId;
 
-        @NameInMap("FsetId")
+        @com.aliyun.core.annotation.NameInMap("FsetId")
         private String fsetId;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("ProtocolMountTargetDomain")
+        @com.aliyun.core.annotation.NameInMap("ProtocolMountTargetDomain")
         private String protocolMountTargetDomain;
 
-        @NameInMap("ProtocolServiceId")
+        @com.aliyun.core.annotation.NameInMap("ProtocolServiceId")
         private String protocolServiceId;
 
-        @NameInMap("ProtocolType")
+        @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ProtocolMountTargets(Builder builder) {

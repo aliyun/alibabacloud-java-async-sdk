@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLifecyclePoliciesResponseBody</p>
  */
 public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
-    @NameInMap("LifecyclePolicies")
+    @com.aliyun.core.annotation.NameInMap("LifecyclePolicies")
     private java.util.List < LifecyclePolicies> lifecyclePolicies;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLifecyclePoliciesResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeLifecyclePoliciesResponseBody extends TeaModel {
     } 
 
     public static class LifecyclePolicies extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("LifecyclePolicyName")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePolicyName")
         private String lifecyclePolicyName;
 
-        @NameInMap("LifecycleRuleName")
+        @com.aliyun.core.annotation.NameInMap("LifecycleRuleName")
         private String lifecycleRuleName;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private java.util.List < String > paths;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
         private LifecyclePolicies(Builder builder) {

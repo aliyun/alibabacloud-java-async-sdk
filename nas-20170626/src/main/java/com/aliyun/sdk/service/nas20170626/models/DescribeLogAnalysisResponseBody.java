@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLogAnalysisResponseBody</p>
  */
 public class DescribeLogAnalysisResponseBody extends TeaModel {
-    @NameInMap("Analyses")
+    @com.aliyun.core.annotation.NameInMap("Analyses")
     private Analyses analyses;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeLogAnalysisResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
     } 
 
     public static class MetaValue extends TeaModel {
-        @NameInMap("Logstore")
+        @com.aliyun.core.annotation.NameInMap("Logstore")
         private String logstore;
 
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private String project;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private MetaValue(Builder builder) {
@@ -253,10 +252,10 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
 
     }
     public static class Analysis extends TeaModel {
-        @NameInMap("MetaKey")
+        @com.aliyun.core.annotation.NameInMap("MetaKey")
         private String metaKey;
 
-        @NameInMap("MetaValue")
+        @com.aliyun.core.annotation.NameInMap("MetaValue")
         private MetaValue metaValue;
 
         private Analysis(Builder builder) {
@@ -314,7 +313,7 @@ public class DescribeLogAnalysisResponseBody extends TeaModel {
 
     }
     public static class Analyses extends TeaModel {
-        @NameInMap("Analysis")
+        @com.aliyun.core.annotation.NameInMap("Analysis")
         private java.util.List < Analysis> analysis;
 
         private Analyses(Builder builder) {

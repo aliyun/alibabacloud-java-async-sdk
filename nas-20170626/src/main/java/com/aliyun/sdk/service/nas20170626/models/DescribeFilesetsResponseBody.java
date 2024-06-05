@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFilesetsResponseBody</p>
  */
 public class DescribeFilesetsResponseBody extends TeaModel {
-    @NameInMap("Entries")
+    @com.aliyun.core.annotation.NameInMap("Entries")
     private Entries entries;
 
-    @NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
     private String fileSystemId;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeFilesetsResponseBody(Builder builder) {
@@ -112,26 +111,30 @@ public class DescribeFilesetsResponseBody extends TeaModel {
     } 
 
     public static class Entrie extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtection")
+        private Boolean deletionProtection;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileSystemPath")
+        @com.aliyun.core.annotation.NameInMap("FileSystemPath")
         private String fileSystemPath;
 
-        @NameInMap("FsetId")
+        @com.aliyun.core.annotation.NameInMap("FsetId")
         private String fsetId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Entrie(Builder builder) {
             this.createTime = builder.createTime;
+            this.deletionProtection = builder.deletionProtection;
             this.description = builder.description;
             this.fileSystemPath = builder.fileSystemPath;
             this.fsetId = builder.fsetId;
@@ -152,6 +155,13 @@ public class DescribeFilesetsResponseBody extends TeaModel {
          */
         public String getCreateTime() {
             return this.createTime;
+        }
+
+        /**
+         * @return deletionProtection
+         */
+        public Boolean getDeletionProtection() {
+            return this.deletionProtection;
         }
 
         /**
@@ -191,6 +201,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String createTime; 
+            private Boolean deletionProtection; 
             private String description; 
             private String fileSystemPath; 
             private String fsetId; 
@@ -205,6 +216,14 @@ public class DescribeFilesetsResponseBody extends TeaModel {
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
+                return this;
+            }
+
+            /**
+             * DeletionProtection.
+             */
+            public Builder deletionProtection(Boolean deletionProtection) {
+                this.deletionProtection = deletionProtection;
                 return this;
             }
 
@@ -265,7 +284,7 @@ public class DescribeFilesetsResponseBody extends TeaModel {
 
     }
     public static class Entries extends TeaModel {
-        @NameInMap("Entrie")
+        @com.aliyun.core.annotation.NameInMap("Entrie")
         private java.util.List < Entrie> entrie;
 
         private Entries(Builder builder) {

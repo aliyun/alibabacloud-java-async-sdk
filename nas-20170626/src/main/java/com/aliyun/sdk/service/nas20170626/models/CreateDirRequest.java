@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDirRequest</p>
  */
 public class CreateDirRequest extends Request {
-    @Query
-    @NameInMap("FileSystemId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSystemId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
-    @Query
-    @NameInMap("OwnerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ownerGroupId;
 
-    @Query
-    @NameInMap("OwnerUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer ownerUserId;
 
-    @Query
-    @NameInMap("Permission")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Permission")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permission;
 
-    @Query
-    @NameInMap("Recursion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Recursion")
     private Boolean recursion;
 
-    @Query
-    @NameInMap("RootDirectory")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RootDirectory")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rootDirectory;
 
     private CreateDirRequest(Builder builder) {

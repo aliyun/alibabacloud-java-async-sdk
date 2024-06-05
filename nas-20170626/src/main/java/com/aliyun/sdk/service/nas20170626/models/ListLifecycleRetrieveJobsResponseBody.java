@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLifecycleRetrieveJobsResponseBody</p>
  */
 public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
-    @NameInMap("LifecycleRetrieveJobs")
+    @com.aliyun.core.annotation.NameInMap("LifecycleRetrieveJobs")
     private java.util.List < LifecycleRetrieveJobs> lifecycleRetrieveJobs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLifecycleRetrieveJobsResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
     } 
 
     public static class LifecycleRetrieveJobs extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DiscoveredFileCount")
+        @com.aliyun.core.annotation.NameInMap("DiscoveredFileCount")
         private Long discoveredFileCount;
 
-        @NameInMap("FileSystemId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemId")
         private String fileSystemId;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Paths")
+        @com.aliyun.core.annotation.NameInMap("Paths")
         private java.util.List < String > paths;
 
-        @NameInMap("RetrievedFileCount")
+        @com.aliyun.core.annotation.NameInMap("RetrievedFileCount")
         private Long retrievedFileCount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageType")
+        @com.aliyun.core.annotation.NameInMap("StorageType")
         private String storageType;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private LifecycleRetrieveJobs(Builder builder) {

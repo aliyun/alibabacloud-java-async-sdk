@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nas20170626.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAutoSnapshotPoliciesResponseBody</p>
  */
 public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
-    @NameInMap("AutoSnapshotPolicies")
+    @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicies")
     private AutoSnapshotPolicies autoSnapshotPolicies;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeAutoSnapshotPoliciesResponseBody(Builder builder) {
@@ -132,31 +131,34 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
     } 
 
     public static class AutoSnapshotPolicy extends TeaModel {
-        @NameInMap("AutoSnapshotPolicyId")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyId")
         private String autoSnapshotPolicyId;
 
-        @NameInMap("AutoSnapshotPolicyName")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicyName")
         private String autoSnapshotPolicyName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("FileSystemNums")
+        @com.aliyun.core.annotation.NameInMap("FileSystemNums")
         private Integer fileSystemNums;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("FileSystemType")
+        private String fileSystemType;
+
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RepeatWeekdays")
+        @com.aliyun.core.annotation.NameInMap("RepeatWeekdays")
         private String repeatWeekdays;
 
-        @NameInMap("RetentionDays")
+        @com.aliyun.core.annotation.NameInMap("RetentionDays")
         private Integer retentionDays;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimePoints")
+        @com.aliyun.core.annotation.NameInMap("TimePoints")
         private String timePoints;
 
         private AutoSnapshotPolicy(Builder builder) {
@@ -164,6 +166,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             this.autoSnapshotPolicyName = builder.autoSnapshotPolicyName;
             this.createTime = builder.createTime;
             this.fileSystemNums = builder.fileSystemNums;
+            this.fileSystemType = builder.fileSystemType;
             this.regionId = builder.regionId;
             this.repeatWeekdays = builder.repeatWeekdays;
             this.retentionDays = builder.retentionDays;
@@ -208,6 +211,13 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return fileSystemType
+         */
+        public String getFileSystemType() {
+            return this.fileSystemType;
+        }
+
+        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -247,6 +257,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             private String autoSnapshotPolicyName; 
             private String createTime; 
             private Integer fileSystemNums; 
+            private String fileSystemType; 
             private String regionId; 
             private String repeatWeekdays; 
             private Integer retentionDays; 
@@ -285,6 +296,14 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
              */
             public Builder fileSystemNums(Integer fileSystemNums) {
                 this.fileSystemNums = fileSystemNums;
+                return this;
+            }
+
+            /**
+             * FileSystemType.
+             */
+            public Builder fileSystemType(String fileSystemType) {
+                this.fileSystemType = fileSystemType;
                 return this;
             }
 
@@ -360,7 +379,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
 
     }
     public static class AutoSnapshotPolicies extends TeaModel {
-        @NameInMap("AutoSnapshotPolicy")
+        @com.aliyun.core.annotation.NameInMap("AutoSnapshotPolicy")
         private java.util.List < AutoSnapshotPolicy> autoSnapshotPolicy;
 
         private AutoSnapshotPolicies(Builder builder) {
