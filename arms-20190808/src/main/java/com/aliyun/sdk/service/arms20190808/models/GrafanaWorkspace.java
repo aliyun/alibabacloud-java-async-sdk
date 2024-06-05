@@ -32,6 +32,9 @@ public class GrafanaWorkspace extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceDomain")
     private String grafanaWorkspaceDomain;
 
+    @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceDomainStatus")
+    private String grafanaWorkspaceDomainStatus;
+
     @com.aliyun.core.annotation.NameInMap("grafanaWorkspaceEdition")
     private String grafanaWorkspaceEdition;
 
@@ -97,6 +100,7 @@ public class GrafanaWorkspace extends TeaModel {
         this.gmtCreate = builder.gmtCreate;
         this.grafanaVersion = builder.grafanaVersion;
         this.grafanaWorkspaceDomain = builder.grafanaWorkspaceDomain;
+        this.grafanaWorkspaceDomainStatus = builder.grafanaWorkspaceDomainStatus;
         this.grafanaWorkspaceEdition = builder.grafanaWorkspaceEdition;
         this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
         this.grafanaWorkspaceIp = builder.grafanaWorkspaceIp;
@@ -173,6 +177,13 @@ public class GrafanaWorkspace extends TeaModel {
      */
     public String getGrafanaWorkspaceDomain() {
         return this.grafanaWorkspaceDomain;
+    }
+
+    /**
+     * @return grafanaWorkspaceDomainStatus
+     */
+    public String getGrafanaWorkspaceDomainStatus() {
+        return this.grafanaWorkspaceDomainStatus;
     }
 
     /**
@@ -316,6 +327,7 @@ public class GrafanaWorkspace extends TeaModel {
         private Float gmtCreate; 
         private String grafanaVersion; 
         private String grafanaWorkspaceDomain; 
+        private String grafanaWorkspaceDomainStatus; 
         private String grafanaWorkspaceEdition; 
         private String grafanaWorkspaceId; 
         private String grafanaWorkspaceIp; 
@@ -389,6 +401,14 @@ public class GrafanaWorkspace extends TeaModel {
          */
         public Builder grafanaWorkspaceDomain(String grafanaWorkspaceDomain) {
             this.grafanaWorkspaceDomain = grafanaWorkspaceDomain;
+            return this;
+        }
+
+        /**
+         * grafanaWorkspaceDomainStatus.
+         */
+        public Builder grafanaWorkspaceDomainStatus(String grafanaWorkspaceDomainStatus) {
+            this.grafanaWorkspaceDomainStatus = grafanaWorkspaceDomainStatus;
             return this;
         }
 
