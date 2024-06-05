@@ -1,0 +1,143 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pds20220301.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link FileDeleteUserTagsRequest} extends {@link RequestModel}
+ *
+ * <p>FileDeleteUserTagsRequest</p>
+ */
+public class FileDeleteUserTagsRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("domain_id")
+    private String domainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("drive_id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String driveId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("file_id")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String fileId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("key_list")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < String > keyList;
+
+    private FileDeleteUserTagsRequest(Builder builder) {
+        super(builder);
+        this.domainId = builder.domainId;
+        this.driveId = builder.driveId;
+        this.fileId = builder.fileId;
+        this.keyList = builder.keyList;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static FileDeleteUserTagsRequest create() {
+        return builder().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new Builder(this);
+    }
+
+    /**
+     * @return domainId
+     */
+    public String getDomainId() {
+        return this.domainId;
+    }
+
+    /**
+     * @return driveId
+     */
+    public String getDriveId() {
+        return this.driveId;
+    }
+
+    /**
+     * @return fileId
+     */
+    public String getFileId() {
+        return this.fileId;
+    }
+
+    /**
+     * @return keyList
+     */
+    public java.util.List < String > getKeyList() {
+        return this.keyList;
+    }
+
+    public static final class Builder extends Request.Builder<FileDeleteUserTagsRequest, Builder> {
+        private String domainId; 
+        private String driveId; 
+        private String fileId; 
+        private java.util.List < String > keyList; 
+
+        private Builder() {
+            super();
+        } 
+
+        private Builder(FileDeleteUserTagsRequest request) {
+            super(request);
+            this.domainId = request.domainId;
+            this.driveId = request.driveId;
+            this.fileId = request.fileId;
+            this.keyList = request.keyList;
+        } 
+
+        /**
+         * domain_id.
+         */
+        public Builder domainId(String domainId) {
+            this.putHostParameter("domain_id", domainId);
+            this.domainId = domainId;
+            return this;
+        }
+
+        /**
+         * The drive ID.
+         */
+        public Builder driveId(String driveId) {
+            this.putBodyParameter("drive_id", driveId);
+            this.driveId = driveId;
+            return this;
+        }
+
+        /**
+         * The file ID.
+         */
+        public Builder fileId(String fileId) {
+            this.putBodyParameter("file_id", fileId);
+            this.fileId = fileId;
+            return this;
+        }
+
+        /**
+         * The tags that you want to remove from a file. You cannot leave this parameter empty. You can specify up to 1,000 tags.
+         */
+        public Builder keyList(java.util.List < String > keyList) {
+            this.putBodyParameter("key_list", keyList);
+            this.keyList = keyList;
+            return this;
+        }
+
+        @Override
+        public FileDeleteUserTagsRequest build() {
+            return new FileDeleteUserTagsRequest(this);
+        } 
+
+    } 
+
+}

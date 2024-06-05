@@ -1,0 +1,125 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pds20220301.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link SearchStoriesResponse} extends {@link TeaModel}
+ *
+ * <p>SearchStoriesResponse</p>
+ */
+public class SearchStoriesResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
+    private java.util.Map < String, String > headers;
+
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
+    private SearchStoriesResponseBody body;
+
+    private SearchStoriesResponse(BuilderImpl builder) {
+        super(builder);
+        this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
+        this.body = builder.body;
+    }
+
+    public static SearchStoriesResponse create() {
+        return new BuilderImpl().build();
+    }
+
+    @Override
+    public Builder toBuilder() {
+        return new BuilderImpl(this);
+    }
+
+    /**
+     * @return headers
+     */
+    public java.util.Map < String, String > getHeaders() {
+        return this.headers;
+    }
+
+    /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
+     * @return body
+     */
+    public SearchStoriesResponseBody getBody() {
+        return this.body;
+    }
+
+    public interface Builder extends Response.Builder<SearchStoriesResponse, Builder> {
+
+        Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
+
+        Builder body(SearchStoriesResponseBody body);
+
+        @Override
+        SearchStoriesResponse build();
+
+    } 
+
+    private static final class BuilderImpl
+            extends Response.BuilderImpl<SearchStoriesResponse, Builder>
+            implements Builder {
+        private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
+        private SearchStoriesResponseBody body; 
+
+        private BuilderImpl() {
+            super();
+        } 
+
+        private BuilderImpl(SearchStoriesResponse response) {
+            super(response);
+            this.headers = response.headers;
+            this.statusCode = response.statusCode;
+            this.body = response.body;
+        } 
+
+        /**
+         * headers.
+         */
+        @Override
+        public Builder headers(java.util.Map < String, String > headers) {
+            this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * body.
+         */
+        @Override
+        public Builder body(SearchStoriesResponseBody body) {
+            this.body = body;
+            return this;
+        }
+
+        @Override
+        public SearchStoriesResponse build() {
+            return new SearchStoriesResponse(this);
+        } 
+
+    } 
+
+}

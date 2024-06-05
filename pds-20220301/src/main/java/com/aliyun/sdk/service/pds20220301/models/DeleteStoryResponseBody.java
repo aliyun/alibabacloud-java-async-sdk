@@ -1,0 +1,53 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.pds20220301.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link DeleteStoryResponseBody} extends {@link TeaModel}
+ *
+ * <p>DeleteStoryResponseBody</p>
+ */
+public class DeleteStoryResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("drive_id")
+    private String driveId;
+
+    private DeleteStoryResponseBody(Builder builder) {
+        this.driveId = builder.driveId;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static DeleteStoryResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return driveId
+     */
+    public String getDriveId() {
+        return this.driveId;
+    }
+
+    public static final class Builder {
+        private String driveId; 
+
+        /**
+         * drive_id.
+         */
+        public Builder driveId(String driveId) {
+            this.driveId = driveId;
+            return this;
+        }
+
+        public DeleteStoryResponseBody build() {
+            return new DeleteStoryResponseBody(this);
+        } 
+
+    } 
+
+}
