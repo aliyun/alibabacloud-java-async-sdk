@@ -172,6 +172,9 @@ public class ListCampaignsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompletionRate")
         private Float completionRate;
 
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+        private String contactFlowId;
+
         @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
@@ -216,6 +219,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             this.casesConnected = builder.casesConnected;
             this.casesUncompleted = builder.casesUncompleted;
             this.completionRate = builder.completionRate;
+            this.contactFlowId = builder.contactFlowId;
             this.maxAttemptCount = builder.maxAttemptCount;
             this.minAttemptInterval = builder.minAttemptInterval;
             this.name = builder.name;
@@ -285,6 +289,13 @@ public class ListCampaignsResponseBody extends TeaModel {
          */
         public Float getCompletionRate() {
             return this.completionRate;
+        }
+
+        /**
+         * @return contactFlowId
+         */
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         /**
@@ -379,6 +390,7 @@ public class ListCampaignsResponseBody extends TeaModel {
             private Long casesConnected; 
             private Long casesUncompleted; 
             private Float completionRate; 
+            private String contactFlowId; 
             private Long maxAttemptCount; 
             private Long minAttemptInterval; 
             private String name; 
@@ -445,6 +457,14 @@ public class ListCampaignsResponseBody extends TeaModel {
              */
             public Builder completionRate(Float completionRate) {
                 this.completionRate = completionRate;
+                return this;
+            }
+
+            /**
+             * ContactFlowId.
+             */
+            public Builder contactFlowId(String contactFlowId) {
+                this.contactFlowId = contactFlowId;
                 return this;
             }
 

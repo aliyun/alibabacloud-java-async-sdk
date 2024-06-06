@@ -77,6 +77,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateContactFlowResponse> createContactFlow(CreateContactFlowRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateCustomCallTaggingResponse> createCustomCallTagging(CreateCustomCallTaggingRequest request);
 
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
@@ -277,8 +281,16 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListIvrTrackingDetailsResponse> listIvrTrackingDetails(ListIvrTrackingDetailsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListLegacyAgentEventLogsResponse> listLegacyAgentEventLogs(ListLegacyAgentEventLogsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ListLegacyAgentStatusLogsResponse> listLegacyAgentStatusLogs(ListLegacyAgentStatusLogsRequest request);
 
     CompletableFuture<ListLegacyAppraiseLogsResponse> listLegacyAppraiseLogs(ListLegacyAppraiseLogsRequest request);

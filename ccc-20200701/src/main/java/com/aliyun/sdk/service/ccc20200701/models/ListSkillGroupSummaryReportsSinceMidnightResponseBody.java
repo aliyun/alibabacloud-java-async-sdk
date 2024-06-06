@@ -172,6 +172,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         @com.aliyun.core.annotation.NameInMap("AverageWorkTime")
         private Long averageWorkTime;
 
+        @com.aliyun.core.annotation.NameInMap("CallsAbandoned")
+        private Long callsAbandoned;
+
         @com.aliyun.core.annotation.NameInMap("CallsAttendedTransferOut")
         private Long callsAttendedTransferOut;
 
@@ -183,6 +186,9 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
 
         @com.aliyun.core.annotation.NameInMap("CallsOffered")
         private Long callsOffered;
+
+        @com.aliyun.core.annotation.NameInMap("CallsOverflow")
+        private String callsOverflow;
 
         @com.aliyun.core.annotation.NameInMap("CallsQueuingCanceled")
         private String callsQueuingCanceled;
@@ -264,10 +270,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             this.averageRingTime = builder.averageRingTime;
             this.averageTalkTime = builder.averageTalkTime;
             this.averageWorkTime = builder.averageWorkTime;
+            this.callsAbandoned = builder.callsAbandoned;
             this.callsAttendedTransferOut = builder.callsAttendedTransferOut;
             this.callsBlindTransferOut = builder.callsBlindTransferOut;
             this.callsHandled = builder.callsHandled;
             this.callsOffered = builder.callsOffered;
+            this.callsOverflow = builder.callsOverflow;
             this.callsQueuingCanceled = builder.callsQueuingCanceled;
             this.callsQueuingFailure = builder.callsQueuingFailure;
             this.callsQueuingRerouted = builder.callsQueuingRerouted;
@@ -352,6 +360,13 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
         }
 
         /**
+         * @return callsAbandoned
+         */
+        public Long getCallsAbandoned() {
+            return this.callsAbandoned;
+        }
+
+        /**
          * @return callsAttendedTransferOut
          */
         public Long getCallsAttendedTransferOut() {
@@ -377,6 +392,13 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
          */
         public Long getCallsOffered() {
             return this.callsOffered;
+        }
+
+        /**
+         * @return callsOverflow
+         */
+        public String getCallsOverflow() {
+            return this.callsOverflow;
         }
 
         /**
@@ -555,10 +577,12 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             private Long averageRingTime; 
             private Long averageTalkTime; 
             private Long averageWorkTime; 
+            private Long callsAbandoned; 
             private Long callsAttendedTransferOut; 
             private Long callsBlindTransferOut; 
             private Long callsHandled; 
             private Long callsOffered; 
+            private String callsOverflow; 
             private String callsQueuingCanceled; 
             private String callsQueuingFailure; 
             private String callsQueuingRerouted; 
@@ -641,6 +665,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
             }
 
             /**
+             * CallsAbandoned.
+             */
+            public Builder callsAbandoned(Long callsAbandoned) {
+                this.callsAbandoned = callsAbandoned;
+                return this;
+            }
+
+            /**
              * CallsAttendedTransferOut.
              */
             public Builder callsAttendedTransferOut(Long callsAttendedTransferOut) {
@@ -669,6 +701,14 @@ public class ListSkillGroupSummaryReportsSinceMidnightResponseBody extends TeaMo
              */
             public Builder callsOffered(Long callsOffered) {
                 this.callsOffered = callsOffered;
+                return this;
+            }
+
+            /**
+             * CallsOverflow.
+             */
+            public Builder callsOverflow(String callsOverflow) {
+                this.callsOverflow = callsOverflow;
                 return this;
             }
 

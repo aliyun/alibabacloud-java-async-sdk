@@ -138,6 +138,9 @@ public class GetCampaignResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CompletionRate")
         private Float completionRate;
 
+        @com.aliyun.core.annotation.NameInMap("ContactFlowId")
+        private String contactFlowId;
+
         @com.aliyun.core.annotation.NameInMap("MaxAttemptCount")
         private Long maxAttemptCount;
 
@@ -187,6 +190,7 @@ public class GetCampaignResponseBody extends TeaModel {
             this.casesUncompletedAfterAttempt = builder.casesUncompletedAfterAttempt;
             this.casesUncompletedAfterAttempted = builder.casesUncompletedAfterAttempted;
             this.completionRate = builder.completionRate;
+            this.contactFlowId = builder.contactFlowId;
             this.maxAttemptCount = builder.maxAttemptCount;
             this.minAttemptInterval = builder.minAttemptInterval;
             this.name = builder.name;
@@ -271,6 +275,13 @@ public class GetCampaignResponseBody extends TeaModel {
          */
         public Float getCompletionRate() {
             return this.completionRate;
+        }
+
+        /**
+         * @return contactFlowId
+         */
+        public String getContactFlowId() {
+            return this.contactFlowId;
         }
 
         /**
@@ -374,6 +385,7 @@ public class GetCampaignResponseBody extends TeaModel {
             private String casesUncompletedAfterAttempt; 
             private Long casesUncompletedAfterAttempted; 
             private Float completionRate; 
+            private String contactFlowId; 
             private Long maxAttemptCount; 
             private Long minAttemptInterval; 
             private String name; 
@@ -457,6 +469,14 @@ public class GetCampaignResponseBody extends TeaModel {
              */
             public Builder completionRate(Float completionRate) {
                 this.completionRate = completionRate;
+                return this;
+            }
+
+            /**
+             * ContactFlowId.
+             */
+            public Builder contactFlowId(String contactFlowId) {
+                this.contactFlowId = contactFlowId;
                 return this;
             }
 
