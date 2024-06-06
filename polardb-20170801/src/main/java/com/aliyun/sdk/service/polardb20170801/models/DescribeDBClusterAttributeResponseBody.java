@@ -104,6 +104,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("MaintainTime")
     private String maintainTime;
 
+    @com.aliyun.core.annotation.NameInMap("Orca")
+    private String orca;
+
     @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
@@ -134,11 +137,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("RestoreDataPoint")
+    private String restoreDataPoint;
+
+    @com.aliyun.core.annotation.NameInMap("RestoreType")
+    private String restoreType;
+
     @com.aliyun.core.annotation.NameInMap("SQLSize")
     private Long SQLSize;
 
     @com.aliyun.core.annotation.NameInMap("ServerlessType")
     private String serverlessType;
+
+    @com.aliyun.core.annotation.NameInMap("SourceDBCluster")
+    private String sourceDBCluster;
 
     @com.aliyun.core.annotation.NameInMap("StandbyHAMode")
     private String standbyHAMode;
@@ -211,6 +223,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.isProxyLatestVersion = builder.isProxyLatestVersion;
         this.lockMode = builder.lockMode;
         this.maintainTime = builder.maintainTime;
+        this.orca = builder.orca;
         this.payType = builder.payType;
         this.provisionedIops = builder.provisionedIops;
         this.proxyCpuCores = builder.proxyCpuCores;
@@ -221,8 +234,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.restoreDataPoint = builder.restoreDataPoint;
+        this.restoreType = builder.restoreType;
         this.SQLSize = builder.SQLSize;
         this.serverlessType = builder.serverlessType;
+        this.sourceDBCluster = builder.sourceDBCluster;
         this.standbyHAMode = builder.standbyHAMode;
         this.storageMax = builder.storageMax;
         this.storagePayType = builder.storagePayType;
@@ -464,6 +480,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return orca
+     */
+    public String getOrca() {
+        return this.orca;
+    }
+
+    /**
      * @return payType
      */
     public String getPayType() {
@@ -534,6 +557,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return restoreDataPoint
+     */
+    public String getRestoreDataPoint() {
+        return this.restoreDataPoint;
+    }
+
+    /**
+     * @return restoreType
+     */
+    public String getRestoreType() {
+        return this.restoreType;
+    }
+
+    /**
      * @return SQLSize
      */
     public Long getSQLSize() {
@@ -545,6 +582,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
      */
     public String getServerlessType() {
         return this.serverlessType;
+    }
+
+    /**
+     * @return sourceDBCluster
+     */
+    public String getSourceDBCluster() {
+        return this.sourceDBCluster;
     }
 
     /**
@@ -670,6 +714,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private Boolean isProxyLatestVersion; 
         private String lockMode; 
         private String maintainTime; 
+        private String orca; 
         private String payType; 
         private String provisionedIops; 
         private String proxyCpuCores; 
@@ -680,8 +725,11 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
+        private String restoreDataPoint; 
+        private String restoreType; 
         private Long SQLSize; 
         private String serverlessType; 
+        private String sourceDBCluster; 
         private String standbyHAMode; 
         private Long storageMax; 
         private String storagePayType; 
@@ -990,6 +1038,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * Orca.
+         */
+        public Builder orca(String orca) {
+            this.orca = orca;
+            return this;
+        }
+
+        /**
          * The billing method of the cluster. Valid values:
          * <p>
          * 
@@ -1091,6 +1147,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * RestoreDataPoint.
+         */
+        public Builder restoreDataPoint(String restoreDataPoint) {
+            this.restoreDataPoint = restoreDataPoint;
+            return this;
+        }
+
+        /**
+         * RestoreType.
+         */
+        public Builder restoreType(String restoreType) {
+            this.restoreType = restoreType;
+            return this;
+        }
+
+        /**
          * The storage of SQL. Unit: bytes. If the value is -1, no data is stored.
          */
         public Builder SQLSize(Long SQLSize) {
@@ -1103,6 +1175,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public Builder serverlessType(String serverlessType) {
             this.serverlessType = serverlessType;
+            return this;
+        }
+
+        /**
+         * SourceDBCluster.
+         */
+        public Builder sourceDBCluster(String sourceDBCluster) {
+            this.sourceDBCluster = sourceDBCluster;
             return this;
         }
 
@@ -1273,6 +1353,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MemorySize")
         private String memorySize;
 
+        @com.aliyun.core.annotation.NameInMap("Orca")
+        private String orca;
+
         @com.aliyun.core.annotation.NameInMap("RemoteMemorySize")
         private String remoteMemorySize;
 
@@ -1307,6 +1390,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.maxConnections = builder.maxConnections;
             this.maxIOPS = builder.maxIOPS;
             this.memorySize = builder.memorySize;
+            this.orca = builder.orca;
             this.remoteMemorySize = builder.remoteMemorySize;
             this.sccMode = builder.sccMode;
             this.serverWeight = builder.serverWeight;
@@ -1422,6 +1506,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return orca
+         */
+        public String getOrca() {
+            return this.orca;
+        }
+
+        /**
          * @return remoteMemorySize
          */
         public String getRemoteMemorySize() {
@@ -1478,6 +1569,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private Integer maxConnections; 
             private Integer maxIOPS; 
             private String memorySize; 
+            private String orca; 
             private String remoteMemorySize; 
             private String sccMode; 
             private String serverWeight; 
@@ -1621,6 +1713,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              */
             public Builder memorySize(String memorySize) {
                 this.memorySize = memorySize;
+                return this;
+            }
+
+            /**
+             * Orca.
+             */
+            public Builder orca(String orca) {
+                this.orca = orca;
                 return this;
             }
 

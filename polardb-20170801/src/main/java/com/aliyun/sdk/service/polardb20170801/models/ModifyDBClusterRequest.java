@@ -21,8 +21,16 @@ public class ModifyDBClusterRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBNodeCrashList")
+    private String DBNodeCrashList;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DataSyncMode")
     private String dataSyncMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaultInjectionType")
+    private String faultInjectionType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FaultSimulateMode")
@@ -61,7 +69,9 @@ public class ModifyDBClusterRequest extends Request {
         super(builder);
         this.compressStorage = builder.compressStorage;
         this.DBClusterId = builder.DBClusterId;
+        this.DBNodeCrashList = builder.DBNodeCrashList;
         this.dataSyncMode = builder.dataSyncMode;
+        this.faultInjectionType = builder.faultInjectionType;
         this.faultSimulateMode = builder.faultSimulateMode;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -100,10 +110,24 @@ public class ModifyDBClusterRequest extends Request {
     }
 
     /**
+     * @return DBNodeCrashList
+     */
+    public String getDBNodeCrashList() {
+        return this.DBNodeCrashList;
+    }
+
+    /**
      * @return dataSyncMode
      */
     public String getDataSyncMode() {
         return this.dataSyncMode;
+    }
+
+    /**
+     * @return faultInjectionType
+     */
+    public String getFaultInjectionType() {
+        return this.faultInjectionType;
     }
 
     /**
@@ -165,7 +189,9 @@ public class ModifyDBClusterRequest extends Request {
     public static final class Builder extends Request.Builder<ModifyDBClusterRequest, Builder> {
         private String compressStorage; 
         private String DBClusterId; 
+        private String DBNodeCrashList; 
         private String dataSyncMode; 
+        private String faultInjectionType; 
         private String faultSimulateMode; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -183,7 +209,9 @@ public class ModifyDBClusterRequest extends Request {
             super(request);
             this.compressStorage = request.compressStorage;
             this.DBClusterId = request.DBClusterId;
+            this.DBNodeCrashList = request.DBNodeCrashList;
             this.dataSyncMode = request.dataSyncMode;
+            this.faultInjectionType = request.faultInjectionType;
             this.faultSimulateMode = request.faultSimulateMode;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -216,6 +244,15 @@ public class ModifyDBClusterRequest extends Request {
         }
 
         /**
+         * DBNodeCrashList.
+         */
+        public Builder DBNodeCrashList(String DBNodeCrashList) {
+            this.putQueryParameter("DBNodeCrashList", DBNodeCrashList);
+            this.DBNodeCrashList = DBNodeCrashList;
+            return this;
+        }
+
+        /**
          * The method used to replicate data across zones. Valid values:
          * <p>
          * 
@@ -225,6 +262,15 @@ public class ModifyDBClusterRequest extends Request {
         public Builder dataSyncMode(String dataSyncMode) {
             this.putQueryParameter("DataSyncMode", dataSyncMode);
             this.dataSyncMode = dataSyncMode;
+            return this;
+        }
+
+        /**
+         * FaultInjectionType.
+         */
+        public Builder faultInjectionType(String faultInjectionType) {
+            this.putQueryParameter("FaultInjectionType", faultInjectionType);
+            this.faultInjectionType = faultInjectionType;
             return this;
         }
 
