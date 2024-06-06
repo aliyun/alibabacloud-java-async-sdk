@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyUserAuthenticationRequest</p>
  */
 public class VerifyUserAuthenticationRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("AuthenticationContext")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticationContext")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authenticationContext;
 
-    @Query
-    @NameInMap("AuthenticatorType")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticatorType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String authenticatorType;
 
-    @Query
-    @NameInMap("ClientExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientExtendParamsJson")
     private String clientExtendParamsJson;
 
-    @Query
-    @NameInMap("ClientExtendParamsJsonSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientExtendParamsJsonSign")
     private String clientExtendParamsJsonSign;
 
-    @Query
-    @NameInMap("LogParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogParams")
     private String logParams;
 
-    @Query
-    @NameInMap("LogTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogTag")
     private String logTag;
 
-    @Query
-    @NameInMap("RequireBindHashBase64")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireBindHashBase64")
     private String requireBindHashBase64;
 
-    @Query
-    @NameInMap("RequireChallengeBase64")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireChallengeBase64")
     private String requireChallengeBase64;
 
-    @Query
-    @NameInMap("ServerExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerExtendParamsJson")
     private String serverExtendParamsJson;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String userId;
 
-    @Query
-    @NameInMap("UserSourceIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserSourceIp")
     private String userSourceIp;
 
     private VerifyUserAuthenticationRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrderConsumeStatisticRecordsRequest</p>
  */
 public class ListOrderConsumeStatisticRecordsRequest extends Request {
-    @Query
-    @NameInMap("AliOrderCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AliOrderCode")
     private String aliOrderCode;
 
-    @Query
-    @NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
     private String serviceCode;
 
-    @Query
-    @NameInMap("StatisticTimeMax")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticTimeMax")
     private String statisticTimeMax;
 
-    @Query
-    @NameInMap("StatisticTimeMin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StatisticTimeMin")
     private String statisticTimeMin;
 
     private ListOrderConsumeStatisticRecordsRequest(Builder builder) {

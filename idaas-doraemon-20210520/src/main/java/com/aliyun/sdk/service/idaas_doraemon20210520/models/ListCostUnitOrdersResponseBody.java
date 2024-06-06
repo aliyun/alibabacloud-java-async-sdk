@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCostUnitOrdersResponseBody</p>
  */
 public class ListCostUnitOrdersResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Long totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Long totalPages;
 
     private ListCostUnitOrdersResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListCostUnitOrdersResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AliOrderCode")
+        @com.aliyun.core.annotation.NameInMap("AliOrderCode")
         private String aliOrderCode;
 
-        @NameInMap("AliOrderInstanceId")
+        @com.aliyun.core.annotation.NameInMap("AliOrderInstanceId")
         private String aliOrderInstanceId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Exhausted")
+        @com.aliyun.core.annotation.NameInMap("Exhausted")
         private Boolean exhausted;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private Long expiredTime;
 
-        @NameInMap("OrderStatus")
+        @com.aliyun.core.annotation.NameInMap("OrderStatus")
         private String orderStatus;
 
-        @NameInMap("RefundTime")
+        @com.aliyun.core.annotation.NameInMap("RefundTime")
         private Long refundTime;
 
-        @NameInMap("TotalCostUnit")
+        @com.aliyun.core.annotation.NameInMap("TotalCostUnit")
         private Long totalCostUnit;
 
-        @NameInMap("UsedCostUnit")
+        @com.aliyun.core.annotation.NameInMap("UsedCostUnit")
         private Long usedCostUnit;
 
         private Items(Builder builder) {

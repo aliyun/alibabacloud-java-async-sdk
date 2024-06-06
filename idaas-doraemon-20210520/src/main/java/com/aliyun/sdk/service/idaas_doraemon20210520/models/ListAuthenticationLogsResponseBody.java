@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthenticationLogsResponseBody</p>
  */
 public class ListAuthenticationLogsResponseBody extends TeaModel {
-    @NameInMap("AuthenticationLogContent")
+    @com.aliyun.core.annotation.NameInMap("AuthenticationLogContent")
     private java.util.List < AuthenticationLogContent> authenticationLogContent;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAuthenticationLogsResponseBody(Builder builder) {
@@ -132,64 +131,64 @@ public class ListAuthenticationLogsResponseBody extends TeaModel {
     } 
 
     public static class AuthenticationLogContent extends TeaModel {
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private String aliUid;
 
-        @NameInMap("ApplicationExternalId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
         private String applicationExternalId;
 
-        @NameInMap("ApplicationUuid")
+        @com.aliyun.core.annotation.NameInMap("ApplicationUuid")
         private String applicationUuid;
 
-        @NameInMap("AuthenticationAction")
+        @com.aliyun.core.annotation.NameInMap("AuthenticationAction")
         private String authenticationAction;
 
-        @NameInMap("AuthenticationTime")
+        @com.aliyun.core.annotation.NameInMap("AuthenticationTime")
         private Long authenticationTime;
 
-        @NameInMap("AuthenticatorName")
+        @com.aliyun.core.annotation.NameInMap("AuthenticatorName")
         private String authenticatorName;
 
-        @NameInMap("AuthenticatorType")
+        @com.aliyun.core.annotation.NameInMap("AuthenticatorType")
         private String authenticatorType;
 
-        @NameInMap("AuthenticatorUuid")
+        @com.aliyun.core.annotation.NameInMap("AuthenticatorUuid")
         private String authenticatorUuid;
 
-        @NameInMap("ChallengeBase64")
+        @com.aliyun.core.annotation.NameInMap("ChallengeBase64")
         private String challengeBase64;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("LogParams")
+        @com.aliyun.core.annotation.NameInMap("LogParams")
         private String logParams;
 
-        @NameInMap("LogTag")
+        @com.aliyun.core.annotation.NameInMap("LogTag")
         private String logTag;
 
-        @NameInMap("RawAuthenticationContext")
+        @com.aliyun.core.annotation.NameInMap("RawAuthenticationContext")
         private String rawAuthenticationContext;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("UserAgent")
+        @com.aliyun.core.annotation.NameInMap("UserAgent")
         private String userAgent;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserSourceIp")
+        @com.aliyun.core.annotation.NameInMap("UserSourceIp")
         private String userSourceIp;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private Boolean verifyResult;
 
         private AuthenticationLogContent(Builder builder) {

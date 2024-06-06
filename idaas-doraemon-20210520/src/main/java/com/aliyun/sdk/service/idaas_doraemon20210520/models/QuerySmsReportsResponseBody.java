@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsReportsResponseBody</p>
  */
 public class QuerySmsReportsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsReports")
+    @com.aliyun.core.annotation.NameInMap("SmsReports")
     private java.util.List < SmsReports> smsReports;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Long totalElements;
 
     private QuerySmsReportsResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class QuerySmsReportsResponseBody extends TeaModel {
     } 
 
     public static class SmsReports extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("ChargedCount")
+        @com.aliyun.core.annotation.NameInMap("ChargedCount")
         private Integer chargedCount;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("EventId")
+        @com.aliyun.core.annotation.NameInMap("EventId")
         private String eventId;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("Sn")
+        @com.aliyun.core.annotation.NameInMap("Sn")
         private String sn;
 
-        @NameInMap("Stat")
+        @com.aliyun.core.annotation.NameInMap("Stat")
         private String stat;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
-        @NameInMap("Tid")
+        @com.aliyun.core.annotation.NameInMap("Tid")
         private String tid;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
         private SmsReports(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserAuthenticateOptionsRequest</p>
  */
 public class CreateUserAuthenticateOptionsRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("AuthenticatorType")
-    @Validation(required = true, maxLength = 32)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticatorType")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 32)
     private String authenticatorType;
 
-    @Query
-    @NameInMap("BindHashBase64")
-    @Validation(maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BindHashBase64")
+    @com.aliyun.core.annotation.Validation(maxLength = 64)
     private String bindHashBase64;
 
-    @Query
-    @NameInMap("ClientExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientExtendParamsJson")
     private String clientExtendParamsJson;
 
-    @Query
-    @NameInMap("ClientExtendParamsJsonSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientExtendParamsJsonSign")
     private String clientExtendParamsJsonSign;
 
-    @Query
-    @NameInMap("ServerExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerExtendParamsJson")
     private String serverExtendParamsJson;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String userId;
 
     private CreateUserAuthenticateOptionsRequest(Builder builder) {

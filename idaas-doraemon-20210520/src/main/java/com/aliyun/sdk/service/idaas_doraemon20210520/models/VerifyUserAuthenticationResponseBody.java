@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyUserAuthenticationResponseBody</p>
  */
 public class VerifyUserAuthenticationResponseBody extends TeaModel {
-    @NameInMap("AuthenticateResultInfo")
+    @com.aliyun.core.annotation.NameInMap("AuthenticateResultInfo")
     private AuthenticateResultInfo authenticateResultInfo;
 
-    @NameInMap("EtasSDKString")
+    @com.aliyun.core.annotation.NameInMap("EtasSDKString")
     private String etasSDKString;
 
-    @NameInMap("IdToken")
+    @com.aliyun.core.annotation.NameInMap("IdToken")
     private String idToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VerifyResult")
+    @com.aliyun.core.annotation.NameInMap("VerifyResult")
     private Boolean verifyResult;
 
     private VerifyUserAuthenticationResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class VerifyUserAuthenticationResponseBody extends TeaModel {
     } 
 
     public static class AuthenticateResultInfo extends TeaModel {
-        @NameInMap("BindHashBase64")
+        @com.aliyun.core.annotation.NameInMap("BindHashBase64")
         private String bindHashBase64;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
         private AuthenticateResultInfo(Builder builder) {

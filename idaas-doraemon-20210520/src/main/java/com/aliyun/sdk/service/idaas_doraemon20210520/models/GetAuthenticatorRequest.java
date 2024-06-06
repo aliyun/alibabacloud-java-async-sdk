@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAuthenticatorRequest</p>
  */
 public class GetAuthenticatorRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("AuthenticatorUuid")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthenticatorUuid")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String authenticatorUuid;
 
-    @Query
-    @NameInMap("UserId")
-    @Validation(required = true, maxLength = 64)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 64)
     private String userId;
 
     private GetAuthenticatorRequest(Builder builder) {

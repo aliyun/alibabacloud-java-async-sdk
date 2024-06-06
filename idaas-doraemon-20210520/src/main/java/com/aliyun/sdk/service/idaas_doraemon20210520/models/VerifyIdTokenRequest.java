@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyIdTokenRequest</p>
  */
 public class VerifyIdTokenRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("JwtIdToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JwtIdToken")
     private String jwtIdToken;
 
     private VerifyIdTokenRequest(Builder builder) {

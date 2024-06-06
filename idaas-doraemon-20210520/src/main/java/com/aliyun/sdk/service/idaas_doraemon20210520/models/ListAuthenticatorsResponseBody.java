@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuthenticatorsResponseBody</p>
  */
 public class ListAuthenticatorsResponseBody extends TeaModel {
-    @NameInMap("Authenticator")
+    @com.aliyun.core.annotation.NameInMap("Authenticator")
     private java.util.List < Authenticator> authenticator;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListAuthenticatorsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListAuthenticatorsResponseBody extends TeaModel {
     } 
 
     public static class Authenticator extends TeaModel {
-        @NameInMap("ApplicationExternalId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
         private String applicationExternalId;
 
-        @NameInMap("AuthenticatorName")
+        @com.aliyun.core.annotation.NameInMap("AuthenticatorName")
         private String authenticatorName;
 
-        @NameInMap("AuthenticatorUuid")
+        @com.aliyun.core.annotation.NameInMap("AuthenticatorUuid")
         private String authenticatorUuid;
 
-        @NameInMap("CredentialId")
+        @com.aliyun.core.annotation.NameInMap("CredentialId")
         private String credentialId;
 
-        @NameInMap("LastVerifyTime")
+        @com.aliyun.core.annotation.NameInMap("LastVerifyTime")
         private Long lastVerifyTime;
 
-        @NameInMap("RegisterTime")
+        @com.aliyun.core.annotation.NameInMap("RegisterTime")
         private Long registerTime;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Authenticator(Builder builder) {

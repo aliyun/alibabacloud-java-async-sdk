@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FetchAccessTokenResponseBody</p>
  */
 public class FetchAccessTokenResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private FetchAccessTokenResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class FetchAccessTokenResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Access_token")
+        @com.aliyun.core.annotation.NameInMap("Access_token")
         private String accessToken;
 
-        @NameInMap("Expires_in")
+        @com.aliyun.core.annotation.NameInMap("Expires_in")
         private String expiresIn;
 
-        @NameInMap("Id_token")
+        @com.aliyun.core.annotation.NameInMap("Id_token")
         private String idToken;
 
-        @NameInMap("Refresh_token")
+        @com.aliyun.core.annotation.NameInMap("Refresh_token")
         private String refreshToken;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Token_type")
+        @com.aliyun.core.annotation.NameInMap("Token_type")
         private String tokenType;
 
         private Data(Builder builder) {

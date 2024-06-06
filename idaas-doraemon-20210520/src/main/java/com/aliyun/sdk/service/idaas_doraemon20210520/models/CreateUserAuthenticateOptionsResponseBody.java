@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserAuthenticateOptionsResponseBody</p>
  */
 public class CreateUserAuthenticateOptionsResponseBody extends TeaModel {
-    @NameInMap("ChallengeBase64")
+    @com.aliyun.core.annotation.NameInMap("ChallengeBase64")
     private String challengeBase64;
 
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateUserAuthenticateOptionsResponseBody(Builder builder) {

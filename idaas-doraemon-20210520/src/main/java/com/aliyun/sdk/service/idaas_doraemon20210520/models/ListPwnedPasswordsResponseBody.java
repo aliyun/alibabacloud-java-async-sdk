@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPwnedPasswordsResponseBody</p>
  */
 public class ListPwnedPasswordsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("PwnedPasswordInfos")
+    @com.aliyun.core.annotation.NameInMap("PwnedPasswordInfos")
     private java.util.List < PwnedPasswordInfos> pwnedPasswordInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPwnedPasswordsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListPwnedPasswordsResponseBody extends TeaModel {
     } 
 
     public static class PwnedPasswordInfos extends TeaModel {
-        @NameInMap("HexPasswordSha1Hash")
+        @com.aliyun.core.annotation.NameInMap("HexPasswordSha1Hash")
         private String hexPasswordSha1Hash;
 
-        @NameInMap("PwnedCount")
+        @com.aliyun.core.annotation.NameInMap("PwnedCount")
         private Long pwnedCount;
 
         private PwnedPasswordInfos(Builder builder) {

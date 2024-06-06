@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FetchAccessTokenRequest</p>
  */
 public class FetchAccessTokenRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("MobileExtendParamsJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileExtendParamsJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mobileExtendParamsJson;
 
-    @Query
-    @NameInMap("MobileExtendParamsJsonSign")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileExtendParamsJsonSign")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mobileExtendParamsJsonSign;
 
-    @Query
-    @NameInMap("ServerExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerExtendParamsJson")
     private String serverExtendParamsJson;
 
-    @Query
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @Query
-    @NameInMap("XClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XClientIp")
     private String xClientIp;
 
     private FetchAccessTokenRequest(Builder builder) {

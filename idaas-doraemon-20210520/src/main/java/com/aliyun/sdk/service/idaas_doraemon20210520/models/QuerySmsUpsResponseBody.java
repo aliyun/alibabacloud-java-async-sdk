@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsUpsResponseBody</p>
  */
 public class QuerySmsUpsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsUps")
+    @com.aliyun.core.annotation.NameInMap("SmsUps")
     private java.util.List < SmsUps> smsUps;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Long totalElements;
 
     private QuerySmsUpsResponseBody(Builder builder) {
@@ -92,22 +91,22 @@ public class QuerySmsUpsResponseBody extends TeaModel {
     } 
 
     public static class SmsUps extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("DestCode")
+        @com.aliyun.core.annotation.NameInMap("DestCode")
         private String destCode;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("SendTime")
+        @com.aliyun.core.annotation.NameInMap("SendTime")
         private String sendTime;
 
-        @NameInMap("SequenceId")
+        @com.aliyun.core.annotation.NameInMap("SequenceId")
         private String sequenceId;
 
-        @NameInMap("TenantId")
+        @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
         private SmsUps(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ServiceInvokeRequest</p>
  */
 public class ServiceInvokeRequest extends Request {
-    @Query
-    @NameInMap("ApplicationExternalId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applicationExternalId;
 
-    @Query
-    @NameInMap("DoraemonAction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DoraemonAction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String doraemonAction;
 
-    @Query
-    @NameInMap("MobileExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileExtendParamsJson")
     private String mobileExtendParamsJson;
 
-    @Query
-    @NameInMap("MobileExtendParamsJsonSign")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobileExtendParamsJsonSign")
     private String mobileExtendParamsJsonSign;
 
-    @Query
-    @NameInMap("ServerExtendParamsJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServerExtendParamsJson")
     private String serverExtendParamsJson;
 
-    @Query
-    @NameInMap("ServiceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Query
-    @NameInMap("TestModel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TestModel")
     private Boolean testModel;
 
-    @Query
-    @NameInMap("XClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XClientIp")
     private String xClientIp;
 
     private ServiceInvokeRequest(Builder builder) {

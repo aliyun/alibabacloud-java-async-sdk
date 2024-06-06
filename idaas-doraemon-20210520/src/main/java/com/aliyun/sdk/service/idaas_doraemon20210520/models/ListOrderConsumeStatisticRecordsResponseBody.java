@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.idaas_doraemon20210520.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrderConsumeStatisticRecordsResponseBody</p>
  */
 public class ListOrderConsumeStatisticRecordsResponseBody extends TeaModel {
-    @NameInMap("Items")
+    @com.aliyun.core.annotation.NameInMap("Items")
     private java.util.List < Items> items;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalElements")
+    @com.aliyun.core.annotation.NameInMap("TotalElements")
     private Long totalElements;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Long totalPages;
 
     private ListOrderConsumeStatisticRecordsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListOrderConsumeStatisticRecordsResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AliOrderCode")
+        @com.aliyun.core.annotation.NameInMap("AliOrderCode")
         private String aliOrderCode;
 
-        @NameInMap("ApplicationExternalId")
+        @com.aliyun.core.annotation.NameInMap("ApplicationExternalId")
         private String applicationExternalId;
 
-        @NameInMap("ChargedCount")
+        @com.aliyun.core.annotation.NameInMap("ChargedCount")
         private Long chargedCount;
 
-        @NameInMap("ServiceCode")
+        @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
-        @NameInMap("StatisticTime")
+        @com.aliyun.core.annotation.NameInMap("StatisticTime")
         private Long statisticTime;
 
-        @NameInMap("TotalPrice")
+        @com.aliyun.core.annotation.NameInMap("TotalPrice")
         private Long totalPrice;
 
-        @NameInMap("UnitPrice")
+        @com.aliyun.core.annotation.NameInMap("UnitPrice")
         private Long unitPrice;
 
         private Items(Builder builder) {
