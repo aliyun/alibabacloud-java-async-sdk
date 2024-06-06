@@ -77,7 +77,7 @@ public class DescribeClusterNodePoolsRequest extends Request {
         }
 
         /**
-         * NodepoolName.
+         * The name of the node pool.
          */
         public Builder nodepoolName(String nodepoolName) {
             this.putQueryParameter("NodepoolName", nodepoolName);

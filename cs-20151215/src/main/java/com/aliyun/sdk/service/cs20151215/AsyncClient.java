@@ -55,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
+    CompletableFuture<CreateClusterDiagnosisResponse> createClusterDiagnosis(CreateClusterDiagnosisRequest request);
+
     CompletableFuture<CreateClusterNodePoolResponse> createClusterNodePool(CreateClusterNodePoolRequest request);
 
     CompletableFuture<CreateEdgeMachineResponse> createEdgeMachine(CreateEdgeMachineRequest request);
@@ -240,6 +242,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetClusterAddonInstanceResponse> getClusterAddonInstance(GetClusterAddonInstanceRequest request);
 
     CompletableFuture<GetClusterCheckResponse> getClusterCheck(GetClusterCheckRequest request);
+
+    CompletableFuture<GetClusterDiagnosisCheckItemsResponse> getClusterDiagnosisCheckItems(GetClusterDiagnosisCheckItemsRequest request);
+
+    CompletableFuture<GetClusterDiagnosisResultResponse> getClusterDiagnosisResult(GetClusterDiagnosisResultRequest request);
 
     CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request);
 

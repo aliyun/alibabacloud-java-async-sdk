@@ -380,7 +380,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String type; 
 
             /**
-             * The maximum bandwidth of the elastic IP address (EIP).
+             * The maximum bandwidth of the EIP.
              */
             public Builder eipBandwidth(Long eipBandwidth) {
                 this.eipBandwidth = eipBandwidth;
@@ -416,7 +416,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Specifies whether to associate an EIP with the node pool. Valid values:
+             * Specifies whether to associate an elastic IP address (EIP) with the node pool. Valid values:
              * <p>
              * 
              * *   `true`: associates an EIP with the node pool.
@@ -446,13 +446,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The instance types that can be used for the auto scaling of the node pool. Valid values:
+             * The instance types that can be used for auto scaling of the node pool. Valid values:
              * <p>
              * 
              * *   `cpu`: regular instance.
              * *   `gpu`: GPU-accelerated instance.
-             * *   `gpushare`: shared GPU-accelerated instance
-             * *   `spot`: preemptible instance
+             * *   `gpushare`: shared GPU-accelerated instance.
+             * *   `spot`: preemptible instance.
              * 
              * Default value: `cpu`.
              */
@@ -635,7 +635,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The configurations of node taints.
+             * The configuration of a node taint.
              */
             public Builder taints(java.util.List < Taint > taints) {
                 this.taints = taints;
@@ -643,7 +643,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * unschedulable.
+             * Specifies whether the nodes are unschedulable after a scale-out activity is performed.
              */
             public Builder unschedulable(Boolean unschedulable) {
                 this.unschedulable = unschedulable;
@@ -692,11 +692,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             private Boolean restartNode; 
 
             /**
-             * Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:
+             * Specifies whether ACK is allowed to automatically restart nodes after repairing the nodes. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: yes.
+             * *   `false`: no.
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -764,8 +764,8 @@ public class ModifyClusterNodePoolRequest extends Request {
              * Specifies whether ACK is allowed to automatically update the kubelet. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: yes.
+             * *   `false`: no.
              */
             public Builder autoUpgradeKubelet(Boolean autoUpgradeKubelet) {
                 this.autoUpgradeKubelet = autoUpgradeKubelet;
@@ -773,7 +773,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * auto_upgrade_os.
+             * Specifies whether ACK is allowed to automatically update the operating system. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes.
+             * *   `false`: no.
+             * 
+             * Default value: `false`.
              */
             public Builder autoUpgradeOs(Boolean autoUpgradeOs) {
                 this.autoUpgradeOs = autoUpgradeOs;
@@ -781,7 +787,13 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * auto_upgrade_runtime.
+             * Specifies whether ACK is allowed to automatically update the runtime. This parameter takes effect only when you specify `auto_upgrade=true`. Valid values:
+             * <p>
+             * 
+             * *   `true`: yes.
+             * *   `false`: no.
+             * 
+             * Default value: `false`.
              */
             public Builder autoUpgradeRuntime(Boolean autoUpgradeRuntime) {
                 this.autoUpgradeRuntime = autoUpgradeRuntime;
@@ -837,8 +849,8 @@ public class ModifyClusterNodePoolRequest extends Request {
              * Specifies whether ACK is allowed to automatically restart nodes after patching CVE vulnerabilities. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `false`: no
+             * *   `true`: yes.
+             * *   `false`: no.
              */
             public Builder restartNode(Boolean restartNode) {
                 this.restartNode = restartNode;
@@ -1133,8 +1145,8 @@ public class ModifyClusterNodePoolRequest extends Request {
              * Specifies whether ACK is allowed to automatically patch CVE vulnerabilities. Valid values:
              * <p>
              * 
-             * *   `true`: yes
-             * *   `true`: no
+             * *   `true`: yes.
+             * *   `true`: no.
              */
             public Builder autoVulFix(Boolean autoVulFix) {
                 this.autoVulFix = autoVulFix;
@@ -1289,7 +1301,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The type of private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
+             * The type of the private node pool. This parameter specifies the type of private node pool that you want to use to create instances. A private node pool is generated when an elasticity assurance or a capacity reservation service takes effect. The system selects a private node pool to launch instances. Valid values:
              * <p>
              * 
              * *   `Open`: specifies an open private node pool. The system selects an open private node pool to launch instances. If no matching open private node pool is available, the resources in the public node pool are used.
@@ -1846,7 +1858,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The duration of the auto-renewal. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
+             * The auto-renewal duration. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
              * <p>
              * 
              * If you specify `PeriodUnit=Month`, the valid values are 1, 2, 3, 6, and 12.
@@ -1869,7 +1881,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The configurations of the data disks that are mounted to the nodes in the node pool. You can mount 0 to 10 data disks. You can mount at most 10 data disks to the nodes in the node pool.
+             * The configurations of the data disks that are mounted to the nodes in the node pool. You can mount at most 10 data disks to the nodes in the node pool.
              */
             public Builder dataDisks(java.util.List < DataDisk > dataDisks) {
                 this.dataDisks = dataDisks;
@@ -1996,7 +2008,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The subscription duration of worker nodes. This parameter takes effect and is required only when `instance_charge_type` is set to `PrePaid`.
+             * The subscription duration of the nodes in the node pool. This parameter takes effect and is required only when you set `instance_charge_type` to `PrePaid`.
              * <p>
              * 
              * If `PeriodUnit=Month` is specified, the valid values are 1, 2, 3, 6, 12, 24, 36, 48, and 60.
@@ -2105,7 +2117,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Indicates whether Burst is enabled for the system disk when the disk type is cloud_auto.
+             * Specifies whether to enable Burst for the system disk when the disk type is cloud_auto.
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -2113,7 +2125,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk cloud_efficiency: ultra disk cloud_ssd: standard SSD cloud_essd: indicates an enhanced SSD (ESSD).
+             * The types of system disks. The system attempts to create system disks from a disk type with a lower priority when the disk type with a higher priority is unavailable. Valid values: cloud: disk. cloud_efficiency: ultra disk. cloud_ssd: standard SSD. cloud_essd: enhanced SSD (ESSD).
              */
             public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -2121,11 +2133,11 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * The type of system disk. Valid values:
+             * The type of the system disk. Valid values:
              * <p>
              * 
              * *   `cloud_efficiency`: ultra disk.
-             * *   `cloud_ssd`: standard SSD
+             * *   `cloud_ssd`: standard SSD.
              * 
              * Default value: `cloud_ssd`.
              */
@@ -2143,7 +2155,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             }
 
             /**
-             * Indicates whether the system disk is encrypted. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
+             * Specifies whether to encrypt the system disk. Valid values: true: encrypts the system disk. false: does not encrypt the system disk.
              */
             public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
                 this.systemDiskEncrypted = systemDiskEncrypted;

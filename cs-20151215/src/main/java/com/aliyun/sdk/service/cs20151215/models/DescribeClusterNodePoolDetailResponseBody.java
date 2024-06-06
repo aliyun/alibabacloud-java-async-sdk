@@ -747,7 +747,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * unschedulable.
+             * 扩容后的节点是否可调度。
              */
             public Builder unschedulable(Boolean unschedulable) {
                 this.unschedulable = unschedulable;
@@ -2155,7 +2155,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * cis_enabled.
+             * 【已废弃】请使用参数security_hardening_os替代。
              */
             public Builder cisEnabled(Boolean cisEnabled) {
                 this.cisEnabled = cisEnabled;
@@ -2207,7 +2207,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * image_type.
+             * 操作系统镜像类型。
              */
             public Builder imageType(String imageType) {
                 this.imageType = imageType;
@@ -2259,7 +2259,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * login_as_non_root.
+             * 弹出的ECS实例是否使用以非root用户登录。
              */
             public Builder loginAsNonRoot(Boolean loginAsNonRoot) {
                 this.loginAsNonRoot = loginAsNonRoot;
@@ -2411,7 +2411,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * security_hardening_os.
+             * 阿里云OS安全加固。取值：
+             * <p>
+             * 
+             * - `true`：开启阿里云OS安全加固。
+             * - `false`：不开启阿里云OS安全加固。
+             * 
+             * 默认值：`false`。
              */
             public Builder securityHardeningOs(Boolean securityHardeningOs) {
                 this.securityHardeningOs = securityHardeningOs;
@@ -2419,7 +2425,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * soc_enabled.
+             * 是否开启等保加固，仅当系统镜像选择Alibaba Cloud Linux 2或Alibaba Cloud Linux 3时，可为节点开启等保加固。阿里云为Alibaba Cloud Linux 2和Alibaba Cloud Linux 3等保2.0三级版镜像提供等保合规的基线检查标准和扫描程序。
              */
             public Builder socEnabled(Boolean socEnabled) {
                 this.socEnabled = socEnabled;
@@ -2470,7 +2476,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_bursting_enabled.
+             * 节点系统盘是否开启Burst（性能突发），磁盘类型为cloud_auto时配置。
              */
             public Builder systemDiskBurstingEnabled(Boolean systemDiskBurstingEnabled) {
                 this.systemDiskBurstingEnabled = systemDiskBurstingEnabled;
@@ -2478,7 +2484,16 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_categories.
+             * 系统盘的多磁盘类型。当无法使用高优先级的磁盘类型时，自动尝试下一优先级的磁盘类型创建系统盘。取值：
+             * <p>
+             * - `cloud`：普通云盘。
+             * - `cloud_efficiency`：高效云盘。
+             * - `cloud_ssd`：SSD云盘。
+             * - `cloud_essd`：ESSD云盘。
+             * - `cloud_auto`：ESSD AutoPL 云盘。
+             * - `cloud_essd_entry`：ESSD Entry 云盘。
+             * 
+             * 默认值：`cloud_efficiency`
              */
             public Builder systemDiskCategories(java.util.List < String > systemDiskCategories) {
                 this.systemDiskCategories = systemDiskCategories;
@@ -2498,7 +2513,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_encrypt_algorithm.
+             * 系统盘采用的加密算法。取值范围：aes-256。
              */
             public Builder systemDiskEncryptAlgorithm(String systemDiskEncryptAlgorithm) {
                 this.systemDiskEncryptAlgorithm = systemDiskEncryptAlgorithm;
@@ -2506,7 +2521,10 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_encrypted.
+             * 是否加密系统盘。取值：
+             * <p>
+             * - `true`：加密。
+             * - `false`：不加密。
              */
             public Builder systemDiskEncrypted(Boolean systemDiskEncrypted) {
                 this.systemDiskEncrypted = systemDiskEncrypted;
@@ -2514,7 +2532,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_kms_key_id.
+             * 系统盘使用的KMS密钥ID。
              */
             public Builder systemDiskKmsKeyId(String systemDiskKmsKeyId) {
                 this.systemDiskKmsKeyId = systemDiskKmsKeyId;
@@ -2530,7 +2548,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             }
 
             /**
-             * system_disk_provisioned_iops.
+             * 节点系统盘预配置的读写IOPS，磁盘类型为cloud_auto时配置。
              */
             public Builder systemDiskProvisionedIops(Long systemDiskProvisionedIops) {
                 this.systemDiskProvisionedIops = systemDiskProvisionedIops;
