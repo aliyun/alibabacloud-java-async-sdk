@@ -129,6 +129,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
 
+    CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
+
     CompletableFuture<UpdateClientUserResponse> updateClientUser(UpdateClientUserRequest request);
 
     CompletableFuture<UpdateClientUserPasswordResponse> updateClientUserPassword(UpdateClientUserPasswordRequest request);
