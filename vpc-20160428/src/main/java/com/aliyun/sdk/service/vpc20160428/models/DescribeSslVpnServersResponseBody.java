@@ -109,7 +109,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
         }
 
         /**
-         * The detailed information about the SSL servers.
+         * The detailed information about the SSL-VPN server.
          */
         public Builder sslVpnServers(SslVpnServers sslVpnServers) {
             this.sslVpnServers = sslVpnServers;
@@ -421,7 +421,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the SSL server was created.
+             * The timestamp generated when the SSL-VPN server was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -465,7 +465,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the IDaaS instance is created.
+             * The region ID of the IDaaS instance.
              */
             public Builder iDaaSRegionId(String iDaaSRegionId) {
                 this.iDaaSRegionId = iDaaSRegionId;
@@ -497,7 +497,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the SSL server.
+             * The name of the SSL-VPN server.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -505,7 +505,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The port that is used by the SSL server.
+             * The port that is used by the SSL-VPN server.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -513,7 +513,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used by the SSL server.
+             * The protocol that is used by the SSL-VPN server.
              */
             public Builder proto(String proto) {
                 this.proto = proto;
@@ -521,7 +521,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the SSL server is created.
+             * The region ID of the SSL-VPN server.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -529,10 +529,10 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group to which the SSL server belongs.
+             * The resource group ID of the SSL-VPN server.
              * <p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+             * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -540,7 +540,7 @@ public class DescribeSslVpnServersResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the SSL server.
+             * The ID of the SSL-VPN server.
              */
             public Builder sslVpnServerId(String sslVpnServerId) {
                 this.sslVpnServerId = sslVpnServerId;

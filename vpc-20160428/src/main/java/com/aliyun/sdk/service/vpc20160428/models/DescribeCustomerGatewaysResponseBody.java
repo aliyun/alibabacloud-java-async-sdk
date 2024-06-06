@@ -169,7 +169,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -363,7 +363,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The authentication key of the Border Gateway Protocol (BGP) routing protocol for the gateway device in the data center.
+             * The authentication key that is used to connect to the gateway device in the data center by using Border Gateway Protocol (BGP).
              */
             public Builder authKey(String authKey) {
                 this.authKey = authKey;
@@ -371,10 +371,10 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp generated when the customer gateway was created. Unit: millisecond.
+             * The time when the customer gateway was created. Unit: millisecond.
              * <p>
              * 
-             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since the epoch time January 1, 1970, 00:00:00 UTC.
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -382,7 +382,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the customer gateway.
+             * The customer gateway ID.
              */
             public Builder customerGatewayId(String customerGatewayId) {
                 this.customerGatewayId = customerGatewayId;
@@ -398,7 +398,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The public IP address of the gateway device in the data center.
+             * The IP address of the gateway device in the data center.
              */
             public Builder ipAddress(String ipAddress) {
                 this.ipAddress = ipAddress;
@@ -417,7 +417,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
              * The ID of the resource group to which the customer gateway belongs.
              * <p>
              * 
-             * You can call the [ListResourceGroups](~~158855~~) operation to query the resource group information.
+             * You can call the [ListResourceGroups](~~158855~~) operation to query resource groups.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -425,7 +425,7 @@ public class DescribeCustomerGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags added to the customer gateway.
+             * The tags that are added to the customer gateway.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;

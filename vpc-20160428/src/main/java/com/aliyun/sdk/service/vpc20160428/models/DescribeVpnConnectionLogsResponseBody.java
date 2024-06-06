@@ -105,10 +105,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * An array of strings.
-         * <p>
-         * 
-         * Each item in the array is a log entry.
+         * The log list.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -119,8 +116,8 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
          * Indicates whether the log is accurate. Valid values:
          * <p>
          * 
-         * *   **true**: accurate
-         * *   **false**: inaccurate
+         * *   **true**
+         * *   **false**
          */
         public Builder isCompleted(Boolean isCompleted) {
             this.isCompleted = isCompleted;
@@ -128,7 +125,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -136,7 +133,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -144,7 +141,7 @@ public class DescribeVpnConnectionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

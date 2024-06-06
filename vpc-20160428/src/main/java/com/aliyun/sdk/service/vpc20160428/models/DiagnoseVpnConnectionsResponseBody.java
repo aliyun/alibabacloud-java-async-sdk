@@ -85,7 +85,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         private java.util.List < VpnConnections> vpnConnections; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +93,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +101,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +117,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
         }
 
         /**
-         * VpnConnections.
+         * The diagnostic information.
          */
         public Builder vpnConnections(java.util.List < VpnConnections> vpnConnections) {
             this.vpnConnections = vpnConnections;
@@ -253,7 +253,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             private String vpnConnectionId; 
 
             /**
-             * FailedReason.
+             * The cause of the error.
              */
             public Builder failedReason(String failedReason) {
                 this.failedReason = failedReason;
@@ -261,7 +261,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedReasonCode.
+             * The error code.
              */
             public Builder failedReasonCode(String failedReasonCode) {
                 this.failedReasonCode = failedReasonCode;
@@ -269,7 +269,10 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FailedTime.
+             * The timestamp when the current error occurred on the IPsec-VPN connection. Unit: millisecond.
+             * <p>
+             * 
+             * This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder failedTime(Long failedTime) {
                 this.failedTime = failedTime;
@@ -277,7 +280,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * MismatchLocalParam.
+             * If the values of the parameters configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameters configured for the IPsec-VPN connection.
              */
             public Builder mismatchLocalParam(String mismatchLocalParam) {
                 this.mismatchLocalParam = mismatchLocalParam;
@@ -285,7 +288,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * MismatchRemoteParam.
+             * If the parameter values configured for the IPsec-VPN connection and the peer gateway device do not match, this parameter indicates the value of the parameter configured for the peer gateway device.
              */
             public Builder mismatchRemoteParam(String mismatchRemoteParam) {
                 this.mismatchRemoteParam = mismatchRemoteParam;
@@ -293,7 +296,12 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Severity.
+             * The error level. Valid values:
+             * <p>
+             * 
+             * *   **Critical**
+             * *   **Warn**
+             * *   **Normal**
              */
             public Builder severity(String severity) {
                 this.severity = severity;
@@ -301,7 +309,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLog.
+             * The log information about the error.
              */
             public Builder sourceLog(String sourceLog) {
                 this.sourceLog = sourceLog;
@@ -309,7 +317,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelId.
+             * The tunnel ID.
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -317,7 +325,7 @@ public class DiagnoseVpnConnectionsResponseBody extends TeaModel {
             }
 
             /**
-             * VpnConnectionId.
+             * The ID of the IPsec-VPN connection.
              */
             public Builder vpnConnectionId(String vpnConnectionId) {
                 this.vpnConnectionId = vpnConnectionId;

@@ -179,7 +179,7 @@ public class DeleteRouteEntryRequest extends Request {
         } 
 
         /**
-         * The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.
+         * The destination CIDR block of the route. Only IPv4 CIDR blocks, IPv6 CIDR blocks, and prefix lists are supported.
          */
         public Builder destinationCidrBlock(String destinationCidrBlock) {
             this.putQueryParameter("DestinationCidrBlock", destinationCidrBlock);

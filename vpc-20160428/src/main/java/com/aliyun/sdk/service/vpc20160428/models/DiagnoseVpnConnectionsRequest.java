@@ -138,7 +138,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         } 
 
         /**
-         * PageNumber.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -147,7 +147,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -156,7 +156,10 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the IPsec-VPN connection.
+         * <p>
+         * 
+         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -174,7 +177,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * TunnelIds.
+         * The list of tunnel IDs.
          */
         public Builder tunnelIds(java.util.List < String > tunnelIds) {
             this.putQueryParameter("TunnelIds", tunnelIds);
@@ -183,7 +186,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * VpnConnectionIds.
+         * The IDs of IPsec-VPN connections.
          */
         public Builder vpnConnectionIds(java.util.List < String > vpnConnectionIds) {
             this.putQueryParameter("VpnConnectionIds", vpnConnectionIds);
@@ -192,7 +195,7 @@ public class DiagnoseVpnConnectionsRequest extends Request {
         }
 
         /**
-         * VpnGatewayId.
+         * The ID of the VPN gateway.
          */
         public Builder vpnGatewayId(String vpnGatewayId) {
             this.putQueryParameter("VpnGatewayId", vpnGatewayId);

@@ -227,7 +227,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The new weight that you want to set for the destination-based route. Valid values:
+         * The new weight of the destination-based route. Valid values:
          * <p>
          * 
          * *   **0**: a low priority
@@ -321,7 +321,7 @@ public class ModifyVpnRouteEntryWeightRequest extends Request {
         }
 
         /**
-         * The previous weight of the destination-based route. Valid values:
+         * The original weight of the destination-based route. Valid values:
          * <p>
          * 
          * *   **0**: a low priority

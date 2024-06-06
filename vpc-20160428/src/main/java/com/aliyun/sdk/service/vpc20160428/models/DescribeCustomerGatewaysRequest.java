@@ -270,12 +270,7 @@ public class DescribeCustomerGatewaysRequest extends Request {
         }
 
         /**
-         * The tag value.
-         * <p>
-         * 
-         * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
-         * 
-         * Each tag key corresponds to one tag value. You can specify up to 20 tag values in each call.
+         * The tags to be added to the customer gateway.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -329,12 +324,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             private String value; 
 
             /**
-             * The tag key. The tag key cannot be an empty string.
+             * The key of the tag. The tag key cannot be an empty string.
              * <p>
              * 
-             * It can be at most 64 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
+             * The tag key can be up to 64 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`.
              * 
-             * You can specify at most 20 tag keys in each call.
+             * You can specify at most 20 tag keys at a time.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -342,12 +337,12 @@ public class DescribeCustomerGatewaysRequest extends Request {
             }
 
             /**
-             * The tag value.
+             * The value of the tag.
              * <p>
              * 
-             * The tag value can be an empty string and cannot exceed 128 characters in length. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
+             * The tag value can be up to 128 characters in length. It can be an empty string. It cannot start with `aliyun` or `acs:`, and cannot contain `http://` or `https://`.
              * 
-             * Each tag key corresponds to one tag value. You can specify at most 20 tag values in each call.
+             * Each tag key corresponds to one tag value. You can specify at most 20 tag values at a time.
              */
             public Builder value(String value) {
                 this.value = value;

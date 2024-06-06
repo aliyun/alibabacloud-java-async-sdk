@@ -347,7 +347,10 @@ public class DeleteVpnPbrRouteEntryRequest extends Request {
         }
 
         /**
-         * The weight of the policy-based route.
+         * The weight of the policy-based route. Valid values:
+         * <p>
+         * 
+         * You can call [DescribeVpnPbrRouteEntries](~~2526959~~) to query weights of policy-based routes.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

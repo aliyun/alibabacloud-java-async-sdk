@@ -69,7 +69,7 @@ public class ModifySslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class ModifySslVpnClientCertResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the SSL-VPN client certificate.
+         * The ID of the SSL client certificate.
          */
         public Builder sslVpnClientCertId(String sslVpnClientCertId) {
             this.sslVpnClientCertId = sslVpnClientCertId;

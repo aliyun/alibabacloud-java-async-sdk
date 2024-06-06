@@ -209,10 +209,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         } 
 
         /**
-         * The beginning of the time range to query. The value must be a UNIX timestamp. For example, 1671003744 specifies 15:42:24 (UTC+8) on December 14, 2022.
+         * The start time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * <p>
          * 
-         * >  If you specify **From**, you must also specify **To** or **MinutePeriod**.
+         * >  If you specify **From**, you must specify **To** or **MinutePeriod**.
          */
         public Builder from(Integer from) {
             this.putQueryParameter("From", from);
@@ -221,10 +221,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The interval at which log data is queried. Valid values: **1** to **10**. Unit: minutes.
+         * The interval at which log data is collected. Valid values: **1** to **10**. Unit: minutes.
          * <p>
          * 
-         * >  If both **From** and **To** are not specified, you must specify **MinutePeriod**.
+         * >  If you do not specify **From** and **To**, you must specify **MinutePeriod**.
          */
         public Builder minutePeriod(Integer minutePeriod) {
             this.putQueryParameter("MinutePeriod", minutePeriod);
@@ -251,7 +251,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -260,7 +260,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: **1** to **50**. Default value: **10**.
+         * The number of entries per page. Valid values: **1** to **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -269,7 +269,7 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the region to which the IPsec-VPN connection belongs.
+         * The region ID of the IPsec-VPN connection.
          * <p>
          * 
          * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
@@ -299,10 +299,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The end of the time range to query. The value must be a UNIX timestamp. For example, 1671004344 specifies 15:52:24 (UTC+8) on December 14, 2022.
+         * The end time of the flow log. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          * <p>
          * 
-         * >  If you specify **To**, you must also specify **From** or **MinutePeriod**.
+         * >  If you specify **To**, you must specify **From** or **MinutePeriod**.
          */
         public Builder to(Integer to) {
             this.putQueryParameter("To", to);
@@ -311,7 +311,10 @@ public class DescribeVpnConnectionLogsRequest extends Request {
         }
 
         /**
-         * The tunnel ID of the IPsec-VPN connection. You can specify this parameter only for IPsec-VPN connections in dual-tunnel mode.
+         * The ID of the IPsec-VPN connection.
+         * <p>
+         * 
+         * This parameter is available only for a dual-tunnel IPsec-VPN connection.
          */
         public Builder tunnelId(String tunnelId) {
             this.putQueryParameter("TunnelId", tunnelId);
