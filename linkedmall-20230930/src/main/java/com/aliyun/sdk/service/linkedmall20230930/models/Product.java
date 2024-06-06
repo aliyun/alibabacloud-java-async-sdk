@@ -38,6 +38,9 @@ public class Product extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("images")
     private java.util.List < String > images;
 
+    @com.aliyun.core.annotation.NameInMap("lmItemId")
+    private String lmItemId;
+
     @com.aliyun.core.annotation.NameInMap("picUrl")
     private String picUrl;
 
@@ -90,6 +93,7 @@ public class Product extends TeaModel {
         this.extendProperties = builder.extendProperties;
         this.fuzzyQuantity = builder.fuzzyQuantity;
         this.images = builder.images;
+        this.lmItemId = builder.lmItemId;
         this.picUrl = builder.picUrl;
         this.productId = builder.productId;
         this.productSpecs = builder.productSpecs;
@@ -175,6 +179,13 @@ public class Product extends TeaModel {
      */
     public java.util.List < String > getImages() {
         return this.images;
+    }
+
+    /**
+     * @return lmItemId
+     */
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     /**
@@ -285,6 +296,7 @@ public class Product extends TeaModel {
         private java.util.List < ProductExtendProperty > extendProperties; 
         private String fuzzyQuantity; 
         private java.util.List < String > images; 
+        private String lmItemId; 
         private String picUrl; 
         private String productId; 
         private java.util.List < ProductSpec > productSpecs; 
@@ -369,6 +381,14 @@ public class Product extends TeaModel {
          */
         public Builder images(java.util.List < String > images) {
             this.images = images;
+            return this;
+        }
+
+        /**
+         * lmItemId.
+         */
+        public Builder lmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
             return this;
         }
 

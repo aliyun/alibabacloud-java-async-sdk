@@ -20,6 +20,9 @@ public class ProductSaleInfo extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("fuzzyQuantity")
     private String fuzzyQuantity;
 
+    @com.aliyun.core.annotation.NameInMap("lmItemId")
+    private String lmItemId;
+
     @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
@@ -45,6 +48,7 @@ public class ProductSaleInfo extends TeaModel {
         this.canSell = builder.canSell;
         this.divisionCode = builder.divisionCode;
         this.fuzzyQuantity = builder.fuzzyQuantity;
+        this.lmItemId = builder.lmItemId;
         this.productId = builder.productId;
         this.productStatus = builder.productStatus;
         this.quantity = builder.quantity;
@@ -81,6 +85,13 @@ public class ProductSaleInfo extends TeaModel {
      */
     public String getFuzzyQuantity() {
         return this.fuzzyQuantity;
+    }
+
+    /**
+     * @return lmItemId
+     */
+    public String getLmItemId() {
+        return this.lmItemId;
     }
 
     /**
@@ -136,6 +147,7 @@ public class ProductSaleInfo extends TeaModel {
         private Boolean canSell; 
         private String divisionCode; 
         private String fuzzyQuantity; 
+        private String lmItemId; 
         private String productId; 
         private String productStatus; 
         private Long quantity; 
@@ -165,6 +177,14 @@ public class ProductSaleInfo extends TeaModel {
          */
         public Builder fuzzyQuantity(String fuzzyQuantity) {
             this.fuzzyQuantity = fuzzyQuantity;
+            return this;
+        }
+
+        /**
+         * lmItemId.
+         */
+        public Builder lmItemId(String lmItemId) {
+            this.lmItemId = lmItemId;
             return this;
         }
 
