@@ -6,14 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TranslateECommerceRequest} extends {@link RequestModel}
+ * {@link CreateAsyncTranslateRequest} extends {@link RequestModel}
  *
- * <p>TranslateECommerceRequest</p>
+ * <p>CreateAsyncTranslateRequest</p>
  */
-public class TranslateECommerceRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Context")
-    private String context;
+public class CreateAsyncTranslateRequest extends Request {
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApiType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String apiType;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FormatType")
@@ -40,9 +41,9 @@ public class TranslateECommerceRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetLanguage;
 
-    private TranslateECommerceRequest(Builder builder) {
+    private CreateAsyncTranslateRequest(Builder builder) {
         super(builder);
-        this.context = builder.context;
+        this.apiType = builder.apiType;
         this.formatType = builder.formatType;
         this.scene = builder.scene;
         this.sourceLanguage = builder.sourceLanguage;
@@ -54,7 +55,7 @@ public class TranslateECommerceRequest extends Request {
         return new Builder();
     }
 
-    public static TranslateECommerceRequest create() {
+    public static CreateAsyncTranslateRequest create() {
         return builder().build();
     }
 
@@ -64,10 +65,10 @@ public class TranslateECommerceRequest extends Request {
     }
 
     /**
-     * @return context
+     * @return apiType
      */
-    public String getContext() {
-        return this.context;
+    public String getApiType() {
+        return this.apiType;
     }
 
     /**
@@ -105,8 +106,8 @@ public class TranslateECommerceRequest extends Request {
         return this.targetLanguage;
     }
 
-    public static final class Builder extends Request.Builder<TranslateECommerceRequest, Builder> {
-        private String context; 
+    public static final class Builder extends Request.Builder<CreateAsyncTranslateRequest, Builder> {
+        private String apiType; 
         private String formatType; 
         private String scene; 
         private String sourceLanguage; 
@@ -117,9 +118,9 @@ public class TranslateECommerceRequest extends Request {
             super();
         } 
 
-        private Builder(TranslateECommerceRequest request) {
+        private Builder(CreateAsyncTranslateRequest request) {
             super(request);
-            this.context = request.context;
+            this.apiType = request.apiType;
             this.formatType = request.formatType;
             this.scene = request.scene;
             this.sourceLanguage = request.sourceLanguage;
@@ -128,11 +129,11 @@ public class TranslateECommerceRequest extends Request {
         } 
 
         /**
-         * Context.
+         * ApiType.
          */
-        public Builder context(String context) {
-            this.putQueryParameter("Context", context);
-            this.context = context;
+        public Builder apiType(String apiType) {
+            this.putBodyParameter("ApiType", apiType);
+            this.apiType = apiType;
             return this;
         }
 
@@ -182,8 +183,8 @@ public class TranslateECommerceRequest extends Request {
         }
 
         @Override
-        public TranslateECommerceRequest build() {
-            return new TranslateECommerceRequest(this);
+        public CreateAsyncTranslateRequest build() {
+            return new CreateAsyncTranslateRequest(this);
         } 
 
     } 

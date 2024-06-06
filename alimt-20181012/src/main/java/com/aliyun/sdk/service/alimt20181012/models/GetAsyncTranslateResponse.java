@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TranslateResponse} extends {@link TeaModel}
+ * {@link GetAsyncTranslateResponse} extends {@link TeaModel}
  *
- * <p>TranslateResponse</p>
+ * <p>GetAsyncTranslateResponse</p>
  */
-public class TranslateResponse extends Response {
+public class GetAsyncTranslateResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class TranslateResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private TranslateResponseBody body;
+    private GetAsyncTranslateResponseBody body;
 
-    private TranslateResponse(BuilderImpl builder) {
+    private GetAsyncTranslateResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static TranslateResponse create() {
+    public static GetAsyncTranslateResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class TranslateResponse extends Response {
     /**
      * @return body
      */
-    public TranslateResponseBody getBody() {
+    public GetAsyncTranslateResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<TranslateResponse, Builder> {
+    public interface Builder extends Response.Builder<GetAsyncTranslateResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(TranslateResponseBody body);
+        Builder body(GetAsyncTranslateResponseBody body);
 
         @Override
-        TranslateResponse build();
+        GetAsyncTranslateResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<TranslateResponse, Builder>
+            extends Response.BuilderImpl<GetAsyncTranslateResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private TranslateResponseBody body; 
+        private GetAsyncTranslateResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(TranslateResponse response) {
+        private BuilderImpl(GetAsyncTranslateResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class TranslateResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(TranslateResponseBody body) {
+        public Builder body(GetAsyncTranslateResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public TranslateResponse build() {
-            return new TranslateResponse(this);
+        public GetAsyncTranslateResponse build() {
+            return new GetAsyncTranslateResponse(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TranslateGeneralResponseBody</p>
  */
 public class TranslateGeneralResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TranslateGeneralResponseBody(Builder builder) {
@@ -112,13 +111,17 @@ public class TranslateGeneralResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Translated")
+        @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
+        private String detectedLanguage;
+
+        @com.aliyun.core.annotation.NameInMap("Translated")
         private String translated;
 
-        @NameInMap("WordCount")
+        @com.aliyun.core.annotation.NameInMap("WordCount")
         private String wordCount;
 
         private Data(Builder builder) {
+            this.detectedLanguage = builder.detectedLanguage;
             this.translated = builder.translated;
             this.wordCount = builder.wordCount;
         }
@@ -129,6 +132,13 @@ public class TranslateGeneralResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return detectedLanguage
+         */
+        public String getDetectedLanguage() {
+            return this.detectedLanguage;
         }
 
         /**
@@ -146,8 +156,17 @@ public class TranslateGeneralResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String detectedLanguage; 
             private String translated; 
             private String wordCount; 
+
+            /**
+             * DetectedLanguage.
+             */
+            public Builder detectedLanguage(String detectedLanguage) {
+                this.detectedLanguage = detectedLanguage;
+                return this;
+            }
 
             /**
              * Translated.

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.alimt20181012.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDocTranslateTaskResponseBody</p>
  */
 public class GetDocTranslateTaskResponseBody extends TeaModel {
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Integer pageCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TranslateErrorCode")
+    @com.aliyun.core.annotation.NameInMap("TranslateErrorCode")
     private String translateErrorCode;
 
-    @NameInMap("TranslateErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("TranslateErrorMessage")
     private String translateErrorMessage;
 
-    @NameInMap("TranslateFileUrl")
+    @com.aliyun.core.annotation.NameInMap("TranslateFileUrl")
     private String translateFileUrl;
 
     private GetDocTranslateTaskResponseBody(Builder builder) {

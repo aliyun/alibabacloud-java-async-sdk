@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TranslateImageResponseBody} extends {@link TeaModel}
+ * {@link GetAsyncTranslateResponseBody} extends {@link TeaModel}
  *
- * <p>TranslateImageResponseBody</p>
+ * <p>GetAsyncTranslateResponseBody</p>
  */
-public class TranslateImageResponseBody extends TeaModel {
+public class GetAsyncTranslateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -23,7 +23,7 @@ public class TranslateImageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private TranslateImageResponseBody(Builder builder) {
+    private GetAsyncTranslateResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -34,7 +34,7 @@ public class TranslateImageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TranslateImageResponseBody create() {
+    public static GetAsyncTranslateResponseBody create() {
         return builder().build();
     }
 
@@ -104,26 +104,30 @@ public class TranslateImageResponseBody extends TeaModel {
             return this;
         }
 
-        public TranslateImageResponseBody build() {
-            return new TranslateImageResponseBody(this);
+        public GetAsyncTranslateResponseBody build() {
+            return new GetAsyncTranslateResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FinalImageUrl")
-        private String finalImageUrl;
+        @com.aliyun.core.annotation.NameInMap("DetectedLanguage")
+        private String detectedLanguage;
 
-        @com.aliyun.core.annotation.NameInMap("InPaintingUrl")
-        private String inPaintingUrl;
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
 
-        @com.aliyun.core.annotation.NameInMap("TemplateJson")
-        private String templateJson;
+        @com.aliyun.core.annotation.NameInMap("TranslatedText")
+        private String translatedText;
+
+        @com.aliyun.core.annotation.NameInMap("WordCount")
+        private String wordCount;
 
         private Data(Builder builder) {
-            this.finalImageUrl = builder.finalImageUrl;
-            this.inPaintingUrl = builder.inPaintingUrl;
-            this.templateJson = builder.templateJson;
+            this.detectedLanguage = builder.detectedLanguage;
+            this.status = builder.status;
+            this.translatedText = builder.translatedText;
+            this.wordCount = builder.wordCount;
         }
 
         public static Builder builder() {
@@ -135,52 +139,68 @@ public class TranslateImageResponseBody extends TeaModel {
         }
 
         /**
-         * @return finalImageUrl
+         * @return detectedLanguage
          */
-        public String getFinalImageUrl() {
-            return this.finalImageUrl;
+        public String getDetectedLanguage() {
+            return this.detectedLanguage;
         }
 
         /**
-         * @return inPaintingUrl
+         * @return status
          */
-        public String getInPaintingUrl() {
-            return this.inPaintingUrl;
+        public String getStatus() {
+            return this.status;
         }
 
         /**
-         * @return templateJson
+         * @return translatedText
          */
-        public String getTemplateJson() {
-            return this.templateJson;
+        public String getTranslatedText() {
+            return this.translatedText;
+        }
+
+        /**
+         * @return wordCount
+         */
+        public String getWordCount() {
+            return this.wordCount;
         }
 
         public static final class Builder {
-            private String finalImageUrl; 
-            private String inPaintingUrl; 
-            private String templateJson; 
+            private String detectedLanguage; 
+            private String status; 
+            private String translatedText; 
+            private String wordCount; 
 
             /**
-             * FinalImageUrl.
+             * DetectedLanguage.
              */
-            public Builder finalImageUrl(String finalImageUrl) {
-                this.finalImageUrl = finalImageUrl;
+            public Builder detectedLanguage(String detectedLanguage) {
+                this.detectedLanguage = detectedLanguage;
                 return this;
             }
 
             /**
-             * InPaintingUrl.
+             * Status.
              */
-            public Builder inPaintingUrl(String inPaintingUrl) {
-                this.inPaintingUrl = inPaintingUrl;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
             /**
-             * TemplateJson.
+             * TranslatedText.
              */
-            public Builder templateJson(String templateJson) {
-                this.templateJson = templateJson;
+            public Builder translatedText(String translatedText) {
+                this.translatedText = translatedText;
+                return this;
+            }
+
+            /**
+             * WordCount.
+             */
+            public Builder wordCount(String wordCount) {
+                this.wordCount = wordCount;
                 return this;
             }
 

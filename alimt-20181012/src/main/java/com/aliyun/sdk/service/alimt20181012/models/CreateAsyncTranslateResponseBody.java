@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link TranslateImageResponseBody} extends {@link TeaModel}
+ * {@link CreateAsyncTranslateResponseBody} extends {@link TeaModel}
  *
- * <p>TranslateImageResponseBody</p>
+ * <p>CreateAsyncTranslateResponseBody</p>
  */
-public class TranslateImageResponseBody extends TeaModel {
+public class CreateAsyncTranslateResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
@@ -23,7 +23,7 @@ public class TranslateImageResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private TranslateImageResponseBody(Builder builder) {
+    private CreateAsyncTranslateResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -34,7 +34,7 @@ public class TranslateImageResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static TranslateImageResponseBody create() {
+    public static CreateAsyncTranslateResponseBody create() {
         return builder().build();
     }
 
@@ -104,26 +104,24 @@ public class TranslateImageResponseBody extends TeaModel {
             return this;
         }
 
-        public TranslateImageResponseBody build() {
-            return new TranslateImageResponseBody(this);
+        public CreateAsyncTranslateResponseBody build() {
+            return new CreateAsyncTranslateResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("FinalImageUrl")
-        private String finalImageUrl;
+        @com.aliyun.core.annotation.NameInMap("JobId")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String jobId;
 
-        @com.aliyun.core.annotation.NameInMap("InPaintingUrl")
-        private String inPaintingUrl;
-
-        @com.aliyun.core.annotation.NameInMap("TemplateJson")
-        private String templateJson;
+        @com.aliyun.core.annotation.NameInMap("Status")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String status;
 
         private Data(Builder builder) {
-            this.finalImageUrl = builder.finalImageUrl;
-            this.inPaintingUrl = builder.inPaintingUrl;
-            this.templateJson = builder.templateJson;
+            this.jobId = builder.jobId;
+            this.status = builder.status;
         }
 
         public static Builder builder() {
@@ -135,52 +133,36 @@ public class TranslateImageResponseBody extends TeaModel {
         }
 
         /**
-         * @return finalImageUrl
+         * @return jobId
          */
-        public String getFinalImageUrl() {
-            return this.finalImageUrl;
+        public String getJobId() {
+            return this.jobId;
         }
 
         /**
-         * @return inPaintingUrl
+         * @return status
          */
-        public String getInPaintingUrl() {
-            return this.inPaintingUrl;
-        }
-
-        /**
-         * @return templateJson
-         */
-        public String getTemplateJson() {
-            return this.templateJson;
+        public String getStatus() {
+            return this.status;
         }
 
         public static final class Builder {
-            private String finalImageUrl; 
-            private String inPaintingUrl; 
-            private String templateJson; 
+            private String jobId; 
+            private String status; 
 
             /**
-             * FinalImageUrl.
+             * JobId.
              */
-            public Builder finalImageUrl(String finalImageUrl) {
-                this.finalImageUrl = finalImageUrl;
+            public Builder jobId(String jobId) {
+                this.jobId = jobId;
                 return this;
             }
 
             /**
-             * InPaintingUrl.
+             * Status.
              */
-            public Builder inPaintingUrl(String inPaintingUrl) {
-                this.inPaintingUrl = inPaintingUrl;
-                return this;
-            }
-
-            /**
-             * TemplateJson.
-             */
-            public Builder templateJson(String templateJson) {
-                this.templateJson = templateJson;
+            public Builder status(String status) {
+                this.status = status;
                 return this;
             }
 
