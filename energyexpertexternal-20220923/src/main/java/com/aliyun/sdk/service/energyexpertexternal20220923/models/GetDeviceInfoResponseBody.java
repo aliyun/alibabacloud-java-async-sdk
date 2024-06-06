@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeviceInfoResponseBody</p>
  */
 public class GetDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetDeviceInfoResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The code returned for the request. A value of Success indicates that the request was successful. Other values indicate that the request failed. You can troubleshoot the error by viewing the error message returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -110,7 +109,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,22 +131,22 @@ public class GetDeviceInfoResponseBody extends TeaModel {
     } 
 
     public static class RecordList extends TeaModel {
-        @NameInMap("identifier")
+        @com.aliyun.core.annotation.NameInMap("identifier")
         private String identifier;
 
-        @NameInMap("paramName")
+        @com.aliyun.core.annotation.NameInMap("paramName")
         private String paramName;
 
-        @NameInMap("statisticsDate")
+        @com.aliyun.core.annotation.NameInMap("statisticsDate")
         private String statisticsDate;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("unit")
+        @com.aliyun.core.annotation.NameInMap("unit")
         private String unit;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private Double value;
 
         private RecordList(Builder builder) {
@@ -218,7 +217,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * identifier.
+             * The device identifier.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -226,7 +225,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * paramName.
+             * The parameter name.
              */
             public Builder paramName(String paramName) {
                 this.paramName = paramName;
@@ -234,7 +233,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * statisticsDate.
+             * The date on which the statistics were collected.
              */
             public Builder statisticsDate(String statisticsDate) {
                 this.statisticsDate = statisticsDate;
@@ -242,7 +241,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the measuring point.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -250,7 +249,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * unit.
+             * The unit of the parameter value.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -258,7 +257,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * value.
+             * The value of the measuring point.
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -273,19 +272,19 @@ public class GetDeviceInfoResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("deviceId")
+        @com.aliyun.core.annotation.NameInMap("deviceId")
         private String deviceId;
 
-        @NameInMap("deviceName")
+        @com.aliyun.core.annotation.NameInMap("deviceName")
         private String deviceName;
 
-        @NameInMap("firstTypeName")
+        @com.aliyun.core.annotation.NameInMap("firstTypeName")
         private String firstTypeName;
 
-        @NameInMap("recordList")
+        @com.aliyun.core.annotation.NameInMap("recordList")
         private java.util.List < RecordList> recordList;
 
-        @NameInMap("secondTypeName")
+        @com.aliyun.core.annotation.NameInMap("secondTypeName")
         private String secondTypeName;
 
         private Data(Builder builder) {
@@ -347,7 +346,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             private String secondTypeName; 
 
             /**
-             * deviceId.
+             * The ID of the device.
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;
@@ -355,7 +354,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * deviceName.
+             * The name of the device.
              */
             public Builder deviceName(String deviceName) {
                 this.deviceName = deviceName;
@@ -363,7 +362,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * firstTypeName.
+             * The level 1 meter type.
              */
             public Builder firstTypeName(String firstTypeName) {
                 this.firstTypeName = firstTypeName;
@@ -371,7 +370,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * recordList.
+             * The device parameters.
              */
             public Builder recordList(java.util.List < RecordList> recordList) {
                 this.recordList = recordList;
@@ -379,7 +378,7 @@ public class GetDeviceInfoResponseBody extends TeaModel {
             }
 
             /**
-             * secondTypeName.
+             * The level 2 meter type.
              */
             public Builder secondTypeName(String secondTypeName) {
                 this.secondTypeName = secondTypeName;

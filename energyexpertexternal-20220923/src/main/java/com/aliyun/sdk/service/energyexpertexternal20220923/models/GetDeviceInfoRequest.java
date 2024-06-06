@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeviceInfoRequest</p>
  */
 public class GetDeviceInfoRequest extends Request {
-    @Query
-    @NameInMap("deviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("deviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("ds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ds;
 
-    @Query
-    @NameInMap("factoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("factoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String factoryId;
 
     private GetDeviceInfoRequest(Builder builder) {
@@ -85,7 +84,7 @@ public class GetDeviceInfoRequest extends Request {
         } 
 
         /**
-         * deviceId.
+         * The ID of the device.
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("deviceId", deviceId);
@@ -94,7 +93,7 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * ds.
+         * The time string in the YYYY-mm-dd format.
          */
         public Builder ds(String ds) {
             this.putQueryParameter("ds", ds);
@@ -103,7 +102,7 @@ public class GetDeviceInfoRequest extends Request {
         }
 
         /**
-         * factoryId.
+         * The ID of the site.
          */
         public Builder factoryId(String factoryId) {
             this.putQueryParameter("factoryId", factoryId);

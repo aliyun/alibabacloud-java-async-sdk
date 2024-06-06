@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDeviceListRequest</p>
  */
 public class GetDeviceListRequest extends Request {
-    @Query
-    @NameInMap("factoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("factoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String factoryId;
 
     private GetDeviceListRequest(Builder builder) {
@@ -55,7 +54,7 @@ public class GetDeviceListRequest extends Request {
         } 
 
         /**
-         * factoryId.
+         * The ID of the site.
          */
         public Builder factoryId(String factoryId) {
             this.putQueryParameter("factoryId", factoryId);

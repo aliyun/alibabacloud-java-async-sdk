@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.energyexpertexternal20220923.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetOrgAndFactoryResponseBody</p>
  */
 public class GetOrgAndFactoryResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetOrgAndFactoryResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * code.
+         * The code returned for the request.
          */
         public Builder code(String code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * data.
+         * data
          */
         public Builder data(java.util.List < Data> data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * httpCode.
+         * The HTTP status code.
          */
         public Builder httpCode(Integer httpCode) {
             this.httpCode = httpCode;
@@ -110,7 +109,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
         }
 
         /**
-         * success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,10 +131,10 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
     } 
 
     public static class FactoryList extends TeaModel {
-        @NameInMap("factoryId")
+        @com.aliyun.core.annotation.NameInMap("factoryId")
         private String factoryId;
 
-        @NameInMap("factoryName")
+        @com.aliyun.core.annotation.NameInMap("factoryName")
         private String factoryName;
 
         private FactoryList(Builder builder) {
@@ -170,7 +169,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String factoryName; 
 
             /**
-             * factoryId.
+             * The site ID.
              */
             public Builder factoryId(String factoryId) {
                 this.factoryId = factoryId;
@@ -178,7 +177,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * factoryName.
+             * The site name.
              */
             public Builder factoryName(String factoryName) {
                 this.factoryName = factoryName;
@@ -193,16 +192,16 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("aliyunPk")
+        @com.aliyun.core.annotation.NameInMap("aliyunPk")
         private String aliyunPk;
 
-        @NameInMap("factoryList")
+        @com.aliyun.core.annotation.NameInMap("factoryList")
         private java.util.List < FactoryList> factoryList;
 
-        @NameInMap("organizationId")
+        @com.aliyun.core.annotation.NameInMap("organizationId")
         private String organizationId;
 
-        @NameInMap("organizationName")
+        @com.aliyun.core.annotation.NameInMap("organizationName")
         private String organizationName;
 
         private Data(Builder builder) {
@@ -255,7 +254,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             private String organizationName; 
 
             /**
-             * aliyunPk.
+             * The Alibaba Cloud account ID.
              */
             public Builder aliyunPk(String aliyunPk) {
                 this.aliyunPk = aliyunPk;
@@ -263,7 +262,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * factoryList.
+             * The sites.
              */
             public Builder factoryList(java.util.List < FactoryList> factoryList) {
                 this.factoryList = factoryList;
@@ -271,7 +270,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * organizationId.
+             * The enterprise ID.
              */
             public Builder organizationId(String organizationId) {
                 this.organizationId = organizationId;
@@ -279,7 +278,7 @@ public class GetOrgAndFactoryResponseBody extends TeaModel {
             }
 
             /**
-             * organizationName.
+             * The enterprise name.
              */
             public Builder organizationName(String organizationName) {
                 this.organizationName = organizationName;
