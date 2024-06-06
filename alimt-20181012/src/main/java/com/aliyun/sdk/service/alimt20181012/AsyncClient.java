@@ -27,6 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetBatchTranslateResponse> getBatchTranslate(GetBatchTranslateRequest request);
 
+    CompletableFuture<GetBatchTranslateByVPCResponse> getBatchTranslateByVPC(GetBatchTranslateByVPCRequest request);
+
     CompletableFuture<GetDetectLanguageResponse> getDetectLanguage(GetDetectLanguageRequest request);
 
     CompletableFuture<GetDocTranslateTaskResponse> getDocTranslateTask(GetDocTranslateTaskRequest request);
@@ -58,6 +60,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TranslateECommerceResponse> translateECommerce(TranslateECommerceRequest request);
 
     CompletableFuture<TranslateGeneralResponse> translateGeneral(TranslateGeneralRequest request);
+
+    CompletableFuture<TranslateGeneralVpcResponse> translateGeneralVpc(TranslateGeneralVpcRequest request);
 
     CompletableFuture<TranslateImageResponse> translateImage(TranslateImageRequest request);
 
