@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DeleteAddonReleaseRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddonName")
+    private String addonName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnvironmentId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String environmentId;
@@ -31,6 +35,7 @@ public class DeleteAddonReleaseRequest extends Request {
 
     private DeleteAddonReleaseRequest(Builder builder) {
         super(builder);
+        this.addonName = builder.addonName;
         this.environmentId = builder.environmentId;
         this.force = builder.force;
         this.regionId = builder.regionId;
@@ -48,6 +53,13 @@ public class DeleteAddonReleaseRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addonName
+     */
+    public String getAddonName() {
+        return this.addonName;
     }
 
     /**
@@ -79,6 +91,7 @@ public class DeleteAddonReleaseRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DeleteAddonReleaseRequest, Builder> {
+        private String addonName; 
         private String environmentId; 
         private Boolean force; 
         private String regionId; 
@@ -90,11 +103,21 @@ public class DeleteAddonReleaseRequest extends Request {
 
         private Builder(DeleteAddonReleaseRequest request) {
             super(request);
+            this.addonName = request.addonName;
             this.environmentId = request.environmentId;
             this.force = request.force;
             this.regionId = request.regionId;
             this.releaseName = request.releaseName;
         } 
+
+        /**
+         * AddonName.
+         */
+        public Builder addonName(String addonName) {
+            this.putQueryParameter("AddonName", addonName);
+            this.addonName = addonName;
+            return this;
+        }
 
         /**
          * Environment ID.

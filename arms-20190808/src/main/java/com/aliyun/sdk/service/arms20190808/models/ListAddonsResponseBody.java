@@ -216,6 +216,9 @@ public class ListAddonsResponseBody extends TeaModel {
 
     }
     public static class Dependencies extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClusterTypes")
+        private java.util.List < String > clusterTypes;
+
         @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.Map < String, Boolean > features;
 
@@ -223,6 +226,7 @@ public class ListAddonsResponseBody extends TeaModel {
         private java.util.List < String > services;
 
         private Dependencies(Builder builder) {
+            this.clusterTypes = builder.clusterTypes;
             this.features = builder.features;
             this.services = builder.services;
         }
@@ -233,6 +237,13 @@ public class ListAddonsResponseBody extends TeaModel {
 
         public static Dependencies create() {
             return builder().build();
+        }
+
+        /**
+         * @return clusterTypes
+         */
+        public java.util.List < String > getClusterTypes() {
+            return this.clusterTypes;
         }
 
         /**
@@ -250,8 +261,17 @@ public class ListAddonsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > clusterTypes; 
             private java.util.Map < String, Boolean > features; 
             private java.util.List < String > services; 
+
+            /**
+             * ClusterTypes.
+             */
+            public Builder clusterTypes(java.util.List < String > clusterTypes) {
+                this.clusterTypes = clusterTypes;
+                return this;
+            }
 
             /**
              * Name of the Feature.

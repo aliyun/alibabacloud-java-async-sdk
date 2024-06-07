@@ -273,7 +273,7 @@ public class CreateEnvironmentRequest extends Request {
          * The subtype of the environment. Valid values:
          * <p>
          * 
-         * *   CS: ACK, One
+         * *   CS: ACK
          * *   ECS: ECS
          * *   Cloud: cloud service
          */
@@ -311,7 +311,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * GrafanaWorkspaceId.
+         * 环境绑定的grafana工作区id。传空时，表示使用默认的共享grafana。
          */
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
@@ -325,7 +325,7 @@ public class CreateEnvironmentRequest extends Request {
          * 
          * *   none: No. By default, no managed agents or exporters are provided for ACK clusters.
          * *   agent: Agents are managed. By default, managed agents are provided for ASK clusters, ACS clusters, and ACK One clusters.
-         * *   agent-exproter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
+         * *   agent-exporter: Agents and exporters are managed. By default, managed agents and exporters are provided for cloud services.
          */
         public Builder managedType(String managedType) {
             this.putQueryParameter("ManagedType", managedType);
@@ -334,7 +334,7 @@ public class CreateEnvironmentRequest extends Request {
         }
 
         /**
-         * The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation to initialize a storage instance.
+         * The ID of the Prometheus instance. If no Prometheus instance is created, call the InitEnvironment operation.
          */
         public Builder prometheusInstanceId(String prometheusInstanceId) {
             this.putQueryParameter("PrometheusInstanceId", prometheusInstanceId);
