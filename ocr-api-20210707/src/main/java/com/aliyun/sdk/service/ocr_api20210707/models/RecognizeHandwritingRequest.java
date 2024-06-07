@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecognizeHandwritingRequest</p>
  */
 public class RecognizeHandwritingRequest extends Request {
-    @Query
-    @NameInMap("NeedRotate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedRotate")
     private Boolean needRotate;
 
-    @Query
-    @NameInMap("NeedSortPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NeedSortPage")
     private Boolean needSortPage;
 
-    @Query
-    @NameInMap("OutputCharInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputCharInfo")
     private Boolean outputCharInfo;
 
-    @Query
-    @NameInMap("OutputTable")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputTable")
     private Boolean outputTable;
 
-    @Query
-    @NameInMap("Paragraph")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Paragraph")
     private Boolean paragraph;
 
-    @Query
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeHandwritingRequest(Builder builder) {

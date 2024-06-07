@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyBusinessLicenseRequest</p>
  */
 public class VerifyBusinessLicenseRequest extends Request {
-    @Query
-    @NameInMap("CompanyName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompanyName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String companyName;
 
-    @Query
-    @NameInMap("CreditCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreditCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String creditCode;
 
-    @Query
-    @NameInMap("LegalPerson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LegalPerson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String legalPerson;
 
     private VerifyBusinessLicenseRequest(Builder builder) {

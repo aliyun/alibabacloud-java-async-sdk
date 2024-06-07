@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RecognizeAllTextRequest</p>
  */
 public class RecognizeAllTextRequest extends Request {
-    @Query
-    @NameInMap("AdvancedConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdvancedConfig")
     private AdvancedConfig advancedConfig;
 
-    @Query
-    @NameInMap("IdCardConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdCardConfig")
     private IdCardConfig idCardConfig;
 
-    @Query
-    @NameInMap("InternationalBusinessLicenseConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternationalBusinessLicenseConfig")
     private InternationalBusinessLicenseConfig internationalBusinessLicenseConfig;
 
-    @Query
-    @NameInMap("InternationalIdCardConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternationalIdCardConfig")
     private InternationalIdCardConfig internationalIdCardConfig;
 
-    @Query
-    @NameInMap("MultiLanConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiLanConfig")
     private MultiLanConfig multiLanConfig;
 
-    @Query
-    @NameInMap("OutputBarCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputBarCode")
     private Boolean outputBarCode;
 
-    @Query
-    @NameInMap("OutputCoordinate")
-    private byte[] outputCoordinate;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputCoordinate")
+    private String outputCoordinate;
 
-    @Query
-    @NameInMap("OutputFigure")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputFigure")
     private Boolean outputFigure;
 
-    @Query
-    @NameInMap("OutputKVExcel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputKVExcel")
     private Boolean outputKVExcel;
 
-    @Query
-    @NameInMap("OutputOricoord")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputOricoord")
     private Boolean outputOricoord;
 
-    @Query
-    @NameInMap("OutputQrcode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputQrcode")
     private Boolean outputQrcode;
 
-    @Query
-    @NameInMap("OutputStamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputStamp")
     private Boolean outputStamp;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("TableConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TableConfig")
     private TableConfig tableConfig;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("Url")
-    @Validation(maxLength = 2048)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Url")
+    @com.aliyun.core.annotation.Validation(maxLength = 2048)
     private String url;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private java.io.InputStream body;
 
     private RecognizeAllTextRequest(Builder builder) {
@@ -161,7 +160,7 @@ public class RecognizeAllTextRequest extends Request {
     /**
      * @return outputCoordinate
      */
-    public byte[] getOutputCoordinate() {
+    public String getOutputCoordinate() {
         return this.outputCoordinate;
     }
 
@@ -242,7 +241,7 @@ public class RecognizeAllTextRequest extends Request {
         private InternationalIdCardConfig internationalIdCardConfig; 
         private MultiLanConfig multiLanConfig; 
         private Boolean outputBarCode; 
-        private byte[] outputCoordinate; 
+        private String outputCoordinate; 
         private Boolean outputFigure; 
         private Boolean outputKVExcel; 
         private Boolean outputOricoord; 
@@ -341,7 +340,7 @@ public class RecognizeAllTextRequest extends Request {
         /**
          * OutputCoordinate.
          */
-        public Builder outputCoordinate(byte[] outputCoordinate) {
+        public Builder outputCoordinate(String outputCoordinate) {
             this.putQueryParameter("OutputCoordinate", outputCoordinate);
             this.outputCoordinate = outputCoordinate;
             return this;
@@ -446,28 +445,28 @@ public class RecognizeAllTextRequest extends Request {
     } 
 
     public static class AdvancedConfig extends TeaModel {
-        @NameInMap("IsHandWritingTable")
+        @com.aliyun.core.annotation.NameInMap("IsHandWritingTable")
         private Boolean isHandWritingTable;
 
-        @NameInMap("IsLineLessTable")
+        @com.aliyun.core.annotation.NameInMap("IsLineLessTable")
         private Boolean isLineLessTable;
 
-        @NameInMap("OutputCharInfo")
+        @com.aliyun.core.annotation.NameInMap("OutputCharInfo")
         private Boolean outputCharInfo;
 
-        @NameInMap("OutputParagraph")
+        @com.aliyun.core.annotation.NameInMap("OutputParagraph")
         private Boolean outputParagraph;
 
-        @NameInMap("OutputRow")
+        @com.aliyun.core.annotation.NameInMap("OutputRow")
         private Boolean outputRow;
 
-        @NameInMap("OutputTable")
+        @com.aliyun.core.annotation.NameInMap("OutputTable")
         private Boolean outputTable;
 
-        @NameInMap("OutputTableExcel")
+        @com.aliyun.core.annotation.NameInMap("OutputTableExcel")
         private Boolean outputTableExcel;
 
-        @NameInMap("OutputTableHtml")
+        @com.aliyun.core.annotation.NameInMap("OutputTableHtml")
         private Boolean outputTableHtml;
 
         private AdvancedConfig(Builder builder) {
@@ -627,7 +626,7 @@ public class RecognizeAllTextRequest extends Request {
 
     }
     public static class IdCardConfig extends TeaModel {
-        @NameInMap("OutputIdCardQuality")
+        @com.aliyun.core.annotation.NameInMap("OutputIdCardQuality")
         private Boolean outputIdCardQuality;
 
         private IdCardConfig(Builder builder) {
@@ -668,7 +667,7 @@ public class RecognizeAllTextRequest extends Request {
 
     }
     public static class InternationalBusinessLicenseConfig extends TeaModel {
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
         private InternationalBusinessLicenseConfig(Builder builder) {
@@ -709,7 +708,7 @@ public class RecognizeAllTextRequest extends Request {
 
     }
     public static class InternationalIdCardConfig extends TeaModel {
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
         private InternationalIdCardConfig(Builder builder) {
@@ -750,7 +749,7 @@ public class RecognizeAllTextRequest extends Request {
 
     }
     public static class MultiLanConfig extends TeaModel {
-        @NameInMap("Languages")
+        @com.aliyun.core.annotation.NameInMap("Languages")
         private String languages;
 
         private MultiLanConfig(Builder builder) {
@@ -791,16 +790,16 @@ public class RecognizeAllTextRequest extends Request {
 
     }
     public static class TableConfig extends TeaModel {
-        @NameInMap("IsHandWritingTable")
+        @com.aliyun.core.annotation.NameInMap("IsHandWritingTable")
         private Boolean isHandWritingTable;
 
-        @NameInMap("IsLineLessTable")
+        @com.aliyun.core.annotation.NameInMap("IsLineLessTable")
         private Boolean isLineLessTable;
 
-        @NameInMap("OutputTableExcel")
+        @com.aliyun.core.annotation.NameInMap("OutputTableExcel")
         private Boolean outputTableExcel;
 
-        @NameInMap("OutputTableHtml")
+        @com.aliyun.core.annotation.NameInMap("OutputTableHtml")
         private Boolean outputTableHtml;
 
         private TableConfig(Builder builder) {

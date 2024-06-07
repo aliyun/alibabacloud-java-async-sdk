@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ocr_api20210707.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyVATInvoiceRequest</p>
  */
 public class VerifyVATInvoiceRequest extends Request {
-    @Query
-    @NameInMap("InvoiceCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceCode")
     private String invoiceCode;
 
-    @Query
-    @NameInMap("InvoiceDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invoiceDate;
 
-    @Query
-    @NameInMap("InvoiceKind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceKind")
     private Integer invoiceKind;
 
-    @Query
-    @NameInMap("InvoiceNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invoiceNo;
 
-    @Query
-    @NameInMap("InvoiceSum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceSum")
     private String invoiceSum;
 
-    @Query
-    @NameInMap("VerifyCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyCode")
     private String verifyCode;
 
     private VerifyVATInvoiceRequest(Builder builder) {
