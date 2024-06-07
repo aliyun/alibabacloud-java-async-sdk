@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CloneLaboratoryResponse> cloneLaboratory(CloneLaboratoryRequest request);
 
+    CompletableFuture<CloneTrafficControlTaskResponse> cloneTrafficControlTask(CloneTrafficControlTaskRequest request);
+
     CompletableFuture<CreateABMetricResponse> createABMetric(CreateABMetricRequest request);
 
     CompletableFuture<CreateABMetricGroupResponse> createABMetricGroup(CreateABMetricGroupRequest request);
@@ -65,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateTableMetaResponse> createTableMeta(CreateTableMetaRequest request);
 
+    CompletableFuture<CreateTrafficControlTargetResponse> createTrafficControlTarget(CreateTrafficControlTargetRequest request);
+
+    CompletableFuture<CreateTrafficControlTaskResponse> createTrafficControlTask(CreateTrafficControlTaskRequest request);
+
     CompletableFuture<DebugResourceRuleResponse> debugResourceRule(DebugResourceRuleRequest request);
 
     CompletableFuture<DeleteABMetricResponse> deleteABMetric(DeleteABMetricRequest request);
@@ -94,6 +100,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSubCrowdResponse> deleteSubCrowd(DeleteSubCrowdRequest request);
 
     CompletableFuture<DeleteTableMetaResponse> deleteTableMeta(DeleteTableMetaRequest request);
+
+    CompletableFuture<DeleteTrafficControlTargetResponse> deleteTrafficControlTarget(DeleteTrafficControlTargetRequest request);
+
+    CompletableFuture<DeleteTrafficControlTaskResponse> deleteTrafficControlTask(DeleteTrafficControlTaskRequest request);
+
+    CompletableFuture<GenerateTrafficControlTaskCodeResponse> generateTrafficControlTaskCode(GenerateTrafficControlTaskCodeRequest request);
+
+    CompletableFuture<GenerateTrafficControlTaskConfigResponse> generateTrafficControlTaskConfig(GenerateTrafficControlTaskConfigRequest request);
 
     CompletableFuture<GetABMetricResponse> getABMetric(GetABMetricRequest request);
 
@@ -126,6 +140,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSubCrowdResponse> getSubCrowd(GetSubCrowdRequest request);
 
     CompletableFuture<GetTableMetaResponse> getTableMeta(GetTableMetaRequest request);
+
+    CompletableFuture<GetTrafficControlTargetResponse> getTrafficControlTarget(GetTrafficControlTargetRequest request);
+
+    CompletableFuture<GetTrafficControlTaskResponse> getTrafficControlTask(GetTrafficControlTaskRequest request);
+
+    CompletableFuture<GetTrafficControlTaskTrafficResponse> getTrafficControlTaskTraffic(GetTrafficControlTaskTrafficRequest request);
 
     CompletableFuture<ListABMetricGroupsResponse> listABMetricGroups(ListABMetricGroupsRequest request);
 
@@ -167,6 +187,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTableMetasResponse> listTableMetas(ListTableMetasRequest request);
 
+    CompletableFuture<ListTrafficControlTargetTrafficHistoryResponse> listTrafficControlTargetTrafficHistory(ListTrafficControlTargetTrafficHistoryRequest request);
+
+    CompletableFuture<ListTrafficControlTasksResponse> listTrafficControlTasks(ListTrafficControlTasksRequest request);
+
     CompletableFuture<OfflineExperimentResponse> offlineExperiment(OfflineExperimentRequest request);
 
     CompletableFuture<OfflineExperimentGroupResponse> offlineExperimentGroup(OfflineExperimentGroupRequest request);
@@ -183,7 +207,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PushResourceRuleResponse> pushResourceRule(PushResourceRuleRequest request);
 
+    CompletableFuture<ReleaseTrafficControlTaskResponse> releaseTrafficControlTask(ReleaseTrafficControlTaskRequest request);
+
     CompletableFuture<ReportABMetricGroupResponse> reportABMetricGroup(ReportABMetricGroupRequest request);
+
+    CompletableFuture<SplitTrafficControlTargetResponse> splitTrafficControlTarget(SplitTrafficControlTargetRequest request);
+
+    CompletableFuture<StartTrafficControlTargetResponse> startTrafficControlTarget(StartTrafficControlTargetRequest request);
+
+    CompletableFuture<StartTrafficControlTaskResponse> startTrafficControlTask(StartTrafficControlTaskRequest request);
+
+    CompletableFuture<StopTrafficControlTargetResponse> stopTrafficControlTarget(StopTrafficControlTargetRequest request);
+
+    CompletableFuture<StopTrafficControlTaskResponse> stopTrafficControlTask(StopTrafficControlTaskRequest request);
 
     CompletableFuture<SyncFeatureConsistencyCheckJobReplayLogResponse> syncFeatureConsistencyCheckJobReplayLog(SyncFeatureConsistencyCheckJobReplayLogRequest request);
 
@@ -216,6 +252,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateSceneResponse> updateScene(UpdateSceneRequest request);
 
     CompletableFuture<UpdateTableMetaResponse> updateTableMeta(UpdateTableMetaRequest request);
+
+    CompletableFuture<UpdateTrafficControlTargetResponse> updateTrafficControlTarget(UpdateTrafficControlTargetRequest request);
+
+    CompletableFuture<UpdateTrafficControlTaskResponse> updateTrafficControlTask(UpdateTrafficControlTaskRequest request);
+
+    CompletableFuture<UpdateTrafficControlTaskTrafficResponse> updateTrafficControlTaskTraffic(UpdateTrafficControlTaskTrafficRequest request);
 
     CompletableFuture<UploadRecommendationDataResponse> uploadRecommendationData(UploadRecommendationDataRequest request);
 
