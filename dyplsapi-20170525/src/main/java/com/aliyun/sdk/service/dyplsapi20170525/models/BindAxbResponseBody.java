@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAxbResponseBody</p>
  */
 public class BindAxbResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecretBindDTO")
+    @com.aliyun.core.annotation.NameInMap("SecretBindDTO")
     private SecretBindDTO secretBindDTO;
 
     private BindAxbResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class BindAxbResponseBody extends TeaModel {
         private SecretBindDTO secretBindDTO; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class BindAxbResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class BindAxbResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class BindAxbResponseBody extends TeaModel {
         }
 
         /**
-         * SecretBindDTO.
+         * The information returned after the phone numbers were bound.
          */
         public Builder secretBindDTO(SecretBindDTO secretBindDTO) {
             this.secretBindDTO = secretBindDTO;
@@ -112,13 +115,13 @@ public class BindAxbResponseBody extends TeaModel {
     } 
 
     public static class SecretBindDTO extends TeaModel {
-        @NameInMap("Extension")
+        @com.aliyun.core.annotation.NameInMap("Extension")
         private String extension;
 
-        @NameInMap("SecretNo")
+        @com.aliyun.core.annotation.NameInMap("SecretNo")
         private String secretNo;
 
-        @NameInMap("SubsId")
+        @com.aliyun.core.annotation.NameInMap("SubsId")
         private String subsId;
 
         private SecretBindDTO(Builder builder) {
@@ -162,7 +165,10 @@ public class BindAxbResponseBody extends TeaModel {
             private String subsId; 
 
             /**
-             * Extension.
+             * The extension of the phone number.
+             * <p>
+             * 
+             * >  The BindAxb operation does not involve an extension. Ignore this parameter.
              */
             public Builder extension(String extension) {
                 this.extension = extension;
@@ -170,7 +176,7 @@ public class BindAxbResponseBody extends TeaModel {
             }
 
             /**
-             * SecretNo.
+             * The private number, that is, phone number X.
              */
             public Builder secretNo(String secretNo) {
                 this.secretNo = secretNo;
@@ -178,7 +184,7 @@ public class BindAxbResponseBody extends TeaModel {
             }
 
             /**
-             * SubsId.
+             * The binding ID.
              */
             public Builder subsId(String subsId) {
                 this.subsId = subsId;

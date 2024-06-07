@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,83 +11,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindAxbRequest</p>
  */
 public class BindAxbRequest extends Request {
-    @Query
-    @NameInMap("ASRModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ASRModelId")
     private String ASRModelId;
 
-    @Query
-    @NameInMap("ASRStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ASRStatus")
     private Boolean ASRStatus;
 
-    @Query
-    @NameInMap("CallDisplayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallDisplayType")
     private Integer callDisplayType;
 
-    @Query
-    @NameInMap("CallRestrict")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallRestrict")
     private String callRestrict;
 
-    @Query
-    @NameInMap("CallTimeout")
-    @Validation(maximum = 180)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTimeout")
+    @com.aliyun.core.annotation.Validation(maximum = 180)
     private Integer callTimeout;
 
-    @Query
-    @NameInMap("DtmfConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DtmfConfig")
     private String dtmfConfig;
 
-    @Query
-    @NameInMap("ExpectCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpectCity")
     private String expectCity;
 
-    @Query
-    @NameInMap("Expiration")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expiration")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String expiration;
 
-    @Query
-    @NameInMap("IsRecordingEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRecordingEnabled")
     private Boolean isRecordingEnabled;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OutOrderId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutOrderId")
     private String outOrderId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoA")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoA")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoA;
 
-    @Query
-    @NameInMap("PhoneNoB")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoB")
     private String phoneNoB;
 
-    @Query
-    @NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RingConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RingConfig")
     private String ringConfig;
 
     private BindAxbRequest(Builder builder) {
@@ -309,7 +308,7 @@ public class BindAxbRequest extends Request {
         } 
 
         /**
-         * ASRModelId.
+         * The ID of the ASR model. On the [Automatic Speech Recognition (ASR) Model Management](https://dyplsnext.console.aliyun.com/?spm=5176.12818093.categories-n-products.ddypls.22e616d0a0tEFC#/asr) page, you can view the ID of the ASR model.
          */
         public Builder ASRModelId(String ASRModelId) {
             this.putQueryParameter("ASRModelId", ASRModelId);
@@ -318,7 +317,11 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * ASRStatus.
+         * Specifies whether to enable automatic speech recognition (ASR). Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables ASR.
+         * *   **true**: enables ASR.
          */
         public Builder ASRStatus(Boolean ASRStatus) {
             this.putQueryParameter("ASRStatus", ASRStatus);
@@ -327,7 +330,10 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * CallDisplayType.
+         * Re-sets the phone number display logic in the AXB binding. Fixed value: **1**, indicating that phone number X is displayed on both the calling phone and the called phone.
+         * <p>
+         * 
+         * >  Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.
          */
         public Builder callDisplayType(Integer callDisplayType) {
             this.putQueryParameter("CallDisplayType", callDisplayType);
@@ -336,7 +342,11 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * CallRestrict.
+         * The status of the one-way call restriction. Valid values:
+         * <p>
+         * 
+         * *   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.
+         * *   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.
          */
         public Builder callRestrict(String callRestrict) {
             this.putQueryParameter("CallRestrict", callRestrict);
@@ -345,7 +355,7 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * CallTimeout.
+         * The maximum ringing duration for each number in sequential ringing. Unit: seconds. The value ranges from 5 to 20.
          */
         public Builder callTimeout(Integer callTimeout) {
             this.putQueryParameter("CallTimeout", callTimeout);
@@ -354,7 +364,16 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * DtmfConfig.
+         * Specifies the dual tone multiple frequency (DTMF) key configuration in the AXB binding. The following content can be configured:
+         * <p>
+         * 
+         * *   endCallIvrPhoneNo: for whom the audio is played, user A or user B.
+         * *   waitingDtmfTime: the maximum waiting time after the first audio is played. The maximum waiting time is 30 seconds.
+         * *   maxLoop: the maximum number of loop playback times of the first audio if the DTMF key is not matched. The maximum number of loop playback times is 5.
+         * *   step1File: the name of the first audio.
+         * *   step2File: the name of the second audio.
+         * *   validKey: the valid key values, such as 1,2. Only two valid key values can be set, and the key values are separated by a comma (,).
+         * *   waitingEndCall: The waiting duration to hang up a call. The waiting duration is allowed by a carrier. The maximum waiting duration is 10 seconds.
          */
         public Builder dtmfConfig(String dtmfConfig) {
             this.putQueryParameter("DtmfConfig", dtmfConfig);
@@ -363,7 +382,11 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * ExpectCity.
+         * Specifies the city to which phone number X to be selected belongs.
+         * <p>
+         * 
+         * *   If no phone number for the specified city is available in the current phone number pool or this parameter is not specified, a phone number that belongs to another city is randomly selected from the current phone number pool and assigned as phone number X.
+         * *   If**Number X Assignment Mode** is set to **Strict Matching Mode** and no phone number meets the requirement, the system displays an allocation error.
          */
         public Builder expectCity(String expectCity) {
             this.putQueryParameter("ExpectCity", expectCity);
@@ -372,7 +395,10 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * Expiration.
+         * The expiration time of the AXB binding.
+         * <p>
+         * 
+         * >  The expiration time must be more than 1 minute later than the time when you call this API operation.
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -381,7 +407,11 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * IsRecordingEnabled.
+         * Specifies whether to record all calls made by the bound phone numbers. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false** (default)
          */
         public Builder isRecordingEnabled(Boolean isRecordingEnabled) {
             this.putQueryParameter("IsRecordingEnabled", isRecordingEnabled);
@@ -390,7 +420,7 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The extension field for the external business. This parameter is returned in a call record receipt.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -399,7 +429,7 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * OutOrderId.
+         * The ID of the external business.
          */
         public Builder outOrderId(String outOrderId) {
             this.putQueryParameter("OutOrderId", outOrderId);
@@ -417,7 +447,10 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * PhoneNoA.
+         * Phone number A in the AXB binding.
+         * <p>
+         * 
+         * Phone number A can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.
          */
         public Builder phoneNoA(String phoneNoA) {
             this.putQueryParameter("PhoneNoA", phoneNoA);
@@ -426,7 +459,10 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * PhoneNoB.
+         * Phone number B in the AXB binding. If phone number A is used to call phone number X, the call is forwarded to phone number B. Phone number B can be set to a mobile phone number or a landline phone number. The landline phone number must be added with an area code, and no hyphen is required between the area code and the landline phone number.
+         * <p>
+         * 
+         * >  If you need to update phone number B, call the [UpdateSubscription](~~110253~~) operation.
          */
         public Builder phoneNoB(String phoneNoB) {
             this.putQueryParameter("PhoneNoB", phoneNoB);
@@ -435,7 +471,12 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * Phone number X in the AXB binding.
+         * <p>
+         * 
+         * Phone number X is the phone number that you purchased in the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) or by using the [BuySecretNo](~~110266~~) operation before you bind a phone number. Phone number X is used to forward calls.
+         * 
+         * If you do not specify this parameter, a random phone number is selected from the phone number pool based on the value of the ExpectCity parameter and is used as phone number X.
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -444,7 +485,10 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -471,7 +515,15 @@ public class BindAxbRequest extends Request {
         }
 
         /**
-         * RingConfig.
+         * Sets the ringtone code for enterprise Color Ring Back Tone (CRBT) in the AXB binding.
+         * <p>
+         * 
+         * *   Ringtone setting when phone number A is used to call phone number X in the AXB binding: AXBRing_A
+         * *   Ringtone setting when phone number B is used to call phone number X in the AXB binding: AXBRing_B
+         * 
+         * Enterprise CRBT codes: Enterprise CRBT codes can be queried in the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). You can choose **Number Pool Management** > **Enterprise CRBT Management** to view enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.
+         * 
+         * >  The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.
          */
         public Builder ringConfig(String ringConfig) {
             this.putQueryParameter("RingConfig", ringConfig);

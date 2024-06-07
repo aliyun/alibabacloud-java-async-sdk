@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,83 +11,83 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSubscriptionRequest</p>
  */
 public class UpdateSubscriptionRequest extends Request {
-    @Query
-    @NameInMap("ASRModelId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ASRModelId")
     private String ASRModelId;
 
-    @Query
-    @NameInMap("ASRStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ASRStatus")
     private Boolean ASRStatus;
 
-    @Query
-    @NameInMap("CallDisplayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallDisplayType")
     private Integer callDisplayType;
 
-    @Query
-    @NameInMap("CallRestrict")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallRestrict")
     private String callRestrict;
 
-    @Query
-    @NameInMap("Expiration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expiration")
     private String expiration;
 
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("IsRecordingEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsRecordingEnabled")
     private Boolean isRecordingEnabled;
 
-    @Query
-    @NameInMap("OperateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operateType;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoA")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoA")
     private String phoneNoA;
 
-    @Query
-    @NameInMap("PhoneNoB")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoB")
     private String phoneNoB;
 
-    @Query
-    @NameInMap("PhoneNoX")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RingConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RingConfig")
     private String ringConfig;
 
-    @Query
-    @NameInMap("SubsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subsId;
 
     private UpdateSubscriptionRequest(Builder builder) {
@@ -309,7 +308,7 @@ public class UpdateSubscriptionRequest extends Request {
         } 
 
         /**
-         * ASRModelId.
+         * The ID of the ASR model.
          */
         public Builder ASRModelId(String ASRModelId) {
             this.putQueryParameter("ASRModelId", ASRModelId);
@@ -318,7 +317,11 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * ASRStatus.
+         * Specifies whether to enable automatic speech recognition (ASR). Valid values:
+         * <p>
+         * 
+         * *   **false** (default): disables ASR.
+         * *   **true**: enables ASR.
          */
         public Builder ASRStatus(Boolean ASRStatus) {
             this.putQueryParameter("ASRStatus", ASRStatus);
@@ -327,7 +330,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * CallDisplayType.
+         * Re-sets the phone number display logic in the phone number binding. Fixed value: **1**, indicating that phone number X is displayed on both the calling phone and the called phone.
+         * <p>
+         * 
+         * >  Due to the regulatory restrictions imposed by carriers, the setting to display real phone numbers during calls does not take effect.
          */
         public Builder callDisplayType(Integer callDisplayType) {
             this.putQueryParameter("CallDisplayType", callDisplayType);
@@ -336,7 +342,14 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * CallRestrict.
+         * One-way call restrictions. Valid values:
+         * <p>
+         * 
+         * *   **CONTROL_AX_DISABLE**: Phone number A cannot be used to call phone number X.
+         * *   **CONTROL_BX_DISABLE**: Phone number B cannot be used to call phone number X.
+         * *   **CONTROL_CLEAR_DISABLE**: The call restrictions are cleared.
+         * 
+         * >  This parameter is required when **OperateType** is set to **updateCallRestrict**.
          */
         public Builder callRestrict(String callRestrict) {
             this.putQueryParameter("CallRestrict", callRestrict);
@@ -345,7 +358,14 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * Expiration.
+         * Re-sets the expiration time of the phone number binding.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   This parameter is required when **OperateType** is set to **updateExpire**.
+         * 
+         * *   The expiration time must be more than 1 minute later than the time when you call this API operation.
          */
         public Builder expiration(String expiration) {
             this.putQueryParameter("Expiration", expiration);
@@ -354,7 +374,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of number group G in the phone number binding.
+         * <p>
+         * 
+         * >  This parameter is required when **OperateType** is set to **updateAxgGroup**.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -363,7 +386,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * IsRecordingEnabled.
+         * Re-sets the recording status in the phone number binding.
+         * <p>
+         * 
+         * >  This parameter does not have a default value. If you do not specify this parameter, the value of the corresponding field is not updated.
          */
         public Builder isRecordingEnabled(Boolean isRecordingEnabled) {
             this.putQueryParameter("IsRecordingEnabled", isRecordingEnabled);
@@ -372,7 +398,17 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * The operation to modify the phone number binding. Valid values:
+         * <p>
+         * 
+         * *   **updateNoA**: modifies phone number A.
+         * *   **updateNoB**: modifies phone number B.
+         * *   **updateExpire**: modifies the validity period of the binding.
+         * *   **updateAxgGroup**: modifies number group G.
+         * *   **updateCallRestrict**: modifies one-way call restrictions.
+         * *   **updateCallDisplayType**: updates the number display logic for calls.
+         * *   **updateOutId**: updates the value of the OutId parameter.
+         * *   **updateIsRecordingEnabled**: updates the status of the recording feature in the binding.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -381,7 +417,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * OutId.
+         * Re-sets the value of the OutId parameter in the phone number binding.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -399,7 +435,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * PhoneNoA.
+         * Phone number A in the phone number binding.
+         * <p>
+         * 
+         * >  This parameter is required when **OperateType** is set to **updateNoA**.
          */
         public Builder phoneNoA(String phoneNoA) {
             this.putQueryParameter("PhoneNoA", phoneNoA);
@@ -408,7 +447,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * PhoneNoB.
+         * Phone number B in the phone number binding.
+         * <p>
+         * 
+         * >  This parameter is required when **OperateType** is set to **updateNoB**.
          */
         public Builder phoneNoB(String phoneNoB) {
             this.putQueryParameter("PhoneNoB", phoneNoB);
@@ -417,7 +459,7 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * Phone number X in the phone number binding.
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -426,7 +468,12 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * 
+         * >  This parameter is required when **ProductType** is left empty.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -435,7 +482,19 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The product type. Valid values:
+         * <p>
+         * 
+         * *   **AXB\_170**
+         * *   **AXN\_170**
+         * *   **AXN\_95**
+         * *   **AXN_EXTENSION_REUSE**
+         * 
+         * > 
+         * 
+         * *   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.
+         * 
+         * *   This parameter is required when **PoolKey** is left empty.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -462,7 +521,29 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * RingConfig.
+         * Updates the ringtone code for enterprise Color Ring Back Tone (CRBT) in the phone number binding.
+         * <p>
+         * 
+         * AXB product:
+         * 
+         * *   Ringtone setting when phone number A is used to call phone number X in the AXB binding: AXBRing_A
+         * *   Ringtone setting when phone number B is used to call phone number X in the AXB binding: AXBRing_B
+         * 
+         * AXN product:
+         * 
+         * *   Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_AB
+         * *   Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXN extension binding: AXNRing_A
+         * *   Ringtone setting when phone number N is used to call phone number X in the AXN extension binding: AXNRing_N
+         * 
+         * AXG product:
+         * 
+         * *   Ringtone setting (with a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_AB
+         * *   Ringtone setting (without a callback number) when phone number A is used to call phone number X in the AXG binding: AXGRing_A
+         * *   Ringtone setting when a phone number in number group G is used to call phone number X in the AXG binding: AXGRing_G
+         * 
+         * Enterprise CRBT codes: Enterprise CRBT codes can be queried in the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). You can choose **Number Pool Management** > **Enterprise CRBT Management** to view and manage enterprise CRBT codes. You can also upload, delete, or perform other operations on enterprise CRBT codes.
+         * 
+         * >  The bound enterprise CRBTs are preferentially used. If no enterprise CRBT is set or the setting does not take effect, the enterprise CRBTs at the phone number pool level are used.
          */
         public Builder ringConfig(String ringConfig) {
             this.putQueryParameter("RingConfig", ringConfig);
@@ -471,7 +552,10 @@ public class UpdateSubscriptionRequest extends Request {
         }
 
         /**
-         * SubsId.
+         * The binding ID.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account), choose **Number and Number Pool** > **Number Management**. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the **SubsId** parameter returned by an API operation for a phone number binding such as BindAxb. The value of this parameter indicates a binding ID.
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);

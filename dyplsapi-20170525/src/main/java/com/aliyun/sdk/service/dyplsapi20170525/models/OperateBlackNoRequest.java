@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OperateBlackNoRequest</p>
  */
 public class OperateBlackNoRequest extends Request {
-    @Query
-    @NameInMap("BlackNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BlackNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blackNo;
 
-    @Query
-    @NameInMap("OperateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String operateType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tips")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tips")
     private String tips;
 
     private OperateBlackNoRequest(Builder builder) {
@@ -141,7 +140,7 @@ public class OperateBlackNoRequest extends Request {
         } 
 
         /**
-         * BlackNo.
+         * The phone number to be added to or deleted from the blacklist.
          */
         public Builder blackNo(String blackNo) {
             this.putQueryParameter("BlackNo", blackNo);
@@ -150,7 +149,11 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * The type of the operation on the phone number. Valid values:
+         * <p>
+         * 
+         * *   **AddBlack**: adds the phone number to the blacklist.
+         * *   **DeleteBlack**: deletes the phone number from the blacklist.
          */
         public Builder operateType(String operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -168,7 +171,7 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -195,7 +198,7 @@ public class OperateBlackNoRequest extends Request {
         }
 
         /**
-         * Tips.
+         * The description.
          */
         public Builder tips(String tips) {
             this.putQueryParameter("Tips", tips);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BuySecretNoRequest</p>
  */
 public class BuySecretNoRequest extends Request {
-    @Query
-    @NameInMap("City")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String city;
 
-    @Query
-    @NameInMap("DisplayPool")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayPool")
     private Boolean displayPool;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SecretNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecretNo")
     private String secretNo;
 
-    @Query
-    @NameInMap("SpecId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long specId;
 
     private BuySecretNoRequest(Builder builder) {
@@ -155,7 +154,14 @@ public class BuySecretNoRequest extends Request {
         } 
 
         /**
-         * City.
+         * Specifies the home location of the phone number.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   The home location can be set only to a location in the Chinese mainland.
+         * 
+         * *   A phone number that starts with 95 does not have a home location. If you purchase a phone number that starts with 95, set this parameter to **Nationwide**.
          */
         public Builder city(String city) {
             this.putQueryParameter("City", city);
@@ -164,7 +170,10 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * DisplayPool.
+         * Specifies whether to add the phone number to the pool of numbers that will be displayed during calls.
+         * <p>
+         * 
+         * >  This parameter takes effect only for customers who have enabled the number display feature.
          */
         public Builder displayPool(Boolean displayPool) {
             this.putQueryParameter("DisplayPool", displayPool);
@@ -182,7 +191,7 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -209,7 +218,10 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * SecretNo.
+         * The prefix of the phone number. If you specify the value of **SecretNo** when you purchase a phone number, a phone number starting with the specified prefix is selected.
+         * <p>
+         * 
+         * >  You can specify up to 18 digits of the phone number prefix.
          */
         public Builder secretNo(String secretNo) {
             this.putQueryParameter("SecretNo", secretNo);
@@ -218,7 +230,12 @@ public class BuySecretNoRequest extends Request {
         }
 
         /**
-         * SpecId.
+         * The type of the phone number. Valid values:
+         * <p>
+         * 
+         * *   **1**: a phone number assigned by a virtual network operator, that is, a phone number that belongs to the 170 or 171 number segment.
+         * *   **2**: a phone number provided by a carrier.
+         * *   **3**: a phone number that starts with 95.
          */
         public Builder specId(Long specId) {
             this.putQueryParameter("SpecId", specId);

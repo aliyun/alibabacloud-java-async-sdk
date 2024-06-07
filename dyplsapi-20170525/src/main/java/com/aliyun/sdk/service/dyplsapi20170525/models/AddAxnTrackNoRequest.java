@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAxnTrackNoRequest</p>
  */
 public class AddAxnTrackNoRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoX")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SubsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subsId;
 
-    @Query
-    @NameInMap("trackNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("trackNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String trackNo;
 
     private AddAxnTrackNoRequest(Builder builder) {
@@ -151,7 +150,10 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * The private number in the AXN binding, that is, phone number X.
+         * <p>
+         * 
+         * You can call the [BindAxn](~~110258~~) operation to obtain the value of PhoneNoX.
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -160,7 +162,7 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -187,7 +189,10 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * SubsId.
+         * The binding ID.
+         * <p>
+         * 
+         * You can call the [BindAxn](~~110258~~) operation to obtain the value of SubsId.
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);
@@ -196,7 +201,7 @@ public class AddAxnTrackNoRequest extends Request {
         }
 
         /**
-         * trackNo.
+         * The tracking number.
          */
         public Builder trackNo(String trackNo) {
             this.putQueryParameter("trackNo", trackNo);

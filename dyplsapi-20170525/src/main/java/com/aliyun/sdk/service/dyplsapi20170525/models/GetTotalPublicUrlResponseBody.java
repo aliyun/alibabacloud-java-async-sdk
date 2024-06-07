@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTotalPublicUrlResponseBody</p>
  */
 public class GetTotalPublicUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetTotalPublicUrlResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other status codes indicate that the request failed. For more information, see [Error codes](~~109196~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The download URLs of the recording files.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,10 +115,10 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("PhonePublicUrl")
+        @com.aliyun.core.annotation.NameInMap("PhonePublicUrl")
         private String phonePublicUrl;
 
-        @NameInMap("RingPublicUrl")
+        @com.aliyun.core.annotation.NameInMap("RingPublicUrl")
         private String ringPublicUrl;
 
         private Data(Builder builder) {
@@ -150,7 +153,10 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
             private String ringPublicUrl; 
 
             /**
-             * PhonePublicUrl.
+             * The download URL of the recorded call.
+             * <p>
+             * 
+             * >  The download URL of the recorded call is valid for 30 days.
              */
             public Builder phonePublicUrl(String phonePublicUrl) {
                 this.phonePublicUrl = phonePublicUrl;
@@ -158,7 +164,10 @@ public class GetTotalPublicUrlResponseBody extends TeaModel {
             }
 
             /**
-             * RingPublicUrl.
+             * The download URL of the recorded ringing tone.
+             * <p>
+             * 
+             * >  The download URL of the recorded ringing tone is valid for 30 days.
              */
             public Builder ringPublicUrl(String ringPublicUrl) {
                 this.ringPublicUrl = ringPublicUrl;

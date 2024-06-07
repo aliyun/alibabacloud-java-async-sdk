@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePickUpWaybillPreQueryResponse</p>
  */
 public class CreatePickUpWaybillPreQueryResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CreatePickUpWaybillPreQueryResponseBody body;
 
     private CreatePickUpWaybillPreQueryResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class CreatePickUpWaybillPreQueryResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CreatePickUpWaybillPreQueryResponseBody getBody() {
@@ -52,6 +60,8 @@ public class CreatePickUpWaybillPreQueryResponse extends Response {
     public interface Builder extends Response.Builder<CreatePickUpWaybillPreQueryResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CreatePickUpWaybillPreQueryResponseBody body);
 
@@ -64,6 +74,7 @@ public class CreatePickUpWaybillPreQueryResponse extends Response {
             extends Response.BuilderImpl<CreatePickUpWaybillPreQueryResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CreatePickUpWaybillPreQueryResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class CreatePickUpWaybillPreQueryResponse extends Response {
         private BuilderImpl(CreatePickUpWaybillPreQueryResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class CreatePickUpWaybillPreQueryResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

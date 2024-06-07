@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAxgGroupResponseBody</p>
  */
 public class CreateAxgGroupResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private Long groupId;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateAxgGroupResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * GroupId.
+         * The ID of number group G. The value of this parameter is required when the [BindAxg](~~110249~~) operation is called to add an AXG binding.
          */
         public Builder groupId(Long groupId) {
             this.groupId = groupId;
@@ -90,7 +93,7 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class CreateAxgGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

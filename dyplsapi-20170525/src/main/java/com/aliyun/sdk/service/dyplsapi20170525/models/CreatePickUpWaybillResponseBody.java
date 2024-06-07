@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePickUpWaybillResponseBody</p>
  */
 public class CreatePickUpWaybillResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreatePickUpWaybillResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -82,7 +81,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -90,7 +89,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +97,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,22 +111,22 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CpCode")
+        @com.aliyun.core.annotation.NameInMap("CpCode")
         private String cpCode;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("GotCode")
+        @com.aliyun.core.annotation.NameInMap("GotCode")
         private String gotCode;
 
-        @NameInMap("MailNo")
+        @com.aliyun.core.annotation.NameInMap("MailNo")
         private String mailNo;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private String success;
 
         private Data(Builder builder) {
@@ -198,7 +197,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             private String success; 
 
             /**
-             * CpCode.
+             * The code of the courier company.
              */
             public Builder cpCode(String cpCode) {
                 this.cpCode = cpCode;
@@ -206,7 +205,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorCode.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -214,7 +213,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMsg.
+             * The error message.
              */
             public Builder errorMsg(String errorMsg) {
                 this.errorMsg = errorMsg;
@@ -222,7 +221,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * GotCode.
+             * The pickup code.
              */
             public Builder gotCode(String gotCode) {
                 this.gotCode = gotCode;
@@ -230,7 +229,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * MailNo.
+             * The order ID.
              */
             public Builder mailNo(String mailNo) {
                 this.mailNo = mailNo;
@@ -238,7 +237,7 @@ public class CreatePickUpWaybillResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the request was successful.
              */
             public Builder success(String success) {
                 this.success = success;

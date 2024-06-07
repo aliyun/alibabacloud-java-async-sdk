@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySubsIdRequest</p>
  */
 public class QuerySubsIdRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoX")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QuerySubsIdRequest(Builder builder) {
@@ -120,7 +119,7 @@ public class QuerySubsIdRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * The private number in the binding, that is, phone number X.
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -129,7 +128,10 @@ public class QuerySubsIdRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dyplsnext.console.aliyun.com/overview) and view the key of the phone number pool on the Number Pool Management page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);

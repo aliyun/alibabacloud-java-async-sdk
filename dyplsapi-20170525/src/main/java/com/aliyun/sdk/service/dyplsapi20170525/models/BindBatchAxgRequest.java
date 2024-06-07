@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindBatchAxgRequest</p>
  */
 public class BindBatchAxgRequest extends Request {
-    @Query
-    @NameInMap("AxgBindList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AxgBindList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < AxgBindList> axgBindList;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private BindBatchAxgRequest(Builder builder) {
@@ -164,48 +163,48 @@ public class BindBatchAxgRequest extends Request {
     } 
 
     public static class AxgBindList extends TeaModel {
-        @NameInMap("ASRModelId")
+        @com.aliyun.core.annotation.NameInMap("ASRModelId")
         private String ASRModelId;
 
-        @NameInMap("ASRStatus")
+        @com.aliyun.core.annotation.NameInMap("ASRStatus")
         private Boolean ASRStatus;
 
-        @NameInMap("CallDisplayType")
+        @com.aliyun.core.annotation.NameInMap("CallDisplayType")
         private Integer callDisplayType;
 
-        @NameInMap("CallRestrict")
+        @com.aliyun.core.annotation.NameInMap("CallRestrict")
         private String callRestrict;
 
-        @NameInMap("ExpectCity")
+        @com.aliyun.core.annotation.NameInMap("ExpectCity")
         private String expectCity;
 
-        @NameInMap("Expiration")
+        @com.aliyun.core.annotation.NameInMap("Expiration")
         private String expiration;
 
-        @NameInMap("GroupId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("GroupId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String groupId;
 
-        @NameInMap("IsRecordingEnabled")
+        @com.aliyun.core.annotation.NameInMap("IsRecordingEnabled")
         private Boolean isRecordingEnabled;
 
-        @NameInMap("OutId")
+        @com.aliyun.core.annotation.NameInMap("OutId")
         private String outId;
 
-        @NameInMap("OutOrderId")
+        @com.aliyun.core.annotation.NameInMap("OutOrderId")
         private String outOrderId;
 
-        @NameInMap("PhoneNoA")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PhoneNoA")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String phoneNoA;
 
-        @NameInMap("PhoneNoB")
+        @com.aliyun.core.annotation.NameInMap("PhoneNoB")
         private String phoneNoB;
 
-        @NameInMap("PhoneNoX")
+        @com.aliyun.core.annotation.NameInMap("PhoneNoX")
         private String phoneNoX;
 
-        @NameInMap("RingConfig")
+        @com.aliyun.core.annotation.NameInMap("RingConfig")
         private String ringConfig;
 
         private AxgBindList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySubscriptionDetailRequest</p>
  */
 public class QuerySubscriptionDetailRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PhoneNoX")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNoX")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String phoneNoX;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SubsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subsId;
 
     private QuerySubscriptionDetailRequest(Builder builder) {
@@ -149,7 +148,7 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * PhoneNoX.
+         * The private number in the binding, that is, phone number X.
          */
         public Builder phoneNoX(String phoneNoX) {
             this.putQueryParameter("PhoneNoX", phoneNoX);
@@ -158,7 +157,10 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>
+         * 
+         * >  This parameter is required when **ProductType** is left empty.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -167,7 +169,19 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The product type. Valid values:
+         * <p>
+         * 
+         * *   **AXB\_170**
+         * *   **AXN\_170**
+         * *   **AXN\_95**
+         * *   **AXN_EXTENSION_REUSE**
+         * 
+         * > 
+         * 
+         * *   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.
+         * 
+         * *   This parameter is required when **PoolKey** is left empty.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);
@@ -194,7 +208,10 @@ public class QuerySubscriptionDetailRequest extends Request {
         }
 
         /**
-         * SubsId.
+         * The binding ID.
+         * <p>
+         * 
+         * Log on to the Phone Number Protection console, choose **Number and Number Pool** > **Number Management**. On the Number Management page, select the desired record and click Details to view the binding ID. Alternatively, you can view the value of the **SubsId** parameter returned by an API operation for a phone number binding such as [BindAxb](~~110248~~). The value of this parameter indicates a binding ID.
          */
         public Builder subsId(String subsId) {
             this.putQueryParameter("SubsId", subsId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryRecordFileDownloadUrlRequest</p>
  */
 public class QueryRecordFileDownloadUrlRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("CallTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTime")
     private String callTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
     private String poolKey;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryRecordFileDownloadUrlRequest(Builder builder) {
@@ -139,7 +138,7 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * The ID of the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -148,7 +147,7 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * CallTime.
+         * The call initiation time in the call record. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
          */
         public Builder callTime(String callTime) {
             this.putQueryParameter("CallTime", callTime);
@@ -166,7 +165,10 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
+         * <p>
+         * 
+         * >  This parameter is required when **ProductType** is left empty.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -175,7 +177,19 @@ public class QueryRecordFileDownloadUrlRequest extends Request {
         }
 
         /**
-         * ProductType.
+         * The product type. Valid values:
+         * <p>
+         * 
+         * *   **AXB\_170**.
+         * *   **AXN\_170**.
+         * *   **AXN\_95**.
+         * *   **AXN_EXTENSION_REUSE**
+         * 
+         * > 
+         * 
+         * *   This parameter is applicable to the original key accounts of Alibaba Cloud. This parameter can be ignored for Alibaba Cloud users.
+         * 
+         * *   This parameter is required when **PoolKey** is left empty.
          */
         public Builder productType(String productType) {
             this.putQueryParameter("ProductType", productType);

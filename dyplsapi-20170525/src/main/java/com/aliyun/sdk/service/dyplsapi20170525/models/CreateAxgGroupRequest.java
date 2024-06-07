@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAxgGroupRequest</p>
  */
 public class CreateAxgGroupRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Numbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Numbers")
     private String numbers;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
-    @Query
-    @NameInMap("Remark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
     private String remark;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CreateAxgGroupRequest(Builder builder) {
@@ -139,7 +138,10 @@ public class CreateAxgGroupRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of number group G. If the name of number group G is not specified, the ID of number group G is used as the name of number group G.
+         * <p>
+         * 
+         * >  The value must be 1 to 128 characters in length.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -148,7 +150,7 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * Numbers.
+         * The phone numbers that you add to number group G. Separate multiple phone numbers with commas (,). A maximum of 200 phone numbers can be added to number group G.
          */
         public Builder numbers(String numbers) {
             this.putQueryParameter("Numbers", numbers);
@@ -166,7 +168,7 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
@@ -175,7 +177,7 @@ public class CreateAxgGroupRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The remarks of number group G. The value must be 0 to 256 characters in length.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);

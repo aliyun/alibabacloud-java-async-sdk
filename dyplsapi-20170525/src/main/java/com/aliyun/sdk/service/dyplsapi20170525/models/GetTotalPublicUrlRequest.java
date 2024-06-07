@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTotalPublicUrlRequest</p>
  */
 public class GetTotalPublicUrlRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("CallTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callTime;
 
-    @Query
-    @NameInMap("CheckSubs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckSubs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean checkSubs;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PartnerKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PartnerKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String partnerKey;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private GetTotalPublicUrlRequest(Builder builder) {
@@ -142,7 +141,10 @@ public class GetTotalPublicUrlRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * The ID of the call record.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -151,7 +153,10 @@ public class GetTotalPublicUrlRequest extends Request {
         }
 
         /**
-         * CallTime.
+         * The call initiation time in the call record.
+         * <p>
+         * 
+         * Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
          */
         public Builder callTime(String callTime) {
             this.putQueryParameter("CallTime", callTime);
@@ -160,7 +165,7 @@ public class GetTotalPublicUrlRequest extends Request {
         }
 
         /**
-         * CheckSubs.
+         * Specifies whether the verification on the binding ID is required.
          */
         public Builder checkSubs(Boolean checkSubs) {
             this.putQueryParameter("CheckSubs", checkSubs);
@@ -178,7 +183,7 @@ public class GetTotalPublicUrlRequest extends Request {
         }
 
         /**
-         * PartnerKey.
+         * The key of the phone number pool. Log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder partnerKey(String partnerKey) {
             this.putQueryParameter("PartnerKey", partnerKey);

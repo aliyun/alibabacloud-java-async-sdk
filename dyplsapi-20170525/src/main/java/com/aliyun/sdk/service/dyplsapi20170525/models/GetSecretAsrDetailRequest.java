@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dyplsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSecretAsrDetailRequest</p>
  */
 public class GetSecretAsrDetailRequest extends Request {
-    @Query
-    @NameInMap("CallId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callId;
 
-    @Query
-    @NameInMap("CallTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String callTime;
 
-    @Query
-    @NameInMap("PoolKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolKey;
 
     private GetSecretAsrDetailRequest(Builder builder) {
@@ -85,7 +84,10 @@ public class GetSecretAsrDetailRequest extends Request {
         } 
 
         /**
-         * CallId.
+         * The ID of the call record.
+         * <p>
+         * 
+         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view **Call Record ID** on the **Call Record Query** page.
          */
         public Builder callId(String callId) {
             this.putQueryParameter("CallId", callId);
@@ -94,7 +96,10 @@ public class GetSecretAsrDetailRequest extends Request {
         }
 
         /**
-         * CallTime.
+         * The call initiation time in the call record.
+         * <p>
+         * 
+         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account). View **Call Initiated At** on the **Call Record Query** page, or view the call_time field in the Call Detail Record (CDR) receipt.
          */
         public Builder callTime(String callTime) {
             this.putQueryParameter("CallTime", callTime);
@@ -103,7 +108,10 @@ public class GetSecretAsrDetailRequest extends Request {
         }
 
         /**
-         * PoolKey.
+         * The key of the phone number pool.
+         * <p>
+         * 
+         * You can log on to the [Phone Number Protection console](https://dypls.console.aliyun.com/dypls.htm#/account) and view the key of the phone number pool on the **Number Pool Management** page.
          */
         public Builder poolKey(String poolKey) {
             this.putQueryParameter("PoolKey", poolKey);
