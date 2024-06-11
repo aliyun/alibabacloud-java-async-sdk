@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPolicyResponseBody</p>
  */
 public class GetPolicyResponseBody extends TeaModel {
-    @NameInMap("DefaultPolicyVersion")
+    @com.aliyun.core.annotation.NameInMap("DefaultPolicyVersion")
     private DefaultPolicyVersion defaultPolicyVersion;
 
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetPolicyResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class GetPolicyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DefaultPolicyVersion.
+         * The information of the default policy version.
          */
         public Builder defaultPolicyVersion(DefaultPolicyVersion defaultPolicyVersion) {
             this.defaultPolicyVersion = defaultPolicyVersion;
@@ -70,7 +69,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * Policy.
+         * The basic information of the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -78,7 +77,7 @@ public class GetPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,16 +91,16 @@ public class GetPolicyResponseBody extends TeaModel {
     } 
 
     public static class DefaultPolicyVersion extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private DefaultPolicyVersion(Builder builder) {
@@ -154,7 +153,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * CreateDate.
+             * The time when the default policy version was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +161,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultVersion.
+             * An attribute in the `DefaultPolicyVersion` parameter. The value of the `IsDefaultVersion` parameter is `true`.
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -170,7 +169,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * The script of the default policy version.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -178,7 +177,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The ID of the default policy version.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -193,28 +192,28 @@ public class GetPolicyResponseBody extends TeaModel {
 
     }
     public static class Policy extends TeaModel {
-        @NameInMap("AttachmentCount")
+        @com.aliyun.core.annotation.NameInMap("AttachmentCount")
         private Integer attachmentCount;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Policy(Builder builder) {
@@ -303,7 +302,7 @@ public class GetPolicyResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of references to the policy.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -311,7 +310,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -319,7 +318,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version ID of the policy.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -327,7 +326,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -335,7 +334,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * This parameter is deprecated.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -343,7 +342,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -351,7 +350,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -359,7 +358,7 @@ public class GetPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the policy was modified.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

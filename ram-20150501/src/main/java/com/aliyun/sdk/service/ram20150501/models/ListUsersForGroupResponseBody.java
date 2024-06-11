@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersForGroupResponseBody</p>
  */
 public class ListUsersForGroupResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersForGroupResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +81,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value of IsTruncated is `true`, you can call this operation again and set `marker` to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +89,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +97,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The list of the RAM users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -112,13 +111,13 @@ public class ListUsersForGroupResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("JoinDate")
+        @com.aliyun.core.annotation.NameInMap("JoinDate")
         private String joinDate;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -162,7 +161,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -170,7 +169,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * JoinDate.
+             * The time when the RAM user joined the RAM user group.
              */
             public Builder joinDate(String joinDate) {
                 this.joinDate = joinDate;
@@ -178,7 +177,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the RAM user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -193,7 +192,7 @@ public class ListUsersForGroupResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < User> user;
 
         private Users(Builder builder) {

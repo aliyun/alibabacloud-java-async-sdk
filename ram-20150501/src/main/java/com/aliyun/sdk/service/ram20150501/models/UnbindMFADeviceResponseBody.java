@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnbindMFADeviceResponseBody</p>
  */
 public class UnbindMFADeviceResponseBody extends TeaModel {
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UnbindMFADeviceResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFADevice.
+         * The information of the MFA device.
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -58,7 +57,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,7 +71,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
     } 
 
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private MFADevice(Builder builder) {
@@ -98,7 +97,7 @@ public class UnbindMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddUserToGroupRequest</p>
  */
 public class AddUserToGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private AddUserToGroupRequest(Builder builder) {
@@ -61,14 +60,14 @@ public class AddUserToGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AddUserToGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.userName = response.userName;
+        private Builder(AddUserToGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.userName = request.userName;
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -77,7 +76,7 @@ public class AddUserToGroupRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The name of the RAM user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccessKeyLastUsedResponseBody</p>
  */
 public class GetAccessKeyLastUsedResponseBody extends TeaModel {
-    @NameInMap("AccessKeyLastUsed")
+    @com.aliyun.core.annotation.NameInMap("AccessKeyLastUsed")
     private AccessKeyLastUsed accessKeyLastUsed;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccessKeyLastUsedResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetAccessKeyLastUsedResponseBody extends TeaModel {
     } 
 
     public static class AccessKeyLastUsed extends TeaModel {
-        @NameInMap("LastUsedDate")
+        @com.aliyun.core.annotation.NameInMap("LastUsedDate")
         private String lastUsedDate;
 
         private AccessKeyLastUsed(Builder builder) {

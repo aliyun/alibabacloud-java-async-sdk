@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePolicyDescriptionResponseBody</p>
  */
 public class UpdatePolicyDescriptionResponseBody extends TeaModel {
-    @NameInMap("Policy")
+    @com.aliyun.core.annotation.NameInMap("Policy")
     private Policy policy;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdatePolicyDescriptionResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policy.
+         * The information about the policy.
          */
         public Builder policy(Policy policy) {
             this.policy = policy;
@@ -58,7 +57,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
     } 
 
     public static class Policy extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Policy(Builder builder) {
@@ -158,7 +157,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -166,7 +165,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The version of the policy. Default value: v1.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -174,7 +173,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -182,7 +181,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -190,7 +189,11 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   Custom: custom policy
+             * *   System: system policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -198,7 +201,7 @@ public class UpdatePolicyDescriptionResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the policy was modified.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateRoleResponseBody</p>
  */
 public class UpdateRoleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
     private UpdateRoleResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         private Role role; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class UpdateRoleResponseBody extends TeaModel {
         }
 
         /**
-         * Role.
+         * The information of the RAM role.
          */
         public Builder role(Role role) {
             this.role = role;
@@ -72,28 +71,28 @@ public class UpdateRoleResponseBody extends TeaModel {
     } 
 
     public static class Role extends TeaModel {
-        @NameInMap("Arn")
+        @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
 
-        @NameInMap("AssumeRolePolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
         private String assumeRolePolicyDocument;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MaxSessionDuration")
+        @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
         private Long maxSessionDuration;
 
-        @NameInMap("RoleId")
+        @com.aliyun.core.annotation.NameInMap("RoleId")
         private String roleId;
 
-        @NameInMap("RoleName")
+        @com.aliyun.core.annotation.NameInMap("RoleName")
         private String roleName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Role(Builder builder) {
@@ -182,7 +181,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Arn.
+             * The Alibaba Cloud Resource Name (ARN) of the role.
              */
             public Builder arn(String arn) {
                 this.arn = arn;
@@ -190,7 +189,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * AssumeRolePolicyDocument.
+             * The policy that specifies the trusted entity to assume the RAM role.
              */
             public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
                 this.assumeRolePolicyDocument = assumeRolePolicyDocument;
@@ -198,7 +197,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM role was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -206,7 +205,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the RAM role.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -214,7 +213,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * MaxSessionDuration.
+             * The maximum session duration of the RAM role.
              */
             public Builder maxSessionDuration(Long maxSessionDuration) {
                 this.maxSessionDuration = maxSessionDuration;
@@ -222,7 +221,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleId.
+             * The ID of the RAM role.
              */
             public Builder roleId(String roleId) {
                 this.roleId = roleId;
@@ -230,7 +229,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * RoleName.
+             * The name of the RAM role.
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -238,7 +237,7 @@ public class UpdateRoleResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the description of the RAM role was changed.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetPasswordPolicyResponse} extends {@link TeaModel}
+ * {@link DecodeDiagnosticMessageResponse} extends {@link TeaModel}
  *
- * <p>GetPasswordPolicyResponse</p>
+ * <p>DecodeDiagnosticMessageResponse</p>
  */
-public class GetPasswordPolicyResponse extends Response {
+public class DecodeDiagnosticMessageResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class GetPasswordPolicyResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetPasswordPolicyResponseBody body;
+    private DecodeDiagnosticMessageResponseBody body;
 
-    private GetPasswordPolicyResponse(BuilderImpl builder) {
+    private DecodeDiagnosticMessageResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetPasswordPolicyResponse create() {
+    public static DecodeDiagnosticMessageResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class GetPasswordPolicyResponse extends Response {
     /**
      * @return body
      */
-    public GetPasswordPolicyResponseBody getBody() {
+    public DecodeDiagnosticMessageResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetPasswordPolicyResponse, Builder> {
+    public interface Builder extends Response.Builder<DecodeDiagnosticMessageResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetPasswordPolicyResponseBody body);
+        Builder body(DecodeDiagnosticMessageResponseBody body);
 
         @Override
-        GetPasswordPolicyResponse build();
+        DecodeDiagnosticMessageResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetPasswordPolicyResponse, Builder>
+            extends Response.BuilderImpl<DecodeDiagnosticMessageResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetPasswordPolicyResponseBody body; 
+        private DecodeDiagnosticMessageResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetPasswordPolicyResponse response) {
+        private BuilderImpl(DecodeDiagnosticMessageResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class GetPasswordPolicyResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetPasswordPolicyResponseBody body) {
+        public Builder body(DecodeDiagnosticMessageResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetPasswordPolicyResponse build() {
-            return new GetPasswordPolicyResponse(this);
+        public DecodeDiagnosticMessageResponse build() {
+            return new DecodeDiagnosticMessageResponse(this);
         } 
 
     } 

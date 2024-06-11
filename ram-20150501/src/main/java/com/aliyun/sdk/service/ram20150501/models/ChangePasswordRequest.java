@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangePasswordRequest</p>
  */
 public class ChangePasswordRequest extends Request {
-    @Query
-    @NameInMap("NewPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPassword")
     private String newPassword;
 
-    @Query
-    @NameInMap("OldPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPassword")
     private String oldPassword;
 
     private ChangePasswordRequest(Builder builder) {
@@ -61,14 +60,17 @@ public class ChangePasswordRequest extends Request {
             super();
         } 
 
-        private Builder(ChangePasswordRequest response) {
-            super(response);
-            this.newPassword = response.newPassword;
-            this.oldPassword = response.oldPassword;
+        private Builder(ChangePasswordRequest request) {
+            super(request);
+            this.newPassword = request.newPassword;
+            this.oldPassword = request.oldPassword;
         } 
 
         /**
-         * NewPassword.
+         * The new password that is used to log on to the Alibaba Cloud Management Console.
+         * <p>
+         * 
+         * The password must meet the complexity requirements. For more information, see [SetPasswordPolicy](~~28739~~).
          */
         public Builder newPassword(String newPassword) {
             this.putQueryParameter("NewPassword", newPassword);
@@ -77,7 +79,7 @@ public class ChangePasswordRequest extends Request {
         }
 
         /**
-         * OldPassword.
+         * The old password that is used to log on to the Alibaba Cloud Management Console.
          */
         public Builder oldPassword(String oldPassword) {
             this.putQueryParameter("OldPassword", oldPassword);

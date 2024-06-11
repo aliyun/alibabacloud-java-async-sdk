@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachPolicyFromUserRequest</p>
  */
 public class DetachPolicyFromUserRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private DetachPolicyFromUserRequest(Builder builder) {
@@ -74,15 +73,15 @@ public class DetachPolicyFromUserRequest extends Request {
             super();
         } 
 
-        private Builder(DetachPolicyFromUserRequest response) {
-            super(response);
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
-            this.userName = response.userName;
+        private Builder(DetachPolicyFromUserRequest request) {
+            super(request);
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
+            this.userName = request.userName;
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -91,7 +90,7 @@ public class DetachPolicyFromUserRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values: `System` and `Custom`.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);
@@ -100,7 +99,7 @@ public class DetachPolicyFromUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The name of the RAM user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

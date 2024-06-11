@@ -109,6 +109,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * >  This operation is available only for RAM users. Before you call this operation, make sure that `AllowUserToChangePassword` in [SetSecurityPreference](~~43765~~) is set to `True`. The value True indicates that RAM users can change their passwords.
+      *
+     */
     @Override
     public CompletableFuture<ChangePasswordResponse> changePassword(ChangePasswordRequest request) {
         try {
@@ -179,6 +183,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * For more information about policies, see [Policy overview](~~93732~~).
+      * This topic provides an example on how to create a custom policy to query Elastic Compute Service (ECS) instances in a specific region.
+      *
+     */
     @Override
     public CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request) {
         try {
@@ -207,6 +216,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## Description
+      * For more information about RAM roles, see [Overview of RAM roles](~~93689~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateRoleResponse> createRole(CreateRoleRequest request) {
         try {
@@ -221,6 +235,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to create a RAM user named `alice`.
+      *
+     */
     @Override
     public CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request) {
         try {
@@ -250,6 +268,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DecodeDiagnosticMessageResponse> decodeDiagnosticMessage(DecodeDiagnosticMessageRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DecodeDiagnosticMessage").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DecodeDiagnosticMessageResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DecodeDiagnosticMessageResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DeleteAccessKeyResponse> deleteAccessKey(DeleteAccessKeyRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -263,6 +295,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete a RAM user group, make sure that no policies are attached to the group and no RAM users are included in the group.
+      *
+     */
     @Override
     public CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request) {
         try {
@@ -333,6 +369,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete a RAM user, make sure that no policies are attached to the RAM user and that the RAM user does not belong to any groups.
+      *
+     */
     @Override
     public CompletableFuture<DeleteUserResponse> deleteUser(DeleteUserRequest request) {
         try {
@@ -529,6 +569,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query the information about the RAM user `alice`.
+      *
+     */
     @Override
     public CompletableFuture<GetUserResponse> getUser(GetUserRequest request) {
         try {
@@ -599,6 +643,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to query the RAM user groups to which the RAM user `Alice` belongs. The response shows that `Alice` belongs to the RAM user group named `Dev-Team`.
+      *
+     */
     @Override
     public CompletableFuture<ListGroupsForUserResponse> listGroupsForUser(ListGroupsForUserRequest request) {
         try {
@@ -655,6 +703,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * > You can call this operation to query only the policies that are attached to Alibaba Cloud accounts. You cannot query the policies that are attached to resource groups.
+      *
+     */
     @Override
     public CompletableFuture<ListPoliciesForUserResponse> listPoliciesForUser(ListPoliciesForUserRequest request) {
         try {
@@ -865,6 +917,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this operation to modify only the description of a custom policy. You cannot modify the description of a system policy.
+      *
+     */
     @Override
     public CompletableFuture<UpdatePolicyDescriptionResponse> updatePolicyDescription(UpdatePolicyDescriptionRequest request) {
         try {
@@ -879,6 +935,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example to show how to change the description of ECSAdmin to ECS administrator.
+      *
+     */
     @Override
     public CompletableFuture<UpdateRoleResponse> updateRole(UpdateRoleRequest request) {
         try {
@@ -893,6 +953,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * This topic provides an example on how to change the name of a RAM user from `zhangq****` to `xiaoq****`.
+      *
+     */
     @Override
     public CompletableFuture<UpdateUserResponse> updateUser(UpdateUserRequest request) {
         try {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPoliciesResponseBody</p>
  */
 public class ListPoliciesResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private Policies policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPoliciesResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +81,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the value of IsTruncated is `true`, you can call this operation again and set `Marker` to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +89,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * Policies.
+         * The list of policies.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -98,7 +97,7 @@ public class ListPoliciesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,25 +111,25 @@ public class ListPoliciesResponseBody extends TeaModel {
     } 
 
     public static class Policy extends TeaModel {
-        @NameInMap("AttachmentCount")
+        @com.aliyun.core.annotation.NameInMap("AttachmentCount")
         private Integer attachmentCount;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Policy(Builder builder) {
@@ -210,7 +209,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * AttachmentCount.
+             * The number of references to the policy.
              */
             public Builder attachmentCount(Integer attachmentCount) {
                 this.attachmentCount = attachmentCount;
@@ -218,7 +217,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the policy was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -226,7 +225,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The default version of the policy.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -234,7 +233,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -242,7 +241,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -250,7 +249,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy.
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -258,7 +257,7 @@ public class ListPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the policy was modified.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -273,7 +272,7 @@ public class ListPoliciesResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private java.util.List < Policy> policy;
 
         private Policies(Builder builder) {

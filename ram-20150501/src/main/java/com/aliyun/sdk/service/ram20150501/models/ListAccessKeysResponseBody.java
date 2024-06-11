@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAccessKeysResponseBody</p>
  */
 public class ListAccessKeysResponseBody extends TeaModel {
-    @NameInMap("AccessKeys")
+    @com.aliyun.core.annotation.NameInMap("AccessKeys")
     private AccessKeys accessKeys;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAccessKeysResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccessKeys.
+         * The list of AccessKey pairs that belong to the RAM user.
          */
         public Builder accessKeys(AccessKeys accessKeys) {
             this.accessKeys = accessKeys;
@@ -58,7 +57,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class ListAccessKeysResponseBody extends TeaModel {
     } 
 
     public static class AccessKey extends TeaModel {
-        @NameInMap("AccessKeyId")
+        @com.aliyun.core.annotation.NameInMap("AccessKeyId")
         private String accessKeyId;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AccessKey(Builder builder) {
@@ -122,7 +121,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -130,7 +129,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the AccessKey pair was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -138,7 +137,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the AccessKey pair. Valid values: Active and Inactive.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -153,7 +152,7 @@ public class ListAccessKeysResponseBody extends TeaModel {
 
     }
     public static class AccessKeys extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private java.util.List < AccessKey> accessKey;
 
         private AccessKeys(Builder builder) {

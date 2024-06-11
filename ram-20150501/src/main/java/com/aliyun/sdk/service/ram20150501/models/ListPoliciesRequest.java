@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPoliciesRequest</p>
  */
 public class ListPoliciesRequest extends Request {
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private Integer maxItems;
 
-    @Query
-    @NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
     private ListPoliciesRequest(Builder builder) {
@@ -74,15 +73,15 @@ public class ListPoliciesRequest extends Request {
             super();
         } 
 
-        private Builder(ListPoliciesRequest response) {
-            super(response);
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
-            this.policyType = response.policyType;
+        private Builder(ListPoliciesRequest request) {
+            super(request);
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
+            this.policyType = request.policyType;
         } 
 
         /**
-         * Marker.
+         * The `Marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -91,7 +90,10 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
+         * <p>
+         * 
+         * Valid values: 1 to 1000. Default value: 100.
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);
@@ -100,7 +102,7 @@ public class ListPoliciesRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the `Policy`. Valid values: `System` and `Custom`. If you do not specify the parameter, all policies are returned.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

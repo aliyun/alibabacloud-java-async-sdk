@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePolicyVersionRequest</p>
  */
 public class CreatePolicyVersionRequest extends Request {
-    @Query
-    @NameInMap("PolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
     private String policyDocument;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("RotateStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RotateStrategy")
     private String rotateStrategy;
 
-    @Query
-    @NameInMap("SetAsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SetAsDefault")
     private Boolean setAsDefault;
 
     private CreatePolicyVersionRequest(Builder builder) {
@@ -87,16 +86,16 @@ public class CreatePolicyVersionRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePolicyVersionRequest response) {
-            super(response);
-            this.policyDocument = response.policyDocument;
-            this.policyName = response.policyName;
-            this.rotateStrategy = response.rotateStrategy;
-            this.setAsDefault = response.setAsDefault;
+        private Builder(CreatePolicyVersionRequest request) {
+            super(request);
+            this.policyDocument = request.policyDocument;
+            this.policyName = request.policyName;
+            this.rotateStrategy = request.rotateStrategy;
+            this.setAsDefault = request.setAsDefault;
         } 
 
         /**
-         * PolicyDocument.
+         * The document of the policy. The document can be up to 6,144 bytes in length.
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -105,7 +104,7 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -114,7 +113,15 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * RotateStrategy.
+         * The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   `None`: disables the rotation strategy.
+         * *   `DeleteOldestNonDefaultVersionWhenLimitExceeded`: deletes the earliest non-active version if the number of versions exceeds the limit.
+         * 
+         * Default value: `None`.
          */
         public Builder rotateStrategy(String rotateStrategy) {
             this.putQueryParameter("RotateStrategy", rotateStrategy);
@@ -123,7 +130,7 @@ public class CreatePolicyVersionRequest extends Request {
         }
 
         /**
-         * SetAsDefault.
+         * Specifies whether to set this policy as the default policy. Default value: `false`.
          */
         public Builder setAsDefault(Boolean setAsDefault) {
             this.putQueryParameter("SetAsDefault", setAsDefault);

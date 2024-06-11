@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteLoginProfileRequest</p>
  */
 public class DeleteLoginProfileRequest extends Request {
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private DeleteLoginProfileRequest(Builder builder) {
@@ -48,13 +47,13 @@ public class DeleteLoginProfileRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteLoginProfileRequest response) {
-            super(response);
-            this.userName = response.userName;
+        private Builder(DeleteLoginProfileRequest request) {
+            super(request);
+            this.userName = request.userName;
         } 
 
         /**
-         * UserName.
+         * The name of the RAM user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

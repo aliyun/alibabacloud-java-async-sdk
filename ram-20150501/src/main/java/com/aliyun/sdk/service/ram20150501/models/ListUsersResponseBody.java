@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("IsTruncated")
+    @com.aliyun.core.annotation.NameInMap("IsTruncated")
     private Boolean isTruncated;
 
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private Users users;
 
     private ListUsersResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListUsersResponseBody extends TeaModel {
         private Users users; 
 
         /**
-         * IsTruncated.
+         * Indicates whether the response is truncated.
          */
         public Builder isTruncated(Boolean isTruncated) {
             this.isTruncated = isTruncated;
@@ -82,7 +81,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Marker.
+         * The marker. This parameter is returned only if the value of `IsTruncated` is `true`. If the parameter is returned, you can call this operation again and set `Marker` to obtain the truncated part.``
          */
         public Builder marker(String marker) {
             this.marker = marker;
@@ -90,7 +89,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +97,7 @@ public class ListUsersResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The RAM users.
          */
         public Builder users(Users users) {
             this.users = users;
@@ -112,28 +111,28 @@ public class ListUsersResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("MobilePhone")
+        @com.aliyun.core.annotation.NameInMap("MobilePhone")
         private String mobilePhone;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -222,7 +221,7 @@ public class ListUsersResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Comments.
+             * The description.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -230,7 +229,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM user was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -238,7 +237,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -246,7 +245,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the RAM user.
+             * <p>
+             * 
+             * > This parameter is unavailable.
              */
             public Builder email(String email) {
                 this.email = email;
@@ -254,7 +256,10 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * The mobile phone number of the RAM user.
+             * <p>
+             * 
+             * > This parameter is unavailable.
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -262,7 +267,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The point in time when the information about the RAM user was last modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -270,7 +275,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -278,7 +283,7 @@ public class ListUsersResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The logon name of the RAM user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -293,7 +298,7 @@ public class ListUsersResponseBody extends TeaModel {
 
     }
     public static class Users extends TeaModel {
-        @NameInMap("User")
+        @com.aliyun.core.annotation.NameInMap("User")
         private java.util.List < User> user;
 
         private Users(Builder builder) {

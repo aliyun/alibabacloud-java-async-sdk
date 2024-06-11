@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPolicyVersionsResponseBody</p>
  */
 public class ListPolicyVersionsResponseBody extends TeaModel {
-    @NameInMap("PolicyVersions")
+    @com.aliyun.core.annotation.NameInMap("PolicyVersions")
     private PolicyVersions policyVersions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPolicyVersionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PolicyVersions.
+         * The list of the policy versions.
          */
         public Builder policyVersions(PolicyVersions policyVersions) {
             this.policyVersions = policyVersions;
@@ -58,7 +57,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
     } 
 
     public static class PolicyVersion extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("IsDefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("IsDefaultVersion")
         private Boolean isDefaultVersion;
 
-        @NameInMap("PolicyDocument")
+        @com.aliyun.core.annotation.NameInMap("PolicyDocument")
         private String policyDocument;
 
-        @NameInMap("VersionId")
+        @com.aliyun.core.annotation.NameInMap("VersionId")
         private String versionId;
 
         private PolicyVersion(Builder builder) {
@@ -134,7 +133,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * CreateDate.
+             * The time when the version was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -142,7 +141,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsDefaultVersion.
+             * Indicates whether the version is the default version.
              */
             public Builder isDefaultVersion(Boolean isDefaultVersion) {
                 this.isDefaultVersion = isDefaultVersion;
@@ -150,7 +149,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyDocument.
+             * The script of the policy.
              */
             public Builder policyDocument(String policyDocument) {
                 this.policyDocument = policyDocument;
@@ -158,7 +157,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionId.
+             * The ID of the version.
              */
             public Builder versionId(String versionId) {
                 this.versionId = versionId;
@@ -173,7 +172,7 @@ public class ListPolicyVersionsResponseBody extends TeaModel {
 
     }
     public static class PolicyVersions extends TeaModel {
-        @NameInMap("PolicyVersion")
+        @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private java.util.List < PolicyVersion> policyVersion;
 
         private PolicyVersions(Builder builder) {

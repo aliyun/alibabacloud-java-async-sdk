@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachPolicyToGroupRequest</p>
  */
 public class AttachPolicyToGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
-    @Query
-    @NameInMap("PolicyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyType")
     private String policyType;
 
     private AttachPolicyToGroupRequest(Builder builder) {
@@ -74,15 +73,15 @@ public class AttachPolicyToGroupRequest extends Request {
             super();
         } 
 
-        private Builder(AttachPolicyToGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
-            this.policyName = response.policyName;
-            this.policyType = response.policyType;
+        private Builder(AttachPolicyToGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
+            this.policyName = request.policyName;
+            this.policyType = request.policyType;
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);
@@ -91,7 +90,7 @@ public class AttachPolicyToGroupRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);
@@ -100,7 +99,7 @@ public class AttachPolicyToGroupRequest extends Request {
         }
 
         /**
-         * PolicyType.
+         * The type of the policy. Valid values: `System` and `Custom`.
          */
         public Builder policyType(String policyType) {
             this.putQueryParameter("PolicyType", policyType);

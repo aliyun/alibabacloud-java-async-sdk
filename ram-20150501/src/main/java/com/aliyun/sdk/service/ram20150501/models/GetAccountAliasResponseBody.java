@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountAliasResponseBody</p>
  */
 public class GetAccountAliasResponseBody extends TeaModel {
-    @NameInMap("AccountAlias")
+    @com.aliyun.core.annotation.NameInMap("AccountAlias")
     private String accountAlias;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAccountAliasResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetAccountAliasResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AccountAlias.
+         * The alias of the Alibaba Cloud account.
          */
         public Builder accountAlias(String accountAlias) {
             this.accountAlias = accountAlias;
@@ -58,7 +57,7 @@ public class GetAccountAliasResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

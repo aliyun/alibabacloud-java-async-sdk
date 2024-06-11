@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePolicyRequest</p>
  */
 public class DeletePolicyRequest extends Request {
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
     private DeletePolicyRequest(Builder builder) {
@@ -48,13 +47,13 @@ public class DeletePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(DeletePolicyRequest response) {
-            super(response);
-            this.policyName = response.policyName;
+        private Builder(DeletePolicyRequest request) {
+            super(request);
+            this.policyName = request.policyName;
         } 
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

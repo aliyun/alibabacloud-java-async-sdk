@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserMFAInfoResponseBody</p>
  */
 public class GetUserMFAInfoResponseBody extends TeaModel {
-    @NameInMap("MFADevice")
+    @com.aliyun.core.annotation.NameInMap("MFADevice")
     private MFADevice MFADevice;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetUserMFAInfoResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MFADevice.
+         * The information about the MFA device that is attached to the RAM user.
          */
         public Builder MFADevice(MFADevice MFADevice) {
             this.MFADevice = MFADevice;
@@ -58,7 +57,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
     } 
 
     public static class MFADevice extends TeaModel {
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MFADevice(Builder builder) {
@@ -110,7 +109,7 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;
@@ -118,7 +117,11 @@ public class GetUserMFAInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the MFA device. Valid values:
+             * <p>
+             * 
+             * *   VMFA: virtual MFA device
+             * *   U2F: Universal 2nd Factor (U2F) security key
              */
             public Builder type(String type) {
                 this.type = type;

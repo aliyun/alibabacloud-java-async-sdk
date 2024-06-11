@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserResponseBody</p>
  */
 public class UpdateUserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private User user;
 
     private UpdateUserResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdateUserResponseBody extends TeaModel {
         private User user; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class UpdateUserResponseBody extends TeaModel {
         }
 
         /**
-         * User.
+         * The information about the RAM user.
          */
         public Builder user(User user) {
             this.user = user;
@@ -72,28 +71,28 @@ public class UpdateUserResponseBody extends TeaModel {
     } 
 
     public static class User extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("MobilePhone")
+        @com.aliyun.core.annotation.NameInMap("MobilePhone")
         private String mobilePhone;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private User(Builder builder) {
@@ -182,7 +181,7 @@ public class UpdateUserResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * Comments.
+             * The description of the RAM user.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -190,7 +189,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The point in time when the RAM user was created. The time is displayed in UTC.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -198,7 +197,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * DisplayName.
+             * The display name of the RAM user.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -206,7 +205,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * Email.
+             * The email address of the RAM user.
+             * <p>
+             * 
+             * >  This parameter can be returned only on the China site (aliyun.com).
              */
             public Builder email(String email) {
                 this.email = email;
@@ -214,7 +216,10 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * MobilePhone.
+             * The mobile phone number of the RAM user.
+             * <p>
+             * 
+             * >  This parameter can be returned only on the China site (aliyun.com).
              */
             public Builder mobilePhone(String mobilePhone) {
                 this.mobilePhone = mobilePhone;
@@ -222,7 +227,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The point in time when the information about the RAM user was last modified. The time is displayed in UTC.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;
@@ -230,7 +235,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The ID of the RAM user.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -238,7 +243,7 @@ public class UpdateUserResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The username of the RAM user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

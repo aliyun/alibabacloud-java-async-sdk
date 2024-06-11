@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteGroupRequest</p>
  */
 public class DeleteGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private DeleteGroupRequest(Builder builder) {
@@ -48,13 +47,16 @@ public class DeleteGroupRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
+        private Builder(DeleteGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
+         * <p>
+         * 
+         * If you want to query the name of a RAM user group, call the [ListGroups](~~28703~~) operation.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

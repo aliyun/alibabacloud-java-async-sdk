@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateGroupRequest</p>
  */
 public class CreateGroupRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private CreateGroupRequest(Builder builder) {
@@ -61,14 +60,17 @@ public class CreateGroupRequest extends Request {
             super();
         } 
 
-        private Builder(CreateGroupRequest response) {
-            super(response);
-            this.comments = response.comments;
-            this.groupName = response.groupName;
+        private Builder(CreateGroupRequest request) {
+            super(request);
+            this.comments = request.comments;
+            this.groupName = request.groupName;
         } 
 
         /**
-         * Comments.
+         * The description.
+         * <p>
+         * 
+         * The value can be up to 128 characters in length.
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -77,7 +79,10 @@ public class CreateGroupRequest extends Request {
         }
 
         /**
-         * GroupName.
+         * The name of the user group.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

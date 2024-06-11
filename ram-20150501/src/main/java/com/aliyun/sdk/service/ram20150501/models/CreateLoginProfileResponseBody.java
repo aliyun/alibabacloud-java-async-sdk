@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateLoginProfileResponseBody</p>
  */
 public class CreateLoginProfileResponseBody extends TeaModel {
-    @NameInMap("LoginProfile")
+    @com.aliyun.core.annotation.NameInMap("LoginProfile")
     private LoginProfile loginProfile;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateLoginProfileResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * LoginProfile.
+         * The logon configurations of the RAM user.
          */
         public Builder loginProfile(LoginProfile loginProfile) {
             this.loginProfile = loginProfile;
@@ -58,7 +57,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class CreateLoginProfileResponseBody extends TeaModel {
     } 
 
     public static class LoginProfile extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("MFABindRequired")
+        @com.aliyun.core.annotation.NameInMap("MFABindRequired")
         private Boolean MFABindRequired;
 
-        @NameInMap("PasswordResetRequired")
+        @com.aliyun.core.annotation.NameInMap("PasswordResetRequired")
         private Boolean passwordResetRequired;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private LoginProfile(Builder builder) {
@@ -134,7 +133,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * CreateDate.
+             * The time when the logon configurations were created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -142,7 +141,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * MFABindRequired.
+             * Indicates whether an MFA device must be attached to the RAM user upon logon.
              */
             public Builder MFABindRequired(Boolean MFABindRequired) {
                 this.MFABindRequired = MFABindRequired;
@@ -150,7 +149,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * PasswordResetRequired.
+             * Indicates whether the RAM user must change the password upon logon.
              */
             public Builder passwordResetRequired(Boolean passwordResetRequired) {
                 this.passwordResetRequired = passwordResetRequired;
@@ -158,7 +157,7 @@ public class CreateLoginProfileResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The name of the RAM user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

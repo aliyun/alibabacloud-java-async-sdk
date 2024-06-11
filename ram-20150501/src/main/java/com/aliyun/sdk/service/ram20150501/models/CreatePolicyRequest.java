@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePolicyRequest</p>
  */
 public class CreatePolicyRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("PolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyDocument")
     private String policyDocument;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
     private CreatePolicyRequest(Builder builder) {
@@ -74,15 +73,18 @@ public class CreatePolicyRequest extends Request {
             super();
         } 
 
-        private Builder(CreatePolicyRequest response) {
-            super(response);
-            this.description = response.description;
-            this.policyDocument = response.policyDocument;
-            this.policyName = response.policyName;
+        private Builder(CreatePolicyRequest request) {
+            super(request);
+            this.description = request.description;
+            this.policyDocument = request.policyDocument;
+            this.policyName = request.policyName;
         } 
 
         /**
-         * Description.
+         * The description of the policy.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -91,7 +93,12 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyDocument.
+         * The document of the policy.
+         * <p>
+         * 
+         * The document must be 1 to 6,144 characters in length.
+         * 
+         * For more information about policy elements and sample policies, see [Policy elements](~~93738~~) and [Overview of sample policies](~~210969~~).
          */
         public Builder policyDocument(String policyDocument) {
             this.putQueryParameter("PolicyDocument", policyDocument);
@@ -100,7 +107,10 @@ public class CreatePolicyRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length, and can contain letters, digits, and hyphens (-).
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

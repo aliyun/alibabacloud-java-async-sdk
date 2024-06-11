@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetGroupRequest</p>
  */
 public class GetGroupRequest extends Request {
-    @Query
-    @NameInMap("GroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupName")
     private String groupName;
 
     private GetGroupRequest(Builder builder) {
@@ -48,13 +47,13 @@ public class GetGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetGroupRequest response) {
-            super(response);
-            this.groupName = response.groupName;
+        private Builder(GetGroupRequest request) {
+            super(request);
+            this.groupName = request.groupName;
         } 
 
         /**
-         * GroupName.
+         * The name of the RAM user group.
          */
         public Builder groupName(String groupName) {
             this.putQueryParameter("GroupName", groupName);

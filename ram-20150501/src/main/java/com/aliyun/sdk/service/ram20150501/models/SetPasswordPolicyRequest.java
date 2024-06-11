@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetPasswordPolicyRequest</p>
  */
 public class SetPasswordPolicyRequest extends Request {
-    @Query
-    @NameInMap("HardExpiry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HardExpiry")
     private Boolean hardExpiry;
 
-    @Query
-    @NameInMap("MaxLoginAttemps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxLoginAttemps")
     private Integer maxLoginAttemps;
 
-    @Query
-    @NameInMap("MaxPasswordAge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxPasswordAge")
     private Integer maxPasswordAge;
 
-    @Query
-    @NameInMap("MinimumPasswordLength")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinimumPasswordLength")
     private Integer minimumPasswordLength;
 
-    @Query
-    @NameInMap("PasswordReusePrevention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PasswordReusePrevention")
     private Integer passwordReusePrevention;
 
-    @Query
-    @NameInMap("RequireLowercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireLowercaseCharacters")
     private Boolean requireLowercaseCharacters;
 
-    @Query
-    @NameInMap("RequireNumbers")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireNumbers")
     private Boolean requireNumbers;
 
-    @Query
-    @NameInMap("RequireSymbols")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireSymbols")
     private Boolean requireSymbols;
 
-    @Query
-    @NameInMap("RequireUppercaseCharacters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequireUppercaseCharacters")
     private Boolean requireUppercaseCharacters;
 
     private SetPasswordPolicyRequest(Builder builder) {
@@ -152,21 +151,27 @@ public class SetPasswordPolicyRequest extends Request {
             super();
         } 
 
-        private Builder(SetPasswordPolicyRequest response) {
-            super(response);
-            this.hardExpiry = response.hardExpiry;
-            this.maxLoginAttemps = response.maxLoginAttemps;
-            this.maxPasswordAge = response.maxPasswordAge;
-            this.minimumPasswordLength = response.minimumPasswordLength;
-            this.passwordReusePrevention = response.passwordReusePrevention;
-            this.requireLowercaseCharacters = response.requireLowercaseCharacters;
-            this.requireNumbers = response.requireNumbers;
-            this.requireSymbols = response.requireSymbols;
-            this.requireUppercaseCharacters = response.requireUppercaseCharacters;
+        private Builder(SetPasswordPolicyRequest request) {
+            super(request);
+            this.hardExpiry = request.hardExpiry;
+            this.maxLoginAttemps = request.maxLoginAttemps;
+            this.maxPasswordAge = request.maxPasswordAge;
+            this.minimumPasswordLength = request.minimumPasswordLength;
+            this.passwordReusePrevention = request.passwordReusePrevention;
+            this.requireLowercaseCharacters = request.requireLowercaseCharacters;
+            this.requireNumbers = request.requireNumbers;
+            this.requireSymbols = request.requireSymbols;
+            this.requireUppercaseCharacters = request.requireUppercaseCharacters;
         } 
 
         /**
-         * HardExpiry.
+         * Specifies whether a password will expire.
+         * <p>
+         * 
+         * Valid values: `true` and `false`. Default value: `false`. If you leave this parameter unspecified, the default value false is used.
+         * 
+         * *   If you set this parameter to `true`, the Alibaba Cloud account to which the RAM users belong must reset the passwords before the RAM users can log on to the Alibaba Cloud Management Console.
+         * *   If you set this parameter to `false`, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.
          */
         public Builder hardExpiry(Boolean hardExpiry) {
             this.putQueryParameter("HardExpiry", hardExpiry);
@@ -175,7 +180,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxLoginAttemps.
+         * The maximum number of permitted logon attempts within one hour. The number of logon attempts is reset to zero if a RAM user changes the password.
          */
         public Builder maxLoginAttemps(Integer maxLoginAttemps) {
             this.putQueryParameter("MaxLoginAttemps", maxLoginAttemps);
@@ -184,7 +189,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MaxPasswordAge.
+         * The number of days for which a password is valid. Default value: 0. The default value indicates that the password never expires.
          */
         public Builder maxPasswordAge(Integer maxPasswordAge) {
             this.putQueryParameter("MaxPasswordAge", maxPasswordAge);
@@ -193,7 +198,10 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * MinimumPasswordLength.
+         * The minimum required number of characters in a password.
+         * <p>
+         * 
+         * Valid values: 8 to 32. Default value: 8.
          */
         public Builder minimumPasswordLength(Integer minimumPasswordLength) {
             this.putQueryParameter("MinimumPasswordLength", minimumPasswordLength);
@@ -202,7 +210,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * PasswordReusePrevention.
+         * The number of previous passwords that a RAM user is prevented from reusing. Default value: 0. The default value indicates that the RAM user can reuse previous passwords.
          */
         public Builder passwordReusePrevention(Integer passwordReusePrevention) {
             this.putQueryParameter("PasswordReusePrevention", passwordReusePrevention);
@@ -211,7 +219,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireLowercaseCharacters.
+         * Specifies whether a password must contain one or more lowercase letters.
          */
         public Builder requireLowercaseCharacters(Boolean requireLowercaseCharacters) {
             this.putQueryParameter("RequireLowercaseCharacters", requireLowercaseCharacters);
@@ -220,7 +228,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireNumbers.
+         * Specifies whether a password must contain one or more digits.
          */
         public Builder requireNumbers(Boolean requireNumbers) {
             this.putQueryParameter("RequireNumbers", requireNumbers);
@@ -229,7 +237,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireSymbols.
+         * Specifies whether a password must contain one or more special characters.
          */
         public Builder requireSymbols(Boolean requireSymbols) {
             this.putQueryParameter("RequireSymbols", requireSymbols);
@@ -238,7 +246,7 @@ public class SetPasswordPolicyRequest extends Request {
         }
 
         /**
-         * RequireUppercaseCharacters.
+         * Specifies whether a password must contain one or more uppercase letters.
          */
         public Builder requireUppercaseCharacters(Boolean requireUppercaseCharacters) {
             this.putQueryParameter("RequireUppercaseCharacters", requireUppercaseCharacters);

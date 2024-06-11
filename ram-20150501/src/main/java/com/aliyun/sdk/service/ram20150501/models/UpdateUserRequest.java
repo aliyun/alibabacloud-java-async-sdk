@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateUserRequest</p>
  */
 public class UpdateUserRequest extends Request {
-    @Query
-    @NameInMap("NewComments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewComments")
     private String newComments;
 
-    @Query
-    @NameInMap("NewDisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDisplayName")
     private String newDisplayName;
 
-    @Query
-    @NameInMap("NewEmail")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewEmail")
     private String newEmail;
 
-    @Query
-    @NameInMap("NewMobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewMobilePhone")
     private String newMobilePhone;
 
-    @Query
-    @NameInMap("NewUserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewUserName")
     private String newUserName;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private UpdateUserRequest(Builder builder) {
@@ -113,18 +112,21 @@ public class UpdateUserRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateUserRequest response) {
-            super(response);
-            this.newComments = response.newComments;
-            this.newDisplayName = response.newDisplayName;
-            this.newEmail = response.newEmail;
-            this.newMobilePhone = response.newMobilePhone;
-            this.newUserName = response.newUserName;
-            this.userName = response.userName;
+        private Builder(UpdateUserRequest request) {
+            super(request);
+            this.newComments = request.newComments;
+            this.newDisplayName = request.newDisplayName;
+            this.newEmail = request.newEmail;
+            this.newMobilePhone = request.newMobilePhone;
+            this.newUserName = request.newUserName;
+            this.userName = request.userName;
         } 
 
         /**
-         * NewComments.
+         * The new description of the RAM user.
+         * <p>
+         * 
+         * The description must be 1 to 128 characters in length.
          */
         public Builder newComments(String newComments) {
             this.putQueryParameter("NewComments", newComments);
@@ -133,7 +135,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewDisplayName.
+         * The new display name of the RAM user.
+         * <p>
+         * 
+         * The name must be 1 to 128 characters in length.
          */
         public Builder newDisplayName(String newDisplayName) {
             this.putQueryParameter("NewDisplayName", newDisplayName);
@@ -142,7 +147,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewEmail.
+         * The new email address of the RAM user.
+         * <p>
+         * 
+         * >  This parameter can be returned only on the China site (aliyun.com).
          */
         public Builder newEmail(String newEmail) {
             this.putQueryParameter("NewEmail", newEmail);
@@ -151,7 +159,12 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewMobilePhone.
+         * The new mobile phone number of the RAM user.
+         * <p>
+         * 
+         * Format: \<Country code>-\<Mobile phone number>.
+         * 
+         * >  This parameter can be returned only on the China site (aliyun.com).
          */
         public Builder newMobilePhone(String newMobilePhone) {
             this.putQueryParameter("NewMobilePhone", newMobilePhone);
@@ -160,7 +173,10 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * NewUserName.
+         * The new username of the RAM user.
+         * <p>
+         * 
+         * The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
          */
         public Builder newUserName(String newUserName) {
             this.putQueryParameter("NewUserName", newUserName);
@@ -169,7 +185,7 @@ public class UpdateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the RAM user.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

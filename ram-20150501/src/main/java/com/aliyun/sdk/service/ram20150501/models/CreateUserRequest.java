@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUserRequest</p>
  */
 public class CreateUserRequest extends Request {
-    @Query
-    @NameInMap("Comments")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Comments")
     private String comments;
 
-    @Query
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("MobilePhone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MobilePhone")
     private String mobilePhone;
 
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private CreateUserRequest(Builder builder) {
@@ -100,17 +99,20 @@ public class CreateUserRequest extends Request {
             super();
         } 
 
-        private Builder(CreateUserRequest response) {
-            super(response);
-            this.comments = response.comments;
-            this.displayName = response.displayName;
-            this.email = response.email;
-            this.mobilePhone = response.mobilePhone;
-            this.userName = response.userName;
+        private Builder(CreateUserRequest request) {
+            super(request);
+            this.comments = request.comments;
+            this.displayName = request.displayName;
+            this.email = request.email;
+            this.mobilePhone = request.mobilePhone;
+            this.userName = request.userName;
         } 
 
         /**
-         * Comments.
+         * The description of the RAM user.
+         * <p>
+         * 
+         * The description must be 1 to 128 characters in length.
          */
         public Builder comments(String comments) {
             this.putQueryParameter("Comments", comments);
@@ -119,7 +121,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * DisplayName.
+         * The display name of the RAM user.
+         * <p>
+         * 
+         * The display name must be 1 to 128 characters in length.
          */
         public Builder displayName(String displayName) {
             this.putQueryParameter("DisplayName", displayName);
@@ -128,7 +133,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * Email.
+         * The email address of the RAM user.
+         * <p>
+         * 
+         * >  This parameter applies only to the China site (aliyun.com).
          */
         public Builder email(String email) {
             this.putQueryParameter("Email", email);
@@ -137,7 +145,12 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * MobilePhone.
+         * The mobile phone number of the RAM user.
+         * <p>
+         * 
+         * Format: Country code-Mobile phone number.
+         * 
+         * >  This parameter applies only to the China site (aliyun.com).
          */
         public Builder mobilePhone(String mobilePhone) {
             this.putQueryParameter("MobilePhone", mobilePhone);
@@ -146,7 +159,10 @@ public class CreateUserRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The username of the RAM user.
+         * <p>
+         * 
+         * The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);

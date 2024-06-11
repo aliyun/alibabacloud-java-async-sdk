@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRoleRequest</p>
  */
 public class CreateRoleRequest extends Request {
-    @Query
-    @NameInMap("AssumeRolePolicyDocument")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssumeRolePolicyDocument")
     private String assumeRolePolicyDocument;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("MaxSessionDuration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxSessionDuration")
     private Long maxSessionDuration;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
     private CreateRoleRequest(Builder builder) {
@@ -87,16 +86,19 @@ public class CreateRoleRequest extends Request {
             super();
         } 
 
-        private Builder(CreateRoleRequest response) {
-            super(response);
-            this.assumeRolePolicyDocument = response.assumeRolePolicyDocument;
-            this.description = response.description;
-            this.maxSessionDuration = response.maxSessionDuration;
-            this.roleName = response.roleName;
+        private Builder(CreateRoleRequest request) {
+            super(request);
+            this.assumeRolePolicyDocument = request.assumeRolePolicyDocument;
+            this.description = request.description;
+            this.maxSessionDuration = request.maxSessionDuration;
+            this.roleName = request.roleName;
         } 
 
         /**
-         * AssumeRolePolicyDocument.
+         * The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).
+         * <p>
+         * 
+         * >  RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.
          */
         public Builder assumeRolePolicyDocument(String assumeRolePolicyDocument) {
             this.putQueryParameter("AssumeRolePolicyDocument", assumeRolePolicyDocument);
@@ -105,7 +107,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the RAM role.
+         * <p>
+         * 
+         * The description must be 1 to 1,024 characters in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -114,7 +119,12 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * MaxSessionDuration.
+         * The maximum session duration of the RAM role.
+         * <p>
+         * 
+         * Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.
+         * 
+         * If you do not specify this parameter, the default value is used.
          */
         public Builder maxSessionDuration(Long maxSessionDuration) {
             this.putQueryParameter("MaxSessionDuration", maxSessionDuration);
@@ -123,7 +133,10 @@ public class CreateRoleRequest extends Request {
         }
 
         /**
-         * RoleName.
+         * The name of the RAM role.
+         * <p>
+         * 
+         * The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
          */
         public Builder roleName(String roleName) {
             this.putQueryParameter("RoleName", roleName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPoliciesForUserResponseBody</p>
  */
 public class ListPoliciesForUserResponseBody extends TeaModel {
-    @NameInMap("Policies")
+    @com.aliyun.core.annotation.NameInMap("Policies")
     private Policies policies;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPoliciesForUserResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Policies.
+         * The information about the policy.
          */
         public Builder policies(Policies policies) {
             this.policies = policies;
@@ -58,7 +57,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
     } 
 
     public static class Policy extends TeaModel {
-        @NameInMap("AttachDate")
+        @com.aliyun.core.annotation.NameInMap("AttachDate")
         private String attachDate;
 
-        @NameInMap("DefaultVersion")
+        @com.aliyun.core.annotation.NameInMap("DefaultVersion")
         private String defaultVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
         private Policy(Builder builder) {
@@ -146,7 +145,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             private String policyType; 
 
             /**
-             * AttachDate.
+             * The time at which the policy is attached to the RAM user. The time is displayed in UTC.
              */
             public Builder attachDate(String attachDate) {
                 this.attachDate = attachDate;
@@ -154,7 +153,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * The current version.
              */
             public Builder defaultVersion(String defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -162,7 +161,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the policy.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -170,7 +169,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyName.
+             * The name of the policy.
              */
             public Builder policyName(String policyName) {
                 this.policyName = policyName;
@@ -178,7 +177,11 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
             }
 
             /**
-             * PolicyType.
+             * The type of the policy. Valid values:
+             * <p>
+             * 
+             * *   System: system policy
+             * *   Custom: custom policy
              */
             public Builder policyType(String policyType) {
                 this.policyType = policyType;
@@ -193,7 +196,7 @@ public class ListPoliciesForUserResponseBody extends TeaModel {
 
     }
     public static class Policies extends TeaModel {
-        @NameInMap("Policy")
+        @com.aliyun.core.annotation.NameInMap("Policy")
         private java.util.List < Policy> policy;
 
         private Policies(Builder builder) {

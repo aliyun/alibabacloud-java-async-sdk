@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRolesRequest</p>
  */
 public class ListRolesRequest extends Request {
-    @Query
-    @NameInMap("Marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Marker")
     private String marker;
 
-    @Query
-    @NameInMap("MaxItems")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxItems")
     private Integer maxItems;
 
     private ListRolesRequest(Builder builder) {
@@ -61,14 +60,14 @@ public class ListRolesRequest extends Request {
             super();
         } 
 
-        private Builder(ListRolesRequest response) {
-            super(response);
-            this.marker = response.marker;
-            this.maxItems = response.maxItems;
+        private Builder(ListRolesRequest request) {
+            super(request);
+            this.marker = request.marker;
+            this.maxItems = request.maxItems;
         } 
 
         /**
-         * Marker.
+         * The `marker`. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.
          */
         public Builder marker(String marker) {
             this.putQueryParameter("Marker", marker);
@@ -77,7 +76,10 @@ public class ListRolesRequest extends Request {
         }
 
         /**
-         * MaxItems.
+         * The number of entries to return. If a response is truncated because it reaches the value of `MaxItems`, the value of `IsTruncated` will be `true`.
+         * <p>
+         * 
+         * Valid values: 1 to 1000. Default value: 100.
          */
         public Builder maxItems(Integer maxItems) {
             this.putQueryParameter("MaxItems", maxItems);

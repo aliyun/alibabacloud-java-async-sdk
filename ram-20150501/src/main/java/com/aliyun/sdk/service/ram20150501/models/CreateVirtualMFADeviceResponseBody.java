@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateVirtualMFADeviceResponseBody</p>
  */
 public class CreateVirtualMFADeviceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VirtualMFADevice")
+    @com.aliyun.core.annotation.NameInMap("VirtualMFADevice")
     private VirtualMFADevice virtualMFADevice;
 
     private CreateVirtualMFADeviceResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         private VirtualMFADevice virtualMFADevice; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualMFADevice.
+         * The information of the MFA device.
          */
         public Builder virtualMFADevice(VirtualMFADevice virtualMFADevice) {
             this.virtualMFADevice = virtualMFADevice;
@@ -72,13 +71,13 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
     } 
 
     public static class VirtualMFADevice extends TeaModel {
-        @NameInMap("Base32StringSeed")
+        @com.aliyun.core.annotation.NameInMap("Base32StringSeed")
         private String base32StringSeed;
 
-        @NameInMap("QRCodePNG")
+        @com.aliyun.core.annotation.NameInMap("QRCodePNG")
         private String QRCodePNG;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
         private VirtualMFADevice(Builder builder) {
@@ -122,7 +121,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             private String serialNumber; 
 
             /**
-             * Base32StringSeed.
+             * The key of the MFA device.
              */
             public Builder base32StringSeed(String base32StringSeed) {
                 this.base32StringSeed = base32StringSeed;
@@ -130,7 +129,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * QRCodePNG.
+             * The Base64-encoded QR code, in the PNG format.
              */
             public Builder QRCodePNG(String QRCodePNG) {
                 this.QRCodePNG = QRCodePNG;
@@ -138,7 +137,7 @@ public class CreateVirtualMFADeviceResponseBody extends TeaModel {
             }
 
             /**
-             * SerialNumber.
+             * The serial number of the MFA device.
              */
             public Builder serialNumber(String serialNumber) {
                 this.serialNumber = serialNumber;

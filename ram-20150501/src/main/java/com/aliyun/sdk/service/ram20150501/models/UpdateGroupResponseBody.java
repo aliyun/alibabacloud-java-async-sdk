@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateGroupResponseBody</p>
  */
 public class UpdateGroupResponseBody extends TeaModel {
-    @NameInMap("Group")
+    @com.aliyun.core.annotation.NameInMap("Group")
     private Group group;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateGroupResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Group.
+         * The information of the RAM user group.
          */
         public Builder group(Group group) {
             this.group = group;
@@ -58,7 +57,7 @@ public class UpdateGroupResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class UpdateGroupResponseBody extends TeaModel {
     } 
 
     public static class Group extends TeaModel {
-        @NameInMap("Comments")
+        @com.aliyun.core.annotation.NameInMap("Comments")
         private String comments;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
         private Group(Builder builder) {
@@ -146,7 +145,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             private String updateDate; 
 
             /**
-             * Comments.
+             * The description of the RAM user group.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -154,7 +153,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the RAM user group was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -162,7 +161,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the RAM user group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -170,7 +169,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The new name of the RAM user group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -178,7 +177,7 @@ public class UpdateGroupResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateDate.
+             * The time when the information of the RAM user group was updated.
              */
             public Builder updateDate(String updateDate) {
                 this.updateDate = updateDate;

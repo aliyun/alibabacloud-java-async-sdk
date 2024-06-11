@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePolicyDescriptionRequest</p>
  */
 public class UpdatePolicyDescriptionRequest extends Request {
-    @Query
-    @NameInMap("NewDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewDescription")
     private String newDescription;
 
-    @Query
-    @NameInMap("PolicyName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyName")
     private String policyName;
 
     private UpdatePolicyDescriptionRequest(Builder builder) {
@@ -61,14 +60,17 @@ public class UpdatePolicyDescriptionRequest extends Request {
             super();
         } 
 
-        private Builder(UpdatePolicyDescriptionRequest response) {
-            super(response);
-            this.newDescription = response.newDescription;
-            this.policyName = response.policyName;
+        private Builder(UpdatePolicyDescriptionRequest request) {
+            super(request);
+            this.newDescription = request.newDescription;
+            this.policyName = request.policyName;
         } 
 
         /**
-         * NewDescription.
+         * The description of the policy.
+         * <p>
+         * 
+         * The value of the parameter must be 1 to 1,024 characters in length.
          */
         public Builder newDescription(String newDescription) {
             this.putQueryParameter("NewDescription", newDescription);
@@ -77,7 +79,7 @@ public class UpdatePolicyDescriptionRequest extends Request {
         }
 
         /**
-         * PolicyName.
+         * The name of the policy.
          */
         public Builder policyName(String policyName) {
             this.putQueryParameter("PolicyName", policyName);

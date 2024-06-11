@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.ram20150501.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUserRequest</p>
  */
 public class GetUserRequest extends Request {
-    @Query
-    @NameInMap("UserName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
     private String userName;
 
     private GetUserRequest(Builder builder) {
@@ -48,13 +47,16 @@ public class GetUserRequest extends Request {
             super();
         } 
 
-        private Builder(GetUserRequest response) {
-            super(response);
-            this.userName = response.userName;
+        private Builder(GetUserRequest request) {
+            super(request);
+            this.userName = request.userName;
         } 
 
         /**
-         * UserName.
+         * The username of the RAM user.
+         * <p>
+         * 
+         * The username must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (\_).
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
