@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesRequest</p>
  */
 public class ListInstancesRequest extends Request {
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(required = true, maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tags")
     private String tags;
 
     private ListInstancesRequest(Builder builder) {

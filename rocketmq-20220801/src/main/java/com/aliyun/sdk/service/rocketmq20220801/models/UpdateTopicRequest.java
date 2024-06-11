@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTopicRequest</p>
  */
 public class UpdateTopicRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("topicName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
     private UpdateTopicRequest(Builder builder) {

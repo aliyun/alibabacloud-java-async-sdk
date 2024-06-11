@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInstanceResponseBody</p>
  */
 public class GetInstanceResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetInstanceResponseBody(Builder builder) {
@@ -192,7 +191,7 @@ public class GetInstanceResponseBody extends TeaModel {
     } 
 
     public static class AccountInfo extends TeaModel {
-        @NameInMap("username")
+        @com.aliyun.core.annotation.NameInMap("username")
         private String username;
 
         private AccountInfo(Builder builder) {
@@ -233,11 +232,20 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class AclInfo extends TeaModel {
-        @NameInMap("aclType")
+        @com.aliyun.core.annotation.NameInMap("aclType")
+        @Deprecated
         private String aclType;
+
+        @com.aliyun.core.annotation.NameInMap("aclTypes")
+        private java.util.List < String > aclTypes;
+
+        @com.aliyun.core.annotation.NameInMap("defaultVpcAuthFree")
+        private Boolean defaultVpcAuthFree;
 
         private AclInfo(Builder builder) {
             this.aclType = builder.aclType;
+            this.aclTypes = builder.aclTypes;
+            this.defaultVpcAuthFree = builder.defaultVpcAuthFree;
         }
 
         public static Builder builder() {
@@ -255,19 +263,72 @@ public class GetInstanceResponseBody extends TeaModel {
             return this.aclType;
         }
 
+        /**
+         * @return aclTypes
+         */
+        public java.util.List < String > getAclTypes() {
+            return this.aclTypes;
+        }
+
+        /**
+         * @return defaultVpcAuthFree
+         */
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
         public static final class Builder {
             private String aclType; 
+            private java.util.List < String > aclTypes; 
+            private Boolean defaultVpcAuthFree; 
 
             /**
-             * The authentication type of the instance.
+             * The authentication type of the instance. This parameter is no longer in use. We recommend that you configure aclTypes.
              * <p>
              * 
              * Valid values:
              * 
-             * *   default: intelligent authentication
+             * - default: intelligent identity authentication
+             * 
+             * - apache_acl:access control list (ACL) identity authentication**
              */
             public Builder aclType(String aclType) {
                 this.aclType = aclType;
+                return this;
+            }
+
+            /**
+             * The authentication types of the instance.
+             */
+            public Builder aclTypes(java.util.List < String > aclTypes) {
+                this.aclTypes = aclTypes;
+                return this;
+            }
+
+            /**
+             * Indicates whether the authentication-free in VPCs feature is enabled.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   true
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             * *   false
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             * 
+             *     <!-- -->
+             */
+            public Builder defaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+                this.defaultVpcAuthFree = defaultVpcAuthFree;
                 return this;
             }
 
@@ -279,31 +340,31 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class ExtConfig extends TeaModel {
-        @NameInMap("aclType")
+        @com.aliyun.core.annotation.NameInMap("aclType")
         private String aclType;
 
-        @NameInMap("autoScaling")
+        @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @NameInMap("flowOutBandwidth")
+        @com.aliyun.core.annotation.NameInMap("flowOutBandwidth")
         private Integer flowOutBandwidth;
 
-        @NameInMap("flowOutType")
+        @com.aliyun.core.annotation.NameInMap("flowOutType")
         private String flowOutType;
 
-        @NameInMap("internetSpec")
+        @com.aliyun.core.annotation.NameInMap("internetSpec")
         private String internetSpec;
 
-        @NameInMap("messageRetentionTime")
+        @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
-        @NameInMap("msgProcessSpec")
+        @com.aliyun.core.annotation.NameInMap("msgProcessSpec")
         private String msgProcessSpec;
 
-        @NameInMap("sendReceiveRatio")
+        @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
-        @NameInMap("supportAutoScaling")
+        @com.aliyun.core.annotation.NameInMap("supportAutoScaling")
         private Boolean supportAutoScaling;
 
         private ExtConfig(Builder builder) {
@@ -523,16 +584,16 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class InstanceQuotas extends TeaModel {
-        @NameInMap("freeCount")
+        @com.aliyun.core.annotation.NameInMap("freeCount")
         private Double freeCount;
 
-        @NameInMap("quotaName")
+        @com.aliyun.core.annotation.NameInMap("quotaName")
         private String quotaName;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Double totalCount;
 
-        @NameInMap("usedCount")
+        @com.aliyun.core.annotation.NameInMap("usedCount")
         private Double usedCount;
 
         private InstanceQuotas(Builder builder) {
@@ -629,13 +690,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("endpointType")
+        @com.aliyun.core.annotation.NameInMap("endpointType")
         private String endpointType;
 
-        @NameInMap("endpointUrl")
+        @com.aliyun.core.annotation.NameInMap("endpointUrl")
         private String endpointUrl;
 
-        @NameInMap("ipWhitelist")
+        @com.aliyun.core.annotation.NameInMap("ipWhitelist")
         private java.util.List < String > ipWhitelist;
 
         private Endpoints(Builder builder) {
@@ -684,29 +745,8 @@ public class GetInstanceResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   TCP_VPC
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     VPC endpoint
-             * 
-             *     <!-- -->
-             * 
-             * *   TCP_INTERNET
-             * 
-             *     <!-- -->
-             * 
-             *     :
-             * 
-             *     <!-- -->
-             * 
-             *     public endpoint
-             * 
-             *     <!-- -->
+             * - TCP_VPC: VPC endpoint
+             * - TCP_INTERNET:public endpoint
              */
             public Builder endpointType(String endpointType) {
                 this.endpointType = endpointType;
@@ -722,11 +762,11 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use a public endpoint to access the ApsaraMQ for RocketMQ broker.
+             * The whitelist that includes the IP addresses that are allowed to access the ApsaraMQ for RocketMQ broker over the Internet. This parameter can be configured only if you use the public endpoint to access the instance.
              * <p>
              * 
-             * *   If this parameter is not configured, all IP addresses are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
-             * *   If this parameter is configured, only the IP addresses that are included in the whitelist can access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If you do not configure an IP address whitelist, all CIDR blocks are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
+             * *   If you configure an IP address whitelist, only the IP addresses in the whitelist are allowed to access the ApsaraMQ for RocketMQ broker over the Internet.
              * 
              * We recommend that you configure internetInfo.ipWhitelist instead of this parameter.
              */
@@ -743,16 +783,16 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class InternetInfo extends TeaModel {
-        @NameInMap("flowOutBandwidth")
+        @com.aliyun.core.annotation.NameInMap("flowOutBandwidth")
         private Integer flowOutBandwidth;
 
-        @NameInMap("flowOutType")
+        @com.aliyun.core.annotation.NameInMap("flowOutType")
         private String flowOutType;
 
-        @NameInMap("internetSpec")
+        @com.aliyun.core.annotation.NameInMap("internetSpec")
         private String internetSpec;
 
-        @NameInMap("ipWhitelist")
+        @com.aliyun.core.annotation.NameInMap("ipWhitelist")
         private java.util.List < String > ipWhitelist;
 
         private InternetInfo(Builder builder) {
@@ -861,19 +901,85 @@ public class GetInstanceResponseBody extends TeaModel {
         } 
 
     }
-    public static class VpcInfo extends TeaModel {
-        @NameInMap("securityGroupIds")
-        private String securityGroupIds;
-
-        @NameInMap("vSwitchId")
+    public static class VSwitches extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
         private String vSwitchId;
 
-        @NameInMap("vpcId")
+        @com.aliyun.core.annotation.NameInMap("zoneId")
+        private String zoneId;
+
+        private VSwitches(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+            this.zoneId = builder.zoneId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitches create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        /**
+         * @return zoneId
+         */
+        public String getZoneId() {
+            return this.zoneId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+            private String zoneId; 
+
+            /**
+             * vSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * zoneId.
+             */
+            public Builder zoneId(String zoneId) {
+                this.zoneId = zoneId;
+                return this;
+            }
+
+            public VSwitches build() {
+                return new VSwitches(this);
+            } 
+
+        } 
+
+    }
+    public static class VpcInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("securityGroupIds")
+        private String securityGroupIds;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        @Deprecated
+        private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitches")
+        private java.util.List < VSwitches> vSwitches;
+
+        @com.aliyun.core.annotation.NameInMap("vpcId")
         private String vpcId;
 
         private VpcInfo(Builder builder) {
             this.securityGroupIds = builder.securityGroupIds;
             this.vSwitchId = builder.vSwitchId;
+            this.vSwitches = builder.vSwitches;
             this.vpcId = builder.vpcId;
         }
 
@@ -900,6 +1006,13 @@ public class GetInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return vSwitches
+         */
+        public java.util.List < VSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -909,10 +1022,11 @@ public class GetInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private String securityGroupIds; 
             private String vSwitchId; 
+            private java.util.List < VSwitches> vSwitches; 
             private String vpcId; 
 
             /**
-             * The ID of the security group with which the instance is associated.
+             * The security group ID.
              */
             public Builder securityGroupIds(String securityGroupIds) {
                 this.securityGroupIds = securityGroupIds;
@@ -924,6 +1038,14 @@ public class GetInstanceResponseBody extends TeaModel {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * vSwitches.
+             */
+            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+                this.vSwitches = vSwitches;
                 return this;
             }
 
@@ -943,13 +1065,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("endpoints")
+        @com.aliyun.core.annotation.NameInMap("endpoints")
         private java.util.List < Endpoints> endpoints;
 
-        @NameInMap("internetInfo")
+        @com.aliyun.core.annotation.NameInMap("internetInfo")
         private InternetInfo internetInfo;
 
-        @NameInMap("vpcInfo")
+        @com.aliyun.core.annotation.NameInMap("vpcInfo")
         private VpcInfo vpcInfo;
 
         private NetworkInfo(Builder builder) {
@@ -1009,7 +1131,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the VPC.
+             * The virtual private cloud (VPC) information.
              */
             public Builder vpcInfo(VpcInfo vpcInfo) {
                 this.vpcInfo = vpcInfo;
@@ -1024,22 +1146,22 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class ProductInfo extends TeaModel {
-        @NameInMap("autoScaling")
+        @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @NameInMap("messageRetentionTime")
+        @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
-        @NameInMap("msgProcessSpec")
+        @com.aliyun.core.annotation.NameInMap("msgProcessSpec")
         private String msgProcessSpec;
 
-        @NameInMap("sendReceiveRatio")
+        @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
-        @NameInMap("supportAutoScaling")
+        @com.aliyun.core.annotation.NameInMap("supportAutoScaling")
         private Boolean supportAutoScaling;
 
-        @NameInMap("traceOn")
+        @com.aliyun.core.annotation.NameInMap("traceOn")
         private Boolean traceOn;
 
         private ProductInfo(Builder builder) {
@@ -1173,7 +1295,13 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Whether to enable tracking capability. Non-serverless instances are enabled by default, and serverless instances are optional for users.
+             * Indicates whether the message trace feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
+             * 
+             * This parameter is not in use. By default, the message trace feature is enabled for ApsaraMQ for RocketMQ instances, regardless of whether this parameter is configured.
              */
             public Builder traceOn(Boolean traceOn) {
                 this.traceOn = traceOn;
@@ -1188,13 +1316,13 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Software extends TeaModel {
-        @NameInMap("maintainTime")
+        @com.aliyun.core.annotation.NameInMap("maintainTime")
         private String maintainTime;
 
-        @NameInMap("softwareVersion")
+        @com.aliyun.core.annotation.NameInMap("softwareVersion")
         private String softwareVersion;
 
-        @NameInMap("upgradeMethod")
+        @com.aliyun.core.annotation.NameInMap("upgradeMethod")
         private String upgradeMethod;
 
         private Software(Builder builder) {
@@ -1276,10 +1404,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private Tags(Builder builder) {
@@ -1337,88 +1465,89 @@ public class GetInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("accountInfo")
+        @com.aliyun.core.annotation.NameInMap("accountInfo")
         private AccountInfo accountInfo;
 
-        @NameInMap("aclInfo")
+        @com.aliyun.core.annotation.NameInMap("aclInfo")
         private AclInfo aclInfo;
 
-        @NameInMap("bid")
+        @com.aliyun.core.annotation.NameInMap("bid")
         private String bid;
 
-        @NameInMap("commodityCode")
+        @com.aliyun.core.annotation.NameInMap("commodityCode")
         private String commodityCode;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("expireTime")
+        @com.aliyun.core.annotation.NameInMap("expireTime")
         private String expireTime;
 
-        @NameInMap("extConfig")
+        @com.aliyun.core.annotation.NameInMap("extConfig")
+        @Deprecated
         private ExtConfig extConfig;
 
-        @NameInMap("groupCount")
+        @com.aliyun.core.annotation.NameInMap("groupCount")
         private Long groupCount;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("instanceName")
+        @com.aliyun.core.annotation.NameInMap("instanceName")
         private String instanceName;
 
-        @NameInMap("instanceQuotas")
+        @com.aliyun.core.annotation.NameInMap("instanceQuotas")
         private java.util.List < InstanceQuotas> instanceQuotas;
 
-        @NameInMap("networkInfo")
+        @com.aliyun.core.annotation.NameInMap("networkInfo")
         private NetworkInfo networkInfo;
 
-        @NameInMap("paymentType")
+        @com.aliyun.core.annotation.NameInMap("paymentType")
         private String paymentType;
 
-        @NameInMap("productInfo")
+        @com.aliyun.core.annotation.NameInMap("productInfo")
         private ProductInfo productInfo;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("releaseTime")
+        @com.aliyun.core.annotation.NameInMap("releaseTime")
         private String releaseTime;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("resourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("resourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("seriesCode")
+        @com.aliyun.core.annotation.NameInMap("seriesCode")
         private String seriesCode;
 
-        @NameInMap("serviceCode")
+        @com.aliyun.core.annotation.NameInMap("serviceCode")
         private String serviceCode;
 
-        @NameInMap("software")
+        @com.aliyun.core.annotation.NameInMap("software")
         private Software software;
 
-        @NameInMap("startTime")
+        @com.aliyun.core.annotation.NameInMap("startTime")
         private String startTime;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("subSeriesCode")
+        @com.aliyun.core.annotation.NameInMap("subSeriesCode")
         private String subSeriesCode;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("topicCount")
+        @com.aliyun.core.annotation.NameInMap("topicCount")
         private Long topicCount;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
-        @NameInMap("userId")
+        @com.aliyun.core.annotation.NameInMap("userId")
         private String userId;
 
         private Data(Builder builder) {
@@ -1735,7 +1864,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The extended configurations. We recommend you configure the productInfo, internetInfo, or aclInfo parameter instead of this parameter.
+             * The extended configurations. We recommend you configure productInfo, internetInfo, or aclInfo instead of this parameter.
              */
             public Builder extConfig(ExtConfig extConfig) {
                 this.extConfig = extConfig;
@@ -1767,7 +1896,7 @@ public class GetInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The quotas in the instance.
+             * The instance quotas.
              */
             public Builder instanceQuotas(java.util.List < InstanceQuotas> instanceQuotas) {
                 this.instanceQuotas = instanceQuotas;

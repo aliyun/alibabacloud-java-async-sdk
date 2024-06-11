@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTopicResponseBody</p>
  */
 public class GetTopicResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetTopicResponseBody(Builder builder) {
@@ -192,28 +191,28 @@ public class GetTopicResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("messageType")
+        @com.aliyun.core.annotation.NameInMap("messageType")
         private String messageType;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("topicName")
+        @com.aliyun.core.annotation.NameInMap("topicName")
         private String topicName;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {

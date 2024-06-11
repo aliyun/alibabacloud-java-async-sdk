@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateInstanceRequest</p>
  */
 public class UpdateInstanceRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("instanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("aclInfo")
+    private AclInfo aclInfo;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("networkInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkInfo")
     private NetworkInfo networkInfo;
 
-    @Body
-    @NameInMap("productInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("productInfo")
     private ProductInfo productInfo;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
     private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.aclInfo = builder.aclInfo;
         this.instanceName = builder.instanceName;
         this.networkInfo = builder.networkInfo;
         this.productInfo = builder.productInfo;
@@ -60,6 +64,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return aclInfo
+     */
+    public AclInfo getAclInfo() {
+        return this.aclInfo;
     }
 
     /**
@@ -92,6 +103,7 @@ public class UpdateInstanceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
+        private AclInfo aclInfo; 
         private String instanceName; 
         private NetworkInfo networkInfo; 
         private ProductInfo productInfo; 
@@ -104,6 +116,7 @@ public class UpdateInstanceRequest extends Request {
         private Builder(UpdateInstanceRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.aclInfo = request.aclInfo;
             this.instanceName = request.instanceName;
             this.networkInfo = request.networkInfo;
             this.productInfo = request.productInfo;
@@ -116,6 +129,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * The access control list for the instance.
+         */
+        public Builder aclInfo(AclInfo aclInfo) {
+            this.putBodyParameter("aclInfo", aclInfo);
+            this.aclInfo = aclInfo;
             return this;
         }
 
@@ -162,8 +184,74 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    public static class AclInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("aclTypes")
+        private java.util.List < String > aclTypes;
+
+        @com.aliyun.core.annotation.NameInMap("defaultVpcAuthFree")
+        private Boolean defaultVpcAuthFree;
+
+        private AclInfo(Builder builder) {
+            this.aclTypes = builder.aclTypes;
+            this.defaultVpcAuthFree = builder.defaultVpcAuthFree;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AclInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return aclTypes
+         */
+        public java.util.List < String > getAclTypes() {
+            return this.aclTypes;
+        }
+
+        /**
+         * @return defaultVpcAuthFree
+         */
+        public Boolean getDefaultVpcAuthFree() {
+            return this.defaultVpcAuthFree;
+        }
+
+        public static final class Builder {
+            private java.util.List < String > aclTypes; 
+            private Boolean defaultVpcAuthFree; 
+
+            /**
+             * The authentication type of the instance.
+             */
+            public Builder aclTypes(java.util.List < String > aclTypes) {
+                this.aclTypes = aclTypes;
+                return this;
+            }
+
+            /**
+             * Indicates whether the authentication-free in VPCs feature is enabled.
+             * <p>
+             * Indicates whether the authentication-free in VPCs feature is enabled.
+             * Valid values:
+             * - true
+             * - false
+             */
+            public Builder defaultVpcAuthFree(Boolean defaultVpcAuthFree) {
+                this.defaultVpcAuthFree = defaultVpcAuthFree;
+                return this;
+            }
+
+            public AclInfo build() {
+                return new AclInfo(this);
+            } 
+
+        } 
+
+    }
     public static class InternetInfo extends TeaModel {
-        @NameInMap("ipWhitelist")
+        @com.aliyun.core.annotation.NameInMap("ipWhitelist")
         private java.util.List < String > ipWhitelist;
 
         private InternetInfo(Builder builder) {
@@ -208,7 +296,7 @@ public class UpdateInstanceRequest extends Request {
 
     }
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("internetInfo")
+        @com.aliyun.core.annotation.NameInMap("internetInfo")
         private InternetInfo internetInfo;
 
         private NetworkInfo(Builder builder) {
@@ -249,16 +337,16 @@ public class UpdateInstanceRequest extends Request {
 
     }
     public static class ProductInfo extends TeaModel {
-        @NameInMap("autoScaling")
+        @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @NameInMap("messageRetentionTime")
+        @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
-        @NameInMap("sendReceiveRatio")
+        @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
-        @NameInMap("traceOn")
+        @com.aliyun.core.annotation.NameInMap("traceOn")
         private Boolean traceOn;
 
         private ProductInfo(Builder builder) {

@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteInstanceResponse} extends {@link TeaModel}
+ * {@link ListConsumerConnectionsResponse} extends {@link TeaModel}
  *
- * <p>DeleteInstanceResponse</p>
+ * <p>ListConsumerConnectionsResponse</p>
  */
-public class DeleteInstanceResponse extends Response {
+public class ListConsumerConnectionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DeleteInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteInstanceResponseBody body;
+    private ListConsumerConnectionsResponseBody body;
 
-    private DeleteInstanceResponse(BuilderImpl builder) {
+    private ListConsumerConnectionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteInstanceResponse create() {
+    public static ListConsumerConnectionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DeleteInstanceResponse extends Response {
     /**
      * @return body
      */
-    public DeleteInstanceResponseBody getBody() {
+    public ListConsumerConnectionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<ListConsumerConnectionsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteInstanceResponseBody body);
+        Builder body(ListConsumerConnectionsResponseBody body);
 
         @Override
-        DeleteInstanceResponse build();
+        ListConsumerConnectionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteInstanceResponse, Builder>
+            extends Response.BuilderImpl<ListConsumerConnectionsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteInstanceResponseBody body; 
+        private ListConsumerConnectionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteInstanceResponse response) {
+        private BuilderImpl(ListConsumerConnectionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DeleteInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteInstanceResponseBody body) {
+        public Builder body(ListConsumerConnectionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteInstanceResponse build() {
-            return new DeleteInstanceResponse(this);
+        public ListConsumerConnectionsResponse build() {
+            return new ListConsumerConnectionsResponse(this);
         } 
 
     } 

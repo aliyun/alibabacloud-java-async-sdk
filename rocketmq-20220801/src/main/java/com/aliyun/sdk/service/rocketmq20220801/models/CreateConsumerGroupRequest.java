@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConsumerGroupRequest</p>
  */
 public class CreateConsumerGroupRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("consumerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    @Body
-    @NameInMap("consumeRetryPolicy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("consumeRetryPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private ConsumeRetryPolicy consumeRetryPolicy;
 
-    @Body
-    @NameInMap("deliveryOrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryOrderType;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
     private CreateConsumerGroupRequest(Builder builder) {
@@ -180,14 +179,14 @@ public class CreateConsumerGroupRequest extends Request {
     } 
 
     public static class ConsumeRetryPolicy extends TeaModel {
-        @NameInMap("deadLetterTargetTopic")
+        @com.aliyun.core.annotation.NameInMap("deadLetterTargetTopic")
         private String deadLetterTargetTopic;
 
-        @NameInMap("maxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
-        @NameInMap("retryPolicy")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("retryPolicy")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {

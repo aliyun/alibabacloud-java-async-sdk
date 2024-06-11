@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,69 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateInstanceRequest</p>
  */
 public class CreateInstanceRequest extends Request {
-    @Body
-    @NameInMap("autoRenew")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenew")
     private Boolean autoRenew;
 
-    @Body
-    @NameInMap("autoRenewPeriod")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("autoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Body
-    @NameInMap("commodityCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("commodityCode")
     private String commodityCode;
 
-    @Body
-    @NameInMap("instanceName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("instanceName")
     private String instanceName;
 
-    @Body
-    @NameInMap("networkInfo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("networkInfo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private NetworkInfo networkInfo;
 
-    @Body
-    @NameInMap("paymentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("paymentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String paymentType;
 
-    @Body
-    @NameInMap("period")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("period")
     private Integer period;
 
-    @Body
-    @NameInMap("periodUnit")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("periodUnit")
     private String periodUnit;
 
-    @Body
-    @NameInMap("productInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("productInfo")
     private ProductInfo productInfo;
 
-    @Body
-    @NameInMap("remark")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("remark")
     private String remark;
 
-    @Body
-    @NameInMap("resourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("seriesCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("seriesCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String seriesCode;
 
-    @Body
-    @NameInMap("serviceCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("serviceCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceCode;
 
-    @Body
-    @NameInMap("subSeriesCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("subSeriesCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subSeriesCode;
 
-    @Query
-    @NameInMap("clientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("clientToken")
     private String clientToken;
 
     private CreateInstanceRequest(Builder builder) {
@@ -424,6 +423,7 @@ public class CreateInstanceRequest extends Request {
          * 
          * *   cluster_ha: High-availability Cluster Edition
          * *   single_node: Standalone Edition
+         * *   serverless: Serverless Edition
          * 
          * If you set seriesCode to ultimate, you can set this parameter to only cluster_ha.
          * 
@@ -452,18 +452,18 @@ public class CreateInstanceRequest extends Request {
     } 
 
     public static class InternetInfo extends TeaModel {
-        @NameInMap("flowOutBandwidth")
+        @com.aliyun.core.annotation.NameInMap("flowOutBandwidth")
         private Integer flowOutBandwidth;
 
-        @NameInMap("flowOutType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("flowOutType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String flowOutType;
 
-        @NameInMap("internetSpec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("internetSpec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String internetSpec;
 
-        @NameInMap("ipWhitelist")
+        @com.aliyun.core.annotation.NameInMap("ipWhitelist")
         private java.util.List < String > ipWhitelist;
 
         private InternetInfo(Builder builder) {
@@ -535,6 +535,7 @@ public class CreateInstanceRequest extends Request {
              * Valid values:
              * 
              * *   payByBandwidth: pay-by-bandwidth. If Internet access is enabled for an instance, specify this value for the parameter.
+             * *   payByTraffic: pay-by-traffic. If Internet access is enabled for an instance, specify this value for the parameter.
              * *   uninvolved: No billing method is involved. If Internet access is disabled for an instance, specify this value for the parameter.
              */
             public Builder flowOutType(String flowOutType) {
@@ -578,15 +579,15 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class VpcInfo extends TeaModel {
-        @NameInMap("securityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("securityGroupIds")
         private String securityGroupIds;
 
-        @NameInMap("vSwitchId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vSwitchId;
 
-        @NameInMap("vpcId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vpcId;
 
         private VpcInfo(Builder builder) {
@@ -638,7 +639,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * The ID of the vSwitch with which you want to associate the instance.
+             * The ID of the vSwitch with which you want to associate the instance, If there are multiple vSwitchs, please concatenate them using the "|" character.
              * <p>
              * 
              * >  After an ApsaraMQ for RocketMQ instance is created, you cannot change the vSwitch with which the instance is associated. If you want to change the vSwitch with which the instance is associated, you must release the instance and purchase a new instance.
@@ -667,12 +668,12 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class NetworkInfo extends TeaModel {
-        @NameInMap("internetInfo")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("internetInfo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private InternetInfo internetInfo;
 
-        @NameInMap("vpcInfo")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("vpcInfo")
+        @com.aliyun.core.annotation.Validation(required = true)
         private VpcInfo vpcInfo;
 
         private NetworkInfo(Builder builder) {
@@ -730,23 +731,23 @@ public class CreateInstanceRequest extends Request {
 
     }
     public static class ProductInfo extends TeaModel {
-        @NameInMap("autoScaling")
+        @com.aliyun.core.annotation.NameInMap("autoScaling")
         private Boolean autoScaling;
 
-        @NameInMap("chargeType")
+        @com.aliyun.core.annotation.NameInMap("chargeType")
         private String chargeType;
 
-        @NameInMap("intranetSpec")
+        @com.aliyun.core.annotation.NameInMap("intranetSpec")
         private String intranetSpec;
 
-        @NameInMap("messageRetentionTime")
+        @com.aliyun.core.annotation.NameInMap("messageRetentionTime")
         private Integer messageRetentionTime;
 
-        @NameInMap("msgProcessSpec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("msgProcessSpec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String msgProcessSpec;
 
-        @NameInMap("sendReceiveRatio")
+        @com.aliyun.core.annotation.NameInMap("sendReceiveRatio")
         private Float sendReceiveRatio;
 
         private ProductInfo(Builder builder) {

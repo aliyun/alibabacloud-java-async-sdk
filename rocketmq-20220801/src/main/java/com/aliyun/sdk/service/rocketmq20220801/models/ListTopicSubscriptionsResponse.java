@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteInstanceResponse} extends {@link TeaModel}
+ * {@link ListTopicSubscriptionsResponse} extends {@link TeaModel}
  *
- * <p>DeleteInstanceResponse</p>
+ * <p>ListTopicSubscriptionsResponse</p>
  */
-public class DeleteInstanceResponse extends Response {
+public class ListTopicSubscriptionsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DeleteInstanceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DeleteInstanceResponseBody body;
+    private ListTopicSubscriptionsResponseBody body;
 
-    private DeleteInstanceResponse(BuilderImpl builder) {
+    private ListTopicSubscriptionsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DeleteInstanceResponse create() {
+    public static ListTopicSubscriptionsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DeleteInstanceResponse extends Response {
     /**
      * @return body
      */
-    public DeleteInstanceResponseBody getBody() {
+    public ListTopicSubscriptionsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DeleteInstanceResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTopicSubscriptionsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DeleteInstanceResponseBody body);
+        Builder body(ListTopicSubscriptionsResponseBody body);
 
         @Override
-        DeleteInstanceResponse build();
+        ListTopicSubscriptionsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DeleteInstanceResponse, Builder>
+            extends Response.BuilderImpl<ListTopicSubscriptionsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DeleteInstanceResponseBody body; 
+        private ListTopicSubscriptionsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DeleteInstanceResponse response) {
+        private BuilderImpl(ListTopicSubscriptionsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DeleteInstanceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DeleteInstanceResponseBody body) {
+        public Builder body(ListTopicSubscriptionsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DeleteInstanceResponse build() {
-            return new DeleteInstanceResponse(this);
+        public ListTopicSubscriptionsResponse build() {
+            return new ListTopicSubscriptionsResponse(this);
         } 
 
     } 

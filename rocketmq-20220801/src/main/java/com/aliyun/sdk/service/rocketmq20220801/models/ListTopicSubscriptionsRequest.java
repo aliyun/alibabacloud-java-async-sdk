@@ -6,32 +6,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetConsumerGroupRequest} extends {@link RequestModel}
+ * {@link ListTopicSubscriptionsRequest} extends {@link RequestModel}
  *
- * <p>GetConsumerGroupRequest</p>
+ * <p>ListTopicSubscriptionsRequest</p>
  */
-public class GetConsumerGroupRequest extends Request {
+public class ListTopicSubscriptionsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Path
-    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String consumerGroupId;
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    private String topicName;
 
-    private GetConsumerGroupRequest(Builder builder) {
+    private ListTopicSubscriptionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
-        this.consumerGroupId = builder.consumerGroupId;
+        this.topicName = builder.topicName;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static GetConsumerGroupRequest create() {
+    public static ListTopicSubscriptionsRequest create() {
         return builder().build();
     }
 
@@ -48,28 +47,28 @@ public class GetConsumerGroupRequest extends Request {
     }
 
     /**
-     * @return consumerGroupId
+     * @return topicName
      */
-    public String getConsumerGroupId() {
-        return this.consumerGroupId;
+    public String getTopicName() {
+        return this.topicName;
     }
 
-    public static final class Builder extends Request.Builder<GetConsumerGroupRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListTopicSubscriptionsRequest, Builder> {
         private String instanceId; 
-        private String consumerGroupId; 
+        private String topicName; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(GetConsumerGroupRequest request) {
+        private Builder(ListTopicSubscriptionsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
-            this.consumerGroupId = request.consumerGroupId;
+            this.topicName = request.topicName;
         } 
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,17 +77,17 @@ public class GetConsumerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group.
+         * topicName.
          */
-        public Builder consumerGroupId(String consumerGroupId) {
-            this.putPathParameter("consumerGroupId", consumerGroupId);
-            this.consumerGroupId = consumerGroupId;
+        public Builder topicName(String topicName) {
+            this.putPathParameter("topicName", topicName);
+            this.topicName = topicName;
             return this;
         }
 
         @Override
-        public GetConsumerGroupRequest build() {
-            return new GetConsumerGroupRequest(this);
+        public ListTopicSubscriptionsRequest build() {
+            return new ListTopicSubscriptionsRequest(this);
         } 
 
     } 

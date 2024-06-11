@@ -72,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListAvailableZonesResponse> listAvailableZones(ListAvailableZonesRequest request);
 
+    CompletableFuture<ListConsumerConnectionsResponse> listConsumerConnections(ListConsumerConnectionsRequest request);
+
     CompletableFuture<ListConsumerGroupSubscriptionsResponse> listConsumerGroupSubscriptions(ListConsumerGroupSubscriptionsRequest request);
 
     /**
@@ -87,6 +89,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
     CompletableFuture<ListRegionsResponse> listRegions(ListRegionsRequest request);
+
+    CompletableFuture<ListTopicSubscriptionsResponse> listTopicSubscriptions(ListTopicSubscriptionsRequest request);
 
     CompletableFuture<ListTopicsResponse> listTopics(ListTopicsRequest request);
 

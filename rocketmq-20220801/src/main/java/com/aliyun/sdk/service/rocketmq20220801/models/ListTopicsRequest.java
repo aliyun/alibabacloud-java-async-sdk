@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTopicsRequest</p>
  */
 public class ListTopicsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("messageTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("messageTypes")
     private java.util.List < String > messageTypes;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(required = true, maximum = 10000, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 10000, minimum = 10)
     private Integer pageSize;
 
     private ListTopicsRequest(Builder builder) {

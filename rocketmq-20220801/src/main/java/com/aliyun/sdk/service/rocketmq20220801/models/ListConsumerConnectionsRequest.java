@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetConsumerGroupRequest} extends {@link RequestModel}
+ * {@link ListConsumerConnectionsRequest} extends {@link RequestModel}
  *
- * <p>GetConsumerGroupRequest</p>
+ * <p>ListConsumerConnectionsRequest</p>
  */
-public class GetConsumerGroupRequest extends Request {
+public class ListConsumerConnectionsRequest extends Request {
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("instanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -21,7 +21,7 @@ public class GetConsumerGroupRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    private GetConsumerGroupRequest(Builder builder) {
+    private ListConsumerConnectionsRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.consumerGroupId = builder.consumerGroupId;
@@ -31,7 +31,7 @@ public class GetConsumerGroupRequest extends Request {
         return new Builder();
     }
 
-    public static GetConsumerGroupRequest create() {
+    public static ListConsumerConnectionsRequest create() {
         return builder().build();
     }
 
@@ -54,7 +54,7 @@ public class GetConsumerGroupRequest extends Request {
         return this.consumerGroupId;
     }
 
-    public static final class Builder extends Request.Builder<GetConsumerGroupRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListConsumerConnectionsRequest, Builder> {
         private String instanceId; 
         private String consumerGroupId; 
 
@@ -62,14 +62,14 @@ public class GetConsumerGroupRequest extends Request {
             super();
         } 
 
-        private Builder(GetConsumerGroupRequest request) {
+        private Builder(ListConsumerConnectionsRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.consumerGroupId = request.consumerGroupId;
         } 
 
         /**
-         * The ID of the instance to which the consumer group belongs.
+         * instanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class GetConsumerGroupRequest extends Request {
         }
 
         /**
-         * The ID of the consumer group.
+         * consumerGroupId.
          */
         public Builder consumerGroupId(String consumerGroupId) {
             this.putPathParameter("consumerGroupId", consumerGroupId);
@@ -87,8 +87,8 @@ public class GetConsumerGroupRequest extends Request {
         }
 
         @Override
-        public GetConsumerGroupRequest build() {
-            return new GetConsumerGroupRequest(this);
+        public ListConsumerConnectionsRequest build() {
+            return new ListConsumerConnectionsRequest(this);
         } 
 
     } 

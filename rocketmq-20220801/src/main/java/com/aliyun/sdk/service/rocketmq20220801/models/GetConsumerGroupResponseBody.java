@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConsumerGroupResponseBody</p>
  */
 public class GetConsumerGroupResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private GetConsumerGroupResponseBody(Builder builder) {
@@ -192,13 +191,13 @@ public class GetConsumerGroupResponseBody extends TeaModel {
     } 
 
     public static class ConsumeRetryPolicy extends TeaModel {
-        @NameInMap("deadLetterTargetTopic")
+        @com.aliyun.core.annotation.NameInMap("deadLetterTargetTopic")
         private String deadLetterTargetTopic;
 
-        @NameInMap("maxRetryTimes")
+        @com.aliyun.core.annotation.NameInMap("maxRetryTimes")
         private Integer maxRetryTimes;
 
-        @NameInMap("retryPolicy")
+        @com.aliyun.core.annotation.NameInMap("retryPolicy")
         private String retryPolicy;
 
         private ConsumeRetryPolicy(Builder builder) {
@@ -307,31 +306,31 @@ public class GetConsumerGroupResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("consumeRetryPolicy")
+        @com.aliyun.core.annotation.NameInMap("consumeRetryPolicy")
         private ConsumeRetryPolicy consumeRetryPolicy;
 
-        @NameInMap("consumerGroupId")
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private String createTime;
 
-        @NameInMap("deliveryOrderType")
+        @com.aliyun.core.annotation.NameInMap("deliveryOrderType")
         private String deliveryOrderType;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("remark")
+        @com.aliyun.core.annotation.NameInMap("remark")
         private String remark;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("updateTime")
+        @com.aliyun.core.annotation.NameInMap("updateTime")
         private String updateTime;
 
         private Data(Builder builder) {

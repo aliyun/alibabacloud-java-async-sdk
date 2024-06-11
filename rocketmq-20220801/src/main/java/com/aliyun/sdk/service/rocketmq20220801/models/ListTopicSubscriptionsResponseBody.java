@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListRegionsResponseBody} extends {@link TeaModel}
+ * {@link ListTopicSubscriptionsResponseBody} extends {@link TeaModel}
  *
- * <p>ListRegionsResponseBody</p>
+ * <p>ListTopicSubscriptionsResponseBody</p>
  */
-public class ListRegionsResponseBody extends TeaModel {
+public class ListTopicSubscriptionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
@@ -35,7 +35,7 @@ public class ListRegionsResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    private ListRegionsResponseBody(Builder builder) {
+    private ListTopicSubscriptionsResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.dynamicCode = builder.dynamicCode;
@@ -50,7 +50,7 @@ public class ListRegionsResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ListRegionsResponseBody create() {
+    public static ListTopicSubscriptionsResponseBody create() {
         return builder().build();
     }
 
@@ -184,103 +184,42 @@ public class ListRegionsResponseBody extends TeaModel {
             return this;
         }
 
-        public ListRegionsResponseBody build() {
-            return new ListRegionsResponseBody(this);
+        public ListTopicSubscriptionsResponseBody build() {
+            return new ListTopicSubscriptionsResponseBody(this);
         } 
 
     } 
 
-    public static class Tags extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("tagCode")
-        private String tagCode;
-
-        @com.aliyun.core.annotation.NameInMap("tagValue")
-        private Object tagValue;
-
-        private Tags(Builder builder) {
-            this.tagCode = builder.tagCode;
-            this.tagValue = builder.tagValue;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Tags create() {
-            return builder().build();
-        }
-
-        /**
-         * @return tagCode
-         */
-        public String getTagCode() {
-            return this.tagCode;
-        }
-
-        /**
-         * @return tagValue
-         */
-        public Object getTagValue() {
-            return this.tagValue;
-        }
-
-        public static final class Builder {
-            private String tagCode; 
-            private Object tagValue; 
-
-            /**
-             * tagCode.
-             */
-            public Builder tagCode(String tagCode) {
-                this.tagCode = tagCode;
-                return this;
-            }
-
-            /**
-             * tagValue.
-             */
-            public Builder tagValue(Object tagValue) {
-                this.tagValue = tagValue;
-                return this;
-            }
-
-            public Tags build() {
-                return new Tags(this);
-            } 
-
-        } 
-
-    }
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("createTime")
-        private String createTime;
+        @com.aliyun.core.annotation.NameInMap("consistency")
+        private String consistency;
 
-        @com.aliyun.core.annotation.NameInMap("regionId")
-        private String regionId;
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+        private String consumerGroupId;
 
-        @com.aliyun.core.annotation.NameInMap("regionName")
-        private String regionName;
+        @com.aliyun.core.annotation.NameInMap("filterExpression")
+        private String filterExpression;
 
-        @com.aliyun.core.annotation.NameInMap("supportRocketmqV4")
-        private Boolean supportRocketmqV4;
+        @com.aliyun.core.annotation.NameInMap("filterExpressionType")
+        private String filterExpressionType;
 
-        @com.aliyun.core.annotation.NameInMap("supportRocketmqV5")
-        private Boolean supportRocketmqV5;
+        @com.aliyun.core.annotation.NameInMap("messageModel")
+        private String messageModel;
 
-        @com.aliyun.core.annotation.NameInMap("tags")
-        private java.util.List < Tags> tags;
+        @com.aliyun.core.annotation.NameInMap("subscriptionStatus")
+        private String subscriptionStatus;
 
-        @com.aliyun.core.annotation.NameInMap("updateTime")
-        private String updateTime;
+        @com.aliyun.core.annotation.NameInMap("topicName")
+        private String topicName;
 
         private Data(Builder builder) {
-            this.createTime = builder.createTime;
-            this.regionId = builder.regionId;
-            this.regionName = builder.regionName;
-            this.supportRocketmqV4 = builder.supportRocketmqV4;
-            this.supportRocketmqV5 = builder.supportRocketmqV5;
-            this.tags = builder.tags;
-            this.updateTime = builder.updateTime;
+            this.consistency = builder.consistency;
+            this.consumerGroupId = builder.consumerGroupId;
+            this.filterExpression = builder.filterExpression;
+            this.filterExpressionType = builder.filterExpressionType;
+            this.messageModel = builder.messageModel;
+            this.subscriptionStatus = builder.subscriptionStatus;
+            this.topicName = builder.topicName;
         }
 
         public static Builder builder() {
@@ -292,116 +231,116 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return createTime
+         * @return consistency
          */
-        public String getCreateTime() {
-            return this.createTime;
+        public String getConsistency() {
+            return this.consistency;
         }
 
         /**
-         * @return regionId
+         * @return consumerGroupId
          */
-        public String getRegionId() {
-            return this.regionId;
+        public String getConsumerGroupId() {
+            return this.consumerGroupId;
         }
 
         /**
-         * @return regionName
+         * @return filterExpression
          */
-        public String getRegionName() {
-            return this.regionName;
+        public String getFilterExpression() {
+            return this.filterExpression;
         }
 
         /**
-         * @return supportRocketmqV4
+         * @return filterExpressionType
          */
-        public Boolean getSupportRocketmqV4() {
-            return this.supportRocketmqV4;
+        public String getFilterExpressionType() {
+            return this.filterExpressionType;
         }
 
         /**
-         * @return supportRocketmqV5
+         * @return messageModel
          */
-        public Boolean getSupportRocketmqV5() {
-            return this.supportRocketmqV5;
+        public String getMessageModel() {
+            return this.messageModel;
         }
 
         /**
-         * @return tags
+         * @return subscriptionStatus
          */
-        public java.util.List < Tags> getTags() {
-            return this.tags;
+        public String getSubscriptionStatus() {
+            return this.subscriptionStatus;
         }
 
         /**
-         * @return updateTime
+         * @return topicName
          */
-        public String getUpdateTime() {
-            return this.updateTime;
+        public String getTopicName() {
+            return this.topicName;
         }
 
         public static final class Builder {
-            private String createTime; 
-            private String regionId; 
-            private String regionName; 
-            private Boolean supportRocketmqV4; 
-            private Boolean supportRocketmqV5; 
-            private java.util.List < Tags> tags; 
-            private String updateTime; 
+            private String consistency; 
+            private String consumerGroupId; 
+            private String filterExpression; 
+            private String filterExpressionType; 
+            private String messageModel; 
+            private String subscriptionStatus; 
+            private String topicName; 
 
             /**
-             * createTime.
+             * consistency.
              */
-            public Builder createTime(String createTime) {
-                this.createTime = createTime;
+            public Builder consistency(String consistency) {
+                this.consistency = consistency;
                 return this;
             }
 
             /**
-             * regionId.
+             * consumerGroupId.
              */
-            public Builder regionId(String regionId) {
-                this.regionId = regionId;
+            public Builder consumerGroupId(String consumerGroupId) {
+                this.consumerGroupId = consumerGroupId;
                 return this;
             }
 
             /**
-             * regionName.
+             * filterExpression.
              */
-            public Builder regionName(String regionName) {
-                this.regionName = regionName;
+            public Builder filterExpression(String filterExpression) {
+                this.filterExpression = filterExpression;
                 return this;
             }
 
             /**
-             * supportRocketmqV4.
+             * filterExpressionType.
              */
-            public Builder supportRocketmqV4(Boolean supportRocketmqV4) {
-                this.supportRocketmqV4 = supportRocketmqV4;
+            public Builder filterExpressionType(String filterExpressionType) {
+                this.filterExpressionType = filterExpressionType;
                 return this;
             }
 
             /**
-             * supportRocketmqV5.
+             * messageModel.
              */
-            public Builder supportRocketmqV5(Boolean supportRocketmqV5) {
-                this.supportRocketmqV5 = supportRocketmqV5;
+            public Builder messageModel(String messageModel) {
+                this.messageModel = messageModel;
                 return this;
             }
 
             /**
-             * tags.
+             * subscriptionStatus.
              */
-            public Builder tags(java.util.List < Tags> tags) {
-                this.tags = tags;
+            public Builder subscriptionStatus(String subscriptionStatus) {
+                this.subscriptionStatus = subscriptionStatus;
                 return this;
             }
 
             /**
-             * updateTime.
+             * topicName.
              */
-            public Builder updateTime(String updateTime) {
-                this.updateTime = updateTime;
+            public Builder topicName(String topicName) {
+                this.topicName = topicName;
                 return this;
             }
 

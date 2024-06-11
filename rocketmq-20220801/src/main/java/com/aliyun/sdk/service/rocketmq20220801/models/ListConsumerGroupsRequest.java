@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConsumerGroupsRequest</p>
  */
 public class ListConsumerGroupsRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("filter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("filter")
     private String filter;
 
-    @Query
-    @NameInMap("pageNumber")
-    @Validation(required = true, maximum = 100000000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100000000, minimum = 1)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
-    @Validation(required = true, maximum = 100, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 10)
     private Integer pageSize;
 
     private ListConsumerGroupsRequest(Builder builder) {

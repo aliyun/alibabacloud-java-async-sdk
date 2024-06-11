@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetConsumeOffsetRequest</p>
  */
 public class ResetConsumeOffsetRequest extends Request {
-    @Path
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("consumerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("consumerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consumerGroupId;
 
-    @Path
-    @NameInMap("topicName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("topicName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topicName;
 
-    @Body
-    @NameInMap("resetTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resetTime")
     private String resetTime;
 
-    @Body
-    @NameInMap("resetType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("resetType")
     private String resetType;
 
     private ResetConsumeOffsetRequest(Builder builder) {

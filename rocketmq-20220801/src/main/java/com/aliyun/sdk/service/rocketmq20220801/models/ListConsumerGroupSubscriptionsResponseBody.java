@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.rocketmq20220801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConsumerGroupSubscriptionsResponseBody</p>
  */
 public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
-    @NameInMap("code")
+    @com.aliyun.core.annotation.NameInMap("code")
     private String code;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("dynamicCode")
+    @com.aliyun.core.annotation.NameInMap("dynamicCode")
     private String dynamicCode;
 
-    @NameInMap("dynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("dynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("httpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("httpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
     private ListConsumerGroupSubscriptionsResponseBody(Builder builder) {
@@ -192,28 +191,32 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("consumerGroupId")
+        @com.aliyun.core.annotation.NameInMap("consistency")
+        private Boolean consistency;
+
+        @com.aliyun.core.annotation.NameInMap("consumerGroupId")
         private String consumerGroupId;
 
-        @NameInMap("filterExpression")
+        @com.aliyun.core.annotation.NameInMap("filterExpression")
         private String filterExpression;
 
-        @NameInMap("filterExpressionType")
+        @com.aliyun.core.annotation.NameInMap("filterExpressionType")
         private String filterExpressionType;
 
-        @NameInMap("messageModel")
+        @com.aliyun.core.annotation.NameInMap("messageModel")
         private String messageModel;
 
-        @NameInMap("subscriptionStatus")
+        @com.aliyun.core.annotation.NameInMap("subscriptionStatus")
         private String subscriptionStatus;
 
-        @NameInMap("topicCreated")
+        @com.aliyun.core.annotation.NameInMap("topicCreated")
         private Boolean topicCreated;
 
-        @NameInMap("topicName")
+        @com.aliyun.core.annotation.NameInMap("topicName")
         private String topicName;
 
         private Data(Builder builder) {
+            this.consistency = builder.consistency;
             this.consumerGroupId = builder.consumerGroupId;
             this.filterExpression = builder.filterExpression;
             this.filterExpressionType = builder.filterExpressionType;
@@ -229,6 +232,13 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return consistency
+         */
+        public Boolean getConsistency() {
+            return this.consistency;
         }
 
         /**
@@ -281,6 +291,7 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean consistency; 
             private String consumerGroupId; 
             private String filterExpression; 
             private String filterExpressionType; 
@@ -288,6 +299,14 @@ public class ListConsumerGroupSubscriptionsResponseBody extends TeaModel {
             private String subscriptionStatus; 
             private Boolean topicCreated; 
             private String topicName; 
+
+            /**
+             * consistency.
+             */
+            public Builder consistency(Boolean consistency) {
+                this.consistency = consistency;
+                return this;
+            }
 
             /**
              * The consumer group ID.
