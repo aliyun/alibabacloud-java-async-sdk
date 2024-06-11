@@ -80,6 +80,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AzureInstanceCount")
         private Integer azureInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("ExposedInstanceCoreCount")
+        private Long exposedInstanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("ExposedInstanceCount")
         private Integer exposedInstanceCount;
 
@@ -98,17 +101,26 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ImportantAssetCount")
         private Integer importantAssetCount;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceCoreCount")
+        private Long instanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private Integer instanceCount;
 
         @com.aliyun.core.annotation.NameInMap("InstanceSyncTaskCount")
         private Integer instanceSyncTaskCount;
 
+        @com.aliyun.core.annotation.NameInMap("NewInstanceCoreCount")
+        private Long newInstanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("NewInstanceCount")
         private Integer newInstanceCount;
 
         @com.aliyun.core.annotation.NameInMap("NoRiskInstanceCount")
         private Integer noRiskInstanceCount;
+
+        @com.aliyun.core.annotation.NameInMap("NotRunningStatusCoreCount")
+        private Long notRunningStatusCoreCount;
 
         @com.aliyun.core.annotation.NameInMap("NotRunningStatusCount")
         private Integer notRunningStatusCount;
@@ -125,6 +137,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RegionCount")
         private Integer regionCount;
 
+        @com.aliyun.core.annotation.NameInMap("RiskInstanceCoreCount")
+        private Long riskInstanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("RiskInstanceCount")
         private Integer riskInstanceCount;
 
@@ -140,6 +155,9 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UnKnowStatusInstanceCount")
         private Integer unKnowStatusInstanceCount;
 
+        @com.aliyun.core.annotation.NameInMap("UnprotectedInstanceCoreCount")
+        private Long unprotectedInstanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("UnprotectedInstanceCount")
         private Integer unprotectedInstanceCount;
 
@@ -150,26 +168,32 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             this.aliYunInstanceCount = builder.aliYunInstanceCount;
             this.awsInstanceCount = builder.awsInstanceCount;
             this.azureInstanceCount = builder.azureInstanceCount;
+            this.exposedInstanceCoreCount = builder.exposedInstanceCoreCount;
             this.exposedInstanceCount = builder.exposedInstanceCount;
             this.generalAssetCount = builder.generalAssetCount;
             this.groupCount = builder.groupCount;
             this.huaweiInstanceCount = builder.huaweiInstanceCount;
             this.idcInstanceCount = builder.idcInstanceCount;
             this.importantAssetCount = builder.importantAssetCount;
+            this.instanceCoreCount = builder.instanceCoreCount;
             this.instanceCount = builder.instanceCount;
             this.instanceSyncTaskCount = builder.instanceSyncTaskCount;
+            this.newInstanceCoreCount = builder.newInstanceCoreCount;
             this.newInstanceCount = builder.newInstanceCount;
             this.noRiskInstanceCount = builder.noRiskInstanceCount;
+            this.notRunningStatusCoreCount = builder.notRunningStatusCoreCount;
             this.notRunningStatusCount = builder.notRunningStatusCount;
             this.offlineInstanceCount = builder.offlineInstanceCount;
             this.outMachineInstanceCount = builder.outMachineInstanceCount;
             this.pauseInstanceCount = builder.pauseInstanceCount;
             this.regionCount = builder.regionCount;
+            this.riskInstanceCoreCount = builder.riskInstanceCoreCount;
             this.riskInstanceCount = builder.riskInstanceCount;
             this.tencentInstanceCount = builder.tencentInstanceCount;
             this.testAssetCount = builder.testAssetCount;
             this.tripartiteInstanceCount = builder.tripartiteInstanceCount;
             this.unKnowStatusInstanceCount = builder.unKnowStatusInstanceCount;
+            this.unprotectedInstanceCoreCount = builder.unprotectedInstanceCoreCount;
             this.unprotectedInstanceCount = builder.unprotectedInstanceCount;
             this.vpcCount = builder.vpcCount;
         }
@@ -201,6 +225,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getAzureInstanceCount() {
             return this.azureInstanceCount;
+        }
+
+        /**
+         * @return exposedInstanceCoreCount
+         */
+        public Long getExposedInstanceCoreCount() {
+            return this.exposedInstanceCoreCount;
         }
 
         /**
@@ -246,6 +277,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCoreCount
+         */
+        public Long getInstanceCoreCount() {
+            return this.instanceCoreCount;
+        }
+
+        /**
          * @return instanceCount
          */
         public Integer getInstanceCount() {
@@ -260,6 +298,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return newInstanceCoreCount
+         */
+        public Long getNewInstanceCoreCount() {
+            return this.newInstanceCoreCount;
+        }
+
+        /**
          * @return newInstanceCount
          */
         public Integer getNewInstanceCount() {
@@ -271,6 +316,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
          */
         public Integer getNoRiskInstanceCount() {
             return this.noRiskInstanceCount;
+        }
+
+        /**
+         * @return notRunningStatusCoreCount
+         */
+        public Long getNotRunningStatusCoreCount() {
+            return this.notRunningStatusCoreCount;
         }
 
         /**
@@ -309,6 +361,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskInstanceCoreCount
+         */
+        public Long getRiskInstanceCoreCount() {
+            return this.riskInstanceCoreCount;
+        }
+
+        /**
          * @return riskInstanceCount
          */
         public Integer getRiskInstanceCount() {
@@ -344,6 +403,13 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
         }
 
         /**
+         * @return unprotectedInstanceCoreCount
+         */
+        public Long getUnprotectedInstanceCoreCount() {
+            return this.unprotectedInstanceCoreCount;
+        }
+
+        /**
          * @return unprotectedInstanceCount
          */
         public Integer getUnprotectedInstanceCount() {
@@ -361,26 +427,32 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             private Integer aliYunInstanceCount; 
             private Integer awsInstanceCount; 
             private Integer azureInstanceCount; 
+            private Long exposedInstanceCoreCount; 
             private Integer exposedInstanceCount; 
             private Integer generalAssetCount; 
             private Integer groupCount; 
             private Integer huaweiInstanceCount; 
             private Integer idcInstanceCount; 
             private Integer importantAssetCount; 
+            private Long instanceCoreCount; 
             private Integer instanceCount; 
             private Integer instanceSyncTaskCount; 
+            private Long newInstanceCoreCount; 
             private Integer newInstanceCount; 
             private Integer noRiskInstanceCount; 
+            private Long notRunningStatusCoreCount; 
             private Integer notRunningStatusCount; 
             private Integer offlineInstanceCount; 
             private Integer outMachineInstanceCount; 
             private Integer pauseInstanceCount; 
             private Integer regionCount; 
+            private Long riskInstanceCoreCount; 
             private Integer riskInstanceCount; 
             private Integer tencentInstanceCount; 
             private Integer testAssetCount; 
             private Integer tripartiteInstanceCount; 
             private Integer unKnowStatusInstanceCount; 
+            private Long unprotectedInstanceCoreCount; 
             private Integer unprotectedInstanceCount; 
             private Integer vpcCount; 
 
@@ -405,6 +477,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder azureInstanceCount(Integer azureInstanceCount) {
                 this.azureInstanceCount = azureInstanceCount;
+                return this;
+            }
+
+            /**
+             * ExposedInstanceCoreCount.
+             */
+            public Builder exposedInstanceCoreCount(Long exposedInstanceCoreCount) {
+                this.exposedInstanceCoreCount = exposedInstanceCoreCount;
                 return this;
             }
 
@@ -457,6 +537,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * InstanceCoreCount.
+             */
+            public Builder instanceCoreCount(Long instanceCoreCount) {
+                this.instanceCoreCount = instanceCoreCount;
+                return this;
+            }
+
+            /**
              * The total number of assets of the specified type. If no asset types are specified, this parameter indicates the total number of all servers and Alibaba Cloud services within your account.
              */
             public Builder instanceCount(Integer instanceCount) {
@@ -473,6 +561,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * NewInstanceCoreCount.
+             */
+            public Builder newInstanceCoreCount(Long newInstanceCoreCount) {
+                this.newInstanceCoreCount = newInstanceCoreCount;
+                return this;
+            }
+
+            /**
              * The number of newly added servers.
              */
             public Builder newInstanceCount(Integer newInstanceCount) {
@@ -485,6 +581,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder noRiskInstanceCount(Integer noRiskInstanceCount) {
                 this.noRiskInstanceCount = noRiskInstanceCount;
+                return this;
+            }
+
+            /**
+             * NotRunningStatusCoreCount.
+             */
+            public Builder notRunningStatusCoreCount(Long notRunningStatusCoreCount) {
+                this.notRunningStatusCoreCount = notRunningStatusCoreCount;
                 return this;
             }
 
@@ -529,6 +633,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
             }
 
             /**
+             * RiskInstanceCoreCount.
+             */
+            public Builder riskInstanceCoreCount(Long riskInstanceCoreCount) {
+                this.riskInstanceCoreCount = riskInstanceCoreCount;
+                return this;
+            }
+
+            /**
              * The number of assets that are at risk.
              */
             public Builder riskInstanceCount(Integer riskInstanceCount) {
@@ -565,6 +677,14 @@ public class DescribeFieldStatisticsResponseBody extends TeaModel {
              */
             public Builder unKnowStatusInstanceCount(Integer unKnowStatusInstanceCount) {
                 this.unKnowStatusInstanceCount = unKnowStatusInstanceCount;
+                return this;
+            }
+
+            /**
+             * UnprotectedInstanceCoreCount.
+             */
+            public Builder unprotectedInstanceCoreCount(Long unprotectedInstanceCoreCount) {
+                this.unprotectedInstanceCoreCount = unprotectedInstanceCoreCount;
                 return this;
             }
 

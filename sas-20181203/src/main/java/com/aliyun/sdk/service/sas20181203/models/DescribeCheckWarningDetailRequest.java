@@ -126,7 +126,7 @@ public class DescribeCheckWarningDetailRequest extends Request {
          * The ID of the check item.
          * <p>
          * 
-         * >  You can call the [DescribeCheckWarningSummary](~~116179~~) operation to query the IDs of check items.
+         * >  You can call the [ListCheckItemWarningSummary](~~ListCheckItemWarningSummary~~) operation to query the IDs of the check items.
          */
         public Builder checkId(String checkId) {
             this.putQueryParameter("CheckId", checkId);

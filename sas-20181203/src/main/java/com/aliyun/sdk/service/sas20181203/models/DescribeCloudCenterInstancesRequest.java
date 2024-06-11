@@ -49,6 +49,7 @@ public class DescribeCloudCenterInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @Deprecated
     private String regionId;
 
     @com.aliyun.core.annotation.Query

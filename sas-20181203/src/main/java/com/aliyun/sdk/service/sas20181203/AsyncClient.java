@@ -760,6 +760,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVulConfigResponse> describeVulConfig(DescribeVulConfigRequest request);
 
+    CompletableFuture<DescribeVulDefendCountStatisticsResponse> describeVulDefendCountStatistics(DescribeVulDefendCountStatisticsRequest request);
+
     CompletableFuture<DescribeVulDetailsResponse> describeVulDetails(DescribeVulDetailsRequest request);
 
     /**
@@ -773,6 +775,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVulListResponse> describeVulList(DescribeVulListRequest request);
 
     CompletableFuture<DescribeVulListPageResponse> describeVulListPage(DescribeVulListPageRequest request);
+
+    CompletableFuture<DescribeVulMetaCountStatisticsResponse> describeVulMetaCountStatistics(DescribeVulMetaCountStatisticsRequest request);
 
     CompletableFuture<DescribeVulNumStatisticsResponse> describeVulNumStatistics(DescribeVulNumStatisticsRequest request);
 

@@ -103,6 +103,9 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("GroupFlag")
         private Integer groupFlag;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceCoreCount")
+        private Long instanceCoreCount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceCount")
         private String instanceCount;
 
@@ -120,6 +123,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             this.authVersionCheckCount = builder.authVersionCheckCount;
             this.fieldAliasName = builder.fieldAliasName;
             this.groupFlag = builder.groupFlag;
+            this.instanceCoreCount = builder.instanceCoreCount;
             this.instanceCount = builder.instanceCount;
             this.os = builder.os;
             this.riskInstanceCount = builder.riskInstanceCount;
@@ -163,6 +167,13 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceCoreCount
+         */
+        public Long getInstanceCoreCount() {
+            return this.instanceCoreCount;
+        }
+
+        /**
          * @return instanceCount
          */
         public String getInstanceCount() {
@@ -195,6 +206,7 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
             private Integer authVersionCheckCount; 
             private String fieldAliasName; 
             private Integer groupFlag; 
+            private Long instanceCoreCount; 
             private String instanceCount; 
             private String os; 
             private String riskInstanceCount; 
@@ -233,6 +245,14 @@ public class DescribeGroupedInstancesResponseBody extends TeaModel {
              */
             public Builder groupFlag(Integer groupFlag) {
                 this.groupFlag = groupFlag;
+                return this;
+            }
+
+            /**
+             * InstanceCoreCount.
+             */
+            public Builder instanceCoreCount(Long instanceCoreCount) {
+                this.instanceCoreCount = instanceCoreCount;
                 return this;
             }
 

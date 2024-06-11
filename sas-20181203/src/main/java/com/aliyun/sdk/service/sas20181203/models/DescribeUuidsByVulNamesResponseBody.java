@@ -91,6 +91,12 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
     } 
 
     public static class MachineInfoStatistics extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
+        private String internetIp;
+
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
+        private String intranetIp;
+
         @com.aliyun.core.annotation.NameInMap("MachineInstanceId")
         private String machineInstanceId;
 
@@ -110,6 +116,8 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         private String uuid;
 
         private MachineInfoStatistics(Builder builder) {
+            this.internetIp = builder.internetIp;
+            this.intranetIp = builder.intranetIp;
             this.machineInstanceId = builder.machineInstanceId;
             this.machineIp = builder.machineIp;
             this.machineName = builder.machineName;
@@ -124,6 +132,20 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
 
         public static MachineInfoStatistics create() {
             return builder().build();
+        }
+
+        /**
+         * @return internetIp
+         */
+        public String getInternetIp() {
+            return this.internetIp;
+        }
+
+        /**
+         * @return intranetIp
+         */
+        public String getIntranetIp() {
+            return this.intranetIp;
         }
 
         /**
@@ -169,12 +191,30 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String internetIp; 
+            private String intranetIp; 
             private String machineInstanceId; 
             private String machineIp; 
             private String machineName; 
             private String os; 
             private String regionId; 
             private String uuid; 
+
+            /**
+             * InternetIp.
+             */
+            public Builder internetIp(String internetIp) {
+                this.internetIp = internetIp;
+                return this;
+            }
+
+            /**
+             * IntranetIp.
+             */
+            public Builder intranetIp(String intranetIp) {
+                this.intranetIp = intranetIp;
+                return this;
+            }
 
             /**
              * The instance ID.

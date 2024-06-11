@@ -442,7 +442,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated number of authorizations that will be consumed by this check item.
+             * The estimated quota that will be consumed by this check item.
              */
             public Builder estimatedCount(Integer estimatedCount) {
                 this.estimatedCount = estimatedCount;
@@ -450,7 +450,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * The asset subtype of the cloud service. Valid value:
+             * The asset subtype of the cloud service. Valid values:
              * <p>
              * 
              * *   If **InstanceType** is set to **ECS**, this parameter supports the following valid values:
@@ -471,7 +471,7 @@ public class ListCheckItemResponseBody extends TeaModel {
              *     *   **POLICY**
              *     *   **GROUP**
              * 
-             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid values:
+             * *   If **InstanceType** is set to **WAF**, this parameter supports the following valid value:
              * 
              *     *   **DOMAIN**
              * 
@@ -485,31 +485,31 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * The asset type of the cloud service. Valid value:
+             * The asset type of the cloud service. Valid values:
              * <p>
              * 
-             * *   **ECS**: Elastic Compute Service (ECS)
-             * *   **SLB**: Server Load Balancer (SLB)
-             * *   **RDS**: ApsaraDB RDS
-             * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB)
-             * *   **KVSTORE**: ApsaraDB for Redis (Redis)
-             * *   **ACR**: Container Registry
-             * *   **CSK**: Container Service for Kubernetes (ACK)
-             * *   **VPC**: Virtual Private Cloud (VPC)
-             * *   **ACTIONTRAIL**: ActionTrail
-             * *   **CDN**: Alibaba Cloud CDN (CDN)
-             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service)
-             * *   **RDC**: Apsara Devops
-             * *   **RAM**: Resource Access Management (RAM)
-             * *   **DDOS**: Anti-DDoS
-             * *   **WAF**: Web Application Firewall (WAF)
-             * *   **OSS**: Object Storage Service (OSS)
-             * *   **POLARDB**: PolarDB
-             * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL
-             * *   **MSE**: Microservices Engine (MSE)
-             * *   **NAS**: Apsara File Storage NAS (NAS)
-             * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP)
-             * *   **EIP**: Elastic IP Address (EIP)
+             * *   **ECS**: Elastic Compute Service (ECS).
+             * *   **SLB**: Server Load Balancer (SLB).
+             * *   **RDS**: ApsaraDB RDS.
+             * *   **MONGODB**: ApsaraDB for MongoDB (MongoDB).
+             * *   **KVSTORE**: ApsaraDB for Redis (Redis).
+             * *   **ACR**: Container Registry.
+             * *   **CSK**: Container Service for Kubernetes (ACK).
+             * *   **VPC**: Virtual Private Cloud (VPC).
+             * *   **ACTIONTRAIL**: ActionTrail.
+             * *   **CDN**: Alibaba Cloud CDN (CDN).
+             * *   **CAS**: Certificate Management Service (formerly SSL Certificates Service).
+             * *   **RDC**: Apsara Devops.
+             * *   **RAM**: Resource Access Management (RAM).
+             * *   **DDOS**: Anti-DDoS.
+             * *   **WAF**: Web Application Firewall (WAF).
+             * *   **OSS**: Object Storage Service (OSS).
+             * *   **POLARDB**: PolarDB.
+             * *   **POSTGRESQL**: ApsaraDB RDS for PostgreSQL.
+             * *   **MSE**: Microservices Engine (MSE).
+             * *   **NAS**: Apsara File Storage NAS (NAS).
+             * *   **SDDP**: Sensitive Data Discovery and Protection (SDDP).
+             * *   **EIP**: Elastic IP Address (EIP).
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -517,7 +517,7 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the check item. Valid value:
+             * The risk level of the check item. Valid values:
              * <p>
              * 
              * *   **HIGH**
@@ -538,14 +538,14 @@ public class ListCheckItemResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the cloud asset. Valid value:
+             * The type of the cloud asset. Valid values:
              * <p>
              * 
-             * *   **0**: an asset provided by Alibaba Cloud
-             * *   **1**: a third-party cloud asset
-             * *   **2**: an asset in a data center
-             * *   **3**, **4**, **5**, and **7**: other cloud asset
-             * *   **8**: a simple application server
+             * *   **0**: an asset provided by Alibaba Cloud.
+             * *   **1**: an asset outside Alibaba Cloud.
+             * *   **2**: an asset in a data center.
+             * *   **3**, **4**, **5**, and **7**: other cloud asset.
+             * *   **8**: a simple application server.
              */
             public Builder vendor(String vendor) {
                 this.vendor = vendor;

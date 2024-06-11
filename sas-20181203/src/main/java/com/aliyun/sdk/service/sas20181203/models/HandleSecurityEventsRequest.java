@@ -33,6 +33,10 @@ public class HandleSecurityEventsRequest extends Request {
     private String remark;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryAccountId")
+    private Long resourceDirectoryAccountId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SecurityEventIds")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > securityEventIds;
@@ -48,6 +52,7 @@ public class HandleSecurityEventsRequest extends Request {
         this.operationCode = builder.operationCode;
         this.operationParams = builder.operationParams;
         this.remark = builder.remark;
+        this.resourceDirectoryAccountId = builder.resourceDirectoryAccountId;
         this.securityEventIds = builder.securityEventIds;
         this.sourceIp = builder.sourceIp;
     }
@@ -101,6 +106,13 @@ public class HandleSecurityEventsRequest extends Request {
     }
 
     /**
+     * @return resourceDirectoryAccountId
+     */
+    public Long getResourceDirectoryAccountId() {
+        return this.resourceDirectoryAccountId;
+    }
+
+    /**
      * @return securityEventIds
      */
     public java.util.List < String > getSecurityEventIds() {
@@ -120,6 +132,7 @@ public class HandleSecurityEventsRequest extends Request {
         private String operationCode; 
         private String operationParams; 
         private String remark; 
+        private Long resourceDirectoryAccountId; 
         private java.util.List < String > securityEventIds; 
         private String sourceIp; 
 
@@ -134,6 +147,7 @@ public class HandleSecurityEventsRequest extends Request {
             this.operationCode = request.operationCode;
             this.operationParams = request.operationParams;
             this.remark = request.remark;
+            this.resourceDirectoryAccountId = request.resourceDirectoryAccountId;
             this.securityEventIds = request.securityEventIds;
             this.sourceIp = request.sourceIp;
         } 
@@ -219,6 +233,18 @@ public class HandleSecurityEventsRequest extends Request {
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
             this.remark = remark;
+            return this;
+        }
+
+        /**
+         * The Alibaba Cloud account ID of the member in the resource directory.
+         * <p>
+         * 
+         * >  You can call the [DescribeMonitorAccounts](~~DescribeMonitorAccounts~~) operation to obtain the IDs.
+         */
+        public Builder resourceDirectoryAccountId(Long resourceDirectoryAccountId) {
+            this.putQueryParameter("ResourceDirectoryAccountId", resourceDirectoryAccountId);
+            this.resourceDirectoryAccountId = resourceDirectoryAccountId;
             return this;
         }
 
