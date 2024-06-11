@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportModelFeatureTrainingSetFGTableRequest</p>
  */
 public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("ModelFeatureId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelFeatureId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("TrainingSetFgConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingSetFgConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private TrainingSetFgConfig trainingSetFgConfig;
 
     private ExportModelFeatureTrainingSetFGTableRequest(Builder builder) {
@@ -142,14 +141,14 @@ public class ExportModelFeatureTrainingSetFGTableRequest extends Request {
     } 
 
     public static class TrainingSetFgConfig extends TeaModel {
-        @NameInMap("FgJsonName")
+        @com.aliyun.core.annotation.NameInMap("FgJsonName")
         private String fgJsonName;
 
-        @NameInMap("JarName")
+        @com.aliyun.core.annotation.NameInMap("JarName")
         private String jarName;
 
-        @NameInMap("Partitions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Partitions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.Map < String, java.util.Map<String, ?>> partitions;
 
         private TrainingSetFgConfig(Builder builder) {

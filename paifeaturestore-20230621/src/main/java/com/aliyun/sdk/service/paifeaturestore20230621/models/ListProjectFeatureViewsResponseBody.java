@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectFeatureViewsResponseBody</p>
  */
 public class ListProjectFeatureViewsResponseBody extends TeaModel {
-    @NameInMap("FeatureViews")
+    @com.aliyun.core.annotation.NameInMap("FeatureViews")
     private java.util.List < FeatureViews> featureViews;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListProjectFeatureViewsResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
     } 
 
     public static class Features extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < String > attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {
@@ -173,16 +172,16 @@ public class ListProjectFeatureViewsResponseBody extends TeaModel {
 
     }
     public static class FeatureViews extends TeaModel {
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("Features")
+        @com.aliyun.core.annotation.NameInMap("Features")
         private java.util.List < Features> features;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private FeatureViews(Builder builder) {

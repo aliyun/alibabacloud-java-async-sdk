@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTaskResponseBody</p>
  */
 public class GetTaskResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtExecutedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtExecutedTime")
     private String gmtExecutedTime;
 
-    @NameInMap("GmtFinishedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtFinishedTime")
     private String gmtFinishedTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("ObjectId")
+    @com.aliyun.core.annotation.NameInMap("ObjectId")
     private String objectId;
 
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RunningConfig")
+    @com.aliyun.core.annotation.NameInMap("RunningConfig")
     private String runningConfig;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetTaskResponseBody(Builder builder) {

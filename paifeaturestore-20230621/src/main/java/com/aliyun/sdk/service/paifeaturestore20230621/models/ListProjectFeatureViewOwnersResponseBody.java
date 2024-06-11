@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectFeatureViewOwnersResponseBody</p>
  */
 public class ListProjectFeatureViewOwnersResponseBody extends TeaModel {
-    @NameInMap("Owners")
+    @com.aliyun.core.annotation.NameInMap("Owners")
     private java.util.List < String > owners;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListProjectFeatureViewOwnersResponseBody(Builder builder) {

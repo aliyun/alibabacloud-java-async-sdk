@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProjectFeatureViewResponseBody</p>
  */
 public class GetProjectFeatureViewResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("FeatureEntityId")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
     private String featureEntityId;
 
-    @NameInMap("FeatureEntityName")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntityName")
     private String featureEntityName;
 
-    @NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
     private String featureViewId;
 
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private java.util.List < Fields> fields;
 
-    @NameInMap("GmtSyncTime")
+    @com.aliyun.core.annotation.NameInMap("GmtSyncTime")
     private String gmtSyncTime;
 
-    @NameInMap("JoinId")
+    @com.aliyun.core.annotation.NameInMap("JoinId")
     private String joinId;
 
-    @NameInMap("LastSyncConfig")
+    @com.aliyun.core.annotation.NameInMap("LastSyncConfig")
     private String lastSyncConfig;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RegisterDatasourceId")
+    @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
     private String registerDatasourceId;
 
-    @NameInMap("RegisterTable")
+    @com.aliyun.core.annotation.NameInMap("RegisterTable")
     private String registerTable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncOnlineTable")
+    @com.aliyun.core.annotation.NameInMap("SyncOnlineTable")
     private Boolean syncOnlineTable;
 
-    @NameInMap("TTL")
+    @com.aliyun.core.annotation.NameInMap("TTL")
     private Integer TTL;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < String > tags;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("WriteMethod")
+    @com.aliyun.core.annotation.NameInMap("WriteMethod")
     private String writeMethod;
 
     private GetProjectFeatureViewResponseBody(Builder builder) {
@@ -432,13 +431,13 @@ public class GetProjectFeatureViewResponseBody extends TeaModel {
     } 
 
     public static class Fields extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.List < String > attributes;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Fields(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureEntitiesResponseBody</p>
  */
 public class ListFeatureEntitiesResponseBody extends TeaModel {
-    @NameInMap("FeatureEntities")
+    @com.aliyun.core.annotation.NameInMap("FeatureEntities")
     private java.util.List < FeatureEntities> featureEntities;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListFeatureEntitiesResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class ListFeatureEntitiesResponseBody extends TeaModel {
     } 
 
     public static class FeatureEntities extends TeaModel {
-        @NameInMap("FeatureEntityId")
+        @com.aliyun.core.annotation.NameInMap("FeatureEntityId")
         private String featureEntityId;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("JoinId")
+        @com.aliyun.core.annotation.NameInMap("JoinId")
         private String joinId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private FeatureEntities(Builder builder) {

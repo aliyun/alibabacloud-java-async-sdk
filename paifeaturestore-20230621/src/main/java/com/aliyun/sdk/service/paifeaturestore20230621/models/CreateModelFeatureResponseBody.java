@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateModelFeatureResponseBody</p>
  */
 public class CreateModelFeatureResponseBody extends TeaModel {
-    @NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
     private String modelFeatureId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateModelFeatureResponseBody(Builder builder) {

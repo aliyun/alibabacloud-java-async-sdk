@@ -6,11 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListFeatureViewRelationshipsRequest} extends {@link RequestModel}
+ * {@link ListFeatureViewOnlineFeaturesRequest} extends {@link RequestModel}
  *
- * <p>ListFeatureViewRelationshipsRequest</p>
+ * <p>ListFeatureViewOnlineFeaturesRequest</p>
  */
-public class ListFeatureViewRelationshipsRequest extends Request {
+public class ListFeatureViewOnlineFeaturesRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Path
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -21,28 +25,37 @@ public class ListFeatureViewRelationshipsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String featureViewId;
 
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JoinIds")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < String > joinIds;
 
-    private ListFeatureViewRelationshipsRequest(Builder builder) {
+    private ListFeatureViewOnlineFeaturesRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
         this.featureViewId = builder.featureViewId;
-        this.regionId = builder.regionId;
+        this.joinIds = builder.joinIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListFeatureViewRelationshipsRequest create() {
+    public static ListFeatureViewOnlineFeaturesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -60,27 +73,38 @@ public class ListFeatureViewRelationshipsRequest extends Request {
     }
 
     /**
-     * @return regionId
+     * @return joinIds
      */
-    public String getRegionId() {
-        return this.regionId;
+    public java.util.List < String > getJoinIds() {
+        return this.joinIds;
     }
 
-    public static final class Builder extends Request.Builder<ListFeatureViewRelationshipsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ListFeatureViewOnlineFeaturesRequest, Builder> {
+        private String regionId; 
         private String instanceId; 
         private String featureViewId; 
-        private String regionId; 
+        private java.util.List < String > joinIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListFeatureViewRelationshipsRequest request) {
+        private Builder(ListFeatureViewOnlineFeaturesRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.instanceId = request.instanceId;
             this.featureViewId = request.featureViewId;
-            this.regionId = request.regionId;
+            this.joinIds = request.joinIds;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * InstanceId.
@@ -101,17 +125,18 @@ public class ListFeatureViewRelationshipsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * JoinIds.
          */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
+        public Builder joinIds(java.util.List < String > joinIds) {
+            String joinIdsShrink = shrink(joinIds, "JoinIds", "json");
+            this.putQueryParameter("JoinIds", joinIdsShrink);
+            this.joinIds = joinIds;
             return this;
         }
 
         @Override
-        public ListFeatureViewRelationshipsRequest build() {
-            return new ListFeatureViewRelationshipsRequest(this);
+        public ListFeatureViewOnlineFeaturesRequest build() {
+            return new ListFeatureViewOnlineFeaturesRequest(this);
         } 
 
     } 

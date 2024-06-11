@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProjectModelFeatureResponseBody</p>
  */
 public class GetProjectModelFeatureResponseBody extends TeaModel {
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.NameInMap("Features")
     private java.util.List < Features> features;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("LabelDatasourceId")
+    @com.aliyun.core.annotation.NameInMap("LabelDatasourceId")
     private String labelDatasourceId;
 
-    @NameInMap("LabelDatasourceTable")
+    @com.aliyun.core.annotation.NameInMap("LabelDatasourceTable")
     private String labelDatasourceTable;
 
-    @NameInMap("LabelEventTime")
+    @com.aliyun.core.annotation.NameInMap("LabelEventTime")
     private String labelEventTime;
 
-    @NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
     private String labelTableId;
 
-    @NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
     private String modelFeatureId;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrainingSetFGTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetFGTable")
     private String trainingSetFGTable;
 
-    @NameInMap("TrainingSetTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetTable")
     private String trainingSetTable;
 
     private GetProjectModelFeatureResponseBody(Builder builder) {
@@ -332,19 +331,19 @@ public class GetProjectModelFeatureResponseBody extends TeaModel {
     } 
 
     public static class Features extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("FeatureViewName")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewName")
         private String featureViewName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {

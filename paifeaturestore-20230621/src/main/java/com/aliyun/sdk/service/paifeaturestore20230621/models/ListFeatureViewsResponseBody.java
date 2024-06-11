@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureViewsResponseBody</p>
  */
 public class ListFeatureViewsResponseBody extends TeaModel {
-    @NameInMap("FeatureViews")
+    @com.aliyun.core.annotation.NameInMap("FeatureViews")
     private java.util.List < FeatureViews> featureViews;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListFeatureViewsResponseBody(Builder builder) {
@@ -92,46 +91,46 @@ public class ListFeatureViewsResponseBody extends TeaModel {
     } 
 
     public static class FeatureViews extends TeaModel {
-        @NameInMap("FeatureEntityName")
+        @com.aliyun.core.annotation.NameInMap("FeatureEntityName")
         private String featureEntityName;
 
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GmtModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
         private String gmtModifiedTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("RegisterDatasourceId")
+        @com.aliyun.core.annotation.NameInMap("RegisterDatasourceId")
         private String registerDatasourceId;
 
-        @NameInMap("RegisterDatasourceName")
+        @com.aliyun.core.annotation.NameInMap("RegisterDatasourceName")
         private String registerDatasourceName;
 
-        @NameInMap("RegisterTable")
+        @com.aliyun.core.annotation.NameInMap("RegisterTable")
         private String registerTable;
 
-        @NameInMap("TTL")
+        @com.aliyun.core.annotation.NameInMap("TTL")
         private Integer TTL;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WriteToFeatureDB")
+        @com.aliyun.core.annotation.NameInMap("WriteToFeatureDB")
         private Boolean writeToFeatureDB;
 
         private FeatureViews(Builder builder) {

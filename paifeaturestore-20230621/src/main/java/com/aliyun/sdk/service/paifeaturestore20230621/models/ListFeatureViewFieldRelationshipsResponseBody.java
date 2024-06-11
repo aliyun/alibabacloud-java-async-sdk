@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureViewFieldRelationshipsResponseBody</p>
  */
 public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
-    @NameInMap("Relationships")
+    @com.aliyun.core.annotation.NameInMap("Relationships")
     private java.util.List < Relationships> relationships;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFeatureViewFieldRelationshipsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
     } 
 
     public static class Models extends TeaModel {
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private Models(Builder builder) {
@@ -133,16 +132,16 @@ public class ListFeatureViewFieldRelationshipsResponseBody extends TeaModel {
 
     }
     public static class Relationships extends TeaModel {
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("Models")
+        @com.aliyun.core.annotation.NameInMap("Models")
         private java.util.List < Models> models;
 
-        @NameInMap("OfflineTableName")
+        @com.aliyun.core.annotation.NameInMap("OfflineTableName")
         private String offlineTableName;
 
-        @NameInMap("OnlineTableName")
+        @com.aliyun.core.annotation.NameInMap("OnlineTableName")
         private String onlineTableName;
 
         private Relationships(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>WriteFeatureViewTableRequest</p>
  */
 public class WriteFeatureViewTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("FeatureViewId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String featureViewId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Mode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Mode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mode;
 
-    @Body
-    @NameInMap("Partitions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Partitions")
     private java.util.Map < String, java.util.Map<String, ?>> partitions;
 
-    @Body
-    @NameInMap("UrlDatasource")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UrlDatasource")
     private UrlDatasource urlDatasource;
 
     private WriteFeatureViewTableRequest(Builder builder) {
@@ -188,13 +187,13 @@ public class WriteFeatureViewTableRequest extends Request {
     } 
 
     public static class UrlDatasource extends TeaModel {
-        @NameInMap("Delimiter")
+        @com.aliyun.core.annotation.NameInMap("Delimiter")
         private String delimiter;
 
-        @NameInMap("OmitHeader")
+        @com.aliyun.core.annotation.NameInMap("OmitHeader")
         private Boolean omitHeader;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private UrlDatasource(Builder builder) {

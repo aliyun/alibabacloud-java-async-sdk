@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListModelFeatureAvailableFeaturesResponseBody</p>
  */
 public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
-    @NameInMap("AvaliableFeatures")
+    @com.aliyun.core.annotation.NameInMap("AvaliableFeatures")
     private java.util.List < AvaliableFeatures> avaliableFeatures;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListModelFeatureAvailableFeaturesResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class ListModelFeatureAvailableFeaturesResponseBody extends TeaModel {
     } 
 
     public static class AvaliableFeatures extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SourceName")
+        @com.aliyun.core.annotation.NameInMap("SourceName")
         private String sourceName;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AvaliableFeatures(Builder builder) {

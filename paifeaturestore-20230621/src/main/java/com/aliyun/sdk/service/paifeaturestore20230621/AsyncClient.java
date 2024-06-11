@@ -97,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListFeatureViewFieldRelationshipsResponse> listFeatureViewFieldRelationships(ListFeatureViewFieldRelationshipsRequest request);
 
+    CompletableFuture<ListFeatureViewOnlineFeaturesResponse> listFeatureViewOnlineFeatures(ListFeatureViewOnlineFeaturesRequest request);
+
     CompletableFuture<ListFeatureViewRelationshipsResponse> listFeatureViewRelationships(ListFeatureViewRelationshipsRequest request);
 
     CompletableFuture<ListFeatureViewsResponse> listFeatureViews(ListFeatureViewsRequest request);

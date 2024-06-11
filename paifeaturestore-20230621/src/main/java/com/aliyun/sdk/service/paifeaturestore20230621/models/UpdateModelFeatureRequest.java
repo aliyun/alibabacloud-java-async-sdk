@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateModelFeatureRequest</p>
  */
 public class UpdateModelFeatureRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("ModelFeatureId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelFeatureId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Features")
     private java.util.List < Features> features;
 
-    @Body
-    @NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
     private String labelTableId;
 
-    @Body
-    @NameInMap("SequenceFeatureViewIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SequenceFeatureViewIds")
     private java.util.List < String > sequenceFeatureViewIds;
 
     private UpdateModelFeatureRequest(Builder builder) {
@@ -187,19 +186,19 @@ public class UpdateModelFeatureRequest extends Request {
     } 
 
     public static class Features extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("FeatureViewId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureViewId;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
         private Features(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetModelFeatureResponseBody</p>
  */
 public class GetModelFeatureResponseBody extends TeaModel {
-    @NameInMap("ExportTrainingSetTableScript")
+    @com.aliyun.core.annotation.NameInMap("ExportTrainingSetTableScript")
     private String exportTrainingSetTableScript;
 
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.NameInMap("Features")
     private java.util.List < Features> features;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("LabelTableId")
+    @com.aliyun.core.annotation.NameInMap("LabelTableId")
     private String labelTableId;
 
-    @NameInMap("LabelTableName")
+    @com.aliyun.core.annotation.NameInMap("LabelTableName")
     private String labelTableName;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @NameInMap("ProjectName")
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
-    @NameInMap("Relations")
+    @com.aliyun.core.annotation.NameInMap("Relations")
     private Relations relations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TrainingSetFGTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetFGTable")
     private String trainingSetFGTable;
 
-    @NameInMap("TrainingSetTable")
+    @com.aliyun.core.annotation.NameInMap("TrainingSetTable")
     private String trainingSetTable;
 
     private GetModelFeatureResponseBody(Builder builder) {
@@ -312,19 +311,19 @@ public class GetModelFeatureResponseBody extends TeaModel {
     } 
 
     public static class Features extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
-        @NameInMap("FeatureViewId")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewId")
         private String featureViewId;
 
-        @NameInMap("FeatureViewName")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewName")
         private String featureViewName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Features(Builder builder) {
@@ -433,13 +432,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     }
     public static class Domains extends TeaModel {
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Domains(Builder builder) {
@@ -514,13 +513,13 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     }
     public static class Links extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("Link")
+        @com.aliyun.core.annotation.NameInMap("Link")
         private String link;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
         private Links(Builder builder) {
@@ -595,10 +594,10 @@ public class GetModelFeatureResponseBody extends TeaModel {
 
     }
     public static class Relations extends TeaModel {
-        @NameInMap("Domains")
+        @com.aliyun.core.annotation.NameInMap("Domains")
         private java.util.List < Domains> domains;
 
-        @NameInMap("Links")
+        @com.aliyun.core.annotation.NameInMap("Links")
         private java.util.List < Links> links;
 
         private Relations(Builder builder) {

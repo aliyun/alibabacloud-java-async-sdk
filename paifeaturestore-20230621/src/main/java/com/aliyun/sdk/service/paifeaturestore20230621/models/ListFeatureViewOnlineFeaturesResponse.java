@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateDatasourceResponse} extends {@link TeaModel}
+ * {@link ListFeatureViewOnlineFeaturesResponse} extends {@link TeaModel}
  *
- * <p>UpdateDatasourceResponse</p>
+ * <p>ListFeatureViewOnlineFeaturesResponse</p>
  */
-public class UpdateDatasourceResponse extends Response {
+public class ListFeatureViewOnlineFeaturesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class UpdateDatasourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateDatasourceResponseBody body;
+    private ListFeatureViewOnlineFeaturesResponseBody body;
 
-    private UpdateDatasourceResponse(BuilderImpl builder) {
+    private ListFeatureViewOnlineFeaturesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateDatasourceResponse create() {
+    public static ListFeatureViewOnlineFeaturesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class UpdateDatasourceResponse extends Response {
     /**
      * @return body
      */
-    public UpdateDatasourceResponseBody getBody() {
+    public ListFeatureViewOnlineFeaturesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateDatasourceResponse, Builder> {
+    public interface Builder extends Response.Builder<ListFeatureViewOnlineFeaturesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateDatasourceResponseBody body);
+        Builder body(ListFeatureViewOnlineFeaturesResponseBody body);
 
         @Override
-        UpdateDatasourceResponse build();
+        ListFeatureViewOnlineFeaturesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateDatasourceResponse, Builder>
+            extends Response.BuilderImpl<ListFeatureViewOnlineFeaturesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateDatasourceResponseBody body; 
+        private ListFeatureViewOnlineFeaturesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateDatasourceResponse response) {
+        private BuilderImpl(ListFeatureViewOnlineFeaturesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class UpdateDatasourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateDatasourceResponseBody body) {
+        public Builder body(ListFeatureViewOnlineFeaturesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateDatasourceResponse build() {
-            return new UpdateDatasourceResponse(this);
+        public ListFeatureViewOnlineFeaturesResponse build() {
+            return new ListFeatureViewOnlineFeaturesResponse(this);
         } 
 
     } 

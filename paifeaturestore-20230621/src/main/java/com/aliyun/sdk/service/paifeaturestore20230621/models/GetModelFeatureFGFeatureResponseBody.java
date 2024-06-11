@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetModelFeatureFGFeatureResponseBody</p>
  */
 public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
-    @NameInMap("LookupFeatures")
+    @com.aliyun.core.annotation.NameInMap("LookupFeatures")
     private java.util.List < LookupFeatures> lookupFeatures;
 
-    @NameInMap("RawFeatures")
+    @com.aliyun.core.annotation.NameInMap("RawFeatures")
     private java.util.List < RawFeatures> rawFeatures;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Reserves")
+    @com.aliyun.core.annotation.NameInMap("Reserves")
     private java.util.List < String > reserves;
 
-    @NameInMap("SequenceFeatures")
+    @com.aliyun.core.annotation.NameInMap("SequenceFeatures")
     private java.util.List < SequenceFeatures> sequenceFeatures;
 
     private GetModelFeatureFGFeatureResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
     } 
 
     public static class LookupFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("KeyFeatureDomain")
+        @com.aliyun.core.annotation.NameInMap("KeyFeatureDomain")
         private String keyFeatureDomain;
 
-        @NameInMap("KeyFeatureName")
+        @com.aliyun.core.annotation.NameInMap("KeyFeatureName")
         private String keyFeatureName;
 
-        @NameInMap("MapFeatureDomain")
+        @com.aliyun.core.annotation.NameInMap("MapFeatureDomain")
         private String mapFeatureDomain;
 
-        @NameInMap("MapFeatureName")
+        @com.aliyun.core.annotation.NameInMap("MapFeatureName")
         private String mapFeatureName;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private LookupFeatures(Builder builder) {
@@ -293,22 +292,22 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     }
     public static class RawFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("FeatureDomain")
+        @com.aliyun.core.annotation.NameInMap("FeatureDomain")
         private String featureDomain;
 
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("FeatureType")
+        @com.aliyun.core.annotation.NameInMap("FeatureType")
         private String featureType;
 
-        @NameInMap("InputFeatureName")
+        @com.aliyun.core.annotation.NameInMap("InputFeatureName")
         private String inputFeatureName;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private RawFeatures(Builder builder) {
@@ -434,22 +433,22 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     }
     public static class SubFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("FeatureDomain")
+        @com.aliyun.core.annotation.NameInMap("FeatureDomain")
         private String featureDomain;
 
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("FeatureType")
+        @com.aliyun.core.annotation.NameInMap("FeatureType")
         private String featureType;
 
-        @NameInMap("InputFeatureName")
+        @com.aliyun.core.annotation.NameInMap("InputFeatureName")
         private String inputFeatureName;
 
-        @NameInMap("ValueType")
+        @com.aliyun.core.annotation.NameInMap("ValueType")
         private String valueType;
 
         private SubFeatures(Builder builder) {
@@ -575,19 +574,19 @@ public class GetModelFeatureFGFeatureResponseBody extends TeaModel {
 
     }
     public static class SequenceFeatures extends TeaModel {
-        @NameInMap("AttributeDelim")
+        @com.aliyun.core.annotation.NameInMap("AttributeDelim")
         private String attributeDelim;
 
-        @NameInMap("FeatureName")
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
         private String featureName;
 
-        @NameInMap("SequenceDelim")
+        @com.aliyun.core.annotation.NameInMap("SequenceDelim")
         private String sequenceDelim;
 
-        @NameInMap("SequenceLength")
+        @com.aliyun.core.annotation.NameInMap("SequenceLength")
         private Long sequenceLength;
 
-        @NameInMap("SubFeatures")
+        @com.aliyun.core.annotation.NameInMap("SubFeatures")
         private java.util.List < SubFeatures> subFeatures;
 
         private SequenceFeatures(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FeatureViewConfigValue</p>
  */
 public class FeatureViewConfigValue extends TeaModel {
-    @NameInMap("Partitions")
+    @com.aliyun.core.annotation.NameInMap("Partitions")
     private java.util.Map < String, FeatureViewConfigValuePartitionsValue > partitions;
 
-    @NameInMap("EventTime")
+    @com.aliyun.core.annotation.NameInMap("EventTime")
     private String eventTime;
 
-    @NameInMap("Equal")
+    @com.aliyun.core.annotation.NameInMap("Equal")
     private Boolean equal;
 
     private FeatureViewConfigValue(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateModelFeatureFGFeatureRequest</p>
  */
 public class UpdateModelFeatureFGFeatureRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("ModelFeatureId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelFeatureId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("LookupFeatures")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LookupFeatures")
     private java.util.List < LookupFeatures> lookupFeatures;
 
-    @Body
-    @NameInMap("RawFeatures")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RawFeatures")
     private java.util.List < RawFeatures> rawFeatures;
 
-    @Body
-    @NameInMap("Reserves")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reserves")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > reserves;
 
-    @Body
-    @NameInMap("SequenceFeatures")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SequenceFeatures")
     private java.util.List < SequenceFeatures> sequenceFeatures;
 
     private UpdateModelFeatureFGFeatureRequest(Builder builder) {
@@ -211,32 +210,32 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
     } 
 
     public static class LookupFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String defaultValue;
 
-        @NameInMap("FeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureName;
 
-        @NameInMap("KeyFeatureDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("KeyFeatureDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String keyFeatureDomain;
 
-        @NameInMap("KeyFeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("KeyFeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String keyFeatureName;
 
-        @NameInMap("MapFeatureDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MapFeatureDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mapFeatureDomain;
 
-        @NameInMap("MapFeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("MapFeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String mapFeatureName;
 
-        @NameInMap("ValueType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ValueType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String valueType;
 
         private LookupFeatures(Builder builder) {
@@ -379,28 +378,28 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     }
     public static class RawFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String defaultValue;
 
-        @NameInMap("FeatureDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureDomain;
 
-        @NameInMap("FeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureName;
 
-        @NameInMap("FeatureType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureType;
 
-        @NameInMap("InputFeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InputFeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String inputFeatureName;
 
-        @NameInMap("ValueType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ValueType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String valueType;
 
         private RawFeatures(Builder builder) {
@@ -526,28 +525,28 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     }
     public static class SubFeatures extends TeaModel {
-        @NameInMap("DefaultValue")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String defaultValue;
 
-        @NameInMap("FeatureDomain")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureDomain")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureDomain;
 
-        @NameInMap("FeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureName;
 
-        @NameInMap("FeatureType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureType;
 
-        @NameInMap("InputFeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("InputFeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String inputFeatureName;
 
-        @NameInMap("ValueType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ValueType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String valueType;
 
         private SubFeatures(Builder builder) {
@@ -673,23 +672,23 @@ public class UpdateModelFeatureFGFeatureRequest extends Request {
 
     }
     public static class SequenceFeatures extends TeaModel {
-        @NameInMap("AttributeDelim")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("AttributeDelim")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String attributeDelim;
 
-        @NameInMap("FeatureName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FeatureName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String featureName;
 
-        @NameInMap("SequenceDelim")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SequenceDelim")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String sequenceDelim;
 
-        @NameInMap("SequenceLength")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SequenceLength")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long sequenceLength;
 
-        @NameInMap("SubFeatures")
+        @com.aliyun.core.annotation.NameInMap("SubFeatures")
         private java.util.List < SubFeatures> subFeatures;
 
         private SequenceFeatures(Builder builder) {

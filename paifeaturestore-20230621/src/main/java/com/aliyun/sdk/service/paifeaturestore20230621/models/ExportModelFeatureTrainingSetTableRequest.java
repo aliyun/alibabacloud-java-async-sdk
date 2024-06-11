@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExportModelFeatureTrainingSetTableRequest</p>
  */
 public class ExportModelFeatureTrainingSetTableRequest extends Request {
-    @Path
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Path
-    @NameInMap("ModelFeatureId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelFeatureId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelFeatureId;
 
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("FeatureViewConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FeatureViewConfig")
     private java.util.Map < String, FeatureViewConfigValue > featureViewConfig;
 
-    @Body
-    @NameInMap("LabelInputConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LabelInputConfig")
     private LabelInputConfig labelInputConfig;
 
-    @Body
-    @NameInMap("TrainingSetConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingSetConfig")
     private TrainingSetConfig trainingSetConfig;
 
     private ExportModelFeatureTrainingSetTableRequest(Builder builder) {
@@ -187,10 +186,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     } 
 
     public static class LabelInputConfig extends TeaModel {
-        @NameInMap("EventTime")
+        @com.aliyun.core.annotation.NameInMap("EventTime")
         private String eventTime;
 
-        @NameInMap("Partitions")
+        @com.aliyun.core.annotation.NameInMap("Partitions")
         private java.util.Map < String, java.util.Map<String, ?>> partitions;
 
         private LabelInputConfig(Builder builder) {
@@ -248,7 +247,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
 
     }
     public static class TrainingSetConfig extends TeaModel {
-        @NameInMap("Partitions")
+        @com.aliyun.core.annotation.NameInMap("Partitions")
         private java.util.Map < String, java.util.Map<String, ?>> partitions;
 
         private TrainingSetConfig(Builder builder) {

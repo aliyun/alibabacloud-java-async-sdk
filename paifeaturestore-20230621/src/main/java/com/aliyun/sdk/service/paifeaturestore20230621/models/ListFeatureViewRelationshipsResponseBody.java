@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.paifeaturestore20230621.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFeatureViewRelationshipsResponseBody</p>
  */
 public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
-    @NameInMap("Relationships")
+    @com.aliyun.core.annotation.NameInMap("Relationships")
     private java.util.List < Relationships> relationships;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFeatureViewRelationshipsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
     } 
 
     public static class Models extends TeaModel {
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private String modelId;
 
-        @NameInMap("ModelName")
+        @com.aliyun.core.annotation.NameInMap("ModelName")
         private String modelName;
 
         private Models(Builder builder) {
@@ -133,13 +132,13 @@ public class ListFeatureViewRelationshipsResponseBody extends TeaModel {
 
     }
     public static class Relationships extends TeaModel {
-        @NameInMap("FeatureViewName")
+        @com.aliyun.core.annotation.NameInMap("FeatureViewName")
         private String featureViewName;
 
-        @NameInMap("Models")
+        @com.aliyun.core.annotation.NameInMap("Models")
         private java.util.List < Models> models;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
         private Relationships(Builder builder) {
