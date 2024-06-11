@@ -145,6 +145,67 @@ public class CreateAScriptsRequest extends Request {
 
     } 
 
+    public static class ExtAttributes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttributeKey")
+        private String attributeKey;
+
+        @com.aliyun.core.annotation.NameInMap("AttributeValue")
+        private String attributeValue;
+
+        private ExtAttributes(Builder builder) {
+            this.attributeKey = builder.attributeKey;
+            this.attributeValue = builder.attributeValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtAttributes create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attributeKey
+         */
+        public String getAttributeKey() {
+            return this.attributeKey;
+        }
+
+        /**
+         * @return attributeValue
+         */
+        public String getAttributeValue() {
+            return this.attributeValue;
+        }
+
+        public static final class Builder {
+            private String attributeKey; 
+            private String attributeValue; 
+
+            /**
+             * AttributeKey.
+             */
+            public Builder attributeKey(String attributeKey) {
+                this.attributeKey = attributeKey;
+                return this;
+            }
+
+            /**
+             * AttributeValue.
+             */
+            public Builder attributeValue(String attributeValue) {
+                this.attributeValue = attributeValue;
+                return this;
+            }
+
+            public ExtAttributes build() {
+                return new ExtAttributes(this);
+            } 
+
+        } 
+
+    }
     public static class AScripts extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AScriptName")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -153,6 +214,12 @@ public class CreateAScriptsRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
+        @com.aliyun.core.annotation.NameInMap("ExtAttributeEnabled")
+        private Boolean extAttributeEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("ExtAttributes")
+        private java.util.List < ExtAttributes> extAttributes;
+
         @com.aliyun.core.annotation.NameInMap("ScriptContent")
         @com.aliyun.core.annotation.Validation(required = true)
         private String scriptContent;
@@ -160,6 +227,8 @@ public class CreateAScriptsRequest extends Request {
         private AScripts(Builder builder) {
             this.aScriptName = builder.aScriptName;
             this.enabled = builder.enabled;
+            this.extAttributeEnabled = builder.extAttributeEnabled;
+            this.extAttributes = builder.extAttributes;
             this.scriptContent = builder.scriptContent;
         }
 
@@ -186,6 +255,20 @@ public class CreateAScriptsRequest extends Request {
         }
 
         /**
+         * @return extAttributeEnabled
+         */
+        public Boolean getExtAttributeEnabled() {
+            return this.extAttributeEnabled;
+        }
+
+        /**
+         * @return extAttributes
+         */
+        public java.util.List < ExtAttributes> getExtAttributes() {
+            return this.extAttributes;
+        }
+
+        /**
          * @return scriptContent
          */
         public String getScriptContent() {
@@ -195,6 +278,8 @@ public class CreateAScriptsRequest extends Request {
         public static final class Builder {
             private String aScriptName; 
             private Boolean enabled; 
+            private Boolean extAttributeEnabled; 
+            private java.util.List < ExtAttributes> extAttributes; 
             private String scriptContent; 
 
             /**
@@ -217,6 +302,22 @@ public class CreateAScriptsRequest extends Request {
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
+                return this;
+            }
+
+            /**
+             * ExtAttributeEnabled.
+             */
+            public Builder extAttributeEnabled(Boolean extAttributeEnabled) {
+                this.extAttributeEnabled = extAttributeEnabled;
+                return this;
+            }
+
+            /**
+             * ExtAttributes.
+             */
+            public Builder extAttributes(java.util.List < ExtAttributes> extAttributes) {
+                this.extAttributes = extAttributes;
                 return this;
             }
 
