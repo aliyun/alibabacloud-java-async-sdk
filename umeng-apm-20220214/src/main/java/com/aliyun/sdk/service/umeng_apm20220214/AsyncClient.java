@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<DeleteSymRecordsResponse> deleteSymRecords(DeleteSymRecordsRequest request);
+
     CompletableFuture<GetH5PageTrendResponse> getH5PageTrend(GetH5PageTrendRequest request);
 
     CompletableFuture<GetLaunchTrendResponse> getLaunchTrend(GetLaunchTrendRequest request);
