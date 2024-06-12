@@ -196,6 +196,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthEnabled")
+        private Boolean authEnabled;
+
         @com.aliyun.core.annotation.NameInMap("AutopurgePurgeInterval")
         private String autopurgePurgeInterval;
 
@@ -222,6 +225,9 @@ public class QueryConfigResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ConsoleUIEnabled")
         private Boolean consoleUIEnabled;
+
+        @com.aliyun.core.annotation.NameInMap("Enable4lw")
+        private Boolean enable4lw;
 
         @com.aliyun.core.annotation.NameInMap("EurekaSupported")
         private Boolean eurekaSupported;
@@ -290,6 +296,7 @@ public class QueryConfigResponseBody extends TeaModel {
         private String userName;
 
         private Data(Builder builder) {
+            this.authEnabled = builder.authEnabled;
             this.autopurgePurgeInterval = builder.autopurgePurgeInterval;
             this.autopurgeSnapRetainCount = builder.autopurgeSnapRetainCount;
             this.clusterName = builder.clusterName;
@@ -299,6 +306,7 @@ public class QueryConfigResponseBody extends TeaModel {
             this.configSecretEnabled = builder.configSecretEnabled;
             this.configSecretSupported = builder.configSecretSupported;
             this.consoleUIEnabled = builder.consoleUIEnabled;
+            this.enable4lw = builder.enable4lw;
             this.eurekaSupported = builder.eurekaSupported;
             this.extendedTypesEnable = builder.extendedTypesEnable;
             this.initLimit = builder.initLimit;
@@ -329,6 +337,13 @@ public class QueryConfigResponseBody extends TeaModel {
 
         public static Data create() {
             return builder().build();
+        }
+
+        /**
+         * @return authEnabled
+         */
+        public Boolean getAuthEnabled() {
+            return this.authEnabled;
         }
 
         /**
@@ -392,6 +407,13 @@ public class QueryConfigResponseBody extends TeaModel {
          */
         public Boolean getConsoleUIEnabled() {
             return this.consoleUIEnabled;
+        }
+
+        /**
+         * @return enable4lw
+         */
+        public Boolean getEnable4lw() {
+            return this.enable4lw;
         }
 
         /**
@@ -549,6 +571,7 @@ public class QueryConfigResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean authEnabled; 
             private String autopurgePurgeInterval; 
             private String autopurgeSnapRetainCount; 
             private String clusterName; 
@@ -558,6 +581,7 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean configSecretEnabled; 
             private Boolean configSecretSupported; 
             private Boolean consoleUIEnabled; 
+            private Boolean enable4lw; 
             private Boolean eurekaSupported; 
             private Boolean extendedTypesEnable; 
             private String initLimit; 
@@ -580,6 +604,14 @@ public class QueryConfigResponseBody extends TeaModel {
             private Boolean TLSEnabled; 
             private String tickTime; 
             private String userName; 
+
+            /**
+             * AuthEnabled.
+             */
+            public Builder authEnabled(Boolean authEnabled) {
+                this.authEnabled = authEnabled;
+                return this;
+            }
 
             /**
              * A reserved parameter.
@@ -666,6 +698,14 @@ public class QueryConfigResponseBody extends TeaModel {
              */
             public Builder consoleUIEnabled(Boolean consoleUIEnabled) {
                 this.consoleUIEnabled = consoleUIEnabled;
+                return this;
+            }
+
+            /**
+             * Enable4lw.
+             */
+            public Builder enable4lw(Boolean enable4lw) {
+                this.enable4lw = enable4lw;
                 return this;
             }
 

@@ -16,6 +16,10 @@ public class UpdateConfigRequest extends Request {
     private String acceptLanguage;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthEnabled")
+    private Boolean authEnabled;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutopurgePurgeInterval")
     private String autopurgePurgeInterval;
 
@@ -42,6 +46,10 @@ public class UpdateConfigRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ConsoleUIEnabled")
     private Boolean consoleUIEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Enable4lw")
+    private Boolean enable4lw;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EurekaSupported")
@@ -118,6 +126,7 @@ public class UpdateConfigRequest extends Request {
     private UpdateConfigRequest(Builder builder) {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
+        this.authEnabled = builder.authEnabled;
         this.autopurgePurgeInterval = builder.autopurgePurgeInterval;
         this.autopurgeSnapRetainCount = builder.autopurgeSnapRetainCount;
         this.clusterId = builder.clusterId;
@@ -125,6 +134,7 @@ public class UpdateConfigRequest extends Request {
         this.configSecretEnabled = builder.configSecretEnabled;
         this.configType = builder.configType;
         this.consoleUIEnabled = builder.consoleUIEnabled;
+        this.enable4lw = builder.enable4lw;
         this.eurekaSupported = builder.eurekaSupported;
         this.extendedTypesEnable = builder.extendedTypesEnable;
         this.initLimit = builder.initLimit;
@@ -163,6 +173,13 @@ public class UpdateConfigRequest extends Request {
      */
     public String getAcceptLanguage() {
         return this.acceptLanguage;
+    }
+
+    /**
+     * @return authEnabled
+     */
+    public Boolean getAuthEnabled() {
+        return this.authEnabled;
     }
 
     /**
@@ -212,6 +229,13 @@ public class UpdateConfigRequest extends Request {
      */
     public Boolean getConsoleUIEnabled() {
         return this.consoleUIEnabled;
+    }
+
+    /**
+     * @return enable4lw
+     */
+    public Boolean getEnable4lw() {
+        return this.enable4lw;
     }
 
     /**
@@ -342,6 +366,7 @@ public class UpdateConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateConfigRequest, Builder> {
         private String acceptLanguage; 
+        private Boolean authEnabled; 
         private String autopurgePurgeInterval; 
         private String autopurgeSnapRetainCount; 
         private String clusterId; 
@@ -349,6 +374,7 @@ public class UpdateConfigRequest extends Request {
         private Boolean configSecretEnabled; 
         private String configType; 
         private Boolean consoleUIEnabled; 
+        private Boolean enable4lw; 
         private Boolean eurekaSupported; 
         private String extendedTypesEnable; 
         private String initLimit; 
@@ -375,6 +401,7 @@ public class UpdateConfigRequest extends Request {
         private Builder(UpdateConfigRequest request) {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
+            this.authEnabled = request.authEnabled;
             this.autopurgePurgeInterval = request.autopurgePurgeInterval;
             this.autopurgeSnapRetainCount = request.autopurgeSnapRetainCount;
             this.clusterId = request.clusterId;
@@ -382,6 +409,7 @@ public class UpdateConfigRequest extends Request {
             this.configSecretEnabled = request.configSecretEnabled;
             this.configType = request.configType;
             this.consoleUIEnabled = request.consoleUIEnabled;
+            this.enable4lw = request.enable4lw;
             this.eurekaSupported = request.eurekaSupported;
             this.extendedTypesEnable = request.extendedTypesEnable;
             this.initLimit = request.initLimit;
@@ -412,6 +440,15 @@ public class UpdateConfigRequest extends Request {
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
             this.acceptLanguage = acceptLanguage;
+            return this;
+        }
+
+        /**
+         * AuthEnabled.
+         */
+        public Builder authEnabled(Boolean authEnabled) {
+            this.putQueryParameter("AuthEnabled", authEnabled);
+            this.authEnabled = authEnabled;
             return this;
         }
 
@@ -487,6 +524,15 @@ public class UpdateConfigRequest extends Request {
         public Builder consoleUIEnabled(Boolean consoleUIEnabled) {
             this.putQueryParameter("ConsoleUIEnabled", consoleUIEnabled);
             this.consoleUIEnabled = consoleUIEnabled;
+            return this;
+        }
+
+        /**
+         * Enable4lw.
+         */
+        public Builder enable4lw(Boolean enable4lw) {
+            this.putQueryParameter("Enable4lw", enable4lw);
+            this.enable4lw = enable4lw;
             return this;
         }
 
