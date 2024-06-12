@@ -1116,6 +1116,9 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
+
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.applyIntentionInfoDo = builder.applyIntentionInfoDo;
@@ -1131,6 +1134,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartCorpId = builder.thirdpartCorpId;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -1239,6 +1243,13 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long applyId; 
             private ApplyIntentionInfoDo applyIntentionInfoDo; 
@@ -1254,6 +1265,7 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
             private String thirdpartApplyId; 
             private String thirdpartCorpId; 
             private String userId; 
+            private String userName; 
 
             /**
              * apply_id.
@@ -1364,6 +1376,14 @@ public class FlightExceedApplyQueryResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

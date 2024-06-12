@@ -13,13 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class CommonApplyQueryRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("apply_id")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long applyId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("biz_category")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer bizCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("business_instance_id")
+    private String businessInstanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("user_id")
@@ -33,6 +36,7 @@ public class CommonApplyQueryRequest extends Request {
         super(builder);
         this.applyId = builder.applyId;
         this.bizCategory = builder.bizCategory;
+        this.businessInstanceId = builder.businessInstanceId;
         this.userId = builder.userId;
         this.xAcsBtripSoCorpToken = builder.xAcsBtripSoCorpToken;
     }
@@ -65,6 +69,13 @@ public class CommonApplyQueryRequest extends Request {
     }
 
     /**
+     * @return businessInstanceId
+     */
+    public String getBusinessInstanceId() {
+        return this.businessInstanceId;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -81,6 +92,7 @@ public class CommonApplyQueryRequest extends Request {
     public static final class Builder extends Request.Builder<CommonApplyQueryRequest, Builder> {
         private Long applyId; 
         private Integer bizCategory; 
+        private String businessInstanceId; 
         private String userId; 
         private String xAcsBtripSoCorpToken; 
 
@@ -92,6 +104,7 @@ public class CommonApplyQueryRequest extends Request {
             super(request);
             this.applyId = request.applyId;
             this.bizCategory = request.bizCategory;
+            this.businessInstanceId = request.businessInstanceId;
             this.userId = request.userId;
             this.xAcsBtripSoCorpToken = request.xAcsBtripSoCorpToken;
         } 
@@ -111,6 +124,15 @@ public class CommonApplyQueryRequest extends Request {
         public Builder bizCategory(Integer bizCategory) {
             this.putQueryParameter("biz_category", bizCategory);
             this.bizCategory = bizCategory;
+            return this;
+        }
+
+        /**
+         * business_instance_id.
+         */
+        public Builder businessInstanceId(String businessInstanceId) {
+            this.putQueryParameter("business_instance_id", businessInstanceId);
+            this.businessInstanceId = businessInstanceId;
             return this;
         }
 

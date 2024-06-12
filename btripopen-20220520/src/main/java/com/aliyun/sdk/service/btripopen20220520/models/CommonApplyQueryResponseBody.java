@@ -184,6 +184,9 @@ public class CommonApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("user_id")
         private String userId;
 
+        @com.aliyun.core.annotation.NameInMap("user_name")
+        private String userName;
+
         private Module(Builder builder) {
             this.applyId = builder.applyId;
             this.bizCategory = builder.bizCategory;
@@ -196,6 +199,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             this.thirdpartId = builder.thirdpartId;
             this.tripCause = builder.tripCause;
             this.userId = builder.userId;
+            this.userName = builder.userName;
         }
 
         public static Builder builder() {
@@ -283,6 +287,13 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             return this.userId;
         }
 
+        /**
+         * @return userName
+         */
+        public String getUserName() {
+            return this.userName;
+        }
+
         public static final class Builder {
             private Long applyId; 
             private Integer bizCategory; 
@@ -295,6 +306,7 @@ public class CommonApplyQueryResponseBody extends TeaModel {
             private String thirdpartId; 
             private String tripCause; 
             private String userId; 
+            private String userName; 
 
             /**
              * apply_id.
@@ -381,6 +393,14 @@ public class CommonApplyQueryResponseBody extends TeaModel {
              */
             public Builder userId(String userId) {
                 this.userId = userId;
+                return this;
+            }
+
+            /**
+             * user_name.
+             */
+            public Builder userName(String userName) {
+                this.userName = userName;
                 return this;
             }
 

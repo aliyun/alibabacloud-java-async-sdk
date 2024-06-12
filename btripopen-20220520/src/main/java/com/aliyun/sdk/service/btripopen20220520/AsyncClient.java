@@ -45,6 +45,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyQueryResponse> applyQuery(ApplyQueryRequest request);
 
+    CompletableFuture<ApplyTripTaskExecuteResponse> applyTripTaskExecute(ApplyTripTaskExecuteRequest request);
+
     CompletableFuture<BaseCityInfoSearchResponse> baseCityInfoSearch(BaseCityInfoSearchRequest request);
 
     CompletableFuture<BtripBillInfoAdjustResponse> btripBillInfoAdjust(BtripBillInfoAdjustRequest request);
@@ -350,6 +352,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TravelStandardListQueryResponse> travelStandardListQuery(TravelStandardListQueryRequest request);
 
     CompletableFuture<TravelStandardQueryResponse> travelStandardQuery(TravelStandardQueryRequest request);
+
+    CompletableFuture<TripBusinessInstanceQueryResponse> tripBusinessInstanceQuery(TripBusinessInstanceQueryRequest request);
+
+    CompletableFuture<TripCCInfoQueryResponse> tripCCInfoQuery(TripCCInfoQueryRequest request);
+
+    CompletableFuture<TripTaskQueryResponse> tripTaskQuery(TripTaskQueryRequest request);
 
     CompletableFuture<UpdateCustomRoleResponse> updateCustomRole(UpdateCustomRoleRequest request);
 
