@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PhoneNumberStatusForVirtualResponseBody</p>
  */
 public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PhoneNumberStatusForVirtualResponseBody(Builder builder) {
@@ -117,7 +116,7 @@ public class PhoneNumberStatusForVirtualResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("IsPrivacyNumber")
+        @com.aliyun.core.annotation.NameInMap("IsPrivacyNumber")
         private Boolean isPrivacyNumber;
 
         private Data(Builder builder) {

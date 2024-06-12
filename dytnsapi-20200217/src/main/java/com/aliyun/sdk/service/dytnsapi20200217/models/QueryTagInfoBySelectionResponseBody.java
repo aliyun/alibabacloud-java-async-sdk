@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTagInfoBySelectionResponseBody</p>
  */
 public class QueryTagInfoBySelectionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTagInfoBySelectionResponseBody(Builder builder) {
@@ -136,10 +135,10 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
     } 
 
     public static class ValueDict extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Desc")
+        @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
         private ValueDict(Builder builder) {
@@ -197,22 +196,22 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     }
     public static class ParamList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Hint")
+        @com.aliyun.core.annotation.NameInMap("Hint")
         private String hint;
 
-        @NameInMap("Must")
+        @com.aliyun.core.annotation.NameInMap("Must")
         private Boolean must;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("ValueDict")
+        @com.aliyun.core.annotation.NameInMap("ValueDict")
         private java.util.List < ValueDict> valueDict;
 
         private ParamList(Builder builder) {
@@ -338,46 +337,46 @@ public class QueryTagInfoBySelectionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AuthCodeList")
+        @com.aliyun.core.annotation.NameInMap("AuthCodeList")
         private java.util.List < String > authCodeList;
 
-        @NameInMap("ComplexityType")
+        @com.aliyun.core.annotation.NameInMap("ComplexityType")
         private String complexityType;
 
-        @NameInMap("DemoAddress")
+        @com.aliyun.core.annotation.NameInMap("DemoAddress")
         private String demoAddress;
 
-        @NameInMap("DocAddress")
+        @com.aliyun.core.annotation.NameInMap("DocAddress")
         private String docAddress;
 
-        @NameInMap("EnumDefinitionAddress")
+        @com.aliyun.core.annotation.NameInMap("EnumDefinitionAddress")
         private String enumDefinitionAddress;
 
-        @NameInMap("FlowName")
+        @com.aliyun.core.annotation.NameInMap("FlowName")
         private String flowName;
 
-        @NameInMap("IndustryId")
+        @com.aliyun.core.annotation.NameInMap("IndustryId")
         private Long industryId;
 
-        @NameInMap("IndustryName")
+        @com.aliyun.core.annotation.NameInMap("IndustryName")
         private String industryName;
 
-        @NameInMap("ParamList")
+        @com.aliyun.core.annotation.NameInMap("ParamList")
         private java.util.List < ParamList> paramList;
 
-        @NameInMap("RichTextDescription")
+        @com.aliyun.core.annotation.NameInMap("RichTextDescription")
         private String richTextDescription;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private Long sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private Long tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
         private Data(Builder builder) {

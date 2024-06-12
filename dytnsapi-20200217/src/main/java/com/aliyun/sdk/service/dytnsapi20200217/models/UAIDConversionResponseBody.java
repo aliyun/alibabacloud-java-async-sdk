@@ -6,31 +6,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UAIDVerificationResponseBody} extends {@link TeaModel}
+ * {@link UAIDConversionResponseBody} extends {@link TeaModel}
  *
- * <p>UAIDVerificationResponseBody</p>
+ * <p>UAIDConversionResponseBody</p>
  */
-public class UAIDVerificationResponseBody extends TeaModel {
+public class UAIDConversionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
-
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private Model model;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private UAIDVerificationResponseBody(Builder builder) {
+    private UAIDConversionResponseBody(Builder builder) {
         this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
-        this.data = builder.data;
         this.message = builder.message;
+        this.model = builder.model;
         this.requestId = builder.requestId;
     }
 
@@ -38,7 +38,7 @@ public class UAIDVerificationResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UAIDVerificationResponseBody create() {
+    public static UAIDConversionResponseBody create() {
         return builder().build();
     }
 
@@ -57,17 +57,17 @@ public class UAIDVerificationResponseBody extends TeaModel {
     }
 
     /**
-     * @return data
-     */
-    public Data getData() {
-        return this.data;
-    }
-
-    /**
      * @return message
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return model
+     */
+    public Model getModel() {
+        return this.model;
     }
 
     /**
@@ -80,8 +80,8 @@ public class UAIDVerificationResponseBody extends TeaModel {
     public static final class Builder {
         private String accessDeniedDetail; 
         private String code; 
-        private Data data; 
         private String message; 
+        private Model model; 
         private String requestId; 
 
         /**
@@ -101,18 +101,18 @@ public class UAIDVerificationResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
-         */
-        public Builder data(Data data) {
-            this.data = data;
-            return this;
-        }
-
-        /**
          * Message.
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * Model.
+         */
+        public Builder model(Model model) {
+            this.model = model;
             return this;
         }
 
@@ -124,48 +124,48 @@ public class UAIDVerificationResponseBody extends TeaModel {
             return this;
         }
 
-        public UAIDVerificationResponseBody build() {
-            return new UAIDVerificationResponseBody(this);
+        public UAIDConversionResponseBody build() {
+            return new UAIDConversionResponseBody(this);
         } 
 
     } 
 
-    public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Uaid")
-        private String uaid;
+    public static class Model extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PhoneList")
+        private String phoneList;
 
-        private Data(Builder builder) {
-            this.uaid = builder.uaid;
+        private Model(Builder builder) {
+            this.phoneList = builder.phoneList;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Data create() {
+        public static Model create() {
             return builder().build();
         }
 
         /**
-         * @return uaid
+         * @return phoneList
          */
-        public String getUaid() {
-            return this.uaid;
+        public String getPhoneList() {
+            return this.phoneList;
         }
 
         public static final class Builder {
-            private String uaid; 
+            private String phoneList; 
 
             /**
-             * Uaid.
+             * PhoneList.
              */
-            public Builder uaid(String uaid) {
-                this.uaid = uaid;
+            public Builder phoneList(String phoneList) {
+                this.phoneList = phoneList;
                 return this;
             }
 
-            public Data build() {
-                return new Data(this);
+            public Model build() {
+                return new Model(this);
             } 
 
         } 

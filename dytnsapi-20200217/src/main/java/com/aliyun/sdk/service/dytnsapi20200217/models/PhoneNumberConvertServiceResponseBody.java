@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PhoneNumberConvertServiceResponseBody</p>
  */
 public class PhoneNumberConvertServiceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PhoneNumberConvertServiceResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class PhoneNumberConvertServiceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ConverResult")
+        @com.aliyun.core.annotation.NameInMap("ConverResult")
         private Boolean converResult;
 
-        @NameInMap("Number")
+        @com.aliyun.core.annotation.NameInMap("Number")
         private String number;
 
-        @NameInMap("NumberMd5")
+        @com.aliyun.core.annotation.NameInMap("NumberMd5")
         private String numberMd5;
 
-        @NameInMap("NumberSha256")
+        @com.aliyun.core.annotation.NameInMap("NumberSha256")
         private String numberSha256;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTagApplyRuleResponseBody</p>
  */
 public class QueryTagApplyRuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTagApplyRuleResponseBody(Builder builder) {
@@ -136,22 +135,22 @@ public class QueryTagApplyRuleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ApplyMaterialDesc")
+        @com.aliyun.core.annotation.NameInMap("ApplyMaterialDesc")
         private String applyMaterialDesc;
 
-        @NameInMap("AutoAudit")
+        @com.aliyun.core.annotation.NameInMap("AutoAudit")
         private Long autoAudit;
 
-        @NameInMap("ChargingStandardLink")
+        @com.aliyun.core.annotation.NameInMap("ChargingStandardLink")
         private String chargingStandardLink;
 
-        @NameInMap("EncryptedQuery")
+        @com.aliyun.core.annotation.NameInMap("EncryptedQuery")
         private Long encryptedQuery;
 
-        @NameInMap("NeedApplyMaterial")
+        @com.aliyun.core.annotation.NameInMap("NeedApplyMaterial")
         private Long needApplyMaterial;
 
-        @NameInMap("SlaLink")
+        @com.aliyun.core.annotation.NameInMap("SlaLink")
         private String slaLink;
 
         private Data(Builder builder) {

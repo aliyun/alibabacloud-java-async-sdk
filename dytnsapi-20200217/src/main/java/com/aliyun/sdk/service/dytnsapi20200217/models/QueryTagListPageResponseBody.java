@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTagListPageResponseBody</p>
  */
 public class QueryTagListPageResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryTagListPageResponseBody(Builder builder) {
@@ -136,40 +135,40 @@ public class QueryTagListPageResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("DocAddress")
+        @com.aliyun.core.annotation.NameInMap("DocAddress")
         private String docAddress;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IndustryId")
+        @com.aliyun.core.annotation.NameInMap("IndustryId")
         private Long industryId;
 
-        @NameInMap("IndustryName")
+        @com.aliyun.core.annotation.NameInMap("IndustryName")
         private String industryName;
 
-        @NameInMap("Introduction")
+        @com.aliyun.core.annotation.NameInMap("Introduction")
         private String introduction;
 
-        @NameInMap("IsOpen")
+        @com.aliyun.core.annotation.NameInMap("IsOpen")
         private Long isOpen;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SaleStatusStr")
+        @com.aliyun.core.annotation.NameInMap("SaleStatusStr")
         private String saleStatusStr;
 
-        @NameInMap("SceneId")
+        @com.aliyun.core.annotation.NameInMap("SceneId")
         private Long sceneId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
         private Records(Builder builder) {
@@ -399,19 +398,19 @@ public class QueryTagListPageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNo")
+        @com.aliyun.core.annotation.NameInMap("PageNo")
         private Long pageNo;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Records")
+        @com.aliyun.core.annotation.NameInMap("Records")
         private java.util.List < Records> records;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
-        @NameInMap("TotalPage")
+        @com.aliyun.core.annotation.NameInMap("TotalPage")
         private Long totalPage;
 
         private Data(Builder builder) {

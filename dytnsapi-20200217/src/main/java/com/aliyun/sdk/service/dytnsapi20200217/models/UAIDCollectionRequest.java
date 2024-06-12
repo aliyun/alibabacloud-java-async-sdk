@@ -6,36 +6,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePhoneNumberAnalysisRequest} extends {@link RequestModel}
+ * {@link UAIDCollectionRequest} extends {@link RequestModel}
  *
- * <p>DescribePhoneNumberAnalysisRequest</p>
+ * <p>UAIDCollectionRequest</p>
  */
-public class DescribePhoneNumberAnalysisRequest extends Request {
+public class UAIDCollectionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String authCode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InputNumber")
+    @com.aliyun.core.annotation.NameInMap("Carrier")
+    private String carrier;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    private String ip;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String inputNumber;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Mask")
-    private String mask;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NumberType")
-    private Long numberType;
+    private String outId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Rate")
-    private Long rate;
+    @com.aliyun.core.annotation.NameInMap("Province")
+    private String province;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -45,23 +45,34 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribePhoneNumberAnalysisRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Token")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String token;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserGrantId")
+    private String userGrantId;
+
+    private UAIDCollectionRequest(Builder builder) {
         super(builder);
         this.authCode = builder.authCode;
-        this.inputNumber = builder.inputNumber;
-        this.mask = builder.mask;
-        this.numberType = builder.numberType;
+        this.carrier = builder.carrier;
+        this.ip = builder.ip;
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
-        this.rate = builder.rate;
+        this.province = builder.province;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.token = builder.token;
+        this.userGrantId = builder.userGrantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribePhoneNumberAnalysisRequest create() {
+    public static UAIDCollectionRequest create() {
         return builder().build();
     }
 
@@ -78,24 +89,24 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
     }
 
     /**
-     * @return inputNumber
+     * @return carrier
      */
-    public String getInputNumber() {
-        return this.inputNumber;
+    public String getCarrier() {
+        return this.carrier;
     }
 
     /**
-     * @return mask
+     * @return ip
      */
-    public String getMask() {
-        return this.mask;
+    public String getIp() {
+        return this.ip;
     }
 
     /**
-     * @return numberType
+     * @return outId
      */
-    public Long getNumberType() {
-        return this.numberType;
+    public String getOutId() {
+        return this.outId;
     }
 
     /**
@@ -106,10 +117,10 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
     }
 
     /**
-     * @return rate
+     * @return province
      */
-    public Long getRate() {
-        return this.rate;
+    public String getProvince() {
+        return this.province;
     }
 
     /**
@@ -126,30 +137,48 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribePhoneNumberAnalysisRequest, Builder> {
+    /**
+     * @return token
+     */
+    public String getToken() {
+        return this.token;
+    }
+
+    /**
+     * @return userGrantId
+     */
+    public String getUserGrantId() {
+        return this.userGrantId;
+    }
+
+    public static final class Builder extends Request.Builder<UAIDCollectionRequest, Builder> {
         private String authCode; 
-        private String inputNumber; 
-        private String mask; 
-        private Long numberType; 
+        private String carrier; 
+        private String ip; 
+        private String outId; 
         private Long ownerId; 
-        private Long rate; 
+        private String province; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String token; 
+        private String userGrantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePhoneNumberAnalysisRequest request) {
+        private Builder(UAIDCollectionRequest request) {
             super(request);
             this.authCode = request.authCode;
-            this.inputNumber = request.inputNumber;
-            this.mask = request.mask;
-            this.numberType = request.numberType;
+            this.carrier = request.carrier;
+            this.ip = request.ip;
+            this.outId = request.outId;
             this.ownerId = request.ownerId;
-            this.rate = request.rate;
+            this.province = request.province;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.token = request.token;
+            this.userGrantId = request.userGrantId;
         } 
 
         /**
@@ -162,29 +191,29 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         }
 
         /**
-         * InputNumber.
+         * Carrier.
          */
-        public Builder inputNumber(String inputNumber) {
-            this.putQueryParameter("InputNumber", inputNumber);
-            this.inputNumber = inputNumber;
+        public Builder carrier(String carrier) {
+            this.putQueryParameter("Carrier", carrier);
+            this.carrier = carrier;
             return this;
         }
 
         /**
-         * Mask.
+         * Ip.
          */
-        public Builder mask(String mask) {
-            this.putQueryParameter("Mask", mask);
-            this.mask = mask;
+        public Builder ip(String ip) {
+            this.putQueryParameter("Ip", ip);
+            this.ip = ip;
             return this;
         }
 
         /**
-         * NumberType.
+         * OutId.
          */
-        public Builder numberType(Long numberType) {
-            this.putQueryParameter("NumberType", numberType);
-            this.numberType = numberType;
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
             return this;
         }
 
@@ -198,11 +227,11 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         }
 
         /**
-         * Rate.
+         * Province.
          */
-        public Builder rate(Long rate) {
-            this.putQueryParameter("Rate", rate);
-            this.rate = rate;
+        public Builder province(String province) {
+            this.putQueryParameter("Province", province);
+            this.province = province;
             return this;
         }
 
@@ -224,9 +253,27 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
             return this;
         }
 
+        /**
+         * Token.
+         */
+        public Builder token(String token) {
+            this.putQueryParameter("Token", token);
+            this.token = token;
+            return this;
+        }
+
+        /**
+         * UserGrantId.
+         */
+        public Builder userGrantId(String userGrantId) {
+            this.putQueryParameter("UserGrantId", userGrantId);
+            this.userGrantId = userGrantId;
+            return this;
+        }
+
         @Override
-        public DescribePhoneNumberAnalysisRequest build() {
-            return new DescribePhoneNumberAnalysisRequest(this);
+        public UAIDCollectionRequest build() {
+            return new UAIDCollectionRequest(this);
         } 
 
     } 

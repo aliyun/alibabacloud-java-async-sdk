@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePhoneNumberOnlineTimeResponse} extends {@link TeaModel}
+ * {@link UAIDCollectionResponse} extends {@link TeaModel}
  *
- * <p>DescribePhoneNumberOnlineTimeResponse</p>
+ * <p>UAIDCollectionResponse</p>
  */
-public class DescribePhoneNumberOnlineTimeResponse extends Response {
+public class UAIDCollectionResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribePhoneNumberOnlineTimeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribePhoneNumberOnlineTimeResponseBody body;
+    private UAIDCollectionResponseBody body;
 
-    private DescribePhoneNumberOnlineTimeResponse(BuilderImpl builder) {
+    private UAIDCollectionResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribePhoneNumberOnlineTimeResponse create() {
+    public static UAIDCollectionResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribePhoneNumberOnlineTimeResponse extends Response {
     /**
      * @return body
      */
-    public DescribePhoneNumberOnlineTimeResponseBody getBody() {
+    public UAIDCollectionResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribePhoneNumberOnlineTimeResponse, Builder> {
+    public interface Builder extends Response.Builder<UAIDCollectionResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribePhoneNumberOnlineTimeResponseBody body);
+        Builder body(UAIDCollectionResponseBody body);
 
         @Override
-        DescribePhoneNumberOnlineTimeResponse build();
+        UAIDCollectionResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribePhoneNumberOnlineTimeResponse, Builder>
+            extends Response.BuilderImpl<UAIDCollectionResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribePhoneNumberOnlineTimeResponseBody body; 
+        private UAIDCollectionResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribePhoneNumberOnlineTimeResponse response) {
+        private BuilderImpl(UAIDCollectionResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribePhoneNumberOnlineTimeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribePhoneNumberOnlineTimeResponseBody body) {
+        public Builder body(UAIDCollectionResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribePhoneNumberOnlineTimeResponse build() {
-            return new DescribePhoneNumberOnlineTimeResponse(this);
+        public UAIDCollectionResponse build() {
+            return new UAIDCollectionResponse(this);
         } 
 
     } 

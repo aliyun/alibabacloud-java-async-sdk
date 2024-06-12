@@ -6,16 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link PhoneNumberEncryptResponseBody} extends {@link TeaModel}
+ * {@link GetUAIDConversionSignResponseBody} extends {@link TeaModel}
  *
- * <p>PhoneNumberEncryptResponseBody</p>
+ * <p>GetUAIDConversionSignResponseBody</p>
  */
-public class PhoneNumberEncryptResponseBody extends TeaModel {
+public class GetUAIDConversionSignResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private java.util.List < Data> data;
+    private Data data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -23,7 +26,8 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private PhoneNumberEncryptResponseBody(Builder builder) {
+    private GetUAIDConversionSignResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -34,8 +38,15 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static PhoneNumberEncryptResponseBody create() {
+    public static GetUAIDConversionSignResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -48,7 +59,7 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public java.util.List < Data> getData() {
+    public Data getData() {
         return this.data;
     }
 
@@ -67,17 +78,22 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
-        private java.util.List < Data> data; 
+        private Data data; 
         private String message; 
         private String requestId; 
 
         /**
-         * The response code.
-         * <p>
-         * 
-         * *   The value OK indicates that the request was successful.
-         * *   Other values indicate that the request failed. For more information, see [Error codes](~~109196~~).
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * Code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -85,15 +101,15 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the returned entries.
+         * Data.
          */
-        public Builder data(java.util.List < Data> data) {
+        public Builder data(Data data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The returned message.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -101,33 +117,33 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public PhoneNumberEncryptResponseBody build() {
-            return new PhoneNumberEncryptResponseBody(this);
+        public GetUAIDConversionSignResponseBody build() {
+            return new GetUAIDConversionSignResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("EncryptedNumber")
-        private String encryptedNumber;
+        @com.aliyun.core.annotation.NameInMap("Carrier")
+        private String carrier;
 
-        @com.aliyun.core.annotation.NameInMap("ExpireTime")
-        private String expireTime;
+        @com.aliyun.core.annotation.NameInMap("OutId")
+        private String outId;
 
-        @com.aliyun.core.annotation.NameInMap("OriginalNumber")
-        private String originalNumber;
+        @com.aliyun.core.annotation.NameInMap("Sign")
+        private String sign;
 
         private Data(Builder builder) {
-            this.encryptedNumber = builder.encryptedNumber;
-            this.expireTime = builder.expireTime;
-            this.originalNumber = builder.originalNumber;
+            this.carrier = builder.carrier;
+            this.outId = builder.outId;
+            this.sign = builder.sign;
         }
 
         public static Builder builder() {
@@ -139,52 +155,52 @@ public class PhoneNumberEncryptResponseBody extends TeaModel {
         }
 
         /**
-         * @return encryptedNumber
+         * @return carrier
          */
-        public String getEncryptedNumber() {
-            return this.encryptedNumber;
+        public String getCarrier() {
+            return this.carrier;
         }
 
         /**
-         * @return expireTime
+         * @return outId
          */
-        public String getExpireTime() {
-            return this.expireTime;
+        public String getOutId() {
+            return this.outId;
         }
 
         /**
-         * @return originalNumber
+         * @return sign
          */
-        public String getOriginalNumber() {
-            return this.originalNumber;
+        public String getSign() {
+            return this.sign;
         }
 
         public static final class Builder {
-            private String encryptedNumber; 
-            private String expireTime; 
-            private String originalNumber; 
+            private String carrier; 
+            private String outId; 
+            private String sign; 
 
             /**
-             * The encrypted phone number.
+             * Carrier.
              */
-            public Builder encryptedNumber(String encryptedNumber) {
-                this.encryptedNumber = encryptedNumber;
+            public Builder carrier(String carrier) {
+                this.carrier = carrier;
                 return this;
             }
 
             /**
-             * The time when the phone number expires.
+             * OutId.
              */
-            public Builder expireTime(String expireTime) {
-                this.expireTime = expireTime;
+            public Builder outId(String outId) {
+                this.outId = outId;
                 return this;
             }
 
             /**
-             * The original phone number.
+             * Sign.
              */
-            public Builder originalNumber(String originalNumber) {
-                this.originalNumber = originalNumber;
+            public Builder sign(String sign) {
+                this.sign = sign;
                 return this;
             }
 

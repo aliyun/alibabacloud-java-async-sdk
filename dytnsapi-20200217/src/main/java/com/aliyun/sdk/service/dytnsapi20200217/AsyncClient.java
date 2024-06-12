@@ -112,6 +112,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetUAIDApplyTokenSignResponse> getUAIDApplyTokenSign(GetUAIDApplyTokenSignRequest request);
 
+    CompletableFuture<GetUAIDConversionSignResponse> getUAIDConversionSign(GetUAIDConversionSignRequest request);
+
     /**
       * Before you call this operation, perform the following operations: Log on to the Cell Phone Number Service console. On the [Labels](https://dytns.console.aliyun.com/analysis/square) page, find the label that you want to use, click **Activate Now**, enter the required information, and then submit your application. After your application is approved, you can use the label.
       * ### [](#qps)QPS limits
@@ -224,6 +226,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<TwoElementsVerificationResponse> twoElementsVerification(TwoElementsVerificationRequest request);
+
+    CompletableFuture<UAIDCollectionResponse> uAIDCollection(UAIDCollectionRequest request);
+
+    CompletableFuture<UAIDConversionResponse> uAIDConversion(UAIDConversionRequest request);
 
     CompletableFuture<UAIDVerificationResponse> uAIDVerification(UAIDVerificationRequest request);
 

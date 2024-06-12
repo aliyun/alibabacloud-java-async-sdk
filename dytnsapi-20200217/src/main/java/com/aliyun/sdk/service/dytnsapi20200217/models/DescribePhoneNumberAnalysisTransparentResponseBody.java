@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePhoneNumberAnalysisTransparentResponseBody</p>
  */
 public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePhoneNumberAnalysisTransparentResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribePhoneNumberAnalysisTransparentResponseBody extends TeaModel
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Device_risk")
+        @com.aliyun.core.annotation.NameInMap("Device_risk")
         private String deviceRisk;
 
-        @NameInMap("Ip_risk")
+        @com.aliyun.core.annotation.NameInMap("Ip_risk")
         private String ipRisk;
 
-        @NameInMap("Score1")
+        @com.aliyun.core.annotation.NameInMap("Score1")
         private String score1;
 
-        @NameInMap("Score2")
+        @com.aliyun.core.annotation.NameInMap("Score2")
         private String score2;
 
-        @NameInMap("Score3")
+        @com.aliyun.core.annotation.NameInMap("Score3")
         private String score3;
 
         private Data(Builder builder) {

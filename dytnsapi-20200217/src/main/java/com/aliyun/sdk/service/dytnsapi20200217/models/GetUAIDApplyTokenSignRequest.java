@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUAIDApplyTokenSignRequest</p>
  */
 public class GetUAIDApplyTokenSignRequest extends Request {
-    @Query
-    @NameInMap("AuthCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String authCode;
 
-    @Query
-    @NameInMap("Carrier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Carrier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String carrier;
 
-    @Query
-    @NameInMap("ClientType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clientType;
 
-    @Query
-    @NameInMap("Format")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Format")
     private String format;
 
-    @Query
-    @NameInMap("OutId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ParamKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamKey")
     private String paramKey;
 
-    @Query
-    @NameInMap("ParamStr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamStr")
     private String paramStr;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Time")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Time")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String time;
 
     private GetUAIDApplyTokenSignRequest(Builder builder) {

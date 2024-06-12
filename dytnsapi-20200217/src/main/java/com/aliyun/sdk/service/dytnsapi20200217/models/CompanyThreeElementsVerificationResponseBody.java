@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CompanyThreeElementsVerificationResponseBody</p>
  */
 public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CompanyThreeElementsVerificationResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
     } 
 
     public static class DetailInfo extends TeaModel {
-        @NameInMap("EnterpriseStatus")
+        @com.aliyun.core.annotation.NameInMap("EnterpriseStatus")
         private String enterpriseStatus;
 
-        @NameInMap("OpenTime")
+        @com.aliyun.core.annotation.NameInMap("OpenTime")
         private String openTime;
 
         private DetailInfo(Builder builder) {
@@ -193,16 +192,16 @@ public class CompanyThreeElementsVerificationResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DetailInfo")
+        @com.aliyun.core.annotation.NameInMap("DetailInfo")
         private DetailInfo detailInfo;
 
-        @NameInMap("InconsistentData")
+        @com.aliyun.core.annotation.NameInMap("InconsistentData")
         private java.util.List < String > inconsistentData;
 
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private Long reasonCode;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
         private Data(Builder builder) {

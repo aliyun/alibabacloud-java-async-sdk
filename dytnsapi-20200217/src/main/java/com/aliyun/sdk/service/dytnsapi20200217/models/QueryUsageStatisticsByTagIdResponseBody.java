@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryUsageStatisticsByTagIdResponseBody</p>
  */
 public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryUsageStatisticsByTagIdResponseBody(Builder builder) {
@@ -136,37 +135,37 @@ public class QueryUsageStatisticsByTagIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AuthorizationCode")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationCode")
         private String authorizationCode;
 
-        @NameInMap("FailTotal")
+        @com.aliyun.core.annotation.NameInMap("FailTotal")
         private Long failTotal;
 
-        @NameInMap("GmtDateStr")
+        @com.aliyun.core.annotation.NameInMap("GmtDateStr")
         private String gmtDateStr;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IndustryName")
+        @com.aliyun.core.annotation.NameInMap("IndustryName")
         private String industryName;
 
-        @NameInMap("PartnerId")
+        @com.aliyun.core.annotation.NameInMap("PartnerId")
         private Long partnerId;
 
-        @NameInMap("SceneName")
+        @com.aliyun.core.annotation.NameInMap("SceneName")
         private String sceneName;
 
-        @NameInMap("SuccessTotal")
+        @com.aliyun.core.annotation.NameInMap("SuccessTotal")
         private Long successTotal;
 
-        @NameInMap("TagId")
+        @com.aliyun.core.annotation.NameInMap("TagId")
         private Long tagId;
 
-        @NameInMap("TagName")
+        @com.aliyun.core.annotation.NameInMap("TagName")
         private String tagName;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

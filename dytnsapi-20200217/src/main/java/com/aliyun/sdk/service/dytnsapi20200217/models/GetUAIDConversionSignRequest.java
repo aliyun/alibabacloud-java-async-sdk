@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UAIDVerificationRequest} extends {@link RequestModel}
+ * {@link GetUAIDConversionSignRequest} extends {@link RequestModel}
  *
- * <p>UAIDVerificationRequest</p>
+ * <p>GetUAIDConversionSignRequest</p>
  */
-public class UAIDVerificationRequest extends Request {
+public class GetUAIDConversionSignRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthCode")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -22,8 +22,12 @@ public class UAIDVerificationRequest extends Request {
     private String carrier;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Ip")
-    private String ip;
+    @com.aliyun.core.annotation.NameInMap("ClientType")
+    private String clientType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Format")
+    private String format;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutId")
@@ -34,8 +38,12 @@ public class UAIDVerificationRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Province")
-    private String province;
+    @com.aliyun.core.annotation.NameInMap("ParamKey")
+    private String paramKey;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParamStr")
+    private String paramStr;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -46,33 +54,29 @@ public class UAIDVerificationRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Token")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String token;
+    @com.aliyun.core.annotation.NameInMap("Time")
+    private String time;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("UserGrantId")
-    private String userGrantId;
-
-    private UAIDVerificationRequest(Builder builder) {
+    private GetUAIDConversionSignRequest(Builder builder) {
         super(builder);
         this.authCode = builder.authCode;
         this.carrier = builder.carrier;
-        this.ip = builder.ip;
+        this.clientType = builder.clientType;
+        this.format = builder.format;
         this.outId = builder.outId;
         this.ownerId = builder.ownerId;
-        this.province = builder.province;
+        this.paramKey = builder.paramKey;
+        this.paramStr = builder.paramStr;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.token = builder.token;
-        this.userGrantId = builder.userGrantId;
+        this.time = builder.time;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static UAIDVerificationRequest create() {
+    public static GetUAIDConversionSignRequest create() {
         return builder().build();
     }
 
@@ -96,10 +100,17 @@ public class UAIDVerificationRequest extends Request {
     }
 
     /**
-     * @return ip
+     * @return clientType
      */
-    public String getIp() {
-        return this.ip;
+    public String getClientType() {
+        return this.clientType;
+    }
+
+    /**
+     * @return format
+     */
+    public String getFormat() {
+        return this.format;
     }
 
     /**
@@ -117,10 +128,17 @@ public class UAIDVerificationRequest extends Request {
     }
 
     /**
-     * @return province
+     * @return paramKey
      */
-    public String getProvince() {
-        return this.province;
+    public String getParamKey() {
+        return this.paramKey;
+    }
+
+    /**
+     * @return paramStr
+     */
+    public String getParamStr() {
+        return this.paramStr;
     }
 
     /**
@@ -138,47 +156,42 @@ public class UAIDVerificationRequest extends Request {
     }
 
     /**
-     * @return token
+     * @return time
      */
-    public String getToken() {
-        return this.token;
+    public String getTime() {
+        return this.time;
     }
 
-    /**
-     * @return userGrantId
-     */
-    public String getUserGrantId() {
-        return this.userGrantId;
-    }
-
-    public static final class Builder extends Request.Builder<UAIDVerificationRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetUAIDConversionSignRequest, Builder> {
         private String authCode; 
         private String carrier; 
-        private String ip; 
+        private String clientType; 
+        private String format; 
         private String outId; 
         private Long ownerId; 
-        private String province; 
+        private String paramKey; 
+        private String paramStr; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String token; 
-        private String userGrantId; 
+        private String time; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UAIDVerificationRequest request) {
+        private Builder(GetUAIDConversionSignRequest request) {
             super(request);
             this.authCode = request.authCode;
             this.carrier = request.carrier;
-            this.ip = request.ip;
+            this.clientType = request.clientType;
+            this.format = request.format;
             this.outId = request.outId;
             this.ownerId = request.ownerId;
-            this.province = request.province;
+            this.paramKey = request.paramKey;
+            this.paramStr = request.paramStr;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.token = request.token;
-            this.userGrantId = request.userGrantId;
+            this.time = request.time;
         } 
 
         /**
@@ -200,11 +213,20 @@ public class UAIDVerificationRequest extends Request {
         }
 
         /**
-         * Ip.
+         * ClientType.
          */
-        public Builder ip(String ip) {
-            this.putQueryParameter("Ip", ip);
-            this.ip = ip;
+        public Builder clientType(String clientType) {
+            this.putQueryParameter("ClientType", clientType);
+            this.clientType = clientType;
+            return this;
+        }
+
+        /**
+         * Format.
+         */
+        public Builder format(String format) {
+            this.putQueryParameter("Format", format);
+            this.format = format;
             return this;
         }
 
@@ -227,11 +249,20 @@ public class UAIDVerificationRequest extends Request {
         }
 
         /**
-         * Province.
+         * ParamKey.
          */
-        public Builder province(String province) {
-            this.putQueryParameter("Province", province);
-            this.province = province;
+        public Builder paramKey(String paramKey) {
+            this.putQueryParameter("ParamKey", paramKey);
+            this.paramKey = paramKey;
+            return this;
+        }
+
+        /**
+         * ParamStr.
+         */
+        public Builder paramStr(String paramStr) {
+            this.putQueryParameter("ParamStr", paramStr);
+            this.paramStr = paramStr;
             return this;
         }
 
@@ -254,26 +285,17 @@ public class UAIDVerificationRequest extends Request {
         }
 
         /**
-         * Token.
+         * Time.
          */
-        public Builder token(String token) {
-            this.putQueryParameter("Token", token);
-            this.token = token;
-            return this;
-        }
-
-        /**
-         * UserGrantId.
-         */
-        public Builder userGrantId(String userGrantId) {
-            this.putQueryParameter("UserGrantId", userGrantId);
-            this.userGrantId = userGrantId;
+        public Builder time(String time) {
+            this.putQueryParameter("Time", time);
+            this.time = time;
             return this;
         }
 
         @Override
-        public UAIDVerificationRequest build() {
-            return new UAIDVerificationRequest(this);
+        public GetUAIDConversionSignRequest build() {
+            return new GetUAIDConversionSignRequest(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePhoneNumberOnlineTimeResponseBody</p>
  */
 public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePhoneNumberOnlineTimeResponseBody(Builder builder) {
@@ -119,10 +118,10 @@ public class DescribePhoneNumberOnlineTimeResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CarrierCode")
+        @com.aliyun.core.annotation.NameInMap("CarrierCode")
         private String carrierCode;
 
-        @NameInMap("VerifyResult")
+        @com.aliyun.core.annotation.NameInMap("VerifyResult")
         private String verifyResult;
 
         private Data(Builder builder) {

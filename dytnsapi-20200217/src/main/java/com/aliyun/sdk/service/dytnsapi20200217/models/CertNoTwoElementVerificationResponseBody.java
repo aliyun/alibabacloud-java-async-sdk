@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dytnsapi20200217.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CertNoTwoElementVerificationResponseBody</p>
  */
 public class CertNoTwoElementVerificationResponseBody extends TeaModel {
-    @NameInMap("AccessDeniedDetail")
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
     private String accessDeniedDetail;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CertNoTwoElementVerificationResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class CertNoTwoElementVerificationResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("IsConsistent")
+        @com.aliyun.core.annotation.NameInMap("IsConsistent")
         private String isConsistent;
 
         private Data(Builder builder) {

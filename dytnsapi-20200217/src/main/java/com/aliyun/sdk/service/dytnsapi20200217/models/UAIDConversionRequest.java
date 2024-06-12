@@ -6,36 +6,28 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribePhoneNumberAnalysisRequest} extends {@link RequestModel}
+ * {@link UAIDConversionRequest} extends {@link RequestModel}
  *
- * <p>DescribePhoneNumberAnalysisRequest</p>
+ * <p>UAIDConversionRequest</p>
  */
-public class DescribePhoneNumberAnalysisRequest extends Request {
+public class UAIDConversionRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AuthCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String authCode;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InputNumber")
+    @com.aliyun.core.annotation.NameInMap("Carrier")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String inputNumber;
+    private String carrier;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Mask")
-    private String mask;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NumberType")
-    private Long numberType;
+    @com.aliyun.core.annotation.NameInMap("OutId")
+    private String outId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Rate")
-    private Long rate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -45,23 +37,26 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribePhoneNumberAnalysisRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UaidList")
+    private String uaidList;
+
+    private UAIDConversionRequest(Builder builder) {
         super(builder);
         this.authCode = builder.authCode;
-        this.inputNumber = builder.inputNumber;
-        this.mask = builder.mask;
-        this.numberType = builder.numberType;
+        this.carrier = builder.carrier;
+        this.outId = builder.outId;
         this.ownerId = builder.ownerId;
-        this.rate = builder.rate;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.uaidList = builder.uaidList;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribePhoneNumberAnalysisRequest create() {
+    public static UAIDConversionRequest create() {
         return builder().build();
     }
 
@@ -78,24 +73,17 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
     }
 
     /**
-     * @return inputNumber
+     * @return carrier
      */
-    public String getInputNumber() {
-        return this.inputNumber;
+    public String getCarrier() {
+        return this.carrier;
     }
 
     /**
-     * @return mask
+     * @return outId
      */
-    public String getMask() {
-        return this.mask;
-    }
-
-    /**
-     * @return numberType
-     */
-    public Long getNumberType() {
-        return this.numberType;
+    public String getOutId() {
+        return this.outId;
     }
 
     /**
@@ -103,13 +91,6 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
      */
     public Long getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return rate
-     */
-    public Long getRate() {
-        return this.rate;
     }
 
     /**
@@ -126,30 +107,35 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribePhoneNumberAnalysisRequest, Builder> {
+    /**
+     * @return uaidList
+     */
+    public String getUaidList() {
+        return this.uaidList;
+    }
+
+    public static final class Builder extends Request.Builder<UAIDConversionRequest, Builder> {
         private String authCode; 
-        private String inputNumber; 
-        private String mask; 
-        private Long numberType; 
+        private String carrier; 
+        private String outId; 
         private Long ownerId; 
-        private Long rate; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String uaidList; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribePhoneNumberAnalysisRequest request) {
+        private Builder(UAIDConversionRequest request) {
             super(request);
             this.authCode = request.authCode;
-            this.inputNumber = request.inputNumber;
-            this.mask = request.mask;
-            this.numberType = request.numberType;
+            this.carrier = request.carrier;
+            this.outId = request.outId;
             this.ownerId = request.ownerId;
-            this.rate = request.rate;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.uaidList = request.uaidList;
         } 
 
         /**
@@ -162,29 +148,20 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         }
 
         /**
-         * InputNumber.
+         * Carrier.
          */
-        public Builder inputNumber(String inputNumber) {
-            this.putQueryParameter("InputNumber", inputNumber);
-            this.inputNumber = inputNumber;
+        public Builder carrier(String carrier) {
+            this.putQueryParameter("Carrier", carrier);
+            this.carrier = carrier;
             return this;
         }
 
         /**
-         * Mask.
+         * OutId.
          */
-        public Builder mask(String mask) {
-            this.putQueryParameter("Mask", mask);
-            this.mask = mask;
-            return this;
-        }
-
-        /**
-         * NumberType.
-         */
-        public Builder numberType(Long numberType) {
-            this.putQueryParameter("NumberType", numberType);
-            this.numberType = numberType;
+        public Builder outId(String outId) {
+            this.putQueryParameter("OutId", outId);
+            this.outId = outId;
             return this;
         }
 
@@ -194,15 +171,6 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
         public Builder ownerId(Long ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * Rate.
-         */
-        public Builder rate(Long rate) {
-            this.putQueryParameter("Rate", rate);
-            this.rate = rate;
             return this;
         }
 
@@ -224,9 +192,18 @@ public class DescribePhoneNumberAnalysisRequest extends Request {
             return this;
         }
 
+        /**
+         * UaidList.
+         */
+        public Builder uaidList(String uaidList) {
+            this.putQueryParameter("UaidList", uaidList);
+            this.uaidList = uaidList;
+            return this;
+        }
+
         @Override
-        public DescribePhoneNumberAnalysisRequest build() {
-            return new DescribePhoneNumberAnalysisRequest(this);
+        public UAIDConversionRequest build() {
+            return new UAIDConversionRequest(this);
         } 
 
     } 
