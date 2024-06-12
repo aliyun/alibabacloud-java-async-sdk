@@ -27,6 +27,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckResourceStockResponse> checkResourceStock(CheckResourceStockRequest request);
 
+    CompletableFuture<CreateAndroidInstanceGroupResponse> createAndroidInstanceGroup(CreateAndroidInstanceGroupRequest request);
+
+    CompletableFuture<CreateAppResponse> createApp(CreateAppRequest request);
+
     CompletableFuture<CreateCustomImageResponse> createCustomImage(CreateCustomImageRequest request);
 
     CompletableFuture<CreateKeyPairResponse> createKeyPair(CreateKeyPairRequest request);
@@ -46,6 +50,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeAndroidInstanceGroupsResponse> describeAndroidInstanceGroups(DescribeAndroidInstanceGroupsRequest request);
 
     CompletableFuture<DescribeAndroidInstancesResponse> describeAndroidInstances(DescribeAndroidInstancesRequest request);
+
+    CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request);
 
     CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request);
 
