@@ -85,7 +85,7 @@ public class DeleteServiceSourceResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * The response code returned.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DeleteServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The HTTP status code returned.
+         * HttpStatusCode.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -101,7 +101,7 @@ public class DeleteServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The message returned.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class DeleteServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,11 +117,7 @@ public class DeleteServiceSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Indicates whether the request was successful. Valid values:
-         * <p>
-         * 
-         * *   `true`: The request was successful.
-         * *   `false`: The request failed.
+         * Success.
          */
         public Builder success(Boolean success) {
             this.success = success;

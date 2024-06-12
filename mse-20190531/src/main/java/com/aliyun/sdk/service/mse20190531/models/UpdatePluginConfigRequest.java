@@ -29,19 +29,21 @@ public class UpdatePluginConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayId")
+    @Deprecated
     private Long gatewayId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GatewayUniqueId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String gatewayUniqueId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GmtCreate")
+    @Deprecated
     private String gmtCreate;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GmtModified")
+    @Deprecated
     private String gmtModified;
 
     @com.aliyun.core.annotation.Query
@@ -50,8 +52,11 @@ public class UpdatePluginConfigRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PluginId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private Long pluginId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIdList")
+    private java.util.List < Long > resourceIdList;
 
     private UpdatePluginConfigRequest(Builder builder) {
         super(builder);
@@ -65,6 +70,7 @@ public class UpdatePluginConfigRequest extends Request {
         this.gmtModified = builder.gmtModified;
         this.id = builder.id;
         this.pluginId = builder.pluginId;
+        this.resourceIdList = builder.resourceIdList;
     }
 
     public static Builder builder() {
@@ -150,6 +156,13 @@ public class UpdatePluginConfigRequest extends Request {
         return this.pluginId;
     }
 
+    /**
+     * @return resourceIdList
+     */
+    public java.util.List < Long > getResourceIdList() {
+        return this.resourceIdList;
+    }
+
     public static final class Builder extends Request.Builder<UpdatePluginConfigRequest, Builder> {
         private String acceptLanguage; 
         private String config; 
@@ -161,6 +174,7 @@ public class UpdatePluginConfigRequest extends Request {
         private String gmtModified; 
         private Long id; 
         private Long pluginId; 
+        private java.util.List < Long > resourceIdList; 
 
         private Builder() {
             super();
@@ -178,6 +192,7 @@ public class UpdatePluginConfigRequest extends Request {
             this.gmtModified = request.gmtModified;
             this.id = request.id;
             this.pluginId = request.pluginId;
+            this.resourceIdList = request.resourceIdList;
         } 
 
         /**
@@ -275,6 +290,16 @@ public class UpdatePluginConfigRequest extends Request {
         public Builder pluginId(Long pluginId) {
             this.putQueryParameter("PluginId", pluginId);
             this.pluginId = pluginId;
+            return this;
+        }
+
+        /**
+         * ResourceIdList.
+         */
+        public Builder resourceIdList(java.util.List < Long > resourceIdList) {
+            String resourceIdListShrink = shrink(resourceIdList, "ResourceIdList", "json");
+            this.putQueryParameter("ResourceIdList", resourceIdListShrink);
+            this.resourceIdList = resourceIdList;
             return this;
         }
 

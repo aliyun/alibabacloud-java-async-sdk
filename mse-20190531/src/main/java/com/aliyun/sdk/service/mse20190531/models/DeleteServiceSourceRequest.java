@@ -81,11 +81,7 @@ public class DeleteServiceSourceRequest extends Request {
         } 
 
         /**
-         * The language of the response. Valid values:
-         * <p>
-         * 
-         * *   zh: Chinese
-         * *   en: English
+         * AcceptLanguage.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -94,7 +90,7 @@ public class DeleteServiceSourceRequest extends Request {
         }
 
         /**
-         * The unique ID of the gateway.
+         * GatewayUniqueId.
          */
         public Builder gatewayUniqueId(String gatewayUniqueId) {
             this.putQueryParameter("GatewayUniqueId", gatewayUniqueId);
@@ -103,7 +99,7 @@ public class DeleteServiceSourceRequest extends Request {
         }
 
         /**
-         * The ID of the data source.
+         * SourceId.
          */
         public Builder sourceId(Long sourceId) {
             this.putQueryParameter("SourceId", sourceId);

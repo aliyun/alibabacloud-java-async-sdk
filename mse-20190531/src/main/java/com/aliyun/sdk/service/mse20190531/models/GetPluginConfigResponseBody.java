@@ -210,6 +210,67 @@ public class GetPluginConfigResponseBody extends TeaModel {
 
     } 
 
+    public static class ResourceList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ResourceList(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private Long id; 
+            private String name; 
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ResourceList build() {
+                return new ResourceList(this);
+            } 
+
+        } 
+
+    }
     public static class GatewayConfigList extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
@@ -238,6 +299,9 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PluginId")
         private Long pluginId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceList")
+        private java.util.List < ResourceList> resourceList;
+
         private GatewayConfigList(Builder builder) {
             this.config = builder.config;
             this.configLevel = builder.configLevel;
@@ -248,6 +312,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             this.gmtModified = builder.gmtModified;
             this.id = builder.id;
             this.pluginId = builder.pluginId;
+            this.resourceList = builder.resourceList;
         }
 
         public static Builder builder() {
@@ -321,6 +386,13 @@ public class GetPluginConfigResponseBody extends TeaModel {
             return this.pluginId;
         }
 
+        /**
+         * @return resourceList
+         */
+        public java.util.List < ResourceList> getResourceList() {
+            return this.resourceList;
+        }
+
         public static final class Builder {
             private String config; 
             private Integer configLevel; 
@@ -331,6 +403,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private String gmtModified; 
             private Long id; 
             private Long pluginId; 
+            private java.util.List < ResourceList> resourceList; 
 
             /**
              * The plug-in configuration.
@@ -411,6 +484,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * ResourceList.
+             */
+            public Builder resourceList(java.util.List < ResourceList> resourceList) {
+                this.resourceList = resourceList;
+                return this;
+            }
+
             public GatewayConfigList build() {
                 return new GatewayConfigList(this);
             } 
@@ -425,8 +506,17 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConfigCheck")
         private String configCheck;
 
+        @com.aliyun.core.annotation.NameInMap("ConfigExample")
+        private String configExample;
+
+        @com.aliyun.core.annotation.NameInMap("DomainConfigStartIndex")
+        private Integer domainConfigStartIndex;
+
         @com.aliyun.core.annotation.NameInMap("GatewayConfigList")
         private java.util.List < GatewayConfigList> gatewayConfigList;
+
+        @com.aliyun.core.annotation.NameInMap("GatewayConfigStartIndex")
+        private Integer gatewayConfigStartIndex;
 
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
@@ -458,6 +548,9 @@ public class GetPluginConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadmeEn")
         private String readmeEn;
 
+        @com.aliyun.core.annotation.NameInMap("RouteConfigStartIndex")
+        private Integer routeConfigStartIndex;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -479,7 +572,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.category = builder.category;
             this.configCheck = builder.configCheck;
+            this.configExample = builder.configExample;
+            this.domainConfigStartIndex = builder.domainConfigStartIndex;
             this.gatewayConfigList = builder.gatewayConfigList;
+            this.gatewayConfigStartIndex = builder.gatewayConfigStartIndex;
             this.id = builder.id;
             this.imageName = builder.imageName;
             this.mode = builder.mode;
@@ -490,6 +586,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             this.publishState = builder.publishState;
             this.readme = builder.readme;
             this.readmeEn = builder.readmeEn;
+            this.routeConfigStartIndex = builder.routeConfigStartIndex;
             this.status = builder.status;
             this.summary = builder.summary;
             this.type = builder.type;
@@ -521,10 +618,31 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return configExample
+         */
+        public String getConfigExample() {
+            return this.configExample;
+        }
+
+        /**
+         * @return domainConfigStartIndex
+         */
+        public Integer getDomainConfigStartIndex() {
+            return this.domainConfigStartIndex;
+        }
+
+        /**
          * @return gatewayConfigList
          */
         public java.util.List < GatewayConfigList> getGatewayConfigList() {
             return this.gatewayConfigList;
+        }
+
+        /**
+         * @return gatewayConfigStartIndex
+         */
+        public Integer getGatewayConfigStartIndex() {
+            return this.gatewayConfigStartIndex;
         }
 
         /**
@@ -598,6 +716,13 @@ public class GetPluginConfigResponseBody extends TeaModel {
         }
 
         /**
+         * @return routeConfigStartIndex
+         */
+        public Integer getRouteConfigStartIndex() {
+            return this.routeConfigStartIndex;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -642,7 +767,10 @@ public class GetPluginConfigResponseBody extends TeaModel {
         public static final class Builder {
             private Integer category; 
             private String configCheck; 
+            private String configExample; 
+            private Integer domainConfigStartIndex; 
             private java.util.List < GatewayConfigList> gatewayConfigList; 
+            private Integer gatewayConfigStartIndex; 
             private Long id; 
             private String imageName; 
             private Integer mode; 
@@ -653,6 +781,7 @@ public class GetPluginConfigResponseBody extends TeaModel {
             private Integer publishState; 
             private String readme; 
             private String readmeEn; 
+            private Integer routeConfigStartIndex; 
             private String status; 
             private String summary; 
             private Integer type; 
@@ -690,10 +819,34 @@ public class GetPluginConfigResponseBody extends TeaModel {
             }
 
             /**
+             * ConfigExample.
+             */
+            public Builder configExample(String configExample) {
+                this.configExample = configExample;
+                return this;
+            }
+
+            /**
+             * DomainConfigStartIndex.
+             */
+            public Builder domainConfigStartIndex(Integer domainConfigStartIndex) {
+                this.domainConfigStartIndex = domainConfigStartIndex;
+                return this;
+            }
+
+            /**
              * The list of gateway plug-in configurations.
              */
             public Builder gatewayConfigList(java.util.List < GatewayConfigList> gatewayConfigList) {
                 this.gatewayConfigList = gatewayConfigList;
+                return this;
+            }
+
+            /**
+             * GatewayConfigStartIndex.
+             */
+            public Builder gatewayConfigStartIndex(Integer gatewayConfigStartIndex) {
+                this.gatewayConfigStartIndex = gatewayConfigStartIndex;
                 return this;
             }
 
@@ -783,6 +936,14 @@ public class GetPluginConfigResponseBody extends TeaModel {
              */
             public Builder readmeEn(String readmeEn) {
                 this.readmeEn = readmeEn;
+                return this;
+            }
+
+            /**
+             * RouteConfigStartIndex.
+             */
+            public Builder routeConfigStartIndex(Integer routeConfigStartIndex) {
+                this.routeConfigStartIndex = routeConfigStartIndex;
                 return this;
             }
 
