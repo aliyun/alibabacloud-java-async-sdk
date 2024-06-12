@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregatorsRequest</p>
  */
 public class ListAggregatorsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
-    @Validation(maxLength = 100, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 100, minLength = 1)
     private String nextToken;
 
     private ListAggregatorsRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class ListAggregatorsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * The maximum number of entries to return in a request. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -79,7 +78,7 @@ public class ListAggregatorsRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

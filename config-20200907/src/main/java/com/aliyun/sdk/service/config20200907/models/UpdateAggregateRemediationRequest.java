@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAggregateRemediationRequest</p>
  */
 public class UpdateAggregateRemediationRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("InvokeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeType")
     private String invokeType;
 
-    @Body
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Body
-    @NameInMap("RemediationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remediationId;
 
-    @Body
-    @NameInMap("RemediationTemplateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationTemplateId")
     private String remediationTemplateId;
 
-    @Body
-    @NameInMap("RemediationType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationType")
     private String remediationType;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private UpdateAggregateRemediationRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiscoveredResourceResponseBody</p>
  */
 public class GetDiscoveredResourceResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceDetail")
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceDetail")
     private DiscoveredResourceDetail discoveredResourceDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDiscoveredResourceResponseBody(Builder builder) {
@@ -72,42 +71,46 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
     } 
 
     public static class DiscoveredResourceDetail extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
+        private String complianceType;
+
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreationTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreationTime")
         private Long resourceCreationTime;
 
-        @NameInMap("ResourceDeleted")
+        @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
         private Integer resourceDeleted;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private DiscoveredResourceDetail(Builder builder) {
             this.accountId = builder.accountId;
             this.availabilityZone = builder.availabilityZone;
+            this.complianceType = builder.complianceType;
             this.configuration = builder.configuration;
             this.region = builder.region;
             this.resourceCreationTime = builder.resourceCreationTime;
@@ -139,6 +142,13 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
          */
         public String getAvailabilityZone() {
             return this.availabilityZone;
+        }
+
+        /**
+         * @return complianceType
+         */
+        public String getComplianceType() {
+            return this.complianceType;
         }
 
         /**
@@ -207,6 +217,7 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
         public static final class Builder {
             private Long accountId; 
             private String availabilityZone; 
+            private String complianceType; 
             private String configuration; 
             private String region; 
             private Long resourceCreationTime; 
@@ -230,6 +241,14 @@ public class GetDiscoveredResourceResponseBody extends TeaModel {
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
+                return this;
+            }
+
+            /**
+             * ComplianceType.
+             */
+            public Builder complianceType(String complianceType) {
+                this.complianceType = complianceType;
                 return this;
             }
 

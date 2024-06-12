@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateResourceInventoryResponseBody</p>
  */
 public class GetAggregateResourceInventoryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceInventory")
+    @com.aliyun.core.annotation.NameInMap("ResourceInventory")
     private ResourceInventory resourceInventory;
 
     private GetAggregateResourceInventoryResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetAggregateResourceInventoryResponseBody extends TeaModel {
     } 
 
     public static class ResourceInventory extends TeaModel {
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
-        @NameInMap("ResourceInventoryGenerateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceInventoryGenerateTime")
         private Long resourceInventoryGenerateTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ResourceInventory(Builder builder) {

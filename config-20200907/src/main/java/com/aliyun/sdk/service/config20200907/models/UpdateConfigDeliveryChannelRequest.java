@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateConfigDeliveryChannelRequest</p>
  */
 public class UpdateConfigDeliveryChannelRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ConfigurationItemChangeNotification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigurationItemChangeNotification")
     private Boolean configurationItemChangeNotification;
 
-    @Query
-    @NameInMap("ConfigurationSnapshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigurationSnapshot")
     private Boolean configurationSnapshot;
 
-    @Query
-    @NameInMap("DeliveryChannelCondition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelCondition")
     private String deliveryChannelCondition;
 
-    @Query
-    @NameInMap("DeliveryChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryChannelId;
 
-    @Query
-    @NameInMap("DeliveryChannelName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelName")
     private String deliveryChannelName;
 
-    @Query
-    @NameInMap("DeliveryChannelTargetArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelTargetArn")
     private String deliveryChannelTargetArn;
 
-    @Query
-    @NameInMap("DeliverySnapshotTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeliverySnapshotTime")
     private String deliverySnapshotTime;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("NonCompliantNotification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NonCompliantNotification")
     private Boolean nonCompliantNotification;
 
-    @Query
-    @NameInMap("OversizedDataOSSTargetArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OversizedDataOSSTargetArn")
     private String oversizedDataOSSTargetArn;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Long status;
 
     private UpdateConfigDeliveryChannelRequest(Builder builder) {

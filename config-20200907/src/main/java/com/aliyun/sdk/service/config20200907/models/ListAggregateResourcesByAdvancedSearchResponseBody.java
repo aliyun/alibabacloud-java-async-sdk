@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateResourcesByAdvancedSearchResponseBody</p>
  */
 public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel {
-    @NameInMap("QueryResults")
+    @com.aliyun.core.annotation.NameInMap("QueryResults")
     private QueryResults queryResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateResourcesByAdvancedSearchResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
         private String requestId; 
 
         /**
-         * The result of the request.
+         * The returned data.
          */
         public Builder queryResults(QueryResults queryResults) {
             this.queryResults = queryResults;
@@ -72,10 +71,10 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
     } 
 
     public static class QueryResultList extends TeaModel {
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private java.util.List < ? > values;
 
         private QueryResultList(Builder builder) {
@@ -133,7 +132,7 @@ public class ListAggregateResourcesByAdvancedSearchResponseBody extends TeaModel
 
     }
     public static class QueryResults extends TeaModel {
-        @NameInMap("QueryResultList")
+        @com.aliyun.core.annotation.NameInMap("QueryResultList")
         private QueryResultList queryResultList;
 
         private QueryResults(Builder builder) {

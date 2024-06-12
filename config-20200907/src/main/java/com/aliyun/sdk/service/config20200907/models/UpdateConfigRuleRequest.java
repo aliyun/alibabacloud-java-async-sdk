@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,66 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateConfigRuleRequest</p>
  */
 public class UpdateConfigRuleRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
     private String configRuleName;
 
-    @Body
-    @NameInMap("ConfigRuleTriggerTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleTriggerTypes")
     private String configRuleTriggerTypes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ExcludeResourceIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
 
-    @Body
-    @NameInMap("InputParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParameters")
     private java.util.Map < String, ? > inputParameters;
 
-    @Body
-    @NameInMap("MaximumExecutionFrequency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
     private String maximumExecutionFrequency;
 
-    @Body
-    @NameInMap("RegionIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
     private String regionIdsScope;
 
-    @Body
-    @NameInMap("ResourceGroupIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
 
-    @Body
-    @NameInMap("ResourceTypesScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
     private java.util.List < String > resourceTypesScope;
 
-    @Body
-    @NameInMap("RiskLevel")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
-    @Body
-    @NameInMap("TagKeyLogicScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
     private String tagKeyLogicScope;
 
-    @Body
-    @NameInMap("TagKeyScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
 
-    @Body
-    @NameInMap("TagValueScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
     private UpdateConfigRuleRequest(Builder builder) {

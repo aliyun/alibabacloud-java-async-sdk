@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRemediationTemplatesResponseBody</p>
  */
 public class ListRemediationTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RemediationTemplates")
+    @com.aliyun.core.annotation.NameInMap("RemediationTemplates")
     private java.util.List < RemediationTemplates> remediationTemplates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListRemediationTemplatesResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListRemediationTemplatesResponseBody extends TeaModel {
     } 
 
     public static class RemediationTemplates extends TeaModel {
-        @NameInMap("RemediationType")
+        @com.aliyun.core.annotation.NameInMap("RemediationType")
         private String remediationType;
 
-        @NameInMap("TemplateDefinition")
+        @com.aliyun.core.annotation.NameInMap("TemplateDefinition")
         private String templateDefinition;
 
-        @NameInMap("TemplateDescription")
+        @com.aliyun.core.annotation.NameInMap("TemplateDescription")
         private String templateDescription;
 
-        @NameInMap("TemplateIdentifier")
+        @com.aliyun.core.annotation.NameInMap("TemplateIdentifier")
         private String templateIdentifier;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private RemediationTemplates(Builder builder) {

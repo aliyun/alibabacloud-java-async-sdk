@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateConfigRulesReportResponseBody</p>
  */
 public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
-    @NameInMap("ConfigRulesReport")
+    @com.aliyun.core.annotation.NameInMap("ConfigRulesReport")
     private ConfigRulesReport configRulesReport;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateConfigRulesReportResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class GetAggregateConfigRulesReportResponseBody extends TeaModel {
     } 
 
     public static class ConfigRulesReport extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("ReportCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ReportCreateTimestamp")
         private Long reportCreateTimestamp;
 
-        @NameInMap("ReportId")
+        @com.aliyun.core.annotation.NameInMap("ReportId")
         private String reportId;
 
-        @NameInMap("ReportStatus")
+        @com.aliyun.core.annotation.NameInMap("ReportStatus")
         private String reportStatus;
 
-        @NameInMap("ReportUrl")
+        @com.aliyun.core.annotation.NameInMap("ReportUrl")
         private String reportUrl;
 
         private ConfigRulesReport(Builder builder) {

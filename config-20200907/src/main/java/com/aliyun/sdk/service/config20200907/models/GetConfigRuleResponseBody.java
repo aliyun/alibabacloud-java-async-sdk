@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConfigRuleResponseBody</p>
  */
 public class GetConfigRuleResponseBody extends TeaModel {
-    @NameInMap("ConfigRule")
+    @com.aliyun.core.annotation.NameInMap("ConfigRule")
     private ConfigRule configRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConfigRuleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
     } 
 
     public static class Compliance extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Compliance(Builder builder) {
@@ -139,28 +138,28 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ConfigRuleEvaluationStatus extends TeaModel {
-        @NameInMap("FirstActivatedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstActivatedTimestamp")
         private Long firstActivatedTimestamp;
 
-        @NameInMap("FirstEvaluationStarted")
+        @com.aliyun.core.annotation.NameInMap("FirstEvaluationStarted")
         private Boolean firstEvaluationStarted;
 
-        @NameInMap("LastErrorCode")
+        @com.aliyun.core.annotation.NameInMap("LastErrorCode")
         private String lastErrorCode;
 
-        @NameInMap("LastErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("LastErrorMessage")
         private String lastErrorMessage;
 
-        @NameInMap("LastFailedEvaluationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastFailedEvaluationTimestamp")
         private Long lastFailedEvaluationTimestamp;
 
-        @NameInMap("LastFailedInvocationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastFailedInvocationTimestamp")
         private Long lastFailedInvocationTimestamp;
 
-        @NameInMap("LastSuccessfulEvaluationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulEvaluationTimestamp")
         private Long lastSuccessfulEvaluationTimestamp;
 
-        @NameInMap("LastSuccessfulInvocationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulInvocationTimestamp")
         private Long lastSuccessfulInvocationTimestamp;
 
         private ConfigRuleEvaluationStatus(Builder builder) {
@@ -249,7 +248,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private Long lastSuccessfulInvocationTimestamp; 
 
             /**
-             * The timestamp when the rule was first triggered. Unit: milliseconds.
+             * The timestamp generated when the rule was first triggered. Unit: millisecond.
              */
             public Builder firstActivatedTimestamp(Long firstActivatedTimestamp) {
                 this.firstActivatedTimestamp = firstActivatedTimestamp;
@@ -257,11 +256,11 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether resources were evaluated based on the rule. Valid values:
+             * Indicates whether resource configurations were evaluated based on the rule. Valid values:
              * <p>
              * 
-             * *   true: Resources were evaluated based on the rule.
-             * *   false: Resources were not evaluated based on the rule.
+             * *   true: Resource configurations were evaluated based on the rule.
+             * *   false: Resource configurations were not evaluated based on the rule.
              */
             public Builder firstEvaluationStarted(Boolean firstEvaluationStarted) {
                 this.firstEvaluationStarted = firstEvaluationStarted;
@@ -269,7 +268,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The error code returned for the last failed compliance evaluation.
+             * The error code returned for the previous failed compliance evaluation.
              */
             public Builder lastErrorCode(String lastErrorCode) {
                 this.lastErrorCode = lastErrorCode;
@@ -277,7 +276,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned for the last failed compliance evaluation.
+             * The error message returned for the previous failed compliance evaluation.
              */
             public Builder lastErrorMessage(String lastErrorMessage) {
                 this.lastErrorMessage = lastErrorMessage;
@@ -285,7 +284,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last failed compliance evaluation of the rule ended. Unit: milliseconds.
+             * The timestamp generated when the previous failed compliance evaluation of the rule ended. Unit: millisecond.
              */
             public Builder lastFailedEvaluationTimestamp(Long lastFailedEvaluationTimestamp) {
                 this.lastFailedEvaluationTimestamp = lastFailedEvaluationTimestamp;
@@ -293,7 +292,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last failed compliance evaluation of the rule started. Unit: milliseconds.
+             * The timestamp generated when the previous failed compliance evaluation of the rule started. Unit: millisecond.
              */
             public Builder lastFailedInvocationTimestamp(Long lastFailedInvocationTimestamp) {
                 this.lastFailedInvocationTimestamp = lastFailedInvocationTimestamp;
@@ -301,7 +300,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last successful compliance evaluation of the rule ended. Unit: milliseconds.
+             * The timestamp generated when the previous successful compliance evaluation of the rule ended. Unit: millisecond.
              */
             public Builder lastSuccessfulEvaluationTimestamp(Long lastSuccessfulEvaluationTimestamp) {
                 this.lastSuccessfulEvaluationTimestamp = lastSuccessfulEvaluationTimestamp;
@@ -309,7 +308,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the last successful compliance evaluation of the rule started. Unit: milliseconds.
+             * The timestamp generated when the previous successful compliance evaluation of the rule started. Unit: millisecond.
              */
             public Builder lastSuccessfulInvocationTimestamp(Long lastSuccessfulInvocationTimestamp) {
                 this.lastSuccessfulInvocationTimestamp = lastSuccessfulInvocationTimestamp;
@@ -324,16 +323,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class CreateBy extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
         private CreateBy(Builder builder) {
@@ -386,7 +385,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String creatorName; 
 
             /**
-             * The ID of the compliance package.
+             * The compliance package ID.
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -425,13 +424,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class SourceDetails extends TeaModel {
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceDetails(Builder builder) {
@@ -478,7 +477,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
              * The event source.
              * <p>
              * 
-             * >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
+             * >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -489,13 +488,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
              * The interval at which the rule is triggered. Valid values:
              * <p>
              * 
-             * *   One_Hour: 1 hour
-             * *   Three_Hours: 3 hours
-             * *   Six_Hours: 6 hours.
-             * *   Twelve_Hours: 12 hours
-             * *   TwentyFour_Hours: 24 hours
+             * *   One_Hour
+             * *   Three_Hours
+             * *   Six_Hours
+             * *   Twelve_Hours
+             * *   TwentyFour_Hours
              * 
-             * >  This parameter is returned if the managed rule is periodically triggered.
+             * >  This parameter is returned if the rule is periodically triggered.
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -522,25 +521,25 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ManagedRule extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
         private java.util.Map < String, ? > compulsoryInputParameterDetails;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < String > labels;
 
-        @NameInMap("ManagedRuleName")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleName")
         private String managedRuleName;
 
-        @NameInMap("OptionalInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
         private java.util.Map < String, ? > optionalInputParameterDetails;
 
-        @NameInMap("SourceDetails")
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
         private java.util.List < SourceDetails> sourceDetails;
 
         private ManagedRule(Builder builder) {
@@ -620,7 +619,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private java.util.List < SourceDetails> sourceDetails; 
 
             /**
-             * The required input parameters of the managed rule.
+             * The settings of the required input parameters for the managed rule.
              */
             public Builder compulsoryInputParameterDetails(java.util.Map < String, ? > compulsoryInputParameterDetails) {
                 this.compulsoryInputParameterDetails = compulsoryInputParameterDetails;
@@ -636,7 +635,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the managed rule.
+             * The identifier of the managed rule.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -644,7 +643,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The list of rule tags.
+             * The rule tags.
              */
             public Builder labels(java.util.List < String > labels) {
                 this.labels = labels;
@@ -660,7 +659,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The optional input parameters of the managed rule.
+             * The settings of the optional input parameters for the managed rule.
              */
             public Builder optionalInputParameterDetails(java.util.Map < String, ? > optionalInputParameterDetails) {
                 this.optionalInputParameterDetails = optionalInputParameterDetails;
@@ -683,7 +682,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class Scope extends TeaModel {
-        @NameInMap("ComplianceResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
         private java.util.List < String > complianceResourceTypes;
 
         private Scope(Builder builder) {
@@ -724,13 +723,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class SourceSourceDetails extends TeaModel {
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceSourceDetails(Builder builder) {
@@ -777,7 +776,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
              * The event source.
              * <p>
              * 
-             * >  Only events related to Cloud Config are supported. Valid value: aliyun.config.
+             * >  Only aliyun.config is returned, which indicates that only events related to Cloud Config are supported.
              */
             public Builder eventSource(String eventSource) {
                 this.eventSource = eventSource;
@@ -788,11 +787,11 @@ public class GetConfigRuleResponseBody extends TeaModel {
              * The interval at which the rule is triggered. Valid values:
              * <p>
              * 
-             * *   One_Hour: 1 hour
-             * *   Three_Hours: 3 hours
-             * *   Six_Hours: 6 hours
-             * *   Twelve_Hours: 12 hours
-             * *   TwentyFour_Hours: 24 hours
+             * *   One_Hour
+             * *   Three_Hours
+             * *   Six_Hours
+             * *   Twelve_Hours
+             * *   TwentyFour_Hours
              * 
              * >  This parameter is returned if the rule is periodically triggered.
              */
@@ -821,13 +820,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("SourceDetails")
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
         private java.util.List < SourceSourceDetails> sourceDetails;
 
         private Source(Builder builder) {
@@ -871,11 +870,11 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private java.util.List < SourceSourceDetails> sourceDetails; 
 
             /**
-             * The identifier of the evaluation rule.
+             * The identifier of the rule.
              * <p>
              * 
-             * *   If the rule was created based on a managed rule, the value of this parameter is the name of the managed rule.
-             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
+             * *   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.
+             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of a function.
              */
             public Builder identifier(String identifier) {
                 this.identifier = identifier;
@@ -883,7 +882,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to create the rule. Valid values:
+             * The type of the rule. Valid values:
              * <p>
              * 
              * *   CUSTOM_FC: a custom rule.
@@ -910,79 +909,79 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ConfigRule extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("Compliance")
+        @com.aliyun.core.annotation.NameInMap("Compliance")
         private Compliance compliance;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleEvaluationStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleEvaluationStatus")
         private ConfigRuleEvaluationStatus configRuleEvaluationStatus;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleState")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
         private String configRuleState;
 
-        @NameInMap("ConfigRuleTriggerTypes")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleTriggerTypes")
         private String configRuleTriggerTypes;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExcludeResourceIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
 
-        @NameInMap("InputParameters")
+        @com.aliyun.core.annotation.NameInMap("InputParameters")
         private java.util.Map < String, ? > inputParameters;
 
-        @NameInMap("ManagedRule")
+        @com.aliyun.core.annotation.NameInMap("ManagedRule")
         private ManagedRule managedRule;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("ModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimestamp")
         private Long modifiedTimestamp;
 
-        @NameInMap("RegionIdsScope")
+        @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
 
-        @NameInMap("ResourceGroupIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("TagKeyLogicScope")
+        @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
         private String tagKeyLogicScope;
 
-        @NameInMap("TagKeyScope")
+        @com.aliyun.core.annotation.NameInMap("TagKeyScope")
         private String tagKeyScope;
 
-        @NameInMap("TagValueScope")
+        @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
         private ConfigRule(Builder builder) {
@@ -1264,7 +1263,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the defense rule.
+             * The name of the rule.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -1275,10 +1274,10 @@ public class GetConfigRuleResponseBody extends TeaModel {
              * The status of the rule. Valid values:
              * <p>
              * 
-             * *   ACTIVE: The rule was being used to monitor resource configurations.
-             * *   DELETING: The rule was being deleted.
-             * *   EVALUATING: The rule was triggered and is being used to monitor resource configurations.
-             * *   INACTIVE: The rule was disabled.
+             * *   ACTIVE: The rule is enabled.
+             * *   DELETING: The rule is being deleted.
+             * *   EVALUATING: The rule is being used to evaluate resource configurations.
+             * *   INACTIVE: The rule is disabled.
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -1306,7 +1305,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the rule was created. Unit: milliseconds.
+             * The timestamp generated when the rule was created. Unit: millisecond.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -1330,7 +1329,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the input parameters of the rule.
+             * The input parameters of the rule.
              */
             public Builder inputParameters(java.util.Map < String, ? > inputParameters) {
                 this.inputParameters = inputParameters;
@@ -1346,16 +1345,16 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the rule was triggered. Valid values:
+             * The interval at which the rule is triggered. Valid values:
              * <p>
              * 
-             * *   One_Hour: 1 hour.
-             * *   Three_Hours: 3 hours.
-             * *   Six_Hours: 6 hours.
-             * *   Twelve_Hours: 12 hours.
-             * *   TwentyFour_Hours: 24 hours.
+             * *   One_Hour
+             * *   Three_Hours
+             * *   Six_Hours
+             * *   Twelve_Hours
+             * *   TwentyFour_Hours
              * 
-             * > This parameter is returned if the managed rule is periodically triggered.
+             * >  This parameter is returned if the rule is periodically triggered.
              */
             public Builder maximumExecutionFrequency(String maximumExecutionFrequency) {
                 this.maximumExecutionFrequency = maximumExecutionFrequency;
@@ -1363,7 +1362,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the rule was last updated. Unit: milliseconds.
+             * The timestamp generated when the rule was last updated. Unit: millisecond.
              */
             public Builder modifiedTimestamp(Long modifiedTimestamp) {
                 this.modifiedTimestamp = modifiedTimestamp;
@@ -1395,12 +1394,12 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * *   1: high.
+             * *   2: medium.
+             * *   3: low.
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

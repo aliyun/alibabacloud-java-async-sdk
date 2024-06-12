@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateDiscoveredResourcesRequest</p>
  */
 public class ListAggregateDiscoveredResourcesRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
-    @Validation(maximum = 100000, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maximum = 100000, minimum = 1)
     private String nextToken;
 
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private String regions;
 
-    @Query
-    @NameInMap("ResourceAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
     private Long resourceAccountId;
 
-    @Query
-    @NameInMap("ResourceDeleted")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
     private Integer resourceDeleted;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     @Deprecated
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
     private ListAggregateDiscoveredResourcesRequest(Builder builder) {
@@ -209,7 +208,7 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud account to which the resources in the account group belong.
+         * The ID of the Alibaba Cloud account to which the specified resource belongs in the account group.
          */
         public Builder resourceAccountId(Long resourceAccountId) {
             this.putQueryParameter("ResourceAccountId", resourceAccountId);
@@ -221,8 +220,8 @@ public class ListAggregateDiscoveredResourcesRequest extends Request {
          * The status of the resource. Valid values:
          * <p>
          * 
-         * *   0: The resource is deleted.
-         * *   1 (default): The resource is retained.
+         * *   0: The resource is deleted. If a resource is deleted from the desired cloud service, **Deleted** is displayed in the resource list in the Cloud Config console.
+         * *   1 (default): The resource is retained. If a resource is managed as expected, **Active** is displayed in the resource list in the Cloud Config console.
          */
         public Builder resourceDeleted(Integer resourceDeleted) {
             this.putQueryParameter("ResourceDeleted", resourceDeleted);

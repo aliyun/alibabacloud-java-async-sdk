@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConfigurationRecorderResponseBody</p>
  */
 public class GetConfigurationRecorderResponseBody extends TeaModel {
-    @NameInMap("ConfigurationRecorder")
+    @com.aliyun.core.annotation.NameInMap("ConfigurationRecorder")
     private ConfigurationRecorder configurationRecorder;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConfigurationRecorderResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetConfigurationRecorderResponseBody extends TeaModel {
     } 
 
     public static class ConfigurationRecorder extends TeaModel {
-        @NameInMap("ConfigurationRecorderStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationRecorderStatus")
         private String configurationRecorderStatus;
 
-        @NameInMap("ResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypes")
         private java.util.List < String > resourceTypes;
 
         private ConfigurationRecorder(Builder builder) {

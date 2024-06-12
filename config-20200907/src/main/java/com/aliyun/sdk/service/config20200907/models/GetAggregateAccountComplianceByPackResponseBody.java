@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateAccountComplianceByPackResponseBody</p>
  */
 public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("AccountComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("AccountComplianceResult")
     private AccountComplianceResult accountComplianceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateAccountComplianceByPackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
     } 
 
     public static class AccountCompliances extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
         private AccountCompliances(Builder builder) {
@@ -159,16 +158,16 @@ public class GetAggregateAccountComplianceByPackResponseBody extends TeaModel {
 
     }
     public static class AccountComplianceResult extends TeaModel {
-        @NameInMap("AccountCompliances")
+        @com.aliyun.core.annotation.NameInMap("AccountCompliances")
         private java.util.List < AccountCompliances> accountCompliances;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private AccountComplianceResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAggregateCompliancePacksResponseBody</p>
  */
 public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
-    @NameInMap("OperateCompliancePacksResult")
+    @com.aliyun.core.annotation.NameInMap("OperateCompliancePacksResult")
     private OperateCompliancePacksResult operateCompliancePacksResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAggregateCompliancePacksResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
     } 
 
     public static class OperateCompliancePacks extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private OperateCompliancePacks(Builder builder) {
@@ -161,7 +160,7 @@ public class DeleteAggregateCompliancePacksResponseBody extends TeaModel {
 
     }
     public static class OperateCompliancePacksResult extends TeaModel {
-        @NameInMap("OperateCompliancePacks")
+        @com.aliyun.core.annotation.NameInMap("OperateCompliancePacks")
         private java.util.List < OperateCompliancePacks> operateCompliancePacks;
 
         private OperateCompliancePacksResult(Builder builder) {

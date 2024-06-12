@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListManagedRulesResponseBody</p>
  */
 public class ListManagedRulesResponseBody extends TeaModel {
-    @NameInMap("ManagedRules")
+    @com.aliyun.core.annotation.NameInMap("ManagedRules")
     private ManagedRules managedRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListManagedRulesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ListManagedRulesResponseBody extends TeaModel {
     } 
 
     public static class Scope extends TeaModel {
-        @NameInMap("ComplianceResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
         private java.util.List < String > complianceResourceTypes;
 
         private Scope(Builder builder) {
@@ -113,34 +112,34 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     }
     public static class ManagedRuleList extends TeaModel {
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < String > labels;
 
-        @NameInMap("RemediationTemplateIdentifier")
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateIdentifier")
         private String remediationTemplateIdentifier;
 
-        @NameInMap("RemediationTemplateName")
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateName")
         private String remediationTemplateName;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("SupportPreviewManagedRule")
+        @com.aliyun.core.annotation.NameInMap("SupportPreviewManagedRule")
         private Boolean supportPreviewManagedRule;
 
         private ManagedRuleList(Builder builder) {
@@ -344,16 +343,16 @@ public class ListManagedRulesResponseBody extends TeaModel {
 
     }
     public static class ManagedRules extends TeaModel {
-        @NameInMap("ManagedRuleList")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleList")
         private java.util.List < ManagedRuleList> managedRuleList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ManagedRules(Builder builder) {

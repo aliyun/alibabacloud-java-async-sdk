@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAggregatorRequest</p>
  */
 public class CreateAggregatorRequest extends Request {
-    @Body
-    @NameInMap("AggregatorAccounts")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorAccounts")
     private java.util.List < AggregatorAccounts> aggregatorAccounts;
 
-    @Body
-    @NameInMap("AggregatorName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorName;
 
-    @Body
-    @NameInMap("AggregatorType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorType")
     private String aggregatorType;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String description;
 
-    @Body
-    @NameInMap("FolderId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
     private CreateAggregatorRequest(Builder builder) {
@@ -126,7 +125,20 @@ public class CreateAggregatorRequest extends Request {
         } 
 
         /**
-         * The type of the member account. Valid value: ResourceDirectory.
+         * The information about the member accounts in the account group. Example:
+         * <p>
+         * 
+         *     [{
+         *     	"accountId": 171322098523****,
+         *     	"accountType":"ResourceDirectory",
+         *                     "accountName":"Alice"
+         *     }, {
+         *     	"accountId": 100532098349****,
+         *     	"accountType":"ResourceDirectory",
+         *                     "accountName":"Tom"
+         *     }]
+         * 
+         * >  If `AggregatorType` is set to `RD` or `FOLDER`, this parameter can be left empty, which indicates that all accounts in the resource directory are added to the global account group.
          */
         public Builder aggregatorAccounts(java.util.List < AggregatorAccounts> aggregatorAccounts) {
             String aggregatorAccountsShrink = shrink(aggregatorAccounts, "AggregatorAccounts", "json");
@@ -148,8 +160,9 @@ public class CreateAggregatorRequest extends Request {
          * The type of the account group. Valid values:
          * <p>
          * 
-         * *   RD: global account group
-         * *   CUSTOM (default): custom account group
+         * *   RD: global account group.
+         * *   FOLDER: account group of the folder.
+         * *   CUSTOM (default): custom account group.
          */
         public Builder aggregatorType(String aggregatorType) {
             this.putBodyParameter("AggregatorType", aggregatorType);
@@ -176,7 +189,7 @@ public class CreateAggregatorRequest extends Request {
         }
 
         /**
-         * FolderId.
+         * The ID of the folder to which the account group is attached. You must specify this parameter if `AggregatorType` is set to `FOLDER`.
          */
         public Builder folderId(String folderId) {
             this.putBodyParameter("FolderId", folderId);
@@ -192,13 +205,13 @@ public class CreateAggregatorRequest extends Request {
     } 
 
     public static class AggregatorAccounts extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
         private AggregatorAccounts(Builder builder) {
@@ -242,7 +255,7 @@ public class CreateAggregatorRequest extends Request {
             private String accountType; 
 
             /**
-             * The Alibaba Cloud account ID of the member. For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).
+             * The member account ID. For more information about how to obtain the ID of a member account, see [ListAccounts](~~160016~~).
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -258,7 +271,7 @@ public class CreateAggregatorRequest extends Request {
             }
 
             /**
-             * The type of the member account. The value is fixed to ResourceDirectory.
+             * The type of the member account. Set this parameter to ResourceDirectory.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;

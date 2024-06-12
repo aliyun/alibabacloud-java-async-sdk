@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateConfigRulesReportResponseBody</p>
  */
 public class GenerateConfigRulesReportResponseBody extends TeaModel {
-    @NameInMap("ReportId")
+    @com.aliyun.core.annotation.NameInMap("ReportId")
     private String reportId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateConfigRulesReportResponseBody(Builder builder) {

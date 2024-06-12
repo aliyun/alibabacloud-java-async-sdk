@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateResourceInventoryRequest</p>
  */
 public class GenerateResourceInventoryRequest extends Request {
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private String regions;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
+    private Integer resourceDeleted;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
     private GenerateResourceInventoryRequest(Builder builder) {
         super(builder);
         this.regions = builder.regions;
+        this.resourceDeleted = builder.resourceDeleted;
         this.resourceTypes = builder.resourceTypes;
     }
 
@@ -47,6 +51,13 @@ public class GenerateResourceInventoryRequest extends Request {
     }
 
     /**
+     * @return resourceDeleted
+     */
+    public Integer getResourceDeleted() {
+        return this.resourceDeleted;
+    }
+
+    /**
      * @return resourceTypes
      */
     public String getResourceTypes() {
@@ -55,6 +66,7 @@ public class GenerateResourceInventoryRequest extends Request {
 
     public static final class Builder extends Request.Builder<GenerateResourceInventoryRequest, Builder> {
         private String regions; 
+        private Integer resourceDeleted; 
         private String resourceTypes; 
 
         private Builder() {
@@ -64,6 +76,7 @@ public class GenerateResourceInventoryRequest extends Request {
         private Builder(GenerateResourceInventoryRequest request) {
             super(request);
             this.regions = request.regions;
+            this.resourceDeleted = request.resourceDeleted;
             this.resourceTypes = request.resourceTypes;
         } 
 
@@ -73,6 +86,15 @@ public class GenerateResourceInventoryRequest extends Request {
         public Builder regions(String regions) {
             this.putQueryParameter("Regions", regions);
             this.regions = regions;
+            return this;
+        }
+
+        /**
+         * ResourceDeleted.
+         */
+        public Builder resourceDeleted(Integer resourceDeleted) {
+            this.putQueryParameter("ResourceDeleted", resourceDeleted);
+            this.resourceDeleted = resourceDeleted;
             return this;
         }
 

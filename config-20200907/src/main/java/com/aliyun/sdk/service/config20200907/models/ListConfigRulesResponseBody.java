@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConfigRulesResponseBody</p>
  */
 public class ListConfigRulesResponseBody extends TeaModel {
-    @NameInMap("ConfigRules")
+    @com.aliyun.core.annotation.NameInMap("ConfigRules")
     private ConfigRules configRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListConfigRulesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried rules.
+         * The information about the rules.
          */
         public Builder configRules(ConfigRules configRules) {
             this.configRules = configRules;
@@ -72,10 +71,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
     } 
 
     public static class Compliance extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Compliance(Builder builder) {
@@ -110,16 +109,13 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private Integer count; 
 
             /**
-             * The compliance evaluation result. Valid values:
+             * The compliance evaluation result of the rule. Valid values:
              * <p>
              * 
-             * - COMPLIANT: The resource is evaluated as compliant.
-             * 
-             * - NON_COMPLIANT: The resource is evaluated as non-compliant.
-             * 
-             * - NOT_APPLICABLE: The rule does not apply to the resource.
-             * 
-             * - INSUFFICIENT_DATA: No resource data is available.
+             * *   COMPLIANT: The resources are evaluated as compliant.
+             * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+             * *   NOT_APPLICABLE: The rule does not apply to the resources.
+             * *   INSUFFICIENT_DATA: No resource data is available.
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -127,7 +123,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of evaluated resources.
+             * The number of resources that are evaluated based on the rule.
              */
             public Builder count(Integer count) {
                 this.count = count;
@@ -142,10 +138,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     }
     public static class CreateBy extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
         private CreateBy(Builder builder) {
@@ -180,7 +176,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private String compliancePackName; 
 
             /**
-             * The ID of the compliance package.
+             * The compliance package ID.
              */
             public Builder compliancePackId(String compliancePackId) {
                 this.compliancePackId = compliancePackId;
@@ -203,10 +199,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -264,46 +260,46 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     }
     public static class ConfigRuleList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AutomationType")
+        @com.aliyun.core.annotation.NameInMap("AutomationType")
         private String automationType;
 
-        @NameInMap("Compliance")
+        @com.aliyun.core.annotation.NameInMap("Compliance")
         private Compliance compliance;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleState")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
         private String configRuleState;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("SourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("SourceIdentifier")
         private String sourceIdentifier;
 
-        @NameInMap("SourceOwner")
+        @com.aliyun.core.annotation.NameInMap("SourceOwner")
         private String sourceOwner;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private ConfigRuleList(Builder builder) {
@@ -446,7 +442,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the management account to which the rule belongs.
+             * The ID of the account to which the rule belongs.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -454,7 +450,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the remediation template. Valid value: OOS, which indicates Operation Orchestration Service.
+             * The type of the remediation template. Only OOS is returned, which indicates CloudOps Orchestration Service.
              */
             public Builder automationType(String automationType) {
                 this.automationType = automationType;
@@ -462,7 +458,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The compliance evaluation result.
+             * The compliance aggregation result of the rule.
              */
             public Builder compliance(Compliance compliance) {
                 this.compliance = compliance;
@@ -486,7 +482,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The rule name.
+             * The name of the rule.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -497,13 +493,10 @@ public class ListConfigRulesResponseBody extends TeaModel {
              * The status of the rule. Valid values:
              * <p>
              * 
-             * - ACTIVE: The rule is enabled.
-             * 
-             * - DELETING: The rule is being deleted.
-             * 
-             * - EVALUATING: The rule is triggered and is being used to monitor resource configurations.
-             * 
-             * - INACTIVE: The rule is disabled.
+             * *   ACTIVE: The rule is enabled.
+             * *   DELETING: The rule is being deleted.
+             * *   EVALUATING: The rule is being used to evaluate resource configurations.
+             * *   INACTIVE: The rule is disabled.
              */
             public Builder configRuleState(String configRuleState) {
                 this.configRuleState = configRuleState;
@@ -535,14 +528,12 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * - 1: high
-             * 
-             * - 2: medium
-             * 
-             * - 3: low
+             * *   1: high.
+             * *   2: medium.
+             * *   3: low.
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -550,12 +541,11 @@ public class ListConfigRulesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the rule.
+             * The identifier of the rule.
              * <p>
              * 
-             * - If the rule is a managed rule, the value of this parameter is the name of the managed rule.
-             * 
-             * - If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the relevant function in Function Compute.
+             * *   If the rule is a managed rule, the value of this parameter is the identifier of the managed rule.
+             * *   If the rule is a custom rule, the value of this parameter is the Alibaba Cloud Resource Name (ARN) of the rule.
              */
             public Builder sourceIdentifier(String sourceIdentifier) {
                 this.sourceIdentifier = sourceIdentifier;
@@ -566,9 +556,8 @@ public class ListConfigRulesResponseBody extends TeaModel {
              * The type of the rule. Valid values:
              * <p>
              * 
-             * - CUSTOM_FC: custom rule
-             * 
-             * - ALIYUN: managed rule
+             * *   CUSTOM_FC: a custom rule.
+             * *   ALIYUN: a managed rule.
              */
             public Builder sourceOwner(String sourceOwner) {
                 this.sourceOwner = sourceOwner;
@@ -591,16 +580,16 @@ public class ListConfigRulesResponseBody extends TeaModel {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleList")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleList")
         private java.util.List < ConfigRuleList> configRuleList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ConfigRules(Builder builder) {
@@ -653,7 +642,7 @@ public class ListConfigRulesResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * The rule list.
+             * The details of the rule.
              */
             public Builder configRuleList(java.util.List < ConfigRuleList> configRuleList) {
                 this.configRuleList = configRuleList;

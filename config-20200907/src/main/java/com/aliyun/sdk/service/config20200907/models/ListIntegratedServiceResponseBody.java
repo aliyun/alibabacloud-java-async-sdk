@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIntegratedServiceResponseBody</p>
  */
 public class ListIntegratedServiceResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIntegratedServiceResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListIntegratedServiceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("IntegratedTypes")
+        @com.aliyun.core.annotation.NameInMap("IntegratedTypes")
         private String integratedTypes;
 
-        @NameInMap("ServiceCode")
+        @com.aliyun.core.annotation.NameInMap("ServiceCode")
         private String serviceCode;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Boolean status;
 
         private Data(Builder builder) {

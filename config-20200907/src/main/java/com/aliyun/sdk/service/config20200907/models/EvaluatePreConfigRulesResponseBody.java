@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EvaluatePreConfigRulesResponseBody</p>
  */
 public class EvaluatePreConfigRulesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceEvaluations")
+    @com.aliyun.core.annotation.NameInMap("ResourceEvaluations")
     private java.util.List < ResourceEvaluations> resourceEvaluations;
 
     private EvaluatePreConfigRulesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
     } 
 
     public static class Rules extends TeaModel {
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("HelpUrl")
+        @com.aliyun.core.annotation.NameInMap("HelpUrl")
         private String helpUrl;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
         private Rules(Builder builder) {
@@ -178,13 +177,13 @@ public class EvaluatePreConfigRulesResponseBody extends TeaModel {
 
     }
     public static class ResourceEvaluations extends TeaModel {
-        @NameInMap("ResourceLogicalId")
+        @com.aliyun.core.annotation.NameInMap("ResourceLogicalId")
         private String resourceLogicalId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Rules")
+        @com.aliyun.core.annotation.NameInMap("Rules")
         private java.util.List < Rules> rules;
 
         private ResourceEvaluations(Builder builder) {

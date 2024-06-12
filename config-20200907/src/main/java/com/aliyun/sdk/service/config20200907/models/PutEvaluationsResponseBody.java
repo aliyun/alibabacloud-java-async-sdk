@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEvaluationsResponseBody</p>
  */
 public class PutEvaluationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Boolean result;
 
     private PutEvaluationsResponseBody(Builder builder) {
@@ -58,11 +57,11 @@ public class PutEvaluationsResponseBody extends TeaModel {
         }
 
         /**
-         * The submission status of the evaluation results of the custom rule. Valid values:
+         * Indicates whether the evaluation results of the custom rule are submitted. Valid values:
          * <p>
          * 
          * *   true: The evaluation results are submitted.
-         * *   false: The evaluation results failed to be submitted.
+         * *   false: The evaluation results fail to be submitted.
          */
         public Builder result(Boolean result) {
             this.result = result;

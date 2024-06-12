@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceEvaluationResultsResponseBody</p>
  */
 public class ListResourceEvaluationResultsResponseBody extends TeaModel {
-    @NameInMap("EvaluationResults")
+    @com.aliyun.core.annotation.NameInMap("EvaluationResults")
     private EvaluationResults evaluationResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListResourceEvaluationResultsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
     } 
 
     public static class EvaluationResultQualifier extends TeaModel {
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("IgnoreDate")
+        @com.aliyun.core.annotation.NameInMap("IgnoreDate")
         private String ignoreDate;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EvaluationResultQualifier(Builder builder) {
@@ -256,10 +255,10 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
 
     }
     public static class EvaluationResultIdentifier extends TeaModel {
-        @NameInMap("EvaluationResultQualifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultQualifier")
         private EvaluationResultQualifier evaluationResultQualifier;
 
-        @NameInMap("OrderingTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OrderingTimestamp")
         private Long orderingTimestamp;
 
         private EvaluationResultIdentifier(Builder builder) {
@@ -317,28 +316,28 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
 
     }
     public static class EvaluationResultList extends TeaModel {
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("ConfigRuleInvokedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleInvokedTimestamp")
         private Long configRuleInvokedTimestamp;
 
-        @NameInMap("EvaluationResultIdentifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultIdentifier")
         private EvaluationResultIdentifier evaluationResultIdentifier;
 
-        @NameInMap("InvokingEventMessageType")
+        @com.aliyun.core.annotation.NameInMap("InvokingEventMessageType")
         private String invokingEventMessageType;
 
-        @NameInMap("RemediationEnabled")
+        @com.aliyun.core.annotation.NameInMap("RemediationEnabled")
         private Boolean remediationEnabled;
 
-        @NameInMap("ResultRecordedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ResultRecordedTimestamp")
         private Long resultRecordedTimestamp;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private EvaluationResultList(Builder builder) {
@@ -525,13 +524,13 @@ public class ListResourceEvaluationResultsResponseBody extends TeaModel {
 
     }
     public static class EvaluationResults extends TeaModel {
-        @NameInMap("EvaluationResultList")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultList")
         private java.util.List < EvaluationResultList> evaluationResultList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private EvaluationResults(Builder builder) {

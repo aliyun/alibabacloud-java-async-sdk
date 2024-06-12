@@ -746,6 +746,11 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### [](#)Prerequisites
+      * You must call the [CreateAdvancedSearchFile](~~2511967~~) operation to create a resource advanced search file. Then, you can call this operation to obtain the URL of the resource advanced search file.
+      *
+     */
     @Override
     public CompletableFuture<GetAdvancedSearchFileResponse> getAdvancedSearchFile(GetAdvancedSearchFileRequest request) {
         try {
@@ -942,7 +947,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetAggregateDiscoveredResourceResponse> getAggregateDiscoveredResource(GetAggregateDiscoveredResourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAggregateDiscoveredResource").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetAggregateDiscoveredResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetAggregateDiscoveredResourceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1089,7 +1094,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the most recently generated resource inventory of an account group whose ID is ca-a91d626622af0035\\*\\*\\*\\*.
+      * ### [](#)Prerequisites
+      * The [GenerateAggregateResourceInventory](~~2398353~~) operation is called to generate a resource inventory. Then, this operation is called to obtain the URL of the resource inventory.
+      * ### [](#)Description
+      * This topic provides an example on how to obtain the last resource inventory that is generated within the account group ca-a91d626622af0035\\*\\*\\*\\*.
       *
      */
     @Override
@@ -1292,7 +1300,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetDiscoveredResourceResponse> getDiscoveredResource(GetDiscoveredResourceRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDiscoveredResource").setMethod(HttpMethod.GET).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("GetDiscoveredResource").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetDiscoveredResourceResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1453,7 +1461,8 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * The sample request in this topic shows you how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The resource is an Object Storage Service (OSS) bucket. The return result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
+      * In Cloud Config, each resource has a compliance timeline. Cloud Config generates a compliance evaluation record for a resource each time the resource is evaluated based on a rule. The compliance evaluation records of a resource are displayed in a compliance timeline. You can configure Cloud Config to execute a rule to evaluate a resource on a regular basis or each time you change the resource configuration. You can also manually execute a rule to evaluate a resource.
+      * This topic provides an example on how to query the compliance timeline of the `new-bucket` resource that resides in the `cn-hangzhou` region. The resource is an Object Storage Service (OSS) bucket. The returned result shows the following two timestamps on the compliance timeline: `1625200295276` and `1625200228510`. The first timestamp indicates 12:31:35 on July 2, 2021 (UTC+8) and the second timestamp indicates 12:30:28 on July 2, 2021 (UTC+8).
       *
      */
     @Override
@@ -1489,7 +1498,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the most recently generated resource inventory of the current Alibaba Cloud account.
+      * ### [](#)Prerequisites
+      * You can call the [GenerateResourceInventory](~~2398354~~) operation to generate a resource inventory. Then, you can call the GetResourceInventory operation to obtain the URL of the resource inventory.
+      * ### [](#)Description
+      * This topic provides an example on how to obtain the last resource inventory that is generated within the current Alibaba Cloud account.
       *
      */
     @Override
@@ -1649,7 +1661,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query a list of resources in the `ca-c560626622af0005****` account group. The returned result shows that eight resources exist in the account group.
+      * This topic provides an example on how to query the resources within the member account `100931896542****` of the account group `ca-c560626622af0005****`. The result indicates that eight resources are queried.
       *
      */
     @Override
@@ -1738,6 +1750,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\))
+      * > 
+      * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
+      * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](~~398718~~) and [Limits on SQL query statements](~~398750~~).
+      * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` in the account group `ca-4b05626622af000c****` by using the advanced search feature.
+      *
+     */
     @Override
     public CompletableFuture<ListAggregateResourcesByAdvancedSearchResponse> listAggregateResourcesByAdvancedSearch(ListAggregateResourcesByAdvancedSearchRequest request) {
         try {
@@ -2029,7 +2049,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query all resources with the business tag key and the online tag value in the current Alibaba Cloud account.
+      * When you write a `SELECT` statement, you must obtain the fields and the data types of the fields from the property file of the resource type. For more information about property files, see [Alibaba Cloud Config Resource Schema](javascript:void\\(0\\)).
+      * > 
+      * *   Each resource type supported by Cloud Config has a property file. Property files are named based on the related resource types. For example, the property file of the `ACS::ECS::Instance` resource type is named `ACS_ECS_Instance.properties.json`. Property files of different resource types are placed under the `config/properties/resource-types` path.
+      * *   For more information about the examples and limits on SQL query statements, see [Examples of SQL query statements](~~398718~~) and [Limits on SQL query statements](~~398750~~).
+      * This topic provides an example on how to obtain all resources whose tag key is `business` and whose tag value is `online` within the current account by using the advanced search feature.
       *
      */
     @Override
@@ -2047,7 +2071,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This topic provides an example on how to query the cloud services and resource types that are supported by Cloud Config.
+      * This topic provides an example on how to query the Alibaba Cloud services and resource types supported by a Cloud Config.
       *
      */
     @Override

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCompliancePackRequest</p>
  */
 public class UpdateCompliancePackRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("CompliancePackId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String compliancePackId;
 
-    @Body
-    @NameInMap("CompliancePackName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompliancePackName")
     private String compliancePackName;
 
-    @Body
-    @NameInMap("ConfigRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRules")
     private java.util.List < ConfigRules> configRules;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(maxLength = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 500)
     private String description;
 
-    @Body
-    @NameInMap("ExcludeResourceIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
 
-    @Body
-    @NameInMap("RegionIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
     private String regionIdsScope;
 
-    @Body
-    @NameInMap("ResourceGroupIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
 
-    @Body
-    @NameInMap("RiskLevel")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
-    @Body
-    @NameInMap("TagKeyScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
 
-    @Body
-    @NameInMap("TagValueScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
     private UpdateCompliancePackRequest(Builder builder) {
@@ -324,10 +323,10 @@ public class UpdateCompliancePackRequest extends Request {
     } 
 
     public static class ConfigRuleParameters extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigRuleParameters(Builder builder) {
@@ -391,22 +390,22 @@ public class UpdateCompliancePackRequest extends Request {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleParameters")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
         private java.util.List < ConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
         private String managedRuleIdentifier;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRules(Builder builder) {

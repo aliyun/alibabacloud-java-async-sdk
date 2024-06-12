@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateResourceConfigurationTimelineResponseBody</p>
  */
 public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceConfigurationTimeline")
+    @com.aliyun.core.annotation.NameInMap("ResourceConfigurationTimeline")
     private ResourceConfigurationTimeline resourceConfigurationTimeline;
 
     private GetAggregateResourceConfigurationTimelineResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
     } 
 
     public static class ConfigurationList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("CaptureTime")
+        @com.aliyun.core.annotation.NameInMap("CaptureTime")
         private String captureTime;
 
-        @NameInMap("ConfigurationDiff")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationDiff")
         private String configurationDiff;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreateTime")
         private String resourceCreateTime;
 
-        @NameInMap("ResourceEventType")
+        @com.aliyun.core.annotation.NameInMap("ResourceEventType")
         private String resourceEventType;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private ConfigurationList(Builder builder) {
@@ -324,13 +323,13 @@ public class GetAggregateResourceConfigurationTimelineResponseBody extends TeaMo
 
     }
     public static class ResourceConfigurationTimeline extends TeaModel {
-        @NameInMap("ConfigurationList")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationList")
         private java.util.List < ConfigurationList> configurationList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private ResourceConfigurationTimeline(Builder builder) {

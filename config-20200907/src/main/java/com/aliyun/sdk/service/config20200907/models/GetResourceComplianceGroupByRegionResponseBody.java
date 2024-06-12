@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceComplianceGroupByRegionResponseBody</p>
  */
 public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
-    @NameInMap("ComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ComplianceResult")
     private ComplianceResult complianceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetResourceComplianceGroupByRegionResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
     } 
 
     public static class Compliances extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private Compliances(Builder builder) {
@@ -113,10 +112,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
              * The evaluation result. Valid values:
              * <p>
              * 
-             * *   COMPLIANT: The resource is evaluated as compliant.
-             * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to the resource.
-             * *   INSUFFICIENT_DATA: No data is available.
+             * *   COMPLIANT: The resources are evaluated as compliant.
+             * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+             * *   NOT_APPLICABLE: The rule does not apply to the resources.
+             * *   INSUFFICIENT_DATA: No resource data is available.
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -139,10 +138,10 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
 
     }
     public static class ComplianceResultList extends TeaModel {
-        @NameInMap("Compliances")
+        @com.aliyun.core.annotation.NameInMap("Compliances")
         private java.util.List < Compliances> compliances;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private ComplianceResultList(Builder builder) {
@@ -200,7 +199,7 @@ public class GetResourceComplianceGroupByRegionResponseBody extends TeaModel {
 
     }
     public static class ComplianceResult extends TeaModel {
-        @NameInMap("ComplianceResultList")
+        @com.aliyun.core.annotation.NameInMap("ComplianceResultList")
         private java.util.List < ComplianceResultList> complianceResultList;
 
         private ComplianceResult(Builder builder) {

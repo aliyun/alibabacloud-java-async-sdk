@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevertEvaluationResultsRequest</p>
  */
 public class RevertEvaluationResultsRequest extends Request {
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Resources> resources;
 
     private RevertEvaluationResultsRequest(Builder builder) {
@@ -99,20 +98,20 @@ public class RevertEvaluationResultsRequest extends Request {
     } 
 
     public static class Resources extends TeaModel {
-        @NameInMap("Region")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Region")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String region;
 
-        @NameInMap("ResourceAccountId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long resourceAccountId;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceType;
 
         private Resources(Builder builder) {

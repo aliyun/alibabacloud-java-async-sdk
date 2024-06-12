@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateResourceComplianceTimelineResponseBody</p>
  */
 public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceComplianceTimeline")
+    @com.aliyun.core.annotation.NameInMap("ResourceComplianceTimeline")
     private ResourceComplianceTimeline resourceComplianceTimeline;
 
     private GetAggregateResourceComplianceTimelineResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
     } 
 
     public static class ComplianceList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("CaptureTime")
+        @com.aliyun.core.annotation.NameInMap("CaptureTime")
         private Long captureTime;
 
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("ConfigurationDiff")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationDiff")
         private String configurationDiff;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreateTime")
         private Long resourceCreateTime;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private ComplianceList(Builder builder) {
@@ -337,13 +336,13 @@ public class GetAggregateResourceComplianceTimelineResponseBody extends TeaModel
 
     }
     public static class ResourceComplianceTimeline extends TeaModel {
-        @NameInMap("ComplianceList")
+        @com.aliyun.core.annotation.NameInMap("ComplianceList")
         private java.util.List < ComplianceList> complianceList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private ResourceComplianceTimeline(Builder builder) {

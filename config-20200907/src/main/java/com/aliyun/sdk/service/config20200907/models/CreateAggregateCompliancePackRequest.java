@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,65 +11,65 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAggregateCompliancePackRequest</p>
  */
 public class CreateAggregateCompliancePackRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("CompliancePackName")
-    @Validation(required = true, maxLength = 100)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompliancePackName")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 100)
     private String compliancePackName;
 
-    @Body
-    @NameInMap("CompliancePackTemplateId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
     private String compliancePackTemplateId;
 
-    @Body
-    @NameInMap("ConfigRules")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRules")
     private java.util.List < ConfigRules> configRules;
 
-    @Body
-    @NameInMap("DefaultEnable")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DefaultEnable")
     private Boolean defaultEnable;
 
-    @Body
-    @NameInMap("Description")
-    @Validation(maxLength = 500)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
+    @com.aliyun.core.annotation.Validation(maxLength = 500)
     private String description;
 
-    @Body
-    @NameInMap("ExcludeResourceIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
 
-    @Body
-    @NameInMap("RegionIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
     private String regionIdsScope;
 
-    @Body
-    @NameInMap("ResourceGroupIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
 
-    @Body
-    @NameInMap("RiskLevel")
-    @Validation(maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Validation(maximum = 3, minimum = 1)
     private Integer riskLevel;
 
-    @Body
-    @NameInMap("TagKeyScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
 
-    @Body
-    @NameInMap("TagValueScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
-    @Body
-    @NameInMap("TemplateContent")
-    @Validation(maxLength = 1024000)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TemplateContent")
+    @com.aliyun.core.annotation.Validation(maxLength = 1024000)
     private String templateContent;
 
     private CreateAggregateCompliancePackRequest(Builder builder) {
@@ -271,7 +270,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * The ID of the compliance package template.
+         * The ID of the compliance package template from which you want to create a compliance package.
          * <p>
          * 
          * For more information about how to obtain the ID of a compliance package template, see [ListCompliancePackTemplates](~~261176~~).
@@ -283,7 +282,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * The rules in the compliance package.
+         * The rules in the compliance package. You must specify one of ConfigRules and TemplateContent.
          */
         public Builder configRules(java.util.List < ConfigRules> configRules) {
             String configRulesShrink = shrink(configRules, "ConfigRules", "json");
@@ -342,12 +341,12 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rules in the compliance package. Valid values:
+         * The risk level of the resources that are not compliant with the rules in the compliance package. Default value: 2. Valid values:
          * <p>
          * 
-         * *   1: high
-         * *   2: medium
-         * *   3: low
+         * *   1: high.
+         * *   2: medium.
+         * *   3: low.
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
@@ -377,7 +376,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
         }
 
         /**
-         * TemplateContent.
+         * The information about the template that is used to create the compliance package. You can call the GetAggregateCompliancePack operation to view the details of an existing compliance package or write a compliance package template. For more information, see [Write a compliance package template in a configuration file](~~2659733~~). You must specify one of ConfigRules and TemplateContent.
          */
         public Builder templateContent(String templateContent) {
             this.putBodyParameter("TemplateContent", templateContent);
@@ -393,10 +392,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
     } 
 
     public static class ConfigRuleParameters extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigRuleParameters(Builder builder) {
@@ -434,7 +433,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
              * The name of the input parameter.
              * <p>
              * 
-             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the name of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the names of input parameters of the managed rule.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -445,7 +444,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
              * The value of the input parameter.
              * <p>
              * 
-             * You must configure the `ParameterName` and `ParameterValue` parameters or neither of them. If the managed rule has an input parameter but no default value exists, you must configure this parameter. For more information about how to obtain the value of an input parameter for a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You must specify both `ParameterName` and `ParameterValue` or neither of them. If the managed rule has an input parameter but no default value is specified, you must specify this parameter. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the values of input parameters of the managed rule.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
@@ -460,23 +459,23 @@ public class CreateAggregateCompliancePackRequest extends Request {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
-        @Validation(maxLength = 100)
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.Validation(maxLength = 100)
         private String configRuleName;
 
-        @NameInMap("ConfigRuleParameters")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
         private java.util.List < ConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
         private String managedRuleIdentifier;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRules(Builder builder) {
@@ -547,10 +546,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             private Integer riskLevel; 
 
             /**
-             * The ID of the rule. If you configure this parameter, Cloud Config adds the rule of the specified ID to the compliance package.
+             * The rule ID. If you specify this parameter, Cloud Config adds the rule that has the specified ID to the compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter takes precedence. For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+             * You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListAggregateConfigRules](~~264148~~) operation to obtain the rule ID.
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -566,7 +565,7 @@ public class CreateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The details of the input parameter of the rule.
+             * The input parameters of the rule.
              */
             public Builder configRuleParameters(java.util.List < ConfigRuleParameters> configRuleParameters) {
                 this.configRuleParameters = configRuleParameters;
@@ -582,10 +581,10 @@ public class CreateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The ID of the managed rule. Cloud Config automatically create a managed rule of the specified ID and adds the rule to the compliance package.
+             * The identifier of the managed rule. Cloud Config automatically creates a managed rule based on the specified identifier and adds the rule to the compliance package.
              * <p>
              * 
-             * You only need to configure the `ManagedRuleIdentifier` or `ConfigRuleId` parameter. If you configure both parameters, the value of the `ConfigRuleId` parameter take precedence. For more information about how to obtain the identifier of a managed rule, see [ListCompliancePackTemplates](~~261176~~).
+             * You need to only specify `ManagedRuleIdentifier` or `ConfigRuleId`. If you specify both parameters, Cloud Config adds a rule based on the value of `ConfigRuleId`. You can call the [ListCompliancePackTemplates](~~261176~~) operation to obtain the identifier of the managed rule.
              */
             public Builder managedRuleIdentifier(String managedRuleIdentifier) {
                 this.managedRuleIdentifier = managedRuleIdentifier;
@@ -593,12 +592,12 @@ public class CreateAggregateCompliancePackRequest extends Request {
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high.
+             * *   2: medium.
+             * *   3: low.
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;

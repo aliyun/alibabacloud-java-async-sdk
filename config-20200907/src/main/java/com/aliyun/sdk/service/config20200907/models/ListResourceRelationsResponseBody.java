@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourceRelationsResponseBody</p>
  */
 public class ListResourceRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceRelations")
+    @com.aliyun.core.annotation.NameInMap("ResourceRelations")
     private ResourceRelations resourceRelations;
 
     private ListResourceRelationsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListResourceRelationsResponseBody extends TeaModel {
     } 
 
     public static class ResourceRelationList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("SourceResourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceId")
         private String sourceResourceId;
 
-        @NameInMap("SourceResourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceRegionId")
         private String sourceResourceRegionId;
 
-        @NameInMap("SourceResourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceType")
         private String sourceResourceType;
 
-        @NameInMap("TargetResourceId")
+        @com.aliyun.core.annotation.NameInMap("TargetResourceId")
         private String targetResourceId;
 
-        @NameInMap("TargetResourceType")
+        @com.aliyun.core.annotation.NameInMap("TargetResourceType")
         private String targetResourceType;
 
         private ResourceRelationList(Builder builder) {
@@ -184,36 +183,9 @@ public class ListResourceRelationsResponseBody extends TeaModel {
              * Valid values:
              * 
              * *   IsContained: The object is included as part of the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   IsAttachedTo: The object is added to the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   IsAssociatedIn: The object is associated with the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   Contains: The object contains the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -229,7 +201,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the current resource belongs.
+             * The ID of the region in which the resource resides.
              */
             public Builder sourceResourceRegionId(String sourceResourceRegionId) {
                 this.sourceResourceRegionId = sourceResourceRegionId;
@@ -245,7 +217,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource that is associated with the object.
+             * The ID of the associated resource.
              */
             public Builder targetResourceId(String targetResourceId) {
                 this.targetResourceId = targetResourceId;
@@ -253,7 +225,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource that is associated with the object.
+             * The type of the associated resource.
              */
             public Builder targetResourceType(String targetResourceType) {
                 this.targetResourceType = targetResourceType;
@@ -268,14 +240,14 @@ public class ListResourceRelationsResponseBody extends TeaModel {
 
     }
     public static class ResourceRelations extends TeaModel {
-        @NameInMap("MaxResults")
-        @Validation(maximum = 100, minimum = 10)
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
+        @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("ResourceRelationList")
+        @com.aliyun.core.annotation.NameInMap("ResourceRelationList")
         private java.util.List < ResourceRelationList> resourceRelationList;
 
         private ResourceRelations(Builder builder) {
@@ -335,42 +307,7 @@ public class ListResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the relationship between the resource and the object.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   IsContained: The object is included as part of the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   IsAttachedTo: The object is added to the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   IsAssociatedIn: The object is associated with the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Contains: The actual value contains the expected value.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * An array that contains the relationships.
              */
             public Builder resourceRelationList(java.util.List < ResourceRelationList> resourceRelationList) {
                 this.resourceRelationList = resourceRelationList;

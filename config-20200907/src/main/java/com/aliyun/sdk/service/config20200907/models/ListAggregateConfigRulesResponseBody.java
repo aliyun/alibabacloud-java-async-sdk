@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateConfigRulesResponseBody</p>
  */
 public class ListAggregateConfigRulesResponseBody extends TeaModel {
-    @NameInMap("ConfigRules")
+    @com.aliyun.core.annotation.NameInMap("ConfigRules")
     private ConfigRules configRules;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateConfigRulesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
     } 
 
     public static class Compliance extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Compliance(Builder builder) {
@@ -139,25 +138,25 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     }
     public static class CreateBy extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("CreatorType")
+        @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
         private CreateBy(Builder builder) {
@@ -300,10 +299,10 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -361,46 +360,46 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     }
     public static class ConfigRuleList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AutomationType")
+        @com.aliyun.core.annotation.NameInMap("AutomationType")
         private String automationType;
 
-        @NameInMap("Compliance")
+        @com.aliyun.core.annotation.NameInMap("Compliance")
         private Compliance compliance;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleState")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
         private String configRuleState;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("SourceIdentifier")
+        @com.aliyun.core.annotation.NameInMap("SourceIdentifier")
         private String sourceIdentifier;
 
-        @NameInMap("SourceOwner")
+        @com.aliyun.core.annotation.NameInMap("SourceOwner")
         private String sourceOwner;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private ConfigRuleList(Builder builder) {
@@ -681,16 +680,16 @@ public class ListAggregateConfigRulesResponseBody extends TeaModel {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleList")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleList")
         private java.util.List < ConfigRuleList> configRuleList;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private ConfigRules(Builder builder) {

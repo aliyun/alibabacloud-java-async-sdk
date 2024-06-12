@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRemediationTemplateResponseBody</p>
  */
 public class GetRemediationTemplateResponseBody extends TeaModel {
-    @NameInMap("RemediationTemplates")
+    @com.aliyun.core.annotation.NameInMap("RemediationTemplates")
     private java.util.List < RemediationTemplates> remediationTemplates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetRemediationTemplateResponseBody(Builder builder) {
@@ -72,24 +71,24 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
     } 
 
     public static class RemediationTemplates extends TeaModel {
-        @NameInMap("ManagedRuleIdentifier")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String managedRuleIdentifier;
 
-        @NameInMap("RemediationType")
+        @com.aliyun.core.annotation.NameInMap("RemediationType")
         private String remediationType;
 
-        @NameInMap("TemplateDefinition")
+        @com.aliyun.core.annotation.NameInMap("TemplateDefinition")
         private String templateDefinition;
 
-        @NameInMap("TemplateDescription")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TemplateDescription")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String templateDescription;
 
-        @NameInMap("TemplateIdentifier")
+        @com.aliyun.core.annotation.NameInMap("TemplateIdentifier")
         private String templateIdentifier;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
         private RemediationTemplates(Builder builder) {
@@ -168,7 +167,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the automatic remediation template. Valid value: OOS.
+             * The type of the automatic remediation template. The value is set to OOS.
              */
             public Builder remediationType(String remediationType) {
                 this.remediationType = remediationType;
@@ -192,7 +191,7 @@ public class GetRemediationTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * The identifier of the automatic remediation template.
+             * The ID of the automatic remediation template.
              */
             public Builder templateIdentifier(String templateIdentifier) {
                 this.templateIdentifier = templateIdentifier;

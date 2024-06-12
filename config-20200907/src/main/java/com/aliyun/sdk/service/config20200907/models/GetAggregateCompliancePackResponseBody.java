@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateCompliancePackResponseBody</p>
  */
 public class GetAggregateCompliancePackResponseBody extends TeaModel {
-    @NameInMap("CompliancePack")
+    @com.aliyun.core.annotation.NameInMap("CompliancePack")
     private CompliancePack compliancePack;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateCompliancePackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
     } 
 
     public static class ConfigRuleParameters extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private ConfigRuleParameters(Builder builder) {
@@ -138,7 +137,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the input parameter is required. Valid values:
+             * Indicates whether the input parameters are required. Valid values:
              * <p>
              * 
              * *   true
@@ -157,25 +156,25 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleParameters")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
         private java.util.List < ConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
         private String managedRuleIdentifier;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRules(Builder builder) {
@@ -279,7 +278,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * The rule description.
+             * The description of the rule.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -306,9 +305,9 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
              * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high
-             * *   2: medium
-             * *   3: low
+             * *   1: high.
+             * *   2: medium.
+             * *   3: low.
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -323,19 +322,19 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     }
     public static class Scope extends TeaModel {
-        @NameInMap("ExcludeResourceIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
 
-        @NameInMap("RegionIdsScope")
+        @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
 
-        @NameInMap("ResourceGroupIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
 
-        @NameInMap("TagKeyScope")
+        @com.aliyun.core.annotation.NameInMap("TagKeyScope")
         private String tagKeyScope;
 
-        @NameInMap("TagValueScope")
+        @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
         private Scope(Builder builder) {
@@ -444,40 +443,40 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
 
     }
     public static class CompliancePack extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CompliancePackTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
 
-        @NameInMap("ConfigRules")
+        @com.aliyun.core.annotation.NameInMap("ConfigRules")
         private java.util.List < ConfigRules> configRules;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateContent")
+        @com.aliyun.core.annotation.NameInMap("TemplateContent")
         private String templateContent;
 
         private CompliancePack(Builder builder) {
@@ -699,7 +698,7 @@ public class GetAggregateCompliancePackResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateContent.
+             * The information about the current compliance package template. The rules in the template do not contain custom function rules. You can quickly create the same compliance package for other accounts or account groups based on the template information.
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;

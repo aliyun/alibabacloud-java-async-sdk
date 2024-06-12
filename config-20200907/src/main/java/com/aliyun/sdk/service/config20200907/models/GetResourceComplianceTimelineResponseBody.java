@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetResourceComplianceTimelineResponseBody</p>
  */
 public class GetResourceComplianceTimelineResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceComplianceTimeline")
+    @com.aliyun.core.annotation.NameInMap("ResourceComplianceTimeline")
     private ResourceComplianceTimeline resourceComplianceTimeline;
 
     private GetResourceComplianceTimelineResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
     } 
 
     public static class ComplianceList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("CaptureTime")
+        @com.aliyun.core.annotation.NameInMap("CaptureTime")
         private Long captureTime;
 
-        @NameInMap("Configuration")
+        @com.aliyun.core.annotation.NameInMap("Configuration")
         private String configuration;
 
-        @NameInMap("ConfigurationDiff")
+        @com.aliyun.core.annotation.NameInMap("ConfigurationDiff")
         private String configurationDiff;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreateTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreateTime")
         private Long resourceCreateTime;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private ComplianceList(Builder builder) {
@@ -238,7 +237,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The zone where the resource resides.
+             * The ID of the zone in which the resource resides.
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -254,7 +253,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the rules that evaluated the resource and the compliance evaluation result.
+             * The rules associated with the resource and the compliance details of the rules.
              */
             public Builder configuration(String configuration) {
                 this.configuration = configuration;
@@ -262,7 +261,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The details of the configuration change that triggered the compliance evaluation.
+             * The details of the resource changes that trigger the compliance evaluation.
              */
             public Builder configurationDiff(String configurationDiff) {
                 this.configurationDiff = configurationDiff;
@@ -270,7 +269,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region where the resource resides.
+             * The region ID.
              */
             public Builder region(String region) {
                 this.region = region;
@@ -278,7 +277,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the resource was created. Unit: milliseconds.
+             * The time when the resource was created. Unit: milliseconds.
              */
             public Builder resourceCreateTime(Long resourceCreateTime) {
                 this.resourceCreateTime = resourceCreateTime;
@@ -286,7 +285,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -294,7 +293,7 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -302,11 +301,11 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the resource. The parameter value varies with the resource type and may be left empty. Examples:
+             * The status of the resource. The parameter value varies based on the resource type and may be left empty. Examples:
              * <p>
              * 
-             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, valid values of this parameter include Running and Stopped.
-             * *   If the ResourceType parameter is set to ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that does not have a specific state. In this case, this parameter is left empty.
+             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
+             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -337,13 +336,13 @@ public class GetResourceComplianceTimelineResponseBody extends TeaModel {
 
     }
     public static class ResourceComplianceTimeline extends TeaModel {
-        @NameInMap("ComplianceList")
+        @com.aliyun.core.annotation.NameInMap("ComplianceList")
         private java.util.List < ComplianceList> complianceList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private ResourceComplianceTimeline(Builder builder) {

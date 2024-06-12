@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAggregateRemediationsResponseBody</p>
  */
 public class DeleteAggregateRemediationsResponseBody extends TeaModel {
-    @NameInMap("RemediationDeleteResults")
+    @com.aliyun.core.annotation.NameInMap("RemediationDeleteResults")
     private java.util.List < RemediationDeleteResults> remediationDeleteResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAggregateRemediationsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DeleteAggregateRemediationsResponseBody extends TeaModel {
     } 
 
     public static class RemediationDeleteResults extends TeaModel {
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("RemediationId")
+        @com.aliyun.core.annotation.NameInMap("RemediationId")
         private String remediationId;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private RemediationDeleteResults(Builder builder) {

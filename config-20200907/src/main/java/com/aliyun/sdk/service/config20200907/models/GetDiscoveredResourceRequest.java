@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiscoveredResourceRequest</p>
  */
 public class GetDiscoveredResourceRequest extends Request {
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceOption")
+    private Integer complianceOption;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private GetDiscoveredResourceRequest(Builder builder) {
         super(builder);
+        this.complianceOption = builder.complianceOption;
         this.region = builder.region;
         this.resourceId = builder.resourceId;
         this.resourceType = builder.resourceType;
@@ -44,6 +48,13 @@ public class GetDiscoveredResourceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return complianceOption
+     */
+    public Integer getComplianceOption() {
+        return this.complianceOption;
     }
 
     /**
@@ -68,6 +79,7 @@ public class GetDiscoveredResourceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<GetDiscoveredResourceRequest, Builder> {
+        private Integer complianceOption; 
         private String region; 
         private String resourceId; 
         private String resourceType; 
@@ -78,10 +90,20 @@ public class GetDiscoveredResourceRequest extends Request {
 
         private Builder(GetDiscoveredResourceRequest request) {
             super(request);
+            this.complianceOption = request.complianceOption;
             this.region = request.region;
             this.resourceId = request.resourceId;
             this.resourceType = request.resourceType;
         } 
+
+        /**
+         * ComplianceOption.
+         */
+        public Builder complianceOption(Integer complianceOption) {
+            this.putQueryParameter("ComplianceOption", complianceOption);
+            this.complianceOption = complianceOption;
+            return this;
+        }
 
         /**
          * The ID of the region in which the resource resides.

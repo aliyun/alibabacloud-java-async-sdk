@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConfigRuleRequest</p>
  */
 public class CreateConfigRuleRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigRuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleName;
 
-    @Body
-    @NameInMap("ConfigRuleTriggerTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleTriggerTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleTriggerTypes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ExcludeResourceIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
 
-    @Body
-    @NameInMap("InputParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParameters")
     private java.util.Map < String, ? > inputParameters;
 
-    @Body
-    @NameInMap("MaximumExecutionFrequency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
     private String maximumExecutionFrequency;
 
-    @Body
-    @NameInMap("RegionIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
     private String regionIdsScope;
 
-    @Body
-    @NameInMap("ResourceGroupIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
 
-    @Body
-    @NameInMap("ResourceTypesScope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceTypesScope;
 
-    @Body
-    @NameInMap("RiskLevel")
-    @Validation(required = true, maximum = 3, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 3, minimum = 1)
     private Integer riskLevel;
 
-    @Body
-    @NameInMap("SourceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceIdentifier;
 
-    @Body
-    @NameInMap("SourceOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceOwner;
 
-    @Body
-    @NameInMap("TagKeyLogicScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
     private String tagKeyLogicScope;
 
-    @Body
-    @NameInMap("TagKeyScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
 
-    @Body
-    @NameInMap("TagValueScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
     private CreateConfigRuleRequest(Builder builder) {
@@ -386,12 +385,12 @@ public class CreateConfigRuleRequest extends Request {
         }
 
         /**
-         * The risk level of the resources that are not compliant with the rule. Valid values:
+         * The risk level of the resources that do not comply with the rule. Valid values:
          * <p>
          * 
-         * *   1: high risk level
-         * *   2: medium risk level
-         * *   3: low risk level
+         * *   1: high.
+         * *   2: medium.
+         * *   3: low.
          */
         public Builder riskLevel(Integer riskLevel) {
             this.putBodyParameter("RiskLevel", riskLevel);
@@ -428,11 +427,11 @@ public class CreateConfigRuleRequest extends Request {
         }
 
         /**
-         * The logical relationship among the tag keys if you specify multiple tag keys for the `TagKeyScope` parameter. For example, if you set the `TagKeyScope` parameter to `ECS,OSS` and the TagKeyLogicScope parameter to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
+         * The logical relationship among the tag keys if you specify multiple tag keys for `TagKeyScope`. For example, if you set `TagKeyScope` to `ECS,OSS` and set TagKeyLogicScope to `AND`, the rule applies to resources with both the `ECS` and `OSS` tag keys. Valid values:
          * <p>
          * 
-         * *   AND: logical AND
-         * *   OR: logical OR
+         * *   AND
+         * *   OR
          */
         public Builder tagKeyLogicScope(String tagKeyLogicScope) {
             this.putBodyParameter("TagKeyLogicScope", tagKeyLogicScope);
@@ -441,10 +440,10 @@ public class CreateConfigRuleRequest extends Request {
         }
 
         /**
-         * The tag key used to filter resources. The rule applies only to the resources with a specified tag key.
+         * The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
          * <p>
          * 
-         * >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * >  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.
          */
         public Builder tagKeyScope(String tagKeyScope) {
             this.putBodyParameter("TagKeyScope", tagKeyScope);
@@ -453,10 +452,10 @@ public class CreateConfigRuleRequest extends Request {
         }
 
         /**
-         * The tag key used to filter resources. The rule applies only to the resources with the specified tag key.
+         * The tag value used to filter resources. The rule applies only to the resources that use the specified tag value.
          * <p>
          * 
-         * >  This parameter applies only to managed rules. You must configure the `TagKeyScope` and `TagValueScope` parameters at the same time.
+         * >  This parameter applies only to managed rules. You must specify both `TagKeyScope` and `TagValueScope`.
          */
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);

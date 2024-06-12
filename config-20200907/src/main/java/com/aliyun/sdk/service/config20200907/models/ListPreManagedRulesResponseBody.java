@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPreManagedRulesResponseBody</p>
  */
 public class ListPreManagedRulesResponseBody extends TeaModel {
-    @NameInMap("ManagedRules")
+    @com.aliyun.core.annotation.NameInMap("ManagedRules")
     private java.util.List < ManagedRules> managedRules;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListPreManagedRulesResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class ListPreManagedRulesResponseBody extends TeaModel {
     } 
 
     public static class ManagedRules extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
         private java.util.Map < String, ? > compulsoryInputParameterDetails;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("OptionalInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
         private java.util.Map < String, ? > optionalInputParameterDetails;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ManagedRules(Builder builder) {

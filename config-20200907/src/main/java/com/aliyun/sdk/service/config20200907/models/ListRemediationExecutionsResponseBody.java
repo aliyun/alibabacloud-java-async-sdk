@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRemediationExecutionsResponseBody</p>
  */
 public class ListRemediationExecutionsResponseBody extends TeaModel {
-    @NameInMap("RemediationExecutionData")
+    @com.aliyun.core.annotation.NameInMap("RemediationExecutionData")
     private RemediationExecutionData remediationExecutionData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRemediationExecutionsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
     } 
 
     public static class RemediationExecutions extends TeaModel {
-        @NameInMap("ExecutionCreateDate")
+        @com.aliyun.core.annotation.NameInMap("ExecutionCreateDate")
         private String executionCreateDate;
 
-        @NameInMap("ExecutionInvocationId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionInvocationId")
         private String executionInvocationId;
 
-        @NameInMap("ExecutionResourceIds")
+        @com.aliyun.core.annotation.NameInMap("ExecutionResourceIds")
         private String executionResourceIds;
 
-        @NameInMap("ExecutionResourceType")
+        @com.aliyun.core.annotation.NameInMap("ExecutionResourceType")
         private String executionResourceType;
 
-        @NameInMap("ExecutionStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
         private String executionStatus;
 
-        @NameInMap("ExecutionStatusMessage")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStatusMessage")
         private String executionStatusMessage;
 
         private RemediationExecutions(Builder builder) {
@@ -174,7 +173,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The IDs of the remediated resources. Multiple resource IDs are separated with commas (,).
+             * The IDs of the resources to which the remediation belongs. Separate multiple resource IDs with commas (,).
              */
             public Builder executionResourceIds(String executionResourceIds) {
                 this.executionResourceIds = executionResourceIds;
@@ -190,7 +189,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the remediation. Valid values:
+             * The status of the remediation record. Valid values:
              * <p>
              * 
              * *   Success
@@ -217,14 +216,14 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
 
     }
     public static class RemediationExecutionData extends TeaModel {
-        @NameInMap("MaxResults")
-        @Validation(maximum = 100, minimum = 10)
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
+        @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
         private Long maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("RemediationExecutions")
+        @com.aliyun.core.annotation.NameInMap("RemediationExecutions")
         private java.util.List < RemediationExecutions> remediationExecutions;
 
         private RemediationExecutionData(Builder builder) {
@@ -268,7 +267,7 @@ public class ListRemediationExecutionsResponseBody extends TeaModel {
             private java.util.List < RemediationExecutions> remediationExecutions; 
 
             /**
-             * The maximum number of entries returned for a single request.
+             * The maximum number of entries to return for a single request.
              */
             public Builder maxResults(Long maxResults) {
                 this.maxResults = maxResults;

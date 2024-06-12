@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConfigRuleComplianceByPackResponseBody</p>
  */
 public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("ConfigRuleComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleComplianceResult")
     private ConfigRuleComplianceResult configRuleComplianceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConfigRuleComplianceByPackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
     } 
 
     public static class ConfigRuleCompliances extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
         private ConfigRuleCompliances(Builder builder) {
@@ -159,16 +158,16 @@ public class GetConfigRuleComplianceByPackResponseBody extends TeaModel {
 
     }
     public static class ConfigRuleComplianceResult extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("ConfigRuleCompliances")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleCompliances")
         private java.util.List < ConfigRuleCompliances> configRuleCompliances;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ConfigRuleComplianceResult(Builder builder) {

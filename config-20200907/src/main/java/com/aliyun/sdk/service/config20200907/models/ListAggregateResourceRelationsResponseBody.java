@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateResourceRelationsResponseBody</p>
  */
 public class ListAggregateResourceRelationsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceRelations")
+    @com.aliyun.core.annotation.NameInMap("ResourceRelations")
     private ResourceRelations resourceRelations;
 
     private ListAggregateResourceRelationsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
     } 
 
     public static class ResourceRelationList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("SourceResourceId")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceId")
         private String sourceResourceId;
 
-        @NameInMap("SourceResourceRegionId")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceRegionId")
         private String sourceResourceRegionId;
 
-        @NameInMap("SourceResourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceResourceType")
         private String sourceResourceType;
 
-        @NameInMap("TargetResourceId")
+        @com.aliyun.core.annotation.NameInMap("TargetResourceId")
         private String targetResourceId;
 
-        @NameInMap("TargetResourceType")
+        @com.aliyun.core.annotation.NameInMap("TargetResourceType")
         private String targetResourceType;
 
         private ResourceRelationList(Builder builder) {
@@ -170,7 +169,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             private String targetResourceType; 
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * The Alibaba Cloud account ID of the resource owner.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -184,36 +183,9 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
              * Valid values:
              * 
              * *   IsContained: The object is included as part of the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   IsAttachedTo: The object is added to the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   IsAssociatedIn: The object is associated with the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
              * *   Contains: The object contains the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -221,7 +193,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource ID.
+             * The resource ID of the current resource.
              */
             public Builder sourceResourceId(String sourceResourceId) {
                 this.sourceResourceId = sourceResourceId;
@@ -229,7 +201,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region to which the current resource belongs.
+             * The region ID of the current resource.
              */
             public Builder sourceResourceRegionId(String sourceResourceRegionId) {
                 this.sourceResourceRegionId = sourceResourceRegionId;
@@ -245,7 +217,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource that is associated with the object.
+             * The resource ID of the resource that is associated with the object.
              */
             public Builder targetResourceId(String targetResourceId) {
                 this.targetResourceId = targetResourceId;
@@ -268,13 +240,13 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
 
     }
     public static class ResourceRelations extends TeaModel {
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("ResourceRelationList")
+        @com.aliyun.core.annotation.NameInMap("ResourceRelationList")
         private java.util.List < ResourceRelationList> resourceRelationList;
 
         private ResourceRelations(Builder builder) {
@@ -334,42 +306,7 @@ public class ListAggregateResourceRelationsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the relationship between the resource and the object.
-             * <p>
-             * 
-             * Valid values:
-             * 
-             * *   IsContained: The object is included as part of the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   IsAttachedTo: The object is added to the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   IsAssociatedIn: The object is associated with the resource.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             * *   Contains: The actual value contains the expected value.
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
-             * 
-             *     <!-- -->
+             * An array that contains the relationships.
              */
             public Builder resourceRelationList(java.util.List < ResourceRelationList> resourceRelationList) {
                 this.resourceRelationList = resourceRelationList;

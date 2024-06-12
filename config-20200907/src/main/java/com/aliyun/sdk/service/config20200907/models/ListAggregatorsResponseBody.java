@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregatorsResponseBody</p>
  */
 public class ListAggregatorsResponseBody extends TeaModel {
-    @NameInMap("AggregatorsResult")
+    @com.aliyun.core.annotation.NameInMap("AggregatorsResult")
     private AggregatorsResult aggregatorsResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregatorsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The account groups returned.
+         * The account groups.
          */
         public Builder aggregatorsResult(AggregatorsResult aggregatorsResult) {
             this.aggregatorsResult = aggregatorsResult;
@@ -58,7 +57,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,31 +71,31 @@ public class ListAggregatorsResponseBody extends TeaModel {
     } 
 
     public static class Aggregators extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorAccountCount")
+        @com.aliyun.core.annotation.NameInMap("AggregatorAccountCount")
         private Long aggregatorAccountCount;
 
-        @NameInMap("AggregatorCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("AggregatorCreateTimestamp")
         private Long aggregatorCreateTimestamp;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("AggregatorStatus")
+        @com.aliyun.core.annotation.NameInMap("AggregatorStatus")
         private Integer aggregatorStatus;
 
-        @NameInMap("AggregatorType")
+        @com.aliyun.core.annotation.NameInMap("AggregatorType")
         private String aggregatorType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
         private Aggregators(Builder builder) {
@@ -194,7 +193,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             private String folderId; 
 
             /**
-             * The ID of the management account used to create the account group.
+             * The ID of the management account that is used to create the account group.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -210,7 +209,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the account group was created.
+             * The timestamp generated when the account group was created.
              */
             public Builder aggregatorCreateTimestamp(Long aggregatorCreateTimestamp) {
                 this.aggregatorCreateTimestamp = aggregatorCreateTimestamp;
@@ -237,8 +236,8 @@ public class ListAggregatorsResponseBody extends TeaModel {
              * The status of the account group. Valid values:
              * <p>
              * 
-             * *   0: being created.
-             * *   1: created.
+             * *   0: The account group is being created.
+             * *   1: The account group was created.
              */
             public Builder aggregatorStatus(Integer aggregatorStatus) {
                 this.aggregatorStatus = aggregatorStatus;
@@ -250,6 +249,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
              * <p>
              * 
              * *   RD: global account group.
+             * *   FOLDER: account group of the folder.
              * *   CUSTOM: custom account group.
              */
             public Builder aggregatorType(String aggregatorType) {
@@ -266,7 +266,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The information about the member accounts in the account group.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;
@@ -281,10 +281,10 @@ public class ListAggregatorsResponseBody extends TeaModel {
 
     }
     public static class AggregatorsResult extends TeaModel {
-        @NameInMap("Aggregators")
+        @com.aliyun.core.annotation.NameInMap("Aggregators")
         private java.util.List < Aggregators> aggregators;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private AggregatorsResult(Builder builder) {
@@ -327,7 +327,7 @@ public class ListAggregatorsResponseBody extends TeaModel {
             }
 
             /**
-             * The token that is used to initiate the next request. If the response of the current request is truncated, this token is used to initiate another request and obtain the remaining entries.
+             * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRemediationTemplatesRequest</p>
  */
 public class ListRemediationTemplatesRequest extends Request {
-    @Query
-    @NameInMap("ManagedRuleIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
     private String managedRuleIdentifier;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("RemediationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemediationType")
     private String remediationType;
 
     private ListRemediationTemplatesRequest(Builder builder) {

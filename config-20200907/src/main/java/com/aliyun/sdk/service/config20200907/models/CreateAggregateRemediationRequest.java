@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAggregateRemediationRequest</p>
  */
 public class CreateAggregateRemediationRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigRuleId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleId;
 
-    @Body
-    @NameInMap("InvokeType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InvokeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String invokeType;
 
-    @Body
-    @NameInMap("Params")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String params;
 
-    @Body
-    @NameInMap("RemediationTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remediationTemplateId;
 
-    @Body
-    @NameInMap("RemediationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RemediationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remediationType;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
     private CreateAggregateRemediationRequest(Builder builder) {

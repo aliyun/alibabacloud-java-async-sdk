@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachConfigRuleToCompliancePackResponseBody</p>
  */
 public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
-    @NameInMap("OperateRuleResult")
+    @com.aliyun.core.annotation.NameInMap("OperateRuleResult")
     private OperateRuleResult operateRuleResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetachConfigRuleToCompliancePackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
     } 
 
     public static class OperateRuleItemList extends TeaModel {
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private OperateRuleItemList(Builder builder) {
@@ -161,7 +160,7 @@ public class DetachConfigRuleToCompliancePackResponseBody extends TeaModel {
 
     }
     public static class OperateRuleResult extends TeaModel {
-        @NameInMap("OperateRuleItemList")
+        @com.aliyun.core.annotation.NameInMap("OperateRuleItemList")
         private java.util.List < OperateRuleItemList> operateRuleItemList;
 
         private OperateRuleResult(Builder builder) {

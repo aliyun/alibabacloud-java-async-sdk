@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateRemediationsResponseBody</p>
  */
 public class ListAggregateRemediationsResponseBody extends TeaModel {
-    @NameInMap("Remediations")
+    @com.aliyun.core.annotation.NameInMap("Remediations")
     private java.util.List < Remediations> remediations;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateRemediationsResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class ListAggregateRemediationsResponseBody extends TeaModel {
     } 
 
     public static class Remediations extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("InvokeType")
+        @com.aliyun.core.annotation.NameInMap("InvokeType")
         private String invokeType;
 
-        @NameInMap("LastSuccessfulInvocationId")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulInvocationId")
         private String lastSuccessfulInvocationId;
 
-        @NameInMap("LastSuccessfulInvocationTime")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulInvocationTime")
         private Long lastSuccessfulInvocationTime;
 
-        @NameInMap("LastSuccessfulInvocationType")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulInvocationType")
         private String lastSuccessfulInvocationType;
 
-        @NameInMap("RemediaitonOriginParams")
+        @com.aliyun.core.annotation.NameInMap("RemediaitonOriginParams")
         private String remediaitonOriginParams;
 
-        @NameInMap("RemediationId")
+        @com.aliyun.core.annotation.NameInMap("RemediationId")
         private String remediationId;
 
-        @NameInMap("RemediationSourceType")
+        @com.aliyun.core.annotation.NameInMap("RemediationSourceType")
         private String remediationSourceType;
 
-        @NameInMap("RemediationTemplateId")
+        @com.aliyun.core.annotation.NameInMap("RemediationTemplateId")
         private String remediationTemplateId;
 
-        @NameInMap("RemediationType")
+        @com.aliyun.core.annotation.NameInMap("RemediationType")
         private String remediationType;
 
         private Remediations(Builder builder) {

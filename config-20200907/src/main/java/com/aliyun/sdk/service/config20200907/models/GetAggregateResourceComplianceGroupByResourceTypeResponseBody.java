@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateResourceComplianceGroupByResourceTypeResponseBody</p>
  */
 public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody extends TeaModel {
-    @NameInMap("ComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ComplianceResult")
     private ComplianceResult complianceResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateResourceComplianceGroupByResourceTypeResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
     } 
 
     public static class Compliances extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Long count;
 
         private Compliances(Builder builder) {
@@ -139,10 +138,10 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
 
     }
     public static class ComplianceResultList extends TeaModel {
-        @NameInMap("Compliances")
+        @com.aliyun.core.annotation.NameInMap("Compliances")
         private java.util.List < Compliances> compliances;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private ComplianceResultList(Builder builder) {
@@ -200,7 +199,7 @@ public class GetAggregateResourceComplianceGroupByResourceTypeResponseBody exten
 
     }
     public static class ComplianceResult extends TeaModel {
-        @NameInMap("ComplianceResultList")
+        @com.aliyun.core.annotation.NameInMap("ComplianceResultList")
         private java.util.List < ComplianceResultList> complianceResultList;
 
         private ComplianceResult(Builder builder) {

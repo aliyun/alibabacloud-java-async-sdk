@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetManagedRuleResponseBody</p>
  */
 public class GetManagedRuleResponseBody extends TeaModel {
-    @NameInMap("ManagedRule")
+    @com.aliyun.core.annotation.NameInMap("ManagedRule")
     private ManagedRule managedRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetManagedRuleResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetManagedRuleResponseBody extends TeaModel {
     } 
 
     public static class Scope extends TeaModel {
-        @NameInMap("ComplianceResourceTypes")
+        @com.aliyun.core.annotation.NameInMap("ComplianceResourceTypes")
         private java.util.List < String > complianceResourceTypes;
 
         private Scope(Builder builder) {
@@ -113,10 +112,10 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     }
     public static class SourceDetails extends TeaModel {
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceDetails(Builder builder) {
@@ -185,34 +184,34 @@ public class GetManagedRuleResponseBody extends TeaModel {
 
     }
     public static class ManagedRule extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
         private java.util.Map < String, ? > compulsoryInputParameterDetails;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("HelpUrls")
+        @com.aliyun.core.annotation.NameInMap("HelpUrls")
         private String helpUrls;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < String > labels;
 
-        @NameInMap("OptionalInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
         private java.util.Map < String, ? > optionalInputParameterDetails;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private Scope scope;
 
-        @NameInMap("SourceDetails")
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
         private java.util.List < SourceDetails> sourceDetails;
 
         private ManagedRule(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSupportedProductsRequest</p>
  */
 public class ListSupportedProductsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 500, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 500, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
     private ListSupportedProductsRequest(Builder builder) {
@@ -69,7 +68,10 @@ public class ListSupportedProductsRequest extends Request {
         } 
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 500.
+         * The maximum number of entries to return for a single request.
+         * <p>
+         * 
+         * Valid values: 1 to 500. Default value: 200.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);

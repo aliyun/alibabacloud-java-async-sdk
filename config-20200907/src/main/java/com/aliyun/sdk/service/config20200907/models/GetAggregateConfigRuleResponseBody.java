@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateConfigRuleResponseBody</p>
  */
 public class GetAggregateConfigRuleResponseBody extends TeaModel {
-    @NameInMap("ConfigRule")
+    @com.aliyun.core.annotation.NameInMap("ConfigRule")
     private ConfigRule configRule;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateConfigRuleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
     } 
 
     public static class Compliance extends TeaModel {
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
         private Compliance(Builder builder) {
@@ -139,28 +138,28 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ConfigRuleEvaluationStatus extends TeaModel {
-        @NameInMap("FirstActivatedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstActivatedTimestamp")
         private Long firstActivatedTimestamp;
 
-        @NameInMap("FirstEvaluationStarted")
+        @com.aliyun.core.annotation.NameInMap("FirstEvaluationStarted")
         private Boolean firstEvaluationStarted;
 
-        @NameInMap("LastErrorCode")
+        @com.aliyun.core.annotation.NameInMap("LastErrorCode")
         private String lastErrorCode;
 
-        @NameInMap("LastErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("LastErrorMessage")
         private String lastErrorMessage;
 
-        @NameInMap("LastFailedEvaluationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastFailedEvaluationTimestamp")
         private Long lastFailedEvaluationTimestamp;
 
-        @NameInMap("LastFailedInvocationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastFailedInvocationTimestamp")
         private Long lastFailedInvocationTimestamp;
 
-        @NameInMap("LastSuccessfulEvaluationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulEvaluationTimestamp")
         private Long lastSuccessfulEvaluationTimestamp;
 
-        @NameInMap("LastSuccessfulInvocationTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessfulInvocationTimestamp")
         private Long lastSuccessfulInvocationTimestamp;
 
         private ConfigRuleEvaluationStatus(Builder builder) {
@@ -324,25 +323,25 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class CreateBy extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorName")
+        @com.aliyun.core.annotation.NameInMap("CreatorName")
         private String creatorName;
 
-        @NameInMap("CreatorType")
+        @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
         private CreateBy(Builder builder) {
@@ -485,13 +484,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class SourceDetails extends TeaModel {
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceDetails(Builder builder) {
@@ -580,25 +579,25 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ManagedRule extends TeaModel {
-        @NameInMap("CompulsoryInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("CompulsoryInputParameterDetails")
         private java.util.Map < String, ? > compulsoryInputParameterDetails;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < String > labels;
 
-        @NameInMap("ManagedRuleName")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleName")
         private String managedRuleName;
 
-        @NameInMap("OptionalInputParameterDetails")
+        @com.aliyun.core.annotation.NameInMap("OptionalInputParameterDetails")
         private java.util.Map < String, ? > optionalInputParameterDetails;
 
-        @NameInMap("SourceDetails")
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
         private java.util.List < SourceDetails> sourceDetails;
 
         private ManagedRule(Builder builder) {
@@ -741,13 +740,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class SourceSourceDetails extends TeaModel {
-        @NameInMap("EventSource")
+        @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("MessageType")
+        @com.aliyun.core.annotation.NameInMap("MessageType")
         private String messageType;
 
         private SourceSourceDetails(Builder builder) {
@@ -836,13 +835,13 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("Owner")
+        @com.aliyun.core.annotation.NameInMap("Owner")
         private String owner;
 
-        @NameInMap("SourceDetails")
+        @com.aliyun.core.annotation.NameInMap("SourceDetails")
         private java.util.List < SourceSourceDetails> sourceDetails;
 
         private Source(Builder builder) {
@@ -925,85 +924,85 @@ public class GetAggregateConfigRuleResponseBody extends TeaModel {
 
     }
     public static class ConfigRule extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("Compliance")
+        @com.aliyun.core.annotation.NameInMap("Compliance")
         private Compliance compliance;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleEvaluationStatus")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleEvaluationStatus")
         private ConfigRuleEvaluationStatus configRuleEvaluationStatus;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("ConfigRuleState")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
         private String configRuleState;
 
-        @NameInMap("ConfigRuleTriggerTypes")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleTriggerTypes")
         private String configRuleTriggerTypes;
 
-        @NameInMap("CreateBy")
+        @com.aliyun.core.annotation.NameInMap("CreateBy")
         private CreateBy createBy;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExcludeAccountIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeAccountIdsScope")
         private String excludeAccountIdsScope;
 
-        @NameInMap("ExcludeFolderIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeFolderIdsScope")
         private String excludeFolderIdsScope;
 
-        @NameInMap("ExcludeResourceIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
 
-        @NameInMap("FolderIdsScope")
+        @com.aliyun.core.annotation.NameInMap("FolderIdsScope")
         private String folderIdsScope;
 
-        @NameInMap("InputParameters")
+        @com.aliyun.core.annotation.NameInMap("InputParameters")
         private java.util.Map < String, ? > inputParameters;
 
-        @NameInMap("ManagedRule")
+        @com.aliyun.core.annotation.NameInMap("ManagedRule")
         private ManagedRule managedRule;
 
-        @NameInMap("MaximumExecutionFrequency")
+        @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
         private String maximumExecutionFrequency;
 
-        @NameInMap("ModifiedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTimestamp")
         private Long modifiedTimestamp;
 
-        @NameInMap("RegionIdsScope")
+        @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
 
-        @NameInMap("ResourceGroupIdsScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("TagKeyLogicScope")
+        @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
         private String tagKeyLogicScope;
 
-        @NameInMap("TagKeyScope")
+        @com.aliyun.core.annotation.NameInMap("TagKeyScope")
         private String tagKeyScope;
 
-        @NameInMap("TagValueScope")
+        @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
         private ConfigRule(Builder builder) {

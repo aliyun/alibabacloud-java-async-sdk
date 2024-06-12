@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIntegratedServiceStatusResponseBody</p>
  */
 public class GetIntegratedServiceStatusResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Boolean data;
 
-    @NameInMap("IntegratedTypes")
+    @com.aliyun.core.annotation.NameInMap("IntegratedTypes")
     private String integratedTypes;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetIntegratedServiceStatusResponseBody(Builder builder) {

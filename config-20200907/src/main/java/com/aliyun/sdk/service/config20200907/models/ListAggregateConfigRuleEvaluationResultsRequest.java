@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateConfigRuleEvaluationResultsRequest</p>
  */
 public class ListAggregateConfigRuleEvaluationResultsRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
     private String compliancePackId;
 
-    @Query
-    @NameInMap("ComplianceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
 
-    @Query
-    @NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     private String configRuleId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private String regions;
 
-    @Query
-    @NameInMap("ResourceAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
     private Long resourceAccountId;
 
-    @Query
-    @NameInMap("ResourceGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private String resourceGroupIds;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     @Deprecated
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
     private ListAggregateConfigRuleEvaluationResultsRequest(Builder builder) {
@@ -226,8 +225,8 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends Request {
          * 
          * *   COMPLIANT: The resource is evaluated as compliant.
          * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resource.
-         * *   INSUFFICIENT_DATA: No resource data is available.
+         * *   NOT_APPLICABLE: The rule does not apply to your resource.
+         * *   INSUFFICIENT_DATA: No data is available.
          * *   IGNORED: The resource is ignored during compliance evaluation.
          */
         public Builder complianceType(String complianceType) {
@@ -237,10 +236,10 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The rule ID.
          * <p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
+         * For more information about how to query the ID of a rule, see [ListAggregateConfigRules](~~264148~~).
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -249,7 +248,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The maximum number of entries to return for a single request. Valid values: 1 to 100.
+         * The maximum number of entries to return in a request. Valid values: 1 to 100.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -258,7 +257,7 @@ public class ListAggregateConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

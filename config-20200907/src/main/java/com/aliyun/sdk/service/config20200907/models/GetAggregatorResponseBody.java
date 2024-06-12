@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregatorResponseBody</p>
  */
 public class GetAggregatorResponseBody extends TeaModel {
-    @NameInMap("Aggregator")
+    @com.aliyun.core.annotation.NameInMap("Aggregator")
     private Aggregator aggregator;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregatorResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class GetAggregatorResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class GetAggregatorResponseBody extends TeaModel {
     } 
 
     public static class AggregatorAccounts extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("RecorderStatus")
+        @com.aliyun.core.annotation.NameInMap("RecorderStatus")
         private String recorderStatus;
 
         private AggregatorAccounts(Builder builder) {
@@ -150,7 +149,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The affiliation of the member account. The value is fixed to ResourceDirectory.
+             * The type of the member account. Only ResourceDirectory is returned, which indicates that the account is a resource directory account.
              */
             public Builder accountType(String accountType) {
                 this.accountType = accountType;
@@ -161,9 +160,9 @@ public class GetAggregatorResponseBody extends TeaModel {
              * The status of the configuration recorder for the member account. Valid values:
              * <p>
              * 
-             * *   REGISTRABLE: The configuration recorder has not been registered.
+             * *   REGISTRABLE: The configuration recorder is not registered.
              * *   BUILDING: The configuration recorder is being deployed.
-             * *   REGISTERED: The configuration recorder has been registered.
+             * *   REGISTERED: The configuration recorder is registered.
              * *   REBUILDING: The configuration recorder is being redeployed.
              */
             public Builder recorderStatus(String recorderStatus) {
@@ -179,34 +178,34 @@ public class GetAggregatorResponseBody extends TeaModel {
 
     }
     public static class Aggregator extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AggregatorAccountCount")
+        @com.aliyun.core.annotation.NameInMap("AggregatorAccountCount")
         private Long aggregatorAccountCount;
 
-        @NameInMap("AggregatorAccounts")
+        @com.aliyun.core.annotation.NameInMap("AggregatorAccounts")
         private java.util.List < AggregatorAccounts> aggregatorAccounts;
 
-        @NameInMap("AggregatorCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("AggregatorCreateTimestamp")
         private String aggregatorCreateTimestamp;
 
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("AggregatorName")
+        @com.aliyun.core.annotation.NameInMap("AggregatorName")
         private String aggregatorName;
 
-        @NameInMap("AggregatorStatus")
+        @com.aliyun.core.annotation.NameInMap("AggregatorStatus")
         private Integer aggregatorStatus;
 
-        @NameInMap("AggregatorType")
+        @com.aliyun.core.annotation.NameInMap("AggregatorType")
         private String aggregatorType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FolderId")
+        @com.aliyun.core.annotation.NameInMap("FolderId")
         private String folderId;
 
         private Aggregator(Builder builder) {
@@ -313,7 +312,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             private String folderId; 
 
             /**
-             * The ID of the management account used to create the account group.
+             * The ID of the management account that is used to create the account group.
              */
             public Builder accountId(Long accountId) {
                 this.accountId = accountId;
@@ -337,7 +336,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the account group was created.
+             * The timestamp generated when the account group was created.
              */
             public Builder aggregatorCreateTimestamp(String aggregatorCreateTimestamp) {
                 this.aggregatorCreateTimestamp = aggregatorCreateTimestamp;
@@ -365,7 +364,7 @@ public class GetAggregatorResponseBody extends TeaModel {
              * <p>
              * 
              * *   0: The account group is being created.
-             * *   1: The account group has been created.
+             * *   1: The account group was created.
              */
             public Builder aggregatorStatus(Integer aggregatorStatus) {
                 this.aggregatorStatus = aggregatorStatus;
@@ -376,8 +375,9 @@ public class GetAggregatorResponseBody extends TeaModel {
              * The type of the account group. Valid values:
              * <p>
              * 
-             * *   RD: global account group
-             * *   CUSTOM: custom account group
+             * *   RD: a global account group.
+             * *   FOLDER: an account group for a folder.
+             * *   CUSTOM: a custom account group.
              */
             public Builder aggregatorType(String aggregatorType) {
                 this.aggregatorType = aggregatorType;
@@ -393,7 +393,7 @@ public class GetAggregatorResponseBody extends TeaModel {
             }
 
             /**
-             * FolderId.
+             * The ID of the attached folder of the account group.
              */
             public Builder folderId(String folderId) {
                 this.folderId = folderId;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateResourcesByAdvancedSearchRequest</p>
  */
 public class ListAggregateResourcesByAdvancedSearchRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("Sql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sql;
 
     private ListAggregateResourcesByAdvancedSearchRequest(Builder builder) {
@@ -79,7 +78,7 @@ public class ListAggregateResourcesByAdvancedSearchRequest extends Request {
         }
 
         /**
-         * The SQL statement used to query resources.
+         * The SQL query statement.
          */
         public Builder sql(String sql) {
             this.putQueryParameter("Sql", sql);

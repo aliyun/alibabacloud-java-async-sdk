@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAdvancedSearchFileRequest</p>
  */
 public class CreateAdvancedSearchFileRequest extends Request {
-    @Query
-    @NameInMap("Sql")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sql")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sql;
 
     private CreateAdvancedSearchFileRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,51 +11,51 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDeliveryChannelRequest</p>
  */
 public class CreateDeliveryChannelRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigurationItemChangeNotification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigurationItemChangeNotification")
     private Boolean configurationItemChangeNotification;
 
-    @Body
-    @NameInMap("ConfigurationSnapshot")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigurationSnapshot")
     private Boolean configurationSnapshot;
 
-    @Body
-    @NameInMap("DeliveryChannelAssumeRoleArn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelAssumeRoleArn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryChannelAssumeRoleArn;
 
-    @Body
-    @NameInMap("DeliveryChannelCondition")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelCondition")
     private String deliveryChannelCondition;
 
-    @Body
-    @NameInMap("DeliveryChannelName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelName")
     private String deliveryChannelName;
 
-    @Body
-    @NameInMap("DeliveryChannelTargetArn")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelTargetArn")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryChannelTargetArn;
 
-    @Body
-    @NameInMap("DeliveryChannelType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeliveryChannelType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deliveryChannelType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("NonCompliantNotification")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NonCompliantNotification")
     private Boolean nonCompliantNotification;
 
-    @Body
-    @NameInMap("OversizedDataOSSTargetArn")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OversizedDataOSSTargetArn")
     private String oversizedDataOSSTargetArn;
 
     private CreateDeliveryChannelRequest(Builder builder) {

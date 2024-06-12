@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCompliancePackResponseBody</p>
  */
 public class CreateCompliancePackResponseBody extends TeaModel {
-    @NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
     private String compliancePackId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateCompliancePackResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateCompliancePackResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the compliance package.
+         * The compliance package ID.
          */
         public Builder compliancePackId(String compliancePackId) {
             this.compliancePackId = compliancePackId;
@@ -58,7 +57,7 @@ public class CreateCompliancePackResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

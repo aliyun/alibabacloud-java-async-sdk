@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,91 +11,91 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAggregateConfigRuleRequest</p>
  */
 public class CreateAggregateConfigRuleRequest extends Request {
-    @Body
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("ConfigRuleName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleName;
 
-    @Body
-    @NameInMap("ConfigRuleTriggerTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleTriggerTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String configRuleTriggerTypes;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("ExcludeAccountIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeAccountIdsScope")
     private String excludeAccountIdsScope;
 
-    @Body
-    @NameInMap("ExcludeFolderIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeFolderIdsScope")
     private String excludeFolderIdsScope;
 
-    @Body
-    @NameInMap("ExcludeResourceIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
 
-    @Body
-    @NameInMap("FolderIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FolderIdsScope")
     private String folderIdsScope;
 
-    @Body
-    @NameInMap("InputParameters")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParameters")
     private java.util.Map < String, ? > inputParameters;
 
-    @Body
-    @NameInMap("MaximumExecutionFrequency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaximumExecutionFrequency")
     private String maximumExecutionFrequency;
 
-    @Body
-    @NameInMap("RegionIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
     private String regionIdsScope;
 
-    @Body
-    @NameInMap("ResourceGroupIdsScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
 
-    @Body
-    @NameInMap("ResourceTypesScope")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > resourceTypesScope;
 
-    @Body
-    @NameInMap("RiskLevel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer riskLevel;
 
-    @Body
-    @NameInMap("SourceIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceIdentifier;
 
-    @Body
-    @NameInMap("SourceOwner")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceOwner")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceOwner;
 
-    @Body
-    @NameInMap("TagKeyLogicScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyLogicScope")
     private String tagKeyLogicScope;
 
-    @Body
-    @NameInMap("TagKeyScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagKeyScope")
     private String tagKeyScope;
 
-    @Body
-    @NameInMap("TagValueScope")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
     private CreateAggregateConfigRuleRequest(Builder builder) {

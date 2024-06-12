@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRemediationTemplateRequest</p>
  */
 public class GetRemediationTemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateIdentifier")
     private String templateIdentifier;
 
     private GetRemediationTemplateRequest(Builder builder) {
@@ -54,10 +53,10 @@ public class GetRemediationTemplateRequest extends Request {
         } 
 
         /**
-         * The identifier of the automatic remediation template.
+         * The ID of the automatic remediation template.
          * <p>
          * 
-         * For more information about how to obtain the identifier of a remediation template, see [Compliance library](~~2337741~~).
+         * For more information about how to obtain the ID of a remediation template, see [Compliance library](~~2337741~~).
          */
         public Builder templateIdentifier(String templateIdentifier) {
             this.putQueryParameter("TemplateIdentifier", templateIdentifier);

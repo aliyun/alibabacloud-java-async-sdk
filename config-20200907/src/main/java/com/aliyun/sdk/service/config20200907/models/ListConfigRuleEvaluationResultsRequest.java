@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConfigRuleEvaluationResultsRequest</p>
  */
 public class ListConfigRuleEvaluationResultsRequest extends Request {
-    @Query
-    @NameInMap("CompliancePackId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CompliancePackId")
     private String compliancePackId;
 
-    @Query
-    @NameInMap("ComplianceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
 
-    @Query
-    @NameInMap("ConfigRuleId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
     private String configRuleId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private String regions;
 
-    @Query
-    @NameInMap("ResourceGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupIds")
     private String resourceGroupIds;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
     private ListConfigRuleEvaluationResultsRequest(Builder builder) {
@@ -168,9 +167,9 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
          * The compliance evaluation result of the resource. Valid values:
          * <p>
          * 
-         * *   COMPLIANT: The resource is evaluated as compliant.
-         * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
-         * *   NOT_APPLICABLE: The rule does not apply to the resource.
+         * *   COMPLIANT: The resources are evaluated as compliant.
+         * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
+         * *   NOT_APPLICABLE: The rule does not apply to the resources.
          * *   INSUFFICIENT_DATA: No data is available.
          * *   IGNORED: The resource is ignored during compliance evaluation.
          */
@@ -181,10 +180,10 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The rule ID.
          * <p>
          * 
-         * For more information about how to obtain the ID of a rule, see [ListConfigRules](~~169607~~).
+         * You can call the [ListConfigRules](~~169607~~) operation to obtain the rule ID.
          */
         public Builder configRuleId(String configRuleId) {
             this.putQueryParameter("ConfigRuleId", configRuleId);
@@ -202,7 +201,7 @@ public class ListConfigRuleEvaluationResultsRequest extends Request {
         }
 
         /**
-         * The token that is used to initiate the next request. If the response to the current request is truncated, this token is used to initiate another request and obtain the remaining entries.``
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of `NextToken`.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);

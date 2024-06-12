@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSupportedResourceRelationConfigResponseBody</p>
  */
 public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceRelationConfigList")
+    @com.aliyun.core.annotation.NameInMap("ResourceRelationConfigList")
     private java.util.List < ResourceRelationConfigList> resourceRelationConfigList;
 
     private GetSupportedResourceRelationConfigResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The supported resource relationships.
+         * An array that contains the relationships.
          */
         public Builder resourceRelationConfigList(java.util.List < ResourceRelationConfigList> resourceRelationConfigList) {
             this.resourceRelationConfigList = resourceRelationConfigList;
@@ -72,10 +71,10 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
     } 
 
     public static class ResourceRelationConfigList extends TeaModel {
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("TargetResourceType")
+        @com.aliyun.core.annotation.NameInMap("TargetResourceType")
         private String targetResourceType;
 
         private ResourceRelationConfigList(Builder builder) {
@@ -110,7 +109,13 @@ public class GetSupportedResourceRelationConfigResponseBody extends TeaModel {
             private String targetResourceType; 
 
             /**
-             * The relationship type.
+             * The type of the relationship between the resource and the object. Valid values:
+             * <p>
+             * 
+             * *   IsContained: The object is included as part of the resource.
+             * *   IsAttachedTo: The object is added to the resource.
+             * *   IsAssociatedIn: The object is associated with the resource.
+             * *   Contains: The actual value contains the expected value.
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;

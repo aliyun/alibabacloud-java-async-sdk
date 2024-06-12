@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateDiscoveredResourceRequest</p>
  */
 public class GetAggregateDiscoveredResourceRequest extends Request {
-    @Query
-    @NameInMap("AggregatorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AggregatorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceOption")
+    private Integer complianceOption;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
-    @Query
-    @NameInMap("ResourceAccountId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAccountId")
     private Long resourceAccountId;
 
-    @Query
-    @NameInMap("ResourceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     @Deprecated
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
     private GetAggregateDiscoveredResourceRequest(Builder builder) {
         super(builder);
         this.aggregatorId = builder.aggregatorId;
+        this.complianceOption = builder.complianceOption;
         this.region = builder.region;
         this.resourceAccountId = builder.resourceAccountId;
         this.resourceId = builder.resourceId;
@@ -69,6 +73,13 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
      */
     public String getAggregatorId() {
         return this.aggregatorId;
+    }
+
+    /**
+     * @return complianceOption
+     */
+    public Integer getComplianceOption() {
+        return this.complianceOption;
     }
 
     /**
@@ -108,6 +119,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
 
     public static final class Builder extends Request.Builder<GetAggregateDiscoveredResourceRequest, Builder> {
         private String aggregatorId; 
+        private Integer complianceOption; 
         private String region; 
         private Long resourceAccountId; 
         private String resourceId; 
@@ -121,6 +133,7 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         private Builder(GetAggregateDiscoveredResourceRequest request) {
             super(request);
             this.aggregatorId = request.aggregatorId;
+            this.complianceOption = request.complianceOption;
             this.region = request.region;
             this.resourceAccountId = request.resourceAccountId;
             this.resourceId = request.resourceId;
@@ -137,6 +150,15 @@ public class GetAggregateDiscoveredResourceRequest extends Request {
         public Builder aggregatorId(String aggregatorId) {
             this.putQueryParameter("AggregatorId", aggregatorId);
             this.aggregatorId = aggregatorId;
+            return this;
+        }
+
+        /**
+         * ComplianceOption.
+         */
+        public Builder complianceOption(Integer complianceOption) {
+            this.putQueryParameter("ComplianceOption", complianceOption);
+            this.complianceOption = complianceOption;
             return this;
         }
 

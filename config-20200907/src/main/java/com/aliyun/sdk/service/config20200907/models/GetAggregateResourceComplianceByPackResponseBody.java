@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateResourceComplianceByPackResponseBody</p>
  */
 public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceComplianceResult")
+    @com.aliyun.core.annotation.NameInMap("ResourceComplianceResult")
     private ResourceComplianceResult resourceComplianceResult;
 
     private GetAggregateResourceComplianceByPackResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetAggregateResourceComplianceByPackResponseBody extends TeaModel {
     } 
 
     public static class ResourceComplianceResult extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private ResourceComplianceResult(Builder builder) {

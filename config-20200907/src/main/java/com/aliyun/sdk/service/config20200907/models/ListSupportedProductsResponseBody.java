@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSupportedProductsResponseBody</p>
  */
 public class ListSupportedProductsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Products")
+    @com.aliyun.core.annotation.NameInMap("Products")
     private java.util.List < Products> products;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSupportedProductsResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The maximum number of entries returned for a single request. Valid values: 1 to 500.
+         * The maximum number of entries to return for a single request. Valid values: 1 to 500.
          */
         public Builder maxResults(String maxResults) {
             this.maxResults = maxResults;
@@ -112,16 +111,16 @@ public class ListSupportedProductsResponseBody extends TeaModel {
     } 
 
     public static class ResourceTypeList extends TeaModel {
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TypeNameEn")
+        @com.aliyun.core.annotation.NameInMap("TypeNameEn")
         private String typeNameEn;
 
-        @NameInMap("TypeNameZh")
+        @com.aliyun.core.annotation.NameInMap("TypeNameZh")
         private String typeNameZh;
 
-        @NameInMap("TypePageLink")
+        @com.aliyun.core.annotation.NameInMap("TypePageLink")
         private String typePageLink;
 
         private ResourceTypeList(Builder builder) {
@@ -213,13 +212,13 @@ public class ListSupportedProductsResponseBody extends TeaModel {
 
     }
     public static class Products extends TeaModel {
-        @NameInMap("ProductNameEn")
+        @com.aliyun.core.annotation.NameInMap("ProductNameEn")
         private String productNameEn;
 
-        @NameInMap("ProductNameZh")
+        @com.aliyun.core.annotation.NameInMap("ProductNameZh")
         private String productNameZh;
 
-        @NameInMap("ResourceTypeList")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypeList")
         private java.util.List < ResourceTypeList> resourceTypeList;
 
         private Products(Builder builder) {
@@ -263,7 +262,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             private java.util.List < ResourceTypeList> resourceTypeList; 
 
             /**
-             * The English name of the cloud service.
+             * The English name of the Alibaba Cloud service.
              */
             public Builder productNameEn(String productNameEn) {
                 this.productNameEn = productNameEn;
@@ -271,7 +270,7 @@ public class ListSupportedProductsResponseBody extends TeaModel {
             }
 
             /**
-             * The Chinese name of the cloud service.
+             * The Chinese name of the Alibaba Cloud service.
              */
             public Builder productNameZh(String productNameZh) {
                 this.productNameZh = productNameZh;

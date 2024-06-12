@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PutEvaluationsRequest</p>
  */
 public class PutEvaluationsRequest extends Request {
-    @Body
-    @NameInMap("DeleteMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeleteMode")
     private Boolean deleteMode;
 
-    @Body
-    @NameInMap("Evaluations")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Evaluations")
     private String evaluations;
 
-    @Body
-    @NameInMap("ResultToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResultToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resultToken;
 
     private PutEvaluationsRequest(Builder builder) {

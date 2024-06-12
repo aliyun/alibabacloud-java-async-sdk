@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateRemediationExecutionsResponseBody</p>
  */
 public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
-    @NameInMap("RemediationExecutionData")
+    @com.aliyun.core.annotation.NameInMap("RemediationExecutionData")
     private RemediationExecutionData remediationExecutionData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateRemediationExecutionsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
     } 
 
     public static class RemediationExecutions extends TeaModel {
-        @NameInMap("ExecutionCreateDate")
+        @com.aliyun.core.annotation.NameInMap("ExecutionCreateDate")
         private String executionCreateDate;
 
-        @NameInMap("ExecutionInvocationId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionInvocationId")
         private String executionInvocationId;
 
-        @NameInMap("ExecutionResourceIds")
+        @com.aliyun.core.annotation.NameInMap("ExecutionResourceIds")
         private String executionResourceIds;
 
-        @NameInMap("ExecutionResourceType")
+        @com.aliyun.core.annotation.NameInMap("ExecutionResourceType")
         private String executionResourceType;
 
-        @NameInMap("ExecutionStatus")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStatus")
         private String executionStatus;
 
-        @NameInMap("ExecutionStatusMessage")
+        @com.aliyun.core.annotation.NameInMap("ExecutionStatusMessage")
         private String executionStatusMessage;
 
         private RemediationExecutions(Builder builder) {
@@ -217,13 +216,13 @@ public class ListAggregateRemediationExecutionsResponseBody extends TeaModel {
 
     }
     public static class RemediationExecutionData extends TeaModel {
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Long maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("RemediationExecutions")
+        @com.aliyun.core.annotation.NameInMap("RemediationExecutions")
         private java.util.List < RemediationExecutions> remediationExecutions;
 
         private RemediationExecutionData(Builder builder) {

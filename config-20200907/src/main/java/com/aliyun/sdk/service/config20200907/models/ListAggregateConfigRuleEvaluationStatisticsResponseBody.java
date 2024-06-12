@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateConfigRuleEvaluationStatisticsResponseBody</p>
  */
 public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends TeaModel {
-    @NameInMap("EvaluationResults")
+    @com.aliyun.core.annotation.NameInMap("EvaluationResults")
     private java.util.List < EvaluationResults> evaluationResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateConfigRuleEvaluationStatisticsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class ListAggregateConfigRuleEvaluationStatisticsResponseBody extends Tea
     } 
 
     public static class EvaluationResults extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("NonCompliantResourceCnt")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantResourceCnt")
         private Integer nonCompliantResourceCnt;
 
-        @NameInMap("NonCompliantRuleCnt")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantRuleCnt")
         private Integer nonCompliantRuleCnt;
 
-        @NameInMap("StatisticDate")
+        @com.aliyun.core.annotation.NameInMap("StatisticDate")
         private String statisticDate;
 
-        @NameInMap("TotalResourceCnt")
+        @com.aliyun.core.annotation.NameInMap("TotalResourceCnt")
         private Integer totalResourceCnt;
 
-        @NameInMap("TotalRuleCnt")
+        @com.aliyun.core.annotation.NameInMap("TotalRuleCnt")
         private Integer totalRuleCnt;
 
         private EvaluationResults(Builder builder) {

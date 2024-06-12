@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAggregatorsResponseBody</p>
  */
 public class DeleteAggregatorsResponseBody extends TeaModel {
-    @NameInMap("OperateAggregatorsResult")
+    @com.aliyun.core.annotation.NameInMap("OperateAggregatorsResult")
     private OperateAggregatorsResult operateAggregatorsResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteAggregatorsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
     } 
 
     public static class OperateAggregators extends TeaModel {
-        @NameInMap("AggregatorId")
+        @com.aliyun.core.annotation.NameInMap("AggregatorId")
         private String aggregatorId;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private OperateAggregators(Builder builder) {
@@ -160,7 +159,7 @@ public class DeleteAggregatorsResponseBody extends TeaModel {
 
     }
     public static class OperateAggregatorsResult extends TeaModel {
-        @NameInMap("OperateAggregators")
+        @com.aliyun.core.annotation.NameInMap("OperateAggregators")
         private java.util.List < OperateAggregators> operateAggregators;
 
         private OperateAggregatorsResult(Builder builder) {

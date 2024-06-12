@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCompliancePackTemplatesResponseBody</p>
  */
 public class ListCompliancePackTemplatesResponseBody extends TeaModel {
-    @NameInMap("CompliancePackTemplatesResult")
+    @com.aliyun.core.annotation.NameInMap("CompliancePackTemplatesResult")
     private CompliancePackTemplatesResult compliancePackTemplatesResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCompliancePackTemplatesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
     } 
 
     public static class ConfigRuleParameters extends TeaModel {
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
-        @NameInMap("Required")
+        @com.aliyun.core.annotation.NameInMap("Required")
         private Boolean required;
 
         private ConfigRuleParameters(Builder builder) {
@@ -157,31 +156,31 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     }
     public static class ConfigRules extends TeaModel {
-        @NameInMap("ConfigRuleParameters")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleParameters")
         private java.util.List < ConfigRuleParameters> configRuleParameters;
 
-        @NameInMap("ControlDescription")
+        @com.aliyun.core.annotation.NameInMap("ControlDescription")
         private String controlDescription;
 
-        @NameInMap("ControlId")
+        @com.aliyun.core.annotation.NameInMap("ControlId")
         private String controlId;
 
-        @NameInMap("DefaultEnable")
+        @com.aliyun.core.annotation.NameInMap("DefaultEnable")
         private Boolean defaultEnable;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ManagedRuleIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleIdentifier")
         private String managedRuleIdentifier;
 
-        @NameInMap("ManagedRuleName")
+        @com.aliyun.core.annotation.NameInMap("ManagedRuleName")
         private String managedRuleName;
 
-        @NameInMap("ResourceTypesScope")
+        @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRules(Builder builder) {
@@ -370,25 +369,25 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     }
     public static class CompliancePackTemplates extends TeaModel {
-        @NameInMap("CompliancePackTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
 
-        @NameInMap("CompliancePackTemplateName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateName")
         private String compliancePackTemplateName;
 
-        @NameInMap("ConfigRules")
+        @com.aliyun.core.annotation.NameInMap("ConfigRules")
         private java.util.List < ConfigRules> configRules;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private String labels;
 
-        @NameInMap("LastUpdate")
+        @com.aliyun.core.annotation.NameInMap("LastUpdate")
         private Integer lastUpdate;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private CompliancePackTemplates(Builder builder) {
@@ -536,16 +535,16 @@ public class ListCompliancePackTemplatesResponseBody extends TeaModel {
 
     }
     public static class CompliancePackTemplatesResult extends TeaModel {
-        @NameInMap("CompliancePackTemplates")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplates")
         private java.util.List < CompliancePackTemplates> compliancePackTemplates;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private CompliancePackTemplatesResult(Builder builder) {

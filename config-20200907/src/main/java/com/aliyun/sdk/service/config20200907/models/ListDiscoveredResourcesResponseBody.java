@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDiscoveredResourcesResponseBody</p>
  */
 public class ListDiscoveredResourcesResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceProfiles")
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceProfiles")
     private DiscoveredResourceProfiles discoveredResourceProfiles;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDiscoveredResourcesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The resources.
+         * The information about the resources.
          */
         public Builder discoveredResourceProfiles(DiscoveredResourceProfiles discoveredResourceProfiles) {
             this.discoveredResourceProfiles = discoveredResourceProfiles;
@@ -72,37 +71,37 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
     } 
 
     public static class DiscoveredResourceProfileList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreationTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreationTime")
         private Long resourceCreationTime;
 
-        @NameInMap("ResourceDeleted")
+        @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
         private Integer resourceDeleted;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private DiscoveredResourceProfileList(Builder builder) {
@@ -226,7 +225,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The zone.
+             * The zone ID.
              */
             public Builder availabilityZone(String availabilityZone) {
                 this.availabilityZone = availabilityZone;
@@ -270,7 +269,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -281,8 +280,8 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
              * The status of the resource. The value of this parameter varies based on the resource type and may be empty. Examples:
              * <p>
              * 
-             * *   If the value of the ResourceType parameter is ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that is in a specific state. In this case, the valid values of this parameter are Running and Stopped.
-             * *   If the value of the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is empty.
+             * *   If the ResourceType parameter is set to ACS::ECS::Instance, the resource is an Elastic Compute Service (ECS) instance that has a specific state. In this case, the valid values of this parameter are Running and Stopped.
+             * *   If the ResourceType parameter is ACS::OSS::Bucket, the resource is an Object Storage Service (OSS) bucket that is not in a specific state. In this case, this parameter is left empty.
              */
             public Builder resourceStatus(String resourceStatus) {
                 this.resourceStatus = resourceStatus;
@@ -321,16 +320,16 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
 
     }
     public static class DiscoveredResourceProfiles extends TeaModel {
-        @NameInMap("DiscoveredResourceProfileList")
+        @com.aliyun.core.annotation.NameInMap("DiscoveredResourceProfileList")
         private java.util.List < DiscoveredResourceProfileList> discoveredResourceProfileList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DiscoveredResourceProfiles(Builder builder) {
@@ -399,7 +398,7 @@ public class ListDiscoveredResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Alibaba Cloud account to which the resource belongs.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

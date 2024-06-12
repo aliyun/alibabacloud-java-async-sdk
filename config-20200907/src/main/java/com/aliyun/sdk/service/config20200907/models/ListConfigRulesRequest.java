@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListConfigRulesRequest</p>
  */
 public class ListConfigRulesRequest extends Request {
-    @Query
-    @NameInMap("ComplianceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ComplianceType")
     private String complianceType;
 
-    @Query
-    @NameInMap("ConfigRuleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
     private String configRuleName;
 
-    @Query
-    @NameInMap("ConfigRuleState")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleState")
     private String configRuleState;
 
-    @Query
-    @NameInMap("Keyword")
-    @Validation(maxLength = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
+    @com.aliyun.core.annotation.Validation(maxLength = 100)
     private String keyword;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTypes")
     private String resourceTypes;
 
-    @Query
-    @NameInMap("RiskLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RiskLevel")
     private Integer riskLevel;
 
     private ListConfigRulesRequest(Builder builder) {
@@ -154,7 +153,7 @@ public class ListConfigRulesRequest extends Request {
         } 
 
         /**
-         * The compliance evaluation result. Valid values:
+         * The compliance evaluation result of the rule. Valid values:
          * <p>
          * 
          * *   COMPLIANT: The resources are evaluated as compliant.
@@ -183,7 +182,7 @@ public class ListConfigRulesRequest extends Request {
          * 
          * *   ACTIVE: The rule is enabled.
          * *   DELETING: The rule is being deleted.
-         * *   EVALUATING: The rule is triggered and is being used to monitor resource configurations.
+         * *   EVALUATING: The rule is being used to evaluate resource configurations.
          * *   INACTIVE: The rule is disabled.
          */
         public Builder configRuleState(String configRuleState) {
@@ -208,7 +207,7 @@ public class ListConfigRulesRequest extends Request {
          * The page number.
          * <p>
          * 
-         * Pages start from page 1. Default value: 1
+         * Page numbers start from 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -220,7 +219,7 @@ public class ListConfigRulesRequest extends Request {
          * The number of entries per page.
          * <p>
          * 
-         * Valid values: 1 to 100. Minimum value: 1. Default value: 10.
+         * Valid values: 1 to 100. A minimum of 1 entry can be returned per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

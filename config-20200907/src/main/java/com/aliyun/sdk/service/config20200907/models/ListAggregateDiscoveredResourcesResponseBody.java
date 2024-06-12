@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateDiscoveredResourcesResponseBody</p>
  */
 public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceProfiles")
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceProfiles")
     private DiscoveredResourceProfiles discoveredResourceProfiles;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateDiscoveredResourcesResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
     } 
 
     public static class DiscoveredResourceProfileList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AvailabilityZone")
+        @com.aliyun.core.annotation.NameInMap("AvailabilityZone")
         private String availabilityZone;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCreationTime")
+        @com.aliyun.core.annotation.NameInMap("ResourceCreationTime")
         private Long resourceCreationTime;
 
-        @NameInMap("ResourceDeleted")
+        @com.aliyun.core.annotation.NameInMap("ResourceDeleted")
         private Integer resourceDeleted;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private DiscoveredResourceProfileList(Builder builder) {
@@ -341,16 +340,16 @@ public class ListAggregateDiscoveredResourcesResponseBody extends TeaModel {
 
     }
     public static class DiscoveredResourceProfiles extends TeaModel {
-        @NameInMap("DiscoveredResourceProfileList")
+        @com.aliyun.core.annotation.NameInMap("DiscoveredResourceProfileList")
         private java.util.List < DiscoveredResourceProfileList> discoveredResourceProfileList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private DiscoveredResourceProfiles(Builder builder) {

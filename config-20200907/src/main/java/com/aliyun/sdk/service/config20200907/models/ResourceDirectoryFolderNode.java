@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResourceDirectoryFolderNode</p>
  */
 public class ResourceDirectoryFolderNode extends TeaModel {
-    @NameInMap("AccountId")
+    @com.aliyun.core.annotation.NameInMap("AccountId")
     private String accountId;
 
-    @NameInMap("Children")
+    @com.aliyun.core.annotation.NameInMap("Children")
     private java.util.List < ResourceDirectoryFolderNode > children;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("FolderId")
+    @com.aliyun.core.annotation.NameInMap("FolderId")
     private String folderId;
 
-    @NameInMap("FolderName")
+    @com.aliyun.core.annotation.NameInMap("FolderName")
     private String folderName;
 
-    @NameInMap("ParentFolderId")
+    @com.aliyun.core.annotation.NameInMap("ParentFolderId")
     private String parentFolderId;
 
     private ResourceDirectoryFolderNode(Builder builder) {

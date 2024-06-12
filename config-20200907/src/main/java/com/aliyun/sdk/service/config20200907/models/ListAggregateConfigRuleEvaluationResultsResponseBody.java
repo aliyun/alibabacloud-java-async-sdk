@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAggregateConfigRuleEvaluationResultsResponseBody</p>
  */
 public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaModel {
-    @NameInMap("EvaluationResults")
+    @com.aliyun.core.annotation.NameInMap("EvaluationResults")
     private EvaluationResults evaluationResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAggregateConfigRuleEvaluationResultsResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,34 +71,34 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
     } 
 
     public static class EvaluationResultQualifier extends TeaModel {
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("ConfigRuleArn")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleArn")
         private String configRuleArn;
 
-        @NameInMap("ConfigRuleId")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleId")
         private String configRuleId;
 
-        @NameInMap("ConfigRuleName")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleName")
         private String configRuleName;
 
-        @NameInMap("IgnoreDate")
+        @com.aliyun.core.annotation.NameInMap("IgnoreDate")
         private String ignoreDate;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceOwnerId")
+        @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
         private Long resourceOwnerId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private EvaluationResultQualifier(Builder builder) {
@@ -214,7 +213,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the rule.
+             * The ARN of the rule.
              */
             public Builder configRuleArn(String configRuleArn) {
                 this.configRuleArn = configRuleArn;
@@ -222,7 +221,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the rule.
+             * The rule ID.
              */
             public Builder configRuleId(String configRuleId) {
                 this.configRuleId = configRuleId;
@@ -230,7 +229,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The name of the rule.
+             * The rule name.
              */
             public Builder configRuleName(String configRuleName) {
                 this.configRuleName = configRuleName;
@@ -241,7 +240,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
              * The date on which the system automatically re-evaluates the ignored incompliant resources.
              * <p>
              * 
-             * >  If this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
+             * >  If the value of this parameter is left empty, the system does not automatically re-evaluate the ignored incompliant resources. You must manually re-evaluate the ignored incompliant resources.
              */
             public Builder ignoreDate(String ignoreDate) {
                 this.ignoreDate = ignoreDate;
@@ -249,7 +248,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the region where the resource resides.
+             * The ID of the region in which your resources reside.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -257,7 +256,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -265,7 +264,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The name of the resource.
+             * The resource name.
              */
             public Builder resourceName(String resourceName) {
                 this.resourceName = resourceName;
@@ -296,10 +295,10 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
 
     }
     public static class EvaluationResultIdentifier extends TeaModel {
-        @NameInMap("EvaluationResultQualifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultQualifier")
         private EvaluationResultQualifier evaluationResultQualifier;
 
-        @NameInMap("OrderingTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OrderingTimestamp")
         private Long orderingTimestamp;
 
         private EvaluationResultIdentifier(Builder builder) {
@@ -345,7 +344,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
              * The timestamp when the compliance evaluation was performed. Unit: milliseconds.
              * <p>
              * 
-             * >  This timestamp indicates the time when the rule was triggered. You can obtain the timestamp from the value of the `ConfigRuleInvokedTimestamp` parameter.
+             * >  This timestamp indicates the time when the rule was triggered. You can obtain the timestamp from the `ConfigRuleInvokedTimestamp` parameter.
              */
             public Builder orderingTimestamp(Long orderingTimestamp) {
                 this.orderingTimestamp = orderingTimestamp;
@@ -360,28 +359,28 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
 
     }
     public static class EvaluationResultList extends TeaModel {
-        @NameInMap("Annotation")
+        @com.aliyun.core.annotation.NameInMap("Annotation")
         private String annotation;
 
-        @NameInMap("ComplianceType")
+        @com.aliyun.core.annotation.NameInMap("ComplianceType")
         private String complianceType;
 
-        @NameInMap("ConfigRuleInvokedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ConfigRuleInvokedTimestamp")
         private Long configRuleInvokedTimestamp;
 
-        @NameInMap("EvaluationResultIdentifier")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultIdentifier")
         private EvaluationResultIdentifier evaluationResultIdentifier;
 
-        @NameInMap("InvokingEventMessageType")
+        @com.aliyun.core.annotation.NameInMap("InvokingEventMessageType")
         private String invokingEventMessageType;
 
-        @NameInMap("RemediationEnabled")
+        @com.aliyun.core.annotation.NameInMap("RemediationEnabled")
         private Boolean remediationEnabled;
 
-        @NameInMap("ResultRecordedTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ResultRecordedTimestamp")
         private Long resultRecordedTimestamp;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private EvaluationResultList(Builder builder) {
@@ -470,14 +469,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private Integer riskLevel; 
 
             /**
-             * The annotation to the resource that is evaluated as incompliant. The following section describe the parameters that can be returned:
+             * The annotation to the resource that is evaluated as non-compliant. The following parameters may be returned:
              * <p>
              * 
              * *   `configuration`: the current resource configuration that is evaluated as incompliant by using the rule.
-             * *   `desiredValue`: the expected resource configuration that is evaluated as compliant by using the rule.
-             * *   `operator`: the operator that is used to compare the current configuration with the expected configuration of the resource.
+             * *   `desiredValue`: the expected resource configuration that is evaluated as compliant.
+             * *   `operator`: the operator that compares the current configuration with the expected configuration of the resource.
              * *   `property`: the JSON path of the current configuration in the resource property struct.
-             * *   `reason`: the reason why the resource is evaluated as incompliant.
+             * *   `reason`: the reason why the resource is evaluated as non-compliant.
              */
             public Builder annotation(String annotation) {
                 this.annotation = annotation;
@@ -485,14 +484,14 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The compliance evaluation result of the resources. Valid values:
+             * The compliance evaluation result of the resource. Valid values:
              * <p>
              * 
-             * *   COMPLIANT: The resources are evaluated as compliant.
-             * *   NON_COMPLIANT: The resources are evaluated as non-compliant.
-             * *   NOT_APPLICABLE: The rule does not apply to the resources.
-             * *   INSUFFICIENT_DATA: No resource data is available.
-             * *   IGNORED: The resources are ignored during compliance evaluation.
+             * *   COMPLIANT: The resource is evaluated as compliant.
+             * *   NON_COMPLIANT: The resource is evaluated as non-compliant.
+             * *   NOT_APPLICABLE: The rule does not apply to your resource.
+             * *   INSUFFICIENT_DATA: No data is available.
+             * *   IGNORED: The resource is ignored during compliance evaluation.
              */
             public Builder complianceType(String complianceType) {
                 this.complianceType = complianceType;
@@ -508,7 +507,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The identifier of the compliance evaluation result.
+             * The identifying information about the compliance evaluation result.
              */
             public Builder evaluationResultIdentifier(EvaluationResultIdentifier evaluationResultIdentifier) {
                 this.evaluationResultIdentifier = evaluationResultIdentifier;
@@ -531,8 +530,8 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
              * Indicates whether the remediation template is enabled. Valid values:
              * <p>
              * 
-             * - true: The remediation template is enabled.
-             * - false: The remediation template is disabled.
+             * *   true
+             * *   false
              */
             public Builder remediationEnabled(Boolean remediationEnabled) {
                 this.remediationEnabled = remediationEnabled;
@@ -540,7 +539,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The timestamp when the compliance evaluation result was generated. Unit: milliseconds.
+             * The timestamp when the compliance evaluation result was recorded. The value of this parameter is a UNIX timestamp in milliseconds.
              */
             public Builder resultRecordedTimestamp(Long resultRecordedTimestamp) {
                 this.resultRecordedTimestamp = resultRecordedTimestamp;
@@ -548,12 +547,12 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The risk level of the resources that are not compliant with the rule. Valid values:
+             * The risk level of the resources that do not comply with the rule. Valid values:
              * <p>
              * 
-             * *   1: high risk level
-             * *   2: medium risk level
-             * *   3: low risk level
+             * *   1: high
+             * *   2: medium.
+             * *   3: low.
              */
             public Builder riskLevel(Integer riskLevel) {
                 this.riskLevel = riskLevel;
@@ -568,13 +567,13 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
 
     }
     public static class EvaluationResults extends TeaModel {
-        @NameInMap("EvaluationResultList")
+        @com.aliyun.core.annotation.NameInMap("EvaluationResultList")
         private java.util.List < EvaluationResultList> evaluationResultList;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private EvaluationResults(Builder builder) {
@@ -618,7 +617,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             private String nextToken; 
 
             /**
-             * The details of the compliance evaluation results.
+             * The details of the compliance evaluation result.
              */
             public Builder evaluationResultList(java.util.List < EvaluationResultList> evaluationResultList) {
                 this.evaluationResultList = evaluationResultList;
@@ -626,7 +625,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The maximum number of entries returned per page.
+             * The maximum number of entries returned on each page.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -634,7 +633,7 @@ public class ListAggregateConfigRuleEvaluationResultsResponseBody extends TeaMod
             }
 
             /**
-             * The token that was used to initiate the next request.
+             * A pagination token. It can be used in the next request to retrieve a new page of results.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

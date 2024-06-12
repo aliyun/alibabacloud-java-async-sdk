@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAggregateCompliancePackReportResponseBody</p>
  */
 public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
-    @NameInMap("CompliancePackReport")
+    @com.aliyun.core.annotation.NameInMap("CompliancePackReport")
     private CompliancePackReport compliancePackReport;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAggregateCompliancePackReportResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetAggregateCompliancePackReportResponseBody extends TeaModel {
     } 
 
     public static class CompliancePackReport extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("ReportCreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("ReportCreateTimestamp")
         private Long reportCreateTimestamp;
 
-        @NameInMap("ReportStatus")
+        @com.aliyun.core.annotation.NameInMap("ReportStatus")
         private String reportStatus;
 
-        @NameInMap("ReportUrl")
+        @com.aliyun.core.annotation.NameInMap("ReportUrl")
         private String reportUrl;
 
         private CompliancePackReport(Builder builder) {

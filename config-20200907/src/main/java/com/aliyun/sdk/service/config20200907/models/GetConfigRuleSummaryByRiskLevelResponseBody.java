@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetConfigRuleSummaryByRiskLevelResponseBody</p>
  */
 public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
-    @NameInMap("ConfigRuleSummaries")
+    @com.aliyun.core.annotation.NameInMap("ConfigRuleSummaries")
     private java.util.List < ConfigRuleSummaries> configRuleSummaries;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetConfigRuleSummaryByRiskLevelResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetConfigRuleSummaryByRiskLevelResponseBody extends TeaModel {
     } 
 
     public static class ConfigRuleSummaries extends TeaModel {
-        @NameInMap("CompliantCount")
+        @com.aliyun.core.annotation.NameInMap("CompliantCount")
         private Integer compliantCount;
 
-        @NameInMap("NonCompliantCount")
+        @com.aliyun.core.annotation.NameInMap("NonCompliantCount")
         private Integer nonCompliantCount;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
         private ConfigRuleSummaries(Builder builder) {

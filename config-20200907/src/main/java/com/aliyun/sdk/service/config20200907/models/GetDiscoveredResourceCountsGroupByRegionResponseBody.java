@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiscoveredResourceCountsGroupByRegionResponseBody</p>
  */
 public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaModel {
-    @NameInMap("DiscoveredResourceCountsSummary")
+    @com.aliyun.core.annotation.NameInMap("DiscoveredResourceCountsSummary")
     private java.util.List < DiscoveredResourceCountsSummary> discoveredResourceCountsSummary;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDiscoveredResourceCountsGroupByRegionResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class GetDiscoveredResourceCountsGroupByRegionResponseBody extends TeaMod
     } 
 
     public static class DiscoveredResourceCountsSummary extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Long resourceCount;
 
         private DiscoveredResourceCountsSummary(Builder builder) {

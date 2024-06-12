@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.config20200907.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCompliancePacksResponseBody</p>
  */
 public class ListCompliancePacksResponseBody extends TeaModel {
-    @NameInMap("CompliancePacksResult")
+    @com.aliyun.core.annotation.NameInMap("CompliancePacksResult")
     private CompliancePacksResult compliancePacksResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListCompliancePacksResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListCompliancePacksResponseBody extends TeaModel {
     } 
 
     public static class CompliancePacks extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("CompliancePackId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackId")
         private String compliancePackId;
 
-        @NameInMap("CompliancePackName")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackName")
         private String compliancePackName;
 
-        @NameInMap("CompliancePackTemplateId")
+        @com.aliyun.core.annotation.NameInMap("CompliancePackTemplateId")
         private String compliancePackTemplateId;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private Integer riskLevel;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CompliancePacks(Builder builder) {
@@ -262,16 +261,16 @@ public class ListCompliancePacksResponseBody extends TeaModel {
 
     }
     public static class CompliancePacksResult extends TeaModel {
-        @NameInMap("CompliancePacks")
+        @com.aliyun.core.annotation.NameInMap("CompliancePacks")
         private java.util.List < CompliancePacks> compliancePacks;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private CompliancePacksResult(Builder builder) {
