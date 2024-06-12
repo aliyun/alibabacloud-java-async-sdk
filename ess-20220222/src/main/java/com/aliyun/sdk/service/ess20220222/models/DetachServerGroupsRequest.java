@@ -140,10 +140,10 @@ public class DetachServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,7 +152,7 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the Elastic Compute Service (ECS) instances in the scaling group from the server group that you want to detach.
+         * Specifies whether to remove the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group from the server group marked for detachment.
          * <p>
          * 
          * *   true
@@ -203,7 +203,7 @@ public class DetachServerGroupsRequest extends Request {
         }
 
         /**
-         * Details of the server groups.
+         * The information about the server groups.
          */
         public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
             this.putQueryParameter("ServerGroups", serverGroups);
@@ -272,7 +272,7 @@ public class DetachServerGroupsRequest extends Request {
             private String type; 
 
             /**
-             * The port number that is used by an ECS instance after Auto Scaling adds the ECS instance to the server group.
+             * The port used by ECS instances or elastic container instances as backend servers of the server group.
              */
             public Builder port(Integer port) {
                 this.port = port;

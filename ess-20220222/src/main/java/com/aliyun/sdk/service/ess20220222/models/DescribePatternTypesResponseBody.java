@@ -49,7 +49,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PatternTypes.
+         * The instance types that meet the specified requirements.
          */
         public Builder patternTypes(java.util.List < PatternTypes> patternTypes) {
             this.patternTypes = patternTypes;
@@ -57,7 +57,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +145,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             private Float memory; 
 
             /**
-             * Cores.
+             * The number of vCPUs that are assigned to the instance type.
              */
             public Builder cores(Integer cores) {
                 this.cores = cores;
@@ -153,7 +153,12 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceFamilyLevel.
+             * The level of the instance family.
+             * <p>
+             * 
+             * *   EntryLevel: entry level (shared instance types) Instance types of this level are the most cost-effective but may not provide stable computing performance. Instance types of this level are suitable for business scenarios in which the CPU utilization is low. For more information, see [Shared instance families](~~108489~~).
+             * *   EnterpriseLevel: enterprise level. Instance types of this level provide stable performance and dedicated resources and are suitable for scenarios that require high stability. For more information, see [Overview of instance families](~~25378~~).
+             * *   CreditEntryLevel: credit-based entry level (burstable instance types). CPU credits are used to ensure computing performance. Instance types of this level are suitable for scenarios in which the CPU utilization is low but may fluctuate in specific cases. For more information, see [Overview of burstable instances](~~59977~~).
              */
             public Builder instanceFamilyLevel(String instanceFamilyLevel) {
                 this.instanceFamilyLevel = instanceFamilyLevel;
@@ -161,7 +166,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The name of the instance type.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -169,7 +174,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceTypeFamily.
+             * The instance family.
              */
             public Builder instanceTypeFamily(String instanceTypeFamily) {
                 this.instanceTypeFamily = instanceTypeFamily;
@@ -177,7 +182,7 @@ public class DescribePatternTypesResponseBody extends TeaModel {
             }
 
             /**
-             * Memory.
+             * The memory size that are assigned to the instance type. Unit: GiB.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;

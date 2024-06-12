@@ -2327,26 +2327,90 @@ public class CreateScalingConfigurationRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Cores")
         private Integer cores;
 
+        @com.aliyun.core.annotation.NameInMap("CpuArchitectures")
+        private java.util.List < String > cpuArchitectures;
+
         @com.aliyun.core.annotation.NameInMap("ExcludedInstanceTypes")
         private java.util.List < String > excludedInstanceTypes;
+
+        @com.aliyun.core.annotation.NameInMap("GpuSpecs")
+        private java.util.List < String > gpuSpecs;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceCategories")
+        private java.util.List < String > instanceCategories;
 
         @com.aliyun.core.annotation.NameInMap("InstanceFamilyLevel")
         private String instanceFamilyLevel;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeFamilies")
+        private java.util.List < String > instanceTypeFamilies;
+
         @com.aliyun.core.annotation.NameInMap("MaxPrice")
         private Float maxPrice;
 
+        @com.aliyun.core.annotation.NameInMap("MaximumCpuCoreCount")
+        private Integer maximumCpuCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("MaximumGpuAmount")
+        private Integer maximumGpuAmount;
+
+        @com.aliyun.core.annotation.NameInMap("MaximumMemorySize")
+        private Float maximumMemorySize;
+
         @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumBaselineCredit")
+        private Integer minimumBaselineCredit;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumCpuCoreCount")
+        private Integer minimumCpuCoreCount;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumEniIpv6AddressQuantity")
+        private Integer minimumEniIpv6AddressQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumEniPrivateIpAddressQuantity")
+        private Integer minimumEniPrivateIpAddressQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumEniQuantity")
+        private Integer minimumEniQuantity;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumGpuAmount")
+        private Integer minimumGpuAmount;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumInitialCredit")
+        private Integer minimumInitialCredit;
+
+        @com.aliyun.core.annotation.NameInMap("MinimumMemorySize")
+        private Float minimumMemorySize;
+
+        @com.aliyun.core.annotation.NameInMap("PhysicalProcessorModels")
+        private java.util.List < String > physicalProcessorModels;
 
         private InstancePatternInfos(Builder builder) {
             this.architectures = builder.architectures;
             this.burstablePerformance = builder.burstablePerformance;
             this.cores = builder.cores;
+            this.cpuArchitectures = builder.cpuArchitectures;
             this.excludedInstanceTypes = builder.excludedInstanceTypes;
+            this.gpuSpecs = builder.gpuSpecs;
+            this.instanceCategories = builder.instanceCategories;
             this.instanceFamilyLevel = builder.instanceFamilyLevel;
+            this.instanceTypeFamilies = builder.instanceTypeFamilies;
             this.maxPrice = builder.maxPrice;
+            this.maximumCpuCoreCount = builder.maximumCpuCoreCount;
+            this.maximumGpuAmount = builder.maximumGpuAmount;
+            this.maximumMemorySize = builder.maximumMemorySize;
             this.memory = builder.memory;
+            this.minimumBaselineCredit = builder.minimumBaselineCredit;
+            this.minimumCpuCoreCount = builder.minimumCpuCoreCount;
+            this.minimumEniIpv6AddressQuantity = builder.minimumEniIpv6AddressQuantity;
+            this.minimumEniPrivateIpAddressQuantity = builder.minimumEniPrivateIpAddressQuantity;
+            this.minimumEniQuantity = builder.minimumEniQuantity;
+            this.minimumGpuAmount = builder.minimumGpuAmount;
+            this.minimumInitialCredit = builder.minimumInitialCredit;
+            this.minimumMemorySize = builder.minimumMemorySize;
+            this.physicalProcessorModels = builder.physicalProcessorModels;
         }
 
         public static Builder builder() {
@@ -2379,10 +2443,31 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
+         * @return cpuArchitectures
+         */
+        public java.util.List < String > getCpuArchitectures() {
+            return this.cpuArchitectures;
+        }
+
+        /**
          * @return excludedInstanceTypes
          */
         public java.util.List < String > getExcludedInstanceTypes() {
             return this.excludedInstanceTypes;
+        }
+
+        /**
+         * @return gpuSpecs
+         */
+        public java.util.List < String > getGpuSpecs() {
+            return this.gpuSpecs;
+        }
+
+        /**
+         * @return instanceCategories
+         */
+        public java.util.List < String > getInstanceCategories() {
+            return this.instanceCategories;
         }
 
         /**
@@ -2393,10 +2478,38 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
+         * @return instanceTypeFamilies
+         */
+        public java.util.List < String > getInstanceTypeFamilies() {
+            return this.instanceTypeFamilies;
+        }
+
+        /**
          * @return maxPrice
          */
         public Float getMaxPrice() {
             return this.maxPrice;
+        }
+
+        /**
+         * @return maximumCpuCoreCount
+         */
+        public Integer getMaximumCpuCoreCount() {
+            return this.maximumCpuCoreCount;
+        }
+
+        /**
+         * @return maximumGpuAmount
+         */
+        public Integer getMaximumGpuAmount() {
+            return this.maximumGpuAmount;
+        }
+
+        /**
+         * @return maximumMemorySize
+         */
+        public Float getMaximumMemorySize() {
+            return this.maximumMemorySize;
         }
 
         /**
@@ -2406,14 +2519,93 @@ public class CreateScalingConfigurationRequest extends Request {
             return this.memory;
         }
 
+        /**
+         * @return minimumBaselineCredit
+         */
+        public Integer getMinimumBaselineCredit() {
+            return this.minimumBaselineCredit;
+        }
+
+        /**
+         * @return minimumCpuCoreCount
+         */
+        public Integer getMinimumCpuCoreCount() {
+            return this.minimumCpuCoreCount;
+        }
+
+        /**
+         * @return minimumEniIpv6AddressQuantity
+         */
+        public Integer getMinimumEniIpv6AddressQuantity() {
+            return this.minimumEniIpv6AddressQuantity;
+        }
+
+        /**
+         * @return minimumEniPrivateIpAddressQuantity
+         */
+        public Integer getMinimumEniPrivateIpAddressQuantity() {
+            return this.minimumEniPrivateIpAddressQuantity;
+        }
+
+        /**
+         * @return minimumEniQuantity
+         */
+        public Integer getMinimumEniQuantity() {
+            return this.minimumEniQuantity;
+        }
+
+        /**
+         * @return minimumGpuAmount
+         */
+        public Integer getMinimumGpuAmount() {
+            return this.minimumGpuAmount;
+        }
+
+        /**
+         * @return minimumInitialCredit
+         */
+        public Integer getMinimumInitialCredit() {
+            return this.minimumInitialCredit;
+        }
+
+        /**
+         * @return minimumMemorySize
+         */
+        public Float getMinimumMemorySize() {
+            return this.minimumMemorySize;
+        }
+
+        /**
+         * @return physicalProcessorModels
+         */
+        public java.util.List < String > getPhysicalProcessorModels() {
+            return this.physicalProcessorModels;
+        }
+
         public static final class Builder {
             private java.util.List < String > architectures; 
             private String burstablePerformance; 
             private Integer cores; 
+            private java.util.List < String > cpuArchitectures; 
             private java.util.List < String > excludedInstanceTypes; 
+            private java.util.List < String > gpuSpecs; 
+            private java.util.List < String > instanceCategories; 
             private String instanceFamilyLevel; 
+            private java.util.List < String > instanceTypeFamilies; 
             private Float maxPrice; 
+            private Integer maximumCpuCoreCount; 
+            private Integer maximumGpuAmount; 
+            private Float maximumMemorySize; 
             private Float memory; 
+            private Integer minimumBaselineCredit; 
+            private Integer minimumCpuCoreCount; 
+            private Integer minimumEniIpv6AddressQuantity; 
+            private Integer minimumEniPrivateIpAddressQuantity; 
+            private Integer minimumEniQuantity; 
+            private Integer minimumGpuAmount; 
+            private Integer minimumInitialCredit; 
+            private Float minimumMemorySize; 
+            private java.util.List < String > physicalProcessorModels; 
 
             /**
              * The architectures of the instance types. Valid values:
@@ -2463,6 +2655,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
+             * CpuArchitectures.
+             */
+            public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
+                this.cpuArchitectures = cpuArchitectures;
+                return this;
+            }
+
+            /**
              * The instance types that you want to exclude. You can use wildcard characters, such as asterisks (\*), to exclude an instance type or an instance family. Examples:
              * <p>
              * 
@@ -2471,6 +2671,22 @@ public class CreateScalingConfigurationRequest extends Request {
              */
             public Builder excludedInstanceTypes(java.util.List < String > excludedInstanceTypes) {
                 this.excludedInstanceTypes = excludedInstanceTypes;
+                return this;
+            }
+
+            /**
+             * GpuSpecs.
+             */
+            public Builder gpuSpecs(java.util.List < String > gpuSpecs) {
+                this.gpuSpecs = gpuSpecs;
+                return this;
+            }
+
+            /**
+             * InstanceCategories.
+             */
+            public Builder instanceCategories(java.util.List < String > instanceCategories) {
+                this.instanceCategories = instanceCategories;
                 return this;
             }
 
@@ -2488,6 +2704,14 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
+             * InstanceTypeFamilies.
+             */
+            public Builder instanceTypeFamilies(java.util.List < String > instanceTypeFamilies) {
+                this.instanceTypeFamilies = instanceTypeFamilies;
+                return this;
+            }
+
+            /**
              * The maximum hourly price of a pay-as-you-go or preemptible instance in intelligent configuration mode. This parameter is used to filter the available instance types that meet the specified criteria.
              * <p>
              * 
@@ -2499,10 +2723,106 @@ public class CreateScalingConfigurationRequest extends Request {
             }
 
             /**
+             * MaximumCpuCoreCount.
+             */
+            public Builder maximumCpuCoreCount(Integer maximumCpuCoreCount) {
+                this.maximumCpuCoreCount = maximumCpuCoreCount;
+                return this;
+            }
+
+            /**
+             * MaximumGpuAmount.
+             */
+            public Builder maximumGpuAmount(Integer maximumGpuAmount) {
+                this.maximumGpuAmount = maximumGpuAmount;
+                return this;
+            }
+
+            /**
+             * MaximumMemorySize.
+             */
+            public Builder maximumMemorySize(Float maximumMemorySize) {
+                this.maximumMemorySize = maximumMemorySize;
+                return this;
+            }
+
+            /**
              * The memory size that you want to allocate to an instance type in intelligent configuration mode. Unit: GiB. This parameter is used to filter the available instance types that meet the specified criteria.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
+                return this;
+            }
+
+            /**
+             * MinimumBaselineCredit.
+             */
+            public Builder minimumBaselineCredit(Integer minimumBaselineCredit) {
+                this.minimumBaselineCredit = minimumBaselineCredit;
+                return this;
+            }
+
+            /**
+             * MinimumCpuCoreCount.
+             */
+            public Builder minimumCpuCoreCount(Integer minimumCpuCoreCount) {
+                this.minimumCpuCoreCount = minimumCpuCoreCount;
+                return this;
+            }
+
+            /**
+             * MinimumEniIpv6AddressQuantity.
+             */
+            public Builder minimumEniIpv6AddressQuantity(Integer minimumEniIpv6AddressQuantity) {
+                this.minimumEniIpv6AddressQuantity = minimumEniIpv6AddressQuantity;
+                return this;
+            }
+
+            /**
+             * MinimumEniPrivateIpAddressQuantity.
+             */
+            public Builder minimumEniPrivateIpAddressQuantity(Integer minimumEniPrivateIpAddressQuantity) {
+                this.minimumEniPrivateIpAddressQuantity = minimumEniPrivateIpAddressQuantity;
+                return this;
+            }
+
+            /**
+             * MinimumEniQuantity.
+             */
+            public Builder minimumEniQuantity(Integer minimumEniQuantity) {
+                this.minimumEniQuantity = minimumEniQuantity;
+                return this;
+            }
+
+            /**
+             * MinimumGpuAmount.
+             */
+            public Builder minimumGpuAmount(Integer minimumGpuAmount) {
+                this.minimumGpuAmount = minimumGpuAmount;
+                return this;
+            }
+
+            /**
+             * MinimumInitialCredit.
+             */
+            public Builder minimumInitialCredit(Integer minimumInitialCredit) {
+                this.minimumInitialCredit = minimumInitialCredit;
+                return this;
+            }
+
+            /**
+             * MinimumMemorySize.
+             */
+            public Builder minimumMemorySize(Float minimumMemorySize) {
+                this.minimumMemorySize = minimumMemorySize;
+                return this;
+            }
+
+            /**
+             * PhysicalProcessorModels.
+             */
+            public Builder physicalProcessorModels(java.util.List < String > physicalProcessorModels) {
+                this.physicalProcessorModels = physicalProcessorModels;
                 return this;
             }
 

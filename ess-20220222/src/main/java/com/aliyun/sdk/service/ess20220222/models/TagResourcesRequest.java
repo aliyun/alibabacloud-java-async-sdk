@@ -136,7 +136,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID of the resource. You can call the [DescribeRegions](~~25609~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -163,7 +163,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The type of the resource. Only scaling groups are supported. Set the value to scalinggroup.
+         * The resource type. Set the value to scalinggroup.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

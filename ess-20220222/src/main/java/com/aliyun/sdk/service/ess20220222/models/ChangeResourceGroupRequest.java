@@ -126,7 +126,7 @@ public class ChangeResourceGroupRequest extends Request {
         } 
 
         /**
-         * NewResourceGroupId.
+         * The ID of the resource group to which you want to move the scaling group.
          */
         public Builder newResourceGroupId(String newResourceGroupId) {
             this.putQueryParameter("NewResourceGroupId", newResourceGroupId);
@@ -153,7 +153,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The ID of the scaling group that you want to move from the current resource group to another resource group.
          */
         public Builder resourceId(String resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -171,7 +171,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The resource type. Set the value to scalinggroup.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);

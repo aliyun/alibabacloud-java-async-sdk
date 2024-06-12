@@ -217,7 +217,7 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The name of the event-triggered task.
+         * The metric name.
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -226,11 +226,11 @@ public class DescribeAlarmsRequest extends Request {
         }
 
         /**
-         * The type of the metric. Valid values:
+         * The metric type. Valid values:
          * <p>
          * 
          * *   system: system metrics of CloudMonitor
-         * *   custom: custom metrics that are reported to CloudMonitor
+         * *   custom: custom metrics that are reported to CloudMonitor.
          */
         public Builder metricType(String metricType) {
             this.putQueryParameter("MetricType", metricType);

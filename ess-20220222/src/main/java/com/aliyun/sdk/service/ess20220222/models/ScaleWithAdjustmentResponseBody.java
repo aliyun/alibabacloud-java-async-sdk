@@ -61,7 +61,12 @@ public class ScaleWithAdjustmentResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * ActivityType.
+         * The type of the scaling activity.
+         * <p>
+         * 
+         * If `ActivityType` is set to `CapacityChange`, only the expected number of instances is changed during the scaling activity specified by ScalingActivityId and no scale-out is triggered.
+         * 
+         * This parameter is applicable to only scaling groups that have an expected number of instances.
          */
         public Builder activityType(String activityType) {
             this.activityType = activityType;

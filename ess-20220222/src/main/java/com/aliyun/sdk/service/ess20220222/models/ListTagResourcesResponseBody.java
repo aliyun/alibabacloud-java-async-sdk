@@ -77,7 +77,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the resource and tags, such as the resource ID, the resource type, tag keys, and tag values.
+         * An array that encompasses both the resource details and its tags, comprising elements like the resource ID, the resource type, the tag key, and the tag value.
          */
         public Builder tagResources(java.util.List < TagResources> tagResources) {
             this.tagResources = tagResources;
@@ -165,11 +165,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * Indicates whether the tag can be propagated.
+             * Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
              * <p>
              * 
-             * *   true: The tag can be propagated only to instances that are to be added to the scaling group. The tag cannot be propagated to instances that are already running in the scaling group.
-             * *   false: The tag cannot be propagated to an instance.
+             * *   true: The tags of the scaling group can be propagated to only instances that are newly created.
+             * *   false: The tags of the scaling group cannot be propagated to instances.
              */
             public Builder propagate(Boolean propagate) {
                 this.propagate = propagate;
@@ -177,7 +177,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource.
+             * The resource ID.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -185,7 +185,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource.
+             * The resource type.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -193,7 +193,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag.
+             * The tag key of the resource.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -201,7 +201,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value of the resource.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

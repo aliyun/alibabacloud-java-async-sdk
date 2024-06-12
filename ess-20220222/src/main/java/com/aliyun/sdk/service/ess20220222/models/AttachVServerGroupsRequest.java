@@ -140,10 +140,10 @@ public class AttachVServerGroupsRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure the idempotence of a request](~~25965~~).
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -152,7 +152,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * Specifies whether to add Elastic Compute Service (ECS) instances in the scaling group to new vServer groups. Valid values:
+         * Specifies whether to add the existing Elastic Compute Service (ECS) instances or elastic container instances in the scaling group to the new vServer group. Valid values:
          * <p>
          * 
          * *   true
@@ -176,7 +176,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai.
+         * The region ID of the scaling group. Examples: cn-hangzhou and cn-shanghai. For information about regions and zones, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -203,7 +203,7 @@ public class AttachVServerGroupsRequest extends Request {
         }
 
         /**
-         * Details of the vServer groups.
+         * The information about the vServer groups.
          */
         public Builder vServerGroups(java.util.List < VServerGroups> vServerGroups) {
             this.putQueryParameter("VServerGroups", vServerGroups);
@@ -269,7 +269,7 @@ public class AttachVServerGroupsRequest extends Request {
             private Integer weight; 
 
             /**
-             * The port number that is used when Auto Scaling adds ECS instances to the vServer group. Valid values: 1 to 65535.
+             * The port number over which Auto Scaling adds ECS instances or elastic container instances to the new vServer group. Valid values: 1 to 65535.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -285,7 +285,7 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * The weight of an ECS instance as a backend server in the vServer group. Valid values: 0 to 100.
+             * The weight of an ECS instance or elastic container instance as a backend server. Valid values: 0 to 100.
              * <p>
              * 
              * Default value: 50.
@@ -341,7 +341,7 @@ public class AttachVServerGroupsRequest extends Request {
             private java.util.List < VServerGroupAttributes> vServerGroupAttributes; 
 
             /**
-             * The ID of the CLB instance to which the vServer group belongs.
+             * The ID of the CLB instance to which the new vServer group belongs.
              */
             public Builder loadBalancerId(String loadBalancerId) {
                 this.loadBalancerId = loadBalancerId;
@@ -349,7 +349,7 @@ public class AttachVServerGroupsRequest extends Request {
             }
 
             /**
-             * Details of the vServer group attributes.
+             * The attributes of the vServer group.
              */
             public Builder vServerGroupAttributes(java.util.List < VServerGroupAttributes> vServerGroupAttributes) {
                 this.vServerGroupAttributes = vServerGroupAttributes;

@@ -386,7 +386,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The expressions that are specified in the multi-metric alert rule.
+         * The information about the multi-metric alert rules.
          */
         public Builder expressions(java.util.List < Expressions> expressions) {
             this.putQueryParameter("Expressions", expressions);
@@ -419,36 +419,40 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The name of the metric. The valid values vary based on the metric type.
+         * The metric name. The valid values of this parameter vary based on the metric type.
          * <p>
          * 
-         * *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
+         * *   If you set MetricType to custom, the valid values are the metrics that you have.
          * 
-         * *   If you set the MetricType parameter to system, the MetricName parameter has the following valid values:
+         * *   If you set MetricType to system, this parameter has the following valid values:
          * 
-         *     *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
-         *     *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
-         *     *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a virtual private cloud (VPC). Unit: KB/min.
-         *     *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
-         *     *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
-         *     *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
-         *     *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
-         *     *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
-         *     *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
-         *     *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
-         *     *   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.
-         *     *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
-         *     *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
-         *     *   MemoryUtilization: the memory usage of an agent. Unit: %.
-         *     *   LoadAverage: the average system load of an agent.
-         *     *   TcpConnection: the total number of TCP connections of an agent.
-         *     *   TcpConnection: the number of established TCP connections of an agent.
-         *     *   PackagesNetOut: the number of packets that are sent by the internal network interface controller (NIC) used by an agent.
-         *     *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
-         *     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
-         *     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+         *     *   CpuUtilization: the CPU utilization. Unit: %.
+         *     *   ConcurrentConnections: the number of concurrent connections.
+         *     *   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.
+         *     *   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.
+         *     *   VpcInternetTx: the outbound traffic over a virtual private cloud (VPC). Unit: KB/min.
+         *     *   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.
+         *     *   SystemDiskReadBps: the number of bytes read from the system disk per second.
+         *     *   SystemDiskWriteBps: the number of bytes written to the system disk per second.
+         *     *   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.
+         *     *   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.
+         *     *   CpuUtilizationAgent: the CPU utilization. Unit: %.
+         *     *   GpuUtilizationAgent: the GPU utilization. Unit: %.
+         *     *   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.
+         *     *   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.
+         *     *   MemoryUtilization: the memory usage. Unit: %.
+         *     *   LoadAverage: the average system load.
+         *     *   TcpConnection: the total number of TCP connections.
+         *     *   TcpConnection: the number of established TCP connections.
+         *     *   PackagesNetOut: the number of packets sent by the internal network interface controller (NIC). Unit: counts/s.
+         *     *   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.
+         *     *   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.
+         *     *   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.
+         *     *   EciPodCpuUtilization: the CPU utilization. Unit: %.
+         *     *   EciPodMemoryUtilization: the memory usage. Unit: %.
+         *     *   LoadBalancerRealServerAverageQps: the queries per second (QPS) of an instance.
          * 
-         * For more information, see [Event-triggered task for system monitoring](~~74854~~).
+         * For more information, see [Event-triggered tasks of the system monitoring type](~~74854~~).
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -488,7 +492,7 @@ public class CreateAlarmRequest extends Request {
         }
 
         /**
-         * The period during which the statistical value of the metric is collected. Unit: seconds. Valid values:
+         * The statistical period of the metric data. Unit: seconds. Valid values:
          * <p>
          * 
          * *   15
@@ -497,7 +501,7 @@ public class CreateAlarmRequest extends Request {
          * *   300
          * *   900
          * 
-         * > If your scaling group is of the ECS type and uses CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.
+         * >  You can set this parameter to 15 seconds only for scaling groups of the ECS type.
          * 
          * Default value: 300.
          */
@@ -605,17 +609,17 @@ public class CreateAlarmRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * The key of the metric dimension. The valid values vary based on the metric type.
+             * The dimension key of the metric. The valid values vary based on the metric type.
              * <p>
              * 
-             * *   If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.
+             * *   If you set MetricType to custom, you can specify this parameter based on your business requirements.
              * 
-             * *   If you set the MetricType parameter to system, this parameter has the following valid values:
+             * *   If you set MetricType to system, this parameter has the following valid values:
              * 
-             *     *   user_id: the ID of your Alibaba Cloud account
-             *     *   scaling_group: the scaling group that you want to monitor
-             *     *   device: the type of the NIC
-             *     *   state: the status of the TCP connection
+             *     *   user_id: the ID of your Alibaba Cloud account.
+             *     *   scaling_group: the scaling group that you want to monitor by using the event-triggered task.
+             *     *   device: the NIC type.
+             *     *   state: the status of the TCP connection.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -623,26 +627,26 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The value of the metric dimension. The valid values vary based on the value of the DimensionKey parameter.
+             * The dimension value of the metric. The valid values of this parameter vary based on the value of Dimensions.DimensionKey.
              * <p>
              * 
-             * *   If you set the MetricType parameter to custom, you can specify this parameter based on your business requirements.
+             * *   If you set MetricType to custom, you can specify this parameter based on your business requirements.
              * 
-             * *   If you set the MetricType parameter to system, the following rules apply:
+             * *   If you set MetricType to system, this parameter has the following valid values:
              * 
-             *     *   If you set the DimensionKey parameter to user_id, the system specifies the value of the DimensionValue parameter.
+             *     *   user_id: The system specifies the value.
              * 
-             *     *   If you set the DimensionKey parameter to scaling_group, the system specifies the value of the DimensionValue parameter.
+             *     *   scaling_group: The system specifies the value.
              * 
-             *     *   If you set the DimensionKey parameter to device, you can set the DimensionValue parameter to eth0 or eth1.
+             *     *   device: You can set this parameter to eth0 or eth1.
              * 
-             *         *   For instances that reside in the classic network, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in a VPC.
-             *         *   For instances that reside in the classic network, eth1 specifies the public NIC.
+             *         *   For instances of the classic network type, eth0 specifies the internal NIC. Only one eth0 NIC exists on each instance that resides in VPCs.
+             *         *   For instances of the classic network type, eth1 specifies the public NIC.
              * 
-             *     *   If you set the DimensionKey parameter to state, you can set the DimensionValue parameter to TCP_TOTAL or ESTABLISHED.
+             *     *   state: You can set this parameter to TCP_TOTAL or ESTABLISHED.
              * 
              *         *   TCP_TOTAL specifies the total number of TCP connections.
-             *         *   ESTABLISHED specifies the number of established TCP connections.
+             *         *   ESTABLISHED specifies the number of TCP connections that are established.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;
@@ -731,13 +735,13 @@ public class CreateAlarmRequest extends Request {
             private Float threshold; 
 
             /**
-             * The operator that is used to compare the metric value and the threshold. Valid values:
+             * The operator that you want to use to compare the metric value and the threshold in the multi-metric alert rule. Valid values:
              * <p>
              * 
-             * *   If the metric value is greater than or equal to the threshold, set the value to: >=.
-             * *   If the metric value is less than or equal to the threshold, set the value to: <=.
-             * *   If the metric value is greater than the threshold, set the value to: >.
-             * *   If the metric value is less than the threshold, set the value to: <.
+             * *   If the metric value is greater than or equal to the threshold, set the value to >=.
+             * *   If the metric value is less than or equal to the metric threshold, set the value to <=.
+             * *   If the metric value is greater than the metric threshold, set the value to >.
+             * *   If the metric value is less than the metric threshold, set the value to <.
              * 
              * Default value: >=.
              */
@@ -747,36 +751,40 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The names of the metrics that are specified in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.
+             * The names of the metrics in the multi-metric alert rule. The valid values of this parameter vary based on the metric type.
              * <p>
              * 
-             * *   If you set the MetricType parameter to custom, the valid values are your custom metrics.
+             * *   If you set MetricType to custom, the valid values are the metrics that you have.
              * 
-             * *   If you set the MetricType parameter to system, the MetricName parameter has the following valid values:
+             * *   If you set MetricType to system, this parameter has the following valid values:
              * 
-             *     *   CpuUtilization: the CPU utilization of an ECS instance. Unit: %.
-             *     *   IntranetTx: the outbound traffic over the internal network from an ECS instance. Unit: KB/min.
-             *     *   IntranetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
-             *     *   VpcInternetTx: the outbound traffic over the Internet from an ECS instance that resides in a VPC. Unit: KB/min.
-             *     *   VpcInternetRx: the inbound traffic over the Internet to an ECS instance that resides in a VPC. Unit: KB/min.
-             *     *   SystemDiskReadBps: the number of bytes read from the system disk used by an ECS instance per second.
-             *     *   SystemDiskWriteBps: the number of bytes written to the system disk used by an ECS instance per second.
-             *     *   SystemDiskReadOps: the number of read operations on the system disk used by an ECS instance per second.
-             *     *   SystemDiskWriteOps: the number of write operations on the system disk used by an ECS instance per second.
-             *     *   CpuUtilizationAgent: the CPU utilization of an agent. Unit: %.
-             *     *   GpuUtilizationAgent: the GPU utilization of an agent. Unit: %.
-             *     *   GpuMemoryFreeUtilizationAgent: the percentage of idle GPU memory of an agent.
-             *     *   GpuMemoryUtilizationAgent: the GPU memory usage of an agent. Unit: %.
-             *     *   MemoryUtilization: the memory usage of an agent. Unit: %.
-             *     *   LoadAverage: the average system load of an agent.
-             *     *   TcpConnection: the total number of TCP connections of an agent.
-             *     *   TcpConnection: the number of established TCP connections of an agent.
-             *     *   PackagesNetOut: the number of packets that are sent by the internal NIC used by an agent.
-             *     *   PackagesNetIn: the number of packets that are received by the internal NIC used by an agent.
-             *     *   EciPodCpuUtilization: the CPU utilization of an elastic container instance. Unit: %.
-             *     *   EciPodMemoryUtilization: the memory usage of an elastic container instance. Unit: %.
+             *     *   CpuUtilization: the CPU utilization. Unit: %.
+             *     *   ConcurrentConnections: the number of concurrent connections.
+             *     *   IntranetTx: the outbound traffic over an internal network. Unit: KB/min.
+             *     *   IntranetRx: the inbound traffic over an internal network. Unit: KB/min.
+             *     *   VpcInternetTx: the outbound traffic over a VPC. Unit: KB/min.
+             *     *   VpcInternetRx: the inbound traffic over a VPC. Unit: KB/min.
+             *     *   SystemDiskReadBps: the number of bytes read from the system disk per second.
+             *     *   SystemDiskWriteBps: the number of bytes written to the system disk per second.
+             *     *   SystemDiskReadOps: the read IOPS of the system disk. Unit: counts/s.
+             *     *   SystemDiskWriteOps: the write IOPS of the system disk. Unit: counts/s.
+             *     *   CpuUtilizationAgent: the CPU utilization. Unit: %.
+             *     *   GpuUtilizationAgent: the GPU utilization. Unit: %.
+             *     *   GpuMemoryFreeUtilizationAgent: the idle GPU memory usage. Unit: %.
+             *     *   GpuMemoryUtilizationAgent: the GPU memory usage. Unit: %.
+             *     *   MemoryUtilization: the memory usage. Unit: %.
+             *     *   LoadAverage: the average system load.
+             *     *   TcpConnection: the total number of TCP connections.
+             *     *   TcpConnection: the number of established TCP connections.
+             *     *   PackagesNetOut: the number of packets sent by the internal NIC. Unit: counts/s.
+             *     *   PackagesNetIn: the number of packets received by the internal NIC. Unit: counts/s.
+             *     *   PackagesNetOut: the number of packets sent by the public NIC. Unit: counts/s.
+             *     *   PackagesNetIn: the number of packets received by the public NIC. Unit: counts/s.
+             *     *   EciPodCpuUtilization: the CPU utilization. Unit: %.
+             *     *   EciPodMemoryUtilization: the memory usage. Unit: %.
+             *     *   LoadBalancerRealServerAverageQps: the QPS of an instance.
              * 
-             * For more information, see [Event-triggered task for system monitoring](~~74854~~).
+             * For more information, see [Event-triggered tasks of the system monitoring type](~~74854~~).
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -784,7 +792,7 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The period during which the statistical values of the metrics that are specified in the multi-metric alert rule are collected. Unit: seconds. Valid values:
+             * The statistical period of the metric data in the multi-metric alert rule. Unit: seconds. Valid values:
              * <p>
              * 
              * *   15
@@ -793,7 +801,7 @@ public class CreateAlarmRequest extends Request {
              * *   300
              * *   900
              * 
-             * > If your scaling group is of the ECS type and uses CloudMonitor metrics, you can set the Period parameter to 15. In other cases, you can set the Period parameter to 60, 120, 300, or 900. In most cases, the name of a CloudMonitor metric contains Agent.
+             * >  You can set this parameter to 15 seconds only for scaling groups of the ECS type.
              * 
              * Default value: 300.
              */
@@ -803,12 +811,12 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The method that is used to aggregate statistics about the metrics that are specified in the multi-metric alert rule. Valid values:
+             * The method that you want to use to aggregate the metric data in the multi-metric alert rule. Valid values:
              * <p>
              * 
-             * *   Average
-             * *   Minimum
-             * *   Maximum
+             * *   Average: the average value.
+             * *   Minimum: the minimum value
+             * *   Maximum: the maximum value
              * 
              * Default value: Average.
              */
@@ -818,7 +826,7 @@ public class CreateAlarmRequest extends Request {
             }
 
             /**
-             * The thresholds of the metric values. If the thresholds are reached the specified number of times within the specified period, a scaling rule is executed.
+             * The threshold of the metric value in the multi-metric alert rule. If the threshold is reached the specified number of times within the statistical period, a scaling rule is executed.
              */
             public Builder threshold(Float threshold) {
                 this.threshold = threshold;

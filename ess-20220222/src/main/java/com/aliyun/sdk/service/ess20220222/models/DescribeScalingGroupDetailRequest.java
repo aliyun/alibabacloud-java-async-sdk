@@ -115,7 +115,7 @@ public class DescribeScalingGroupDetailRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group. For more information, see the "Regions and zones" topic.
+         * The region ID of the scaling group. For more information, see [Regions and zones](~~40654~~).
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

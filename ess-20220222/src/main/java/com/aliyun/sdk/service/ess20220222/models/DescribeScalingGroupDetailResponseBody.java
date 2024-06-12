@@ -61,7 +61,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         private ScalingGroup scalingGroup; 
 
         /**
-         * The output details of the scaling group of the Elastic Container Instance type. The output is a Kubernetes Deployment file in the YAML format.
+         * The output details of the scaling group of the Elastic Container Instance type. Currently, the output is displayed in a Kubernetes Deployment YAML file.
          */
         public Builder output(String output) {
             this.output = output;
@@ -77,7 +77,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the scaling group.
+         * The information about the scaling groups.
          */
         public Builder scalingGroup(ScalingGroup scalingGroup) {
             this.scalingGroup = scalingGroup;
@@ -141,7 +141,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The ID of the ALB server group.
+             * The ID of the Application Load Balancer (ALB) server group.
              */
             public Builder albServerGroupId(String albServerGroupId) {
                 this.albServerGroupId = albServerGroupId;
@@ -149,7 +149,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The port number of an ECS instance as a backend server in the ALB server group.
+             * The port number used by an ECS instance as a backend server in the ALB server group.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -222,7 +222,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weightedCapacity; 
 
             /**
-             * The instance type. The instance type specified by using InstanceType overrides the instance type specified in the launch template.
+             * The instance type. The instance type that is specified by using this parameter overwrites the instance type of the launch template.
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -233,7 +233,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * The maximum bid price of the instance type that is specified by `LaunchTemplateOverride.InstanceType`.
              * <p>
              * 
-             * >  This parameter takes effect only if you use `LaunchTemplateId` to specify a launch template.
+             * >  This parameter takes effect only if you specify `LaunchTemplateId`.
              */
             public Builder spotPriceLimit(Float spotPriceLimit) {
                 this.spotPriceLimit = spotPriceLimit;
@@ -241,7 +241,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The weight of the instance type. The value of this parameter indicates the capacity of a single instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
+             * The weight of the instance type. The value of this parameter indicates the capacity of an instance of the specified instance type in the scaling group. A higher weight indicates that a smaller number of instances of the specified instance type are required to meet the expected capacity requirement.
              */
             public Builder weightedCapacity(Integer weightedCapacity) {
                 this.weightedCapacity = weightedCapacity;
@@ -379,7 +379,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * The port number of an ECS instance as a backend server in the server group.
+             * The port number used by an ECS instance as a backend server in the server group.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -475,8 +475,8 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * Indicates whether the tags of the scaling group can be propagated to instances. Valid values:
              * <p>
              * 
-             * *   true: Tags of the scaling group can be propagated to only instances that are newly created.
-             * *   false: Tags of the scaling group cannot be propagated to instances.
+             * *   true: The tags of the scaling group can be propagated to only instances that are newly created.
+             * *   false: The tags of the scaling group cannot be propagated to any instances.
              * 
              * Default value: false.
              */
@@ -1505,7 +1505,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The type of instances that are managed by the scaling group. Valid values:
+             * The type of the instances that are managed by the scaling group. Valid values:
              * <p>
              * 
              * *   ECS: ECS instances
@@ -1606,10 +1606,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum life span of an ECS instance in the scaling group. Unit: seconds.
+             * The maximum life span of an instance in the scaling group. Unit: seconds.
              * <p>
              * 
-             * Valid values: 0 and `[86400, Integer.maxValue]`. A value of 0 indicates that the ECS instance has an unlimited life span in the scaling group.
+             * Valid values: 0 or from 86400 to `Integer.maxValue`. A value of 0 for MaxInstanceLifetime indicates that any previously set limit has been removed, which effectively disables the maximum instance lifetime constraint.
              * 
              * Default value: null.
              * 
@@ -1763,7 +1763,10 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the scaling group. The name of a scaling group must be unique in a region. The name must be 2 to 64 characters in length, and can contain digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or digit.
+             * The name of the scaling group. The name of each scaling group must be unique in a region.
+             * <p>
+             * 
+             * The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or digit.
              */
             public Builder scalingGroupName(String scalingGroupName) {
                 this.scalingGroupName = scalingGroupName;
@@ -1777,6 +1780,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * *   recycle: economical mode
              * *   release: release mode
              * *   forcerelease: forced release mode
+             * *   forcerecycle: forced recycle mode
              * 
              * For more information, see [RemoveInstances](~~25955~~).
              */
@@ -1789,7 +1793,7 @@ public class DescribeScalingGroupDetailResponseBody extends TeaModel {
              * The information about the server groups.
              * <p>
              * 
-             * >  You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups that are associated with your scaling group.
+             * >  You can use this parameter to obtain information about ALB server groups and Network Load Balancer (NLB) server groups attached to your scaling group.
              */
             public Builder serverGroups(java.util.List < ServerGroups> serverGroups) {
                 this.serverGroups = serverGroups;
