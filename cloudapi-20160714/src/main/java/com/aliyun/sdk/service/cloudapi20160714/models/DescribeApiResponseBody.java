@@ -753,7 +753,7 @@ public class DescribeApiResponseBody extends TeaModel {
         }
 
         /**
-         * TagList.
+         * Tag List.
          */
         public Builder tagList(TagList tagList) {
             this.tagList = tagList;
@@ -2005,7 +2005,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The hash values that can be specified if the **ParameterType** parameter is set to Int, Long, Float, Double, or String. Separate multiple hash values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
+             * The hash values that are supported when **ParameterType** is set to Int, Long, Float, Double, or String. Separate values with commas (,). Examples: 1,2,3,4,9 and A,B,C,E,F.
              */
             public Builder enumValue(String enumValue) {
                 this.enumValue = enumValue;
@@ -2029,7 +2029,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum length of the parameter value if the **ParameterType** parameter is set to String.
+             * The maximum parameter length when ParameterType is set to String.
              */
             public Builder maxLength(Long maxLength) {
                 this.maxLength = maxLength;
@@ -2037,7 +2037,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
+             * The maximum parameter value when ParameterType is set to Int, Long, Float, or Double.
              */
             public Builder maxValue(Long maxValue) {
                 this.maxValue = maxValue;
@@ -2045,7 +2045,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum length of the parameter value if the **ParameterType** parameter is set to String.
+             * The minimum parameter length when ParameterType is set to String.
              */
             public Builder minLength(Long minLength) {
                 this.minLength = minLength;
@@ -2053,7 +2053,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum value of the parameter if the **ParameterType** parameter is set to Int, Long, Float, or Double.
+             * The minimum parameter value when ParameterType is set to Int, Long, Float, or Double.
              */
             public Builder minValue(Long minValue) {
                 this.minValue = minValue;
@@ -2069,7 +2069,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The regular expression that is used to validate the parameter if the **ParameterType** parameter is set to String.
+             * The regular expression that is used for parameter validation when ParameterType is set to String.
              */
             public Builder regularExpression(String regularExpression) {
                 this.regularExpression = regularExpression;
@@ -2538,7 +2538,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String headerValue; 
 
             /**
-             * The name of the HTTP header.
+             * The HTTP header.
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -3367,7 +3367,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String serviceParameterName; 
 
             /**
-             * The name of the frontend parameter. The name must be included in RequestParametersObject and match ApiParameterName in RequestParameters.
+             * The corresponding frontend parameter name. The value must be contained in RequestParametersObject and match RequestParam.ApiParameterName.
              */
             public Builder requestParameterName(String requestParameterName) {
                 this.requestParameterName = requestParameterName;
@@ -3529,7 +3529,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
+             * The system parameter. Valid values: CaClientIp, CaDomain, CaRequestHandleTime, CaAppId, CaRequestId, CaHttpSchema, and CaProxy.
              */
             public Builder parameterName(String parameterName) {
                 this.parameterName = parameterName;
@@ -3631,7 +3631,7 @@ public class DescribeApiResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * Label key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -3639,7 +3639,7 @@ public class DescribeApiResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * Label value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

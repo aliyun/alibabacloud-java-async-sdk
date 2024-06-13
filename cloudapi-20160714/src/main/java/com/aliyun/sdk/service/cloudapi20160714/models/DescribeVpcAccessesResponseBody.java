@@ -169,7 +169,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -383,7 +383,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
+             * The ID of an Elastic Compute Service (ECS) or Server Load Balancer (SLB) instance in the VPC.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -407,7 +407,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -415,7 +415,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of tags.
+             * The tags.
              */
             public Builder tags(Tags tags) {
                 this.tags = tags;
@@ -431,7 +431,7 @@ public class DescribeVpcAccessesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

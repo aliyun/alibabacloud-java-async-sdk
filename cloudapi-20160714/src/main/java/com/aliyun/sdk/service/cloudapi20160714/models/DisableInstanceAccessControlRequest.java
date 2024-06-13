@@ -106,7 +106,7 @@ public class DisableInstanceAccessControlRequest extends Request {
         }
 
         /**
-         * IP版本，可以设置为**ipv4**或者**ipv6**。
+         * The IP version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.putQueryParameter("AddressIPVersion", addressIPVersion);

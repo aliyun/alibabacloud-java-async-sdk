@@ -238,11 +238,12 @@ public class DescribeAuthorizedAppsRequest extends Request {
         }
 
         /**
-         * The name of the runtime environment. Valid values:
+         * The environment. Valid values:
          * <p>
          * 
-         * *   **RELEASE**
-         * *   **TEST**
+         * *   **RELEASE**: the production environment
+         * *   **PRE**: the staging environment
+         * *   **TEST**: the test environment
          */
         public Builder stageName(String stageName) {
             this.putQueryParameter("StageName", stageName);

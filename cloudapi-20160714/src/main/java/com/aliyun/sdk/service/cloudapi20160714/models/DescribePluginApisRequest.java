@@ -181,7 +181,7 @@ public class DescribePluginApisRequest extends Request {
         } 
 
         /**
-         * ApiId.
+         * The ID of the API.
          */
         public Builder apiId(String apiId) {
             this.putQueryParameter("ApiId", apiId);
@@ -190,7 +190,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * ApiName.
+         * The name of the API.
          */
         public Builder apiName(String apiName) {
             this.putQueryParameter("ApiName", apiName);
@@ -199,7 +199,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the API.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +208,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * GroupId.
+         * The ID of the API group.
          */
         public Builder groupId(String groupId) {
             this.putQueryParameter("GroupId", groupId);
@@ -217,7 +217,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Method.
+         * The request HTTP method of the API.
          */
         public Builder method(String method) {
             this.putQueryParameter("Method", method);
@@ -226,7 +226,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The number of the page to return. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -235,7 +235,9 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
+         * <p>
+         * Default value:10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -244,7 +246,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * Path.
+         * The request path of the API.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
@@ -253,7 +255,7 @@ public class DescribePluginApisRequest extends Request {
         }
 
         /**
-         * PluginId.
+         * The ID of the gateway plug-in.
          */
         public Builder pluginId(String pluginId) {
             this.putQueryParameter("PluginId", pluginId);

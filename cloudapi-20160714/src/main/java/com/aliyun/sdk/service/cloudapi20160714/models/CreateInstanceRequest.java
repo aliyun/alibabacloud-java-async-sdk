@@ -239,7 +239,13 @@ public class CreateInstanceRequest extends Request {
         } 
 
         /**
-         * AutoPay.
+         * Whether to automatically pay when renewing. Value:
+         * <p>
+         * 
+         * - True: Automatic payment. Please ensure that your account has sufficient balance.
+         * - False: Console manual payment. The specific operation is to log in to the console, select Expenses in the upper right corner, enter the Expense Center, and find the target order in Order Management to make payment.
+         * 
+         * Default value: False.
          */
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
@@ -248,7 +254,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ChargeType.
+         * The billing method of the instance. Valid values: PostPaid (pay-as-you-go) and PrePaid (subscription).
          */
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
@@ -257,7 +263,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The subscription duration of the instance.
+         * <p>
+         * 
+         * *   Valid values if PricingCycle is set to **Month**: **1** to **9**
+         * *   Valid values if PricingCycle is set to **Year**: **1** to **3**
+         * 
+         * >  This parameter is available and required only if the ChargeType parameter is set to **PrePaid**.
          */
         public Builder duration(Integer duration) {
             this.putQueryParameter("Duration", duration);
@@ -266,7 +278,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * HttpsPolicy.
+         * The HTTPS policy.
          */
         public Builder httpsPolicy(String httpsPolicy) {
             this.putQueryParameter("HttpsPolicy", httpsPolicy);
@@ -275,7 +287,17 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceCidr.
+         * The CIDR block of the VPC integration instance.
+         * <p>
+         * 
+         * *   192.168.0.0/16
+         * *   172.16.0.0/12
+         * 
+         * **
+         * 
+         * **Warning** The VPC integration instance is connected to the specified CIDR block. Plan your CIDR block carefully to prevent overlaps with the private IP addresses of cloud services.
+         * 
+         * >  This parameter is in invitational preview and not available for public use.
          */
         public Builder instanceCidr(String instanceCidr) {
             this.putQueryParameter("InstanceCidr", instanceCidr);
@@ -284,7 +306,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * Instance Name
          */
         public Builder instanceName(String instanceName) {
             this.putQueryParameter("InstanceName", instanceName);
@@ -293,7 +315,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceSpec.
+         * Instance specifications
          */
         public Builder instanceSpec(String instanceSpec) {
             this.putQueryParameter("InstanceSpec", instanceSpec);
@@ -302,7 +324,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceType.
+         * The type of the dedicated instance. Valid values:
+         * <p>
+         * 
+         * *   vpc_connect: a VPC integration instance
+         * *   normal: a conventional dedicated instance
+         * 
+         * >  This parameter is in invitational preview and not available for public use.
          */
         public Builder instanceType(String instanceType) {
             this.putQueryParameter("InstanceType", instanceType);
@@ -311,7 +339,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PricingCycle.
+         * The unit of the subscription duration of the subscription instance. Valid values:
+         * <p>
+         * 
+         * *   **year**
+         * *   **month**
+         * 
+         * >  This parameter is available and required only if the ChargeType parameter is set to PrePaid.
          */
         public Builder pricingCycle(String pricingCycle) {
             this.putQueryParameter("PricingCycle", pricingCycle);
@@ -320,7 +354,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that you want to add to the instance.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -329,7 +363,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * Token.
+         * Passwords are used to prevent duplicate requests from being submitted, please do not reuse them.
          */
         public Builder token(String token) {
             this.putQueryParameter("Token", token);
@@ -338,7 +372,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * UserVpcId.
+         * The ID of the user\"s VPC to be connected by the VPC integration instance.
+         * <p>
+         * 
+         * >  This parameter is in invitational preview and not available for public use.
          */
         public Builder userVpcId(String userVpcId) {
             this.putQueryParameter("UserVpcId", userVpcId);
@@ -347,7 +384,7 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The zone in which you want to create the instance. This parameter is required for a conventional dedicated instance and optional for a virtual private cloud (VPC) integration instance.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -356,7 +393,10 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * ZoneVSwitchSecurityGroup.
+         * The network information when the instance is a VPC integration instance, such as the zone, vSwitch, and security group.
+         * <p>
+         * 
+         * >  This parameter is in invitational preview and not available for public use.
          */
         public Builder zoneVSwitchSecurityGroup(java.util.List < ZoneVSwitchSecurityGroup> zoneVSwitchSecurityGroup) {
             this.putQueryParameter("ZoneVSwitchSecurityGroup", zoneVSwitchSecurityGroup);
@@ -410,7 +450,7 @@ public class CreateInstanceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -418,7 +458,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -495,7 +535,7 @@ public class CreateInstanceRequest extends Request {
             private String zoneId; 
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block for the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -503,7 +543,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * SecurityGroupId.
+             * The ID of the security group. Services in the same security group can access each other.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -511,7 +551,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -519,7 +559,7 @@ public class CreateInstanceRequest extends Request {
             }
 
             /**
-             * ZoneId.
+             * The zone ID.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

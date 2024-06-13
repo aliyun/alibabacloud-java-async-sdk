@@ -85,7 +85,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * AppApiRelationInfos.
+         * The API authorizations.
          */
         public Builder appApiRelationInfos(AppApiRelationInfos appApiRelationInfos) {
             this.appApiRelationInfos = appApiRelationInfos;
@@ -313,7 +313,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -321,7 +321,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -329,7 +329,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthVaildTime.
+             * The validity period of the authorization.
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -337,7 +337,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizationSource.
+             * The authorization source.
              */
             public Builder authorizationSource(String authorizationSource) {
                 this.authorizationSource = authorizationSource;
@@ -345,7 +345,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * CreatedTime.
+             * The time when the authorization was created.
              */
             public Builder createdTime(String createdTime) {
                 this.createdTime = createdTime;
@@ -353,7 +353,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The authorization description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -361,7 +361,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -369,7 +369,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The name of the API group.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -377,7 +377,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The HTTP request method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -385,7 +385,11 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Operator.
+             * The authorizer. Valid values:
+             * <p>
+             * 
+             * *   **PROVIDER**: API owner
+             * *   **CONSUMER**: API caller
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -393,7 +397,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -401,7 +405,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -409,7 +413,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * StageAlias.
+             * Environmental alias.
              */
             public Builder stageAlias(String stageAlias) {
                 this.stageAlias = stageAlias;
@@ -417,7 +421,7 @@ public class DescribeApisByAppResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The environment.
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;

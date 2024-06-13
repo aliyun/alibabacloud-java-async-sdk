@@ -179,7 +179,7 @@ public class DescribeVpcAccessesRequest extends Request {
         } 
 
         /**
-         * AccurateQuery.
+         * Whether to conduct precise queries
          */
         public Builder accurateQuery(Boolean accurateQuery) {
             this.putQueryParameter("AccurateQuery", accurateQuery);
@@ -242,7 +242,7 @@ public class DescribeVpcAccessesRequest extends Request {
         }
 
         /**
-         * The tag of objects that match the rule. You can specify multiple tags.
+         * The port number.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -314,7 +314,7 @@ public class DescribeVpcAccessesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -322,7 +322,7 @@ public class DescribeVpcAccessesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

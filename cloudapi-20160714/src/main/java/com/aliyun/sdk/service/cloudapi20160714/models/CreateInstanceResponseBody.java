@@ -61,7 +61,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         private Boolean tagStatus; 
 
         /**
-         * InstanceId.
+         * Instance ID
          */
         public Builder instanceId(String instanceId) {
             this.instanceId = instanceId;
@@ -69,7 +69,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * Request ID
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class CreateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TagStatus.
+         * Indicates whether the tag exists. Valid values: **true** and **false**.
          */
         public Builder tagStatus(Boolean tagStatus) {
             this.tagStatus = tagStatus;

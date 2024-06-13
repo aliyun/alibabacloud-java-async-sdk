@@ -130,6 +130,108 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
 
     } 
 
+    public static class TagInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private TagInfo(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public TagInfo build() {
+                return new TagInfo(this);
+            } 
+
+        } 
+
+    }
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagInfo")
+        private java.util.List < TagInfo> tagInfo;
+
+        private Tag(Builder builder) {
+            this.tagInfo = builder.tagInfo;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagInfo
+         */
+        public java.util.List < TagInfo> getTagInfo() {
+            return this.tagInfo;
+        }
+
+        public static final class Builder {
+            private java.util.List < TagInfo> tagInfo; 
+
+            /**
+             * TagInfo.
+             */
+            public Builder tagInfo(java.util.List < TagInfo> tagInfo) {
+                this.tagInfo = tagInfo;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
     public static class AuthorizedApp extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppDescription")
         private String appDescription;
@@ -161,6 +263,9 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("StageName")
         private String stageName;
 
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        private Tag tag;
+
         private AuthorizedApp(Builder builder) {
             this.appDescription = builder.appDescription;
             this.appId = builder.appId;
@@ -172,6 +277,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             this.operator = builder.operator;
             this.stageAlias = builder.stageAlias;
             this.stageName = builder.stageName;
+            this.tag = builder.tag;
         }
 
         public static Builder builder() {
@@ -252,6 +358,13 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             return this.stageName;
         }
 
+        /**
+         * @return tag
+         */
+        public Tag getTag() {
+            return this.tag;
+        }
+
         public static final class Builder {
             private String appDescription; 
             private Long appId; 
@@ -263,9 +376,10 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             private String operator; 
             private String stageAlias; 
             private String stageName; 
+            private Tag tag; 
 
             /**
-             * AppDescription.
+             * The description of the application.
              */
             public Builder appDescription(String appDescription) {
                 this.appDescription = appDescription;
@@ -281,7 +395,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * The application name
              */
             public Builder appName(String appName) {
                 this.appName = appName;
@@ -289,7 +403,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the app.
+             * The application name.
              */
             public Builder authVaildTime(String authVaildTime) {
                 this.authVaildTime = authVaildTime;
@@ -328,8 +442,8 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
              * The authorizer. Valid values:
              * <p>
              * 
-             * *   **PROVIDER: API owner**
-             * *   **CONSUMER: API caller**
+             * *   **PROVIDER**: API owner
+             * *   **CONSUMER**: API caller
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -337,7 +451,7 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * StageAlias.
+             * The environment alias.
              */
             public Builder stageAlias(String stageAlias) {
                 this.stageAlias = stageAlias;
@@ -345,14 +459,23 @@ public class DescribeAuthorizedAppsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the runtime environment. Valid values:
+             * The environment to which the API is published. Valid values:
              * <p>
              * 
-             * *   **RELEASE**
-             * *   **TEST**
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the staging environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
+                return this;
+            }
+
+            /**
+             * Tag.
+             */
+            public Builder tag(Tag tag) {
+                this.tag = tag;
                 return this;
             }
 

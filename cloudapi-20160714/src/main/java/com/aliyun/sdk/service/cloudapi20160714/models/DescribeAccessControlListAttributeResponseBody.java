@@ -109,7 +109,7 @@ public class DescribeAccessControlListAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * AddressIPVersion.
+         * The IP version. Valid values: **ipv4** and **ipv6**.
          */
         public Builder addressIPVersion(String addressIPVersion) {
             this.addressIPVersion = addressIPVersion;

@@ -49,7 +49,7 @@ public class CreateAccessControlListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AclId.
+         * The ID of the access control policy.
          */
         public Builder aclId(String aclId) {
             this.aclId = aclId;

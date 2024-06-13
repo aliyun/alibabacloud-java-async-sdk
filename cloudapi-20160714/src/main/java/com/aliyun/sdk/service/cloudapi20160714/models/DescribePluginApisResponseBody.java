@@ -85,7 +85,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiSummarys.
+         * The information about APIs.
          */
         public Builder apiSummarys(ApiSummarys apiSummarys) {
             this.apiSummarys = apiSummarys;
@@ -93,7 +93,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number of the page to return.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries returned per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -109,7 +109,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of returned entries.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -265,7 +265,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             private String stageName; 
 
             /**
-             * ApiId.
+             * The API ID.
              */
             public Builder apiId(String apiId) {
                 this.apiId = apiId;
@@ -273,7 +273,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * ApiName.
+             * The API name.
              */
             public Builder apiName(String apiName) {
                 this.apiName = apiName;
@@ -281,7 +281,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The API description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -289,7 +289,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupId.
+             * The ID of the API group.
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
@@ -297,7 +297,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * GroupName.
+             * The API group to which the API belongs.
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;
@@ -305,7 +305,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The HTTP method of the API.
              */
             public Builder method(String method) {
                 this.method = method;
@@ -313,7 +313,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * Path.
+             * The request path of the API.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -321,7 +321,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The ID of the region in which the API resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -329,7 +329,7 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * StageAlias.
+             * The environment alias.
              */
             public Builder stageAlias(String stageAlias) {
                 this.stageAlias = stageAlias;
@@ -337,7 +337,12 @@ public class DescribePluginApisResponseBody extends TeaModel {
             }
 
             /**
-             * StageName.
+             * The environment to which the API is published. Valid values:
+             * <p>
+             * 
+             * *   **RELEASE**: the production environment
+             * *   **PRE**: the pre-release environment
+             * *   **TEST**: the test environment
              */
             public Builder stageName(String stageName) {
                 this.stageName = stageName;
