@@ -55,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeBackupFilesResponse> describeBackupFiles(DescribeBackupFilesRequest request);
 
+    CompletableFuture<DescribeImageListResponse> describeImageList(DescribeImageListRequest request);
+
     CompletableFuture<DescribeInvocationsResponse> describeInvocations(DescribeInvocationsRequest request);
 
     CompletableFuture<DescribeKeyPairsResponse> describeKeyPairs(DescribeKeyPairsRequest request);
@@ -89,6 +91,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyPolicyGroupResponse> modifyPolicyGroup(ModifyPolicyGroupRequest request);
 
+    CompletableFuture<RebootAndroidInstancesInGroupResponse> rebootAndroidInstancesInGroup(RebootAndroidInstancesInGroupRequest request);
+
     CompletableFuture<RecoveryFileResponse> recoveryFile(RecoveryFileRequest request);
 
     CompletableFuture<RenewAndroidInstanceGroupsResponse> renewAndroidInstanceGroups(RenewAndroidInstanceGroupsRequest request);
@@ -102,6 +106,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetAdbSecureResponse> setAdbSecure(SetAdbSecureRequest request);
 
     CompletableFuture<StartAndroidInstanceResponse> startAndroidInstance(StartAndroidInstanceRequest request);
+
+    CompletableFuture<StopAndroidInstanceResponse> stopAndroidInstance(StopAndroidInstanceRequest request);
 
     CompletableFuture<UninstallAppResponse> uninstallApp(UninstallAppRequest request);
 
