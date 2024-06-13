@@ -149,6 +149,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListWorkerResourceResponse> listWorkerResource(ListWorkerResourceRequest request);
 
+    CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
+
     /**
       * You can call this operation to submit a renewal application for a certificate only when the order of the certificate is in the expiring state. After the renewal is complete, a new certificate order whose status is pending application is generated. You must submit a certificate application for the new certificate order and install the new certificate after the new certificate is issued.
       * > You can call the [DescribeCertificateState](~~455800~~) operation to query the status of a certificate application order. If the value of the **Type** response parameter is **certificate**, the certificate is issued.
