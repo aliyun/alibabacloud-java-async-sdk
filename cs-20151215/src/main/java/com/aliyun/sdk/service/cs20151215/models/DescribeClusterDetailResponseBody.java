@@ -408,10 +408,9 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
          * The type of cluster. Valid values:
          * <p>
          * 
-         * *   `Kubernetes`: ACK dedicated cluster
-         * *   `ManagedKubernetes`: ACK managed cluster
-         * *   `Ask`: ACK Serverless cluster
-         * *   `ExternalKubernetes`: registered cluster
+         * *   `Kubernetes`: ACK dedicated cluster.
+         * *   `ManagedKubernetes`: ACK managed cluster. ACK managed clusters include ACK Pro clusters, ACK Basic clusters, ACK Serverless Pro clusters, ACK Serverless Basic clusters, ACK Edge Pro clusters, and ACK Edge Basic clusters.
+         * *   `ExternalKubernetes`: registered cluster.
          */
         public Builder clusterType(String clusterType) {
             this.clusterType = clusterType;
@@ -621,7 +620,7 @@ public class DescribeClusterDetailResponseBody extends TeaModel {
         }
 
         /**
-         * The resource labels of the cluster.
+         * The resource tags of the cluster.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.tags = tags;

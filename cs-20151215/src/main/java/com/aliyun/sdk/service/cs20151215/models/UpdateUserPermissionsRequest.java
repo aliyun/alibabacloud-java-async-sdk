@@ -81,7 +81,7 @@ public class UpdateUserPermissionsRequest extends Request {
         } 
 
         /**
-         * uid.
+         * The ID of the RAM user or RAM role whose permissions you want to update.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);
@@ -90,7 +90,7 @@ public class UpdateUserPermissionsRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < UpdateUserPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -99,7 +99,14 @@ public class UpdateUserPermissionsRequest extends Request {
         }
 
         /**
-         * mode.
+         * The authorization method. Valid values:
+         * <p>
+         * 
+         * *   `apply`: updates all permissions of the RAM user or RAM role. If you use this method, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
+         * *   `delete`: revokes the specified permissions from the RAM user or RAM role. If you use this method, only the permissions that you specify are revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
+         * *   `patch`: grants the specified permissions to the RAM user or role. If you use this method, only the permissions that you specify are granted, other permissions of the RAM user or RAM role on the cluster are not affected.
+         * 
+         * Default value: `apply`
          */
         public Builder mode(String mode) {
             this.putQueryParameter("mode", mode);
@@ -201,7 +208,10 @@ public class UpdateUserPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * cluster.
+             * The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.
+             * <p>
+             * 
+             * *   Set this parameter to an empty string if `role_type` is set to `all-clusters`.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -209,7 +219,7 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * is_custom.
+             * Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -217,7 +227,7 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * is_ram_role.
+             * Specifies whether to use a RAM role to grant permissions.
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;
@@ -225,7 +235,7 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -233,7 +243,14 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * role_name.
+             * The predefined role. Valid values:
+             * <p>
+             * 
+             * *   `admin`: administrator
+             * *   `ops`: O\&M engineer
+             * *   `dev`: developer
+             * *   `restricted`: restricted user
+             * *   Custom role
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -241,7 +258,12 @@ public class UpdateUserPermissionsRequest extends Request {
             }
 
             /**
-             * role_type.
+             * The authorization type. Valid values:
+             * <p>
+             * 
+             * *   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.
+             * *   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.
+             * *   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;

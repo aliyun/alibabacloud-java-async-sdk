@@ -53,7 +53,7 @@ public class CancelOperationPlanRequest extends Request {
         } 
 
         /**
-         * The operation plan ID.
+         * The ID of the O\&M plan.
          */
         public Builder planId(String planId) {
             this.putPathParameter("plan_id", planId);

@@ -53,11 +53,11 @@ public class OpenAckServiceRequest extends Request {
         } 
 
         /**
-         * The type of ACK service that you want to activate. Valid values:
+         * The type of service that you want to activate. Valid values:
          * <p>
          * 
-         * *   `propayasgo`: ACK Pro
-         * *   `edgepayasgo`: ACK Edge
+         * *   `propayasgo`: professional managed Kubernetes service.
+         * *   `edgepayasgo`: ACK Edge.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

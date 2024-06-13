@@ -129,7 +129,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * The kubelet configuration.
+         * The parameter settings of the kubelet.
          */
         public Builder kubeletConfig(KubeletConfig kubeletConfig) {
             this.putBodyParameter("kubelet_config", kubeletConfig);
@@ -147,7 +147,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
         }
 
         /**
-         * The rotation configuration.
+         * The rotation configurations.
          */
         public Builder rollingPolicy(RollingPolicy rollingPolicy) {
             this.putBodyParameter("rolling_policy", rollingPolicy);
@@ -230,7 +230,7 @@ public class ModifyNodePoolNodeConfigRequest extends Request {
             private Long maxParallelism; 
 
             /**
-             * The maximum number of nodes in the Unschedulable state.
+             * The maximum number of unavailable nodes.
              */
             public Builder maxParallelism(Long maxParallelism) {
                 this.maxParallelism = maxParallelism;

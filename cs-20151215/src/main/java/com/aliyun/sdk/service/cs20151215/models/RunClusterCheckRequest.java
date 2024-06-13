@@ -114,7 +114,7 @@ public class RunClusterCheckRequest extends Request {
         }
 
         /**
-         * target.
+         * 检查目标。
          */
         public Builder target(String target) {
             this.putBodyParameter("target", target);

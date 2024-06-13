@@ -35,6 +35,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CancelTaskResponse> cancelTask(CancelTaskRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CancelWorkflowResponse> cancelWorkflow(CancelWorkflowRequest request);
 
     CompletableFuture<CheckControlPlaneLogEnableResponse> checkControlPlaneLogEnable(CheckControlPlaneLogEnableRequest request);
@@ -94,6 +98,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeployPolicyInstanceResponse> deployPolicyInstance(DeployPolicyInstanceRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescirbeWorkflowResponse> descirbeWorkflow(DescirbeWorkflowRequest request);
 
     CompletableFuture<DescribeAddonResponse> describeAddon(DescribeAddonRequest request);
@@ -226,6 +234,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeUserQuotaResponse> describeUserQuota(DescribeUserQuotaRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeWorkflowsResponse> describeWorkflows(DescribeWorkflowsRequest request);
 
     CompletableFuture<EdgeClusterAddEdgeMachineResponse> edgeClusterAddEdgeMachine(EdgeClusterAddEdgeMachineRequest request);
@@ -252,10 +264,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUpgradeStatusResponse> getUpgradeStatus(GetUpgradeStatusRequest request);
 
     /**
-      * ****
-      * *   Make sure that you have granted the RAM user at least read-only permissions on the desired ACK clusters in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
-      * *   If you use a RAM user to call this API operation, make sure that the RAM user is authorized to modify the permissions of other RAM users on the desired ACK clusters. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
-      * *   This operation overwrites the permissions that have been granted to the specified RAM user. When you call this operation, make sure that the required permissions are included.
+      * **Precautions**:
+      * *   Make sure that you have attached a RAM policy that has at least the read-only permissions on the cluster to the RAM user or RAM role in the RAM console. Otherwise, the `ErrorRamPolicyConfig` error code is returned when you call the operation. For more information about how to authorize a RAM user by attaching RAM policies, see [Create a custom RAM policy](~~86485~~).
+      * *   If you use a RAM user to call the operation, make sure that the RAM user has the permissions to modify the permissions of other RAM users or RAM roles. Otherwise, the `StatusForbidden` or `ForbiddenGrantPermissions` error code is returned when you call the operation. For more information, see [Use a RAM user to grant RBAC permissions to other RAM users](~~119035~~).
+      * *   If you update full permissions, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation.
       *
      */
     CompletableFuture<GrantPermissionsResponse> grantPermissions(GrantPermissionsRequest request);
@@ -335,6 +347,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RemoveNodePoolNodesResponse> removeNodePoolNodes(RemoveNodePoolNodesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<RemoveWorkflowResponse> removeWorkflow(RemoveWorkflowRequest request);
 
     CompletableFuture<RepairClusterNodePoolResponse> repairClusterNodePool(RepairClusterNodePoolRequest request);
@@ -370,6 +386,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartAlertResponse> startAlert(StartAlertRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<StartWorkflowResponse> startWorkflow(StartWorkflowRequest request);
 
     CompletableFuture<StopAlertResponse> stopAlert(StopAlertRequest request);
@@ -395,6 +415,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateTemplateResponse> updateTemplate(UpdateTemplateRequest request);
 
+    /**
+      * **Precautions**:
+      * *   You can update the permissions of a RAM user or RAM role on a cluster by using full update or incremental update. If you use full update, the existing permissions of the RAM user or RAM role on the cluster are overwritten. You must specify all the permissions that you want to grant to the RAM user or RAM role in the request parameters when you call the operation. If you use incremental update, you can grant permissions to or revoke permissions from the RAM user or RAM role on the cluster. In this case, only the permissions that you specify in the request parameters when you call the operation are granted or revoked, other permissions of the RAM user or RAM role on the cluster are not affected.
+      *
+     */
     CompletableFuture<UpdateUserPermissionsResponse> updateUserPermissions(UpdateUserPermissionsRequest request);
 
     CompletableFuture<UpgradeClusterResponse> upgradeCluster(UpgradeClusterRequest request);

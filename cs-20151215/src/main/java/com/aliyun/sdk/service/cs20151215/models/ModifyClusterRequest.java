@@ -277,11 +277,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to associate an elastic IP address (EIP) with the cluster API server. This enables Internet access for the cluster. Valid values:
+         * Specifies whether to associate an elastic IP address (EIP) with the cluster. This EIP is used for accessing the API server over the Internet. Valid values:
          * <p>
          * 
-         * *   `true`: associates an EIP with the cluster API server.
-         * *   `false`: does not associate an EIP with the cluster API server.
+         * *   `true`: associates an EIP with the cluster.
+         * *   `false`: does not associate an EIP with the cluster.
          */
         public Builder apiServerEip(Boolean apiServerEip) {
             this.putBodyParameter("api_server_eip", apiServerEip);
@@ -290,7 +290,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the EIP that you want to associate with the cluster API server. The parameter takes effect only if `api_server_eip` is set to `true`.
+         * The ID of the EIP that you want to associate with the API server of the cluster. This parameter takes effect when `api_server_eip` is set to `true`.
          */
         public Builder apiServerEipId(String apiServerEipId) {
             this.putBodyParameter("api_server_eip_id", apiServerEipId);
@@ -302,7 +302,7 @@ public class ModifyClusterRequest extends Request {
          * The cluster name.
          * <p>
          * 
-         * The name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (-). The name cannot start with a hyphen (-).
+         * The cluster name must be 1 to 63 characters in length, and can contain digits, letters, and hyphens (\_). The cluster name cannot start with a hyphen (-).
          */
         public Builder clusterName(String clusterName) {
             this.putBodyParameter("cluster_name", clusterName);
@@ -311,13 +311,13 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the cluster. If deletion protection is enabled, the cluster cannot be deleted in the ACK console or by calling API operations. Valid values:
+         * Specifies whether to enable cluster deletion protection. If this option is enabled, the cluster cannot be deleted in the console or by calling API operations. Valid values:
          * <p>
          * 
-         * *   `true`: enables deletion protection for the cluster. This way, the cluster cannot be deleted in the ACK console or by calling API operations.
-         * *   `false`: disables deletion protection for the cluster. This way, the cluster can be deleted in the ACK console or by calling API operations.
+         * *   `true`
+         * *   `false`
          * 
-         * Default value: `false`.
+         * Default value: `false`
          */
         public Builder deletionProtection(Boolean deletionProtection) {
             this.putBodyParameter("deletion_protection", deletionProtection);
@@ -326,11 +326,11 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the RAM Roles for Service Accounts (RRSA) feature. Valid values:
+         * Specifies whether to enable the RRSA feature. Valid values:
          * <p>
          * 
-         * *   `true`: enables the RRSA feature.
-         * *   `false`: disables the RRSA feature.
+         * *   `true`
+         * *   `false`
          */
         public Builder enableRrsa(Boolean enableRrsa) {
             this.putBodyParameter("enable_rrsa", enableRrsa);
@@ -342,10 +342,10 @@ public class ModifyClusterRequest extends Request {
          * Specifies whether to remap the test domain name of the cluster. Valid values:
          * <p>
          * 
-         * *   `true`: remaps the test domain name of the cluster.
-         * *   `false`: does not remap the test domain name of the cluster.
+         * *   `true`
+         * *   `false`
          * 
-         * Default value: `false`.
+         * Default value: `false`
          */
         public Builder ingressDomainRebinding(Boolean ingressDomainRebinding) {
             this.putBodyParameter("ingress_domain_rebinding", ingressDomainRebinding);
@@ -354,7 +354,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the Server Load Balancer (SLB) instance that is associated with the cluster.
+         * The ID of the Server Load Balancer (SLB) instance of the cluster to be modified.
          */
         public Builder ingressLoadbalancerId(String ingressLoadbalancerId) {
             this.putBodyParameter("ingress_loadbalancer_id", ingressLoadbalancerId);
@@ -363,13 +363,13 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable deletion protection for the instances in the cluster. If deletion protection is enabled, the instances in the cluster cannot be deleted in the console or by calling the API. Valid values:
+         * Specifies whether to enable instance deletion protection. If this option is enabled, the instance cannot be deleted in the console or by calling API operations. Valid values:
          * <p>
          * 
-         * *   `true`: enables deletion protection for the instances in the cluster. You cannot delete the instances in the cluster in the console or by calling the API.
-         * *   `false`: disables deletion protection for the instances in the cluster. You can delete the instances in the cluster in the console or by calling the API.
+         * *   `true`
+         * *   `false`
          * 
-         * Default value: `false`.
+         * Default value: `false`
          */
         public Builder instanceDeletionProtection(Boolean instanceDeletionProtection) {
             this.putBodyParameter("instance_deletion_protection", instanceDeletionProtection);
@@ -378,7 +378,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The maintenance window of the cluster. This parameter takes effect only in ACK Pro clusters.
+         * The cluster maintenance window. This feature takes effect only for managed Pro clusters.
          */
         public Builder maintenanceWindow(MaintenanceWindow maintenanceWindow) {
             this.putBodyParameter("maintenance_window", maintenanceWindow);
@@ -396,7 +396,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the cluster belongs.
+         * The ID of the cluster resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putBodyParameter("resource_group_id", resourceGroupId);
@@ -405,7 +405,7 @@ public class ModifyClusterRequest extends Request {
         }
 
         /**
-         * 系统事件存储配置。
+         * The storage configurations of system events.
          */
         public Builder systemEventsLogging(SystemEventsLogging systemEventsLogging) {
             this.putBodyParameter("system_events_logging", systemEventsLogging);
@@ -622,7 +622,7 @@ public class ModifyClusterRequest extends Request {
             private String loggingProject; 
 
             /**
-             * 是否开启系统事件存储。
+             * Specifies whether to enable system event storage.
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -630,7 +630,7 @@ public class ModifyClusterRequest extends Request {
             }
 
             /**
-             * 系统事件存储的LogProject名称。
+             * The name of the LogProject that stores system events.
              */
             public Builder loggingProject(String loggingProject) {
                 this.loggingProject = loggingProject;

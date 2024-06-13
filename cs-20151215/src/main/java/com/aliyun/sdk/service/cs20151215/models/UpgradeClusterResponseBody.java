@@ -61,7 +61,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * cluster_id.
+         * 集群ID。
          */
         public Builder clusterId(String clusterId) {
             this.clusterId = clusterId;
@@ -69,7 +69,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * request_id.
+         * 请求ID。
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class UpgradeClusterResponseBody extends TeaModel {
         }
 
         /**
-         * task_id.
+         * 任务ID。
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

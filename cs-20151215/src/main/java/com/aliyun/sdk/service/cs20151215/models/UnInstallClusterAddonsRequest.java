@@ -77,7 +77,7 @@ public class UnInstallClusterAddonsRequest extends Request {
         }
 
         /**
-         * The list of components that you want to uninstall. The list is an array.
+         * The components that you want to uninstall. The list is an array.
          */
         public Builder addons(java.util.List < Addons> addons) {
             this.putBodyParameter("addons", addons);
@@ -131,7 +131,7 @@ public class UnInstallClusterAddonsRequest extends Request {
             private String name; 
 
             /**
-             * Whether to clean up cloud resources.
+             * Specifies whether to release cloud resources.
              */
             public Builder cleanupCloudResources(Boolean cleanupCloudResources) {
                 this.cleanupCloudResources = cleanupCloudResources;

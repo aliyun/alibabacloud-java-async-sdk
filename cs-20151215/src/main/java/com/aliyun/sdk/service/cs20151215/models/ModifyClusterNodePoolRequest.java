@@ -1409,6 +1409,9 @@ public class ModifyClusterNodePoolRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("instance_charge_type")
         private String instanceChargeType;
 
+        @com.aliyun.core.annotation.NameInMap("instance_patterns")
+        private InstancePatterns instancePatterns;
+
         @com.aliyun.core.annotation.NameInMap("instance_types")
         private java.util.List < String > instanceTypes;
 
@@ -1506,6 +1509,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             this.imageId = builder.imageId;
             this.imageType = builder.imageType;
             this.instanceChargeType = builder.instanceChargeType;
+            this.instancePatterns = builder.instancePatterns;
             this.instanceTypes = builder.instanceTypes;
             this.internetChargeType = builder.internetChargeType;
             this.internetMaxBandwidthOut = builder.internetMaxBandwidthOut;
@@ -1599,6 +1603,13 @@ public class ModifyClusterNodePoolRequest extends Request {
          */
         public String getInstanceChargeType() {
             return this.instanceChargeType;
+        }
+
+        /**
+         * @return instancePatterns
+         */
+        public InstancePatterns getInstancePatterns() {
+            return this.instancePatterns;
         }
 
         /**
@@ -1813,6 +1824,7 @@ public class ModifyClusterNodePoolRequest extends Request {
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
+            private InstancePatterns instancePatterns; 
             private java.util.List < String > instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
@@ -1923,6 +1935,14 @@ public class ModifyClusterNodePoolRequest extends Request {
              */
             public Builder instanceChargeType(String instanceChargeType) {
                 this.instanceChargeType = instanceChargeType;
+                return this;
+            }
+
+            /**
+             * instance_patterns.
+             */
+            public Builder instancePatterns(InstancePatterns instancePatterns) {
+                this.instancePatterns = instancePatterns;
                 return this;
             }
 

@@ -120,7 +120,7 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * delete_options.
+         * The type of cluster resource that you want to delete or retain.
          */
         public Builder deleteOptions(java.util.List < DeleteOptions> deleteOptions) {
             String deleteOptionsShrink = shrink(deleteOptions, "delete_options", "json");
@@ -130,11 +130,11 @@ public class DeleteClusterRequest extends Request {
         }
 
         /**
-         * Specifies whether to retain the Server Load Balancer (SLB) resources that are created by the cluster.
+         * Specifies whether to retain the Server Load Balancer (SLB) instances that are created by the cluster.
          * <p>
          * 
-         * *   `true`: retains the SLB resources that are created by the cluster.
-         * *   `false`: does not retain the SLB resources that are created by the cluster.
+         * *   `true`: retains the SLB instances that are created by the cluster.
+         * *   `false`: does not retain the SLB instances that are created by the cluster.
          * 
          * Default value: `false`.
          */
@@ -215,7 +215,11 @@ public class DeleteClusterRequest extends Request {
             private String resourceType; 
 
             /**
-             * delete_mode.
+             * The deletion policy for the specified type of resource. Valid values:
+             * <p>
+             * 
+             * *   delete: deletes the specified type of resource.
+             * *   retain: retains the specified type of resource.
              */
             public Builder deleteMode(String deleteMode) {
                 this.deleteMode = deleteMode;
@@ -223,7 +227,14 @@ public class DeleteClusterRequest extends Request {
             }
 
             /**
-             * resource_type.
+             * Valid values:
+             * <p>
+             * 
+             * *   SLB: SLB resources created for Services. By default, the SLB resources are automatically deleted.
+             * *   ALB: Application Load Balancer (ALB) resources created by the ALB Ingress controller. By default, the ALB resources are retained.
+             * *   SLS_Data: Simple Log Service projects used by the cluster logging feature. By default, the Simple Log Service projects are retained.
+             * *   SLS_ControlPlane: Simple Log Service projects used to store the logs of control planes in ACK managed clusters. By default, the Simple Log Service projects are retained.
+             * *   PrivateZone: PrivateZone resources created by ACK Serverless clusters. By default, the PrivateZone resources are retained.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;

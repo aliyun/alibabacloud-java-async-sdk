@@ -68,7 +68,7 @@ public class GrantPermissionsRequest extends Request {
         } 
 
         /**
-         * The ID of the RAM user.
+         * The ID of the RAM user or RAM role whose permissions you want to update.
          */
         public Builder uid(String uid) {
             this.putPathParameter("uid", uid);
@@ -77,7 +77,7 @@ public class GrantPermissionsRequest extends Request {
         }
 
         /**
-         * The request body.
+         * The request parameters.
          */
         public Builder body(java.util.List < GrantPermissionsRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -182,10 +182,10 @@ public class GrantPermissionsRequest extends Request {
             private String roleType; 
 
             /**
-             * The ID of the cluster that you want to manage.
+             * The ID of the cluster on which you want to grant permissions to the RAM role or RAM role.
              * <p>
              * 
-             * *   When the `role_type` parameter is set to `all-clusters`, this parameter is set to an empty string.
+             * *   Set this parameter to an empty string if `role_type` is set to `all-clusters`.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -193,7 +193,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * Specifies whether to perform a custom authorization. To perform a custom authorization, set `role_name` to a custom cluster role.
+             * Specifies whether to assign a custom role to the RAM user or RAM role. If you want to assign a custom role to the RAM user or RAM role, set `role_name` to the name of the custom role.
              */
             public Builder isCustom(Boolean isCustom) {
                 this.isCustom = isCustom;
@@ -201,7 +201,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * Specifies whether the permissions are granted to a RAM role.
+             * Specifies whether to use a RAM role to grant permissions.
              */
             public Builder isRamRole(Boolean isRamRole) {
                 this.isRamRole = isRamRole;
@@ -209,7 +209,7 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * The namespace to which the permissions are scoped. This parameter is required only if you set role_type to namespace.
+             * The namespace that you want to authorize the RAM user or RAM role to manage. This parameter is required only if you set role_type to namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -217,14 +217,14 @@ public class GrantPermissionsRequest extends Request {
             }
 
             /**
-             * The predefined role name. Valid values:
+             * The predefined role. Valid values:
              * <p>
              * 
              * *   `admin`: administrator
              * *   `ops`: O\&M engineer
              * *   `dev`: developer
              * *   `restricted`: restricted user
-             * *   The custom cluster role.
+             * *   Custom role
              */
             public Builder roleName(String roleName) {
                 this.roleName = roleName;
@@ -235,9 +235,9 @@ public class GrantPermissionsRequest extends Request {
              * The authorization type. Valid values:
              * <p>
              * 
-             * *   `cluster`: indicates that the permissions are scoped to a cluster.
-             * *   `namespace`: specifies that the permissions are scoped to a namespace of a cluster.
-             * *   `all-clusters`: specifies that the permissions are scoped to all clusters.
+             * *   `cluster`: authorizes the RAM user or RAM role to manage the specified clusters.
+             * *   `namespace`: authorizes the RAM user or RAM role to manage the specified namepsaces.
+             * *   `all-clusters`: authorizes the RAM user or RAM role to manage all clusters.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
