@@ -111,6 +111,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetAsyncResultResponse> getAsyncResult(GetAsyncResultRequest request);
 
+    CompletableFuture<GetBotSessionDataResponse> getBotSessionData(GetBotSessionDataRequest request);
+
     CompletableFuture<GetInstancePublishTaskStateResponse> getInstancePublishTaskState(GetInstancePublishTaskStateRequest request);
 
     CompletableFuture<GetPublishTaskStateResponse> getPublishTaskState(GetPublishTaskStateRequest request);
