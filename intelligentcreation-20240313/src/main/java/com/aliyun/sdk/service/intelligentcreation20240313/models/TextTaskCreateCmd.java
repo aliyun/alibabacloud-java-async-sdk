@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TextTaskCreateCmd</p>
  */
 public class TextTaskCreateCmd extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentId")
+    private String agentId;
+
     @com.aliyun.core.annotation.NameInMap("contentRequirement")
     private String contentRequirement;
 
@@ -54,6 +57,7 @@ public class TextTaskCreateCmd extends TeaModel {
     private java.util.List < String > themes;
 
     private TextTaskCreateCmd(Builder builder) {
+        this.agentId = builder.agentId;
         this.contentRequirement = builder.contentRequirement;
         this.idempotentId = builder.idempotentId;
         this.industry = builder.industry;
@@ -75,6 +79,13 @@ public class TextTaskCreateCmd extends TeaModel {
 
     public static TextTaskCreateCmd create() {
         return builder().build();
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
     }
 
     /**
@@ -169,6 +180,7 @@ public class TextTaskCreateCmd extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentId; 
         private String contentRequirement; 
         private String idempotentId; 
         private String industry; 
@@ -182,6 +194,14 @@ public class TextTaskCreateCmd extends TeaModel {
         private String textModeType; 
         private String theme; 
         private java.util.List < String > themes; 
+
+        /**
+         * agentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
 
         /**
          * contentRequirement.

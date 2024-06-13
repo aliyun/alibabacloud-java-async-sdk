@@ -11,6 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>Text</p>
  */
 public class Text extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.NameInMap("agentName")
+    private String agentName;
+
     @com.aliyun.core.annotation.NameInMap("desc")
     @com.aliyun.core.annotation.Validation(required = true)
     private String desc;
@@ -66,6 +72,8 @@ public class Text extends TeaModel {
     private String userNameModified;
 
     private Text(Builder builder) {
+        this.agentId = builder.agentId;
+        this.agentName = builder.agentName;
         this.desc = builder.desc;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
@@ -90,6 +98,20 @@ public class Text extends TeaModel {
 
     public static Text create() {
         return builder().build();
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
     }
 
     /**
@@ -205,6 +227,8 @@ public class Text extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentId; 
+        private String agentName; 
         private String desc; 
         private String gmtCreate; 
         private String gmtModified; 
@@ -221,6 +245,22 @@ public class Text extends TeaModel {
         private String title; 
         private String userNameCreate; 
         private String userNameModified; 
+
+        /**
+         * agentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * agentName.
+         */
+        public Builder agentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * desc.

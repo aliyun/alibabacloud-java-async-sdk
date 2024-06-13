@@ -11,6 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TextTask</p>
  */
 public class TextTask extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("agentId")
+    private String agentId;
+
+    @com.aliyun.core.annotation.NameInMap("agentName")
+    private String agentName;
+
     @com.aliyun.core.annotation.NameInMap("contentRequirement")
     private String contentRequirement;
 
@@ -56,6 +62,9 @@ public class TextTask extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("textTaskStatus")
     private String textTaskStatus;
 
+    @com.aliyun.core.annotation.NameInMap("texts")
+    private Text texts;
+
     @com.aliyun.core.annotation.NameInMap("theme")
     private String theme;
 
@@ -63,6 +72,8 @@ public class TextTask extends TeaModel {
     private String themeDesc;
 
     private TextTask(Builder builder) {
+        this.agentId = builder.agentId;
+        this.agentName = builder.agentName;
         this.contentRequirement = builder.contentRequirement;
         this.gmtCreate = builder.gmtCreate;
         this.gmtModified = builder.gmtModified;
@@ -77,6 +88,7 @@ public class TextTask extends TeaModel {
         this.textModeType = builder.textModeType;
         this.textTaskId = builder.textTaskId;
         this.textTaskStatus = builder.textTaskStatus;
+        this.texts = builder.texts;
         this.theme = builder.theme;
         this.themeDesc = builder.themeDesc;
     }
@@ -87,6 +99,20 @@ public class TextTask extends TeaModel {
 
     public static TextTask create() {
         return builder().build();
+    }
+
+    /**
+     * @return agentId
+     */
+    public String getAgentId() {
+        return this.agentId;
+    }
+
+    /**
+     * @return agentName
+     */
+    public String getAgentName() {
+        return this.agentName;
     }
 
     /**
@@ -188,6 +214,13 @@ public class TextTask extends TeaModel {
     }
 
     /**
+     * @return texts
+     */
+    public Text getTexts() {
+        return this.texts;
+    }
+
+    /**
      * @return theme
      */
     public String getTheme() {
@@ -202,6 +235,8 @@ public class TextTask extends TeaModel {
     }
 
     public static final class Builder {
+        private String agentId; 
+        private String agentName; 
         private String contentRequirement; 
         private String gmtCreate; 
         private String gmtModified; 
@@ -216,8 +251,25 @@ public class TextTask extends TeaModel {
         private String textModeType; 
         private Long textTaskId; 
         private String textTaskStatus; 
+        private Text texts; 
         private String theme; 
         private String themeDesc; 
+
+        /**
+         * agentId.
+         */
+        public Builder agentId(String agentId) {
+            this.agentId = agentId;
+            return this;
+        }
+
+        /**
+         * agentName.
+         */
+        public Builder agentName(String agentName) {
+            this.agentName = agentName;
+            return this;
+        }
 
         /**
          * contentRequirement.
@@ -328,6 +380,14 @@ public class TextTask extends TeaModel {
          */
         public Builder textTaskStatus(String textTaskStatus) {
             this.textTaskStatus = textTaskStatus;
+            return this;
+        }
+
+        /**
+         * texts.
+         */
+        public Builder texts(Text texts) {
+            this.texts = texts;
             return this;
         }
 
