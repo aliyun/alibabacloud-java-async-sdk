@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAdvisorChecksRequest</p>
  */
 public class DescribeAdvisorChecksRequest extends Request {
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
     private DescribeAdvisorChecksRequest(Builder builder) {

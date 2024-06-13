@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCostCheckAdvicesResponseBody</p>
  */
 public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCostCheckAdvicesResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -193,51 +192,63 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
 
     }
     public static class AdviceList extends TeaModel {
-        @NameInMap("AliyunId")
+        @com.aliyun.core.annotation.NameInMap("AccountFolderId")
+        private String accountFolderId;
+
+        @com.aliyun.core.annotation.NameInMap("AccountFolderName")
+        private String accountFolderName;
+
+        @com.aliyun.core.annotation.NameInMap("AliyunId")
         private Long aliyunId;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("Email")
+        private String email;
+
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("GmtDeleted")
+        @com.aliyun.core.annotation.NameInMap("GmtDeleted")
         private Long gmtDeleted;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AdviceList(Builder builder) {
+            this.accountFolderId = builder.accountFolderId;
+            this.accountFolderName = builder.accountFolderName;
             this.aliyunId = builder.aliyunId;
             this.content = builder.content;
+            this.email = builder.email;
             this.endTime = builder.endTime;
             this.gmtDeleted = builder.gmtDeleted;
             this.product = builder.product;
@@ -261,6 +272,20 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return accountFolderId
+         */
+        public String getAccountFolderId() {
+            return this.accountFolderId;
+        }
+
+        /**
+         * @return accountFolderName
+         */
+        public String getAccountFolderName() {
+            return this.accountFolderName;
+        }
+
+        /**
          * @return aliyunId
          */
         public Long getAliyunId() {
@@ -272,6 +297,13 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
          */
         public String getContent() {
             return this.content;
+        }
+
+        /**
+         * @return email
+         */
+        public String getEmail() {
+            return this.email;
         }
 
         /**
@@ -359,8 +391,11 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String accountFolderId; 
+            private String accountFolderName; 
             private Long aliyunId; 
             private String content; 
+            private String email; 
             private Long endTime; 
             private Long gmtDeleted; 
             private String product; 
@@ -375,6 +410,22 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
+             * AccountFolderId.
+             */
+            public Builder accountFolderId(String accountFolderId) {
+                this.accountFolderId = accountFolderId;
+                return this;
+            }
+
+            /**
+             * AccountFolderName.
+             */
+            public Builder accountFolderName(String accountFolderName) {
+                this.accountFolderName = accountFolderName;
+                return this;
+            }
+
+            /**
              * AliyunId.
              */
             public Builder aliyunId(Long aliyunId) {
@@ -387,6 +438,14 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
              */
             public Builder content(String content) {
                 this.content = content;
+                return this;
+            }
+
+            /**
+             * Email.
+             */
+            public Builder email(String email) {
+                this.email = email;
                 return this;
             }
 
@@ -494,19 +553,19 @@ public class DescribeCostCheckAdvicesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AdviceList")
+        @com.aliyun.core.annotation.NameInMap("AdviceList")
         private java.util.List < AdviceList> adviceList;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

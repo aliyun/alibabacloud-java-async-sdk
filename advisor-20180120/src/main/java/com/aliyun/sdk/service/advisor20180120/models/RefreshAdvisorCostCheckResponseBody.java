@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReportBizAlertInfoResponseBody} extends {@link TeaModel}
+ * {@link RefreshAdvisorCostCheckResponseBody} extends {@link TeaModel}
  *
- * <p>ReportBizAlertInfoResponseBody</p>
+ * <p>RefreshAdvisorCostCheckResponseBody</p>
  */
-public class ReportBizAlertInfoResponseBody extends TeaModel {
+public class RefreshAdvisorCostCheckResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -26,7 +26,7 @@ public class ReportBizAlertInfoResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    private ReportBizAlertInfoResponseBody(Builder builder) {
+    private RefreshAdvisorCostCheckResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -38,7 +38,7 @@ public class ReportBizAlertInfoResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReportBizAlertInfoResponseBody create() {
+    public static RefreshAdvisorCostCheckResponseBody create() {
         return builder().build();
     }
 
@@ -124,18 +124,30 @@ public class ReportBizAlertInfoResponseBody extends TeaModel {
             return this;
         }
 
-        public ReportBizAlertInfoResponseBody build() {
-            return new ReportBizAlertInfoResponseBody(this);
+        public RefreshAdvisorCostCheckResponseBody build() {
+            return new RefreshAdvisorCostCheckResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Result")
-        private String result;
+        @com.aliyun.core.annotation.NameInMap("CommandId")
+        private String commandId;
+
+        @com.aliyun.core.annotation.NameInMap("ManagerTaskId")
+        private Long managerTaskId;
+
+        @com.aliyun.core.annotation.NameInMap("Success")
+        private Boolean success;
+
+        @com.aliyun.core.annotation.NameInMap("TaskId")
+        private Long taskId;
 
         private Data(Builder builder) {
-            this.result = builder.result;
+            this.commandId = builder.commandId;
+            this.managerTaskId = builder.managerTaskId;
+            this.success = builder.success;
+            this.taskId = builder.taskId;
         }
 
         public static Builder builder() {
@@ -147,20 +159,68 @@ public class ReportBizAlertInfoResponseBody extends TeaModel {
         }
 
         /**
-         * @return result
+         * @return commandId
          */
-        public String getResult() {
-            return this.result;
+        public String getCommandId() {
+            return this.commandId;
+        }
+
+        /**
+         * @return managerTaskId
+         */
+        public Long getManagerTaskId() {
+            return this.managerTaskId;
+        }
+
+        /**
+         * @return success
+         */
+        public Boolean getSuccess() {
+            return this.success;
+        }
+
+        /**
+         * @return taskId
+         */
+        public Long getTaskId() {
+            return this.taskId;
         }
 
         public static final class Builder {
-            private String result; 
+            private String commandId; 
+            private Long managerTaskId; 
+            private Boolean success; 
+            private Long taskId; 
 
             /**
-             * Result.
+             * CommandId.
              */
-            public Builder result(String result) {
-                this.result = result;
+            public Builder commandId(String commandId) {
+                this.commandId = commandId;
+                return this;
+            }
+
+            /**
+             * ManagerTaskId.
+             */
+            public Builder managerTaskId(Long managerTaskId) {
+                this.managerTaskId = managerTaskId;
+                return this;
+            }
+
+            /**
+             * Success.
+             */
+            public Builder success(Boolean success) {
+                this.success = success;
+                return this;
+            }
+
+            /**
+             * TaskId.
+             */
+            public Builder taskId(Long taskId) {
+                this.taskId = taskId;
                 return this;
             }
 

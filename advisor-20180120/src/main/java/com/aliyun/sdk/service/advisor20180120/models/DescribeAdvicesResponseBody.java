@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAdvicesResponseBody</p>
  */
 public class DescribeAdvicesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAdvicesResponseBody(Builder builder) {
@@ -72,43 +71,43 @@ public class DescribeAdvicesResponseBody extends TeaModel {
     } 
 
     public static class Advice extends TeaModel {
-        @NameInMap("AliyunId")
+        @com.aliyun.core.annotation.NameInMap("AliyunId")
         private Long aliyunId;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("IsExpired")
+        @com.aliyun.core.annotation.NameInMap("IsExpired")
         private Boolean isExpired;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Resource")
+        @com.aliyun.core.annotation.NameInMap("Resource")
         private String resource;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
         private Advice(Builder builder) {
@@ -353,7 +352,7 @@ public class DescribeAdvicesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private java.util.List < Advice> advice;
 
         private Data(Builder builder) {

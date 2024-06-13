@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReportBizAlertInfoRequest</p>
  */
 public class ReportBizAlertInfoRequest extends Request {
-    @Query
-    @NameInMap("AlertDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertDescription")
     private String alertDescription;
 
-    @Query
-    @NameInMap("AlertDetail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertDetail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertDetail;
 
-    @Query
-    @NameInMap("AlertGrade")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertGrade")
     private String alertGrade;
 
-    @Query
-    @NameInMap("AlertLabels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertLabels")
     private String alertLabels;
 
-    @Query
-    @NameInMap("AlertScene")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertScene")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertScene;
 
-    @Query
-    @NameInMap("AlertToken")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertToken")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alertToken;
 
-    @Query
-    @NameInMap("AlertUid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlertUid")
     private java.util.List < Long > alertUid;
 
-    @Query
-    @NameInMap("Language")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
     private String language;
 
     private ReportBizAlertInfoRequest(Builder builder) {

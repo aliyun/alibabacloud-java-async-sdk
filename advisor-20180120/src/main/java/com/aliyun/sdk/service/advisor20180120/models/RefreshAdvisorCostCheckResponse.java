@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeAdvicesFlatPageResponse} extends {@link TeaModel}
+ * {@link RefreshAdvisorCostCheckResponse} extends {@link TeaModel}
  *
- * <p>DescribeAdvicesFlatPageResponse</p>
+ * <p>RefreshAdvisorCostCheckResponse</p>
  */
-public class DescribeAdvicesFlatPageResponse extends Response {
+public class RefreshAdvisorCostCheckResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class DescribeAdvicesFlatPageResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private DescribeAdvicesFlatPageResponseBody body;
+    private RefreshAdvisorCostCheckResponseBody body;
 
-    private DescribeAdvicesFlatPageResponse(BuilderImpl builder) {
+    private RefreshAdvisorCostCheckResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static DescribeAdvicesFlatPageResponse create() {
+    public static RefreshAdvisorCostCheckResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class DescribeAdvicesFlatPageResponse extends Response {
     /**
      * @return body
      */
-    public DescribeAdvicesFlatPageResponseBody getBody() {
+    public RefreshAdvisorCostCheckResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<DescribeAdvicesFlatPageResponse, Builder> {
+    public interface Builder extends Response.Builder<RefreshAdvisorCostCheckResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(DescribeAdvicesFlatPageResponseBody body);
+        Builder body(RefreshAdvisorCostCheckResponseBody body);
 
         @Override
-        DescribeAdvicesFlatPageResponse build();
+        RefreshAdvisorCostCheckResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<DescribeAdvicesFlatPageResponse, Builder>
+            extends Response.BuilderImpl<RefreshAdvisorCostCheckResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private DescribeAdvicesFlatPageResponseBody body; 
+        private RefreshAdvisorCostCheckResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(DescribeAdvicesFlatPageResponse response) {
+        private BuilderImpl(RefreshAdvisorCostCheckResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class DescribeAdvicesFlatPageResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(DescribeAdvicesFlatPageResponseBody body) {
+        public Builder body(RefreshAdvisorCostCheckResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public DescribeAdvicesFlatPageResponse build() {
-            return new DescribeAdvicesFlatPageResponse(this);
+        public RefreshAdvisorCostCheckResponse build() {
+            return new RefreshAdvisorCostCheckResponse(this);
         } 
 
     } 

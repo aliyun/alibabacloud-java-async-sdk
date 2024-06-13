@@ -39,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RefreshAdvisorCheckResponse> refreshAdvisorCheck(RefreshAdvisorCheckRequest request);
 
+    CompletableFuture<RefreshAdvisorCostCheckResponse> refreshAdvisorCostCheck(RefreshAdvisorCostCheckRequest request);
+
     CompletableFuture<RefreshAdvisorResourceResponse> refreshAdvisorResource(RefreshAdvisorResourceRequest request);
 
     CompletableFuture<ReportBizAlertInfoResponse> reportBizAlertInfo(ReportBizAlertInfoRequest request);

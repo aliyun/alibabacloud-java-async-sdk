@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCostCheckResultsRequest</p>
  */
 public class DescribeCostCheckResultsRequest extends Request {
-    @Query
-    @NameInMap("CheckIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AssumeAliyunIdList")
+    private java.util.List < Long > assumeAliyunIdList;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckIds")
     private java.util.List < String > checkIds;
 
-    @Query
-    @NameInMap("GroupBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
     private String groupBy;
 
-    @Query
-    @NameInMap("Product")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Product")
     private String product;
 
-    @Query
-    @NameInMap("RegionIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionIds")
     private java.util.List < String > regionIds;
 
-    @Query
-    @NameInMap("ResourceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceIds")
     private java.util.List < String > resourceIds;
 
-    @Query
-    @NameInMap("ResourceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceName")
     private String resourceName;
 
-    @Query
-    @NameInMap("Severity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Severity")
     private Integer severity;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagKeys")
+    private java.util.List < String > tagKeys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagValues")
+    private java.util.List < String > tagValues;
 
     private DescribeCostCheckResultsRequest(Builder builder) {
         super(builder);
+        this.assumeAliyunIdList = builder.assumeAliyunIdList;
         this.checkIds = builder.checkIds;
         this.groupBy = builder.groupBy;
         this.product = builder.product;
@@ -49,6 +61,8 @@ public class DescribeCostCheckResultsRequest extends Request {
         this.resourceIds = builder.resourceIds;
         this.resourceName = builder.resourceName;
         this.severity = builder.severity;
+        this.tagKeys = builder.tagKeys;
+        this.tagValues = builder.tagValues;
     }
 
     public static Builder builder() {
@@ -62,6 +76,13 @@ public class DescribeCostCheckResultsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return assumeAliyunIdList
+     */
+    public java.util.List < Long > getAssumeAliyunIdList() {
+        return this.assumeAliyunIdList;
     }
 
     /**
@@ -113,7 +134,22 @@ public class DescribeCostCheckResultsRequest extends Request {
         return this.severity;
     }
 
+    /**
+     * @return tagKeys
+     */
+    public java.util.List < String > getTagKeys() {
+        return this.tagKeys;
+    }
+
+    /**
+     * @return tagValues
+     */
+    public java.util.List < String > getTagValues() {
+        return this.tagValues;
+    }
+
     public static final class Builder extends Request.Builder<DescribeCostCheckResultsRequest, Builder> {
+        private java.util.List < Long > assumeAliyunIdList; 
         private java.util.List < String > checkIds; 
         private String groupBy; 
         private String product; 
@@ -121,6 +157,8 @@ public class DescribeCostCheckResultsRequest extends Request {
         private java.util.List < String > resourceIds; 
         private String resourceName; 
         private Integer severity; 
+        private java.util.List < String > tagKeys; 
+        private java.util.List < String > tagValues; 
 
         private Builder() {
             super();
@@ -128,6 +166,7 @@ public class DescribeCostCheckResultsRequest extends Request {
 
         private Builder(DescribeCostCheckResultsRequest request) {
             super(request);
+            this.assumeAliyunIdList = request.assumeAliyunIdList;
             this.checkIds = request.checkIds;
             this.groupBy = request.groupBy;
             this.product = request.product;
@@ -135,7 +174,19 @@ public class DescribeCostCheckResultsRequest extends Request {
             this.resourceIds = request.resourceIds;
             this.resourceName = request.resourceName;
             this.severity = request.severity;
+            this.tagKeys = request.tagKeys;
+            this.tagValues = request.tagValues;
         } 
+
+        /**
+         * AssumeAliyunIdList.
+         */
+        public Builder assumeAliyunIdList(java.util.List < Long > assumeAliyunIdList) {
+            String assumeAliyunIdListShrink = shrink(assumeAliyunIdList, "AssumeAliyunIdList", "json");
+            this.putQueryParameter("AssumeAliyunIdList", assumeAliyunIdListShrink);
+            this.assumeAliyunIdList = assumeAliyunIdList;
+            return this;
+        }
 
         /**
          * CheckIds.
@@ -200,6 +251,26 @@ public class DescribeCostCheckResultsRequest extends Request {
         public Builder severity(Integer severity) {
             this.putQueryParameter("Severity", severity);
             this.severity = severity;
+            return this;
+        }
+
+        /**
+         * TagKeys.
+         */
+        public Builder tagKeys(java.util.List < String > tagKeys) {
+            String tagKeysShrink = shrink(tagKeys, "TagKeys", "json");
+            this.putQueryParameter("TagKeys", tagKeysShrink);
+            this.tagKeys = tagKeys;
+            return this;
+        }
+
+        /**
+         * TagValues.
+         */
+        public Builder tagValues(java.util.List < String > tagValues) {
+            String tagValuesShrink = shrink(tagValues, "TagValues", "json");
+            this.putQueryParameter("TagValues", tagValuesShrink);
+            this.tagValues = tagValues;
             return this;
         }
 

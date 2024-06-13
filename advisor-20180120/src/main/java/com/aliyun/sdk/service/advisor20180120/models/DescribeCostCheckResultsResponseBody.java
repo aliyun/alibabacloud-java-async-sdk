@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.advisor20180120.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCostCheckResultsResponseBody</p>
  */
 public class DescribeCostCheckResultsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private String success;
 
     private DescribeCostCheckResultsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
     } 
 
     public static class CheckItems extends TeaModel {
-        @NameInMap("AdviceCount")
+        @com.aliyun.core.annotation.NameInMap("AdviceCount")
         private Integer adviceCount;
 
-        @NameInMap("AdviceResourceCount")
+        @com.aliyun.core.annotation.NameInMap("AdviceResourceCount")
         private Integer adviceResourceCount;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("CheckId")
+        @com.aliyun.core.annotation.NameInMap("CheckId")
         private String checkId;
 
-        @NameInMap("CheckName")
+        @com.aliyun.core.annotation.NameInMap("CheckName")
         private String checkName;
 
-        @NameInMap("CurrentCost")
+        @com.aliyun.core.annotation.NameInMap("CurrentCost")
         private Float currentCost;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ExpectedSavingCost")
+        @com.aliyun.core.annotation.NameInMap("ExpectedSavingCost")
         private Float expectedSavingCost;
 
-        @NameInMap("OptimizedCost")
+        @com.aliyun.core.annotation.NameInMap("OptimizedCost")
         private Float optimizedCost;
 
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private String product;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
-        @NameInMap("Summary")
+        @com.aliyun.core.annotation.NameInMap("Summary")
         private String summary;
 
-        @NameInMap("Tips")
+        @com.aliyun.core.annotation.NameInMap("Tips")
         private String tips;
 
         private CheckItems(Builder builder) {
@@ -413,19 +412,19 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
 
     }
     public static class ViewGroup extends TeaModel {
-        @NameInMap("CheckItems")
+        @com.aliyun.core.annotation.NameInMap("CheckItems")
         private java.util.List < CheckItems> checkItems;
 
-        @NameInMap("GroupCode")
+        @com.aliyun.core.annotation.NameInMap("GroupCode")
         private String groupCode;
 
-        @NameInMap("GroupCount")
+        @com.aliyun.core.annotation.NameInMap("GroupCount")
         private Integer groupCount;
 
-        @NameInMap("GroupExpectedSavingCost")
+        @com.aliyun.core.annotation.NameInMap("GroupExpectedSavingCost")
         private Float groupExpectedSavingCost;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
         private ViewGroup(Builder builder) {
@@ -534,25 +533,25 @@ public class DescribeCostCheckResultsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AdviceResourceCount")
+        @com.aliyun.core.annotation.NameInMap("AdviceResourceCount")
         private Integer adviceResourceCount;
 
-        @NameInMap("GroupBy")
+        @com.aliyun.core.annotation.NameInMap("GroupBy")
         private String groupBy;
 
-        @NameInMap("NormalCount")
+        @com.aliyun.core.annotation.NameInMap("NormalCount")
         private Integer normalCount;
 
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Integer resourceCount;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("ViewGroup")
+        @com.aliyun.core.annotation.NameInMap("ViewGroup")
         private java.util.List < ViewGroup> viewGroup;
 
-        @NameInMap("WarningCount")
+        @com.aliyun.core.annotation.NameInMap("WarningCount")
         private Integer warningCount;
 
         private Data(Builder builder) {
