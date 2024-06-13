@@ -131,6 +131,26 @@ public class ConfigureSubscriptionRequest extends Request {
     private String sourceEndpointUserName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCaCertificateOssUrl")
+    private String srcCaCertificateOssUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcCaCertificatePassword")
+    private String srcCaCertificatePassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcClientCertOssUrl")
+    private String srcClientCertOssUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcClientKeyOssUrl")
+    private String srcClientKeyOssUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcClientPassword")
+    private String srcClientPassword;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SubscriptionDataTypeDDL")
     private Boolean subscriptionDataTypeDDL;
 
@@ -182,6 +202,11 @@ public class ConfigureSubscriptionRequest extends Request {
         this.sourceEndpointRegion = builder.sourceEndpointRegion;
         this.sourceEndpointRole = builder.sourceEndpointRole;
         this.sourceEndpointUserName = builder.sourceEndpointUserName;
+        this.srcCaCertificateOssUrl = builder.srcCaCertificateOssUrl;
+        this.srcCaCertificatePassword = builder.srcCaCertificatePassword;
+        this.srcClientCertOssUrl = builder.srcClientCertOssUrl;
+        this.srcClientKeyOssUrl = builder.srcClientKeyOssUrl;
+        this.srcClientPassword = builder.srcClientPassword;
         this.subscriptionDataTypeDDL = builder.subscriptionDataTypeDDL;
         this.subscriptionDataTypeDML = builder.subscriptionDataTypeDML;
         this.subscriptionInstanceNetworkType = builder.subscriptionInstanceNetworkType;
@@ -406,6 +431,41 @@ public class ConfigureSubscriptionRequest extends Request {
     }
 
     /**
+     * @return srcCaCertificateOssUrl
+     */
+    public String getSrcCaCertificateOssUrl() {
+        return this.srcCaCertificateOssUrl;
+    }
+
+    /**
+     * @return srcCaCertificatePassword
+     */
+    public String getSrcCaCertificatePassword() {
+        return this.srcCaCertificatePassword;
+    }
+
+    /**
+     * @return srcClientCertOssUrl
+     */
+    public String getSrcClientCertOssUrl() {
+        return this.srcClientCertOssUrl;
+    }
+
+    /**
+     * @return srcClientKeyOssUrl
+     */
+    public String getSrcClientKeyOssUrl() {
+        return this.srcClientKeyOssUrl;
+    }
+
+    /**
+     * @return srcClientPassword
+     */
+    public String getSrcClientPassword() {
+        return this.srcClientPassword;
+    }
+
+    /**
      * @return subscriptionDataTypeDDL
      */
     public Boolean getSubscriptionDataTypeDDL() {
@@ -470,6 +530,11 @@ public class ConfigureSubscriptionRequest extends Request {
         private String sourceEndpointRegion; 
         private String sourceEndpointRole; 
         private String sourceEndpointUserName; 
+        private String srcCaCertificateOssUrl; 
+        private String srcCaCertificatePassword; 
+        private String srcClientCertOssUrl; 
+        private String srcClientKeyOssUrl; 
+        private String srcClientPassword; 
         private Boolean subscriptionDataTypeDDL; 
         private Boolean subscriptionDataTypeDML; 
         private String subscriptionInstanceNetworkType; 
@@ -511,6 +576,11 @@ public class ConfigureSubscriptionRequest extends Request {
             this.sourceEndpointRegion = request.sourceEndpointRegion;
             this.sourceEndpointRole = request.sourceEndpointRole;
             this.sourceEndpointUserName = request.sourceEndpointUserName;
+            this.srcCaCertificateOssUrl = request.srcCaCertificateOssUrl;
+            this.srcCaCertificatePassword = request.srcCaCertificatePassword;
+            this.srcClientCertOssUrl = request.srcClientCertOssUrl;
+            this.srcClientKeyOssUrl = request.srcClientKeyOssUrl;
+            this.srcClientPassword = request.srcClientPassword;
             this.subscriptionDataTypeDDL = request.subscriptionDataTypeDDL;
             this.subscriptionDataTypeDML = request.subscriptionDataTypeDML;
             this.subscriptionInstanceNetworkType = request.subscriptionInstanceNetworkType;
@@ -840,6 +910,51 @@ public class ConfigureSubscriptionRequest extends Request {
         public Builder sourceEndpointUserName(String sourceEndpointUserName) {
             this.putQueryParameter("SourceEndpointUserName", sourceEndpointUserName);
             this.sourceEndpointUserName = sourceEndpointUserName;
+            return this;
+        }
+
+        /**
+         * SrcCaCertificateOssUrl.
+         */
+        public Builder srcCaCertificateOssUrl(String srcCaCertificateOssUrl) {
+            this.putQueryParameter("SrcCaCertificateOssUrl", srcCaCertificateOssUrl);
+            this.srcCaCertificateOssUrl = srcCaCertificateOssUrl;
+            return this;
+        }
+
+        /**
+         * SrcCaCertificatePassword.
+         */
+        public Builder srcCaCertificatePassword(String srcCaCertificatePassword) {
+            this.putQueryParameter("SrcCaCertificatePassword", srcCaCertificatePassword);
+            this.srcCaCertificatePassword = srcCaCertificatePassword;
+            return this;
+        }
+
+        /**
+         * SrcClientCertOssUrl.
+         */
+        public Builder srcClientCertOssUrl(String srcClientCertOssUrl) {
+            this.putQueryParameter("SrcClientCertOssUrl", srcClientCertOssUrl);
+            this.srcClientCertOssUrl = srcClientCertOssUrl;
+            return this;
+        }
+
+        /**
+         * SrcClientKeyOssUrl.
+         */
+        public Builder srcClientKeyOssUrl(String srcClientKeyOssUrl) {
+            this.putQueryParameter("SrcClientKeyOssUrl", srcClientKeyOssUrl);
+            this.srcClientKeyOssUrl = srcClientKeyOssUrl;
+            return this;
+        }
+
+        /**
+         * SrcClientPassword.
+         */
+        public Builder srcClientPassword(String srcClientPassword) {
+            this.putQueryParameter("SrcClientPassword", srcClientPassword);
+            this.srcClientPassword = srcClientPassword;
             return this;
         }
 
