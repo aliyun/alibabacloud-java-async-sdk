@@ -252,6 +252,9 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
+        @com.aliyun.core.annotation.NameInMap("OrderType")
+        private String orderType;
+
         @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
@@ -290,6 +293,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             this.cenId = builder.cenId;
             this.chargeType = builder.chargeType;
             this.creationTime = builder.creationTime;
+            this.orderType = builder.orderType;
             this.resourceType = builder.resourceType;
             this.status = builder.status;
             this.tags = builder.tags;
@@ -337,6 +341,13 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return orderType
+         */
+        public String getOrderType() {
+            return this.orderType;
         }
 
         /**
@@ -421,6 +432,7 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
             private String cenId; 
             private String chargeType; 
             private String creationTime; 
+            private String orderType; 
             private String resourceType; 
             private String status; 
             private java.util.List < Tags> tags; 
@@ -472,6 +484,14 @@ public class ListTransitRouterVpnAttachmentsResponseBody extends TeaModel {
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
+                return this;
+            }
+
+            /**
+             * OrderType.
+             */
+            public Builder orderType(String orderType) {
+                this.orderType = orderType;
                 return this;
             }
 
