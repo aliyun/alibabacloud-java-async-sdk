@@ -85,7 +85,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * SqlLogStatistic
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,11 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(String success) {
             this.success = success;
@@ -217,7 +224,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * ColdSqlSize.
+             * The size of the SQL Explorer and Audit data that is stored in cold storage. Unit: bytes.
              */
             public Builder coldSqlSize(Long coldSqlSize) {
                 this.coldSqlSize = coldSqlSize;
@@ -225,7 +232,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * FreeColdSqlSize.
+             * The free quota for cold data storage. Unit: bytes.
              */
             public Builder freeColdSqlSize(Long freeColdSqlSize) {
                 this.freeColdSqlSize = freeColdSqlSize;
@@ -233,7 +240,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * FreeHotSqlSize.
+             * The free quota for hot data storage. Unit: bytes.
              */
             public Builder freeHotSqlSize(Long freeHotSqlSize) {
                 this.freeHotSqlSize = freeHotSqlSize;
@@ -241,7 +248,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * HotSqlSize.
+             * The size of the SQL Explorer and Audit data that is stored in hot storage. Unit: bytes.
              */
             public Builder hotSqlSize(Long hotSqlSize) {
                 this.hotSqlSize = hotSqlSize;
@@ -249,7 +256,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * ImportSqlSize.
+             * The size of the SQL Explorer and Audit data that was generated in the most recent day. Unit: bytes.
              */
             public Builder importSqlSize(Long importSqlSize) {
                 this.importSqlSize = importSqlSize;
@@ -257,7 +264,7 @@ public class DescribeSqlLogStatisticResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

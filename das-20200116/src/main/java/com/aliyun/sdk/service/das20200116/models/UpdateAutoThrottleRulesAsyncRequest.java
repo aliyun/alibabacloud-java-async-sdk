@@ -202,7 +202,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         } 
 
         /**
-         * The duration threshold for triggering automatic SQL throttling. Set this parameter to a positive integer that is greater than or equal to 2. Unit: minutes.
+         * The duration threshold for triggering automatic SQL throttling. Set this parameter to an integer that is greater than or equal to 2. Unit: minutes.
          */
         public Builder abnormalDuration(Double abnormalDuration) {
             this.putQueryParameter("AbnormalDuration", abnormalDuration);
@@ -211,11 +211,11 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The maximum number of active sessions.
+         * The threshold for the number of active sessions.
          * <p>
          * 
-         * *   Specify an integer that is greater than or equal to 16 when the CPU utilization threshold and the maximum number of active sessions are in the **OR** relationship.
-         * *   Specify an integer that is greater than or equal to 2 when the CPU utilization threshold and the maximum number of active sessions are in the **AND** relationship.
+         * *   If this parameter and CpuUsage are in the **OR** relationship, set this parameter to an integer that is greater than or equal to 16.
+         * *   If this parameter and CpuUsage are in the **AND** relationship, set this parameter to an integer that is greater than or equal to 2.
          */
         public Builder activeSessions(Long activeSessions) {
             this.putQueryParameter("ActiveSessions", activeSessions);
@@ -245,7 +245,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
          * Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:
          * <p>
          * 
-         * >  Abnormal SQL statements use the same template as the SQL statements that need to be throttled.
+         * >  Abnormal SQL statements use the same template as the SQL statements to be throttled.
          * 
          * *   **true**
          * *   **false**
@@ -279,7 +279,7 @@ public class UpdateAutoThrottleRulesAsyncRequest extends Request {
         }
 
         /**
-         * The CPU utilization threshold, in percentages. Valid values: 70 to 100.
+         * The threshold for CPU utilization. Valid values: 70% to 100%.
          */
         public Builder cpuUsage(Double cpuUsage) {
             this.putQueryParameter("CpuUsage", cpuUsage);

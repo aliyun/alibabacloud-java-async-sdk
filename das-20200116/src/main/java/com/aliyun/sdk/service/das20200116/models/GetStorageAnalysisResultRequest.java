@@ -104,7 +104,7 @@ public class GetStorageAnalysisResultRequest extends Request {
         }
 
         /**
-         * The task ID, which is returned after you call the CreateStorageAnalysisTask operation.
+         * The task ID. You can obtain the task ID from the response of the [CreateStorageAnalysisTask](~~2639140~~) operation.
          */
         public Builder taskId(String taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -212,7 +212,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * The data associated with items to be optimized.
+             * The data associated with the items to be optimized, which is in the JSON format.
              */
             public Builder associatedData(String associatedData) {
                 this.associatedData = associatedData;
@@ -220,7 +220,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -231,8 +231,14 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
              * The optimization suggestion. Valid values:
              * <p>
              * 
-             * *   **NEED_ANALYZE_TABLE**: You can execute the ANALYZE TABLE statement on the related table during off-peak hours.
-             * *   **NEED_OPTIMIZE_TABLE**: You can reclaim fragments during off-peak hours.
+             * *   **NEED_ANALYZE_TABLE**: Execute the `ANALYZE TABLE` statement on the table during off-peak hours.
+             * *   **NEED_OPTIMIZE_TABLE**: Reclaim space fragments during off-peak hours.
+             * *   **CHANGE_TABLE_ENGINE_IF_NECESSARY**: Change the storage engine type of a table after risk assessment.
+             * *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: Pay attention to the usage of auto-increment IDs.
+             * *   **DUPLICATE_INDEX**: Optimize indexes of tables.
+             * *   **TABLE_SIZE**: Pay attention to the table size.
+             * *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: Pay attention to the number of rows in a table and the average row length.
+             * *   **STORAGE_USED_PERCENT**: Pay attention to the space usage to prevent the instance from being locked if the instance is full.
              */
             public Builder optimizeAdvice(String optimizeAdvice) {
                 this.optimizeAdvice = optimizeAdvice;
@@ -243,8 +249,15 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
              * The item to be optimized. Valid values:
              * <p>
              * 
-             * *   **NEED_ANALYZE_TABLE**: The statistical data in information_schema.tables differs greatly from the physical file size.
-             * *   **NEED_OPTIMIZE_TABLE**: The fragmentation degree of the table is high.
+             * *   **NEED_ANALYZE_TABLE**: tables whose storage statistics obtained from `information_schema.tables` are 50 GB larger or smaller than the physical file sizes.
+             * *   **NEED_OPTIMIZE_TABLE**: tables whose space fragments are larger than 6 GB and whose fragmentation rates are greater than 30%. The fragmentation rate of a table is generally calculated based on the following formula: `Fragmentation rate = DataFree/(DataSize + IndexSize + DataFree)`. In this topic, PhyTotalSize = DataSize + IndexSize + DataFree. Thus, the fragmentation rate can be calculated based on the following formula: `Fragmentation rate = DataFree/PhyTotalSize`.
+             * *   **TABLE_ENGINE**: tables whose storage engines are not InnoDB or XEngine.
+             * *   **AUTO_INCREMENT_ID_BE_TO_RUN_OUT**: tables whose usages of auto-increment IDs exceed 80%.
+             * *   **DUPLICATE_INDEX**: tables whose indexes are redundant or duplicate.
+             * *   **TABLE_SIZE**: single tables whose sizes are larger than 50 GB.
+             * *   **TABLE_ROWS_AND_AVG_ROW_LENGTH**: single tables that contain more than 5 million rows and whose average row lengths exceed 10 KB.
+             * *   **TOTAL_DATA_FREE**: instances whose reclaimable spaces are larger than 60 GB and whose total fragmentation rate is larger than 5%.
+             * *   **STORAGE_USED_PERCENT**: instances whose space usage is larger than 90%.
              */
             public Builder optimizeItemName(String optimizeItemName) {
                 this.optimizeItemName = optimizeItemName;
@@ -252,7 +265,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -437,10 +450,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * The average row length.
-             * <p>
-             * 
-             * >  Unit: bytes.
+             * The average length of rows. Unit: bytes.
              */
             public Builder avgRowLength(Long avgRowLength) {
                 this.avgRowLength = avgRowLength;
@@ -448,10 +458,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage occupied by fragments.
-             * <p>
-             * 
-             * >  Unit: bytes.
+             * The size of space fragments. Unit: bytes.
              */
             public Builder dataFree(Long dataFree) {
                 this.dataFree = dataFree;
@@ -459,10 +466,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage occupied by the table data.
-             * <p>
-             * 
-             * >  Unit: bytes.
+             * The storage space occupied by data. Unit: bytes.
              */
             public Builder dataSize(Long dataSize) {
                 this.dataSize = dataSize;
@@ -470,7 +474,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The database name.
+             * The name of the database.
              */
             public Builder dbName(String dbName) {
                 this.dbName = dbName;
@@ -478,7 +482,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the engine used by the table.
+             * The type of the storage engine used by the table.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -486,7 +490,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * FragmentSize.
+             * 可回收空间大小（碎片空间大小），单位为Byte。
+             * <p>
+             * 
+             * > 该参数仅适用于MongoDB实例。表碎片率计算方式为：`FragmentSize/PhyTotalSize`。
              */
             public Builder fragmentSize(Long fragmentSize) {
                 this.fragmentSize = fragmentSize;
@@ -494,10 +501,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage occupied by indexes.
-             * <p>
-             * 
-             * >  Unit: bytes.
+             * The storage space occupied by indexes. Unit: bytes.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -505,10 +509,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of the table storage.
+             * The storage space of the table. Unit: bytes.
              * <p>
              * 
-             * >  Unit: byte. The value of the parameter is the sum of DataSize, IndexSize, and DataFree.
+             * >  The value of this parameter is the sum of the values of **DataSize**, **IndexSize**, and **DataFree**.
              */
             public Builder phyTotalSize(Long phyTotalSize) {
                 this.phyTotalSize = phyTotalSize;
@@ -516,10 +520,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The physical file size of the table.
+             * The physical file size of the table. Unit: bytes.
              * <p>
              * 
-             * >  Unit: byte. You may fail to obtain the physical file size because of the deployment mode of the database instance.
+             * >  You may fail to obtain the physical file size because of the deployment mode of the database instance.
              */
             public Builder physicalFileSize(Long physicalFileSize) {
                 this.physicalFileSize = physicalFileSize;
@@ -527,7 +531,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The table name.
+             * The name of the table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -543,7 +547,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The table type.
+             * The type of the table.
              */
             public Builder tableType(String tableType) {
                 this.tableType = tableType;
@@ -551,10 +555,10 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The size of storage occupied by table data and indexes.
+             * The storage space occupied by table data and indexes. Unit: bytes.
              * <p>
              * 
-             * >  Unit: byte. The value of the parameter is the sum of DataSize and IndexSize.
+             * >  The value of this parameter is the sum of the values of **DataSize** and **IndexSize**.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;
@@ -711,10 +715,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated daily storage usage increment in the last seven days.
-             * <p>
-             * 
-             * >  Unit: bytes.
+             * The estimated average daily growth of the used storage space in the previous seven days. Unit: bytes.
              */
             public Builder dailyIncrement(Long dailyIncrement) {
                 this.dailyIncrement = dailyIncrement;
@@ -722,7 +723,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The estimated number of days before the remaining storage runs out.
+             * The estimated number of days for which the remaining storage space is available.
              */
             public Builder estimateAvailableDays(Long estimateAvailableDays) {
                 this.estimateAvailableDays = estimateAvailableDays;
@@ -730,7 +731,7 @@ public class GetStorageAnalysisResultResponseBody extends TeaModel {
             }
 
             /**
-             * The list of items to be optimized.
+             * The items to be optimized, which are generated based on DAS default rules. You can ignore these items based on your business requirements, and create custom rules to generate items to be optimized based on other basic data that is returned.
              */
             public Builder needOptimizeItemList(java.util.List < NeedOptimizeItemList> needOptimizeItemList) {
                 this.needOptimizeItemList = needOptimizeItemList;

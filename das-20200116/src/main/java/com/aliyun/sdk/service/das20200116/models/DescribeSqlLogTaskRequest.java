@@ -95,7 +95,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the database instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -104,7 +104,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -113,7 +113,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -122,7 +122,7 @@ public class DescribeSqlLogTaskRequest extends Request {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.putBodyParameter("TaskId", taskId);

@@ -101,10 +101,10 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The message that is returned for the request.
+         * The returned message.
          * <p>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -356,7 +356,11 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             private String version; 
 
             /**
-             * Indicates whether cold storage is enabled.
+             * Indicates whether the cold data storage is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder coldEnable(Boolean coldEnable) {
                 this.coldEnable = coldEnable;
@@ -364,7 +368,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which data is stored in cold storage. The value of this parameter is the value of Retention minus the value of HotRetention.
+             * The number of days for which the SQL Explorer and Audit data is stored in cold storage. The value is calculated by using the following formula: Value of ColdRetention = Value of Retention - Value of HotRetention.``
              */
             public Builder coldRetention(Integer coldRetention) {
                 this.coldRetention = coldRetention;
@@ -372,7 +376,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when cold storage was enabled.
+             * The time when the cold data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder coldStartTime(Long coldStartTime) {
                 this.coldStartTime = coldStartTime;
@@ -380,7 +384,16 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The collector version.
+             * The collector version. Valid values:
+             * <p>
+             * 
+             * *   **MYSQL_V0**
+             * *   **MYSQL_V1**
+             * *   **MYSQL_V2**
+             * *   **MYSQL_V3**
+             * *   **PG_V1**
+             * *   **rdspg_v1**
+             * *   **polarpg_v1**
              */
             public Builder collectorVersion(String collectorVersion) {
                 this.collectorVersion = collectorVersion;
@@ -388,7 +401,11 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether hot storage is enabled.
+             * Indicates whether the hot data storage is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder hotEnable(Boolean hotEnable) {
                 this.hotEnable = hotEnable;
@@ -396,7 +413,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which data is stored in hot storage.
+             * The number of days for which the SQL Explorer and Audit data is stored in hot storage.
              */
             public Builder hotRetention(Integer hotRetention) {
                 this.hotRetention = hotRetention;
@@ -404,7 +421,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when hot storage was enabled.
+             * The time when the hot data storage was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder hotStartTime(Long hotStartTime) {
                 this.hotStartTime = hotStartTime;
@@ -420,7 +437,11 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether SQL Explorer is enabled.
+             * Indicates whether the SQL Explorer feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder requestEnable(Boolean requestEnable) {
                 this.requestEnable = requestEnable;
@@ -428,7 +449,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when SQL Explorer was enabled.
+             * The time when the SQL Explorer feature was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder requestStartTime(Long requestStartTime) {
                 this.requestStartTime = requestStartTime;
@@ -436,7 +457,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when SQL Explorer will be disabled.
+             * The time when DAS Enterprise Edition V1 expired. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder requestStopTime(Long requestStopTime) {
                 this.requestStopTime = requestStopTime;
@@ -444,7 +465,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The number of days for which data generated by SQL Audit is retained.
+             * The total storage duration of the SQL Explorer and Audit data. Unit: day.
              */
             public Builder retention(Integer retention) {
                 this.retention = retention;
@@ -452,7 +473,11 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DAS Enterprise Edition is enabled.
+             * Indicates whether DAS Enterprise Edition is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder sqlLogEnable(Boolean sqlLogEnable) {
                 this.sqlLogEnable = sqlLogEnable;
@@ -460,7 +485,12 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The state of data migration.
+             * The state of data migration. Valid values:
+             * <p>
+             * 
+             * *   **FINISH**: The historical data is migrated.
+             * *   **RUNNING**: The historical data is being migrated.
+             * *   **FAILURE**: The historical data fails to be migrated.
              */
             public Builder sqlLogState(String sqlLogState) {
                 this.sqlLogState = sqlLogState;
@@ -468,7 +498,7 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The time when SQL Audit was enabled.
+             * The time when DAS Enterprise Edition was enabled. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder sqlLogVisibleTime(Long sqlLogVisibleTime) {
                 this.sqlLogVisibleTime = sqlLogVisibleTime;
@@ -476,7 +506,15 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The latest version of DAS Enterprise Edition that is supported by the database instance.
+             * The latest version of DAS Enterprise Edition that supports the database instance. Valid values:
+             * <p>
+             * 
+             * *   **SQL_LOG_V0**: DAS Enterprise Edition V0.
+             * *   **SQL_LOG_V1**: DAS Enterprise Edition V1.
+             * *   **SQL_LOG_V2**: DAS Enterprise Edition V2.
+             * *   **SQL_LOG_V3**: DAS Enterprise Edition V3.
+             * *   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.
+             * *   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.
              */
             public Builder supportVersion(String supportVersion) {
                 this.supportVersion = supportVersion;
@@ -484,7 +522,15 @@ public class ModifySqlLogConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The version of DAS Enterprise Edition that is enabled.
+             * The version of DAS Enterprise Edition that is enabled for the database instance. Valid values:
+             * <p>
+             * 
+             * *   **SQL_LOG_V0**: DAS Enterprise Edition V0.
+             * *   **SQL_LOG_V1**: DAS Enterprise Edition V1.
+             * *   **SQL_LOG_V2**: DAS Enterprise Edition V2.
+             * *   **SQL_LOG_V3**: DAS Enterprise Edition V3.
+             * *   **SQL_LOG_NOT_ENABLE**: DAS Enterprise Edition is not enabled.
+             * *   **SQL_LOG_NOT_SUPPORT**: DAS Enterprise Edition is not supported.
              */
             public Builder version(String version) {
                 this.version = version;

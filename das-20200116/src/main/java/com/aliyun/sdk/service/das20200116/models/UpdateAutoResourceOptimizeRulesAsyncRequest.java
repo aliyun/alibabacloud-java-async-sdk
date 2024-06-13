@@ -136,7 +136,7 @@ public class UpdateAutoResourceOptimizeRulesAsyncRequest extends Request {
          * The ID of the asynchronous request.
          * <p>
          * 
-         * >  You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.
+         * >  Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of **ResultId** returned in the response to re-initiate the call until the value of **isFinish** is **true**.**** In this case, you must call this operation at least twice.
          */
         public Builder resultId(String resultId) {
             this.putQueryParameter("ResultId", resultId);

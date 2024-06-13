@@ -85,7 +85,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SqlLogTaskDetail
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,7 +101,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
+         * <p>
+         * 
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +112,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +120,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(String success) {
             this.success = success;
@@ -169,7 +176,10 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private Object value; 
 
             /**
-             * Key.
+             * The name of the filter parameter.
+             * <p>
+             * 
+             * >  For more information about the filter parameters, see the **Valid values of Key** section of this topic.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +187,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the filter parameter.
              */
             public Builder value(Object value) {
                 this.value = value;
@@ -274,7 +284,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         private String traceId;
 
         @com.aliyun.core.annotation.NameInMap("TrxId")
-        private Long trxId;
+        private String trxId;
 
         @com.aliyun.core.annotation.NameInMap("UpdateRows")
         private Long updateRows;
@@ -523,7 +533,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         /**
          * @return trxId
          */
-        public Long getTrxId() {
+        public String getTrxId() {
             return this.trxId;
         }
 
@@ -583,14 +593,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private String state; 
             private Long threadId; 
             private String traceId; 
-            private Long trxId; 
+            private String trxId; 
             private Long updateRows; 
             private String useImciEngine; 
             private String vip; 
             private Long writes; 
 
             /**
-             * AccountName.
+             * The database account.
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
@@ -598,7 +608,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Consume.
+             * The execution duration. Unit: millisecond.
              */
             public Builder consume(Long consume) {
                 this.consume = consume;
@@ -606,7 +616,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * CpuTime.
+             * The CPU execution time. Unit: microsecond.
              */
             public Builder cpuTime(Long cpuTime) {
                 this.cpuTime = cpuTime;
@@ -614,7 +624,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * DBName.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -622,7 +632,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * yyyy-MM-dd\"T\"HH:mm:ss.SSS\"Z\"
+             * The execution time. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -630,7 +640,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Ext.
+             * The extended information. This parameter is a reserved parameter.
              */
             public Builder ext(String ext) {
                 this.ext = ext;
@@ -638,7 +648,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Frows.
+             * The number of rows pulled by the CNs of the PolarDB-X 2.0 instance.
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -646,7 +656,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * HostAddress.
+             * The IP address of the client.
              */
             public Builder hostAddress(String hostAddress) {
                 this.hostAddress = hostAddress;
@@ -654,7 +664,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * LockTime.
+             * The lock wait time. Unit: millisecond.
              */
             public Builder lockTime(Long lockTime) {
                 this.lockTime = lockTime;
@@ -662,7 +672,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * LogicRead.
+             * The number of logical reads.
              */
             public Builder logicRead(Long logicRead) {
                 this.logicRead = logicRead;
@@ -670,7 +680,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * NodeId.
+             * The ID of the child node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -678,7 +688,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ts unix
+             * The execution timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder originTime(Long originTime) {
                 this.originTime = originTime;
@@ -686,7 +696,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ParallelDegree.
+             * The wait time of parallel queries in the queue in the PolarDB for MySQL instance. Unit: millisecond.
              */
             public Builder parallelDegree(String parallelDegree) {
                 this.parallelDegree = parallelDegree;
@@ -694,7 +704,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ParallelQueueTime.
+             * The degree of parallelism (DOP) value of the PolarDB for MySQL instance.
              */
             public Builder parallelQueueTime(String parallelQueueTime) {
                 this.parallelQueueTime = parallelQueueTime;
@@ -702,7 +712,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicAsyncRead.
+             * The number of physical asynchronous reads.
              */
             public Builder physicAsyncRead(Long physicAsyncRead) {
                 this.physicAsyncRead = physicAsyncRead;
@@ -710,7 +720,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicRead.
+             * The total number of physical reads.
              */
             public Builder physicRead(Long physicRead) {
                 this.physicRead = physicRead;
@@ -718,7 +728,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * PhysicSyncRead.
+             * The number of physical synchronous reads.
              */
             public Builder physicSyncRead(Long physicSyncRead) {
                 this.physicSyncRead = physicSyncRead;
@@ -726,7 +736,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ReturnRows.
+             * The number of rows returned.
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -734,7 +744,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Rows.
+             * The total number of rows updated or returned by the CNs of the PolarDB-X 2.0 instance.
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -742,7 +752,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ScanRows.
+             * The number of rows scanned.
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -750,7 +760,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Scnt.
+             * The number of requests from the compute nodes (CNs) to the data nodes (DNs) in the PolarDB-X 2.0 instance.
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -758,7 +768,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlId.
+             * The ID of the SQL statement.
              */
             public Builder sqlId(String sqlId) {
                 this.sqlId = sqlId;
@@ -766,7 +776,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlText.
+             * The queried SQL statement.
              */
             public Builder sqlText(String sqlText) {
                 this.sqlText = sqlText;
@@ -774,7 +784,12 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * SqlType.
+             * The type of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **SELECT**
+             * *   **UPDATE**
+             * *   **DELETE**
              */
             public Builder sqlType(String sqlType) {
                 this.sqlType = sqlType;
@@ -782,7 +797,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The execution result of the SQL statement. Valid values:
+             * <p>
+             * 
+             * *   **0**: The execution was successful.
+             * *   **1**: The execution failed.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -790,7 +809,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * ThreadId.
+             * The thread ID.
              */
             public Builder threadId(Long threadId) {
                 this.threadId = threadId;
@@ -798,7 +817,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TraceId.
+             * The trace ID of the PolarDB-X 2.0 instance, which is the execution ID of the SQL statement on the DN.
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -806,15 +825,15 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TrxId.
+             * The transaction ID.
              */
-            public Builder trxId(Long trxId) {
+            public Builder trxId(String trxId) {
                 this.trxId = trxId;
                 return this;
             }
 
             /**
-             * UpdateRows.
+             * The number of rows updated.
              */
             public Builder updateRows(Long updateRows) {
                 this.updateRows = updateRows;
@@ -822,7 +841,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UseImciEngine.
+             * Indicates whether the PolarDB for MySQL instance uses In-Memory Column Indexes (IMCIs). Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder useImciEngine(String useImciEngine) {
                 this.useImciEngine = useImciEngine;
@@ -830,7 +853,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Vip.
+             * The IP address to which the endpoint used for query is resolved.
              */
             public Builder vip(String vip) {
                 this.vip = vip;
@@ -838,7 +861,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Writes.
+             * The number of writes to the ApsaraDB RDS for SQL Server instance.
              */
             public Builder writes(Long writes) {
                 this.writes = writes;
@@ -1011,7 +1034,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             private Long total; 
 
             /**
-             * CreateTime.
+             * The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -1019,7 +1042,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * End.
+             * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -1027,7 +1050,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Expire.
+             * Indicates whether the task has expired. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder expire(Boolean expire) {
                 this.expire = expire;
@@ -1035,7 +1062,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Export.
+             * The download URL of the export task.
              */
             public Builder export(String export) {
                 this.export = export;
@@ -1043,7 +1070,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Filters.
+             * The filter parameters.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -1051,7 +1078,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The task name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1059,7 +1086,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Queries.
+             * The results of the offline querying task.
              */
             public Builder queries(java.util.List < Queries> queries) {
                 this.queries = queries;
@@ -1067,7 +1094,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -1075,7 +1102,16 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The task state. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is to be scheduled.
+             * *   **RUNNING**: The task is running.
+             * *   **FAILED**: The task failed.
+             * *   **CANCELED**: The task is canceled.
+             * *   **COMPLETED**: The task is complete.
+             * 
+             * >  If a task is in the **COMPLETED** state, you can view the results of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1083,7 +1119,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskId.
+             * The task ID.
              */
             public Builder taskId(String taskId) {
                 this.taskId = taskId;
@@ -1091,7 +1127,11 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * TaskType.
+             * The task type. Valid values:
+             * <p>
+             * 
+             * *   **Export**
+             * *   **Query**
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -1099,7 +1139,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * Total.
+             * The total number of tasks.
              */
             public Builder total(Long total) {
                 this.total = total;

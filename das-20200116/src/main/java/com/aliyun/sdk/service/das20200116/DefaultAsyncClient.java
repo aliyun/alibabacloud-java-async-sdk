@@ -237,6 +237,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * *   You can create an offline task only for database instances for which DAS Enterprise Edition V2 or V3 is enabled. For more information about the databases and regions that are supported by various versions of DAS Enterprise Edition, see [Editions and supported features](~~156204~~).
+      *
+     */
     @Override
     public CompletableFuture<CreateSqlLogTaskResponse> createSqlLogTask(CreateSqlLogTaskRequest request) {
         try {
@@ -252,9 +259,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
+      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and ApsaraDB for MongoDB instances.
       * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call DAS, you must set the region to cn-shanghai.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     @Override
@@ -539,6 +546,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSqlLogConfigResponse> describeSqlLogConfig(DescribeSqlLogConfigRequest request) {
         try {
@@ -553,6 +566,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSqlLogRecordsResponse> describeSqlLogRecords(DescribeSqlLogRecordsRequest request) {
         try {
@@ -567,6 +586,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSqlLogStatisticResponse> describeSqlLogStatistic(DescribeSqlLogStatisticRequest request) {
         try {
@@ -581,6 +606,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSqlLogTaskResponse> describeSqlLogTask(DescribeSqlLogTaskRequest request) {
         try {
@@ -595,6 +626,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      *
+     */
     @Override
     public CompletableFuture<DescribeSqlLogTasksResponse> describeSqlLogTasks(DescribeSqlLogTasksRequest request) {
         try {
@@ -777,9 +814,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   For more information about database instances that support DAS Enterprise Edition, see [Overview of DAS Enterprise Edition](~~190912~~).
-      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.
       * *   This operation is applicable only to DAS Enterprise Edition V1.
+      * >  If your database instance supports DAS Enterprise Edition V3, you cannot call this operation to enable DAS Enterprise Edition V1. You can call the [ModifySqlLogConfig](~~2778835~~) operation to enable DAS Enterprise Edition V3 for your database instance. For more information about the databases and regions supported by each version of DAS Enterprise Edition, see [Editions and supported features](~~156204~~).
       *
      */
     @Override
@@ -1047,11 +1084,10 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Before you call this operation, take note of the following items:
-      * *   If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
-      * *   An ApsaraDB RDS for MySQL database or a PolarDB for MySQL database in the China (Shanghai) region is connected to DAS.
-      * *   The new SQL Explorer and Audit feature is enabled for the database instance. For more information, see the [Enable the SQL Explorer and Audit feature](~~92561~~) section of the "Overview" topic.
-      * >  You can query only the data that is generated after the new SQL Explorer and Audit feature is enabled. The start time can be up to seven days earlier than the current time. The interval between the start time and the end time cannot exceed 24 hours.
+      * *   If you use an Alibaba Cloud SDK or DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   The database instance that you want to manage must be an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster in the China (Shanghai) region.
+      * >  You can query only the data generated after DAS Enterprise Edition V2 or V3 was enabled. The beginning of the time range to query can be up to seven days earlier than the current time. The interval between the beginning and the end of the time range to query cannot exceed 24 hours.
       *
      */
     @Override
@@ -1337,10 +1373,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  Asynchronous calls do not immediately return the complete results. You must use the value of **ResultId** returned in the response to re-initiate the call. The complete results are returned only if the value of **IsFinish** is **true**.
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL, PolarDB for MySQL, and PolarDB-X 2.0 instances.
+      * >  GetMySQLAllSessionAsync is an asynchronous operation. After a request is sent, the system does not return complete results but returns a request ID. You need to use the request ID to initiate requests until the value of the **isFinish** field in the returned results is **true**, the complete results are returned. This indicates that to obtain complete data, you must call this operation at least twice.
+      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and PolarDB-X 2.0 instances.
       * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     @Override
@@ -1811,8 +1847,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters.
-      * *   The physical file size indicates the actual size of an obtained file. Only specific deployment modes of database instances support the display of physical file sizes. The statistics on tables are obtained from information_schema.tables. Due to the asynchronicity of the statistics update mechanism in MySQL, statistics and analysis results may not be perfectly accurate. You can execute the ANALYZE TABLE statement on related tables during off-peak hours to obtain the latest information.
+      * >  The physical file size indicates the actual size of an obtained file. Only specific deployment modes of database instances support the display of physical file sizes. The statistics on tables are obtained from `information_schema.tables`. Statistics in MySQL are not updated in real time. Therefore, the statistics may be different from the physical file sizes. If you want to obtain the latest data, you can execute the `ANALYZE TABLE` statement on the relevant tables during off-peak hours.
+      * *   This operation is applicable only to ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and ApsaraDB for MongoDB instances.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call API operations of DAS, you must set the region ID to cn-shanghai.
       *
      */
     @Override
@@ -1879,6 +1917,13 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you call this operation, take note of the following items:
+      * *   If you use an Alibaba Cloud SDK or a DAS SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
+      * *   By default, the latest version of DAS Enterprise Edition that supports the database instance is enabled. For information about the databases and regions that are supported by different versions of DAS Enterprise Edition, see [Editions and supported features](~~156204~~).
+      *
+     */
     @Override
     public CompletableFuture<ModifySqlLogConfigResponse> modifySqlLogConfig(ModifySqlLogConfigRequest request) {
         try {
@@ -1913,9 +1958,9 @@ public final class DefaultAsyncClient implements AsyncClient {
 
     /**
       * Before you call this operation, take note of the following items:
-      * *   If you use Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
-      * *   If you use an SDK to call operations of DAS, you must set the region ID to cn-shanghai.
-      * *   The database instance that you want to manage is connected to DAS.
+      * *   If you use an Alibaba Cloud SDK or Database Autonomy Service (DAS) SDK to call this operation, we recommend that you use the latest version of the SDK.
+      * *   If you use an SDK to call the API operations of DAS, you must set the region ID to cn-shanghai.
+      * *   Make sure that the database instance that you want to manage is connected to DAS.
       *
      */
     @Override
@@ -1965,7 +2010,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  UpdateAutoResourceOptimizeRulesAsync is an asynchronous operation. After a request is sent, the complete results are not returned immediately. If the value of **isFinish** is **false** in the response, wait for 1 second and then send a request again. If the value of **isFinish** is **true**, the complete results are returned.
+      * >  Asynchronous calls do not immediately return the complete results. To obtain the complete results, you must use the value of **ResultId** returned in the response to re-initiate the call until the value of **isFinish** is **true**.**** In this case, you must call this operation at least twice.
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call the API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
       * *   The database instances must be an ApsaraDB RDS for MySQL High-availability Edition instance.
@@ -2012,13 +2057,13 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * >  An asynchronous call does not immediately return complete results. If the value of **isFinish** is **false** in the response, wait for 1 second and then re-initiate the call. If the value of **isFinish** is **true**, the complete results are returned.
+      * >  Asynchronous calls do not immediately return the complete results. You must use the value of **ResultId** returned in the response to re-initiate the call until the value of **isFinish** is **true**.
       * Before you call this operation, take note of the following items:
       * *   If you use an SDK to call the API operations of Database Autonomy Service (DAS), you must set the region ID to cn-shanghai.
       * *   The autonomy service must be enabled for the database instance that you want to manage. For more information, see [Autonomy center](~~152139~~).
       * *   The database instance that you want to manage must be of one of the following types:
       *     *   ApsaraDB RDS for MySQL High-availability Edition or Enterprise Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0
-      *     *   PolarDB for MySQL Cluster Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, and PolarDB for MySQL X-Engine Edition that runs MySQL 8.0
+      *     *   PolarDB for MySQL Cluster Edition that runs MySQL 5.6, MySQL 5.7, or MySQL 8.0, or PolarDB for MySQL X-Engine Edition that runs MySQL 8.0
       *
      */
     @Override

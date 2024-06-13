@@ -581,6 +581,148 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         } 
 
     }
+    public static class ExpiryLevel extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AnalysisTs")
+        private Long analysisTs;
+
+        @com.aliyun.core.annotation.NameInMap("Level")
+        private Integer level;
+
+        @com.aliyun.core.annotation.NameInMap("TotalBytes")
+        private Long totalBytes;
+
+        @com.aliyun.core.annotation.NameInMap("TotalKeys")
+        private Long totalKeys;
+
+        private ExpiryLevel(Builder builder) {
+            this.analysisTs = builder.analysisTs;
+            this.level = builder.level;
+            this.totalBytes = builder.totalBytes;
+            this.totalKeys = builder.totalKeys;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpiryLevel create() {
+            return builder().build();
+        }
+
+        /**
+         * @return analysisTs
+         */
+        public Long getAnalysisTs() {
+            return this.analysisTs;
+        }
+
+        /**
+         * @return level
+         */
+        public Integer getLevel() {
+            return this.level;
+        }
+
+        /**
+         * @return totalBytes
+         */
+        public Long getTotalBytes() {
+            return this.totalBytes;
+        }
+
+        /**
+         * @return totalKeys
+         */
+        public Long getTotalKeys() {
+            return this.totalKeys;
+        }
+
+        public static final class Builder {
+            private Long analysisTs; 
+            private Integer level; 
+            private Long totalBytes; 
+            private Long totalKeys; 
+
+            /**
+             * AnalysisTs.
+             */
+            public Builder analysisTs(Long analysisTs) {
+                this.analysisTs = analysisTs;
+                return this;
+            }
+
+            /**
+             * Level.
+             */
+            public Builder level(Integer level) {
+                this.level = level;
+                return this;
+            }
+
+            /**
+             * TotalBytes.
+             */
+            public Builder totalBytes(Long totalBytes) {
+                this.totalBytes = totalBytes;
+                return this;
+            }
+
+            /**
+             * TotalKeys.
+             */
+            public Builder totalKeys(Long totalKeys) {
+                this.totalKeys = totalKeys;
+                return this;
+            }
+
+            public ExpiryLevel build() {
+                return new ExpiryLevel(this);
+            } 
+
+        } 
+
+    }
+    public static class ExpiryKeysLevelCount extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExpiryLevel")
+        private java.util.List < ExpiryLevel> expiryLevel;
+
+        private ExpiryKeysLevelCount(Builder builder) {
+            this.expiryLevel = builder.expiryLevel;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExpiryKeysLevelCount create() {
+            return builder().build();
+        }
+
+        /**
+         * @return expiryLevel
+         */
+        public java.util.List < ExpiryLevel> getExpiryLevel() {
+            return this.expiryLevel;
+        }
+
+        public static final class Builder {
+            private java.util.List < ExpiryLevel> expiryLevel; 
+
+            /**
+             * ExpiryLevel.
+             */
+            public Builder expiryLevel(java.util.List < ExpiryLevel> expiryLevel) {
+                this.expiryLevel = expiryLevel;
+                return this;
+            }
+
+            public ExpiryKeysLevelCount build() {
+                return new ExpiryKeysLevelCount(this);
+            } 
+
+        } 
+
+    }
     public static class Prefix extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Bytes")
         private Long bytes;
@@ -1194,6 +1336,9 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BigKeysOfNum")
         private BigKeysOfNum bigKeysOfNum;
 
+        @com.aliyun.core.annotation.NameInMap("ExpiryKeysLevelCount")
+        private ExpiryKeysLevelCount expiryKeysLevelCount;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
@@ -1221,6 +1366,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.bigKeys = builder.bigKeys;
             this.bigKeysOfNum = builder.bigKeysOfNum;
+            this.expiryKeysLevelCount = builder.expiryKeysLevelCount;
             this.instanceId = builder.instanceId;
             this.jobId = builder.jobId;
             this.keyPrefixes = builder.keyPrefixes;
@@ -1251,6 +1397,13 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
          */
         public BigKeysOfNum getBigKeysOfNum() {
             return this.bigKeysOfNum;
+        }
+
+        /**
+         * @return expiryKeysLevelCount
+         */
+        public ExpiryKeysLevelCount getExpiryKeysLevelCount() {
+            return this.expiryKeysLevelCount;
         }
 
         /**
@@ -1312,6 +1465,7 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
         public static final class Builder {
             private BigKeys bigKeys; 
             private BigKeysOfNum bigKeysOfNum; 
+            private ExpiryKeysLevelCount expiryKeysLevelCount; 
             private String instanceId; 
             private String jobId; 
             private KeyPrefixes keyPrefixes; 
@@ -1334,6 +1488,14 @@ public class DescribeCacheAnalysisJobResponseBody extends TeaModel {
              */
             public Builder bigKeysOfNum(BigKeysOfNum bigKeysOfNum) {
                 this.bigKeysOfNum = bigKeysOfNum;
+                return this;
+            }
+
+            /**
+             * ExpiryKeysLevelCount.
+             */
+            public Builder expiryKeysLevelCount(ExpiryKeysLevelCount expiryKeysLevelCount) {
+                this.expiryKeysLevelCount = expiryKeysLevelCount;
                 return this;
             }
 

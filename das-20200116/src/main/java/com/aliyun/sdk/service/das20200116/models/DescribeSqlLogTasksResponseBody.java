@@ -85,7 +85,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
         }
 
         /**
-         * ListResult
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +104,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
          * The returned message.
          * <p>
          * 
-         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+         * >  If the request was successful, **Successful** is returned. If the request failed, an error message is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -177,6 +177,9 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
 
             /**
              * The name of the filter parameter.
+             * <p>
+             * 
+             * >  For more information about the filter parameters, see the **Valid values of Key** section of this topic.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -405,7 +408,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             private String taskType; 
 
             /**
-             * The time when the analysis task was complete.
+             * The time when the analysis task was complete. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder analysisTaskFinishTime(Long analysisTaskFinishTime) {
                 this.analysisTaskFinishTime = analysisTaskFinishTime;
@@ -413,7 +416,10 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the analysis task.
+             * The state of the analysis task.
+             * <p>
+             * 
+             * >  This parameter is a system parameter. You do not need to pay attention to the parameter.
              */
             public Builder analysisTaskStatus(String analysisTaskStatus) {
                 this.analysisTaskStatus = analysisTaskStatus;
@@ -421,7 +427,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created.
+             * The time when the task was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -429,7 +435,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query.
+             * The time when the task ended. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -437,7 +443,11 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the task expires.
+             * Indicates whether the task expired. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder expire(Boolean expire) {
                 this.expire = expire;
@@ -445,7 +455,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The filter conditions.
+             * The filter parameters.
              */
             public Builder filters(java.util.List < Filters> filters) {
                 this.filters = filters;
@@ -453,7 +463,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the database instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -461,7 +471,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of log records
+             * The number of log records.
              */
             public Builder logCount(Long logCount) {
                 this.logCount = logCount;
@@ -485,7 +495,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) URL or other information.
+             * The URL that is returned if the value of TaskType is **Export**.
              */
             public Builder result(String result) {
                 this.result = result;
@@ -493,7 +503,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of files scanned
+             * The number of files that are scanned.
              */
             public Builder scanFileSize(Long scanFileSize) {
                 this.scanFileSize = scanFileSize;
@@ -501,7 +511,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query.
+             * The time when the task started. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -509,7 +519,16 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The task state. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is to be scheduled.
+             * *   **RUNNING**: The task is running.
+             * *   **FAILED**: The task failed.
+             * *   **CANCELED**: The task is canceled.
+             * *   **COMPLETED**: The task is complete.
+             * 
+             * >  If a task is in the **COMPLETED** state, you can view the results of the task.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -525,11 +544,11 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task. Valid values:
+             * The task type. Valid values:
              * <p>
              * 
-             * *   Export
-             * *   Query
+             * *   **Export**
+             * *   **Query**
              */
             public Builder taskType(String taskType) {
                 this.taskType = taskType;
@@ -630,7 +649,7 @@ public class DescribeSqlLogTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The number of tasks.
              */
             public Builder total(Long total) {
                 this.total = total;

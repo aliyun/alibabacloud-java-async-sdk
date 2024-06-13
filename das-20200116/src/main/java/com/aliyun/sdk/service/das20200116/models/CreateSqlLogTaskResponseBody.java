@@ -85,7 +85,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The HTTP status code returned.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
         }
 
         /**
-         * SqlLogTask
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -104,7 +104,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
          * The returned message.
          * <p>
          * 
-         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
+         * >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -236,7 +236,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             private String taskId; 
 
             /**
-             * The time when the task was created.
+             * The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -244,7 +244,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The end of the time range to query.
+             * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder end(Long end) {
                 this.end = end;
@@ -252,7 +252,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The ID of the database instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -260,7 +260,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The task name.
+             * The name of the task.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -268,7 +268,7 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query.
+             * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder start(Long start) {
                 this.start = start;
@@ -276,7 +276,16 @@ public class CreateSqlLogTaskResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The state of the task. Valid values:
+             * <p>
+             * 
+             * *   **INIT**: The task is to be scheduled.
+             * *   **RUNNING**: The task is running.
+             * *   **FAILED**: The task failed.
+             * *   **CANCELED**: The task is canceled.
+             * *   **COMPLETED**: The task is complete.
+             * 
+             * >  You can view the result of a task that is in the **COMPLETED** state.
              */
             public Builder status(String status) {
                 this.status = status;

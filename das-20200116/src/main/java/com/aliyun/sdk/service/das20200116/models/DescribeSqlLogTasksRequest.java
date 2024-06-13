@@ -137,7 +137,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -146,7 +146,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The filter conditions.
+         * The filter parameters.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putBodyParameter("Filters", filters);
@@ -167,7 +167,7 @@ public class DescribeSqlLogTasksRequest extends Request {
          * The node ID.
          * <p>
          * 
-         * > This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the logs of a specific node. If this parameter is not specified, the logs of the primary node are returned by default.
+         * >  This parameter is available only for instances that are deployed in the cluster architecture. You can specify this parameter to query the tasks of a specific node. If this parameter is not specified, the tasks of the primary node are returned by default.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -176,7 +176,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -194,7 +194,7 @@ public class DescribeSqlLogTasksRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+         * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -249,6 +249,9 @@ public class DescribeSqlLogTasksRequest extends Request {
 
             /**
              * The name of the filter parameter.
+             * <p>
+             * 
+             * >  For more information about the filter parameters, see the **Valid values of Key** section of this topic.
              */
             public Builder key(String key) {
                 this.key = key;

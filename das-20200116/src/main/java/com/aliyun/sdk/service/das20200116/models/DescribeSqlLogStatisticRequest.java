@@ -54,7 +54,7 @@ public class DescribeSqlLogStatisticRequest extends Request {
         } 
 
         /**
-         * InstanceId.
+         * The ID of the database instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);

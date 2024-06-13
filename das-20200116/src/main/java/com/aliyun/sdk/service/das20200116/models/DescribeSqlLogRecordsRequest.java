@@ -152,7 +152,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -161,7 +161,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * Filters.
+         * The filter conditions.
          */
         public Builder filters(java.util.List < Filters> filters) {
             this.putQueryParameter("Filters", filters);
@@ -170,7 +170,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the database instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -179,7 +179,11 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * NodeId.
+         * The node ID.
+         * <p>
+         * 
+         * *   For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is available only for Cluster Edition instances. By default, if this parameter is not specified, the information about the logs of the primary node is returned.
+         * *   Set this parameter to **polarx_cn** or **polarx_dn** if the node that you want to query belongs to a PolarDB-X 2.0 database instance. A value of polarx_cn indicates a compute node. A value of polarx_dn indicates a data node.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -188,7 +192,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNo(Integer pageNo) {
             this.putBodyParameter("PageNo", pageNo);
@@ -197,7 +201,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
@@ -206,7 +210,11 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role of the node of the PolarDB-X 2.0 database instance. Valid values:
+         * <p>
+         * 
+         * *   \*\*polarx_cn\*\*: compute node
+         * *   \*\*polarx_dn\*\*: data node
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -215,7 +223,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -269,7 +277,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
             private String value; 
 
             /**
-             * Parameter filtering
+             * The name of the filter parameter.
+             * <p>
+             * 
+             * >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -277,7 +288,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the filter parameter.
              */
             public Builder value(String value) {
                 this.value = value;

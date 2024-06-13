@@ -54,7 +54,7 @@ public class DescribeSqlLogConfigRequest extends Request {
         } 
 
         /**
-         * The instance ID.
+         * The ID of the database instance.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
