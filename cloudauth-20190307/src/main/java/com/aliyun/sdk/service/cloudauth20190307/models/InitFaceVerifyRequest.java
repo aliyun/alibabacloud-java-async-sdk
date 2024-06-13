@@ -136,6 +136,10 @@ public class InitFaceVerifyRequest extends Request {
     private String suitableType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UiCustomUrl")
+    private String uiCustomUrl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
@@ -180,6 +184,7 @@ public class InitFaceVerifyRequest extends Request {
         this.returnUrl = builder.returnUrl;
         this.sceneId = builder.sceneId;
         this.suitableType = builder.suitableType;
+        this.uiCustomUrl = builder.uiCustomUrl;
         this.userId = builder.userId;
         this.validityDate = builder.validityDate;
         this.voluntaryCustomizedContent = builder.voluntaryCustomizedContent;
@@ -416,6 +421,13 @@ public class InitFaceVerifyRequest extends Request {
     }
 
     /**
+     * @return uiCustomUrl
+     */
+    public String getUiCustomUrl() {
+        return this.uiCustomUrl;
+    }
+
+    /**
      * @return userId
      */
     public String getUserId() {
@@ -468,6 +480,7 @@ public class InitFaceVerifyRequest extends Request {
         private String returnUrl; 
         private Long sceneId; 
         private String suitableType; 
+        private String uiCustomUrl; 
         private String userId; 
         private String validityDate; 
         private String voluntaryCustomizedContent; 
@@ -509,6 +522,7 @@ public class InitFaceVerifyRequest extends Request {
             this.returnUrl = request.returnUrl;
             this.sceneId = request.sceneId;
             this.suitableType = request.suitableType;
+            this.uiCustomUrl = request.uiCustomUrl;
             this.userId = request.userId;
             this.validityDate = request.validityDate;
             this.voluntaryCustomizedContent = request.voluntaryCustomizedContent;
@@ -790,6 +804,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder suitableType(String suitableType) {
             this.putQueryParameter("SuitableType", suitableType);
             this.suitableType = suitableType;
+            return this;
+        }
+
+        /**
+         * UiCustomUrl.
+         */
+        public Builder uiCustomUrl(String uiCustomUrl) {
+            this.putQueryParameter("UiCustomUrl", uiCustomUrl);
+            this.uiCustomUrl = uiCustomUrl;
             return this;
         }
 
