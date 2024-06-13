@@ -1597,7 +1597,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         private String instanceChargeType;
 
         @com.aliyun.core.annotation.NameInMap("instance_patterns")
-        private InstancePatterns instancePatterns;
+        private java.util.List < InstancePatterns > instancePatterns;
 
         @com.aliyun.core.annotation.NameInMap("instance_types")
         private java.util.List < String > instanceTypes;
@@ -1838,7 +1838,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         /**
          * @return instancePatterns
          */
-        public InstancePatterns getInstancePatterns() {
+        public java.util.List < InstancePatterns > getInstancePatterns() {
             return this.instancePatterns;
         }
 
@@ -2105,7 +2105,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String imageId; 
             private String imageType; 
             private String instanceChargeType; 
-            private InstancePatterns instancePatterns; 
+            private java.util.List < InstancePatterns > instancePatterns; 
             private java.util.List < String > instanceTypes; 
             private String internetChargeType; 
             private Long internetMaxBandwidthOut; 
@@ -2241,7 +2241,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             /**
              * instance_patterns.
              */
-            public Builder instancePatterns(InstancePatterns instancePatterns) {
+            public Builder instancePatterns(java.util.List < InstancePatterns > instancePatterns) {
                 this.instancePatterns = instancePatterns;
                 return this;
             }
