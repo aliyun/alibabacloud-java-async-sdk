@@ -1825,6 +1825,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AllowModifyInternetAddressConnectionLimit")
+        private Boolean allowModifyInternetAddressConnectionLimit;
+
         @com.aliyun.core.annotation.NameInMap("AutoRenewal")
         private Boolean autoRenewal;
 
@@ -1942,6 +1945,9 @@ public class DescribeInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SharedUnitNumLimit")
         private Integer sharedUnitNumLimit;
 
+        @com.aliyun.core.annotation.NameInMap("SpecType")
+        private String specType;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
@@ -1958,6 +1964,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private java.util.List < String > zones;
 
         private Instance(Builder builder) {
+            this.allowModifyInternetAddressConnectionLimit = builder.allowModifyInternetAddressConnectionLimit;
             this.autoRenewal = builder.autoRenewal;
             this.autoUpgradeObVersion = builder.autoUpgradeObVersion;
             this.availableZones = builder.availableZones;
@@ -1997,6 +2004,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
             this.resource = builder.resource;
             this.series = builder.series;
             this.sharedUnitNumLimit = builder.sharedUnitNumLimit;
+            this.specType = builder.specType;
             this.status = builder.status;
             this.tenantCreatable = builder.tenantCreatable;
             this.unitSpec = builder.unitSpec;
@@ -2010,6 +2018,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
         public static Instance create() {
             return builder().build();
+        }
+
+        /**
+         * @return allowModifyInternetAddressConnectionLimit
+         */
+        public Boolean getAllowModifyInternetAddressConnectionLimit() {
+            return this.allowModifyInternetAddressConnectionLimit;
         }
 
         /**
@@ -2286,6 +2301,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * @return specType
+         */
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -2321,6 +2343,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Boolean allowModifyInternetAddressConnectionLimit; 
             private Boolean autoRenewal; 
             private Boolean autoUpgradeObVersion; 
             private java.util.List < String > availableZones; 
@@ -2360,11 +2383,20 @@ public class DescribeInstanceResponseBody extends TeaModel {
             private Resource resource; 
             private String series; 
             private Integer sharedUnitNumLimit; 
+            private String specType; 
             private String status; 
             private TenantCreatable tenantCreatable; 
             private String unitSpec; 
             private String version; 
             private java.util.List < String > zones; 
+
+            /**
+             * AllowModifyInternetAddressConnectionLimit.
+             */
+            public Builder allowModifyInternetAddressConnectionLimit(Boolean allowModifyInternetAddressConnectionLimit) {
+                this.allowModifyInternetAddressConnectionLimit = allowModifyInternetAddressConnectionLimit;
+                return this;
+            }
 
             /**
              * The operation that you want to perform. <br>Set the value to **DescribeInstance**.
@@ -2675,6 +2707,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
              */
             public Builder sharedUnitNumLimit(Integer sharedUnitNumLimit) {
                 this.sharedUnitNumLimit = sharedUnitNumLimit;
+                return this;
+            }
+
+            /**
+             * SpecType.
+             */
+            public Builder specType(String specType) {
+                this.specType = specType;
                 return this;
             }
 

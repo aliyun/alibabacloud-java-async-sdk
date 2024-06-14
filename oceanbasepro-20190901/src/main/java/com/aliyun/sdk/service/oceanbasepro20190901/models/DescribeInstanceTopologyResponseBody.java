@@ -70,6 +70,451 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     } 
 
+    public static class Cpu extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalCpu")
+        private Integer totalCpu;
+
+        @com.aliyun.core.annotation.NameInMap("UsedCpu")
+        private Integer usedCpu;
+
+        private Cpu(Builder builder) {
+            this.totalCpu = builder.totalCpu;
+            this.usedCpu = builder.usedCpu;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Cpu create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalCpu
+         */
+        public Integer getTotalCpu() {
+            return this.totalCpu;
+        }
+
+        /**
+         * @return usedCpu
+         */
+        public Integer getUsedCpu() {
+            return this.usedCpu;
+        }
+
+        public static final class Builder {
+            private Integer totalCpu; 
+            private Integer usedCpu; 
+
+            /**
+             * TotalCpu.
+             */
+            public Builder totalCpu(Integer totalCpu) {
+                this.totalCpu = totalCpu;
+                return this;
+            }
+
+            /**
+             * UsedCpu.
+             */
+            public Builder usedCpu(Integer usedCpu) {
+                this.usedCpu = usedCpu;
+                return this;
+            }
+
+            public Cpu build() {
+                return new Cpu(this);
+            } 
+
+        } 
+
+    }
+    public static class DiskSize extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
+        private Long totalDiskSize;
+
+        @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
+        private Float usedDiskSize;
+
+        private DiskSize(Builder builder) {
+            this.totalDiskSize = builder.totalDiskSize;
+            this.usedDiskSize = builder.usedDiskSize;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DiskSize create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalDiskSize
+         */
+        public Long getTotalDiskSize() {
+            return this.totalDiskSize;
+        }
+
+        /**
+         * @return usedDiskSize
+         */
+        public Float getUsedDiskSize() {
+            return this.usedDiskSize;
+        }
+
+        public static final class Builder {
+            private Long totalDiskSize; 
+            private Float usedDiskSize; 
+
+            /**
+             * TotalDiskSize.
+             */
+            public Builder totalDiskSize(Long totalDiskSize) {
+                this.totalDiskSize = totalDiskSize;
+                return this;
+            }
+
+            /**
+             * UsedDiskSize.
+             */
+            public Builder usedDiskSize(Float usedDiskSize) {
+                this.usedDiskSize = usedDiskSize;
+                return this;
+            }
+
+            public DiskSize build() {
+                return new DiskSize(this);
+            } 
+
+        } 
+
+    }
+    public static class Memory extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TotalMemory")
+        private Long totalMemory;
+
+        @com.aliyun.core.annotation.NameInMap("UsedMemory")
+        private Long usedMemory;
+
+        private Memory(Builder builder) {
+            this.totalMemory = builder.totalMemory;
+            this.usedMemory = builder.usedMemory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Memory create() {
+            return builder().build();
+        }
+
+        /**
+         * @return totalMemory
+         */
+        public Long getTotalMemory() {
+            return this.totalMemory;
+        }
+
+        /**
+         * @return usedMemory
+         */
+        public Long getUsedMemory() {
+            return this.usedMemory;
+        }
+
+        public static final class Builder {
+            private Long totalMemory; 
+            private Long usedMemory; 
+
+            /**
+             * TotalMemory.
+             */
+            public Builder totalMemory(Long totalMemory) {
+                this.totalMemory = totalMemory;
+                return this;
+            }
+
+            /**
+             * UsedMemory.
+             */
+            public Builder usedMemory(Long usedMemory) {
+                this.usedMemory = usedMemory;
+                return this;
+            }
+
+            public Memory build() {
+                return new Memory(this);
+            } 
+
+        } 
+
+    }
+    public static class ReplicaResource extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cpu")
+        private Cpu cpu;
+
+        @com.aliyun.core.annotation.NameInMap("DiskSize")
+        private DiskSize diskSize;
+
+        @com.aliyun.core.annotation.NameInMap("Memory")
+        private Memory memory;
+
+        private ReplicaResource(Builder builder) {
+            this.cpu = builder.cpu;
+            this.diskSize = builder.diskSize;
+            this.memory = builder.memory;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ReplicaResource create() {
+            return builder().build();
+        }
+
+        /**
+         * @return cpu
+         */
+        public Cpu getCpu() {
+            return this.cpu;
+        }
+
+        /**
+         * @return diskSize
+         */
+        public DiskSize getDiskSize() {
+            return this.diskSize;
+        }
+
+        /**
+         * @return memory
+         */
+        public Memory getMemory() {
+            return this.memory;
+        }
+
+        public static final class Builder {
+            private Cpu cpu; 
+            private DiskSize diskSize; 
+            private Memory memory; 
+
+            /**
+             * Cpu.
+             */
+            public Builder cpu(Cpu cpu) {
+                this.cpu = cpu;
+                return this;
+            }
+
+            /**
+             * DiskSize.
+             */
+            public Builder diskSize(DiskSize diskSize) {
+                this.diskSize = diskSize;
+                return this;
+            }
+
+            /**
+             * Memory.
+             */
+            public Builder memory(Memory memory) {
+                this.memory = memory;
+                return this;
+            }
+
+            public ReplicaResource build() {
+                return new ReplicaResource(this);
+            } 
+
+        } 
+
+    }
+    public static class Replicas extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("LogicalZone")
+        private String logicalZone;
+
+        @com.aliyun.core.annotation.NameInMap("NodeNum")
+        private Integer nodeNum;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicaResource")
+        private ReplicaResource replicaResource;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicaType")
+        private String replicaType;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneLogicalId")
+        private Integer zoneLogicalId;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneLogicalName")
+        private String zoneLogicalName;
+
+        @com.aliyun.core.annotation.NameInMap("ZoneRegionName")
+        private String zoneRegionName;
+
+        private Replicas(Builder builder) {
+            this.logicalZone = builder.logicalZone;
+            this.nodeNum = builder.nodeNum;
+            this.replicaResource = builder.replicaResource;
+            this.replicaType = builder.replicaType;
+            this.status = builder.status;
+            this.zoneLogicalId = builder.zoneLogicalId;
+            this.zoneLogicalName = builder.zoneLogicalName;
+            this.zoneRegionName = builder.zoneRegionName;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Replicas create() {
+            return builder().build();
+        }
+
+        /**
+         * @return logicalZone
+         */
+        public String getLogicalZone() {
+            return this.logicalZone;
+        }
+
+        /**
+         * @return nodeNum
+         */
+        public Integer getNodeNum() {
+            return this.nodeNum;
+        }
+
+        /**
+         * @return replicaResource
+         */
+        public ReplicaResource getReplicaResource() {
+            return this.replicaResource;
+        }
+
+        /**
+         * @return replicaType
+         */
+        public String getReplicaType() {
+            return this.replicaType;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        /**
+         * @return zoneLogicalId
+         */
+        public Integer getZoneLogicalId() {
+            return this.zoneLogicalId;
+        }
+
+        /**
+         * @return zoneLogicalName
+         */
+        public String getZoneLogicalName() {
+            return this.zoneLogicalName;
+        }
+
+        /**
+         * @return zoneRegionName
+         */
+        public String getZoneRegionName() {
+            return this.zoneRegionName;
+        }
+
+        public static final class Builder {
+            private String logicalZone; 
+            private Integer nodeNum; 
+            private ReplicaResource replicaResource; 
+            private String replicaType; 
+            private String status; 
+            private Integer zoneLogicalId; 
+            private String zoneLogicalName; 
+            private String zoneRegionName; 
+
+            /**
+             * LogicalZone.
+             */
+            public Builder logicalZone(String logicalZone) {
+                this.logicalZone = logicalZone;
+                return this;
+            }
+
+            /**
+             * NodeNum.
+             */
+            public Builder nodeNum(Integer nodeNum) {
+                this.nodeNum = nodeNum;
+                return this;
+            }
+
+            /**
+             * ReplicaResource.
+             */
+            public Builder replicaResource(ReplicaResource replicaResource) {
+                this.replicaResource = replicaResource;
+                return this;
+            }
+
+            /**
+             * ReplicaType.
+             */
+            public Builder replicaType(String replicaType) {
+                this.replicaType = replicaType;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            /**
+             * ZoneLogicalId.
+             */
+            public Builder zoneLogicalId(Integer zoneLogicalId) {
+                this.zoneLogicalId = zoneLogicalId;
+                return this;
+            }
+
+            /**
+             * ZoneLogicalName.
+             */
+            public Builder zoneLogicalName(String zoneLogicalName) {
+                this.zoneLogicalName = zoneLogicalName;
+                return this;
+            }
+
+            /**
+             * ZoneRegionName.
+             */
+            public Builder zoneRegionName(String zoneRegionName) {
+                this.zoneRegionName = zoneRegionName;
+                return this;
+            }
+
+            public Replicas build() {
+                return new Replicas(this);
+            } 
+
+        } 
+
+    }
     public static class Units extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EnableCancelMigrateUnit")
         private Boolean enableCancelMigrateUnit;
@@ -299,6 +744,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsPrimaryTenantZone")
         private Boolean isPrimaryTenantZone;
 
+        @com.aliyun.core.annotation.NameInMap("LogicalZone")
+        private String logicalZone;
+
+        @com.aliyun.core.annotation.NameInMap("ReplicaType")
+        private String replicaType;
+
         @com.aliyun.core.annotation.NameInMap("TenantZoneId")
         private String tenantZoneId;
 
@@ -310,6 +761,8 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         private TenantZones(Builder builder) {
             this.isPrimaryTenantZone = builder.isPrimaryTenantZone;
+            this.logicalZone = builder.logicalZone;
+            this.replicaType = builder.replicaType;
             this.tenantZoneId = builder.tenantZoneId;
             this.tenantZoneRole = builder.tenantZoneRole;
             this.units = builder.units;
@@ -328,6 +781,20 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         public Boolean getIsPrimaryTenantZone() {
             return this.isPrimaryTenantZone;
+        }
+
+        /**
+         * @return logicalZone
+         */
+        public String getLogicalZone() {
+            return this.logicalZone;
+        }
+
+        /**
+         * @return replicaType
+         */
+        public String getReplicaType() {
+            return this.replicaType;
         }
 
         /**
@@ -353,6 +820,8 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Boolean isPrimaryTenantZone; 
+            private String logicalZone; 
+            private String replicaType; 
             private String tenantZoneId; 
             private String tenantZoneRole; 
             private java.util.List < Units> units; 
@@ -362,6 +831,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder isPrimaryTenantZone(Boolean isPrimaryTenantZone) {
                 this.isPrimaryTenantZone = isPrimaryTenantZone;
+                return this;
+            }
+
+            /**
+             * LogicalZone.
+             */
+            public Builder logicalZone(String logicalZone) {
+                this.logicalZone = logicalZone;
+                return this;
+            }
+
+            /**
+             * ReplicaType.
+             */
+            public Builder replicaType(String replicaType) {
+                this.replicaType = replicaType;
                 return this;
             }
 
@@ -406,6 +891,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantDeployType")
         private String tenantDeployType;
 
+        @com.aliyun.core.annotation.NameInMap("TenantDiskSize")
+        private Float tenantDiskSize;
+
         @com.aliyun.core.annotation.NameInMap("TenantId")
         private String tenantId;
 
@@ -421,6 +909,12 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TenantStatus")
         private String tenantStatus;
 
+        @com.aliyun.core.annotation.NameInMap("TenantUnitCpu")
+        private Float tenantUnitCpu;
+
+        @com.aliyun.core.annotation.NameInMap("TenantUnitMemory")
+        private Float tenantUnitMemory;
+
         @com.aliyun.core.annotation.NameInMap("TenantUnitNum")
         private Integer tenantUnitNum;
 
@@ -431,11 +925,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
             this.tenantCpu = builder.tenantCpu;
             this.tenantDeployType = builder.tenantDeployType;
+            this.tenantDiskSize = builder.tenantDiskSize;
             this.tenantId = builder.tenantId;
             this.tenantMemory = builder.tenantMemory;
             this.tenantMode = builder.tenantMode;
             this.tenantName = builder.tenantName;
             this.tenantStatus = builder.tenantStatus;
+            this.tenantUnitCpu = builder.tenantUnitCpu;
+            this.tenantUnitMemory = builder.tenantUnitMemory;
             this.tenantUnitNum = builder.tenantUnitNum;
             this.tenantZones = builder.tenantZones;
         }
@@ -467,6 +964,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         public String getTenantDeployType() {
             return this.tenantDeployType;
+        }
+
+        /**
+         * @return tenantDiskSize
+         */
+        public Float getTenantDiskSize() {
+            return this.tenantDiskSize;
         }
 
         /**
@@ -505,6 +1009,20 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         /**
+         * @return tenantUnitCpu
+         */
+        public Float getTenantUnitCpu() {
+            return this.tenantUnitCpu;
+        }
+
+        /**
+         * @return tenantUnitMemory
+         */
+        public Float getTenantUnitMemory() {
+            return this.tenantUnitMemory;
+        }
+
+        /**
          * @return tenantUnitNum
          */
         public Integer getTenantUnitNum() {
@@ -522,11 +1040,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String primaryZoneDeployType; 
             private Float tenantCpu; 
             private String tenantDeployType; 
+            private Float tenantDiskSize; 
             private String tenantId; 
             private Float tenantMemory; 
             private String tenantMode; 
             private String tenantName; 
             private String tenantStatus; 
+            private Float tenantUnitCpu; 
+            private Float tenantUnitMemory; 
             private Integer tenantUnitNum; 
             private java.util.List < TenantZones> tenantZones; 
 
@@ -551,6 +1072,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder tenantDeployType(String tenantDeployType) {
                 this.tenantDeployType = tenantDeployType;
+                return this;
+            }
+
+            /**
+             * TenantDiskSize.
+             */
+            public Builder tenantDiskSize(Float tenantDiskSize) {
+                this.tenantDiskSize = tenantDiskSize;
                 return this;
             }
 
@@ -595,6 +1124,22 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
+             * TenantUnitCpu.
+             */
+            public Builder tenantUnitCpu(Float tenantUnitCpu) {
+                this.tenantUnitCpu = tenantUnitCpu;
+                return this;
+            }
+
+            /**
+             * TenantUnitMemory.
+             */
+            public Builder tenantUnitMemory(Float tenantUnitMemory) {
+                this.tenantUnitMemory = tenantUnitMemory;
+                return this;
+            }
+
+            /**
              * The number of CPU cores of the tenant.
              */
             public Builder tenantUnitNum(Integer tenantUnitNum) {
@@ -617,14 +1162,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         } 
 
     }
-    public static class Cpu extends TeaModel {
+    public static class NodeResourceCpu extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalCpu")
         private Integer totalCpu;
 
         @com.aliyun.core.annotation.NameInMap("UsedCpu")
         private Float usedCpu;
 
-        private Cpu(Builder builder) {
+        private NodeResourceCpu(Builder builder) {
             this.totalCpu = builder.totalCpu;
             this.usedCpu = builder.usedCpu;
         }
@@ -633,7 +1178,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Cpu create() {
+        public static NodeResourceCpu create() {
             return builder().build();
         }
 
@@ -671,21 +1216,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
                 return this;
             }
 
-            public Cpu build() {
-                return new Cpu(this);
+            public NodeResourceCpu build() {
+                return new NodeResourceCpu(this);
             } 
 
         } 
 
     }
-    public static class DiskSize extends TeaModel {
+    public static class NodeResourceDiskSize extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalDiskSize")
         private Double totalDiskSize;
 
         @com.aliyun.core.annotation.NameInMap("UsedDiskSize")
         private Double usedDiskSize;
 
-        private DiskSize(Builder builder) {
+        private NodeResourceDiskSize(Builder builder) {
             this.totalDiskSize = builder.totalDiskSize;
             this.usedDiskSize = builder.usedDiskSize;
         }
@@ -694,7 +1239,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static DiskSize create() {
+        public static NodeResourceDiskSize create() {
             return builder().build();
         }
 
@@ -742,21 +1287,21 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
                 return this;
             }
 
-            public DiskSize build() {
-                return new DiskSize(this);
+            public NodeResourceDiskSize build() {
+                return new NodeResourceDiskSize(this);
             } 
 
         } 
 
     }
-    public static class Memory extends TeaModel {
+    public static class NodeResourceMemory extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TotalMemory")
         private Long totalMemory;
 
         @com.aliyun.core.annotation.NameInMap("UsedMemory")
         private Float usedMemory;
 
-        private Memory(Builder builder) {
+        private NodeResourceMemory(Builder builder) {
             this.totalMemory = builder.totalMemory;
             this.usedMemory = builder.usedMemory;
         }
@@ -765,7 +1310,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static Memory create() {
+        public static NodeResourceMemory create() {
             return builder().build();
         }
 
@@ -803,8 +1348,8 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
                 return this;
             }
 
-            public Memory build() {
-                return new Memory(this);
+            public NodeResourceMemory build() {
+                return new NodeResourceMemory(this);
             } 
 
         } 
@@ -812,13 +1357,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     }
     public static class NodeResource extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Cpu")
-        private Cpu cpu;
+        private NodeResourceCpu cpu;
 
         @com.aliyun.core.annotation.NameInMap("DiskSize")
-        private DiskSize diskSize;
+        private NodeResourceDiskSize diskSize;
 
         @com.aliyun.core.annotation.NameInMap("Memory")
-        private Memory memory;
+        private NodeResourceMemory memory;
 
         private NodeResource(Builder builder) {
             this.cpu = builder.cpu;
@@ -837,33 +1382,33 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return cpu
          */
-        public Cpu getCpu() {
+        public NodeResourceCpu getCpu() {
             return this.cpu;
         }
 
         /**
          * @return diskSize
          */
-        public DiskSize getDiskSize() {
+        public NodeResourceDiskSize getDiskSize() {
             return this.diskSize;
         }
 
         /**
          * @return memory
          */
-        public Memory getMemory() {
+        public NodeResourceMemory getMemory() {
             return this.memory;
         }
 
         public static final class Builder {
-            private Cpu cpu; 
-            private DiskSize diskSize; 
-            private Memory memory; 
+            private NodeResourceCpu cpu; 
+            private NodeResourceDiskSize diskSize; 
+            private NodeResourceMemory memory; 
 
             /**
              * The memory size of the tenant, in GB.
              */
-            public Builder cpu(Cpu cpu) {
+            public Builder cpu(NodeResourceCpu cpu) {
                 this.cpu = cpu;
                 return this;
             }
@@ -871,7 +1416,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             /**
              * The information about the CPU resources of the node.
              */
-            public Builder diskSize(DiskSize diskSize) {
+            public Builder diskSize(NodeResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
                 return this;
             }
@@ -882,7 +1427,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              *  - ReadWrite: a role that has the read and write privileges.
              *  - ReadOnly: a role that has only the read-only privilege.
              */
-            public Builder memory(Memory memory) {
+            public Builder memory(NodeResourceMemory memory) {
                 this.memory = memory;
                 return this;
             }
@@ -897,6 +1442,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
     public static class Nodes extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("FullCopyId")
         private Long fullCopyId;
+
+        @com.aliyun.core.annotation.NameInMap("LogicalZone")
+        private String logicalZone;
 
         @com.aliyun.core.annotation.NameInMap("NodeCopyId")
         private Long nodeCopyId;
@@ -918,6 +1466,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         private Nodes(Builder builder) {
             this.fullCopyId = builder.fullCopyId;
+            this.logicalZone = builder.logicalZone;
             this.nodeCopyId = builder.nodeCopyId;
             this.nodeId = builder.nodeId;
             this.nodeResource = builder.nodeResource;
@@ -939,6 +1488,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
          */
         public Long getFullCopyId() {
             return this.fullCopyId;
+        }
+
+        /**
+         * @return logicalZone
+         */
+        public String getLogicalZone() {
+            return this.logicalZone;
         }
 
         /**
@@ -985,6 +1541,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static final class Builder {
             private Long fullCopyId; 
+            private String logicalZone; 
             private Long nodeCopyId; 
             private String nodeId; 
             private java.util.List < NodeResource> nodeResource; 
@@ -997,6 +1554,14 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
              */
             public Builder fullCopyId(Long fullCopyId) {
                 this.fullCopyId = fullCopyId;
+                return this;
+            }
+
+            /**
+             * LogicalZone.
+             */
+            public Builder logicalZone(String logicalZone) {
+                this.logicalZone = logicalZone;
                 return this;
             }
 
@@ -1279,6 +1844,9 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
     }
     public static class InstanceTopology extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Replicas")
+        private java.util.List < Replicas> replicas;
+
         @com.aliyun.core.annotation.NameInMap("Tenants")
         private java.util.List < Tenants> tenants;
 
@@ -1286,6 +1854,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private java.util.List < Zones> zones;
 
         private InstanceTopology(Builder builder) {
+            this.replicas = builder.replicas;
             this.tenants = builder.tenants;
             this.zones = builder.zones;
         }
@@ -1296,6 +1865,13 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
 
         public static InstanceTopology create() {
             return builder().build();
+        }
+
+        /**
+         * @return replicas
+         */
+        public java.util.List < Replicas> getReplicas() {
+            return this.replicas;
         }
 
         /**
@@ -1313,8 +1889,17 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < Replicas> replicas; 
             private java.util.List < Tenants> tenants; 
             private java.util.List < Zones> zones; 
+
+            /**
+             * Replicas.
+             */
+            public Builder replicas(java.util.List < Replicas> replicas) {
+                this.replicas = replicas;
+                return this;
+            }
 
             /**
              * The total number of CPU cores for the node.

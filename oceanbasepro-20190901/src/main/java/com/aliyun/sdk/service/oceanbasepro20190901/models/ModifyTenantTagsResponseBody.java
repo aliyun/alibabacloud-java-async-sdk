@@ -49,7 +49,7 @@ public class ModifyTenantTagsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The update status of the tags.
+         * The tag modification result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +57,7 @@ public class ModifyTenantTagsResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

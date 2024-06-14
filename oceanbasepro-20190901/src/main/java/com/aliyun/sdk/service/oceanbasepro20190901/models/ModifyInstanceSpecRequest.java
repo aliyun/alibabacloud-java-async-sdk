@@ -36,6 +36,10 @@ public class ModifyInstanceSpecRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpgradeSpecNative")
+    private Boolean upgradeSpecNative;
+
     private ModifyInstanceSpecRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
@@ -44,6 +48,7 @@ public class ModifyInstanceSpecRequest extends Request {
         this.dryRun = builder.dryRun;
         this.instanceClass = builder.instanceClass;
         this.instanceId = builder.instanceId;
+        this.upgradeSpecNative = builder.upgradeSpecNative;
     }
 
     public static Builder builder() {
@@ -101,6 +106,13 @@ public class ModifyInstanceSpecRequest extends Request {
         return this.instanceId;
     }
 
+    /**
+     * @return upgradeSpecNative
+     */
+    public Boolean getUpgradeSpecNative() {
+        return this.upgradeSpecNative;
+    }
+
     public static final class Builder extends Request.Builder<ModifyInstanceSpecRequest, Builder> {
         private String regionId; 
         private Long diskSize; 
@@ -108,6 +120,7 @@ public class ModifyInstanceSpecRequest extends Request {
         private Boolean dryRun; 
         private String instanceClass; 
         private String instanceId; 
+        private Boolean upgradeSpecNative; 
 
         private Builder() {
             super();
@@ -121,6 +134,7 @@ public class ModifyInstanceSpecRequest extends Request {
             this.dryRun = request.dryRun;
             this.instanceClass = request.instanceClass;
             this.instanceId = request.instanceId;
+            this.upgradeSpecNative = request.upgradeSpecNative;
         } 
 
         /**
@@ -187,6 +201,15 @@ public class ModifyInstanceSpecRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * UpgradeSpecNative.
+         */
+        public Builder upgradeSpecNative(Boolean upgradeSpecNative) {
+            this.putBodyParameter("UpgradeSpecNative", upgradeSpecNative);
+            this.upgradeSpecNative = upgradeSpecNative;
             return this;
         }
 

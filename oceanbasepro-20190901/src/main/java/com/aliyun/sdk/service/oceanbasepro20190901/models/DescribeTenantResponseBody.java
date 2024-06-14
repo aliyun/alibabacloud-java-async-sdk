@@ -560,6 +560,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
+        @com.aliyun.core.annotation.NameInMap("ConnectionLogicalZones")
+        private java.util.List < String > connectionLogicalZones;
+
         @com.aliyun.core.annotation.NameInMap("ConnectionReplicaType")
         private String connectionReplicaType;
 
@@ -575,8 +578,17 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("InternetAddressStatus")
         private String internetAddressStatus;
 
+        @com.aliyun.core.annotation.NameInMap("InternetMaxConnectionLimit")
+        private Long internetMaxConnectionLimit;
+
+        @com.aliyun.core.annotation.NameInMap("InternetMaxConnectionNum")
+        private Long internetMaxConnectionNum;
+
         @com.aliyun.core.annotation.NameInMap("InternetPort")
         private Integer internetPort;
+
+        @com.aliyun.core.annotation.NameInMap("InternetRpcPort")
+        private Integer internetRpcPort;
 
         @com.aliyun.core.annotation.NameInMap("IntranetAddress")
         private String intranetAddress;
@@ -593,11 +605,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IntranetPort")
         private Integer intranetPort;
 
+        @com.aliyun.core.annotation.NameInMap("IntranetRpcPort")
+        private Integer intranetRpcPort;
+
+        @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
+        private Long maxConnectionLimit;
+
         @com.aliyun.core.annotation.NameInMap("MaxConnectionNum")
         private Long maxConnectionNum;
 
         @com.aliyun.core.annotation.NameInMap("ParallelQueryDegree")
         private Long parallelQueryDegree;
+
+        @com.aliyun.core.annotation.NameInMap("ProxyClusterId")
+        private String proxyClusterId;
 
         @com.aliyun.core.annotation.NameInMap("TenantEndpointId")
         private String tenantEndpointId;
@@ -613,19 +634,26 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         private TenantConnections(Builder builder) {
             this.addressType = builder.addressType;
+            this.connectionLogicalZones = builder.connectionLogicalZones;
             this.connectionReplicaType = builder.connectionReplicaType;
             this.connectionZones = builder.connectionZones;
             this.enableTransactionSplit = builder.enableTransactionSplit;
             this.internetAddress = builder.internetAddress;
             this.internetAddressStatus = builder.internetAddressStatus;
+            this.internetMaxConnectionLimit = builder.internetMaxConnectionLimit;
+            this.internetMaxConnectionNum = builder.internetMaxConnectionNum;
             this.internetPort = builder.internetPort;
+            this.internetRpcPort = builder.internetRpcPort;
             this.intranetAddress = builder.intranetAddress;
             this.intranetAddressMasterZoneId = builder.intranetAddressMasterZoneId;
             this.intranetAddressSlaveZoneId = builder.intranetAddressSlaveZoneId;
             this.intranetAddressStatus = builder.intranetAddressStatus;
             this.intranetPort = builder.intranetPort;
+            this.intranetRpcPort = builder.intranetRpcPort;
+            this.maxConnectionLimit = builder.maxConnectionLimit;
             this.maxConnectionNum = builder.maxConnectionNum;
             this.parallelQueryDegree = builder.parallelQueryDegree;
+            this.proxyClusterId = builder.proxyClusterId;
             this.tenantEndpointId = builder.tenantEndpointId;
             this.transactionSplit = builder.transactionSplit;
             this.vSwitchId = builder.vSwitchId;
@@ -645,6 +673,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public String getAddressType() {
             return this.addressType;
+        }
+
+        /**
+         * @return connectionLogicalZones
+         */
+        public java.util.List < String > getConnectionLogicalZones() {
+            return this.connectionLogicalZones;
         }
 
         /**
@@ -683,10 +718,31 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return internetMaxConnectionLimit
+         */
+        public Long getInternetMaxConnectionLimit() {
+            return this.internetMaxConnectionLimit;
+        }
+
+        /**
+         * @return internetMaxConnectionNum
+         */
+        public Long getInternetMaxConnectionNum() {
+            return this.internetMaxConnectionNum;
+        }
+
+        /**
          * @return internetPort
          */
         public Integer getInternetPort() {
             return this.internetPort;
+        }
+
+        /**
+         * @return internetRpcPort
+         */
+        public Integer getInternetRpcPort() {
+            return this.internetRpcPort;
         }
 
         /**
@@ -725,6 +781,20 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return intranetRpcPort
+         */
+        public Integer getIntranetRpcPort() {
+            return this.intranetRpcPort;
+        }
+
+        /**
+         * @return maxConnectionLimit
+         */
+        public Long getMaxConnectionLimit() {
+            return this.maxConnectionLimit;
+        }
+
+        /**
          * @return maxConnectionNum
          */
         public Long getMaxConnectionNum() {
@@ -736,6 +806,13 @@ public class DescribeTenantResponseBody extends TeaModel {
          */
         public Long getParallelQueryDegree() {
             return this.parallelQueryDegree;
+        }
+
+        /**
+         * @return proxyClusterId
+         */
+        public String getProxyClusterId() {
+            return this.proxyClusterId;
         }
 
         /**
@@ -768,19 +845,26 @@ public class DescribeTenantResponseBody extends TeaModel {
 
         public static final class Builder {
             private String addressType; 
+            private java.util.List < String > connectionLogicalZones; 
             private String connectionReplicaType; 
             private java.util.List < String > connectionZones; 
             private Boolean enableTransactionSplit; 
             private String internetAddress; 
             private String internetAddressStatus; 
+            private Long internetMaxConnectionLimit; 
+            private Long internetMaxConnectionNum; 
             private Integer internetPort; 
+            private Integer internetRpcPort; 
             private String intranetAddress; 
             private String intranetAddressMasterZoneId; 
             private String intranetAddressSlaveZoneId; 
             private String intranetAddressStatus; 
             private Integer intranetPort; 
+            private Integer intranetRpcPort; 
+            private Long maxConnectionLimit; 
             private Long maxConnectionNum; 
             private Long parallelQueryDegree; 
+            private String proxyClusterId; 
             private String tenantEndpointId; 
             private Boolean transactionSplit; 
             private String vSwitchId; 
@@ -791,6 +875,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder addressType(String addressType) {
                 this.addressType = addressType;
+                return this;
+            }
+
+            /**
+             * ConnectionLogicalZones.
+             */
+            public Builder connectionLogicalZones(java.util.List < String > connectionLogicalZones) {
+                this.connectionLogicalZones = connectionLogicalZones;
                 return this;
             }
 
@@ -835,10 +927,34 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * InternetMaxConnectionLimit.
+             */
+            public Builder internetMaxConnectionLimit(Long internetMaxConnectionLimit) {
+                this.internetMaxConnectionLimit = internetMaxConnectionLimit;
+                return this;
+            }
+
+            /**
+             * InternetMaxConnectionNum.
+             */
+            public Builder internetMaxConnectionNum(Long internetMaxConnectionNum) {
+                this.internetMaxConnectionNum = internetMaxConnectionNum;
+                return this;
+            }
+
+            /**
              * 实例类型
              */
             public Builder internetPort(Integer internetPort) {
                 this.internetPort = internetPort;
+                return this;
+            }
+
+            /**
+             * InternetRpcPort.
+             */
+            public Builder internetRpcPort(Integer internetRpcPort) {
+                this.internetRpcPort = internetRpcPort;
                 return this;
             }
 
@@ -887,6 +1003,22 @@ public class DescribeTenantResponseBody extends TeaModel {
             }
 
             /**
+             * IntranetRpcPort.
+             */
+            public Builder intranetRpcPort(Integer intranetRpcPort) {
+                this.intranetRpcPort = intranetRpcPort;
+                return this;
+            }
+
+            /**
+             * MaxConnectionLimit.
+             */
+            public Builder maxConnectionLimit(Long maxConnectionLimit) {
+                this.maxConnectionLimit = maxConnectionLimit;
+                return this;
+            }
+
+            /**
              * MaxConnectionNum.
              */
             public Builder maxConnectionNum(Long maxConnectionNum) {
@@ -899,6 +1031,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder parallelQueryDegree(Long parallelQueryDegree) {
                 this.parallelQueryDegree = parallelQueryDegree;
+                return this;
+            }
+
+            /**
+             * ProxyClusterId.
+             */
+            public Builder proxyClusterId(String proxyClusterId) {
+                this.proxyClusterId = proxyClusterId;
                 return this;
             }
 
@@ -1766,6 +1906,9 @@ public class DescribeTenantResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadOnlyResource")
         private ReadOnlyResource readOnlyResource;
 
+        @com.aliyun.core.annotation.NameInMap("RecycleBinStatus")
+        private String recycleBinStatus;
+
         @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
@@ -1824,6 +1967,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             this.primaryZone = builder.primaryZone;
             this.primaryZoneDeployType = builder.primaryZoneDeployType;
             this.readOnlyResource = builder.readOnlyResource;
+            this.recycleBinStatus = builder.recycleBinStatus;
             this.series = builder.series;
             this.status = builder.status;
             this.tenantConnections = builder.tenantConnections;
@@ -2014,6 +2158,13 @@ public class DescribeTenantResponseBody extends TeaModel {
         }
 
         /**
+         * @return recycleBinStatus
+         */
+        public String getRecycleBinStatus() {
+            return this.recycleBinStatus;
+        }
+
+        /**
          * @return series
          */
         public String getSeries() {
@@ -2115,6 +2266,7 @@ public class DescribeTenantResponseBody extends TeaModel {
             private String primaryZone; 
             private String primaryZoneDeployType; 
             private ReadOnlyResource readOnlyResource; 
+            private String recycleBinStatus; 
             private String series; 
             private String status; 
             private java.util.List < TenantConnections> tenantConnections; 
@@ -2379,6 +2531,14 @@ public class DescribeTenantResponseBody extends TeaModel {
              */
             public Builder readOnlyResource(ReadOnlyResource readOnlyResource) {
                 this.readOnlyResource = readOnlyResource;
+                return this;
+            }
+
+            /**
+             * RecycleBinStatus.
+             */
+            public Builder recycleBinStatus(String recycleBinStatus) {
+                this.recycleBinStatus = recycleBinStatus;
                 return this;
             }
 

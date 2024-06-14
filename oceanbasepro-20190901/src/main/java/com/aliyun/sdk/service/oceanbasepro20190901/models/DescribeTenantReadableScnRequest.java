@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeInstanceRequest} extends {@link RequestModel}
+ * {@link DescribeTenantReadableScnRequest} extends {@link RequestModel}
  *
- * <p>DescribeInstanceRequest</p>
+ * <p>DescribeTenantReadableScnRequest</p>
  */
-public class DescribeInstanceRequest extends Request {
+public class DescribeTenantReadableScnRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -21,26 +21,22 @@ public class DescribeInstanceRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("MaxConnectionLimit")
-    private String maxConnectionLimit;
+    @com.aliyun.core.annotation.NameInMap("TenantId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String tenantId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private Integer pageNumber;
-
-    private DescribeInstanceRequest(Builder builder) {
+    private DescribeTenantReadableScnRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
-        this.maxConnectionLimit = builder.maxConnectionLimit;
-        this.pageNumber = builder.pageNumber;
+        this.tenantId = builder.tenantId;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeInstanceRequest create() {
+    public static DescribeTenantReadableScnRequest create() {
         return builder().build();
     }
 
@@ -64,35 +60,26 @@ public class DescribeInstanceRequest extends Request {
     }
 
     /**
-     * @return maxConnectionLimit
+     * @return tenantId
      */
-    public String getMaxConnectionLimit() {
-        return this.maxConnectionLimit;
+    public String getTenantId() {
+        return this.tenantId;
     }
 
-    /**
-     * @return pageNumber
-     */
-    public Integer getPageNumber() {
-        return this.pageNumber;
-    }
-
-    public static final class Builder extends Request.Builder<DescribeInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeTenantReadableScnRequest, Builder> {
         private String regionId; 
         private String instanceId; 
-        private String maxConnectionLimit; 
-        private Integer pageNumber; 
+        private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeInstanceRequest request) {
+        private Builder(DescribeTenantReadableScnRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
-            this.maxConnectionLimit = request.maxConnectionLimit;
-            this.pageNumber = request.pageNumber;
+            this.tenantId = request.tenantId;
         } 
 
         /**
@@ -105,7 +92,7 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * The size of the data disk, in GB.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -114,26 +101,17 @@ public class DescribeInstanceRequest extends Request {
         }
 
         /**
-         * MaxConnectionLimit.
+         * TenantId.
          */
-        public Builder maxConnectionLimit(String maxConnectionLimit) {
-            this.putBodyParameter("MaxConnectionLimit", maxConnectionLimit);
-            this.maxConnectionLimit = maxConnectionLimit;
-            return this;
-        }
-
-        /**
-         * The information about the storage resources of the cluster.
-         */
-        public Builder pageNumber(Integer pageNumber) {
-            this.putBodyParameter("PageNumber", pageNumber);
-            this.pageNumber = pageNumber;
+        public Builder tenantId(String tenantId) {
+            this.putBodyParameter("TenantId", tenantId);
+            this.tenantId = tenantId;
             return this;
         }
 
         @Override
-        public DescribeInstanceRequest build() {
-            return new DescribeInstanceRequest(this);
+        public DescribeTenantReadableScnRequest build() {
+            return new DescribeTenantReadableScnRequest(this);
         } 
 
     } 

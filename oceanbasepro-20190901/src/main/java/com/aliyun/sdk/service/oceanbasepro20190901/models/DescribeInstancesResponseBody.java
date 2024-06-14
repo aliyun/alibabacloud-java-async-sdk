@@ -855,6 +855,9 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
+        @com.aliyun.core.annotation.NameInMap("SpecType")
+        private String specType;
+
         @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
@@ -894,6 +897,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             this.resource = builder.resource;
             this.resourceGroupId = builder.resourceGroupId;
             this.series = builder.series;
+            this.specType = builder.specType;
             this.state = builder.state;
             this.usedDiskSize = builder.usedDiskSize;
             this.version = builder.version;
@@ -1091,6 +1095,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
 
         /**
+         * @return specType
+         */
+        public String getSpecType() {
+            return this.specType;
+        }
+
+        /**
          * @return state
          */
         public String getState() {
@@ -1145,6 +1156,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private Resource resource; 
             private String resourceGroupId; 
             private String series; 
+            private String specType; 
             private String state; 
             private Long usedDiskSize; 
             private String version; 
@@ -1384,6 +1396,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
              */
             public Builder series(String series) {
                 this.series = series;
+                return this;
+            }
+
+            /**
+             * SpecType.
+             */
+            public Builder specType(String specType) {
+                this.specType = specType;
                 return this;
             }
 

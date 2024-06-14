@@ -6,37 +6,37 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyInstanceTagsRequest} extends {@link RequestModel}
+ * {@link ModifyInstanceSSLRequest} extends {@link RequestModel}
  *
- * <p>ModifyInstanceTagsRequest</p>
+ * <p>ModifyInstanceSSLRequest</p>
  */
-public class ModifyInstanceTagsRequest extends Request {
+public class ModifyInstanceSSLRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnableSSL")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String enableSSL;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Tags")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String tags;
-
-    private ModifyInstanceTagsRequest(Builder builder) {
+    private ModifyInstanceSSLRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.enableSSL = builder.enableSSL;
         this.instanceId = builder.instanceId;
-        this.tags = builder.tags;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ModifyInstanceTagsRequest create() {
+    public static ModifyInstanceSSLRequest create() {
         return builder().build();
     }
 
@@ -53,33 +53,33 @@ public class ModifyInstanceTagsRequest extends Request {
     }
 
     /**
+     * @return enableSSL
+     */
+    public String getEnableSSL() {
+        return this.enableSSL;
+    }
+
+    /**
      * @return instanceId
      */
     public String getInstanceId() {
         return this.instanceId;
     }
 
-    /**
-     * @return tags
-     */
-    public String getTags() {
-        return this.tags;
-    }
-
-    public static final class Builder extends Request.Builder<ModifyInstanceTagsRequest, Builder> {
+    public static final class Builder extends Request.Builder<ModifyInstanceSSLRequest, Builder> {
         private String regionId; 
+        private String enableSSL; 
         private String instanceId; 
-        private String tags; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ModifyInstanceTagsRequest request) {
+        private Builder(ModifyInstanceSSLRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.enableSSL = request.enableSSL;
             this.instanceId = request.instanceId;
-            this.tags = request.tags;
         } 
 
         /**
@@ -92,6 +92,22 @@ public class ModifyInstanceTagsRequest extends Request {
         }
 
         /**
+         * The operation to modify the SSL status. Valid values:
+         * <p>
+         * 
+         * - open: Enable SSL encryption.
+         * 
+         * - update: Update the CA certificate.
+         * 
+         * - close: Disable SSL encryption.
+         */
+        public Builder enableSSL(String enableSSL) {
+            this.putBodyParameter("EnableSSL", enableSSL);
+            this.enableSSL = enableSSL;
+            return this;
+        }
+
+        /**
          * The ID of the OceanBase cluster.
          */
         public Builder instanceId(String instanceId) {
@@ -100,18 +116,9 @@ public class ModifyInstanceTagsRequest extends Request {
             return this;
         }
 
-        /**
-         * The tags.
-         */
-        public Builder tags(String tags) {
-            this.putBodyParameter("Tags", tags);
-            this.tags = tags;
-            return this;
-        }
-
         @Override
-        public ModifyInstanceTagsRequest build() {
-            return new ModifyInstanceTagsRequest(this);
+        public ModifyInstanceSSLRequest build() {
+            return new ModifyInstanceSSLRequest(this);
         } 
 
     } 

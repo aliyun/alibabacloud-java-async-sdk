@@ -121,7 +121,7 @@ public class DescribeTenantTagsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * The resource ID.
+             * The ID of the resource.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;

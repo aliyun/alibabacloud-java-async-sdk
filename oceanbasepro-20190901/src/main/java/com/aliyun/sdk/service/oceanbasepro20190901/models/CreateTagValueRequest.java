@@ -106,7 +106,7 @@ public class CreateTagValueRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The identifier of the client.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("ClientToken", clientToken);
@@ -115,7 +115,7 @@ public class CreateTagValueRequest extends Request {
         }
 
         /**
-         * Key.
+         * The name of the tag group.
          */
         public Builder key(String key) {
             this.putBodyParameter("Key", key);
@@ -124,7 +124,7 @@ public class CreateTagValueRequest extends Request {
         }
 
         /**
-         * Value.
+         * The name of the tag.
          */
         public Builder value(String value) {
             this.putBodyParameter("Value", value);

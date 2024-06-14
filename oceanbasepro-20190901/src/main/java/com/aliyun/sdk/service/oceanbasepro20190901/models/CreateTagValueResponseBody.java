@@ -49,7 +49,7 @@ public class CreateTagValueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Message.
+         * The tag creation result.
          */
         public Builder message(String message) {
             this.message = message;
@@ -57,7 +57,7 @@ public class CreateTagValueResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
