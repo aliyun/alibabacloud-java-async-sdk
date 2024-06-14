@@ -139,6 +139,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<PostISConvRewriterResponse> postISConvRewriter(PostISConvRewriterRequest request);
 
+    CompletableFuture<PostISRerankResponse> postISRerank(PostISRerankRequest request);
+
     CompletableFuture<PostISRetrieveRouterResponse> postISRetrieveRouter(PostISRetrieveRouterRequest request);
 
     CompletableFuture<PostMSConvSearchTokenGeneratedResponse> postMSConvSearchTokenGenerated(PostMSConvSearchTokenGeneratedRequest request);
