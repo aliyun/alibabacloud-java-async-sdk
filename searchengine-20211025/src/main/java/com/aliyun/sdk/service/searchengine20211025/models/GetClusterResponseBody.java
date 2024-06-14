@@ -233,8 +233,14 @@ public class GetClusterResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("config")
+        private java.util.Map < String, java.util.Map<String, ?>> config;
+
         @com.aliyun.core.annotation.NameInMap("configUpdateTime")
         private String configUpdateTime;
+
+        @com.aliyun.core.annotation.NameInMap("createTime")
+        private String createTime;
 
         @com.aliyun.core.annotation.NameInMap("currentAdvanceConfigVersion")
         private String currentAdvanceConfigVersion;
@@ -264,7 +270,9 @@ public class GetClusterResponseBody extends TeaModel {
         private String status;
 
         private Result(Builder builder) {
+            this.config = builder.config;
             this.configUpdateTime = builder.configUpdateTime;
+            this.createTime = builder.createTime;
             this.currentAdvanceConfigVersion = builder.currentAdvanceConfigVersion;
             this.currentOnlineConfigVersion = builder.currentOnlineConfigVersion;
             this.dataNode = builder.dataNode;
@@ -285,10 +293,24 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
+         * @return config
+         */
+        public java.util.Map < String, java.util.Map<String, ?>> getConfig() {
+            return this.config;
+        }
+
+        /**
          * @return configUpdateTime
          */
         public String getConfigUpdateTime() {
             return this.configUpdateTime;
+        }
+
+        /**
+         * @return createTime
+         */
+        public String getCreateTime() {
+            return this.createTime;
         }
 
         /**
@@ -355,7 +377,9 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, java.util.Map<String, ?>> config; 
             private String configUpdateTime; 
+            private String createTime; 
             private String currentAdvanceConfigVersion; 
             private String currentOnlineConfigVersion; 
             private DataNode dataNode; 
@@ -367,10 +391,26 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
 
             /**
+             * config.
+             */
+            public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
              * The time when the cluster was updated.
              */
             public Builder configUpdateTime(String configUpdateTime) {
                 this.configUpdateTime = configUpdateTime;
+                return this;
+            }
+
+            /**
+             * createTime.
+             */
+            public Builder createTime(String createTime) {
+                this.createTime = createTime;
                 return this;
             }
 

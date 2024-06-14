@@ -163,7 +163,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The data partition. This parameter is required if the dataSourceType parameter is set to odps.
+         * This parameter is required when index building for full data in a MaxCompute data source is triggered.
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);

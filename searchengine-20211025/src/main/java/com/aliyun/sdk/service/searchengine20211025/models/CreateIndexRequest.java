@@ -17,6 +17,10 @@ public class CreateIndexRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("buildParallelNum")
+    private Integer buildParallelNum;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("content")
     private String content;
 
@@ -37,6 +41,10 @@ public class CreateIndexRequest extends Request {
     private java.util.Map < String, ? > extend;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("mergeParallelNum")
+    private Integer mergeParallelNum;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("name")
     private String name;
 
@@ -51,11 +59,13 @@ public class CreateIndexRequest extends Request {
     private CreateIndexRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.buildParallelNum = builder.buildParallelNum;
         this.content = builder.content;
         this.dataSource = builder.dataSource;
         this.dataSourceInfo = builder.dataSourceInfo;
         this.domain = builder.domain;
         this.extend = builder.extend;
+        this.mergeParallelNum = builder.mergeParallelNum;
         this.name = builder.name;
         this.partition = builder.partition;
         this.dryRun = builder.dryRun;
@@ -79,6 +89,13 @@ public class CreateIndexRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return buildParallelNum
+     */
+    public Integer getBuildParallelNum() {
+        return this.buildParallelNum;
     }
 
     /**
@@ -117,6 +134,13 @@ public class CreateIndexRequest extends Request {
     }
 
     /**
+     * @return mergeParallelNum
+     */
+    public Integer getMergeParallelNum() {
+        return this.mergeParallelNum;
+    }
+
+    /**
      * @return name
      */
     public String getName() {
@@ -139,11 +163,13 @@ public class CreateIndexRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateIndexRequest, Builder> {
         private String instanceId; 
+        private Integer buildParallelNum; 
         private String content; 
         private String dataSource; 
         private DataSourceInfo dataSourceInfo; 
         private String domain; 
         private java.util.Map < String, ? > extend; 
+        private Integer mergeParallelNum; 
         private String name; 
         private Integer partition; 
         private Boolean dryRun; 
@@ -155,11 +181,13 @@ public class CreateIndexRequest extends Request {
         private Builder(CreateIndexRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.buildParallelNum = request.buildParallelNum;
             this.content = request.content;
             this.dataSource = request.dataSource;
             this.dataSourceInfo = request.dataSourceInfo;
             this.domain = request.domain;
             this.extend = request.extend;
+            this.mergeParallelNum = request.mergeParallelNum;
             this.name = request.name;
             this.partition = request.partition;
             this.dryRun = request.dryRun;
@@ -171,6 +199,15 @@ public class CreateIndexRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * buildParallelNum.
+         */
+        public Builder buildParallelNum(Integer buildParallelNum) {
+            this.putBodyParameter("buildParallelNum", buildParallelNum);
+            this.buildParallelNum = buildParallelNum;
             return this;
         }
 
@@ -216,6 +253,15 @@ public class CreateIndexRequest extends Request {
         public Builder extend(java.util.Map < String, ? > extend) {
             this.putBodyParameter("extend", extend);
             this.extend = extend;
+            return this;
+        }
+
+        /**
+         * mergeParallelNum.
+         */
+        public Builder mergeParallelNum(Integer mergeParallelNum) {
+            this.putBodyParameter("mergeParallelNum", mergeParallelNum);
+            this.mergeParallelNum = mergeParallelNum;
             return this;
         }
 
@@ -551,6 +597,9 @@ public class CreateIndexRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("processParallelNum")
+        private Integer processParallelNum;
+
         @com.aliyun.core.annotation.NameInMap("processPartitionCount")
         private Integer processPartitionCount;
 
@@ -566,6 +615,7 @@ public class CreateIndexRequest extends Request {
             this.dataTimeSec = builder.dataTimeSec;
             this.domain = builder.domain;
             this.name = builder.name;
+            this.processParallelNum = builder.processParallelNum;
             this.processPartitionCount = builder.processPartitionCount;
             this.saroConfig = builder.saroConfig;
             this.type = builder.type;
@@ -615,6 +665,13 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
+         * @return processParallelNum
+         */
+        public Integer getProcessParallelNum() {
+            return this.processParallelNum;
+        }
+
+        /**
          * @return processPartitionCount
          */
         public Integer getProcessPartitionCount() {
@@ -641,6 +698,7 @@ public class CreateIndexRequest extends Request {
             private Integer dataTimeSec; 
             private String domain; 
             private String name; 
+            private Integer processParallelNum; 
             private Integer processPartitionCount; 
             private SaroConfig saroConfig; 
             private String type; 
@@ -682,6 +740,14 @@ public class CreateIndexRequest extends Request {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * processParallelNum.
+             */
+            public Builder processParallelNum(Integer processParallelNum) {
+                this.processParallelNum = processParallelNum;
                 return this;
             }
 

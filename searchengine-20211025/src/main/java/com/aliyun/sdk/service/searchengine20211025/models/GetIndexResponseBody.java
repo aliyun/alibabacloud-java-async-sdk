@@ -365,6 +365,9 @@ public class GetIndexResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
+        @com.aliyun.core.annotation.NameInMap("processParallelNum")
+        private Integer processParallelNum;
+
         @com.aliyun.core.annotation.NameInMap("processPartitionCount")
         private Integer processPartitionCount;
 
@@ -379,6 +382,7 @@ public class GetIndexResponseBody extends TeaModel {
             this.config = builder.config;
             this.domain = builder.domain;
             this.name = builder.name;
+            this.processParallelNum = builder.processParallelNum;
             this.processPartitionCount = builder.processPartitionCount;
             this.saroConfig = builder.saroConfig;
             this.type = builder.type;
@@ -421,6 +425,13 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
+         * @return processParallelNum
+         */
+        public Integer getProcessParallelNum() {
+            return this.processParallelNum;
+        }
+
+        /**
          * @return processPartitionCount
          */
         public Integer getProcessPartitionCount() {
@@ -446,6 +457,7 @@ public class GetIndexResponseBody extends TeaModel {
             private Config config; 
             private String domain; 
             private String name; 
+            private Integer processParallelNum; 
             private Integer processPartitionCount; 
             private SaroConfig saroConfig; 
             private String type; 
@@ -479,6 +491,14 @@ public class GetIndexResponseBody extends TeaModel {
              */
             public Builder name(String name) {
                 this.name = name;
+                return this;
+            }
+
+            /**
+             * processParallelNum.
+             */
+            public Builder processParallelNum(Integer processParallelNum) {
+                this.processParallelNum = processParallelNum;
                 return this;
             }
 
@@ -756,6 +776,15 @@ public class GetIndexResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("cluster")
+        private java.util.Map < String, ResultClusterValue > cluster;
+
+        @com.aliyun.core.annotation.NameInMap("config")
+        private java.util.Map < String, java.util.Map<String, ?>> config;
+
+        @com.aliyun.core.annotation.NameInMap("configWhenBuild")
+        private java.util.Map < String, java.util.Map<String, ?>> configWhenBuild;
+
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
@@ -796,6 +825,9 @@ public class GetIndexResponseBody extends TeaModel {
         private java.util.List < Versions> versions;
 
         private Result(Builder builder) {
+            this.cluster = builder.cluster;
+            this.config = builder.config;
+            this.configWhenBuild = builder.configWhenBuild;
             this.content = builder.content;
             this.dataSource = builder.dataSource;
             this.dataSourceInfo = builder.dataSourceInfo;
@@ -817,6 +849,27 @@ public class GetIndexResponseBody extends TeaModel {
 
         public static Result create() {
             return builder().build();
+        }
+
+        /**
+         * @return cluster
+         */
+        public java.util.Map < String, ResultClusterValue > getCluster() {
+            return this.cluster;
+        }
+
+        /**
+         * @return config
+         */
+        public java.util.Map < String, java.util.Map<String, ?>> getConfig() {
+            return this.config;
+        }
+
+        /**
+         * @return configWhenBuild
+         */
+        public java.util.Map < String, java.util.Map<String, ?>> getConfigWhenBuild() {
+            return this.configWhenBuild;
         }
 
         /**
@@ -911,6 +964,9 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.Map < String, ResultClusterValue > cluster; 
+            private java.util.Map < String, java.util.Map<String, ?>> config; 
+            private java.util.Map < String, java.util.Map<String, ?>> configWhenBuild; 
             private String content; 
             private String dataSource; 
             private DataSourceInfo dataSourceInfo; 
@@ -924,6 +980,30 @@ public class GetIndexResponseBody extends TeaModel {
             private String name; 
             private Integer partition; 
             private java.util.List < Versions> versions; 
+
+            /**
+             * cluster.
+             */
+            public Builder cluster(java.util.Map < String, ResultClusterValue > cluster) {
+                this.cluster = cluster;
+                return this;
+            }
+
+            /**
+             * The configuration of MaxCompute data sources.
+             */
+            public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
+                this.config = config;
+                return this;
+            }
+
+            /**
+             * configWhenBuild.
+             */
+            public Builder configWhenBuild(java.util.Map < String, java.util.Map<String, ?>> configWhenBuild) {
+                this.configWhenBuild = configWhenBuild;
+                return this;
+            }
 
             /**
              * The content of the index.

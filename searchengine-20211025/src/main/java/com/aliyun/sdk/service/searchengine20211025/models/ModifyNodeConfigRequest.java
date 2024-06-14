@@ -205,7 +205,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * active.
+         * Specifies whether to enable the index.
          */
         public Builder active(Boolean active) {
             this.putBodyParameter("active", active);
@@ -214,7 +214,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * dataDuplicateNumber.
+         * The number of data replicas.
          */
         public Builder dataDuplicateNumber(Integer dataDuplicateNumber) {
             this.putBodyParameter("dataDuplicateNumber", dataDuplicateNumber);
@@ -223,7 +223,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * dataFragmentNumber.
+         * The number of data shards.
          */
         public Builder dataFragmentNumber(Integer dataFragmentNumber) {
             this.putBodyParameter("dataFragmentNumber", dataFragmentNumber);
@@ -232,7 +232,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * flowRatio.
+         * The traffic percentage.
          */
         public Builder flowRatio(Integer flowRatio) {
             this.putBodyParameter("flowRatio", flowRatio);
@@ -241,7 +241,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * minServicePercent.
+         * The minimum service ratio.
          */
         public Builder minServicePercent(Integer minServicePercent) {
             this.putBodyParameter("minServicePercent", minServicePercent);
@@ -250,7 +250,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * published.
+         * Specifies whether to mount the cluster.
          */
         public Builder published(Boolean published) {
             this.putBodyParameter("published", published);

@@ -515,6 +515,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RemoveClusterResponse> removeCluster(RemoveClusterRequest request);
 
+    CompletableFuture<StartIndexResponse> startIndex(StartIndexRequest request);
+
+    CompletableFuture<StopIndexResponse> stopIndex(StopIndexRequest request);
+
     /**
       * ### Method
       * ```java

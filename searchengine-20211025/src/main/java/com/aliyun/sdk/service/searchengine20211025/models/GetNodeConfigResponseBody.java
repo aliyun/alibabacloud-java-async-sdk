@@ -57,7 +57,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The result set.
+         * The configurations of the node.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -181,7 +181,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * flowRatio.
+             * The traffic percentage.
              */
             public Builder flowRatio(Integer flowRatio) {
                 this.flowRatio = flowRatio;

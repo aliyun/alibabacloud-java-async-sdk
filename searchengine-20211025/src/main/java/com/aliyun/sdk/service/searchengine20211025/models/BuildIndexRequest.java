@@ -188,7 +188,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The timestamp in seconds. It is of the INT type. This parameter is required for the API-pushed data source.
+         * The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -197,7 +197,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data center where the data source is deployed.
+         * The data center in which the data source resides.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -215,7 +215,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * This parameter is required for the odps data source.
+         * The data partition. This parameter is required if dataSourceType is set to odps.
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

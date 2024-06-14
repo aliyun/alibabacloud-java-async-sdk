@@ -25,6 +25,10 @@ public class ListAdvanceConfigsRequest extends Request {
     private String indexName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("newMode")
+    private Boolean newMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
@@ -33,6 +37,7 @@ public class ListAdvanceConfigsRequest extends Request {
         this.instanceId = builder.instanceId;
         this.dataSourceName = builder.dataSourceName;
         this.indexName = builder.indexName;
+        this.newMode = builder.newMode;
         this.type = builder.type;
     }
 
@@ -71,6 +76,13 @@ public class ListAdvanceConfigsRequest extends Request {
     }
 
     /**
+     * @return newMode
+     */
+    public Boolean getNewMode() {
+        return this.newMode;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -81,6 +93,7 @@ public class ListAdvanceConfigsRequest extends Request {
         private String instanceId; 
         private String dataSourceName; 
         private String indexName; 
+        private Boolean newMode; 
         private String type; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class ListAdvanceConfigsRequest extends Request {
             this.instanceId = request.instanceId;
             this.dataSourceName = request.dataSourceName;
             this.indexName = request.indexName;
+            this.newMode = request.newMode;
             this.type = request.type;
         } 
 
@@ -119,6 +133,15 @@ public class ListAdvanceConfigsRequest extends Request {
         public Builder indexName(String indexName) {
             this.putQueryParameter("indexName", indexName);
             this.indexName = indexName;
+            return this;
+        }
+
+        /**
+         * newMode.
+         */
+        public Builder newMode(Boolean newMode) {
+            this.putQueryParameter("newMode", newMode);
+            this.newMode = newMode;
             return this;
         }
 

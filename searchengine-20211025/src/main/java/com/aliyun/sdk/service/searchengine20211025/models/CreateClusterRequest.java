@@ -188,8 +188,12 @@ public class CreateClusterRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("number")
         private Integer number;
 
+        @com.aliyun.core.annotation.NameInMap("partition")
+        private String partition;
+
         private DataNode(Builder builder) {
             this.number = builder.number;
+            this.partition = builder.partition;
         }
 
         public static Builder builder() {
@@ -207,14 +211,30 @@ public class CreateClusterRequest extends Request {
             return this.number;
         }
 
+        /**
+         * @return partition
+         */
+        public String getPartition() {
+            return this.partition;
+        }
+
         public static final class Builder {
             private Integer number; 
+            private String partition; 
 
             /**
              * The number of data nodes
              */
             public Builder number(Integer number) {
                 this.number = number;
+                return this;
+            }
+
+            /**
+             * partition.
+             */
+            public Builder partition(String partition) {
+                this.partition = partition;
                 return this;
             }
 

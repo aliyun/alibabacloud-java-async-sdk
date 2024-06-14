@@ -172,11 +172,17 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("advanceConfigType")
+        private String advanceConfigType;
+
         @com.aliyun.core.annotation.NameInMap("content")
         private String content;
 
         @com.aliyun.core.annotation.NameInMap("contentType")
         private String contentType;
+
+        @com.aliyun.core.annotation.NameInMap("creator")
+        private String creator;
 
         @com.aliyun.core.annotation.NameInMap("desc")
         private String desc;
@@ -194,8 +200,10 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         private Long updateTime;
 
         private Result(Builder builder) {
+            this.advanceConfigType = builder.advanceConfigType;
             this.content = builder.content;
             this.contentType = builder.contentType;
+            this.creator = builder.creator;
             this.desc = builder.desc;
             this.files = builder.files;
             this.name = builder.name;
@@ -212,6 +220,13 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         /**
+         * @return advanceConfigType
+         */
+        public String getAdvanceConfigType() {
+            return this.advanceConfigType;
+        }
+
+        /**
          * @return content
          */
         public String getContent() {
@@ -223,6 +238,13 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
          */
         public String getContentType() {
             return this.contentType;
+        }
+
+        /**
+         * @return creator
+         */
+        public String getCreator() {
+            return this.creator;
         }
 
         /**
@@ -261,13 +283,23 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String advanceConfigType; 
             private String content; 
             private String contentType; 
+            private String creator; 
             private String desc; 
             private java.util.List < Files> files; 
             private String name; 
             private String status; 
             private Long updateTime; 
+
+            /**
+             * advanceConfigType.
+             */
+            public Builder advanceConfigType(String advanceConfigType) {
+                this.advanceConfigType = advanceConfigType;
+                return this;
+            }
 
             /**
              * content.
@@ -282,6 +314,14 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
+                return this;
+            }
+
+            /**
+             * creator.
+             */
+            public Builder creator(String creator) {
+                this.creator = creator;
                 return this;
             }
 
