@@ -508,15 +508,23 @@ public class CreateTaskRequest extends Request {
 
     }
     public static class ExtraParams extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DomainEducationEnabled")
+        private Boolean domainEducationEnabled;
+
         @com.aliyun.core.annotation.NameInMap("MaxKeywords")
         private Integer maxKeywords;
 
         @com.aliyun.core.annotation.NameInMap("NfixEnabled")
         private Boolean nfixEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("OcrAuxiliaryEnabled")
+        private Boolean ocrAuxiliaryEnabled;
+
         private ExtraParams(Builder builder) {
+            this.domainEducationEnabled = builder.domainEducationEnabled;
             this.maxKeywords = builder.maxKeywords;
             this.nfixEnabled = builder.nfixEnabled;
+            this.ocrAuxiliaryEnabled = builder.ocrAuxiliaryEnabled;
         }
 
         public static Builder builder() {
@@ -525,6 +533,13 @@ public class CreateTaskRequest extends Request {
 
         public static ExtraParams create() {
             return builder().build();
+        }
+
+        /**
+         * @return domainEducationEnabled
+         */
+        public Boolean getDomainEducationEnabled() {
+            return this.domainEducationEnabled;
         }
 
         /**
@@ -541,9 +556,26 @@ public class CreateTaskRequest extends Request {
             return this.nfixEnabled;
         }
 
+        /**
+         * @return ocrAuxiliaryEnabled
+         */
+        public Boolean getOcrAuxiliaryEnabled() {
+            return this.ocrAuxiliaryEnabled;
+        }
+
         public static final class Builder {
+            private Boolean domainEducationEnabled; 
             private Integer maxKeywords; 
             private Boolean nfixEnabled; 
+            private Boolean ocrAuxiliaryEnabled; 
+
+            /**
+             * DomainEducationEnabled.
+             */
+            public Builder domainEducationEnabled(Boolean domainEducationEnabled) {
+                this.domainEducationEnabled = domainEducationEnabled;
+                return this;
+            }
 
             /**
              * MaxKeywords.
@@ -558,6 +590,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder nfixEnabled(Boolean nfixEnabled) {
                 this.nfixEnabled = nfixEnabled;
+                return this;
+            }
+
+            /**
+             * OcrAuxiliaryEnabled.
+             */
+            public Builder ocrAuxiliaryEnabled(Boolean ocrAuxiliaryEnabled) {
+                this.ocrAuxiliaryEnabled = ocrAuxiliaryEnabled;
                 return this;
             }
 
