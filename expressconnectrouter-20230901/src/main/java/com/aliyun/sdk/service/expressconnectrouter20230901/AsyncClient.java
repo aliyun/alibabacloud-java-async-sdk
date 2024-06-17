@@ -61,14 +61,22 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListExpressConnectRouterSupportedRegionResponse> listExpressConnectRouterSupportedRegion(ListExpressConnectRouterSupportedRegionRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ModifyExpressConnectRouterResponse> modifyExpressConnectRouter(ModifyExpressConnectRouterRequest request);
 
     CompletableFuture<ModifyExpressConnectRouterAssociationAllowedPrefixResponse> modifyExpressConnectRouterAssociationAllowedPrefix(ModifyExpressConnectRouterAssociationAllowedPrefixRequest request);
 
     CompletableFuture<ModifyExpressConnectRouterInterRegionTransitModeResponse> modifyExpressConnectRouterInterRegionTransitMode(ModifyExpressConnectRouterInterRegionTransitModeRequest request);
 
+    CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
+
     CompletableFuture<RevokeInstanceFromExpressConnectRouterResponse> revokeInstanceFromExpressConnectRouter(RevokeInstanceFromExpressConnectRouterRequest request);
 
     CompletableFuture<SynchronizeExpressConnectRouterInterRegionBandwidthResponse> synchronizeExpressConnectRouterInterRegionBandwidth(SynchronizeExpressConnectRouterInterRegionBandwidthRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
 }
