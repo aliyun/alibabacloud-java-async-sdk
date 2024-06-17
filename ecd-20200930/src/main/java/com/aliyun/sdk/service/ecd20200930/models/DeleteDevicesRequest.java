@@ -98,11 +98,13 @@ public class DeleteDevicesRequest extends Request {
         } 
 
         /**
-         * The type of the device.
+         * The type of the client.
          * <p>
          * 
-         * *   1: the hardware client device
-         * *   2: the software client device
+         * Valid values:
+         * 
+         * *   1: hardware client.
+         * *   2: software client.
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -111,7 +113,7 @@ public class DeleteDevicesRequest extends Request {
         }
 
         /**
-         * The list of universally unique identifiers (UUIDs) of devices.
+         * The IDs of the devices. You can specify up to 200 IDs.
          */
         public Builder deviceIds(java.util.List < String > deviceIds) {
             this.putQueryParameter("DeviceIds", deviceIds);
@@ -120,11 +122,13 @@ public class DeleteDevicesRequest extends Request {
         }
 
         /**
-         * Specifies whether to forcefully delete the device.
+         * Specifies whether to forcefully delete the device if the device is bound to a user.
          * <p>
          * 
-         * *   1: forcefully deletes the device.
-         * *   0: does not forcefully delete the device. (You cannot delete a device to which a user is bound.)
+         * Valid values:
+         * 
+         * *   0: do not forcefully delete the device.
+         * *   1: forcefully delete the device.
          */
         public Builder force(Integer force) {
             this.putQueryParameter("Force", force);
@@ -133,7 +137,7 @@ public class DeleteDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

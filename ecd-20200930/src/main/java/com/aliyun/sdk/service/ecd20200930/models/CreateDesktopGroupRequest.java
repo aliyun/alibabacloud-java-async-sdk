@@ -162,6 +162,10 @@ public class CreateDesktopGroupRequest extends Request {
     private Long stopDuration;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VolumeEncryptionEnabled")
     private Boolean volumeEncryptionEnabled;
 
@@ -210,6 +214,7 @@ public class CreateDesktopGroupRequest extends Request {
         this.resetType = builder.resetType;
         this.scaleStrategyId = builder.scaleStrategyId;
         this.stopDuration = builder.stopDuration;
+        this.tag = builder.tag;
         this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
         this.volumeEncryptionKey = builder.volumeEncryptionKey;
         this.vpcId = builder.vpcId;
@@ -474,6 +479,13 @@ public class CreateDesktopGroupRequest extends Request {
     }
 
     /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    /**
      * @return volumeEncryptionEnabled
      */
     public Boolean getVolumeEncryptionEnabled() {
@@ -530,6 +542,7 @@ public class CreateDesktopGroupRequest extends Request {
         private Long resetType; 
         private String scaleStrategyId; 
         private Long stopDuration; 
+        private java.util.List < Tag> tag; 
         private Boolean volumeEncryptionEnabled; 
         private String volumeEncryptionKey; 
         private String vpcId; 
@@ -575,6 +588,7 @@ public class CreateDesktopGroupRequest extends Request {
             this.resetType = request.resetType;
             this.scaleStrategyId = request.scaleStrategyId;
             this.stopDuration = request.stopDuration;
+            this.tag = request.tag;
             this.volumeEncryptionEnabled = request.volumeEncryptionEnabled;
             this.volumeEncryptionKey = request.volumeEncryptionKey;
             this.vpcId = request.vpcId;
@@ -934,6 +948,15 @@ public class CreateDesktopGroupRequest extends Request {
         }
 
         /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
+        /**
          * Specifies whether to enable disk encryption.
          */
         public Builder volumeEncryptionEnabled(Boolean volumeEncryptionEnabled) {
@@ -967,4 +990,67 @@ public class CreateDesktopGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

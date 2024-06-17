@@ -17,7 +17,6 @@ public class ModifyDesktopSpecRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String desktopId;
 
     @com.aliyun.core.annotation.Query
@@ -33,6 +32,14 @@ public class ModifyDesktopSpecRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceSpecs")
+    private java.util.List < ResourceSpecs> resourceSpecs;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    private String resourceType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
@@ -55,6 +62,8 @@ public class ModifyDesktopSpecRequest extends Request {
         this.desktopType = builder.desktopType;
         this.promotionId = builder.promotionId;
         this.regionId = builder.regionId;
+        this.resourceSpecs = builder.resourceSpecs;
+        this.resourceType = builder.resourceType;
         this.rootDiskSizeGib = builder.rootDiskSizeGib;
         this.userDiskPerformanceLevel = builder.userDiskPerformanceLevel;
         this.userDiskSizeGib = builder.userDiskSizeGib;
@@ -109,6 +118,20 @@ public class ModifyDesktopSpecRequest extends Request {
     }
 
     /**
+     * @return resourceSpecs
+     */
+    public java.util.List < ResourceSpecs> getResourceSpecs() {
+        return this.resourceSpecs;
+    }
+
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
      * @return rootDiskSizeGib
      */
     public Integer getRootDiskSizeGib() {
@@ -135,6 +158,8 @@ public class ModifyDesktopSpecRequest extends Request {
         private String desktopType; 
         private String promotionId; 
         private String regionId; 
+        private java.util.List < ResourceSpecs> resourceSpecs; 
+        private String resourceType; 
         private Integer rootDiskSizeGib; 
         private String userDiskPerformanceLevel; 
         private Integer userDiskSizeGib; 
@@ -150,6 +175,8 @@ public class ModifyDesktopSpecRequest extends Request {
             this.desktopType = request.desktopType;
             this.promotionId = request.promotionId;
             this.regionId = request.regionId;
+            this.resourceSpecs = request.resourceSpecs;
+            this.resourceType = request.resourceType;
             this.rootDiskSizeGib = request.rootDiskSizeGib;
             this.userDiskPerformanceLevel = request.userDiskPerformanceLevel;
             this.userDiskSizeGib = request.userDiskSizeGib;
@@ -220,6 +247,24 @@ public class ModifyDesktopSpecRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceSpecs.
+         */
+        public Builder resourceSpecs(java.util.List < ResourceSpecs> resourceSpecs) {
+            this.putQueryParameter("ResourceSpecs", resourceSpecs);
+            this.resourceSpecs = resourceSpecs;
+            return this;
+        }
+
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
             return this;
         }
 
@@ -296,4 +341,89 @@ public class ModifyDesktopSpecRequest extends Request {
 
     } 
 
+    public static class ResourceSpecs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("DesktopId")
+        private String desktopId;
+
+        @com.aliyun.core.annotation.NameInMap("RootDiskSizeGib")
+        private Integer rootDiskSizeGib;
+
+        @com.aliyun.core.annotation.NameInMap("UserDiskSizeGib")
+        private Integer userDiskSizeGib;
+
+        private ResourceSpecs(Builder builder) {
+            this.desktopId = builder.desktopId;
+            this.rootDiskSizeGib = builder.rootDiskSizeGib;
+            this.userDiskSizeGib = builder.userDiskSizeGib;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceSpecs create() {
+            return builder().build();
+        }
+
+        /**
+         * @return desktopId
+         */
+        public String getDesktopId() {
+            return this.desktopId;
+        }
+
+        /**
+         * @return rootDiskSizeGib
+         */
+        public Integer getRootDiskSizeGib() {
+            return this.rootDiskSizeGib;
+        }
+
+        /**
+         * @return userDiskSizeGib
+         */
+        public Integer getUserDiskSizeGib() {
+            return this.userDiskSizeGib;
+        }
+
+        public static final class Builder {
+            private String desktopId; 
+            private Integer rootDiskSizeGib; 
+            private Integer userDiskSizeGib; 
+
+            /**
+             * The ID of a cloud computer.
+             */
+            public Builder desktopId(String desktopId) {
+                this.desktopId = desktopId;
+                return this;
+            }
+
+            /**
+             * The size of the new system disk. Unit: GiB. Valid values: 80 to 500 GiB. The value must be a multiple of 10.
+             */
+            public Builder rootDiskSizeGib(Integer rootDiskSizeGib) {
+                this.rootDiskSizeGib = rootDiskSizeGib;
+                return this;
+            }
+
+            /**
+             * The destination data disk size. Unit: GiB.
+             * <p>
+             * 
+             * *   The data disk size of a non-graphical cloud computer ranges from 20 to 1020 GiB and must be a multiple of 10.
+             * *   The data disk size of a graphical cloud computer ranges from 40 to 1020 GiB and must be a multiple of 10.
+             */
+            public Builder userDiskSizeGib(Integer userDiskSizeGib) {
+                this.userDiskSizeGib = userDiskSizeGib;
+                return this;
+            }
+
+            public ResourceSpecs build() {
+                return new ResourceSpecs(this);
+            } 
+
+        } 
+
+    }
 }

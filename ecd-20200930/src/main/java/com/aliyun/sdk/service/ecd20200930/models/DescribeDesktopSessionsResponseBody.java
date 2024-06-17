@@ -317,7 +317,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The OS that the client runs.
+             * The client OS.
              */
             public Builder clientOS(String clientOS) {
                 this.clientOS = clientOS;
@@ -333,7 +333,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop ID.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -341,7 +341,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud desktop name.
+             * The name of the cloud computer.
              */
             public Builder desktopName(String desktopName) {
                 this.desktopName = desktopName;
@@ -365,7 +365,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the latest session. Unit: seconds.
+             * The duration of the last connection to the cloud computer. Unit: seconds.
              */
             public Builder latestConnectionTime(Long latestConnectionTime) {
                 this.latestConnectionTime = latestConnectionTime;
@@ -373,7 +373,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace ID.
+             * The ID of the office network.
              */
             public Builder officeSiteId(String officeSiteId) {
                 this.officeSiteId = officeSiteId;
@@ -381,7 +381,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The workspace name.
+             * The name of the office network.
              */
             public Builder officeSiteName(String officeSiteName) {
                 this.officeSiteName = officeSiteName;
@@ -389,11 +389,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The OS. Valid values:
+             * The OS.
              * <p>
              * 
-             * *   Windows
+             * Valid values:
+             * 
              * *   Linux
+             * *   Windows
              */
             public Builder osType(String osType) {
                 this.osType = osType;
@@ -401,8 +403,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol type that is supported by the cloud desktop. Valid values:
+             * The protocol type.
              * <p>
+             * 
+             * Valid values:
              * 
              * *   HDX
              * *   ASP
@@ -437,8 +441,10 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The session status. Valid values:
+             * The state of the session.
              * <p>
+             * 
+             * Valid values:
              * 
              * *   Connected
              * *   Disconnected
@@ -449,7 +455,7 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
-             * The total session duration. Unit: seconds.
+             * The total connection duration. Unit: seconds.
              */
             public Builder totalConnectionTime(Long totalConnectionTime) {
                 this.totalConnectionTime = totalConnectionTime;

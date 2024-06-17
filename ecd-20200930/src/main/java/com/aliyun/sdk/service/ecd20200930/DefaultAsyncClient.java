@@ -72,7 +72,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can add only one device to a tenant.
+      * Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
       *
      */
     @Override
@@ -1235,7 +1235,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can query data within the last 30 days.
+      * You can only query data within the last 30 days.
       *
      */
     @Override

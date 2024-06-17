@@ -218,6 +218,67 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Tags extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tags(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tags create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tags build() {
+                return new Tags(this);
+            } 
+
+        } 
+
+    }
     public static class DesktopGroups extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BindAmount")
         private Long bindAmount;
@@ -351,6 +412,9 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SystemDiskSize")
         private Integer systemDiskSize;
 
+        @com.aliyun.core.annotation.NameInMap("Tags")
+        private java.util.List < Tags> tags;
+
         @com.aliyun.core.annotation.NameInMap("Version")
         private Integer version;
 
@@ -405,6 +469,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             this.subnetId = builder.subnetId;
             this.systemDiskCategory = builder.systemDiskCategory;
             this.systemDiskSize = builder.systemDiskSize;
+            this.tags = builder.tags;
             this.version = builder.version;
             this.volumeEncryptionEnabled = builder.volumeEncryptionEnabled;
             this.volumeEncryptionKey = builder.volumeEncryptionKey;
@@ -727,6 +792,13 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return tags
+         */
+        public java.util.List < Tags> getTags() {
+            return this.tags;
+        }
+
+        /**
          * @return version
          */
         public Integer getVersion() {
@@ -792,6 +864,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String subnetId; 
             private String systemDiskCategory; 
             private Integer systemDiskSize; 
+            private java.util.List < Tags> tags; 
             private Integer version; 
             private Boolean volumeEncryptionEnabled; 
             private String volumeEncryptionKey; 
@@ -1248,6 +1321,14 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
              */
             public Builder systemDiskSize(Integer systemDiskSize) {
                 this.systemDiskSize = systemDiskSize;
+                return this;
+            }
+
+            /**
+             * Tags.
+             */
+            public Builder tags(java.util.List < Tags> tags) {
+                this.tags = tags;
                 return this;
             }
 

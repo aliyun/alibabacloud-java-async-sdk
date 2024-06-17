@@ -21,6 +21,10 @@ public class RebuildDesktopsRequest extends Request {
     private String imageId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Language")
+    private String language;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OperateType")
     private String operateType;
 
@@ -33,6 +37,7 @@ public class RebuildDesktopsRequest extends Request {
         super(builder);
         this.desktopId = builder.desktopId;
         this.imageId = builder.imageId;
+        this.language = builder.language;
         this.operateType = builder.operateType;
         this.regionId = builder.regionId;
     }
@@ -65,6 +70,13 @@ public class RebuildDesktopsRequest extends Request {
     }
 
     /**
+     * @return language
+     */
+    public String getLanguage() {
+        return this.language;
+    }
+
+    /**
      * @return operateType
      */
     public String getOperateType() {
@@ -81,6 +93,7 @@ public class RebuildDesktopsRequest extends Request {
     public static final class Builder extends Request.Builder<RebuildDesktopsRequest, Builder> {
         private java.util.List < String > desktopId; 
         private String imageId; 
+        private String language; 
         private String operateType; 
         private String regionId; 
 
@@ -92,6 +105,7 @@ public class RebuildDesktopsRequest extends Request {
             super(request);
             this.desktopId = request.desktopId;
             this.imageId = request.imageId;
+            this.language = request.language;
             this.operateType = request.operateType;
             this.regionId = request.regionId;
         } 
@@ -111,6 +125,15 @@ public class RebuildDesktopsRequest extends Request {
         public Builder imageId(String imageId) {
             this.putQueryParameter("ImageId", imageId);
             this.imageId = imageId;
+            return this;
+        }
+
+        /**
+         * Language.
+         */
+        public Builder language(String language) {
+            this.putQueryParameter("Language", language);
+            this.language = language;
             return this;
         }
 

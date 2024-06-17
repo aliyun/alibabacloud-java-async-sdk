@@ -28,7 +28,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddDesktopOversoldUserGroupResponse> addDesktopOversoldUserGroup(AddDesktopOversoldUserGroupRequest request);
 
     /**
-      * You can add only one device to a tenant.
+      * Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.
       *
      */
     CompletableFuture<AddDevicesResponse> addDevices(AddDevicesRequest request);
@@ -303,7 +303,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeDesktopOversoldUserGroupResponse> describeDesktopOversoldUserGroup(DescribeDesktopOversoldUserGroupRequest request);
 
     /**
-      * You can query data within the last 30 days.
+      * You can only query data within the last 30 days.
       *
      */
     CompletableFuture<DescribeDesktopSessionsResponse> describeDesktopSessions(DescribeDesktopSessionsRequest request);

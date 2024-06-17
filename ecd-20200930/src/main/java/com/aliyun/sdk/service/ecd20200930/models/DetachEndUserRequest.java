@@ -126,7 +126,7 @@ public class DetachEndUserRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) workspace.
+         * The address of the Active Directory (AD) office network.
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -135,7 +135,12 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The type of the Alibaba Cloud Workspace client. 1: the hardware client 2: the software client
+         * The type of the client.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   1: hardware client.
          */
         public Builder clientType(String clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -144,7 +149,7 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the device.
+         * The serial number (SN) of the hardware client.
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -153,7 +158,7 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The ID of the convenient office network.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -162,7 +167,7 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the user that is bound to the client.
+         * The ID of the user that you want to unbind from the hardware client.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -171,7 +176,7 @@ public class DetachEndUserRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);

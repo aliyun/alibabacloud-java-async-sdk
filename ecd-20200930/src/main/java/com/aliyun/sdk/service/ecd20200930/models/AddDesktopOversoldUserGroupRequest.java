@@ -27,12 +27,17 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("PolicyGroupId")
     private String policyGroupId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    private java.util.List < Tag> tag;
+
     private AddDesktopOversoldUserGroupRequest(Builder builder) {
         super(builder);
         this.imageId = builder.imageId;
         this.name = builder.name;
         this.oversoldGroupId = builder.oversoldGroupId;
         this.policyGroupId = builder.policyGroupId;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
@@ -76,11 +81,19 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
         return this.policyGroupId;
     }
 
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
     public static final class Builder extends Request.Builder<AddDesktopOversoldUserGroupRequest, Builder> {
         private String imageId; 
         private String name; 
         private String oversoldGroupId; 
         private String policyGroupId; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
@@ -92,6 +105,7 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
             this.name = request.name;
             this.oversoldGroupId = request.oversoldGroupId;
             this.policyGroupId = request.policyGroupId;
+            this.tag = request.tag;
         } 
 
         /**
@@ -130,6 +144,15 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
             return this;
         }
 
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
         public AddDesktopOversoldUserGroupRequest build() {
             return new AddDesktopOversoldUserGroupRequest(this);
@@ -137,4 +160,65 @@ public class AddDesktopOversoldUserGroupRequest extends Request {
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

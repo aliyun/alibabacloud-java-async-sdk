@@ -49,7 +49,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the devices that are returned.
+         * The information about devices that you queried.
          */
         public Builder devices(java.util.List < Devices> devices) {
             this.devices = devices;
@@ -133,7 +133,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private String userType; 
 
             /**
-             * The address of the AD workspace.
+             * The address of the AD office network.
              */
             public Builder adDomain(String adDomain) {
                 this.adDomain = adDomain;
@@ -141,7 +141,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the workspace.
+             * The ID of the convenient office network.
              */
             public Builder directoryId(String directoryId) {
                 this.directoryId = directoryId;
@@ -157,7 +157,13 @@ public class DescribeDevicesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the account.
+             * The account type of the user.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   AD: enterprise AD account.
+             * *   SIMPLE: convenience account
              */
             public Builder userType(String userType) {
                 this.userType = userType;
@@ -210,7 +216,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
             private java.util.List < EndUserList> endUserList; 
 
             /**
-             * The ID of the device.
+             * The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.
              */
             public Builder deviceId(String deviceId) {
                 this.deviceId = deviceId;

@@ -166,7 +166,7 @@ public class DescribeDevicesRequest extends Request {
         } 
 
         /**
-         * The address of the Active Directory (AD) workspace.
+         * The address of the Active Directory (AD) office network.
          */
         public Builder adDomain(String adDomain) {
             this.putQueryParameter("AdDomain", adDomain);
@@ -175,8 +175,10 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The type of the Alibaba Cloud Workspace client.
+         * The type of the client.
          * <p>
+         * 
+         * Valid values:
          * 
          * *   1: hardware client.
          * *   2: software client.
@@ -188,7 +190,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the device.
+         * The ID of the device. The serial number (SN) of the hardware client or the UUID of the software client.
          */
         public Builder deviceId(String deviceId) {
             this.putQueryParameter("DeviceId", deviceId);
@@ -197,7 +199,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the workspace.
+         * The ID of the convenient office network.
          */
         public Builder directoryId(String directoryId) {
             this.putQueryParameter("DirectoryId", directoryId);
@@ -206,7 +208,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the convenience user to whom you want to bind the device.
+         * The ID of the bound user.
          */
         public Builder endUserId(String endUserId) {
             this.putQueryParameter("EndUserId", endUserId);
@@ -215,7 +217,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The number of the page to return.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -224,7 +226,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -233,7 +235,7 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -242,11 +244,13 @@ public class DescribeDevicesRequest extends Request {
         }
 
         /**
-         * The type of the user account.
+         * The account type of the user.
          * <p>
          * 
-         * *   SIMPLE: convenience account.
-         * *   AD: AD account.
+         * Valid values:
+         * 
+         * *   AD: enterprise AD account.
+         * *   SIMPLE: convenience account
          */
         public Builder userType(String userType) {
             this.putQueryParameter("UserType", userType);

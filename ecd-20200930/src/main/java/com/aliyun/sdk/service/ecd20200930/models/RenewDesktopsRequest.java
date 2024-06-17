@@ -16,6 +16,10 @@ public class RenewDesktopsRequest extends Request {
     private Boolean autoPay;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > desktopId;
@@ -40,6 +44,7 @@ public class RenewDesktopsRequest extends Request {
     private RenewDesktopsRequest(Builder builder) {
         super(builder);
         this.autoPay = builder.autoPay;
+        this.autoRenew = builder.autoRenew;
         this.desktopId = builder.desktopId;
         this.period = builder.period;
         this.periodUnit = builder.periodUnit;
@@ -65,6 +70,13 @@ public class RenewDesktopsRequest extends Request {
      */
     public Boolean getAutoPay() {
         return this.autoPay;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -104,6 +116,7 @@ public class RenewDesktopsRequest extends Request {
 
     public static final class Builder extends Request.Builder<RenewDesktopsRequest, Builder> {
         private Boolean autoPay; 
+        private Boolean autoRenew; 
         private java.util.List < String > desktopId; 
         private Integer period; 
         private String periodUnit; 
@@ -117,6 +130,7 @@ public class RenewDesktopsRequest extends Request {
         private Builder(RenewDesktopsRequest request) {
             super(request);
             this.autoPay = request.autoPay;
+            this.autoRenew = request.autoRenew;
             this.desktopId = request.desktopId;
             this.period = request.period;
             this.periodUnit = request.periodUnit;
@@ -153,6 +167,15 @@ public class RenewDesktopsRequest extends Request {
         public Builder autoPay(Boolean autoPay) {
             this.putQueryParameter("AutoPay", autoPay);
             this.autoPay = autoPay;
+            return this;
+        }
+
+        /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
             return this;
         }
 

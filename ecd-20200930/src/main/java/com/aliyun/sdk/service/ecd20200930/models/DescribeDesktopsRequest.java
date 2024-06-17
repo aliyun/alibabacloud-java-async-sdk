@@ -60,6 +60,10 @@ public class DescribeDesktopsRequest extends Request {
     private Boolean filterDesktopGroup;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GpuInstanceGroupId")
+    private String gpuInstanceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
@@ -105,6 +109,10 @@ public class DescribeDesktopsRequest extends Request {
     private String protocolType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QosRuleId")
+    private String qosRuleId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueryFotaUpdate")
     private Boolean queryFotaUpdate;
 
@@ -116,6 +124,10 @@ public class DescribeDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
     private String snapshotPolicyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubPayType")
+    private String subPayType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tag")
@@ -139,6 +151,7 @@ public class DescribeDesktopsRequest extends Request {
         this.excludedEndUserId = builder.excludedEndUserId;
         this.expiredTime = builder.expiredTime;
         this.filterDesktopGroup = builder.filterDesktopGroup;
+        this.gpuInstanceGroupId = builder.gpuInstanceGroupId;
         this.groupId = builder.groupId;
         this.imageId = builder.imageId;
         this.managementFlag = builder.managementFlag;
@@ -150,9 +163,11 @@ public class DescribeDesktopsRequest extends Request {
         this.osTypes = builder.osTypes;
         this.policyGroupId = builder.policyGroupId;
         this.protocolType = builder.protocolType;
+        this.qosRuleId = builder.qosRuleId;
         this.queryFotaUpdate = builder.queryFotaUpdate;
         this.regionId = builder.regionId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
+        this.subPayType = builder.subPayType;
         this.tag = builder.tag;
         this.userName = builder.userName;
     }
@@ -255,6 +270,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return gpuInstanceGroupId
+     */
+    public String getGpuInstanceGroupId() {
+        return this.gpuInstanceGroupId;
+    }
+
+    /**
      * @return groupId
      */
     public String getGroupId() {
@@ -332,6 +354,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return qosRuleId
+     */
+    public String getQosRuleId() {
+        return this.qosRuleId;
+    }
+
+    /**
      * @return queryFotaUpdate
      */
     public Boolean getQueryFotaUpdate() {
@@ -350,6 +379,13 @@ public class DescribeDesktopsRequest extends Request {
      */
     public String getSnapshotPolicyId() {
         return this.snapshotPolicyId;
+    }
+
+    /**
+     * @return subPayType
+     */
+    public String getSubPayType() {
+        return this.subPayType;
     }
 
     /**
@@ -379,6 +415,7 @@ public class DescribeDesktopsRequest extends Request {
         private java.util.List < String > excludedEndUserId; 
         private String expiredTime; 
         private Boolean filterDesktopGroup; 
+        private String gpuInstanceGroupId; 
         private String groupId; 
         private java.util.List < String > imageId; 
         private String managementFlag; 
@@ -390,9 +427,11 @@ public class DescribeDesktopsRequest extends Request {
         private java.util.List < String > osTypes; 
         private String policyGroupId; 
         private String protocolType; 
+        private String qosRuleId; 
         private Boolean queryFotaUpdate; 
         private String regionId; 
         private String snapshotPolicyId; 
+        private String subPayType; 
         private java.util.List < Tag> tag; 
         private String userName; 
 
@@ -414,6 +453,7 @@ public class DescribeDesktopsRequest extends Request {
             this.excludedEndUserId = request.excludedEndUserId;
             this.expiredTime = request.expiredTime;
             this.filterDesktopGroup = request.filterDesktopGroup;
+            this.gpuInstanceGroupId = request.gpuInstanceGroupId;
             this.groupId = request.groupId;
             this.imageId = request.imageId;
             this.managementFlag = request.managementFlag;
@@ -425,9 +465,11 @@ public class DescribeDesktopsRequest extends Request {
             this.osTypes = request.osTypes;
             this.policyGroupId = request.policyGroupId;
             this.protocolType = request.protocolType;
+            this.qosRuleId = request.qosRuleId;
             this.queryFotaUpdate = request.queryFotaUpdate;
             this.regionId = request.regionId;
             this.snapshotPolicyId = request.snapshotPolicyId;
+            this.subPayType = request.subPayType;
             this.tag = request.tag;
             this.userName = request.userName;
         } 
@@ -544,6 +586,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * GpuInstanceGroupId.
+         */
+        public Builder gpuInstanceGroupId(String gpuInstanceGroupId) {
+            this.putQueryParameter("GpuInstanceGroupId", gpuInstanceGroupId);
+            this.gpuInstanceGroupId = gpuInstanceGroupId;
+            return this;
+        }
+
+        /**
          * The ID of the desktop group.
          * <p>
          * 
@@ -650,6 +701,15 @@ public class DescribeDesktopsRequest extends Request {
         }
 
         /**
+         * QosRuleId.
+         */
+        public Builder qosRuleId(String qosRuleId) {
+            this.putQueryParameter("QosRuleId", qosRuleId);
+            this.qosRuleId = qosRuleId;
+            return this;
+        }
+
+        /**
          * Specifies whether to query the information about image update of the cloud desktop.
          */
         public Builder queryFotaUpdate(Boolean queryFotaUpdate) {
@@ -673,6 +733,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder snapshotPolicyId(String snapshotPolicyId) {
             this.putQueryParameter("SnapshotPolicyId", snapshotPolicyId);
             this.snapshotPolicyId = snapshotPolicyId;
+            return this;
+        }
+
+        /**
+         * SubPayType.
+         */
+        public Builder subPayType(String subPayType) {
+            this.putQueryParameter("SubPayType", subPayType);
+            this.subPayType = subPayType;
             return this;
         }
 

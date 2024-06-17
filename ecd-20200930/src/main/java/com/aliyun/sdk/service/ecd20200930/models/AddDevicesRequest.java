@@ -83,11 +83,13 @@ public class AddDevicesRequest extends Request {
         } 
 
         /**
-         * The type of the Alibaba Cloud Workspace client that runs on the device.
+         * The type of the client.
          * <p>
          * 
-         * *   1: the hardware client
-         * *   2: the software client
+         * Valid values:
+         * 
+         * *   1: hardware client.
+         * *   2: software client.
          */
         public Builder clientType(Integer clientType) {
             this.putQueryParameter("ClientType", clientType);
@@ -96,7 +98,7 @@ public class AddDevicesRequest extends Request {
         }
 
         /**
-         * The list of devices.
+         * The IDs of the devices. You can specify up to 200 IDs.
          */
         public Builder deviceIds(java.util.List < String > deviceIds) {
             this.putQueryParameter("DeviceIds", deviceIds);
@@ -105,7 +107,7 @@ public class AddDevicesRequest extends Request {
         }
 
         /**
-         * The ID of the region.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

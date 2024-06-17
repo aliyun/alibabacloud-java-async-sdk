@@ -49,7 +49,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Details of the cloud computers.
+         * The basic information about cloud computers.
          */
         public Builder desktops(java.util.List < Desktops> desktops) {
             this.desktops = desktops;
@@ -205,8 +205,10 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * The connection status of the user. Valid values:
+             * The connection status of the user.
              * <p>
+             * 
+             * Valid values:
              * 
              * *   Connected
              * *   Disconnected
@@ -217,7 +219,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the image that is used by the cloud computer.
+             * The version of the cloud computer image.
              */
             public Builder currentAppVersion(String currentAppVersion) {
                 this.currentAppVersion = currentAppVersion;
@@ -225,7 +227,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DesktopGroupId.
+             * The ID of the cloud computer pool.
              */
             public Builder desktopGroupId(String desktopGroupId) {
                 this.desktopGroupId = desktopGroupId;
@@ -233,7 +235,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The cloud computer ID.
+             * The ID of the cloud computer.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -241,17 +243,19 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cloud computer. Valid values:
+             * The status of the cloud computer.
              * <p>
              * 
-             * *   Pending: The cloud computer is being created.
-             * *   Starting: The cloud computer is being started.
-             * *   Running: The cloud computer is running.
-             * *   Stopping: The cloud computer is being stopped.
-             * *   Stopped: The cloud computer is stopped.
-             * *   Expired: The cloud computer is expired.
-             * *   Deleted: The cloud computer is deleted.
-             * *   Failed: Failed to create the cloud computer.
+             * Valid values:
+             * 
+             * *   Stopped
+             * *   Failed
+             * *   Starting
+             * *   Running
+             * *   Stopping
+             * *   Expired
+             * *   Deleted
+             * *   Pending
              */
             public Builder desktopStatus(String desktopStatus) {
                 this.desktopStatus = desktopStatus;
@@ -275,7 +279,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The destination version to which the image of the cloud computer can be updated.
+             * The version number of the image that can be updated on the cloud computer.
              */
             public Builder newAppVersion(String newAppVersion) {
                 this.newAppVersion = newAppVersion;
@@ -283,7 +287,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the destination version to which the image of the cloud computer can be updated.
+             * The description of the image version that can be updated.
              */
             public Builder releaseNote(String releaseNote) {
                 this.releaseNote = releaseNote;
@@ -291,7 +295,7 @@ public class DescribeDesktopInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The first time when the cloud computer was started.
+             * The time when the cloud computer was first started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;

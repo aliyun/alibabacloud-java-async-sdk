@@ -61,7 +61,7 @@ public class AddDevicesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The execution result. If the request was successful, `success` is returned. If the request failed, an error message is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -69,7 +69,7 @@ public class AddDevicesResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned error message. This parameter is not returned if the value of Code is `success`.
          */
         public Builder message(String message) {
             this.message = message;

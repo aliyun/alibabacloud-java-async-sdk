@@ -615,7 +615,7 @@ public class CreateDesktopsRequest extends Request {
         }
 
         /**
-         * MonthDesktopSetting.
+         * > This parameter is not publicly available.
          */
         public Builder monthDesktopSetting(MonthDesktopSetting monthDesktopSetting) {
             this.putQueryParameter("MonthDesktopSetting", monthDesktopSetting);
@@ -1237,7 +1237,7 @@ public class CreateDesktopsRequest extends Request {
             private Integer useDuration; 
 
             /**
-             * BuyerId.
+             * > This parameter is not publicly available.
              */
             public Builder buyerId(Long buyerId) {
                 this.buyerId = buyerId;
@@ -1245,7 +1245,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * DesktopId.
+             * > This parameter is not publicly available.
              */
             public Builder desktopId(String desktopId) {
                 this.desktopId = desktopId;
@@ -1253,7 +1253,7 @@ public class CreateDesktopsRequest extends Request {
             }
 
             /**
-             * UseDuration.
+             * > This parameter is not publicly available.
              */
             public Builder useDuration(Integer useDuration) {
                 this.useDuration = useDuration;

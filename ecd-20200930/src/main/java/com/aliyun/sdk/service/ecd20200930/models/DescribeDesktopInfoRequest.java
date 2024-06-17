@@ -68,7 +68,7 @@ public class DescribeDesktopInfoRequest extends Request {
         } 
 
         /**
-         * The cloud desktop ID. You can specify 1 to 100 cloud desktop IDs.
+         * The IDs of the cloud computers. You can specify 1 to 100 IDs.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -77,7 +77,7 @@ public class DescribeDesktopInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the most recent region list.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

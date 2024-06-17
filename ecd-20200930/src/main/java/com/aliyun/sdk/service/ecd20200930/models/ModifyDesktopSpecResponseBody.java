@@ -14,11 +14,15 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
+    @com.aliyun.core.annotation.NameInMap("OrderIds")
+    private java.util.List < Long > orderIds;
+
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ModifyDesktopSpecResponseBody(Builder builder) {
         this.orderId = builder.orderId;
+        this.orderIds = builder.orderIds;
         this.requestId = builder.requestId;
     }
 
@@ -38,6 +42,13 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
     }
 
     /**
+     * @return orderIds
+     */
+    public java.util.List < Long > getOrderIds() {
+        return this.orderIds;
+    }
+
+    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -46,6 +57,7 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
 
     public static final class Builder {
         private String orderId; 
+        private java.util.List < Long > orderIds; 
         private String requestId; 
 
         /**
@@ -53,6 +65,14 @@ public class ModifyDesktopSpecResponseBody extends TeaModel {
          */
         public Builder orderId(String orderId) {
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * OrderIds.
+         */
+        public Builder orderIds(java.util.List < Long > orderIds) {
+            this.orderIds = orderIds;
             return this;
         }
 

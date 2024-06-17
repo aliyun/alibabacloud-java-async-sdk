@@ -180,7 +180,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         } 
 
         /**
-         * The IDs of the cloud computers.
+         * The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.
          */
         public Builder desktopId(java.util.List < String > desktopId) {
             this.putQueryParameter("DesktopId", desktopId);
@@ -216,7 +216,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The workspace ID.
+         * The ID of the office network.
          */
         public Builder officeSiteId(String officeSiteId) {
             this.putQueryParameter("OfficeSiteId", officeSiteId);
@@ -243,7 +243,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -252,8 +252,10 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The session status. Valid values:
+         * The state of the session.
          * <p>
+         * 
+         * Valid values:
          * 
          * *   Connected
          * *   Disconnected
