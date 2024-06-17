@@ -63,7 +63,7 @@ public class TextTask extends TeaModel {
     private String textTaskStatus;
 
     @com.aliyun.core.annotation.NameInMap("texts")
-    private Text texts;
+    private java.util.List < Text > texts;
 
     @com.aliyun.core.annotation.NameInMap("theme")
     private String theme;
@@ -216,7 +216,7 @@ public class TextTask extends TeaModel {
     /**
      * @return texts
      */
-    public Text getTexts() {
+    public java.util.List < Text > getTexts() {
         return this.texts;
     }
 
@@ -251,7 +251,7 @@ public class TextTask extends TeaModel {
         private String textModeType; 
         private Long textTaskId; 
         private String textTaskStatus; 
-        private Text texts; 
+        private java.util.List < Text > texts; 
         private String theme; 
         private String themeDesc; 
 
@@ -386,7 +386,7 @@ public class TextTask extends TeaModel {
         /**
          * texts.
          */
-        public Builder texts(Text texts) {
+        public Builder texts(java.util.List < Text > texts) {
             this.texts = texts;
             return this;
         }
