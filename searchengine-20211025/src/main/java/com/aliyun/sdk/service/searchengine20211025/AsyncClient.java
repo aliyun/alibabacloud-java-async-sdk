@@ -37,6 +37,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
+    CompletableFuture<CreateConfigDirResponse> createConfigDir(CreateConfigDirRequest request);
+
+    CompletableFuture<CreateConfigFileResponse> createConfigFile(CreateConfigFileRequest request);
+
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
 
     /**
@@ -61,6 +65,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateInstanceResponse> createInstance(CreateInstanceRequest request);
 
+    CompletableFuture<CreatePublicUrlResponse> createPublicUrl(CreatePublicUrlRequest request);
+
     CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
     /**
@@ -71,6 +77,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteAdvanceConfigResponse> deleteAdvanceConfig(DeleteAdvanceConfigRequest request);
+
+    CompletableFuture<DeleteConfigDirResponse> deleteConfigDir(DeleteConfigDirRequest request);
+
+    CompletableFuture<DeleteConfigFileResponse> deleteConfigFile(DeleteConfigFileRequest request);
 
     /**
       * ## Method
@@ -107,6 +117,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteInstanceResponse> deleteInstance(DeleteInstanceRequest request);
+
+    CompletableFuture<DeletePublicUrlResponse> deletePublicUrl(DeletePublicUrlRequest request);
 
     CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
 
@@ -193,6 +205,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetFileResponse> getFile(GetFileRequest request);
 
     CompletableFuture<GetIndexResponse> getIndex(GetIndexRequest request);
+
+    CompletableFuture<GetIndexOnlineStrategyResponse> getIndexOnlineStrategy(GetIndexOnlineStrategyRequest request);
 
     /**
       * ## Method
@@ -309,6 +323,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListDateSourceGenerationsResponse> listDateSourceGenerations(ListDateSourceGenerationsRequest request);
 
+    CompletableFuture<ListIndexRecoverRecordsResponse> listIndexRecoverRecords(ListIndexRecoverRecordsRequest request);
+
     /**
       * ## Method
       *     GET
@@ -349,6 +365,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListOnlineConfigsResponse> listOnlineConfigs(ListOnlineConfigsRequest request);
 
+    CompletableFuture<ListPausePolicysResponse> listPausePolicys(ListPausePolicysRequest request);
+
+    CompletableFuture<ListPostQueryResultResponse> listPostQueryResult(ListPostQueryResultRequest request);
+
     /**
       * ### Method
       * `GET`
@@ -358,9 +378,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListQueryResultResponse> listQueryResult(ListQueryResultRequest request);
 
+    CompletableFuture<ListRestQueryResultResponse> listRestQueryResult(ListRestQueryResultRequest request);
+
+    CompletableFuture<ListSchemasResponse> listSchemas(ListSchemasRequest request);
+
     CompletableFuture<ListTableGenerationsResponse> listTableGenerations(ListTableGenerationsRequest request);
 
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
+
+    CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
+
+    CompletableFuture<ListVectorQueryResultResponse> listVectorQueryResult(ListVectorQueryResultRequest request);
+
+    CompletableFuture<ModifyAdvanceConfigResponse> modifyAdvanceConfig(ModifyAdvanceConfigRequest request);
 
     /**
       * ## Method
@@ -405,6 +435,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyDataSourceResponse> modifyDataSource(ModifyDataSourceRequest request);
 
+    CompletableFuture<ModifyDataSourceDeployResponse> modifyDataSourceDeploy(ModifyDataSourceDeployRequest request);
+
     /**
       * ## Method
       *     PUT
@@ -413,6 +445,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyFileResponse> modifyFile(ModifyFileRequest request);
+
+    CompletableFuture<ModifyIndexResponse> modifyIndex(ModifyIndexRequest request);
+
+    CompletableFuture<ModifyIndexOnlineStrategyResponse> modifyIndexOnlineStrategy(ModifyIndexOnlineStrategyRequest request);
 
     /**
       * ### Method
@@ -467,6 +503,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyPasswordResponse> modifyPassword(ModifyPasswordRequest request);
 
+    CompletableFuture<ModifyPausePolicyResponse> modifyPausePolicy(ModifyPausePolicyRequest request);
+
+    CompletableFuture<ModifyPublicUrlIpListResponse> modifyPublicUrlIpList(ModifyPublicUrlIpListRequest request);
+
     CompletableFuture<ModifyTableResponse> modifyTable(ModifyTableRequest request);
 
     /**
@@ -490,6 +530,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<PublishIndexVersionResponse> publishIndexVersion(PublishIndexVersionRequest request);
+
+    CompletableFuture<PushDocumentsResponse> pushDocuments(PushDocumentsRequest request);
 
     /**
       * ### Method
