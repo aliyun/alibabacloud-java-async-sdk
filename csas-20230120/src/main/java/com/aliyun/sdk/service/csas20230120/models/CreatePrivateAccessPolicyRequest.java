@@ -29,6 +29,10 @@ public class CreatePrivateAccessPolicyRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeviceAttributeAction")
+    private String deviceAttributeAction;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("DeviceAttributeId")
     private String deviceAttributeId;
 
@@ -71,6 +75,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         this.applicationType = builder.applicationType;
         this.customUserAttributes = builder.customUserAttributes;
         this.description = builder.description;
+        this.deviceAttributeAction = builder.deviceAttributeAction;
         this.deviceAttributeId = builder.deviceAttributeId;
         this.name = builder.name;
         this.policyAction = builder.policyAction;
@@ -120,6 +125,13 @@ public class CreatePrivateAccessPolicyRequest extends Request {
      */
     public String getDescription() {
         return this.description;
+    }
+
+    /**
+     * @return deviceAttributeAction
+     */
+    public String getDeviceAttributeAction() {
+        return this.deviceAttributeAction;
     }
 
     /**
@@ -183,6 +195,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         private String applicationType; 
         private java.util.List < CustomUserAttributes> customUserAttributes; 
         private String description; 
+        private String deviceAttributeAction; 
         private String deviceAttributeId; 
         private String name; 
         private String policyAction; 
@@ -202,6 +215,7 @@ public class CreatePrivateAccessPolicyRequest extends Request {
             this.applicationType = request.applicationType;
             this.customUserAttributes = request.customUserAttributes;
             this.description = request.description;
+            this.deviceAttributeAction = request.deviceAttributeAction;
             this.deviceAttributeId = request.deviceAttributeId;
             this.name = request.name;
             this.policyAction = request.policyAction;
@@ -245,6 +259,15 @@ public class CreatePrivateAccessPolicyRequest extends Request {
         public Builder description(String description) {
             this.putBodyParameter("Description", description);
             this.description = description;
+            return this;
+        }
+
+        /**
+         * DeviceAttributeAction.
+         */
+        public Builder deviceAttributeAction(String deviceAttributeAction) {
+            this.putBodyParameter("DeviceAttributeAction", deviceAttributeAction);
+            this.deviceAttributeAction = deviceAttributeAction;
             return this;
         }
 
