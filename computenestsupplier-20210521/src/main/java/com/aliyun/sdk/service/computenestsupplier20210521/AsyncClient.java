@@ -73,6 +73,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ReleaseArtifactResponse> releaseArtifact(ReleaseArtifactRequest request);
 
+    CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request);
+
+    CompletableFuture<StartServiceInstanceResponse> startServiceInstance(StartServiceInstanceRequest request);
+
+    CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request);
+
     CompletableFuture<UpdateArtifactResponse> updateArtifact(UpdateArtifactRequest request);
 
     CompletableFuture<UpdateServiceResponse> updateService(UpdateServiceRequest request);
