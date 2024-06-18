@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainTransferStatusResponseBody</p>
  */
 public class QueryDomainTransferStatusResponseBody extends TeaModel {
-    @NameInMap("DomainTransferStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainTransferStatus")
     private java.util.List < DomainTransferStatus> domainTransferStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDomainTransferStatusResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class QueryDomainTransferStatusResponseBody extends TeaModel {
     } 
 
     public static class DomainTransferStatus extends TeaModel {
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatusDescription")
+        @com.aliyun.core.annotation.NameInMap("DomainStatusDescription")
         private String domainStatusDescription;
 
         private DomainTransferStatus(Builder builder) {

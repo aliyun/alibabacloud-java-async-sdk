@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDomainStatusResponseBody</p>
  */
 public class CheckDomainStatusResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckDomainStatusResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class CheckDomainStatusResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("DeadDate")
+        @com.aliyun.core.annotation.NameInMap("DeadDate")
         private Long deadDate;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Price")
+        @com.aliyun.core.annotation.NameInMap("Price")
         private Float price;
 
-        @NameInMap("RegDate")
+        @com.aliyun.core.annotation.NameInMap("RegDate")
         private Long regDate;
 
         private Module(Builder builder) {

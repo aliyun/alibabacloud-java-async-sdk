@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBrokerDemandRecordResponseBody</p>
  */
 public class QueryBrokerDemandRecordResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryBrokerDemandRecordResponseBody(Builder builder) {
@@ -152,13 +151,13 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
     } 
 
     public static class BrokerDemandRecord extends TeaModel {
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         private BrokerDemandRecord(Builder builder) {
@@ -233,7 +232,7 @@ public class QueryBrokerDemandRecordResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("BrokerDemandRecord")
+        @com.aliyun.core.annotation.NameInMap("BrokerDemandRecord")
         private java.util.List < BrokerDemandRecord> brokerDemandRecord;
 
         private Data(Builder builder) {

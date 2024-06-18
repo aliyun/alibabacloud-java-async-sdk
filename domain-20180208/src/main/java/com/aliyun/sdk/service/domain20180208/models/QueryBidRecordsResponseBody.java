@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBidRecordsResponseBody</p>
  */
 public class QueryBidRecordsResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryBidRecordsResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class QueryBidRecordsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Bid")
+        @com.aliyun.core.annotation.NameInMap("Bid")
         private Float bid;
 
-        @NameInMap("BidTime")
+        @com.aliyun.core.annotation.NameInMap("BidTime")
         private Long bidTime;
 
-        @NameInMap("Bidder")
+        @com.aliyun.core.annotation.NameInMap("Bidder")
         private String bidder;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitPurchaseInfoRequest</p>
  */
 public class SubmitPurchaseInfoRequest extends Request {
-    @Body
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Body
-    @NameInMap("PurchaseCurrency")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PurchaseCurrency")
     private String purchaseCurrency;
 
-    @Body
-    @NameInMap("PurchasePrice")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PurchasePrice")
     private Double purchasePrice;
 
-    @Body
-    @NameInMap("PurchaseProofs")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PurchaseProofs")
     private java.util.List < String > purchaseProofs;
 
     private SubmitPurchaseInfoRequest(Builder builder) {

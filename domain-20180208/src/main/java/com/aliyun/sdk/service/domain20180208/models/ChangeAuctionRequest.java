@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeAuctionRequest</p>
  */
 public class ChangeAuctionRequest extends Request {
-    @Body
-    @NameInMap("AuctionList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionList")
     private java.util.List < AuctionList> auctionList;
 
     private ChangeAuctionRequest(Builder builder) {
@@ -70,16 +69,16 @@ public class ChangeAuctionRequest extends Request {
     } 
 
     public static class BidRecords extends TeaModel {
-        @NameInMap("CreateTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String createTime;
 
-        @NameInMap("Price")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Price")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Float price;
 
-        @NameInMap("UserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String userId;
 
         private BidRecords(Builder builder) {
@@ -154,38 +153,38 @@ public class ChangeAuctionRequest extends Request {
 
     }
     public static class AuctionList extends TeaModel {
-        @NameInMap("BidRecords")
+        @com.aliyun.core.annotation.NameInMap("BidRecords")
         private java.util.List < BidRecords> bidRecords;
 
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
-        @NameInMap("EndTime")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EndTime")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String endTime;
 
-        @NameInMap("IsReserve")
+        @com.aliyun.core.annotation.NameInMap("IsReserve")
         private Integer isReserve;
 
-        @NameInMap("ReservePrice")
+        @com.aliyun.core.annotation.NameInMap("ReservePrice")
         private Float reservePrice;
 
-        @NameInMap("ReserveRange")
+        @com.aliyun.core.annotation.NameInMap("ReserveRange")
         private String reserveRange;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TimeLeft")
+        @com.aliyun.core.annotation.NameInMap("TimeLeft")
         private Long timeLeft;
 
-        @NameInMap("Winner")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Winner")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String winner;
 
-        @NameInMap("WinnerPrice")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("WinnerPrice")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Float winnerPrice;
 
         private AuctionList(Builder builder) {

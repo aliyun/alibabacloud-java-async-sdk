@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetIntlDomainDownloadUrlResponseBody</p>
  */
 public class GetIntlDomainDownloadUrlResponseBody extends TeaModel {
-    @NameInMap("AllowRetry")
+    @com.aliyun.core.annotation.NameInMap("AllowRetry")
     private Boolean allowRetry;
 
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List < ? > errorArgs;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private GetIntlDomainDownloadUrlResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SelectedDomainListRequest</p>
  */
 public class SelectedDomainListRequest extends Request {
-    @Query
-    @NameInMap("ListDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ListDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listDate;
 
     private SelectedDomainListRequest(Builder builder) {

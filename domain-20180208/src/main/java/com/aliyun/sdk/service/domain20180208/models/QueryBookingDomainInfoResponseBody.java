@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBookingDomainInfoResponseBody</p>
  */
 public class QueryBookingDomainInfoResponseBody extends TeaModel {
-    @NameInMap("AuctionId")
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
     private Integer auctionId;
 
-    @NameInMap("BookEndTime")
+    @com.aliyun.core.annotation.NameInMap("BookEndTime")
     private Long bookEndTime;
 
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @NameInMap("MaxBid")
+    @com.aliyun.core.annotation.NameInMap("MaxBid")
     private Float maxBid;
 
-    @NameInMap("PartnerType")
+    @com.aliyun.core.annotation.NameInMap("PartnerType")
     private String partnerType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnatchNo")
+    @com.aliyun.core.annotation.NameInMap("SnatchNo")
     private String snatchNo;
 
-    @NameInMap("TransferInPrice")
+    @com.aliyun.core.annotation.NameInMap("TransferInPrice")
     private Float transferInPrice;
 
     private QueryBookingDomainInfoResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPurchasedDomainsRequest</p>
  */
 public class QueryPurchasedDomainsRequest extends Request {
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Body
-    @NameInMap("EndOperationTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndOperationTime")
     private String endOperationTime;
 
-    @Body
-    @NameInMap("OpTimeOrder")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OpTimeOrder")
     private Boolean opTimeOrder;
 
-    @Body
-    @NameInMap("OperationStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OperationStatus")
     private Integer operationStatus;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Body
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private Integer productType;
 
-    @Body
-    @NameInMap("StartOperationTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartOperationTime")
     private String startOperationTime;
 
-    @Body
-    @NameInMap("UpdateTimeOrder")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UpdateTimeOrder")
     private Boolean updateTimeOrder;
 
     private QueryPurchasedDomainsRequest(Builder builder) {

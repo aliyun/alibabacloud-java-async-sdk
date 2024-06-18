@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReserveDomainRequest</p>
  */
 public class ReserveDomainRequest extends Request {
-    @Body
-    @NameInMap("Channels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Channels")
     private java.util.List < String > channels;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
     private ReserveDomainRequest(Builder builder) {

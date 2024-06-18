@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBidRecordsRequest</p>
  */
 public class QueryBidRecordsRequest extends Request {
-    @Body
-    @NameInMap("AuctionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auctionId;
 
-    @Body
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Body
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
     private QueryBidRecordsRequest(Builder builder) {

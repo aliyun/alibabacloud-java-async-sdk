@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ReserveDomainResponseBody</p>
  */
 public class ReserveDomainResponseBody extends TeaModel {
-    @NameInMap("AuctionId")
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
     private String auctionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ReserveDomainResponseBody(Builder builder) {

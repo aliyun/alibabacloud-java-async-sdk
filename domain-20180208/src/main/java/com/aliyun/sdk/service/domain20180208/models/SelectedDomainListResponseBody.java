@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SelectedDomainListResponseBody</p>
  */
 public class SelectedDomainListResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private SelectedDomainListResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class SelectedDomainListResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("DownloadUrl")
+        @com.aliyun.core.annotation.NameInMap("DownloadUrl")
         private String downloadUrl;
 
         private Module(Builder builder) {

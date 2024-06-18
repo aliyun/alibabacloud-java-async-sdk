@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePartnerReservePriceRequest</p>
  */
 public class UpdatePartnerReservePriceRequest extends Request {
-    @Body
-    @NameInMap("BiddingId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BiddingId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer biddingId;
 
-    @Body
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Body
-    @NameInMap("PartnerType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PartnerType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String partnerType;
 
-    @Body
-    @NameInMap("ReservePrice")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ReservePrice")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Double reservePrice;
 
     private UpdatePartnerReservePriceRequest(Builder builder) {

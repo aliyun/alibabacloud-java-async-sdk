@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckSelectedDomainStatusRequest</p>
  */
 public class CheckSelectedDomainStatusRequest extends Request {
-    @Query
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
     private CheckSelectedDomainStatusRequest(Builder builder) {

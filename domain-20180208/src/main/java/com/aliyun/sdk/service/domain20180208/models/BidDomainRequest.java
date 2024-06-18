@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BidDomainRequest</p>
  */
 public class BidDomainRequest extends Request {
-    @Body
-    @NameInMap("AuctionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuctionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auctionId;
 
-    @Body
-    @NameInMap("Currency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Currency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currency;
 
-    @Body
-    @NameInMap("MaxBid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxBid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float maxBid;
 
     private BidDomainRequest(Builder builder) {

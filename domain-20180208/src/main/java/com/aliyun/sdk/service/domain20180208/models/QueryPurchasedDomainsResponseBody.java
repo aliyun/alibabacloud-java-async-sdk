@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPurchasedDomainsResponseBody</p>
  */
 public class QueryPurchasedDomainsResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryPurchasedDomainsResponseBody(Builder builder) {
@@ -152,22 +151,22 @@ public class QueryPurchasedDomainsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("DeliveryTime")
+        @com.aliyun.core.annotation.NameInMap("DeliveryTime")
         private String deliveryTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("OperationStatus")
+        @com.aliyun.core.annotation.NameInMap("OperationStatus")
         private String operationStatus;
 
-        @NameInMap("OperationTime")
+        @com.aliyun.core.annotation.NameInMap("OperationTime")
         private String operationTime;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("TradeMoney")
+        @com.aliyun.core.annotation.NameInMap("TradeMoney")
         private Double tradeMoney;
 
         private Data(Builder builder) {

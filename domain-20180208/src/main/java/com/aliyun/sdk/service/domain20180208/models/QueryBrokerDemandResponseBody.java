@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBrokerDemandResponseBody</p>
  */
 public class QueryBrokerDemandResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryBrokerDemandResponseBody(Builder builder) {
@@ -152,61 +151,64 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private Integer auditStatus;
 
-        @NameInMap("BargainSellerMobile")
+        @com.aliyun.core.annotation.NameInMap("BargainSellerMobile")
         private String bargainSellerMobile;
 
-        @NameInMap("BargainSellerPrice")
+        @com.aliyun.core.annotation.NameInMap("BargainSellerPrice")
         private Float bargainSellerPrice;
 
-        @NameInMap("BizId")
+        @com.aliyun.core.annotation.NameInMap("BizId")
         private String bizId;
 
-        @NameInMap("DemandDomain")
+        @com.aliyun.core.annotation.NameInMap("DemandDomain")
         private String demandDomain;
 
-        @NameInMap("DemandPrice")
+        @com.aliyun.core.annotation.NameInMap("DemandPrice")
         private Float demandPrice;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Mobile")
+        @com.aliyun.core.annotation.NameInMap("Mobile")
         private String mobile;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private Integer orderType;
 
-        @NameInMap("PartnerDomain")
+        @com.aliyun.core.annotation.NameInMap("PartnerDomain")
         private String partnerDomain;
 
-        @NameInMap("PayDomain")
+        @com.aliyun.core.annotation.NameInMap("PayDomain")
         private String payDomain;
 
-        @NameInMap("PayPrice")
+        @com.aliyun.core.annotation.NameInMap("PayPrice")
         private Float payPrice;
 
-        @NameInMap("PayTime")
+        @com.aliyun.core.annotation.NameInMap("PayTime")
         private Long payTime;
 
-        @NameInMap("ProduceType")
+        @com.aliyun.core.annotation.NameInMap("ProduceType")
         private Integer produceType;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private Long publishTime;
 
-        @NameInMap("PurchaseStatus")
+        @com.aliyun.core.annotation.NameInMap("PurchaseStatus")
         private Integer purchaseStatus;
 
-        @NameInMap("ServicePayPrice")
+        @com.aliyun.core.annotation.NameInMap("ServicePayPrice")
         private Float servicePayPrice;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SettleBasePrice")
+        private Float settleBasePrice;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Data(Builder builder) {
@@ -228,6 +230,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             this.publishTime = builder.publishTime;
             this.purchaseStatus = builder.purchaseStatus;
             this.servicePayPrice = builder.servicePayPrice;
+            this.settleBasePrice = builder.settleBasePrice;
             this.status = builder.status;
         }
 
@@ -366,6 +369,13 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
         }
 
         /**
+         * @return settleBasePrice
+         */
+        public Float getSettleBasePrice() {
+            return this.settleBasePrice;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -391,6 +401,7 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
             private Long publishTime; 
             private Integer purchaseStatus; 
             private Float servicePayPrice; 
+            private Float settleBasePrice; 
             private String status; 
 
             /**
@@ -534,6 +545,14 @@ public class QueryBrokerDemandResponseBody extends TeaModel {
              */
             public Builder servicePayPrice(Float servicePayPrice) {
                 this.servicePayPrice = servicePayPrice;
+                return this;
+            }
+
+            /**
+             * SettleBasePrice.
+             */
+            public Builder settleBasePrice(Float settleBasePrice) {
+                this.settleBasePrice = settleBasePrice;
                 return this;
             }
 

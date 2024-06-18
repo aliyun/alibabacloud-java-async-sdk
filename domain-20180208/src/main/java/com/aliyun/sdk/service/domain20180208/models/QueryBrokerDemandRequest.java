@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain20180208.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBrokerDemandRequest</p>
  */
 public class QueryBrokerDemandRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 200, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 200, minimum = 10)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private QueryBrokerDemandRequest(Builder builder) {
