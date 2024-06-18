@@ -51,6 +51,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ClearDataResponse> clearData(ClearDataRequest request);
 
+    CompletableFuture<CloseVideoConferenceResponse> closeVideoConference(CloseVideoConferenceRequest request);
+
     CompletableFuture<CommentListReportResponse> commentListReport(CommentListReportRequest request);
 
     CompletableFuture<CreateDeliveryPlanResponse> createDeliveryPlan(CreateDeliveryPlanRequest request);
@@ -280,6 +282,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<QueryMeetingRoomGroupListResponse> queryMeetingRoomGroupList(QueryMeetingRoomGroupListRequest request);
 
     CompletableFuture<QueryMeetingRoomListResponse> queryMeetingRoomList(QueryMeetingRoomListRequest request);
+
+    CompletableFuture<QueryMinutesSummaryResponse> queryMinutesSummary(QueryMinutesSummaryRequest request);
+
+    CompletableFuture<QueryMinutesTextResponse> queryMinutesText(QueryMinutesTextRequest request);
 
     CompletableFuture<QueryOrgHonorsResponse> queryOrgHonors(QueryOrgHonorsRequest request);
 
