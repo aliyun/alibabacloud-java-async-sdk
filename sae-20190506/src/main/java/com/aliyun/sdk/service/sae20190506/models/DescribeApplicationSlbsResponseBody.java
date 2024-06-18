@@ -185,6 +185,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
     } 
 
     public static class Internet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cookie")
+        private String cookie;
+
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+        private Integer cookieTimeout;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
 
@@ -197,14 +203,24 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("StickySession")
+        private Boolean stickySession;
+
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
+        private String stickySessionType;
+
         @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Internet(Builder builder) {
+            this.cookie = builder.cookie;
+            this.cookieTimeout = builder.cookieTimeout;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.stickySession = builder.stickySession;
+            this.stickySessionType = builder.stickySessionType;
             this.targetPort = builder.targetPort;
         }
 
@@ -214,6 +230,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Internet create() {
             return builder().build();
+        }
+
+        /**
+         * @return cookie
+         */
+        public String getCookie() {
+            return this.cookie;
+        }
+
+        /**
+         * @return cookieTimeout
+         */
+        public Integer getCookieTimeout() {
+            return this.cookieTimeout;
         }
 
         /**
@@ -245,6 +275,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stickySession
+         */
+        public Boolean getStickySession() {
+            return this.stickySession;
+        }
+
+        /**
+         * @return stickySessionType
+         */
+        public String getStickySessionType() {
+            return this.stickySessionType;
+        }
+
+        /**
          * @return targetPort
          */
         public Integer getTargetPort() {
@@ -252,11 +296,31 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cookie; 
+            private Integer cookieTimeout; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
             private String protocol; 
+            private Boolean stickySession; 
+            private String stickySessionType; 
             private Integer targetPort; 
+
+            /**
+             * Cookie.
+             */
+            public Builder cookie(String cookie) {
+                this.cookie = cookie;
+                return this;
+            }
+
+            /**
+             * CookieTimeout.
+             */
+            public Builder cookieTimeout(Integer cookieTimeout) {
+                this.cookieTimeout = cookieTimeout;
+                return this;
+            }
 
             /**
              * HttpsCaCertId.
@@ -291,6 +355,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
             }
 
             /**
+             * StickySession.
+             */
+            public Builder stickySession(Boolean stickySession) {
+                this.stickySession = stickySession;
+                return this;
+            }
+
+            /**
+             * StickySessionType.
+             */
+            public Builder stickySessionType(String stickySessionType) {
+                this.stickySessionType = stickySessionType;
+                return this;
+            }
+
+            /**
              * The port specified for the SLB listener.
              */
             public Builder targetPort(Integer targetPort) {
@@ -306,6 +386,12 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
     }
     public static class Intranet extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Cookie")
+        private String cookie;
+
+        @com.aliyun.core.annotation.NameInMap("CookieTimeout")
+        private Integer cookieTimeout;
+
         @com.aliyun.core.annotation.NameInMap("HttpsCaCertId")
         private String httpsCaCertId;
 
@@ -318,14 +404,24 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
+        @com.aliyun.core.annotation.NameInMap("StickySession")
+        private Boolean stickySession;
+
+        @com.aliyun.core.annotation.NameInMap("StickySessionType")
+        private String stickySessionType;
+
         @com.aliyun.core.annotation.NameInMap("TargetPort")
         private Integer targetPort;
 
         private Intranet(Builder builder) {
+            this.cookie = builder.cookie;
+            this.cookieTimeout = builder.cookieTimeout;
             this.httpsCaCertId = builder.httpsCaCertId;
             this.httpsCertId = builder.httpsCertId;
             this.port = builder.port;
             this.protocol = builder.protocol;
+            this.stickySession = builder.stickySession;
+            this.stickySessionType = builder.stickySessionType;
             this.targetPort = builder.targetPort;
         }
 
@@ -335,6 +431,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
 
         public static Intranet create() {
             return builder().build();
+        }
+
+        /**
+         * @return cookie
+         */
+        public String getCookie() {
+            return this.cookie;
+        }
+
+        /**
+         * @return cookieTimeout
+         */
+        public Integer getCookieTimeout() {
+            return this.cookieTimeout;
         }
 
         /**
@@ -366,6 +476,20 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         /**
+         * @return stickySession
+         */
+        public Boolean getStickySession() {
+            return this.stickySession;
+        }
+
+        /**
+         * @return stickySessionType
+         */
+        public String getStickySessionType() {
+            return this.stickySessionType;
+        }
+
+        /**
          * @return targetPort
          */
         public Integer getTargetPort() {
@@ -373,11 +497,31 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String cookie; 
+            private Integer cookieTimeout; 
             private String httpsCaCertId; 
             private String httpsCertId; 
             private Integer port; 
             private String protocol; 
+            private Boolean stickySession; 
+            private String stickySessionType; 
             private Integer targetPort; 
+
+            /**
+             * Cookie.
+             */
+            public Builder cookie(String cookie) {
+                this.cookie = cookie;
+                return this;
+            }
+
+            /**
+             * CookieTimeout.
+             */
+            public Builder cookieTimeout(Integer cookieTimeout) {
+                this.cookieTimeout = cookieTimeout;
+                return this;
+            }
 
             /**
              * HttpsCaCertId.
@@ -408,6 +552,22 @@ public class DescribeApplicationSlbsResponseBody extends TeaModel {
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
+                return this;
+            }
+
+            /**
+             * StickySession.
+             */
+            public Builder stickySession(Boolean stickySession) {
+                this.stickySession = stickySession;
+                return this;
+            }
+
+            /**
+             * StickySessionType.
+             */
+            public Builder stickySessionType(String stickySessionType) {
+                this.stickySessionType = stickySessionType;
                 return this;
             }
 
