@@ -637,6 +637,9 @@ public class ModifyDBInstanceSpecRequest extends Request {
 
         /**
          * The specifications that you want to change for a serverless instance.
+         * <p>
+         * 
+         * >  This parameter is available only on the China site (aliyun.com).
          */
         public Builder serverlessConfiguration(ServerlessConfiguration serverlessConfiguration) {
             String serverlessConfigurationShrink = shrink(serverlessConfiguration, "ServerlessConfiguration", "json");
@@ -781,7 +784,8 @@ public class ModifyDBInstanceSpecRequest extends Request {
              * *   **true**
              * *   **false** (default)
              * 
-             * >  This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is resumed.
+             * > *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. After the automatic start and stop feature is enabled, if no connections to the instance are established within 10 minutes, the instance is suspended. After a connection to the instance is established, the instance is automatically resumed.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder autoPause(Boolean autoPause) {
                 this.autoPause = autoPause;
@@ -796,7 +800,8 @@ public class ModifyDBInstanceSpecRequest extends Request {
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**
              * *   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 14**
              * 
-             * >  The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
+             * > *   The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -811,7 +816,8 @@ public class ModifyDBInstanceSpecRequest extends Request {
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
              * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 14**.
              * 
-             * >  The value of this parameter must be less than or equal to the value of **MaxCapacity**.
+             * > *   The value of this parameter must be less than or equal to the value of MaxCapacity.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
@@ -827,6 +833,7 @@ public class ModifyDBInstanceSpecRequest extends Request {
              * 
              * > *   This parameter is required only for serverless instances that run MySQL and PostgreSQL. If you set this parameter to true, a service interruption that lasts 30 to 120 seconds occurs during forced scaling. Process with caution.
              * > *   The RCU scaling for a serverless instance immediately takes effect. In some cases, such as the execution of large transactions, the scaling does not immediately take effect. In this case, you can enable this feature to forcefully scale the RCUs of the instance.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder switchForce(Boolean switchForce) {
                 this.switchForce = switchForce;

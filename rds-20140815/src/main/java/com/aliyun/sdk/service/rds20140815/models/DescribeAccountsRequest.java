@@ -147,7 +147,7 @@ public class DescribeAccountsRequest extends Request {
         }
 
         /**
-         * The page number. Default value: **1**. Valid values: any non-zero positive integer.
+         * The page number. Default value: **1**. Pages start from page 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);

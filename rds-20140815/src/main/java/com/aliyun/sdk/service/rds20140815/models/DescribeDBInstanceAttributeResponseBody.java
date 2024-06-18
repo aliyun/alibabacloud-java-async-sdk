@@ -271,7 +271,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The node type. Valid values:
+             * The node type. Default value: true. Valid values:
              * <p>
              * 
              * *   d: dedicated node type
@@ -335,7 +335,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The node status. Valid values:
+             * The node status. Default value: true. Valid values:
              * <p>
              * 
              * *   active
@@ -1824,7 +1824,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The creation time of the instance. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The creation time. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1922,7 +1922,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance. For more information, see [Instance states](~~26315~~).
+             * The instance status. For more information, see [Instance statuses](~~26315~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -1943,7 +1943,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **local_ssd** or **ephemeral_ssd**: local SSD
              * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: enhanced SSD (ESSD).
+             * *   **cloud_essd**: Enterprise SSD (ESSD)
              * *   **general_essd**: general ESSD
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
@@ -2027,7 +2027,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The extended information.
+             * The extended information of the instance.
              */
             public Builder extra(Extra extra) {
                 this.extra = extra;
@@ -2198,7 +2198,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Postpaid**: pay-as-you-go
              * *   **Prepaid**: subscription
-             * *   **SERVERLESS**
+             * *   **SERVERLESS**: serverless
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -2351,7 +2351,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * <p>
              * 
              * *   **1**: The instance is normal.
-             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance, and instance performance may be affected. You must adjust the specifications of these instances based on your business requirements.
+             * *   **2**: The specifications of the read-only instances do not match the specifications of the primary instance. You must adjust the specifications of these instances based on your business requirements.
              */
             public Builder tipsLevel(Integer tipsLevel) {
                 this.tipsLevel = tipsLevel;
@@ -2375,7 +2375,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The virtual private cloud (VPC) ID.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

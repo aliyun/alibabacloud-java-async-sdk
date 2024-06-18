@@ -281,7 +281,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
          * <p>
          * 
          * *   **cert**
-         * *   **perfer**
+         * *   **prefer**
          * *   **verify-ca**
          * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */
@@ -372,7 +372,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
          * <p>
          * 
          * *   **cert**
-         * *   **perfer**
+         * *   **prefer**
          * *   **verify-ca**
          * *   **verify-full** (supported only when the instance runs PostgreSQL 12 or later)
          */

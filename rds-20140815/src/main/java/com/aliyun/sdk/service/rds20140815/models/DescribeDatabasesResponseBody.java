@@ -49,7 +49,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the database.
+         * The information about the databases.
          */
         public Builder databases(Databases databases) {
             this.databases = databases;
@@ -590,7 +590,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The collation of the character set. The example value C stands for localization.
+             * The collation of the character set. The example value C indicates localization.
              * <p>
              * 
              * >  This parameter is returned only for instances that run PostgreSQL.
@@ -653,6 +653,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
              * *   **Creating**
              * *   **Running**
              * *   **Deleting**
+             * *   **Cold**
              */
             public Builder DBStatus(String DBStatus) {
                 this.DBStatus = DBStatus;
@@ -668,7 +669,7 @@ public class DescribeDatabasesResponseBody extends TeaModel {
             }
 
             /**
-             * The page number.
+             * The page number of the page to return.
              */
             public Builder pageNumber(Integer pageNumber) {
                 this.pageNumber = pageNumber;

@@ -121,7 +121,10 @@ public class DescribePriceResponseBody extends TeaModel {
         private Float tradeMinRCUAmount; 
 
         /**
-         * Order parameters.
+         * The order parameters.
+         * <p>
+         * 
+         * >  If the **OrderParamOut** parameter is set to **true**, the value of the OrderParams parameter is returned.
          */
         public Builder orderParams(String orderParams) {
             this.orderParams = orderParams;
@@ -153,7 +156,7 @@ public class DescribePriceResponseBody extends TeaModel {
         }
 
         /**
-         * Serverless price information.
+         * The pricing information about a serverless RDS instance.
          */
         public Builder serverlessPrice(ServerlessPrice serverlessPrice) {
             this.serverlessPrice = serverlessPrice;
@@ -621,7 +624,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Order Information
+             * The order information.
              */
             public Builder orderLines(String orderLines) {
                 this.orderLines = orderLines;
@@ -645,7 +648,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Estimated hourly cost calculated based on the maximum RCU selected by the user.
+             * The estimated hourly cost that is calculated based on the maximum number of RCUs you specify.
              */
             public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
                 this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -653,7 +656,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Estimated hourly cost calculated based on the minimum RCU selected by the user.
+             * The estimated hourly cost that is calculated based on the minimum number of RCUs you specify.
              */
             public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
                 this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -932,7 +935,7 @@ public class DescribePriceResponseBody extends TeaModel {
             private Float storageDiscountAmount; 
 
             /**
-             * MaxRCU discount amount.
+             * The discount amount of the maximum number of RCUs.
              */
             public Builder RCUDiscountMaxAmount(Float RCUDiscountMaxAmount) {
                 this.RCUDiscountMaxAmount = RCUDiscountMaxAmount;
@@ -940,7 +943,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MinRCU discount amount.
+             * The discount amount of the minimum number of RCUs.
              */
             public Builder RCUDiscountMinAmount(Float RCUDiscountMinAmount) {
                 this.RCUDiscountMinAmount = RCUDiscountMinAmount;
@@ -948,7 +951,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRCU price.
+             * The price of the maximum number of RCUs.
              */
             public Builder RCUOriginalMaxAmount(Float RCUOriginalMaxAmount) {
                 this.RCUOriginalMaxAmount = RCUOriginalMaxAmount;
@@ -956,7 +959,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MinRCU price.
+             * The price of the minimum number of RCUs.
              */
             public Builder RCUOriginalMinAmount(Float RCUOriginalMinAmount) {
                 this.RCUOriginalMinAmount = RCUOriginalMinAmount;
@@ -964,7 +967,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Original price of the disk.
+             * The original price of the disk capacity.
              */
             public Builder storageOriginalAmount(Float storageOriginalAmount) {
                 this.storageOriginalAmount = storageOriginalAmount;
@@ -972,7 +975,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Maximum total price before discount.
+             * The maximum total price before the discount.
              */
             public Builder totalOriginalMaxAmount(Float totalOriginalMaxAmount) {
                 this.totalOriginalMaxAmount = totalOriginalMaxAmount;
@@ -988,7 +991,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MaxRCU transaction price.
+             * The transaction price of the maximum number of RCUs.
              */
             public Builder tradeMaxRCUAmount(Float tradeMaxRCUAmount) {
                 this.tradeMaxRCUAmount = tradeMaxRCUAmount;
@@ -996,7 +999,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * MinRCU transaction price.
+             * The transaction price of the minimum number of RCUs.
              */
             public Builder tradeMinRCUAmount(Float tradeMinRCUAmount) {
                 this.tradeMinRCUAmount = tradeMinRCUAmount;
@@ -1004,7 +1007,7 @@ public class DescribePriceResponseBody extends TeaModel {
             }
 
             /**
-             * Disk discount price.
+             * The discounted price of the disk capacity.
              */
             public Builder storageDiscountAmount(Float storageDiscountAmount) {
                 this.storageDiscountAmount = storageDiscountAmount;

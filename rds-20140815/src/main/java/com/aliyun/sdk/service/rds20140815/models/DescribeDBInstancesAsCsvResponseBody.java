@@ -678,7 +678,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              * <p>
              * 
              * *   **Performance**: standard mode.
-             * *   **Safety**: safe mode.
+             * *   **Safety**: enhanced mode
              */
             public Builder connectionMode(String connectionMode) {
                 this.connectionMode = connectionMode;
@@ -686,7 +686,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The internal endpoint of the instance.
+             * The internal endpoint.
              */
             public Builder connectionString(String connectionString) {
                 this.connectionString = connectionString;
@@ -726,7 +726,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The description of the instance.
+             * The instance description.
              */
             public Builder DBInstanceDescription(String DBInstanceDescription) {
                 this.DBInstanceDescription = DBInstanceDescription;
@@ -753,8 +753,8 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
              * The network type of the instance. Valid values:
              * <p>
              * 
-             * *   **Internet**: Internet
-             * *   **Intranet**: internal network
+             * *   **Internet**
+             * *   **Intranet**
              */
             public Builder DBInstanceNetType(String DBInstanceNetType) {
                 this.DBInstanceNetType = DBInstanceNetType;
@@ -762,7 +762,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance.
+             * The instance status.
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -778,11 +778,11 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
+             * The instance type. Valid values:
              * <p>
              * 
              * *   **Primary**: primary instance
-             * *   **Readonly**: read-only instance
+             * *   **ReadOnly**: read-only instance
              * *   **Guard**: disaster recovery instance
              * *   **Temp**: temporary instance
              */
@@ -808,7 +808,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The engine version of the instance.
+             * The engine version.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -824,7 +824,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * A deprecated parameter. You do not need to configure this parameter.
+             * A deprecated parameter. You do not need to specify this parameter.
              */
             public Builder exportKey(String exportKey) {
                 this.exportKey = exportKey;
@@ -832,7 +832,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disaster recovery instance that is attached to the instance.
+             * The ID of the disaster recovery instance that is attached to the primary instance.
              */
             public Builder guardDBInstanceId(String guardDBInstanceId) {
                 this.guardDBInstanceId = guardDBInstanceId;
@@ -840,7 +840,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance or read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
+             * The ID of the instance from which incremental data comes. The incremental data of a disaster recovery instance comes from its primary instance. The incremental data of a read-only instance comes from its primary instance. If this parameter is not returned, the instance is a primary instance.
              */
             public Builder incrementSourceDBInstanceId(String incrementSourceDBInstanceId) {
                 this.incrementSourceDBInstanceId = incrementSourceDBInstanceId;
@@ -872,7 +872,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The maintenance window of the instance. The time is displayed in UTC. Take note that the maintenance window that is displayed in the ApsaraDB RDS console is equal to the value of this parameter plus 8 hours.
+             * The maintenance window of the instance. The time follows the ISO 8601 standard and is displayed in UTC. In the ApsaraDB RDS console, the maintenance window is displayed in UTC+8.
              */
             public Builder maintainTime(String maintainTime) {
                 this.maintainTime = maintainTime;
@@ -880,7 +880,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the primary instance.
+             * The primary instance ID.
              */
             public Builder masterInstanceId(String masterInstanceId) {
                 this.masterInstanceId = masterInstanceId;
@@ -936,7 +936,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The IP address whitelist.
+             * The IP addresses in the whitelist.
              */
             public Builder securityIPList(String securityIPList) {
                 this.securityIPList = securityIPList;
@@ -944,7 +944,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * A deprecated parameter. You do not need to configure this parameter.
+             * A deprecated parameter. You do not need to specify this parameter.
              */
             public Builder slaveZones(SlaveZones slaveZones) {
                 this.slaveZones = slaveZones;
@@ -968,7 +968,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the temporary instance that is attached to the instance.
+             * The ID of the temporary instance that is attached to the primary instance.
              */
             public Builder tempDBInstanceId(String tempDBInstanceId) {
                 this.tempDBInstanceId = tempDBInstanceId;
@@ -984,7 +984,7 @@ public class DescribeDBInstancesAsCsvResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the virtual private cloud (VPC).
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

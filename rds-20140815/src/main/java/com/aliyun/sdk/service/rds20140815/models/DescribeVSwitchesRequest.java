@@ -207,7 +207,7 @@ public class DescribeVSwitchesRequest extends Request {
         } 
 
         /**
-         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID. If you specify this parameter, the details of all vSwitches in the VPC to which the dedicated cluster belongs are returned.
+         * The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID. If you specify this parameter, the details of all VSwitches in the VPC to which the dedicated cluster belongs are returned.
          * <p>
          * 
          * >  You must specify this parameter or the **VpcId** parameter.
@@ -255,7 +255,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The region ID of the vSwitch. You can call the DescribeRegions operation to query the most recent region list.
+         * The region ID of the VSwitch. You can call the DescribeRegions operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -300,7 +300,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the VPC to which the vSwitch belongs.
+         * The ID of the VPC to which the VSwitch belongs.
          * <p>
          * 
          * > You must configure this parameter or **DedicatedHostGroupId**.
@@ -312,7 +312,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The ID of the zone to which the vSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the vSwitch that is deployed in the specified zone are returned.
+         * The ID of the zone to which the VSwitch belongs. You can call the DescribeAvailableZones operation to query zone IDs. If you specify this parameter, the query results are filtered based on the value of this parameter and only the details of the VSwitch that is deployed in the specified zone are returned.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

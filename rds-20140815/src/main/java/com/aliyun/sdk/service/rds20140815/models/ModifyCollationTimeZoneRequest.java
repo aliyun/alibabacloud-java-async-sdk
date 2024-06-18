@@ -139,11 +139,8 @@ public class ModifyCollationTimeZoneRequest extends Request {
          * *   **Chinese_Taiwan_Stroke_CI_AS**
          * *   **Chinese_Taiwan_Stroke_CS_AS**
          * 
-         * > 
-         * 
-         * *   The default character set collation of the instance is **Chinese_PRC_CI_AS**.
-         * 
-         * *   You must specify one of the **Collation** and **Timezone** parameters.
+         * > *   The default character set collation of the instance is **Chinese_PRC_CI_AS**.
+         * > *   You must specify one of the **Collation** and **Timezone** parameters.
          */
         public Builder collation(String collation) {
             this.putQueryParameter("Collation", collation);
@@ -191,11 +188,8 @@ public class ModifyCollationTimeZoneRequest extends Request {
          * The time zone of the instance. By default, the system does not modify the time zone.
          * <p>
          * 
-         * > 
-         * 
-         * *   The default time zone of the instance is **China Standard Time**.
-         * 
-         * *   You must specify one of the **Collation** and **Timezone** parameters.
+         * > *   The default time zone of the instance is **China Standard Time**.
+         * > *   You must specify one of the **Collation** and **Timezone** parameters.
          */
         public Builder timezone(String timezone) {
             this.putQueryParameter("Timezone", timezone);
