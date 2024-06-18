@@ -123,7 +123,7 @@ public class ListListenersRequest extends Request {
         } 
 
         /**
-         * The listener IDs. You can specify up to 20 IDs.
+         * The listener IDs. You can specify at most 20 listener IDs.
          */
         public Builder listenerIds(java.util.List < String > listenerIds) {
             this.putQueryParameter("ListenerIds", listenerIds);

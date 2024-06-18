@@ -56,7 +56,7 @@ public class DescribeZonesRequest extends Request {
          * The language of the response. Valid values:
          * <p>
          * 
-         * *   **zh-CN**: Chinese
+         * *   **zh-CN** (default): Chinese
          * *   **en-US**: English
          * *   **ja**: Japanese
          */

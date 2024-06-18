@@ -176,7 +176,7 @@ public class DissociateAdditionalCertificatesFromListenerRequest extends Request
             private String certificateId; 
 
             /**
-             * The certificate ID. Only server certificates are supported. You can specify up to 20 IDs.
+             * The certificate ID. Only server certificates are supported. A maximum of 20 certificate IDs are supported.
              */
             public Builder certificateId(String certificateId) {
                 this.certificateId = certificateId;

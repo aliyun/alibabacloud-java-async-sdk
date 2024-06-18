@@ -71,6 +71,9 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
+    private java.util.List < String > securityGroupIds;
+
     @com.aliyun.core.annotation.NameInMap("Tags")
     private java.util.List < Tags> tags;
 
@@ -101,6 +104,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         this.regionId = builder.regionId;
         this.requestId = builder.requestId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.securityGroupIds = builder.securityGroupIds;
         this.tags = builder.tags;
         this.vpcId = builder.vpcId;
         this.zoneMappings = builder.zoneMappings;
@@ -255,6 +259,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
     }
 
     /**
+     * @return securityGroupIds
+     */
+    public java.util.List < String > getSecurityGroupIds() {
+        return this.securityGroupIds;
+    }
+
+    /**
      * @return tags
      */
     public java.util.List < Tags> getTags() {
@@ -296,6 +307,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         private String regionId; 
         private String requestId; 
         private String resourceGroupId; 
+        private java.util.List < String > securityGroupIds; 
         private java.util.List < Tags> tags; 
         private String vpcId; 
         private java.util.List < ZoneMappings> zoneMappings; 
@@ -389,7 +401,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
         }
 
         /**
-         * The configuration of the billing method of the ALB instance.
+         * The billing method of the ALB instance.
          */
         public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
             this.loadBalancerBillingConfig = loadBalancerBillingConfig;
@@ -498,6 +510,14 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SecurityGroupIds.
+         */
+        public Builder securityGroupIds(java.util.List < String > securityGroupIds) {
+            this.securityGroupIds = securityGroupIds;
             return this;
         }
 
@@ -693,7 +713,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
              * The billing method.
              * <p>
              * 
-             * Only **PostPay** may be returned. The value indicates the pay-as-you-go billing method.
+             * Set the value to **PostPay**, which indicates the pay-as-you-go billing method.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -746,7 +766,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String lockType; 
 
             /**
-             * The configuration of the configuration read-only mode.
+             * The reason why the ALB instance is locked. This parameter is valid only if **LoadBalancerBussinessStatus** is set to **Abnormal**.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -754,10 +774,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the configuration read-only mode was enabled. The reason must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The reason must start with a letter.
+             * The type of the lock. Valid values:
              * <p>
              * 
-             * This parameter is valid only if you set the **ModificationProtectionStatus** parameter to **ConsoleProtection**.
+             * *   **SecurityLocked**: The ALB instance is locked due to security reasons.
+             * *   **RelatedResourceLocked**: The ALB instance is locked due to other resources that are associated with the ALB instance.
+             * *   **FinancialLocked**: The ALB instance is locked due to overdue payments.
+             * *   **ResidualLocked**: The ALB instance is locked because the associated resources have overdue payments and the resources are released.
              */
             public Builder lockType(String lockType) {
                 this.lockType = lockType;
@@ -880,7 +903,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The zones and the vSwitches. You must specify at least two zones.
+             * The tag key.
+             * <p>
+             * 
+             * The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -888,7 +914,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The IP addresses that are used by the ALB instance.
+             * The tag value.
+             * <p>
+             * 
+             * The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. It cannot start with `aliyun` or `acs:`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -977,10 +1006,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String ipv6Address; 
 
             /**
-             * The ID of the zone where the ALB instance was deployed.
+             * An IPv4 address.
              * <p>
              * 
-             * You can call the [DescribeZones](~~189196~~) operation to query the zones of the ALB instance.
+             * This parameter takes effect when **AddressIPVersion** is set to **IPv4** or **DualStack**. The network type is determined by the value of **AddressType**.
              */
             public Builder address(String address) {
                 this.address = address;
@@ -988,7 +1017,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * AllocationId.
+             * The elastic IP address (EIP).
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;
@@ -996,7 +1025,13 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * EipType.
+             * The type of EIP. Valid values:
+             * <p>
+             * 
+             * *   **Common**: an EIP.
+             * *   **Anycast**: an Anycast EIP.
+             * 
+             * >  For more information about the regions in which ALB supports Anycast EIPs, see [Limits](~~460727~~).
              */
             public Builder eipType(String eipType) {
                 this.eipType = eipType;
@@ -1004,7 +1039,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetAddress.
+             * The private IPv4 address.
              */
             public Builder intranetAddress(String intranetAddress) {
                 this.intranetAddress = intranetAddress;
@@ -1012,11 +1047,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol version. Valid values:
+             * An IPv6 address.
              * <p>
              * 
-             * *   **IPv4:** IPv4.
-             * *   **DualStack:** dual stack.
+             * This parameter takes effect only when **AddressIPVersion** is set to **DualStack**. The network type is determined by the value of **Ipv6AddressType**.
              */
             public Builder ipv6Address(String ipv6Address) {
                 this.ipv6Address = ipv6Address;
@@ -1081,7 +1115,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The ID of the vSwitch in the zone. Each zone can contain only one vSwitch and one subnet.
+             * The IP address of the ALB instance.
              */
             public Builder loadBalancerAddresses(java.util.List < LoadBalancerAddresses> loadBalancerAddresses) {
                 this.loadBalancerAddresses = loadBalancerAddresses;
@@ -1089,11 +1123,7 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The type of IPv6 address that is used by the ALB instance. Valid values:
-             * <p>
-             * 
-             * *   **Internet:** The ALB instance uses a public IP address. The domain name of the ALB instance is resolved to the public IP address. Therefore, the ALB instance can be accessed over the Internet.
-             * *   **Intranet:** The ALB instance uses a private IP address. The domain name of the ALB instance is resolved to the private IP address. Therefore, the ALB instance can be accessed over the VPC in which the ALB instance is deployed.
+             * The vSwitch in the zone. You can specify only one vSwitch (subnet) in each zone of an ALB instance.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1101,7 +1131,10 @@ public class GetLoadBalancerAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneId.
+             * The zone ID of the ALB instance.
+             * <p>
+             * 
+             * You can call the [DescribeZones](~~189196~~) operation to query the most recent zone list.
              */
             public Builder zoneId(String zoneId) {
                 this.zoneId = zoneId;

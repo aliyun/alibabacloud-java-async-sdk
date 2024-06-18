@@ -124,7 +124,7 @@ public class ListAclsRequest extends Request {
         } 
 
         /**
-         * The ID of the network ACL. You can specify at most 20 network ACL IDs in each request.
+         * Filter access control lists (ACLs) by ACL ID.
          */
         public Builder aclIds(java.util.List < String > aclIds) {
             this.putQueryParameter("AclIds", aclIds);

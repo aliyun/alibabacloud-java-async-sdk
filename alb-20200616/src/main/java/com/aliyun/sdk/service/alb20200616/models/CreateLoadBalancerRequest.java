@@ -240,11 +240,11 @@ public class CreateLoadBalancerRequest extends Request {
         } 
 
         /**
-         * The mode used to assign IP addresses to zones of the ALB instance. Default value: Dynamic. Valid values:
+         * The mode in which IP addresses are allocated. Valid values:
          * <p>
          * 
-         * *   **Fixed:** assigns a static IP address to the ALB instance.
-         * *   **Dynamic:** dynamically assigns an IP address to each zone of the ALB instance.
+         * *   **Fixed**: The ALB instance uses a static IP address.
+         * *   **Dynamic**: dynamically allocates an IP address to each zone of the ALB instance.
          */
         public Builder addressAllocatedMode(String addressAllocatedMode) {
             this.putQueryParameter("AddressAllocatedMode", addressAllocatedMode);
@@ -319,7 +319,7 @@ public class CreateLoadBalancerRequest extends Request {
         }
 
         /**
-         * The configuration of the billing method of the ALB instance.
+         * The billing method of the ALB instance.
          */
         public Builder loadBalancerBillingConfig(LoadBalancerBillingConfig loadBalancerBillingConfig) {
             this.putQueryParameter("LoadBalancerBillingConfig", loadBalancerBillingConfig);
@@ -445,7 +445,7 @@ public class CreateLoadBalancerRequest extends Request {
             private String payType; 
 
             /**
-             * The ID of the Elastic IP Address (EIP) bandwidth plan that is associated with the ALB instance if the ALB instance uses a public IP address.
+             * The ID of the Internet Shared Bandwidth instance that is associated with the Internet-facing ALB instance.
              */
             public Builder bandwidthPackageId(String bandwidthPackageId) {
                 this.bandwidthPackageId = bandwidthPackageId;
@@ -666,7 +666,7 @@ public class CreateLoadBalancerRequest extends Request {
             private String zoneId; 
 
             /**
-             * 公网实例绑定的EIP实例ID。至少需要添加2个可用区，最多支持添加10个可用区。
+             * AllocationId.
              */
             public Builder allocationId(String allocationId) {
                 this.allocationId = allocationId;

@@ -173,7 +173,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The tag key. The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +181,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value. The tag value can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag value cannot start with `acs:` or `aliyun`.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -378,7 +378,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * The HTTP status codes.
+             * The HTTP status codes that indicate healthy backend servers.
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -391,7 +391,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
              * 
              * Valid values: \*\* 0 to 65535\*\*.
              * 
-             * Default value: **0**. This value indicates that the port on a backend server is used for health checks.
+             * The default value is **0**, which specifies that the port of a backend server is used for health checks.
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -402,11 +402,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
              * The domain name that is used for health checks. Valid values:
              * <p>
              * 
-             * **$SERVER_IP** (default): the private IP addresses of backend servers. If HealthCheckHost is not specified or set to $SERVER_IP, SLB uses the private IP addresses of backend servers for health checks.
+             * *   **$SERVER_IP** (default): the private IP address of a backend server. If an IP address is specified, or this parameter is not specified, the ALB instance uses the private IP address of each backend server as the domain name for health checks.
+             * *   **domain**: The domain name must be 1 to 80 characters in length, and can contain letters, digits, periods (.), and hyphens (-).
              * 
-             * **domain**: The domain name must be 1 to 80 characters in length and can contain letters, digits, periods (.), and hyphens (-).
-             * 
-             * >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.
+             * >  This parameter takes effect only when `HealthCheckProtocol` is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPs.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -414,14 +413,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP version that is used for health checks.
+             * The HTTP version for health checks.
              * <p>
              * 
              * Valid values: **HTTP 1.0** and **HTTP 1.1**.
              * 
              * Default value: **HTTP 1.1**.
              * 
-             * >  This parameter takes effect only if `HealthCheckProtocol` is set to **HTTP**.
+             * >  This parameter takes effect only when `HealthCheckProtocol` is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPs.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -437,14 +436,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method that is used for health checks. Valid values:
+             * The HTTP method that is used for health checks. Valid value:
              * <p>
              * 
-             * *   **HEAD** (default): By default, HTTP health checks use the HEAD method.
+             * *   **HEAD** (default): By default, HTTP and HTTPS health checks use the HEAD method.
              * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-             * *   **POST**: By default, gRPC health checks use the POST method.
+             * *   **POST**: gRPC health checks use the POST method by default.
              * 
-             * >  This parameter takes effect only if **HealthCheckProtocol** is set to **HTTP** or **gRPC**.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPs.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -452,10 +451,10 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The URL that is used for health checks.
+             * The URL path that you want to use for health checks.
              * <p>
              * 
-             * The URL must be 1 to 80 characters in length and can contain only letters, digits, hyphens (-), forward slashes (/), periods (.), percent signs (%), question marks (?), number signs (#), and ampersands (&). The URL can also contain the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
+             * The URL must be 1 to 80 characters in length, and can contain letters, digits, the following special characters: - / . % ? # &, and the following extended characters: `_ ; ~ ! ( ) * [ ] @ $ ^ : \" , +`. The URL must start with a forward slash (/).
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -463,12 +462,15 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that is used for health checks. Valid values:
+             * The protocol that is used for health checks. Valid value:
              * <p>
              * 
-             * *   **HTTP** (default): The SLB instance sends HEAD or GET requests to a backend server to simulate access from a browser and check whether the backend server is healthy.
-             * *   **TCP**: To perform TCP health checks, SLB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
-             * *   **gRPC**: To perform gRPC health checks, SLB sends POST or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **HTTP** (default): The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy.
+             * *   **HTTPS**: The ALB instance sends HEAD or GET requests, which simulate browser requests, to check whether the backend server is healthy. HTTPS provides higher security because HTTPS supports data encryption.
+             * *   **TCP**: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.
+             * *   **gRPC**: The ALB instance sends POST or GET requests to a backend server to check whether the backend server is healthy.
+             * 
+             * >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPs.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -487,7 +489,7 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
              * The name of the health check template.
              * <p>
              * 
-             * The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
+             * The name must be 2 to 128 character characters in length, and can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
              */
             public Builder healthCheckTemplateName(String healthCheckTemplateName) {
                 this.healthCheckTemplateName = healthCheckTemplateName;
@@ -495,14 +497,14 @@ public class ListHealthCheckTemplatesResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for a health check response. If a backend Elastic Compute Service (ECS) instance does not return a health check response within the specified timeout period, the backend server fails the health check.
+             * The timeout period of a health check response. If a backend Elastic Compute Service (ECS) instance does not respond within the specified timeout period, the ECS instance fails to pass the health check.
              * <p>
              * 
              * Valid values: **1 to 300**. Unit: seconds.
              * 
              * Default value: **5**.
              * 
-             * >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, the value of **HealthCHeckTimeout** is ignored and the value of **HealthCheckInterval** is used.
+             * >  If the value of **HealthCHeckTimeout** is smaller than the value of **HealthCheckInterval**, **HealthCHeckTimeout** does not take effect. The value of **HealthCheckInterval** specifies the timeout period.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;

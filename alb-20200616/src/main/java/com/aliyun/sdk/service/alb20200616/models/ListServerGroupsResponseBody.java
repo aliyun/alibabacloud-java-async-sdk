@@ -173,7 +173,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer connectionDrainTimeout; 
 
             /**
-             * ConnectionDrainEnabled.
+             * Indicates whether connection draining is enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder connectionDrainEnabled(Boolean connectionDrainEnabled) {
                 this.connectionDrainEnabled = connectionDrainEnabled;
@@ -181,7 +185,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionDrainTimeout.
+             * The timeout period of connection draining.
              */
             public Builder connectionDrainTimeout(Integer connectionDrainTimeout) {
                 this.connectionDrainTimeout = connectionDrainTimeout;
@@ -354,7 +358,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer unhealthyThreshold; 
 
             /**
-             * The HTTP status codes that indicate whether the backend server passes the health check.
+             * The HTTP status codes that indicate healthy backend servers.
              */
             public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
                 this.healthCheckCodes = healthCheckCodes;
@@ -362,10 +366,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The port that you want to use for health checks on backend servers. Valid values: **0** to **65535**.
+             * The backend port that is used for health checks. Valid values: **0** to **65535**.
              * <p>
              * 
-             * A value of **0** indicates that the port on a backend server is used for health checks.
+             * A value of **0** indicates that the port of a backend server is used for health checks.
              */
             public Builder healthCheckConnectPort(Integer healthCheckConnectPort) {
                 this.healthCheckConnectPort = healthCheckConnectPort;
@@ -388,13 +392,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
              * The domain name that is used for health checks. The domain name meets the following requirements:
              * <p>
              * 
-             * *   The domain name is 1 to 80 characters in length.
-             * *   The domain name contains lowercase letters, digits, hyphens (-), and periods (.).
-             * *   The domain name contains at least one period (.) but does not start or end with a period (.).
-             * *   The rightmost domain label of the domain name contains only letters, and does not contain digits or hyphens (-).
-             * *   The domain name does not start or end with a hyphen (-).
+             * *   The domain name must be 1 to 80 characters in length.
+             * *   The domain name can contain lowercase letters, digits, hyphens (-), and periods (.).
+             * *   The domain name can contain at least one period (.) but cannot start or end with a period (.).
+             * *   The rightmost domain label of the domain name can contain only letters, and cannot contain digits or hyphens (-).
+             * *   The domain name cannot start or end with a hyphen (-).
              * 
-             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
              */
             public Builder healthCheckHost(String healthCheckHost) {
                 this.healthCheckHost = healthCheckHost;
@@ -402,12 +406,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP version that is used for health checks.
+             * The HTTP version for health checks.
              * <p>
              * 
              * Valid values: **HTTP1.0** and **HTTP1.1**.
              * 
-             * >  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
              */
             public Builder healthCheckHttpVersion(String healthCheckHttpVersion) {
                 this.healthCheckHttpVersion = healthCheckHttpVersion;
@@ -415,7 +419,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval between two consecutive health checks. Unit: seconds. Valid values: **1** to **50**.
+             * The interval at which health checks are performed. Unit: seconds. Valid values: **1** to **50**.
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
@@ -423,14 +427,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP method that is used for health checks. Valid values:
+             * The HTTP method that is used for health checks. Valid value:
              * <p>
              * 
              * *   **GET**: If the length of a response exceeds 8 KB, the response is truncated. However, the health check result is not affected.
-             * *   **POST**: gRPC health checks on listeners use the POST method by default.
-             * *   **HEAD**: HTTP and HTTPS health checks on listeners use the HEAD method by default.
+             * *   **POST**: gRPC health checks use the POST method by default.
+             * *   **HEAD**: HTTP and HTTPS health checks use the HEAD method by default.
              * 
-             * >  This parameter takes effect when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP**, **HTTPS**, or **gRPC**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
              */
             public Builder healthCheckMethod(String healthCheckMethod) {
                 this.healthCheckMethod = healthCheckMethod;
@@ -438,10 +442,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The path that is used for health checks.
+             * The URL that is used for health checks.
              * <p>
              * 
-             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTPS on the **ALB** tab.
+             * >  This parameter takes effect only when **HealthCheckProtocol** is set to **HTTP** or **HTTPS**. HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
              */
             public Builder healthCheckPath(String healthCheckPath) {
                 this.healthCheckPath = healthCheckPath;
@@ -449,15 +453,15 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The protocol that you want to use for health checks. Valid values:
+             * The protocol that you want to use for health checks. Valid value:
              * <p>
              * 
-             * *   **HTTP**: ALB performs HTTP health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy.
-             * *   **HTTPS**: ALB performs HTTPS health checks by sending HEAD or GET requests to a backend server to check whether the backend server is healthy. HTTPS supports data encryption and provides higher data security than HTTP.
-             * *   **TCP**: To perform TCP health checks, ALB sends SYN packets to the backend server to check whether the port of the backend server is available to receive requests.
-             * *   **gRPC**: ALB performs gRPC health checks by sending POST or GET requests to a backend server to check whether the backend server is healthy.
+             * *   **HTTP**: HTTP health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers.
+             * *   **HTTPS**: HTTPS health checks simulate browser behaviors by sending HEAD or GET requests to probe the availability of backend servers. HTTPS supports encryption and provides higher security than HTTP.
+             * *   **TCP**: TCP health checks send TCP SYN packets to a backend server to check whether the port of the backend server is reachable.
+             * *   **gRPC**: gRPC health checks send POST or GET requests to a backend server to check whether the backend server is healthy.
              * 
-             * >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, and then apply for the privilege to use HTTPS on the **ALB** tab.
+             * >  HTTPS is unavailable by default. If you want to use HTTPS, log on to the SLB console, go to the Quota Center page, click the **ALB** tab, and then apply for the privilege to use HTTPS.
              */
             public Builder healthCheckProtocol(String healthCheckProtocol) {
                 this.healthCheckProtocol = healthCheckProtocol;
@@ -465,7 +469,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period for a health check response. If a backend server does not respond within the specified timeout period, the backend server fails the health check. Unit: seconds.
+             * The timeout period of a health check response. If a backend server does not respond within the specified timeout period, the backend server is declared unhealthy. Unit: seconds.
              */
             public Builder healthCheckTimeout(Integer healthCheckTimeout) {
                 this.healthCheckTimeout = healthCheckTimeout;
@@ -534,7 +538,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Boolean slowStartEnabled; 
 
             /**
-             * SlowStartDuration.
+             * The duration of a slow start.
              */
             public Builder slowStartDuration(Integer slowStartDuration) {
                 this.slowStartDuration = slowStartDuration;
@@ -542,7 +546,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SlowStartEnabled.
+             * Indicates whether slow starts are enabled. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder slowStartEnabled(Boolean slowStartEnabled) {
                 this.slowStartEnabled = slowStartEnabled;
@@ -619,7 +627,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String stickySessionType; 
 
             /**
-             * The cookie that is configured on the server.
+             * The cookie configured for the server.
              */
             public Builder cookie(String cookie) {
                 this.cookie = cookie;
@@ -627,7 +635,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The timeout period of a cookie. Unit: seconds. Valid values: **1** to **86400**.
+             * The timeout period of the cookie. Unit: seconds. Valid values: **1** to **86400**.
              * <p>
              * 
              * >  This parameter takes effect only when **StickySessionEnabled** is set to **true** and **StickySessionType** is set to **Insert**.
@@ -638,7 +646,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether session persistence is enabled. Valid values:
+             * Indicates whether session persistence is enabled. Valid value:
              * <p>
              * 
              * *   **true**
@@ -650,11 +658,11 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The method that is used to handle a cookie. Valid values:
+             * The method that is used to handle the cookie. Valid value:
              * <p>
              * 
-             * *   **Insert**: inserts a cookie. ALB inserts a cookie (SERVERID) into the first HTTP or HTTPS response packet that is sent to a client. The next request from the client contains this cookie and the listener distributes this request to the recorded backend server.
-             * *   **Server**: rewrites a cookie. When ALB detects a user-defined cookie, it overwrites the original cookie with the user-defined cookie. Subsequent requests to ALB carry this user-defined cookie, and ALB determines the destination servers of the requests based on the cookies.
+             * *   **insert**: inserts the cookie. The first time a client accesses ALB, ALB inserts the SERVERID cookie into the HTTP or HTTPS response packet. Subsequent requests from the client that carry this cookie are forwarded to the same backend server as the first request.
+             * *   **Server**: rewrites the cookie. ALB rewrites the custom cookies in requests from a client. Subsequent requests from the client that carry the new cookie are forwarded to the same backend server as the first request.
              */
             public Builder stickySessionType(String stickySessionType) {
                 this.stickySessionType = stickySessionType;
@@ -768,7 +776,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The data type of the common parameter.
+             * The parameter type. Valid value: QueryString.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -776,7 +784,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The parameter value for consistent hashing.
+             * The hash value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1057,7 +1065,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * Indicates whether configuration management is enabled. Valid values:
+             * Indicates whether configuration management is enabled. Valid value:
              * <p>
              * 
              * *   **true**
@@ -1069,7 +1077,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * ConnectionDrainConfig.
+             * The configurations of connection draining.
+             * <p>
+             * 
+             * After connection draining is enabled, ALB maintains data transmission for a period of time after the backend server is removed or declared unhealthy.
+             * 
+             * > *   By default, connection draining is disabled. To enable connection draining, contact your account manager.
+             * >*   Basic ALB instances do not support connection draining. Standard and WAF-enabled ALB instances support connection draining.
+             * >*   Server groups of the instance and IP types support connection draining. Server groups of the Function Compute type do not support connection draining.
              */
             public Builder connectionDrainConfig(ConnectionDrainConfig connectionDrainConfig) {
                 this.connectionDrainConfig = connectionDrainConfig;
@@ -1085,7 +1100,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The health check configuration.
+             * The health check configurations.
              */
             public Builder healthCheckConfig(HealthCheckConfig healthCheckConfig) {
                 this.healthCheckConfig = healthCheckConfig;
@@ -1093,7 +1108,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether IPv6 is supported. Valid values:
+             * Indicates whether IPv6 is supported. Valid value:
              * <p>
              * 
              * *   **true**
@@ -1105,12 +1120,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The backend protocol. Valid values:
+             * The backend protocol. Valid value:
              * <p>
              * 
              * *   **HTTP**: allows you to associate HTTPS, HTTP, or QUIC listeners with backend servers.
-             * *   **HTTPS**: allows you to associate an HTTPS listener with the server group.
-             * *   **GRPC**: allows you to associate an HTTPS or QUIC listener with the server group.
+             * *   **HTTPS**: allows you to associate HTTPS listeners with backend servers.
+             * *   **GRPC**: allows you to associate HTTPS and QUIC listeners with backend servers.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -1118,7 +1133,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * RelatedLoadBalancerIds.
+             * The ID of the ALB instance associated with the server group.
              */
             public Builder relatedLoadBalancerIds(java.util.List < String > relatedLoadBalancerIds) {
                 this.relatedLoadBalancerIds = relatedLoadBalancerIds;
@@ -1126,7 +1141,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The resource group ID to which the GA instance belongs.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -1134,12 +1149,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The scheduling algorithm. Valid values:
+             * The scheduling algorithm. Valid value:
              * <p>
              * 
              * *   **Wrr**: Backend servers with higher weights receive more requests than backend servers with lower weights.
              * *   **Wlc**: Requests are distributed based on the weight and load of each backend server. The load refers to the number of connections on a backend server. If multiple backend servers have the same weight, requests are forwarded to the backend server with the least number of connections.
-             * *   **Sch**: The consistent hashing algorithm is used. Requests from the same source IP address are distributed to the same backend server.
+             * *   **Sch**: consistent hashing. Requests that have the same hash factors are distributed to the same backend server. If you do not specify the UchConfig parameter, the source IP address is used as the hash factor by default. Requests that are from the same IP address are distributed to the same backend server. If you specify the UchConfig parameter, the URL string is used as the hash factor. Requests that have the same URL string are distributed to the same backend server.
              */
             public Builder scheduler(String scheduler) {
                 this.scheduler = scheduler;
@@ -1155,7 +1170,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the server group.
+             * The server group ID.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1163,7 +1178,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the server group.
+             * The server group name.
              */
             public Builder serverGroupName(String serverGroupName) {
                 this.serverGroupName = serverGroupName;
@@ -1171,10 +1186,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the server group. Valid values:
+             * The status of the server group. Valid value:
              * <p>
              * 
-             * *   **Creating**
+             * *   **Creating**.
              * *   **Available**
              * *   **Configuring**
              */
@@ -1184,12 +1199,12 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The type of server group. Valid values:
+             * The server group type. Valid value:
              * <p>
              * 
-             * *   **Instance**
-             * *   **Ip**
-             * *   **Fc**
+             * *   **Instance**: instances, including Elastic Compute Service (ECS) instances, elastic network interfaces (ENIs), and elastic container instances.
+             * *   **Ip**: IP addresses.
+             * *   **Fc**: Function Compute
              */
             public Builder serverGroupType(String serverGroupType) {
                 this.serverGroupType = serverGroupType;
@@ -1197,7 +1212,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The service name.
+             * The name of the server group.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -1205,7 +1220,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * SlowStartConfig.
+             * The configurations of slow starts.
+             * <p>
+             * 
+             * After slow starts are enabled, ALB prefetches data to newly added backend servers. Requests distributed to the backend servers gradually increase.
+             * 
+             * > *   Basic ALB instances do not support slow starts. Standard and WAF-enabled ALB instances support slow starts.
+             * >*   Server groups of the instance and IP types support slow starts. Server groups of the Function Compute type do not support slow starts.
+             * >*   Slow start is supported only by the weighted round-robin scheduling algorithm.
              */
             public Builder slowStartConfig(SlowStartConfig slowStartConfig) {
                 this.slowStartConfig = slowStartConfig;
@@ -1237,7 +1259,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether long-lived TCP connections are enabled. Valid values:
+             * Indicates whether persistent TCP connections are enabled. Valid value:
              * <p>
              * 
              * *   **true**
@@ -1249,7 +1271,7 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The ID of the VPC to which the ALB instance belongs.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

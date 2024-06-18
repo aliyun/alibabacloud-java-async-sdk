@@ -205,13 +205,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
         private Integer unhealthyThreshold; 
 
         /**
-         * The HTTP status codes that are used to determine whether the backend server passes the health check.
-         * <p>
-         * 
-         * *   If **HealthCheckProtocol** is set to **HTTP**, **HealthCheckCodes** can be set to **http\_2xx** (default), **http\_3xx**, **http\_4xx**, and **http\_5xx**. Separate multiple HTTP status codes with a comma (,).
-         * *   If **HealthCheckProtocol** is set to **gRPC**, **HealthCheckCodes** can be set to **0 to 99**. Default value: **0**. Value ranges are supported. You can enter up to 20 value ranges and separate them with a comma (,).
-         * 
-         * > This parameter takes effect only when the **HealthCheckProtocol** parameter is set to **HTTP** or **gRPC**.
+         * The HTTP status codes that indicate healthy backend servers.
          */
         public Builder healthCheckCodes(java.util.List < String > healthCheckCodes) {
             this.healthCheckCodes = healthCheckCodes;
@@ -420,7 +414,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key. The tag key can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag key. The tag key can be up to 128 characters in length, and cannot contain `http://` or `https://`. The tag key cannot start with `acs:` or `aliyun`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -428,7 +422,7 @@ public class GetHealthCheckTemplateAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value. The tag value can be up to 128 characters in length and cannot start with `acs:` or `aliyun`. It cannot contain `http://` or `https://`.
+             * The tag value. The tag value can be up to 128 characters in length, and cannot start with `acs:`. The tag value cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

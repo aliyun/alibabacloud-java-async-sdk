@@ -85,7 +85,7 @@ public class ListAclsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The network ACLs.
+         * A list of ACLs.
          */
         public Builder acls(java.util.List < Acls> acls) {
             this.acls = acls;
@@ -113,7 +113,7 @@ public class ListAclsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -173,7 +173,7 @@ public class ListAclsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +181,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -306,7 +306,7 @@ public class ListAclsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * The ID of the network ACL.
+             * The ACL ID.
              */
             public Builder aclId(String aclId) {
                 this.aclId = aclId;
@@ -314,7 +314,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the network ACL.
+             * The name of the ACL.
              */
             public Builder aclName(String aclName) {
                 this.aclName = aclName;
@@ -322,12 +322,12 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the network ACL. Valid values:
+             * The status of the ACL. Valid values:
              * <p>
              * 
              * *   **Creating**: The network ACL is being created.
              * *   **Available**: The network ACL is available.
-             * *   **Configuring**: The network ACL is being configured.
+             * *   **Configuring**
              */
             public Builder aclStatus(String aclStatus) {
                 this.aclStatus = aclStatus;
@@ -335,7 +335,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The IP version. **IPv4** is returned.
+             * The IP version of the ACL. Only **IPv4** may be returned.
              */
             public Builder addressIPVersion(String addressIPVersion) {
                 this.addressIPVersion = addressIPVersion;
@@ -343,11 +343,11 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of configuration management. Valid values:
+             * Indicates whether configuration management is enabled. Valid values:
              * <p>
              * 
-             * *   **true**: configuration management is enabled.
-             * *   **false**: configuration management is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder configManagedEnabled(Boolean configManagedEnabled) {
                 this.configManagedEnabled = configManagedEnabled;
@@ -355,7 +355,7 @@ public class ListAclsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * The time when the ACL was created. The follows the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

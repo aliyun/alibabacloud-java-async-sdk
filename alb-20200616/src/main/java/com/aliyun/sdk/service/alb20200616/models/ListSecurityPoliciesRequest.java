@@ -155,7 +155,7 @@ public class ListSecurityPoliciesRequest extends Request {
         }
 
         /**
-         * The security policy IDs. You can specify up to 20 IDs.
+         * The security policy IDs. You can specify at most 20 security policies.
          */
         public Builder securityPolicyIds(java.util.List < String > securityPolicyIds) {
             this.putQueryParameter("SecurityPolicyIds", securityPolicyIds);

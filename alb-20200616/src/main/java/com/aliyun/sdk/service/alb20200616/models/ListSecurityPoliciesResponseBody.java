@@ -173,7 +173,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The tag key.
+             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -181,7 +181,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The tag value.
+             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -314,7 +314,7 @@ public class ListSecurityPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the resource was created.
+             * The time when the ACL was created. The time follows the `YYYY-MM-DDThh:mm:ssZ` format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;

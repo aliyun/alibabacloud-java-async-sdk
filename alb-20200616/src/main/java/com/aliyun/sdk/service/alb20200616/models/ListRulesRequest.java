@@ -204,7 +204,7 @@ public class ListRulesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -258,7 +258,7 @@ public class ListRulesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -266,7 +266,7 @@ public class ListRulesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;

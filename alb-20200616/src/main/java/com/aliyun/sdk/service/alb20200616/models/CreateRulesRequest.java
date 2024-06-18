@@ -124,7 +124,7 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The listener ID of the ALB instance.
+         * The ID of the Application Load Balancer (ALB) instance.
          */
         public Builder listenerId(String listenerId) {
             this.putQueryParameter("ListenerId", listenerId);
@@ -133,7 +133,7 @@ public class CreateRulesRequest extends Request {
         }
 
         /**
-         * The forwarding rules. You can specify at most 10 forwarding rules in each call.
+         * The forwarding rules. You can specify at most 10 forwarding rules in each request.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.putQueryParameter("Rules", rules);
@@ -238,8 +238,8 @@ public class CreateRulesRequest extends Request {
              * Specifies whether to allow credentials to be carried in CORS requests. Valid values:
              * <p>
              * 
-             * *   **on**: allows credentials to be carried in CORS requests.
-             * *   **off**: does not allow credentials to be carried in CORS requests.
+             * *   **on**
+             * *   **off**
              */
             public Builder allowCredentials(String allowCredentials) {
                 this.allowCredentials = allowCredentials;
@@ -247,7 +247,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The allowed headers for CORS requests.
+             * The trusted headers of CORS requests.
              */
             public Builder allowHeaders(java.util.List < String > allowHeaders) {
                 this.allowHeaders = allowHeaders;
@@ -255,7 +255,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The allowed HTTP methods for CORS requests.
+             * The trusted HTTP methods of CORS requests.
              */
             public Builder allowMethods(java.util.List < String > allowMethods) {
                 this.allowMethods = allowMethods;
@@ -263,7 +263,11 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The allowed origins of CORS requests.
+             * The trusted origins of CORS requests. One or more values are supported. Asterisks (`*`) can be used as wildcard characters.
+             * <p>
+             * 
+             * *   Each value must start with `http://` or `https://`, which must be followed by a valid domain name, including top-level domain names. Example: `http://*.test.abc.example.com`.
+             * *   You can specify a port in each value or leave the port empty. Valid values: **1** to **65535**.
              */
             public Builder allowOrigin(java.util.List < String > allowOrigin) {
                 this.allowOrigin = allowOrigin;
@@ -279,7 +283,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The maximum cache time of preflight requests in the browser. Unit: seconds.
+             * The maximum cache time of dry run requests in the browser. Unit: seconds.
              * <p>
              * 
              * Valid values: **-1** to **172800**.
@@ -347,7 +351,7 @@ public class CreateRulesRequest extends Request {
             private String httpCode; 
 
             /**
-             * The content of the custom response. The content can be up to 1 KB in size and can contain only ASCII characters.
+             * The content of the custom response. The content cannot exceed 1 KB in size, and can contain only ASCII characters.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -370,7 +374,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The HTTP status code in the response. Valid values: **HTTP\_2xx**, **HTTP\_4xx**, and **HTTP\_5xx**. **x** must be a digit.
+             * The HTTP status code in responses. Valid values: **2xx**, **4xx**, **5xx**. The value must be a numeric string. **x** must be a digit.
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -426,8 +430,8 @@ public class CreateRulesRequest extends Request {
              * Specifies whether to enable session persistence. Valid values:
              * <p>
              * 
-             * *   **true**: enables session persistence.
-             * *   **false** (default): disables session persistence.
+             * *   **true**
+             * *   **false** (default)
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -499,8 +503,8 @@ public class CreateRulesRequest extends Request {
              * The weight of the server group. A larger value specifies a higher weight. A server group with a higher weight receives more requests. Valid values: **0** to **100**.
              * <p>
              * 
-             * *   If only one destination server group exists and you do not specify a weight, the default value **100** is used.
-             * *   If more than one destination server group exists, you must specify weights.
+             * *   If the number of destination server groups is 1, the default weight of the server group is **100**, unless you specify a weight.
+             * *   If the number of destination server groups is larger than 1, you must specify a weight.
              */
             public Builder weight(Integer weight) {
                 this.weight = weight;
@@ -553,7 +557,7 @@ public class CreateRulesRequest extends Request {
             private java.util.List < ServerGroupTuples> serverGroupTuples; 
 
             /**
-             * The configuration of session persistence for server groups.
+             * The configuration of session persistence for the server groups.
              */
             public Builder serverGroupStickySession(ServerGroupStickySession serverGroupStickySession) {
                 this.serverGroupStickySession = serverGroupStickySession;
@@ -626,10 +630,10 @@ public class CreateRulesRequest extends Request {
             private String valueType; 
 
             /**
-             * The key of the header. The key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header key specified by **InsertHeaderConfig** must be unique.
+             * The key of the header. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header keys specified by **InsertHeaderConfig** must be unique.
              * <p>
              * 
-             * >  You cannot specify the following header keys: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The header keys are case-insensitive.
+             * >  The following header keys are not supported: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The header keys are not case-sensitive.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -637,20 +641,20 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The value of the header.
+             * The value of the header to be inserted.
              * <p>
              * 
-             * *   If **ValueType** is set to **SystemDefined**, one of the following values is supported:
+             * *   If **ValueType** is set to **SystemDefined**, you can set the Value parameter to one of the following values:
              * 
              *     *   **ClientSrcPort**: the client port.
-             *     *   **ClientSrcIp**: the client IP address.
+             *     *   **ClientSrcIp**: the IP address of the client.
              *     *   **Protocol**: the request protocol (HTTP or HTTPS).
              *     *   **SLBId**: the ID of the ALB instance.
              *     *   **SLBPort**: the listener port.
              * 
-             * *   If **ValueType** is set to **UserDefined**, a custom header value is supported. The header value must be 1 to 128 characters in length, and can contain printable characters whose ASCII values are `greater than or equal to 32 and smaller than 127`. You can use asterisks (\*) and question marks (?) as wildcard characters. The header value cannot start or end with a space character.
+             * *   If **ValueType** is set to **UserDefined**, you can specify a custom header value. The header value must be 1 to 128 characters in length, and can contain wildcard characters, such as asterisks (\*) and question marks (?), and printable characters whose ASCII values are `larger than or equal to 32 and smaller than 127`. The header value cannot start or end with a space character.
              * 
-             * *   If **ValueType** is set to **ReferenceHeader**, you can reference one of the request headers. The header value must be 1 to 128 characters in length, and can contain lowercase letters, digits, underscores (\_), and hyphens (-).
+             * *   If **ValueType** is set to **ReferenceHeader**, you can reference a value from request headers. The value must be 1 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and underscores (\_).
              */
             public Builder value(String value) {
                 this.value = value;
@@ -764,18 +768,18 @@ public class CreateRulesRequest extends Request {
             private String query; 
 
             /**
-             * The hostname to which requests are redirected. Valid values:
+             * The hostname to which requests are forwarded. Valid values:
              * <p>
              * 
              * *   **${host}** (default): If ${host} is returned, no other character is appended.
              * 
-             * *   Limits on the value:
+             * *   The hostname must meet the following requirements:
              * 
-             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). Asterisks (\*) and question marks (?) can be used as wildcards.
-             *     *   The hostname contains at least one period (.) but does not start or end with a period (.).
+             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (\*), and question marks (?).
+             *     *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
              *     *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).
-             *     *   The domain labels do not start or end with hyphens (-).
-             *     *   You can use asterisks (\*) and question marks (?) as wildcards anywhere in a domain label.
+             *     *   The domain labels cannot start or end with a hyphen (-).
+             *     *   You can place an asterisk (\*) or a question mark (?) anywhere in a domain label as wildcard characters.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -783,7 +787,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The HTTP status code that indicates the redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.
+             * The redirect type. Valid values: **301**, **302**, **303**, **307**, and **308**.
              */
             public Builder httpCode(String httpCode) {
                 this.httpCode = httpCode;
@@ -791,16 +795,16 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The path to which requests are redirected. Valid values:
+             * The URL to which requests are redirected. Valid values:
              * <p>
              * 
              * *   Default value: **${path}**. **${host}**, **${protocol}**, and **${port}** are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
              * 
-             * *   Limits on the value:
+             * *   The path must meet the following requirements:
              * 
-             *     *   The path must be 1 to 128 characters in length.
-             *     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
-             *     *   The path is case-sensitive.
+             *     *   The URL must be 1 to 128 characters in length.
+             *     *   The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             *     *   The URL is case-sensitive.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -812,7 +816,7 @@ public class CreateRulesRequest extends Request {
              * <p>
              * 
              * *   **${port}** (default): If you set the value to ${port}, you cannot add other characters to the value.
-             * *   Other valid values: **1 to 63335**.
+             * *   You can also enter a port number. Valid values: **1 to 63335**.
              */
             public Builder port(String port) {
                 this.port = port;
@@ -824,9 +828,9 @@ public class CreateRulesRequest extends Request {
              * <p>
              * 
              * *   **${protocol}** (default): If ${protocol} is returned, no other character is appended.
-             * *   **HTTP** or **HTTPS**.
+             * *   **HTTP** or **HTTPS**
              * 
-             * >  HTTPS listeners support only HTTPS to HTTPS redirects.
+             * >  HTTPS listeners supports only HTTPS redirects.
              */
             public Builder protocol(String protocol) {
                 this.protocol = protocol;
@@ -839,10 +843,10 @@ public class CreateRulesRequest extends Request {
              * 
              * *   Default value: **${query}**. **${host}**, **${protocol}**, and **${port}** are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.
              * 
-             * *   Limits on the value:
+             * *   The query string must meet the following requirements:
              * 
              *     *   The query string must be 1 to 128 characters in length.
-             *     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+             *     *   The query string can contain printable characters, but cannot contain space characters, the special characters `# [ ] { } \ | < > &`, or uppercase letters.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -883,11 +887,11 @@ public class CreateRulesRequest extends Request {
             private String key; 
 
             /**
-             * The key of the header to be removed. The key must be 1 to 40 characters in length and can contain letters, digits, underscores, and hyphens (-). The header key must be unique.
+             * The key of the header to be removed. The header key must be 1 to 40 characters in length, and can contain letters, digits, underscores (\_), and hyphens (-). The header keys specified in RemoveHeader must be unique.
              * <p>
              * 
-             * *   You cannot specify the following header keys for an inbound forwarding rule: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The preceding keys are case-insensitive.
-             * *   You cannot specify the following header keys for an outbound forwarding rule: `connection`, `upgrade`, `content-length`, and `transfer-encoding`. The preceding keys are case-insensitive.
+             * *   If Direction is set to Request, the following header keys are not supported: `slb-id`, `slb-ip`, `x-forwarded-for`, `x-forwarded-proto`, `x-forwarded-eip`, `x-forwarded-port`, `x-forwarded-client-srcport`, `connection`, `upgrade`, `content-length`, `transfer-encoding`, `keep-alive`, `te`, `host`, `cookie`, `remoteip`, and `authority`. The header keys are not case-sensitive.
+             * *   If Direction is set to Response, the following header keys are not supported: `connection`, `upgrade`, `content-length`, and `transfer-encoding`. The header keys are not case-sensitive.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -952,17 +956,17 @@ public class CreateRulesRequest extends Request {
             private String query; 
 
             /**
-             * The hostname to which requests are redirected. Valid values:
+             * The hostname to which requests are rewritten. Valid values:
              * <p>
              * 
              * *   **${host}** (default): If you set the value to ${host}, you cannot append other characters.
              * 
-             * *   A custom value that meets the following requirements:
+             * *   The hostname must meet the following requirements:
              * 
-             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), and periods (.). You can use asterisks (\*) and question marks (?) as wildcard characters.
-             *     *   The hostname contains at least one period (.) but does not start or end with a period (.).
+             *     *   The hostname must be 3 to 128 characters in length, and can contain lowercase letters, digits, hyphens (-), periods (.), asterisks (\*), and question marks (?).
+             *     *   The hostname must contain at least one period (.) but cannot start or end with a period (.).
              *     *   The rightmost domain label can contain only letters and wildcard characters. It does not contain digits or hyphens (-).
-             *     *   The domain labels do not start or end with hyphens (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
+             *     *   The domain labels cannot start or end with hyphens (-). You can use asterisks (\*) and question marks (?) anywhere in a domain label as wildcard characters.
              */
             public Builder host(String host) {
                 this.host = host;
@@ -970,16 +974,16 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The path to which requests are redirected. Valid values:
+             * The URL to which requests are redirected. Valid values:
              * <p>
              * 
              * *   Default value: **${path}**. **${host}**, **${protocol}**, and **${port}** are also supported. Each variable can be specified only once. You can specify one or more of the preceding variables in each request. You can also combine them with a custom value.
              * 
-             * *   Limits on the value:
+             * *   The URL must meet the following requirements:
              * 
-             *     *   The path must be 1 to 128 characters in length.
-             *     *   It must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
-             *     *   The path is case-sensitive.
+             *     *   The value must be 1 to 128 characters in length,
+             *     *   The URL must start with a forward slash (/) and can contain letters, digits, and the following special characters: `$ - _ .+ / & ~ @ :`. It cannot contain the following special characters: `" % # ; ! ( ) [ ]^ , "`. You can use asterisks (\*) and question marks (?) as wildcard characters.
+             *     *   The URL is case-sensitive.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -987,15 +991,15 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The query string of the URL to which requests are redirected.
+             * The query string of the URL to which requests are rewritten.
              * <p>
              * 
              * *   Default value: **${query}**. **${host}**, **${protocol}**, and **${port}** are also supported. Each variable can be specified only once. The preceding variables can be used at the same time or combined with a custom value.
              * 
-             * *   Limits on the value:
+             * *   The query string must meet the following requirements:
              * 
              *     *   The query string must be 1 to 128 characters in length.
-             *     *   It can contain printable characters, except space characters, the special characters `# [ ] { } \ | < > &`, and uppercase letters.
+             *     *   The query string can contain printable characters, but cannot contain space characters, the special characters `# [ ] { } \ | < > &`, or uppercase letters.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -1048,10 +1052,10 @@ public class CreateRulesRequest extends Request {
             private Integer QPS; 
 
             /**
-             * The QPS of each IP address. Value range: **1 to 1000000**.
+             * The number of requests per IP address. Value range: **1 to 1000000**.
              * <p>
              * 
-             * >  If **QPS** and PerIpQps are specified, the value of **PerIpQps** must be smaller than the value of **QPS**.
+             * >  If both the **QPS** and **PerIpQps** parameters are specified, the value of the **QPS** parameter is smaller than the value of the PerIpQps parameter.
              */
             public Builder perIpQps(Integer perIpQps) {
                 this.perIpQps = perIpQps;
@@ -1100,7 +1104,7 @@ public class CreateRulesRequest extends Request {
             private String serverGroupId; 
 
             /**
-             * The ID of the server group.
+             * The server group ID.
              */
             public Builder serverGroupId(String serverGroupId) {
                 this.serverGroupId = serverGroupId;
@@ -1202,7 +1206,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The type of destination to which network traffic is mirrored. Valid values:
+             * The type of target to which network traffic is mirrored. Valid values:
              * <p>
              * 
              * *   **ForwardGroupMirror**: a server group.
@@ -1376,7 +1380,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the custom response. You can specify at most 20 responses.
+             * The configuration of the custom response. You can specify at most 20 custom responses.
              */
             public Builder fixedResponseConfig(FixedResponseConfig fixedResponseConfig) {
                 this.fixedResponseConfig = fixedResponseConfig;
@@ -1384,7 +1388,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the server group. You can add at most 20 server groups.
+             * The configuration of the server group. You can specify at most 20 server groups.
              */
             public Builder forwardGroupConfig(ForwardGroupConfig forwardGroupConfig) {
                 this.forwardGroupConfig = forwardGroupConfig;
@@ -1392,7 +1396,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the header to be inserted. You can specify at most 20 headers.
+             * The key of the header to be inserted. You can specify at most 20 headers.
              */
             public Builder insertHeaderConfig(InsertHeaderConfig insertHeaderConfig) {
                 this.insertHeaderConfig = insertHeaderConfig;
@@ -1400,7 +1404,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The priority of the action. Valid values: **1 to 50000**. A lower value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter is required. The priority of each action within a forwarding rule must be unique. You can specify priorities for at most 20 actions.
+             * The priority of the action. Valid values: **1 to 50000**. A lower value indicates a higher priority. The actions of a forwarding rule are applied in descending order of priority. This parameter cannot empty. The priority of each action within a forwarding rule must be unique. You can specify at most 20 action priorities.
              */
             public Builder order(Integer order) {
                 this.order = order;
@@ -1416,7 +1420,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the header to be removed.
+             * The HTTP header to be removed.
              */
             public Builder removeHeaderConfig(RemoveHeaderConfig removeHeaderConfig) {
                 this.removeHeaderConfig = removeHeaderConfig;
@@ -1432,7 +1436,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of traffic throttling. You can add at most 20 configuration records.
+             * The configuration of traffic throttling. You can specify at most 20 traffic throttling rules.
              */
             public Builder trafficLimitConfig(TrafficLimitConfig trafficLimitConfig) {
                 this.trafficLimitConfig = trafficLimitConfig;
@@ -1440,7 +1444,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of traffic mirroring. You can add at most 20 traffic mirrors.
+             * The configuration of traffic mirroring. You can specify at most 20 traffic mirroring rules.
              */
             public Builder trafficMirrorConfig(TrafficMirrorConfig trafficMirrorConfig) {
                 this.trafficMirrorConfig = trafficMirrorConfig;
@@ -1448,23 +1452,23 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The action type. You can specify at most 11 types of actions. Valid values:
+             * The action type. You can specify at most 11 types of action. Valid values:
              * <p>
              * 
              * *   **ForwardGroup**: distributes requests to multiple vServer groups.
-             * *   **Redirect**: redirects a request.
+             * *   **Redirect**: redirects requests.
              * *   **FixedResponse**: returns a custom response.
-             * *   **Rewrite**: rewrites a request.
-             * *   **InsertHeader**: inserts a header.
-             * *   **RemoveHeaderConfig:** deletes the header of a request.
+             * *   **Rewrite**: rewrites requests.
+             * *   **InsertHeader**: inserts headers.
+             * *   **RemoveHeaderConfig**: deletes a header.
              * *   **TrafficLimit**: throttles traffic.
-             * *   **trafficMirror**: mirrors network traffic.
+             * *   **TrafficMirror**: mirrors network traffic.
              * *   **Cors**: enables cross-origin resource sharing (CORS).
              * 
-             * The following action types are supported:
+             * You can specify the last action and the actions that you want to perform before the last action:
              * 
-             * *   **FinalType**: the last action to be performed in a forwarding rule. Each forwarding rule can contain only one FinalType action. You can specify a **ForwardGroup**, **Redirect**, or **FixedResponse** action as the FinalType action.
-             * *   **ExtType**: one or more actions to be performed before the **FinalType** action. A forwarding rule can contain one or more **ExtType** actions. To specify an ExtType action, you must specify a **FinalType** action. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
+             * *   **FinalType**: Each forwarding rule can contain only one FinalType action, which is performed at the end. You can specify only one of **ForwardGroup**, **Redirect**, and **FixedResponse**.
+             * *   **ExtType**: Each forwarding rule can contain one or more **ExtType** actions, which are performed before the **FinalType** action. If you want to specify an ExtType action, you must also specify a **FinalType** action. You can specify multiple **InsertHeader** actions or one **Rewrite** action.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1517,10 +1521,10 @@ public class CreateRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the cookie.
+             * The cookie key.
              * <p>
              * 
-             * *   The key must be 1 to 100 characters in length.
+             * *   The cookie key must be 1 to 100 characters in length.
              * *   You can use asterisks (\*) and question marks (?) as wildcard characters.
              * *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
              */
@@ -1530,10 +1534,10 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The value of the cookie.
+             * The cookie value.
              * <p>
              * 
-             * *   The value must be 1 to 100 characters in length.
+             * *   The cookie value must be 1 to 100 characters in length.
              * *   You can use asterisks (\*) and question marks (?) as wildcard characters.
              * *   It can contain printable characters, except uppercase letters, space characters, and the following special characters: `; # [ ] { } \ | < > &`.
              */
@@ -1576,7 +1580,7 @@ public class CreateRulesRequest extends Request {
             private java.util.List < Values> values; 
 
             /**
-             * The key-value pairs of cookies.
+             * The cookie value.
              */
             public Builder values(java.util.List < Values> values) {
                 this.values = values;
@@ -1632,9 +1636,9 @@ public class CreateRulesRequest extends Request {
              * The key of the header.
              * <p>
              * 
-             * *   The key must be 1 to 40 characters in length.
-             * *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
-             * *   You cannot specify Cookie or Host.
+             * *   The header key must be 1 to 40 characters in length,
+             * *   The header key can contain letters, digits, hyphens (-), and underscores (\_).
+             * *   Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1642,7 +1646,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The values of the header.
+             * The value of the header.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1683,7 +1687,7 @@ public class CreateRulesRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The hostnames.
+             * The hostname.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1765,7 +1769,7 @@ public class CreateRulesRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The paths.
+             * The URLs to which requests are forwarded.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -1821,7 +1825,7 @@ public class CreateRulesRequest extends Request {
              * They key of the query string.
              * <p>
              * 
-             * *   It must be 1 to 100 characters in length.
+             * *   The key must be 1 to 100 characters in length.
              * *   You can use asterisks (\*) and question marks (?) as wildcards. The key can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`.
              */
             public Builder key(String key) {
@@ -1833,8 +1837,8 @@ public class CreateRulesRequest extends Request {
              * The value of the query string.
              * <p>
              * 
-             * *   The value must be 1 to 128 characters in length.
-             * *   It can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`. You can use asterisks (\*) and question marks (?) as wildcards.
+             * *   The value must be 1 to 128 characters in length,
+             * *   The value can contain printable characters, excluding uppercase letters, space characters, and the following special characters: `# [ ] { } \ | < > &`. You can use asterisks (\*) and question marks (?) as wildcard characters.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1931,9 +1935,9 @@ public class CreateRulesRequest extends Request {
              * The key of the header.
              * <p>
              * 
-             * *   The key must be 1 to 40 characters in length.
-             * *   It can contain lowercase letters, digits, hyphens (-), and underscores (\_).
-             * *   You cannot specify Cookie or Host.
+             * *   The header key must be 1 to 40 characters in length.
+             * *   It can contain letters, digits, hyphens (-), and underscores (\_).
+             * *   Cookie and Host are not supported.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1941,7 +1945,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The values of the header.
+             * The value of the header.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -2023,7 +2027,7 @@ public class CreateRulesRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * The configuration of the source IP addresses based on which user traffic is matched.
+             * Traffic matching based on source IP addresses.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -2173,7 +2177,7 @@ public class CreateRulesRequest extends Request {
             private String type; 
 
             /**
-             * The configurations of the cookies. You can add at most 20 cookies.
+             * The key-value pairs of the cookie. You can specify at most 20 cookies.
              */
             public Builder cookieConfig(CookieConfig cookieConfig) {
                 this.cookieConfig = cookieConfig;
@@ -2181,7 +2185,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the header. You can add at most 20 headers.
+             * The configuration of the header. You can specify at most 20 headers.
              */
             public Builder headerConfig(HeaderConfig headerConfig) {
                 this.headerConfig = headerConfig;
@@ -2189,7 +2193,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configurations of the hosts. You can specify up to 20 resources.
+             * The configuration of the hosts. You can specify at most 20 hosts.
              */
             public Builder hostConfig(HostConfig hostConfig) {
                 this.hostConfig = hostConfig;
@@ -2205,7 +2209,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configurations of the paths. You can specify at most 20 paths.
+             * The configurations of the forwarding URLs. You can specify at most 20 forwarding URLs.
              */
             public Builder pathConfig(PathConfig pathConfig) {
                 this.pathConfig = pathConfig;
@@ -2221,7 +2225,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the header. You can add at most 20 headers.
+             * The configuration of the header. You can specify at most 20 headers.
              */
             public Builder responseHeaderConfig(ResponseHeaderConfig responseHeaderConfig) {
                 this.responseHeaderConfig = responseHeaderConfig;
@@ -2237,7 +2241,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The configuration of the source IP addresses based on which user traffic is matched. This parameter is required and takes effect only when **Type** is set to **SourceIP**. You can specify at most five values for **SourceIp**.
+             * Traffic matching based on source IP addresses. This parameter is required and valid when **Type** is set to **SourceIP**. You can specify up to five IP addresses or CIDR blocks in the **SourceIpConfig** parameter.
              */
             public Builder sourceIpConfig(SourceIpConfig sourceIpConfig) {
                 this.sourceIpConfig = sourceIpConfig;
@@ -2245,18 +2249,18 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The type of forwarding rule. You can specify at most seven types. Valid values:
+             * The type of forwarding rule. You can specify at most seven types of forwarding rules. Valid values:
              * <p>
              * 
-             * *   **Host**: Responses are forwarded based on hosts.
-             * *   **Path**: Responses are forwarded based on paths.
-             * *   **Header**: Responses are forwarded based on HTTP headers.
-             * *   **QueryString**: Responses are forwarded based on query strings.
-             * *   **Method**: Responses are forwarded based on request methods.
-             * *   **Cookie**: Responses are forwarded based on cookies.
-             * *   **SourceIp:**: Responses are forwarded based on source IP addresses.
-             * *   **ResponseHeader**: Responses are forwarded based on HTTP response headers.
-             * *   **ResponseStatusCode**: Responses are forwarded based on response status codes.
+             * *   **Host**: Requests are forwarded based on hosts.
+             * *   **Path**: Requests are forwarded based on URLs.
+             * *   **Header**: Requests are forwarded based on HTTP headers.
+             * *   **QueryString**: Requests are forwarded based on query strings.
+             * *   **Method**: Requests are forwarded based on request methods.
+             * *   **Cookie**: Requests are forwarded based on cookies.
+             * *   **SourceIp**: Requests are forwarded based on source IP addresses.
+             * *   **ResponseHeader**: Requests are forwarded based on HTTP response headers.
+             * *   **ResponseStatusCode**: Requests are forwarded based on response status codes.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2309,7 +2313,7 @@ public class CreateRulesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag. The tag key can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag key. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2317,7 +2321,7 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The value of the tag. The tag value can be up to 128 characters in length, and cannot start with acs: or aliyun. It cannot contain http:// or https://.
+             * The tag value. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -2425,10 +2429,10 @@ public class CreateRulesRequest extends Request {
              * The direction to which the forwarding rule is applied. You can specify only one direction. Valid values:
              * <p>
              * 
-             * *   **Request** (default): The forwarding rule is applied to the client requests received by ALB.
-             * *   **Response**: The forwarding rule is applied to the responses returned by backend servers.
+             * *   **Request** (default): The forwarding rule applies to requests. Requests sent from clients to ALB are matches against the match conditions and processed based on the rule actions.
+             * *   **Response**: The forwarding rule applies to responses. Responses from backend servers to ALB are matches against the match conditions and processed based on the rule actions.
              * 
-             * >  Basic ALB instances do not support forwarding rules of the **Response** type.
+             * >  Basic ALB instances do not support forwarding rules applied to the **Response** direction.
              */
             public Builder direction(String direction) {
                 this.direction = direction;
@@ -2436,10 +2440,10 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The priority of the forwarding rule. Valid values: **1** to **10000**. A lower value specifies a higher priority. You can specify priorities for at most 10 forwarding rules.
+             * The priority of the forwarding rule. Valid values: **1** to **10000**. A lower value specifies a higher priority. You can specify at most 10 priorities.
              * <p>
              * 
-             * >  The priority of each forwarding rule added to a listener must be unique.
+             * >  The priorities of forwarding rules for the same listener must be unique.
              */
             public Builder priority(Integer priority) {
                 this.priority = priority;
@@ -2463,11 +2467,11 @@ public class CreateRulesRequest extends Request {
             }
 
             /**
-             * The name of the forwarding rule. You can name at most 20 forwarding rules.
+             * The name of the forwarding rule. You can specify at most 20 rule names.
              * <p>
              * 
              * *   The name must be 2 to 128 characters in length.
-             * *   It can contain letters, digits, periods (.), underscores (\_), and hyphens (-). It must start with a letter.
+             * *   The name can contain letters, digits, periods (.), underscores (\_), and hyphens (-). The name must start with a letter.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

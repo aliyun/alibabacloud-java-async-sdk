@@ -321,6 +321,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
 
+    CompletableFuture<LoadBalancerJoinSecurityGroupResponse> loadBalancerJoinSecurityGroup(LoadBalancerJoinSecurityGroupRequest request);
+
+    CompletableFuture<LoadBalancerLeaveSecurityGroupResponse> loadBalancerLeaveSecurityGroup(LoadBalancerLeaveSecurityGroupRequest request);
+
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
     /**

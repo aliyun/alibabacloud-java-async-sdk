@@ -6,23 +6,19 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateListenerResponseBody} extends {@link TeaModel}
+ * {@link LoadBalancerJoinSecurityGroupResponseBody} extends {@link TeaModel}
  *
- * <p>CreateListenerResponseBody</p>
+ * <p>LoadBalancerJoinSecurityGroupResponseBody</p>
  */
-public class CreateListenerResponseBody extends TeaModel {
+public class LoadBalancerJoinSecurityGroupResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
-
-    @com.aliyun.core.annotation.NameInMap("ListenerId")
-    private String listenerId;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private CreateListenerResponseBody(Builder builder) {
+    private LoadBalancerJoinSecurityGroupResponseBody(Builder builder) {
         this.jobId = builder.jobId;
-        this.listenerId = builder.listenerId;
         this.requestId = builder.requestId;
     }
 
@@ -30,7 +26,7 @@ public class CreateListenerResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static CreateListenerResponseBody create() {
+    public static LoadBalancerJoinSecurityGroupResponseBody create() {
         return builder().build();
     }
 
@@ -42,13 +38,6 @@ public class CreateListenerResponseBody extends TeaModel {
     }
 
     /**
-     * @return listenerId
-     */
-    public String getListenerId() {
-        return this.listenerId;
-    }
-
-    /**
      * @return requestId
      */
     public String getRequestId() {
@@ -57,11 +46,10 @@ public class CreateListenerResponseBody extends TeaModel {
 
     public static final class Builder {
         private String jobId; 
-        private String listenerId; 
         private String requestId; 
 
         /**
-         * The ID of the asynchronous task.
+         * JobId.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -69,23 +57,15 @@ public class CreateListenerResponseBody extends TeaModel {
         }
 
         /**
-         * The listener ID.
-         */
-        public Builder listenerId(String listenerId) {
-            this.listenerId = listenerId;
-            return this;
-        }
-
-        /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public CreateListenerResponseBody build() {
-            return new CreateListenerResponseBody(this);
+        public LoadBalancerJoinSecurityGroupResponseBody build() {
+            return new LoadBalancerJoinSecurityGroupResponseBody(this);
         } 
 
     } 
