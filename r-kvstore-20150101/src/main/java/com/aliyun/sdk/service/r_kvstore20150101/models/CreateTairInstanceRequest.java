@@ -116,6 +116,10 @@ public class CreateTairInstanceRequest extends Request {
     private Integer readOnlyCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoverConfigMode")
+    private String recoverConfigMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -215,6 +219,7 @@ public class CreateTairInstanceRequest extends Request {
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
         this.readOnlyCount = builder.readOnlyCount;
+        this.recoverConfigMode = builder.recoverConfigMode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -423,6 +428,13 @@ public class CreateTairInstanceRequest extends Request {
     }
 
     /**
+     * @return recoverConfigMode
+     */
+    public String getRecoverConfigMode() {
+        return this.recoverConfigMode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -567,6 +579,7 @@ public class CreateTairInstanceRequest extends Request {
         private Integer port; 
         private String privateIpAddress; 
         private Integer readOnlyCount; 
+        private String recoverConfigMode; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -616,6 +629,7 @@ public class CreateTairInstanceRequest extends Request {
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
             this.readOnlyCount = request.readOnlyCount;
+            this.recoverConfigMode = request.recoverConfigMode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -683,10 +697,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the backup set of the source instance. If you want to create an instance based on a backup set of a specified instance, you can specify this parameter after you specify the **SrcDBInstanceId** parameter. Then, the system creates an instance based on the backup set that is specified by this parameter. You can call the [DescribeBackups](~~61081~~) operation to query the IDs of backup sets.
-         * <p>
-         * 
-         * >  If you want to create an instance based on a backup set of a specified instance, you must specify this parameter after you use the **SrcDBInstanceId** parameter to specify the ID of the source instance. Then, the system creates an instance based on the backup set that is specified by this parameter.
+         * The ID of the backup set of the source instance. The system uses the data stored in the backup set to create an instance. You can call the [DescribeBackups](~~61081~~) operation to query the backup set ID.
          */
         public Builder backupId(String backupId) {
             this.putQueryParameter("BackupId", backupId);
@@ -726,14 +737,11 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * This parameter is supported for specific new cluster instances. You can query the backup set ID by using the [DescribeClusterBackupList](~~2679158~~) operation.
+         * This parameter is supported for specific new cluster instances. You can query the backup set ID by calling the [DescribeClusterBackupList](~~2679158~~) operation.
          * <p>
          * 
          * *   If this parameter is supported, you can specify the backup set ID. In this case, you do not need to specify the **BackupId** parameter.
-         * 
-         * <!---->
-         * 
-         * *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets in all shards of the source instance, separated by commas (,). Example: "11101,11102".
+         * *   If this parameter is not supported, set the BackupId parameter to the IDs of backup sets in all shards of the source instance, separated by commas (,). Example: "2158\*\*\*\*20,2158\*\*\*\*22".
          */
         public Builder clusterBackupId(String clusterBackupId) {
             this.putQueryParameter("ClusterBackupId", clusterBackupId);
@@ -778,7 +786,14 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the distributed instance.
+         * Specifies whether to use the created instance as a child instance of a distributed instance.
+         * <p>
+         * 
+         * *   If you want the created instance to be used as the first child instance, enter **true**.
+         * *   If you want the created instance to be used as the second or third child instance, enter the ID of the distributed instance, such as gr-bp14rkqrhac\*\*\*\*.
+         * *   If you do not want the created instance to be used as a distributed instance, leave the parameter empty.
+         * 
+         * >  If you want the created instance to be used as a distributed instance, the created instance must be a Tair DRAM-based instance.
          */
         public Builder globalInstanceId(String globalInstanceId) {
             this.putQueryParameter("GlobalInstanceId", globalInstanceId);
@@ -910,11 +925,23 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The number of read-only nodes of the instance. This parameter is available only if you create a read/write splitting instance that uses cloud disks. You can use this parameter to specify a custom number of read-only nodes for the instance. Valid value: 1 to 5.
+         * The number of read replicas in the primary zone. This parameter applies only to read/write splitting instances that use cloud disks. You can use this parameter to customize the number of read replicas. Valid values: 1 to 9.
+         * <p>
+         * 
+         * >  The sum of the values of this parameter and SlaveReadOnlyCount cannot be greater than 9.
          */
         public Builder readOnlyCount(Integer readOnlyCount) {
             this.putQueryParameter("ReadOnlyCount", readOnlyCount);
             this.readOnlyCount = readOnlyCount;
+            return this;
+        }
+
+        /**
+         * RecoverConfigMode.
+         */
+        public Builder recoverConfigMode(String recoverConfigMode) {
+            this.putQueryParameter("RecoverConfigMode", recoverConfigMode);
+            this.recoverConfigMode = recoverConfigMode;
             return this;
         }
 
@@ -962,7 +989,7 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * RestoreTime.
+         * If data flashback is enabled for the source instance, you can use this parameter to specify a point in time within the backup retention period of the source instance. The system uses the backup data of the source instance at the point in time to create an instance. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder restoreTime(String restoreTime) {
             this.putQueryParameter("RestoreTime", restoreTime);
@@ -995,10 +1022,10 @@ public class CreateTairInstanceRequest extends Request {
          * The number of data nodes in the instance. Valid values:
          * <p>
          * 
-         * *   **1**: You can create an instance in the standard architecture that contains only one data node. For more information about the standard architecture, see [Cluster master-replica instances](~~52228~~). This is the default value.
-         * *   **2** to **32**: You can create an instance in the cluster architecture that contains the specified number of data nodes. For more information about the cluster architecture, see [Cluster master-replica instances](~~52228~~).
+         * *   **1** (default): You can create a [standard instance](~~52228~~) that contains only a single data node.
+         * *   **2** to **32**: You can create a [cluster instance](~~52228~~) that contains the specified number of data nodes.
          * 
-         * > Only persistent memory-optimized instances can use the cluster architecture. Therefore, you can set this parameter to an integer from **2** to **32** only if you set the **InstanceType** parameter to **tair_scm**.
+         * >  When the **InstanceType** parameter is set to **tair_rdb** or **tair_scm**, this parameter can be set to **2** to **32**. Only DRAM-based and persistent memory-optimized instances support the cluster architecture.
          */
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
@@ -1020,10 +1047,10 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The number of read replicas in the secondary zone. This parameter is used to create a read/write splitting instance that is deployed across multiple zones.
+         * The number of read replicas in the secondary zone when you create a multi-zone read/write splitting instance. The sum of the values of this parameter and ReadOnlyCount cannot be greater than 9.
          * <p>
          * 
-         * > To create a read/write splitting instance that is deployed across multiple zones, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
+         * > When you create a multi-zone read/write splitting instance, you must specify both SlaveReadOnlyCount and SecondaryZoneId.
          */
         public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
             this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
@@ -1032,10 +1059,10 @@ public class CreateTairInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the source instance.
+         * If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance.
          * <p>
          * 
-         * > If you want to create an instance based on the backup set of an existing instance, set this parameter to the ID of the source instance and the **BackupId** parameter to the backup set that you want to use.
+         * >  Then, you can use the **BackupId**, **ClusterBackupId**, or **RestoreTime** parameter to specify the backup set that you want to use or the point in time. This parameter must be used in combination with one of the preceding three parameters.
          */
         public Builder srcDBInstanceId(String srcDBInstanceId) {
             this.putQueryParameter("SrcDBInstanceId", srcDBInstanceId);

@@ -134,6 +134,10 @@ public class CreateInstanceRequest extends Request {
     private Integer readOnlyCount;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecoverConfigMode")
+    private String recoverConfigMode;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -166,6 +170,10 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ShardCount")
     @com.aliyun.core.annotation.Validation(maximum = 128, minimum = 1)
     private Integer shardCount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SlaveReadOnlyCount")
+    private Integer slaveReadOnlyCount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SrcDBInstanceId")
@@ -223,6 +231,7 @@ public class CreateInstanceRequest extends Request {
         this.port = builder.port;
         this.privateIpAddress = builder.privateIpAddress;
         this.readOnlyCount = builder.readOnlyCount;
+        this.recoverConfigMode = builder.recoverConfigMode;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -231,6 +240,7 @@ public class CreateInstanceRequest extends Request {
         this.secondaryZoneId = builder.secondaryZoneId;
         this.securityToken = builder.securityToken;
         this.shardCount = builder.shardCount;
+        this.slaveReadOnlyCount = builder.slaveReadOnlyCount;
         this.srcDBInstanceId = builder.srcDBInstanceId;
         this.tag = builder.tag;
         this.token = builder.token;
@@ -463,6 +473,13 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
+     * @return recoverConfigMode
+     */
+    public String getRecoverConfigMode() {
+        return this.recoverConfigMode;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -516,6 +533,13 @@ public class CreateInstanceRequest extends Request {
      */
     public Integer getShardCount() {
         return this.shardCount;
+    }
+
+    /**
+     * @return slaveReadOnlyCount
+     */
+    public Integer getSlaveReadOnlyCount() {
+        return this.slaveReadOnlyCount;
     }
 
     /**
@@ -591,6 +615,7 @@ public class CreateInstanceRequest extends Request {
         private String port; 
         private String privateIpAddress; 
         private Integer readOnlyCount; 
+        private String recoverConfigMode; 
         private String regionId; 
         private String resourceGroupId; 
         private String resourceOwnerAccount; 
@@ -599,6 +624,7 @@ public class CreateInstanceRequest extends Request {
         private String secondaryZoneId; 
         private String securityToken; 
         private Integer shardCount; 
+        private Integer slaveReadOnlyCount; 
         private String srcDBInstanceId; 
         private java.util.List < Tag> tag; 
         private String token; 
@@ -642,6 +668,7 @@ public class CreateInstanceRequest extends Request {
             this.port = request.port;
             this.privateIpAddress = request.privateIpAddress;
             this.readOnlyCount = request.readOnlyCount;
+            this.recoverConfigMode = request.recoverConfigMode;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -650,6 +677,7 @@ public class CreateInstanceRequest extends Request {
             this.secondaryZoneId = request.secondaryZoneId;
             this.securityToken = request.securityToken;
             this.shardCount = request.shardCount;
+            this.slaveReadOnlyCount = request.slaveReadOnlyCount;
             this.srcDBInstanceId = request.srcDBInstanceId;
             this.tag = request.tag;
             this.token = request.token;
@@ -998,6 +1026,15 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * RecoverConfigMode.
+         */
+        public Builder recoverConfigMode(String recoverConfigMode) {
+            this.putQueryParameter("RecoverConfigMode", recoverConfigMode);
+            this.recoverConfigMode = recoverConfigMode;
+            return this;
+        }
+
+        /**
          * The ID of the region where you want to create the instance. You can call the [DescribeRegions](~~61012~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
@@ -1072,6 +1109,15 @@ public class CreateInstanceRequest extends Request {
         public Builder shardCount(Integer shardCount) {
             this.putQueryParameter("ShardCount", shardCount);
             this.shardCount = shardCount;
+            return this;
+        }
+
+        /**
+         * SlaveReadOnlyCount.
+         */
+        public Builder slaveReadOnlyCount(Integer slaveReadOnlyCount) {
+            this.putQueryParameter("SlaveReadOnlyCount", slaveReadOnlyCount);
+            this.slaveReadOnlyCount = slaveReadOnlyCount;
             return this;
         }
 

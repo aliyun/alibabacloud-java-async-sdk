@@ -17,7 +17,7 @@ public class ModifyBackupPolicyRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("BackupRetentionPeriod")
-    @com.aliyun.core.annotation.Validation(maximum = 730, minimum = 7)
+    @com.aliyun.core.annotation.Validation(maximum = 730)
     private Integer backupRetentionPeriod;
 
     @com.aliyun.core.annotation.Query
@@ -206,7 +206,7 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * The number of days for which data backup files are retained. Valid values: 7 to 730. Default value: 7.
+         * The number of days for which you want to retain data backup files. Valid values: 7 to 730. Default value: 7.
          */
         public Builder backupRetentionPeriod(Integer backupRetentionPeriod) {
             this.putQueryParameter("BackupRetentionPeriod", backupRetentionPeriod);
@@ -215,12 +215,13 @@ public class ModifyBackupPolicyRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable incremental data backup. Default value: 0. Valid values:
+         * Enables or disables the data flashback feature for the instance. Valid values:
          * <p>
          * 
-         * *   **1**: enables incremental data backup.
-         * *   **0**: disables incremental data backup.
-         * >This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
+         * *   **1**: enables the data flashback feature. You must also enable AOF persistence by setting `appendonly` to `yes` in the parameter settings of the instance. Then, you can use the data flashback feature.
+         * *   **0** (default): disables the data flashback feature.
+         * 
+         * >  This parameter is available only for ApsaraDB for Redis Enhanced Edition (Tair) DRAM-based and persistent memory-optimized instances. For more information, see [Data flashback](~~443784~~).
          */
         public Builder enableBackupLog(Integer enableBackupLog) {
             this.putQueryParameter("EnableBackupLog", enableBackupLog);

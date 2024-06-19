@@ -278,7 +278,7 @@ public class CreateTairInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the order.
+         * The order ID.
          */
         public Builder orderId(Long orderId) {
             this.orderId = orderId;

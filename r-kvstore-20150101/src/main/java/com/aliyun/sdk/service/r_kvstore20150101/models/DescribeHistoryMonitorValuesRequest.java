@@ -265,11 +265,21 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * The monitoring metrics. Separate the metrics with commas (,).
+         * The monitoring metrics. Separate the metrics with commas (,). Take CpuUsage as an example:
          * <p>
-         * *   This parameter is empty by default. The UsedMemory and quotaMemory metrics are returned. For information about the metrics that are supported by ApsaraDB for Redis instances and their descriptions, see [View performance monitoring data](~~122091~~).
+         * 
+         * *   To query the overall CPU utilization of all data nodes, specify **CpuUsage$db**.
+         * *   To query the CPU utilization of a single data node, specify **CpuUsage** and NodeId.
+         * 
+         * For more information about the monitoring metrics, see **Additional description of MonitorKeys**.
+         * 
+         * > 
+         * 
+         * *   This parameter is empty by default, which indicates that the UsedMemory and quotaMemory metrics are returned.
          * 
          * *   To ensure query efficiency, we recommend that you specify no more than five metrics for a single node at a time, and specify only a single metric when you query aggregate metrics.
+         * 
+         * [Additional description of MonitorKeys](https://help.aliyun.com/zh/redis/developer-reference/api-r-kvstore-2015-01-01-describehistorymonitorvalues-redis)
          */
         public Builder monitorKeys(String monitorKeys) {
             this.putQueryParameter("MonitorKeys", monitorKeys);
@@ -292,7 +302,10 @@ public class DescribeHistoryMonitorValuesRequest extends Request {
         }
 
         /**
-         * NodeRole.
+         * If you want to query the metrics of the read replicas in a cloud-native read/write splitting instance, you must set this parameter to **READONLY** and specify **NodeId**.
+         * <p>
+         * 
+         * > In other cases, you do not need to specify this parameter or you can set this parameter to **MASTER**.
          */
         public Builder nodeRole(String nodeRole) {
             this.putQueryParameter("NodeRole", nodeRole);

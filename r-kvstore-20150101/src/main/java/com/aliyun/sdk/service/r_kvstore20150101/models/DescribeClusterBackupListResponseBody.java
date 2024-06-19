@@ -277,6 +277,9 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IsAvail")
         private String isAvail;
 
+        @com.aliyun.core.annotation.NameInMap("RecoverConfigMode")
+        private String recoverConfigMode;
+
         private Backups(Builder builder) {
             this.backupDownloadURL = builder.backupDownloadURL;
             this.backupEndTime = builder.backupEndTime;
@@ -290,6 +293,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             this.extraInfo = builder.extraInfo;
             this.instanceName = builder.instanceName;
             this.isAvail = builder.isAvail;
+            this.recoverConfigMode = builder.recoverConfigMode;
         }
 
         public static Builder builder() {
@@ -384,6 +388,13 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             return this.isAvail;
         }
 
+        /**
+         * @return recoverConfigMode
+         */
+        public String getRecoverConfigMode() {
+            return this.recoverConfigMode;
+        }
+
         public static final class Builder {
             private String backupDownloadURL; 
             private String backupEndTime; 
@@ -397,6 +408,7 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
             private ExtraInfo extraInfo; 
             private String instanceName; 
             private String isAvail; 
+            private String recoverConfigMode; 
 
             /**
              * The public download URL of the backup file.
@@ -502,6 +514,14 @@ public class DescribeClusterBackupListResponseBody extends TeaModel {
              */
             public Builder isAvail(String isAvail) {
                 this.isAvail = isAvail;
+                return this;
+            }
+
+            /**
+             * RecoverConfigMode.
+             */
+            public Builder recoverConfigMode(String recoverConfigMode) {
+                this.recoverConfigMode = recoverConfigMode;
                 return this;
             }
 

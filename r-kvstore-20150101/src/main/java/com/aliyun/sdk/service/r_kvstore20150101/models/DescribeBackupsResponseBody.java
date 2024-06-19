@@ -420,6 +420,9 @@ public class DescribeBackupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("NodeInstanceId")
         private String nodeInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("RecoverConfigMode")
+        private String recoverConfigMode;
+
         private Backup(Builder builder) {
             this.backupDBNames = builder.backupDBNames;
             this.backupDownloadURL = builder.backupDownloadURL;
@@ -435,6 +438,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             this.backupType = builder.backupType;
             this.engineVersion = builder.engineVersion;
             this.nodeInstanceId = builder.nodeInstanceId;
+            this.recoverConfigMode = builder.recoverConfigMode;
         }
 
         public static Builder builder() {
@@ -543,6 +547,13 @@ public class DescribeBackupsResponseBody extends TeaModel {
             return this.nodeInstanceId;
         }
 
+        /**
+         * @return recoverConfigMode
+         */
+        public String getRecoverConfigMode() {
+            return this.recoverConfigMode;
+        }
+
         public static final class Builder {
             private String backupDBNames; 
             private String backupDownloadURL; 
@@ -558,6 +569,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
             private String backupType; 
             private String engineVersion; 
             private String nodeInstanceId; 
+            private String recoverConfigMode; 
 
             /**
              * The names of the databases that are backed up. The default value is **all**, which indicates that all databases are backed up.
@@ -690,6 +702,14 @@ public class DescribeBackupsResponseBody extends TeaModel {
              */
             public Builder nodeInstanceId(String nodeInstanceId) {
                 this.nodeInstanceId = nodeInstanceId;
+                return this;
+            }
+
+            /**
+             * RecoverConfigMode.
+             */
+            public Builder recoverConfigMode(String recoverConfigMode) {
+                this.recoverConfigMode = recoverConfigMode;
                 return this;
             }
 
