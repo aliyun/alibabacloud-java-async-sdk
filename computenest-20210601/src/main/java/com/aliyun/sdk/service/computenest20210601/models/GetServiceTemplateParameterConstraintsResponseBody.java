@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetServiceTemplateParameterConstraintsResponseBody</p>
  */
 public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel {
-    @NameInMap("FamilyConstraints")
+    @com.aliyun.core.annotation.NameInMap("FamilyConstraints")
     private java.util.List < String > familyConstraints;
 
-    @NameInMap("ParameterConstraints")
+    @com.aliyun.core.annotation.NameInMap("ParameterConstraints")
     private java.util.List < ParameterConstraints> parameterConstraints;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetServiceTemplateParameterConstraintsResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
     } 
 
     public static class OriginalConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
 
-        @NameInMap("PropertyName")
+        @com.aliyun.core.annotation.NameInMap("PropertyName")
         private String propertyName;
 
-        @NameInMap("ResourceName")
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
         private String resourceName;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
         private OriginalConstraints(Builder builder) {
@@ -192,26 +191,110 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         } 
 
     }
+    public static class QueryErrors extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceName")
+        private String resourceName;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
+        private String resourceType;
+
+        private QueryErrors(Builder builder) {
+            this.errorMessage = builder.errorMessage;
+            this.resourceName = builder.resourceName;
+            this.resourceType = builder.resourceType;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static QueryErrors create() {
+            return builder().build();
+        }
+
+        /**
+         * @return errorMessage
+         */
+        public String getErrorMessage() {
+            return this.errorMessage;
+        }
+
+        /**
+         * @return resourceName
+         */
+        public String getResourceName() {
+            return this.resourceName;
+        }
+
+        /**
+         * @return resourceType
+         */
+        public String getResourceType() {
+            return this.resourceType;
+        }
+
+        public static final class Builder {
+            private String errorMessage; 
+            private String resourceName; 
+            private String resourceType; 
+
+            /**
+             * ErrorMessage.
+             */
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
+                return this;
+            }
+
+            /**
+             * ResourceName.
+             */
+            public Builder resourceName(String resourceName) {
+                this.resourceName = resourceName;
+                return this;
+            }
+
+            /**
+             * ResourceType.
+             */
+            public Builder resourceType(String resourceType) {
+                this.resourceType = resourceType;
+                return this;
+            }
+
+            public QueryErrors build() {
+                return new QueryErrors(this);
+            } 
+
+        } 
+
+    }
     public static class ParameterConstraints extends TeaModel {
-        @NameInMap("AllowedValues")
+        @com.aliyun.core.annotation.NameInMap("AllowedValues")
         private java.util.List < String > allowedValues;
 
-        @NameInMap("AssociationParameterNames")
+        @com.aliyun.core.annotation.NameInMap("AssociationParameterNames")
         private java.util.List < String > associationParameterNames;
 
-        @NameInMap("Behavior")
+        @com.aliyun.core.annotation.NameInMap("Behavior")
         private String behavior;
 
-        @NameInMap("BehaviorReason")
+        @com.aliyun.core.annotation.NameInMap("BehaviorReason")
         private String behaviorReason;
 
-        @NameInMap("OriginalConstraints")
+        @com.aliyun.core.annotation.NameInMap("OriginalConstraints")
         private java.util.List < OriginalConstraints> originalConstraints;
 
-        @NameInMap("ParameterKey")
+        @com.aliyun.core.annotation.NameInMap("ParameterKey")
         private String parameterKey;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("QueryErrors")
+        private java.util.List < QueryErrors> queryErrors;
+
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private ParameterConstraints(Builder builder) {
@@ -221,6 +304,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             this.behaviorReason = builder.behaviorReason;
             this.originalConstraints = builder.originalConstraints;
             this.parameterKey = builder.parameterKey;
+            this.queryErrors = builder.queryErrors;
             this.type = builder.type;
         }
 
@@ -275,6 +359,13 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
         }
 
         /**
+         * @return queryErrors
+         */
+        public java.util.List < QueryErrors> getQueryErrors() {
+            return this.queryErrors;
+        }
+
+        /**
          * @return type
          */
         public String getType() {
@@ -288,6 +379,7 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
             private String behaviorReason; 
             private java.util.List < OriginalConstraints> originalConstraints; 
             private String parameterKey; 
+            private java.util.List < QueryErrors> queryErrors; 
             private String type; 
 
             /**
@@ -335,6 +427,14 @@ public class GetServiceTemplateParameterConstraintsResponseBody extends TeaModel
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
+                return this;
+            }
+
+            /**
+             * QueryErrors.
+             */
+            public Builder queryErrors(java.util.List < QueryErrors> queryErrors) {
+                this.queryErrors = queryErrors;
                 return this;
             }
 

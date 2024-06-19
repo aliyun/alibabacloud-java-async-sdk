@@ -6,14 +6,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceInstanceRequest} extends {@link RequestModel}
+ * {@link RestartServiceInstanceRequest} extends {@link RequestModel}
  *
- * <p>GetServiceInstanceRequest</p>
+ * <p>RestartServiceInstanceRequest</p>
  */
-public class GetServiceInstanceRequest extends Request {
+public class RestartServiceInstanceRequest extends Request {
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MarketInstanceId")
-    private String marketInstanceId;
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
+    private String clientToken;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
@@ -22,11 +22,12 @@ public class GetServiceInstanceRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
-    private GetServiceInstanceRequest(Builder builder) {
+    private RestartServiceInstanceRequest(Builder builder) {
         super(builder);
-        this.marketInstanceId = builder.marketInstanceId;
+        this.clientToken = builder.clientToken;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
     }
@@ -35,7 +36,7 @@ public class GetServiceInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static GetServiceInstanceRequest create() {
+    public static RestartServiceInstanceRequest create() {
         return builder().build();
     }
 
@@ -45,10 +46,10 @@ public class GetServiceInstanceRequest extends Request {
     }
 
     /**
-     * @return marketInstanceId
+     * @return clientToken
      */
-    public String getMarketInstanceId() {
-        return this.marketInstanceId;
+    public String getClientToken() {
+        return this.clientToken;
     }
 
     /**
@@ -65,8 +66,8 @@ public class GetServiceInstanceRequest extends Request {
         return this.serviceInstanceId;
     }
 
-    public static final class Builder extends Request.Builder<GetServiceInstanceRequest, Builder> {
-        private String marketInstanceId; 
+    public static final class Builder extends Request.Builder<RestartServiceInstanceRequest, Builder> {
+        private String clientToken; 
         private String regionId; 
         private String serviceInstanceId; 
 
@@ -74,19 +75,19 @@ public class GetServiceInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(GetServiceInstanceRequest request) {
+        private Builder(RestartServiceInstanceRequest request) {
             super(request);
-            this.marketInstanceId = request.marketInstanceId;
+            this.clientToken = request.clientToken;
             this.regionId = request.regionId;
             this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**
-         * MarketInstanceId.
+         * ClientToken.
          */
-        public Builder marketInstanceId(String marketInstanceId) {
-            this.putQueryParameter("MarketInstanceId", marketInstanceId);
-            this.marketInstanceId = marketInstanceId;
+        public Builder clientToken(String clientToken) {
+            this.putQueryParameter("ClientToken", clientToken);
+            this.clientToken = clientToken;
             return this;
         }
 
@@ -109,8 +110,8 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         @Override
-        public GetServiceInstanceRequest build() {
-            return new GetServiceInstanceRequest(this);
+        public RestartServiceInstanceRequest build() {
+            return new RestartServiceInstanceRequest(this);
         } 
 
     } 

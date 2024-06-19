@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.computenest20210601;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.computenest20210601.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -35,5 +36,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListServiceInstanceResourcesResponse> listServiceInstanceResources(ListServiceInstanceResourcesRequest request);
 
     CompletableFuture<ListServiceInstancesResponse> listServiceInstances(ListServiceInstancesRequest request);
+
+    CompletableFuture<RestartServiceInstanceResponse> restartServiceInstance(RestartServiceInstanceRequest request);
+
+    CompletableFuture<StartServiceInstanceResponse> startServiceInstance(StartServiceInstanceRequest request);
+
+    CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request);
 
 }

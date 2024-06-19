@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetServiceTemplateParameterConstraintsResponse} extends {@link TeaModel}
+ * {@link StopServiceInstanceResponse} extends {@link TeaModel}
  *
- * <p>GetServiceTemplateParameterConstraintsResponse</p>
+ * <p>StopServiceInstanceResponse</p>
  */
-public class GetServiceTemplateParameterConstraintsResponse extends Response {
+public class StopServiceInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class GetServiceTemplateParameterConstraintsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetServiceTemplateParameterConstraintsResponseBody body;
+    private StopServiceInstanceResponseBody body;
 
-    private GetServiceTemplateParameterConstraintsResponse(BuilderImpl builder) {
+    private StopServiceInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetServiceTemplateParameterConstraintsResponse create() {
+    public static StopServiceInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class GetServiceTemplateParameterConstraintsResponse extends Response {
     /**
      * @return body
      */
-    public GetServiceTemplateParameterConstraintsResponseBody getBody() {
+    public StopServiceInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetServiceTemplateParameterConstraintsResponse, Builder> {
+    public interface Builder extends Response.Builder<StopServiceInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetServiceTemplateParameterConstraintsResponseBody body);
+        Builder body(StopServiceInstanceResponseBody body);
 
         @Override
-        GetServiceTemplateParameterConstraintsResponse build();
+        StopServiceInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetServiceTemplateParameterConstraintsResponse, Builder>
+            extends Response.BuilderImpl<StopServiceInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetServiceTemplateParameterConstraintsResponseBody body; 
+        private StopServiceInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetServiceTemplateParameterConstraintsResponse response) {
+        private BuilderImpl(StopServiceInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class GetServiceTemplateParameterConstraintsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetServiceTemplateParameterConstraintsResponseBody body) {
+        public Builder body(StopServiceInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetServiceTemplateParameterConstraintsResponse build() {
-            return new GetServiceTemplateParameterConstraintsResponse(this);
+        public StopServiceInstanceResponse build() {
+            return new StopServiceInstanceResponse(this);
         } 
 
     } 

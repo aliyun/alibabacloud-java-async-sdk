@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceInstanceResponseBody</p>
  */
 public class CreateServiceInstanceResponseBody extends TeaModel {
-    @NameInMap("MarketInstanceId")
+    @com.aliyun.core.annotation.NameInMap("MarketInstanceId")
     private String marketInstanceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
+    private String orderId;
+
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
     private String serviceInstanceId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateServiceInstanceResponseBody(Builder builder) {
         this.marketInstanceId = builder.marketInstanceId;
+        this.orderId = builder.orderId;
         this.requestId = builder.requestId;
         this.serviceInstanceId = builder.serviceInstanceId;
         this.status = builder.status;
@@ -44,6 +47,13 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
      */
     public String getMarketInstanceId() {
         return this.marketInstanceId;
+    }
+
+    /**
+     * @return orderId
+     */
+    public String getOrderId() {
+        return this.orderId;
     }
 
     /**
@@ -69,6 +79,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
 
     public static final class Builder {
         private String marketInstanceId; 
+        private String orderId; 
         private String requestId; 
         private String serviceInstanceId; 
         private String status; 
@@ -78,6 +89,14 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
          */
         public Builder marketInstanceId(String marketInstanceId) {
             this.marketInstanceId = marketInstanceId;
+            return this;
+        }
+
+        /**
+         * OrderId.
+         */
+        public Builder orderId(String orderId) {
+            this.orderId = orderId;
             return this;
         }
 

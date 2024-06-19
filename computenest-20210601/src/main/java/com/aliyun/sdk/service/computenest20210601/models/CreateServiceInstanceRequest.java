@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,87 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServiceInstanceRequest</p>
  */
 public class CreateServiceInstanceRequest extends Request {
-    @Query
-    @NameInMap("BusinessInfo")
-    private BusinessInfo businessInfo;
-
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Commodity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Commodity")
     private Commodity commodity;
 
-    @Query
-    @NameInMap("ContactGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactGroup")
     private String contactGroup;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("EnableInstanceOps")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableInstanceOps")
     private Boolean enableInstanceOps;
 
-    @Query
-    @NameInMap("EnableUserPrometheus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableUserPrometheus")
     private Boolean enableUserPrometheus;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OperationMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperationMetadata")
     private OperationMetadata operationMetadata;
 
-    @Query
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, ? > parameters;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ServiceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceId;
 
-    @Query
-    @NameInMap("ServiceVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceVersion")
     private String serviceVersion;
 
-    @Query
-    @NameInMap("SpecificationCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecificationCode")
     private String specificationCode;
 
-    @Query
-    @NameInMap("SpecificationName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecificationName")
     private String specificationName;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @Query
-    @NameInMap("TrialType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TrialType")
     private String trialType;
 
     private CreateServiceInstanceRequest(Builder builder) {
         super(builder);
-        this.businessInfo = builder.businessInfo;
         this.clientToken = builder.clientToken;
         this.commodity = builder.commodity;
         this.contactGroup = builder.contactGroup;
@@ -124,13 +118,6 @@ public class CreateServiceInstanceRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return businessInfo
-     */
-    public BusinessInfo getBusinessInfo() {
-        return this.businessInfo;
     }
 
     /**
@@ -260,7 +247,6 @@ public class CreateServiceInstanceRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateServiceInstanceRequest, Builder> {
-        private BusinessInfo businessInfo; 
         private String clientToken; 
         private Commodity commodity; 
         private String contactGroup; 
@@ -286,7 +272,6 @@ public class CreateServiceInstanceRequest extends Request {
 
         private Builder(CreateServiceInstanceRequest request) {
             super(request);
-            this.businessInfo = request.businessInfo;
             this.clientToken = request.clientToken;
             this.commodity = request.commodity;
             this.contactGroup = request.contactGroup;
@@ -306,16 +291,6 @@ public class CreateServiceInstanceRequest extends Request {
             this.templateName = request.templateName;
             this.trialType = request.trialType;
         } 
-
-        /**
-         * BusinessInfo.
-         */
-        public Builder businessInfo(BusinessInfo businessInfo) {
-            String businessInfoShrink = shrink(businessInfo, "BusinessInfo", "json");
-            this.putQueryParameter("BusinessInfo", businessInfoShrink);
-            this.businessInfo = businessInfo;
-            return this;
-        }
 
         /**
          * ClientToken.
@@ -497,55 +472,22 @@ public class CreateServiceInstanceRequest extends Request {
 
     } 
 
-    public static class BusinessInfo extends TeaModel {
-        @NameInMap("OrderParams")
-        private java.util.Map < String, String > orderParams;
-
-        private BusinessInfo(Builder builder) {
-            this.orderParams = builder.orderParams;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static BusinessInfo create() {
-            return builder().build();
-        }
-
-        /**
-         * @return orderParams
-         */
-        public java.util.Map < String, String > getOrderParams() {
-            return this.orderParams;
-        }
-
-        public static final class Builder {
-            private java.util.Map < String, String > orderParams; 
-
-            /**
-             * OrderParams.
-             */
-            public Builder orderParams(java.util.Map < String, String > orderParams) {
-                this.orderParams = orderParams;
-                return this;
-            }
-
-            public BusinessInfo build() {
-                return new BusinessInfo(this);
-            } 
-
-        } 
-
-    }
     public static class Commodity extends TeaModel {
-        @NameInMap("PayPeriod")
+        @com.aliyun.core.annotation.NameInMap("AutoPay")
+        private Boolean autoPay;
+
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
+        private Boolean autoRenew;
+
+        @com.aliyun.core.annotation.NameInMap("PayPeriod")
         private Long payPeriod;
 
-        @NameInMap("PayPeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PayPeriodUnit")
         private String payPeriodUnit;
 
         private Commodity(Builder builder) {
+            this.autoPay = builder.autoPay;
+            this.autoRenew = builder.autoRenew;
             this.payPeriod = builder.payPeriod;
             this.payPeriodUnit = builder.payPeriodUnit;
         }
@@ -556,6 +498,20 @@ public class CreateServiceInstanceRequest extends Request {
 
         public static Commodity create() {
             return builder().build();
+        }
+
+        /**
+         * @return autoPay
+         */
+        public Boolean getAutoPay() {
+            return this.autoPay;
+        }
+
+        /**
+         * @return autoRenew
+         */
+        public Boolean getAutoRenew() {
+            return this.autoRenew;
         }
 
         /**
@@ -573,8 +529,26 @@ public class CreateServiceInstanceRequest extends Request {
         }
 
         public static final class Builder {
+            private Boolean autoPay; 
+            private Boolean autoRenew; 
             private Long payPeriod; 
             private String payPeriodUnit; 
+
+            /**
+             * AutoPay.
+             */
+            public Builder autoPay(Boolean autoPay) {
+                this.autoPay = autoPay;
+                return this;
+            }
+
+            /**
+             * AutoRenew.
+             */
+            public Builder autoRenew(Boolean autoRenew) {
+                this.autoRenew = autoRenew;
+                return this;
+            }
 
             /**
              * PayPeriod.
@@ -600,19 +574,19 @@ public class CreateServiceInstanceRequest extends Request {
 
     }
     public static class OperationMetadata extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExtraInfo")
+        @com.aliyun.core.annotation.NameInMap("ExtraInfo")
         private String extraInfo;
 
-        @NameInMap("Resources")
+        @com.aliyun.core.annotation.NameInMap("Resources")
         private String resources;
 
-        @NameInMap("ServiceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
         private String serviceInstanceId;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private OperationMetadata(Builder builder) {
@@ -721,10 +695,10 @@ public class CreateServiceInstanceRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

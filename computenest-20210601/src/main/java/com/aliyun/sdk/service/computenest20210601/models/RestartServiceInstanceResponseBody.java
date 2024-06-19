@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ChangeResourceGroupResponseBody} extends {@link TeaModel}
+ * {@link RestartServiceInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>ChangeResourceGroupResponseBody</p>
+ * <p>RestartServiceInstanceResponseBody</p>
  */
-public class ChangeResourceGroupResponseBody extends TeaModel {
+public class RestartServiceInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ChangeResourceGroupResponseBody(Builder builder) {
+    private RestartServiceInstanceResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ChangeResourceGroupResponseBody create() {
+    public static RestartServiceInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -44,8 +44,8 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
             return this;
         }
 
-        public ChangeResourceGroupResponseBody build() {
-            return new ChangeResourceGroupResponseBody(this);
+        public RestartServiceInstanceResponseBody build() {
+            return new RestartServiceInstanceResponseBody(this);
         } 
 
     } 

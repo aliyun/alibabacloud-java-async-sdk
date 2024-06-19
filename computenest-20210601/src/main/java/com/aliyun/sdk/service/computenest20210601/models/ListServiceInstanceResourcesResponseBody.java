@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceInstanceResourcesResponseBody</p>
  */
 public class ListServiceInstanceResourcesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
     private ListServiceInstanceResourcesResponseBody(Builder builder) {
@@ -112,34 +111,34 @@ public class ListServiceInstanceResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RenewStatus")
+        @com.aliyun.core.annotation.NameInMap("RenewStatus")
         private String renewStatus;
 
-        @NameInMap("RenewalPeriod")
+        @com.aliyun.core.annotation.NameInMap("RenewalPeriod")
         private Integer renewalPeriod;
 
-        @NameInMap("RenewalPeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("RenewalPeriodUnit")
         private String renewalPeriodUnit;
 
-        @NameInMap("ResourceARN")
+        @com.aliyun.core.annotation.NameInMap("ResourceARN")
         private String resourceARN;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Resources(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceInstanceResourcesRequest</p>
  */
 public class ListServiceInstanceResourcesRequest extends Request {
-    @Query
-    @NameInMap("ExpireTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTimeEnd")
     private String expireTimeEnd;
 
-    @Query
-    @NameInMap("ExpireTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTimeStart")
     private String expireTimeStart;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceARN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceARN")
     private java.util.List < String > resourceARN;
 
-    @Query
-    @NameInMap("ServiceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
-    @Query
-    @NameInMap("ServiceInstanceResourceType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceResourceType")
     private String serviceInstanceResourceType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private ListServiceInstanceResourcesRequest(Builder builder) {
@@ -278,10 +277,10 @@ public class ListServiceInstanceResourcesRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

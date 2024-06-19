@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.computenest20210601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServiceInstanceLogsRequest</p>
  */
 public class ListServiceInstanceLogsRequest extends Request {
-    @Query
-    @NameInMap("LogSource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogSource")
     private String logSource;
 
-    @Query
-    @NameInMap("Logstore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Logstore")
     private String logstore;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ServiceInstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceInstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serviceInstanceId;
 
     private ListServiceInstanceLogsRequest(Builder builder) {
