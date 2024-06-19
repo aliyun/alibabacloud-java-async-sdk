@@ -34,8 +34,20 @@ public class UpdateCompliancePackRequest extends Request {
     private String description;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
+    private String excludeRegionIdsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceGroupIdsScope")
+    private String excludeResourceGroupIdsScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
+    private java.util.List < ExcludeTagsScope> excludeTagsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
@@ -44,6 +56,10 @@ public class UpdateCompliancePackRequest extends Request {
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
     private String resourceGroupIdsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
+    private String resourceIdsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("RiskLevel")
@@ -58,6 +74,10 @@ public class UpdateCompliancePackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagsScope")
+    private java.util.List < TagsScope> tagsScope;
+
     private UpdateCompliancePackRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -65,12 +85,17 @@ public class UpdateCompliancePackRequest extends Request {
         this.compliancePackName = builder.compliancePackName;
         this.configRules = builder.configRules;
         this.description = builder.description;
+        this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
+        this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
         this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
+        this.excludeTagsScope = builder.excludeTagsScope;
         this.regionIdsScope = builder.regionIdsScope;
         this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
+        this.resourceIdsScope = builder.resourceIdsScope;
         this.riskLevel = builder.riskLevel;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
+        this.tagsScope = builder.tagsScope;
     }
 
     public static Builder builder() {
@@ -122,10 +147,31 @@ public class UpdateCompliancePackRequest extends Request {
     }
 
     /**
+     * @return excludeRegionIdsScope
+     */
+    public String getExcludeRegionIdsScope() {
+        return this.excludeRegionIdsScope;
+    }
+
+    /**
+     * @return excludeResourceGroupIdsScope
+     */
+    public String getExcludeResourceGroupIdsScope() {
+        return this.excludeResourceGroupIdsScope;
+    }
+
+    /**
      * @return excludeResourceIdsScope
      */
     public String getExcludeResourceIdsScope() {
         return this.excludeResourceIdsScope;
+    }
+
+    /**
+     * @return excludeTagsScope
+     */
+    public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+        return this.excludeTagsScope;
     }
 
     /**
@@ -140,6 +186,13 @@ public class UpdateCompliancePackRequest extends Request {
      */
     public String getResourceGroupIdsScope() {
         return this.resourceGroupIdsScope;
+    }
+
+    /**
+     * @return resourceIdsScope
+     */
+    public String getResourceIdsScope() {
+        return this.resourceIdsScope;
     }
 
     /**
@@ -163,18 +216,30 @@ public class UpdateCompliancePackRequest extends Request {
         return this.tagValueScope;
     }
 
+    /**
+     * @return tagsScope
+     */
+    public java.util.List < TagsScope> getTagsScope() {
+        return this.tagsScope;
+    }
+
     public static final class Builder extends Request.Builder<UpdateCompliancePackRequest, Builder> {
         private String clientToken; 
         private String compliancePackId; 
         private String compliancePackName; 
         private java.util.List < ConfigRules> configRules; 
         private String description; 
+        private String excludeRegionIdsScope; 
+        private String excludeResourceGroupIdsScope; 
         private String excludeResourceIdsScope; 
+        private java.util.List < ExcludeTagsScope> excludeTagsScope; 
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
+        private String resourceIdsScope; 
         private Integer riskLevel; 
         private String tagKeyScope; 
         private String tagValueScope; 
+        private java.util.List < TagsScope> tagsScope; 
 
         private Builder() {
             super();
@@ -187,12 +252,17 @@ public class UpdateCompliancePackRequest extends Request {
             this.compliancePackName = request.compliancePackName;
             this.configRules = request.configRules;
             this.description = request.description;
+            this.excludeRegionIdsScope = request.excludeRegionIdsScope;
+            this.excludeResourceGroupIdsScope = request.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = request.excludeResourceIdsScope;
+            this.excludeTagsScope = request.excludeTagsScope;
             this.regionIdsScope = request.regionIdsScope;
             this.resourceGroupIdsScope = request.resourceGroupIdsScope;
+            this.resourceIdsScope = request.resourceIdsScope;
             this.riskLevel = request.riskLevel;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
+            this.tagsScope = request.tagsScope;
         } 
 
         /**
@@ -254,11 +324,38 @@ public class UpdateCompliancePackRequest extends Request {
         }
 
         /**
+         * ExcludeRegionIdsScope.
+         */
+        public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
+            this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
+            this.excludeRegionIdsScope = excludeRegionIdsScope;
+            return this;
+        }
+
+        /**
+         * ExcludeResourceGroupIdsScope.
+         */
+        public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+            this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
+            this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+            return this;
+        }
+
+        /**
          * The ID of the resource that you do not want to evaluate by using the compliance package. Separate multiple resource IDs with commas (,).
          */
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
             this.excludeResourceIdsScope = excludeResourceIdsScope;
+            return this;
+        }
+
+        /**
+         * ExcludeTagsScope.
+         */
+        public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+            this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
+            this.excludeTagsScope = excludeTagsScope;
             return this;
         }
 
@@ -277,6 +374,15 @@ public class UpdateCompliancePackRequest extends Request {
         public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
             this.putBodyParameter("ResourceGroupIdsScope", resourceGroupIdsScope);
             this.resourceGroupIdsScope = resourceGroupIdsScope;
+            return this;
+        }
+
+        /**
+         * ResourceIdsScope.
+         */
+        public Builder resourceIdsScope(String resourceIdsScope) {
+            this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
+            this.resourceIdsScope = resourceIdsScope;
             return this;
         }
 
@@ -312,6 +418,15 @@ public class UpdateCompliancePackRequest extends Request {
         public Builder tagValueScope(String tagValueScope) {
             this.putBodyParameter("TagValueScope", tagValueScope);
             this.tagValueScope = tagValueScope;
+            return this;
+        }
+
+        /**
+         * TagsScope.
+         */
+        public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+            this.putBodyParameter("TagsScope", tagsScope);
+            this.tagsScope = tagsScope;
             return this;
         }
 
@@ -536,6 +651,128 @@ public class UpdateCompliancePackRequest extends Request {
 
             public ConfigRules build() {
                 return new ConfigRules(this);
+            } 
+
+        } 
+
+    }
+    public static class ExcludeTagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ExcludeTagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExcludeTagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ExcludeTagsScope build() {
+                return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    public static class TagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagsScope build() {
+                return new TagsScope(this);
             } 
 
         } 

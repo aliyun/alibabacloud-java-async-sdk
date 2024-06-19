@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class UpdateAggregateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AccountIdsScope")
+    private String accountIdsScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("AggregatorId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String aggregatorId;
@@ -46,8 +50,20 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     private String excludeFolderIdsScope;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
+    private String excludeRegionIdsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeResourceGroupIdsScope")
+    private String excludeResourceGroupIdsScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
     private String excludeResourceIdsScope;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
+    private java.util.List < ExcludeTagsScope> excludeTagsScope;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FolderIdsScope")
@@ -70,6 +86,10 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     private String resourceGroupIdsScope;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
+    private String resourceIdsScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
     private java.util.List < String > resourceTypesScope;
 
@@ -90,8 +110,13 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TagValueScope")
     private String tagValueScope;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TagsScope")
+    private java.util.List < TagsScope> tagsScope;
+
     private UpdateAggregateConfigRuleRequest(Builder builder) {
         super(builder);
+        this.accountIdsScope = builder.accountIdsScope;
         this.aggregatorId = builder.aggregatorId;
         this.clientToken = builder.clientToken;
         this.configRuleId = builder.configRuleId;
@@ -100,17 +125,22 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         this.description = builder.description;
         this.excludeAccountIdsScope = builder.excludeAccountIdsScope;
         this.excludeFolderIdsScope = builder.excludeFolderIdsScope;
+        this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
+        this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
         this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
+        this.excludeTagsScope = builder.excludeTagsScope;
         this.folderIdsScope = builder.folderIdsScope;
         this.inputParameters = builder.inputParameters;
         this.maximumExecutionFrequency = builder.maximumExecutionFrequency;
         this.regionIdsScope = builder.regionIdsScope;
         this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
+        this.resourceIdsScope = builder.resourceIdsScope;
         this.resourceTypesScope = builder.resourceTypesScope;
         this.riskLevel = builder.riskLevel;
         this.tagKeyLogicScope = builder.tagKeyLogicScope;
         this.tagKeyScope = builder.tagKeyScope;
         this.tagValueScope = builder.tagValueScope;
+        this.tagsScope = builder.tagsScope;
     }
 
     public static Builder builder() {
@@ -124,6 +154,13 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return accountIdsScope
+     */
+    public String getAccountIdsScope() {
+        return this.accountIdsScope;
     }
 
     /**
@@ -183,10 +220,31 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return excludeRegionIdsScope
+     */
+    public String getExcludeRegionIdsScope() {
+        return this.excludeRegionIdsScope;
+    }
+
+    /**
+     * @return excludeResourceGroupIdsScope
+     */
+    public String getExcludeResourceGroupIdsScope() {
+        return this.excludeResourceGroupIdsScope;
+    }
+
+    /**
      * @return excludeResourceIdsScope
      */
     public String getExcludeResourceIdsScope() {
         return this.excludeResourceIdsScope;
+    }
+
+    /**
+     * @return excludeTagsScope
+     */
+    public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+        return this.excludeTagsScope;
     }
 
     /**
@@ -225,6 +283,13 @@ public class UpdateAggregateConfigRuleRequest extends Request {
     }
 
     /**
+     * @return resourceIdsScope
+     */
+    public String getResourceIdsScope() {
+        return this.resourceIdsScope;
+    }
+
+    /**
      * @return resourceTypesScope
      */
     public java.util.List < String > getResourceTypesScope() {
@@ -259,7 +324,15 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         return this.tagValueScope;
     }
 
+    /**
+     * @return tagsScope
+     */
+    public java.util.List < TagsScope> getTagsScope() {
+        return this.tagsScope;
+    }
+
     public static final class Builder extends Request.Builder<UpdateAggregateConfigRuleRequest, Builder> {
+        private String accountIdsScope; 
         private String aggregatorId; 
         private String clientToken; 
         private String configRuleId; 
@@ -268,17 +341,22 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         private String description; 
         private String excludeAccountIdsScope; 
         private String excludeFolderIdsScope; 
+        private String excludeRegionIdsScope; 
+        private String excludeResourceGroupIdsScope; 
         private String excludeResourceIdsScope; 
+        private java.util.List < ExcludeTagsScope> excludeTagsScope; 
         private String folderIdsScope; 
         private java.util.Map < String, ? > inputParameters; 
         private String maximumExecutionFrequency; 
         private String regionIdsScope; 
         private String resourceGroupIdsScope; 
+        private String resourceIdsScope; 
         private java.util.List < String > resourceTypesScope; 
         private Integer riskLevel; 
         private String tagKeyLogicScope; 
         private String tagKeyScope; 
         private String tagValueScope; 
+        private java.util.List < TagsScope> tagsScope; 
 
         private Builder() {
             super();
@@ -286,6 +364,7 @@ public class UpdateAggregateConfigRuleRequest extends Request {
 
         private Builder(UpdateAggregateConfigRuleRequest request) {
             super(request);
+            this.accountIdsScope = request.accountIdsScope;
             this.aggregatorId = request.aggregatorId;
             this.clientToken = request.clientToken;
             this.configRuleId = request.configRuleId;
@@ -294,18 +373,32 @@ public class UpdateAggregateConfigRuleRequest extends Request {
             this.description = request.description;
             this.excludeAccountIdsScope = request.excludeAccountIdsScope;
             this.excludeFolderIdsScope = request.excludeFolderIdsScope;
+            this.excludeRegionIdsScope = request.excludeRegionIdsScope;
+            this.excludeResourceGroupIdsScope = request.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = request.excludeResourceIdsScope;
+            this.excludeTagsScope = request.excludeTagsScope;
             this.folderIdsScope = request.folderIdsScope;
             this.inputParameters = request.inputParameters;
             this.maximumExecutionFrequency = request.maximumExecutionFrequency;
             this.regionIdsScope = request.regionIdsScope;
             this.resourceGroupIdsScope = request.resourceGroupIdsScope;
+            this.resourceIdsScope = request.resourceIdsScope;
             this.resourceTypesScope = request.resourceTypesScope;
             this.riskLevel = request.riskLevel;
             this.tagKeyLogicScope = request.tagKeyLogicScope;
             this.tagKeyScope = request.tagKeyScope;
             this.tagValueScope = request.tagValueScope;
+            this.tagsScope = request.tagsScope;
         } 
+
+        /**
+         * AccountIdsScope.
+         */
+        public Builder accountIdsScope(String accountIdsScope) {
+            this.putBodyParameter("AccountIdsScope", accountIdsScope);
+            this.accountIdsScope = accountIdsScope;
+            return this;
+        }
 
         /**
          * The ID of the account group.
@@ -403,6 +496,24 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         }
 
         /**
+         * ExcludeRegionIdsScope.
+         */
+        public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
+            this.putBodyParameter("ExcludeRegionIdsScope", excludeRegionIdsScope);
+            this.excludeRegionIdsScope = excludeRegionIdsScope;
+            return this;
+        }
+
+        /**
+         * ExcludeResourceGroupIdsScope.
+         */
+        public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+            this.putBodyParameter("ExcludeResourceGroupIdsScope", excludeResourceGroupIdsScope);
+            this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+            return this;
+        }
+
+        /**
          * The ID of the resource to be excluded from the compliance evaluations performed by the rule. Separate multiple resource IDs with commas (,).
          * <p>
          * 
@@ -411,6 +522,15 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
             this.putBodyParameter("ExcludeResourceIdsScope", excludeResourceIdsScope);
             this.excludeResourceIdsScope = excludeResourceIdsScope;
+            return this;
+        }
+
+        /**
+         * ExcludeTagsScope.
+         */
+        public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+            this.putBodyParameter("ExcludeTagsScope", excludeTagsScope);
+            this.excludeTagsScope = excludeTagsScope;
             return this;
         }
 
@@ -481,6 +601,15 @@ public class UpdateAggregateConfigRuleRequest extends Request {
         }
 
         /**
+         * ResourceIdsScope.
+         */
+        public Builder resourceIdsScope(String resourceIdsScope) {
+            this.putBodyParameter("ResourceIdsScope", resourceIdsScope);
+            this.resourceIdsScope = resourceIdsScope;
+            return this;
+        }
+
+        /**
          * The type of the resource to be evaluated by the rule. Separate multiple resource types with commas (,).
          */
         public Builder resourceTypesScope(java.util.List < String > resourceTypesScope) {
@@ -541,6 +670,15 @@ public class UpdateAggregateConfigRuleRequest extends Request {
             return this;
         }
 
+        /**
+         * TagsScope.
+         */
+        public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+            this.putBodyParameter("TagsScope", tagsScope);
+            this.tagsScope = tagsScope;
+            return this;
+        }
+
         @Override
         public UpdateAggregateConfigRuleRequest build() {
             return new UpdateAggregateConfigRuleRequest(this);
@@ -548,4 +686,126 @@ public class UpdateAggregateConfigRuleRequest extends Request {
 
     } 
 
+    public static class ExcludeTagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ExcludeTagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExcludeTagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ExcludeTagsScope build() {
+                return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    public static class TagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagsScope build() {
+                return new TagsScope(this);
+            } 
+
+        } 
+
+    }
 }

@@ -321,9 +321,141 @@ public class GetCompliancePackResponseBody extends TeaModel {
         } 
 
     }
+    public static class ExcludeTagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ExcludeTagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExcludeTagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ExcludeTagsScope build() {
+                return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
+    public static class TagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagsScope build() {
+                return new TagsScope(this);
+            } 
+
+        } 
+
+    }
     public static class Scope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
+        private String excludeRegionIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceGroupIdsScope")
+        private String excludeResourceGroupIdsScope;
+
         @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List < ExcludeTagsScope> excludeTagsScope;
 
         @com.aliyun.core.annotation.NameInMap("RegionIdsScope")
         private String regionIdsScope;
@@ -331,18 +463,30 @@ public class GetCompliancePackResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
+        private String resourceIdsScope;
+
         @com.aliyun.core.annotation.NameInMap("TagKeyScope")
         private String tagKeyScope;
 
         @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
+        @com.aliyun.core.annotation.NameInMap("TagsScope")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private java.util.List < TagsScope> tagsScope;
+
         private Scope(Builder builder) {
+            this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
+            this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
+            this.excludeTagsScope = builder.excludeTagsScope;
             this.regionIdsScope = builder.regionIdsScope;
             this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
+            this.resourceIdsScope = builder.resourceIdsScope;
             this.tagKeyScope = builder.tagKeyScope;
             this.tagValueScope = builder.tagValueScope;
+            this.tagsScope = builder.tagsScope;
         }
 
         public static Builder builder() {
@@ -354,10 +498,31 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
 
         /**
+         * @return excludeRegionIdsScope
+         */
+        public String getExcludeRegionIdsScope() {
+            return this.excludeRegionIdsScope;
+        }
+
+        /**
+         * @return excludeResourceGroupIdsScope
+         */
+        public String getExcludeResourceGroupIdsScope() {
+            return this.excludeResourceGroupIdsScope;
+        }
+
+        /**
          * @return excludeResourceIdsScope
          */
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        /**
+         * @return excludeTagsScope
+         */
+        public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+            return this.excludeTagsScope;
         }
 
         /**
@@ -375,6 +540,13 @@ public class GetCompliancePackResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceIdsScope
+         */
+        public String getResourceIdsScope() {
+            return this.resourceIdsScope;
+        }
+
+        /**
          * @return tagKeyScope
          */
         public String getTagKeyScope() {
@@ -388,18 +560,54 @@ public class GetCompliancePackResponseBody extends TeaModel {
             return this.tagValueScope;
         }
 
+        /**
+         * @return tagsScope
+         */
+        public java.util.List < TagsScope> getTagsScope() {
+            return this.tagsScope;
+        }
+
         public static final class Builder {
+            private String excludeRegionIdsScope; 
+            private String excludeResourceGroupIdsScope; 
             private String excludeResourceIdsScope; 
+            private java.util.List < ExcludeTagsScope> excludeTagsScope; 
             private String regionIdsScope; 
             private String resourceGroupIdsScope; 
+            private String resourceIdsScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
+            private java.util.List < TagsScope> tagsScope; 
+
+            /**
+             * ExcludeRegionIdsScope.
+             */
+            public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
+                this.excludeRegionIdsScope = excludeRegionIdsScope;
+                return this;
+            }
+
+            /**
+             * ExcludeResourceGroupIdsScope.
+             */
+            public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+                this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+                return this;
+            }
 
             /**
              * The ID of the resource that you do not want to evaluate by using the compliance package.
              */
             public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
                 this.excludeResourceIdsScope = excludeResourceIdsScope;
+                return this;
+            }
+
+            /**
+             * ExcludeTagsScope.
+             */
+            public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+                this.excludeTagsScope = excludeTagsScope;
                 return this;
             }
 
@@ -420,6 +628,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
             }
 
             /**
+             * ResourceIdsScope.
+             */
+            public Builder resourceIdsScope(String resourceIdsScope) {
+                this.resourceIdsScope = resourceIdsScope;
+                return this;
+            }
+
+            /**
              * The tag key of the resource that you want to evaluate by using the compliance package.
              */
             public Builder tagKeyScope(String tagKeyScope) {
@@ -432,6 +648,14 @@ public class GetCompliancePackResponseBody extends TeaModel {
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
+                return this;
+            }
+
+            /**
+             * TagsScope.
+             */
+            public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+                this.tagsScope = tagsScope;
                 return this;
             }
 

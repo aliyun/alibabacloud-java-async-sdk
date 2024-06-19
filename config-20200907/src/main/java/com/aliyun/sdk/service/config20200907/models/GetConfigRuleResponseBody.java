@@ -423,6 +423,67 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    public static class ExcludeTagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private ExcludeTagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExcludeTagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public ExcludeTagsScope build() {
+                return new ExcludeTagsScope(this);
+            } 
+
+        } 
+
+    }
     public static class SourceDetails extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EventSource")
         private String eventSource;
@@ -908,6 +969,67 @@ public class GetConfigRuleResponseBody extends TeaModel {
         } 
 
     }
+    public static class TagsScope extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TagKey")
+        private String tagKey;
+
+        @com.aliyun.core.annotation.NameInMap("TagValue")
+        private String tagValue;
+
+        private TagsScope(Builder builder) {
+            this.tagKey = builder.tagKey;
+            this.tagValue = builder.tagValue;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TagsScope create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tagKey
+         */
+        public String getTagKey() {
+            return this.tagKey;
+        }
+
+        /**
+         * @return tagValue
+         */
+        public String getTagValue() {
+            return this.tagValue;
+        }
+
+        public static final class Builder {
+            private String tagKey; 
+            private String tagValue; 
+
+            /**
+             * TagKey.
+             */
+            public Builder tagKey(String tagKey) {
+                this.tagKey = tagKey;
+                return this;
+            }
+
+            /**
+             * TagValue.
+             */
+            public Builder tagValue(String tagValue) {
+                this.tagValue = tagValue;
+                return this;
+            }
+
+            public TagsScope build() {
+                return new TagsScope(this);
+            } 
+
+        } 
+
+    }
     public static class ConfigRule extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
@@ -942,8 +1064,17 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
+        @com.aliyun.core.annotation.NameInMap("ExcludeRegionIdsScope")
+        private String excludeRegionIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeResourceGroupIdsScope")
+        private String excludeResourceGroupIdsScope;
+
         @com.aliyun.core.annotation.NameInMap("ExcludeResourceIdsScope")
         private String excludeResourceIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ExcludeTagsScope")
+        private java.util.List < ExcludeTagsScope> excludeTagsScope;
 
         @com.aliyun.core.annotation.NameInMap("InputParameters")
         private java.util.Map < String, ? > inputParameters;
@@ -962,6 +1093,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ResourceGroupIdsScope")
         private String resourceGroupIdsScope;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceIdsScope")
+        private String resourceIdsScope;
 
         @com.aliyun.core.annotation.NameInMap("ResourceTypesScope")
         private String resourceTypesScope;
@@ -984,6 +1118,9 @@ public class GetConfigRuleResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TagValueScope")
         private String tagValueScope;
 
+        @com.aliyun.core.annotation.NameInMap("TagsScope")
+        private java.util.List < TagsScope> tagsScope;
+
         private ConfigRule(Builder builder) {
             this.accountId = builder.accountId;
             this.compliance = builder.compliance;
@@ -996,13 +1133,17 @@ public class GetConfigRuleResponseBody extends TeaModel {
             this.createBy = builder.createBy;
             this.createTimestamp = builder.createTimestamp;
             this.description = builder.description;
+            this.excludeRegionIdsScope = builder.excludeRegionIdsScope;
+            this.excludeResourceGroupIdsScope = builder.excludeResourceGroupIdsScope;
             this.excludeResourceIdsScope = builder.excludeResourceIdsScope;
+            this.excludeTagsScope = builder.excludeTagsScope;
             this.inputParameters = builder.inputParameters;
             this.managedRule = builder.managedRule;
             this.maximumExecutionFrequency = builder.maximumExecutionFrequency;
             this.modifiedTimestamp = builder.modifiedTimestamp;
             this.regionIdsScope = builder.regionIdsScope;
             this.resourceGroupIdsScope = builder.resourceGroupIdsScope;
+            this.resourceIdsScope = builder.resourceIdsScope;
             this.resourceTypesScope = builder.resourceTypesScope;
             this.riskLevel = builder.riskLevel;
             this.scope = builder.scope;
@@ -1010,6 +1151,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             this.tagKeyLogicScope = builder.tagKeyLogicScope;
             this.tagKeyScope = builder.tagKeyScope;
             this.tagValueScope = builder.tagValueScope;
+            this.tagsScope = builder.tagsScope;
         }
 
         public static Builder builder() {
@@ -1098,10 +1240,31 @@ public class GetConfigRuleResponseBody extends TeaModel {
         }
 
         /**
+         * @return excludeRegionIdsScope
+         */
+        public String getExcludeRegionIdsScope() {
+            return this.excludeRegionIdsScope;
+        }
+
+        /**
+         * @return excludeResourceGroupIdsScope
+         */
+        public String getExcludeResourceGroupIdsScope() {
+            return this.excludeResourceGroupIdsScope;
+        }
+
+        /**
          * @return excludeResourceIdsScope
          */
         public String getExcludeResourceIdsScope() {
             return this.excludeResourceIdsScope;
+        }
+
+        /**
+         * @return excludeTagsScope
+         */
+        public java.util.List < ExcludeTagsScope> getExcludeTagsScope() {
+            return this.excludeTagsScope;
         }
 
         /**
@@ -1144,6 +1307,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
          */
         public String getResourceGroupIdsScope() {
             return this.resourceGroupIdsScope;
+        }
+
+        /**
+         * @return resourceIdsScope
+         */
+        public String getResourceIdsScope() {
+            return this.resourceIdsScope;
         }
 
         /**
@@ -1195,6 +1365,13 @@ public class GetConfigRuleResponseBody extends TeaModel {
             return this.tagValueScope;
         }
 
+        /**
+         * @return tagsScope
+         */
+        public java.util.List < TagsScope> getTagsScope() {
+            return this.tagsScope;
+        }
+
         public static final class Builder {
             private Long accountId; 
             private Compliance compliance; 
@@ -1207,13 +1384,17 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private CreateBy createBy; 
             private Long createTimestamp; 
             private String description; 
+            private String excludeRegionIdsScope; 
+            private String excludeResourceGroupIdsScope; 
             private String excludeResourceIdsScope; 
+            private java.util.List < ExcludeTagsScope> excludeTagsScope; 
             private java.util.Map < String, ? > inputParameters; 
             private ManagedRule managedRule; 
             private String maximumExecutionFrequency; 
             private Long modifiedTimestamp; 
             private String regionIdsScope; 
             private String resourceGroupIdsScope; 
+            private String resourceIdsScope; 
             private String resourceTypesScope; 
             private Integer riskLevel; 
             private Scope scope; 
@@ -1221,6 +1402,7 @@ public class GetConfigRuleResponseBody extends TeaModel {
             private String tagKeyLogicScope; 
             private String tagKeyScope; 
             private String tagValueScope; 
+            private java.util.List < TagsScope> tagsScope; 
 
             /**
              * The ID of the Alibaba Cloud account to which the rule belongs.
@@ -1321,10 +1503,34 @@ public class GetConfigRuleResponseBody extends TeaModel {
             }
 
             /**
+             * ExcludeRegionIdsScope.
+             */
+            public Builder excludeRegionIdsScope(String excludeRegionIdsScope) {
+                this.excludeRegionIdsScope = excludeRegionIdsScope;
+                return this;
+            }
+
+            /**
+             * ExcludeResourceGroupIdsScope.
+             */
+            public Builder excludeResourceGroupIdsScope(String excludeResourceGroupIdsScope) {
+                this.excludeResourceGroupIdsScope = excludeResourceGroupIdsScope;
+                return this;
+            }
+
+            /**
              * The ID of the resource excluded from the compliance evaluations performed by the rule.
              */
             public Builder excludeResourceIdsScope(String excludeResourceIdsScope) {
                 this.excludeResourceIdsScope = excludeResourceIdsScope;
+                return this;
+            }
+
+            /**
+             * ExcludeTagsScope.
+             */
+            public Builder excludeTagsScope(java.util.List < ExcludeTagsScope> excludeTagsScope) {
+                this.excludeTagsScope = excludeTagsScope;
                 return this;
             }
 
@@ -1382,6 +1588,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
              */
             public Builder resourceGroupIdsScope(String resourceGroupIdsScope) {
                 this.resourceGroupIdsScope = resourceGroupIdsScope;
+                return this;
+            }
+
+            /**
+             * ResourceIdsScope.
+             */
+            public Builder resourceIdsScope(String resourceIdsScope) {
+                this.resourceIdsScope = resourceIdsScope;
                 return this;
             }
 
@@ -1452,6 +1666,14 @@ public class GetConfigRuleResponseBody extends TeaModel {
              */
             public Builder tagValueScope(String tagValueScope) {
                 this.tagValueScope = tagValueScope;
+                return this;
+            }
+
+            /**
+             * TagsScope.
+             */
+            public Builder tagsScope(java.util.List < TagsScope> tagsScope) {
+                this.tagsScope = tagsScope;
                 return this;
             }
 
