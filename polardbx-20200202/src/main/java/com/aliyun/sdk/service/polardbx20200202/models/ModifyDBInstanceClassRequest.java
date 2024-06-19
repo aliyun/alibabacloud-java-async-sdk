@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDBInstanceClassRequest</p>
  */
 public class ModifyDBInstanceClassRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("CnClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CnClass")
     private String cnClass;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DnClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnClass")
     private String dnClass;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("TargetDBInstanceClass")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedDNScale")
+    private Boolean specifiedDNScale;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedDNSpecMapJson")
+    private String specifiedDNSpecMapJson;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTime")
+    private String switchTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SwitchTimeMode")
+    private String switchTimeMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetDBInstanceClass")
     private String targetDBInstanceClass;
 
     private ModifyDBInstanceClassRequest(Builder builder) {
@@ -45,6 +60,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         this.DBInstanceName = builder.DBInstanceName;
         this.dnClass = builder.dnClass;
         this.regionId = builder.regionId;
+        this.specifiedDNScale = builder.specifiedDNScale;
+        this.specifiedDNSpecMapJson = builder.specifiedDNSpecMapJson;
+        this.switchTime = builder.switchTime;
+        this.switchTimeMode = builder.switchTimeMode;
         this.targetDBInstanceClass = builder.targetDBInstanceClass;
     }
 
@@ -97,6 +116,34 @@ public class ModifyDBInstanceClassRequest extends Request {
     }
 
     /**
+     * @return specifiedDNScale
+     */
+    public Boolean getSpecifiedDNScale() {
+        return this.specifiedDNScale;
+    }
+
+    /**
+     * @return specifiedDNSpecMapJson
+     */
+    public String getSpecifiedDNSpecMapJson() {
+        return this.specifiedDNSpecMapJson;
+    }
+
+    /**
+     * @return switchTime
+     */
+    public String getSwitchTime() {
+        return this.switchTime;
+    }
+
+    /**
+     * @return switchTimeMode
+     */
+    public String getSwitchTimeMode() {
+        return this.switchTimeMode;
+    }
+
+    /**
      * @return targetDBInstanceClass
      */
     public String getTargetDBInstanceClass() {
@@ -109,6 +156,10 @@ public class ModifyDBInstanceClassRequest extends Request {
         private String DBInstanceName; 
         private String dnClass; 
         private String regionId; 
+        private Boolean specifiedDNScale; 
+        private String specifiedDNSpecMapJson; 
+        private String switchTime; 
+        private String switchTimeMode; 
         private String targetDBInstanceClass; 
 
         private Builder() {
@@ -122,6 +173,10 @@ public class ModifyDBInstanceClassRequest extends Request {
             this.DBInstanceName = request.DBInstanceName;
             this.dnClass = request.dnClass;
             this.regionId = request.regionId;
+            this.specifiedDNScale = request.specifiedDNScale;
+            this.specifiedDNSpecMapJson = request.specifiedDNSpecMapJson;
+            this.switchTime = request.switchTime;
+            this.switchTimeMode = request.switchTimeMode;
             this.targetDBInstanceClass = request.targetDBInstanceClass;
         } 
 
@@ -167,6 +222,42 @@ public class ModifyDBInstanceClassRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SpecifiedDNScale.
+         */
+        public Builder specifiedDNScale(Boolean specifiedDNScale) {
+            this.putQueryParameter("SpecifiedDNScale", specifiedDNScale);
+            this.specifiedDNScale = specifiedDNScale;
+            return this;
+        }
+
+        /**
+         * SpecifiedDNSpecMapJson.
+         */
+        public Builder specifiedDNSpecMapJson(String specifiedDNSpecMapJson) {
+            this.putQueryParameter("SpecifiedDNSpecMapJson", specifiedDNSpecMapJson);
+            this.specifiedDNSpecMapJson = specifiedDNSpecMapJson;
+            return this;
+        }
+
+        /**
+         * SwitchTime.
+         */
+        public Builder switchTime(String switchTime) {
+            this.putQueryParameter("SwitchTime", switchTime);
+            this.switchTime = switchTime;
+            return this;
+        }
+
+        /**
+         * SwitchTimeMode.
+         */
+        public Builder switchTimeMode(String switchTimeMode) {
+            this.putQueryParameter("SwitchTimeMode", switchTimeMode);
+            this.switchTimeMode = switchTimeMode;
             return this;
         }
 

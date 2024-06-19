@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDBRequest</p>
  */
 public class CreateDBRequest extends Request {
-    @Query
-    @NameInMap("AccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountName;
 
-    @Query
-    @NameInMap("AccountPrivilege")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
     private String accountPrivilege;
 
-    @Query
-    @NameInMap("Charset")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Charset")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String charset;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DbDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbDescription")
     private String dbDescription;
 
-    @Query
-    @NameInMap("DbName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DbName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dbName;
 
-    @Query
-    @NameInMap("Mode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mode")
     private String mode;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityAccountName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountName")
     private String securityAccountName;
 
-    @Query
-    @NameInMap("SecurityAccountPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountPassword")
     private String securityAccountPassword;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoragePoolName")
+    private String storagePoolName;
 
     private CreateDBRequest(Builder builder) {
         super(builder);
@@ -69,6 +72,7 @@ public class CreateDBRequest extends Request {
         this.regionId = builder.regionId;
         this.securityAccountName = builder.securityAccountName;
         this.securityAccountPassword = builder.securityAccountPassword;
+        this.storagePoolName = builder.storagePoolName;
     }
 
     public static Builder builder() {
@@ -154,6 +158,13 @@ public class CreateDBRequest extends Request {
         return this.securityAccountPassword;
     }
 
+    /**
+     * @return storagePoolName
+     */
+    public String getStoragePoolName() {
+        return this.storagePoolName;
+    }
+
     public static final class Builder extends Request.Builder<CreateDBRequest, Builder> {
         private String accountName; 
         private String accountPrivilege; 
@@ -165,6 +176,7 @@ public class CreateDBRequest extends Request {
         private String regionId; 
         private String securityAccountName; 
         private String securityAccountPassword; 
+        private String storagePoolName; 
 
         private Builder() {
             super();
@@ -182,6 +194,7 @@ public class CreateDBRequest extends Request {
             this.regionId = request.regionId;
             this.securityAccountName = request.securityAccountName;
             this.securityAccountPassword = request.securityAccountPassword;
+            this.storagePoolName = request.storagePoolName;
         } 
 
         /**
@@ -271,6 +284,15 @@ public class CreateDBRequest extends Request {
         public Builder securityAccountPassword(String securityAccountPassword) {
             this.putQueryParameter("SecurityAccountPassword", securityAccountPassword);
             this.securityAccountPassword = securityAccountPassword;
+            return this;
+        }
+
+        /**
+         * StoragePoolName.
+         */
+        public Builder storagePoolName(String storagePoolName) {
+            this.putQueryParameter("StoragePoolName", storagePoolName);
+            this.storagePoolName = storagePoolName;
             return this;
         }
 

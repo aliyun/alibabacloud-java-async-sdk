@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDbListResponseBody</p>
  */
 public class DescribeDbListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDbListResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class DescribeDbListResponseBody extends TeaModel {
     } 
 
     public static class Accounts extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountPrivilege")
+        @com.aliyun.core.annotation.NameInMap("AccountPrivilege")
         private String accountPrivilege;
 
         private Accounts(Builder builder) {
@@ -173,19 +172,19 @@ public class DescribeDbListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Accounts")
+        @com.aliyun.core.annotation.NameInMap("Accounts")
         private java.util.List < Accounts> accounts;
 
-        @NameInMap("CharacterSetName")
+        @com.aliyun.core.annotation.NameInMap("CharacterSetName")
         private String characterSetName;
 
-        @NameInMap("DBDescription")
+        @com.aliyun.core.annotation.NameInMap("DBDescription")
         private String DBDescription;
 
-        @NameInMap("DBInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceName")
         private String DBInstanceName;
 
-        @NameInMap("DBName")
+        @com.aliyun.core.annotation.NameInMap("DBName")
         private String DBName;
 
         private Data(Builder builder) {

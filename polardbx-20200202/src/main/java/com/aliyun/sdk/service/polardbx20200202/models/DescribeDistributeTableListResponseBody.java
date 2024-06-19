@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDistributeTableListResponseBody</p>
  */
 public class DescribeDistributeTableListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDistributeTableListResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
     } 
 
     public static class Tables extends TeaModel {
-        @NameInMap("DbKey")
+        @com.aliyun.core.annotation.NameInMap("DbKey")
         private String dbKey;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
-        @NameInMap("TableType")
+        @com.aliyun.core.annotation.NameInMap("TableType")
         private String tableType;
 
-        @NameInMap("TbKey")
+        @com.aliyun.core.annotation.NameInMap("TbKey")
         private String tbKey;
 
         private Tables(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeDistributeTableListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
         private Data(Builder builder) {

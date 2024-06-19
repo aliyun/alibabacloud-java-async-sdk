@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeActiveOperationMaintainConfResponseBody</p>
  */
 public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("HasConfig")
+    @com.aliyun.core.annotation.NameInMap("HasConfig")
     private Long hasConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeActiveOperationMaintainConfResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("CycleTime")
+        @com.aliyun.core.annotation.NameInMap("CycleTime")
         private String cycleTime;
 
-        @NameInMap("CycleType")
+        @com.aliyun.core.annotation.NameInMap("CycleType")
         private String cycleType;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
         private Config(Builder builder) {

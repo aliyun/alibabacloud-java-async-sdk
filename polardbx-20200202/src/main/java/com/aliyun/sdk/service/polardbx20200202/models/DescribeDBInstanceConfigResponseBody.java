@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceConfigResponseBody</p>
  */
 public class DescribeDBInstanceConfigResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceConfigResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDBInstanceConfigResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ConfigName")
+        @com.aliyun.core.annotation.NameInMap("ConfigName")
         private String configName;
 
-        @NameInMap("ConfigValue")
+        @com.aliyun.core.annotation.NameInMap("ConfigValue")
         private String configValue;
 
-        @NameInMap("DbInstanceName")
+        @com.aliyun.core.annotation.NameInMap("DbInstanceName")
         private String dbInstanceName;
 
         private Data(Builder builder) {

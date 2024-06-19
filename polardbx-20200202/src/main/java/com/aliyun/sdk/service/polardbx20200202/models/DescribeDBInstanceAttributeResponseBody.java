@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceAttributeResponseBody</p>
  */
 public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
-    @NameInMap("DBInstance")
+    @com.aliyun.core.annotation.NameInMap("DBInstance")
     private DBInstance DBInstance;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDBInstanceAttributeResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
     } 
 
     public static class ConnAddrs extends TeaModel {
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Long port;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("VpcInstanceId")
+        @com.aliyun.core.annotation.NameInMap("VpcInstanceId")
         private String vpcInstanceId;
 
         private ConnAddrs(Builder builder) {
@@ -213,22 +212,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBNodes extends TeaModel {
-        @NameInMap("ComputeNodeId")
+        @com.aliyun.core.annotation.NameInMap("ComputeNodeId")
         private String computeNodeId;
 
-        @NameInMap("DataNodeId")
+        @com.aliyun.core.annotation.NameInMap("DataNodeId")
         private String dataNodeId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NodeClass")
+        @com.aliyun.core.annotation.NameInMap("NodeClass")
         private String nodeClass;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBNodes(Builder builder) {
@@ -354,10 +353,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class TagSet extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagSet(Builder builder) {
@@ -415,157 +414,160 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     }
     public static class DBInstance extends TeaModel {
-        @NameInMap("CanNotCreateColumnar")
+        @com.aliyun.core.annotation.NameInMap("CanNotCreateColumnar")
         private Boolean canNotCreateColumnar;
 
-        @NameInMap("CnNodeClassCode")
+        @com.aliyun.core.annotation.NameInMap("CnNodeClassCode")
         private String cnNodeClassCode;
 
-        @NameInMap("CnNodeCount")
+        @com.aliyun.core.annotation.NameInMap("CnNodeCount")
         private Integer cnNodeCount;
 
-        @NameInMap("ColumnarInstanceName")
+        @com.aliyun.core.annotation.NameInMap("ColumnarInstanceName")
         private String columnarInstanceName;
 
-        @NameInMap("ColumnarReadDBInstances")
+        @com.aliyun.core.annotation.NameInMap("ColumnarReadDBInstances")
         private java.util.List < String > columnarReadDBInstances;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("ConnAddrs")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrs")
         private java.util.List < ConnAddrs> connAddrs;
 
-        @NameInMap("ConnectionString")
+        @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DBInstanceType")
+        @com.aliyun.core.annotation.NameInMap("DBInstanceType")
         private String DBInstanceType;
 
-        @NameInMap("DBNodeClass")
+        @com.aliyun.core.annotation.NameInMap("DBNodeClass")
         private String DBNodeClass;
 
-        @NameInMap("DBNodeCount")
+        @com.aliyun.core.annotation.NameInMap("DBNodeCount")
         private Integer DBNodeCount;
 
-        @NameInMap("DBNodes")
+        @com.aliyun.core.annotation.NameInMap("DBNodes")
         private java.util.List < DBNodes> DBNodes;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DifferentDNSpec")
+        @com.aliyun.core.annotation.NameInMap("DifferentDNSpec")
         private Boolean differentDNSpec;
 
-        @NameInMap("DnNodeClassCode")
+        @com.aliyun.core.annotation.NameInMap("DnNodeClassCode")
         private String dnNodeClassCode;
 
-        @NameInMap("DnNodeCount")
+        @com.aliyun.core.annotation.NameInMap("DnNodeCount")
         private Integer dnNodeCount;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("Expired")
+        @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("KindCode")
+        @com.aliyun.core.annotation.NameInMap("KindCode")
         private Integer kindCode;
 
-        @NameInMap("LTSVersions")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LTSVersions")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > LTSVersions;
 
-        @NameInMap("LatestMinorVersion")
+        @com.aliyun.core.annotation.NameInMap("LatestMinorVersion")
         private String latestMinorVersion;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("MaintainEndTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
         private String maintainEndTime;
 
-        @NameInMap("MaintainStartTime")
+        @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
         private String maintainStartTime;
 
-        @NameInMap("MinorVersion")
+        @com.aliyun.core.annotation.NameInMap("MinorVersion")
         private String minorVersion;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private String network;
 
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
-        @NameInMap("PrimaryZone")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PrimaryZone")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String primaryZone;
 
-        @NameInMap("ReadDBInstances")
+        @com.aliyun.core.annotation.NameInMap("ReadDBInstances")
         private java.util.List < String > readDBInstances;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RightsSeparationEnabled")
+        @com.aliyun.core.annotation.NameInMap("RightsSeparationEnabled")
         private Boolean rightsSeparationEnabled;
 
-        @NameInMap("RightsSeparationStatus")
+        @com.aliyun.core.annotation.NameInMap("RightsSeparationStatus")
         private String rightsSeparationStatus;
 
-        @NameInMap("SecondaryZone")
+        @com.aliyun.core.annotation.NameInMap("SecondaryZone")
         private String secondaryZone;
 
-        @NameInMap("Series")
+        @com.aliyun.core.annotation.NameInMap("Series")
         private String series;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("SpecCategory")
+        private String specCategory;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageUsed")
+        @com.aliyun.core.annotation.NameInMap("StorageUsed")
         private Long storageUsed;
 
-        @NameInMap("TagSet")
+        @com.aliyun.core.annotation.NameInMap("TagSet")
         private java.util.List < TagSet> tagSet;
 
-        @NameInMap("TertiaryZone")
+        @com.aliyun.core.annotation.NameInMap("TertiaryZone")
         private String tertiaryZone;
 
-        @NameInMap("TopologyType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String topologyType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("VPCId")
+        @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private DBInstance(Builder builder) {
@@ -610,6 +612,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.rightsSeparationStatus = builder.rightsSeparationStatus;
             this.secondaryZone = builder.secondaryZone;
             this.series = builder.series;
+            this.specCategory = builder.specCategory;
             this.status = builder.status;
             this.storageUsed = builder.storageUsed;
             this.tagSet = builder.tagSet;
@@ -917,6 +920,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return specCategory
+         */
+        public String getSpecCategory() {
+            return this.specCategory;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -1021,6 +1031,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String rightsSeparationStatus; 
             private String secondaryZone; 
             private String series; 
+            private String specCategory; 
             private String status; 
             private Long storageUsed; 
             private java.util.List < TagSet> tagSet; 
@@ -1356,6 +1367,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder series(String series) {
                 this.series = series;
+                return this;
+            }
+
+            /**
+             * SpecCategory.
+             */
+            public Builder specCategory(String specCategory) {
+                this.specCategory = specCategory;
                 return this;
             }
 

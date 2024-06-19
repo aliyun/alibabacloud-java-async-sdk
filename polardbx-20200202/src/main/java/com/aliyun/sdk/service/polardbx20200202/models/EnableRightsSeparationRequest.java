@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableRightsSeparationRequest</p>
  */
 public class EnableRightsSeparationRequest extends Request {
-    @Query
-    @NameInMap("AuditAccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountDescription")
     private String auditAccountDescription;
 
-    @Query
-    @NameInMap("AuditAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditAccountName;
 
-    @Query
-    @NameInMap("AuditAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuditAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String auditAccountPassword;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("SecurityAccountDescription")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountDescription")
     private String securityAccountDescription;
 
-    @Query
-    @NameInMap("SecurityAccountName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityAccountName;
 
-    @Query
-    @NameInMap("SecurityAccountPassword")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityAccountPassword")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityAccountPassword;
 
     private EnableRightsSeparationRequest(Builder builder) {

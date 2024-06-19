@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsResponseBody</p>
  */
 public class DescribeRegionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeRegionsResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeRegionsResponseBody extends TeaModel {
     } 
 
     public static class Zone extends TeaModel {
-        @NameInMap("VpcEnabled")
+        @com.aliyun.core.annotation.NameInMap("VpcEnabled")
         private Boolean vpcEnabled;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Zone(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < Zone> zone;
 
         private Zones(Builder builder) {
@@ -254,16 +253,16 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Region extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SupportPolarx10")
+        @com.aliyun.core.annotation.NameInMap("SupportPolarx10")
         private Boolean supportPolarx10;
 
-        @NameInMap("SupportPolarx20")
+        @com.aliyun.core.annotation.NameInMap("SupportPolarx20")
         private Boolean supportPolarx20;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private Region(Builder builder) {
@@ -355,7 +354,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

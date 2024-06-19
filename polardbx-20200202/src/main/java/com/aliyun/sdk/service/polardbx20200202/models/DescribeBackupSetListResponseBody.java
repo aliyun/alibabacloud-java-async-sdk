@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupSetListResponseBody</p>
  */
 public class DescribeBackupSetListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeBackupSetListResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BackupModel")
+        @com.aliyun.core.annotation.NameInMap("BackupModel")
         private Integer backupModel;
 
-        @NameInMap("BackupSetId")
-        private Long backupSetId;
+        @com.aliyun.core.annotation.NameInMap("BackupSetId")
+        private String backupSetId;
 
-        @NameInMap("BackupSetSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSize")
         private Long backupSetSize;
 
-        @NameInMap("BackupType")
+        @com.aliyun.core.annotation.NameInMap("BackupType")
         private Integer backupType;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
         private Data(Builder builder) {
@@ -161,7 +160,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
         /**
          * @return backupSetId
          */
-        public Long getBackupSetId() {
+        public String getBackupSetId() {
             return this.backupSetId;
         }
 
@@ -202,7 +201,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
 
         public static final class Builder {
             private Integer backupModel; 
-            private Long backupSetId; 
+            private String backupSetId; 
             private Long backupSetSize; 
             private Integer backupType; 
             private Long beginTime; 
@@ -220,7 +219,7 @@ public class DescribeBackupSetListResponseBody extends TeaModel {
             /**
              * BackupSetId.
              */
-            public Builder backupSetId(Long backupSetId) {
+            public Builder backupSetId(String backupSetId) {
                 this.backupSetId = backupSetId;
                 return this;
             }

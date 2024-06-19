@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBInstanceHAResponseBody</p>
  */
 public class DescribeDBInstanceHAResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeDBInstanceHAResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class DescribeDBInstanceHAResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("PrimaryAzoneId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryAzoneId")
         private String primaryAzoneId;
 
-        @NameInMap("PrimaryRegionId")
+        @com.aliyun.core.annotation.NameInMap("PrimaryRegionId")
         private String primaryRegionId;
 
-        @NameInMap("SecondaryAzoneId")
+        @com.aliyun.core.annotation.NameInMap("SecondaryAzoneId")
         private String secondaryAzoneId;
 
-        @NameInMap("SecondaryRegionId")
+        @com.aliyun.core.annotation.NameInMap("SecondaryRegionId")
         private String secondaryRegionId;
 
-        @NameInMap("TopologyType")
+        @com.aliyun.core.annotation.NameInMap("TopologyType")
         private String topologyType;
 
         private Data(Builder builder) {

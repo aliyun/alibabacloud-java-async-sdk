@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParameterTemplatesResponseBody</p>
  */
 public class DescribeParameterTemplatesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParameterTemplatesResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Parameters extends TeaModel {
-        @NameInMap("CheckingCode")
+        @com.aliyun.core.annotation.NameInMap("CheckingCode")
         private String checkingCode;
 
-        @NameInMap("Dynamic")
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
         private Integer dynamic;
 
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
-        @NameInMap("Revisable")
+        @com.aliyun.core.annotation.NameInMap("Revisable")
         private Integer revisable;
 
         private Parameters(Builder builder) {
@@ -213,16 +212,16 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("ParameterCount")
+        @com.aliyun.core.annotation.NameInMap("ParameterCount")
         private Integer parameterCount;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.List < Parameters> parameters;
 
         private Data(Builder builder) {

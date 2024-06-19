@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeColdDataBasicInfoResponseBody</p>
  */
 public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeColdDataBasicInfoResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("BackupSetCount")
+        @com.aliyun.core.annotation.NameInMap("BackupSetCount")
         private Integer backupSetCount;
 
-        @NameInMap("BackupSetSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("BackupSetSpaceSize")
         private Double backupSetSpaceSize;
 
-        @NameInMap("CloudProduct")
+        @com.aliyun.core.annotation.NameInMap("CloudProduct")
         private String cloudProduct;
 
-        @NameInMap("CurrentSpaceSize")
+        @com.aliyun.core.annotation.NameInMap("CurrentSpaceSize")
         private Double currentSpaceSize;
 
-        @NameInMap("DataRedundancyType")
+        @com.aliyun.core.annotation.NameInMap("DataRedundancyType")
         private String dataRedundancyType;
 
-        @NameInMap("EnableStatus")
+        @com.aliyun.core.annotation.NameInMap("EnableStatus")
         private Boolean enableStatus;
 
-        @NameInMap("ReadAccessNum")
+        @com.aliyun.core.annotation.NameInMap("ReadAccessNum")
         private Long readAccessNum;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VolumeName")
+        @com.aliyun.core.annotation.NameInMap("VolumeName")
         private String volumeName;
 
-        @NameInMap("WriteAccessNum")
+        @com.aliyun.core.annotation.NameInMap("WriteAccessNum")
         private Double writeAccessNum;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeArchiveTableListResponseBody</p>
  */
 public class DescribeArchiveTableListResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeArchiveTableListResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
     } 
 
     public static class Tables extends TeaModel {
-        @NameInMap("ArchiveStatus")
+        @com.aliyun.core.annotation.NameInMap("ArchiveStatus")
         private String archiveStatus;
 
-        @NameInMap("CreatedDate")
+        @com.aliyun.core.annotation.NameInMap("CreatedDate")
         private Long createdDate;
 
-        @NameInMap("FileCount")
+        @com.aliyun.core.annotation.NameInMap("FileCount")
         private Integer fileCount;
 
-        @NameInMap("LastSuccessArchiveTime")
+        @com.aliyun.core.annotation.NameInMap("LastSuccessArchiveTime")
         private Long lastSuccessArchiveTime;
 
-        @NameInMap("SchemaName")
+        @com.aliyun.core.annotation.NameInMap("SchemaName")
         private String schemaName;
 
-        @NameInMap("SpaceSize")
+        @com.aliyun.core.annotation.NameInMap("SpaceSize")
         private Double spaceSize;
 
-        @NameInMap("TableName")
+        @com.aliyun.core.annotation.NameInMap("TableName")
         private String tableName;
 
         private Tables(Builder builder) {
@@ -233,28 +232,28 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageIndex")
+        @com.aliyun.core.annotation.NameInMap("PageIndex")
         private Long pageIndex;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("PausedCount")
+        @com.aliyun.core.annotation.NameInMap("PausedCount")
         private Integer pausedCount;
 
-        @NameInMap("RunningCount")
+        @com.aliyun.core.annotation.NameInMap("RunningCount")
         private Integer runningCount;
 
-        @NameInMap("SuccessCount")
+        @com.aliyun.core.annotation.NameInMap("SuccessCount")
         private Integer successCount;
 
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("TobeArchivedConut")
+        @com.aliyun.core.annotation.NameInMap("TobeArchivedConut")
         private Integer tobeArchivedConut;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private Data(Builder builder) {

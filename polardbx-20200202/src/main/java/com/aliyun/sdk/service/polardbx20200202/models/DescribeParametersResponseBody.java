@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParametersResponseBody</p>
  */
 public class DescribeParametersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeParametersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeParametersResponseBody extends TeaModel {
     } 
 
     public static class ConfigParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private ConfigParameters(Builder builder) {
@@ -153,13 +152,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParameters extends TeaModel {
-        @NameInMap("ParameterDescription")
+        @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
-        @NameInMap("ParameterName")
+        @com.aliyun.core.annotation.NameInMap("ParameterName")
         private String parameterName;
 
-        @NameInMap("ParameterValue")
+        @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
         private RunningParameters(Builder builder) {
@@ -234,16 +233,16 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ConfigParameters")
+        @com.aliyun.core.annotation.NameInMap("ConfigParameters")
         private java.util.List < ConfigParameters> configParameters;
 
-        @NameInMap("Engine")
+        @com.aliyun.core.annotation.NameInMap("Engine")
         private String engine;
 
-        @NameInMap("EngineVersion")
+        @com.aliyun.core.annotation.NameInMap("EngineVersion")
         private String engineVersion;
 
-        @NameInMap("RunningParameters")
+        @com.aliyun.core.annotation.NameInMap("RunningParameters")
         private java.util.List < RunningParameters> runningParameters;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.polardbx20200202.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,86 +11,86 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateBackupPolicyRequest</p>
  */
 public class UpdateBackupPolicyRequest extends Request {
-    @Query
-    @NameInMap("BackupPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPeriod")
     private String backupPeriod;
 
-    @Query
-    @NameInMap("BackupPlanBegin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupPlanBegin")
     private String backupPlanBegin;
 
-    @Query
-    @NameInMap("BackupSetRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupSetRetention")
     private Integer backupSetRetention;
 
-    @Query
-    @NameInMap("BackupType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupType")
     private String backupType;
 
-    @Query
-    @NameInMap("BackupWay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupWay")
     private String backupWay;
 
-    @Query
-    @NameInMap("ColdDataBackupInterval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColdDataBackupInterval")
     private Integer coldDataBackupInterval;
 
-    @Query
-    @NameInMap("ColdDataBackupRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColdDataBackupRetention")
     private Integer coldDataBackupRetention;
 
-    @Query
-    @NameInMap("CrossRegionDataBackupRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionDataBackupRetention")
     private Integer crossRegionDataBackupRetention;
 
-    @Query
-    @NameInMap("CrossRegionLogBackupRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrossRegionLogBackupRetention")
     private Integer crossRegionLogBackupRetention;
 
-    @Query
-    @NameInMap("DBInstanceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DBInstanceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceName;
 
-    @Query
-    @NameInMap("DestCrossRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestCrossRegion")
     private String destCrossRegion;
 
-    @Query
-    @NameInMap("ForceCleanOnHighSpaceUsage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceCleanOnHighSpaceUsage")
     private Integer forceCleanOnHighSpaceUsage;
 
-    @Query
-    @NameInMap("IsCrossRegionDataBackupEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsCrossRegionDataBackupEnabled")
     private Boolean isCrossRegionDataBackupEnabled;
 
-    @Query
-    @NameInMap("IsCrossRegionLogBackupEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsCrossRegionLogBackupEnabled")
     private Boolean isCrossRegionLogBackupEnabled;
 
-    @Query
-    @NameInMap("IsEnabled")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsEnabled")
     private Integer isEnabled;
 
-    @Query
-    @NameInMap("LocalLogRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetention")
     private Integer localLogRetention;
 
-    @Query
-    @NameInMap("LocalLogRetentionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocalLogRetentionNumber")
     private Integer localLogRetentionNumber;
 
-    @Query
-    @NameInMap("LogLocalRetentionSpace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogLocalRetentionSpace")
     private Integer logLocalRetentionSpace;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("RemoveLogRetention")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RemoveLogRetention")
     private Integer removeLogRetention;
 
     private UpdateBackupPolicyRequest(Builder builder) {
