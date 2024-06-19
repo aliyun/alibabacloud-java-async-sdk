@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateVirtualNodeResponse} extends {@link TeaModel}
+ * {@link TagResourcesResponse} extends {@link TeaModel}
  *
- * <p>UpdateVirtualNodeResponse</p>
+ * <p>TagResourcesResponse</p>
  */
-public class UpdateVirtualNodeResponse extends Response {
+public class TagResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class UpdateVirtualNodeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateVirtualNodeResponseBody body;
+    private TagResourcesResponseBody body;
 
-    private UpdateVirtualNodeResponse(BuilderImpl builder) {
+    private TagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateVirtualNodeResponse create() {
+    public static TagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class UpdateVirtualNodeResponse extends Response {
     /**
      * @return body
      */
-    public UpdateVirtualNodeResponseBody getBody() {
+    public TagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateVirtualNodeResponse, Builder> {
+    public interface Builder extends Response.Builder<TagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateVirtualNodeResponseBody body);
+        Builder body(TagResourcesResponseBody body);
 
         @Override
-        UpdateVirtualNodeResponse build();
+        TagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateVirtualNodeResponse, Builder>
+            extends Response.BuilderImpl<TagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateVirtualNodeResponseBody body; 
+        private TagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateVirtualNodeResponse response) {
+        private BuilderImpl(TagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class UpdateVirtualNodeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateVirtualNodeResponseBody body) {
+        public Builder body(TagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateVirtualNodeResponse build() {
-            return new UpdateVirtualNodeResponse(this);
+        public TagResourcesResponse build() {
+            return new TagResourcesResponse(this);
         } 
 
     } 

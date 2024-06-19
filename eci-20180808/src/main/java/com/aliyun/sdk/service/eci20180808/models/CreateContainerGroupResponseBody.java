@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateContainerGroupResponseBody</p>
  */
 public class CreateContainerGroupResponseBody extends TeaModel {
-    @NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
     private String containerGroupId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateContainerGroupResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the elastic container instance.
+         * The ID of the instance.
          */
         public Builder containerGroupId(String containerGroupId) {
             this.containerGroupId = containerGroupId;
@@ -58,7 +57,7 @@ public class CreateContainerGroupResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

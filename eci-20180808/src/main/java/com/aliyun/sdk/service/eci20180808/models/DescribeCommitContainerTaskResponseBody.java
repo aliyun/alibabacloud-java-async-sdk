@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCommitContainerTaskResponseBody</p>
  */
 public class DescribeCommitContainerTaskResponseBody extends TeaModel {
-    @NameInMap("CommitTasks")
+    @com.aliyun.core.annotation.NameInMap("CommitTasks")
     private java.util.List < CommitTasks> commitTasks;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeCommitContainerTaskResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
     } 
 
     public static class CommitPhaseInfos extends TeaModel {
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Phase")
+        @com.aliyun.core.annotation.NameInMap("Phase")
         private String phase;
 
-        @NameInMap("RecordTime")
+        @com.aliyun.core.annotation.NameInMap("RecordTime")
         private String recordTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CommitPhaseInfos(Builder builder) {
@@ -238,28 +237,28 @@ public class DescribeCommitContainerTaskResponseBody extends TeaModel {
 
     }
     public static class CommitTasks extends TeaModel {
-        @NameInMap("CommitPhaseInfos")
+        @com.aliyun.core.annotation.NameInMap("CommitPhaseInfos")
         private java.util.List < CommitPhaseInfos> commitPhaseInfos;
 
-        @NameInMap("ContainerName")
+        @com.aliyun.core.annotation.NameInMap("ContainerName")
         private String containerName;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("TaskCreationTime")
+        @com.aliyun.core.annotation.NameInMap("TaskCreationTime")
         private String taskCreationTime;
 
-        @NameInMap("TaskFinishedTime")
+        @com.aliyun.core.annotation.NameInMap("TaskFinishedTime")
         private String taskFinishedTime;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("TaskProgress")
+        @com.aliyun.core.annotation.NameInMap("TaskProgress")
         private String taskProgress;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
         private CommitTasks(Builder builder) {

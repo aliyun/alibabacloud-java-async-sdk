@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMultiContainerGroupMetricResponseBody</p>
  */
 public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
-    @NameInMap("MonitorDatas")
+    @com.aliyun.core.annotation.NameInMap("MonitorDatas")
     private java.util.List < MonitorDatas> monitorDatas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMultiContainerGroupMetricResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
     } 
 
     public static class CPU extends TeaModel {
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("Load")
+        @com.aliyun.core.annotation.NameInMap("Load")
         private Long load;
 
-        @NameInMap("UsageCoreNanoSeconds")
+        @com.aliyun.core.annotation.NameInMap("UsageCoreNanoSeconds")
         private Long usageCoreNanoSeconds;
 
-        @NameInMap("UsageNanoCores")
+        @com.aliyun.core.annotation.NameInMap("UsageNanoCores")
         private Long usageNanoCores;
 
         private CPU(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class ContainersCPU extends TeaModel {
-        @NameInMap("Limit")
+        @com.aliyun.core.annotation.NameInMap("Limit")
         private Long limit;
 
-        @NameInMap("Load")
+        @com.aliyun.core.annotation.NameInMap("Load")
         private Long load;
 
-        @NameInMap("UsageCoreNanoSeconds")
+        @com.aliyun.core.annotation.NameInMap("UsageCoreNanoSeconds")
         private Long usageCoreNanoSeconds;
 
-        @NameInMap("UsageNanoCores")
+        @com.aliyun.core.annotation.NameInMap("UsageNanoCores")
         private Long usageNanoCores;
 
         private ContainersCPU(Builder builder) {
@@ -274,19 +273,19 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Memory extends TeaModel {
-        @NameInMap("AvailableBytes")
+        @com.aliyun.core.annotation.NameInMap("AvailableBytes")
         private Long availableBytes;
 
-        @NameInMap("Cache")
+        @com.aliyun.core.annotation.NameInMap("Cache")
         private Long cache;
 
-        @NameInMap("Rss")
+        @com.aliyun.core.annotation.NameInMap("Rss")
         private Long rss;
 
-        @NameInMap("UsageBytes")
+        @com.aliyun.core.annotation.NameInMap("UsageBytes")
         private Long usageBytes;
 
-        @NameInMap("WorkingSet")
+        @com.aliyun.core.annotation.NameInMap("WorkingSet")
         private Long workingSet;
 
         private Memory(Builder builder) {
@@ -395,13 +394,13 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Containers extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private ContainersCPU CPU;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Memory memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Containers(Builder builder) {
@@ -476,19 +475,19 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Disk extends TeaModel {
-        @NameInMap("Device")
+        @com.aliyun.core.annotation.NameInMap("Device")
         private String device;
 
-        @NameInMap("ReadBytes")
+        @com.aliyun.core.annotation.NameInMap("ReadBytes")
         private Long readBytes;
 
-        @NameInMap("ReadIo")
+        @com.aliyun.core.annotation.NameInMap("ReadIo")
         private Long readIo;
 
-        @NameInMap("WriteBytes")
+        @com.aliyun.core.annotation.NameInMap("WriteBytes")
         private Long writeBytes;
 
-        @NameInMap("WriteIo")
+        @com.aliyun.core.annotation.NameInMap("WriteIo")
         private Long writeIo;
 
         private Disk(Builder builder) {
@@ -597,16 +596,16 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Filesystem extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Long available;
 
-        @NameInMap("Capacity")
+        @com.aliyun.core.annotation.NameInMap("Capacity")
         private Long capacity;
 
-        @NameInMap("FsName")
+        @com.aliyun.core.annotation.NameInMap("FsName")
         private String fsName;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private Long usage;
 
         private Filesystem(Builder builder) {
@@ -698,19 +697,19 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class RecordsMemory extends TeaModel {
-        @NameInMap("AvailableBytes")
+        @com.aliyun.core.annotation.NameInMap("AvailableBytes")
         private Long availableBytes;
 
-        @NameInMap("Cache")
+        @com.aliyun.core.annotation.NameInMap("Cache")
         private Long cache;
 
-        @NameInMap("Rss")
+        @com.aliyun.core.annotation.NameInMap("Rss")
         private Long rss;
 
-        @NameInMap("UsageBytes")
+        @com.aliyun.core.annotation.NameInMap("UsageBytes")
         private Long usageBytes;
 
-        @NameInMap("WorkingSet")
+        @com.aliyun.core.annotation.NameInMap("WorkingSet")
         private Long workingSet;
 
         private RecordsMemory(Builder builder) {
@@ -819,31 +818,31 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Interfaces extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RxBytes")
+        @com.aliyun.core.annotation.NameInMap("RxBytes")
         private Long rxBytes;
 
-        @NameInMap("RxDrops")
+        @com.aliyun.core.annotation.NameInMap("RxDrops")
         private Long rxDrops;
 
-        @NameInMap("RxErrors")
+        @com.aliyun.core.annotation.NameInMap("RxErrors")
         private Long rxErrors;
 
-        @NameInMap("RxPackets")
+        @com.aliyun.core.annotation.NameInMap("RxPackets")
         private Long rxPackets;
 
-        @NameInMap("TxBytes")
+        @com.aliyun.core.annotation.NameInMap("TxBytes")
         private Long txBytes;
 
-        @NameInMap("TxDrops")
+        @com.aliyun.core.annotation.NameInMap("TxDrops")
         private Long txDrops;
 
-        @NameInMap("TxErrors")
+        @com.aliyun.core.annotation.NameInMap("TxErrors")
         private Long txErrors;
 
-        @NameInMap("TxPackets")
+        @com.aliyun.core.annotation.NameInMap("TxPackets")
         private Long txPackets;
 
         private Interfaces(Builder builder) {
@@ -1020,7 +1019,7 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("Interfaces")
+        @com.aliyun.core.annotation.NameInMap("Interfaces")
         private java.util.List < Interfaces> interfaces;
 
         private Network(Builder builder) {
@@ -1061,25 +1060,25 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class Records extends TeaModel {
-        @NameInMap("CPU")
+        @com.aliyun.core.annotation.NameInMap("CPU")
         private CPU CPU;
 
-        @NameInMap("Containers")
+        @com.aliyun.core.annotation.NameInMap("Containers")
         private java.util.List < Containers> containers;
 
-        @NameInMap("Disk")
+        @com.aliyun.core.annotation.NameInMap("Disk")
         private java.util.List < Disk> disk;
 
-        @NameInMap("Filesystem")
+        @com.aliyun.core.annotation.NameInMap("Filesystem")
         private java.util.List < Filesystem> filesystem;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private RecordsMemory memory;
 
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private Network network;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
         private Records(Builder builder) {
@@ -1222,10 +1221,10 @@ public class DescribeMultiContainerGroupMetricResponseBody extends TeaModel {
 
     }
     public static class MonitorDatas extends TeaModel {
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("Records")
+        @com.aliyun.core.annotation.NameInMap("Records")
         private java.util.List < Records> records;
 
         private MonitorDatas(Builder builder) {

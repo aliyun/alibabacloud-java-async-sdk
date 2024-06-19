@@ -35,13 +35,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CopyDataCacheResponse> copyDataCache(CopyDataCacheRequest request);
 
     /**
-      * When you call the CreateContainerGroup operation to create an elastic container instance, the system creates a service-linked role named AliyunServiceRoleForECI. This role is used to access other Alibaba Cloud services such as Elastic Compute Service (ECS) and Virtual Private Cloud (VPC). For more information, see [Elastic Container Instance service-linked role](~~212914~~).
-      * When you create an elastic container instance, you can configure features such as instances, images, and storage based on your business requirements. For information about parameters configured for the features and the description of the parameters, see the following documents:
-      * **Instances** You can use one of the following methods to create an elastic container instance:
+      * When you call the CreateContainerGroup operation to create an elastic container instance, the system automatically creates a service-linked role named AliyunServiceRoleForECI. You can assume the service-linked role to access relevant cloud services such as Elastic Compute Service (ECS) and Virtual Private Cloud (VPC). For more information, see [Elastic Container Instance service-linked role](~~212914~~).
+      * When you create an elastic container instance, you can configure features that are related to instances, images, and storage based on your business requirements. For information about parameters configured for the features and the description of the parameters, see the following documents:
+      * **Instances**
+      * You can use one of the following methods to create an elastic container instance:
       * *   [Specify the number of vCPUs and memory size to create an elastic container instance](~~114662~~)
       * *   [Specify ECS instance types to create an elastic container instance](~~114664~~)
       * Both the preceding creation methods support the following features:
-      * *   [Specify CPU options](~~197781~~)
       * *   [Create a preemptible elastic container instance](~~157759~~)
       * *   [Configure multiple zones](~~157290~~)
       * *   [Configure multiple specifications](~~146468~~)
@@ -115,6 +115,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateVirtualNodeResponse> createVirtualNode(CreateVirtualNodeRequest request);
 
+    /**
+      * You can delete a container group that you no longer need. Before you delete a container group, make sure that you understand the lifecycle of container groups. For more information, see [Lifecycle of an elastic container instance](~~122385~~).
+      *
+     */
     CompletableFuture<DeleteContainerGroupResponse> deleteContainerGroup(DeleteContainerGroupRequest request);
 
     CompletableFuture<DeleteDataCacheResponse> deleteDataCache(DeleteDataCacheRequest request);
@@ -186,6 +190,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExecContainerCommandResponse> execContainerCommand(ExecContainerCommandRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     /**
       * This operation does not support resource group authentication.
       *
@@ -205,6 +211,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<RestartContainerGroupResponse> restartContainerGroup(RestartContainerGroupRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
       * *   Only elastic container instances that are in the Pending or Running state can be updated. After you call this operation to update an elastic container instance, the instance enters the Updating state.

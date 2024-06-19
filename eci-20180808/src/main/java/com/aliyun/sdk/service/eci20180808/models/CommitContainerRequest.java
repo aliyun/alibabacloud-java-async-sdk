@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CommitContainerRequest</p>
  */
 public class CommitContainerRequest extends Request {
-    @Query
-    @NameInMap("AcrRegistryInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrRegistryInfo")
     private AcrRegistryInfo acrRegistryInfo;
 
-    @Query
-    @NameInMap("Arn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Arn")
     private Arn arn;
 
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("ContainerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerName;
 
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private Image image;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private CommitContainerRequest(Builder builder) {
@@ -183,9 +182,10 @@ public class CommitContainerRequest extends Request {
         } 
 
         /**
-         * The access credential configurations of the Container Registry Enterprise Edition instance.\
+         * The access credential configurations of the Container Registry Enterprise Edition instance.
          * <p>
-         * If you use a Container Registry Personal Edition instance, you can leave this parameter empty.
+         * 
+         * >  If you use a Container Registry Personal Edition instance, you do not need to configure this parameter. If you use a Container Registry Enterprise Edition instance, you must configure this parameter.
          */
         public Builder acrRegistryInfo(AcrRegistryInfo acrRegistryInfo) {
             this.putQueryParameter("AcrRegistryInfo", acrRegistryInfo);
@@ -194,7 +194,7 @@ public class CommitContainerRequest extends Request {
         }
 
         /**
-         * The ARN that is required for authorization.
+         * The details about the ARN that is required for authorization.
          */
         public Builder arn(Arn arn) {
             this.putQueryParameter("Arn", arn);
@@ -282,16 +282,16 @@ public class CommitContainerRequest extends Request {
     } 
 
     public static class AcrRegistryInfo extends TeaModel {
-        @NameInMap("ArnService")
+        @com.aliyun.core.annotation.NameInMap("ArnService")
         private String arnService;
 
-        @NameInMap("ArnUser")
+        @com.aliyun.core.annotation.NameInMap("ArnUser")
         private String arnUser;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AcrRegistryInfo(Builder builder) {
@@ -344,7 +344,7 @@ public class CommitContainerRequest extends Request {
             private String regionId; 
 
             /**
-             * The RAM role ARN of the account to which permissions are granted during a cross-account authorization.
+             * The Alibaba Cloud Resource Access (ARN) of the RAM role that is assigned to the user (the authorized account) in cross-account authorization scenarios.
              */
             public Builder arnService(String arnService) {
                 this.arnService = arnService;
@@ -352,7 +352,7 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The RAM role ARN of the account that is used to grant permissions during a cross-account authorization.
+             * The ARN of the RAM role that is assigned to the authorizer in cross-account authorization scenarios.
              */
             public Builder arnUser(String arnUser) {
                 this.arnUser = arnUser;
@@ -368,7 +368,7 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The ID of the region where the Container Registry Enterprise Edition instance resides.
+             * The region ID of the Container Registry Enterprise Edition instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -383,10 +383,10 @@ public class CommitContainerRequest extends Request {
 
     }
     public static class Arn extends TeaModel {
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("RoleType")
+        @com.aliyun.core.annotation.NameInMap("RoleType")
         private String roleType;
 
         private Arn(Builder builder) {
@@ -421,7 +421,7 @@ public class CommitContainerRequest extends Request {
             private String roleType; 
 
             /**
-             * The ARN of the RAM role of the Container Registry Enterprise Edition instance.
+             * The ARN of the authorized role.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -429,7 +429,7 @@ public class CommitContainerRequest extends Request {
             }
 
             /**
-             * The type of the authorization.
+             * The authorization type. A value of service indicates that RAM roles are used for authorization.
              */
             public Builder roleType(String roleType) {
                 this.roleType = roleType;
@@ -444,18 +444,18 @@ public class CommitContainerRequest extends Request {
 
     }
     public static class Image extends TeaModel {
-        @NameInMap("Author")
+        @com.aliyun.core.annotation.NameInMap("Author")
         private String author;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Repository")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Repository")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String repository;
 
-        @NameInMap("Tag")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Tag")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String tag;
 
         private Image(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImageCachesResponseBody</p>
  */
 public class DescribeImageCachesResponseBody extends TeaModel {
-    @NameInMap("ImageCaches")
+    @com.aliyun.core.annotation.NameInMap("ImageCaches")
     private java.util.List < ImageCaches> imageCaches;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeImageCachesResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeImageCachesResponseBody extends TeaModel {
     } 
 
     public static class Events extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -273,10 +272,10 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -334,55 +333,55 @@ public class DescribeImageCachesResponseBody extends TeaModel {
 
     }
     public static class ImageCaches extends TeaModel {
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("EliminationStrategy")
+        @com.aliyun.core.annotation.NameInMap("EliminationStrategy")
         private String eliminationStrategy;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < Events> events;
 
-        @NameInMap("ExpireDateTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireDateTime")
         private String expireDateTime;
 
-        @NameInMap("FlashSnapshotId")
+        @com.aliyun.core.annotation.NameInMap("FlashSnapshotId")
         private String flashSnapshotId;
 
-        @NameInMap("ImageCacheId")
+        @com.aliyun.core.annotation.NameInMap("ImageCacheId")
         private String imageCacheId;
 
-        @NameInMap("ImageCacheName")
+        @com.aliyun.core.annotation.NameInMap("ImageCacheName")
         private String imageCacheName;
 
-        @NameInMap("ImageCacheSize")
+        @com.aliyun.core.annotation.NameInMap("ImageCacheSize")
         private Integer imageCacheSize;
 
-        @NameInMap("Images")
+        @com.aliyun.core.annotation.NameInMap("Images")
         private java.util.List < String > images;
 
-        @NameInMap("LastMatchedTime")
+        @com.aliyun.core.annotation.NameInMap("LastMatchedTime")
         private String lastMatchedTime;
 
-        @NameInMap("Progress")
+        @com.aliyun.core.annotation.NameInMap("Progress")
         private String progress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SnapshotId")
+        @com.aliyun.core.annotation.NameInMap("SnapshotId")
         private String snapshotId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private ImageCaches(Builder builder) {

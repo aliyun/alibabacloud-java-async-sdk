@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContainerGroupsResponseBody</p>
  */
 public class DescribeContainerGroupsResponseBody extends TeaModel {
-    @NameInMap("ContainerGroups")
+    @com.aliyun.core.annotation.NameInMap("ContainerGroups")
     private java.util.List < ContainerGroups> containerGroups;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeContainerGroupsResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details about the elastic container instances.
+         * Details about the queried elastic container instances.
          */
         public Builder containerGroups(java.util.List < ContainerGroups> containerGroups) {
             this.containerGroups = containerGroups;
@@ -112,28 +111,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
     } 
 
     public static class CurrentState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Integer signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private CurrentState(Builder builder) {
@@ -254,7 +253,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * The reason why the container is in this status.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -298,7 +297,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class FieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private FieldRef(Builder builder) {
@@ -339,7 +338,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ValueFrom extends TeaModel {
-        @NameInMap("FieldRef")
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
         private FieldRef fieldRef;
 
         private ValueFrom(Builder builder) {
@@ -380,13 +379,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class EnvironmentVars extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueFrom")
+        @com.aliyun.core.annotation.NameInMap("ValueFrom")
         private ValueFrom valueFrom;
 
         private EnvironmentVars(Builder builder) {
@@ -446,7 +445,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the environment variable value. This parameter has a value only when the Value parameter is not empty.
+             * The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.
              */
             public Builder valueFrom(ValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -461,13 +460,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class HttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private HttpGet(Builder builder) {
@@ -542,10 +541,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class TcpSocket extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private TcpSocket(Builder builder) {
@@ -603,28 +602,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class LivenessProbe extends TeaModel {
-        @NameInMap("Execs")
+        @com.aliyun.core.annotation.NameInMap("Execs")
         private java.util.List < String > execs;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
         private HttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
         private TcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private LivenessProbe(Builder builder) {
@@ -729,7 +728,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The HTTP GET method used to check the container.
+             * The HTTP GET method that is used to check the container.
              */
             public Builder httpGet(HttpGet httpGet) {
                 this.httpGet = httpGet;
@@ -745,7 +744,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the health check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+             * The interval at which the health check is performed. Default value: 10. Minimum value: 1. Unit: seconds.
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -753,7 +752,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. The value must be 1.
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -784,10 +783,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Ports extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Ports(Builder builder) {
@@ -845,28 +844,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class PreviousState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Integer signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private PreviousState(Builder builder) {
@@ -987,7 +986,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * The reason why the container is in this status.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -1031,13 +1030,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ReadinessProbeHttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private ReadinessProbeHttpGet(Builder builder) {
@@ -1112,10 +1111,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ReadinessProbeTcpSocket extends TeaModel {
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ReadinessProbeTcpSocket(Builder builder) {
@@ -1173,28 +1172,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ReadinessProbe extends TeaModel {
-        @NameInMap("Execs")
+        @com.aliyun.core.annotation.NameInMap("Execs")
         private java.util.List < String > execs;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
         private ReadinessProbeHttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
         private ReadinessProbeTcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private ReadinessProbe(Builder builder) {
@@ -1315,7 +1314,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the health check is performed. Unit: seconds. Default value: 10. Minimum value: 1.
+             * The interval at which the health check is performed. Default value: 10. Minimum value: 1. Unit: seconds.
              */
             public Builder periodSeconds(Integer periodSeconds) {
                 this.periodSeconds = periodSeconds;
@@ -1323,7 +1322,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. Set the value to 1.
+             * The minimum number of consecutive successes that must occur for the check to be considered successful. Default value: 1. The value must be 1.
              */
             public Builder successThreshold(Integer successThreshold) {
                 this.successThreshold = successThreshold;
@@ -1354,7 +1353,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Capability extends TeaModel {
-        @NameInMap("Adds")
+        @com.aliyun.core.annotation.NameInMap("Adds")
         private java.util.List < String > adds;
 
         private Capability(Builder builder) {
@@ -1380,7 +1379,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private java.util.List < String > adds; 
 
             /**
-             * The permissions specific to the processes in the container.
+             * The permissions specific to the process in the container.
              */
             public Builder adds(java.util.List < String > adds) {
                 this.adds = adds;
@@ -1395,13 +1394,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class SecurityContext extends TeaModel {
-        @NameInMap("Capability")
+        @com.aliyun.core.annotation.NameInMap("Capability")
         private Capability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private SecurityContext(Builder builder) {
@@ -1453,7 +1452,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether permissions on the root file system are read-only.
+             * Indicates whether permissions on the root file system are read-only. Valid value: true.
              */
             public Builder readOnlyRootFilesystem(Boolean readOnlyRootFilesystem) {
                 this.readOnlyRootFilesystem = readOnlyRootFilesystem;
@@ -1476,19 +1475,19 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class VolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private VolumeMounts(Builder builder) {
@@ -1558,12 +1557,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -1602,70 +1601,70 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Containers extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
 
-        @NameInMap("Commands")
+        @com.aliyun.core.annotation.NameInMap("Commands")
         private java.util.List < String > commands;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CurrentState")
+        @com.aliyun.core.annotation.NameInMap("CurrentState")
         private CurrentState currentState;
 
-        @NameInMap("EnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List < EnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("LivenessProbe")
+        @com.aliyun.core.annotation.NameInMap("LivenessProbe")
         private LivenessProbe livenessProbe;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < Ports> ports;
 
-        @NameInMap("PreviousState")
+        @com.aliyun.core.annotation.NameInMap("PreviousState")
         private PreviousState previousState;
 
-        @NameInMap("ReadinessProbe")
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
         private ReadinessProbe readinessProbe;
 
-        @NameInMap("Ready")
+        @com.aliyun.core.annotation.NameInMap("Ready")
         private Boolean ready;
 
-        @NameInMap("RestartCount")
+        @com.aliyun.core.annotation.NameInMap("RestartCount")
         private Integer restartCount;
 
-        @NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
         private SecurityContext securityContext;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMounts")
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
         private java.util.List < VolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Containers(Builder builder) {
@@ -1940,7 +1939,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   Always: Each time the instance is updated, image pulling is performed.
-             * *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
              * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
@@ -1973,7 +1972,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The exposed ports and protocols of the container.
+             * The exposed port and protocol of the container.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -1981,7 +1980,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The previous status of the container.
+             * The previous state of the container.
              */
             public Builder previousState(PreviousState previousState) {
                 this.previousState = previousState;
@@ -2068,10 +2067,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Options extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Options(Builder builder) {
@@ -2129,13 +2128,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class DnsConfig extends TeaModel {
-        @NameInMap("NameServers")
+        @com.aliyun.core.annotation.NameInMap("NameServers")
         private java.util.List < String > nameServers;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private java.util.List < Options> options;
 
-        @NameInMap("Searches")
+        @com.aliyun.core.annotation.NameInMap("Searches")
         private java.util.List < String > searches;
 
         private DnsConfig(Builder builder) {
@@ -2195,7 +2194,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The search domain of the DNS server.
+             * The search domains of DNS servers.
              */
             public Builder searches(java.util.List < String > searches) {
                 this.searches = searches;
@@ -2210,10 +2209,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Sysctls extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Sysctls(Builder builder) {
@@ -2271,7 +2270,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class EciSecurityContext extends TeaModel {
-        @NameInMap("Sysctls")
+        @com.aliyun.core.annotation.NameInMap("Sysctls")
         private java.util.List < Sysctls> sysctls;
 
         private EciSecurityContext(Builder builder) {
@@ -2312,25 +2311,25 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Events(Builder builder) {
@@ -2477,10 +2476,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class HostAliases extends TeaModel {
-        @NameInMap("Hostnames")
+        @com.aliyun.core.annotation.NameInMap("Hostnames")
         private java.util.List < String > hostnames;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
         private HostAliases(Builder builder) {
@@ -2538,28 +2537,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersCurrentState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Integer signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private InitContainersCurrentState(Builder builder) {
@@ -2680,7 +2679,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * The reason why the container is in this status.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -2724,7 +2723,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ValueFromFieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private ValueFromFieldRef(Builder builder) {
@@ -2765,7 +2764,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class EnvironmentVarsValueFrom extends TeaModel {
-        @NameInMap("FieldRef")
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
         private ValueFromFieldRef fieldRef;
 
         private EnvironmentVarsValueFrom(Builder builder) {
@@ -2806,13 +2805,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersEnvironmentVars extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
-        @NameInMap("ValueFrom")
+        @com.aliyun.core.annotation.NameInMap("ValueFrom")
         private EnvironmentVarsValueFrom valueFrom;
 
         private InitContainersEnvironmentVars(Builder builder) {
@@ -2872,7 +2871,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The source of the environment variable value. This parameter has a value only when the Value parameter is not empty.
+             * The source of the environment variable value. This parameter has a value only when the Value parameter is left empty.
              */
             public Builder valueFrom(EnvironmentVarsValueFrom valueFrom) {
                 this.valueFrom = valueFrom;
@@ -2887,10 +2886,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersPorts extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private InitContainersPorts(Builder builder) {
@@ -2948,28 +2947,28 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersPreviousState extends TeaModel {
-        @NameInMap("DetailStatus")
+        @com.aliyun.core.annotation.NameInMap("DetailStatus")
         private String detailStatus;
 
-        @NameInMap("ExitCode")
+        @com.aliyun.core.annotation.NameInMap("ExitCode")
         private Integer exitCode;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Signal")
+        @com.aliyun.core.annotation.NameInMap("Signal")
         private Integer signal;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private InitContainersPreviousState(Builder builder) {
@@ -3090,7 +3089,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the container is in this state.
+             * The reason why the container is in this status.
              */
             public Builder reason(String reason) {
                 this.reason = reason;
@@ -3129,7 +3128,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class SecurityContextCapability extends TeaModel {
-        @NameInMap("Adds")
+        @com.aliyun.core.annotation.NameInMap("Adds")
         private java.util.List < String > adds;
 
         private SecurityContextCapability(Builder builder) {
@@ -3170,13 +3169,13 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersSecurityContext extends TeaModel {
-        @NameInMap("Capability")
+        @com.aliyun.core.annotation.NameInMap("Capability")
         private SecurityContextCapability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private InitContainersSecurityContext(Builder builder) {
@@ -3236,7 +3235,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The UID this is used to run the entry point of the container process.
+             * The UID that is used to run the entry point of the container process.
              */
             public Builder runAsUser(Long runAsUser) {
                 this.runAsUser = runAsUser;
@@ -3251,16 +3250,16 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainersVolumeMounts extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
         private InitContainersVolumeMounts(Builder builder) {
@@ -3321,12 +3320,12 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation setting of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or the subdirectories of this volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+             * *   None: The volume mount does not receive subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume.
+             * *   Bidirectional: This value is similar to HostToCotainer. The volume mount receives subsequent mounts that are performed on this volume or on the subdirectories of this volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
              */
             public Builder mountPropagation(String mountPropagation) {
                 this.mountPropagation = mountPropagation;
@@ -3342,7 +3341,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Default value: false.
+             * Indicates whether the volume is read-only.
              */
             public Builder readOnly(Boolean readOnly) {
                 this.readOnly = readOnly;
@@ -3357,55 +3356,55 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class InitContainers extends TeaModel {
-        @NameInMap("Args")
+        @com.aliyun.core.annotation.NameInMap("Args")
         private java.util.List < String > args;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CurrentState")
+        @com.aliyun.core.annotation.NameInMap("CurrentState")
         private InitContainersCurrentState currentState;
 
-        @NameInMap("EnvironmentVars")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVars")
         private java.util.List < InitContainersEnvironmentVars> environmentVars;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Ports")
+        @com.aliyun.core.annotation.NameInMap("Ports")
         private java.util.List < InitContainersPorts> ports;
 
-        @NameInMap("PreviousState")
+        @com.aliyun.core.annotation.NameInMap("PreviousState")
         private InitContainersPreviousState previousState;
 
-        @NameInMap("Ready")
+        @com.aliyun.core.annotation.NameInMap("Ready")
         private Boolean ready;
 
-        @NameInMap("RestartCount")
+        @com.aliyun.core.annotation.NameInMap("RestartCount")
         private Integer restartCount;
 
-        @NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
         private InitContainersSecurityContext securityContext;
 
-        @NameInMap("VolumeMounts")
+        @com.aliyun.core.annotation.NameInMap("VolumeMounts")
         private java.util.List < InitContainersVolumeMounts> volumeMounts;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private InitContainers(Builder builder) {
@@ -3607,7 +3606,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The environment variables of the container.
+             * The environment variables of the init container.
              */
             public Builder environmentVars(java.util.List < InitContainersEnvironmentVars> environmentVars) {
                 this.environmentVars = environmentVars;
@@ -3635,7 +3634,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   Always: Each time the instance is updated, image pulling is performed.
-             * *   IfNotPresent: On-premises images are used first. If no on-premises images are available, image pulling is performed.
+             * *   IfNotPresent: On-premises images are preferentially used. If no on-premises images are available, image pulling is performed.
              * *   Never: On-premises images are always used. Image pulling is not performed.
              */
             public Builder imagePullPolicy(String imagePullPolicy) {
@@ -3660,7 +3659,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The exposed ports and protocols of the container.
+             * The exposed port and protocol of the container.
              */
             public Builder ports(java.util.List < InitContainersPorts> ports) {
                 this.ports = ports;
@@ -3684,7 +3683,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of times the container restarted.
+             * The number of times that the container restarted.
              */
             public Builder restartCount(Integer restartCount) {
                 this.restartCount = restartCount;
@@ -3723,10 +3722,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -3784,10 +3783,10 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ConfigFileVolumeConfigFileToPaths extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ConfigFileVolumeConfigFileToPaths(Builder builder) {
@@ -3845,43 +3844,43 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class Volumes extends TeaModel {
-        @NameInMap("ConfigFileVolumeConfigFileToPaths")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolumeConfigFileToPaths")
         private java.util.List < ConfigFileVolumeConfigFileToPaths> configFileVolumeConfigFileToPaths;
 
-        @NameInMap("DiskVolumeDiskId")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeDiskId")
         private String diskVolumeDiskId;
 
-        @NameInMap("DiskVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("DiskVolumeFsType")
         private String diskVolumeFsType;
 
-        @NameInMap("EmptyDirVolumeMedium")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeMedium")
         private String emptyDirVolumeMedium;
 
-        @NameInMap("EmptyDirVolumeSizeLimit")
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolumeSizeLimit")
         private String emptyDirVolumeSizeLimit;
 
-        @NameInMap("FlexVolumeDriver")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeDriver")
         private String flexVolumeDriver;
 
-        @NameInMap("FlexVolumeFsType")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeFsType")
         private String flexVolumeFsType;
 
-        @NameInMap("FlexVolumeOptions")
+        @com.aliyun.core.annotation.NameInMap("FlexVolumeOptions")
         private String flexVolumeOptions;
 
-        @NameInMap("NFSVolumePath")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumePath")
         private String NFSVolumePath;
 
-        @NameInMap("NFSVolumeReadOnly")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeReadOnly")
         private Boolean NFSVolumeReadOnly;
 
-        @NameInMap("NFSVolumeServer")
+        @com.aliyun.core.annotation.NameInMap("NFSVolumeServer")
         private String NFSVolumeServer;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Volumes(Builder builder) {
@@ -4023,7 +4022,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the disk when you set the Type parameter to DiskVolume.
+             * The ID of the disk when you set Type to DiskVolume.
              */
             public Builder diskVolumeDiskId(String diskVolumeDiskId) {
                 this.diskVolumeDiskId = diskVolumeDiskId;
@@ -4099,7 +4098,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The endpoint of the server when you set the Type parameter to NFSVolume.
+             * The address of the NFS server.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -4136,121 +4135,121 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
 
     }
     public static class ContainerGroups extends TeaModel {
-        @NameInMap("ComputeCategory")
+        @com.aliyun.core.annotation.NameInMap("ComputeCategory")
         private String computeCategory;
 
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("ContainerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupName")
         private String containerGroupName;
 
-        @NameInMap("Containers")
+        @com.aliyun.core.annotation.NameInMap("Containers")
         private java.util.List < Containers> containers;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Discount")
+        @com.aliyun.core.annotation.NameInMap("Discount")
         private Integer discount;
 
-        @NameInMap("DnsConfig")
+        @com.aliyun.core.annotation.NameInMap("DnsConfig")
         private DnsConfig dnsConfig;
 
-        @NameInMap("EciSecurityContext")
+        @com.aliyun.core.annotation.NameInMap("EciSecurityContext")
         private EciSecurityContext eciSecurityContext;
 
-        @NameInMap("EniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("EniInstanceId")
         private String eniInstanceId;
 
-        @NameInMap("EphemeralStorage")
+        @com.aliyun.core.annotation.NameInMap("EphemeralStorage")
         private Integer ephemeralStorage;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < Events> events;
 
-        @NameInMap("ExpiredTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
 
-        @NameInMap("FailedTime")
+        @com.aliyun.core.annotation.NameInMap("FailedTime")
         private String failedTime;
 
-        @NameInMap("HostAliases")
+        @com.aliyun.core.annotation.NameInMap("HostAliases")
         private java.util.List < HostAliases> hostAliases;
 
-        @NameInMap("InitContainers")
+        @com.aliyun.core.annotation.NameInMap("InitContainers")
         private java.util.List < InitContainers> initContainers;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("InternetIp")
+        @com.aliyun.core.annotation.NameInMap("InternetIp")
         private String internetIp;
 
-        @NameInMap("IntranetIp")
+        @com.aliyun.core.annotation.NameInMap("IntranetIp")
         private String intranetIp;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("RamRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamRoleName")
         private String ramRoleName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("RestartPolicy")
+        @com.aliyun.core.annotation.NameInMap("RestartPolicy")
         private String restartPolicy;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("SpotPriceLimit")
+        @com.aliyun.core.annotation.NameInMap("SpotPriceLimit")
         private Double spotPriceLimit;
 
-        @NameInMap("SpotStrategy")
+        @com.aliyun.core.annotation.NameInMap("SpotStrategy")
         private String spotStrategy;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SucceededTime")
+        @com.aliyun.core.annotation.NameInMap("SucceededTime")
         private String succeededTime;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TenantEniInstanceId")
+        @com.aliyun.core.annotation.NameInMap("TenantEniInstanceId")
         private String tenantEniInstanceId;
 
-        @NameInMap("TenantEniIp")
+        @com.aliyun.core.annotation.NameInMap("TenantEniIp")
         private String tenantEniIp;
 
-        @NameInMap("TenantSecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("TenantSecurityGroupId")
         private String tenantSecurityGroupId;
 
-        @NameInMap("TenantVSwitchId")
+        @com.aliyun.core.annotation.NameInMap("TenantVSwitchId")
         private String tenantVSwitchId;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("Volumes")
+        @com.aliyun.core.annotation.NameInMap("Volumes")
         private java.util.List < Volumes> volumes;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ContainerGroups(Builder builder) {
@@ -4618,7 +4617,11 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
-             * The computing power type of the elastic container instance. A value of economy indicates economic instances.
+             * The computing power type of the elastic container instance. Valid values:
+             * <p>
+             * 
+             * *   economy: economic computing power.
+             * *   general: general-purpose computing power.
              */
             public Builder computeCategory(String computeCategory) {
                 this.computeCategory = computeCategory;
@@ -4658,7 +4661,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the system created the elastic container instance after the system received the request. The time follows the RFC 3339 standard. The time is displayed in UTC.
+             * The time when the instance was created. The time follows the RFC 3339 standard. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -4802,7 +4805,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -4813,8 +4816,8 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
              * The restart policy of the elastic container instance. Valid values:
              * <p>
              * 
-             * *   Never: Never restarts the instance if a container in the instance exits.
-             * *   Always: Always restarts the instance if a container in the instance exits.
+             * *   Never: Never restarts the instance if a container in the instance exits upon termination.
+             * *   Always: Always restarts the instance if a container in the instance exits upon termination.
              * *   OnFailure: Restarts the instance only if a container in the instance exists upon failure with a status code of non-zero.
              */
             public Builder restartPolicy(String restartPolicy) {
@@ -4823,7 +4826,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The security group ID.
+             * The ID of the security group to which the instances belong.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -4846,8 +4849,8 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
              * <p>
              * 
              * *   NoSpot: The instance is a regular pay-as-you-go instance.
-             * *   SpotWithPriceLimit: The instance is a preemptible instance that has a maximum price.
-             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is used as the bid price.
+             * *   SpotWithPriceLimit: The instance is a preemptible instance that has a user-defined maximum hourly price.
+             * *   SpotAsPriceGo: The instance is a preemptible instance for which the market price at the time of purchase is automatically used as the bid price.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -4855,7 +4858,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. Valid values:
+             * The status of the instance. Valid values:
              * <p>
              * 
              * *   Pending: The instance is being started.
@@ -4883,7 +4886,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the instance.
+             * The tags that are added to the instance.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -4931,7 +4934,7 @@ public class DescribeContainerGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Information about the volumes.
+             * The information about the volumes.
              */
             public Builder volumes(java.util.List < Volumes> volumes) {
                 this.volumes = volumes;

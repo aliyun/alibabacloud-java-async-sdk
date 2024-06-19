@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContainerGroupEventsResponseBody</p>
  */
 public class DescribeContainerGroupEventsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private DescribeContainerGroupEventsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
     } 
 
     public static class Metadata extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
         private Metadata(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
     public static class Source extends TeaModel {
-        @NameInMap("Component")
+        @com.aliyun.core.annotation.NameInMap("Component")
         private String component;
 
-        @NameInMap("Host")
+        @com.aliyun.core.annotation.NameInMap("Host")
         private String host;
 
         private Source(Builder builder) {
@@ -214,19 +213,19 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
     public static class InvolvedObject extends TeaModel {
-        @NameInMap("ApiVersion")
+        @com.aliyun.core.annotation.NameInMap("ApiVersion")
         private String apiVersion;
 
-        @NameInMap("Kind")
+        @com.aliyun.core.annotation.NameInMap("Kind")
         private String kind;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private String uid;
 
         private InvolvedObject(Builder builder) {
@@ -335,37 +334,37 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
     public static class Events extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("FirstTimestamp")
+        @com.aliyun.core.annotation.NameInMap("FirstTimestamp")
         private String firstTimestamp;
 
-        @NameInMap("LastTimestamp")
+        @com.aliyun.core.annotation.NameInMap("LastTimestamp")
         private String lastTimestamp;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Metadata")
+        @com.aliyun.core.annotation.NameInMap("Metadata")
         private Metadata metadata;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("ReportingComponent")
+        @com.aliyun.core.annotation.NameInMap("ReportingComponent")
         private String reportingComponent;
 
-        @NameInMap("ReportingInstance")
+        @com.aliyun.core.annotation.NameInMap("ReportingInstance")
         private String reportingInstance;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private Source source;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("involvedObject")
+        @com.aliyun.core.annotation.NameInMap("involvedObject")
         private InvolvedObject involvedObject;
 
         private Events(Builder builder) {
@@ -580,22 +579,22 @@ public class DescribeContainerGroupEventsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Annotations")
+        @com.aliyun.core.annotation.NameInMap("Annotations")
         private String annotations;
 
-        @NameInMap("ContainerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
         private String containerGroupId;
 
-        @NameInMap("Events")
+        @com.aliyun.core.annotation.NameInMap("Events")
         private java.util.List < Events> events;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Namespace")
+        @com.aliyun.core.annotation.NameInMap("Namespace")
         private String namespace;
 
-        @NameInMap("uuid")
+        @com.aliyun.core.annotation.NameInMap("uuid")
         private String uuid;
 
         private Data(Builder builder) {

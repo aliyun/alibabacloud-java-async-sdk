@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateVirtualNodeResponse} extends {@link TeaModel}
+ * {@link ListTagResourcesResponse} extends {@link TeaModel}
  *
- * <p>UpdateVirtualNodeResponse</p>
+ * <p>ListTagResourcesResponse</p>
  */
-public class UpdateVirtualNodeResponse extends Response {
+public class ListTagResourcesResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class UpdateVirtualNodeResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private UpdateVirtualNodeResponseBody body;
+    private ListTagResourcesResponseBody body;
 
-    private UpdateVirtualNodeResponse(BuilderImpl builder) {
+    private ListTagResourcesResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static UpdateVirtualNodeResponse create() {
+    public static ListTagResourcesResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class UpdateVirtualNodeResponse extends Response {
     /**
      * @return body
      */
-    public UpdateVirtualNodeResponseBody getBody() {
+    public ListTagResourcesResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<UpdateVirtualNodeResponse, Builder> {
+    public interface Builder extends Response.Builder<ListTagResourcesResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(UpdateVirtualNodeResponseBody body);
+        Builder body(ListTagResourcesResponseBody body);
 
         @Override
-        UpdateVirtualNodeResponse build();
+        ListTagResourcesResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<UpdateVirtualNodeResponse, Builder>
+            extends Response.BuilderImpl<ListTagResourcesResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private UpdateVirtualNodeResponseBody body; 
+        private ListTagResourcesResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(UpdateVirtualNodeResponse response) {
+        private BuilderImpl(ListTagResourcesResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class UpdateVirtualNodeResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(UpdateVirtualNodeResponseBody body) {
+        public Builder body(ListTagResourcesResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public UpdateVirtualNodeResponse build() {
-            return new UpdateVirtualNodeResponse(this);
+        public ListTagResourcesResponse build() {
+            return new ListTagResourcesResponse(this);
         } 
 
     } 

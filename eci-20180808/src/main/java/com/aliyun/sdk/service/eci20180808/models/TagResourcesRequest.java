@@ -6,20 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeMultiContainerGroupMetricRequest} extends {@link RequestModel}
+ * {@link TagResourcesRequest} extends {@link RequestModel}
  *
- * <p>DescribeMultiContainerGroupMetricRequest</p>
+ * <p>TagResourcesRequest</p>
  */
-public class DescribeMultiContainerGroupMetricRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ContainerGroupIds")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String containerGroupIds;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("MetricType")
-    private String metricType;
-
+public class TagResourcesRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
@@ -34,8 +25,9 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < String > resourceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -45,43 +37,39 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeMultiContainerGroupMetricRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String resourceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private java.util.List < Tag> tag;
+
+    private TagResourcesRequest(Builder builder) {
         super(builder);
-        this.containerGroupIds = builder.containerGroupIds;
-        this.metricType = builder.metricType;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
-        this.resourceGroupId = builder.resourceGroupId;
+        this.resourceId = builder.resourceId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resourceType = builder.resourceType;
+        this.tag = builder.tag;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeMultiContainerGroupMetricRequest create() {
+    public static TagResourcesRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return containerGroupIds
-     */
-    public String getContainerGroupIds() {
-        return this.containerGroupIds;
-    }
-
-    /**
-     * @return metricType
-     */
-    public String getMetricType() {
-        return this.metricType;
     }
 
     /**
@@ -106,10 +94,10 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
     }
 
     /**
-     * @return resourceGroupId
+     * @return resourceId
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public java.util.List < String > getResourceId() {
+        return this.resourceId;
     }
 
     /**
@@ -126,49 +114,45 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeMultiContainerGroupMetricRequest, Builder> {
-        private String containerGroupIds; 
-        private String metricType; 
+    /**
+     * @return resourceType
+     */
+    public String getResourceType() {
+        return this.resourceType;
+    }
+
+    /**
+     * @return tag
+     */
+    public java.util.List < Tag> getTag() {
+        return this.tag;
+    }
+
+    public static final class Builder extends Request.Builder<TagResourcesRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
-        private String resourceGroupId; 
+        private java.util.List < String > resourceId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resourceType; 
+        private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeMultiContainerGroupMetricRequest request) {
+        private Builder(TagResourcesRequest request) {
             super(request);
-            this.containerGroupIds = request.containerGroupIds;
-            this.metricType = request.metricType;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
-            this.resourceGroupId = request.resourceGroupId;
+            this.resourceId = request.resourceId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resourceType = request.resourceType;
+            this.tag = request.tag;
         } 
-
-        /**
-         * The instance ID. The value is a JSON array. You can specify up to 20 instance IDs at a time.
-         */
-        public Builder containerGroupIds(String containerGroupIds) {
-            this.putQueryParameter("ContainerGroupIds", containerGroupIds);
-            this.containerGroupIds = containerGroupIds;
-            return this;
-        }
-
-        /**
-         * The type of the monitoring data. Set the value to summary. This value indicates that records are returned.
-         */
-        public Builder metricType(String metricType) {
-            this.putQueryParameter("MetricType", metricType);
-            this.metricType = metricType;
-            return this;
-        }
 
         /**
          * OwnerAccount.
@@ -189,7 +173,7 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -198,11 +182,11 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
         }
 
         /**
-         * The ID of the resource group to which the elastic container instances belong.
+         * ResourceId.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder resourceId(java.util.List < String > resourceId) {
+            this.putQueryParameter("ResourceId", resourceId);
+            this.resourceId = resourceId;
             return this;
         }
 
@@ -224,11 +208,90 @@ public class DescribeMultiContainerGroupMetricRequest extends Request {
             return this;
         }
 
+        /**
+         * ResourceType.
+         */
+        public Builder resourceType(String resourceType) {
+            this.putQueryParameter("ResourceType", resourceType);
+            this.resourceType = resourceType;
+            return this;
+        }
+
+        /**
+         * Tag.
+         */
+        public Builder tag(java.util.List < Tag> tag) {
+            this.putQueryParameter("Tag", tag);
+            this.tag = tag;
+            return this;
+        }
+
         @Override
-        public DescribeMultiContainerGroupMetricRequest build() {
-            return new DescribeMultiContainerGroupMetricRequest(this);
+        public TagResourcesRequest build() {
+            return new TagResourcesRequest(this);
         } 
 
     } 
 
+    public static class Tag extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Key")
+        private String key;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Tag(Builder builder) {
+            this.key = builder.key;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Tag create() {
+            return builder().build();
+        }
+
+        /**
+         * @return key
+         */
+        public String getKey() {
+            return this.key;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String key; 
+            private String value; 
+
+            /**
+             * Key.
+             */
+            public Builder key(String key) {
+                this.key = key;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Tag build() {
+                return new Tag(this);
+            } 
+
+        } 
+
+    }
 }

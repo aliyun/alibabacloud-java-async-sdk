@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateImageCacheResponseBody</p>
  */
 public class CreateImageCacheResponseBody extends TeaModel {
-    @NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
     private String containerGroupId;
 
-    @NameInMap("ImageCacheId")
+    @com.aliyun.core.annotation.NameInMap("ImageCacheId")
     private String imageCacheId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateImageCacheResponseBody(Builder builder) {

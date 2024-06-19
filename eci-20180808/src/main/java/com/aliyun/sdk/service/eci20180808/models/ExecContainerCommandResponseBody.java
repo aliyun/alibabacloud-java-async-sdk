@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExecContainerCommandResponseBody</p>
  */
 public class ExecContainerCommandResponseBody extends TeaModel {
-    @NameInMap("HttpUrl")
+    @com.aliyun.core.annotation.NameInMap("HttpUrl")
     private String httpUrl;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SyncResponse")
+    @com.aliyun.core.annotation.NameInMap("SyncResponse")
     private String syncResponse;
 
-    @NameInMap("WebSocketUri")
+    @com.aliyun.core.annotation.NameInMap("WebSocketUri")
     private String webSocketUri;
 
     private ExecContainerCommandResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateContainerGroupRequest</p>
  */
 public class UpdateContainerGroupRequest extends Request {
-    @Query
-    @NameInMap("DnsConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsConfig")
     private DnsConfig dnsConfig;
 
-    @Query
-    @NameInMap("AcrRegistryInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcrRegistryInfo")
     private java.util.List < AcrRegistryInfo> acrRegistryInfo;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Container")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Container")
     private java.util.List < Container> container;
 
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("Cpu")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cpu")
     private Float cpu;
 
-    @Query
-    @NameInMap("ImageRegistryCredential")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageRegistryCredential")
     private java.util.List < ImageRegistryCredential> imageRegistryCredential;
 
-    @Query
-    @NameInMap("InitContainer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitContainer")
     private java.util.List < InitContainer> initContainer;
 
-    @Query
-    @NameInMap("Memory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memory")
     private Float memory;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RestartPolicy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestartPolicy")
     private String restartPolicy;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("UpdateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UpdateType")
     private String updateType;
 
-    @Query
-    @NameInMap("Volume")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Volume")
     private java.util.List < Volume> volume;
 
     private UpdateContainerGroupRequest(Builder builder) {
@@ -497,10 +496,10 @@ public class UpdateContainerGroupRequest extends Request {
     } 
 
     public static class Option extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Option(Builder builder) {
@@ -558,13 +557,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class DnsConfig extends TeaModel {
-        @NameInMap("NameServer")
+        @com.aliyun.core.annotation.NameInMap("NameServer")
         private java.util.List < String > nameServer;
 
-        @NameInMap("Option")
+        @com.aliyun.core.annotation.NameInMap("Option")
         private java.util.List < Option> option;
 
-        @NameInMap("Search")
+        @com.aliyun.core.annotation.NameInMap("Search")
         private java.util.List < String > search;
 
         private DnsConfig(Builder builder) {
@@ -639,16 +638,16 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class AcrRegistryInfo extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < String > domain;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private AcrRegistryInfo(Builder builder) {
@@ -740,7 +739,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Exec extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
         private Exec(Builder builder) {
@@ -781,13 +780,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class HttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private HttpGet(Builder builder) {
@@ -862,7 +861,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class TcpSocket extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private TcpSocket(Builder builder) {
@@ -903,31 +902,31 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class LivenessProbe extends TeaModel {
-        @NameInMap("Exec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Exec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Exec exec;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
+        @com.aliyun.core.annotation.Validation(required = true)
         private HttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private TcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private LivenessProbe(Builder builder) {
@@ -1087,7 +1086,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ReadinessProbeExec extends TeaModel {
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
         private ReadinessProbeExec(Builder builder) {
@@ -1128,13 +1127,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ReadinessProbeHttpGet extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Scheme")
+        @com.aliyun.core.annotation.NameInMap("Scheme")
         private String scheme;
 
         private ReadinessProbeHttpGet(Builder builder) {
@@ -1209,7 +1208,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ReadinessProbeTcpSocket extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ReadinessProbeTcpSocket(Builder builder) {
@@ -1250,31 +1249,31 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ReadinessProbe extends TeaModel {
-        @NameInMap("Exec")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Exec")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeExec exec;
 
-        @NameInMap("FailureThreshold")
+        @com.aliyun.core.annotation.NameInMap("FailureThreshold")
         private Integer failureThreshold;
 
-        @NameInMap("HttpGet")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HttpGet")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeHttpGet httpGet;
 
-        @NameInMap("InitialDelaySeconds")
+        @com.aliyun.core.annotation.NameInMap("InitialDelaySeconds")
         private Integer initialDelaySeconds;
 
-        @NameInMap("PeriodSeconds")
+        @com.aliyun.core.annotation.NameInMap("PeriodSeconds")
         private Integer periodSeconds;
 
-        @NameInMap("SuccessThreshold")
+        @com.aliyun.core.annotation.NameInMap("SuccessThreshold")
         private Integer successThreshold;
 
-        @NameInMap("TcpSocket")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("TcpSocket")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbeTcpSocket tcpSocket;
 
-        @NameInMap("TimeoutSeconds")
+        @com.aliyun.core.annotation.NameInMap("TimeoutSeconds")
         private Integer timeoutSeconds;
 
         private ReadinessProbe(Builder builder) {
@@ -1434,7 +1433,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Capability extends TeaModel {
-        @NameInMap("Add")
+        @com.aliyun.core.annotation.NameInMap("Add")
         private java.util.List < String > add;
 
         private Capability(Builder builder) {
@@ -1475,14 +1474,14 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class SecurityContext extends TeaModel {
-        @NameInMap("Capability")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Capability")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Capability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private SecurityContext(Builder builder) {
@@ -1557,7 +1556,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class FieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private FieldRef(Builder builder) {
@@ -1598,14 +1597,14 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class EnvironmentVar extends TeaModel {
-        @NameInMap("FieldRef")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
+        @com.aliyun.core.annotation.Validation(required = true)
         private FieldRef fieldRef;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private EnvironmentVar(Builder builder) {
@@ -1680,10 +1679,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class LifecyclePostStartHandlerHttpGetHttpHeaders extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LifecyclePostStartHandlerHttpGetHttpHeaders(Builder builder) {
@@ -1741,10 +1740,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class LifecyclePreStopHandlerHttpGetHttpHeader extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private LifecyclePreStopHandlerHttpGetHttpHeader(Builder builder) {
@@ -1802,10 +1801,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Port extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private Port(Builder builder) {
@@ -1863,19 +1862,19 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class VolumeMount extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private VolumeMount(Builder builder) {
@@ -1991,109 +1990,109 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Container extends TeaModel {
-        @NameInMap("LivenessProbe")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("LivenessProbe")
+        @com.aliyun.core.annotation.Validation(required = true)
         private LivenessProbe livenessProbe;
 
-        @NameInMap("ReadinessProbe")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ReadinessProbe")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ReadinessProbe readinessProbe;
 
-        @NameInMap("SecurityContext")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContext securityContext;
 
-        @NameInMap("Arg")
+        @com.aliyun.core.annotation.NameInMap("Arg")
         private java.util.List < String > arg;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("EnvironmentVar")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
         private java.util.List < EnvironmentVar> environmentVar;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("LifecyclePostStartHandlerExec")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerExec")
         private java.util.List < String > lifecyclePostStartHandlerExec;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHost")
         private String lifecyclePostStartHandlerHttpGetHost;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetHttpHeaders")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetHttpHeaders")
         private java.util.List < LifecyclePostStartHandlerHttpGetHttpHeaders> lifecyclePostStartHandlerHttpGetHttpHeaders;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPath")
         private String lifecyclePostStartHandlerHttpGetPath;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetPort")
         private Integer lifecyclePostStartHandlerHttpGetPort;
 
-        @NameInMap("LifecyclePostStartHandlerHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerHttpGetScheme")
         private String lifecyclePostStartHandlerHttpGetScheme;
 
-        @NameInMap("LifecyclePostStartHandlerTcpSocketHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketHost")
         private String lifecyclePostStartHandlerTcpSocketHost;
 
-        @NameInMap("LifecyclePostStartHandlerTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePostStartHandlerTcpSocketPort")
         private Integer lifecyclePostStartHandlerTcpSocketPort;
 
-        @NameInMap("LifecyclePreStopHandlerExec")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerExec")
         private java.util.List < String > lifecyclePreStopHandlerExec;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHost")
         private String lifecyclePreStopHandlerHttpGetHost;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetHttpHeader")
         private java.util.List < LifecyclePreStopHandlerHttpGetHttpHeader> lifecyclePreStopHandlerHttpGetHttpHeader;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetPath")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPath")
         private String lifecyclePreStopHandlerHttpGetPath;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetPort")
         private Integer lifecyclePreStopHandlerHttpGetPort;
 
-        @NameInMap("LifecyclePreStopHandlerHttpGetScheme")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerHttpGetScheme")
         private String lifecyclePreStopHandlerHttpGetScheme;
 
-        @NameInMap("LifecyclePreStopHandlerTcpSocketHost")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketHost")
         private String lifecyclePreStopHandlerTcpSocketHost;
 
-        @NameInMap("LifecyclePreStopHandlerTcpSocketPort")
+        @com.aliyun.core.annotation.NameInMap("LifecyclePreStopHandlerTcpSocketPort")
         private Integer lifecyclePreStopHandlerTcpSocketPort;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private java.util.List < Port> port;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMount")
+        @com.aliyun.core.annotation.NameInMap("VolumeMount")
         private java.util.List < VolumeMount> volumeMount;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private Container(Builder builder) {
@@ -2704,13 +2703,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ImageRegistryCredential extends TeaModel {
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private ImageRegistryCredential(Builder builder) {
@@ -2785,7 +2784,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class SecurityContextCapability extends TeaModel {
-        @NameInMap("Add")
+        @com.aliyun.core.annotation.NameInMap("Add")
         private java.util.List < String > add;
 
         private SecurityContextCapability(Builder builder) {
@@ -2826,14 +2825,14 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class InitContainerSecurityContext extends TeaModel {
-        @NameInMap("Capability")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Capability")
+        @com.aliyun.core.annotation.Validation(required = true)
         private SecurityContextCapability capability;
 
-        @NameInMap("ReadOnlyRootFilesystem")
+        @com.aliyun.core.annotation.NameInMap("ReadOnlyRootFilesystem")
         private Boolean readOnlyRootFilesystem;
 
-        @NameInMap("RunAsUser")
+        @com.aliyun.core.annotation.NameInMap("RunAsUser")
         private Long runAsUser;
 
         private InitContainerSecurityContext(Builder builder) {
@@ -2908,7 +2907,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class EnvironmentVarFieldRef extends TeaModel {
-        @NameInMap("FieldPath")
+        @com.aliyun.core.annotation.NameInMap("FieldPath")
         private String fieldPath;
 
         private EnvironmentVarFieldRef(Builder builder) {
@@ -2949,14 +2948,14 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class InitContainerEnvironmentVar extends TeaModel {
-        @NameInMap("FieldRef")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FieldRef")
+        @com.aliyun.core.annotation.Validation(required = true)
         private EnvironmentVarFieldRef fieldRef;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InitContainerEnvironmentVar(Builder builder) {
@@ -3031,10 +3030,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class InitContainerPort extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
         private InitContainerPort(Builder builder) {
@@ -3092,19 +3091,19 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class InitContainerVolumeMount extends TeaModel {
-        @NameInMap("MountPath")
+        @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
-        @NameInMap("MountPropagation")
+        @com.aliyun.core.annotation.NameInMap("MountPropagation")
         private String mountPropagation;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("SubPath")
+        @com.aliyun.core.annotation.NameInMap("SubPath")
         private String subPath;
 
         private InitContainerVolumeMount(Builder builder) {
@@ -3220,53 +3219,53 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class InitContainer extends TeaModel {
-        @NameInMap("SecurityContext")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("SecurityContext")
+        @com.aliyun.core.annotation.Validation(required = true)
         private InitContainerSecurityContext securityContext;
 
-        @NameInMap("Arg")
+        @com.aliyun.core.annotation.NameInMap("Arg")
         private java.util.List < String > arg;
 
-        @NameInMap("Command")
+        @com.aliyun.core.annotation.NameInMap("Command")
         private java.util.List < String > command;
 
-        @NameInMap("Cpu")
+        @com.aliyun.core.annotation.NameInMap("Cpu")
         private Float cpu;
 
-        @NameInMap("EnvironmentVar")
+        @com.aliyun.core.annotation.NameInMap("EnvironmentVar")
         private java.util.List < InitContainerEnvironmentVar> environmentVar;
 
-        @NameInMap("Gpu")
+        @com.aliyun.core.annotation.NameInMap("Gpu")
         private Integer gpu;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
-        @NameInMap("ImagePullPolicy")
+        @com.aliyun.core.annotation.NameInMap("ImagePullPolicy")
         private String imagePullPolicy;
 
-        @NameInMap("Memory")
+        @com.aliyun.core.annotation.NameInMap("Memory")
         private Float memory;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private java.util.List < InitContainerPort> port;
 
-        @NameInMap("Stdin")
+        @com.aliyun.core.annotation.NameInMap("Stdin")
         private Boolean stdin;
 
-        @NameInMap("StdinOnce")
+        @com.aliyun.core.annotation.NameInMap("StdinOnce")
         private Boolean stdinOnce;
 
-        @NameInMap("Tty")
+        @com.aliyun.core.annotation.NameInMap("Tty")
         private Boolean tty;
 
-        @NameInMap("VolumeMount")
+        @com.aliyun.core.annotation.NameInMap("VolumeMount")
         private java.util.List < InitContainerVolumeMount> volumeMount;
 
-        @NameInMap("WorkingDir")
+        @com.aliyun.core.annotation.NameInMap("WorkingDir")
         private String workingDir;
 
         private InitContainer(Builder builder) {
@@ -3567,10 +3566,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -3628,10 +3627,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ConfigFileToPath extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
         private ConfigFileToPath(Builder builder) {
@@ -3689,7 +3688,7 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class ConfigFileVolume extends TeaModel {
-        @NameInMap("ConfigFileToPath")
+        @com.aliyun.core.annotation.NameInMap("ConfigFileToPath")
         private java.util.List < ConfigFileToPath> configFileToPath;
 
         private ConfigFileVolume(Builder builder) {
@@ -3730,10 +3729,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class EmptyDirVolume extends TeaModel {
-        @NameInMap("Medium")
+        @com.aliyun.core.annotation.NameInMap("Medium")
         private String medium;
 
-        @NameInMap("SizeLimit")
+        @com.aliyun.core.annotation.NameInMap("SizeLimit")
         private String sizeLimit;
 
         private EmptyDirVolume(Builder builder) {
@@ -3791,13 +3790,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class FlexVolume extends TeaModel {
-        @NameInMap("Driver")
+        @com.aliyun.core.annotation.NameInMap("Driver")
         private String driver;
 
-        @NameInMap("FsType")
+        @com.aliyun.core.annotation.NameInMap("FsType")
         private String fsType;
 
-        @NameInMap("Options")
+        @com.aliyun.core.annotation.NameInMap("Options")
         private String options;
 
         private FlexVolume(Builder builder) {
@@ -3872,10 +3871,10 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class HostPathVolume extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private HostPathVolume(Builder builder) {
@@ -3933,13 +3932,13 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class NFSVolume extends TeaModel {
-        @NameInMap("Path")
+        @com.aliyun.core.annotation.NameInMap("Path")
         private String path;
 
-        @NameInMap("ReadOnly")
+        @com.aliyun.core.annotation.NameInMap("ReadOnly")
         private Boolean readOnly;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
         private NFSVolume(Builder builder) {
@@ -4014,30 +4013,30 @@ public class UpdateContainerGroupRequest extends Request {
 
     }
     public static class Volume extends TeaModel {
-        @NameInMap("ConfigFileVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ConfigFileVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private ConfigFileVolume configFileVolume;
 
-        @NameInMap("EmptyDirVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EmptyDirVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private EmptyDirVolume emptyDirVolume;
 
-        @NameInMap("FlexVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FlexVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private FlexVolume flexVolume;
 
-        @NameInMap("HostPathVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("HostPathVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private HostPathVolume hostPathVolume;
 
-        @NameInMap("NFSVolume")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NFSVolume")
+        @com.aliyun.core.annotation.Validation(required = true)
         private NFSVolume NFSVolume;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Volume(Builder builder) {

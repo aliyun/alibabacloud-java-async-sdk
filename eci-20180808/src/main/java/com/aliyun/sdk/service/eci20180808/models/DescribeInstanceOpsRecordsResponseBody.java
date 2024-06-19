@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceOpsRecordsResponseBody</p>
  */
 public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceOpsRecordsResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("OpsStatus")
+        @com.aliyun.core.annotation.NameInMap("OpsStatus")
         private String opsStatus;
 
-        @NameInMap("OpsType")
+        @com.aliyun.core.annotation.NameInMap("OpsType")
         private String opsType;
 
-        @NameInMap("ResultContent")
+        @com.aliyun.core.annotation.NameInMap("ResultContent")
         private String resultContent;
 
-        @NameInMap("ResultType")
+        @com.aliyun.core.annotation.NameInMap("ResultType")
         private String resultType;
 
         private Records(Builder builder) {
@@ -175,6 +174,12 @@ public class DescribeInstanceOpsRecordsResponseBody extends TeaModel {
 
             /**
              * The status of the O\&M task.
+             * <p>
+             * - Ready
+             * - Failed
+             * - Expired
+             * - Closed
+             * - Success
              */
             public Builder opsStatus(String opsStatus) {
                 this.opsStatus = opsStatus;

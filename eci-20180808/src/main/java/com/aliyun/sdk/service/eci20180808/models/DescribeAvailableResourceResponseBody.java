@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAvailableResourceResponseBody</p>
  */
 public class DescribeAvailableResourceResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private AvailableZones availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeAvailableResourceResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
     } 
 
     public static class SupportedResource extends TeaModel {
-        @NameInMap("StatusCategory")
+        @com.aliyun.core.annotation.NameInMap("StatusCategory")
         private String statusCategory;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SupportedResource(Builder builder) {
@@ -143,7 +142,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class SupportedResources extends TeaModel {
-        @NameInMap("SupportedResource")
+        @com.aliyun.core.annotation.NameInMap("SupportedResource")
         private java.util.List < SupportedResource> supportedResource;
 
         private SupportedResources(Builder builder) {
@@ -184,10 +183,10 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableResource extends TeaModel {
-        @NameInMap("SupportedResources")
+        @com.aliyun.core.annotation.NameInMap("SupportedResources")
         private SupportedResources supportedResources;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AvailableResource(Builder builder) {
@@ -249,7 +248,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableResources extends TeaModel {
-        @NameInMap("AvailableResource")
+        @com.aliyun.core.annotation.NameInMap("AvailableResource")
         private java.util.List < AvailableResource> availableResource;
 
         private AvailableResources(Builder builder) {
@@ -290,13 +289,13 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableZone extends TeaModel {
-        @NameInMap("AvailableResources")
+        @com.aliyun.core.annotation.NameInMap("AvailableResources")
         private AvailableResources availableResources;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private AvailableZone(Builder builder) {
@@ -371,7 +370,7 @@ public class DescribeAvailableResourceResponseBody extends TeaModel {
 
     }
     public static class AvailableZones extends TeaModel {
-        @NameInMap("AvailableZone")
+        @com.aliyun.core.annotation.NameInMap("AvailableZone")
         private java.util.List < AvailableZone> availableZone;
 
         private AvailableZones(Builder builder) {

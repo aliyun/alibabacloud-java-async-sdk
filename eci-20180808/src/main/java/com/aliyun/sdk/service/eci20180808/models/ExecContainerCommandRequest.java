@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.eci20180808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ExecContainerCommandRequest</p>
  */
 public class ExecContainerCommandRequest extends Request {
-    @Query
-    @NameInMap("Command")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Command")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String command;
 
-    @Query
-    @NameInMap("ContainerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerGroupId;
 
-    @Query
-    @NameInMap("ContainerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContainerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String containerName;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Stdin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Stdin")
     private Boolean stdin;
 
-    @Query
-    @NameInMap("Sync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sync")
     private Boolean sync;
 
-    @Query
-    @NameInMap("TTY")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TTY")
     private Boolean TTY;
 
     private ExecContainerCommandRequest(Builder builder) {
@@ -281,9 +280,9 @@ public class ExecContainerCommandRequest extends Request {
         }
 
         /**
-         * Specifies whether to run the command immediately and return the result. Default value: false.\
+         * Specifies whether to immediately run the command and synchronously return the result. Default value: false.\
          * <p>
-         * If you set this parameter to true, set the value of TTY to false.
+         * If this parameter is set to true, TTY must be set to false. Command cannot be set to `/bin/bash`.
          */
         public Builder sync(Boolean sync) {
             this.putQueryParameter("Sync", sync);
@@ -294,7 +293,7 @@ public class ExecContainerCommandRequest extends Request {
         /**
          * Specifies whether to enable interaction. Default value: false.\
          * <p>
-         * If the command is a /bin/bash command, set the value to true.
+         * If the Command parameter is set to `/bin/bash`, set this parameter to true.
          */
         public Builder TTY(Boolean TTY) {
             this.putQueryParameter("TTY", TTY);
