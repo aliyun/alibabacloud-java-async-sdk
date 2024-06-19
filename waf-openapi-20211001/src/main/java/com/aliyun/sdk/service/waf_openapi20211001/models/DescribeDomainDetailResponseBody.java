@@ -396,7 +396,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         private Boolean sM2AccessOnly;
 
         @com.aliyun.core.annotation.NameInMap("SM2CertId")
-        private Boolean sM2CertId;
+        private String sM2CertId;
 
         @com.aliyun.core.annotation.NameInMap("SM2Enabled")
         private Boolean sM2Enabled;
@@ -525,7 +525,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
         /**
          * @return sM2CertId
          */
-        public Boolean getSM2CertId() {
+        public String getSM2CertId() {
             return this.sM2CertId;
         }
 
@@ -570,7 +570,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             private Boolean iPv6Enabled; 
             private String protectionResource; 
             private Boolean sM2AccessOnly; 
-            private Boolean sM2CertId; 
+            private String sM2CertId; 
             private Boolean sM2Enabled; 
             private String TLSVersion; 
             private Long xffHeaderMode; 
@@ -708,7 +708,7 @@ public class DescribeDomainDetailResponseBody extends TeaModel {
             /**
              * The ID of the SM certificate that is added. This parameter is returned only if the value of SM2Enabled is true.
              */
-            public Builder sM2CertId(Boolean sM2CertId) {
+            public Builder sM2CertId(String sM2CertId) {
                 this.sM2CertId = sM2CertId;
                 return this;
             }

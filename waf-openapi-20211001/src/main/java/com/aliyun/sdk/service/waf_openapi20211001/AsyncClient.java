@@ -65,7 +65,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeApisecEventDomainStatisticResponse> describeApisecEventDomainStatistic(DescribeApisecEventDomainStatisticRequest request);
 
+    CompletableFuture<DescribeApisecLogDeliveriesResponse> describeApisecLogDeliveries(DescribeApisecLogDeliveriesRequest request);
+
     CompletableFuture<DescribeApisecSensitiveDomainStatisticResponse> describeApisecSensitiveDomainStatistic(DescribeApisecSensitiveDomainStatisticRequest request);
+
+    CompletableFuture<DescribeApisecSlsLogStoresResponse> describeApisecSlsLogStores(DescribeApisecSlsLogStoresRequest request);
+
+    CompletableFuture<DescribeApisecSlsProjectsResponse> describeApisecSlsProjects(DescribeApisecSlsProjectsRequest request);
 
     CompletableFuture<DescribeCertDetailResponse> describeCertDetail(DescribeCertDetailRequest request);
 
@@ -178,6 +184,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
     CompletableFuture<ListTagValuesResponse> listTagValues(ListTagValuesRequest request);
+
+    CompletableFuture<ModifyApisecLogDeliveryResponse> modifyApisecLogDelivery(ModifyApisecLogDeliveryRequest request);
+
+    CompletableFuture<ModifyApisecLogDeliveryStatusResponse> modifyApisecLogDeliveryStatus(ModifyApisecLogDeliveryStatusRequest request);
 
     CompletableFuture<ModifyDefenseResourceGroupResponse> modifyDefenseResourceGroup(ModifyDefenseResourceGroupRequest request);
 
