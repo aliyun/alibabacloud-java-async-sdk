@@ -33,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CredentialVerifyResponse> credentialVerify(CredentialVerifyRequest request);
 
+    CompletableFuture<DeepfakeDetectResponse> deepfakeDetect(DeepfakeDetectRequest request);
+
     CompletableFuture<DescribeDeviceInfoResponse> describeDeviceInfo(DescribeDeviceInfoRequest request);
 
     CompletableFuture<DescribeFaceVerifyResponse> describeFaceVerify(DescribeFaceVerifyRequest request);
