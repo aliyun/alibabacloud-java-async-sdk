@@ -25,16 +25,11 @@ public class DettachAssetGroupToInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("SourceIp")
-    private String sourceIp;
-
     private DettachAssetGroupToInstanceRequest(Builder builder) {
         super(builder);
         this.assetGroupList = builder.assetGroupList;
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
-        this.sourceIp = builder.sourceIp;
     }
 
     public static Builder builder() {
@@ -71,18 +66,10 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         return this.regionId;
     }
 
-    /**
-     * @return sourceIp
-     */
-    public String getSourceIp() {
-        return this.sourceIp;
-    }
-
     public static final class Builder extends Request.Builder<DettachAssetGroupToInstanceRequest, Builder> {
         private java.util.List < AssetGroupList> assetGroupList; 
         private String instanceId; 
         private String regionId; 
-        private String sourceIp; 
 
         private Builder() {
             super();
@@ -93,7 +80,6 @@ public class DettachAssetGroupToInstanceRequest extends Request {
             this.assetGroupList = request.assetGroupList;
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
-            this.sourceIp = request.sourceIp;
         } 
 
         /**
@@ -127,15 +113,6 @@ public class DettachAssetGroupToInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The source IP address of the request. The system specifies this parameter.
-         */
-        public Builder sourceIp(String sourceIp) {
-            this.putQueryParameter("SourceIp", sourceIp);
-            this.sourceIp = sourceIp;
             return this;
         }
 

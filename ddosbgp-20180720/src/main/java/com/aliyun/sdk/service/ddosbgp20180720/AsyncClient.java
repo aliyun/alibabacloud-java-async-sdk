@@ -37,6 +37,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ConfigSchedruleOnDemandResponse> configSchedruleOnDemand(ConfigSchedruleOnDemandRequest request);
 
+    CompletableFuture<CreatePolicyResponse> createPolicy(CreatePolicyRequest request);
+
     CompletableFuture<CreateSchedruleOnDemandResponse> createSchedruleOnDemand(CreateSchedruleOnDemandRequest request);
 
     /**
@@ -53,6 +55,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteIpResponse> deleteIp(DeleteIpRequest request);
+
+    CompletableFuture<DeletePolicyResponse> deletePolicy(DeletePolicyRequest request);
 
     CompletableFuture<DeleteRdMemberListResponse> deleteRdMemberList(DeleteRdMemberListRequest request);
 
@@ -126,11 +130,17 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeTrafficResponse> describeTraffic(DescribeTrafficRequest request);
 
+    CompletableFuture<DetachFromPolicyResponse> detachFromPolicy(DetachFromPolicyRequest request);
+
     CompletableFuture<DettachAssetGroupToInstanceResponse> dettachAssetGroupToInstance(DettachAssetGroupToInstanceRequest request);
 
     CompletableFuture<GetSlsOpenStatusResponse> getSlsOpenStatus(GetSlsOpenStatusRequest request);
 
     CompletableFuture<ListOpenedAccessLogInstancesResponse> listOpenedAccessLogInstances(ListOpenedAccessLogInstancesRequest request);
+
+    CompletableFuture<ListPolicyResponse> listPolicy(ListPolicyRequest request);
+
+    CompletableFuture<ListPolicyAttachmentResponse> listPolicyAttachment(ListPolicyAttachmentRequest request);
 
     CompletableFuture<ListTagKeysResponse> listTagKeys(ListTagKeysRequest request);
 
@@ -139,6 +149,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ModifyPolicyResponse> modifyPolicy(ModifyPolicyRequest request);
+
+    CompletableFuture<ModifyPolicyContentResponse> modifyPolicyContent(ModifyPolicyContentRequest request);
 
     /**
       * You can call the ModifyRemark operation to add remarks for a single Anti-DDoS Origin instance.  
