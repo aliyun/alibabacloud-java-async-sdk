@@ -71,6 +71,9 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
     } 
 
     public static class OverallList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AuthVersionList")
+        private java.util.List < String > authVersionList;
+
         @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
@@ -81,6 +84,7 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         private String type;
 
         private OverallList(Builder builder) {
+            this.authVersionList = builder.authVersionList;
             this.config = builder.config;
             this.totalCount = builder.totalCount;
             this.type = builder.type;
@@ -92,6 +96,13 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
 
         public static OverallList create() {
             return builder().build();
+        }
+
+        /**
+         * @return authVersionList
+         */
+        public java.util.List < String > getAuthVersionList() {
+            return this.authVersionList;
         }
 
         /**
@@ -116,9 +127,18 @@ public class DescribeCommonOverallConfigListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private java.util.List < String > authVersionList; 
             private String config; 
             private Integer totalCount; 
             private String type; 
+
+            /**
+             * AuthVersionList.
+             */
+            public Builder authVersionList(java.util.List < String > authVersionList) {
+                this.authVersionList = authVersionList;
+                return this;
+            }
 
             /**
              * Indicates the status of the switch. Valid values:
