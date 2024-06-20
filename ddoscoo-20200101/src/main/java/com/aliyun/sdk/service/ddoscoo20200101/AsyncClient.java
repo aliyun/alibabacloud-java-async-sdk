@@ -34,11 +34,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachSceneDefenseObjectResponse> attachSceneDefenseObject(AttachSceneDefenseObjectRequest request);
 
+    CompletableFuture<ConfigDomainSecurityProfileResponse> configDomainSecurityProfile(ConfigDomainSecurityProfileRequest request);
+
     /**
       * If multiple origin servers are configured for a website that is added to Anti-DDoS Pro or Anti-DDoS Premium, you can modify the load balancing algorithms for back-to-origin traffic based on back-to-origin policies. The IP hash algorithm is used by default. You can change the algorithm to the round-robin or least response time algorithm. For more information, see the description of the **Policy** parameter in the "Request parameters" section of this topic.
       *
      */
     CompletableFuture<ConfigL7RsPolicyResponse> configL7RsPolicy(ConfigL7RsPolicyRequest request);
+
+    CompletableFuture<ConfigL7UsKeepaliveResponse> configL7UsKeepalive(ConfigL7UsKeepaliveRequest request);
 
     CompletableFuture<ConfigLayer4RealLimitResponse> configLayer4RealLimit(ConfigLayer4RealLimitRequest request);
 
@@ -305,6 +309,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeInstancesResponse> describeInstances(DescribeInstancesRequest request);
 
     CompletableFuture<DescribeL7RsPolicyResponse> describeL7RsPolicy(DescribeL7RsPolicyRequest request);
+
+    CompletableFuture<DescribeL7UsKeepaliveResponse> describeL7UsKeepalive(DescribeL7UsKeepaliveRequest request);
 
     CompletableFuture<DescribeLayer4RulePolicyResponse> describeLayer4RulePolicy(DescribeLayer4RulePolicyRequest request);
 

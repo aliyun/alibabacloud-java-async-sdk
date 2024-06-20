@@ -71,8 +71,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
     } 
 
     public static class EipInfos extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CertConfigured")
+        private Boolean certConfigured;
+
         @com.aliyun.core.annotation.NameInMap("Eip")
         private String eip;
+
+        @com.aliyun.core.annotation.NameInMap("FunctionVersion")
+        private String functionVersion;
 
         @com.aliyun.core.annotation.NameInMap("IpMode")
         private String ipMode;
@@ -80,14 +86,24 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("IpVersion")
         private String ipVersion;
 
+        @com.aliyun.core.annotation.NameInMap("Ssl13Enabled")
+        private Boolean ssl13Enabled;
+
         @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
+        @com.aliyun.core.annotation.NameInMap("TlsVersion")
+        private String tlsVersion;
+
         private EipInfos(Builder builder) {
+            this.certConfigured = builder.certConfigured;
             this.eip = builder.eip;
+            this.functionVersion = builder.functionVersion;
             this.ipMode = builder.ipMode;
             this.ipVersion = builder.ipVersion;
+            this.ssl13Enabled = builder.ssl13Enabled;
             this.status = builder.status;
+            this.tlsVersion = builder.tlsVersion;
         }
 
         public static Builder builder() {
@@ -99,10 +115,24 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return certConfigured
+         */
+        public Boolean getCertConfigured() {
+            return this.certConfigured;
+        }
+
+        /**
          * @return eip
          */
         public String getEip() {
             return this.eip;
+        }
+
+        /**
+         * @return functionVersion
+         */
+        public String getFunctionVersion() {
+            return this.functionVersion;
         }
 
         /**
@@ -120,23 +150,57 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
         }
 
         /**
+         * @return ssl13Enabled
+         */
+        public Boolean getSsl13Enabled() {
+            return this.ssl13Enabled;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
             return this.status;
         }
 
+        /**
+         * @return tlsVersion
+         */
+        public String getTlsVersion() {
+            return this.tlsVersion;
+        }
+
         public static final class Builder {
+            private Boolean certConfigured; 
             private String eip; 
+            private String functionVersion; 
             private String ipMode; 
             private String ipVersion; 
+            private Boolean ssl13Enabled; 
             private String status; 
+            private String tlsVersion; 
+
+            /**
+             * CertConfigured.
+             */
+            public Builder certConfigured(Boolean certConfigured) {
+                this.certConfigured = certConfigured;
+                return this;
+            }
 
             /**
              * The IP address of the instance.
              */
             public Builder eip(String eip) {
                 this.eip = eip;
+                return this;
+            }
+
+            /**
+             * FunctionVersion.
+             */
+            public Builder functionVersion(String functionVersion) {
+                this.functionVersion = functionVersion;
                 return this;
             }
 
@@ -165,6 +229,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
             }
 
             /**
+             * Ssl13Enabled.
+             */
+            public Builder ssl13Enabled(Boolean ssl13Enabled) {
+                this.ssl13Enabled = ssl13Enabled;
+                return this;
+            }
+
+            /**
              * The status of the instance. Valid values:
              * <p>
              * 
@@ -176,6 +248,14 @@ public class DescribeInstanceDetailsResponseBody extends TeaModel {
              */
             public Builder status(String status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * TlsVersion.
+             */
+            public Builder tlsVersion(String tlsVersion) {
+                this.tlsVersion = tlsVersion;
                 return this;
             }
 
