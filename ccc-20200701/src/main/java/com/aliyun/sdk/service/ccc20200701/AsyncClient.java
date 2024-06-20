@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AbortCampaignResponse> abortCampaign(AbortCampaignRequest request);
 
+    CompletableFuture<AcceptChatResponse> acceptChat(AcceptChatRequest request);
+
     CompletableFuture<AddBlacklistCallTaggingResponse> addBlacklistCallTagging(AddBlacklistCallTaggingRequest request);
 
     CompletableFuture<AddCasesResponse> addCases(AddCasesRequest request);
@@ -62,6 +64,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ChangeVisibilityResponse> changeVisibility(ChangeVisibilityRequest request);
 
     CompletableFuture<ChangeWorkModeResponse> changeWorkMode(ChangeWorkModeRequest request);
+
+    CompletableFuture<ClaimChatResponse> claimChat(ClaimChatRequest request);
 
     CompletableFuture<CoachCallResponse> coachCall(CoachCallRequest request);
 
@@ -186,6 +190,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserResponse> getUser(GetUserRequest request);
 
     CompletableFuture<GetVideoResponse> getVideo(GetVideoRequest request);
+
+    CompletableFuture<GetVisitorLoginDetailsResponse> getVisitorLoginDetails(GetVisitorLoginDetailsRequest request);
 
     CompletableFuture<GetVoicemailRecordingResponse> getVoicemailRecording(GetVoicemailRecordingRequest request);
 
@@ -432,6 +438,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SignOutGroupResponse> signOutGroup(SignOutGroupRequest request);
 
     CompletableFuture<StartBack2BackCallResponse> startBack2BackCall(StartBack2BackCallRequest request);
+
+    CompletableFuture<StartChatResponse> startChat(StartChatRequest request);
 
     CompletableFuture<StartConferenceResponse> startConference(StartConferenceRequest request);
 
