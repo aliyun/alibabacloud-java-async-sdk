@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FaceCompareRequest</p>
  */
 public class FaceCompareRequest extends Request {
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Body
-    @NameInMap("SourceFacePicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceFacePicture")
     private String sourceFacePicture;
 
-    @Query
-    @NameInMap("SourceFacePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceFacePictureUrl")
     private String sourceFacePictureUrl;
 
-    @Body
-    @NameInMap("TargetFacePicture")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TargetFacePicture")
     private String targetFacePicture;
 
-    @Query
-    @NameInMap("TargetFacePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetFacePictureUrl")
     private String targetFacePictureUrl;
 
     private FaceCompareRequest(Builder builder) {

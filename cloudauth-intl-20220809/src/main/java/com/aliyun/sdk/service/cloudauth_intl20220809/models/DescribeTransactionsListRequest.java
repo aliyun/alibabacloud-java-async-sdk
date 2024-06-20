@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTransactionsListRequest</p>
  */
 public class DescribeTransactionsListRequest extends Request {
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("Coin")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Coin")
     private String coin;
 
-    @Query
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Long page;
 
-    @Query
-    @NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DescribeTransactionsListRequest(Builder builder) {

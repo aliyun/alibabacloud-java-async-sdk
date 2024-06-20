@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckResultRequest</p>
  */
 public class CheckResultRequest extends Request {
-    @Query
-    @NameInMap("ExtraImageControlList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtraImageControlList")
     private String extraImageControlList;
 
-    @Query
-    @NameInMap("IsReturnImage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsReturnImage")
     private String isReturnImage;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("ReturnFiveCategorySpoofResult")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnFiveCategorySpoofResult")
     private String returnFiveCategorySpoofResult;
 
-    @Query
-    @NameInMap("TransactionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionId")
     private String transactionId;
 
     private CheckResultRequest(Builder builder) {

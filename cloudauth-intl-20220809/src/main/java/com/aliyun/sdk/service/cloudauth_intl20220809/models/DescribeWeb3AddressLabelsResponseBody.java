@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWeb3AddressLabelsResponseBody</p>
  */
 public class DescribeWeb3AddressLabelsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWeb3AddressLabelsResponseBody(Builder builder) {
@@ -132,61 +131,61 @@ public class DescribeWeb3AddressLabelsResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Address")
+        @com.aliyun.core.annotation.NameInMap("Address")
         private String address;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("BalanceSymbol")
+        @com.aliyun.core.annotation.NameInMap("BalanceSymbol")
         private String balanceSymbol;
 
-        @NameInMap("ChainName")
+        @com.aliyun.core.annotation.NameInMap("ChainName")
         private String chainName;
 
-        @NameInMap("ChainShortName")
+        @com.aliyun.core.annotation.NameInMap("ChainShortName")
         private String chainShortName;
 
-        @NameInMap("ContractAddress")
+        @com.aliyun.core.annotation.NameInMap("ContractAddress")
         private String contractAddress;
 
-        @NameInMap("CreateContractAddress")
+        @com.aliyun.core.annotation.NameInMap("CreateContractAddress")
         private String createContractAddress;
 
-        @NameInMap("CreateContractTransactionHash")
+        @com.aliyun.core.annotation.NameInMap("CreateContractTransactionHash")
         private String createContractTransactionHash;
 
-        @NameInMap("CustomRiskAssessment")
+        @com.aliyun.core.annotation.NameInMap("CustomRiskAssessment")
         private String customRiskAssessment;
 
-        @NameInMap("FirstTransactionTime")
+        @com.aliyun.core.annotation.NameInMap("FirstTransactionTime")
         private String firstTransactionTime;
 
-        @NameInMap("IsProducerAddress")
+        @com.aliyun.core.annotation.NameInMap("IsProducerAddress")
         private String isProducerAddress;
 
-        @NameInMap("LastTransactionTime")
+        @com.aliyun.core.annotation.NameInMap("LastTransactionTime")
         private String lastTransactionTime;
 
-        @NameInMap("ReceiveAmount")
+        @com.aliyun.core.annotation.NameInMap("ReceiveAmount")
         private String receiveAmount;
 
-        @NameInMap("SendAmount")
+        @com.aliyun.core.annotation.NameInMap("SendAmount")
         private String sendAmount;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TokenAmount")
+        @com.aliyun.core.annotation.NameInMap("TokenAmount")
         private Integer tokenAmount;
 
-        @NameInMap("TokenList")
+        @com.aliyun.core.annotation.NameInMap("TokenList")
         private String tokenList;
 
-        @NameInMap("TransactionCount")
+        @com.aliyun.core.annotation.NameInMap("TransactionCount")
         private Integer transactionCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,88 +11,92 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InitializeRequest</p>
  */
 public class InitializeRequest extends Request {
-    @Query
-    @NameInMap("Authorize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Authorize")
     private String authorize;
 
-    @Query
-    @NameInMap("CallbackToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackToken")
     private String callbackToken;
 
-    @Query
-    @NameInMap("CallbackUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CallbackUrl")
     private String callbackUrl;
 
-    @Query
-    @NameInMap("Crop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
-    @Query
-    @NameInMap("DocScanMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocScanMode")
     private String docScanMode;
 
-    @Query
-    @NameInMap("DocType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
-    @Body
-    @NameInMap("FacePictureBase64")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExperienceCode")
+    private String experienceCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FacePictureBase64")
     private String facePictureBase64;
 
-    @Query
-    @NameInMap("FacePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacePictureUrl")
     private String facePictureUrl;
 
-    @Query
-    @NameInMap("IdFaceQuality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdFaceQuality")
     private String idFaceQuality;
 
-    @Query
-    @NameInMap("IdSpoof")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdSpoof")
     private String idSpoof;
 
-    @Query
-    @NameInMap("LanguageConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LanguageConfig")
     private String languageConfig;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("MerchantUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantUserId")
     private String merchantUserId;
 
-    @Query
-    @NameInMap("MetaInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MetaInfo")
     private String metaInfo;
 
-    @Query
-    @NameInMap("Ocr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ocr")
     private String ocr;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductFlow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductFlow")
     private String productFlow;
 
-    @Query
-    @NameInMap("ReturnUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReturnUrl")
     private String returnUrl;
 
-    @Query
-    @NameInMap("SceneCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SceneCode")
     private String sceneCode;
 
-    @Query
-    @NameInMap("SecurityLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityLevel")
     private String securityLevel;
 
-    @Query
-    @NameInMap("StyleConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StyleConfig")
     private String styleConfig;
 
     private InitializeRequest(Builder builder) {
@@ -104,6 +107,7 @@ public class InitializeRequest extends Request {
         this.crop = builder.crop;
         this.docScanMode = builder.docScanMode;
         this.docType = builder.docType;
+        this.experienceCode = builder.experienceCode;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
         this.idFaceQuality = builder.idFaceQuality;
@@ -174,6 +178,13 @@ public class InitializeRequest extends Request {
      */
     public String getDocType() {
         return this.docType;
+    }
+
+    /**
+     * @return experienceCode
+     */
+    public String getExperienceCode() {
+        return this.experienceCode;
     }
 
     /**
@@ -288,6 +299,7 @@ public class InitializeRequest extends Request {
         private String crop; 
         private String docScanMode; 
         private String docType; 
+        private String experienceCode; 
         private String facePictureBase64; 
         private String facePictureUrl; 
         private String idFaceQuality; 
@@ -316,6 +328,7 @@ public class InitializeRequest extends Request {
             this.crop = request.crop;
             this.docScanMode = request.docScanMode;
             this.docType = request.docType;
+            this.experienceCode = request.experienceCode;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
             this.idFaceQuality = request.idFaceQuality;
@@ -384,6 +397,15 @@ public class InitializeRequest extends Request {
         public Builder docType(String docType) {
             this.putQueryParameter("DocType", docType);
             this.docType = docType;
+            return this;
+        }
+
+        /**
+         * ExperienceCode.
+         */
+        public Builder experienceCode(String experienceCode) {
+            this.putQueryParameter("ExperienceCode", experienceCode);
+            this.experienceCode = experienceCode;
             return this;
         }
 

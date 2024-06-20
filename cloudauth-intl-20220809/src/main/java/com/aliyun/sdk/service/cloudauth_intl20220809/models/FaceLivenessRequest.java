@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FaceLivenessRequest</p>
  */
 public class FaceLivenessRequest extends Request {
-    @Query
-    @NameInMap("Crop")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Crop")
     private String crop;
 
-    @Body
-    @NameInMap("FacePictureBase64")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FacePictureBase64")
     private String facePictureBase64;
 
-    @Query
-    @NameInMap("FacePictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FacePictureUrl")
     private String facePictureUrl;
 
-    @Query
-    @NameInMap("FaceQuality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceQuality")
     private String faceQuality;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("MerchantUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantUserId")
     private String merchantUserId;
 
-    @Query
-    @NameInMap("Occlusion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Occlusion")
     private String occlusion;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
     private FaceLivenessRequest(Builder builder) {

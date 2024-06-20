@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteVerifyResultRequest</p>
  */
 public class DeleteVerifyResultRequest extends Request {
-    @Query
-    @NameInMap("DeleteAfterQuery")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteAfterQuery")
     private String deleteAfterQuery;
 
-    @Query
-    @NameInMap("DeleteType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteType")
     private String deleteType;
 
-    @Query
-    @NameInMap("TransactionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionId")
     private String transactionId;
 
     private DeleteVerifyResultRequest(Builder builder) {

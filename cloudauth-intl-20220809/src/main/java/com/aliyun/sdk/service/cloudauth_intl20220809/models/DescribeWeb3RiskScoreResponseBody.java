@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWeb3RiskScoreResponseBody</p>
  */
 public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWeb3RiskScoreResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
     } 
 
     public static class RiskResults extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private String severity;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private RiskResults(Builder builder) {
@@ -221,10 +220,10 @@ public class DescribeWeb3RiskScoreResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("RiskResults")
+        @com.aliyun.core.annotation.NameInMap("RiskResults")
         private java.util.List < RiskResults> riskResults;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FraudResultCallBackRequest</p>
  */
 public class FraudResultCallBackRequest extends Request {
-    @Query
-    @NameInMap("CertifyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertifyId")
     private String certifyId;
 
-    @Query
-    @NameInMap("ExtParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtParams")
     private String extParams;
 
-    @Query
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @Query
-    @NameInMap("VerifyDeployEnv")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VerifyDeployEnv")
     private String verifyDeployEnv;
 
     private FraudResultCallBackRequest(Builder builder) {

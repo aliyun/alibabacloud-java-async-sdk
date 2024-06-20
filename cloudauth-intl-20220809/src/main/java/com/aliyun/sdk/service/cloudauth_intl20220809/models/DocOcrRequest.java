@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DocOcrRequest</p>
  */
 public class DocOcrRequest extends Request {
-    @Query
-    @NameInMap("DocType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocType")
     private String docType;
 
-    @Query
-    @NameInMap("IdFaceQuality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdFaceQuality")
     private String idFaceQuality;
 
-    @Body
-    @NameInMap("IdOcrPictureBase64")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IdOcrPictureBase64")
     private String idOcrPictureBase64;
 
-    @Query
-    @NameInMap("IdOcrPictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdOcrPictureUrl")
     private String idOcrPictureUrl;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("MerchantUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantUserId")
     private String merchantUserId;
 
-    @Query
-    @NameInMap("Ocr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ocr")
     private String ocr;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("Spoof")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Spoof")
     private String spoof;
 
     private DocOcrRequest(Builder builder) {

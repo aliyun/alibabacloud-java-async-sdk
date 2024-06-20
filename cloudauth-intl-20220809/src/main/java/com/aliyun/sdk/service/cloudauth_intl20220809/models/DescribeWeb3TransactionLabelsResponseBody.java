@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWeb3TransactionLabelsResponseBody</p>
  */
 public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeWeb3TransactionLabelsResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
     } 
 
     public static class ContractDetails extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("GasLimit")
+        @com.aliyun.core.annotation.NameInMap("GasLimit")
         private Integer gasLimit;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
         private ContractDetails(Builder builder) {
@@ -253,16 +252,16 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
     }
     public static class InputDetails extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("InputHash")
+        @com.aliyun.core.annotation.NameInMap("InputHash")
         private String inputHash;
 
-        @NameInMap("IsContract")
+        @com.aliyun.core.annotation.NameInMap("IsContract")
         private String isContract;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private InputDetails(Builder builder) {
@@ -354,16 +353,16 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
     }
     public static class OutputDetails extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private Integer amount;
 
-        @NameInMap("InputHash")
+        @com.aliyun.core.annotation.NameInMap("InputHash")
         private String inputHash;
 
-        @NameInMap("IsContract")
+        @com.aliyun.core.annotation.NameInMap("IsContract")
         private String isContract;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private OutputDetails(Builder builder) {
@@ -455,28 +454,28 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
     }
     public static class TokenTransferDetails extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("Symbol")
+        @com.aliyun.core.annotation.NameInMap("Symbol")
         private String symbol;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("TokenContractAddress")
+        @com.aliyun.core.annotation.NameInMap("TokenContractAddress")
         private String tokenContractAddress;
 
-        @NameInMap("TokenId")
+        @com.aliyun.core.annotation.NameInMap("TokenId")
         private String tokenId;
 
         private TokenTransferDetails(Builder builder) {
@@ -636,70 +635,70 @@ public class DescribeWeb3TransactionLabelsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("ChainName")
+        @com.aliyun.core.annotation.NameInMap("ChainName")
         private String chainName;
 
-        @NameInMap("ChainShortName")
+        @com.aliyun.core.annotation.NameInMap("ChainShortName")
         private String chainShortName;
 
-        @NameInMap("ContractDetails")
+        @com.aliyun.core.annotation.NameInMap("ContractDetails")
         private java.util.List < ContractDetails> contractDetails;
 
-        @NameInMap("ErrorLog")
+        @com.aliyun.core.annotation.NameInMap("ErrorLog")
         private String errorLog;
 
-        @NameInMap("GasLimit")
+        @com.aliyun.core.annotation.NameInMap("GasLimit")
         private Integer gasLimit;
 
-        @NameInMap("GasPrice")
+        @com.aliyun.core.annotation.NameInMap("GasPrice")
         private String gasPrice;
 
-        @NameInMap("GasUsed")
+        @com.aliyun.core.annotation.NameInMap("GasUsed")
         private Integer gasUsed;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Integer index;
 
-        @NameInMap("InputData")
+        @com.aliyun.core.annotation.NameInMap("InputData")
         private String inputData;
 
-        @NameInMap("InputDetails")
+        @com.aliyun.core.annotation.NameInMap("InputDetails")
         private java.util.List < InputDetails> inputDetails;
 
-        @NameInMap("MethodId")
+        @com.aliyun.core.annotation.NameInMap("MethodId")
         private String methodId;
 
-        @NameInMap("Nonce")
+        @com.aliyun.core.annotation.NameInMap("Nonce")
         private String nonce;
 
-        @NameInMap("OutputDetails")
+        @com.aliyun.core.annotation.NameInMap("OutputDetails")
         private java.util.List < OutputDetails> outputDetails;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private Integer state;
 
-        @NameInMap("TokenTransferDetails")
+        @com.aliyun.core.annotation.NameInMap("TokenTransferDetails")
         private java.util.List < TokenTransferDetails> tokenTransferDetails;
 
-        @NameInMap("TransactionSymbol")
+        @com.aliyun.core.annotation.NameInMap("TransactionSymbol")
         private String transactionSymbol;
 
-        @NameInMap("TransactionTime")
+        @com.aliyun.core.annotation.NameInMap("TransactionTime")
         private String transactionTime;
 
-        @NameInMap("TransactionType")
+        @com.aliyun.core.annotation.NameInMap("TransactionType")
         private String transactionType;
 
-        @NameInMap("Txfee")
+        @com.aliyun.core.annotation.NameInMap("Txfee")
         private String txfee;
 
-        @NameInMap("Txid")
+        @com.aliyun.core.annotation.NameInMap("Txid")
         private String txid;
 
         private Data(Builder builder) {

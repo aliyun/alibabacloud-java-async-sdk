@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAddressOverviewResponseBody</p>
  */
 public class DescribeAddressOverviewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAddressOverviewResponseBody(Builder builder) {
@@ -132,28 +131,28 @@ public class DescribeAddressOverviewResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private Float balance;
 
-        @NameInMap("FirstSeen")
+        @com.aliyun.core.annotation.NameInMap("FirstSeen")
         private Long firstSeen;
 
-        @NameInMap("LastSeen")
+        @com.aliyun.core.annotation.NameInMap("LastSeen")
         private Long lastSeen;
 
-        @NameInMap("ReceivedTxsCount")
+        @com.aliyun.core.annotation.NameInMap("ReceivedTxsCount")
         private Integer receivedTxsCount;
 
-        @NameInMap("SpentTxsCount")
+        @com.aliyun.core.annotation.NameInMap("SpentTxsCount")
         private Integer spentTxsCount;
 
-        @NameInMap("TotalReceived")
+        @com.aliyun.core.annotation.NameInMap("TotalReceived")
         private Float totalReceived;
 
-        @NameInMap("TotalSpent")
+        @com.aliyun.core.annotation.NameInMap("TotalSpent")
         private Float totalSpent;
 
-        @NameInMap("TxsCount")
+        @com.aliyun.core.annotation.NameInMap("TxsCount")
         private Long txsCount;
 
         private Data(Builder builder) {

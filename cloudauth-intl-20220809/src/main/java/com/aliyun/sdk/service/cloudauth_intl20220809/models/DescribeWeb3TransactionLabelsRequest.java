@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cloudauth_intl20220809.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeWeb3TransactionLabelsRequest</p>
  */
 public class DescribeWeb3TransactionLabelsRequest extends Request {
-    @Query
-    @NameInMap("ChainShortName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChainShortName")
     private String chainShortName;
 
-    @Query
-    @NameInMap("MerchantBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
-    @Query
-    @NameInMap("Transaction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Transaction")
     private String transaction;
 
     private DescribeWeb3TransactionLabelsRequest(Builder builder) {
