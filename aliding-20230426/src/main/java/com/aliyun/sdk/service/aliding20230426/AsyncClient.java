@@ -283,6 +283,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<QueryMeetingRoomListResponse> queryMeetingRoomList(QueryMeetingRoomListRequest request);
 
+    CompletableFuture<QueryMinutesResponse> queryMinutes(QueryMinutesRequest request);
+
     CompletableFuture<QueryMinutesSummaryResponse> queryMinutesSummary(QueryMinutesSummaryRequest request);
 
     CompletableFuture<QueryMinutesTextResponse> queryMinutesText(QueryMinutesTextRequest request);
@@ -343,11 +345,15 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartInstanceResponse> startInstance(StartInstanceRequest request);
 
+    CompletableFuture<StartMinutesResponse> startMinutes(StartMinutesRequest request);
+
     CompletableFuture<StatisticsListByTypeReportResponse> statisticsListByTypeReport(StatisticsListByTypeReportRequest request);
 
     CompletableFuture<StatisticsReportResponse> statisticsReport(StatisticsReportRequest request);
 
     CompletableFuture<StopCloudRecordResponse> stopCloudRecord(StopCloudRecordRequest request);
+
+    CompletableFuture<StopMinutesResponse> stopMinutes(StopMinutesRequest request);
 
     CompletableFuture<SubscribeCalendarResponse> subscribeCalendar(SubscribeCalendarRequest request);
 
