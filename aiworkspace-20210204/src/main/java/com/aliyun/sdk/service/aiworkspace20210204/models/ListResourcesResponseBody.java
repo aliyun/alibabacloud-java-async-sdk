@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourcesResponseBody</p>
  */
 public class ListResourcesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Resources")
+    @com.aliyun.core.annotation.NameInMap("Resources")
     private java.util.List < Resources> resources;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListResourcesResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListResourcesResponseBody extends TeaModel {
     } 
 
     public static class Encryption extends TeaModel {
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
         private Encryption(Builder builder) {
@@ -173,7 +172,7 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Executor extends TeaModel {
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private String ownerId;
 
         private Executor(Builder builder) {
@@ -214,10 +213,10 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -275,10 +274,10 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Specs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Specs(Builder builder) {
@@ -336,28 +335,28 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Quotas extends TeaModel {
-        @NameInMap("CardType")
+        @com.aliyun.core.annotation.NameInMap("CardType")
         private String cardType;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaType")
+        @com.aliyun.core.annotation.NameInMap("QuotaType")
         private String quotaType;
 
-        @NameInMap("Specs")
+        @com.aliyun.core.annotation.NameInMap("Specs")
         private java.util.List < Specs> specs;
 
         private Quotas(Builder builder) {
@@ -517,46 +516,46 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;
 
-        @NameInMap("EnvType")
+        @com.aliyun.core.annotation.NameInMap("EnvType")
         private String envType;
 
-        @NameInMap("Executor")
+        @com.aliyun.core.annotation.NameInMap("Executor")
         private Executor executor;
 
-        @NameInMap("GmtCreateTime")
+        @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
         private String gmtCreateTime;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Quotas")
+        @com.aliyun.core.annotation.NameInMap("Quotas")
         private java.util.List < Quotas> quotas;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private java.util.Map < String, ? > spec;
 
-        @NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
         private String workspaceId;
 
         private Resources(Builder builder) {

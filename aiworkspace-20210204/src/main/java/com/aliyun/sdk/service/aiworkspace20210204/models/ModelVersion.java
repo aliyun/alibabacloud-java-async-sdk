@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModelVersion</p>
  */
 public class ModelVersion extends TeaModel {
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @NameInMap("EvaluationSpec")
+    @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map < String, ? > evaluationSpec;
 
-    @NameInMap("ExtraInfo")
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private java.util.Map < String, ? > extraInfo;
 
-    @NameInMap("FormatType")
+    @com.aliyun.core.annotation.NameInMap("FormatType")
     private String formatType;
 
-    @NameInMap("FrameworkType")
+    @com.aliyun.core.annotation.NameInMap("FrameworkType")
     private String frameworkType;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map < String, ? > metrics;
 
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @NameInMap("TrainingSpec")
+    @com.aliyun.core.annotation.NameInMap("TrainingSpec")
     private java.util.Map < String, ? > trainingSpec;
 
-    @NameInMap("Uri")
+    @com.aliyun.core.annotation.NameInMap("Uri")
     private String uri;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("VersionDescription")
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
-    @NameInMap("VersionName")
+    @com.aliyun.core.annotation.NameInMap("VersionName")
     private String versionName;
 
     private ModelVersion(Builder builder) {

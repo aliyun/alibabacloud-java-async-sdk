@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateProductOrdersRequest</p>
  */
 public class CreateProductOrdersRequest extends Request {
-    @Body
-    @NameInMap("AutoPay")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
-    @Body
-    @NameInMap("Products")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Products")
     private java.util.List < Products> products;
 
     private CreateProductOrdersRequest(Builder builder) {
@@ -93,13 +92,13 @@ public class CreateProductOrdersRequest extends Request {
     } 
 
     public static class InstanceProperties extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private InstanceProperties(Builder builder) {
@@ -174,25 +173,25 @@ public class CreateProductOrdersRequest extends Request {
 
     }
     public static class Products extends TeaModel {
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
 
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("InstanceProperties")
+        @com.aliyun.core.annotation.NameInMap("InstanceProperties")
         private java.util.List < InstanceProperties> instanceProperties;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PricingCycle")
+        @com.aliyun.core.annotation.NameInMap("PricingCycle")
         private String pricingCycle;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
         private Products(Builder builder) {

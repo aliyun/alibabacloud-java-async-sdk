@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotasResponseBody</p>
  */
 public class ListQuotasResponseBody extends TeaModel {
-    @NameInMap("Quotas")
+    @com.aliyun.core.annotation.NameInMap("Quotas")
     private java.util.List < Quotas> quotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListQuotasResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class ListQuotasResponseBody extends TeaModel {
     } 
 
     public static class Specs extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Specs(Builder builder) {
@@ -173,25 +172,25 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class Quotas extends TeaModel {
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaType")
+        @com.aliyun.core.annotation.NameInMap("QuotaType")
         private String quotaType;
 
-        @NameInMap("Specs")
+        @com.aliyun.core.annotation.NameInMap("Specs")
         private java.util.List < Specs> specs;
 
         private Quotas(Builder builder) {

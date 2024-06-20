@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateModelRequest</p>
  */
 public class CreateModelRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Body
-    @NameInMap("ExtraInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private java.util.Map < String, ? > extraInfo;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("ModelDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelDescription")
     private String modelDescription;
 
-    @Body
-    @NameInMap("ModelDoc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelDoc")
     private String modelDoc;
 
-    @Body
-    @NameInMap("ModelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelName;
 
-    @Body
-    @NameInMap("ModelType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModelType")
     private String modelType;
 
-    @Body
-    @NameInMap("OrderNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
     private Long orderNumber;
 
-    @Body
-    @NameInMap("Origin")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Origin")
     private String origin;
 
-    @Body
-    @NameInMap("Task")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Task")
     private String task;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateModelRequest(Builder builder) {

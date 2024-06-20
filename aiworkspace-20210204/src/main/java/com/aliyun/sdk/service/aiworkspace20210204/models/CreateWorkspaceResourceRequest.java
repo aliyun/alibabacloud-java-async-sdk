@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWorkspaceResourceRequest</p>
  */
 public class CreateWorkspaceResourceRequest extends Request {
-    @Path
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Body
-    @NameInMap("Option")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
-    @Body
-    @NameInMap("Resources")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Resources")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Resources> resources;
 
     private CreateWorkspaceResourceRequest(Builder builder) {
@@ -118,10 +117,10 @@ public class CreateWorkspaceResourceRequest extends Request {
     } 
 
     public static class Labels extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Labels(Builder builder) {
@@ -179,8 +178,8 @@ public class CreateWorkspaceResourceRequest extends Request {
 
     }
     public static class Quotas extends TeaModel {
-        @NameInMap("Id")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Id")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String id;
 
         private Quotas(Builder builder) {
@@ -221,37 +220,37 @@ public class CreateWorkspaceResourceRequest extends Request {
 
     }
     public static class Resources extends TeaModel {
-        @NameInMap("EnvType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("EnvType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String envType;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private Boolean isDefault;
 
-        @NameInMap("Labels")
+        @com.aliyun.core.annotation.NameInMap("Labels")
         private java.util.List < Labels> labels;
 
-        @NameInMap("Name")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String name;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Quotas")
+        @com.aliyun.core.annotation.NameInMap("Quotas")
         private java.util.List < Quotas> quotas;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private java.util.Map < String, ? > spec;
 
-        @NameInMap("WorkspaceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String workspaceId;
 
         private Resources(Builder builder) {

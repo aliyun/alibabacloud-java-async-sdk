@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCodeSourceRequest</p>
  */
 public class CreateCodeSourceRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("CodeBranch")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
-    @Body
-    @NameInMap("CodeRepo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepo")
     private String codeRepo;
 
-    @Body
-    @NameInMap("CodeRepoAccessToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepoAccessToken")
     private String codeRepoAccessToken;
 
-    @Body
-    @NameInMap("CodeRepoUserName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CodeRepoUserName")
     private String codeRepoUserName;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("MountPath")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MountPath")
     private String mountPath;
 
-    @Body
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
     private CreateCodeSourceRequest(Builder builder) {

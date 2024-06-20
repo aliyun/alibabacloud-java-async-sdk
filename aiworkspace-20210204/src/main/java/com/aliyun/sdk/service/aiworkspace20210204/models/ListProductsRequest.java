@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductsRequest</p>
  */
 public class ListProductsRequest extends Request {
-    @Query
-    @NameInMap("ProductCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCodes")
     private String productCodes;
 
-    @Query
-    @NameInMap("ServiceCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServiceCodes")
     private String serviceCodes;
 
-    @Query
-    @NameInMap("Verbose")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
     private ListProductsRequest(Builder builder) {

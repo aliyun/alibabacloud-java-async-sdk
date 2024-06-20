@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ServiceTemplate</p>
  */
 public class ServiceTemplate extends TeaModel {
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifiedTime")
     private String gmtModifiedTime;
 
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @NameInMap("OrderNumber")
+    @com.aliyun.core.annotation.NameInMap("OrderNumber")
     private Long orderNumber;
 
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @NameInMap("ServiceTemplateDescription")
+    @com.aliyun.core.annotation.NameInMap("ServiceTemplateDescription")
     private String serviceTemplateDescription;
 
-    @NameInMap("ServiceTemplateDoc")
+    @com.aliyun.core.annotation.NameInMap("ServiceTemplateDoc")
     private String serviceTemplateDoc;
 
-    @NameInMap("ServiceTemplateId")
+    @com.aliyun.core.annotation.NameInMap("ServiceTemplateId")
     private String serviceTemplateId;
 
-    @NameInMap("ServiceTemplateName")
+    @com.aliyun.core.annotation.NameInMap("ServiceTemplateName")
     private String serviceTemplateName;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private ServiceTemplate(Builder builder) {

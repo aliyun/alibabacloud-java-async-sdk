@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateModelVersionRequest</p>
  */
 public class UpdateModelVersionRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Path
-    @NameInMap("VersionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Body
-    @NameInMap("ApprovalStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
-    @Body
-    @NameInMap("EvaluationSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map < String, ? > evaluationSpec;
 
-    @Body
-    @NameInMap("ExtraInfo")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExtraInfo")
     private java.util.Map < String, ? > extraInfo;
 
-    @Body
-    @NameInMap("InferenceSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InferenceSpec")
     private java.util.Map < String, ? > inferenceSpec;
 
-    @Body
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private java.util.Map < String, ? > metrics;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("TrainingSpec")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TrainingSpec")
     private java.util.Map < String, ? > trainingSpec;
 
-    @Body
-    @NameInMap("VersionDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VersionDescription")
     private String versionDescription;
 
     private UpdateModelVersionRequest(Builder builder) {

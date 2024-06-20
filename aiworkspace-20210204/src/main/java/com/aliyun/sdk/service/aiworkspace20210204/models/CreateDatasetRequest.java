@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDatasetRequest</p>
  */
 public class CreateDatasetRequest extends Request {
-    @Body
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Body
-    @NameInMap("DataSourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataSourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataSourceType;
 
-    @Body
-    @NameInMap("DataType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataType")
     private String dataType;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Labels")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Labels")
     private java.util.List < Label > labels;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("Options")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Options")
     private String options;
 
-    @Body
-    @NameInMap("Property")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Property")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String property;
 
-    @Body
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @Body
-    @NameInMap("ProviderType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProviderType")
     private String providerType;
 
-    @Body
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Body
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @Body
-    @NameInMap("Uri")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Uri")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uri;
 
-    @Body
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UserId")
+    private String userId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CreateDatasetRequest(Builder builder) {
@@ -87,6 +90,7 @@ public class CreateDatasetRequest extends Request {
         this.sourceId = builder.sourceId;
         this.sourceType = builder.sourceType;
         this.uri = builder.uri;
+        this.userId = builder.userId;
         this.workspaceId = builder.workspaceId;
     }
 
@@ -195,6 +199,13 @@ public class CreateDatasetRequest extends Request {
     }
 
     /**
+     * @return userId
+     */
+    public String getUserId() {
+        return this.userId;
+    }
+
+    /**
      * @return workspaceId
      */
     public String getWorkspaceId() {
@@ -215,6 +226,7 @@ public class CreateDatasetRequest extends Request {
         private String sourceId; 
         private String sourceType; 
         private String uri; 
+        private String userId; 
         private String workspaceId; 
 
         private Builder() {
@@ -236,6 +248,7 @@ public class CreateDatasetRequest extends Request {
             this.sourceId = request.sourceId;
             this.sourceType = request.sourceType;
             this.uri = request.uri;
+            this.userId = request.userId;
             this.workspaceId = request.workspaceId;
         } 
 
@@ -353,6 +366,15 @@ public class CreateDatasetRequest extends Request {
         public Builder uri(String uri) {
             this.putBodyParameter("Uri", uri);
             this.uri = uri;
+            return this;
+        }
+
+        /**
+         * UserId.
+         */
+        public Builder userId(String userId) {
+            this.putBodyParameter("UserId", userId);
+            this.userId = userId;
             return this;
         }
 

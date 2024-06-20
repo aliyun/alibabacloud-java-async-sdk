@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteModelVersionLabelsRequest</p>
  */
 public class DeleteModelVersionLabelsRequest extends Request {
-    @Path
-    @NameInMap("ModelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("ModelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String modelId;
 
-    @Path
-    @NameInMap("VersionName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("VersionName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String versionName;
 
-    @Query
-    @NameInMap("LabelKeys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelKeys")
     private String labelKeys;
 
     private DeleteModelVersionLabelsRequest(Builder builder) {

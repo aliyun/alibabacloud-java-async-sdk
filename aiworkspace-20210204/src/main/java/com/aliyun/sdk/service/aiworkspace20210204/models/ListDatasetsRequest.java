@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDatasetsRequest</p>
  */
 public class ListDatasetsRequest extends Request {
-    @Query
-    @NameInMap("DataSourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataSourceTypes")
     private String dataSourceTypes;
 
-    @Query
-    @NameInMap("DataTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataTypes")
     private String dataTypes;
 
-    @Query
-    @NameInMap("Label")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Label")
     private String label;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("Properties")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Properties")
     private String properties;
 
-    @Query
-    @NameInMap("Provider")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Provider")
     private String provider;
 
-    @Query
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @Query
-    @NameInMap("SourceTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceTypes")
     private String sourceTypes;
 
-    @Query
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private ListDatasetsRequest(Builder builder) {

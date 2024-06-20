@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CodeSourceItem</p>
  */
 public class CodeSourceItem extends TeaModel {
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @NameInMap("CodeBranch")
+    @com.aliyun.core.annotation.NameInMap("CodeBranch")
     private String codeBranch;
 
-    @NameInMap("CodeCommit")
+    @com.aliyun.core.annotation.NameInMap("CodeCommit")
     private String codeCommit;
 
-    @NameInMap("CodeRepo")
+    @com.aliyun.core.annotation.NameInMap("CodeRepo")
     private String codeRepo;
 
-    @NameInMap("CodeRepoAccessToken")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoAccessToken")
     private String codeRepoAccessToken;
 
-    @NameInMap("CodeRepoUserName")
+    @com.aliyun.core.annotation.NameInMap("CodeRepoUserName")
     private String codeRepoUserName;
 
-    @NameInMap("CodeSourceId")
+    @com.aliyun.core.annotation.NameInMap("CodeSourceId")
     private String codeSourceId;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("DisplayName")
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
     private String displayName;
 
-    @NameInMap("GmtCreateTime")
+    @com.aliyun.core.annotation.NameInMap("GmtCreateTime")
     private String gmtCreateTime;
 
-    @NameInMap("GmtModifyTime")
+    @com.aliyun.core.annotation.NameInMap("GmtModifyTime")
     private String gmtModifyTime;
 
-    @NameInMap("MountPath")
+    @com.aliyun.core.annotation.NameInMap("MountPath")
     private String mountPath;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
-    @NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
     private String workspaceId;
 
     private CodeSourceItem(Builder builder) {

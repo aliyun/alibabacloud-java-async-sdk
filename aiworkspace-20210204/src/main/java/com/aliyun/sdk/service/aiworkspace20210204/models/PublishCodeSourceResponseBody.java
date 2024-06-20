@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PublishCodeSourceResponseBody</p>
  */
 public class PublishCodeSourceResponseBody extends TeaModel {
-    @NameInMap("CodeSourceId")
+    @com.aliyun.core.annotation.NameInMap("CodeSourceId")
     private String codeSourceId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private PublishCodeSourceResponseBody(Builder builder) {

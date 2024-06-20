@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPermissionsResponseBody</p>
  */
 public class ListPermissionsResponseBody extends TeaModel {
-    @NameInMap("Permissions")
+    @com.aliyun.core.annotation.NameInMap("Permissions")
     private java.util.List < Permissions> permissions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListPermissionsResponseBody(Builder builder) {
@@ -92,10 +91,10 @@ public class ListPermissionsResponseBody extends TeaModel {
     } 
 
     public static class PermissionRules extends TeaModel {
-        @NameInMap("Accessibility")
+        @com.aliyun.core.annotation.NameInMap("Accessibility")
         private String accessibility;
 
-        @NameInMap("EntityAccessType")
+        @com.aliyun.core.annotation.NameInMap("EntityAccessType")
         private String entityAccessType;
 
         private PermissionRules(Builder builder) {
@@ -153,10 +152,10 @@ public class ListPermissionsResponseBody extends TeaModel {
 
     }
     public static class Permissions extends TeaModel {
-        @NameInMap("PermissionCode")
+        @com.aliyun.core.annotation.NameInMap("PermissionCode")
         private String permissionCode;
 
-        @NameInMap("PermissionRules")
+        @com.aliyun.core.annotation.NameInMap("PermissionRules")
         private java.util.List < PermissionRules> permissionRules;
 
         private Permissions(Builder builder) {

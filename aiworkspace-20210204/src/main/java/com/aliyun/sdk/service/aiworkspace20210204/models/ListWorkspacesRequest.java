@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWorkspacesRequest</p>
  */
 public class ListWorkspacesRequest extends Request {
-    @Query
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private String fields;
 
-    @Query
-    @NameInMap("ModuleList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleList")
     private String moduleList;
 
-    @Query
-    @NameInMap("Option")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @Query
-    @NameInMap("Verbose")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Verbose")
     private Boolean verbose;
 
-    @Query
-    @NameInMap("WorkspaceIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceIds")
     private String workspaceIds;
 
-    @Query
-    @NameInMap("WorkspaceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkspaceName")
     private String workspaceName;
 
     private ListWorkspacesRequest(Builder builder) {

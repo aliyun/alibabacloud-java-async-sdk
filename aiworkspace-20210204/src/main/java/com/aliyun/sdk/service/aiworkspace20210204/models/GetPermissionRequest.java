@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.aiworkspace20210204.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPermissionRequest</p>
  */
 public class GetPermissionRequest extends Request {
-    @Path
-    @NameInMap("WorkspaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("WorkspaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String workspaceId;
 
-    @Path
-    @NameInMap("PermissionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("PermissionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String permissionCode;
 
-    @Query
-    @NameInMap("Accessibility")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Accessibility")
     private String accessibility;
 
-    @Query
-    @NameInMap("Creator")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Creator")
     private String creator;
 
-    @Query
-    @NameInMap("Option")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
-    @Query
-    @NameInMap("Resource")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Resource")
     private String resource;
 
     private GetPermissionRequest(Builder builder) {
