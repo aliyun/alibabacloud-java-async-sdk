@@ -16,6 +16,10 @@ public class UpdateServiceRequest extends Request {
     private String alarmMetadata;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApprovalType")
+    private String approvalType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -78,6 +82,10 @@ public class UpdateServiceRequest extends Request {
     private String serviceVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareType")
+    private String shareType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TenantType")
     private String tenantType;
 
@@ -100,6 +108,7 @@ public class UpdateServiceRequest extends Request {
     private UpdateServiceRequest(Builder builder) {
         super(builder);
         this.alarmMetadata = builder.alarmMetadata;
+        this.approvalType = builder.approvalType;
         this.clientToken = builder.clientToken;
         this.deployMetadata = builder.deployMetadata;
         this.deployType = builder.deployType;
@@ -115,6 +124,7 @@ public class UpdateServiceRequest extends Request {
         this.serviceInfo = builder.serviceInfo;
         this.serviceType = builder.serviceType;
         this.serviceVersion = builder.serviceVersion;
+        this.shareType = builder.shareType;
         this.tenantType = builder.tenantType;
         this.trialDuration = builder.trialDuration;
         this.updateOption = builder.updateOption;
@@ -140,6 +150,13 @@ public class UpdateServiceRequest extends Request {
      */
     public String getAlarmMetadata() {
         return this.alarmMetadata;
+    }
+
+    /**
+     * @return approvalType
+     */
+    public String getApprovalType() {
+        return this.approvalType;
     }
 
     /**
@@ -248,6 +265,13 @@ public class UpdateServiceRequest extends Request {
     }
 
     /**
+     * @return shareType
+     */
+    public String getShareType() {
+        return this.shareType;
+    }
+
+    /**
      * @return tenantType
      */
     public String getTenantType() {
@@ -284,6 +308,7 @@ public class UpdateServiceRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateServiceRequest, Builder> {
         private String alarmMetadata; 
+        private String approvalType; 
         private String clientToken; 
         private String deployMetadata; 
         private String deployType; 
@@ -299,6 +324,7 @@ public class UpdateServiceRequest extends Request {
         private java.util.List < ServiceInfo> serviceInfo; 
         private String serviceType; 
         private String serviceVersion; 
+        private String shareType; 
         private String tenantType; 
         private Integer trialDuration; 
         private UpdateOption updateOption; 
@@ -312,6 +338,7 @@ public class UpdateServiceRequest extends Request {
         private Builder(UpdateServiceRequest request) {
             super(request);
             this.alarmMetadata = request.alarmMetadata;
+            this.approvalType = request.approvalType;
             this.clientToken = request.clientToken;
             this.deployMetadata = request.deployMetadata;
             this.deployType = request.deployType;
@@ -327,6 +354,7 @@ public class UpdateServiceRequest extends Request {
             this.serviceInfo = request.serviceInfo;
             this.serviceType = request.serviceType;
             this.serviceVersion = request.serviceVersion;
+            this.shareType = request.shareType;
             this.tenantType = request.tenantType;
             this.trialDuration = request.trialDuration;
             this.updateOption = request.updateOption;
@@ -340,6 +368,15 @@ public class UpdateServiceRequest extends Request {
         public Builder alarmMetadata(String alarmMetadata) {
             this.putQueryParameter("AlarmMetadata", alarmMetadata);
             this.alarmMetadata = alarmMetadata;
+            return this;
+        }
+
+        /**
+         * ApprovalType.
+         */
+        public Builder approvalType(String approvalType) {
+            this.putQueryParameter("ApprovalType", approvalType);
+            this.approvalType = approvalType;
             return this;
         }
 
@@ -475,6 +512,15 @@ public class UpdateServiceRequest extends Request {
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
             this.serviceVersion = serviceVersion;
+            return this;
+        }
+
+        /**
+         * ShareType.
+         */
+        public Builder shareType(String shareType) {
+            this.putQueryParameter("ShareType", shareType);
+            this.shareType = shareType;
             return this;
         }
 
