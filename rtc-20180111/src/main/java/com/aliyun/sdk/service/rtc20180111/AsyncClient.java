@@ -159,10 +159,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAutoLiveStreamRuleResponse> updateAutoLiveStreamRule(UpdateAutoLiveStreamRuleRequest request);
 
+    CompletableFuture<UpdateCloudRecordResponse> updateCloudRecord(UpdateCloudRecordRequest request);
+
     CompletableFuture<UpdateMPUTaskResponse> updateMPUTask(UpdateMPUTaskRequest request);
 
     CompletableFuture<UpdateRecordTaskResponse> updateRecordTask(UpdateRecordTaskRequest request);
 
     CompletableFuture<UpdateRecordTemplateResponse> updateRecordTemplate(UpdateRecordTemplateRequest request);
+
+    CompletableFuture<UpdateStreamingOutResponse> updateStreamingOut(UpdateStreamingOutRequest request);
 
 }

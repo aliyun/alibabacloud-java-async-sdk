@@ -22,6 +22,18 @@ public class StartStreamingOutRequest extends Request {
     private String channelId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClockWidgets")
+    private java.util.List < ClockWidgets> clockWidgets;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CropMode")
+    private Integer cropMode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Images")
+    private java.util.List < Images> images;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Panes")
     private java.util.List < Panes> panes;
 
@@ -36,17 +48,25 @@ public class StartStreamingOutRequest extends Request {
     private String templateId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Texts")
+    private java.util.List < Texts> texts;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Url")
-    @com.aliyun.core.annotation.Validation(required = true)
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
     private String url;
 
     private StartStreamingOutRequest(Builder builder) {
         super(builder);
         this.appId = builder.appId;
         this.channelId = builder.channelId;
+        this.clockWidgets = builder.clockWidgets;
+        this.cropMode = builder.cropMode;
+        this.images = builder.images;
         this.panes = builder.panes;
         this.taskId = builder.taskId;
         this.templateId = builder.templateId;
+        this.texts = builder.texts;
         this.url = builder.url;
     }
 
@@ -78,6 +98,27 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return clockWidgets
+     */
+    public java.util.List < ClockWidgets> getClockWidgets() {
+        return this.clockWidgets;
+    }
+
+    /**
+     * @return cropMode
+     */
+    public Integer getCropMode() {
+        return this.cropMode;
+    }
+
+    /**
+     * @return images
+     */
+    public java.util.List < Images> getImages() {
+        return this.images;
+    }
+
+    /**
      * @return panes
      */
     public java.util.List < Panes> getPanes() {
@@ -99,6 +140,13 @@ public class StartStreamingOutRequest extends Request {
     }
 
     /**
+     * @return texts
+     */
+    public java.util.List < Texts> getTexts() {
+        return this.texts;
+    }
+
+    /**
      * @return url
      */
     public String getUrl() {
@@ -108,9 +156,13 @@ public class StartStreamingOutRequest extends Request {
     public static final class Builder extends Request.Builder<StartStreamingOutRequest, Builder> {
         private String appId; 
         private String channelId; 
+        private java.util.List < ClockWidgets> clockWidgets; 
+        private Integer cropMode; 
+        private java.util.List < Images> images; 
         private java.util.List < Panes> panes; 
         private String taskId; 
         private String templateId; 
+        private java.util.List < Texts> texts; 
         private String url; 
 
         private Builder() {
@@ -121,9 +173,13 @@ public class StartStreamingOutRequest extends Request {
             super(request);
             this.appId = request.appId;
             this.channelId = request.channelId;
+            this.clockWidgets = request.clockWidgets;
+            this.cropMode = request.cropMode;
+            this.images = request.images;
             this.panes = request.panes;
             this.taskId = request.taskId;
             this.templateId = request.templateId;
+            this.texts = request.texts;
             this.url = request.url;
         } 
 
@@ -142,6 +198,33 @@ public class StartStreamingOutRequest extends Request {
         public Builder channelId(String channelId) {
             this.putQueryParameter("ChannelId", channelId);
             this.channelId = channelId;
+            return this;
+        }
+
+        /**
+         * ClockWidgets.
+         */
+        public Builder clockWidgets(java.util.List < ClockWidgets> clockWidgets) {
+            this.putQueryParameter("ClockWidgets", clockWidgets);
+            this.clockWidgets = clockWidgets;
+            return this;
+        }
+
+        /**
+         * CropMode.
+         */
+        public Builder cropMode(Integer cropMode) {
+            this.putQueryParameter("CropMode", cropMode);
+            this.cropMode = cropMode;
+            return this;
+        }
+
+        /**
+         * Images.
+         */
+        public Builder images(java.util.List < Images> images) {
+            this.putQueryParameter("Images", images);
+            this.images = images;
             return this;
         }
 
@@ -173,6 +256,15 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * Texts.
+         */
+        public Builder texts(java.util.List < Texts> texts) {
+            this.putQueryParameter("Texts", texts);
+            this.texts = texts;
+            return this;
+        }
+
+        /**
          * Url.
          */
         public Builder url(String url) {
@@ -188,17 +280,1285 @@ public class StartStreamingOutRequest extends Request {
 
     } 
 
+    public static class BoxColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private BoxColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BoxColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public BoxColor build() {
+                return new BoxColor(this);
+            } 
+
+        } 
+
+    }
+    public static class FontColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private FontColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static FontColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public FontColor build() {
+                return new FontColor(this);
+            } 
+
+        } 
+
+    }
+    public static class ClockWidgets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxAlpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double boxAlpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxBorderw")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
+        private Integer boxBorderw;
+
+        @com.aliyun.core.annotation.NameInMap("BoxColor")
+        private BoxColor boxColor;
+
+        @com.aliyun.core.annotation.NameInMap("Font")
+        @com.aliyun.core.annotation.Validation(maximum = 9)
+        private Integer font;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private FontColor fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        @com.aliyun.core.annotation.Validation(maximum = 72)
+        private Integer fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("HasBox")
+        private Boolean hasBox;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        @com.aliyun.core.annotation.NameInMap("Zone")
+        @com.aliyun.core.annotation.Validation(maximum = 12)
+        private Integer zone;
+
+        private ClockWidgets(Builder builder) {
+            this.alpha = builder.alpha;
+            this.boxAlpha = builder.boxAlpha;
+            this.boxBorderw = builder.boxBorderw;
+            this.boxColor = builder.boxColor;
+            this.font = builder.font;
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.hasBox = builder.hasBox;
+            this.layer = builder.layer;
+            this.x = builder.x;
+            this.y = builder.y;
+            this.zone = builder.zone;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ClockWidgets create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return boxAlpha
+         */
+        public Double getBoxAlpha() {
+            return this.boxAlpha;
+        }
+
+        /**
+         * @return boxBorderw
+         */
+        public Integer getBoxBorderw() {
+            return this.boxBorderw;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public BoxColor getBoxColor() {
+            return this.boxColor;
+        }
+
+        /**
+         * @return font
+         */
+        public Integer getFont() {
+            return this.font;
+        }
+
+        /**
+         * @return fontColor
+         */
+        public FontColor getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public Integer getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return hasBox
+         */
+        public Boolean getHasBox() {
+            return this.hasBox;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        /**
+         * @return zone
+         */
+        public Integer getZone() {
+            return this.zone;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private Double boxAlpha; 
+            private Integer boxBorderw; 
+            private BoxColor boxColor; 
+            private Integer font; 
+            private FontColor fontColor; 
+            private Integer fontSize; 
+            private Boolean hasBox; 
+            private Integer layer; 
+            private Double x; 
+            private Double y; 
+            private Integer zone; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BoxAlpha.
+             */
+            public Builder boxAlpha(Double boxAlpha) {
+                this.boxAlpha = boxAlpha;
+                return this;
+            }
+
+            /**
+             * BoxBorderw.
+             */
+            public Builder boxBorderw(Integer boxBorderw) {
+                this.boxBorderw = boxBorderw;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(BoxColor boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
+
+            /**
+             * Font.
+             */
+            public Builder font(Integer font) {
+                this.font = font;
+                return this;
+            }
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(FontColor fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(Integer fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * HasBox.
+             */
+            public Builder hasBox(Boolean hasBox) {
+                this.hasBox = hasBox;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            /**
+             * Zone.
+             */
+            public Builder zone(Integer zone) {
+                this.zone = zone;
+                return this;
+            }
+
+            public ClockWidgets build() {
+                return new ClockWidgets(this);
+            } 
+
+        } 
+
+    }
+    public static class Images extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double height;
+
+        @com.aliyun.core.annotation.NameInMap("ImageCropMode")
+        private Integer imageCropMode;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        private Images(Builder builder) {
+            this.alpha = builder.alpha;
+            this.height = builder.height;
+            this.imageCropMode = builder.imageCropMode;
+            this.layer = builder.layer;
+            this.url = builder.url;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Images create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return height
+         */
+        public Double getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return imageCropMode
+         */
+        public Integer getImageCropMode() {
+            return this.imageCropMode;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return width
+         */
+        public Double getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private Double height; 
+            private Integer imageCropMode; 
+            private Integer layer; 
+            private String url; 
+            private Double width; 
+            private Double x; 
+            private Double y; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Double height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * ImageCropMode.
+             */
+            public Builder imageCropMode(Integer imageCropMode) {
+                this.imageCropMode = imageCropMode;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Double width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            public Images build() {
+                return new Images(this);
+            } 
+
+        } 
+
+    }
+    public static class PanesImages extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("Height")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double height;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("PaneImageCropMode")
+        private Integer paneImageCropMode;
+
+        @com.aliyun.core.annotation.NameInMap("Url")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 1024, minLength = 1)
+        private String url;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double width;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        private PanesImages(Builder builder) {
+            this.alpha = builder.alpha;
+            this.height = builder.height;
+            this.layer = builder.layer;
+            this.paneImageCropMode = builder.paneImageCropMode;
+            this.url = builder.url;
+            this.width = builder.width;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PanesImages create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return height
+         */
+        public Double getHeight() {
+            return this.height;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return paneImageCropMode
+         */
+        public Integer getPaneImageCropMode() {
+            return this.paneImageCropMode;
+        }
+
+        /**
+         * @return url
+         */
+        public String getUrl() {
+            return this.url;
+        }
+
+        /**
+         * @return width
+         */
+        public Double getWidth() {
+            return this.width;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private Double height; 
+            private Integer layer; 
+            private Integer paneImageCropMode; 
+            private String url; 
+            private Double width; 
+            private Double x; 
+            private Double y; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * Height.
+             */
+            public Builder height(Double height) {
+                this.height = height;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * PaneImageCropMode.
+             */
+            public Builder paneImageCropMode(Integer paneImageCropMode) {
+                this.paneImageCropMode = paneImageCropMode;
+                return this;
+            }
+
+            /**
+             * Url.
+             */
+            public Builder url(String url) {
+                this.url = url;
+                return this;
+            }
+
+            /**
+             * Width.
+             */
+            public Builder width(Double width) {
+                this.width = width;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            public PanesImages build() {
+                return new PanesImages(this);
+            } 
+
+        } 
+
+    }
+    public static class TextsBoxColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private TextsBoxColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextsBoxColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public TextsBoxColor build() {
+                return new TextsBoxColor(this);
+            } 
+
+        } 
+
+    }
+    public static class TextsFontColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private TextsFontColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TextsFontColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public TextsFontColor build() {
+                return new TextsFontColor(this);
+            } 
+
+        } 
+
+    }
+    public static class PanesTexts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxAlpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double boxAlpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxBorderw")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
+        private Integer boxBorderw;
+
+        @com.aliyun.core.annotation.NameInMap("BoxColor")
+        private TextsBoxColor boxColor;
+
+        @com.aliyun.core.annotation.NameInMap("Font")
+        @com.aliyun.core.annotation.Validation(maximum = 9)
+        private Integer font;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private TextsFontColor fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        @com.aliyun.core.annotation.Validation(maximum = 72)
+        private Integer fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("HasBox")
+        private Boolean hasBox;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("Texture")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        private String texture;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        private PanesTexts(Builder builder) {
+            this.alpha = builder.alpha;
+            this.boxAlpha = builder.boxAlpha;
+            this.boxBorderw = builder.boxBorderw;
+            this.boxColor = builder.boxColor;
+            this.font = builder.font;
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.hasBox = builder.hasBox;
+            this.layer = builder.layer;
+            this.texture = builder.texture;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PanesTexts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return boxAlpha
+         */
+        public Double getBoxAlpha() {
+            return this.boxAlpha;
+        }
+
+        /**
+         * @return boxBorderw
+         */
+        public Integer getBoxBorderw() {
+            return this.boxBorderw;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public TextsBoxColor getBoxColor() {
+            return this.boxColor;
+        }
+
+        /**
+         * @return font
+         */
+        public Integer getFont() {
+            return this.font;
+        }
+
+        /**
+         * @return fontColor
+         */
+        public TextsFontColor getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public Integer getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return hasBox
+         */
+        public Boolean getHasBox() {
+            return this.hasBox;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return texture
+         */
+        public String getTexture() {
+            return this.texture;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private Double boxAlpha; 
+            private Integer boxBorderw; 
+            private TextsBoxColor boxColor; 
+            private Integer font; 
+            private TextsFontColor fontColor; 
+            private Integer fontSize; 
+            private Boolean hasBox; 
+            private Integer layer; 
+            private String texture; 
+            private Double x; 
+            private Double y; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BoxAlpha.
+             */
+            public Builder boxAlpha(Double boxAlpha) {
+                this.boxAlpha = boxAlpha;
+                return this;
+            }
+
+            /**
+             * BoxBorderw.
+             */
+            public Builder boxBorderw(Integer boxBorderw) {
+                this.boxBorderw = boxBorderw;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(TextsBoxColor boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
+
+            /**
+             * Font.
+             */
+            public Builder font(Integer font) {
+                this.font = font;
+                return this;
+            }
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(TextsFontColor fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(Integer fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * HasBox.
+             */
+            public Builder hasBox(Boolean hasBox) {
+                this.hasBox = hasBox;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * Texture.
+             */
+            public Builder texture(String texture) {
+                this.texture = texture;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            public PanesTexts build() {
+                return new PanesTexts(this);
+            } 
+
+        } 
+
+    }
     public static class Panes extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Images")
+        private java.util.List < PanesImages> images;
+
+        @com.aliyun.core.annotation.NameInMap("PaneCropMode")
+        private Integer paneCropMode;
+
         @com.aliyun.core.annotation.NameInMap("PaneId")
         @com.aliyun.core.annotation.Validation(required = true)
         private String paneId;
 
+        @com.aliyun.core.annotation.NameInMap("Source")
+        private String source;
+
         @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
+        @com.aliyun.core.annotation.NameInMap("Texts")
+        private java.util.List < PanesTexts> texts;
+
         private Panes(Builder builder) {
+            this.images = builder.images;
+            this.paneCropMode = builder.paneCropMode;
             this.paneId = builder.paneId;
+            this.source = builder.source;
             this.sourceType = builder.sourceType;
+            this.texts = builder.texts;
         }
 
         public static Builder builder() {
@@ -210,10 +1570,31 @@ public class StartStreamingOutRequest extends Request {
         }
 
         /**
+         * @return images
+         */
+        public java.util.List < PanesImages> getImages() {
+            return this.images;
+        }
+
+        /**
+         * @return paneCropMode
+         */
+        public Integer getPaneCropMode() {
+            return this.paneCropMode;
+        }
+
+        /**
          * @return paneId
          */
         public String getPaneId() {
             return this.paneId;
+        }
+
+        /**
+         * @return source
+         */
+        public String getSource() {
+            return this.source;
         }
 
         /**
@@ -223,15 +1604,50 @@ public class StartStreamingOutRequest extends Request {
             return this.sourceType;
         }
 
+        /**
+         * @return texts
+         */
+        public java.util.List < PanesTexts> getTexts() {
+            return this.texts;
+        }
+
         public static final class Builder {
+            private java.util.List < PanesImages> images; 
+            private Integer paneCropMode; 
             private String paneId; 
+            private String source; 
             private String sourceType; 
+            private java.util.List < PanesTexts> texts; 
+
+            /**
+             * Images.
+             */
+            public Builder images(java.util.List < PanesImages> images) {
+                this.images = images;
+                return this;
+            }
+
+            /**
+             * PaneCropMode.
+             */
+            public Builder paneCropMode(Integer paneCropMode) {
+                this.paneCropMode = paneCropMode;
+                return this;
+            }
 
             /**
              * PaneId.
              */
             public Builder paneId(String paneId) {
                 this.paneId = paneId;
+                return this;
+            }
+
+            /**
+             * Source.
+             */
+            public Builder source(String source) {
+                this.source = source;
                 return this;
             }
 
@@ -243,8 +1659,454 @@ public class StartStreamingOutRequest extends Request {
                 return this;
             }
 
+            /**
+             * Texts.
+             */
+            public Builder texts(java.util.List < PanesTexts> texts) {
+                this.texts = texts;
+                return this;
+            }
+
             public Panes build() {
                 return new Panes(this);
+            } 
+
+        } 
+
+    }
+    public static class StartStreamingOutRequestTextsBoxColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private StartStreamingOutRequestTextsBoxColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StartStreamingOutRequestTextsBoxColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public StartStreamingOutRequestTextsBoxColor build() {
+                return new StartStreamingOutRequestTextsBoxColor(this);
+            } 
+
+        } 
+
+    }
+    public static class StartStreamingOutRequestTextsFontColor extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("B")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer b;
+
+        @com.aliyun.core.annotation.NameInMap("G")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer g;
+
+        @com.aliyun.core.annotation.NameInMap("R")
+        @com.aliyun.core.annotation.Validation(maximum = 255)
+        private Integer r;
+
+        private StartStreamingOutRequestTextsFontColor(Builder builder) {
+            this.b = builder.b;
+            this.g = builder.g;
+            this.r = builder.r;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static StartStreamingOutRequestTextsFontColor create() {
+            return builder().build();
+        }
+
+        /**
+         * @return b
+         */
+        public Integer getB() {
+            return this.b;
+        }
+
+        /**
+         * @return g
+         */
+        public Integer getG() {
+            return this.g;
+        }
+
+        /**
+         * @return r
+         */
+        public Integer getR() {
+            return this.r;
+        }
+
+        public static final class Builder {
+            private Integer b; 
+            private Integer g; 
+            private Integer r; 
+
+            /**
+             * B.
+             */
+            public Builder b(Integer b) {
+                this.b = b;
+                return this;
+            }
+
+            /**
+             * G.
+             */
+            public Builder g(Integer g) {
+                this.g = g;
+                return this;
+            }
+
+            /**
+             * R.
+             */
+            public Builder r(Integer r) {
+                this.r = r;
+                return this;
+            }
+
+            public StartStreamingOutRequestTextsFontColor build() {
+                return new StartStreamingOutRequestTextsFontColor(this);
+            } 
+
+        } 
+
+    }
+    public static class Texts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Alpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double alpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxAlpha")
+        @com.aliyun.core.annotation.Validation(maximum = 1)
+        private Double boxAlpha;
+
+        @com.aliyun.core.annotation.NameInMap("BoxBorderw")
+        @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 1)
+        private Integer boxBorderw;
+
+        @com.aliyun.core.annotation.NameInMap("BoxColor")
+        private StartStreamingOutRequestTextsBoxColor boxColor;
+
+        @com.aliyun.core.annotation.NameInMap("Font")
+        @com.aliyun.core.annotation.Validation(maximum = 9)
+        private Integer font;
+
+        @com.aliyun.core.annotation.NameInMap("FontColor")
+        private StartStreamingOutRequestTextsFontColor fontColor;
+
+        @com.aliyun.core.annotation.NameInMap("FontSize")
+        @com.aliyun.core.annotation.Validation(maximum = 72)
+        private Integer fontSize;
+
+        @com.aliyun.core.annotation.NameInMap("HasBox")
+        private Boolean hasBox;
+
+        @com.aliyun.core.annotation.NameInMap("Layer")
+        @com.aliyun.core.annotation.Validation(maximum = 100)
+        private Integer layer;
+
+        @com.aliyun.core.annotation.NameInMap("Texture")
+        @com.aliyun.core.annotation.Validation(required = true, maxLength = 128, minLength = 1)
+        private String texture;
+
+        @com.aliyun.core.annotation.NameInMap("X")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double x;
+
+        @com.aliyun.core.annotation.NameInMap("Y")
+        @com.aliyun.core.annotation.Validation(required = true, maximum = 1)
+        private Double y;
+
+        private Texts(Builder builder) {
+            this.alpha = builder.alpha;
+            this.boxAlpha = builder.boxAlpha;
+            this.boxBorderw = builder.boxBorderw;
+            this.boxColor = builder.boxColor;
+            this.font = builder.font;
+            this.fontColor = builder.fontColor;
+            this.fontSize = builder.fontSize;
+            this.hasBox = builder.hasBox;
+            this.layer = builder.layer;
+            this.texture = builder.texture;
+            this.x = builder.x;
+            this.y = builder.y;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Texts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alpha
+         */
+        public Double getAlpha() {
+            return this.alpha;
+        }
+
+        /**
+         * @return boxAlpha
+         */
+        public Double getBoxAlpha() {
+            return this.boxAlpha;
+        }
+
+        /**
+         * @return boxBorderw
+         */
+        public Integer getBoxBorderw() {
+            return this.boxBorderw;
+        }
+
+        /**
+         * @return boxColor
+         */
+        public StartStreamingOutRequestTextsBoxColor getBoxColor() {
+            return this.boxColor;
+        }
+
+        /**
+         * @return font
+         */
+        public Integer getFont() {
+            return this.font;
+        }
+
+        /**
+         * @return fontColor
+         */
+        public StartStreamingOutRequestTextsFontColor getFontColor() {
+            return this.fontColor;
+        }
+
+        /**
+         * @return fontSize
+         */
+        public Integer getFontSize() {
+            return this.fontSize;
+        }
+
+        /**
+         * @return hasBox
+         */
+        public Boolean getHasBox() {
+            return this.hasBox;
+        }
+
+        /**
+         * @return layer
+         */
+        public Integer getLayer() {
+            return this.layer;
+        }
+
+        /**
+         * @return texture
+         */
+        public String getTexture() {
+            return this.texture;
+        }
+
+        /**
+         * @return x
+         */
+        public Double getX() {
+            return this.x;
+        }
+
+        /**
+         * @return y
+         */
+        public Double getY() {
+            return this.y;
+        }
+
+        public static final class Builder {
+            private Double alpha; 
+            private Double boxAlpha; 
+            private Integer boxBorderw; 
+            private StartStreamingOutRequestTextsBoxColor boxColor; 
+            private Integer font; 
+            private StartStreamingOutRequestTextsFontColor fontColor; 
+            private Integer fontSize; 
+            private Boolean hasBox; 
+            private Integer layer; 
+            private String texture; 
+            private Double x; 
+            private Double y; 
+
+            /**
+             * Alpha.
+             */
+            public Builder alpha(Double alpha) {
+                this.alpha = alpha;
+                return this;
+            }
+
+            /**
+             * BoxAlpha.
+             */
+            public Builder boxAlpha(Double boxAlpha) {
+                this.boxAlpha = boxAlpha;
+                return this;
+            }
+
+            /**
+             * BoxBorderw.
+             */
+            public Builder boxBorderw(Integer boxBorderw) {
+                this.boxBorderw = boxBorderw;
+                return this;
+            }
+
+            /**
+             * BoxColor.
+             */
+            public Builder boxColor(StartStreamingOutRequestTextsBoxColor boxColor) {
+                this.boxColor = boxColor;
+                return this;
+            }
+
+            /**
+             * Font.
+             */
+            public Builder font(Integer font) {
+                this.font = font;
+                return this;
+            }
+
+            /**
+             * FontColor.
+             */
+            public Builder fontColor(StartStreamingOutRequestTextsFontColor fontColor) {
+                this.fontColor = fontColor;
+                return this;
+            }
+
+            /**
+             * FontSize.
+             */
+            public Builder fontSize(Integer fontSize) {
+                this.fontSize = fontSize;
+                return this;
+            }
+
+            /**
+             * HasBox.
+             */
+            public Builder hasBox(Boolean hasBox) {
+                this.hasBox = hasBox;
+                return this;
+            }
+
+            /**
+             * Layer.
+             */
+            public Builder layer(Integer layer) {
+                this.layer = layer;
+                return this;
+            }
+
+            /**
+             * Texture.
+             */
+            public Builder texture(String texture) {
+                this.texture = texture;
+                return this;
+            }
+
+            /**
+             * X.
+             */
+            public Builder x(Double x) {
+                this.x = x;
+                return this;
+            }
+
+            /**
+             * Y.
+             */
+            public Builder y(Double y) {
+                this.y = y;
+                return this;
+            }
+
+            public Texts build() {
+                return new Texts(this);
             } 
 
         } 
