@@ -37,6 +37,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
+    CompletableFuture<CreateWmBaseImageResponse> createWmBaseImage(CreateWmBaseImageRequest request);
+
+    CompletableFuture<CreateWmEmbedTaskResponse> createWmEmbedTask(CreateWmEmbedTaskRequest request);
+
+    CompletableFuture<CreateWmExtractTaskResponse> createWmExtractTask(CreateWmExtractTaskRequest request);
+
+    CompletableFuture<CreateWmInfoMappingResponse> createWmInfoMapping(CreateWmInfoMappingRequest request);
+
     CompletableFuture<DeleteClientUserResponse> deleteClientUser(DeleteClientUserRequest request);
 
     CompletableFuture<DeleteDynamicRouteResponse> deleteDynamicRoute(DeleteDynamicRouteRequest request);
@@ -76,6 +84,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUserDeviceResponse> getUserDevice(GetUserDeviceRequest request);
 
     CompletableFuture<GetUserGroupResponse> getUserGroup(GetUserGroupRequest request);
+
+    CompletableFuture<GetWmEmbedTaskResponse> getWmEmbedTask(GetWmEmbedTaskRequest request);
+
+    CompletableFuture<GetWmExtractTaskResponse> getWmExtractTask(GetWmExtractTaskRequest request);
 
     CompletableFuture<ListApplicationsForPrivateAccessPolicyResponse> listApplicationsForPrivateAccessPolicy(ListApplicationsForPrivateAccessPolicyRequest request);
 
@@ -132,6 +144,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListUserGroupsForRegistrationPolicyResponse> listUserGroupsForRegistrationPolicy(ListUserGroupsForRegistrationPolicyRequest request);
 
     CompletableFuture<ListUsersResponse> listUsers(ListUsersRequest request);
+
+    CompletableFuture<LookupWmInfoMappingResponse> lookupWmInfoMapping(LookupWmInfoMappingRequest request);
 
     CompletableFuture<RevokeUserSessionResponse> revokeUserSession(RevokeUserSessionRequest request);
 
