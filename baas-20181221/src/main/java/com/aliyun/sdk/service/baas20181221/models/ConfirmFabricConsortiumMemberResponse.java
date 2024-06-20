@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfirmFabricConsortiumMemberResponse</p>
  */
 public class ConfirmFabricConsortiumMemberResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private ConfirmFabricConsortiumMemberResponseBody body;
 
     private ConfirmFabricConsortiumMemberResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class ConfirmFabricConsortiumMemberResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public ConfirmFabricConsortiumMemberResponseBody getBody() {
@@ -52,6 +60,8 @@ public class ConfirmFabricConsortiumMemberResponse extends Response {
     public interface Builder extends Response.Builder<ConfirmFabricConsortiumMemberResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(ConfirmFabricConsortiumMemberResponseBody body);
 
@@ -64,6 +74,7 @@ public class ConfirmFabricConsortiumMemberResponse extends Response {
             extends Response.BuilderImpl<ConfirmFabricConsortiumMemberResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private ConfirmFabricConsortiumMemberResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class ConfirmFabricConsortiumMemberResponse extends Response {
         private BuilderImpl(ConfirmFabricConsortiumMemberResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class ConfirmFabricConsortiumMemberResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

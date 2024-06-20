@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricCandidateOrganizationsRequest</p>
  */
 public class DescribeFabricCandidateOrganizationsRequest extends Request {
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
 
     private DescribeFabricCandidateOrganizationsRequest(Builder builder) {
         super(builder);
-        this.location = builder.location;
         this.regionId = builder.regionId;
+        this.location = builder.location;
     }
 
     public static Builder builder() {
@@ -40,41 +39,32 @@ public class DescribeFabricCandidateOrganizationsRequest extends Request {
     }
 
     /**
-     * @return location
-     */
-    public String getLocation() {
-        return this.location;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return location
+     */
+    public String getLocation() {
+        return this.location;
+    }
+
     public static final class Builder extends Request.Builder<DescribeFabricCandidateOrganizationsRequest, Builder> {
-        private String location; 
         private String regionId; 
+        private String location; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricCandidateOrganizationsRequest response) {
-            super(response);
-            this.location = response.location;
-            this.regionId = response.regionId;
+        private Builder(DescribeFabricCandidateOrganizationsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.location = request.location;
         } 
-
-        /**
-         * Location.
-         */
-        public Builder location(String location) {
-            this.putBodyParameter("Location", location);
-            this.location = location;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -82,6 +72,15 @@ public class DescribeFabricCandidateOrganizationsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Location.
+         */
+        public Builder location(String location) {
+            this.putBodyParameter("Location", location);
+            this.location = location;
             return this;
         }
 

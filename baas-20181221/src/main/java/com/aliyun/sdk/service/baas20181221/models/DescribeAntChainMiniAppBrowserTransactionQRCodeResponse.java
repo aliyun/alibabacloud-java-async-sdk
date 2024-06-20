@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainMiniAppBrowserTransactionQRCodeResponse</p>
  */
 public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody body;
 
     private DescribeAntChainMiniAppBrowserTransactionQRCodeResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Res
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody getBody() {
@@ -52,6 +60,8 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Res
     public interface Builder extends Response.Builder<DescribeAntChainMiniAppBrowserTransactionQRCodeResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody body);
 
@@ -64,6 +74,7 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Res
             extends Response.BuilderImpl<DescribeAntChainMiniAppBrowserTransactionQRCodeResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Res
         private BuilderImpl(DescribeAntChainMiniAppBrowserTransactionQRCodeResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponse extends Res
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

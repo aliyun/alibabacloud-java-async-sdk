@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAntChainConsortiumRequest</p>
  */
 public class UpdateAntChainConsortiumRequest extends Request {
-    @Body
-    @NameInMap("ConsortiumDescription")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumDescription")
     private String consortiumDescription;
 
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("ConsortiumName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumName;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private UpdateAntChainConsortiumRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.consortiumDescription = builder.consortiumDescription;
         this.consortiumId = builder.consortiumId;
         this.consortiumName = builder.consortiumName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +48,13 @@ public class UpdateAntChainConsortiumRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +78,32 @@ public class UpdateAntChainConsortiumRequest extends Request {
         return this.consortiumName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateAntChainConsortiumRequest, Builder> {
+        private String regionId; 
         private String consortiumDescription; 
         private String consortiumId; 
         private String consortiumName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateAntChainConsortiumRequest response) {
-            super(response);
-            this.consortiumDescription = response.consortiumDescription;
-            this.consortiumId = response.consortiumId;
-            this.consortiumName = response.consortiumName;
-            this.regionId = response.regionId;
+        private Builder(UpdateAntChainConsortiumRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.consortiumDescription = request.consortiumDescription;
+            this.consortiumId = request.consortiumId;
+            this.consortiumName = request.consortiumName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConsortiumDescription.
@@ -121,15 +129,6 @@ public class UpdateAntChainConsortiumRequest extends Request {
         public Builder consortiumName(String consortiumName) {
             this.putBodyParameter("ConsortiumName", consortiumName);
             this.consortiumName = consortiumName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

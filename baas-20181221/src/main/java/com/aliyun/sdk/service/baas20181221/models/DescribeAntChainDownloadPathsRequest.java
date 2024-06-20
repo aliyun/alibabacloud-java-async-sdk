@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainDownloadPathsRequest</p>
  */
 public class DescribeAntChainDownloadPathsRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
 
     private DescribeAntChainDownloadPathsRequest(Builder builder) {
         super(builder);
-        this.antChainId = builder.antChainId;
         this.regionId = builder.regionId;
+        this.antChainId = builder.antChainId;
     }
 
     public static Builder builder() {
@@ -41,41 +40,32 @@ public class DescribeAntChainDownloadPathsRequest extends Request {
     }
 
     /**
-     * @return antChainId
-     */
-    public String getAntChainId() {
-        return this.antChainId;
-    }
-
-    /**
      * @return regionId
      */
     public String getRegionId() {
         return this.regionId;
     }
 
+    /**
+     * @return antChainId
+     */
+    public String getAntChainId() {
+        return this.antChainId;
+    }
+
     public static final class Builder extends Request.Builder<DescribeAntChainDownloadPathsRequest, Builder> {
-        private String antChainId; 
         private String regionId; 
+        private String antChainId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainDownloadPathsRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.regionId = response.regionId;
+        private Builder(DescribeAntChainDownloadPathsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
         } 
-
-        /**
-         * AntChainId.
-         */
-        public Builder antChainId(String antChainId) {
-            this.putBodyParameter("AntChainId", antChainId);
-            this.antChainId = antChainId;
-            return this;
-        }
 
         /**
          * RegionId.
@@ -83,6 +73,15 @@ public class DescribeAntChainDownloadPathsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * AntChainId.
+         */
+        public Builder antChainId(String antChainId) {
+            this.putBodyParameter("AntChainId", antChainId);
+            this.antChainId = antChainId;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainLatestTransactionDigestsV2Request</p>
  */
 public class DescribeAntChainLatestTransactionDigestsV2Request extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
     private String consortiumId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeAntChainLatestTransactionDigestsV2Request(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.consortiumId = builder.consortiumId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -46,6 +45,13 @@ public class DescribeAntChainLatestTransactionDigestsV2Request extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return antChainId
      */
     public String getAntChainId() {
@@ -59,28 +65,30 @@ public class DescribeAntChainLatestTransactionDigestsV2Request extends Request {
         return this.consortiumId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAntChainLatestTransactionDigestsV2Request, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String consortiumId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainLatestTransactionDigestsV2Request response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.consortiumId = response.consortiumId;
-            this.regionId = response.regionId;
+        private Builder(DescribeAntChainLatestTransactionDigestsV2Request request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.consortiumId = request.consortiumId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -97,15 +105,6 @@ public class DescribeAntChainLatestTransactionDigestsV2Request extends Request {
         public Builder consortiumId(String consortiumId) {
             this.putBodyParameter("ConsortiumId", consortiumId);
             this.consortiumId = consortiumId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAntChainRequest</p>
  */
 public class UpdateAntChainRequest extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("AntChainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainName;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private UpdateAntChainRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.antChainName = builder.antChainName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +46,13 @@ public class UpdateAntChainRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return antChainId
      */
     public String getAntChainId() {
@@ -60,28 +66,30 @@ public class UpdateAntChainRequest extends Request {
         return this.antChainName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<UpdateAntChainRequest, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String antChainName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(UpdateAntChainRequest response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.antChainName = response.antChainName;
-            this.regionId = response.regionId;
+        private Builder(UpdateAntChainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.antChainName = request.antChainName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -98,15 +106,6 @@ public class UpdateAntChainRequest extends Request {
         public Builder antChainName(String antChainName) {
             this.putBodyParameter("AntChainName", antChainName);
             this.antChainName = antChainName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

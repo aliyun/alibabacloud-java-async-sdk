@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,46 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricChannelRequest</p>
  */
 public class CreateFabricChannelRequest extends Request {
-    @Body
-    @NameInMap("BatchTimeout")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BatchTimeout")
     private Integer batchTimeout;
 
-    @Query
-    @NameInMap("ChannelName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelName;
 
-    @Query
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("MaxMessageCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxMessageCount")
     private Integer maxMessageCount;
 
-    @Query
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Organization> organization;
 
-    @Body
-    @NameInMap("PreferredMaxBytes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PreferredMaxBytes")
     private Integer preferredMaxBytes;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateFabricChannelRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.batchTimeout = builder.batchTimeout;
         this.channelName = builder.channelName;
         this.consortiumId = builder.consortiumId;
         this.maxMessageCount = builder.maxMessageCount;
         this.organization = builder.organization;
         this.preferredMaxBytes = builder.preferredMaxBytes;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -65,6 +64,13 @@ public class CreateFabricChannelRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -109,36 +115,38 @@ public class CreateFabricChannelRequest extends Request {
         return this.preferredMaxBytes;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateFabricChannelRequest, Builder> {
+        private String regionId; 
         private Integer batchTimeout; 
         private String channelName; 
         private String consortiumId; 
         private Integer maxMessageCount; 
         private java.util.List < Organization> organization; 
         private Integer preferredMaxBytes; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFabricChannelRequest response) {
-            super(response);
-            this.batchTimeout = response.batchTimeout;
-            this.channelName = response.channelName;
-            this.consortiumId = response.consortiumId;
-            this.maxMessageCount = response.maxMessageCount;
-            this.organization = response.organization;
-            this.preferredMaxBytes = response.preferredMaxBytes;
-            this.regionId = response.regionId;
+        private Builder(CreateFabricChannelRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.batchTimeout = request.batchTimeout;
+            this.channelName = request.channelName;
+            this.consortiumId = request.consortiumId;
+            this.maxMessageCount = request.maxMessageCount;
+            this.organization = request.organization;
+            this.preferredMaxBytes = request.preferredMaxBytes;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * BatchTimeout.
@@ -194,15 +202,6 @@ public class CreateFabricChannelRequest extends Request {
             return this;
         }
 
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
         @Override
         public CreateFabricChannelRequest build() {
             return new CreateFabricChannelRequest(this);
@@ -211,7 +210,7 @@ public class CreateFabricChannelRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Organization(Builder builder) {

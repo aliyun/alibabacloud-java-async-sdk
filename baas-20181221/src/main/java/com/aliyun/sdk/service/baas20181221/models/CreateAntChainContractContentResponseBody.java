@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntChainContractContentResponseBody</p>
  */
 public class CreateAntChainContractContentResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private CreateAntChainContractContentResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class CreateAntChainContractContentResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentId")
+        @com.aliyun.core.annotation.NameInMap("ContentId")
         private String contentId;
 
-        @NameInMap("ContentName")
+        @com.aliyun.core.annotation.NameInMap("ContentName")
         private String contentName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("IsDirectory")
+        @com.aliyun.core.annotation.NameInMap("IsDirectory")
         private Boolean isDirectory;
 
-        @NameInMap("ParentContentId")
+        @com.aliyun.core.annotation.NameInMap("ParentContentId")
         private String parentContentId;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Result(Builder builder) {

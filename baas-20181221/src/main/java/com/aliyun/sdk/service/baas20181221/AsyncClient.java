@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.baas20181221;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.baas20181221.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -24,6 +25,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyAntChainCertificateWithKeyAutoCreationResponse> applyAntChainCertificateWithKeyAutoCreation(ApplyAntChainCertificateWithKeyAutoCreationRequest request);
 
+    CompletableFuture<ApproveFabricChaincodeDefinitionResponse> approveFabricChaincodeDefinition(ApproveFabricChaincodeDefinitionRequest request);
+
     CompletableFuture<BatchAddAntChainMiniAppQRCodeAuthorizedUsersResponse> batchAddAntChainMiniAppQRCodeAuthorizedUsers(BatchAddAntChainMiniAppQRCodeAuthorizedUsersRequest request);
 
     CompletableFuture<CheckFabricConsortiumDomainResponse> checkFabricConsortiumDomain(CheckFabricConsortiumDomainRequest request);
@@ -44,7 +47,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateAntChainContractProjectResponse> createAntChainContractProject(CreateAntChainContractProjectRequest request);
 
+    CompletableFuture<CreateAntChainKmsAccountNewResponse> createAntChainKmsAccountNew(CreateAntChainKmsAccountNewRequest request);
+
     CompletableFuture<CreateFabricChaincodeResponse> createFabricChaincode(CreateFabricChaincodeRequest request);
+
+    CompletableFuture<CreateFabricChaincodePackageResponse> createFabricChaincodePackage(CreateFabricChaincodePackageRequest request);
 
     CompletableFuture<CreateFabricChannelResponse> createFabricChannel(CreateFabricChannelRequest request);
 
@@ -152,6 +159,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFabricCandidateOrganizationsResponse> describeFabricCandidateOrganizations(DescribeFabricCandidateOrganizationsRequest request);
 
+    CompletableFuture<DescribeFabricChaincodeDefinitionTaskResponse> describeFabricChaincodeDefinitionTask(DescribeFabricChaincodeDefinitionTaskRequest request);
+
     CompletableFuture<DescribeFabricChaincodeUploadPolicyResponse> describeFabricChaincodeUploadPolicy(DescribeFabricChaincodeUploadPolicyRequest request);
 
     CompletableFuture<DescribeFabricChannelMembersResponse> describeFabricChannelMembers(DescribeFabricChannelMembersRequest request);
@@ -186,6 +195,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeFabricOrganizationResponse> describeFabricOrganization(DescribeFabricOrganizationRequest request);
 
+    CompletableFuture<DescribeFabricOrganizationChaincodePackageResponse> describeFabricOrganizationChaincodePackage(DescribeFabricOrganizationChaincodePackageRequest request);
+
     CompletableFuture<DescribeFabricOrganizationChaincodesResponse> describeFabricOrganizationChaincodes(DescribeFabricOrganizationChaincodesRequest request);
 
     CompletableFuture<DescribeFabricOrganizationChannelsResponse> describeFabricOrganizationChannels(DescribeFabricOrganizationChannelsRequest request);
@@ -216,6 +227,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<InstallFabricChaincodeResponse> installFabricChaincode(InstallFabricChaincodeRequest request);
 
+    CompletableFuture<InstallFabricChaincodePackageResponse> installFabricChaincodePackage(InstallFabricChaincodePackageRequest request);
+
     CompletableFuture<InstantiateFabricChaincodeResponse> instantiateFabricChaincode(InstantiateFabricChaincodeRequest request);
 
     CompletableFuture<JoinFabricChannelResponse> joinFabricChannel(JoinFabricChannelRequest request);
@@ -227,6 +240,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetAntChainUserCertificateResponse> resetAntChainUserCertificate(ResetAntChainUserCertificateRequest request);
 
     CompletableFuture<ResetFabricOrganizationUserPasswordResponse> resetFabricOrganizationUserPassword(ResetFabricOrganizationUserPasswordRequest request);
+
+    CompletableFuture<SubmitFabricChaincodeDefinitionResponse> submitFabricChaincodeDefinition(SubmitFabricChaincodeDefinitionRequest request);
 
     CompletableFuture<SynchronizeFabricChaincodeResponse> synchronizeFabricChaincode(SynchronizeFabricChaincodeRequest request);
 
@@ -248,6 +263,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UpdateAntChainQRCodeAuthorizationResponse> updateAntChainQRCodeAuthorization(UpdateAntChainQRCodeAuthorizationRequest request);
 
+    /**
+      * ****
+      *
+     */
     CompletableFuture<UpgradeFabricChaincodeResponse> upgradeFabricChaincode(UpgradeFabricChaincodeRequest request);
+
+    CompletableFuture<UpgradeFabricChaincodeDefinitionResponse> upgradeFabricChaincodeDefinition(UpgradeFabricChaincodeDefinitionRequest request);
 
 }

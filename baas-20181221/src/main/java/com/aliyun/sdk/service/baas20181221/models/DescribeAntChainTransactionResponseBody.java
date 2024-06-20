@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainTransactionResponseBody</p>
  */
 public class DescribeAntChainTransactionResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainTransactionResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
     } 
 
     public static class Transaction extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Extentions")
+        @com.aliyun.core.annotation.NameInMap("Extentions")
         private java.util.List < String > extentions;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("Gas")
+        @com.aliyun.core.annotation.NameInMap("Gas")
         private String gas;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("Nonce")
+        @com.aliyun.core.annotation.NameInMap("Nonce")
         private String nonce;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
 
-        @NameInMap("Signatures")
+        @com.aliyun.core.annotation.NameInMap("Signatures")
         private java.util.List < String > signatures;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
-        @NameInMap("TxType")
+        @com.aliyun.core.annotation.NameInMap("TxType")
         private String txType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Transaction(Builder builder) {
@@ -278,7 +277,7 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
             }
 
             /**
-             * Period.
+             * Period
              */
             public Builder period(Long period) {
                 this.period = period;
@@ -333,22 +332,22 @@ public class DescribeAntChainTransactionResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Long blockHeight;
 
-        @NameInMap("BlockVersion")
+        @com.aliyun.core.annotation.NameInMap("BlockVersion")
         private String blockVersion;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("Transaction")
+        @com.aliyun.core.annotation.NameInMap("Transaction")
         private Transaction transaction;
 
         private Result(Builder builder) {

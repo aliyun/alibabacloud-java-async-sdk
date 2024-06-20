@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricOrganizationChaincodesResponseBody</p>
  */
 public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeFabricOrganizationChaincodesResponseBody(Builder builder) {
@@ -112,43 +111,43 @@ public class DescribeFabricOrganizationChaincodesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ChaincodeId")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeId")
         private String chaincodeId;
 
-        @NameInMap("ChaincodeName")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeName")
         private String chaincodeName;
 
-        @NameInMap("ChaincodeVersion")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeVersion")
         private String chaincodeVersion;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("ConsortiumId")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumId")
         private String consortiumId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("DeployTime")
+        @com.aliyun.core.annotation.NameInMap("DeployTime")
         private String deployTime;
 
-        @NameInMap("EndorsePolicy")
+        @com.aliyun.core.annotation.NameInMap("EndorsePolicy")
         private String endorsePolicy;
 
-        @NameInMap("Installed")
+        @com.aliyun.core.annotation.NameInMap("Installed")
         private String installed;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Result(Builder builder) {

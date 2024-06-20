@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricPeerLogsRequest</p>
  */
 public class DescribeFabricPeerLogsRequest extends Request {
-    @Query
-    @NameInMap("Lines")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lines")
     private String lines;
 
-    @Query
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Query
-    @NameInMap("PeerName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeerName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String peerName;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeFabricPeerLogsRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.lines = builder.lines;
         this.organizationId = builder.organizationId;
         this.peerName = builder.peerName;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +48,13 @@ public class DescribeFabricPeerLogsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +78,32 @@ public class DescribeFabricPeerLogsRequest extends Request {
         return this.peerName;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeFabricPeerLogsRequest, Builder> {
+        private String regionId; 
         private String lines; 
         private String organizationId; 
         private String peerName; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricPeerLogsRequest response) {
-            super(response);
-            this.lines = response.lines;
-            this.organizationId = response.organizationId;
-            this.peerName = response.peerName;
-            this.regionId = response.regionId;
+        private Builder(DescribeFabricPeerLogsRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.lines = request.lines;
+            this.organizationId = request.organizationId;
+            this.peerName = request.peerName;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Lines.
@@ -121,15 +129,6 @@ public class DescribeFabricPeerLogsRequest extends Request {
         public Builder peerName(String peerName) {
             this.putQueryParameter("PeerName", peerName);
             this.peerName = peerName;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

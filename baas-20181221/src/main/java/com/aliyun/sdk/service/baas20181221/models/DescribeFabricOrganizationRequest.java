@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricOrganizationRequest</p>
  */
 public class DescribeFabricOrganizationRequest extends Request {
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Query
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
     private DescribeFabricOrganizationRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.location = builder.location;
         this.organizationId = builder.organizationId;
-        this.regionId = builder.regionId;
         this.tag = builder.tag;
     }
 
@@ -51,6 +50,13 @@ public class DescribeFabricOrganizationRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return location
      */
     public String getLocation() {
@@ -65,13 +71,6 @@ public class DescribeFabricOrganizationRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return tag
      */
     public java.util.List < Tag> getTag() {
@@ -79,22 +78,31 @@ public class DescribeFabricOrganizationRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeFabricOrganizationRequest, Builder> {
+        private String regionId; 
         private String location; 
         private String organizationId; 
-        private String regionId; 
         private java.util.List < Tag> tag; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeFabricOrganizationRequest response) {
-            super(response);
-            this.location = response.location;
-            this.organizationId = response.organizationId;
-            this.regionId = response.regionId;
-            this.tag = response.tag;
+        private Builder(DescribeFabricOrganizationRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.location = request.location;
+            this.organizationId = request.organizationId;
+            this.tag = request.tag;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Location.
@@ -115,15 +123,6 @@ public class DescribeFabricOrganizationRequest extends Request {
         }
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
          * Tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
@@ -140,11 +139,11 @@ public class DescribeFabricOrganizationRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Key")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

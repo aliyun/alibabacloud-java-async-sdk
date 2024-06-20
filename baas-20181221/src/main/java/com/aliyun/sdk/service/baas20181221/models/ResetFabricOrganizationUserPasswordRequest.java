@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetFabricOrganizationUserPasswordRequest</p>
  */
 public class ResetFabricOrganizationUserPasswordRequest extends Request {
-    @Body
-    @NameInMap("Location")
-    private String location;
-
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
-
-    @Body
-    @NameInMap("Password")
-    @Validation(required = true)
-    private String password;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    private String location;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String password;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private ResetFabricOrganizationUserPasswordRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.location = builder.location;
         this.organizationId = builder.organizationId;
         this.password = builder.password;
-        this.regionId = builder.regionId;
         this.username = builder.username;
     }
 
@@ -55,6 +54,13 @@ public class ResetFabricOrganizationUserPasswordRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +85,6 @@ public class ResetFabricOrganizationUserPasswordRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return username
      */
     public String getUsername() {
@@ -93,24 +92,33 @@ public class ResetFabricOrganizationUserPasswordRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<ResetFabricOrganizationUserPasswordRequest, Builder> {
+        private String regionId; 
         private String location; 
         private String organizationId; 
         private String password; 
-        private String regionId; 
         private String username; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ResetFabricOrganizationUserPasswordRequest response) {
-            super(response);
-            this.location = response.location;
-            this.organizationId = response.organizationId;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.username = response.username;
+        private Builder(ResetFabricOrganizationUserPasswordRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.location = request.location;
+            this.organizationId = request.organizationId;
+            this.password = request.password;
+            this.username = request.username;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Location.
@@ -136,15 +144,6 @@ public class ResetFabricOrganizationUserPasswordRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

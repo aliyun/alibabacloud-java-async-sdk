@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody</p>
  */
 public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeAntChainMiniAppBrowserTransactionQRCodeResponseBody extends
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("Base64QRCodePNG")
+        @com.aliyun.core.annotation.NameInMap("Base64QRCodePNG")
         private String base64QRCodePNG;
 
-        @NameInMap("QRCodeContent")
+        @com.aliyun.core.annotation.NameInMap("QRCodeContent")
         private String QRCodeContent;
 
-        @NameInMap("TransactionHash")
+        @com.aliyun.core.annotation.NameInMap("TransactionHash")
         private String transactionHash;
 
         private Result(Builder builder) {

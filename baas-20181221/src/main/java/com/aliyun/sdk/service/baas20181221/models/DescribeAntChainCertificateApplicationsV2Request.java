@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainCertificateApplicationsV2Request</p>
  */
 public class DescribeAntChainCertificateApplicationsV2Request extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
-    private String antChainId;
-
-    @Body
-    @NameInMap("ConsortiumId")
-    private String consortiumId;
-
-    @Body
-    @NameInMap("PageNumber")
-    @Validation(required = true)
-    private Integer pageNumber;
-
-    @Body
-    @NameInMap("PageSize")
-    @Validation(required = true)
-    private Integer pageSize;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String antChainId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    private String consortiumId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer pageNumber;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private Integer pageSize;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String status;
 
     private DescribeAntChainCertificateApplicationsV2Request(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.consortiumId = builder.consortiumId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.regionId = builder.regionId;
         this.status = builder.status;
     }
 
@@ -61,6 +60,13 @@ public class DescribeAntChainCertificateApplicationsV2Request extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -92,13 +98,6 @@ public class DescribeAntChainCertificateApplicationsV2Request extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return status
      */
     public String getStatus() {
@@ -106,26 +105,35 @@ public class DescribeAntChainCertificateApplicationsV2Request extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeAntChainCertificateApplicationsV2Request, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String consortiumId; 
         private Integer pageNumber; 
         private Integer pageSize; 
-        private String regionId; 
         private String status; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainCertificateApplicationsV2Request response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.consortiumId = response.consortiumId;
-            this.pageNumber = response.pageNumber;
-            this.pageSize = response.pageSize;
-            this.regionId = response.regionId;
-            this.status = response.status;
+        private Builder(DescribeAntChainCertificateApplicationsV2Request request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.consortiumId = request.consortiumId;
+            this.pageNumber = request.pageNumber;
+            this.pageSize = request.pageSize;
+            this.status = request.status;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -160,15 +168,6 @@ public class DescribeAntChainCertificateApplicationsV2Request extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putBodyParameter("PageSize", pageSize);
             this.pageSize = pageSize;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

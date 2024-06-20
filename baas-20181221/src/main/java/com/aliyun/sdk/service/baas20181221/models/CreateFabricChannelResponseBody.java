@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricChannelResponseBody</p>
  */
 public class CreateFabricChannelResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateFabricChannelResponseBody(Builder builder) {
@@ -112,58 +111,58 @@ public class CreateFabricChannelResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("BatchTimeout")
+        @com.aliyun.core.annotation.NameInMap("BatchTimeout")
         private Integer batchTimeout;
 
-        @NameInMap("BlockCount")
+        @com.aliyun.core.annotation.NameInMap("BlockCount")
         private Integer blockCount;
 
-        @NameInMap("ChaincodeCount")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeCount")
         private Integer chaincodeCount;
 
-        @NameInMap("ChannelId")
+        @com.aliyun.core.annotation.NameInMap("ChannelId")
         private String channelId;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("ConsortiumId")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumId")
         private String consortiumId;
 
-        @NameInMap("ConsortiumName")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumName")
         private String consortiumName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("MaxMessageCount")
+        @com.aliyun.core.annotation.NameInMap("MaxMessageCount")
         private Integer maxMessageCount;
 
-        @NameInMap("MemberCount")
+        @com.aliyun.core.annotation.NameInMap("MemberCount")
         private Integer memberCount;
 
-        @NameInMap("OwnerBid")
+        @com.aliyun.core.annotation.NameInMap("OwnerBid")
         private String ownerBid;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("PreferredMaxBytes")
+        @com.aliyun.core.annotation.NameInMap("PreferredMaxBytes")
         private Integer preferredMaxBytes;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("SupportConfig")
+        @com.aliyun.core.annotation.NameInMap("SupportConfig")
         private Boolean supportConfig;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Result(Builder builder) {

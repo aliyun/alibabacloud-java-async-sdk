@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricChannelMemberRequest</p>
  */
 public class CreateFabricChannelMemberRequest extends Request {
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Query
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Organization> organization;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateFabricChannelMemberRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.channelId = builder.channelId;
         this.organization = builder.organization;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +46,13 @@ public class CreateFabricChannelMemberRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return channelId
      */
     public String getChannelId() {
@@ -60,28 +66,30 @@ public class CreateFabricChannelMemberRequest extends Request {
         return this.organization;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateFabricChannelMemberRequest, Builder> {
+        private String regionId; 
         private String channelId; 
         private java.util.List < Organization> organization; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFabricChannelMemberRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.organization = response.organization;
-            this.regionId = response.regionId;
+        private Builder(CreateFabricChannelMemberRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.channelId = request.channelId;
+            this.organization = request.organization;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChannelId.
@@ -101,15 +109,6 @@ public class CreateFabricChannelMemberRequest extends Request {
             return this;
         }
 
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
         @Override
         public CreateFabricChannelMemberRequest build() {
             return new CreateFabricChannelMemberRequest(this);
@@ -118,7 +117,8 @@ public class CreateFabricChannelMemberRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String organizationId;
 
         private Organization(Builder builder) {

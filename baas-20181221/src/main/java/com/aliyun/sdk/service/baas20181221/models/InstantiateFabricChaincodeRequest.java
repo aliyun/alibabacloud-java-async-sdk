@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstantiateFabricChaincodeRequest</p>
  */
 public class InstantiateFabricChaincodeRequest extends Request {
-    @Body
-    @NameInMap("ChaincodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chaincodeId;
 
-    @Body
-    @NameInMap("CollectionConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CollectionConfig")
     private String collectionConfig;
 
-    @Body
-    @NameInMap("EndorsePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndorsePolicy")
     private String endorsePolicy;
 
-    @Body
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private InstantiateFabricChaincodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.chaincodeId = builder.chaincodeId;
         this.collectionConfig = builder.collectionConfig;
         this.endorsePolicy = builder.endorsePolicy;
         this.location = builder.location;
         this.organizationId = builder.organizationId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -59,6 +58,13 @@ public class InstantiateFabricChaincodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -96,34 +102,36 @@ public class InstantiateFabricChaincodeRequest extends Request {
         return this.organizationId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<InstantiateFabricChaincodeRequest, Builder> {
+        private String regionId; 
         private String chaincodeId; 
         private String collectionConfig; 
         private String endorsePolicy; 
         private String location; 
         private String organizationId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(InstantiateFabricChaincodeRequest response) {
-            super(response);
-            this.chaincodeId = response.chaincodeId;
-            this.collectionConfig = response.collectionConfig;
-            this.endorsePolicy = response.endorsePolicy;
-            this.location = response.location;
-            this.organizationId = response.organizationId;
-            this.regionId = response.regionId;
+        private Builder(InstantiateFabricChaincodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.chaincodeId = request.chaincodeId;
+            this.collectionConfig = request.collectionConfig;
+            this.endorsePolicy = request.endorsePolicy;
+            this.location = request.location;
+            this.organizationId = request.organizationId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChaincodeId.
@@ -167,15 +175,6 @@ public class InstantiateFabricChaincodeRequest extends Request {
         public Builder organizationId(String organizationId) {
             this.putBodyParameter("OrganizationId", organizationId);
             this.organizationId = organizationId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

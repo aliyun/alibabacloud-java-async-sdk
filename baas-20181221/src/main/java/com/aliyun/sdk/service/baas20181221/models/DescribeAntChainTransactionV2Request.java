@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainTransactionV2Request</p>
  */
 public class DescribeAntChainTransactionV2Request extends Request {
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
     private String consortiumId;
 
-    @Body
-    @NameInMap("Hash")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Hash")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hash;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private DescribeAntChainTransactionV2Request(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.antChainId = builder.antChainId;
         this.consortiumId = builder.consortiumId;
         this.hash = builder.hash;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -49,6 +48,13 @@ public class DescribeAntChainTransactionV2Request extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -72,30 +78,32 @@ public class DescribeAntChainTransactionV2Request extends Request {
         return this.hash;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<DescribeAntChainTransactionV2Request, Builder> {
+        private String regionId; 
         private String antChainId; 
         private String consortiumId; 
         private String hash; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeAntChainTransactionV2Request response) {
-            super(response);
-            this.antChainId = response.antChainId;
-            this.consortiumId = response.consortiumId;
-            this.hash = response.hash;
-            this.regionId = response.regionId;
+        private Builder(DescribeAntChainTransactionV2Request request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.antChainId = request.antChainId;
+            this.consortiumId = request.consortiumId;
+            this.hash = request.hash;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * AntChainId.
@@ -121,15 +129,6 @@ public class DescribeAntChainTransactionV2Request extends Request {
         public Builder hash(String hash) {
             this.putBodyParameter("Hash", hash);
             this.hash = hash;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

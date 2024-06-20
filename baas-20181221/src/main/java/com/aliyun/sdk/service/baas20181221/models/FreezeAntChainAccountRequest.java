@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>FreezeAntChainAccountRequest</p>
  */
 public class FreezeAntChainAccountRequest extends Request {
-    @Body
-    @NameInMap("Account")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Account")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String account;
 
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private FreezeAntChainAccountRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.account = builder.account;
         this.antChainId = builder.antChainId;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +46,13 @@ public class FreezeAntChainAccountRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return account
      */
     public String getAccount() {
@@ -60,28 +66,30 @@ public class FreezeAntChainAccountRequest extends Request {
         return this.antChainId;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<FreezeAntChainAccountRequest, Builder> {
+        private String regionId; 
         private String account; 
         private String antChainId; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(FreezeAntChainAccountRequest response) {
-            super(response);
-            this.account = response.account;
-            this.antChainId = response.antChainId;
-            this.regionId = response.regionId;
+        private Builder(FreezeAntChainAccountRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.account = request.account;
+            this.antChainId = request.antChainId;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Account.
@@ -98,15 +106,6 @@ public class FreezeAntChainAccountRequest extends Request {
         public Builder antChainId(String antChainId) {
             this.putBodyParameter("AntChainId", antChainId);
             this.antChainId = antChainId;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

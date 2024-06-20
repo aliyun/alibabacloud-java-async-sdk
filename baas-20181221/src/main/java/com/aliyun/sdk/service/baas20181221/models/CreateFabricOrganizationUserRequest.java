@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricOrganizationUserRequest</p>
  */
 public class CreateFabricOrganizationUserRequest extends Request {
-    @Body
-    @NameInMap("Attrs")
-    private String attrs;
-
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
-    private String organizationId;
-
-    @Body
-    @NameInMap("Password")
-    @Validation(required = true)
-    private String password;
-
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Attrs")
+    private String attrs;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String organizationId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String password;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private CreateFabricOrganizationUserRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.attrs = builder.attrs;
         this.organizationId = builder.organizationId;
         this.password = builder.password;
-        this.regionId = builder.regionId;
         this.username = builder.username;
     }
 
@@ -55,6 +54,13 @@ public class CreateFabricOrganizationUserRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -79,13 +85,6 @@ public class CreateFabricOrganizationUserRequest extends Request {
     }
 
     /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
-    /**
      * @return username
      */
     public String getUsername() {
@@ -93,24 +92,33 @@ public class CreateFabricOrganizationUserRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateFabricOrganizationUserRequest, Builder> {
+        private String regionId; 
         private String attrs; 
         private String organizationId; 
         private String password; 
-        private String regionId; 
         private String username; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFabricOrganizationUserRequest response) {
-            super(response);
-            this.attrs = response.attrs;
-            this.organizationId = response.organizationId;
-            this.password = response.password;
-            this.regionId = response.regionId;
-            this.username = response.username;
+        private Builder(CreateFabricOrganizationUserRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.attrs = request.attrs;
+            this.organizationId = request.organizationId;
+            this.password = request.password;
+            this.username = request.username;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * Attrs.
@@ -136,15 +144,6 @@ public class CreateFabricOrganizationUserRequest extends Request {
         public Builder password(String password) {
             this.putBodyParameter("Password", password);
             this.password = password;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

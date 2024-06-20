@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeFabricConsortiumChannelsResponse</p>
  */
 public class DescribeFabricConsortiumChannelsResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private DescribeFabricConsortiumChannelsResponseBody body;
 
     private DescribeFabricConsortiumChannelsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class DescribeFabricConsortiumChannelsResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public DescribeFabricConsortiumChannelsResponseBody getBody() {
@@ -52,6 +60,8 @@ public class DescribeFabricConsortiumChannelsResponse extends Response {
     public interface Builder extends Response.Builder<DescribeFabricConsortiumChannelsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(DescribeFabricConsortiumChannelsResponseBody body);
 
@@ -64,6 +74,7 @@ public class DescribeFabricConsortiumChannelsResponse extends Response {
             extends Response.BuilderImpl<DescribeFabricConsortiumChannelsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private DescribeFabricConsortiumChannelsResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class DescribeFabricConsortiumChannelsResponse extends Response {
         private BuilderImpl(DescribeFabricConsortiumChannelsResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class DescribeFabricConsortiumChannelsResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

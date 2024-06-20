@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntChainContractProjectRequest</p>
  */
 public class CreateAntChainContractProjectRequest extends Request {
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("ProjectDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectDescription")
     private String projectDescription;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("ProjectVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectVersion;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateAntChainContractProjectRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.consortiumId = builder.consortiumId;
         this.projectDescription = builder.projectDescription;
         this.projectName = builder.projectName;
         this.projectVersion = builder.projectVersion;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -55,6 +54,13 @@ public class CreateAntChainContractProjectRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -85,32 +91,34 @@ public class CreateAntChainContractProjectRequest extends Request {
         return this.projectVersion;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateAntChainContractProjectRequest, Builder> {
+        private String regionId; 
         private String consortiumId; 
         private String projectDescription; 
         private String projectName; 
         private String projectVersion; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateAntChainContractProjectRequest response) {
-            super(response);
-            this.consortiumId = response.consortiumId;
-            this.projectDescription = response.projectDescription;
-            this.projectName = response.projectName;
-            this.projectVersion = response.projectVersion;
-            this.regionId = response.regionId;
+        private Builder(CreateAntChainContractProjectRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.consortiumId = request.consortiumId;
+            this.projectDescription = request.projectDescription;
+            this.projectName = request.projectName;
+            this.projectVersion = request.projectVersion;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConsortiumId.
@@ -145,15 +153,6 @@ public class CreateAntChainContractProjectRequest extends Request {
         public Builder projectVersion(String projectVersion) {
             this.putBodyParameter("ProjectVersion", projectVersion);
             this.projectVersion = projectVersion;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

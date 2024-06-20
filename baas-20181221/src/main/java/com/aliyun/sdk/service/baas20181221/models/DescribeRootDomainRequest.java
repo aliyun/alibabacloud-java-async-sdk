@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRootDomainRequest</p>
  */
 public class DescribeRootDomainRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private DescribeRootDomainRequest(Builder builder) {
@@ -48,9 +47,9 @@ public class DescribeRootDomainRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeRootDomainRequest response) {
-            super(response);
-            this.regionId = response.regionId;
+        private Builder(DescribeRootDomainRequest request) {
+            super(request);
+            this.regionId = request.regionId;
         } 
 
         /**

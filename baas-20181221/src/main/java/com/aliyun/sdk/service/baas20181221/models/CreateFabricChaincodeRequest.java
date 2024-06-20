@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,46 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricChaincodeRequest</p>
  */
 public class CreateFabricChaincodeRequest extends Request {
-    @Body
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelId;
 
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("EndorsePolicy")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndorsePolicy")
     private String endorsePolicy;
 
-    @Body
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
-    @Body
-    @NameInMap("OssBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossBucket;
 
-    @Body
-    @NameInMap("OssUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OssUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ossUrl;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private CreateFabricChaincodeRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.channelId = builder.channelId;
         this.consortiumId = builder.consortiumId;
         this.endorsePolicy = builder.endorsePolicy;
@@ -58,7 +58,6 @@ public class CreateFabricChaincodeRequest extends Request {
         this.organizationId = builder.organizationId;
         this.ossBucket = builder.ossBucket;
         this.ossUrl = builder.ossUrl;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -72,6 +71,13 @@ public class CreateFabricChaincodeRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
     }
 
     /**
@@ -123,14 +129,8 @@ public class CreateFabricChaincodeRequest extends Request {
         return this.ossUrl;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<CreateFabricChaincodeRequest, Builder> {
+        private String regionId; 
         private String channelId; 
         private String consortiumId; 
         private String endorsePolicy; 
@@ -138,23 +138,31 @@ public class CreateFabricChaincodeRequest extends Request {
         private String organizationId; 
         private String ossBucket; 
         private String ossUrl; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(CreateFabricChaincodeRequest response) {
-            super(response);
-            this.channelId = response.channelId;
-            this.consortiumId = response.consortiumId;
-            this.endorsePolicy = response.endorsePolicy;
-            this.location = response.location;
-            this.organizationId = response.organizationId;
-            this.ossBucket = response.ossBucket;
-            this.ossUrl = response.ossUrl;
-            this.regionId = response.regionId;
+        private Builder(CreateFabricChaincodeRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.channelId = request.channelId;
+            this.consortiumId = request.consortiumId;
+            this.endorsePolicy = request.endorsePolicy;
+            this.location = request.location;
+            this.organizationId = request.organizationId;
+            this.ossBucket = request.ossBucket;
+            this.ossUrl = request.ossUrl;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ChannelId.
@@ -216,15 +224,6 @@ public class CreateFabricChaincodeRequest extends Request {
         public Builder ossUrl(String ossUrl) {
             this.putBodyParameter("OssUrl", ossUrl);
             this.ossUrl = ossUrl;
-            return this;
-        }
-
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
             return this;
         }
 

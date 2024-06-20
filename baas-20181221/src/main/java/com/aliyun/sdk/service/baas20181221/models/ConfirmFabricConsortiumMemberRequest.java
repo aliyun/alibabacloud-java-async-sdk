@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20181221.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConfirmFabricConsortiumMemberRequest</p>
  */
 public class ConfirmFabricConsortiumMemberRequest extends Request {
-    @Query
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Query
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Organization> organization;
-
-    @Host
-    @NameInMap("RegionId")
-    private String regionId;
 
     private ConfirmFabricConsortiumMemberRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.consortiumId = builder.consortiumId;
         this.organization = builder.organization;
-        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -47,6 +46,13 @@ public class ConfirmFabricConsortiumMemberRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return consortiumId
      */
     public String getConsortiumId() {
@@ -60,28 +66,30 @@ public class ConfirmFabricConsortiumMemberRequest extends Request {
         return this.organization;
     }
 
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
-    }
-
     public static final class Builder extends Request.Builder<ConfirmFabricConsortiumMemberRequest, Builder> {
+        private String regionId; 
         private String consortiumId; 
         private java.util.List < Organization> organization; 
-        private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ConfirmFabricConsortiumMemberRequest response) {
-            super(response);
-            this.consortiumId = response.consortiumId;
-            this.organization = response.organization;
-            this.regionId = response.regionId;
+        private Builder(ConfirmFabricConsortiumMemberRequest request) {
+            super(request);
+            this.regionId = request.regionId;
+            this.consortiumId = request.consortiumId;
+            this.organization = request.organization;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * ConsortiumId.
@@ -101,15 +109,6 @@ public class ConfirmFabricConsortiumMemberRequest extends Request {
             return this;
         }
 
-        /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
         @Override
         public ConfirmFabricConsortiumMemberRequest build() {
             return new ConfirmFabricConsortiumMemberRequest(this);
@@ -118,7 +117,8 @@ public class ConfirmFabricConsortiumMemberRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String organizationId;
 
         private Organization(Builder builder) {
