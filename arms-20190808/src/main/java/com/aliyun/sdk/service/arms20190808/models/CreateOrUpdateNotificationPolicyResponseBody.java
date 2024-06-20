@@ -734,6 +734,9 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SendRecoverMessage")
         private Boolean sendRecoverMessage;
 
+        @com.aliyun.core.annotation.NameInMap("State")
+        private String state;
+
         private NotificationPolicy(Builder builder) {
             this.directedMode = builder.directedMode;
             this.escalationPolicyId = builder.escalationPolicyId;
@@ -747,6 +750,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             this.repeat = builder.repeat;
             this.repeatInterval = builder.repeatInterval;
             this.sendRecoverMessage = builder.sendRecoverMessage;
+            this.state = builder.state;
         }
 
         public static Builder builder() {
@@ -841,6 +845,13 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             return this.sendRecoverMessage;
         }
 
+        /**
+         * @return state
+         */
+        public String getState() {
+            return this.state;
+        }
+
         public static final class Builder {
             private Boolean directedMode; 
             private Long escalationPolicyId; 
@@ -854,6 +865,7 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
             private Boolean repeat; 
             private Long repeatInterval; 
             private Boolean sendRecoverMessage; 
+            private String state; 
 
             /**
              * 极简模式
@@ -956,6 +968,14 @@ public class CreateOrUpdateNotificationPolicyResponseBody extends TeaModel {
              */
             public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
                 this.sendRecoverMessage = sendRecoverMessage;
+                return this;
+            }
+
+            /**
+             * State.
+             */
+            public Builder state(String state) {
+                this.state = state;
                 return this;
             }
 

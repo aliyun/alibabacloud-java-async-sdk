@@ -17,6 +17,7 @@ public class UploadRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("File")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String file;
 
     @com.aliyun.core.annotation.Query

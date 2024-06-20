@@ -44,6 +44,10 @@ public class CreateEnvironmentRequest extends Request {
     private String grafanaWorkspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InitEnvironment")
+    private Boolean initEnvironment;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ManagedType")
     private String managedType;
 
@@ -73,6 +77,7 @@ public class CreateEnvironmentRequest extends Request {
         this.environmentType = builder.environmentType;
         this.feePackage = builder.feePackage;
         this.grafanaWorkspaceId = builder.grafanaWorkspaceId;
+        this.initEnvironment = builder.initEnvironment;
         this.managedType = builder.managedType;
         this.prometheusInstanceId = builder.prometheusInstanceId;
         this.regionId = builder.regionId;
@@ -143,6 +148,13 @@ public class CreateEnvironmentRequest extends Request {
     }
 
     /**
+     * @return initEnvironment
+     */
+    public Boolean getInitEnvironment() {
+        return this.initEnvironment;
+    }
+
+    /**
      * @return managedType
      */
     public String getManagedType() {
@@ -185,6 +197,7 @@ public class CreateEnvironmentRequest extends Request {
         private String environmentType; 
         private String feePackage; 
         private String grafanaWorkspaceId; 
+        private Boolean initEnvironment; 
         private String managedType; 
         private String prometheusInstanceId; 
         private String regionId; 
@@ -204,6 +217,7 @@ public class CreateEnvironmentRequest extends Request {
             this.environmentType = request.environmentType;
             this.feePackage = request.feePackage;
             this.grafanaWorkspaceId = request.grafanaWorkspaceId;
+            this.initEnvironment = request.initEnvironment;
             this.managedType = request.managedType;
             this.prometheusInstanceId = request.prometheusInstanceId;
             this.regionId = request.regionId;
@@ -316,6 +330,15 @@ public class CreateEnvironmentRequest extends Request {
         public Builder grafanaWorkspaceId(String grafanaWorkspaceId) {
             this.putQueryParameter("GrafanaWorkspaceId", grafanaWorkspaceId);
             this.grafanaWorkspaceId = grafanaWorkspaceId;
+            return this;
+        }
+
+        /**
+         * InitEnvironment.
+         */
+        public Builder initEnvironment(Boolean initEnvironment) {
+            this.putQueryParameter("InitEnvironment", initEnvironment);
+            this.initEnvironment = initEnvironment;
             return this;
         }
 

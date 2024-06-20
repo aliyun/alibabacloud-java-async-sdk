@@ -65,6 +65,10 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("SendRecoverMessage")
     private Boolean sendRecoverMessage;
 
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("State")
+    private String state;
+
     private CreateOrUpdateNotificationPolicyRequest(Builder builder) {
         super(builder);
         this.directedMode = builder.directedMode;
@@ -80,6 +84,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         this.repeat = builder.repeat;
         this.repeatInterval = builder.repeatInterval;
         this.sendRecoverMessage = builder.sendRecoverMessage;
+        this.state = builder.state;
     }
 
     public static Builder builder() {
@@ -186,6 +191,13 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         return this.sendRecoverMessage;
     }
 
+    /**
+     * @return state
+     */
+    public String getState() {
+        return this.state;
+    }
+
     public static final class Builder extends Request.Builder<CreateOrUpdateNotificationPolicyRequest, Builder> {
         private Boolean directedMode; 
         private Long escalationPolicyId; 
@@ -200,6 +212,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         private Boolean repeat; 
         private Long repeatInterval; 
         private Boolean sendRecoverMessage; 
+        private String state; 
 
         private Builder() {
             super();
@@ -220,6 +233,7 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
             this.repeat = request.repeat;
             this.repeatInterval = request.repeatInterval;
             this.sendRecoverMessage = request.sendRecoverMessage;
+            this.state = request.state;
         } 
 
         /**
@@ -396,6 +410,15 @@ public class CreateOrUpdateNotificationPolicyRequest extends Request {
         public Builder sendRecoverMessage(Boolean sendRecoverMessage) {
             this.putBodyParameter("SendRecoverMessage", sendRecoverMessage);
             this.sendRecoverMessage = sendRecoverMessage;
+            return this;
+        }
+
+        /**
+         * State.
+         */
+        public Builder state(String state) {
+            this.putBodyParameter("State", state);
+            this.state = state;
             return this;
         }
 

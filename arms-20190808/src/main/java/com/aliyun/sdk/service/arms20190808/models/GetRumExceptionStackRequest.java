@@ -32,6 +32,10 @@ public class GetRumExceptionStackRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourcemapType")
+    private String sourcemapType;
+
     private GetRumExceptionStackRequest(Builder builder) {
         super(builder);
         this.exceptionBinaryImages = builder.exceptionBinaryImages;
@@ -39,6 +43,7 @@ public class GetRumExceptionStackRequest extends Request {
         this.exceptionThreadId = builder.exceptionThreadId;
         this.pid = builder.pid;
         this.regionId = builder.regionId;
+        this.sourcemapType = builder.sourcemapType;
     }
 
     public static Builder builder() {
@@ -89,12 +94,20 @@ public class GetRumExceptionStackRequest extends Request {
         return this.regionId;
     }
 
+    /**
+     * @return sourcemapType
+     */
+    public String getSourcemapType() {
+        return this.sourcemapType;
+    }
+
     public static final class Builder extends Request.Builder<GetRumExceptionStackRequest, Builder> {
         private String exceptionBinaryImages; 
         private String exceptionStack; 
         private String exceptionThreadId; 
         private String pid; 
         private String regionId; 
+        private String sourcemapType; 
 
         private Builder() {
             super();
@@ -107,6 +120,7 @@ public class GetRumExceptionStackRequest extends Request {
             this.exceptionThreadId = request.exceptionThreadId;
             this.pid = request.pid;
             this.regionId = request.regionId;
+            this.sourcemapType = request.sourcemapType;
         } 
 
         /**
@@ -151,6 +165,15 @@ public class GetRumExceptionStackRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SourcemapType.
+         */
+        public Builder sourcemapType(String sourcemapType) {
+            this.putQueryParameter("SourcemapType", sourcemapType);
+            this.sourcemapType = sourcemapType;
             return this;
         }
 

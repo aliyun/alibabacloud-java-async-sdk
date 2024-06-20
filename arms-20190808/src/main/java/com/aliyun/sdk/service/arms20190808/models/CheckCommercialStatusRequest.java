@@ -17,6 +17,7 @@ public class CheckCommercialStatusRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Service")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String service;
 
     private CheckCommercialStatusRequest(Builder builder) {
