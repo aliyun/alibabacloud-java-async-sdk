@@ -511,6 +511,9 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MaliciousRuleStatus")
         private String maliciousRuleStatus;
 
+        @com.aliyun.core.annotation.NameInMap("MarkList")
+        private java.util.List < String > markList;
+
         @com.aliyun.core.annotation.NameInMap("MarkMisRules")
         private String markMisRules;
 
@@ -593,6 +596,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             this.lastTimeStamp = builder.lastTimeStamp;
             this.level = builder.level;
             this.maliciousRuleStatus = builder.maliciousRuleStatus;
+            this.markList = builder.markList;
             this.markMisRules = builder.markMisRules;
             this.name = builder.name;
             this.occurrenceTime = builder.occurrenceTime;
@@ -891,6 +895,13 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
         }
 
         /**
+         * @return markList
+         */
+        public java.util.List < String > getMarkList() {
+            return this.markList;
+        }
+
+        /**
          * @return markMisRules
          */
         public String getMarkMisRules() {
@@ -1028,6 +1039,7 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
             private Long lastTimeStamp; 
             private String level; 
             private String maliciousRuleStatus; 
+            private java.util.List < String > markList; 
             private String markMisRules; 
             private String name; 
             private String occurrenceTime; 
@@ -1394,6 +1406,14 @@ public class DescribeSuspEventsResponseBody extends TeaModel {
              */
             public Builder maliciousRuleStatus(String maliciousRuleStatus) {
                 this.maliciousRuleStatus = maliciousRuleStatus;
+                return this;
+            }
+
+            /**
+             * MarkList.
+             */
+            public Builder markList(java.util.List < String > markList) {
+                this.markList = markList;
                 return this;
             }
 

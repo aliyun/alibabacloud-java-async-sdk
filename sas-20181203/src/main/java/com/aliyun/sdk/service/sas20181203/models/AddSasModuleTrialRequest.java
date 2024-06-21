@@ -80,11 +80,11 @@ public class AddSasModuleTrialRequest extends Request {
         }
 
         /**
-         * The module code. Valid values:
+         * The code of the feature. Valid values:
          * <p>
          * 
-         * *   **vulFix**: vulnerability fixing
-         * *   **cloudSiem**: threat analysis
+         * *   **vulFix**: vulnerability fixing.
+         * *   **cloudSiem**: threat analysis and response.
          */
         public Builder moduleCode(String moduleCode) {
             this.putQueryParameter("ModuleCode", moduleCode);

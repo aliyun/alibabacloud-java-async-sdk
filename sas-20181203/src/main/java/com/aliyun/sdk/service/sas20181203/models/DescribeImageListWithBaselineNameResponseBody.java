@@ -61,7 +61,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The timestamp when the last baseline check was performed. Unit: milliseconds.
+         * The information about the images.
          */
         public Builder imageInfos(java.util.List < ImageInfos> imageInfos) {
             this.imageInfos = imageInfos;
@@ -533,7 +533,7 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
             }
 
             /**
-             * FirstScanTime.
+             * The timestamp generated when the first scan was performed. Unit: milliseconds.
              */
             public Builder firstScanTime(Long firstScanTime) {
                 this.firstScanTime = firstScanTime;
@@ -748,8 +748,8 @@ public class DescribeImageListWithBaselineNameResponseBody extends TeaModel {
              * The type of the asset on which the baseline check is performed. Valid values:
              * <p>
              * 
-             * - ECS_IMAGE: image
-             * - ECS_SNAPSHOT: snapshot
+             * *   ECS_IMAGE
+             * *   ECS_SNAPSHOT
              */
             public Builder targetType(String targetType) {
                 this.targetType = targetType;

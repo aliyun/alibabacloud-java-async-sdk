@@ -129,7 +129,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
         }
 
         /**
-         * RepairConfigs.
+         * The parameters required for fixing risk items.
          */
         public Builder repairConfigs(java.util.List < RepairConfigs> repairConfigs) {
             this.putQueryParameter("RepairConfigs", repairConfigs);
@@ -288,7 +288,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             private String value; 
 
             /**
-             * FlowId.
+             * The ID of the fixing process.
              */
             public Builder flowId(String flowId) {
                 this.flowId = flowId;
@@ -296,7 +296,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * The name of the parameter required for fixing a risk item, which is unique in a check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -312,7 +312,7 @@ public class ChangeCheckCustomConfigRequest extends Request {
             }
 
             /**
-             * The value of the custom configuration item. The value is a string.
+             * The value of the parameter required for fixing a risk item. The value is a string.
              */
             public Builder value(String value) {
                 this.value = value;

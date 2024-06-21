@@ -21,12 +21,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
     private Description description;
 
     @com.aliyun.core.annotation.NameInMap("RepairReset")
+    @Deprecated
     private String repairReset;
 
     @com.aliyun.core.annotation.NameInMap("RepairSetting")
     private RepairSetting repairSetting;
 
     @com.aliyun.core.annotation.NameInMap("RepairSupportType")
+    @Deprecated
     private Integer repairSupportType;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
@@ -539,11 +541,20 @@ public class GetCheckDetailResponseBody extends TeaModel {
 
     }
     public static class RepairConfigs extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConsoleParamType")
+        private String consoleParamType;
+
         @com.aliyun.core.annotation.NameInMap("CustomFlag")
         private Boolean customFlag;
 
+        @com.aliyun.core.annotation.NameInMap("DataTransformType")
+        private String dataTransformType;
+
         @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
+
+        @com.aliyun.core.annotation.NameInMap("EmptyParamSwitch")
+        private String emptyParamSwitch;
 
         @com.aliyun.core.annotation.NameInMap("ExclusiveName")
         private java.util.List < String > exclusiveName;
@@ -560,17 +571,24 @@ public class GetCheckDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TypeDefine")
         private String typeDefine;
 
+        @com.aliyun.core.annotation.NameInMap("UsageType")
+        private String usageType;
+
         @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private RepairConfigs(Builder builder) {
+            this.consoleParamType = builder.consoleParamType;
             this.customFlag = builder.customFlag;
+            this.dataTransformType = builder.dataTransformType;
             this.defaultValue = builder.defaultValue;
+            this.emptyParamSwitch = builder.emptyParamSwitch;
             this.exclusiveName = builder.exclusiveName;
             this.flowId = builder.flowId;
             this.name = builder.name;
             this.showName = builder.showName;
             this.typeDefine = builder.typeDefine;
+            this.usageType = builder.usageType;
             this.value = builder.value;
         }
 
@@ -583,6 +601,13 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return consoleParamType
+         */
+        public String getConsoleParamType() {
+            return this.consoleParamType;
+        }
+
+        /**
          * @return customFlag
          */
         public Boolean getCustomFlag() {
@@ -590,10 +615,24 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return dataTransformType
+         */
+        public String getDataTransformType() {
+            return this.dataTransformType;
+        }
+
+        /**
          * @return defaultValue
          */
         public String getDefaultValue() {
             return this.defaultValue;
+        }
+
+        /**
+         * @return emptyParamSwitch
+         */
+        public String getEmptyParamSwitch() {
+            return this.emptyParamSwitch;
         }
 
         /**
@@ -632,6 +671,13 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return usageType
+         */
+        public String getUsageType() {
+            return this.usageType;
+        }
+
+        /**
          * @return value
          */
         public String getValue() {
@@ -639,14 +685,26 @@ public class GetCheckDetailResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String consoleParamType; 
             private Boolean customFlag; 
+            private String dataTransformType; 
             private String defaultValue; 
+            private String emptyParamSwitch; 
             private java.util.List < String > exclusiveName; 
             private String flowId; 
             private String name; 
             private String showName; 
             private String typeDefine; 
+            private String usageType; 
             private String value; 
+
+            /**
+             * ConsoleParamType.
+             */
+            public Builder consoleParamType(String consoleParamType) {
+                this.consoleParamType = consoleParamType;
+                return this;
+            }
 
             /**
              * CustomFlag.
@@ -657,10 +715,26 @@ public class GetCheckDetailResponseBody extends TeaModel {
             }
 
             /**
+             * DataTransformType.
+             */
+            public Builder dataTransformType(String dataTransformType) {
+                this.dataTransformType = dataTransformType;
+                return this;
+            }
+
+            /**
              * The default value of the custom configuration item. The value is a string.
              */
             public Builder defaultValue(String defaultValue) {
                 this.defaultValue = defaultValue;
+                return this;
+            }
+
+            /**
+             * EmptyParamSwitch.
+             */
+            public Builder emptyParamSwitch(String emptyParamSwitch) {
+                this.emptyParamSwitch = emptyParamSwitch;
                 return this;
             }
 
@@ -701,6 +775,14 @@ public class GetCheckDetailResponseBody extends TeaModel {
              */
             public Builder typeDefine(String typeDefine) {
                 this.typeDefine = typeDefine;
+                return this;
+            }
+
+            /**
+             * UsageType.
+             */
+            public Builder usageType(String usageType) {
+                this.usageType = usageType;
                 return this;
             }
 

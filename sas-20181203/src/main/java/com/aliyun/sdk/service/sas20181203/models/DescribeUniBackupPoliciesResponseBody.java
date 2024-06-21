@@ -421,10 +421,10 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
              * The status of the agent. Valid values:
              * <p>
              * 
-             * *   **UNKNOWN**: unknown
-             * *   **INSTALLED**: installed
-             * *   **INSTALL_FAILED**: installation failed
-             * *   **UNINSTALL_FAILED**: uninstallation failed
+             * *   **UNKNOWN**
+             * *   **INSTALLED**
+             * *   **INSTALL_FAILED**
+             * *   **UNINSTALL_FAILED**
              */
             public Builder agentStatus(String agentStatus) {
                 this.agentStatus = agentStatus;
@@ -524,12 +524,12 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
              * The status of the backup task. Valid values:
              * <p>
              * 
-             * *   **init**: initializing
-             * *   **running**: running
-             * *   **completed**: complete
-             * *   **restoring**: restoring
-             * *   **creating**: creating
-             * *   **created**: created
+             * *   **init**
+             * *   **running**
+             * *   **completed**
+             * *   **restoring**
+             * *   **creating**
+             * *   **created**
              */
             public Builder planStatus(String planStatus) {
                 this.planStatus = planStatus;
@@ -556,10 +556,12 @@ public class DescribeUniBackupPoliciesResponseBody extends TeaModel {
              * The status of the anti-ransomware policy. Valid values:
              * <p>
              * 
-             * *   **initiating**: initializing
-             * *   **opening**: enabled
-             * *   **closing**: disabled
-             * *   **deleting**: deleting
+             * *   **initiating**
+             * *   **opening**
+             * *   **closing**
+             * *   **deleting**
+             * *   **enabled**
+             * *   **disabled**
              */
             public Builder policyStatus(String policyStatus) {
                 this.policyStatus = policyStatus;

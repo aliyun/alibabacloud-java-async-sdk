@@ -157,7 +157,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             private Integer status; 
 
             /**
-             * The purchased quota.
+             * The quota.
              */
             public Builder authLimit(Long authLimit) {
                 this.authLimit = authLimit;
@@ -165,7 +165,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * List of purchased quotas.
+             * The list of quotas. This parameter is available if the value of the ModuleCode parameter is cloudSiem. The value of this parameter consists of the log storage capacity for the threat analysis and response feature and the log data to add. Units: GB and GB-day.
              */
             public Builder authLimitList(String authLimitList) {
                 this.authLimitList = authLimitList;
@@ -189,11 +189,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the module. Valid values:
+             * The code of the feature. Valid values:
              * <p>
              * 
-             * *   **vulFix**: vulnerability fixing
-             * *   **cloudSiem**: threat analysis
+             * *   **vulFix**: vulnerability fixing.
+             * *   **cloudSiem**: threat analysis and response.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -204,8 +204,8 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
              * The status of the trial use. Valid values:
              * <p>
              * 
-             * *   **1**: enabled
-             * *   **0**: finished
+             * *   **1**: The feature is in trial use.
+             * *   **0**: The trial use ends.
              */
             public Builder status(Integer status) {
                 this.status = status;
@@ -282,11 +282,11 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The module code. Valid values:
+             * The code of the feature. Valid values:
              * <p>
              * 
-             * *   **vulFix**: vulnerability fixing
-             * *   **cloudSiem**: threat analysis
+             * *   **vulFix**: vulnerability fixing.
+             * *   **cloudSiem**: threat analysis and response.
              */
             public Builder moduleCode(String moduleCode) {
                 this.moduleCode = moduleCode;
@@ -294,7 +294,7 @@ public class GetModuleTrialAuthInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the trial use.
+             * The trial use record.
              */
             public Builder trialRecordList(java.util.List < TrialRecordList> trialRecordList) {
                 this.trialRecordList = trialRecordList;

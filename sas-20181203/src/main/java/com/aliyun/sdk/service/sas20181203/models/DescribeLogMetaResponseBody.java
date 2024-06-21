@@ -240,9 +240,9 @@ public class DescribeLogMetaResponseBody extends TeaModel {
              * The category of logs. Valid values:
              * <p>
              * 
-             * *   **host**: host logs
-             * *   **network**: network logs
-             * *   **security**: security logs
+             * *   **host**
+             * *   **network**
+             * *   **security**
              */
             public Builder category(String category) {
                 this.category = category;
@@ -253,7 +253,7 @@ public class DescribeLogMetaResponseBody extends TeaModel {
              * The time period after which logs in hot storage are moved to cold storage. Unit: days.
              * <p>
              * 
-             * >  If the value is **-1**, logs that are stored in hot storage are not moved to cold storage.
+             * >  If the value is -1, logs that are stored in hot storage are not moved to cold storage.
              */
             public Builder hotTtl(Integer hotTtl) {
                 this.hotTtl = hotTtl;

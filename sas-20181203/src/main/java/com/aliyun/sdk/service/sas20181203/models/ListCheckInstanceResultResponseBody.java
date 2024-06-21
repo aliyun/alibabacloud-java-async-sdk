@@ -181,7 +181,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Name.
+             * The name of the configuration item, which is unique.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +189,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * ShowName.
+             * The display name of the configuration item for internationalization.
              */
             public Builder showName(String showName) {
                 this.showName = showName;
@@ -197,7 +197,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the configuration item specified for the instance.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -262,7 +262,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private Long lastUpdateTime; 
 
             /**
-             * Config.
+             * The information about the configuration item whose risks are fixed for the instance.
              */
             public Builder config(java.util.List < Config> config) {
                 this.config = config;
@@ -270,7 +270,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * FirstUpdateTime.
+             * The time of the first check.
              */
             public Builder firstUpdateTime(Long firstUpdateTime) {
                 this.firstUpdateTime = firstUpdateTime;
@@ -278,7 +278,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * LastUpdateTime.
+             * The time of the last check.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -391,7 +391,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             private String statusMessage; 
 
             /**
-             * The check result ID of the instance.
+             * The ID of the check result for the instance.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -407,7 +407,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceInfo.
+             * The information about the instance on which the check item is used.
              */
             public Builder instanceInfo(InstanceInfo instanceInfo) {
                 this.instanceInfo = instanceInfo;
@@ -415,7 +415,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The instance name.
+             * The instance name of the server.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -423,7 +423,7 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the instance resides.
+             * The region ID of the instance.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -434,11 +434,11 @@ public class ListCheckInstanceResultResponseBody extends TeaModel {
              * The states of check items. Multiple states are separated with commas (,). Valid values:
              * <p>
              * 
-             * *   **PASS**: The instance passed the check.
-             * *   **NOT_PASS**: The instance failed to pass the check.
-             * *   **CHECKING**: The instance is being checked.
-             * *   **NOT_CHECK**: The instance is not checked.
-             * *   **WHITELIST**: The instance is in the whitelist.
+             * *   **PASS**: passed
+             * *   **NOT_PASS**: failed
+             * *   **CHECKING**: being checked
+             * *   **NOT_CHECK**: not checked
+             * *   **WHITELIST**: added to the whitelist
              */
             public Builder status(String status) {
                 this.status = status;

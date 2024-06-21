@@ -69,7 +69,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
         }
 
         /**
-         * IllegalRepairConfigs.
+         * An array that consists of the invalid parameters required for fixing risk items.
          */
         public Builder illegalRepairConfigs(java.util.List < IllegalRepairConfigs> illegalRepairConfigs) {
             this.illegalRepairConfigs = illegalRepairConfigs;
@@ -117,7 +117,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * The name of the custom configuration item, which is unique in a check item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -158,7 +158,7 @@ public class ChangeCheckCustomConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the custom configuration item. The name of a custom configuration item is unique in a check item.
+             * The name of the invalid parameter required for fixing a risk item.
              */
             public Builder name(String name) {
                 this.name = name;

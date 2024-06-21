@@ -40,6 +40,10 @@ public class ListFileProtectEventRequest extends Request {
     private String intranetIp;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    private String operation;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
     @com.aliyun.core.annotation.Validation(maxLength = 100, minLength = 1)
     private String pageSize;
@@ -69,6 +73,7 @@ public class ListFileProtectEventRequest extends Request {
         this.instanceName = builder.instanceName;
         this.internetIp = builder.internetIp;
         this.intranetIp = builder.intranetIp;
+        this.operation = builder.operation;
         this.pageSize = builder.pageSize;
         this.ruleName = builder.ruleName;
         this.startTime = builder.startTime;
@@ -139,6 +144,13 @@ public class ListFileProtectEventRequest extends Request {
     }
 
     /**
+     * @return operation
+     */
+    public String getOperation() {
+        return this.operation;
+    }
+
+    /**
      * @return pageSize
      */
     public String getPageSize() {
@@ -181,6 +193,7 @@ public class ListFileProtectEventRequest extends Request {
         private String instanceName; 
         private String internetIp; 
         private String intranetIp; 
+        private String operation; 
         private String pageSize; 
         private String ruleName; 
         private Long startTime; 
@@ -200,6 +213,7 @@ public class ListFileProtectEventRequest extends Request {
             this.instanceName = request.instanceName;
             this.internetIp = request.internetIp;
             this.intranetIp = request.intranetIp;
+            this.operation = request.operation;
             this.pageSize = request.pageSize;
             this.ruleName = request.ruleName;
             this.startTime = request.startTime;
@@ -267,6 +281,22 @@ public class ListFileProtectEventRequest extends Request {
         public Builder intranetIp(String intranetIp) {
             this.putQueryParameter("IntranetIp", intranetIp);
             this.intranetIp = intranetIp;
+            return this;
+        }
+
+        /**
+         * Type of operation on a file. eg:
+         * <p>
+         * 
+         * - **DELETE**: delete the file.
+         * - **WRITE**: write the file.
+         * - **READ**: read the file.
+         * - **RENAME**: rename the file.
+         * - **CHOWN**: set the file owner and file association group operations.
+         */
+        public Builder operation(String operation) {
+            this.putQueryParameter("Operation", operation);
+            this.operation = operation;
             return this;
         }
 

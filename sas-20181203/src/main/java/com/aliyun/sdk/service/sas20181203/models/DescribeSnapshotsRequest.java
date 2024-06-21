@@ -205,7 +205,7 @@ public class DescribeSnapshotsRequest extends Request {
          * The region in which the server resides.
          * <p>
          * 
-         * > This parameter is required if you do not specify the Uuid parameter.
+         * >  If the Uuid parameter is not specified, this parameter is required.
          */
         public Builder machineRegion(String machineRegion) {
             this.putQueryParameter("MachineRegion", machineRegion);
