@@ -20,6 +20,10 @@ public class AddGatewayRequest extends Request {
     private String chargeType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClbNetworkType")
+    private String clbNetworkType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableHardwareAcceleration")
     private Boolean enableHardwareAcceleration;
 
@@ -105,6 +109,7 @@ public class AddGatewayRequest extends Request {
         super(builder);
         this.acceptLanguage = builder.acceptLanguage;
         this.chargeType = builder.chargeType;
+        this.clbNetworkType = builder.clbNetworkType;
         this.enableHardwareAcceleration = builder.enableHardwareAcceleration;
         this.enableSls = builder.enableSls;
         this.enableXtrace = builder.enableXtrace;
@@ -152,6 +157,13 @@ public class AddGatewayRequest extends Request {
      */
     public String getChargeType() {
         return this.chargeType;
+    }
+
+    /**
+     * @return clbNetworkType
+     */
+    public String getClbNetworkType() {
+        return this.clbNetworkType;
     }
 
     /**
@@ -297,6 +309,7 @@ public class AddGatewayRequest extends Request {
     public static final class Builder extends Request.Builder<AddGatewayRequest, Builder> {
         private String acceptLanguage; 
         private String chargeType; 
+        private String clbNetworkType; 
         private Boolean enableHardwareAcceleration; 
         private Boolean enableSls; 
         private Boolean enableXtrace; 
@@ -326,6 +339,7 @@ public class AddGatewayRequest extends Request {
             super(request);
             this.acceptLanguage = request.acceptLanguage;
             this.chargeType = request.chargeType;
+            this.clbNetworkType = request.clbNetworkType;
             this.enableHardwareAcceleration = request.enableHardwareAcceleration;
             this.enableSls = request.enableSls;
             this.enableXtrace = request.enableXtrace;
@@ -394,6 +408,15 @@ public class AddGatewayRequest extends Request {
         public Builder chargeType(String chargeType) {
             this.putQueryParameter("ChargeType", chargeType);
             this.chargeType = chargeType;
+            return this;
+        }
+
+        /**
+         * ClbNetworkType.
+         */
+        public Builder clbNetworkType(String clbNetworkType) {
+            this.putQueryParameter("ClbNetworkType", clbNetworkType);
+            this.clbNetworkType = clbNetworkType;
             return this;
         }
 
