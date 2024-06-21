@@ -43,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeAppKeyResponse> describeAppKey(DescribeAppKeyRequest request);
 
+    CompletableFuture<DescribeAppRecordingFilesResponse> describeAppRecordingFiles(DescribeAppRecordingFilesRequest request);
+
     CompletableFuture<DescribeAppStreamingOutTemplatesResponse> describeAppStreamingOutTemplates(DescribeAppStreamingOutTemplatesRequest request);
 
     CompletableFuture<DescribeAppsResponse> describeApps(DescribeAppsRequest request);
