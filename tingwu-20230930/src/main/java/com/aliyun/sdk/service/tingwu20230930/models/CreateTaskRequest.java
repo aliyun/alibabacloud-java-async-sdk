@@ -520,11 +520,15 @@ public class CreateTaskRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("OcrAuxiliaryEnabled")
         private Boolean ocrAuxiliaryEnabled;
 
+        @com.aliyun.core.annotation.NameInMap("TranslateLlmSceneEnabled")
+        private Boolean translateLlmSceneEnabled;
+
         private ExtraParams(Builder builder) {
             this.domainEducationEnabled = builder.domainEducationEnabled;
             this.maxKeywords = builder.maxKeywords;
             this.nfixEnabled = builder.nfixEnabled;
             this.ocrAuxiliaryEnabled = builder.ocrAuxiliaryEnabled;
+            this.translateLlmSceneEnabled = builder.translateLlmSceneEnabled;
         }
 
         public static Builder builder() {
@@ -563,11 +567,19 @@ public class CreateTaskRequest extends Request {
             return this.ocrAuxiliaryEnabled;
         }
 
+        /**
+         * @return translateLlmSceneEnabled
+         */
+        public Boolean getTranslateLlmSceneEnabled() {
+            return this.translateLlmSceneEnabled;
+        }
+
         public static final class Builder {
             private Boolean domainEducationEnabled; 
             private Integer maxKeywords; 
             private Boolean nfixEnabled; 
             private Boolean ocrAuxiliaryEnabled; 
+            private Boolean translateLlmSceneEnabled; 
 
             /**
              * DomainEducationEnabled.
@@ -598,6 +610,14 @@ public class CreateTaskRequest extends Request {
              */
             public Builder ocrAuxiliaryEnabled(Boolean ocrAuxiliaryEnabled) {
                 this.ocrAuxiliaryEnabled = ocrAuxiliaryEnabled;
+                return this;
+            }
+
+            /**
+             * TranslateLlmSceneEnabled.
+             */
+            public Builder translateLlmSceneEnabled(Boolean translateLlmSceneEnabled) {
+                this.translateLlmSceneEnabled = translateLlmSceneEnabled;
                 return this;
             }
 
