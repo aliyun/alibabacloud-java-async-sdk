@@ -331,6 +331,67 @@ public class ModifyChatappTemplateRequest extends Request {
 
     } 
 
+    public static class SupportedApps extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("PackageName")
+        private String packageName;
+
+        @com.aliyun.core.annotation.NameInMap("SignatureHash")
+        private String signatureHash;
+
+        private SupportedApps(Builder builder) {
+            this.packageName = builder.packageName;
+            this.signatureHash = builder.signatureHash;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SupportedApps create() {
+            return builder().build();
+        }
+
+        /**
+         * @return packageName
+         */
+        public String getPackageName() {
+            return this.packageName;
+        }
+
+        /**
+         * @return signatureHash
+         */
+        public String getSignatureHash() {
+            return this.signatureHash;
+        }
+
+        public static final class Builder {
+            private String packageName; 
+            private String signatureHash; 
+
+            /**
+             * PackageName.
+             */
+            public Builder packageName(String packageName) {
+                this.packageName = packageName;
+                return this;
+            }
+
+            /**
+             * SignatureHash.
+             */
+            public Builder signatureHash(String signatureHash) {
+                this.signatureHash = signatureHash;
+                return this;
+            }
+
+            public SupportedApps build() {
+                return new SupportedApps(this);
+            } 
+
+        } 
+
+    }
     public static class Buttons extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AutofillText")
         private String autofillText;
@@ -351,13 +412,18 @@ public class ModifyChatappTemplateRequest extends Request {
         private String navigateScreen;
 
         @com.aliyun.core.annotation.NameInMap("PackageName")
+        @Deprecated
         private String packageName;
 
         @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
         @com.aliyun.core.annotation.NameInMap("SignatureHash")
+        @Deprecated
         private String signatureHash;
+
+        @com.aliyun.core.annotation.NameInMap("SupportedApps")
+        private java.util.List < SupportedApps> supportedApps;
 
         @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
@@ -382,6 +448,7 @@ public class ModifyChatappTemplateRequest extends Request {
             this.packageName = builder.packageName;
             this.phoneNumber = builder.phoneNumber;
             this.signatureHash = builder.signatureHash;
+            this.supportedApps = builder.supportedApps;
             this.text = builder.text;
             this.type = builder.type;
             this.url = builder.url;
@@ -460,6 +527,13 @@ public class ModifyChatappTemplateRequest extends Request {
         }
 
         /**
+         * @return supportedApps
+         */
+        public java.util.List < SupportedApps> getSupportedApps() {
+            return this.supportedApps;
+        }
+
+        /**
          * @return text
          */
         public String getText() {
@@ -497,6 +571,7 @@ public class ModifyChatappTemplateRequest extends Request {
             private String packageName; 
             private String phoneNumber; 
             private String signatureHash; 
+            private java.util.List < SupportedApps> supportedApps; 
             private String text; 
             private String type; 
             private String url; 
@@ -571,6 +646,14 @@ public class ModifyChatappTemplateRequest extends Request {
              */
             public Builder signatureHash(String signatureHash) {
                 this.signatureHash = signatureHash;
+                return this;
+            }
+
+            /**
+             * SupportedApps.
+             */
+            public Builder supportedApps(java.util.List < SupportedApps> supportedApps) {
+                this.supportedApps = supportedApps;
                 return this;
             }
 
