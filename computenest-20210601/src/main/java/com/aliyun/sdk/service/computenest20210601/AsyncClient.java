@@ -43,4 +43,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopServiceInstanceResponse> stopServiceInstance(StopServiceInstanceRequest request);
 
+    CompletableFuture<UpdateServiceInstanceSpecResponse> updateServiceInstanceSpec(UpdateServiceInstanceSpecRequest request);
+
 }
