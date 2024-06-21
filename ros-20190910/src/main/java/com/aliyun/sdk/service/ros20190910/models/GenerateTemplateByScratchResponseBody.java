@@ -69,10 +69,10 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The resources that you want to import into a stack in the scenario.
+         * The resources that you want to import into a stack in the resource management scenario.
          * <p>
          * 
-         * > This parameter is returned only if the scenario is of the Resource Management type.
+         * > This parameter is returned only for a resource management scenario.
          */
         public Builder resourcesToImport(java.util.List < ResourcesToImport> resourcesToImport) {
             this.resourcesToImport = resourcesToImport;
@@ -80,7 +80,7 @@ public class GenerateTemplateByScratchResponseBody extends TeaModel {
         }
 
         /**
-         * The template content of the scenario.
+         * The template content of the resource scenario.
          */
         public Builder templateBody(String templateBody) {
             this.templateBody = templateBody;

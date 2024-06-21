@@ -279,6 +279,9 @@ public class UpdateTemplateScratchRequest extends Request {
 
         /**
          * The source resource group.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
          */
         public Builder sourceResourceGroup(SourceResourceGroup sourceResourceGroup) {
             String sourceResourceGroupShrink = shrink(sourceResourceGroup, "SourceResourceGroup", "json");
@@ -291,9 +294,7 @@ public class UpdateTemplateScratchRequest extends Request {
          * The source resources.
          * <p>
          * 
-         * If you specify SourceResources when TemplateScratchType is set to ArchitectureDetection, the system detects the architecture of all resources that are associated with the specified source resources. For example, if you set the value of SourceResources to an ID of a Classic Load Balancer (CLB) instance, the system detects the architecture of resources, such as Elastic Compute Service (ECS) instances, vSwitches, and virtual private clouds (VPCs), that are associated with the CLB instance.
-         * 
-         * If you set TemplateScratchType to ArchitectureDetection, you can specify up to 20 source resources for SourceResources. In other cases, you can specify up to 200 source resources.
+         * >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
          */
         public Builder sourceResources(java.util.List < SourceResources> sourceResources) {
             String sourceResourcesShrink = shrink(sourceResources, "SourceResources", "json");
@@ -304,6 +305,9 @@ public class UpdateTemplateScratchRequest extends Request {
 
         /**
          * The source tag.
+         * <p>
+         * 
+         * >  You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.
          */
         public Builder sourceTag(SourceTag sourceTag) {
             String sourceTagShrink = shrink(sourceTag, "SourceTag", "json");
@@ -313,7 +317,12 @@ public class UpdateTemplateScratchRequest extends Request {
         }
 
         /**
-         * The ID of the scenario.
+         * The ID of the resource scenario.
+         * <p>
+         * 
+         * The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the "Additional information about request parameters" section of this topic.
+         * 
+         * >  You can call the [ListTemplateScratches](~~610832~~) operation to query the ID of a resource scenario.
          */
         public Builder templateScratchId(String templateScratchId) {
             this.putQueryParameter("TemplateScratchId", templateScratchId);
@@ -450,7 +459,7 @@ public class UpdateTemplateScratchRequest extends Request {
             }
 
             /**
-             * The resource types.
+             * The resource types for filtering resources.
              */
             public Builder resourceTypeFilter(java.util.List < String > resourceTypeFilter) {
                 this.resourceTypeFilter = resourceTypeFilter;
@@ -567,12 +576,12 @@ public class UpdateTemplateScratchRequest extends Request {
             private java.util.List < String > resourceTypeFilter; 
 
             /**
-             * The source tags that consist of key-value pairs.
+             * The source tags. A tag contains a tag key and a tag value.
              * <p>
              * 
-             * If you want to specify only the tag key, you must set the tag value to an empty string. Example: {"TagKey": ""}.
+             * If you want to specify only the tag key, you must leave the tag value empty. Example: {"TagKey": ""}.
              * 
-             * If you set TemplateScratchType to ArchitectureDetection, you can add up to five source tags. In other cases, you can add up to 10 source tags.
+             * If you set TemplateScratchType to ArchitectureDetection, you can add up to 5 source tags. In other cases, you can add up to 10 source tags.
              */
             public Builder resourceTags(java.util.Map < String, ? > resourceTags) {
                 this.resourceTags = resourceTags;

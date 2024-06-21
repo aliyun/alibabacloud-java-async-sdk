@@ -81,7 +81,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
         }
 
         /**
-         * The registration records.
+         * The registration records of the resource.
          */
         public Builder registrations(java.util.List < Registrations> registrations) {
             this.registrations = registrations;
@@ -209,7 +209,7 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
             private String versionId; 
 
             /**
-             * The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
+             * The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -244,9 +244,9 @@ public class ListResourceTypeRegistrationsResponseBody extends TeaModel {
              * The registration state. Valid values:
              * <p>
              * 
-             * *   IN_PROGRESS
-             * *   COMPLETE
-             * *   FAILED
+             * *   IN_PROGRESS: The registration is in progress.
+             * *   COMPLETE: The registration is successful.
+             * *   FAILED: The registration failed.
              */
             public Builder status(String status) {
                 this.status = status;

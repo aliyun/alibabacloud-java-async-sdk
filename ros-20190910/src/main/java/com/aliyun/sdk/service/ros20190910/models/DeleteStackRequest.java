@@ -16,6 +16,10 @@ public class DeleteStackRequest extends Request {
     private java.util.List < String > deleteOptions;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Parallelism")
+    private Long parallelism;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RamRoleName")
     private String ramRoleName;
 
@@ -40,6 +44,7 @@ public class DeleteStackRequest extends Request {
     private DeleteStackRequest(Builder builder) {
         super(builder);
         this.deleteOptions = builder.deleteOptions;
+        this.parallelism = builder.parallelism;
         this.ramRoleName = builder.ramRoleName;
         this.regionId = builder.regionId;
         this.retainAllResources = builder.retainAllResources;
@@ -65,6 +70,13 @@ public class DeleteStackRequest extends Request {
      */
     public java.util.List < String > getDeleteOptions() {
         return this.deleteOptions;
+    }
+
+    /**
+     * @return parallelism
+     */
+    public Long getParallelism() {
+        return this.parallelism;
     }
 
     /**
@@ -104,6 +116,7 @@ public class DeleteStackRequest extends Request {
 
     public static final class Builder extends Request.Builder<DeleteStackRequest, Builder> {
         private java.util.List < String > deleteOptions; 
+        private Long parallelism; 
         private String ramRoleName; 
         private String regionId; 
         private Boolean retainAllResources; 
@@ -117,6 +130,7 @@ public class DeleteStackRequest extends Request {
         private Builder(DeleteStackRequest request) {
             super(request);
             this.deleteOptions = request.deleteOptions;
+            this.parallelism = request.parallelism;
             this.ramRoleName = request.ramRoleName;
             this.regionId = request.regionId;
             this.retainAllResources = request.retainAllResources;
@@ -130,6 +144,15 @@ public class DeleteStackRequest extends Request {
         public Builder deleteOptions(java.util.List < String > deleteOptions) {
             this.putQueryParameter("DeleteOptions", deleteOptions);
             this.deleteOptions = deleteOptions;
+            return this;
+        }
+
+        /**
+         * Parallelism.
+         */
+        public Builder parallelism(Long parallelism) {
+            this.putQueryParameter("Parallelism", parallelism);
+            this.parallelism = parallelism;
             return this;
         }
 

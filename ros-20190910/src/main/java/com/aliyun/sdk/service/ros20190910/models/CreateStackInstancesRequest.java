@@ -376,10 +376,14 @@ public class CreateStackInstancesRequest extends Request {
     } 
 
     public static class DeploymentTargets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AccountIds")
+        private java.util.List < String > accountIds;
+
         @com.aliyun.core.annotation.NameInMap("RdFolderIds")
         private java.util.List < String > rdFolderIds;
 
         private DeploymentTargets(Builder builder) {
+            this.accountIds = builder.accountIds;
             this.rdFolderIds = builder.rdFolderIds;
         }
 
@@ -392,6 +396,13 @@ public class CreateStackInstancesRequest extends Request {
         }
 
         /**
+         * @return accountIds
+         */
+        public java.util.List < String > getAccountIds() {
+            return this.accountIds;
+        }
+
+        /**
          * @return rdFolderIds
          */
         public java.util.List < String > getRdFolderIds() {
@@ -399,7 +410,19 @@ public class CreateStackInstancesRequest extends Request {
         }
 
         public static final class Builder {
+            private java.util.List < String > accountIds; 
             private java.util.List < String > rdFolderIds; 
+
+            /**
+             * The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.
+             * <p>
+             * 
+             * > You must specify one of the following parameters: `AccountIds` and `DeploymentTargets`.
+             */
+            public Builder accountIds(java.util.List < String > accountIds) {
+                this.accountIds = accountIds;
+                return this;
+            }
 
             /**
              * The folder IDs of the resource directory. You can add up to five folder IDs.
