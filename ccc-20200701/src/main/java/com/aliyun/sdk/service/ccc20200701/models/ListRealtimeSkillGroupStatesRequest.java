@@ -17,6 +17,10 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
+    private String mediaType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNumber;
@@ -33,6 +37,7 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
     private ListRealtimeSkillGroupStatesRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.skillGroupIdList = builder.skillGroupIdList;
@@ -59,6 +64,13 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
     }
 
     /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
+    }
+
+    /**
      * @return pageNumber
      */
     public Integer getPageNumber() {
@@ -81,6 +93,7 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListRealtimeSkillGroupStatesRequest, Builder> {
         private String instanceId; 
+        private String mediaType; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String skillGroupIdList; 
@@ -92,6 +105,7 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
         private Builder(ListRealtimeSkillGroupStatesRequest request) {
             super(request);
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.skillGroupIdList = request.skillGroupIdList;
@@ -103,6 +117,15 @@ public class ListRealtimeSkillGroupStatesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 

@@ -29,6 +29,10 @@ public class ListRealtimeAgentStatesRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
+    private String mediaType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OutboundScenario")
     private Boolean outboundScenario;
 
@@ -64,6 +68,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         this.agentName = builder.agentName;
         this.callTypeList = builder.callTypeList;
         this.instanceId = builder.instanceId;
+        this.mediaType = builder.mediaType;
         this.outboundScenario = builder.outboundScenario;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
@@ -112,6 +117,13 @@ public class ListRealtimeAgentStatesRequest extends Request {
      */
     public String getInstanceId() {
         return this.instanceId;
+    }
+
+    /**
+     * @return mediaType
+     */
+    public String getMediaType() {
+        return this.mediaType;
     }
 
     /**
@@ -168,6 +180,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
         private String agentName; 
         private String callTypeList; 
         private String instanceId; 
+        private String mediaType; 
         private Boolean outboundScenario; 
         private Integer pageNumber; 
         private Integer pageSize; 
@@ -186,6 +199,7 @@ public class ListRealtimeAgentStatesRequest extends Request {
             this.agentName = request.agentName;
             this.callTypeList = request.callTypeList;
             this.instanceId = request.instanceId;
+            this.mediaType = request.mediaType;
             this.outboundScenario = request.outboundScenario;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
@@ -228,6 +242,15 @@ public class ListRealtimeAgentStatesRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * MediaType.
+         */
+        public Builder mediaType(String mediaType) {
+            this.putQueryParameter("MediaType", mediaType);
+            this.mediaType = mediaType;
             return this;
         }
 
