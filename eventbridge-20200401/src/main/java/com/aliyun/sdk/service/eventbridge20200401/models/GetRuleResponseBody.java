@@ -130,6 +130,47 @@ public class GetRuleResponseBody extends TeaModel {
 
     } 
 
+    public static class ConcurrentConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Concurrency")
+        private Long concurrency;
+
+        private ConcurrentConfig(Builder builder) {
+            this.concurrency = builder.concurrency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ConcurrentConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return concurrency
+         */
+        public Long getConcurrency() {
+            return this.concurrency;
+        }
+
+        public static final class Builder {
+            private Long concurrency; 
+
+            /**
+             * Concurrency.
+             */
+            public Builder concurrency(Long concurrency) {
+                this.concurrency = concurrency;
+                return this;
+            }
+
+            public ConcurrentConfig build() {
+                return new ConcurrentConfig(this);
+            } 
+
+        } 
+
+    }
     public static class DeadLetterQueue extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Arn")
         private String arn;
@@ -273,6 +314,9 @@ public class GetRuleResponseBody extends TeaModel {
 
     }
     public static class Targets extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ConcurrentConfig")
+        private ConcurrentConfig concurrentConfig;
+
         @com.aliyun.core.annotation.NameInMap("DeadLetterQueue")
         private DeadLetterQueue deadLetterQueue;
 
@@ -301,6 +345,7 @@ public class GetRuleResponseBody extends TeaModel {
         private String type;
 
         private Targets(Builder builder) {
+            this.concurrentConfig = builder.concurrentConfig;
             this.deadLetterQueue = builder.deadLetterQueue;
             this.detailMap = builder.detailMap;
             this.endpoint = builder.endpoint;
@@ -318,6 +363,13 @@ public class GetRuleResponseBody extends TeaModel {
 
         public static Targets create() {
             return builder().build();
+        }
+
+        /**
+         * @return concurrentConfig
+         */
+        public ConcurrentConfig getConcurrentConfig() {
+            return this.concurrentConfig;
         }
 
         /**
@@ -384,6 +436,7 @@ public class GetRuleResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ConcurrentConfig concurrentConfig; 
             private DeadLetterQueue deadLetterQueue; 
             private java.util.Map < String, ? > detailMap; 
             private String endpoint; 
@@ -393,6 +446,14 @@ public class GetRuleResponseBody extends TeaModel {
             private String pushRetryStrategy; 
             private String pushSelector; 
             private String type; 
+
+            /**
+             * ConcurrentConfig.
+             */
+            public Builder concurrentConfig(ConcurrentConfig concurrentConfig) {
+                this.concurrentConfig = concurrentConfig;
+                return this;
+            }
 
             /**
              * The dead-letter queue.

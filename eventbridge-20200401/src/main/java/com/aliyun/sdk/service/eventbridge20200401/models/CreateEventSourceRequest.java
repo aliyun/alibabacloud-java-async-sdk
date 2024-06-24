@@ -26,6 +26,18 @@ public class CreateEventSourceRequest extends Request {
     private String eventSourceName;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalSourceConfig")
+    private java.util.Map < String, ? > externalSourceConfig;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExternalSourceType")
+    private byte[] externalSourceType;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LinkedExternalSource")
+    private Boolean linkedExternalSource;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SourceHttpEventParameters")
     private SourceHttpEventParameters sourceHttpEventParameters;
 
@@ -58,6 +70,9 @@ public class CreateEventSourceRequest extends Request {
         this.description = builder.description;
         this.eventBusName = builder.eventBusName;
         this.eventSourceName = builder.eventSourceName;
+        this.externalSourceConfig = builder.externalSourceConfig;
+        this.externalSourceType = builder.externalSourceType;
+        this.linkedExternalSource = builder.linkedExternalSource;
         this.sourceHttpEventParameters = builder.sourceHttpEventParameters;
         this.sourceKafkaParameters = builder.sourceKafkaParameters;
         this.sourceMNSParameters = builder.sourceMNSParameters;
@@ -99,6 +114,27 @@ public class CreateEventSourceRequest extends Request {
      */
     public String getEventSourceName() {
         return this.eventSourceName;
+    }
+
+    /**
+     * @return externalSourceConfig
+     */
+    public java.util.Map < String, ? > getExternalSourceConfig() {
+        return this.externalSourceConfig;
+    }
+
+    /**
+     * @return externalSourceType
+     */
+    public byte[] getExternalSourceType() {
+        return this.externalSourceType;
+    }
+
+    /**
+     * @return linkedExternalSource
+     */
+    public Boolean getLinkedExternalSource() {
+        return this.linkedExternalSource;
     }
 
     /**
@@ -154,6 +190,9 @@ public class CreateEventSourceRequest extends Request {
         private String description; 
         private String eventBusName; 
         private String eventSourceName; 
+        private java.util.Map < String, ? > externalSourceConfig; 
+        private byte[] externalSourceType; 
+        private Boolean linkedExternalSource; 
         private SourceHttpEventParameters sourceHttpEventParameters; 
         private SourceKafkaParameters sourceKafkaParameters; 
         private SourceMNSParameters sourceMNSParameters; 
@@ -171,6 +210,9 @@ public class CreateEventSourceRequest extends Request {
             this.description = request.description;
             this.eventBusName = request.eventBusName;
             this.eventSourceName = request.eventSourceName;
+            this.externalSourceConfig = request.externalSourceConfig;
+            this.externalSourceType = request.externalSourceType;
+            this.linkedExternalSource = request.linkedExternalSource;
             this.sourceHttpEventParameters = request.sourceHttpEventParameters;
             this.sourceKafkaParameters = request.sourceKafkaParameters;
             this.sourceMNSParameters = request.sourceMNSParameters;
@@ -204,6 +246,34 @@ public class CreateEventSourceRequest extends Request {
         public Builder eventSourceName(String eventSourceName) {
             this.putBodyParameter("EventSourceName", eventSourceName);
             this.eventSourceName = eventSourceName;
+            return this;
+        }
+
+        /**
+         * ExternalSourceConfig.
+         */
+        public Builder externalSourceConfig(java.util.Map < String, ? > externalSourceConfig) {
+            String externalSourceConfigShrink = shrink(externalSourceConfig, "ExternalSourceConfig", "json");
+            this.putBodyParameter("ExternalSourceConfig", externalSourceConfigShrink);
+            this.externalSourceConfig = externalSourceConfig;
+            return this;
+        }
+
+        /**
+         * ExternalSourceType.
+         */
+        public Builder externalSourceType(byte[] externalSourceType) {
+            this.putBodyParameter("ExternalSourceType", externalSourceType);
+            this.externalSourceType = externalSourceType;
+            return this;
+        }
+
+        /**
+         * LinkedExternalSource.
+         */
+        public Builder linkedExternalSource(Boolean linkedExternalSource) {
+            this.putBodyParameter("LinkedExternalSource", linkedExternalSource);
+            this.linkedExternalSource = linkedExternalSource;
             return this;
         }
 

@@ -14,6 +14,9 @@ public class DeleteEventBusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
+    @com.aliyun.core.annotation.NameInMap("Data")
+    private Boolean data;
+
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
@@ -25,6 +28,7 @@ public class DeleteEventBusResponseBody extends TeaModel {
 
     private DeleteEventBusResponseBody(Builder builder) {
         this.code = builder.code;
+        this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
         this.success = builder.success;
@@ -43,6 +47,13 @@ public class DeleteEventBusResponseBody extends TeaModel {
      */
     public String getCode() {
         return this.code;
+    }
+
+    /**
+     * @return data
+     */
+    public Boolean getData() {
+        return this.data;
     }
 
     /**
@@ -68,6 +79,7 @@ public class DeleteEventBusResponseBody extends TeaModel {
 
     public static final class Builder {
         private String code; 
+        private Boolean data; 
         private String message; 
         private String requestId; 
         private Boolean success; 
@@ -77,6 +89,14 @@ public class DeleteEventBusResponseBody extends TeaModel {
          */
         public Builder code(String code) {
             this.code = code;
+            return this;
+        }
+
+        /**
+         * Data.
+         */
+        public Builder data(Boolean data) {
+            this.data = data;
             return this;
         }
 
