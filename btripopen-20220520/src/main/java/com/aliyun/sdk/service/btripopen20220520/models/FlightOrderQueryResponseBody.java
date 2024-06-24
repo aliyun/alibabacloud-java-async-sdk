@@ -1128,6 +1128,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("arr_city_code")
         private String arrCityCode;
 
+        @com.aliyun.core.annotation.NameInMap("company_refund_ticket_fee")
+        private Double companyRefundTicketFee;
+
         @com.aliyun.core.annotation.NameInMap("dep_airport")
         private String depAirport;
 
@@ -1152,6 +1155,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("out_apply_id")
         private String outApplyId;
 
+        @com.aliyun.core.annotation.NameInMap("personal_refund_ticket_fee")
+        private Double personalRefundTicketFee;
+
         @com.aliyun.core.annotation.NameInMap("refund_order_id")
         private Long refundOrderId;
 
@@ -1173,6 +1179,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.arrAirportCode = builder.arrAirportCode;
             this.arrCity = builder.arrCity;
             this.arrCityCode = builder.arrCityCode;
+            this.companyRefundTicketFee = builder.companyRefundTicketFee;
             this.depAirport = builder.depAirport;
             this.depAirportCode = builder.depAirportCode;
             this.depCity = builder.depCity;
@@ -1181,6 +1188,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.gmtCreate = builder.gmtCreate;
             this.gmtModify = builder.gmtModify;
             this.outApplyId = builder.outApplyId;
+            this.personalRefundTicketFee = builder.personalRefundTicketFee;
             this.refundOrderId = builder.refundOrderId;
             this.refundReason = builder.refundReason;
             this.refundTicketFee = builder.refundTicketFee;
@@ -1229,6 +1237,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
          */
         public String getArrCityCode() {
             return this.arrCityCode;
+        }
+
+        /**
+         * @return companyRefundTicketFee
+         */
+        public Double getCompanyRefundTicketFee() {
+            return this.companyRefundTicketFee;
         }
 
         /**
@@ -1288,6 +1303,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return personalRefundTicketFee
+         */
+        public Double getPersonalRefundTicketFee() {
+            return this.personalRefundTicketFee;
+        }
+
+        /**
          * @return refundOrderId
          */
         public Long getRefundOrderId() {
@@ -1328,6 +1350,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String arrAirportCode; 
             private String arrCity; 
             private String arrCityCode; 
+            private Double companyRefundTicketFee; 
             private String depAirport; 
             private String depAirportCode; 
             private String depCity; 
@@ -1336,6 +1359,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String gmtCreate; 
             private String gmtModify; 
             private String outApplyId; 
+            private Double personalRefundTicketFee; 
             private Long refundOrderId; 
             private String refundReason; 
             private Double refundTicketFee; 
@@ -1379,6 +1403,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder arrCityCode(String arrCityCode) {
                 this.arrCityCode = arrCityCode;
+                return this;
+            }
+
+            /**
+             * company_refund_ticket_fee.
+             */
+            public Builder companyRefundTicketFee(Double companyRefundTicketFee) {
+                this.companyRefundTicketFee = companyRefundTicketFee;
                 return this;
             }
 
@@ -1443,6 +1475,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder outApplyId(String outApplyId) {
                 this.outApplyId = outApplyId;
+                return this;
+            }
+
+            /**
+             * personal_refund_ticket_fee.
+             */
+            public Builder personalRefundTicketFee(Double personalRefundTicketFee) {
+                this.personalRefundTicketFee = personalRefundTicketFee;
                 return this;
             }
 
@@ -1530,6 +1570,9 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("pay_type")
         private Integer payType;
 
+        @com.aliyun.core.annotation.NameInMap("personal_price")
+        private Double personalPrice;
+
         @com.aliyun.core.annotation.NameInMap("settle_price")
         private Double settlePrice;
 
@@ -1561,6 +1604,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             this.gmtModify = builder.gmtModify;
             this.oilPrice = builder.oilPrice;
             this.payType = builder.payType;
+            this.personalPrice = builder.personalPrice;
             this.settlePrice = builder.settlePrice;
             this.ticketNo = builder.ticketNo;
             this.ticketPrice = builder.ticketPrice;
@@ -1662,6 +1706,13 @@ public class FlightOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return personalPrice
+         */
+        public Double getPersonalPrice() {
+            return this.personalPrice;
+        }
+
+        /**
          * @return settlePrice
          */
         public Double getSettlePrice() {
@@ -1716,6 +1767,7 @@ public class FlightOrderQueryResponseBody extends TeaModel {
             private String gmtModify; 
             private Double oilPrice; 
             private Integer payType; 
+            private Double personalPrice; 
             private Double settlePrice; 
             private String ticketNo; 
             private Double ticketPrice; 
@@ -1816,6 +1868,14 @@ public class FlightOrderQueryResponseBody extends TeaModel {
              */
             public Builder payType(Integer payType) {
                 this.payType = payType;
+                return this;
+            }
+
+            /**
+             * personal_price.
+             */
+            public Builder personalPrice(Double personalPrice) {
+                this.personalPrice = personalPrice;
                 return this;
             }
 

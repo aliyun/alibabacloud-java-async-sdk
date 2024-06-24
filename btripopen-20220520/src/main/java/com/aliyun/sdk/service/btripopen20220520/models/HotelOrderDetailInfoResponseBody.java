@@ -1909,6 +1909,9 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_status_desc")
         private String orderStatusDesc;
 
+        @com.aliyun.core.annotation.NameInMap("out_confirm_code")
+        private String outConfirmCode;
+
         @com.aliyun.core.annotation.NameInMap("pay_time")
         private String payTime;
 
@@ -1978,6 +1981,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             this.occupantInfoList = builder.occupantInfoList;
             this.orderStatus = builder.orderStatus;
             this.orderStatusDesc = builder.orderStatusDesc;
+            this.outConfirmCode = builder.outConfirmCode;
             this.payTime = builder.payTime;
             this.productType = builder.productType;
             this.purchaseOrderId = builder.purchaseOrderId;
@@ -2165,6 +2169,13 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return outConfirmCode
+         */
+        public String getOutConfirmCode() {
+            return this.outConfirmCode;
+        }
+
+        /**
          * @return payTime
          */
         public String getPayTime() {
@@ -2293,6 +2304,7 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
             private java.util.List < OccupantInfoList> occupantInfoList; 
             private Integer orderStatus; 
             private String orderStatusDesc; 
+            private String outConfirmCode; 
             private String payTime; 
             private Integer productType; 
             private String purchaseOrderId; 
@@ -2490,6 +2502,14 @@ public class HotelOrderDetailInfoResponseBody extends TeaModel {
              */
             public Builder orderStatusDesc(String orderStatusDesc) {
                 this.orderStatusDesc = orderStatusDesc;
+                return this;
+            }
+
+            /**
+             * out_confirm_code.
+             */
+            public Builder outConfirmCode(String outConfirmCode) {
+                this.outConfirmCode = outConfirmCode;
                 return this;
             }
 

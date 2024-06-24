@@ -758,6 +758,9 @@ public class CarApplyQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("approver_list")
         private java.util.List < ApproverList> approverList;
 
+        @com.aliyun.core.annotation.NameInMap("business_type")
+        private String businessType;
+
         @com.aliyun.core.annotation.NameInMap("depart_id")
         private String departId;
 
@@ -799,6 +802,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
         private ApplyList(Builder builder) {
             this.approverList = builder.approverList;
+            this.businessType = builder.businessType;
             this.departId = builder.departId;
             this.departName = builder.departName;
             this.gmtCreate = builder.gmtCreate;
@@ -827,6 +831,13 @@ public class CarApplyQueryResponseBody extends TeaModel {
          */
         public java.util.List < ApproverList> getApproverList() {
             return this.approverList;
+        }
+
+        /**
+         * @return businessType
+         */
+        public String getBusinessType() {
+            return this.businessType;
         }
 
         /**
@@ -922,6 +933,7 @@ public class CarApplyQueryResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < ApproverList> approverList; 
+            private String businessType; 
             private String departId; 
             private String departName; 
             private String gmtCreate; 
@@ -941,6 +953,14 @@ public class CarApplyQueryResponseBody extends TeaModel {
              */
             public Builder approverList(java.util.List < ApproverList> approverList) {
                 this.approverList = approverList;
+                return this;
+            }
+
+            /**
+             * business_type.
+             */
+            public Builder businessType(String businessType) {
+                this.businessType = businessType;
                 return this;
             }
 
