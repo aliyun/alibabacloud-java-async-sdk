@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobResourceUsageRequest</p>
  */
 public class GetJobResourceUsageRequest extends Request {
-    @Query
-    @NameInMap("date")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("date")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String date;
 
-    @Query
-    @NameInMap("jobOwnerList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobOwnerList")
     private java.util.List < String > jobOwnerList;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("quotaNicknameList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaNicknameList")
     private java.util.List < String > quotaNicknameList;
 
     private GetJobResourceUsageRequest(Builder builder) {

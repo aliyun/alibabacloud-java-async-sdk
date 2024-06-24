@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotasResponseBody</p>
  */
 public class ListQuotasResponseBody extends TeaModel {
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Long maxItem;
 
-    @NameInMap("quotaInfoList")
+    @com.aliyun.core.annotation.NameInMap("quotaInfoList")
     private java.util.List < QuotaInfoList> quotaInfoList;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListQuotasResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class ListQuotasResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -213,13 +212,13 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class BillingPolicy extends TeaModel {
-        @NameInMap("billingMethod")
+        @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
 
-        @NameInMap("odpsSpecCode")
+        @com.aliyun.core.annotation.NameInMap("odpsSpecCode")
         private String odpsSpecCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private BillingPolicy(Builder builder) {
@@ -298,10 +297,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class SaleTag extends TeaModel {
-        @NameInMap("resourceIds")
+        @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List < String > resourceIds;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private SaleTag(Builder builder) {
@@ -359,28 +358,28 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class ScheduleInfo extends TeaModel {
-        @NameInMap("currPlan")
+        @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
 
-        @NameInMap("currTime")
+        @com.aliyun.core.annotation.NameInMap("currTime")
         private String currTime;
 
-        @NameInMap("nextPlan")
+        @com.aliyun.core.annotation.NameInMap("nextPlan")
         private String nextPlan;
 
-        @NameInMap("nextTime")
+        @com.aliyun.core.annotation.NameInMap("nextTime")
         private String nextTime;
 
-        @NameInMap("oncePlan")
+        @com.aliyun.core.annotation.NameInMap("oncePlan")
         private String oncePlan;
 
-        @NameInMap("onceTime")
+        @com.aliyun.core.annotation.NameInMap("onceTime")
         private String onceTime;
 
-        @NameInMap("operatorName")
+        @com.aliyun.core.annotation.NameInMap("operatorName")
         private String operatorName;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
         private ScheduleInfo(Builder builder) {
@@ -540,13 +539,13 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class SubQuotaInfoListBillingPolicy extends TeaModel {
-        @NameInMap("billingMethod")
+        @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
 
-        @NameInMap("odpsSpecCode")
+        @com.aliyun.core.annotation.NameInMap("odpsSpecCode")
         private String odpsSpecCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private SubQuotaInfoListBillingPolicy(Builder builder) {
@@ -625,10 +624,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class SubQuotaInfoListSaleTag extends TeaModel {
-        @NameInMap("resourceIds")
+        @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List < String > resourceIds;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private SubQuotaInfoListSaleTag(Builder builder) {
@@ -686,28 +685,28 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class SubQuotaInfoListScheduleInfo extends TeaModel {
-        @NameInMap("currPlan")
+        @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
 
-        @NameInMap("currTime")
+        @com.aliyun.core.annotation.NameInMap("currTime")
         private String currTime;
 
-        @NameInMap("nextPlan")
+        @com.aliyun.core.annotation.NameInMap("nextPlan")
         private String nextPlan;
 
-        @NameInMap("nextTime")
+        @com.aliyun.core.annotation.NameInMap("nextTime")
         private String nextTime;
 
-        @NameInMap("oncePlan")
+        @com.aliyun.core.annotation.NameInMap("oncePlan")
         private String oncePlan;
 
-        @NameInMap("onceTime")
+        @com.aliyun.core.annotation.NameInMap("onceTime")
         private String onceTime;
 
-        @NameInMap("operatorName")
+        @com.aliyun.core.annotation.NameInMap("operatorName")
         private String operatorName;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
         private SubQuotaInfoListScheduleInfo(Builder builder) {
@@ -867,55 +866,55 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class SubQuotaInfoList extends TeaModel {
-        @NameInMap("billingPolicy")
+        @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private SubQuotaInfoListBillingPolicy billingPolicy;
 
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("parameter")
+        @com.aliyun.core.annotation.NameInMap("parameter")
         private java.util.Map < String, ? > parameter;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private SubQuotaInfoListSaleTag saleTag;
 
-        @NameInMap("scheduleInfo")
+        @com.aliyun.core.annotation.NameInMap("scheduleInfo")
         private SubQuotaInfoListScheduleInfo scheduleInfo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private SubQuotaInfoList(Builder builder) {
@@ -1228,61 +1227,61 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class DataQuotaInfoList extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("billingPolicy")
+        @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private BillingPolicy billingPolicy;
 
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("parameter")
+        @com.aliyun.core.annotation.NameInMap("parameter")
         private java.util.Map < String, ? > parameter;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private SaleTag saleTag;
 
-        @NameInMap("scheduleInfo")
+        @com.aliyun.core.annotation.NameInMap("scheduleInfo")
         private ScheduleInfo scheduleInfo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("subQuotaInfoList")
+        @com.aliyun.core.annotation.NameInMap("subQuotaInfoList")
         private java.util.List < SubQuotaInfoList> subQuotaInfoList;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private DataQuotaInfoList(Builder builder) {
@@ -1629,16 +1628,16 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Long maxItem;
 
-        @NameInMap("quotaInfoList")
+        @com.aliyun.core.annotation.NameInMap("quotaInfoList")
         private java.util.List < DataQuotaInfoList> quotaInfoList;
 
         private Data(Builder builder) {
@@ -1730,10 +1729,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListTags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private QuotaInfoListTags(Builder builder) {
@@ -1791,13 +1790,13 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListBillingPolicy extends TeaModel {
-        @NameInMap("billingMethod")
+        @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
 
-        @NameInMap("odpsSpecCode")
+        @com.aliyun.core.annotation.NameInMap("odpsSpecCode")
         private String odpsSpecCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private QuotaInfoListBillingPolicy(Builder builder) {
@@ -1876,10 +1875,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListSaleTag extends TeaModel {
-        @NameInMap("resourceIds")
+        @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List < String > resourceIds;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private QuotaInfoListSaleTag(Builder builder) {
@@ -1937,28 +1936,28 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListScheduleInfo extends TeaModel {
-        @NameInMap("currPlan")
+        @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
 
-        @NameInMap("currTime")
+        @com.aliyun.core.annotation.NameInMap("currTime")
         private String currTime;
 
-        @NameInMap("nextPlan")
+        @com.aliyun.core.annotation.NameInMap("nextPlan")
         private String nextPlan;
 
-        @NameInMap("nextTime")
+        @com.aliyun.core.annotation.NameInMap("nextTime")
         private String nextTime;
 
-        @NameInMap("oncePlan")
+        @com.aliyun.core.annotation.NameInMap("oncePlan")
         private String oncePlan;
 
-        @NameInMap("onceTime")
+        @com.aliyun.core.annotation.NameInMap("onceTime")
         private String onceTime;
 
-        @NameInMap("operatorName")
+        @com.aliyun.core.annotation.NameInMap("operatorName")
         private String operatorName;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
         private QuotaInfoListScheduleInfo(Builder builder) {
@@ -2118,13 +2117,13 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListSubQuotaInfoListBillingPolicy extends TeaModel {
-        @NameInMap("billingMethod")
+        @com.aliyun.core.annotation.NameInMap("billingMethod")
         private String billingMethod;
 
-        @NameInMap("odpsSpecCode")
+        @com.aliyun.core.annotation.NameInMap("odpsSpecCode")
         private String odpsSpecCode;
 
-        @NameInMap("orderId")
+        @com.aliyun.core.annotation.NameInMap("orderId")
         private String orderId;
 
         private QuotaInfoListSubQuotaInfoListBillingPolicy(Builder builder) {
@@ -2203,10 +2202,10 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListSubQuotaInfoListSaleTag extends TeaModel {
-        @NameInMap("resourceIds")
+        @com.aliyun.core.annotation.NameInMap("resourceIds")
         private java.util.List < String > resourceIds;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private QuotaInfoListSubQuotaInfoListSaleTag(Builder builder) {
@@ -2264,28 +2263,28 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListSubQuotaInfoListScheduleInfo extends TeaModel {
-        @NameInMap("currPlan")
+        @com.aliyun.core.annotation.NameInMap("currPlan")
         private String currPlan;
 
-        @NameInMap("currTime")
+        @com.aliyun.core.annotation.NameInMap("currTime")
         private String currTime;
 
-        @NameInMap("nextPlan")
+        @com.aliyun.core.annotation.NameInMap("nextPlan")
         private String nextPlan;
 
-        @NameInMap("nextTime")
+        @com.aliyun.core.annotation.NameInMap("nextTime")
         private String nextTime;
 
-        @NameInMap("oncePlan")
+        @com.aliyun.core.annotation.NameInMap("oncePlan")
         private String oncePlan;
 
-        @NameInMap("onceTime")
+        @com.aliyun.core.annotation.NameInMap("onceTime")
         private String onceTime;
 
-        @NameInMap("operatorName")
+        @com.aliyun.core.annotation.NameInMap("operatorName")
         private String operatorName;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
         private QuotaInfoListSubQuotaInfoListScheduleInfo(Builder builder) {
@@ -2445,55 +2444,55 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoListSubQuotaInfoList extends TeaModel {
-        @NameInMap("billingPolicy")
+        @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private QuotaInfoListSubQuotaInfoListBillingPolicy billingPolicy;
 
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("parameter")
+        @com.aliyun.core.annotation.NameInMap("parameter")
         private java.util.Map < String, ? > parameter;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private QuotaInfoListSubQuotaInfoListSaleTag saleTag;
 
-        @NameInMap("scheduleInfo")
+        @com.aliyun.core.annotation.NameInMap("scheduleInfo")
         private QuotaInfoListSubQuotaInfoListScheduleInfo scheduleInfo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private QuotaInfoListSubQuotaInfoList(Builder builder) {
@@ -2806,61 +2805,61 @@ public class ListQuotasResponseBody extends TeaModel {
 
     }
     public static class QuotaInfoList extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < QuotaInfoListTags> tags;
 
-        @NameInMap("billingPolicy")
+        @com.aliyun.core.annotation.NameInMap("billingPolicy")
         private QuotaInfoListBillingPolicy billingPolicy;
 
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("creatorId")
+        @com.aliyun.core.annotation.NameInMap("creatorId")
         private String creatorId;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nickName")
+        @com.aliyun.core.annotation.NameInMap("nickName")
         private String nickName;
 
-        @NameInMap("parameter")
+        @com.aliyun.core.annotation.NameInMap("parameter")
         private java.util.Map < String, ? > parameter;
 
-        @NameInMap("parentId")
+        @com.aliyun.core.annotation.NameInMap("parentId")
         private String parentId;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private QuotaInfoListSaleTag saleTag;
 
-        @NameInMap("scheduleInfo")
+        @com.aliyun.core.annotation.NameInMap("scheduleInfo")
         private QuotaInfoListScheduleInfo scheduleInfo;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("subQuotaInfoList")
+        @com.aliyun.core.annotation.NameInMap("subQuotaInfoList")
         private java.util.List < QuotaInfoListSubQuotaInfoList> subQuotaInfoList;
 
-        @NameInMap("tag")
+        @com.aliyun.core.annotation.NameInMap("tag")
         private String tag;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("version")
+        @com.aliyun.core.annotation.NameInMap("version")
         private String version;
 
         private QuotaInfoList(Builder builder) {

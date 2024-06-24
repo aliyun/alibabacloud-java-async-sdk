@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRunningJobsRequest</p>
  */
 public class GetRunningJobsRequest extends Request {
-    @Query
-    @NameInMap("from")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("from")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long from;
 
-    @Query
-    @NameInMap("jobOwnerList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("jobOwnerList")
     private java.util.List < String > jobOwnerList;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("quotaNicknameList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaNicknameList")
     private java.util.List < String > quotaNicknameList;
 
-    @Query
-    @NameInMap("to")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("to")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long to;
 
     private GetRunningJobsRequest(Builder builder) {

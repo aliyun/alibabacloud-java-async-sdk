@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>KillJobsRequest</p>
  */
 public class KillJobsRequest extends Request {
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private KillJobsRequest(Builder builder) {

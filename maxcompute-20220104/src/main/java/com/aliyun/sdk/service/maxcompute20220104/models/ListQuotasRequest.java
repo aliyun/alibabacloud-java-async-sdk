@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotasRequest</p>
  */
 public class ListQuotasRequest extends Request {
-    @Query
-    @NameInMap("billingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("billingType")
     private String billingType;
 
-    @Query
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @Query
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Long maxItem;
 
-    @Query
-    @NameInMap("productId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("productId")
     private String productId;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("saleTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("saleTags")
     private String saleTags;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private ListQuotasRequest(Builder builder) {

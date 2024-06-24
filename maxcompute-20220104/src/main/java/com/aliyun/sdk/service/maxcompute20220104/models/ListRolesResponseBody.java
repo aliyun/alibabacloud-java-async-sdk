@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRolesResponseBody</p>
  */
 public class ListRolesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListRolesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListRolesResponseBody extends TeaModel {
     } 
 
     public static class Function extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Function(Builder builder) {
@@ -133,10 +132,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Instance(Builder builder) {
@@ -194,10 +193,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Package extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Package(Builder builder) {
@@ -255,10 +254,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Project extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Project(Builder builder) {
@@ -316,10 +315,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Resource(Builder builder) {
@@ -377,10 +376,10 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Table extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Table(Builder builder) {
@@ -438,22 +437,22 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Acl extends TeaModel {
-        @NameInMap("function")
+        @com.aliyun.core.annotation.NameInMap("function")
         private java.util.List < Function> function;
 
-        @NameInMap("instance")
+        @com.aliyun.core.annotation.NameInMap("instance")
         private java.util.List < Instance> instance;
 
-        @NameInMap("package")
+        @com.aliyun.core.annotation.NameInMap("package")
         private java.util.List < Package> _package;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private java.util.List < Project> project;
 
-        @NameInMap("resource")
+        @com.aliyun.core.annotation.NameInMap("resource")
         private java.util.List < Resource> resource;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private java.util.List < Table> table;
 
         private Acl(Builder builder) {
@@ -579,16 +578,16 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Roles extends TeaModel {
-        @NameInMap("acl")
+        @com.aliyun.core.annotation.NameInMap("acl")
         private Acl acl;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("policy")
+        @com.aliyun.core.annotation.NameInMap("policy")
         private String policy;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Roles(Builder builder) {
@@ -680,7 +679,7 @@ public class ListRolesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("roles")
+        @com.aliyun.core.annotation.NameInMap("roles")
         private java.util.List < Roles> roles;
 
         private Data(Builder builder) {

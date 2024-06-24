@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobInfosResponseBody</p>
  */
 public class ListJobInfosResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListJobInfosResponseBody(Builder builder) {
@@ -92,85 +91,85 @@ public class ListJobInfosResponseBody extends TeaModel {
     } 
 
     public static class JobInfoList extends TeaModel {
-        @NameInMap("cluster")
+        @com.aliyun.core.annotation.NameInMap("cluster")
         private String cluster;
 
-        @NameInMap("cuSnapshot")
+        @com.aliyun.core.annotation.NameInMap("cuSnapshot")
         private Double cuSnapshot;
 
-        @NameInMap("cuUsage")
+        @com.aliyun.core.annotation.NameInMap("cuUsage")
         private Long cuUsage;
 
-        @NameInMap("endAtTime")
+        @com.aliyun.core.annotation.NameInMap("endAtTime")
         private Long endAtTime;
 
-        @NameInMap("extNodeId")
+        @com.aliyun.core.annotation.NameInMap("extNodeId")
         private String extNodeId;
 
-        @NameInMap("extNodeOnDuty")
+        @com.aliyun.core.annotation.NameInMap("extNodeOnDuty")
         private String extNodeOnDuty;
 
-        @NameInMap("extPlantFrom")
+        @com.aliyun.core.annotation.NameInMap("extPlantFrom")
         private String extPlantFrom;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("jobOwner")
+        @com.aliyun.core.annotation.NameInMap("jobOwner")
         private String jobOwner;
 
-        @NameInMap("jobType")
+        @com.aliyun.core.annotation.NameInMap("jobType")
         private String jobType;
 
-        @NameInMap("memorySnapshot")
+        @com.aliyun.core.annotation.NameInMap("memorySnapshot")
         private Double memorySnapshot;
 
-        @NameInMap("memoryUsage")
+        @com.aliyun.core.annotation.NameInMap("memoryUsage")
         private Long memoryUsage;
 
-        @NameInMap("priority")
+        @com.aliyun.core.annotation.NameInMap("priority")
         private Long priority;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("quotaNickname")
+        @com.aliyun.core.annotation.NameInMap("quotaNickname")
         private String quotaNickname;
 
-        @NameInMap("quotaType")
+        @com.aliyun.core.annotation.NameInMap("quotaType")
         private String quotaType;
 
-        @NameInMap("region")
+        @com.aliyun.core.annotation.NameInMap("region")
         private String region;
 
-        @NameInMap("runningAtTime")
+        @com.aliyun.core.annotation.NameInMap("runningAtTime")
         private Long runningAtTime;
 
-        @NameInMap("runningTime")
+        @com.aliyun.core.annotation.NameInMap("runningTime")
         private Long runningTime;
 
-        @NameInMap("signature")
+        @com.aliyun.core.annotation.NameInMap("signature")
         private String signature;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("statusSnapshot")
+        @com.aliyun.core.annotation.NameInMap("statusSnapshot")
         private String statusSnapshot;
 
-        @NameInMap("submittedAtTime")
+        @com.aliyun.core.annotation.NameInMap("submittedAtTime")
         private Long submittedAtTime;
 
-        @NameInMap("tags")
+        @com.aliyun.core.annotation.NameInMap("tags")
         private String tags;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
-        @NameInMap("totalTime")
+        @com.aliyun.core.annotation.NameInMap("totalTime")
         private Long totalTime;
 
-        @NameInMap("waitingTime")
+        @com.aliyun.core.annotation.NameInMap("waitingTime")
         private Long waitingTime;
 
         private JobInfoList(Builder builder) {
@@ -653,16 +652,16 @@ public class ListJobInfosResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("jobInfoList")
+        @com.aliyun.core.annotation.NameInMap("jobInfoList")
         private java.util.List < JobInfoList> jobInfoList;
 
-        @NameInMap("pageNumber")
+        @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Long pageSize;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

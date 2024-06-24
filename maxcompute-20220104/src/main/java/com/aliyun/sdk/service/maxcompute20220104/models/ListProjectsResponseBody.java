@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectsResponseBody</p>
  */
 public class ListProjectsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListProjectsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListProjectsResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private Tags(Builder builder) {
@@ -133,10 +132,10 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class IpWhiteList extends TeaModel {
-        @NameInMap("ipList")
+        @com.aliyun.core.annotation.NameInMap("ipList")
         private String ipList;
 
-        @NameInMap("vpcIpList")
+        @com.aliyun.core.annotation.NameInMap("vpcIpList")
         private String vpcIpList;
 
         private IpWhiteList(Builder builder) {
@@ -194,13 +193,13 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class Encryption extends TeaModel {
-        @NameInMap("algorithm")
+        @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         private Encryption(Builder builder) {
@@ -275,10 +274,10 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class TableLifecycle extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private TableLifecycle(Builder builder) {
@@ -336,34 +335,34 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("allowFullScan")
+        @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
-        @NameInMap("enableDecimal2")
+        @com.aliyun.core.annotation.NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
-        @NameInMap("enableTunnelQuotaRoute")
+        @com.aliyun.core.annotation.NameInMap("enableTunnelQuotaRoute")
         private Boolean enableTunnelQuotaRoute;
 
-        @NameInMap("encryption")
+        @com.aliyun.core.annotation.NameInMap("encryption")
         private Encryption encryption;
 
-        @NameInMap("retentionDays")
+        @com.aliyun.core.annotation.NameInMap("retentionDays")
         private Long retentionDays;
 
-        @NameInMap("sqlMeteringMax")
+        @com.aliyun.core.annotation.NameInMap("sqlMeteringMax")
         private String sqlMeteringMax;
 
-        @NameInMap("tableLifecycle")
+        @com.aliyun.core.annotation.NameInMap("tableLifecycle")
         private TableLifecycle tableLifecycle;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
-        @NameInMap("tunnelQuota")
+        @com.aliyun.core.annotation.NameInMap("tunnelQuota")
         private String tunnelQuota;
 
-        @NameInMap("typeSystem")
+        @com.aliyun.core.annotation.NameInMap("typeSystem")
         private String typeSystem;
 
         private Properties(Builder builder) {
@@ -557,10 +556,10 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class SaleTag extends TeaModel {
-        @NameInMap("resourceId")
+        @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private SaleTag(Builder builder) {
@@ -618,10 +617,10 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class ProjectProtection extends TeaModel {
-        @NameInMap("exceptionPolicy")
+        @com.aliyun.core.annotation.NameInMap("exceptionPolicy")
         private String exceptionPolicy;
 
-        @NameInMap("protected")
+        @com.aliyun.core.annotation.NameInMap("protected")
         private Boolean _protected;
 
         private ProjectProtection(Builder builder) {
@@ -679,25 +678,25 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class SecurityProperties extends TeaModel {
-        @NameInMap("enableDownloadPrivilege")
+        @com.aliyun.core.annotation.NameInMap("enableDownloadPrivilege")
         private Boolean enableDownloadPrivilege;
 
-        @NameInMap("labelSecurity")
+        @com.aliyun.core.annotation.NameInMap("labelSecurity")
         private Boolean labelSecurity;
 
-        @NameInMap("objectCreatorHasAccessPermission")
+        @com.aliyun.core.annotation.NameInMap("objectCreatorHasAccessPermission")
         private Boolean objectCreatorHasAccessPermission;
 
-        @NameInMap("objectCreatorHasGrantPermission")
+        @com.aliyun.core.annotation.NameInMap("objectCreatorHasGrantPermission")
         private Boolean objectCreatorHasGrantPermission;
 
-        @NameInMap("projectProtection")
+        @com.aliyun.core.annotation.NameInMap("projectProtection")
         private ProjectProtection projectProtection;
 
-        @NameInMap("usingAcl")
+        @com.aliyun.core.annotation.NameInMap("usingAcl")
         private Boolean usingAcl;
 
-        @NameInMap("usingPolicy")
+        @com.aliyun.core.annotation.NameInMap("usingPolicy")
         private Boolean usingPolicy;
 
         private SecurityProperties(Builder builder) {
@@ -840,49 +839,49 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class Projects extends TeaModel {
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("costStorage")
+        @com.aliyun.core.annotation.NameInMap("costStorage")
         private String costStorage;
 
-        @NameInMap("createdTime")
+        @com.aliyun.core.annotation.NameInMap("createdTime")
         private Long createdTime;
 
-        @NameInMap("defaultQuota")
+        @com.aliyun.core.annotation.NameInMap("defaultQuota")
         private String defaultQuota;
 
-        @NameInMap("ipWhiteList")
+        @com.aliyun.core.annotation.NameInMap("ipWhiteList")
         private IpWhiteList ipWhiteList;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("properties")
+        @com.aliyun.core.annotation.NameInMap("properties")
         private Properties properties;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private SaleTag saleTag;
 
-        @NameInMap("securityProperties")
+        @com.aliyun.core.annotation.NameInMap("securityProperties")
         private SecurityProperties securityProperties;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("threeTierModel")
+        @com.aliyun.core.annotation.NameInMap("threeTierModel")
         private Boolean threeTierModel;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Projects(Builder builder) {
@@ -1180,16 +1179,16 @@ public class ListProjectsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
-        @NameInMap("projects")
+        @com.aliyun.core.annotation.NameInMap("projects")
         private java.util.List < Projects> projects;
 
         private Data(Builder builder) {

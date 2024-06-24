@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPackageRequest</p>
  */
 public class GetPackageRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Path
-    @NameInMap("packageName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("packageName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String packageName;
 
-    @Query
-    @NameInMap("sourceProject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("sourceProject")
     private String sourceProject;
 
     private GetPackageRequest(Builder builder) {

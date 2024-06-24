@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRoleAclResponseBody</p>
  */
 public class GetRoleAclResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetRoleAclResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetRoleAclResponseBody extends TeaModel {
     } 
 
     public static class Function extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Function(Builder builder) {
@@ -213,13 +212,13 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Instance extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Instance(Builder builder) {
@@ -294,13 +293,13 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Package extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Package(Builder builder) {
@@ -375,13 +374,13 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Project extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Project(Builder builder) {
@@ -456,13 +455,13 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Resource(Builder builder) {
@@ -537,13 +536,13 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Table extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Table(Builder builder) {
@@ -618,22 +617,22 @@ public class GetRoleAclResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("function")
+        @com.aliyun.core.annotation.NameInMap("function")
         private java.util.List < Function> function;
 
-        @NameInMap("instance")
+        @com.aliyun.core.annotation.NameInMap("instance")
         private java.util.List < Instance> instance;
 
-        @NameInMap("package")
+        @com.aliyun.core.annotation.NameInMap("package")
         private java.util.List < Package> _package;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private java.util.List < Project> project;
 
-        @NameInMap("resource")
+        @com.aliyun.core.annotation.NameInMap("resource")
         private java.util.List < Resource> resource;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private java.util.List < Table> table;
 
         private Data(Builder builder) {

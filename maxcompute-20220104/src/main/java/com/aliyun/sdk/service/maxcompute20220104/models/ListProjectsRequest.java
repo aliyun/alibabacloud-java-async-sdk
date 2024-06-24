@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProjectsRequest</p>
  */
 public class ListProjectsRequest extends Request {
-    @Query
-    @NameInMap("listSystemCatalog")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("listSystemCatalog")
     private Boolean listSystemCatalog;
 
-    @Query
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @Query
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Integer maxItem;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("quotaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaName")
     private String quotaName;
 
-    @Query
-    @NameInMap("quotaNickName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("quotaNickName")
     private String quotaNickName;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("saleTags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("saleTags")
     private String saleTags;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListProjectsRequest(Builder builder) {

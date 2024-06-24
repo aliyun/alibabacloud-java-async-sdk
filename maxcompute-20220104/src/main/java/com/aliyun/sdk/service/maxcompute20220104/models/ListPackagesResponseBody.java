@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPackagesResponseBody</p>
  */
 public class ListPackagesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListPackagesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListPackagesResponseBody extends TeaModel {
     } 
 
     public static class CreatedPackages extends TeaModel {
-        @NameInMap("createTime")
+        @com.aliyun.core.annotation.NameInMap("createTime")
         private Long createTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private CreatedPackages(Builder builder) {
@@ -133,16 +132,16 @@ public class ListPackagesResponseBody extends TeaModel {
 
     }
     public static class InstalledPackages extends TeaModel {
-        @NameInMap("installTime")
+        @com.aliyun.core.annotation.NameInMap("installTime")
         private Long installTime;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("sourceProject")
+        @com.aliyun.core.annotation.NameInMap("sourceProject")
         private String sourceProject;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
         private InstalledPackages(Builder builder) {
@@ -234,10 +233,10 @@ public class ListPackagesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("createdPackages")
+        @com.aliyun.core.annotation.NameInMap("createdPackages")
         private java.util.List < CreatedPackages> createdPackages;
 
-        @NameInMap("installedPackages")
+        @com.aliyun.core.annotation.NameInMap("installedPackages")
         private java.util.List < InstalledPackages> installedPackages;
 
         private Data(Builder builder) {

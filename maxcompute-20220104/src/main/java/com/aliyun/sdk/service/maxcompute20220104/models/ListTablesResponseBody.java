@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTablesResponseBody</p>
  */
 public class ListTablesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListTablesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListTablesResponseBody extends TeaModel {
     } 
 
     public static class NativeColumns extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private NativeColumns(Builder builder) {
@@ -173,16 +172,16 @@ public class ListTablesResponseBody extends TeaModel {
 
     }
     public static class PartitionColumns extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private PartitionColumns(Builder builder) {
@@ -274,100 +273,100 @@ public class ListTablesResponseBody extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("autoRefreshEnabled")
+        @com.aliyun.core.annotation.NameInMap("autoRefreshEnabled")
         private Boolean autoRefreshEnabled;
 
-        @NameInMap("createTableDDL")
+        @com.aliyun.core.annotation.NameInMap("createTableDDL")
         private String createTableDDL;
 
-        @NameInMap("creationTime")
+        @com.aliyun.core.annotation.NameInMap("creationTime")
         private Long creationTime;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("fileNum")
+        @com.aliyun.core.annotation.NameInMap("fileNum")
         private Long fileNum;
 
-        @NameInMap("isExternalTable")
+        @com.aliyun.core.annotation.NameInMap("isExternalTable")
         private Boolean isExternalTable;
 
-        @NameInMap("isOutdated")
+        @com.aliyun.core.annotation.NameInMap("isOutdated")
         private Boolean isOutdated;
 
-        @NameInMap("lastAccessTime")
+        @com.aliyun.core.annotation.NameInMap("lastAccessTime")
         private Long lastAccessTime;
 
-        @NameInMap("lastDDLTime")
+        @com.aliyun.core.annotation.NameInMap("lastDDLTime")
         private Long lastDDLTime;
 
-        @NameInMap("lastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
         private Long lastModifiedTime;
 
-        @NameInMap("lifecycle")
+        @com.aliyun.core.annotation.NameInMap("lifecycle")
         private String lifecycle;
 
-        @NameInMap("location")
+        @com.aliyun.core.annotation.NameInMap("location")
         private String location;
 
-        @NameInMap("materializedView")
+        @com.aliyun.core.annotation.NameInMap("materializedView")
         private Boolean materializedView;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("nativeColumns")
+        @com.aliyun.core.annotation.NameInMap("nativeColumns")
         private java.util.List < NativeColumns> nativeColumns;
 
-        @NameInMap("odpsPropertiesRolearn")
+        @com.aliyun.core.annotation.NameInMap("odpsPropertiesRolearn")
         private String odpsPropertiesRolearn;
 
-        @NameInMap("odpsSqlTextOptionFlushHeader")
+        @com.aliyun.core.annotation.NameInMap("odpsSqlTextOptionFlushHeader")
         private Boolean odpsSqlTextOptionFlushHeader;
 
-        @NameInMap("odpsTextOptionHeaderLinesCount")
+        @com.aliyun.core.annotation.NameInMap("odpsTextOptionHeaderLinesCount")
         private Long odpsTextOptionHeaderLinesCount;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("partitionColumns")
+        @com.aliyun.core.annotation.NameInMap("partitionColumns")
         private java.util.List < PartitionColumns> partitionColumns;
 
-        @NameInMap("physicalSize")
+        @com.aliyun.core.annotation.NameInMap("physicalSize")
         private Long physicalSize;
 
-        @NameInMap("projectName")
+        @com.aliyun.core.annotation.NameInMap("projectName")
         private String projectName;
 
-        @NameInMap("rewriteEnabled")
+        @com.aliyun.core.annotation.NameInMap("rewriteEnabled")
         private Boolean rewriteEnabled;
 
-        @NameInMap("schema")
+        @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("storageHandler")
+        @com.aliyun.core.annotation.NameInMap("storageHandler")
         private String storageHandler;
 
-        @NameInMap("tableComment")
+        @com.aliyun.core.annotation.NameInMap("tableComment")
         private String tableComment;
 
-        @NameInMap("tableLabel")
+        @com.aliyun.core.annotation.NameInMap("tableLabel")
         private String tableLabel;
 
-        @NameInMap("tablesotreTableName")
+        @com.aliyun.core.annotation.NameInMap("tablesotreTableName")
         private String tablesotreTableName;
 
-        @NameInMap("tablestoreColumnsMapping")
+        @com.aliyun.core.annotation.NameInMap("tablestoreColumnsMapping")
         private String tablestoreColumnsMapping;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("viewText")
+        @com.aliyun.core.annotation.NameInMap("viewText")
         private String viewText;
 
         private Tables(Builder builder) {
@@ -935,13 +934,13 @@ public class ListTablesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
-        @NameInMap("tables")
+        @com.aliyun.core.annotation.NameInMap("tables")
         private java.util.List < Tables> tables;
 
         private Data(Builder builder) {

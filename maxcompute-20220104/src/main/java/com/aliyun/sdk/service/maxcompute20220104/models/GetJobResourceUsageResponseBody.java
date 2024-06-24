@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetJobResourceUsageResponseBody</p>
  */
 public class GetJobResourceUsageResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetJobResourceUsageResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
     } 
 
     public static class JobResourceUsageList extends TeaModel {
-        @NameInMap("cuUsage")
+        @com.aliyun.core.annotation.NameInMap("cuUsage")
         private Long cuUsage;
 
-        @NameInMap("date")
+        @com.aliyun.core.annotation.NameInMap("date")
         private String date;
 
-        @NameInMap("jobOwner")
+        @com.aliyun.core.annotation.NameInMap("jobOwner")
         private String jobOwner;
 
-        @NameInMap("memoryUsage")
+        @com.aliyun.core.annotation.NameInMap("memoryUsage")
         private Long memoryUsage;
 
-        @NameInMap("quotaNickname")
+        @com.aliyun.core.annotation.NameInMap("quotaNickname")
         private String quotaNickname;
 
         private JobResourceUsageList(Builder builder) {
@@ -253,16 +252,16 @@ public class GetJobResourceUsageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("jobResourceUsageList")
+        @com.aliyun.core.annotation.NameInMap("jobResourceUsageList")
         private java.util.List < JobResourceUsageList> jobResourceUsageList;
 
-        @NameInMap("pageNumber")
+        @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Long pageSize;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

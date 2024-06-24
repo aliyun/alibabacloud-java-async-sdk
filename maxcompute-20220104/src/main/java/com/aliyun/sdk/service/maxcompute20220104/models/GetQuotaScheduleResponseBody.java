@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaScheduleResponseBody</p>
  */
 public class GetQuotaScheduleResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private java.util.List < Data> data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetQuotaScheduleResponseBody(Builder builder) {
@@ -134,10 +133,10 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
     } 
 
     public static class Condition extends TeaModel {
-        @NameInMap("after")
+        @com.aliyun.core.annotation.NameInMap("after")
         private String after;
 
-        @NameInMap("at")
+        @com.aliyun.core.annotation.NameInMap("at")
         private String at;
 
         private Condition(Builder builder) {
@@ -195,22 +194,22 @@ public class GetQuotaScheduleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("condition")
+        @com.aliyun.core.annotation.NameInMap("condition")
         private Condition condition;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
-        @NameInMap("operator")
+        @com.aliyun.core.annotation.NameInMap("operator")
         private String operator;
 
-        @NameInMap("plan")
+        @com.aliyun.core.annotation.NameInMap("plan")
         private String plan;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Data(Builder builder) {

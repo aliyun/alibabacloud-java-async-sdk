@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPackageResponseBody</p>
  */
 public class GetPackageResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetPackageResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetPackageResponseBody extends TeaModel {
     } 
 
     public static class AllowedProjectList extends TeaModel {
-        @NameInMap("label")
+        @com.aliyun.core.annotation.NameInMap("label")
         private String label;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
         private AllowedProjectList(Builder builder) {
@@ -193,13 +192,13 @@ public class GetPackageResponseBody extends TeaModel {
 
     }
     public static class Function extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Function(Builder builder) {
@@ -274,13 +273,13 @@ public class GetPackageResponseBody extends TeaModel {
 
     }
     public static class Resource extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Resource(Builder builder) {
@@ -355,13 +354,13 @@ public class GetPackageResponseBody extends TeaModel {
 
     }
     public static class Table extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("schemaName")
+        @com.aliyun.core.annotation.NameInMap("schemaName")
         private String schemaName;
 
         private Table(Builder builder) {
@@ -436,13 +435,13 @@ public class GetPackageResponseBody extends TeaModel {
 
     }
     public static class ResourceList extends TeaModel {
-        @NameInMap("function")
+        @com.aliyun.core.annotation.NameInMap("function")
         private java.util.List < Function> function;
 
-        @NameInMap("resource")
+        @com.aliyun.core.annotation.NameInMap("resource")
         private java.util.List < Resource> resource;
 
-        @NameInMap("table")
+        @com.aliyun.core.annotation.NameInMap("table")
         private java.util.List < Table> table;
 
         private ResourceList(Builder builder) {
@@ -517,10 +516,10 @@ public class GetPackageResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("allowedProjectList")
+        @com.aliyun.core.annotation.NameInMap("allowedProjectList")
         private java.util.List < AllowedProjectList> allowedProjectList;
 
-        @NameInMap("resourceList")
+        @com.aliyun.core.annotation.NameInMap("resourceList")
         private ResourceList resourceList;
 
         private Data(Builder builder) {

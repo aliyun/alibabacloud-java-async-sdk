@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFunctionsResponseBody</p>
  */
 public class ListFunctionsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListFunctionsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListFunctionsResponseBody extends TeaModel {
     } 
 
     public static class Functions extends TeaModel {
-        @NameInMap("class")
+        @com.aliyun.core.annotation.NameInMap("class")
         private String _class;
 
-        @NameInMap("creationTime")
+        @com.aliyun.core.annotation.NameInMap("creationTime")
         private Long creationTime;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("resources")
+        @com.aliyun.core.annotation.NameInMap("resources")
         private String resources;
 
-        @NameInMap("schema")
+        @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
         private Functions(Builder builder) {
@@ -233,13 +232,13 @@ public class ListFunctionsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("functions")
+        @com.aliyun.core.annotation.NameInMap("functions")
         private java.util.List < Functions> functions;
 
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
         private Data(Builder builder) {

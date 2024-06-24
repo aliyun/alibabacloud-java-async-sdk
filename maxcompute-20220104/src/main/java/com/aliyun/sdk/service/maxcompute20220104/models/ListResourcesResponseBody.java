@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListResourcesResponseBody</p>
  */
 public class ListResourcesResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListResourcesResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class ListResourcesResponseBody extends TeaModel {
     } 
 
     public static class Resources extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("contentMD5")
+        @com.aliyun.core.annotation.NameInMap("contentMD5")
         private String contentMD5;
 
-        @NameInMap("creationTime")
+        @com.aliyun.core.annotation.NameInMap("creationTime")
         private Long creationTime;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("lastModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("lastModifiedTime")
         private Long lastModifiedTime;
 
-        @NameInMap("lastUpdator")
+        @com.aliyun.core.annotation.NameInMap("lastUpdator")
         private String lastUpdator;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("schema")
+        @com.aliyun.core.annotation.NameInMap("schema")
         private String schema;
 
-        @NameInMap("size")
+        @com.aliyun.core.annotation.NameInMap("size")
         private Long size;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Resources(Builder builder) {
@@ -356,13 +355,13 @@ public class ListResourcesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("marker")
+        @com.aliyun.core.annotation.NameInMap("marker")
         private String marker;
 
-        @NameInMap("maxItem")
+        @com.aliyun.core.annotation.NameInMap("maxItem")
         private Integer maxItem;
 
-        @NameInMap("resources")
+        @com.aliyun.core.annotation.NameInMap("resources")
         private java.util.List < Resources> resources;
 
         private Data(Builder builder) {

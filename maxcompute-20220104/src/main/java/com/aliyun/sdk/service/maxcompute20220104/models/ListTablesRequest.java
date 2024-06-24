@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTablesRequest</p>
  */
 public class ListTablesRequest extends Request {
-    @Path
-    @NameInMap("projectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Path
+    @com.aliyun.core.annotation.NameInMap("projectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Query
-    @NameInMap("marker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("marker")
     private String marker;
 
-    @Query
-    @NameInMap("maxItem")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("maxItem")
     private Integer maxItem;
 
-    @Query
-    @NameInMap("prefix")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prefix")
     private String prefix;
 
-    @Query
-    @NameInMap("schemaName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("schemaName")
     private String schemaName;
 
-    @Query
-    @NameInMap("type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("type")
     private String type;
 
     private ListTablesRequest(Builder builder) {

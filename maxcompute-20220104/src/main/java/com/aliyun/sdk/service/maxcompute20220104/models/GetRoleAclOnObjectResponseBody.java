@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRoleAclOnObjectResponseBody</p>
  */
 public class GetRoleAclOnObjectResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetRoleAclOnObjectResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetRoleAclOnObjectResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("actions")
+        @com.aliyun.core.annotation.NameInMap("actions")
         private java.util.List < String > actions;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetRunningJobsResponseBody</p>
  */
 public class GetRunningJobsResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetRunningJobsResponseBody(Builder builder) {
@@ -134,31 +133,31 @@ public class GetRunningJobsResponseBody extends TeaModel {
     } 
 
     public static class RunningJobInfoList extends TeaModel {
-        @NameInMap("cuSnapshot")
+        @com.aliyun.core.annotation.NameInMap("cuSnapshot")
         private Double cuSnapshot;
 
-        @NameInMap("instanceId")
+        @com.aliyun.core.annotation.NameInMap("instanceId")
         private String instanceId;
 
-        @NameInMap("jobOwner")
+        @com.aliyun.core.annotation.NameInMap("jobOwner")
         private String jobOwner;
 
-        @NameInMap("memorySnapshot")
+        @com.aliyun.core.annotation.NameInMap("memorySnapshot")
         private Double memorySnapshot;
 
-        @NameInMap("progress")
+        @com.aliyun.core.annotation.NameInMap("progress")
         private Double progress;
 
-        @NameInMap("project")
+        @com.aliyun.core.annotation.NameInMap("project")
         private String project;
 
-        @NameInMap("quotaNickname")
+        @com.aliyun.core.annotation.NameInMap("quotaNickname")
         private String quotaNickname;
 
-        @NameInMap("runningAtTime")
+        @com.aliyun.core.annotation.NameInMap("runningAtTime")
         private Long runningAtTime;
 
-        @NameInMap("submittedAtTime")
+        @com.aliyun.core.annotation.NameInMap("submittedAtTime")
         private Long submittedAtTime;
 
         private RunningJobInfoList(Builder builder) {
@@ -335,16 +334,16 @@ public class GetRunningJobsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("pageNumber")
+        @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Long pageNumber;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Long pageSize;
 
-        @NameInMap("runningJobInfoList")
+        @com.aliyun.core.annotation.NameInMap("runningJobInfoList")
         private java.util.List < RunningJobInfoList> runningJobInfoList;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

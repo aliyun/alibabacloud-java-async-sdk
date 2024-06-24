@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUsersResponseBody</p>
  */
 public class ListUsersResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private ListUsersResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class ListUsersResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("accountId")
+        @com.aliyun.core.annotation.NameInMap("accountId")
         private String accountId;
 
-        @NameInMap("accountName")
+        @com.aliyun.core.annotation.NameInMap("accountName")
         private String accountName;
 
-        @NameInMap("accountType")
+        @com.aliyun.core.annotation.NameInMap("accountType")
         private String accountType;
 
-        @NameInMap("displayName")
+        @com.aliyun.core.annotation.NameInMap("displayName")
         private String displayName;
 
-        @NameInMap("tenantId")
+        @com.aliyun.core.annotation.NameInMap("tenantId")
         private String tenantId;
 
         private Users(Builder builder) {
@@ -193,16 +192,16 @@ public class ListUsersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("pageNumber")
+        @com.aliyun.core.annotation.NameInMap("pageNumber")
         private Integer pageNumber;
 
-        @NameInMap("pageSize")
+        @com.aliyun.core.annotation.NameInMap("pageSize")
         private Integer pageSize;
 
-        @NameInMap("totalCount")
+        @com.aliyun.core.annotation.NameInMap("totalCount")
         private Integer totalCount;
 
-        @NameInMap("users")
+        @com.aliyun.core.annotation.NameInMap("users")
         private java.util.List < Users> users;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProjectResponseBody</p>
  */
 public class GetProjectResponseBody extends TeaModel {
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
-    @NameInMap("errorCode")
+    @com.aliyun.core.annotation.NameInMap("errorCode")
     private String errorCode;
 
-    @NameInMap("errorMsg")
+    @com.aliyun.core.annotation.NameInMap("errorMsg")
     private String errorMsg;
 
-    @NameInMap("httpCode")
+    @com.aliyun.core.annotation.NameInMap("httpCode")
     private Integer httpCode;
 
-    @NameInMap("requestId")
+    @com.aliyun.core.annotation.NameInMap("requestId")
     private String requestId;
 
     private GetProjectResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class GetProjectResponseBody extends TeaModel {
     } 
 
     public static class IpWhiteList extends TeaModel {
-        @NameInMap("ipList")
+        @com.aliyun.core.annotation.NameInMap("ipList")
         private String ipList;
 
-        @NameInMap("vpcIpList")
+        @com.aliyun.core.annotation.NameInMap("vpcIpList")
         private String vpcIpList;
 
         private IpWhiteList(Builder builder) {
@@ -193,13 +192,13 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class Encryption extends TeaModel {
-        @NameInMap("algorithm")
+        @com.aliyun.core.annotation.NameInMap("algorithm")
         private String algorithm;
 
-        @NameInMap("enable")
+        @com.aliyun.core.annotation.NameInMap("enable")
         private Boolean enable;
 
-        @NameInMap("key")
+        @com.aliyun.core.annotation.NameInMap("key")
         private String key;
 
         private Encryption(Builder builder) {
@@ -274,13 +273,13 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class StorageTierSize extends TeaModel {
-        @NameInMap("longTermSize")
+        @com.aliyun.core.annotation.NameInMap("longTermSize")
         private Long longTermSize;
 
-        @NameInMap("lowFrequencySize")
+        @com.aliyun.core.annotation.NameInMap("lowFrequencySize")
         private Long lowFrequencySize;
 
-        @NameInMap("standardSize")
+        @com.aliyun.core.annotation.NameInMap("standardSize")
         private Long standardSize;
 
         private StorageTierSize(Builder builder) {
@@ -355,13 +354,13 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class StorageTierInfo extends TeaModel {
-        @NameInMap("projectBackupSize")
+        @com.aliyun.core.annotation.NameInMap("projectBackupSize")
         private Long projectBackupSize;
 
-        @NameInMap("projectTotalSize")
+        @com.aliyun.core.annotation.NameInMap("projectTotalSize")
         private Long projectTotalSize;
 
-        @NameInMap("storageTierSize")
+        @com.aliyun.core.annotation.NameInMap("storageTierSize")
         private StorageTierSize storageTierSize;
 
         private StorageTierInfo(Builder builder) {
@@ -436,10 +435,10 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class TableLifecycle extends TeaModel {
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
-        @NameInMap("value")
+        @com.aliyun.core.annotation.NameInMap("value")
         private String value;
 
         private TableLifecycle(Builder builder) {
@@ -496,47 +495,642 @@ public class GetProjectResponseBody extends TeaModel {
         } 
 
     }
+    public static class DaysAfterLastAccessGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private DaysAfterLastAccessGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DaysAfterLastAccessGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public DaysAfterLastAccessGreaterThan build() {
+                return new DaysAfterLastAccessGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class DaysAfterLastModificationGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private DaysAfterLastModificationGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DaysAfterLastModificationGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public DaysAfterLastModificationGreaterThan build() {
+                return new DaysAfterLastModificationGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class DaysAfterLastTierModificationGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private DaysAfterLastTierModificationGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DaysAfterLastTierModificationGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public DaysAfterLastTierModificationGreaterThan build() {
+                return new DaysAfterLastTierModificationGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class TierToLongterm extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastAccessGreaterThan")
+        private DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan;
+
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastModificationGreaterThan")
+        private DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan;
+
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastTierModificationGreaterThan")
+        private DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan;
+
+        private TierToLongterm(Builder builder) {
+            this.daysAfterLastAccessGreaterThan = builder.daysAfterLastAccessGreaterThan;
+            this.daysAfterLastModificationGreaterThan = builder.daysAfterLastModificationGreaterThan;
+            this.daysAfterLastTierModificationGreaterThan = builder.daysAfterLastTierModificationGreaterThan;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TierToLongterm create() {
+            return builder().build();
+        }
+
+        /**
+         * @return daysAfterLastAccessGreaterThan
+         */
+        public DaysAfterLastAccessGreaterThan getDaysAfterLastAccessGreaterThan() {
+            return this.daysAfterLastAccessGreaterThan;
+        }
+
+        /**
+         * @return daysAfterLastModificationGreaterThan
+         */
+        public DaysAfterLastModificationGreaterThan getDaysAfterLastModificationGreaterThan() {
+            return this.daysAfterLastModificationGreaterThan;
+        }
+
+        /**
+         * @return daysAfterLastTierModificationGreaterThan
+         */
+        public DaysAfterLastTierModificationGreaterThan getDaysAfterLastTierModificationGreaterThan() {
+            return this.daysAfterLastTierModificationGreaterThan;
+        }
+
+        public static final class Builder {
+            private DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan; 
+            private DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan; 
+            private DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan; 
+
+            /**
+             * daysAfterLastAccessGreaterThan.
+             */
+            public Builder daysAfterLastAccessGreaterThan(DaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan) {
+                this.daysAfterLastAccessGreaterThan = daysAfterLastAccessGreaterThan;
+                return this;
+            }
+
+            /**
+             * daysAfterLastModificationGreaterThan.
+             */
+            public Builder daysAfterLastModificationGreaterThan(DaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan) {
+                this.daysAfterLastModificationGreaterThan = daysAfterLastModificationGreaterThan;
+                return this;
+            }
+
+            /**
+             * daysAfterLastTierModificationGreaterThan.
+             */
+            public Builder daysAfterLastTierModificationGreaterThan(DaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan) {
+                this.daysAfterLastTierModificationGreaterThan = daysAfterLastTierModificationGreaterThan;
+                return this;
+            }
+
+            public TierToLongterm build() {
+                return new TierToLongterm(this);
+            } 
+
+        } 
+
+    }
+    public static class TierToLowFrequencyDaysAfterLastAccessGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private TierToLowFrequencyDaysAfterLastAccessGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TierToLowFrequencyDaysAfterLastAccessGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public TierToLowFrequencyDaysAfterLastAccessGreaterThan build() {
+                return new TierToLowFrequencyDaysAfterLastAccessGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class TierToLowFrequencyDaysAfterLastModificationGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private TierToLowFrequencyDaysAfterLastModificationGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TierToLowFrequencyDaysAfterLastModificationGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public TierToLowFrequencyDaysAfterLastModificationGreaterThan build() {
+                return new TierToLowFrequencyDaysAfterLastModificationGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class TierToLowFrequencyDaysAfterLastTierModificationGreaterThan extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("conditionCode")
+        private String conditionCode;
+
+        @com.aliyun.core.annotation.NameInMap("value")
+        private Long value;
+
+        private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan(Builder builder) {
+            this.conditionCode = builder.conditionCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TierToLowFrequencyDaysAfterLastTierModificationGreaterThan create() {
+            return builder().build();
+        }
+
+        /**
+         * @return conditionCode
+         */
+        public String getConditionCode() {
+            return this.conditionCode;
+        }
+
+        /**
+         * @return value
+         */
+        public Long getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String conditionCode; 
+            private Long value; 
+
+            /**
+             * conditionCode.
+             */
+            public Builder conditionCode(String conditionCode) {
+                this.conditionCode = conditionCode;
+                return this;
+            }
+
+            /**
+             * The retention period of a table. Unit: days.
+             */
+            public Builder value(Long value) {
+                this.value = value;
+                return this;
+            }
+
+            public TierToLowFrequencyDaysAfterLastTierModificationGreaterThan build() {
+                return new TierToLowFrequencyDaysAfterLastTierModificationGreaterThan(this);
+            } 
+
+        } 
+
+    }
+    public static class TierToLowFrequency extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastAccessGreaterThan")
+        private TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan;
+
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastModificationGreaterThan")
+        private TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan;
+
+        @com.aliyun.core.annotation.NameInMap("daysAfterLastTierModificationGreaterThan")
+        private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan;
+
+        private TierToLowFrequency(Builder builder) {
+            this.daysAfterLastAccessGreaterThan = builder.daysAfterLastAccessGreaterThan;
+            this.daysAfterLastModificationGreaterThan = builder.daysAfterLastModificationGreaterThan;
+            this.daysAfterLastTierModificationGreaterThan = builder.daysAfterLastTierModificationGreaterThan;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TierToLowFrequency create() {
+            return builder().build();
+        }
+
+        /**
+         * @return daysAfterLastAccessGreaterThan
+         */
+        public TierToLowFrequencyDaysAfterLastAccessGreaterThan getDaysAfterLastAccessGreaterThan() {
+            return this.daysAfterLastAccessGreaterThan;
+        }
+
+        /**
+         * @return daysAfterLastModificationGreaterThan
+         */
+        public TierToLowFrequencyDaysAfterLastModificationGreaterThan getDaysAfterLastModificationGreaterThan() {
+            return this.daysAfterLastModificationGreaterThan;
+        }
+
+        /**
+         * @return daysAfterLastTierModificationGreaterThan
+         */
+        public TierToLowFrequencyDaysAfterLastTierModificationGreaterThan getDaysAfterLastTierModificationGreaterThan() {
+            return this.daysAfterLastTierModificationGreaterThan;
+        }
+
+        public static final class Builder {
+            private TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan; 
+            private TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan; 
+            private TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan; 
+
+            /**
+             * daysAfterLastAccessGreaterThan.
+             */
+            public Builder daysAfterLastAccessGreaterThan(TierToLowFrequencyDaysAfterLastAccessGreaterThan daysAfterLastAccessGreaterThan) {
+                this.daysAfterLastAccessGreaterThan = daysAfterLastAccessGreaterThan;
+                return this;
+            }
+
+            /**
+             * daysAfterLastModificationGreaterThan.
+             */
+            public Builder daysAfterLastModificationGreaterThan(TierToLowFrequencyDaysAfterLastModificationGreaterThan daysAfterLastModificationGreaterThan) {
+                this.daysAfterLastModificationGreaterThan = daysAfterLastModificationGreaterThan;
+                return this;
+            }
+
+            /**
+             * daysAfterLastTierModificationGreaterThan.
+             */
+            public Builder daysAfterLastTierModificationGreaterThan(TierToLowFrequencyDaysAfterLastTierModificationGreaterThan daysAfterLastTierModificationGreaterThan) {
+                this.daysAfterLastTierModificationGreaterThan = daysAfterLastTierModificationGreaterThan;
+                return this;
+            }
+
+            public TierToLowFrequency build() {
+                return new TierToLowFrequency(this);
+            } 
+
+        } 
+
+    }
+    public static class TableLifecycleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TierToLongterm")
+        private TierToLongterm tierToLongterm;
+
+        @com.aliyun.core.annotation.NameInMap("TierToLowFrequency")
+        private TierToLowFrequency tierToLowFrequency;
+
+        private TableLifecycleConfig(Builder builder) {
+            this.tierToLongterm = builder.tierToLongterm;
+            this.tierToLowFrequency = builder.tierToLowFrequency;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TableLifecycleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return tierToLongterm
+         */
+        public TierToLongterm getTierToLongterm() {
+            return this.tierToLongterm;
+        }
+
+        /**
+         * @return tierToLowFrequency
+         */
+        public TierToLowFrequency getTierToLowFrequency() {
+            return this.tierToLowFrequency;
+        }
+
+        public static final class Builder {
+            private TierToLongterm tierToLongterm; 
+            private TierToLowFrequency tierToLowFrequency; 
+
+            /**
+             * TierToLongterm.
+             */
+            public Builder tierToLongterm(TierToLongterm tierToLongterm) {
+                this.tierToLongterm = tierToLongterm;
+                return this;
+            }
+
+            /**
+             * TierToLowFrequency.
+             */
+            public Builder tierToLowFrequency(TierToLowFrequency tierToLowFrequency) {
+                this.tierToLowFrequency = tierToLowFrequency;
+                return this;
+            }
+
+            public TableLifecycleConfig build() {
+                return new TableLifecycleConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Properties extends TeaModel {
-        @NameInMap("allowFullScan")
+        @com.aliyun.core.annotation.NameInMap("allowFullScan")
         private Boolean allowFullScan;
 
-        @NameInMap("elderTunnelQuota")
+        @com.aliyun.core.annotation.NameInMap("elderTunnelQuota")
         private String elderTunnelQuota;
 
-        @NameInMap("enableDecimal2")
+        @com.aliyun.core.annotation.NameInMap("enableDecimal2")
         private Boolean enableDecimal2;
 
-        @NameInMap("enableFdcCacheForce")
+        @com.aliyun.core.annotation.NameInMap("enableFdcCacheForce")
         private Boolean enableFdcCacheForce;
 
-        @NameInMap("enableTunnelQuotaRoute")
+        @com.aliyun.core.annotation.NameInMap("enableTieredStorage")
+        private Boolean enableTieredStorage;
+
+        @com.aliyun.core.annotation.NameInMap("enableTunnelQuotaRoute")
         private Boolean enableTunnelQuotaRoute;
 
-        @NameInMap("encryption")
+        @com.aliyun.core.annotation.NameInMap("encryption")
         private Encryption encryption;
 
-        @NameInMap("fdcQuota")
+        @com.aliyun.core.annotation.NameInMap("fdcQuota")
         private String fdcQuota;
 
-        @NameInMap("retentionDays")
+        @com.aliyun.core.annotation.NameInMap("retentionDays")
         private Long retentionDays;
 
-        @NameInMap("sqlMeteringMax")
+        @com.aliyun.core.annotation.NameInMap("sqlMeteringMax")
         private String sqlMeteringMax;
 
-        @NameInMap("storageTierInfo")
+        @com.aliyun.core.annotation.NameInMap("storageTierInfo")
         private StorageTierInfo storageTierInfo;
 
-        @NameInMap("tableLifecycle")
+        @com.aliyun.core.annotation.NameInMap("tableLifecycle")
         private TableLifecycle tableLifecycle;
 
-        @NameInMap("timezone")
+        @com.aliyun.core.annotation.NameInMap("tableLifecycleConfig")
+        private TableLifecycleConfig tableLifecycleConfig;
+
+        @com.aliyun.core.annotation.NameInMap("timezone")
         private String timezone;
 
-        @NameInMap("tunnelQuota")
+        @com.aliyun.core.annotation.NameInMap("tunnelQuota")
         private String tunnelQuota;
 
-        @NameInMap("typeSystem")
+        @com.aliyun.core.annotation.NameInMap("typeSystem")
         private String typeSystem;
 
         private Properties(Builder builder) {
@@ -544,6 +1138,7 @@ public class GetProjectResponseBody extends TeaModel {
             this.elderTunnelQuota = builder.elderTunnelQuota;
             this.enableDecimal2 = builder.enableDecimal2;
             this.enableFdcCacheForce = builder.enableFdcCacheForce;
+            this.enableTieredStorage = builder.enableTieredStorage;
             this.enableTunnelQuotaRoute = builder.enableTunnelQuotaRoute;
             this.encryption = builder.encryption;
             this.fdcQuota = builder.fdcQuota;
@@ -551,6 +1146,7 @@ public class GetProjectResponseBody extends TeaModel {
             this.sqlMeteringMax = builder.sqlMeteringMax;
             this.storageTierInfo = builder.storageTierInfo;
             this.tableLifecycle = builder.tableLifecycle;
+            this.tableLifecycleConfig = builder.tableLifecycleConfig;
             this.timezone = builder.timezone;
             this.tunnelQuota = builder.tunnelQuota;
             this.typeSystem = builder.typeSystem;
@@ -590,6 +1186,13 @@ public class GetProjectResponseBody extends TeaModel {
          */
         public Boolean getEnableFdcCacheForce() {
             return this.enableFdcCacheForce;
+        }
+
+        /**
+         * @return enableTieredStorage
+         */
+        public Boolean getEnableTieredStorage() {
+            return this.enableTieredStorage;
         }
 
         /**
@@ -642,6 +1245,13 @@ public class GetProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return tableLifecycleConfig
+         */
+        public TableLifecycleConfig getTableLifecycleConfig() {
+            return this.tableLifecycleConfig;
+        }
+
+        /**
          * @return timezone
          */
         public String getTimezone() {
@@ -667,6 +1277,7 @@ public class GetProjectResponseBody extends TeaModel {
             private String elderTunnelQuota; 
             private Boolean enableDecimal2; 
             private Boolean enableFdcCacheForce; 
+            private Boolean enableTieredStorage; 
             private Boolean enableTunnelQuotaRoute; 
             private Encryption encryption; 
             private String fdcQuota; 
@@ -674,6 +1285,7 @@ public class GetProjectResponseBody extends TeaModel {
             private String sqlMeteringMax; 
             private StorageTierInfo storageTierInfo; 
             private TableLifecycle tableLifecycle; 
+            private TableLifecycleConfig tableLifecycleConfig; 
             private String timezone; 
             private String tunnelQuota; 
             private String typeSystem; 
@@ -707,6 +1319,14 @@ public class GetProjectResponseBody extends TeaModel {
              */
             public Builder enableFdcCacheForce(Boolean enableFdcCacheForce) {
                 this.enableFdcCacheForce = enableFdcCacheForce;
+                return this;
+            }
+
+            /**
+             * enableTieredStorage.
+             */
+            public Builder enableTieredStorage(Boolean enableTieredStorage) {
+                this.enableTieredStorage = enableTieredStorage;
                 return this;
             }
 
@@ -767,6 +1387,14 @@ public class GetProjectResponseBody extends TeaModel {
             }
 
             /**
+             * tableLifecycleConfig.
+             */
+            public Builder tableLifecycleConfig(TableLifecycleConfig tableLifecycleConfig) {
+                this.tableLifecycleConfig = tableLifecycleConfig;
+                return this;
+            }
+
+            /**
              * The time zone of the project.
              */
             public Builder timezone(String timezone) {
@@ -798,10 +1426,10 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class SaleTag extends TeaModel {
-        @NameInMap("resourceId")
+        @com.aliyun.core.annotation.NameInMap("resourceId")
         private String resourceId;
 
-        @NameInMap("resourceType")
+        @com.aliyun.core.annotation.NameInMap("resourceType")
         private String resourceType;
 
         private SaleTag(Builder builder) {
@@ -859,10 +1487,10 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class ProjectProtection extends TeaModel {
-        @NameInMap("exceptionPolicy")
+        @com.aliyun.core.annotation.NameInMap("exceptionPolicy")
         private String exceptionPolicy;
 
-        @NameInMap("protected")
+        @com.aliyun.core.annotation.NameInMap("protected")
         private Boolean _protected;
 
         private ProjectProtection(Builder builder) {
@@ -920,25 +1548,25 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class SecurityProperties extends TeaModel {
-        @NameInMap("enableDownloadPrivilege")
+        @com.aliyun.core.annotation.NameInMap("enableDownloadPrivilege")
         private Boolean enableDownloadPrivilege;
 
-        @NameInMap("labelSecurity")
+        @com.aliyun.core.annotation.NameInMap("labelSecurity")
         private Boolean labelSecurity;
 
-        @NameInMap("objectCreatorHasAccessPermission")
+        @com.aliyun.core.annotation.NameInMap("objectCreatorHasAccessPermission")
         private Boolean objectCreatorHasAccessPermission;
 
-        @NameInMap("objectCreatorHasGrantPermission")
+        @com.aliyun.core.annotation.NameInMap("objectCreatorHasGrantPermission")
         private Boolean objectCreatorHasGrantPermission;
 
-        @NameInMap("projectProtection")
+        @com.aliyun.core.annotation.NameInMap("projectProtection")
         private ProjectProtection projectProtection;
 
-        @NameInMap("usingAcl")
+        @com.aliyun.core.annotation.NameInMap("usingAcl")
         private Boolean usingAcl;
 
-        @NameInMap("usingPolicy")
+        @com.aliyun.core.annotation.NameInMap("usingPolicy")
         private Boolean usingPolicy;
 
         private SecurityProperties(Builder builder) {
@@ -1081,52 +1709,52 @@ public class GetProjectResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("comment")
+        @com.aliyun.core.annotation.NameInMap("comment")
         private String comment;
 
-        @NameInMap("costStorage")
+        @com.aliyun.core.annotation.NameInMap("costStorage")
         private String costStorage;
 
-        @NameInMap("createdTime")
+        @com.aliyun.core.annotation.NameInMap("createdTime")
         private Long createdTime;
 
-        @NameInMap("defaultQuota")
+        @com.aliyun.core.annotation.NameInMap("defaultQuota")
         private String defaultQuota;
 
-        @NameInMap("ipWhiteList")
+        @com.aliyun.core.annotation.NameInMap("ipWhiteList")
         private IpWhiteList ipWhiteList;
 
-        @NameInMap("name")
+        @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
-        @NameInMap("owner")
+        @com.aliyun.core.annotation.NameInMap("owner")
         private String owner;
 
-        @NameInMap("productType")
+        @com.aliyun.core.annotation.NameInMap("productType")
         private String productType;
 
-        @NameInMap("properties")
+        @com.aliyun.core.annotation.NameInMap("properties")
         private Properties properties;
 
-        @NameInMap("regionId")
+        @com.aliyun.core.annotation.NameInMap("regionId")
         private String regionId;
 
-        @NameInMap("saleTag")
+        @com.aliyun.core.annotation.NameInMap("saleTag")
         private SaleTag saleTag;
 
-        @NameInMap("securityProperties")
+        @com.aliyun.core.annotation.NameInMap("securityProperties")
         private SecurityProperties securityProperties;
 
-        @NameInMap("status")
+        @com.aliyun.core.annotation.NameInMap("status")
         private String status;
 
-        @NameInMap("superAdmins")
+        @com.aliyun.core.annotation.NameInMap("superAdmins")
         private java.util.List < String > superAdmins;
 
-        @NameInMap("threeTierModel")
+        @com.aliyun.core.annotation.NameInMap("threeTierModel")
         private Boolean threeTierModel;
 
-        @NameInMap("type")
+        @com.aliyun.core.annotation.NameInMap("type")
         private String type;
 
         private Data(Builder builder) {

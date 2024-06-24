@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.maxcompute20220104.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobInfosRequest</p>
  */
 public class ListJobInfosRequest extends Request {
-    @Query
-    @NameInMap("ascOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ascOrder")
     private Boolean ascOrder;
 
-    @Body
-    @NameInMap("body")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("body")
     private String body;
 
-    @Query
-    @NameInMap("orderColumn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("orderColumn")
     private String orderColumn;
 
-    @Query
-    @NameInMap("pageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageNumber")
     private Long pageNumber;
 
-    @Query
-    @NameInMap("pageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("region")
     private String region;
 
-    @Query
-    @NameInMap("tenantId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("tenantId")
     private String tenantId;
 
     private ListJobInfosRequest(Builder builder) {
