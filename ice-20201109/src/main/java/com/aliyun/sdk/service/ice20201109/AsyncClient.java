@@ -377,6 +377,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitTranscodeJobResponse> submitTranscodeJob(SubmitTranscodeJobRequest request);
 
+    CompletableFuture<SubmitVideoTranslationJobResponse> submitVideoTranslationJob(SubmitVideoTranslationJobRequest request);
+
     CompletableFuture<UpdateAvatarTrainingJobResponse> updateAvatarTrainingJob(UpdateAvatarTrainingJobRequest request);
 
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
