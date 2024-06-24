@@ -72,10 +72,10 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
 
     public static class Config extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Countries")
-        private java.util.List < String > countries;
+        private java.util.List < Long > countries;
 
         @com.aliyun.core.annotation.NameInMap("Provinces")
-        private java.util.List < String > provinces;
+        private java.util.List < Long > provinces;
 
         @com.aliyun.core.annotation.NameInMap("RegionBlockSwitch")
         private String regionBlockSwitch;
@@ -97,14 +97,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         /**
          * @return countries
          */
-        public java.util.List < String > getCountries() {
+        public java.util.List < Long > getCountries() {
             return this.countries;
         }
 
         /**
          * @return provinces
          */
-        public java.util.List < String > getProvinces() {
+        public java.util.List < Long > getProvinces() {
             return this.provinces;
         }
 
@@ -116,14 +116,14 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private java.util.List < String > countries; 
-            private java.util.List < String > provinces; 
+            private java.util.List < Long > countries; 
+            private java.util.List < Long > provinces; 
             private String regionBlockSwitch; 
 
             /**
              * An array consisting of the codes of the countries or areas from which the requests are blocked.
              */
-            public Builder countries(java.util.List < String > countries) {
+            public Builder countries(java.util.List < Long > countries) {
                 this.countries = countries;
                 return this;
             }
@@ -131,7 +131,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             /**
              * An array consisting of the codes of the administrative regions in China from which the requests are blocked.
              */
-            public Builder provinces(java.util.List < String > provinces) {
+            public Builder provinces(java.util.List < Long > provinces) {
                 this.provinces = provinces;
                 return this;
             }
