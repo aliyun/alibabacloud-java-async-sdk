@@ -97,7 +97,7 @@ public class CreateConfigDirRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The ID of the instance.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +106,7 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * configName.
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -115,7 +115,7 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * dirName.
+         * The name of the directory
          */
         public Builder dirName(String dirName) {
             this.putBodyParameter("dirName", dirName);
@@ -124,7 +124,7 @@ public class CreateConfigDirRequest extends Request {
         }
 
         /**
-         * parentFullPath.
+         * Parent file path
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putBodyParameter("parentFullPath", parentFullPath);

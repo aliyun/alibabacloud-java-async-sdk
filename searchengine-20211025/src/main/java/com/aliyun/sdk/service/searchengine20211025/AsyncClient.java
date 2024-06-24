@@ -28,6 +28,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<BuildIndexResponse> buildIndex(BuildIndexRequest request);
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     /**
       * ### Method
       * `POST`
@@ -386,6 +388,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTablesResponse> listTables(ListTablesRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ListTasksResponse> listTasks(ListTasksRequest request);
 
     CompletableFuture<ListVectorQueryResultResponse> listVectorQueryResult(ListVectorQueryResultRequest request);
@@ -573,6 +577,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<StopTaskResponse> stopTask(StopTaskRequest request);
+
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
       * ### Method

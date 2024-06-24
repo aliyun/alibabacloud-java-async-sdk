@@ -57,7 +57,7 @@ public class ListClustersResponseBody extends TeaModel {
         }
 
         /**
-         * The list of clusters.
+         * The clusters.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -121,7 +121,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the node.
+             * The name of the Searcher worker.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -129,7 +129,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * The number of Searcher workers.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -137,7 +137,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The partition ID of the node.
+             * The ID of the partition that is stored on the Searcher worker.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -202,7 +202,7 @@ public class ListClustersResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the node.
+             * The name of the QRS worker.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -210,7 +210,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number of nodes.
+             * The number of QRS workers.
              */
             public Builder number(Integer number) {
                 this.number = number;
@@ -218,7 +218,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The number o replicas.
+             * The ID of the partition that is stored on the QRS worker.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -463,7 +463,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The effective advanced version.
+             * The effective advanced configuration version.
              */
             public Builder currentAdvanceConfigVersion(String currentAdvanceConfigVersion) {
                 this.currentAdvanceConfigVersion = currentAdvanceConfigVersion;
@@ -471,7 +471,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 词典配置生效版本
+             * The effective dictionary configuration version.
              */
             public Builder currentOfflineDictConfigVersion(String currentOfflineDictConfigVersion) {
                 this.currentOfflineDictConfigVersion = currentOfflineDictConfigVersion;
@@ -487,7 +487,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 查询配置生效版本
+             * The effective query configuration version.
              */
             public Builder currentOnlineQueryConfigVersion(String currentOnlineQueryConfigVersion) {
                 this.currentOnlineQueryConfigVersion = currentOnlineQueryConfigVersion;
@@ -495,7 +495,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the node in the cluster.
+             * The information about Searcher workers.
              */
             public Builder dataNode(DataNode dataNode) {
                 this.dataNode = dataNode;
@@ -519,7 +519,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 词典配置最新版本
+             * The latest dictionary configuration version.
              */
             public Builder latestOfflineDictConfigVersion(String latestOfflineDictConfigVersion) {
                 this.latestOfflineDictConfigVersion = latestOfflineDictConfigVersion;
@@ -535,7 +535,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 查询配置最新版本
+             * The latest query configuration version.
              */
             public Builder latestOnlineQueryConfigVersion(String latestOnlineQueryConfigVersion) {
                 this.latestOnlineQueryConfigVersion = latestOnlineQueryConfigVersion;
@@ -543,7 +543,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -551,7 +551,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The query node of the cluster.
+             * The information about Query Result Searcher (QRS) workers.
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;
@@ -559,7 +559,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values: running, starting, stopping, and stopped. running indicates the cluster is running, starting indicates the cluster is starting, stopping indicates the cluster is stopping, and stopped indicates the cluster has stopped.
+             * The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
              */
             public Builder status(String status) {
                 this.status = status;
