@@ -645,9 +645,21 @@ public class CreateInstanceRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("MountPath")
         private String mountPath;
 
+        @com.aliyun.core.annotation.NameInMap("OptionType")
+        private String optionType;
+
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private String options;
+
+        @com.aliyun.core.annotation.NameInMap("Uri")
+        private String uri;
+
         private Datasets(Builder builder) {
             this.datasetId = builder.datasetId;
             this.mountPath = builder.mountPath;
+            this.optionType = builder.optionType;
+            this.options = builder.options;
+            this.uri = builder.uri;
         }
 
         public static Builder builder() {
@@ -672,9 +684,33 @@ public class CreateInstanceRequest extends Request {
             return this.mountPath;
         }
 
+        /**
+         * @return optionType
+         */
+        public String getOptionType() {
+            return this.optionType;
+        }
+
+        /**
+         * @return options
+         */
+        public String getOptions() {
+            return this.options;
+        }
+
+        /**
+         * @return uri
+         */
+        public String getUri() {
+            return this.uri;
+        }
+
         public static final class Builder {
             private String datasetId; 
             private String mountPath; 
+            private String optionType; 
+            private String options; 
+            private String uri; 
 
             /**
              * DatasetId.
@@ -689,6 +725,30 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
+                return this;
+            }
+
+            /**
+             * OptionType.
+             */
+            public Builder optionType(String optionType) {
+                this.optionType = optionType;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(String options) {
+                this.options = options;
+                return this;
+            }
+
+            /**
+             * Uri.
+             */
+            public Builder uri(String uri) {
+                this.uri = uri;
                 return this;
             }
 
