@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationsDetailForTemplateRequest</p>
  */
 public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
-    @Body
-    @NameInMap("AliyunUid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AliyunUid")
     private String aliyunUid;
 
-    @Body
-    @NameInMap("BatchQuotaApplicationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BatchQuotaApplicationId")
     private String batchQuotaApplicationId;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListQuotaApplicationsDetailForTemplateRequest(Builder builder) {
@@ -197,7 +196,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
          * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -229,12 +228,12 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends Request {
         }
 
         /**
-         * The approval status of the quota increase application. Valid values:
+         * The approval state of the quota increase application. Valid values:
          * <p>
          * 
          * *   Disagree: The application is rejected.
          * *   Agree: The application is approved.
-         * *   Process: The application is pending approval.
+         * *   Process: The application is in review.
          * *   Cancel: The application is canceled.
          */
         public Builder status(String status) {

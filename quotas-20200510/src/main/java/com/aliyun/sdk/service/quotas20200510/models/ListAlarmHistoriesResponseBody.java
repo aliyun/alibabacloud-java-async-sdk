@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlarmHistoriesResponseBody</p>
  */
 public class ListAlarmHistoriesResponseBody extends TeaModel {
-    @NameInMap("AlarmHistories")
+    @com.aliyun.core.annotation.NameInMap("AlarmHistories")
     private java.util.List < AlarmHistories> alarmHistories;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListAlarmHistoriesResponseBody(Builder builder) {
@@ -132,31 +131,31 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     } 
 
     public static class AlarmHistories extends TeaModel {
-        @NameInMap("AlarmName")
+        @com.aliyun.core.annotation.NameInMap("AlarmName")
         private String alarmName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyTarget")
+        @com.aliyun.core.annotation.NameInMap("NotifyTarget")
         private String notifyTarget;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaActionCode")
+        @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
         private String quotaActionCode;
 
-        @NameInMap("QuotaUsage")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsage")
         private Float quotaUsage;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("ThresholdPercent")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
         private Float thresholdPercent;
 
         private AlarmHistories(Builder builder) {

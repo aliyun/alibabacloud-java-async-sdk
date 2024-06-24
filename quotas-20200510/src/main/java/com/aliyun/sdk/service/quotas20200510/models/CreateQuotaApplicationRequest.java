@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQuotaApplicationRequest</p>
  */
 public class CreateQuotaApplicationRequest extends Request {
-    @Body
-    @NameInMap("AuditMode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AuditMode")
     private String auditMode;
 
-    @Body
-    @NameInMap("DesireValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DesireValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Float desireValue;
 
-    @Body
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Body
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Body
-    @NameInMap("EnvLanguage")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EnvLanguage")
     private String envLanguage;
 
-    @Body
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @Body
-    @NameInMap("NoticeType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NoticeType")
     private Integer noticeType;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
-    @Body
-    @NameInMap("Reason")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String reason;
 
     private CreateQuotaApplicationRequest(Builder builder) {
@@ -216,7 +215,11 @@ public class CreateQuotaApplicationRequest extends Request {
          * The requested value of the quota.
          * <p>
          * 
-         * > Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
+         * > 
+         * 
+         * *   You can specify the DesireValue parameter based on the values of the `TotalUsage` and `ApplicableRange` parameters that are returned by the [ListProductQuotas](~~440554~~) operation.
+         * 
+         * *   Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.
          */
         public Builder desireValue(Float desireValue) {
             this.putBodyParameter("DesireValue", desireValue);
@@ -237,7 +240,7 @@ public class CreateQuotaApplicationRequest extends Request {
          * The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
          * <p>
          * 
-         * > If you do not specify an end time, the default end time is 99 years after the quota application is submitted.
+         * >  If you do not specify an end time, the default end time is 99 years after the quota application is submitted.
          */
         public Builder effectiveTime(String effectiveTime) {
             this.putBodyParameter("EffectiveTime", effectiveTime);
@@ -262,7 +265,7 @@ public class CreateQuotaApplicationRequest extends Request {
          * The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.
          * <p>
          * 
-         * > If you do not specify a start time, the default start time is the time when the quota application is submitted.
+         * >  If you do not specify a start time, the default start time is the time when the quota application is submitted.
          */
         public Builder expireTime(String expireTime) {
             this.putBodyParameter("ExpireTime", expireTime);
@@ -287,7 +290,7 @@ public class CreateQuotaApplicationRequest extends Request {
          * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * >  To query the abbreviation of an Alibaba Cloud service name, check the `ProductCode` parameter that is described in [ListProductQuotas](~~440554~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -296,7 +299,10 @@ public class CreateQuotaApplicationRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * The quota ID.
+         * <p>
+         * 
+         * >  To query the quota ID of an Alibaba Cloud service, check the `QuotaActionCode` parameter that is described in [ListProductQuotas](~~440554~~).
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -338,10 +344,10 @@ public class CreateQuotaApplicationRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -379,9 +385,11 @@ public class CreateQuotaApplicationRequest extends Request {
              * The key of the dimension.
              * <p>
              * 
-             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * > 
              * 
-             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -392,9 +400,11 @@ public class CreateQuotaApplicationRequest extends Request {
              * The value of the dimension.
              * <p>
              * 
-             * The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * > 
              * 
-             * > This parameter is required if you set the ProductCode parameter to ecs, ecs-spec, actiontrail, or ess.
+             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * *   This parameter is required if you set the `ProductCode` parameter to `ecs`, `ecs-spec`, `actiontrail`, or `ess`.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaApplicationApprovalRequest</p>
  */
 public class GetQuotaApplicationApprovalRequest extends Request {
-    @Body
-    @NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
     private String applicationId;
 
     private GetQuotaApplicationApprovalRequest(Builder builder) {
@@ -54,7 +53,10 @@ public class GetQuotaApplicationApprovalRequest extends Request {
         } 
 
         /**
-         * ApplicationId.
+         * The quota application ID.
+         * <p>
+         * 
+         * For more information about how to obtain the ID of a quota application, see [ListQuotaApplications](~~440568~~).
          */
         public Builder applicationId(String applicationId) {
             this.putBodyParameter("ApplicationId", applicationId);

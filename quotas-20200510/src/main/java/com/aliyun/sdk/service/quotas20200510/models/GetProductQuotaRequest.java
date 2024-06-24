@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProductQuotaRequest</p>
  */
 public class GetProductQuotaRequest extends Request {
-    @Body
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String quotaActionCode;
 
     private GetProductQuotaRequest(Builder builder) {
@@ -121,10 +120,10 @@ public class GetProductQuotaRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetProductQuotaDimensionRequest</p>
  */
 public class GetProductQuotaDimensionRequest extends Request {
-    @Body
-    @NameInMap("DependentDimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DependentDimensions")
     private java.util.List < DependentDimensions> dependentDimensions;
 
-    @Body
-    @NameInMap("DimensionKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DimensionKey")
     private String dimensionKey;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
     private GetProductQuotaDimensionRequest(Builder builder) {
@@ -120,10 +119,10 @@ public class GetProductQuotaDimensionRequest extends Request {
     } 
 
     public static class DependentDimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DependentDimensions(Builder builder) {

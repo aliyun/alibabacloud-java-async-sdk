@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQuotaAlarmRequest</p>
  */
 public class CreateQuotaAlarmRequest extends Request {
-    @Body
-    @NameInMap("AlarmName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmName;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaDimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaDimensions")
     private java.util.List < QuotaDimensions> quotaDimensions;
 
-    @Body
-    @NameInMap("Threshold")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Threshold")
     private Float threshold;
 
-    @Body
-    @NameInMap("ThresholdPercent")
-    @Validation(maximum = 100, minimum = 50)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 50)
     private Float thresholdPercent;
 
-    @Body
-    @NameInMap("ThresholdType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ThresholdType")
     private String thresholdType;
 
-    @Body
-    @NameInMap("WebHook")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("WebHook")
     private String webHook;
 
     private CreateQuotaAlarmRequest(Builder builder) {
@@ -235,10 +234,10 @@ public class CreateQuotaAlarmRequest extends Request {
     } 
 
     public static class QuotaDimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private QuotaDimensions(Builder builder) {

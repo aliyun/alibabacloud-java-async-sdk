@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDependentQuotasResponseBody</p>
  */
 public class ListDependentQuotasResponseBody extends TeaModel {
-    @NameInMap("Quotas")
+    @com.aliyun.core.annotation.NameInMap("Quotas")
     private java.util.List < Quotas> quotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDependentQuotasResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListDependentQuotasResponseBody extends TeaModel {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("DependentDimension")
+        @com.aliyun.core.annotation.NameInMap("DependentDimension")
         private java.util.List < String > dependentDimension;
 
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValues")
+        @com.aliyun.core.annotation.NameInMap("DimensionValues")
         private java.util.List < String > dimensionValues;
 
         private Dimensions(Builder builder) {
@@ -153,16 +152,16 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
     }
     public static class Quotas extends TeaModel {
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.List < Dimensions> dimensions;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaActionCode")
+        @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
         private String quotaActionCode;
 
-        @NameInMap("Scale")
+        @com.aliyun.core.annotation.NameInMap("Scale")
         private Float scale;
 
         private Quotas(Builder builder) {

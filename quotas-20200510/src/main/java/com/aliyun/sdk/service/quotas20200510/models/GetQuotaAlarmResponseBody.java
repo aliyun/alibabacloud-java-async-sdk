@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaAlarmResponseBody</p>
  */
 public class GetQuotaAlarmResponseBody extends TeaModel {
-    @NameInMap("QuotaAlarm")
+    @com.aliyun.core.annotation.NameInMap("QuotaAlarm")
     private QuotaAlarm quotaAlarm;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetQuotaAlarmResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
     } 
 
     public static class QuotaAlarm extends TeaModel {
-        @NameInMap("AlarmId")
+        @com.aliyun.core.annotation.NameInMap("AlarmId")
         private String alarmId;
 
-        @NameInMap("AlarmName")
+        @com.aliyun.core.annotation.NameInMap("AlarmName")
         private String alarmName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("NotifyChannels")
+        @com.aliyun.core.annotation.NameInMap("NotifyChannels")
         private java.util.List < String > notifyChannels;
 
-        @NameInMap("NotifyTarget")
+        @com.aliyun.core.annotation.NameInMap("NotifyTarget")
         private String notifyTarget;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaActionCode")
+        @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
         private String quotaActionCode;
 
-        @NameInMap("QuotaDimension")
+        @com.aliyun.core.annotation.NameInMap("QuotaDimension")
         private java.util.Map < String, ? > quotaDimension;
 
-        @NameInMap("QuotaUsage")
+        @com.aliyun.core.annotation.NameInMap("QuotaUsage")
         private Float quotaUsage;
 
-        @NameInMap("QuotaValue")
+        @com.aliyun.core.annotation.NameInMap("QuotaValue")
         private Float quotaValue;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private Float threshold;
 
-        @NameInMap("ThresholdPercent")
+        @com.aliyun.core.annotation.NameInMap("ThresholdPercent")
         private Float thresholdPercent;
 
-        @NameInMap("ThresholdType")
+        @com.aliyun.core.annotation.NameInMap("ThresholdType")
         private String thresholdType;
 
-        @NameInMap("Webhook")
+        @com.aliyun.core.annotation.NameInMap("Webhook")
         private String webhook;
 
         private QuotaAlarm(Builder builder) {

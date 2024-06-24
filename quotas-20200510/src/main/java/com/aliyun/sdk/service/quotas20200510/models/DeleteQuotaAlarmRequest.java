@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQuotaAlarmRequest</p>
  */
 public class DeleteQuotaAlarmRequest extends Request {
-    @Body
-    @NameInMap("AlarmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmId;
 
     private DeleteQuotaAlarmRequest(Builder builder) {
@@ -56,6 +55,9 @@ public class DeleteQuotaAlarmRequest extends Request {
 
         /**
          * The ID of the quota alert.
+         * <p>
+         * 
+         * >  You can call the [ListQuotaAlarms](~~440561~~) operation to obtain the ID of a quota alert.
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);

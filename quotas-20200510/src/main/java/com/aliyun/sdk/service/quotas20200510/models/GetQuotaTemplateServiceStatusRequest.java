@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaTemplateServiceStatusRequest</p>
  */
 public class GetQuotaTemplateServiceStatusRequest extends Request {
-    @Body
-    @NameInMap("ResourceDirectoryId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceDirectoryId")
     private String resourceDirectoryId;
 
     private GetQuotaTemplateServiceStatusRequest(Builder builder) {

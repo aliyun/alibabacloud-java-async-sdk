@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationsForTemplateRequest</p>
  */
 public class ListQuotaApplicationsForTemplateRequest extends Request {
-    @Body
-    @NameInMap("ApplyEndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplyEndTime")
     private String applyEndTime;
 
-    @Body
-    @NameInMap("ApplyStartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ApplyStartTime")
     private String applyStartTime;
 
-    @Body
-    @NameInMap("BatchQuotaApplicationId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BatchQuotaApplicationId")
     private String batchQuotaApplicationId;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
     private ListQuotaApplicationsForTemplateRequest(Builder builder) {
@@ -206,7 +205,7 @@ public class ListQuotaApplicationsForTemplateRequest extends Request {
          * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * >  For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);

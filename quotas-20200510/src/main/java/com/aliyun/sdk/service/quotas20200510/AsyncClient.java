@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.quotas20200510;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.quotas20200510.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -30,8 +31,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateQuotaApplicationResponse> createQuotaApplication(CreateQuotaApplicationRequest request);
 
+    /**
+      * ### [](#)QPS limit
+      * You can add a maximum of 10 quota items to a quota template at a time.
+      *
+     */
     CompletableFuture<CreateQuotaApplicationsForTemplateResponse> createQuotaApplicationsForTemplate(CreateQuotaApplicationsForTemplateRequest request);
 
+    /**
+      * ### [](#)Prerequisites
+      * You must set the `ServiceStatus` parameter to `1`. This ensures that the quota template is enabled.
+      * You can call the [GetQuotaTemplateServiceStatus](~~450407~~) operation to query the status of a quota template. If the `ServiceStatus` parameter is set to `0` or `-1`, you must call the [ModifyQuotaTemplateServiceStatus](~~450406~~) operation to set the ServiceStatus parameter to `1`.
+      *
+     */
     CompletableFuture<CreateTemplateQuotaItemResponse> createTemplateQuotaItem(CreateTemplateQuotaItemRequest request);
 
     /**
@@ -68,6 +80,11 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetQuotaApplicationResponse> getQuotaApplication(GetQuotaApplicationRequest request);
 
+    /**
+      * ### [](#)Prerequisites
+      * Make sure that you have created an application for quota increase. For more information, see [CreateQuotaApplication](~~440566~~).
+      *
+     */
     CompletableFuture<GetQuotaApplicationApprovalResponse> getQuotaApplicationApproval(GetQuotaApplicationApprovalRequest request);
 
     CompletableFuture<GetQuotaTemplateServiceStatusResponse> getQuotaTemplateServiceStatus(GetQuotaTemplateServiceStatusRequest request);
@@ -101,6 +118,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListProductQuotasResponse> listProductQuotas(ListProductQuotasRequest request);
 
+    /**
+      * The services in the query result are the same as the services listed in [Alibaba Cloud services that support Quota Center](~~182368~~).
+      *
+     */
     CompletableFuture<ListProductsResponse> listProducts(ListProductsRequest request);
 
     CompletableFuture<ListQuotaAlarmsResponse> listQuotaAlarms(ListQuotaAlarmsRequest request);
@@ -118,13 +139,20 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListQuotaApplicationsForTemplateResponse> listQuotaApplicationsForTemplate(ListQuotaApplicationsForTemplateRequest request);
 
     /**
-      * By default, the quota template is enabled.
+      * ### [](#)Prerequisites
+      * A resource directory is enabled. For more information, see [EnableResourceDirectory](~~604185~~).
+      * ### [](#)Usage notes
+      * If the `ServiceStatus` parameter is set to `0` or `-1`, you can call this operation to set the parameter to `1`. Then, you can call the [CreateTemplateQuotaItem](~~450615~~) operation to create a quota template.
       *
      */
     CompletableFuture<ModifyQuotaTemplateServiceStatusResponse> modifyQuotaTemplateServiceStatus(ModifyQuotaTemplateServiceStatusRequest request);
 
     CompletableFuture<ModifyTemplateQuotaItemResponse> modifyTemplateQuotaItem(ModifyTemplateQuotaItemRequest request);
 
+    /**
+      * >  You can call this operation to enable the approval reminder feature for quota applications that support this feature. To check whether this feature is supported, you can view the value of `SupportReminder` in the GetQuotaApplicationApproval operation. If the value of SupportReminder is `true`, this feature is supported.
+      *
+     */
     CompletableFuture<RemindQuotaApplicationApprovalResponse> remindQuotaApplicationApproval(RemindQuotaApplicationApprovalRequest request);
 
     /**

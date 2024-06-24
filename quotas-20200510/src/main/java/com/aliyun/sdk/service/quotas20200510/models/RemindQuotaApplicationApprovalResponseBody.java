@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemindQuotaApplicationApprovalResponseBody</p>
  */
 public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
-    @NameInMap("AllowRetry")
+    @com.aliyun.core.annotation.NameInMap("AllowRetry")
     private Boolean allowRetry;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List < ? > errorArgs;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private String module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RemindQuotaApplicationApprovalResponseBody(Builder builder) {
@@ -146,7 +145,11 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AllowRetry.
+         * Indicates whether retries are allowed. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -154,7 +157,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -162,7 +165,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -170,7 +173,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * The parameters whose values are invalid.
          */
         public Builder errorArgs(java.util.List < ? > errorArgs) {
             this.errorArgs = errorArgs;
@@ -178,7 +181,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -186,7 +189,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -194,7 +197,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -202,7 +205,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * The quota application ID.
          */
         public Builder module(String module) {
             this.module = module;
@@ -210,7 +213,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +221,11 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;

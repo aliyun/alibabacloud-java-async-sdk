@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductQuotasRequest</p>
  */
 public class ListProductQuotasRequest extends Request {
-    @Body
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Body
-    @NameInMap("GroupCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GroupCode")
     private String groupCode;
 
-    @Body
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
-    @Body
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Body
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
     private ListProductQuotasRequest(Builder builder) {
@@ -232,7 +231,7 @@ public class ListProductQuotasRequest extends Request {
          * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of the `ProductCode` parameter.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -241,7 +240,7 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The ID of the quota.
+         * The quota ID.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.putBodyParameter("QuotaActionCode", quotaActionCode);
@@ -264,12 +263,14 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The field based on which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+         * The field based on which you want to sort the returned records. Valid values:
          * <p>
          * 
          * *   TIME: The returned records are sorted by the last update time.
          * *   TOTAL: The returned records are sorted by the usage of the total quota.
          * *   RESERVED: The returned records are sorted by the usage of the reserved quota.
+         * 
+         * >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
          */
         public Builder sortField(String sortField) {
             this.putBodyParameter("SortField", sortField);
@@ -278,11 +279,13 @@ public class ListProductQuotasRequest extends Request {
         }
 
         /**
-         * The order in which you want to sort the returned records. This parameter is available only for quotas that belong to ECS Quotas by Instance Type. Valid values:
+         * The order in which you want to sort the returned records. Valid values:
          * <p>
          * 
          * *   Ascending: ascending order
          * *   Descending: descending order
+         * 
+         * >  This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.
          */
         public Builder sortOrder(String sortOrder) {
             this.putBodyParameter("SortOrder", sortOrder);
@@ -298,10 +301,10 @@ public class ListProductQuotasRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -339,7 +342,7 @@ public class ListProductQuotasRequest extends Request {
              * The key of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -350,7 +353,7 @@ public class ListProductQuotasRequest extends Request {
              * The value of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAlarmHistoriesRequest</p>
  */
 public class ListAlarmHistoriesRequest extends Request {
-    @Body
-    @NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
     private String alarmId;
 
-    @Body
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @Body
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private Long startTime;
 
     private ListAlarmHistoriesRequest(Builder builder) {
@@ -138,7 +137,7 @@ public class ListAlarmHistoriesRequest extends Request {
         } 
 
         /**
-         * AlarmId.
+         * The ID of the alert.
          */
         public Builder alarmId(String alarmId) {
             this.putBodyParameter("AlarmId", alarmId);

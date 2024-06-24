@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationTemplatesResponseBody</p>
  */
 public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("QuotaApplicationTemplates")
+    @com.aliyun.core.annotation.NameInMap("QuotaApplicationTemplates")
     private java.util.List < QuotaApplicationTemplates> quotaApplicationTemplates;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListQuotaApplicationTemplatesResponseBody(Builder builder) {
@@ -135,10 +134,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Period extends TeaModel {
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("PeriodValue")
+        @com.aliyun.core.annotation.NameInMap("PeriodValue")
         private Integer periodValue;
 
         private Period(Builder builder) {
@@ -203,49 +202,49 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
 
     }
     public static class QuotaApplicationTemplates extends TeaModel {
-        @NameInMap("ApplicableRange")
+        @com.aliyun.core.annotation.NameInMap("ApplicableRange")
         private java.util.List < Float > applicableRange;
 
-        @NameInMap("ApplicableType")
+        @com.aliyun.core.annotation.NameInMap("ApplicableType")
         private String applicableType;
 
-        @NameInMap("DesireValue")
+        @com.aliyun.core.annotation.NameInMap("DesireValue")
         private Float desireValue;
 
-        @NameInMap("Dimensions")
+        @com.aliyun.core.annotation.NameInMap("Dimensions")
         private java.util.Map < String, ? > dimensions;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("EnvLanguage")
+        @com.aliyun.core.annotation.NameInMap("EnvLanguage")
         private String envLanguage;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private String expireTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NoticeType")
+        @com.aliyun.core.annotation.NameInMap("NoticeType")
         private Integer noticeType;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Period period;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("QuotaActionCode")
+        @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
         private String quotaActionCode;
 
-        @NameInMap("QuotaCategory")
+        @com.aliyun.core.annotation.NameInMap("QuotaCategory")
         private String quotaCategory;
 
-        @NameInMap("QuotaDescription")
+        @com.aliyun.core.annotation.NameInMap("QuotaDescription")
         private String quotaDescription;
 
-        @NameInMap("QuotaName")
+        @com.aliyun.core.annotation.NameInMap("QuotaName")
         private String quotaName;
 
         private QuotaApplicationTemplates(Builder builder) {

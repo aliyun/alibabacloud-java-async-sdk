@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductsResponseBody</p>
  */
 public class ListProductsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("ProductInfo")
+    @com.aliyun.core.annotation.NameInMap("ProductInfo")
     private java.util.List < ProductInfo> productInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProductsResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class ListProductsResponseBody extends TeaModel {
     } 
 
     public static class ProductInfo extends TeaModel {
-        @NameInMap("CommonQuotaSupport")
+        @com.aliyun.core.annotation.NameInMap("CommonQuotaSupport")
         private String commonQuotaSupport;
 
-        @NameInMap("Dynamic")
+        @com.aliyun.core.annotation.NameInMap("Dynamic")
         private Boolean dynamic;
 
-        @NameInMap("FlowControlSupport")
+        @com.aliyun.core.annotation.NameInMap("FlowControlSupport")
         private String flowControlSupport;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductNameEn")
+        @com.aliyun.core.annotation.NameInMap("ProductNameEn")
         private String productNameEn;
 
-        @NameInMap("SecondCategoryId")
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryId")
         private Long secondCategoryId;
 
-        @NameInMap("SecondCategoryName")
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryName")
         private String secondCategoryName;
 
-        @NameInMap("SecondCategoryNameEn")
+        @com.aliyun.core.annotation.NameInMap("SecondCategoryNameEn")
         private String secondCategoryNameEn;
 
-        @NameInMap("WhiteListLabelQuotaSupport")
+        @com.aliyun.core.annotation.NameInMap("WhiteListLabelQuotaSupport")
         private String whiteListLabelQuotaSupport;
 
         private ProductInfo(Builder builder) {

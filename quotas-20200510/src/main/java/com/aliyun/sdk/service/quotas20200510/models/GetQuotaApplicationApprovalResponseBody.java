@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetQuotaApplicationApprovalResponseBody</p>
  */
 public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
-    @NameInMap("AllowRetry")
+    @com.aliyun.core.annotation.NameInMap("AllowRetry")
     private Boolean allowRetry;
 
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorArgs")
+    @com.aliyun.core.annotation.NameInMap("ErrorArgs")
     private java.util.List < ? > errorArgs;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private String errorCode;
 
-    @NameInMap("ErrorMsg")
+    @com.aliyun.core.annotation.NameInMap("ErrorMsg")
     private String errorMsg;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("Module")
+    @com.aliyun.core.annotation.NameInMap("Module")
     private Module module;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetQuotaApplicationApprovalResponseBody(Builder builder) {
@@ -146,7 +145,11 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * AllowRetry.
+         * Indicates whether retries are allowed. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder allowRetry(Boolean allowRetry) {
             this.allowRetry = allowRetry;
@@ -154,7 +157,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicCode.
+         * The dynamic error code.
          */
         public Builder dynamicCode(String dynamicCode) {
             this.dynamicCode = dynamicCode;
@@ -162,7 +165,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * DynamicMessage.
+         * The dynamic error message.
          */
         public Builder dynamicMessage(String dynamicMessage) {
             this.dynamicMessage = dynamicMessage;
@@ -170,7 +173,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorArgs.
+         * The parameters whose values are invalid.
          */
         public Builder errorArgs(java.util.List < ? > errorArgs) {
             this.errorArgs = errorArgs;
@@ -178,7 +181,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorCode.
+         * The error code.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -186,7 +189,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMsg.
+         * The error message.
          */
         public Builder errorMsg(String errorMsg) {
             this.errorMsg = errorMsg;
@@ -194,7 +197,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -202,7 +205,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Module.
+         * The information about quota application approval.
          */
         public Builder module(Module module) {
             this.module = module;
@@ -210,7 +213,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -218,7 +221,11 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -232,16 +239,16 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("ApprovalHours")
+        @com.aliyun.core.annotation.NameInMap("ApprovalHours")
         private Integer approvalHours;
 
-        @NameInMap("ReminderIntervalHours")
+        @com.aliyun.core.annotation.NameInMap("ReminderIntervalHours")
         private Integer reminderIntervalHours;
 
-        @NameInMap("SupportReminder")
+        @com.aliyun.core.annotation.NameInMap("SupportReminder")
         private Boolean supportReminder;
 
-        @NameInMap("UnsupportReminderReason")
+        @com.aliyun.core.annotation.NameInMap("UnsupportReminderReason")
         private String unsupportReminderReason;
 
         private Module(Builder builder) {
@@ -294,7 +301,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
             private String unsupportReminderReason; 
 
             /**
-             * ApprovalHours.
+             * The average amount of time required to approve quota applications. Unit: hour.
              */
             public Builder approvalHours(Integer approvalHours) {
                 this.approvalHours = approvalHours;
@@ -302,7 +309,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * ReminderIntervalHours.
+             * The interval between two consecutive approval reminders. Unit: hour.
              */
             public Builder reminderIntervalHours(Integer reminderIntervalHours) {
                 this.reminderIntervalHours = reminderIntervalHours;
@@ -310,7 +317,11 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * SupportReminder.
+             * Indicates whether approval reminders are supported for quota applications. Valid values:
+             * <p>
+             * 
+             * *   false
+             * *   true
              */
             public Builder supportReminder(Boolean supportReminder) {
                 this.supportReminder = supportReminder;
@@ -318,7 +329,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
             }
 
             /**
-             * UnsupportReminderReason.
+             * The reason why approval reminders are not supported for quota applications.
              */
             public Builder unsupportReminderReason(String unsupportReminderReason) {
                 this.unsupportReminderReason = unsupportReminderReason;

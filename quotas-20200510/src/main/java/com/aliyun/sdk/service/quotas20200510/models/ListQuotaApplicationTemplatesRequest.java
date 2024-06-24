@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationTemplatesRequest</p>
  */
 public class ListQuotaApplicationTemplatesRequest extends Request {
-    @Body
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Body
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
     private ListQuotaApplicationTemplatesRequest(Builder builder) {
@@ -180,7 +179,7 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
          * The abbreviation of the Alibaba Cloud service name.
          * <p>
          * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
+         * >  To query the abbreviation of an Alibaba Cloud service name, call the [ListProducts](~~440555~~) operation and check the value of `ProductCode` in the response.
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -219,10 +218,10 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -260,7 +259,11 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
              * The key of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * > 
+             * 
+             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * *   You must specify both Key and Value for each quota dimension.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -271,7 +274,11 @@ public class ListQuotaApplicationTemplatesRequest extends Request {
              * The value of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * > 
+             * 
+             * *   The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * 
+             * *   You must specify both Key and Value for each quota dimension.
              */
             public Builder value(String value) {
                 this.value = value;

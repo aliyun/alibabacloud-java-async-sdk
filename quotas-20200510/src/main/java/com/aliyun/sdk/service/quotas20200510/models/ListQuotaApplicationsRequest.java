@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQuotaApplicationsRequest</p>
  */
 public class ListQuotaApplicationsRequest extends Request {
-    @Body
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < Dimensions> dimensions;
 
-    @Body
-    @NameInMap("KeyWord")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("KeyWord")
     private String keyWord;
 
-    @Body
-    @NameInMap("MaxResults")
-    @Validation(maximum = 200)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 200)
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @Body
-    @NameInMap("QuotaCategory")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QuotaCategory")
     private String quotaCategory;
 
-    @Body
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private ListQuotaApplicationsRequest(Builder builder) {
@@ -193,9 +192,6 @@ public class ListQuotaApplicationsRequest extends Request {
 
         /**
          * The abbreviation of the Alibaba Cloud service name.
-         * <p>
-         * 
-         * > For more information, see [Alibaba Cloud services that support Quota Center](~~182368~~).
          */
         public Builder productCode(String productCode) {
             this.putBodyParameter("ProductCode", productCode);
@@ -249,10 +245,10 @@ public class ListQuotaApplicationsRequest extends Request {
     } 
 
     public static class Dimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Dimensions(Builder builder) {
@@ -290,7 +286,7 @@ public class ListQuotaApplicationsRequest extends Request {
              * The key of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -301,7 +297,7 @@ public class ListQuotaApplicationsRequest extends Request {
              * The value of the dimension.
              * <p>
              * 
-             * > The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
+             * >  The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.
              */
             public Builder value(String value) {
                 this.value = value;

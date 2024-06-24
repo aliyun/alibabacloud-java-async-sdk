@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListProductQuotaDimensionsResponseBody</p>
  */
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("QuotaDimensions")
+    @com.aliyun.core.annotation.NameInMap("QuotaDimensions")
     private java.util.List < QuotaDimensions> quotaDimensions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListProductQuotaDimensionsResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     } 
 
     public static class DependentDimensions extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DependentDimensions(Builder builder) {
@@ -170,7 +169,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the quota dimension on which the quota dimension that you want to query is dependent.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -178,7 +177,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the quota dimension on which the quota dimension that you want to query is dependent.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -193,13 +192,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     }
     public static class DimensionValueDetail extends TeaModel {
-        @NameInMap("DependentDimensions")
+        @com.aliyun.core.annotation.NameInMap("DependentDimensions")
         private java.util.List < DependentDimensions> dependentDimensions;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DimensionValueDetail(Builder builder) {
@@ -243,7 +242,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * DependentDimensions.
+             * The quota dimensions on which the quota dimension that you want to query is dependent.
              */
             public Builder dependentDimensions(java.util.List < DependentDimensions> dependentDimensions) {
                 this.dependentDimensions = dependentDimensions;
@@ -274,22 +273,22 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     }
     public static class QuotaDimensions extends TeaModel {
-        @NameInMap("DependentDimensions")
+        @com.aliyun.core.annotation.NameInMap("DependentDimensions")
         private java.util.List < String > dependentDimensions;
 
-        @NameInMap("DimensionKey")
+        @com.aliyun.core.annotation.NameInMap("DimensionKey")
         private String dimensionKey;
 
-        @NameInMap("DimensionValueDetail")
+        @com.aliyun.core.annotation.NameInMap("DimensionValueDetail")
         private java.util.List < DimensionValueDetail> dimensionValueDetail;
 
-        @NameInMap("DimensionValues")
+        @com.aliyun.core.annotation.NameInMap("DimensionValues")
         private java.util.List < String > dimensionValues;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Requisite")
+        @com.aliyun.core.annotation.NameInMap("Requisite")
         private Boolean requisite;
 
         private QuotaDimensions(Builder builder) {

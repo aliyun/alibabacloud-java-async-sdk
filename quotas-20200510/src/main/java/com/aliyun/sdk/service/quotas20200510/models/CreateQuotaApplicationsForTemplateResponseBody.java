@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQuotaApplicationsForTemplateResponseBody</p>
  */
 public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
-    @NameInMap("AliyunUids")
+    @com.aliyun.core.annotation.NameInMap("AliyunUids")
     private java.util.List < String > aliyunUids;
 
-    @NameInMap("BatchQuotaApplicationId")
+    @com.aliyun.core.annotation.NameInMap("BatchQuotaApplicationId")
     private String batchQuotaApplicationId;
 
-    @NameInMap("FailResults")
+    @com.aliyun.core.annotation.NameInMap("FailResults")
     private java.util.List < FailResults> failResults;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateQuotaApplicationsForTemplateResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     } 
 
     public static class FailResults extends TeaModel {
-        @NameInMap("AliyunUid")
+        @com.aliyun.core.annotation.NameInMap("AliyunUid")
         private String aliyunUid;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private FailResults(Builder builder) {

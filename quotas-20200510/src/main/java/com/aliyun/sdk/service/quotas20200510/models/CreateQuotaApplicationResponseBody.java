@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.quotas20200510.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,58 +11,58 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQuotaApplicationResponseBody</p>
  */
 public class CreateQuotaApplicationResponseBody extends TeaModel {
-    @NameInMap("ApplicationId")
+    @com.aliyun.core.annotation.NameInMap("ApplicationId")
     private String applicationId;
 
-    @NameInMap("ApplyTime")
+    @com.aliyun.core.annotation.NameInMap("ApplyTime")
     private String applyTime;
 
-    @NameInMap("ApproveValue")
+    @com.aliyun.core.annotation.NameInMap("ApproveValue")
     private Float approveValue;
 
-    @NameInMap("AuditReason")
+    @com.aliyun.core.annotation.NameInMap("AuditReason")
     private String auditReason;
 
-    @NameInMap("DesireValue")
+    @com.aliyun.core.annotation.NameInMap("DesireValue")
     private Integer desireValue;
 
-    @NameInMap("Dimension")
+    @com.aliyun.core.annotation.NameInMap("Dimension")
     private java.util.Map < String, ? > dimension;
 
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("NoticeType")
+    @com.aliyun.core.annotation.NameInMap("NoticeType")
     private Long noticeType;
 
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @NameInMap("QuotaActionCode")
+    @com.aliyun.core.annotation.NameInMap("QuotaActionCode")
     private String quotaActionCode;
 
-    @NameInMap("QuotaArn")
+    @com.aliyun.core.annotation.NameInMap("QuotaArn")
     private String quotaArn;
 
-    @NameInMap("QuotaDescription")
+    @com.aliyun.core.annotation.NameInMap("QuotaDescription")
     private String quotaDescription;
 
-    @NameInMap("QuotaName")
+    @com.aliyun.core.annotation.NameInMap("QuotaName")
     private String quotaName;
 
-    @NameInMap("QuotaUnit")
+    @com.aliyun.core.annotation.NameInMap("QuotaUnit")
     private String quotaUnit;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private CreateQuotaApplicationResponseBody(Builder builder) {
@@ -326,7 +325,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the quota.
+         * The quota ID.
          */
         public Builder quotaActionCode(String quotaActionCode) {
             this.quotaActionCode = quotaActionCode;
@@ -358,7 +357,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * The unit of the new quota value.
+         * The unit of the quota.
          */
         public Builder quotaUnit(String quotaUnit) {
             this.quotaUnit = quotaUnit;
