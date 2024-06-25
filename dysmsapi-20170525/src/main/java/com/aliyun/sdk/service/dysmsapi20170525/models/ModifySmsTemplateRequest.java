@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySmsTemplateRequest</p>
  */
 public class ModifySmsTemplateRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Remark")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remark;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateContent")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateContent")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateContent;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer templateType;
 
     private ModifySmsTemplateRequest(Builder builder) {
@@ -166,7 +165,7 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The description of the message template. It is one of the reference information for template review. The description cannot exceed 100 characters in length.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -193,7 +192,10 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The code of the message template.
+         * <p>
+         * 
+         * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the template code on the **Templates** tab. You can also call the [AddSmsTemplate](~~121208~~) operation to obtain the template code.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -202,7 +204,10 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateContent.
+         * The content of the template. The content must be 1 to 500 characters in length.
+         * <p>
+         * 
+         * > When you modify a template, design the template content based on the review comments.
          */
         public Builder templateContent(String templateContent) {
             this.putQueryParameter("TemplateContent", templateContent);
@@ -211,7 +216,7 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the template. The name must be 1 to 30 characters in length.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -220,7 +225,13 @@ public class ModifySmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the message. Valid values:
+         * <p>
+         * 
+         * *   **0**: verification code
+         * *   **1**: text message
+         * *   **2**: promotional message
+         * *   **3**: message sent to countries or regions outside the Chinese mainland
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);

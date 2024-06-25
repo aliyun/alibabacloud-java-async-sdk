@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsSignResponseBody</p>
  */
 public class QuerySmsSignResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateDate")
+    @com.aliyun.core.annotation.NameInMap("CreateDate")
     private String createDate;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SignName")
+    @com.aliyun.core.annotation.NameInMap("SignName")
     private String signName;
 
-    @NameInMap("SignStatus")
+    @com.aliyun.core.annotation.NameInMap("SignStatus")
     private Integer signStatus;
 
     private QuerySmsSignResponseBody(Builder builder) {
@@ -110,7 +109,11 @@ public class QuerySmsSignResponseBody extends TeaModel {
         private Integer signStatus; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * CreateDate.
+         * The date and time when the signature was created.
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -126,7 +129,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +137,11 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * The remarks of the review. Valid values:
+         * <p>
+         * 
+         * *   If the signature is in the **Approved** or **Pending Approval** state, No Remarks is returned.
+         * *   If the signature is in the **Not Approved** state, the reason why the signature is rejected is returned.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -142,7 +149,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +157,7 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * SignName.
+         * The signature.
          */
         public Builder signName(String signName) {
             this.signName = signName;
@@ -158,7 +165,13 @@ public class QuerySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * SignStatus.
+         * The status of the signature. Valid values:
+         * <p>
+         * 
+         * *   **0**: The signature is pending approval.
+         * *   **1**: The signature is approved.
+         * *   **2**: The signature is rejected. The Reason parameter indicates the reason why the signature is rejected.
+         * *   **10**: The signature is cancelled.
          */
         public Builder signStatus(Integer signStatus) {
             this.signStatus = signStatus;

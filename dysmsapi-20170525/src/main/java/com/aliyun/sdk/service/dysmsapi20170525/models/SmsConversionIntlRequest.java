@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SmsConversionIntlRequest</p>
  */
 public class SmsConversionIntlRequest extends Request {
-    @Query
-    @NameInMap("ConversionTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversionTime")
     private Long conversionTime;
 
-    @Query
-    @NameInMap("Delivered")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Delivered")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean delivered;
 
-    @Query
-    @NameInMap("MessageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MessageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String messageId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private SmsConversionIntlRequest(Builder builder) {
@@ -126,7 +125,11 @@ public class SmsConversionIntlRequest extends Request {
         } 
 
         /**
-         * ConversionTime.
+         * The time when the OTP message was delivered. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * *   If you leave the parameter empty, the current timestamp is specified by default.
+         * *   If you specify the parameter, the timestamp must be greater than the message sending time and less than the current timestamp.
          */
         public Builder conversionTime(Long conversionTime) {
             this.putQueryParameter("ConversionTime", conversionTime);
@@ -135,7 +138,7 @@ public class SmsConversionIntlRequest extends Request {
         }
 
         /**
-         * Delivered.
+         * Specifies whether customers replied to the OTP message. Valid values: true and false.
          */
         public Builder delivered(Boolean delivered) {
             this.putQueryParameter("Delivered", delivered);
@@ -144,7 +147,7 @@ public class SmsConversionIntlRequest extends Request {
         }
 
         /**
-         * MessageId.
+         * The ID of the message.
          */
         public Builder messageId(String messageId) {
             this.putQueryParameter("MessageId", messageId);

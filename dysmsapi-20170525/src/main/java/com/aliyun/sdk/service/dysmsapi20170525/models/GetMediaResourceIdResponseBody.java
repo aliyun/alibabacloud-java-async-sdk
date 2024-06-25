@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaResourceIdResponseBody</p>
  */
 public class GetMediaResourceIdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetMediaResourceIdResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -112,10 +119,10 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ResUrlDownload")
+        @com.aliyun.core.annotation.NameInMap("ResUrlDownload")
         private String resUrlDownload;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private Long resourceId;
 
         private Data(Builder builder) {
@@ -150,7 +157,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
             private Long resourceId; 
 
             /**
-             * ResUrlDownload.
+             * The download URL of the resource.
              */
             public Builder resUrlDownload(String resUrlDownload) {
                 this.resUrlDownload = resUrlDownload;
@@ -158,7 +165,7 @@ public class GetMediaResourceIdResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceId.
+             * The resource ID.
              */
             public Builder resourceId(Long resourceId) {
                 this.resourceId = resourceId;

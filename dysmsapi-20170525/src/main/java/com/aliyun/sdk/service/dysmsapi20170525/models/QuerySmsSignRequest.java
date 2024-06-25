@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsSignRequest</p>
  */
 public class QuerySmsSignRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SignName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
     private QuerySmsSignRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class QuerySmsSignRequest extends Request {
         }
 
         /**
-         * SignName.
+         * The signature.
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddShortUrlResponseBody</p>
  */
 public class AddShortUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddShortUrlResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class AddShortUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the short URL.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class AddShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,13 +115,13 @@ public class AddShortUrlResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("ShortUrl")
+        @com.aliyun.core.annotation.NameInMap("ShortUrl")
         private String shortUrl;
 
-        @NameInMap("SourceUrl")
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
         private Data(Builder builder) {
@@ -162,7 +165,10 @@ public class AddShortUrlResponseBody extends TeaModel {
             private String sourceUrl; 
 
             /**
-             * ExpireDate.
+             * The time when the short URL expires.
+             * <p>
+             * 
+             * > The value of **ExpireDate** is on the hour.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -170,7 +176,7 @@ public class AddShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrl.
+             * The short URL.
              */
             public Builder shortUrl(String shortUrl) {
                 this.shortUrl = shortUrl;
@@ -178,7 +184,7 @@ public class AddShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUrl.
+             * The source URL.
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;

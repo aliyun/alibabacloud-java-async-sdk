@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ConversionDataIntlRequest</p>
  */
 public class ConversionDataIntlRequest extends Request {
-    @Query
-    @NameInMap("ConversionRate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ConversionRate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String conversionRate;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ReportTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReportTime")
     private Long reportTime;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ConversionDataIntlRequest(Builder builder) {
@@ -111,7 +110,10 @@ public class ConversionDataIntlRequest extends Request {
         } 
 
         /**
-         * ConversionRate.
+         * The conversion rate.
+         * <p>
+         * 
+         * > The value of this parameter is a double, and ranges from 0 to 1.
          */
         public Builder conversionRate(String conversionRate) {
             this.putQueryParameter("ConversionRate", conversionRate);
@@ -129,7 +131,10 @@ public class ConversionDataIntlRequest extends Request {
         }
 
         /**
-         * ReportTime.
+         * The time point at which the conversion rate is monitored. The value is a UNIX timestamp. Unit: milliseconds.
+         * <p>
+         * 
+         * > If you do not specify this parameter, the current timestamp is used by default.
          */
         public Builder reportTime(Long reportTime) {
             this.putQueryParameter("ReportTime", reportTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendCardSmsRequest</p>
  */
 public class SendCardSmsRequest extends Request {
-    @Query
-    @NameInMap("CardObjects")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardObjects")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < CardObjects> cardObjects;
 
-    @Query
-    @NameInMap("CardTemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardTemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cardTemplateCode;
 
-    @Query
-    @NameInMap("DigitalTemplateCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DigitalTemplateCode")
     private String digitalTemplateCode;
 
-    @Query
-    @NameInMap("DigitalTemplateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DigitalTemplateParam")
     private String digitalTemplateParam;
 
-    @Query
-    @NameInMap("FallbackType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FallbackType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fallbackType;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("SignName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
-    @Query
-    @NameInMap("SmsTemplateCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateCode")
     private String smsTemplateCode;
 
-    @Query
-    @NameInMap("SmsTemplateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateParam")
     private String smsTemplateParam;
 
-    @Query
-    @NameInMap("SmsUpExtendCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsUpExtendCode")
     private String smsUpExtendCode;
 
-    @Query
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @Query
-    @NameInMap("TemplateParam")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateParam")
     private String templateParam;
 
     private SendCardSmsRequest(Builder builder) {
@@ -212,7 +211,7 @@ public class SendCardSmsRequest extends Request {
         } 
 
         /**
-         * CardObjects.
+         * The objects of the message template.
          */
         public Builder cardObjects(java.util.List < CardObjects> cardObjects) {
             this.putQueryParameter("CardObjects", cardObjects);
@@ -221,7 +220,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * CardTemplateCode.
+         * The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > Make sure that the message template has been approved.
          */
         public Builder cardTemplateCode(String cardTemplateCode) {
             this.putQueryParameter("CardTemplateCode", cardTemplateCode);
@@ -230,7 +232,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * DigitalTemplateCode.
+         * The code of the digital message template that applies when the card message is rolled back. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > Make sure that the message template has been approved.
          */
         public Builder digitalTemplateCode(String digitalTemplateCode) {
             this.putQueryParameter("DigitalTemplateCode", digitalTemplateCode);
@@ -239,7 +244,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * DigitalTemplateParam.
+         * The variables of the digital message template.
+         * <p>
+         * 
+         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
          */
         public Builder digitalTemplateParam(String digitalTemplateParam) {
             this.putQueryParameter("DigitalTemplateParam", digitalTemplateParam);
@@ -248,7 +256,12 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * FallbackType.
+         * The rollback type. Valid values:
+         * <p>
+         * 
+         * *   **SMS**: text message
+         * *   **DIGITALSMS**: digital message
+         * *   **NONE**: none
          */
         public Builder fallbackType(String fallbackType) {
             this.putQueryParameter("FallbackType", fallbackType);
@@ -257,7 +270,7 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The ID that is reserved for the caller of the operation.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -266,7 +279,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * SignName.
+         * The signature. You can view the template code in the **Signature** column on the **Signaturess** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > The signature must be approved.
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -275,7 +291,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * SmsTemplateCode.
+         * The code of the text message template that applies when the card message is rolled back. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > Make sure that the message template has been approved. If you set the **FallbackType** parameter to **SMS**, this parameter is required.
          */
         public Builder smsTemplateCode(String smsTemplateCode) {
             this.putQueryParameter("SmsTemplateCode", smsTemplateCode);
@@ -284,7 +303,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * SmsTemplateParam.
+         * The variables of the text message template.
+         * <p>
+         * 
+         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
          */
         public Builder smsTemplateParam(String smsTemplateParam) {
             this.putQueryParameter("SmsTemplateParam", smsTemplateParam);
@@ -293,7 +315,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * SmsUpExtendCode.
+         * The extension code of the upstream message. Upstream messages are messages sent to the communication service provider. Upstream messages are used to customize a service, complete an inquiry, or send a request. You are charged for sending upstream messages based on the billing standards of the service provider.
+         * <p>
+         * 
+         * > If you do not need upstream messages, ignore this parameter.
          */
         public Builder smsUpExtendCode(String smsUpExtendCode) {
             this.putQueryParameter("SmsUpExtendCode", smsUpExtendCode);
@@ -302,7 +327,12 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The code of the text message template.
+         * <p>
+         * 
+         * Log on to the Alibaba Cloud SMS console. In the left-side navigation pane, click **Go Globe** or **Go China**. You can view the message template in the **Template Code** column on the **Message Templates** tab.
+         * 
+         * > The message templates must be created on the Go Globe page and approved.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);
@@ -311,7 +341,10 @@ public class SendCardSmsRequest extends Request {
         }
 
         /**
-         * TemplateParam.
+         * The variables of the message template. Format: JSON.
+         * <p>
+         * 
+         * > If you need to add line breaks to the JSON template, make sure that the format is valid.
          */
         public Builder templateParam(String templateParam) {
             this.putQueryParameter("TemplateParam", templateParam);
@@ -327,13 +360,13 @@ public class SendCardSmsRequest extends Request {
     } 
 
     public static class CardObjects extends TeaModel {
-        @NameInMap("customUrl")
+        @com.aliyun.core.annotation.NameInMap("customUrl")
         private String customUrl;
 
-        @NameInMap("dyncParams")
+        @com.aliyun.core.annotation.NameInMap("dyncParams")
         private String dyncParams;
 
-        @NameInMap("mobile")
+        @com.aliyun.core.annotation.NameInMap("mobile")
         private String mobile;
 
         private CardObjects(Builder builder) {
@@ -377,7 +410,7 @@ public class SendCardSmsRequest extends Request {
             private String mobile; 
 
             /**
-             * customUrl.
+             * The URL to which the message is redirected if the message fails to be rendered.
              */
             public Builder customUrl(String customUrl) {
                 this.customUrl = customUrl;
@@ -385,7 +418,7 @@ public class SendCardSmsRequest extends Request {
             }
 
             /**
-             * dyncParams.
+             * The variables. Special characters, such as $ and {}, do not need to be entered.
              */
             public Builder dyncParams(String dyncParams) {
                 this.dyncParams = dyncParams;
@@ -393,7 +426,7 @@ public class SendCardSmsRequest extends Request {
             }
 
             /**
-             * mobile.
+             * The mobile phone number.
              */
             public Builder mobile(String mobile) {
                 this.mobile = mobile;

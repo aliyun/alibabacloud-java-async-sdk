@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCardSmsTemplateRequest</p>
  */
 public class CreateCardSmsTemplateRequest extends Request {
-    @Query
-    @NameInMap("Factorys")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Factorys")
     private String factorys;
 
-    @Query
-    @NameInMap("Memo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Memo")
     private String memo;
 
-    @Query
-    @NameInMap("Template")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Template")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.Map < String, ? > template;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     private CreateCardSmsTemplateRequest(Builder builder) {
@@ -98,7 +97,16 @@ public class CreateCardSmsTemplateRequest extends Request {
         } 
 
         /**
-         * Factorys.
+         * The mobile phone manufacturer. Valid values:
+         * <p>
+         * 
+         * *   **HuaWei**: HUAWEI
+         * *   **XiaoMi**: Xiaomi
+         * *   **OPPO**: OPPO
+         * *   **VIVO**: vivo
+         * *   **MEIZU**: MEIZU
+         * 
+         * > If this parameter is not specified, the system automatically specifies a supported mobile phone manufacturer.
          */
         public Builder factorys(String factorys) {
             this.putQueryParameter("Factorys", factorys);
@@ -107,7 +115,7 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * Memo.
+         * The description of the message template.
          */
         public Builder memo(String memo) {
             this.putQueryParameter("Memo", memo);
@@ -116,7 +124,14 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * Template.
+         * The content of the card message template.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   For information about fields such as Template, ExtendInfo, TemplateContent, TmpCard, and Action, see [Parameters of card message templates](~~434929~~).
+         * 
+         * *   Message template content varies based on the template type. For more information, see [Sample message templates](~~435361~~).
          */
         public Builder template(java.util.Map < String, ? > template) {
             String templateShrink = shrink(template, "Template", "json");
@@ -126,7 +141,7 @@ public class CreateCardSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The name of the card message template.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);

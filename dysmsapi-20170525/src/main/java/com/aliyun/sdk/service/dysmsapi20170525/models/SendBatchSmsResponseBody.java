@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendBatchSmsResponseBody</p>
  */
 public class SendBatchSmsResponseBody extends TeaModel {
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendBatchSmsResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class SendBatchSmsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BizId.
+         * The ID of the delivery receipt. You can use one of the following methods to query the delivery status of a message based on the ID.
+         * <p>
+         * 
+         * *   Call the [QuerySendDetails](~~102352~~) operation.
+         * *   Log on to the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm#/overview). In the left-side navigation pane, choose **Analytics** > **Delivery Report**.
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -82,7 +85,11 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +97,7 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +105,7 @@ public class SendBatchSmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

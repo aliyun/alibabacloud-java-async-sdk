@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCardSmsTemplateRequest</p>
  */
 public class QueryCardSmsTemplateRequest extends Request {
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
     private QueryCardSmsTemplateRequest(Builder builder) {
@@ -55,7 +54,12 @@ public class QueryCardSmsTemplateRequest extends Request {
         } 
 
         /**
-         * TemplateCode.
+         * The code of the message template.
+         * <p>
+         * 
+         * You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * 
+         * > Make sure that the message template has been approved.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

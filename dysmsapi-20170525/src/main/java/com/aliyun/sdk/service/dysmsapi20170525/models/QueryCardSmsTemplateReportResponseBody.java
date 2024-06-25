@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCardSmsTemplateReportResponseBody</p>
  */
 public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCardSmsTemplateReportResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request is successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -112,7 +119,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("model")
+        @com.aliyun.core.annotation.NameInMap("model")
         private java.util.List < java.util.Map<String, ?>> model;
 
         private Data(Builder builder) {
@@ -138,7 +145,7 @@ public class QueryCardSmsTemplateReportResponseBody extends TeaModel {
             private java.util.List < java.util.Map<String, ?>> model; 
 
             /**
-             * model.
+             * The details of the data returned.
              */
             public Builder model(java.util.List < java.util.Map<String, ?>> model) {
                 this.model = model;

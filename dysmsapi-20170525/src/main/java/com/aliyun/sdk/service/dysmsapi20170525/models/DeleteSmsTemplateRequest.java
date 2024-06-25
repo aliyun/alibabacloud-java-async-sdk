@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteSmsTemplateRequest</p>
  */
 public class DeleteSmsTemplateRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
     private DeleteSmsTemplateRequest(Builder builder) {
@@ -124,7 +123,10 @@ public class DeleteSmsTemplateRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The code of the message template.
+         * <p>
+         * 
+         * You can log on to the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm) and obtain the message template code on the **Message Templates** tab. You can also obtain the message template code by calling the [AddSmsTemplate](~~121208~~) operation.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

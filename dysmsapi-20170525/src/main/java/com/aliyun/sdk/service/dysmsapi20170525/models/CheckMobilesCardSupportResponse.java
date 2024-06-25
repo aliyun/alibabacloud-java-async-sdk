@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckMobilesCardSupportResponse</p>
  */
 public class CheckMobilesCardSupportResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private CheckMobilesCardSupportResponseBody body;
 
     private CheckMobilesCardSupportResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class CheckMobilesCardSupportResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public CheckMobilesCardSupportResponseBody getBody() {
@@ -52,6 +60,8 @@ public class CheckMobilesCardSupportResponse extends Response {
     public interface Builder extends Response.Builder<CheckMobilesCardSupportResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(CheckMobilesCardSupportResponseBody body);
 
@@ -64,6 +74,7 @@ public class CheckMobilesCardSupportResponse extends Response {
             extends Response.BuilderImpl<CheckMobilesCardSupportResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private CheckMobilesCardSupportResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class CheckMobilesCardSupportResponse extends Response {
         private BuilderImpl(CheckMobilesCardSupportResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class CheckMobilesCardSupportResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

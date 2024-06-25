@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTagResourcesResponseBody</p>
  */
 public class ListTagResourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagResources")
+    @com.aliyun.core.annotation.NameInMap("TagResources")
     private TagResources tagResources;
 
     private ListTagResourcesResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class ListTagResourcesResponseBody extends TeaModel {
         private TagResources tagResources; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The token used to query the next page.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -90,7 +93,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TagResources.
+         * The list of tags.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -112,16 +115,16 @@ public class ListTagResourcesResponseBody extends TeaModel {
     } 
 
     public static class TagResource extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private String tagValue;
 
         private TagResource(Builder builder) {
@@ -174,7 +177,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * ResourceId.
+             * The code of the message template.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -182,7 +185,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceType.
+             * The type of resource.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -190,7 +193,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -198,7 +201,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -213,7 +216,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     }
     public static class TagResources extends TeaModel {
-        @NameInMap("TagResource")
+        @com.aliyun.core.annotation.NameInMap("TagResource")
         private java.util.List < TagResource> tagResource;
 
         private TagResources(Builder builder) {

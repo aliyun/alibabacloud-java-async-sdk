@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsTemplateResponseBody</p>
  */
 public class QuerySmsTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CreateDate")
+    @com.aliyun.core.annotation.NameInMap("CreateDate")
     private String createDate;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
     private String templateCode;
 
-    @NameInMap("TemplateContent")
+    @com.aliyun.core.annotation.NameInMap("TemplateContent")
     private String templateContent;
 
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
-    @NameInMap("TemplateStatus")
+    @com.aliyun.core.annotation.NameInMap("TemplateStatus")
     private Integer templateStatus;
 
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private Integer templateType;
 
     private QuerySmsTemplateResponseBody(Builder builder) {
@@ -146,7 +145,11 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         private Integer templateType; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -154,7 +157,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * CreateDate.
+         * The time when the message template was created.
          */
         public Builder createDate(String createDate) {
             this.createDate = createDate;
@@ -162,7 +165,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -170,7 +173,11 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Reason.
+         * The approval remarks.
+         * <p>
+         * 
+         * *   If the value of AuditStatus is **AUDIT_STATE_PASS** or **AUDIT_STATE_INIT**, the value of Reason is No Approval Remarks.
+         * *   If the value of AuditStatus is **AUDIT_STATE_NOT_PASS**, the reason why the message template is rejected is returned.
          */
         public Builder reason(String reason) {
             this.reason = reason;
@@ -178,7 +185,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -186,7 +193,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateCode.
+         * The code of the message template.
          */
         public Builder templateCode(String templateCode) {
             this.templateCode = templateCode;
@@ -194,7 +201,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateContent.
+         * The content of the message template.
          */
         public Builder templateContent(String templateContent) {
             this.templateContent = templateContent;
@@ -202,7 +209,7 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * The name of the message template.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -210,7 +217,13 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateStatus.
+         * The approval status of the message template. Valid values:
+         * <p>
+         * 
+         * *   **0**: The message template is pending approval.
+         * *   **1**: The message template is approved.
+         * *   **AUDIT_STATE_NOT_PASS**: The message template is rejected. You can view the reason in the Reason response parameter.
+         * *   **10**: The approval is canceled.
          */
         public Builder templateStatus(Integer templateStatus) {
             this.templateStatus = templateStatus;
@@ -218,7 +231,13 @@ public class QuerySmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateType.
+         * The type of the message. Valid values:
+         * <p>
+         * 
+         * *   **0**: verification code
+         * *   **1**: notification message
+         * *   **2**: promotional message
+         * *   **3**: message sent to countries or regions outside the Chinese mainland
          */
         public Builder templateType(Integer templateType) {
             this.templateType = templateType;

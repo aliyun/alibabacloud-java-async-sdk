@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCardSmsTemplateResponseBody</p>
  */
 public class CreateCardSmsTemplateResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateCardSmsTemplateResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,11 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -112,7 +119,7 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
         private Data(Builder builder) {
@@ -138,7 +145,12 @@ public class CreateCardSmsTemplateResponseBody extends TeaModel {
             private String templateCode; 
 
             /**
-             * TemplateCode.
+             * The code of the message template.
+             * <p>
+             * 
+             * You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the [Alibaba Cloud SMS console](https://dysms.console.aliyun.com/dysms.htm?spm=5176.12818093.categories-n-products.ddysms.3b2816d0xml2NA#/overview).
+             * 
+             * > Make sure that the message template has been approved.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsSignListRequest</p>
  */
 public class QuerySmsSignListRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageIndex")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QuerySmsSignListRequest(Builder builder) {
@@ -120,7 +119,7 @@ public class QuerySmsSignListRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The page number. Default value: **1**.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -129,7 +128,7 @@ public class QuerySmsSignListRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of signatures per page. Valid values: **1 to 50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

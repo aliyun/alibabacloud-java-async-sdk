@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryShortUrlRequest</p>
  */
 public class QueryShortUrlRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Body
-    @NameInMap("ShortUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShortUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shortUrl;
 
     private QueryShortUrlRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class QueryShortUrlRequest extends Request {
         }
 
         /**
-         * ShortUrl.
+         * The short URL. You can query the short URL by calling the [AddShortUrl](~~186774~~) operation.
          */
         public Builder shortUrl(String shortUrl) {
             this.putBodyParameter("ShortUrl", shortUrl);

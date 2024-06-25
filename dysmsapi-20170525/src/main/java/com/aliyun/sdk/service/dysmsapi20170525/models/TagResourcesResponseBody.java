@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TagResourcesResponseBody</p>
  */
 public class TagResourcesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private TagResourcesResponseBody(Builder builder) {
@@ -62,7 +61,11 @@ public class TagResourcesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -70,7 +73,11 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * Indicates whether tags were attached. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder data(String data) {
             this.data = data;
@@ -78,7 +85,7 @@ public class TagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

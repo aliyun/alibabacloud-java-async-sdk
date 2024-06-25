@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySendStatisticsRequest</p>
  */
 public class QuerySendStatisticsRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endDate;
 
-    @Query
-    @NameInMap("IsGlobe")
-    @Validation(required = true, maxLength = 2, minLength = 1, maximum = 2, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsGlobe")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 2, minLength = 1, maximum = 2, minimum = 1)
     private Integer isGlobe;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageIndex")
-    @Validation(required = true, minLength = 1, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageIndex")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1, minimum = 1)
     private Integer pageIndex;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true, maxLength = 50, minLength = 1, maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 50, minLength = 1, maximum = 50, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("SignName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
     private String signName;
 
-    @Query
-    @NameInMap("StartDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startDate;
 
-    @Query
-    @NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
     private Integer templateType;
 
     private QuerySendStatisticsRequest(Builder builder) {
@@ -185,7 +184,7 @@ public class QuerySendStatisticsRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Format: yyyyMMdd. Example: 20181225.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -194,7 +193,11 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * IsGlobe.
+         * The site from where the message is sent. Valid values:
+         * <p>
+         * 
+         * *   **1**: China site
+         * *   **2**: international site
          */
         public Builder isGlobe(Integer isGlobe) {
             this.putQueryParameter("IsGlobe", isGlobe);
@@ -212,7 +215,7 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * PageIndex.
+         * The page number. Default value: **1**.
          */
         public Builder pageIndex(Integer pageIndex) {
             this.putQueryParameter("PageIndex", pageIndex);
@@ -221,7 +224,7 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Valid values: **1 to 50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -248,7 +251,7 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * SignName.
+         * The signature.
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -257,7 +260,7 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Format: yyyyMMdd. Example: 20181225.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -266,7 +269,14 @@ public class QuerySendStatisticsRequest extends Request {
         }
 
         /**
-         * TemplateType.
+         * The type of the message template. Valid values: Valid values:
+         * <p>
+         * 
+         * *   **0**: verification code
+         * *   **1**: notification
+         * *   **2**: promotional message (Enterprise users only)
+         * *   **3**: international purpose (Enterprise users only)
+         * *   **7**: digital message
          */
         public Builder templateType(Integer templateType) {
             this.putQueryParameter("TemplateType", templateType);

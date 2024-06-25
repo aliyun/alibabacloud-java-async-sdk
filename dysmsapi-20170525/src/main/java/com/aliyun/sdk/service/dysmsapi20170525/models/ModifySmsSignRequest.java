@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySmsSignRequest</p>
  */
 public class ModifySmsSignRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Remark")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Remark")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String remark;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Body
-    @NameInMap("SignFileList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SignFileList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < SignFileList> signFileList;
 
-    @Query
-    @NameInMap("SignName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signName;
 
-    @Query
-    @NameInMap("SignSource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignSource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer signSource;
 
-    @Query
-    @NameInMap("SignType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignType")
     private Integer signType;
 
     private ModifySmsSignRequest(Builder builder) {
@@ -165,7 +164,10 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * Remark.
+         * The scenario description of your released services. Provide the information of your services, such as a website URL, a domain name with an ICP filing, an app download URL, or the name of your WeChat official account or mini program. For sign-in scenarios, you must also provide an account and password for tests. A detailed description can improve the review efficiency of signatures and templates.
+         * <p>
+         * 
+         * > The description can be up to 200 characters in length.
          */
         public Builder remark(String remark) {
             this.putQueryParameter("Remark", remark);
@@ -192,7 +194,7 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignFileList.
+         * The list of signature files.
          */
         public Builder signFileList(java.util.List < SignFileList> signFileList) {
             this.putBodyParameter("SignFileList", signFileList);
@@ -201,7 +203,7 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignName.
+         * The signature.
          */
         public Builder signName(String signName) {
             this.putQueryParameter("SignName", signName);
@@ -210,7 +212,15 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignSource.
+         * The source of the signature. Valid values:
+         * <p>
+         * 
+         * *   **0**: full name or abbreviation of an enterprise or institution.
+         * *   **1**: full name or abbreviation of a website with Ministry of Industry and Information Technology (MIIT) filing.
+         * *   **2**: full name or abbreviation of an app.
+         * *   **3**: full name or abbreviation of a WeChat official account or applet.
+         * *   **4**: full name or abbreviation of an e-commerce store.
+         * *   **5**: full name or abbreviation of a trademark.
          */
         public Builder signSource(Integer signSource) {
             this.putQueryParameter("SignSource", signSource);
@@ -219,7 +229,11 @@ public class ModifySmsSignRequest extends Request {
         }
 
         /**
-         * SignType.
+         * The type of the signature. Valid values:
+         * <p>
+         * 
+         * *   **0**: verification-code signature
+         * *   **1**: general-purpose signature
          */
         public Builder signType(Integer signType) {
             this.putQueryParameter("SignType", signType);
@@ -235,12 +249,12 @@ public class ModifySmsSignRequest extends Request {
     } 
 
     public static class SignFileList extends TeaModel {
-        @NameInMap("FileContents")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileContents")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileContents;
 
-        @NameInMap("FileSuffix")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("FileSuffix")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String fileSuffix;
 
         private SignFileList(Builder builder) {
@@ -275,7 +289,10 @@ public class ModifySmsSignRequest extends Request {
             private String fileSuffix; 
 
             /**
-             * FileContents.
+             * The base64-encoded string of the signed files. The size of the image cannot exceed 2 MB.
+             * <p>
+             * 
+             * In some scenarios, documents are required to prove your identity. For more information, see [Signature specifications](~~108076~~).
              */
             public Builder fileContents(String fileContents) {
                 this.fileContents = fileContents;
@@ -283,7 +300,12 @@ public class ModifySmsSignRequest extends Request {
             }
 
             /**
-             * FileSuffix.
+             * The format of the documents. You can upload multiple images. JPG, PNG, GIF, and JPEG are supported.
+             * <p>
+             * 
+             * In some scenarios, documents are required to prove your identity. For more information, see [Signature specifications](~~108076~~).
+             * 
+             * > If the signature is used for other purposes or the signature source is an enterprise or public institution, you must upload some documents and an authorization letter. For more information, see [Documents](~~108076~~) and [Letter of authorization](~~56741~~).
              */
             public Builder fileSuffix(String fileSuffix) {
                 this.fileSuffix = fileSuffix;

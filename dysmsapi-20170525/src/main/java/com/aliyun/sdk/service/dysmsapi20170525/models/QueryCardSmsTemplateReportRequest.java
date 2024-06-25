@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCardSmsTemplateReportRequest</p>
  */
 public class QueryCardSmsTemplateReportRequest extends Request {
-    @Query
-    @NameInMap("EndDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndDate")
     private String endDate;
 
-    @Query
-    @NameInMap("StartDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartDate")
     private String startDate;
 
-    @Query
-    @NameInMap("TemplateCodes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCodes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > templateCodes;
 
     private QueryCardSmsTemplateReportRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         } 
 
         /**
-         * EndDate.
+         * The end of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder endDate(String endDate) {
             this.putQueryParameter("EndDate", endDate);
@@ -92,7 +91,7 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * StartDate.
+         * The beginning of the time range to query. Specify the time in the yyyy-MM-dd HH:mm:ss format.
          */
         public Builder startDate(String startDate) {
             this.putQueryParameter("StartDate", startDate);
@@ -101,7 +100,7 @@ public class QueryCardSmsTemplateReportRequest extends Request {
         }
 
         /**
-         * TemplateCodes.
+         * The array of message templates.
          */
         public Builder templateCodes(java.util.List < String > templateCodes) {
             this.putQueryParameter("TemplateCodes", templateCodes);

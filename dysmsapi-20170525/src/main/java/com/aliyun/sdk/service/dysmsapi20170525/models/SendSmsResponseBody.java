@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SendSmsResponseBody</p>
  */
 public class SendSmsResponseBody extends TeaModel {
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SendSmsResponseBody(Builder builder) {
@@ -74,7 +73,10 @@ public class SendSmsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BizId.
+         * The ID of the delivery receipt.
+         * <p>
+         * 
+         * You can call the [QuerySendDetails](~~QuerySendDetails~~) operation to query the delivery status based on the receipt ID.
          */
         public Builder bizId(String bizId) {
             this.bizId = bizId;
@@ -82,7 +84,11 @@ public class SendSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -90,7 +96,7 @@ public class SendSmsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +104,7 @@ public class SendSmsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

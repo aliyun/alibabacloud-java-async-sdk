@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifySmsSignResponseBody</p>
  */
 public class ModifySmsSignResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SignName")
+    @com.aliyun.core.annotation.NameInMap("SignName")
     private String signName;
 
     private ModifySmsSignResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class ModifySmsSignResponseBody extends TeaModel {
         private String signName; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   For more information about other response codes, see [API error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class ModifySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -90,7 +93,7 @@ public class ModifySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -98,7 +101,7 @@ public class ModifySmsSignResponseBody extends TeaModel {
         }
 
         /**
-         * SignName.
+         * The signature.
          */
         public Builder signName(String signName) {
             this.signName = signName;

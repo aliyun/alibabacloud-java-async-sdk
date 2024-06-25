@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySendStatisticsResponseBody</p>
  */
 public class QuerySendStatisticsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QuerySendStatisticsResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,19 +115,19 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
     } 
 
     public static class TargetList extends TeaModel {
-        @NameInMap("NoRespondedCount")
+        @com.aliyun.core.annotation.NameInMap("NoRespondedCount")
         private Long noRespondedCount;
 
-        @NameInMap("RespondedFailCount")
+        @com.aliyun.core.annotation.NameInMap("RespondedFailCount")
         private Long respondedFailCount;
 
-        @NameInMap("RespondedSuccessCount")
+        @com.aliyun.core.annotation.NameInMap("RespondedSuccessCount")
         private Long respondedSuccessCount;
 
-        @NameInMap("SendDate")
+        @com.aliyun.core.annotation.NameInMap("SendDate")
         private String sendDate;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TargetList(Builder builder) {
@@ -186,7 +189,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             private Long totalCount; 
 
             /**
-             * NoRespondedCount.
+             * The number of messages without a delivery receipt.
              */
             public Builder noRespondedCount(Long noRespondedCount) {
                 this.noRespondedCount = noRespondedCount;
@@ -194,7 +197,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RespondedFailCount.
+             * The number of messages with a delivery receipt that indicates a failure.
              */
             public Builder respondedFailCount(Long respondedFailCount) {
                 this.respondedFailCount = respondedFailCount;
@@ -202,7 +205,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * RespondedSuccessCount.
+             * The number of messages with a delivery receipt that indicates a success.
              */
             public Builder respondedSuccessCount(Long respondedSuccessCount) {
                 this.respondedSuccessCount = respondedSuccessCount;
@@ -210,7 +213,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * SendDate.
+             * The date when the message is sent. Format: yyyyMMdd. Example: 20181225.
              */
             public Builder sendDate(String sendDate) {
                 this.sendDate = sendDate;
@@ -218,7 +221,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalCount.
+             * The number of delivered messages.
              */
             public Builder totalCount(Long totalCount) {
                 this.totalCount = totalCount;
@@ -233,10 +236,10 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("TargetList")
+        @com.aliyun.core.annotation.NameInMap("TargetList")
         private java.util.List < TargetList> targetList;
 
-        @NameInMap("TotalSize")
+        @com.aliyun.core.annotation.NameInMap("TotalSize")
         private Long totalSize;
 
         private Data(Builder builder) {
@@ -271,7 +274,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             private Long totalSize; 
 
             /**
-             * TargetList.
+             * The details of the data returned.
              */
             public Builder targetList(java.util.List < TargetList> targetList) {
                 this.targetList = targetList;
@@ -279,7 +282,7 @@ public class QuerySendStatisticsResponseBody extends TeaModel {
             }
 
             /**
-             * TotalSize.
+             * The total number of entries returned.
              */
             public Builder totalSize(Long totalSize) {
                 this.totalSize = totalSize;

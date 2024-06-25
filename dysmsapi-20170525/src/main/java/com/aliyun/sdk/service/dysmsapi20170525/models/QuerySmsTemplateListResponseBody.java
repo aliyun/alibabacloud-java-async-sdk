@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmsTemplateListResponseBody</p>
  */
 public class QuerySmsTemplateListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("CurrentPage")
+    @com.aliyun.core.annotation.NameInMap("CurrentPage")
     private Integer currentPage;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SmsTemplateList")
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateList")
     private java.util.List < SmsTemplateList> smsTemplateList;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QuerySmsTemplateListResponseBody(Builder builder) {
@@ -110,7 +109,11 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * Code.
+         * The HTTP status code.
+         * <p>
+         * 
+         * *   The value OK indicates that the request was successful.
+         * *   Other values indicate that the request failed. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -118,7 +121,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * CurrentPage.
+         * The page number. Default value: **1**.
          */
         public Builder currentPage(Integer currentPage) {
             this.currentPage = currentPage;
@@ -126,7 +129,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -134,7 +137,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of templates per page. Valid values: **1 to 50**.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -142,7 +145,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -150,7 +153,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * SmsTemplateList.
+         * The queried message templates.
          */
         public Builder smsTemplateList(java.util.List < SmsTemplateList> smsTemplateList) {
             this.smsTemplateList = smsTemplateList;
@@ -158,7 +161,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of templates.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -172,13 +175,13 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
     } 
 
     public static class Reason extends TeaModel {
-        @NameInMap("RejectDate")
+        @com.aliyun.core.annotation.NameInMap("RejectDate")
         private String rejectDate;
 
-        @NameInMap("RejectInfo")
+        @com.aliyun.core.annotation.NameInMap("RejectInfo")
         private String rejectInfo;
 
-        @NameInMap("RejectSubInfo")
+        @com.aliyun.core.annotation.NameInMap("RejectSubInfo")
         private String rejectSubInfo;
 
         private Reason(Builder builder) {
@@ -222,7 +225,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private String rejectSubInfo; 
 
             /**
-             * RejectDate.
+             * The time when the message template was rejected. Format: yyyy-MM-dd HH:mm:ss.
              */
             public Builder rejectDate(String rejectDate) {
                 this.rejectDate = rejectDate;
@@ -230,7 +233,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * RejectInfo.
+             * The reason why the message template was rejected.
              */
             public Builder rejectInfo(String rejectInfo) {
                 this.rejectInfo = rejectInfo;
@@ -238,7 +241,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * RejectSubInfo.
+             * The remarks about the rejection.
              */
             public Builder rejectSubInfo(String rejectSubInfo) {
                 this.rejectSubInfo = rejectSubInfo;
@@ -253,31 +256,31 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
 
     }
     public static class SmsTemplateList extends TeaModel {
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("OuterTemplateType")
+        @com.aliyun.core.annotation.NameInMap("OuterTemplateType")
         private Integer outerTemplateType;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private Reason reason;
 
-        @NameInMap("TemplateCode")
+        @com.aliyun.core.annotation.NameInMap("TemplateCode")
         private String templateCode;
 
-        @NameInMap("TemplateContent")
+        @com.aliyun.core.annotation.NameInMap("TemplateContent")
         private String templateContent;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private Integer templateType;
 
         private SmsTemplateList(Builder builder) {
@@ -375,7 +378,13 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             private Integer templateType; 
 
             /**
-             * AuditStatus.
+             * The approval status of the message template. Valid values:
+             * <p>
+             * 
+             * *   **AUDIT_STATE_INIT**: The message template is pending approval.
+             * *   **AUDIT_STATE_PASS**: The message template is approved.
+             * *   **AUDIT_STATE_NOT_PASS**: The message template is rejected. You can view the reason in the Reason response parameter.
+             * *   **AUDIT_STATE_CANCEL** or **AUDIT_SATE_CANCEL**: The approval is canceled.
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -383,7 +392,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * CreateDate.
+             * The time when the message template was created. The time is in the yyyy-MM-dd HH:mm:ss format.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -391,7 +400,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ticket ID.
              */
             public Builder orderId(String orderId) {
                 this.orderId = orderId;
@@ -399,7 +408,16 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * OuterTemplateType.
+             * The type of the message template. We recommend that you specify this parameter. Valid values:
+             * <p>
+             * 
+             * *   **0**: verification code
+             * *   **1**: notification message
+             * *   **2**: promotional message
+             * *   **3**: message sent to countries or regions outside the Chinese mainland
+             * *   **7**: digital message
+             * 
+             * > The template type is the same as the value of the TemplateType parameter in the AddSmsTemplate and ModifySmsTemplate operations.
              */
             public Builder outerTemplateType(Integer outerTemplateType) {
                 this.outerTemplateType = outerTemplateType;
@@ -407,7 +425,11 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * Reason.
+             * The approval remarks.
+             * <p>
+             * 
+             * *   If the value of AuditStatus is **AUDIT_STATE_PASS** or **AUDIT_STATE_INIT**, the value of Reason is No Approval Remarks.
+             * *   If the value of AuditStatus is **AUDIT_STATE_NOT_PASS**, the reason why the message template is rejected is returned.
              */
             public Builder reason(Reason reason) {
                 this.reason = reason;
@@ -415,7 +437,10 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateCode.
+             * The code of the message template.
+             * <p>
+             * 
+             * You can log on to the [Short Message Service (SMS) console](https://dysms.console.aliyun.com/dysms.htm), click **Go China** or **Go Globe** in the left-side navigation pane, and then view the template code on the **Templates** tab. You can also call the [AddSmsTemplate](~~121208~~) operation to obtain the template code.
              */
             public Builder templateCode(String templateCode) {
                 this.templateCode = templateCode;
@@ -423,7 +448,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateContent.
+             * The content of the message template.
              */
             public Builder templateContent(String templateContent) {
                 this.templateContent = templateContent;
@@ -431,7 +456,7 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The name of the message template.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -439,7 +464,14 @@ public class QuerySmsTemplateListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateType.
+             * The type of the message template. Valid values:
+             * <p>
+             * 
+             * *   **0**: notification message
+             * *   **1**: promotional message
+             * *   **2**: verification code
+             * *   **6**: message sent to countries or regions outside the Chinese mainland
+             * *   **7**: digital message
              */
             public Builder templateType(Integer templateType) {
                 this.templateType = templateType;

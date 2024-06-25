@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddShortUrlRequest</p>
  */
 public class AddShortUrlRequest extends Request {
-    @Body
-    @NameInMap("EffectiveDays")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("EffectiveDays")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String effectiveDays;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Body
-    @NameInMap("ShortUrlName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ShortUrlName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String shortUrlName;
 
-    @Body
-    @NameInMap("SourceUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceUrl;
 
     private AddShortUrlRequest(Builder builder) {
@@ -127,7 +126,7 @@ public class AddShortUrlRequest extends Request {
         } 
 
         /**
-         * EffectiveDays.
+         * The validity period of the short URL. Unit: days. The maximum validity period is 90 days.
          */
         public Builder effectiveDays(String effectiveDays) {
             this.putBodyParameter("EffectiveDays", effectiveDays);
@@ -163,7 +162,7 @@ public class AddShortUrlRequest extends Request {
         }
 
         /**
-         * ShortUrlName.
+         * The service name of the short URL. The name cannot exceed 13 characters in length.
          */
         public Builder shortUrlName(String shortUrlName) {
             this.putBodyParameter("ShortUrlName", shortUrlName);
@@ -172,7 +171,7 @@ public class AddShortUrlRequest extends Request {
         }
 
         /**
-         * SourceUrl.
+         * The source URL. The URL cannot exceed 1,000 characters in length.
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putBodyParameter("SourceUrl", sourceUrl);

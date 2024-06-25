@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryShortUrlResponseBody</p>
  */
 public class QueryShortUrlResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryShortUrlResponseBody(Builder builder) {
@@ -74,7 +73,11 @@ public class QueryShortUrlResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Code.
+         * The response code.
+         * <p>
+         * 
+         * *   If OK is returned, the request is successful.
+         * *   Other values indicate that the request fails. For more information, see [Error codes](~~101346~~).
          */
         public Builder code(String code) {
             this.code = code;
@@ -82,7 +85,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The details of the short URL.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -90,7 +93,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -98,7 +101,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -112,28 +115,28 @@ public class QueryShortUrlResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("ExpireDate")
+        @com.aliyun.core.annotation.NameInMap("ExpireDate")
         private String expireDate;
 
-        @NameInMap("PageViewCount")
+        @com.aliyun.core.annotation.NameInMap("PageViewCount")
         private String pageViewCount;
 
-        @NameInMap("ShortUrl")
+        @com.aliyun.core.annotation.NameInMap("ShortUrl")
         private String shortUrl;
 
-        @NameInMap("ShortUrlName")
+        @com.aliyun.core.annotation.NameInMap("ShortUrlName")
         private String shortUrlName;
 
-        @NameInMap("ShortUrlStatus")
+        @com.aliyun.core.annotation.NameInMap("ShortUrlStatus")
         private String shortUrlStatus;
 
-        @NameInMap("SourceUrl")
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
-        @NameInMap("UniqueVisitorCount")
+        @com.aliyun.core.annotation.NameInMap("UniqueVisitorCount")
         private String uniqueVisitorCount;
 
         private Data(Builder builder) {
@@ -222,7 +225,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             private String uniqueVisitorCount; 
 
             /**
-             * CreateDate.
+             * The time when the short URL was created.
              */
             public Builder createDate(String createDate) {
                 this.createDate = createDate;
@@ -230,7 +233,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The time when the short URL expires.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -238,7 +241,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * PageViewCount.
+             * The PV.
              */
             public Builder pageViewCount(String pageViewCount) {
                 this.pageViewCount = pageViewCount;
@@ -246,7 +249,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrl.
+             * The short URL.
              */
             public Builder shortUrl(String shortUrl) {
                 this.shortUrl = shortUrl;
@@ -254,7 +257,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrlName.
+             * The service name of the short URL.
              */
             public Builder shortUrlName(String shortUrlName) {
                 this.shortUrlName = shortUrlName;
@@ -262,7 +265,13 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * ShortUrlStatus.
+             * The status of the short URL. Valid values:
+             * <p>
+             * 
+             * *   **expired**
+             * *   **effective**
+             * *   **audit**
+             * *   **reject**
              */
             public Builder shortUrlStatus(String shortUrlStatus) {
                 this.shortUrlStatus = shortUrlStatus;
@@ -270,7 +279,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * SourceUrl.
+             * The source address.
              */
             public Builder sourceUrl(String sourceUrl) {
                 this.sourceUrl = sourceUrl;
@@ -278,7 +287,7 @@ public class QueryShortUrlResponseBody extends TeaModel {
             }
 
             /**
-             * UniqueVisitorCount.
+             * The UV.
              */
             public Builder uniqueVisitorCount(String uniqueVisitorCount) {
                 this.uniqueVisitorCount = uniqueVisitorCount;

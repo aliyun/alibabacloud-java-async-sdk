@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckMobilesCardSupportRequest</p>
  */
 public class CheckMobilesCardSupportRequest extends Request {
-    @Query
-    @NameInMap("Mobiles")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Mobiles")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < java.util.Map<String, ?>> mobiles;
 
-    @Query
-    @NameInMap("TemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateCode;
 
     private CheckMobilesCardSupportRequest(Builder builder) {
@@ -70,7 +69,7 @@ public class CheckMobilesCardSupportRequest extends Request {
         } 
 
         /**
-         * Mobiles.
+         * The list of mobile phone numbers that receive messages.
          */
         public Builder mobiles(java.util.List < java.util.Map<String, ?>> mobiles) {
             this.putQueryParameter("Mobiles", mobiles);
@@ -79,7 +78,10 @@ public class CheckMobilesCardSupportRequest extends Request {
         }
 
         /**
-         * TemplateCode.
+         * The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > Make sure that the message template has been approved.
          */
         public Builder templateCode(String templateCode) {
             this.putQueryParameter("TemplateCode", templateCode);

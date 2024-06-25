@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCardSmsLinkRequest</p>
  */
 public class GetCardSmsLinkRequest extends Request {
-    @Query
-    @NameInMap("CardCodeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardCodeType")
     private Integer cardCodeType;
 
-    @Query
-    @NameInMap("CardLinkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardLinkType")
     private Integer cardLinkType;
 
-    @Query
-    @NameInMap("CardTemplateCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardTemplateCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cardTemplateCode;
 
-    @Query
-    @NameInMap("CardTemplateParamJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CardTemplateParamJson")
     private String cardTemplateParamJson;
 
-    @Query
-    @NameInMap("CustomShortCodeJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomShortCodeJson")
     private String customShortCodeJson;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("OutId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutId")
     private String outId;
 
-    @Query
-    @NameInMap("PhoneNumberJson")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PhoneNumberJson")
     private String phoneNumberJson;
 
-    @Query
-    @NameInMap("SignNameJson")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SignNameJson")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signNameJson;
 
     private GetCardSmsLinkRequest(Builder builder) {
@@ -168,7 +167,11 @@ public class GetCardSmsLinkRequest extends Request {
         } 
 
         /**
-         * CardCodeType.
+         * The code type of the URLs.
+         * <p>
+         * 
+         * *   **1**: group texting
+         * *   **2**: personalization
          */
         public Builder cardCodeType(Integer cardCodeType) {
             this.putQueryParameter("CardCodeType", cardCodeType);
@@ -177,7 +180,13 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * CardLinkType.
+         * The type of the short URLs.
+         * <p>
+         * 
+         * *   1: standard short code.
+         * *   2: custom short code.
+         * 
+         * > If the **CardLinkType** is not specified, standard short codes are generated. If you need to generate custom short codes, contact Alibaba Cloud SMS technical support.
          */
         public Builder cardLinkType(Integer cardLinkType) {
             this.putQueryParameter("CardLinkType", cardLinkType);
@@ -186,7 +195,10 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * CardTemplateCode.
+         * The code of the message template. You can view the template code in the **Template Code** column on the **Templates** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > Make sure that the message template has been approved.
          */
         public Builder cardTemplateCode(String cardTemplateCode) {
             this.putQueryParameter("CardTemplateCode", cardTemplateCode);
@@ -195,7 +207,7 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * CardTemplateParamJson.
+         * The variables of the message template.
          */
         public Builder cardTemplateParamJson(String cardTemplateParamJson) {
             this.putQueryParameter("CardTemplateParamJson", cardTemplateParamJson);
@@ -204,7 +216,10 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * CustomShortCodeJson.
+         * The custom short code. It can contain 4 to 8 digits or letters.
+         * <p>
+         * 
+         * > If the CardLinkType parameter is set to 2, the CustomShortCodeJson parameter is required.
          */
         public Builder customShortCodeJson(String customShortCodeJson) {
             this.putQueryParameter("CustomShortCodeJson", customShortCodeJson);
@@ -213,7 +228,14 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The original domain name. You must submit domain names for approval in advance.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   If the **CardLinkType** parameter is set to **2**, the **Domain** parameter is required.
+         * 
+         * *   The **Domain** parameter cannot exceed 100 characters in length. If the parameter is not specified, a default domain name is used.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -222,7 +244,7 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * OutId.
+         * The extension field.
          */
         public Builder outId(String outId) {
             this.putQueryParameter("OutId", outId);
@@ -231,7 +253,16 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * PhoneNumberJson.
+         * The mobile phone numbers of recipients, custom identifiers, or system identifiers.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   A maximum of 10,000 mobile phone numbers are supported.
+         * 
+         * *   You can enter custom identifier. Each identifier can be a maximum of 60 characters in length.
+         * 
+         * *   You can apply for a maximum of 10 OPPO templates at a time.
          */
         public Builder phoneNumberJson(String phoneNumberJson) {
             this.putQueryParameter("PhoneNumberJson", phoneNumberJson);
@@ -240,7 +271,10 @@ public class GetCardSmsLinkRequest extends Request {
         }
 
         /**
-         * SignNameJson.
+         * The signature. You can view the template code in the **Signature** column on the **Signaturess** tab of the **Go China** page in the Alibaba Cloud SMS console.
+         * <p>
+         * 
+         * > The signatures must be approved and correspond to the mobile numbers in sequence.
          */
         public Builder signNameJson(String signNameJson) {
             this.putQueryParameter("SignNameJson", signNameJson);

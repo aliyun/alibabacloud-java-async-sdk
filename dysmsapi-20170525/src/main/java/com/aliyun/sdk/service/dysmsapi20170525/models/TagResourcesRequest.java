@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TagResourcesRequest</p>
  */
 public class TagResourcesRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProdCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProdCode")
     private String prodCode;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceId")
     private java.util.List < String > resourceId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("ResourceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resourceType;
 
-    @Query
-    @NameInMap("Tag")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Tag> tag;
 
     private TagResourcesRequest(Builder builder) {
@@ -164,7 +163,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ProdCode.
+         * The name of the cloud service. Set the value to **dysms**.
          */
         public Builder prodCode(String prodCode) {
             this.putQueryParameter("ProdCode", prodCode);
@@ -173,7 +172,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID. Set the value to **cn-hangzhou**.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -182,7 +181,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceId.
+         * The code of the message template.
          */
         public Builder resourceId(java.util.List < String > resourceId) {
             this.putQueryParameter("ResourceId", resourceId);
@@ -209,7 +208,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of the resource. Set the value to **TEMPLATE**.
          */
         public Builder resourceType(String resourceType) {
             this.putQueryParameter("ResourceType", resourceType);
@@ -218,7 +217,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tag.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -234,10 +233,10 @@ public class TagResourcesRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -272,7 +271,7 @@ public class TagResourcesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The array of tag keys. Valid values of N: 1 to 20.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -280,7 +279,7 @@ public class TagResourcesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The array of tag values. Valid values of N: 1 to 20.
              */
             public Builder value(String value) {
                 this.value = value;

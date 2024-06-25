@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dysmsapi20170525.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteShortUrlRequest</p>
  */
 public class DeleteShortUrlRequest extends Request {
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Body
-    @NameInMap("SourceUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceUrl;
 
     private DeleteShortUrlRequest(Builder builder) {
@@ -124,7 +123,7 @@ public class DeleteShortUrlRequest extends Request {
         }
 
         /**
-         * SourceUrl.
+         * The source address. The address can be up to 1,000 characters in length.
          */
         public Builder sourceUrl(String sourceUrl) {
             this.putBodyParameter("SourceUrl", sourceUrl);
