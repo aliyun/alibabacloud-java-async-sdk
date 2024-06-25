@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMetricRequest</p>
  */
 public class QueryMetricRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private java.util.List < String > dimensions;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Filters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Filters")
     private java.util.List < Filters> filters;
 
-    @Query
-    @NameInMap("IntervalInSec")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IntervalInSec")
     private Integer intervalInSec;
 
-    @Query
-    @NameInMap("Limit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Limit")
     private Integer limit;
 
-    @Query
-    @NameInMap("Measures")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Measures")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > measures;
 
-    @Query
-    @NameInMap("Metric")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Metric")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String metric;
 
-    @Query
-    @NameInMap("Order")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
     private String order;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("ProxyUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyUserId")
     private String proxyUserId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private QueryMetricRequest(Builder builder) {
@@ -338,10 +337,10 @@ public class QueryMetricRequest extends Request {
     } 
 
     public static class Filters extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Filters(Builder builder) {

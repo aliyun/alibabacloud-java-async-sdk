@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTagValResponseBody</p>
  */
 public class GetTagValResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TagValues")
+    @com.aliyun.core.annotation.NameInMap("TagValues")
     private TagValues tagValues;
 
     private GetTagValResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetTagValResponseBody extends TeaModel {
     } 
 
     public static class TagValues extends TeaModel {
-        @NameInMap("TagValue")
+        @com.aliyun.core.annotation.NameInMap("TagValue")
         private java.util.List < String > tagValue;
 
         private TagValues(Builder builder) {

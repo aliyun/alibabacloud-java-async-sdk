@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,15 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>OpenXtraceServiceResponseBody</p>
  */
 public class OpenXtraceServiceResponseBody extends TeaModel {
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private String orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("Result")
+    private String result;
 
     private OpenXtraceServiceResponseBody(Builder builder) {
         this.orderId = builder.orderId;
         this.requestId = builder.requestId;
+        this.result = builder.result;
     }
 
     public static Builder builder() {
@@ -45,9 +48,17 @@ public class OpenXtraceServiceResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return result
+     */
+    public String getResult() {
+        return this.result;
+    }
+
     public static final class Builder {
         private String orderId; 
         private String requestId; 
+        private String result; 
 
         /**
          * OrderId.
@@ -62,6 +73,14 @@ public class OpenXtraceServiceResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * Result.
+         */
+        public Builder result(String result) {
+            this.result = result;
             return this;
         }
 

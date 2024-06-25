@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryMetricResponseBody} extends {@link TeaModel}
+ * {@link CheckCommercialStatusResponseBody} extends {@link TeaModel}
  *
- * <p>QueryMetricResponseBody</p>
+ * <p>CheckCommercialStatusResponseBody</p>
  */
-public class QueryMetricResponseBody extends TeaModel {
+public class CheckCommercialStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private QueryMetricResponseBody(Builder builder) {
+    private CheckCommercialStatusResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -26,7 +26,7 @@ public class QueryMetricResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static QueryMetricResponseBody create() {
+    public static CheckCommercialStatusResponseBody create() {
         return builder().build();
     }
 
@@ -49,7 +49,7 @@ public class QueryMetricResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The returned statistics.
+         * Data.
          */
         public Builder data(String data) {
             this.data = data;
@@ -57,15 +57,15 @@ public class QueryMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * Id of the request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public QueryMetricResponseBody build() {
-            return new QueryMetricResponseBody(this);
+        public CheckCommercialStatusResponseBody build() {
+            return new CheckCommercialStatusResponseBody(this);
         } 
 
     } 

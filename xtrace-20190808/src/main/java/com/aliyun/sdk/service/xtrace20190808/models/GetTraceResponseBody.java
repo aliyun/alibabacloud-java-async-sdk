@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTraceResponseBody</p>
  */
 public class GetTraceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Spans")
+    @com.aliyun.core.annotation.NameInMap("Spans")
     private Spans spans;
 
     private GetTraceResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetTraceResponseBody extends TeaModel {
     } 
 
     public static class TagEntry extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagEntry(Builder builder) {
@@ -133,7 +132,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class TagEntryList extends TeaModel {
-        @NameInMap("TagEntry")
+        @com.aliyun.core.annotation.NameInMap("TagEntry")
         private java.util.List < TagEntry> tagEntry;
 
         private TagEntryList(Builder builder) {
@@ -174,10 +173,10 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class LogEvent extends TeaModel {
-        @NameInMap("TagEntryList")
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
         private TagEntryList tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private LogEvent(Builder builder) {
@@ -235,7 +234,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class LogEventList extends TeaModel {
-        @NameInMap("LogEvent")
+        @com.aliyun.core.annotation.NameInMap("LogEvent")
         private java.util.List < LogEvent> logEvent;
 
         private LogEventList(Builder builder) {
@@ -276,10 +275,10 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class TagEntryListTagEntry extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TagEntryListTagEntry(Builder builder) {
@@ -337,7 +336,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class SpanTagEntryList extends TeaModel {
-        @NameInMap("TagEntry")
+        @com.aliyun.core.annotation.NameInMap("TagEntry")
         private java.util.List < TagEntryListTagEntry> tagEntry;
 
         private SpanTagEntryList(Builder builder) {
@@ -378,43 +377,43 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class Span extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Long duration;
 
-        @NameInMap("HaveStack")
+        @com.aliyun.core.annotation.NameInMap("HaveStack")
         private Boolean haveStack;
 
-        @NameInMap("LogEventList")
+        @com.aliyun.core.annotation.NameInMap("LogEventList")
         private LogEventList logEventList;
 
-        @NameInMap("OperationName")
+        @com.aliyun.core.annotation.NameInMap("OperationName")
         private String operationName;
 
-        @NameInMap("ParentSpanId")
+        @com.aliyun.core.annotation.NameInMap("ParentSpanId")
         private String parentSpanId;
 
-        @NameInMap("ResultCode")
+        @com.aliyun.core.annotation.NameInMap("ResultCode")
         private String resultCode;
 
-        @NameInMap("RpcId")
+        @com.aliyun.core.annotation.NameInMap("RpcId")
         private String rpcId;
 
-        @NameInMap("ServiceIp")
+        @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
-        @NameInMap("SpanId")
+        @com.aliyun.core.annotation.NameInMap("SpanId")
         private String spanId;
 
-        @NameInMap("TagEntryList")
+        @com.aliyun.core.annotation.NameInMap("TagEntryList")
         private SpanTagEntryList tagEntryList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("TraceID")
+        @com.aliyun.core.annotation.NameInMap("TraceID")
         private String traceID;
 
         private Span(Builder builder) {
@@ -663,7 +662,7 @@ public class GetTraceResponseBody extends TeaModel {
 
     }
     public static class Spans extends TeaModel {
-        @NameInMap("Span")
+        @com.aliyun.core.annotation.NameInMap("Span")
         private java.util.List < Span> span;
 
         private Spans(Builder builder) {

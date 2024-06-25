@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIpOrHostsResponseBody</p>
  */
 public class ListIpOrHostsResponseBody extends TeaModel {
-    @NameInMap("IpNames")
+    @com.aliyun.core.annotation.NameInMap("IpNames")
     private IpNames ipNames;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListIpOrHostsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class ListIpOrHostsResponseBody extends TeaModel {
     } 
 
     public static class IpNames extends TeaModel {
-        @NameInMap("IpName")
+        @com.aliyun.core.annotation.NameInMap("IpName")
         private java.util.List < String > ipName;
 
         private IpNames(Builder builder) {

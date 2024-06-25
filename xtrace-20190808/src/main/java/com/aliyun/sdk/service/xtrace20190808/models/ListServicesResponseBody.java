@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.xtrace20190808.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServicesResponseBody</p>
  */
 public class ListServicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Services")
+    @com.aliyun.core.annotation.NameInMap("Services")
     private Services services;
 
     private ListServicesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListServicesResponseBody extends TeaModel {
     } 
 
     public static class Service extends TeaModel {
-        @NameInMap("Pid")
+        @com.aliyun.core.annotation.NameInMap("Pid")
         private String pid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceName")
+        @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
 
         private Service(Builder builder) {
@@ -153,7 +152,7 @@ public class ListServicesResponseBody extends TeaModel {
 
     }
     public static class Services extends TeaModel {
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private java.util.List < Service> service;
 
         private Services(Builder builder) {

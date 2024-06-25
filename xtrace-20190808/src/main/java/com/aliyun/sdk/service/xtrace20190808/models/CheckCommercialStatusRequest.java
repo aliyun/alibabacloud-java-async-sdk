@@ -6,25 +6,31 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link OpenXtraceServiceRequest} extends {@link RequestModel}
+ * {@link CheckCommercialStatusRequest} extends {@link RequestModel}
  *
- * <p>OpenXtraceServiceRequest</p>
+ * <p>CheckCommercialStatusRequest</p>
  */
-public class OpenXtraceServiceRequest extends Request {
+public class CheckCommercialStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private OpenXtraceServiceRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Service")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String service;
+
+    private CheckCommercialStatusRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.service = builder.service;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static OpenXtraceServiceRequest create() {
+    public static CheckCommercialStatusRequest create() {
         return builder().build();
     }
 
@@ -40,16 +46,25 @@ public class OpenXtraceServiceRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<OpenXtraceServiceRequest, Builder> {
+    /**
+     * @return service
+     */
+    public String getService() {
+        return this.service;
+    }
+
+    public static final class Builder extends Request.Builder<CheckCommercialStatusRequest, Builder> {
         private String regionId; 
+        private String service; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(OpenXtraceServiceRequest request) {
+        private Builder(CheckCommercialStatusRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.service = request.service;
         } 
 
         /**
@@ -61,9 +76,18 @@ public class OpenXtraceServiceRequest extends Request {
             return this;
         }
 
+        /**
+         * Service.
+         */
+        public Builder service(String service) {
+            this.putQueryParameter("Service", service);
+            this.service = service;
+            return this;
+        }
+
         @Override
-        public OpenXtraceServiceRequest build() {
-            return new OpenXtraceServiceRequest(this);
+        public CheckCommercialStatusRequest build() {
+            return new CheckCommercialStatusRequest(this);
         } 
 
     } 

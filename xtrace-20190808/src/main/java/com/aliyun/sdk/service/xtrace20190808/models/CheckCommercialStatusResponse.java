@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link OpenXtraceServiceResponse} extends {@link TeaModel}
+ * {@link CheckCommercialStatusResponse} extends {@link TeaModel}
  *
- * <p>OpenXtraceServiceResponse</p>
+ * <p>CheckCommercialStatusResponse</p>
  */
-public class OpenXtraceServiceResponse extends Response {
+public class CheckCommercialStatusResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class OpenXtraceServiceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private OpenXtraceServiceResponseBody body;
+    private CheckCommercialStatusResponseBody body;
 
-    private OpenXtraceServiceResponse(BuilderImpl builder) {
+    private CheckCommercialStatusResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static OpenXtraceServiceResponse create() {
+    public static CheckCommercialStatusResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class OpenXtraceServiceResponse extends Response {
     /**
      * @return body
      */
-    public OpenXtraceServiceResponseBody getBody() {
+    public CheckCommercialStatusResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<OpenXtraceServiceResponse, Builder> {
+    public interface Builder extends Response.Builder<CheckCommercialStatusResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(OpenXtraceServiceResponseBody body);
+        Builder body(CheckCommercialStatusResponseBody body);
 
         @Override
-        OpenXtraceServiceResponse build();
+        CheckCommercialStatusResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<OpenXtraceServiceResponse, Builder>
+            extends Response.BuilderImpl<CheckCommercialStatusResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private OpenXtraceServiceResponseBody body; 
+        private CheckCommercialStatusResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(OpenXtraceServiceResponse response) {
+        private BuilderImpl(CheckCommercialStatusResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class OpenXtraceServiceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(OpenXtraceServiceResponseBody body) {
+        public Builder body(CheckCommercialStatusResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public OpenXtraceServiceResponse build() {
-            return new OpenXtraceServiceResponse(this);
+        public CheckCommercialStatusResponse build() {
+            return new CheckCommercialStatusResponse(this);
         } 
 
     } 

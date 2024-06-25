@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.xtrace20190808;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.xtrace20190808.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -17,6 +18,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     static AsyncClient create() {
         return builder().build();
     }
+
+    CompletableFuture<CheckCommercialStatusResponse> checkCommercialStatus(CheckCommercialStatusRequest request);
 
     CompletableFuture<GetTagKeyResponse> getTagKey(GetTagKeyRequest request);
 
