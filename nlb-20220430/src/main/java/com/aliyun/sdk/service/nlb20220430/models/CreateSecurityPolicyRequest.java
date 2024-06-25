@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSecurityPolicyRequest</p>
  */
 public class CreateSecurityPolicyRequest extends Request {
-    @Body
-    @NameInMap("Ciphers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ciphers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > ciphers;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("SecurityPolicyName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
     private String securityPolicyName;
 
-    @Body
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Body
-    @NameInMap("TlsVersions")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TlsVersions")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > tlsVersions;
 
     private CreateSecurityPolicyRequest(Builder builder) {
@@ -289,10 +288,10 @@ public class CreateSecurityPolicyRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

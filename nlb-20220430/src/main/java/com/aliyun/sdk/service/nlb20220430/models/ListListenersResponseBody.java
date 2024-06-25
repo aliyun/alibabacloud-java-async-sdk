@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenersResponseBody</p>
  */
 public class ListListenersResponseBody extends TeaModel {
-    @NameInMap("Listeners")
+    @com.aliyun.core.annotation.NameInMap("Listeners")
     private java.util.List < Listeners> listeners;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListListenersResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListListenersResponseBody extends TeaModel {
     } 
 
     public static class ProxyProtocolV2Config extends TeaModel {
-        @NameInMap("Ppv2PrivateLinkEpIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpIdEnabled")
         private Boolean ppv2PrivateLinkEpIdEnabled;
 
-        @NameInMap("Ppv2PrivateLinkEpsIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2PrivateLinkEpsIdEnabled")
         private Boolean ppv2PrivateLinkEpsIdEnabled;
 
-        @NameInMap("Ppv2VpcIdEnabled")
+        @com.aliyun.core.annotation.NameInMap("Ppv2VpcIdEnabled")
         private Boolean ppv2VpcIdEnabled;
 
         private ProxyProtocolV2Config(Builder builder) {
@@ -229,10 +228,10 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -290,73 +289,73 @@ public class ListListenersResponseBody extends TeaModel {
 
     }
     public static class Listeners extends TeaModel {
-        @NameInMap("AlpnEnabled")
+        @com.aliyun.core.annotation.NameInMap("AlpnEnabled")
         private Boolean alpnEnabled;
 
-        @NameInMap("AlpnPolicy")
+        @com.aliyun.core.annotation.NameInMap("AlpnPolicy")
         private String alpnPolicy;
 
-        @NameInMap("CaCertificateIds")
+        @com.aliyun.core.annotation.NameInMap("CaCertificateIds")
         private java.util.List < String > caCertificateIds;
 
-        @NameInMap("CaEnabled")
+        @com.aliyun.core.annotation.NameInMap("CaEnabled")
         private Boolean caEnabled;
 
-        @NameInMap("CertificateIds")
+        @com.aliyun.core.annotation.NameInMap("CertificateIds")
         private java.util.List < String > certificateIds;
 
-        @NameInMap("Cps")
+        @com.aliyun.core.annotation.NameInMap("Cps")
         private Integer cps;
 
-        @NameInMap("EndPort")
+        @com.aliyun.core.annotation.NameInMap("EndPort")
         private String endPort;
 
-        @NameInMap("IdleTimeout")
+        @com.aliyun.core.annotation.NameInMap("IdleTimeout")
         private Integer idleTimeout;
 
-        @NameInMap("ListenerDescription")
+        @com.aliyun.core.annotation.NameInMap("ListenerDescription")
         private String listenerDescription;
 
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("ListenerStatus")
+        @com.aliyun.core.annotation.NameInMap("ListenerStatus")
         private String listenerStatus;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("Mss")
+        @com.aliyun.core.annotation.NameInMap("Mss")
         private Integer mss;
 
-        @NameInMap("ProxyProtocolEnabled")
+        @com.aliyun.core.annotation.NameInMap("ProxyProtocolEnabled")
         private Boolean proxyProtocolEnabled;
 
-        @NameInMap("ProxyProtocolV2Config")
+        @com.aliyun.core.annotation.NameInMap("ProxyProtocolV2Config")
         private ProxyProtocolV2Config proxyProtocolV2Config;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("SecSensorEnabled")
+        @com.aliyun.core.annotation.NameInMap("SecSensorEnabled")
         private Boolean secSensorEnabled;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("StartPort")
+        @com.aliyun.core.annotation.NameInMap("StartPort")
         private String startPort;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Listeners(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLoadBalancerAddressTypeConfigRequest</p>
  */
 public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
-    @Body
-    @NameInMap("AddressType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String addressType;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ZoneMappings")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneMappings")
     private java.util.List < ZoneMappings> zoneMappings;
 
     private UpdateLoadBalancerAddressTypeConfigRequest(Builder builder) {
@@ -203,16 +202,16 @@ public class UpdateLoadBalancerAddressTypeConfigRequest extends Request {
     } 
 
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("EipType")
+        @com.aliyun.core.annotation.NameInMap("EipType")
         private String eipType;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneMappings(Builder builder) {

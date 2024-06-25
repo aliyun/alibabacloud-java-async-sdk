@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListListenerCertificatesRequest</p>
  */
 public class ListListenerCertificatesRequest extends Request {
-    @Body
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Body
-    @NameInMap("ListenerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ListenerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String listenerId;
 
-    @Body
-    @NameInMap("MaxResults")
-    @Validation(maximum = 50, minimum = 1)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(maximum = 50, minimum = 1)
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private ListListenerCertificatesRequest(Builder builder) {

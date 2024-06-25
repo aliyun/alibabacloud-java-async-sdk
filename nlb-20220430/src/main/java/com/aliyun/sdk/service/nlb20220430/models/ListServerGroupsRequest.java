@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServerGroupsRequest</p>
  */
 public class ListServerGroupsRequest extends Request {
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Body
-    @NameInMap("ServerGroupIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupIds")
     private java.util.List < String > serverGroupIds;
 
-    @Body
-    @NameInMap("ServerGroupNames")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupNames")
     private java.util.List < String > serverGroupNames;
 
-    @Body
-    @NameInMap("ServerGroupType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupType")
     private String serverGroupType;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Body
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
     private ListServerGroupsRequest(Builder builder) {
@@ -265,10 +264,10 @@ public class ListServerGroupsRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

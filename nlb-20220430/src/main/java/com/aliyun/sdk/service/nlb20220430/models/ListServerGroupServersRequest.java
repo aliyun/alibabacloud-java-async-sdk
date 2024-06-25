@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServerGroupServersRequest</p>
  */
 public class ListServerGroupServersRequest extends Request {
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
-    @Body
-    @NameInMap("ServerIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerIds")
     private java.util.List < String > serverIds;
 
-    @Body
-    @NameInMap("ServerIps")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerIps")
     private java.util.List < String > serverIps;
 
     private ListServerGroupServersRequest(Builder builder) {

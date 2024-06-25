@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.nlb20220430;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.nlb20220430.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -71,6 +72,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteServerGroupResponse> deleteServerGroup(DeleteServerGroupRequest request);
 
+    CompletableFuture<DescribeHdMonitorRegionConfigResponse> describeHdMonitorRegionConfig(DescribeHdMonitorRegionConfigRequest request);
+
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
 
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);
@@ -135,6 +138,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<MoveResourceGroupResponse> moveResourceGroup(MoveResourceGroupRequest request);
 
     CompletableFuture<RemoveServersFromServerGroupResponse> removeServersFromServerGroup(RemoveServersFromServerGroupRequest request);
+
+    CompletableFuture<SetHdMonitorRegionConfigResponse> setHdMonitorRegionConfig(SetHdMonitorRegionConfigRequest request);
 
     CompletableFuture<StartListenerResponse> startListener(StartListenerRequest request);
 

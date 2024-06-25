@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServerGroupResponseBody</p>
  */
 public class CreateServerGroupResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
     private String serverGroupId;
 
     private CreateServerGroupResponseBody(Builder builder) {

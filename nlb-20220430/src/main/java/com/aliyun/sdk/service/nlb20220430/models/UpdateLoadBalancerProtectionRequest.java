@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateLoadBalancerProtectionRequest</p>
  */
 public class UpdateLoadBalancerProtectionRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DeletionProtectionEnabled")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeletionProtectionEnabled")
     private Boolean deletionProtectionEnabled;
 
-    @Body
-    @NameInMap("DeletionProtectionReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeletionProtectionReason")
     private String deletionProtectionReason;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("LoadBalancerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loadBalancerId;
 
-    @Body
-    @NameInMap("ModificationProtectionReason")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModificationProtectionReason")
     private String modificationProtectionReason;
 
-    @Body
-    @NameInMap("ModificationProtectionStatus")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ModificationProtectionStatus")
     private String modificationProtectionStatus;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
     private UpdateLoadBalancerProtectionRequest(Builder builder) {

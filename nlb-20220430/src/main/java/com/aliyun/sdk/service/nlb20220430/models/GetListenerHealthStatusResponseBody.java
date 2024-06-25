@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetListenerHealthStatusResponseBody</p>
  */
 public class GetListenerHealthStatusResponseBody extends TeaModel {
-    @NameInMap("ListenerHealthStatus")
+    @com.aliyun.core.annotation.NameInMap("ListenerHealthStatus")
     private java.util.List < ListenerHealthStatus> listenerHealthStatus;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private GetListenerHealthStatusResponseBody(Builder builder) {
@@ -136,7 +135,7 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
     } 
 
     public static class Reason extends TeaModel {
-        @NameInMap("ReasonCode")
+        @com.aliyun.core.annotation.NameInMap("ReasonCode")
         private String reasonCode;
 
         private Reason(Builder builder) {
@@ -185,19 +184,19 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     }
     public static class NonNormalServers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private Reason reason;
 
-        @NameInMap("ServerId")
+        @com.aliyun.core.annotation.NameInMap("ServerId")
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private NonNormalServers(Builder builder) {
@@ -312,13 +311,13 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     }
     public static class ServerGroupInfos extends TeaModel {
-        @NameInMap("HeathCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HeathCheckEnabled")
         private Boolean heathCheckEnabled;
 
-        @NameInMap("NonNormalServers")
+        @com.aliyun.core.annotation.NameInMap("NonNormalServers")
         private java.util.List < NonNormalServers> nonNormalServers;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
         private ServerGroupInfos(Builder builder) {
@@ -397,16 +396,16 @@ public class GetListenerHealthStatusResponseBody extends TeaModel {
 
     }
     public static class ListenerHealthStatus extends TeaModel {
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Integer listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("ServerGroupInfos")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupInfos")
         private java.util.List < ServerGroupInfos> serverGroupInfos;
 
         private ListenerHealthStatus(Builder builder) {

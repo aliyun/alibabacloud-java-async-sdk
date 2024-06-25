@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLoadBalancersResponseBody</p>
  */
 public class ListLoadBalancersResponseBody extends TeaModel {
-    @NameInMap("LoadBalancers")
+    @com.aliyun.core.annotation.NameInMap("LoadBalancers")
     private java.util.List < LoadBalancers> loadBalancers;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListLoadBalancersResponseBody(Builder builder) {
@@ -136,13 +135,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
     } 
 
     public static class DeletionProtectionConfig extends TeaModel {
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private Boolean enabled;
 
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private DeletionProtectionConfig(Builder builder) {
@@ -221,7 +220,7 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancerBillingConfig extends TeaModel {
-        @NameInMap("PayType")
+        @com.aliyun.core.annotation.NameInMap("PayType")
         private String payType;
 
         private LoadBalancerBillingConfig(Builder builder) {
@@ -262,13 +261,13 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class ModificationProtectionConfig extends TeaModel {
-        @NameInMap("EnabledTime")
+        @com.aliyun.core.annotation.NameInMap("EnabledTime")
         private String enabledTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ModificationProtectionConfig(Builder builder) {
@@ -352,10 +351,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class OperationLocks extends TeaModel {
-        @NameInMap("LockReason")
+        @com.aliyun.core.annotation.NameInMap("LockReason")
         private String lockReason;
 
-        @NameInMap("LockType")
+        @com.aliyun.core.annotation.NameInMap("LockType")
         private String lockType;
 
         private OperationLocks(Builder builder) {
@@ -419,10 +418,10 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -480,25 +479,25 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancerAddresses extends TeaModel {
-        @NameInMap("AllocationId")
+        @com.aliyun.core.annotation.NameInMap("AllocationId")
         private String allocationId;
 
-        @NameInMap("EniId")
+        @com.aliyun.core.annotation.NameInMap("EniId")
         private String eniId;
 
-        @NameInMap("Ipv6Address")
+        @com.aliyun.core.annotation.NameInMap("Ipv6Address")
         private String ipv6Address;
 
-        @NameInMap("PrivateIPv4Address")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv4Address")
         private String privateIPv4Address;
 
-        @NameInMap("PrivateIPv4HcStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv4HcStatus")
         private String privateIPv4HcStatus;
 
-        @NameInMap("PrivateIPv6HcStatus")
+        @com.aliyun.core.annotation.NameInMap("PrivateIPv6HcStatus")
         private String privateIPv6HcStatus;
 
-        @NameInMap("PublicIPv4Address")
+        @com.aliyun.core.annotation.NameInMap("PublicIPv4Address")
         private String publicIPv4Address;
 
         private LoadBalancerAddresses(Builder builder) {
@@ -641,16 +640,16 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class ZoneMappings extends TeaModel {
-        @NameInMap("LoadBalancerAddresses")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerAddresses")
         private java.util.List < LoadBalancerAddresses> loadBalancerAddresses;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private ZoneMappings(Builder builder) {
@@ -746,70 +745,70 @@ public class ListLoadBalancersResponseBody extends TeaModel {
 
     }
     public static class LoadBalancers extends TeaModel {
-        @NameInMap("AddressIpVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
         private String addressIpVersion;
 
-        @NameInMap("AddressType")
+        @com.aliyun.core.annotation.NameInMap("AddressType")
         private String addressType;
 
-        @NameInMap("BandwidthPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwidthPackageId")
         private String bandwidthPackageId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CrossZoneEnabled")
+        @com.aliyun.core.annotation.NameInMap("CrossZoneEnabled")
         private Boolean crossZoneEnabled;
 
-        @NameInMap("DNSName")
+        @com.aliyun.core.annotation.NameInMap("DNSName")
         private String DNSName;
 
-        @NameInMap("DeletionProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("DeletionProtectionConfig")
         private DeletionProtectionConfig deletionProtectionConfig;
 
-        @NameInMap("Ipv6AddressType")
+        @com.aliyun.core.annotation.NameInMap("Ipv6AddressType")
         private String ipv6AddressType;
 
-        @NameInMap("LoadBalancerBillingConfig")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBillingConfig")
         private LoadBalancerBillingConfig loadBalancerBillingConfig;
 
-        @NameInMap("LoadBalancerBusinessStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerBusinessStatus")
         private String loadBalancerBusinessStatus;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
-        @NameInMap("LoadBalancerName")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerName")
         private String loadBalancerName;
 
-        @NameInMap("LoadBalancerStatus")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
         private String loadBalancerStatus;
 
-        @NameInMap("LoadBalancerType")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
         private String loadBalancerType;
 
-        @NameInMap("ModificationProtectionConfig")
+        @com.aliyun.core.annotation.NameInMap("ModificationProtectionConfig")
         private ModificationProtectionConfig modificationProtectionConfig;
 
-        @NameInMap("OperationLocks")
+        @com.aliyun.core.annotation.NameInMap("OperationLocks")
         private java.util.List < OperationLocks> operationLocks;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityGroupIds")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupIds")
         private java.util.List < String > securityGroupIds;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("ZoneMappings")
+        @com.aliyun.core.annotation.NameInMap("ZoneMappings")
         private java.util.List < ZoneMappings> zoneMappings;
 
         private LoadBalancers(Builder builder) {

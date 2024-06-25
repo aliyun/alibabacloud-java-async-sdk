@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSecurityPolicyAttributeRequest</p>
  */
 public class UpdateSecurityPolicyAttributeRequest extends Request {
-    @Body
-    @NameInMap("Ciphers")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Ciphers")
     private java.util.List < String > ciphers;
 
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("SecurityPolicyId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String securityPolicyId;
 
-    @Body
-    @NameInMap("SecurityPolicyName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
     private String securityPolicyName;
 
-    @Body
-    @NameInMap("TlsVersions")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TlsVersions")
     private java.util.List < String > tlsVersions;
 
     private UpdateSecurityPolicyAttributeRequest(Builder builder) {

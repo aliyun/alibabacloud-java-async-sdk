@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListServerGroupsResponseBody</p>
  */
 public class ListServerGroupsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServerGroups")
+    @com.aliyun.core.annotation.NameInMap("ServerGroups")
     private java.util.List < ServerGroups> serverGroups;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListServerGroupsResponseBody(Builder builder) {
@@ -136,37 +135,43 @@ public class ListServerGroupsResponseBody extends TeaModel {
     } 
 
     public static class HealthCheck extends TeaModel {
-        @NameInMap("HealthCheckConnectPort")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectPort")
         private Integer healthCheckConnectPort;
 
-        @NameInMap("HealthCheckConnectTimeout")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckConnectTimeout")
         private Integer healthCheckConnectTimeout;
 
-        @NameInMap("HealthCheckDomain")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckDomain")
         private String healthCheckDomain;
 
-        @NameInMap("HealthCheckEnabled")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckEnabled")
         private Boolean healthCheckEnabled;
 
-        @NameInMap("HealthCheckHttpCode")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckExp")
+        private String healthCheckExp;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheckHttpCode")
         private java.util.List < String > healthCheckHttpCode;
 
-        @NameInMap("HealthCheckInterval")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckInterval")
         private Integer healthCheckInterval;
 
-        @NameInMap("HealthCheckType")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckReq")
+        private String healthCheckReq;
+
+        @com.aliyun.core.annotation.NameInMap("HealthCheckType")
         private String healthCheckType;
 
-        @NameInMap("HealthCheckUrl")
+        @com.aliyun.core.annotation.NameInMap("HealthCheckUrl")
         private String healthCheckUrl;
 
-        @NameInMap("HealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("HealthyThreshold")
         private Integer healthyThreshold;
 
-        @NameInMap("HttpCheckMethod")
+        @com.aliyun.core.annotation.NameInMap("HttpCheckMethod")
         private String httpCheckMethod;
 
-        @NameInMap("UnhealthyThreshold")
+        @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
         private Integer unhealthyThreshold;
 
         private HealthCheck(Builder builder) {
@@ -174,8 +179,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             this.healthCheckConnectTimeout = builder.healthCheckConnectTimeout;
             this.healthCheckDomain = builder.healthCheckDomain;
             this.healthCheckEnabled = builder.healthCheckEnabled;
+            this.healthCheckExp = builder.healthCheckExp;
             this.healthCheckHttpCode = builder.healthCheckHttpCode;
             this.healthCheckInterval = builder.healthCheckInterval;
+            this.healthCheckReq = builder.healthCheckReq;
             this.healthCheckType = builder.healthCheckType;
             this.healthCheckUrl = builder.healthCheckUrl;
             this.healthyThreshold = builder.healthyThreshold;
@@ -220,6 +227,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return healthCheckExp
+         */
+        public String getHealthCheckExp() {
+            return this.healthCheckExp;
+        }
+
+        /**
          * @return healthCheckHttpCode
          */
         public java.util.List < String > getHealthCheckHttpCode() {
@@ -231,6 +245,13 @@ public class ListServerGroupsResponseBody extends TeaModel {
          */
         public Integer getHealthCheckInterval() {
             return this.healthCheckInterval;
+        }
+
+        /**
+         * @return healthCheckReq
+         */
+        public String getHealthCheckReq() {
+            return this.healthCheckReq;
         }
 
         /**
@@ -273,8 +294,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
             private Integer healthCheckConnectTimeout; 
             private String healthCheckDomain; 
             private Boolean healthCheckEnabled; 
+            private String healthCheckExp; 
             private java.util.List < String > healthCheckHttpCode; 
             private Integer healthCheckInterval; 
+            private String healthCheckReq; 
             private String healthCheckType; 
             private String healthCheckUrl; 
             private Integer healthyThreshold; 
@@ -329,6 +352,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * HealthCheckExp.
+             */
+            public Builder healthCheckExp(String healthCheckExp) {
+                this.healthCheckExp = healthCheckExp;
+                return this;
+            }
+
+            /**
              * The HTTP status codes returned for health checks. Multiple HTTP status codes are separated by commas (,). Valid values: **http\_2xx**, **http\_3xx**, **http\_4xx**, and **http\_5xx**.
              * <p>
              * 
@@ -347,6 +378,14 @@ public class ListServerGroupsResponseBody extends TeaModel {
              */
             public Builder healthCheckInterval(Integer healthCheckInterval) {
                 this.healthCheckInterval = healthCheckInterval;
+                return this;
+            }
+
+            /**
+             * HealthCheckReq.
+             */
+            public Builder healthCheckReq(String healthCheckReq) {
+                this.healthCheckReq = healthCheckReq;
                 return this;
             }
 
@@ -410,10 +449,10 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -477,61 +516,61 @@ public class ListServerGroupsResponseBody extends TeaModel {
 
     }
     public static class ServerGroups extends TeaModel {
-        @NameInMap("AddressIPVersion")
+        @com.aliyun.core.annotation.NameInMap("AddressIPVersion")
         private String addressIPVersion;
 
-        @NameInMap("AliUid")
+        @com.aliyun.core.annotation.NameInMap("AliUid")
         private Long aliUid;
 
-        @NameInMap("AnyPortEnabled")
+        @com.aliyun.core.annotation.NameInMap("AnyPortEnabled")
         private Boolean anyPortEnabled;
 
-        @NameInMap("ConnectionDrainEnabled")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainEnabled")
         private Boolean connectionDrainEnabled;
 
-        @NameInMap("ConnectionDrainTimeout")
+        @com.aliyun.core.annotation.NameInMap("ConnectionDrainTimeout")
         private Integer connectionDrainTimeout;
 
-        @NameInMap("HealthCheck")
+        @com.aliyun.core.annotation.NameInMap("HealthCheck")
         private HealthCheck healthCheck;
 
-        @NameInMap("PreserveClientIpEnabled")
+        @com.aliyun.core.annotation.NameInMap("PreserveClientIpEnabled")
         private Boolean preserveClientIpEnabled;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RelatedLoadBalancerIds")
+        @com.aliyun.core.annotation.NameInMap("RelatedLoadBalancerIds")
         private java.util.List < String > relatedLoadBalancerIds;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("Scheduler")
+        @com.aliyun.core.annotation.NameInMap("Scheduler")
         private String scheduler;
 
-        @NameInMap("ServerCount")
+        @com.aliyun.core.annotation.NameInMap("ServerCount")
         private Integer serverCount;
 
-        @NameInMap("ServerGroupId")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupId")
         private String serverGroupId;
 
-        @NameInMap("ServerGroupName")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupName")
         private String serverGroupName;
 
-        @NameInMap("ServerGroupStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupStatus")
         private String serverGroupStatus;
 
-        @NameInMap("ServerGroupType")
+        @com.aliyun.core.annotation.NameInMap("ServerGroupType")
         private String serverGroupType;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
         private ServerGroups(Builder builder) {

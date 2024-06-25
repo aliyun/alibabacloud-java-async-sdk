@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListTagResourcesResponse} extends {@link TeaModel}
+ * {@link SetHdMonitorRegionConfigResponse} extends {@link TeaModel}
  *
- * <p>ListTagResourcesResponse</p>
+ * <p>SetHdMonitorRegionConfigResponse</p>
  */
-public class ListTagResourcesResponse extends Response {
+public class SetHdMonitorRegionConfigResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class ListTagResourcesResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListTagResourcesResponseBody body;
+    private SetHdMonitorRegionConfigResponseBody body;
 
-    private ListTagResourcesResponse(BuilderImpl builder) {
+    private SetHdMonitorRegionConfigResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListTagResourcesResponse create() {
+    public static SetHdMonitorRegionConfigResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class ListTagResourcesResponse extends Response {
     /**
      * @return body
      */
-    public ListTagResourcesResponseBody getBody() {
+    public SetHdMonitorRegionConfigResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListTagResourcesResponse, Builder> {
+    public interface Builder extends Response.Builder<SetHdMonitorRegionConfigResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListTagResourcesResponseBody body);
+        Builder body(SetHdMonitorRegionConfigResponseBody body);
 
         @Override
-        ListTagResourcesResponse build();
+        SetHdMonitorRegionConfigResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListTagResourcesResponse, Builder>
+            extends Response.BuilderImpl<SetHdMonitorRegionConfigResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListTagResourcesResponseBody body; 
+        private SetHdMonitorRegionConfigResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListTagResourcesResponse response) {
+        private BuilderImpl(SetHdMonitorRegionConfigResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class ListTagResourcesResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListTagResourcesResponseBody body) {
+        public Builder body(SetHdMonitorRegionConfigResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListTagResourcesResponse build() {
-            return new ListTagResourcesResponse(this);
+        public SetHdMonitorRegionConfigResponse build() {
+            return new SetHdMonitorRegionConfigResponse(this);
         } 
 
     } 

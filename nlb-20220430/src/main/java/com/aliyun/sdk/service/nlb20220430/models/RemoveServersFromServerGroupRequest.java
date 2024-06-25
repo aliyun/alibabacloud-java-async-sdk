@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RemoveServersFromServerGroupRequest</p>
  */
 public class RemoveServersFromServerGroupRequest extends Request {
-    @Body
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Body
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Body
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ServerGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServerGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String serverGroupId;
 
-    @Body
-    @NameInMap("Servers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Servers")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Servers> servers;
 
     private RemoveServersFromServerGroupRequest(Builder builder) {
@@ -176,18 +175,18 @@ public class RemoveServersFromServerGroupRequest extends Request {
     } 
 
     public static class Servers extends TeaModel {
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("ServerId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverId;
 
-        @NameInMap("ServerIp")
+        @com.aliyun.core.annotation.NameInMap("ServerIp")
         private String serverIp;
 
-        @NameInMap("ServerType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ServerType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String serverType;
 
         private Servers(Builder builder) {

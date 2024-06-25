@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSecurityPolicyResponseBody</p>
  */
 public class ListSecurityPolicyResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityPolicies")
+    @com.aliyun.core.annotation.NameInMap("SecurityPolicies")
     private java.util.List < SecurityPolicies> securityPolicies;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
     private ListSecurityPolicyResponseBody(Builder builder) {
@@ -136,16 +135,16 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
     } 
 
     public static class RelatedListeners extends TeaModel {
-        @NameInMap("ListenerId")
+        @com.aliyun.core.annotation.NameInMap("ListenerId")
         private String listenerId;
 
-        @NameInMap("ListenerPort")
+        @com.aliyun.core.annotation.NameInMap("ListenerPort")
         private Long listenerPort;
 
-        @NameInMap("ListenerProtocol")
+        @com.aliyun.core.annotation.NameInMap("ListenerProtocol")
         private String listenerProtocol;
 
-        @NameInMap("LoadBalancerId")
+        @com.aliyun.core.annotation.NameInMap("LoadBalancerId")
         private String loadBalancerId;
 
         private RelatedListeners(Builder builder) {
@@ -237,10 +236,10 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -304,31 +303,31 @@ public class ListSecurityPolicyResponseBody extends TeaModel {
 
     }
     public static class SecurityPolicies extends TeaModel {
-        @NameInMap("Ciphers")
+        @com.aliyun.core.annotation.NameInMap("Ciphers")
         private String ciphers;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RelatedListeners")
+        @com.aliyun.core.annotation.NameInMap("RelatedListeners")
         private java.util.List < RelatedListeners> relatedListeners;
 
-        @NameInMap("ResourceGroupId")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
         private String resourceGroupId;
 
-        @NameInMap("SecurityPolicyId")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyId")
         private String securityPolicyId;
 
-        @NameInMap("SecurityPolicyName")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyName")
         private String securityPolicyName;
 
-        @NameInMap("SecurityPolicyStatus")
+        @com.aliyun.core.annotation.NameInMap("SecurityPolicyStatus")
         private String securityPolicyStatus;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TlsVersion")
+        @com.aliyun.core.annotation.NameInMap("TlsVersion")
         private String tlsVersion;
 
         private SecurityPolicies(Builder builder) {

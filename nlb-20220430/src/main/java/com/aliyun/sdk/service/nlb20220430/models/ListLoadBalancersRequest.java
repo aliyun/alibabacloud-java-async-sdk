@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,68 +11,68 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLoadBalancersRequest</p>
  */
 public class ListLoadBalancersRequest extends Request {
-    @Query
-    @NameInMap("AddressIpVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressIpVersion")
     private String addressIpVersion;
 
-    @Query
-    @NameInMap("AddressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
     private String addressType;
 
-    @Query
-    @NameInMap("DNSName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DNSName")
     private String DNSName;
 
-    @Query
-    @NameInMap("Ipv6AddressType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ipv6AddressType")
     private String ipv6AddressType;
 
-    @Query
-    @NameInMap("LoadBalancerBusinessStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerBusinessStatus")
     private String loadBalancerBusinessStatus;
 
-    @Query
-    @NameInMap("LoadBalancerIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerIds")
     private java.util.List < String > loadBalancerIds;
 
-    @Query
-    @NameInMap("LoadBalancerNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerNames")
     private java.util.List < String > loadBalancerNames;
 
-    @Query
-    @NameInMap("LoadBalancerStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerStatus")
     private String loadBalancerStatus;
 
-    @Query
-    @NameInMap("LoadBalancerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoadBalancerType")
     private String loadBalancerType;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private java.util.List < Tag> tag;
 
-    @Query
-    @NameInMap("VpcIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcIds")
     private java.util.List < String > vpcIds;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private ListLoadBalancersRequest(Builder builder) {
@@ -446,10 +445,10 @@ public class ListLoadBalancersRequest extends Request {
     } 
 
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {

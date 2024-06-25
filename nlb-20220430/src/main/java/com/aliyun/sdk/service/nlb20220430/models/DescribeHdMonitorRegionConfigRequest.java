@@ -6,16 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListSystemSecurityPolicyRequest} extends {@link RequestModel}
+ * {@link DescribeHdMonitorRegionConfigRequest} extends {@link RequestModel}
  *
- * <p>ListSystemSecurityPolicyRequest</p>
+ * <p>DescribeHdMonitorRegionConfigRequest</p>
  */
-public class ListSystemSecurityPolicyRequest extends Request {
-    @com.aliyun.core.annotation.Body
+public class DescribeHdMonitorRegionConfigRequest extends Request {
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    private ListSystemSecurityPolicyRequest(Builder builder) {
+    private DescribeHdMonitorRegionConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
     }
@@ -24,7 +24,7 @@ public class ListSystemSecurityPolicyRequest extends Request {
         return new Builder();
     }
 
-    public static ListSystemSecurityPolicyRequest create() {
+    public static DescribeHdMonitorRegionConfigRequest create() {
         return builder().build();
     }
 
@@ -40,33 +40,30 @@ public class ListSystemSecurityPolicyRequest extends Request {
         return this.regionId;
     }
 
-    public static final class Builder extends Request.Builder<ListSystemSecurityPolicyRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeHdMonitorRegionConfigRequest, Builder> {
         private String regionId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListSystemSecurityPolicyRequest request) {
+        private Builder(DescribeHdMonitorRegionConfigRequest request) {
             super(request);
             this.regionId = request.regionId;
         } 
 
         /**
-         * The region ID of the NLB instance.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~443657~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
-            this.putBodyParameter("RegionId", regionId);
+            this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
             return this;
         }
 
         @Override
-        public ListSystemSecurityPolicyRequest build() {
-            return new ListSystemSecurityPolicyRequest(this);
+        public DescribeHdMonitorRegionConfigRequest build() {
+            return new DescribeHdMonitorRegionConfigRequest(this);
         } 
 
     } 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nlb20220430.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MoveResourceGroupResponseBody</p>
  */
 public class MoveResourceGroupResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private Integer httpStatusCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private MoveResourceGroupResponseBody(Builder builder) {
@@ -116,7 +115,7 @@ public class MoveResourceGroupResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
         private Data(Builder builder) {
