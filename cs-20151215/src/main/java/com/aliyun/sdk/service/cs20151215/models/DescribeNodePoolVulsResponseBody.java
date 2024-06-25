@@ -83,11 +83,15 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("necessity")
         private String necessity;
 
+        @com.aliyun.core.annotation.NameInMap("need_reboot")
+        private Boolean needReboot;
+
         private VulList(Builder builder) {
             this.aliasName = builder.aliasName;
             this.cveList = builder.cveList;
             this.name = builder.name;
             this.necessity = builder.necessity;
+            this.needReboot = builder.needReboot;
         }
 
         public static Builder builder() {
@@ -126,11 +130,19 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             return this.necessity;
         }
 
+        /**
+         * @return needReboot
+         */
+        public Boolean getNeedReboot() {
+            return this.needReboot;
+        }
+
         public static final class Builder {
             private String aliasName; 
             private java.util.List < String > cveList; 
             private String name; 
             private String necessity; 
+            private Boolean needReboot; 
 
             /**
              * The alias of the vulnerability.
@@ -168,6 +180,14 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
+                return this;
+            }
+
+            /**
+             * need_reboot.
+             */
+            public Builder needReboot(Boolean needReboot) {
+                this.needReboot = needReboot;
                 return this;
             }
 

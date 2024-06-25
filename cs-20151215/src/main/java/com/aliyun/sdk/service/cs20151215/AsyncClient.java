@@ -29,6 +29,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CancelClusterUpgradeResponse> cancelClusterUpgrade(CancelClusterUpgradeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CancelComponentUpgradeResponse> cancelComponentUpgrade(CancelComponentUpgradeRequest request);
 
     CompletableFuture<CancelOperationPlanResponse> cancelOperationPlan(CancelOperationPlanRequest request);
@@ -263,6 +267,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetKubernetesTriggerResponse> getKubernetesTrigger(GetKubernetesTriggerRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<GetUpgradeStatusResponse> getUpgradeStatus(GetUpgradeStatusRequest request);
 
     /**
@@ -326,6 +334,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<PauseClusterUpgradeResponse> pauseClusterUpgrade(PauseClusterUpgradeRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<PauseComponentUpgradeResponse> pauseComponentUpgrade(PauseComponentUpgradeRequest request);
 
     CompletableFuture<PauseTaskResponse> pauseTask(PauseTaskRequest request);
@@ -357,6 +369,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RepairClusterNodePoolResponse> repairClusterNodePool(RepairClusterNodePoolRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ResumeComponentUpgradeResponse> resumeComponentUpgrade(ResumeComponentUpgradeRequest request);
 
     CompletableFuture<ResumeTaskResponse> resumeTask(ResumeTaskRequest request);

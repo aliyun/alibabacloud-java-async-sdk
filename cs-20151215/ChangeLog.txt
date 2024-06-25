@@ -1,3 +1,6 @@
+2024-06-25 Version: 2.0.15
+- Generated java-async 2015-12-15 for CS.
+
 2024-06-13 Version: 2.0.14
 - Generated java-async 2015-12-15 for CS.
 
