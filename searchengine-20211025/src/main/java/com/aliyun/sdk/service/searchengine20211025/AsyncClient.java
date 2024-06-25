@@ -30,6 +30,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
 
+    CompletableFuture<CloneSqlInstanceResponse> cloneSqlInstance(CloneSqlInstanceRequest request);
+
     /**
       * ### Method
       * `POST`
@@ -44,6 +46,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateConfigFileResponse> createConfigFile(CreateConfigFileRequest request);
 
     CompletableFuture<CreateDataSourceResponse> createDataSource(CreateDataSourceRequest request);
+
+    CompletableFuture<CreateFolderResponse> createFolder(CreateFolderRequest request);
 
     /**
       * ### Method
@@ -69,6 +73,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreatePublicUrlResponse> createPublicUrl(CreatePublicUrlRequest request);
 
+    CompletableFuture<CreateSqlInstanceResponse> createSqlInstance(CreateSqlInstanceRequest request);
+
     CompletableFuture<CreateTableResponse> createTable(CreateTableRequest request);
 
     /**
@@ -92,6 +98,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteDataSourceResponse> deleteDataSource(DeleteDataSourceRequest request);
+
+    CompletableFuture<DeleteFolderResponse> deleteFolder(DeleteFolderRequest request);
 
     /**
       * ## Method
@@ -122,9 +130,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeletePublicUrlResponse> deletePublicUrl(DeletePublicUrlRequest request);
 
+    CompletableFuture<DeleteSqlInstanceResponse> deleteSqlInstance(DeleteSqlInstanceRequest request);
+
     CompletableFuture<DeleteTableResponse> deleteTable(DeleteTableRequest request);
 
     CompletableFuture<DescribeRegionsResponse> describeRegions(DescribeRegionsRequest request);
+
+    CompletableFuture<ExecuteSqlInstanceResponse> executeSqlInstance(ExecuteSqlInstanceRequest request);
 
     /**
       * \\### Method
@@ -186,6 +198,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDataSourceDeployResponse> getDataSourceDeploy(GetDataSourceDeployRequest request);
 
+    CompletableFuture<GetDatabaseSchemaResponse> getDatabaseSchema(GetDatabaseSchemaRequest request);
+
     /**
       * ## Method
       * GET
@@ -229,6 +243,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetInstanceResponse> getInstance(GetInstanceRequest request);
 
     CompletableFuture<GetNodeConfigResponse> getNodeConfig(GetNodeConfigRequest request);
+
+    CompletableFuture<GetSqlInstanceResponse> getSqlInstance(GetSqlInstanceRequest request);
 
     CompletableFuture<GetTableResponse> getTable(GetTableRequest request);
 
@@ -315,6 +331,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ListDataSourcesResponse> listDataSources(ListDataSourcesRequest request);
+
+    CompletableFuture<ListDatabasesResponse> listDatabases(ListDatabasesRequest request);
 
     /**
       * ### Method
@@ -429,15 +447,6 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyClusterOnlineConfigResponse> modifyClusterOnlineConfig(ModifyClusterOnlineConfigRequest request);
-
-    /**
-      * ## Method
-      * `PUT`
-      * ## URI
-      * `/openapi/ha3/instances/{instanceId}/data-sources/{dataSourceName}`
-      *
-     */
-    CompletableFuture<ModifyDataSourceResponse> modifyDataSource(ModifyDataSourceRequest request);
 
     CompletableFuture<ModifyDataSourceDeployResponse> modifyDataSourceDeploy(ModifyDataSourceDeployRequest request);
 
@@ -561,6 +570,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<RemoveClusterResponse> removeCluster(RemoveClusterRequest request);
 
+    CompletableFuture<RenameFolderResponse> renameFolder(RenameFolderRequest request);
+
     CompletableFuture<StartIndexResponse> startIndex(StartIndexRequest request);
 
     CompletableFuture<StopIndexResponse> stopIndex(StopIndexRequest request);
@@ -590,5 +601,11 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
+
+    CompletableFuture<UpdateSqlInstanceContentResponse> updateSqlInstanceContent(UpdateSqlInstanceContentRequest request);
+
+    CompletableFuture<UpdateSqlInstanceNameResponse> updateSqlInstanceName(UpdateSqlInstanceNameRequest request);
+
+    CompletableFuture<UpdateSqlInstanceParamsResponse> updateSqlInstanceParams(UpdateSqlInstanceParamsRequest request);
 
 }

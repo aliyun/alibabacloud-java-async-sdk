@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyDataSourceResponse} extends {@link TeaModel}
+ * {@link UpdateSqlInstanceNameResponse} extends {@link TeaModel}
  *
- * <p>ModifyDataSourceResponse</p>
+ * <p>UpdateSqlInstanceNameResponse</p>
  */
-public class ModifyDataSourceResponse extends Response {
+public class UpdateSqlInstanceNameResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class ModifyDataSourceResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ModifyDataSourceResponseBody body;
+    private UpdateSqlInstanceNameResponseBody body;
 
-    private ModifyDataSourceResponse(BuilderImpl builder) {
+    private UpdateSqlInstanceNameResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ModifyDataSourceResponse create() {
+    public static UpdateSqlInstanceNameResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class ModifyDataSourceResponse extends Response {
     /**
      * @return body
      */
-    public ModifyDataSourceResponseBody getBody() {
+    public UpdateSqlInstanceNameResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ModifyDataSourceResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateSqlInstanceNameResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ModifyDataSourceResponseBody body);
+        Builder body(UpdateSqlInstanceNameResponseBody body);
 
         @Override
-        ModifyDataSourceResponse build();
+        UpdateSqlInstanceNameResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ModifyDataSourceResponse, Builder>
+            extends Response.BuilderImpl<UpdateSqlInstanceNameResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ModifyDataSourceResponseBody body; 
+        private UpdateSqlInstanceNameResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ModifyDataSourceResponse response) {
+        private BuilderImpl(UpdateSqlInstanceNameResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class ModifyDataSourceResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ModifyDataSourceResponseBody body) {
+        public Builder body(UpdateSqlInstanceNameResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ModifyDataSourceResponse build() {
-            return new ModifyDataSourceResponse(this);
+        public UpdateSqlInstanceNameResponse build() {
+            return new UpdateSqlInstanceNameResponse(this);
         } 
 
     } 
