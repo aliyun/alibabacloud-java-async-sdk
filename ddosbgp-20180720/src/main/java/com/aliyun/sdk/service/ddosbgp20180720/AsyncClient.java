@@ -25,6 +25,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AttachAssetGroupToInstanceResponse> attachAssetGroupToInstance(AttachAssetGroupToInstanceRequest request);
 
+    CompletableFuture<AttachToPolicyResponse> attachToPolicy(AttachToPolicyRequest request);
+
     CompletableFuture<CheckAccessLogAuthResponse> checkAccessLogAuth(CheckAccessLogAuthRequest request);
 
     /**
