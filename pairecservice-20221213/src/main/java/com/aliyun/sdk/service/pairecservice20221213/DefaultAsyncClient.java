@@ -645,7 +645,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GenerateTrafficControlTaskCodeResponse> generateTrafficControlTaskCode(GenerateTrafficControlTaskCodeRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateTrafficControlTaskCode").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/code").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateTrafficControlTaskCode").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/generatecode").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateTrafficControlTaskCodeResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -659,7 +659,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GenerateTrafficControlTaskConfigResponse> generateTrafficControlTaskConfig(GenerateTrafficControlTaskConfigRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateTrafficControlTaskConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/config").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GenerateTrafficControlTaskConfig").setMethod(HttpMethod.POST).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/generateconfig").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GenerateTrafficControlTaskConfigResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -925,7 +925,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<GetTrafficControlTaskTrafficResponse> getTrafficControlTaskTraffic(GetTrafficControlTaskTrafficRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTrafficControlTaskTraffic").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/action/traffic").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("GetTrafficControlTaskTraffic").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltasks/{TrafficControlTaskId}/trafficinfo").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(GetTrafficControlTaskTrafficResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {
@@ -1219,7 +1219,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     public CompletableFuture<ListTrafficControlTargetTrafficHistoryResponse> listTrafficControlTargetTrafficHistory(ListTrafficControlTargetTrafficHistoryRequest request) {
         try {
             this.handler.validateRequestModel(request);
-            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrafficControlTargetTrafficHistory").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltargets/{TrafficControlTargetId}/action/traffichistory").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RESTFUL).setAction("ListTrafficControlTargetTrafficHistory").setMethod(HttpMethod.GET).setPathRegex("/api/v1/trafficcontroltargets/{TrafficControlTargetId}/traffichistories").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
             ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ListTrafficControlTargetTrafficHistoryResponse.create());
             return this.handler.execute(params);
         } catch (Exception e) {

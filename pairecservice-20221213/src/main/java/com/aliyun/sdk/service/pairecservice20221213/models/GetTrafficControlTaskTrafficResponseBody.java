@@ -14,12 +14,12 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("TrafficControlTaskTraffic")
-    private TrafficControlTaskTraffic trafficControlTaskTraffic;
+    @com.aliyun.core.annotation.NameInMap("TrafficControlTaskTrafficInfo")
+    private TrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo;
 
     private GetTrafficControlTaskTrafficResponseBody(Builder builder) {
         this.requestId = builder.requestId;
-        this.trafficControlTaskTraffic = builder.trafficControlTaskTraffic;
+        this.trafficControlTaskTrafficInfo = builder.trafficControlTaskTrafficInfo;
     }
 
     public static Builder builder() {
@@ -38,15 +38,15 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
     }
 
     /**
-     * @return trafficControlTaskTraffic
+     * @return trafficControlTaskTrafficInfo
      */
-    public TrafficControlTaskTraffic getTrafficControlTaskTraffic() {
-        return this.trafficControlTaskTraffic;
+    public TrafficControlTaskTrafficInfo getTrafficControlTaskTrafficInfo() {
+        return this.trafficControlTaskTrafficInfo;
     }
 
     public static final class Builder {
         private String requestId; 
-        private TrafficControlTaskTraffic trafficControlTaskTraffic; 
+        private TrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo; 
 
         /**
          * RequestId.
@@ -57,10 +57,10 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         }
 
         /**
-         * TrafficControlTaskTraffic.
+         * TrafficControlTaskTrafficInfo.
          */
-        public Builder trafficControlTaskTraffic(TrafficControlTaskTraffic trafficControlTaskTraffic) {
-            this.trafficControlTaskTraffic = trafficControlTaskTraffic;
+        public Builder trafficControlTaskTrafficInfo(TrafficControlTaskTrafficInfo trafficControlTaskTrafficInfo) {
+            this.trafficControlTaskTrafficInfo = trafficControlTaskTrafficInfo;
             return this;
         }
 
@@ -131,14 +131,14 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
         } 
 
     }
-    public static class TrafficControlTaskTraffic extends TeaModel {
+    public static class TrafficControlTaskTrafficInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("TargetTraffics")
         private java.util.List < TargetTraffics> targetTraffics;
 
         @com.aliyun.core.annotation.NameInMap("TaskTraffics")
         private java.util.Map < String, ? > taskTraffics;
 
-        private TrafficControlTaskTraffic(Builder builder) {
+        private TrafficControlTaskTrafficInfo(Builder builder) {
             this.targetTraffics = builder.targetTraffics;
             this.taskTraffics = builder.taskTraffics;
         }
@@ -147,7 +147,7 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
             return new Builder();
         }
 
-        public static TrafficControlTaskTraffic create() {
+        public static TrafficControlTaskTrafficInfo create() {
             return builder().build();
         }
 
@@ -185,8 +185,8 @@ public class GetTrafficControlTaskTrafficResponseBody extends TeaModel {
                 return this;
             }
 
-            public TrafficControlTaskTraffic build() {
-                return new TrafficControlTaskTraffic(this);
+            public TrafficControlTaskTrafficInfo build() {
+                return new TrafficControlTaskTrafficInfo(this);
             } 
 
         } 
