@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeImportFileUrlRequest</p>
  */
 public class DescribeImportFileUrlRequest extends Request {
-    @Query
-    @NameInMap("ContentType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contentType;
 
     private DescribeImportFileUrlRequest(Builder builder) {
@@ -49,9 +48,9 @@ public class DescribeImportFileUrlRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeImportFileUrlRequest response) {
-            super(response);
-            this.contentType = response.contentType;
+        private Builder(DescribeImportFileUrlRequest request) {
+            super(request);
+            this.contentType = request.contentType;
         } 
 
         /**

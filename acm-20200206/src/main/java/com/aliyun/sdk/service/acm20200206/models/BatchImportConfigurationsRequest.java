@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchImportConfigurationsRequest</p>
  */
 public class BatchImportConfigurationsRequest extends Request {
-    @Body
-    @NameInMap("FileUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileUrl;
 
-    @Body
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Body
-    @NameInMap("Policy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Policy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policy;
 
     private BatchImportConfigurationsRequest(Builder builder) {
@@ -77,11 +76,11 @@ public class BatchImportConfigurationsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchImportConfigurationsRequest response) {
-            super(response);
-            this.fileUrl = response.fileUrl;
-            this.namespaceId = response.namespaceId;
-            this.policy = response.policy;
+        private Builder(BatchImportConfigurationsRequest request) {
+            super(request);
+            this.fileUrl = request.fileUrl;
+            this.namespaceId = request.namespaceId;
+            this.policy = request.policy;
         } 
 
         /**

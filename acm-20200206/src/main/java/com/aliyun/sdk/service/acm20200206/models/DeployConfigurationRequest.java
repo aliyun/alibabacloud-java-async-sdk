@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeployConfigurationRequest</p>
  */
 public class DeployConfigurationRequest extends Request {
-    @Body
-    @NameInMap("AppName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AppName")
     private String appName;
 
-    @Body
-    @NameInMap("BetaIps")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BetaIps")
     private String betaIps;
 
-    @Body
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Body
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
-    @Body
-    @NameInMap("Desc")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Desc")
     private String desc;
 
-    @Body
-    @NameInMap("Group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Body
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Body
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Body
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private DeployConfigurationRequest(Builder builder) {
@@ -156,17 +155,17 @@ public class DeployConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(DeployConfigurationRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.betaIps = response.betaIps;
-            this.content = response.content;
-            this.dataId = response.dataId;
-            this.desc = response.desc;
-            this.group = response.group;
-            this.namespaceId = response.namespaceId;
-            this.tags = response.tags;
-            this.type = response.type;
+        private Builder(DeployConfigurationRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.betaIps = request.betaIps;
+            this.content = request.content;
+            this.dataId = request.dataId;
+            this.desc = request.desc;
+            this.group = request.group;
+            this.namespaceId = request.namespaceId;
+            this.tags = request.tags;
+            this.type = request.type;
         } 
 
         /**

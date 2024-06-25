@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateNamespaceRequest</p>
  */
 public class UpdateNamespaceRequest extends Request {
-    @Body
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Body
-    @NameInMap("NamespaceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NamespaceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceName;
 
     private UpdateNamespaceRequest(Builder builder) {
@@ -63,10 +62,10 @@ public class UpdateNamespaceRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateNamespaceRequest response) {
-            super(response);
-            this.namespaceId = response.namespaceId;
-            this.namespaceName = response.namespaceName;
+        private Builder(UpdateNamespaceRequest request) {
+            super(request);
+            this.namespaceId = request.namespaceId;
+            this.namespaceName = request.namespaceName;
         } 
 
         /**

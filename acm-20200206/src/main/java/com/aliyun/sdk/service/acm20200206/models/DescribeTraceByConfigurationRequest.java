@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTraceByConfigurationRequest</p>
  */
 public class DescribeTraceByConfigurationRequest extends Request {
-    @Query
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
-    @Query
-    @NameInMap("EndTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTs")
     private String endTs;
 
-    @Query
-    @NameInMap("Group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
-    @Query
-    @NameInMap("StartTs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTs")
     private String startTs;
 
     private DescribeTraceByConfigurationRequest(Builder builder) {
@@ -103,13 +102,13 @@ public class DescribeTraceByConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTraceByConfigurationRequest response) {
-            super(response);
-            this.dataId = response.dataId;
-            this.endTs = response.endTs;
-            this.group = response.group;
-            this.namespaceId = response.namespaceId;
-            this.startTs = response.startTs;
+        private Builder(DescribeTraceByConfigurationRequest request) {
+            super(request);
+            this.dataId = request.dataId;
+            this.endTs = request.endTs;
+            this.group = request.group;
+            this.namespaceId = request.namespaceId;
+            this.startTs = request.startTs;
         } 
 
         /**

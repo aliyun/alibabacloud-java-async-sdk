@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNamespacesResponseBody</p>
  */
 public class DescribeNamespacesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("Namespaces")
+    @com.aliyun.core.annotation.NameInMap("Namespaces")
     private java.util.List < Namespaces> namespaces;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNamespacesResponseBody(Builder builder) {
@@ -112,19 +111,19 @@ public class DescribeNamespacesResponseBody extends TeaModel {
     } 
 
     public static class Namespaces extends TeaModel {
-        @NameInMap("ConfigCount")
+        @com.aliyun.core.annotation.NameInMap("ConfigCount")
         private Integer configCount;
 
-        @NameInMap("NamespaceId")
+        @com.aliyun.core.annotation.NameInMap("NamespaceId")
         private String namespaceId;
 
-        @NameInMap("NamespaceName")
+        @com.aliyun.core.annotation.NameInMap("NamespaceName")
         private String namespaceName;
 
-        @NameInMap("Quota")
+        @com.aliyun.core.annotation.NameInMap("Quota")
         private Integer quota;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
         private Namespaces(Builder builder) {

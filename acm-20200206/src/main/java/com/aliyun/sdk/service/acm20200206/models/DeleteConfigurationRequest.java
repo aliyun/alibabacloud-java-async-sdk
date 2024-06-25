@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.acm20200206.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteConfigurationRequest</p>
  */
 public class DeleteConfigurationRequest extends Request {
-    @Query
-    @NameInMap("DataId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DataId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String dataId;
 
-    @Query
-    @NameInMap("Group")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Group")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String group;
 
-    @Query
-    @NameInMap("NamespaceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NamespaceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String namespaceId;
 
     private DeleteConfigurationRequest(Builder builder) {
@@ -77,11 +76,11 @@ public class DeleteConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteConfigurationRequest response) {
-            super(response);
-            this.dataId = response.dataId;
-            this.group = response.group;
-            this.namespaceId = response.namespaceId;
+        private Builder(DeleteConfigurationRequest request) {
+            super(request);
+            this.dataId = request.dataId;
+            this.group = request.group;
+            this.namespaceId = request.namespaceId;
         } 
 
         /**
