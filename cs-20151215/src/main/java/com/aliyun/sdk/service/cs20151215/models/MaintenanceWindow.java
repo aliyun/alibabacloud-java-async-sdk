@@ -20,6 +20,9 @@ public class MaintenanceWindow extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("maintenance_time")
     private String maintenanceTime;
 
+    @com.aliyun.core.annotation.NameInMap("recurrence")
+    private String recurrence;
+
     @com.aliyun.core.annotation.NameInMap("weekly_period")
     private String weeklyPeriod;
 
@@ -27,6 +30,7 @@ public class MaintenanceWindow extends TeaModel {
         this.duration = builder.duration;
         this.enable = builder.enable;
         this.maintenanceTime = builder.maintenanceTime;
+        this.recurrence = builder.recurrence;
         this.weeklyPeriod = builder.weeklyPeriod;
     }
 
@@ -60,6 +64,13 @@ public class MaintenanceWindow extends TeaModel {
     }
 
     /**
+     * @return recurrence
+     */
+    public String getRecurrence() {
+        return this.recurrence;
+    }
+
+    /**
      * @return weeklyPeriod
      */
     public String getWeeklyPeriod() {
@@ -70,6 +81,7 @@ public class MaintenanceWindow extends TeaModel {
         private String duration; 
         private Boolean enable; 
         private String maintenanceTime; 
+        private String recurrence; 
         private String weeklyPeriod; 
 
         /**
@@ -93,6 +105,14 @@ public class MaintenanceWindow extends TeaModel {
          */
         public Builder maintenanceTime(String maintenanceTime) {
             this.maintenanceTime = maintenanceTime;
+            return this;
+        }
+
+        /**
+         * recurrence.
+         */
+        public Builder recurrence(String recurrence) {
+            this.recurrence = recurrence;
             return this;
         }
 
