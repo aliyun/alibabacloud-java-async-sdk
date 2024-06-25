@@ -817,7 +817,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * Architecture.
+         * The CPU architecture. Valid values:
+         * <p>
+         * 
+         * *   X86
+         * *   ARM
          */
         public Builder architecture(String architecture) {
             this.putQueryParameter("Architecture", architecture);
@@ -1002,7 +1006,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 标准版节点个数。
+         * DBNodeNum.
          */
         public Builder DBNodeNum(Integer DBNodeNum) {
             this.putQueryParameter("DBNodeNum", DBNodeNum);
@@ -1081,12 +1085,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 开启Binlog功能，取值范围如下：
-         * <p>
-         * 
-         * - **ON**：集群开启Binlog功能
-         * - **OFF**：集群关闭Binlog功能
-         * > 当参数**DBType**为**MySQL**时，该参数才生效。
+         * LoosePolarLogBin.
          */
         public Builder loosePolarLogBin(String loosePolarLogBin) {
             this.putQueryParameter("LoosePolarLogBin", loosePolarLogBin);
@@ -1095,12 +1094,13 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 开启X-Engine存储引擎功能，取值范围如下：
+         * Specifies whether to enable X-Engine. Valid values:
          * <p>
          * 
-         * - **ON**：集群开启X-Engine引擎
-         * - **OFF**：集群关闭X-Engine引擎
-         * > 当参数**CreationOption**不等于**CreateGdnStandby**，**DBType**为**MySQL**且**DBVersion**为**8.0**时，该参数才生效。开启X-Engine引擎的节点内存规格必须大于等于16 GB。
+         * *   **ON**
+         * *   **OFF**
+         * 
+         * >  This parameter takes effect only if you do not set **CreationOption** to **CreateGdnStandby** and you set **DBType** to **MySQL** and **DBVersion** to **8.0**. To enable X-Engine on a node, make sure that the memory of the node is greater than or equal to 8 GB in size.
          */
         public Builder looseXEngine(String looseXEngine) {
             this.putQueryParameter("LooseXEngine", looseXEngine);
@@ -1109,9 +1109,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 设置开启X-Engine存储引擎比例，取值范围10~90的整数。
-         * <p>
-         * > 当参数**LooseXEngine**为**ON**时，该参数才生效。
+         * LooseXEngineUseMemoryPct.
          */
         public Builder looseXEngineUseMemoryPct(String looseXEngineUseMemoryPct) {
             this.putQueryParameter("LooseXEngineUseMemoryPct", looseXEngineUseMemoryPct);
@@ -1193,7 +1191,12 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * ProvisionedIops.
+         * The provisioned read/write IOPS of the ESSD AutoPL disk. Valid values: 0 to min{50,000, 1,000 × Capacity - Baseline IOPS}
+         * <p>
+         * 
+         * Baseline IOPS = min{1,800 + 50 × Capacity, 50,000}
+         * 
+         * >  This parameter is available only if the StorageType parameter is set to ESSDAUTOPL.
          */
         public Builder provisionedIops(Long provisionedIops) {
             this.putQueryParameter("ProvisionedIops", provisionedIops);
@@ -1202,7 +1205,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 标准版数据库代理规格。
+         * ProxyClass.
          */
         public Builder proxyClass(String proxyClass) {
             this.putQueryParameter("ProxyClass", proxyClass);
@@ -1211,11 +1214,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 数据库代理类型，取值范围如下：
-         * <p>
-         * 
-         * - **Exclusive**：企业独享版
-         * - **General**：企业通用版
+         * ProxyType.
          */
         public Builder proxyType(String proxyType) {
             this.putQueryParameter("ProxyType", proxyType);
@@ -1348,10 +1347,7 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 存储热备集群的可用区。适用于标准版3AZ场景。
-         * <p>
-         * 
-         * > 开启了多可用区数据强一致，该参数才生效。
+         * StandbyAZ.
          */
         public Builder standbyAZ(String standbyAZ) {
             this.putQueryParameter("StandbyAZ", standbyAZ);
@@ -1394,10 +1390,11 @@ public class CreateDBClusterRequest extends Request {
          * *   **PSL4**
          * 
          * Valid values for Standard Edition:
-         * 
+         * *   **ESSDPL0**
          * *   **ESSDPL1**
          * *   **ESSDPL2**
          * *   **ESSDPL3**
+         * *   **ESSDAUTOPL**
          * 
          * > This parameter is invalid for serverless clusters.
          */
@@ -1417,12 +1414,11 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
-         * 集群是否开启了多可用区数据强一致。取值范围：
+         * Specifies whether to enable multi-zone data consistency. Valid values:
          * <p>
          * 
-         * - **ON**：表示开启了多可用区数据强一致，适用于标准版3AZ场景。
-         * 
-         * - **OFF**：表示未开启多可用区数据强一致。
+         * *   **ON**: enables multi-zone data consistency. Set this parameter to ON for Standard Edition clusters of Multi-zone Edition.
+         * *   **OFF**: disables multi-zone data consistency.
          */
         public Builder strictConsistency(String strictConsistency) {
             this.putQueryParameter("StrictConsistency", strictConsistency);

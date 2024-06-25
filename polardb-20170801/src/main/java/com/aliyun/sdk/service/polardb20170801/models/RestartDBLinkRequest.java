@@ -147,7 +147,10 @@ public class RestartDBLinkRequest extends Request {
         }
 
         /**
-         * DBClusterId.
+         * The cluster ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBClusters](~~98094~~) operation to query the IDs of all clusters in an Alibaba Cloud account.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);

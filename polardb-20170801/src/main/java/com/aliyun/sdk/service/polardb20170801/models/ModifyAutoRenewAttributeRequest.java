@@ -193,10 +193,9 @@ public class ModifyAutoRenewAttributeRequest extends Request {
          * The automatic renewal period.
          * <p>
          * 
-         *  
-         * *   Valid values when **PeriodUnit** is set to **Month**: `1, 2, 3, 6, and 12`.
-         * *   Valid values when **PeriodUnit** is set to **Year**: `1, 2, and 3`.
-         *  
+         * *   Valid values when you set the **PeriodUnit** parameter to **Month**: `1, 2, 3, 6, and 12`.
+         * *   Valid values when you set the **PeriodUnit** parameter to **Year**: `1, 2, and 3`.
+         * 
          * Default value: **1**.
          */
         public Builder duration(String duration) {
@@ -226,10 +225,10 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         /**
          * The unit of the renewal period. Valid values:
          * <p>
-         *  
+         * 
          * *   **Year**
          * *   **Month**
-         *  
+         * 
          * Default value: **Month**.
          */
         public Builder periodUnit(String periodUnit) {
@@ -252,16 +251,16 @@ public class ModifyAutoRenewAttributeRequest extends Request {
         }
 
         /**
-         * The auto-renewal state of the cluster. Valid values:
+         * The auto-renewal status of the cluster. Valid values:
          * <p>
-         *  
-         * *   **AutoRenewal:** The cluster are automatically renewed.
+         * 
+         * *   **AutoRenewal:** The cluster is automatically renewed.
          * *   **Normal**: The cluster is manually renewed.
          * *   **NotRenewal:** The cluster is not renewed after expiration.
-         *  
+         * 
          * Default value: **AutoRenewal**.
-         *  
-         * >  If this parameter is set to **NotRenewal**, the system does not send a text message for the cluster expiration, but only sends a message three days before the cluster expires to remind you that the cluster is not renewed.
+         * 
+         * >  If you set this parameter to **NotRenewal**, the system sends a notification that indicates the cluster is not renewed three days before the cluster expires. After the cluster expires, the system no longer sends a notification.
          */
         public Builder renewalStatus(String renewalStatus) {
             this.putQueryParameter("RenewalStatus", renewalStatus);

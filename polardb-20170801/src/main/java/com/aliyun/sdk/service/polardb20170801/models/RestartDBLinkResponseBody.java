@@ -61,7 +61,7 @@ public class RestartDBLinkResponseBody extends TeaModel {
         private String taskId; 
 
         /**
-         * DBClusterId.
+         * The cluster ID.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.DBClusterId = DBClusterId;
@@ -69,7 +69,7 @@ public class RestartDBLinkResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class RestartDBLinkResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;
