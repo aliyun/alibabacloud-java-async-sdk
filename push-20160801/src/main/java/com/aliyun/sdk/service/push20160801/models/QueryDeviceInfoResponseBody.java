@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDeviceInfoResponseBody</p>
  */
 public class QueryDeviceInfoResponseBody extends TeaModel {
-    @NameInMap("DeviceInfo")
+    @com.aliyun.core.annotation.NameInMap("DeviceInfo")
     private DeviceInfo deviceInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDeviceInfoResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class QueryDeviceInfoResponseBody extends TeaModel {
     } 
 
     public static class DeviceInfo extends TeaModel {
-        @NameInMap("Account")
+        @com.aliyun.core.annotation.NameInMap("Account")
         private String account;
 
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("Brand")
+        @com.aliyun.core.annotation.NameInMap("Brand")
         private String brand;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("DeviceToken")
+        @com.aliyun.core.annotation.NameInMap("DeviceToken")
         private String deviceToken;
 
-        @NameInMap("DeviceType")
+        @com.aliyun.core.annotation.NameInMap("DeviceType")
         private String deviceType;
 
-        @NameInMap("LastOnlineTime")
+        @com.aliyun.core.annotation.NameInMap("LastOnlineTime")
         private String lastOnlineTime;
 
-        @NameInMap("Model")
+        @com.aliyun.core.annotation.NameInMap("Model")
         private String model;
 
-        @NameInMap("Online")
+        @com.aliyun.core.annotation.NameInMap("Online")
         private Boolean online;
 
-        @NameInMap("PhoneNumber")
+        @com.aliyun.core.annotation.NameInMap("PhoneNumber")
         private String phoneNumber;
 
-        @NameInMap("PushEnabled")
+        @com.aliyun.core.annotation.NameInMap("PushEnabled")
         private Boolean pushEnabled;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
         private DeviceInfo(Builder builder) {

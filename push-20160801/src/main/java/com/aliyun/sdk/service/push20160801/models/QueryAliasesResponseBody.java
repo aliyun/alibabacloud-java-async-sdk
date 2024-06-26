@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAliasesResponseBody</p>
  */
 public class QueryAliasesResponseBody extends TeaModel {
-    @NameInMap("AliasInfos")
+    @com.aliyun.core.annotation.NameInMap("AliasInfos")
     private AliasInfos aliasInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryAliasesResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class QueryAliasesResponseBody extends TeaModel {
     } 
 
     public static class AliasInfo extends TeaModel {
-        @NameInMap("AliasName")
+        @com.aliyun.core.annotation.NameInMap("AliasName")
         private String aliasName;
 
         private AliasInfo(Builder builder) {
@@ -113,7 +112,7 @@ public class QueryAliasesResponseBody extends TeaModel {
 
     }
     public static class AliasInfos extends TeaModel {
-        @NameInMap("AliasInfo")
+        @com.aliyun.core.annotation.NameInMap("AliasInfo")
         private java.util.List < AliasInfo> aliasInfo;
 
         private AliasInfos(Builder builder) {

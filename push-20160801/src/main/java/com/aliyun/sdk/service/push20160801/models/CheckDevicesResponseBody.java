@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDevicesResponseBody</p>
  */
 public class CheckDevicesResponseBody extends TeaModel {
-    @NameInMap("DeviceCheckInfos")
+    @com.aliyun.core.annotation.NameInMap("DeviceCheckInfos")
     private DeviceCheckInfos deviceCheckInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDevicesResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class CheckDevicesResponseBody extends TeaModel {
     } 
 
     public static class DeviceCheckInfo extends TeaModel {
-        @NameInMap("Available")
+        @com.aliyun.core.annotation.NameInMap("Available")
         private Boolean available;
 
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
         private DeviceCheckInfo(Builder builder) {
@@ -133,7 +132,7 @@ public class CheckDevicesResponseBody extends TeaModel {
 
     }
     public static class DeviceCheckInfos extends TeaModel {
-        @NameInMap("DeviceCheckInfo")
+        @com.aliyun.core.annotation.NameInMap("DeviceCheckInfo")
         private java.util.List < DeviceCheckInfo> deviceCheckInfo;
 
         private DeviceCheckInfos(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,309 +11,369 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PushRequest</p>
  */
 public class PushRequest extends Request {
-    @Query
-    @NameInMap("AndroidActivity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidActivity")
     private String androidActivity;
 
-    @Query
-    @NameInMap("AndroidBigBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBigBody")
     private String androidBigBody;
 
-    @Query
-    @NameInMap("AndroidBigPictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBigPictureUrl")
     private String androidBigPictureUrl;
 
-    @Query
-    @NameInMap("AndroidBigTitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidBigTitle")
     private String androidBigTitle;
 
-    @Query
-    @NameInMap("AndroidExtParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidExtParameters")
     private String androidExtParameters;
 
-    @Query
-    @NameInMap("AndroidHonorTargetUserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidHonorTargetUserType")
     private Integer androidHonorTargetUserType;
 
-    @Query
-    @NameInMap("AndroidHuaweiReceiptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidHuaweiReceiptId")
     private String androidHuaweiReceiptId;
 
-    @Query
-    @NameInMap("AndroidHuaweiTargetUserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidHuaweiTargetUserType")
     private Integer androidHuaweiTargetUserType;
 
-    @Query
-    @NameInMap("AndroidImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidImageUrl")
     private String androidImageUrl;
 
-    @Query
-    @NameInMap("AndroidInboxBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidInboxBody")
     private String androidInboxBody;
 
-    @Query
-    @NameInMap("AndroidMessageHuaweiCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMessageHuaweiCategory")
     private String androidMessageHuaweiCategory;
 
-    @Query
-    @NameInMap("AndroidMessageHuaweiUrgency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMessageHuaweiUrgency")
     private String androidMessageHuaweiUrgency;
 
-    @Query
-    @NameInMap("AndroidMessageVivoCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMessageVivoCategory")
     private String androidMessageVivoCategory;
 
-    @Query
-    @NameInMap("AndroidMusic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidMusic")
     private String androidMusic;
 
-    @Query
-    @NameInMap("AndroidNotificationBarPriority")
-    @Validation(maximum = 2)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationBarPriority")
+    @com.aliyun.core.annotation.Validation(maximum = 2)
     private Integer androidNotificationBarPriority;
 
-    @Query
-    @NameInMap("AndroidNotificationBarType")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationBarType")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer androidNotificationBarType;
 
-    @Query
-    @NameInMap("AndroidNotificationChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationChannel")
     private String androidNotificationChannel;
 
-    @Query
-    @NameInMap("AndroidNotificationGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationGroup")
     private String androidNotificationGroup;
 
-    @Query
-    @NameInMap("AndroidNotificationHonorChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationHonorChannel")
     private String androidNotificationHonorChannel;
 
-    @Query
-    @NameInMap("AndroidNotificationHuaweiChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationHuaweiChannel")
     private String androidNotificationHuaweiChannel;
 
-    @Query
-    @NameInMap("AndroidNotificationNotifyId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationNotifyId")
     private Integer androidNotificationNotifyId;
 
-    @Query
-    @NameInMap("AndroidNotificationVivoChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationVivoChannel")
     private String androidNotificationVivoChannel;
 
-    @Query
-    @NameInMap("AndroidNotificationXiaomiChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotificationXiaomiChannel")
     private String androidNotificationXiaomiChannel;
 
-    @Query
-    @NameInMap("AndroidNotifyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidNotifyType")
     private String androidNotifyType;
 
-    @Query
-    @NameInMap("AndroidOpenType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidOpenType")
     private String androidOpenType;
 
-    @Query
-    @NameInMap("AndroidOpenUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidOpenUrl")
     private String androidOpenUrl;
 
-    @Query
-    @NameInMap("AndroidPopupActivity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidPopupActivity")
     private String androidPopupActivity;
 
-    @Query
-    @NameInMap("AndroidPopupBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidPopupBody")
     private String androidPopupBody;
 
-    @Query
-    @NameInMap("AndroidPopupTitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidPopupTitle")
     private String androidPopupTitle;
 
-    @Query
-    @NameInMap("AndroidRemind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidRemind")
     private Boolean androidRemind;
 
-    @Query
-    @NameInMap("AndroidRenderStyle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidRenderStyle")
     private Integer androidRenderStyle;
 
-    @Query
-    @NameInMap("AndroidTargetUserType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidTargetUserType")
     private Integer androidTargetUserType;
 
-    @Query
-    @NameInMap("AndroidVivoPushMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidVivoPushMode")
     private Integer androidVivoPushMode;
 
-    @Query
-    @NameInMap("AndroidVivoReceiptId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidVivoReceiptId")
     private String androidVivoReceiptId;
 
-    @Query
-    @NameInMap("AndroidXiaoMiActivity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaoMiActivity")
     @Deprecated
     private String androidXiaoMiActivity;
 
-    @Query
-    @NameInMap("AndroidXiaoMiNotifyBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaoMiNotifyBody")
     @Deprecated
     private String androidXiaoMiNotifyBody;
 
-    @Query
-    @NameInMap("AndroidXiaoMiNotifyTitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaoMiNotifyTitle")
     @Deprecated
     private String androidXiaoMiNotifyTitle;
 
-    @Query
-    @NameInMap("AndroidXiaomiBigPictureUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiBigPictureUrl")
     private String androidXiaomiBigPictureUrl;
 
-    @Query
-    @NameInMap("AndroidXiaomiImageUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AndroidXiaomiImageUrl")
     private String androidXiaomiImageUrl;
 
-    @Query
-    @NameInMap("AppKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long appKey;
 
-    @Query
-    @NameInMap("Body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Body")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String body;
 
-    @Query
-    @NameInMap("DeviceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceType;
 
-    @Query
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @Query
-    @NameInMap("JobKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyAction")
+    private String harmonyAction;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyActionType")
+    private String harmonyActionType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyCategory")
+    private String harmonyCategory;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyExtParameters")
+    private String harmonyExtParameters;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyImageUrl")
+    private String harmonyImageUrl;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyInboxContent")
+    private String harmonyInboxContent;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyNotificationSlotType")
+    private String harmonyNotificationSlotType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyNotifyId")
+    private Integer harmonyNotifyId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyReceiptId")
+    private String harmonyReceiptId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyRemind")
+    private Boolean harmonyRemind;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyRemindBody")
+    private String harmonyRemindBody;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyRemindTitle")
+    private String harmonyRemindTitle;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyRenderStyle")
+    private String harmonyRenderStyle;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyTestMessage")
+    private Boolean harmonyTestMessage;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HarmonyUri")
+    private String harmonyUri;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobKey")
     private String jobKey;
 
-    @Query
-    @NameInMap("PushTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushTime")
     private String pushTime;
 
-    @Query
-    @NameInMap("PushType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PushType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pushType;
 
-    @Query
-    @NameInMap("SendChannels")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendChannels")
     private String sendChannels;
 
-    @Query
-    @NameInMap("SendSpeed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SendSpeed")
     @Deprecated
     private Integer sendSpeed;
 
-    @Query
-    @NameInMap("SmsDelaySecs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsDelaySecs")
     private Integer smsDelaySecs;
 
-    @Query
-    @NameInMap("SmsParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsParams")
     private String smsParams;
 
-    @Query
-    @NameInMap("SmsSendPolicy")
-    @Validation(maximum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsSendPolicy")
+    @com.aliyun.core.annotation.Validation(maximum = 1)
     private Integer smsSendPolicy;
 
-    @Query
-    @NameInMap("SmsSignName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsSignName")
     private String smsSignName;
 
-    @Query
-    @NameInMap("SmsTemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SmsTemplateName")
     private String smsTemplateName;
 
-    @Query
-    @NameInMap("StoreOffline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StoreOffline")
     private Boolean storeOffline;
 
-    @Query
-    @NameInMap("Target")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Target")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String target;
 
-    @Query
-    @NameInMap("TargetValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TargetValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String targetValue;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("Trim")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Trim")
     private Boolean trim;
 
-    @Query
-    @NameInMap("iOSApnsEnv")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSApnsEnv")
     private String iOSApnsEnv;
 
-    @Query
-    @NameInMap("iOSBadge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSBadge")
     private Integer iOSBadge;
 
-    @Query
-    @NameInMap("iOSBadgeAutoIncrement")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSBadgeAutoIncrement")
     private Boolean iOSBadgeAutoIncrement;
 
-    @Query
-    @NameInMap("iOSExtParameters")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSExtParameters")
     private String iOSExtParameters;
 
-    @Query
-    @NameInMap("iOSInterruptionLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSInterruptionLevel")
     private String iOSInterruptionLevel;
 
-    @Query
-    @NameInMap("iOSMusic")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSMusic")
     private String iOSMusic;
 
-    @Query
-    @NameInMap("iOSMutableContent")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSMutableContent")
     private Boolean iOSMutableContent;
 
-    @Query
-    @NameInMap("iOSNotificationCategory")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSNotificationCategory")
     private String iOSNotificationCategory;
 
-    @Query
-    @NameInMap("iOSNotificationCollapseId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSNotificationCollapseId")
     private String iOSNotificationCollapseId;
 
-    @Query
-    @NameInMap("iOSNotificationThreadId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSNotificationThreadId")
     private String iOSNotificationThreadId;
 
-    @Query
-    @NameInMap("iOSRelevanceScore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSRelevanceScore")
     private Double iOSRelevanceScore;
 
-    @Query
-    @NameInMap("iOSRemind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSRemind")
     private Boolean iOSRemind;
 
-    @Query
-    @NameInMap("iOSRemindBody")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSRemindBody")
     private String iOSRemindBody;
 
-    @Query
-    @NameInMap("iOSSilentNotification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSSilentNotification")
     private Boolean iOSSilentNotification;
 
-    @Query
-    @NameInMap("iOSSubtitle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("iOSSubtitle")
     private String iOSSubtitle;
 
     private PushRequest(Builder builder) {
@@ -362,6 +421,21 @@ public class PushRequest extends Request {
         this.body = builder.body;
         this.deviceType = builder.deviceType;
         this.expireTime = builder.expireTime;
+        this.harmonyAction = builder.harmonyAction;
+        this.harmonyActionType = builder.harmonyActionType;
+        this.harmonyCategory = builder.harmonyCategory;
+        this.harmonyExtParameters = builder.harmonyExtParameters;
+        this.harmonyImageUrl = builder.harmonyImageUrl;
+        this.harmonyInboxContent = builder.harmonyInboxContent;
+        this.harmonyNotificationSlotType = builder.harmonyNotificationSlotType;
+        this.harmonyNotifyId = builder.harmonyNotifyId;
+        this.harmonyReceiptId = builder.harmonyReceiptId;
+        this.harmonyRemind = builder.harmonyRemind;
+        this.harmonyRemindBody = builder.harmonyRemindBody;
+        this.harmonyRemindTitle = builder.harmonyRemindTitle;
+        this.harmonyRenderStyle = builder.harmonyRenderStyle;
+        this.harmonyTestMessage = builder.harmonyTestMessage;
+        this.harmonyUri = builder.harmonyUri;
         this.jobKey = builder.jobKey;
         this.pushTime = builder.pushTime;
         this.pushType = builder.pushType;
@@ -709,6 +783,111 @@ public class PushRequest extends Request {
     }
 
     /**
+     * @return harmonyAction
+     */
+    public String getHarmonyAction() {
+        return this.harmonyAction;
+    }
+
+    /**
+     * @return harmonyActionType
+     */
+    public String getHarmonyActionType() {
+        return this.harmonyActionType;
+    }
+
+    /**
+     * @return harmonyCategory
+     */
+    public String getHarmonyCategory() {
+        return this.harmonyCategory;
+    }
+
+    /**
+     * @return harmonyExtParameters
+     */
+    public String getHarmonyExtParameters() {
+        return this.harmonyExtParameters;
+    }
+
+    /**
+     * @return harmonyImageUrl
+     */
+    public String getHarmonyImageUrl() {
+        return this.harmonyImageUrl;
+    }
+
+    /**
+     * @return harmonyInboxContent
+     */
+    public String getHarmonyInboxContent() {
+        return this.harmonyInboxContent;
+    }
+
+    /**
+     * @return harmonyNotificationSlotType
+     */
+    public String getHarmonyNotificationSlotType() {
+        return this.harmonyNotificationSlotType;
+    }
+
+    /**
+     * @return harmonyNotifyId
+     */
+    public Integer getHarmonyNotifyId() {
+        return this.harmonyNotifyId;
+    }
+
+    /**
+     * @return harmonyReceiptId
+     */
+    public String getHarmonyReceiptId() {
+        return this.harmonyReceiptId;
+    }
+
+    /**
+     * @return harmonyRemind
+     */
+    public Boolean getHarmonyRemind() {
+        return this.harmonyRemind;
+    }
+
+    /**
+     * @return harmonyRemindBody
+     */
+    public String getHarmonyRemindBody() {
+        return this.harmonyRemindBody;
+    }
+
+    /**
+     * @return harmonyRemindTitle
+     */
+    public String getHarmonyRemindTitle() {
+        return this.harmonyRemindTitle;
+    }
+
+    /**
+     * @return harmonyRenderStyle
+     */
+    public String getHarmonyRenderStyle() {
+        return this.harmonyRenderStyle;
+    }
+
+    /**
+     * @return harmonyTestMessage
+     */
+    public Boolean getHarmonyTestMessage() {
+        return this.harmonyTestMessage;
+    }
+
+    /**
+     * @return harmonyUri
+     */
+    public String getHarmonyUri() {
+        return this.harmonyUri;
+    }
+
+    /**
      * @return jobKey
      */
     public String getJobKey() {
@@ -962,6 +1141,21 @@ public class PushRequest extends Request {
         private String body; 
         private String deviceType; 
         private String expireTime; 
+        private String harmonyAction; 
+        private String harmonyActionType; 
+        private String harmonyCategory; 
+        private String harmonyExtParameters; 
+        private String harmonyImageUrl; 
+        private String harmonyInboxContent; 
+        private String harmonyNotificationSlotType; 
+        private Integer harmonyNotifyId; 
+        private String harmonyReceiptId; 
+        private Boolean harmonyRemind; 
+        private String harmonyRemindBody; 
+        private String harmonyRemindTitle; 
+        private String harmonyRenderStyle; 
+        private Boolean harmonyTestMessage; 
+        private String harmonyUri; 
         private String jobKey; 
         private String pushTime; 
         private String pushType; 
@@ -1042,6 +1236,21 @@ public class PushRequest extends Request {
             this.body = request.body;
             this.deviceType = request.deviceType;
             this.expireTime = request.expireTime;
+            this.harmonyAction = request.harmonyAction;
+            this.harmonyActionType = request.harmonyActionType;
+            this.harmonyCategory = request.harmonyCategory;
+            this.harmonyExtParameters = request.harmonyExtParameters;
+            this.harmonyImageUrl = request.harmonyImageUrl;
+            this.harmonyInboxContent = request.harmonyInboxContent;
+            this.harmonyNotificationSlotType = request.harmonyNotificationSlotType;
+            this.harmonyNotifyId = request.harmonyNotifyId;
+            this.harmonyReceiptId = request.harmonyReceiptId;
+            this.harmonyRemind = request.harmonyRemind;
+            this.harmonyRemindBody = request.harmonyRemindBody;
+            this.harmonyRemindTitle = request.harmonyRemindTitle;
+            this.harmonyRenderStyle = request.harmonyRenderStyle;
+            this.harmonyTestMessage = request.harmonyTestMessage;
+            this.harmonyUri = request.harmonyUri;
             this.jobKey = request.jobKey;
             this.pushTime = request.pushTime;
             this.pushType = request.pushType;
@@ -1458,6 +1667,141 @@ public class PushRequest extends Request {
         public Builder expireTime(String expireTime) {
             this.putQueryParameter("ExpireTime", expireTime);
             this.expireTime = expireTime;
+            return this;
+        }
+
+        /**
+         * HarmonyAction.
+         */
+        public Builder harmonyAction(String harmonyAction) {
+            this.putQueryParameter("HarmonyAction", harmonyAction);
+            this.harmonyAction = harmonyAction;
+            return this;
+        }
+
+        /**
+         * HarmonyActionType.
+         */
+        public Builder harmonyActionType(String harmonyActionType) {
+            this.putQueryParameter("HarmonyActionType", harmonyActionType);
+            this.harmonyActionType = harmonyActionType;
+            return this;
+        }
+
+        /**
+         * HarmonyCategory.
+         */
+        public Builder harmonyCategory(String harmonyCategory) {
+            this.putQueryParameter("HarmonyCategory", harmonyCategory);
+            this.harmonyCategory = harmonyCategory;
+            return this;
+        }
+
+        /**
+         * HarmonyExtParameters.
+         */
+        public Builder harmonyExtParameters(String harmonyExtParameters) {
+            this.putQueryParameter("HarmonyExtParameters", harmonyExtParameters);
+            this.harmonyExtParameters = harmonyExtParameters;
+            return this;
+        }
+
+        /**
+         * HarmonyImageUrl.
+         */
+        public Builder harmonyImageUrl(String harmonyImageUrl) {
+            this.putQueryParameter("HarmonyImageUrl", harmonyImageUrl);
+            this.harmonyImageUrl = harmonyImageUrl;
+            return this;
+        }
+
+        /**
+         * HarmonyInboxContent.
+         */
+        public Builder harmonyInboxContent(String harmonyInboxContent) {
+            this.putQueryParameter("HarmonyInboxContent", harmonyInboxContent);
+            this.harmonyInboxContent = harmonyInboxContent;
+            return this;
+        }
+
+        /**
+         * HarmonyNotificationSlotType.
+         */
+        public Builder harmonyNotificationSlotType(String harmonyNotificationSlotType) {
+            this.putQueryParameter("HarmonyNotificationSlotType", harmonyNotificationSlotType);
+            this.harmonyNotificationSlotType = harmonyNotificationSlotType;
+            return this;
+        }
+
+        /**
+         * HarmonyNotifyId.
+         */
+        public Builder harmonyNotifyId(Integer harmonyNotifyId) {
+            this.putQueryParameter("HarmonyNotifyId", harmonyNotifyId);
+            this.harmonyNotifyId = harmonyNotifyId;
+            return this;
+        }
+
+        /**
+         * HarmonyReceiptId.
+         */
+        public Builder harmonyReceiptId(String harmonyReceiptId) {
+            this.putQueryParameter("HarmonyReceiptId", harmonyReceiptId);
+            this.harmonyReceiptId = harmonyReceiptId;
+            return this;
+        }
+
+        /**
+         * HarmonyRemind.
+         */
+        public Builder harmonyRemind(Boolean harmonyRemind) {
+            this.putQueryParameter("HarmonyRemind", harmonyRemind);
+            this.harmonyRemind = harmonyRemind;
+            return this;
+        }
+
+        /**
+         * HarmonyRemindBody.
+         */
+        public Builder harmonyRemindBody(String harmonyRemindBody) {
+            this.putQueryParameter("HarmonyRemindBody", harmonyRemindBody);
+            this.harmonyRemindBody = harmonyRemindBody;
+            return this;
+        }
+
+        /**
+         * HarmonyRemindTitle.
+         */
+        public Builder harmonyRemindTitle(String harmonyRemindTitle) {
+            this.putQueryParameter("HarmonyRemindTitle", harmonyRemindTitle);
+            this.harmonyRemindTitle = harmonyRemindTitle;
+            return this;
+        }
+
+        /**
+         * HarmonyRenderStyle.
+         */
+        public Builder harmonyRenderStyle(String harmonyRenderStyle) {
+            this.putQueryParameter("HarmonyRenderStyle", harmonyRenderStyle);
+            this.harmonyRenderStyle = harmonyRenderStyle;
+            return this;
+        }
+
+        /**
+         * HarmonyTestMessage.
+         */
+        public Builder harmonyTestMessage(Boolean harmonyTestMessage) {
+            this.putQueryParameter("HarmonyTestMessage", harmonyTestMessage);
+            this.harmonyTestMessage = harmonyTestMessage;
+            return this;
+        }
+
+        /**
+         * HarmonyUri.
+         */
+        public Builder harmonyUri(String harmonyUri) {
+            this.putQueryParameter("HarmonyUri", harmonyUri);
+            this.harmonyUri = harmonyUri;
             return this;
         }
 

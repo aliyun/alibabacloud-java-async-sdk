@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.push20160801.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckCertificateResponseBody</p>
  */
 public class CheckCertificateResponseBody extends TeaModel {
-    @NameInMap("Android")
+    @com.aliyun.core.annotation.NameInMap("Android")
     private Boolean android;
 
-    @NameInMap("DevelopmentCertInfo")
+    @com.aliyun.core.annotation.NameInMap("DevelopmentCertInfo")
     private DevelopmentCertInfo developmentCertInfo;
 
-    @NameInMap("IOS")
+    @com.aliyun.core.annotation.NameInMap("IOS")
     private Boolean IOS;
 
-    @NameInMap("ProductionCertInfo")
+    @com.aliyun.core.annotation.NameInMap("ProductionCertInfo")
     private ProductionCertInfo productionCertInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckCertificateResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class CheckCertificateResponseBody extends TeaModel {
     } 
 
     public static class DevelopmentCertInfo extends TeaModel {
-        @NameInMap("ExipreTime")
+        @com.aliyun.core.annotation.NameInMap("ExipreTime")
         private Long exipreTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DevelopmentCertInfo(Builder builder) {
@@ -193,10 +192,10 @@ public class CheckCertificateResponseBody extends TeaModel {
 
     }
     public static class ProductionCertInfo extends TeaModel {
-        @NameInMap("ExipreTime")
+        @com.aliyun.core.annotation.NameInMap("ExipreTime")
         private Long exipreTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private ProductionCertInfo(Builder builder) {
