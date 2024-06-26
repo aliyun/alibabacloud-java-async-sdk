@@ -55,6 +55,10 @@ public class CreateMySqlDataSourceRequest extends Request {
     private String type;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("UseSsl")
+    private Boolean useSsl;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("UserName")
     @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
@@ -75,6 +79,7 @@ public class CreateMySqlDataSourceRequest extends Request {
         this.port = builder.port;
         this.schema = builder.schema;
         this.type = builder.type;
+        this.useSsl = builder.useSsl;
         this.userName = builder.userName;
         this.vpcId = builder.vpcId;
     }
@@ -163,6 +168,13 @@ public class CreateMySqlDataSourceRequest extends Request {
     }
 
     /**
+     * @return useSsl
+     */
+    public Boolean getUseSsl() {
+        return this.useSsl;
+    }
+
+    /**
      * @return userName
      */
     public String getUserName() {
@@ -187,6 +199,7 @@ public class CreateMySqlDataSourceRequest extends Request {
         private Integer port; 
         private String schema; 
         private String type; 
+        private Boolean useSsl; 
         private String userName; 
         private String vpcId; 
 
@@ -206,6 +219,7 @@ public class CreateMySqlDataSourceRequest extends Request {
             this.port = request.port;
             this.schema = request.schema;
             this.type = request.type;
+            this.useSsl = request.useSsl;
             this.userName = request.userName;
             this.vpcId = request.vpcId;
         } 
@@ -297,6 +311,15 @@ public class CreateMySqlDataSourceRequest extends Request {
         public Builder type(String type) {
             this.putBodyParameter("Type", type);
             this.type = type;
+            return this;
+        }
+
+        /**
+         * UseSsl.
+         */
+        public Builder useSsl(Boolean useSsl) {
+            this.putBodyParameter("UseSsl", useSsl);
+            this.useSsl = useSsl;
             return this;
         }
 

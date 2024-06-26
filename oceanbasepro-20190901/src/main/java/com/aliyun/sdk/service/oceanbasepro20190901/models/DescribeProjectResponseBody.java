@@ -422,6 +422,12 @@ public class DescribeProjectResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RocketMqSendMsgTimeout")
         private Long rocketMqSendMsgTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("SinkStoreFormat")
+        private String sinkStoreFormat;
+
+        @com.aliyun.core.annotation.NameInMap("SourceStoreFormat")
+        private String sourceStoreFormat;
+
         @com.aliyun.core.annotation.NameInMap("TableCategory")
         private String tableCategory;
 
@@ -436,6 +442,8 @@ public class DescribeProjectResponseBody extends TeaModel {
             this.rocketMqMsgTags = builder.rocketMqMsgTags;
             this.rocketMqProducerGroup = builder.rocketMqProducerGroup;
             this.rocketMqSendMsgTimeout = builder.rocketMqSendMsgTimeout;
+            this.sinkStoreFormat = builder.sinkStoreFormat;
+            this.sourceStoreFormat = builder.sourceStoreFormat;
             this.tableCategory = builder.tableCategory;
         }
 
@@ -518,6 +526,20 @@ public class DescribeProjectResponseBody extends TeaModel {
         }
 
         /**
+         * @return sinkStoreFormat
+         */
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        /**
+         * @return sourceStoreFormat
+         */
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
+        /**
          * @return tableCategory
          */
         public String getTableCategory() {
@@ -535,6 +557,8 @@ public class DescribeProjectResponseBody extends TeaModel {
             private String rocketMqMsgTags; 
             private String rocketMqProducerGroup; 
             private Long rocketMqSendMsgTimeout; 
+            private String sinkStoreFormat; 
+            private String sourceStoreFormat; 
             private String tableCategory; 
 
             /**
@@ -614,6 +638,22 @@ public class DescribeProjectResponseBody extends TeaModel {
              */
             public Builder rocketMqSendMsgTimeout(Long rocketMqSendMsgTimeout) {
                 this.rocketMqSendMsgTimeout = rocketMqSendMsgTimeout;
+                return this;
+            }
+
+            /**
+             * SinkStoreFormat.
+             */
+            public Builder sinkStoreFormat(String sinkStoreFormat) {
+                this.sinkStoreFormat = sinkStoreFormat;
+                return this;
+            }
+
+            /**
+             * SourceStoreFormat.
+             */
+            public Builder sourceStoreFormat(String sourceStoreFormat) {
+                this.sourceStoreFormat = sourceStoreFormat;
                 return this;
             }
 

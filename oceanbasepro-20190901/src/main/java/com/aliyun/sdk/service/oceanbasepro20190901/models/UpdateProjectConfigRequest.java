@@ -16,6 +16,10 @@ public class UpdateProjectConfigRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommonTransferConfig")
+    private CommonTransferConfig commonTransferConfig;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("FullTransferConfig")
     private FullTransferConfig fullTransferConfig;
 
@@ -35,6 +39,7 @@ public class UpdateProjectConfigRequest extends Request {
     private UpdateProjectConfigRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.commonTransferConfig = builder.commonTransferConfig;
         this.fullTransferConfig = builder.fullTransferConfig;
         this.id = builder.id;
         this.incrTransferConfig = builder.incrTransferConfig;
@@ -59,6 +64,13 @@ public class UpdateProjectConfigRequest extends Request {
      */
     public String getRegionId() {
         return this.regionId;
+    }
+
+    /**
+     * @return commonTransferConfig
+     */
+    public CommonTransferConfig getCommonTransferConfig() {
+        return this.commonTransferConfig;
     }
 
     /**
@@ -91,6 +103,7 @@ public class UpdateProjectConfigRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateProjectConfigRequest, Builder> {
         private String regionId; 
+        private CommonTransferConfig commonTransferConfig; 
         private FullTransferConfig fullTransferConfig; 
         private String id; 
         private IncrTransferConfig incrTransferConfig; 
@@ -103,6 +116,7 @@ public class UpdateProjectConfigRequest extends Request {
         private Builder(UpdateProjectConfigRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.commonTransferConfig = request.commonTransferConfig;
             this.fullTransferConfig = request.fullTransferConfig;
             this.id = request.id;
             this.incrTransferConfig = request.incrTransferConfig;
@@ -115,6 +129,16 @@ public class UpdateProjectConfigRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * CommonTransferConfig.
+         */
+        public Builder commonTransferConfig(CommonTransferConfig commonTransferConfig) {
+            String commonTransferConfigShrink = shrink(commonTransferConfig, "CommonTransferConfig", "json");
+            this.putBodyParameter("CommonTransferConfig", commonTransferConfigShrink);
+            this.commonTransferConfig = commonTransferConfig;
             return this;
         }
 
@@ -164,6 +188,67 @@ public class UpdateProjectConfigRequest extends Request {
 
     } 
 
+    public static class CommonTransferConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SinkStoreFormat")
+        private String sinkStoreFormat;
+
+        @com.aliyun.core.annotation.NameInMap("SourceStoreFormat")
+        private String sourceStoreFormat;
+
+        private CommonTransferConfig(Builder builder) {
+            this.sinkStoreFormat = builder.sinkStoreFormat;
+            this.sourceStoreFormat = builder.sourceStoreFormat;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CommonTransferConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return sinkStoreFormat
+         */
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        /**
+         * @return sourceStoreFormat
+         */
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
+        public static final class Builder {
+            private String sinkStoreFormat; 
+            private String sourceStoreFormat; 
+
+            /**
+             * SinkStoreFormat.
+             */
+            public Builder sinkStoreFormat(String sinkStoreFormat) {
+                this.sinkStoreFormat = sinkStoreFormat;
+                return this;
+            }
+
+            /**
+             * SourceStoreFormat.
+             */
+            public Builder sourceStoreFormat(String sourceStoreFormat) {
+                this.sourceStoreFormat = sourceStoreFormat;
+                return this;
+            }
+
+            public CommonTransferConfig build() {
+                return new CommonTransferConfig(this);
+            } 
+
+        } 
+
+    }
     public static class FullTransferConfig extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReadWorkerNum")
         private Integer readWorkerNum;

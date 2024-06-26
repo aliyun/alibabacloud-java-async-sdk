@@ -637,6 +637,12 @@ public class CreateProjectRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("RocketMqSendMsgTimeout")
         private Long rocketMqSendMsgTimeout;
 
+        @com.aliyun.core.annotation.NameInMap("SinkStoreFormat")
+        private String sinkStoreFormat;
+
+        @com.aliyun.core.annotation.NameInMap("SourceStoreFormat")
+        private String sourceStoreFormat;
+
         @com.aliyun.core.annotation.NameInMap("SyncSchema")
         private Boolean syncSchema;
 
@@ -658,6 +664,8 @@ public class CreateProjectRequest extends Request {
             this.rocketMqMsgTags = builder.rocketMqMsgTags;
             this.rocketMqProducerGroup = builder.rocketMqProducerGroup;
             this.rocketMqSendMsgTimeout = builder.rocketMqSendMsgTimeout;
+            this.sinkStoreFormat = builder.sinkStoreFormat;
+            this.sourceStoreFormat = builder.sourceStoreFormat;
             this.syncSchema = builder.syncSchema;
             this.syncSchemaColumnName = builder.syncSchemaColumnName;
             this.tableCategory = builder.tableCategory;
@@ -749,6 +757,20 @@ public class CreateProjectRequest extends Request {
         }
 
         /**
+         * @return sinkStoreFormat
+         */
+        public String getSinkStoreFormat() {
+            return this.sinkStoreFormat;
+        }
+
+        /**
+         * @return sourceStoreFormat
+         */
+        public String getSourceStoreFormat() {
+            return this.sourceStoreFormat;
+        }
+
+        /**
          * @return syncSchema
          */
         public Boolean getSyncSchema() {
@@ -781,6 +803,8 @@ public class CreateProjectRequest extends Request {
             private String rocketMqMsgTags; 
             private String rocketMqProducerGroup; 
             private Long rocketMqSendMsgTimeout; 
+            private String sinkStoreFormat; 
+            private String sourceStoreFormat; 
             private Boolean syncSchema; 
             private String syncSchemaColumnName; 
             private String tableCategory; 
@@ -870,6 +894,22 @@ public class CreateProjectRequest extends Request {
              */
             public Builder rocketMqSendMsgTimeout(Long rocketMqSendMsgTimeout) {
                 this.rocketMqSendMsgTimeout = rocketMqSendMsgTimeout;
+                return this;
+            }
+
+            /**
+             * SinkStoreFormat.
+             */
+            public Builder sinkStoreFormat(String sinkStoreFormat) {
+                this.sinkStoreFormat = sinkStoreFormat;
+                return this;
+            }
+
+            /**
+             * SourceStoreFormat.
+             */
+            public Builder sourceStoreFormat(String sourceStoreFormat) {
+                this.sourceStoreFormat = sourceStoreFormat;
                 return this;
             }
 
