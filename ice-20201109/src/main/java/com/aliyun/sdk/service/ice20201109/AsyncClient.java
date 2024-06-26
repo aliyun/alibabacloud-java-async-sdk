@@ -195,6 +195,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetSnapshotUrlsResponse> getSnapshotUrls(GetSnapshotUrlsRequest request);
 
+    CompletableFuture<GetStorageListResponse> getStorageList(GetStorageListRequest request);
+
     CompletableFuture<GetSystemTemplateResponse> getSystemTemplate(GetSystemTemplateRequest request);
 
     CompletableFuture<GetTemplateResponse> getTemplate(GetTemplateRequest request);
