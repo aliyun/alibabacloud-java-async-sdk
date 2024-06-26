@@ -127,6 +127,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeMemberAccountsResponse> describeMemberAccounts(DescribeMemberAccountsRequest request);
 
+    CompletableFuture<DescribePauseProtectionStatusResponse> describePauseProtectionStatus(DescribePauseProtectionStatusRequest request);
+
     CompletableFuture<DescribePeakTrendResponse> describePeakTrend(DescribePeakTrendRequest request);
 
     CompletableFuture<DescribeProductInstancesResponse> describeProductInstances(DescribeProductInstancesRequest request);
@@ -212,6 +214,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyMajorProtectionBlackIpResponse> modifyMajorProtectionBlackIp(ModifyMajorProtectionBlackIpRequest request);
 
     CompletableFuture<ModifyMemberAccountResponse> modifyMemberAccount(ModifyMemberAccountRequest request);
+
+    CompletableFuture<ModifyPauseProtectionStatusResponse> modifyPauseProtectionStatus(ModifyPauseProtectionStatusRequest request);
 
     CompletableFuture<ModifyResourceLogStatusResponse> modifyResourceLogStatus(ModifyResourceLogStatusRequest request);
 

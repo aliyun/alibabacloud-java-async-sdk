@@ -922,7 +922,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of connections. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -965,10 +965,10 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
+             * The timeout period for idle persistent connections. Valid values: 1 to 60. Default value: 15. Unit: seconds.
              * <p>
              * 
-             * >  This parameter specifies the period of time during which a reused persistent connection is allowed to remain in the Idle state before the persistent connection is released.
+             * >  This parameter specifies the time for which a reused persistent connection can remain in the Idle state before the persistent connection is closed.
              */
             public Builder keepaliveTimeout(Integer keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;
@@ -989,7 +989,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of read connections. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for read connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -1048,7 +1048,7 @@ public class CreateDomainRequest extends Request {
              * The value of the SNI field. If you do not specify this parameter, the value of the **Host** field is automatically used. This parameter is optional. If you want WAF to use an SNI field value that is different from the Host field value in back-to-origin requests, you can specify a custom value for the SNI field.
              * <p>
              * 
-             * >  This parameter is required only if you set **SniEnalbed** to **true**.
+             * >  This parameter is required only if you set **SniEnabled** to **true**.
              */
             public Builder sniHost(String sniHost) {
                 this.sniHost = sniHost;
@@ -1056,7 +1056,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * The timeout period of write connections. Unit: seconds. Valid values: 1 to 3600.
+             * The timeout period for write connections. Unit: seconds. Valid values: 1 to 3600.
              */
             public Builder writeTimeout(Integer writeTimeout) {
                 this.writeTimeout = writeTimeout;
@@ -1064,7 +1064,7 @@ public class CreateDomainRequest extends Request {
             }
 
             /**
-             * Indicates whether the X-Forward-For-Proto header is used to identify the protocol used by WAF to forward requests to the origin server. Valid values:
+             * Specifies whether to use X-Forward-For-Proto to pass the protocol used by WAF to forward requests to the origin server. Valid values:
              * <p>
              * 
              * *   **true** (default)

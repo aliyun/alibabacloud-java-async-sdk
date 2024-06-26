@@ -797,6 +797,20 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     @Override
+    public CompletableFuture<DescribePauseProtectionStatusResponse> describePauseProtectionStatus(DescribePauseProtectionStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("DescribePauseProtectionStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(DescribePauseProtectionStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<DescribePauseProtectionStatusResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
     public CompletableFuture<DescribePeakTrendResponse> describePeakTrend(DescribePeakTrendRequest request) {
         try {
             this.handler.validateRequestModel(request);
@@ -1393,6 +1407,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ModifyMemberAccountResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<ModifyPauseProtectionStatusResponse> modifyPauseProtectionStatus(ModifyPauseProtectionStatusRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("ModifyPauseProtectionStatus").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(ModifyPauseProtectionStatusResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<ModifyPauseProtectionStatusResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }
