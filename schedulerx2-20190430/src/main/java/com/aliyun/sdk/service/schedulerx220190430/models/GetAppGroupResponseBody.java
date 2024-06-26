@@ -137,6 +137,9 @@ public class GetAppGroupResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private String appVersion;
+
         @com.aliyun.core.annotation.NameInMap("CurJobs")
         private Integer curJobs;
 
@@ -155,6 +158,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         private Data(Builder builder) {
             this.appKey = builder.appKey;
             this.appName = builder.appName;
+            this.appVersion = builder.appVersion;
             this.curJobs = builder.curJobs;
             this.description = builder.description;
             this.groupId = builder.groupId;
@@ -182,6 +186,13 @@ public class GetAppGroupResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return appVersion
+         */
+        public String getAppVersion() {
+            return this.appVersion;
         }
 
         /**
@@ -222,6 +233,7 @@ public class GetAppGroupResponseBody extends TeaModel {
         public static final class Builder {
             private String appKey; 
             private String appName; 
+            private String appVersion; 
             private Integer curJobs; 
             private String description; 
             private String groupId; 
@@ -241,6 +253,14 @@ public class GetAppGroupResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * AppVersion.
+             */
+            public Builder appVersion(String appVersion) {
+                this.appVersion = appVersion;
                 return this;
             }
 

@@ -49,6 +49,7 @@ public class CreateWorkflowRequest extends Request {
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TimeType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer timeType;
 
     @com.aliyun.core.annotation.Body

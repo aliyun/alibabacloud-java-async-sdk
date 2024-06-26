@@ -144,22 +144,22 @@ public class ListGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("AppVersion")
+        private Integer appVersion;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
         @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @com.aliyun.core.annotation.NameInMap("Version")
-        private Integer version;
-
         private AppGroups(Builder builder) {
             this.appGroupId = builder.appGroupId;
             this.appKey = builder.appKey;
             this.appName = builder.appName;
+            this.appVersion = builder.appVersion;
             this.description = builder.description;
             this.groupId = builder.groupId;
-            this.version = builder.version;
         }
 
         public static Builder builder() {
@@ -192,6 +192,13 @@ public class ListGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return appVersion
+         */
+        public Integer getAppVersion() {
+            return this.appVersion;
+        }
+
+        /**
          * @return description
          */
         public String getDescription() {
@@ -205,20 +212,13 @@ public class ListGroupsResponseBody extends TeaModel {
             return this.groupId;
         }
 
-        /**
-         * @return version
-         */
-        public Integer getVersion() {
-            return this.version;
-        }
-
         public static final class Builder {
             private Long appGroupId; 
             private String appKey; 
             private String appName; 
+            private Integer appVersion; 
             private String description; 
             private String groupId; 
-            private Integer version; 
 
             /**
              * The application group ID.
@@ -245,6 +245,14 @@ public class ListGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * AppVersion.
+             */
+            public Builder appVersion(Integer appVersion) {
+                this.appVersion = appVersion;
+                return this;
+            }
+
+            /**
              * The description of the application.
              */
             public Builder description(String description) {
@@ -257,14 +265,6 @@ public class ListGroupsResponseBody extends TeaModel {
              */
             public Builder groupId(String groupId) {
                 this.groupId = groupId;
-                return this;
-            }
-
-            /**
-             * Version.
-             */
-            public Builder version(Integer version) {
-                this.version = version;
                 return this;
             }
 
