@@ -120,6 +120,9 @@ public class DescribeAppsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
+        @com.aliyun.core.annotation.NameInMap("BizRegionId")
+        private String bizRegionId;
+
         @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
@@ -145,6 +148,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             this.androidAppVersion = builder.androidAppVersion;
             this.appId = builder.appId;
             this.appName = builder.appName;
+            this.bizRegionId = builder.bizRegionId;
             this.description = builder.description;
             this.gmtCreate = builder.gmtCreate;
             this.gmtModified = builder.gmtModified;
@@ -181,6 +185,13 @@ public class DescribeAppsResponseBody extends TeaModel {
          */
         public String getAppName() {
             return this.appName;
+        }
+
+        /**
+         * @return bizRegionId
+         */
+        public String getBizRegionId() {
+            return this.bizRegionId;
         }
 
         /**
@@ -236,6 +247,7 @@ public class DescribeAppsResponseBody extends TeaModel {
             private String androidAppVersion; 
             private Integer appId; 
             private String appName; 
+            private String bizRegionId; 
             private String description; 
             private String gmtCreate; 
             private String gmtModified; 
@@ -265,6 +277,14 @@ public class DescribeAppsResponseBody extends TeaModel {
              */
             public Builder appName(String appName) {
                 this.appName = appName;
+                return this;
+            }
+
+            /**
+             * BizRegionId.
+             */
+            public Builder bizRegionId(String bizRegionId) {
+                this.bizRegionId = bizRegionId;
                 return this;
             }
 

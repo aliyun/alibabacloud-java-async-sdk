@@ -20,6 +20,10 @@ public class DescribeAppsRequest extends Request {
     private String appName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstallationStatus")
     private String installationStatus;
 
@@ -40,6 +44,7 @@ public class DescribeAppsRequest extends Request {
         super(builder);
         this.appIdList = builder.appIdList;
         this.appName = builder.appName;
+        this.bizRegionId = builder.bizRegionId;
         this.installationStatus = builder.installationStatus;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -74,6 +79,13 @@ public class DescribeAppsRequest extends Request {
     }
 
     /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
+    }
+
+    /**
      * @return installationStatus
      */
     public String getInstallationStatus() {
@@ -104,6 +116,7 @@ public class DescribeAppsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAppsRequest, Builder> {
         private java.util.List < String > appIdList; 
         private String appName; 
+        private String bizRegionId; 
         private String installationStatus; 
         private Integer maxResults; 
         private String nextToken; 
@@ -117,6 +130,7 @@ public class DescribeAppsRequest extends Request {
             super(request);
             this.appIdList = request.appIdList;
             this.appName = request.appName;
+            this.bizRegionId = request.bizRegionId;
             this.installationStatus = request.installationStatus;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -138,6 +152,15 @@ public class DescribeAppsRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 

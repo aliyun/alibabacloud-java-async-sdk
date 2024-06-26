@@ -17,6 +17,10 @@ public class CreateAppRequest extends Request {
     private String appName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizRegionId")
+    private String bizRegionId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
@@ -43,6 +47,7 @@ public class CreateAppRequest extends Request {
     private CreateAppRequest(Builder builder) {
         super(builder);
         this.appName = builder.appName;
+        this.bizRegionId = builder.bizRegionId;
         this.description = builder.description;
         this.fileName = builder.fileName;
         this.filePath = builder.filePath;
@@ -69,6 +74,13 @@ public class CreateAppRequest extends Request {
      */
     public String getAppName() {
         return this.appName;
+    }
+
+    /**
+     * @return bizRegionId
+     */
+    public String getBizRegionId() {
+        return this.bizRegionId;
     }
 
     /**
@@ -115,6 +127,7 @@ public class CreateAppRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateAppRequest, Builder> {
         private String appName; 
+        private String bizRegionId; 
         private String description; 
         private String fileName; 
         private String filePath; 
@@ -129,6 +142,7 @@ public class CreateAppRequest extends Request {
         private Builder(CreateAppRequest request) {
             super(request);
             this.appName = request.appName;
+            this.bizRegionId = request.bizRegionId;
             this.description = request.description;
             this.fileName = request.fileName;
             this.filePath = request.filePath;
@@ -143,6 +157,15 @@ public class CreateAppRequest extends Request {
         public Builder appName(String appName) {
             this.putQueryParameter("AppName", appName);
             this.appName = appName;
+            return this;
+        }
+
+        /**
+         * BizRegionId.
+         */
+        public Builder bizRegionId(String bizRegionId) {
+            this.putQueryParameter("BizRegionId", bizRegionId);
+            this.bizRegionId = bizRegionId;
             return this;
         }
 
