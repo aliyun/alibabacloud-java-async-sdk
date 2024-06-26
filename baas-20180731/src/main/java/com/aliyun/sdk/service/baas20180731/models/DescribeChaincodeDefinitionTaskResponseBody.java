@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChaincodeDefinitionTaskResponseBody</p>
  */
 public class DescribeChaincodeDefinitionTaskResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeChaincodeDefinitionTaskResponseBody(Builder builder) {
@@ -112,25 +111,25 @@ public class DescribeChaincodeDefinitionTaskResponseBody extends TeaModel {
     } 
 
     public static class ChaincodeDefinition extends TeaModel {
-        @NameInMap("ChaincodePackageId")
+        @com.aliyun.core.annotation.NameInMap("ChaincodePackageId")
         private String chaincodePackageId;
 
-        @NameInMap("CollectionConfig")
+        @com.aliyun.core.annotation.NameInMap("CollectionConfig")
         private String collectionConfig;
 
-        @NameInMap("EndorsementPolicy")
+        @com.aliyun.core.annotation.NameInMap("EndorsementPolicy")
         private String endorsementPolicy;
 
-        @NameInMap("InitRequired")
+        @com.aliyun.core.annotation.NameInMap("InitRequired")
         private Boolean initRequired;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Sequence")
+        @com.aliyun.core.annotation.NameInMap("Sequence")
         private Long sequence;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private ChaincodeDefinition(Builder builder) {
@@ -273,7 +272,7 @@ public class DescribeChaincodeDefinitionTaskResponseBody extends TeaModel {
 
     }
     public static class Content extends TeaModel {
-        @NameInMap("ChaincodeDefinition")
+        @com.aliyun.core.annotation.NameInMap("ChaincodeDefinition")
         private ChaincodeDefinition chaincodeDefinition;
 
         private Content(Builder builder) {
@@ -314,31 +313,31 @@ public class DescribeChaincodeDefinitionTaskResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Approvers")
+        @com.aliyun.core.annotation.NameInMap("Approvers")
         private java.util.List < String > approvers;
 
-        @NameInMap("ChannelName")
+        @com.aliyun.core.annotation.NameInMap("ChannelName")
         private String channelName;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private Content content;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {

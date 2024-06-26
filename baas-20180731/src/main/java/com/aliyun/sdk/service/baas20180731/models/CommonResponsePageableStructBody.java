@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CommonResponsePageableStructBody</p>
  */
 public class CommonResponsePageableStructBody extends TeaModel {
-    @NameInMap("Current")
+    @com.aliyun.core.annotation.NameInMap("Current")
     private String current;
 
-    @NameInMap("List")
+    @com.aliyun.core.annotation.NameInMap("List")
     private java.util.List < TriggerLogDTOStructBody > list;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private String total;
 
     private CommonResponsePageableStructBody(Builder builder) {

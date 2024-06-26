@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadPathsOfContractChainResponseBody</p>
  */
 public class DescribeDownloadPathsOfContractChainResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeDownloadPathsOfContractChainResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeDownloadPathsOfContractChainResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CaUrl")
+        @com.aliyun.core.annotation.NameInMap("CaUrl")
         private String caUrl;
 
-        @NameInMap("CertUrl")
+        @com.aliyun.core.annotation.NameInMap("CertUrl")
         private String certUrl;
 
-        @NameInMap("TrustCaUrl")
+        @com.aliyun.core.annotation.NameInMap("TrustCaUrl")
         private String trustCaUrl;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetBlockchainCreateTaskResponseBody</p>
  */
 public class GetBlockchainCreateTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetBlockchainCreateTaskResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class GetBlockchainCreateTaskResponseBody extends TeaModel {
     } 
 
     public static class BlockchainCreateTasks extends TeaModel {
-        @NameInMap("Bizid")
+        @com.aliyun.core.annotation.NameInMap("Bizid")
         private String bizid;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Memo")
+        @com.aliyun.core.annotation.NameInMap("Memo")
         private String memo;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private BlockchainCreateTasks(Builder builder) {
@@ -193,7 +192,7 @@ public class GetBlockchainCreateTaskResponseBody extends TeaModel {
 
     }
     public static class ResultBlockchainCreateTasks extends TeaModel {
-        @NameInMap("BlockchainCreateTasks")
+        @com.aliyun.core.annotation.NameInMap("BlockchainCreateTasks")
         private java.util.List < BlockchainCreateTasks> blockchainCreateTasks;
 
         private ResultBlockchainCreateTasks(Builder builder) {
@@ -234,13 +233,13 @@ public class GetBlockchainCreateTaskResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private Integer current;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Pagination(Builder builder) {
@@ -315,10 +314,10 @@ public class GetBlockchainCreateTaskResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("BlockchainCreateTasks")
+        @com.aliyun.core.annotation.NameInMap("BlockchainCreateTasks")
         private ResultBlockchainCreateTasks blockchainCreateTasks;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

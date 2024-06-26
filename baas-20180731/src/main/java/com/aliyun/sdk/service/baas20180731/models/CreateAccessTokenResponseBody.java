@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccessTokenResponseBody</p>
  */
 public class CreateAccessTokenResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateAccessTokenResponseBody(Builder builder) {
@@ -112,16 +111,16 @@ public class CreateAccessTokenResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AccessToken")
+        @com.aliyun.core.annotation.NameInMap("AccessToken")
         private String accessToken;
 
-        @NameInMap("ExpiresIn")
+        @com.aliyun.core.annotation.NameInMap("ExpiresIn")
         private Long expiresIn;
 
-        @NameInMap("RefreshToken")
+        @com.aliyun.core.annotation.NameInMap("RefreshToken")
         private String refreshToken;
 
-        @NameInMap("TokenType")
+        @com.aliyun.core.annotation.NameInMap("TokenType")
         private String tokenType;
 
         private Result(Builder builder) {

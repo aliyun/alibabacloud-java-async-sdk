@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainDownloadPathsNewResponseBody</p>
  */
 public class DescribeAntChainDownloadPathsNewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainDownloadPathsNewResponseBody(Builder builder) {
@@ -192,16 +191,16 @@ public class DescribeAntChainDownloadPathsNewResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("CaCrtUrl")
+        @com.aliyun.core.annotation.NameInMap("CaCrtUrl")
         private String caCrtUrl;
 
-        @NameInMap("ClientCrtUrl")
+        @com.aliyun.core.annotation.NameInMap("ClientCrtUrl")
         private String clientCrtUrl;
 
-        @NameInMap("SdkUrl")
+        @com.aliyun.core.annotation.NameInMap("SdkUrl")
         private String sdkUrl;
 
-        @NameInMap("TrustCaUrl")
+        @com.aliyun.core.annotation.NameInMap("TrustCaUrl")
         private String trustCaUrl;
 
         private Result(Builder builder) {

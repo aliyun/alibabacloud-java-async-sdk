@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMembersResponseBody</p>
  */
 public class DescribeMembersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeMembersResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeMembersResponseBody extends TeaModel {
     } 
 
     public static class Pagination extends TeaModel {
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private Integer current;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Pagination(Builder builder) {
@@ -153,10 +152,10 @@ public class DescribeMembersResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("MemberList")
+        @com.aliyun.core.annotation.NameInMap("MemberList")
         private java.util.List < String > memberList;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

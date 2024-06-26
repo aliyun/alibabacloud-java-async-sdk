@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody</p>
  */
 public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
     } 
 
     public static class AuthorizedUserList extends TeaModel {
-        @NameInMap("GmtAuthorized")
+        @com.aliyun.core.annotation.NameInMap("GmtAuthorized")
         private String gmtAuthorized;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
         private AuthorizedUserList(Builder builder) {
@@ -133,13 +132,13 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Pagination(Builder builder) {
@@ -214,19 +213,19 @@ public class DescribeAntChainMiniAppBrowserQRCodeAuthorizedUsersResponseBody ext
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("AntChainId")
+        @com.aliyun.core.annotation.NameInMap("AntChainId")
         private String antChainId;
 
-        @NameInMap("AuthorizationType")
+        @com.aliyun.core.annotation.NameInMap("AuthorizationType")
         private String authorizationType;
 
-        @NameInMap("AuthorizedUserList")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedUserList")
         private java.util.List < AuthorizedUserList> authorizedUserList;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
-        @NameInMap("QRCodeType")
+        @com.aliyun.core.annotation.NameInMap("QRCodeType")
         private String QRCodeType;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResetAntChainUserCertificateRequest</p>
  */
 public class ResetAntChainUserCertificateRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("Bid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bid;
 
-    @Body
-    @NameInMap("Operation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Operation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer operation;
 
-    @Body
-    @NameInMap("Username")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Username")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String username;
 
     private ResetAntChainUserCertificateRequest(Builder builder) {

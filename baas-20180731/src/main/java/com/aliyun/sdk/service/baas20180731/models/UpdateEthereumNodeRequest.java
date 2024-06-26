@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateEthereumNodeRequest</p>
  */
 public class UpdateEthereumNodeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("NodeId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeId;
 
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
     private UpdateEthereumNodeRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeEthereumNodesResponseBody</p>
  */
 public class DescribeEthereumNodesResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeEthereumNodesResponseBody(Builder builder) {
@@ -112,52 +111,52 @@ public class DescribeEthereumNodesResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Consensus")
+        @com.aliyun.core.annotation.NameInMap("Consensus")
         private String consensus;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EthereumId")
+        @com.aliyun.core.annotation.NameInMap("EthereumId")
         private String ethereumId;
 
-        @NameInMap("EthereumName")
+        @com.aliyun.core.annotation.NameInMap("EthereumName")
         private String ethereumName;
 
-        @NameInMap("External")
+        @com.aliyun.core.annotation.NameInMap("External")
         private Boolean external;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("NetworkId")
+        @com.aliyun.core.annotation.NameInMap("NetworkId")
         private Long networkId;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("PublicIp")
+        @com.aliyun.core.annotation.NameInMap("PublicIp")
         private String publicIp;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RpcPort")
+        @com.aliyun.core.annotation.NameInMap("RpcPort")
         private String rpcPort;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Validator")
+        @com.aliyun.core.annotation.NameInMap("Validator")
         private Boolean validator;
 
-        @NameInMap("WsPort")
+        @com.aliyun.core.annotation.NameInMap("WsPort")
         private String wsPort;
 
         private Result(Builder builder) {

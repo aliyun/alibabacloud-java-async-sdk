@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyAntChainWithKeyAutoCreationRequest</p>
  */
 public class ApplyAntChainWithKeyAutoCreationRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AntChainId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainId;
 
-    @Body
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("CountryName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CountryName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String countryName;
 
-    @Body
-    @NameInMap("LocalityName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LocalityName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String localityName;
 
-    @Body
-    @NameInMap("OrganizationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationName;
 
-    @Body
-    @NameInMap("OrganizationUnitName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnitName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationUnitName;
 
-    @Body
-    @NameInMap("Password")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Password")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String password;
 
-    @Body
-    @NameInMap("StateOrProvinceName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("StateOrProvinceName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String stateOrProvinceName;
 
     private ApplyAntChainWithKeyAutoCreationRequest(Builder builder) {

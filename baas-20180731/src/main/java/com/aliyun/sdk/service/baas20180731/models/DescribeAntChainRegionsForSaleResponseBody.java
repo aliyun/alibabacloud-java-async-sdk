@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainRegionsForSaleResponseBody</p>
  */
 public class DescribeAntChainRegionsForSaleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
     private DescribeAntChainRegionsForSaleResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeAntChainRegionsForSaleResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("TypeList")
+        @com.aliyun.core.annotation.NameInMap("TypeList")
         private java.util.List < String > typeList;
 
         private Result(Builder builder) {

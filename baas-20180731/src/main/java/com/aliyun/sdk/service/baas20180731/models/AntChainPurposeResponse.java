@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AntChainPurposeResponse</p>
  */
 public class AntChainPurposeResponse extends Response {
-    @NameInMap("ChainPurposeExtend")
+    @com.aliyun.core.annotation.NameInMap("ChainPurposeExtend")
     private String chainPurposeExtend;
 
-    @NameInMap("ChainPurposeItem")
+    @com.aliyun.core.annotation.NameInMap("ChainPurposeItem")
     private String chainPurposeItem;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("Purpose")
+    @com.aliyun.core.annotation.NameInMap("Purpose")
     private String purpose;
 
-    @NameInMap("RecordList")
+    @com.aliyun.core.annotation.NameInMap("RecordList")
     private java.util.List < ChainPurpose > recordList;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private AntChainPurposeResponse(BuilderImpl builder) {

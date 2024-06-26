@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>InstallFabricChaincodePackageRequest</p>
  */
 public class InstallFabricChaincodePackageRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ChaincodePackageId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChaincodePackageId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String chaincodePackageId;
 
-    @Body
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @Body
-    @NameInMap("OrganizationId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrganizationId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationId;
 
     private InstallFabricChaincodePackageRequest(Builder builder) {

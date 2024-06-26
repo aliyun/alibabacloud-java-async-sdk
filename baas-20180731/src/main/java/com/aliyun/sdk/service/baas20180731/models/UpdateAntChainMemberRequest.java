@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateAntChainMemberRequest</p>
  */
 public class UpdateAntChainMemberRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("MemberId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemberId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberId;
 
-    @Body
-    @NameInMap("MemberName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MemberName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String memberName;
 
     private UpdateAntChainMemberRequest(Builder builder) {

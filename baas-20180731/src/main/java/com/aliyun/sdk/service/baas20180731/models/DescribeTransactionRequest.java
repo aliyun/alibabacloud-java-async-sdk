@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTransactionRequest</p>
  */
 public class DescribeTransactionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Bizid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizid")
     private String bizid;
 
-    @Body
-    @NameInMap("Hash")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Hash")
     private String hash;
 
     private DescribeTransactionRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOrganizationResponseBody</p>
  */
 public class CreateOrganizationResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateOrganizationResponseBody(Builder builder) {
@@ -112,58 +111,58 @@ public class CreateOrganizationResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ClusterState")
+        @com.aliyun.core.annotation.NameInMap("ClusterState")
         private String clusterState;
 
-        @NameInMap("CodeName")
+        @com.aliyun.core.annotation.NameInMap("CodeName")
         private String codeName;
 
-        @NameInMap("ConsortiumCount")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumCount")
         private Integer consortiumCount;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("OwnerBid")
+        @com.aliyun.core.annotation.NameInMap("OwnerBid")
         private String ownerBid;
 
-        @NameInMap("OwnerName")
+        @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Integer ownerUid;
 
-        @NameInMap("PeerCount")
+        @com.aliyun.core.annotation.NameInMap("PeerCount")
         private Integer peerCount;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RequestId")
+        @com.aliyun.core.annotation.NameInMap("RequestId")
         private String requestId;
 
-        @NameInMap("ServiceState")
+        @com.aliyun.core.annotation.NameInMap("ServiceState")
         private String serviceState;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Integer userCount;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Result(Builder builder) {

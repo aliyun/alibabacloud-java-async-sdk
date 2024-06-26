@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEcosphereResponseBody</p>
  */
 public class CreateEcosphereResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("ErrorMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrorMessage")
     private String errorMessage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateEcosphereResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class CreateEcosphereResponseBody extends TeaModel {
     } 
 
     public static class Organizations extends TeaModel {
-        @NameInMap("ClusterState")
+        @com.aliyun.core.annotation.NameInMap("ClusterState")
         private String clusterState;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ServiceState")
+        @com.aliyun.core.annotation.NameInMap("ServiceState")
         private String serviceState;
 
         private Organizations(Builder builder) {
@@ -293,13 +292,13 @@ public class CreateEcosphereResponseBody extends TeaModel {
 
     }
     public static class Specification extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NumOfNodes")
+        @com.aliyun.core.annotation.NameInMap("NumOfNodes")
         private Integer numOfNodes;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Specification(Builder builder) {
@@ -374,64 +373,64 @@ public class CreateEcosphereResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ChannelCount")
+        @com.aliyun.core.annotation.NameInMap("ChannelCount")
         private Integer channelCount;
 
-        @NameInMap("ChannelPolicy")
+        @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
         private String channelPolicy;
 
-        @NameInMap("ClusterState")
+        @com.aliyun.core.annotation.NameInMap("ClusterState")
         private String clusterState;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("ConsortiumId")
+        @com.aliyun.core.annotation.NameInMap("ConsortiumId")
         private String consortiumId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("MemberCount")
+        @com.aliyun.core.annotation.NameInMap("MemberCount")
         private Integer memberCount;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrdererCount")
+        @com.aliyun.core.annotation.NameInMap("OrdererCount")
         private Integer ordererCount;
 
-        @NameInMap("OrdererType")
+        @com.aliyun.core.annotation.NameInMap("OrdererType")
         private String ordererType;
 
-        @NameInMap("Organizations")
+        @com.aliyun.core.annotation.NameInMap("Organizations")
         private java.util.List < Organizations> organizations;
 
-        @NameInMap("OwnerBid")
+        @com.aliyun.core.annotation.NameInMap("OwnerBid")
         private String ownerBid;
 
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceState")
+        @com.aliyun.core.annotation.NameInMap("ServiceState")
         private String serviceState;
 
-        @NameInMap("SpecName")
+        @com.aliyun.core.annotation.NameInMap("SpecName")
         private String specName;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private Specification specification;
 
-        @NameInMap("ZoneId")
+        @com.aliyun.core.annotation.NameInMap("ZoneId")
         private String zoneId;
 
         private Result(Builder builder) {

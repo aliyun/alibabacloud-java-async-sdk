@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainLatestBlocksNewResponseBody</p>
  */
 public class DescribeAntChainLatestBlocksNewResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("HttpStatusCode")
+    @com.aliyun.core.annotation.NameInMap("HttpStatusCode")
     private String httpStatusCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMessage")
+    @com.aliyun.core.annotation.NameInMap("ResultMessage")
     private String resultMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeAntChainLatestBlocksNewResponseBody(Builder builder) {
@@ -192,34 +191,34 @@ public class DescribeAntChainLatestBlocksNewResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Alias")
+        @com.aliyun.core.annotation.NameInMap("Alias")
         private String alias;
 
-        @NameInMap("BizData")
+        @com.aliyun.core.annotation.NameInMap("BizData")
         private String bizData;
 
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Long height;
 
-        @NameInMap("PreviousHash")
+        @com.aliyun.core.annotation.NameInMap("PreviousHash")
         private String previousHash;
 
-        @NameInMap("RootTxHash")
+        @com.aliyun.core.annotation.NameInMap("RootTxHash")
         private String rootTxHash;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("TransactionSize")
+        @com.aliyun.core.annotation.NameInMap("TransactionSize")
         private Long transactionSize;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private Long version;
 
         private Result(Builder builder) {

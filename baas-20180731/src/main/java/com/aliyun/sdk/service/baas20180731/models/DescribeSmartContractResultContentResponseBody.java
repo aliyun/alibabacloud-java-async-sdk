@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSmartContractResultContentResponseBody</p>
  */
 public class DescribeSmartContractResultContentResponseBody extends TeaModel {
-    @NameInMap("DynamicCode")
+    @com.aliyun.core.annotation.NameInMap("DynamicCode")
     private String dynamicCode;
 
-    @NameInMap("DynamicMessage")
+    @com.aliyun.core.annotation.NameInMap("DynamicMessage")
     private String dynamicMessage;
 
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private java.util.List < Result> result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSmartContractResultContentResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
     } 
 
     public static class Range extends TeaModel {
-        @NameInMap("Character")
+        @com.aliyun.core.annotation.NameInMap("Character")
         private Integer character;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private Integer line;
 
         private Range(Builder builder) {
@@ -213,10 +212,10 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
 
     }
     public static class LocationRange extends TeaModel {
-        @NameInMap("Character")
+        @com.aliyun.core.annotation.NameInMap("Character")
         private Integer character;
 
-        @NameInMap("Line")
+        @com.aliyun.core.annotation.NameInMap("Line")
         private Integer line;
 
         private LocationRange(Builder builder) {
@@ -274,10 +273,10 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
 
     }
     public static class Location extends TeaModel {
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private java.util.List < LocationRange> range;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Location(Builder builder) {
@@ -335,10 +334,10 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
 
     }
     public static class Trace extends TeaModel {
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private Location location;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private Trace(Builder builder) {
@@ -396,28 +395,28 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
 
     }
     public static class Diagnostics extends TeaModel {
-        @NameInMap("Advice")
+        @com.aliyun.core.annotation.NameInMap("Advice")
         private String advice;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Range")
+        @com.aliyun.core.annotation.NameInMap("Range")
         private java.util.List < Range> range;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("Trace")
+        @com.aliyun.core.annotation.NameInMap("Trace")
         private java.util.List < Trace> trace;
 
         private Diagnostics(Builder builder) {
@@ -577,10 +576,10 @@ public class DescribeSmartContractResultContentResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Diagnostics")
+        @com.aliyun.core.annotation.NameInMap("Diagnostics")
         private java.util.List < Diagnostics> diagnostics;
 
-        @NameInMap("Uri")
+        @com.aliyun.core.annotation.NameInMap("Uri")
         private String uri;
 
         private Result(Builder builder) {

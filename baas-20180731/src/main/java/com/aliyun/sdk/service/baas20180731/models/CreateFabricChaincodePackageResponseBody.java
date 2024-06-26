@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFabricChaincodePackageResponseBody</p>
  */
 public class CreateFabricChaincodePackageResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateFabricChaincodePackageResponseBody(Builder builder) {
@@ -132,52 +131,52 @@ public class CreateFabricChaincodePackageResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("ChaincodePackageId")
+        @com.aliyun.core.annotation.NameInMap("ChaincodePackageId")
         private Integer chaincodePackageId;
 
-        @NameInMap("Checksum")
+        @com.aliyun.core.annotation.NameInMap("Checksum")
         private String checksum;
 
-        @NameInMap("DeleteTime")
+        @com.aliyun.core.annotation.NameInMap("DeleteTime")
         private Long deleteTime;
 
-        @NameInMap("Deleted")
+        @com.aliyun.core.annotation.NameInMap("Deleted")
         private Boolean deleted;
 
-        @NameInMap("InstallTime")
+        @com.aliyun.core.annotation.NameInMap("InstallTime")
         private Long installTime;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Md5sum")
+        @com.aliyun.core.annotation.NameInMap("Md5sum")
         private String md5sum;
 
-        @NameInMap("OrganizationId")
+        @com.aliyun.core.annotation.NameInMap("OrganizationId")
         private String organizationId;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssURL")
+        @com.aliyun.core.annotation.NameInMap("OssURL")
         private String ossURL;
 
-        @NameInMap("ProviderBid")
+        @com.aliyun.core.annotation.NameInMap("ProviderBid")
         private String providerBid;
 
-        @NameInMap("ProviderUid")
+        @com.aliyun.core.annotation.NameInMap("ProviderUid")
         private Long providerUid;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("TypeString")
+        @com.aliyun.core.annotation.NameInMap("TypeString")
         private Boolean typeString;
 
-        @NameInMap("UploadTime")
+        @com.aliyun.core.annotation.NameInMap("UploadTime")
         private Long uploadTime;
 
         private Result(Builder builder) {

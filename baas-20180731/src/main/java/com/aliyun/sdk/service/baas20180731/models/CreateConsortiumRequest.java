@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateConsortiumRequest</p>
  */
 public class CreateConsortiumRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ChannelPolicy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelPolicy;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Domain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Domain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domain;
 
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Body
-    @NameInMap("Location")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String location;
 
-    @Body
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @Body
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Body
-    @NameInMap("OrdererType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrdererType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ordererType;
 
-    @Body
-    @NameInMap("OrderersCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderersCount")
     private Integer orderersCount;
 
-    @Body
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private java.util.List < Organization> organization;
 
-    @Body
-    @NameInMap("PeersCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeersCount")
     private Integer peersCount;
 
-    @Body
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("SpecName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpecName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specName;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateConsortiumRequest(Builder builder) {
@@ -398,7 +397,7 @@ public class CreateConsortiumRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Organization(Builder builder) {

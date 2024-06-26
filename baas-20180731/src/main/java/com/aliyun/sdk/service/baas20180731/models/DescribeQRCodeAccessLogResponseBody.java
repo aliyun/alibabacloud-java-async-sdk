@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeQRCodeAccessLogResponseBody</p>
  */
 public class DescribeQRCodeAccessLogResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeQRCodeAccessLogResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeQRCodeAccessLogResponseBody extends TeaModel {
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("AccessAlipayAccountCount")
+        @com.aliyun.core.annotation.NameInMap("AccessAlipayAccountCount")
         private Long accessAlipayAccountCount;
 
-        @NameInMap("AccessCount")
+        @com.aliyun.core.annotation.NameInMap("AccessCount")
         private Long accessCount;
 
         private Result(Builder builder) {

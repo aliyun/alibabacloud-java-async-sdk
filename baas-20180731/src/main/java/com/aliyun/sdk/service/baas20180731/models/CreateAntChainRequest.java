@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAntChainRequest</p>
  */
 public class CreateAntChainRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AntChainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AntChainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String antChainName;
 
-    @Body
-    @NameInMap("BlockchainRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BlockchainRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String blockchainRegionId;
 
-    @Body
-    @NameInMap("CipherSuit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CipherSuit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cipherSuit;
 
-    @Body
-    @NameInMap("ConsortiumId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumId;
 
-    @Body
-    @NameInMap("LiveTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("LiveTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer liveTime;
 
-    @Body
-    @NameInMap("MerkleTreeSuit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MerkleTreeSuit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String merkleTreeSuit;
 
-    @Body
-    @NameInMap("NodeNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer nodeNum;
 
-    @Body
-    @NameInMap("ResourceSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ResourceSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer resourceSize;
 
-    @Body
-    @NameInMap("TlsAlgo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TlsAlgo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tlsAlgo;
 
     private CreateAntChainRequest(Builder builder) {

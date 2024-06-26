@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateEcosphereRequest</p>
  */
 public class CreateEcosphereRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ChannelPolicy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ChannelPolicy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channelPolicy;
 
-    @Body
-    @NameInMap("ConsortiumName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ConsortiumName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String consortiumName;
 
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @Body
-    @NameInMap("Location")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Location")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String location;
 
-    @Body
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @Body
-    @NameInMap("OrdererDomain")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrdererDomain")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ordererDomain;
 
-    @Body
-    @NameInMap("OrdererType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrdererType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ordererType;
 
-    @Body
-    @NameInMap("OrderersCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OrderersCount")
     private Integer orderersCount;
 
-    @Body
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Organization> organization;
 
-    @Body
-    @NameInMap("PeersCount")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PeersCount")
     private Integer peersCount;
 
-    @Body
-    @NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
     private String pricingCycle;
 
-    @Body
-    @NameInMap("SpecName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SpecName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String specName;
 
-    @Body
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private CreateEcosphereRequest(Builder builder) {
@@ -399,13 +398,13 @@ public class CreateEcosphereRequest extends Request {
     } 
 
     public static class Organization extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private String domain;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Organization(Builder builder) {

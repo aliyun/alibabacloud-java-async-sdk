@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTransactionFor2CBrowserResponseBody</p>
  */
 public class DescribeTransactionFor2CBrowserResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeTransactionFor2CBrowserResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class DescribeTransactionFor2CBrowserResponseBody extends TeaModel {
     } 
 
     public static class TransactionV10 extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("Extentions")
+        @com.aliyun.core.annotation.NameInMap("Extentions")
         private java.util.List < String > extentions;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private String from;
 
-        @NameInMap("Gas")
+        @com.aliyun.core.annotation.NameInMap("Gas")
         private String gas;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("Nonce")
+        @com.aliyun.core.annotation.NameInMap("Nonce")
         private String nonce;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Long period;
 
-        @NameInMap("SignatureList")
+        @com.aliyun.core.annotation.NameInMap("SignatureList")
         private java.util.List < String > signatureList;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private String to;
 
-        @NameInMap("TxType")
+        @com.aliyun.core.annotation.NameInMap("TxType")
         private String txType;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private TransactionV10(Builder builder) {
@@ -333,49 +332,49 @@ public class DescribeTransactionFor2CBrowserResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("BlockHash")
+        @com.aliyun.core.annotation.NameInMap("BlockHash")
         private String blockHash;
 
-        @NameInMap("BlockHeight")
+        @com.aliyun.core.annotation.NameInMap("BlockHeight")
         private Long blockHeight;
 
-        @NameInMap("BlockVersion")
+        @com.aliyun.core.annotation.NameInMap("BlockVersion")
         private Integer blockVersion;
 
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private Integer category;
 
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("ContentHash")
+        @com.aliyun.core.annotation.NameInMap("ContentHash")
         private String contentHash;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("Hash")
+        @com.aliyun.core.annotation.NameInMap("Hash")
         private String hash;
 
-        @NameInMap("KeyName")
+        @com.aliyun.core.annotation.NameInMap("KeyName")
         private String keyName;
 
-        @NameInMap("KeyWrap")
+        @com.aliyun.core.annotation.NameInMap("KeyWrap")
         private String keyWrap;
 
-        @NameInMap("Nonce")
+        @com.aliyun.core.annotation.NameInMap("Nonce")
         private String nonce;
 
-        @NameInMap("ReferenceCount")
+        @com.aliyun.core.annotation.NameInMap("ReferenceCount")
         private Integer referenceCount;
 
-        @NameInMap("ReferenceList")
+        @com.aliyun.core.annotation.NameInMap("ReferenceList")
         private java.util.List < String > referenceList;
 
-        @NameInMap("TransTypeV6")
+        @com.aliyun.core.annotation.NameInMap("TransTypeV6")
         private String transTypeV6;
 
-        @NameInMap("TransactionV10")
+        @com.aliyun.core.annotation.NameInMap("TransactionV10")
         private TransactionV10 transactionV10;
 
         private Result(Builder builder) {

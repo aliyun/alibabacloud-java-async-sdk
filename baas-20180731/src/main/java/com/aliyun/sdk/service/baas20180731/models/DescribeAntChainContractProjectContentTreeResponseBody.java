@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAntChainContractProjectContentTreeResponseBody</p>
  */
 public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private DescribeAntChainContractProjectContentTreeResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeAntChainContractProjectContentTreeResponseBody extends TeaM
     } 
 
     public static class Result extends TeaModel {
-        @NameInMap("Children")
+        @com.aliyun.core.annotation.NameInMap("Children")
         private java.util.List < java.util.Map<String, ?>> children;
 
-        @NameInMap("ProjectDescription")
+        @com.aliyun.core.annotation.NameInMap("ProjectDescription")
         private String projectDescription;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("ProjectName")
+        @com.aliyun.core.annotation.NameInMap("ProjectName")
         private String projectName;
 
-        @NameInMap("ProjectVersion")
+        @com.aliyun.core.annotation.NameInMap("ProjectVersion")
         private String projectVersion;
 
         private Result(Builder builder) {

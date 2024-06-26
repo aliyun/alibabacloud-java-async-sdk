@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAppliesResponseBody</p>
  */
 public class GetAppliesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
     private GetAppliesResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetAppliesResponseBody extends TeaModel {
     } 
 
     public static class ApplyHistoryList extends TeaModel {
-        @NameInMap("Bizid")
+        @com.aliyun.core.annotation.NameInMap("Bizid")
         private String bizid;
 
-        @NameInMap("Createtime")
+        @com.aliyun.core.annotation.NameInMap("Createtime")
         private Long createtime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("RejectReason")
+        @com.aliyun.core.annotation.NameInMap("RejectReason")
         private String rejectReason;
 
-        @NameInMap("ReqAddr")
+        @com.aliyun.core.annotation.NameInMap("ReqAddr")
         private String reqAddr;
 
-        @NameInMap("SignedAddr")
+        @com.aliyun.core.annotation.NameInMap("SignedAddr")
         private String signedAddr;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Updatetime")
+        @com.aliyun.core.annotation.NameInMap("Updatetime")
         private Long updatetime;
 
-        @NameInMap("Username")
+        @com.aliyun.core.annotation.NameInMap("Username")
         private String username;
 
         private ApplyHistoryList(Builder builder) {
@@ -273,13 +272,13 @@ public class GetAppliesResponseBody extends TeaModel {
 
     }
     public static class Pagination extends TeaModel {
-        @NameInMap("Current")
+        @com.aliyun.core.annotation.NameInMap("Current")
         private Integer current;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Pagination(Builder builder) {
@@ -354,10 +353,10 @@ public class GetAppliesResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("ApplyHistoryList")
+        @com.aliyun.core.annotation.NameInMap("ApplyHistoryList")
         private java.util.List < ApplyHistoryList> applyHistoryList;
 
-        @NameInMap("Pagination")
+        @com.aliyun.core.annotation.NameInMap("Pagination")
         private Pagination pagination;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCloudIntegrationServiceTokenResponseBody</p>
  */
 public class DescribeCloudIntegrationServiceTokenResponseBody extends TeaModel {
-    @NameInMap("ErrorCode")
+    @com.aliyun.core.annotation.NameInMap("ErrorCode")
     private Integer errorCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private Result result;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCloudIntegrationServiceTokenResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribeCloudIntegrationServiceTokenResponseBody extends TeaModel {
     } 
 
     public static class History extends TeaModel {
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private History(Builder builder) {
@@ -193,16 +192,16 @@ public class DescribeCloudIntegrationServiceTokenResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("History")
+        @com.aliyun.core.annotation.NameInMap("History")
         private java.util.List < History> history;
 
-        @NameInMap("Service")
+        @com.aliyun.core.annotation.NameInMap("Service")
         private String service;
 
-        @NameInMap("Token")
+        @com.aliyun.core.annotation.NameInMap("Token")
         private String token;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Result(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CopyAntChainContractProjectRequest</p>
  */
 public class CopyAntChainContractProjectRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ProjectDescription")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectDescription")
     private String projectDescription;
 
-    @Body
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Body
-    @NameInMap("ProjectName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectName;
 
-    @Body
-    @NameInMap("ProjectVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProjectVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectVersion;
 
     private CopyAntChainContractProjectRequest(Builder builder) {

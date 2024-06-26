@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.baas20180731.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateOwnAccountRequest</p>
  */
 public class CreateOwnAccountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Bizid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Bizid")
     private String bizid;
 
-    @Body
-    @NameInMap("Identity")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Identity")
     private String identity;
 
-    @Body
-    @NameInMap("PublicKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PublicKey")
     private String publicKey;
 
-    @Body
-    @NameInMap("RecoveryKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RecoveryKey")
     private String recoveryKey;
 
     private CreateOwnAccountRequest(Builder builder) {
