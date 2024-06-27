@@ -352,6 +352,87 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         } 
 
     }
+    public static class GdnMemberList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("MemberName")
+        private String memberName;
+
+        @com.aliyun.core.annotation.NameInMap("Role")
+        private String role;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
+        private String status;
+
+        private GdnMemberList(Builder builder) {
+            this.memberName = builder.memberName;
+            this.role = builder.role;
+            this.status = builder.status;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static GdnMemberList create() {
+            return builder().build();
+        }
+
+        /**
+         * @return memberName
+         */
+        public String getMemberName() {
+            return this.memberName;
+        }
+
+        /**
+         * @return role
+         */
+        public String getRole() {
+            return this.role;
+        }
+
+        /**
+         * @return status
+         */
+        public String getStatus() {
+            return this.status;
+        }
+
+        public static final class Builder {
+            private String memberName; 
+            private String role; 
+            private String status; 
+
+            /**
+             * MemberName.
+             */
+            public Builder memberName(String memberName) {
+                this.memberName = memberName;
+                return this;
+            }
+
+            /**
+             * Role.
+             */
+            public Builder role(String role) {
+                this.role = role;
+                return this;
+            }
+
+            /**
+             * Status.
+             */
+            public Builder status(String status) {
+                this.status = status;
+                return this;
+            }
+
+            public GdnMemberList build() {
+                return new GdnMemberList(this);
+            } 
+
+        } 
+
+    }
     public static class TagSet extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
@@ -480,6 +561,15 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
+        @com.aliyun.core.annotation.NameInMap("GdnInstanceName")
+        private String gdnInstanceName;
+
+        @com.aliyun.core.annotation.NameInMap("GdnMemberList")
+        private java.util.List < GdnMemberList> gdnMemberList;
+
+        @com.aliyun.core.annotation.NameInMap("GdnRole")
+        private String gdnRole;
+
         @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
@@ -593,6 +683,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             this.engine = builder.engine;
             this.expireDate = builder.expireDate;
             this.expired = builder.expired;
+            this.gdnInstanceName = builder.gdnInstanceName;
+            this.gdnMemberList = builder.gdnMemberList;
+            this.gdnRole = builder.gdnRole;
             this.id = builder.id;
             this.kindCode = builder.kindCode;
             this.LTSVersions = builder.LTSVersions;
@@ -784,6 +877,27 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         public String getExpired() {
             return this.expired;
+        }
+
+        /**
+         * @return gdnInstanceName
+         */
+        public String getGdnInstanceName() {
+            return this.gdnInstanceName;
+        }
+
+        /**
+         * @return gdnMemberList
+         */
+        public java.util.List < GdnMemberList> getGdnMemberList() {
+            return this.gdnMemberList;
+        }
+
+        /**
+         * @return gdnRole
+         */
+        public String getGdnRole() {
+            return this.gdnRole;
         }
 
         /**
@@ -1012,6 +1126,9 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             private String engine; 
             private String expireDate; 
             private String expired; 
+            private String gdnInstanceName; 
+            private java.util.List < GdnMemberList> gdnMemberList; 
+            private String gdnRole; 
             private String id; 
             private Integer kindCode; 
             private java.util.List < String > LTSVersions; 
@@ -1215,6 +1332,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              */
             public Builder expired(String expired) {
                 this.expired = expired;
+                return this;
+            }
+
+            /**
+             * GdnInstanceName.
+             */
+            public Builder gdnInstanceName(String gdnInstanceName) {
+                this.gdnInstanceName = gdnInstanceName;
+                return this;
+            }
+
+            /**
+             * GdnMemberList.
+             */
+            public Builder gdnMemberList(java.util.List < GdnMemberList> gdnMemberList) {
+                this.gdnMemberList = gdnMemberList;
+                return this;
+            }
+
+            /**
+             * GdnRole.
+             */
+            public Builder gdnRole(String gdnRole) {
+                this.gdnRole = gdnRole;
                 return this;
             }
 
