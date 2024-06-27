@@ -353,7 +353,7 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * MemberAccount.
+         * The ID of the member.
          */
         public Builder memberAccount(Long memberAccount) {
             this.putQueryParameter("MemberAccount", memberAccount);
@@ -385,7 +385,7 @@ public class DescribeDataLimitsRequest extends Request {
         }
 
         /**
-         * The type of the service to which the data asset to be queried belongs. Valid values:
+         * The type of the service to which the data asset belongs. This parameter is required. Valid values:
          * <p>
          * 
          * *   **1**: MaxCompute

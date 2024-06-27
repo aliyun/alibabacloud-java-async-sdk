@@ -137,6 +137,9 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthStatus")
         private Integer authStatus;
 
+        @com.aliyun.core.annotation.NameInMap("AuthTime")
+        private Long authTime;
+
         @com.aliyun.core.annotation.NameInMap("ClusterStatus")
         private String clusterStatus;
 
@@ -188,6 +191,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         private Items(Builder builder) {
             this.auditStatus = builder.auditStatus;
             this.authStatus = builder.authStatus;
+            this.authTime = builder.authTime;
             this.clusterStatus = builder.clusterStatus;
             this.connectNode = builder.connectNode;
             this.dbNum = builder.dbNum;
@@ -226,6 +230,13 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
          */
         public Integer getAuthStatus() {
             return this.authStatus;
+        }
+
+        /**
+         * @return authTime
+         */
+        public Long getAuthTime() {
+            return this.authTime;
         }
 
         /**
@@ -343,6 +354,7 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
         public static final class Builder {
             private Integer auditStatus; 
             private Integer authStatus; 
+            private Long authTime; 
             private String clusterStatus; 
             private String connectNode; 
             private String dbNum; 
@@ -373,6 +385,14 @@ public class DescribeParentInstanceResponseBody extends TeaModel {
              */
             public Builder authStatus(Integer authStatus) {
                 this.authStatus = authStatus;
+                return this;
+            }
+
+            /**
+             * AuthTime.
+             */
+            public Builder authTime(Long authTime) {
+                this.authTime = authTime;
                 return this;
             }
 

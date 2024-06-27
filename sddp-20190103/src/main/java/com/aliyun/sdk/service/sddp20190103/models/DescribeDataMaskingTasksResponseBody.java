@@ -93,7 +93,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of de-identification tasks.
+         * A list of de-identification tasks.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -361,7 +361,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             private Integer triggerType; 
 
             /**
-             * DstMemberAccount.
+             * The member account to which the desensitization target belongs.
              */
             public Builder dstMemberAccount(Long dstMemberAccount) {
                 this.dstMemberAccount = dstMemberAccount;
@@ -369,7 +369,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The destination directory.
+             * The destination path.
              */
             public Builder dstPath(String dstPath) {
                 this.dstPath = dstPath;
@@ -385,7 +385,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The service to which the de-identified data belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * The type of the service to which the de-identified data belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder dstTypeCode(String dstTypeCode) {
                 this.dstTypeCode = dstTypeCode;
@@ -393,7 +393,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the de-identification task is created. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -409,7 +409,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the task.
+             * The task ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -441,7 +441,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * SrcMemberAccount.
+             * The member account to which the desensitization source belongs.
              */
             public Builder srcMemberAccount(Long srcMemberAccount) {
                 this.srcMemberAccount = srcMemberAccount;
@@ -457,7 +457,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
+             * The type of the service to which the data to be de-identified belongs. Valid values: **1**, **2**, **3**, **4**, and **5**. The value 1 indicates MaxCompute. The value 2 indicates OSS. The value 3 indicates AnalyticDB for MySQL. The value 4 indicates Tablestore. The value 5 indicates ApsaraDB RDS.
              */
             public Builder srcType(Integer srcType) {
                 this.srcType = srcType;
@@ -465,7 +465,7 @@ public class DescribeDataMaskingTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The service to which the data to be de-identified belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * The type of the service to which the data to be de-identified belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder srcTypeCode(String srcTypeCode) {
                 this.srcTypeCode = srcTypeCode;

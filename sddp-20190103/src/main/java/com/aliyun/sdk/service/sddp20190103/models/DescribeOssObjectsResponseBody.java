@@ -501,7 +501,7 @@ public class DescribeOssObjectsResponseBody extends TeaModel {
             }
 
             /**
-             * LastModifiedTime.
+             * The time when the file was last modified.
              */
             public Builder lastModifiedTime(Long lastModifiedTime) {
                 this.lastModifiedTime = lastModifiedTime;

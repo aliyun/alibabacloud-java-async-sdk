@@ -121,7 +121,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private java.util.List < String > z; 
 
             /**
-             * The values of data on the x-axis.
+             * The value of the data item on the X axis.
              */
             public Builder x(java.util.List < String > x) {
                 this.x = x;
@@ -129,7 +129,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The values of data on the y-axis.
+             * The value of the data item on the Y axis.
              */
             public Builder y(java.util.List < String > y) {
                 this.y = y;
@@ -137,7 +137,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Z.
+             * The value of the data item for the Z axis.
              */
             public Builder z(java.util.List < String > z) {
                 this.z = z;
@@ -262,7 +262,13 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private String zLabel; 
 
             /**
-             * ChatType.
+             * The type of the chart. Valid values:
+             * <p>
+             * 
+             * *   **1**: column chart
+             * *   **2**: line chart
+             * 
+             * >This field will be returned only when NewAlarm is true.
              */
             public Builder chatType(Integer chatType) {
                 this.chatType = chatType;
@@ -286,7 +292,10 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Icon title.
+             * <p>
+             * 
+             * >This field will be returned only when NewAlarm is true.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -306,7 +315,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The descriptive label of data on the x-axis.
+             * The descriptive label of data items on the X axis.
              */
             public Builder xLabel(String xLabel) {
                 this.xLabel = xLabel;
@@ -314,7 +323,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The descriptive label of data on the y-axis.
+             * The descriptive label of data items on the Y axis.
              */
             public Builder yLabel(String yLabel) {
                 this.yLabel = yLabel;
@@ -322,7 +331,10 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * ZLabel.
+             * The descriptive label of data items on the Z axis.
+             * <p>
+             * 
+             * >This field will be returned only when NewAlarm is true.
              */
             public Builder zLabel(String zLabel) {
                 this.zLabel = zLabel;
@@ -395,7 +407,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * Exception event name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -529,7 +541,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             private java.util.List < ResourceInfo> resourceInfo; 
 
             /**
-             * An array that consists of the baseline behavior chart of the anomalous event.
+             * The baseline behavior chart of the anomalous event.
              */
             public Builder chart(java.util.List < Chart> chart) {
                 this.chart = chart;
@@ -537,7 +549,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the content in the anomalous event.
+             * The content in the anomalous event.
              */
             public Builder content(java.util.List < Content> content) {
                 this.content = content;
@@ -678,7 +690,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the account was locked. The value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the account is disabled. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder disableTime(Long disableTime) {
                 this.disableTime = disableTime;
@@ -686,7 +698,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The point in time when the account was unlocked. The value is a UNIX timestamp. Unit: milliseconds.
+             * The time when the disabled account is enabled. The value is a UNIX timestamp. Unit: milliseconds.
              */
             public Builder enableTime(Long enableTime) {
                 this.enableTime = enableTime;
@@ -718,7 +730,7 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the handling record.
+             * The ID of the handling rule.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -729,9 +741,9 @@ public class DescribeEventDetailResponseBody extends TeaModel {
              * The status of the account that triggered the anomalous event. Valid values:
              * <p>
              * 
-             * *   **0**: locked
-             * *   **1**: unlocked
-             * *   **-1**: failed to unlock the account
+             * *   **0**: disabled
+             * *   **1**: enabled
+             * *   **-1**: failed to disable the account
              * *   **-2**: failed to enable the account
              */
             public Builder status(Integer status) {
@@ -1175,7 +1187,10 @@ public class DescribeEventDetailResponseBody extends TeaModel {
             }
 
             /**
-             * NewAlarm.
+             * Whether it is a new version of the alarm. Value:
+             * <p>
+             * - **true**: Yes. 
+             * - **false**: No.
              */
             public Builder newAlarm(Boolean newAlarm) {
                 this.newAlarm = newAlarm;

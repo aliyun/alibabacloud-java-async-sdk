@@ -93,7 +93,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the data assets.
+         * A list of data assets.
          */
         public Builder items(java.util.List < Items> items) {
             this.items = items;
@@ -655,7 +655,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
              * *   **0**: The data detection is ready.
              * *   **1**: The data detection is running.
              * *   **2**: The connectivity test is in progress.
-             * *   **3**: The connectivity test passed.
+             * *   **3**: The connectivity test is passed.
              * *   **4**: The connectivity test failed.
              */
             public Builder checkStatus(Integer checkStatus) {
@@ -684,7 +684,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine version of the instance.
+             * The database engine version.
              */
             public Builder dbVersion(String dbVersion) {
                 this.dbVersion = dbVersion;
@@ -692,7 +692,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether DSC has the data detection permissions on the data asset. Valid values:
+             * Indicates whether DSC has the data identification permissions on the data asset. Valid values:
              * <p>
              * 
              * *   **1**: yes
@@ -712,7 +712,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The error code that is returned.
+             * The error code.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -732,7 +732,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
              * <p>
              * 
              * *   **0**: no
-             * *   **1**: yes (default value)
+             * *   **1**: yes (default)
              */
             public Builder eventStatus(Integer eventStatus) {
                 this.eventStatus = eventStatus;
@@ -748,7 +748,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the data asset.
+             * The unique ID of the data asset.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -764,7 +764,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance to which the table belongs.
+             * The ID of the data asset to which the table belongs.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -772,7 +772,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the last scan was finished.
+             * The time when the last scan is performed.
              * <p>
              * 
              * *   The value is a UNIX timestamp.
@@ -800,7 +800,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * MemberAccount.
+             * The ID of the member.
              */
             public Builder memberAccount(Long memberAccount) {
                 this.memberAccount = memberAccount;
@@ -828,7 +828,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The parent ID of the data asset. Valid values include **bucket, db, and project**.
+             * The parent ID of the data asset that you want to query. Valid values include **bucket, db, and project**.
              */
             public Builder parentId(String parentId) {
                 this.parentId = parentId;
@@ -867,7 +867,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The region in which the data asset resides.
+             * The region in which the asset resides.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -891,7 +891,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The code of the service to which the data asset belongs. Valid values include **MaxCompute, OSS, ADS, OTS, and RDS**.
+             * The code of the service to which the data asset belongs. Valid values: **MaxCompute, OSS, ADS, OTS, and RDS**.
              */
             public Builder resourceTypeCode(String resourceTypeCode) {
                 this.resourceTypeCode = resourceTypeCode;
@@ -907,7 +907,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The array consisting of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.
+             * A list of the IDs of the security groups that are used by PrivateLink when you install the DSC agent.
              */
             public Builder securityGroupIdList(java.util.List < String > securityGroupIdList) {
                 this.securityGroupIdList = securityGroupIdList;
@@ -927,7 +927,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether data de-identification is supported. Valid values:
+             * Indicates whether the data de-identification feature is supported. Valid values:
              * <p>
              * 
              * *   **true**: yes
@@ -942,8 +942,8 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
              * Indicates whether anomalous event detection is supported. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder supportEvent(Boolean supportEvent) {
                 this.supportEvent = supportEvent;
@@ -999,7 +999,7 @@ public class DescribeDataLimitsResponseBody extends TeaModel {
             }
 
             /**
-             * The array consisting of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.
+             * A list of the IDs of the vSwitches that are used by PrivateLink when you install the DSC agent.
              */
             public Builder vSwitchIdList(java.util.List < String > vSwitchIdList) {
                 this.vSwitchIdList = vSwitchIdList;
