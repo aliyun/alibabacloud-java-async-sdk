@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AyncTradeDocumentPackageExtractSmartAppRequest</p>
  */
 public class AyncTradeDocumentPackageExtractSmartAppRequest extends Request {
-    @Query
-    @NameInMap("CustomExtractionRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomExtractionRange")
     private java.util.List < String > customExtractionRange;
 
-    @Query
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Query
-    @NameInMap("FileUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileUrl;
 
-    @Query
-    @NameInMap("Option")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Option")
     private String option;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private AyncTradeDocumentPackageExtractSmartAppRequest(Builder builder) {

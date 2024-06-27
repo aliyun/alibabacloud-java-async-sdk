@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDocStructureResultRequest</p>
  */
 public class GetDocStructureResultRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("ImageStrategy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageStrategy")
     private String imageStrategy;
 
-    @Query
-    @NameInMap("RevealMarkdown")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RevealMarkdown")
     private Boolean revealMarkdown;
 
     private GetDocStructureResultRequest(Builder builder) {

@@ -6,15 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubmitConvertImageToExcelJobRequest} extends {@link RequestModel}
+ * {@link SubmitConvertImageToMarkdownJobRequest} extends {@link RequestModel}
  *
- * <p>SubmitConvertImageToExcelJobRequest</p>
+ * <p>SubmitConvertImageToMarkdownJobRequest</p>
  */
-public class SubmitConvertImageToExcelJobRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ForceMergeExcel")
-    private Boolean forceMergeExcel;
-
+public class SubmitConvertImageToMarkdownJobRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ImageNameExtension")
     private String imageNameExtension;
@@ -27,9 +23,8 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ImageUrls")
     private java.util.List < String > imageUrls;
 
-    private SubmitConvertImageToExcelJobRequest(Builder builder) {
+    private SubmitConvertImageToMarkdownJobRequest(Builder builder) {
         super(builder);
-        this.forceMergeExcel = builder.forceMergeExcel;
         this.imageNameExtension = builder.imageNameExtension;
         this.imageNames = builder.imageNames;
         this.imageUrls = builder.imageUrls;
@@ -39,20 +34,13 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         return new Builder();
     }
 
-    public static SubmitConvertImageToExcelJobRequest create() {
+    public static SubmitConvertImageToMarkdownJobRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return forceMergeExcel
-     */
-    public Boolean getForceMergeExcel() {
-        return this.forceMergeExcel;
     }
 
     /**
@@ -76,8 +64,7 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         return this.imageUrls;
     }
 
-    public static final class Builder extends Request.Builder<SubmitConvertImageToExcelJobRequest, Builder> {
-        private Boolean forceMergeExcel; 
+    public static final class Builder extends Request.Builder<SubmitConvertImageToMarkdownJobRequest, Builder> {
         private String imageNameExtension; 
         private java.util.List < String > imageNames; 
         private java.util.List < String > imageUrls; 
@@ -86,22 +73,12 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
             super();
         } 
 
-        private Builder(SubmitConvertImageToExcelJobRequest request) {
+        private Builder(SubmitConvertImageToMarkdownJobRequest request) {
             super(request);
-            this.forceMergeExcel = request.forceMergeExcel;
             this.imageNameExtension = request.imageNameExtension;
             this.imageNames = request.imageNames;
             this.imageUrls = request.imageUrls;
         } 
-
-        /**
-         * ForceMergeExcel.
-         */
-        public Builder forceMergeExcel(Boolean forceMergeExcel) {
-            this.putQueryParameter("ForceMergeExcel", forceMergeExcel);
-            this.forceMergeExcel = forceMergeExcel;
-            return this;
-        }
 
         /**
          * ImageNameExtension.
@@ -133,8 +110,8 @@ public class SubmitConvertImageToExcelJobRequest extends Request {
         }
 
         @Override
-        public SubmitConvertImageToExcelJobRequest build() {
-            return new SubmitConvertImageToExcelJobRequest(this);
+        public SubmitConvertImageToMarkdownJobRequest build() {
+            return new SubmitConvertImageToMarkdownJobRequest(this);
         } 
 
     } 

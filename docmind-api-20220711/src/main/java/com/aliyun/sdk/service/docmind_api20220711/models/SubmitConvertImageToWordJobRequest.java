@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitConvertImageToWordJobRequest</p>
  */
 public class SubmitConvertImageToWordJobRequest extends Request {
-    @Query
-    @NameInMap("ImageNameExtension")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageNameExtension")
     private String imageNameExtension;
 
-    @Query
-    @NameInMap("ImageNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageNames")
     private java.util.List < String > imageNames;
 
-    @Query
-    @NameInMap("ImageUrls")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrls")
     private java.util.List < String > imageUrls;
 
     private SubmitConvertImageToWordJobRequest(Builder builder) {

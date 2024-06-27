@@ -1,37 +1,33 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubmitDocumentCompareJobResponse} extends {@link TeaModel}
+ * {@link SubmitConvertImageToMarkdownJobResponse} extends {@link TeaModel}
  *
- * <p>SubmitDocumentCompareJobResponse</p>
+ * <p>SubmitConvertImageToMarkdownJobResponse</p>
  */
-public class SubmitDocumentCompareJobResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+public class SubmitConvertImageToMarkdownJobResponse extends Response {
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("statusCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
     private Integer statusCode;
 
-    @NameInMap("body")
-    @Validation(required = true)
-    private SubmitDocumentCompareJobResponseBody body;
+    @com.aliyun.core.annotation.NameInMap("body")
+    private SubmitConvertImageToMarkdownJobResponseBody body;
 
-    private SubmitDocumentCompareJobResponse(BuilderImpl builder) {
+    private SubmitConvertImageToMarkdownJobResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static SubmitDocumentCompareJobResponse create() {
+    public static SubmitConvertImageToMarkdownJobResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -57,35 +53,35 @@ public class SubmitDocumentCompareJobResponse extends Response {
     /**
      * @return body
      */
-    public SubmitDocumentCompareJobResponseBody getBody() {
+    public SubmitConvertImageToMarkdownJobResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<SubmitDocumentCompareJobResponse, Builder> {
+    public interface Builder extends Response.Builder<SubmitConvertImageToMarkdownJobResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(SubmitDocumentCompareJobResponseBody body);
+        Builder body(SubmitConvertImageToMarkdownJobResponseBody body);
 
         @Override
-        SubmitDocumentCompareJobResponse build();
+        SubmitConvertImageToMarkdownJobResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<SubmitDocumentCompareJobResponse, Builder>
+            extends Response.BuilderImpl<SubmitConvertImageToMarkdownJobResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private SubmitDocumentCompareJobResponseBody body; 
+        private SubmitConvertImageToMarkdownJobResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(SubmitDocumentCompareJobResponse response) {
+        private BuilderImpl(SubmitConvertImageToMarkdownJobResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -114,14 +110,14 @@ public class SubmitDocumentCompareJobResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(SubmitDocumentCompareJobResponseBody body) {
+        public Builder body(SubmitConvertImageToMarkdownJobResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public SubmitDocumentCompareJobResponse build() {
-            return new SubmitDocumentCompareJobResponse(this);
+        public SubmitConvertImageToMarkdownJobResponse build() {
+            return new SubmitConvertImageToMarkdownJobResponse(this);
         } 
 
     } 

@@ -1,30 +1,29 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.docmind_api20220711.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link SubmitDocumentCompareJobResponseBody} extends {@link TeaModel}
+ * {@link SubmitConvertImageToMarkdownJobResponseBody} extends {@link TeaModel}
  *
- * <p>SubmitDocumentCompareJobResponseBody</p>
+ * <p>SubmitConvertImageToMarkdownJobResponseBody</p>
  */
-public class SubmitDocumentCompareJobResponseBody extends TeaModel {
-    @NameInMap("Code")
+public class SubmitConvertImageToMarkdownJobResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private SubmitDocumentCompareJobResponseBody(Builder builder) {
+    private SubmitConvertImageToMarkdownJobResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -35,7 +34,7 @@ public class SubmitDocumentCompareJobResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static SubmitDocumentCompareJobResponseBody create() {
+    public static SubmitConvertImageToMarkdownJobResponseBody create() {
         return builder().build();
     }
 
@@ -105,14 +104,14 @@ public class SubmitDocumentCompareJobResponseBody extends TeaModel {
             return this;
         }
 
-        public SubmitDocumentCompareJobResponseBody build() {
-            return new SubmitDocumentCompareJobResponseBody(this);
+        public SubmitConvertImageToMarkdownJobResponseBody build() {
+            return new SubmitConvertImageToMarkdownJobResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
         private Data(Builder builder) {

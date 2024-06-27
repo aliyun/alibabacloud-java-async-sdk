@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.docmind_api20220711;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.docmind_api20220711.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -34,10 +35,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SubmitConvertImageToExcelJobResponse> submitConvertImageToExcelJob(SubmitConvertImageToExcelJobRequest request);
 
+    CompletableFuture<SubmitConvertImageToMarkdownJobResponse> submitConvertImageToMarkdownJob(SubmitConvertImageToMarkdownJobRequest request);
+
     CompletableFuture<SubmitConvertImageToPdfJobResponse> submitConvertImageToPdfJob(SubmitConvertImageToPdfJobRequest request);
 
     CompletableFuture<SubmitConvertImageToWordJobResponse> submitConvertImageToWordJob(SubmitConvertImageToWordJobRequest request);
-
-    CompletableFuture<SubmitDocumentCompareJobResponse> submitDocumentCompareJob(SubmitDocumentCompareJobRequest request);
 
 }
