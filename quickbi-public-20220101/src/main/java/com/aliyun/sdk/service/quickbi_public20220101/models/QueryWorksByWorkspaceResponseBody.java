@@ -220,6 +220,12 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OwnerName")
         private String ownerName;
 
+        @com.aliyun.core.annotation.NameInMap("PublicFlag")
+        private Boolean publicFlag;
+
+        @com.aliyun.core.annotation.NameInMap("PublicInvalidTime")
+        private Long publicInvalidTime;
+
         @com.aliyun.core.annotation.NameInMap("SecurityLevel")
         private String securityLevel;
 
@@ -250,6 +256,8 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             this.modifyName = builder.modifyName;
             this.ownerId = builder.ownerId;
             this.ownerName = builder.ownerName;
+            this.publicFlag = builder.publicFlag;
+            this.publicInvalidTime = builder.publicInvalidTime;
             this.securityLevel = builder.securityLevel;
             this.status = builder.status;
             this.workName = builder.workName;
@@ -324,6 +332,20 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
         }
 
         /**
+         * @return publicFlag
+         */
+        public Boolean getPublicFlag() {
+            return this.publicFlag;
+        }
+
+        /**
+         * @return publicInvalidTime
+         */
+        public Long getPublicInvalidTime() {
+            return this.publicInvalidTime;
+        }
+
+        /**
          * @return securityLevel
          */
         public String getSecurityLevel() {
@@ -381,6 +403,8 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
             private String modifyName; 
             private String ownerId; 
             private String ownerName; 
+            private Boolean publicFlag; 
+            private Long publicInvalidTime; 
             private String securityLevel; 
             private Integer status; 
             private String workName; 
@@ -454,6 +478,22 @@ public class QueryWorksByWorkspaceResponseBody extends TeaModel {
              */
             public Builder ownerName(String ownerName) {
                 this.ownerName = ownerName;
+                return this;
+            }
+
+            /**
+             * PublicFlag.
+             */
+            public Builder publicFlag(Boolean publicFlag) {
+                this.publicFlag = publicFlag;
+                return this;
+            }
+
+            /**
+             * PublicInvalidTime.
+             */
+            public Builder publicInvalidTime(Long publicInvalidTime) {
+                this.publicInvalidTime = publicInvalidTime;
                 return this;
             }
 

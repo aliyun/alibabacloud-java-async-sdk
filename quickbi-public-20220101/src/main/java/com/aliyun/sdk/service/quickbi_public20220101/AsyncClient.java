@@ -67,6 +67,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateUserGroupResponse> createUserGroup(CreateUserGroupRequest request);
 
+    CompletableFuture<DataSetBloodResponse> dataSetBlood(DataSetBloodRequest request);
+
+    CompletableFuture<DataSourceBloodResponse> dataSourceBlood(DataSourceBloodRequest request);
+
     CompletableFuture<DelayTicketExpireTimeResponse> delayTicketExpireTime(DelayTicketExpireTimeRequest request);
 
     /**
@@ -133,6 +137,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyApiDatasourceParametersResponse> modifyApiDatasourceParameters(ModifyApiDatasourceParametersRequest request);
 
+    CompletableFuture<QueryApprovalInfoResponse> queryApprovalInfo(QueryApprovalInfoRequest request);
+
+    CompletableFuture<QueryAuditLogResponse> queryAuditLog(QueryAuditLogRequest request);
+
     CompletableFuture<QueryComponentPerformanceResponse> queryComponentPerformance(QueryComponentPerformanceRequest request);
 
     CompletableFuture<QueryCubeOptimizationResponse> queryCubeOptimization(QueryCubeOptimizationRequest request);
@@ -144,6 +152,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<QueryDataServiceResponse> queryDataService(QueryDataServiceRequest request);
+
+    CompletableFuture<QueryDataServiceListResponse> queryDataServiceList(QueryDataServiceListRequest request);
 
     /**
       * The data source, directory, and dataset model (including dimensions, measures, physical fields, custom SQL text, and association relationships).

@@ -103,6 +103,12 @@ public class QueryUserListResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AuthAdminUser")
         private Boolean authAdminUser;
 
+        @com.aliyun.core.annotation.NameInMap("JoinedDate")
+        private Long joinedDate;
+
+        @com.aliyun.core.annotation.NameInMap("LastLoginTime")
+        private Long lastLoginTime;
+
         @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
@@ -120,6 +126,8 @@ public class QueryUserListResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.adminUser = builder.adminUser;
             this.authAdminUser = builder.authAdminUser;
+            this.joinedDate = builder.joinedDate;
+            this.lastLoginTime = builder.lastLoginTime;
             this.nickName = builder.nickName;
             this.roleIdList = builder.roleIdList;
             this.userId = builder.userId;
@@ -163,6 +171,20 @@ public class QueryUserListResponseBody extends TeaModel {
         }
 
         /**
+         * @return joinedDate
+         */
+        public Long getJoinedDate() {
+            return this.joinedDate;
+        }
+
+        /**
+         * @return lastLoginTime
+         */
+        public Long getLastLoginTime() {
+            return this.lastLoginTime;
+        }
+
+        /**
          * @return nickName
          */
         public String getNickName() {
@@ -195,6 +217,8 @@ public class QueryUserListResponseBody extends TeaModel {
             private String accountName; 
             private Boolean adminUser; 
             private Boolean authAdminUser; 
+            private Long joinedDate; 
+            private Long lastLoginTime; 
             private String nickName; 
             private java.util.List < Long > roleIdList; 
             private String userId; 
@@ -229,6 +253,22 @@ public class QueryUserListResponseBody extends TeaModel {
              */
             public Builder authAdminUser(Boolean authAdminUser) {
                 this.authAdminUser = authAdminUser;
+                return this;
+            }
+
+            /**
+             * JoinedDate.
+             */
+            public Builder joinedDate(Long joinedDate) {
+                this.joinedDate = joinedDate;
+                return this;
+            }
+
+            /**
+             * LastLoginTime.
+             */
+            public Builder lastLoginTime(Long lastLoginTime) {
+                this.lastLoginTime = lastLoginTime;
                 return this;
             }
 

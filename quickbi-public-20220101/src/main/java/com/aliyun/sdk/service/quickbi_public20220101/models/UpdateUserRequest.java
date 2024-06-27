@@ -20,6 +20,10 @@ public class UpdateUserRequest extends Request {
     private Boolean authAdminUser;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDeleted")
+    private Boolean isDeleted;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("NickName")
     private String nickName;
 
@@ -41,6 +45,7 @@ public class UpdateUserRequest extends Request {
         super(builder);
         this.adminUser = builder.adminUser;
         this.authAdminUser = builder.authAdminUser;
+        this.isDeleted = builder.isDeleted;
         this.nickName = builder.nickName;
         this.roleIds = builder.roleIds;
         this.userId = builder.userId;
@@ -75,6 +80,13 @@ public class UpdateUserRequest extends Request {
     }
 
     /**
+     * @return isDeleted
+     */
+    public Boolean getIsDeleted() {
+        return this.isDeleted;
+    }
+
+    /**
      * @return nickName
      */
     public String getNickName() {
@@ -105,6 +117,7 @@ public class UpdateUserRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateUserRequest, Builder> {
         private Boolean adminUser; 
         private Boolean authAdminUser; 
+        private Boolean isDeleted; 
         private String nickName; 
         private String roleIds; 
         private String userId; 
@@ -118,6 +131,7 @@ public class UpdateUserRequest extends Request {
             super(request);
             this.adminUser = request.adminUser;
             this.authAdminUser = request.authAdminUser;
+            this.isDeleted = request.isDeleted;
             this.nickName = request.nickName;
             this.roleIds = request.roleIds;
             this.userId = request.userId;
@@ -147,6 +161,15 @@ public class UpdateUserRequest extends Request {
         public Builder authAdminUser(Boolean authAdminUser) {
             this.putQueryParameter("AuthAdminUser", authAdminUser);
             this.authAdminUser = authAdminUser;
+            return this;
+        }
+
+        /**
+         * IsDeleted.
+         */
+        public Builder isDeleted(Boolean isDeleted) {
+            this.putQueryParameter("IsDeleted", isDeleted);
+            this.isDeleted = isDeleted;
             return this;
         }
 
