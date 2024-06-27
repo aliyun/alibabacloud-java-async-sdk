@@ -442,8 +442,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("DBInstanceIds")
         private DBInstanceIds DBInstanceIds;
 
+        @com.aliyun.core.annotation.NameInMap("RecoveryModel")
+        private String recoveryModel;
+
         private Extra(Builder builder) {
             this.DBInstanceIds = builder.DBInstanceIds;
+            this.recoveryModel = builder.recoveryModel;
         }
 
         public static Builder builder() {
@@ -461,14 +465,30 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             return this.DBInstanceIds;
         }
 
+        /**
+         * @return recoveryModel
+         */
+        public String getRecoveryModel() {
+            return this.recoveryModel;
+        }
+
         public static final class Builder {
             private DBInstanceIds DBInstanceIds; 
+            private String recoveryModel; 
 
             /**
              * The instance IDs.
              */
             public Builder DBInstanceIds(DBInstanceIds DBInstanceIds) {
                 this.DBInstanceIds = DBInstanceIds;
+                return this;
+            }
+
+            /**
+             * RecoveryModel.
+             */
+            public Builder recoveryModel(String recoveryModel) {
+                this.recoveryModel = recoveryModel;
                 return this;
             }
 

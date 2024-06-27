@@ -377,6 +377,9 @@ public class DescribeParametersResponseBody extends TeaModel {
 
     }
     public static class RunningParametersDBInstanceParameter extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ParameterDefaultValue")
+        private String parameterDefaultValue;
+
         @com.aliyun.core.annotation.NameInMap("ParameterDescription")
         private String parameterDescription;
 
@@ -386,10 +389,15 @@ public class DescribeParametersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ParameterValue")
         private String parameterValue;
 
+        @com.aliyun.core.annotation.NameInMap("ParameterValueRange")
+        private String parameterValueRange;
+
         private RunningParametersDBInstanceParameter(Builder builder) {
+            this.parameterDefaultValue = builder.parameterDefaultValue;
             this.parameterDescription = builder.parameterDescription;
             this.parameterName = builder.parameterName;
             this.parameterValue = builder.parameterValue;
+            this.parameterValueRange = builder.parameterValueRange;
         }
 
         public static Builder builder() {
@@ -398,6 +406,13 @@ public class DescribeParametersResponseBody extends TeaModel {
 
         public static RunningParametersDBInstanceParameter create() {
             return builder().build();
+        }
+
+        /**
+         * @return parameterDefaultValue
+         */
+        public String getParameterDefaultValue() {
+            return this.parameterDefaultValue;
         }
 
         /**
@@ -421,10 +436,27 @@ public class DescribeParametersResponseBody extends TeaModel {
             return this.parameterValue;
         }
 
+        /**
+         * @return parameterValueRange
+         */
+        public String getParameterValueRange() {
+            return this.parameterValueRange;
+        }
+
         public static final class Builder {
+            private String parameterDefaultValue; 
             private String parameterDescription; 
             private String parameterName; 
             private String parameterValue; 
+            private String parameterValueRange; 
+
+            /**
+             * ParameterDefaultValue.
+             */
+            public Builder parameterDefaultValue(String parameterDefaultValue) {
+                this.parameterDefaultValue = parameterDefaultValue;
+                return this;
+            }
 
             /**
              * The description of the parameter.
@@ -447,6 +479,14 @@ public class DescribeParametersResponseBody extends TeaModel {
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;
+                return this;
+            }
+
+            /**
+             * ParameterValueRange.
+             */
+            public Builder parameterValueRange(String parameterValueRange) {
+                this.parameterValueRange = parameterValueRange;
                 return this;
             }
 
