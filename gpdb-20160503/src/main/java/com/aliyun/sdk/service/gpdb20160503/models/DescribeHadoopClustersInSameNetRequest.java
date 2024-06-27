@@ -68,7 +68,7 @@ public class DescribeHadoopClustersInSameNetRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -77,7 +77,7 @@ public class DescribeHadoopClustersInSameNetRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

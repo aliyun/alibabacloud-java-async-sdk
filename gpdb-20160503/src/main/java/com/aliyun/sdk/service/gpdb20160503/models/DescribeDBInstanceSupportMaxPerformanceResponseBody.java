@@ -61,7 +61,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -77,7 +77,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -153,7 +153,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             private String value; 
 
             /**
-             * Bottleneck.
+             * The performance bottleneck type.
              */
             public Builder bottleneck(String bottleneck) {
                 this.bottleneck = bottleneck;
@@ -161,7 +161,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Key.
+             * The name of the performance metric.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -169,7 +169,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Unit.
+             * The unit of the performance metric.
              */
             public Builder unit(String unit) {
                 this.unit = unit;
@@ -177,7 +177,7 @@ public class DescribeDBInstanceSupportMaxPerformanceResponseBody extends TeaMode
             }
 
             /**
-             * Value.
+             * The value of the performance metric.
              */
             public Builder value(String value) {
                 this.value = value;

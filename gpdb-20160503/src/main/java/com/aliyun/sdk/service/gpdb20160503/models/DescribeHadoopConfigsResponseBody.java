@@ -61,7 +61,14 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConfigName.
+         * The name of the configuration file. Valid values:
+         * <p>
+         * 
+         * *   hdfs-site
+         * *   core-site
+         * *   yarn-site
+         * *   mapred-site
+         * *   hive-site
          */
         public Builder configName(String configName) {
             this.configName = configName;
@@ -77,7 +84,7 @@ public class DescribeHadoopConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

@@ -657,7 +657,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the instance. For more information, see [Instance statuses](~~86944~~).
+             * The status of the instance. For more information, see [Instance statuses](~~86944~~).
              */
             public Builder DBInstanceStatus(String DBInstanceStatus) {
                 this.DBInstanceStatus = DBInstanceStatus;
@@ -673,7 +673,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the database engine.
+             * The database engine version of the instance.
              */
             public Builder engineVersion(String engineVersion) {
                 this.engineVersion = engineVersion;
@@ -684,7 +684,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * The expiration time of the instance. The time is displayed in UTC.
              * <p>
              * 
-             * > The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
+             * >  The expiration time of a pay-as-you-go instance is `2999-09-08T16:00:00Z`.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -724,7 +724,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **LockByExpiration**: The instance is automatically locked due to instance expiration.
              * *   **LockByRestoration**: The instance is automatically locked due to instance restoration.
              * *   **LockByDiskQuota**: The instance is automatically locked due to exhausted storage.
-             * *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked due to exhausted storage.
+             * *   **LockReadInstanceByDiskQuota**: The instance is a read-only instance and is automatically locked when the disk space is full.
              */
             public Builder lockMode(String lockMode) {
                 this.lockMode = lockMode;
@@ -741,7 +741,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **3**: The instance is automatically locked due to instance restoration.
              * *   **4**: The instance is automatically locked due to exhausted storage.
              * 
-             * > If the instance is in reserved storage mode and unlocked, null is returned.
+             * >  If the instance is in reserved storage mode and is not locked, null is returned.
              */
             public Builder lockReason(String lockReason) {
                 this.lockReason = lockReason;
@@ -807,7 +807,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
              * *   **Manual**: manual scheduling.
              * *   **Auto**: automatic scheduling.
              * 
-             * > This parameter is returned only for instances in Serverless mode.
+             * >  This parameter is returned only for instances in Serverless mode.
              */
             public Builder serverlessMode(String serverlessMode) {
                 this.serverlessMode = serverlessMode;
@@ -851,7 +851,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The VPC ID.
+             * The VPC ID of the instance.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;

@@ -92,7 +92,7 @@ public class DeleteJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -101,7 +101,10 @@ public class DeleteJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

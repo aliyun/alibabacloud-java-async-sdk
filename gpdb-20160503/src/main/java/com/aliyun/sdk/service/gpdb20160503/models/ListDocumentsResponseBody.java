@@ -97,7 +97,11 @@ public class ListDocumentsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;
@@ -149,7 +153,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * FileName.
+             * The name of the document.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -157,7 +161,7 @@ public class ListDocumentsResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source of the document.
              */
             public Builder source(String source) {
                 this.source = source;

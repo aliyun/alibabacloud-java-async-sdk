@@ -93,7 +93,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -101,7 +101,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * PageRecordCount.
+         * The number of entries per page.
          */
         public Builder pageRecordCount(Integer pageRecordCount) {
             this.pageRecordCount = pageRecordCount;
@@ -109,7 +109,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -241,7 +241,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CurrentVersion.
+             * The current version.
              */
             public Builder currentVersion(String currentVersion) {
                 this.currentVersion = currentVersion;
@@ -249,7 +249,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the extension.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -257,7 +257,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * ExtensionId.
+             * The extension ID.
              */
             public Builder extensionId(String extensionId) {
                 this.extensionId = extensionId;
@@ -265,7 +265,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * InstalledDatabases.
+             * The names of the databases in which the extension is installed.
              */
             public Builder installedDatabases(String installedDatabases) {
                 this.installedDatabases = installedDatabases;
@@ -273,7 +273,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * IsInstallNeedRestart.
+             * Indicates whether an instance restart is required after you install the extension for the extension to take effect.
              */
             public Builder isInstallNeedRestart(Boolean isInstallNeedRestart) {
                 this.isInstallNeedRestart = isInstallNeedRestart;
@@ -281,7 +281,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * LatestVersion.
+             * The latest version.
              */
             public Builder latestVersion(String latestVersion) {
                 this.latestVersion = latestVersion;
@@ -289,7 +289,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the extension.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -297,7 +297,7 @@ public class ListInstanceExtensionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the extension.
              */
             public Builder status(String status) {
                 this.status = status;

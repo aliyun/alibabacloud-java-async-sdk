@@ -337,7 +337,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         private String writeMode; 
 
         /**
-         * Account.
+         * The username of the account.
          */
         public Builder account(String account) {
             this.account = account;
@@ -353,7 +353,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the job was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -361,7 +361,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * The name of the data source.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -377,7 +377,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DestColumns.
+         * The destination fields.
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             this.destColumns = destColumns;
@@ -385,7 +385,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DestDatabase.
+         * The name of the destination database.
          */
         public Builder destDatabase(String destDatabase) {
             this.destDatabase = destDatabase;
@@ -401,7 +401,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * DestTable.
+         * The name of the destination table.
          */
         public Builder destTable(String destTable) {
             this.destTable = destTable;
@@ -417,7 +417,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The information about the job status. For example, if the job is in the Exception state, the cause of the exception is displayed. If the job is in the Running state, this parameter is left empty.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -449,7 +449,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobDescription.
+         * The description of the job.
          */
         public Builder jobDescription(String jobDescription) {
             this.jobDescription = jobDescription;
@@ -457,7 +457,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -465,7 +465,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * JobName.
+         * The name of the job.
          */
         public Builder jobName(String jobName) {
             this.jobName = jobName;
@@ -489,7 +489,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * The time when the job was last modified.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -497,7 +497,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Password.
+         * The password of the account.
          */
         public Builder password(String password) {
             this.password = password;
@@ -505,7 +505,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -513,7 +513,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * SrcColumns.
+         * The source fields.
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             this.srcColumns = srcColumns;
@@ -521,7 +521,13 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the job. Valid values:
+         * <p>
+         * 
+         * *   Init: The job is being initialized.
+         * *   Running: The job is running.
+         * *   Exception: The job encounters an exception.
+         * *   Paused: The job is paused.
          */
         public Builder status(String status) {
             this.status = status;
@@ -537,7 +543,7 @@ public class DescribeStreamingJobResponseBody extends TeaModel {
         }
 
         /**
-         * WriteMode.
+         * The write mode.
          */
         public Builder writeMode(String writeMode) {
             this.writeMode = writeMode;

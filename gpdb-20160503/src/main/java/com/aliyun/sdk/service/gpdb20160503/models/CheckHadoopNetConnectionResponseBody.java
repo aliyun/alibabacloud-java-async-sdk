@@ -61,7 +61,7 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ConnectionMessage.
+         * The returned message. If the connection failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
          */
         public Builder connectionMessage(String connectionMessage) {
             this.connectionMessage = connectionMessage;
@@ -69,7 +69,7 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * ConnectionStatus.
+         * The connection status. Valid values: Success and Failed.
          */
         public Builder connectionStatus(String connectionStatus) {
             this.connectionStatus = connectionStatus;
@@ -77,7 +77,7 @@ public class CheckHadoopNetConnectionResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

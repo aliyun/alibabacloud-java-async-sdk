@@ -267,7 +267,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HDFSConf.
+         * The string that specifies the content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
          */
         public Builder HDFSConf(String HDFSConf) {
             this.putQueryParameter("HDFSConf", HDFSConf);
@@ -276,7 +276,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopCoreConf.
+         * The string that specifies the content of the Hadoop core-site.xml file.
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.putQueryParameter("HadoopCoreConf", hadoopCoreConf);
@@ -294,7 +294,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopHostsAddress.
+         * The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.putQueryParameter("HadoopHostsAddress", hadoopHostsAddress);
@@ -303,7 +303,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HiveConf.
+         * The string that specifies the content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.
          */
         public Builder hiveConf(String hiveConf) {
             this.putQueryParameter("HiveConf", hiveConf);
@@ -321,7 +321,10 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -330,7 +333,7 @@ public class CreateHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * YarnConf.
+         * The string that specifies the content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
          */
         public Builder yarnConf(String yarnConf) {
             this.putQueryParameter("YarnConf", yarnConf);

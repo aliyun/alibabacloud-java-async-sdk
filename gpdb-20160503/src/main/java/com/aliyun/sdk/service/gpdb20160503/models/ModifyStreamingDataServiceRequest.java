@@ -112,7 +112,10 @@ public class ModifyStreamingDataServiceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~196830~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -130,7 +133,7 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -139,7 +142,7 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -148,7 +151,13 @@ public class ModifyStreamingDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceSpec.
+         * The specifications of the service. Unit: capacity units (CUs). Valid values:
+         * <p>
+         * 
+         * *   2
+         * *   4
+         * *   8
+         * *   16
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putQueryParameter("ServiceSpec", serviceSpec);

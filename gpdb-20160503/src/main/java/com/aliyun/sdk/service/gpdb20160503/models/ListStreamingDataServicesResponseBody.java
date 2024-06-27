@@ -106,8 +106,14 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ServiceIp")
         private String serviceIp;
 
+        @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+        private Boolean serviceManaged;
+
         @com.aliyun.core.annotation.NameInMap("ServiceName")
         private String serviceName;
+
+        @com.aliyun.core.annotation.NameInMap("ServiceOwnerId")
+        private String serviceOwnerId;
 
         @com.aliyun.core.annotation.NameInMap("ServicePort")
         private String servicePort;
@@ -127,7 +133,9 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             this.serviceDescription = builder.serviceDescription;
             this.serviceId = builder.serviceId;
             this.serviceIp = builder.serviceIp;
+            this.serviceManaged = builder.serviceManaged;
             this.serviceName = builder.serviceName;
+            this.serviceOwnerId = builder.serviceOwnerId;
             this.servicePort = builder.servicePort;
             this.serviceSpec = builder.serviceSpec;
             this.serviceType = builder.serviceType;
@@ -178,10 +186,24 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return serviceManaged
+         */
+        public Boolean getServiceManaged() {
+            return this.serviceManaged;
+        }
+
+        /**
          * @return serviceName
          */
         public String getServiceName() {
             return this.serviceName;
+        }
+
+        /**
+         * @return serviceOwnerId
+         */
+        public String getServiceOwnerId() {
+            return this.serviceOwnerId;
         }
 
         /**
@@ -218,7 +240,9 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             private String serviceDescription; 
             private String serviceId; 
             private String serviceIp; 
+            private Boolean serviceManaged; 
             private String serviceName; 
+            private String serviceOwnerId; 
             private String servicePort; 
             private String serviceSpec; 
             private String serviceType; 
@@ -265,10 +289,26 @@ public class ListStreamingDataServicesResponseBody extends TeaModel {
             }
 
             /**
+             * ServiceManaged.
+             */
+            public Builder serviceManaged(Boolean serviceManaged) {
+                this.serviceManaged = serviceManaged;
+                return this;
+            }
+
+            /**
              * ServiceName.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
+                return this;
+            }
+
+            /**
+             * ServiceOwnerId.
+             */
+            public Builder serviceOwnerId(String serviceOwnerId) {
+                this.serviceOwnerId = serviceOwnerId;
                 return this;
             }
 

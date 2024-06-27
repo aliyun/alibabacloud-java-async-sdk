@@ -57,7 +57,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the VPCs.
+         * The queried VPCs.
          */
         public Builder vpcs(Vpcs vpcs) {
             this.vpcs = vpcs;
@@ -233,7 +233,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -454,7 +454,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region.
+             * The region ID of the instance.
              */
             public Builder regionNo(String regionNo) {
                 this.regionNo = regionNo;
@@ -470,7 +470,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * Details of the vSwitches.
+             * The queried vSwitches.
              */
             public Builder vSwitchs(java.util.List < VSwitchs> vSwitchs) {
                 this.vSwitchs = vSwitchs;
@@ -478,7 +478,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of VPC.
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -527,7 +527,7 @@ public class DescribeRdsVpcsResponseBody extends TeaModel {
             private java.util.List < Vpc> vpc; 
 
             /**
-             * Details of the VPC.
+             * The queried VPC.
              */
             public Builder vpc(java.util.List < Vpc> vpc) {
                 this.vpc = vpc;

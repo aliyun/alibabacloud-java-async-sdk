@@ -83,7 +83,10 @@ public class ModifyDBResourceGroupRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -101,7 +104,7 @@ public class ModifyDBResourceGroupRequest extends Request {
         }
 
         /**
-         * ResourceGroupItems.
+         * The information about the resource group.
          */
         public Builder resourceGroupItems(java.util.List < ResourceGroupItems> resourceGroupItems) {
             String resourceGroupItemsShrink = shrink(resourceGroupItems, "ResourceGroupItems", "json");
@@ -158,7 +161,20 @@ public class ModifyDBResourceGroupRequest extends Request {
             private String resourceGroupName; 
 
             /**
-             * ResourceGroupConfig.
+             * The configurations of the resource group to which you want to modify.
+             * <p>
+             * 
+             * > 
+             * 
+             * *   CpuRateLimit: the percentage of CPU resources that are available for the resource group. Unit: %.
+             * 
+             * *   MemoryLimit: the percentage of memory resources that are available for the resource group. Unit: %.
+             * 
+             * *   MemorySharedQuota: the percentage of memory resources shared among transactions that are submitted to the resource group. Unit: %. Default value: 80.
+             * 
+             * *   MemorySpillRatio: the memory spill ratio for memory-intensive transactions. When the memory that is used by memory-intensive transactions reaches this value, data is spilled to disks. Unit: %. Default value: 0.
+             * 
+             * *   Concurrency: the maximum number of concurrent transactions or parallel queries that are allowed for a resource group. Default value: 20.
              */
             public Builder resourceGroupConfig(String resourceGroupConfig) {
                 this.resourceGroupConfig = resourceGroupConfig;
@@ -166,7 +182,7 @@ public class ModifyDBResourceGroupRequest extends Request {
             }
 
             /**
-             * ResourceGroupName.
+             * The name of the resource group.
              */
             public Builder resourceGroupName(String resourceGroupName) {
                 this.resourceGroupName = resourceGroupName;

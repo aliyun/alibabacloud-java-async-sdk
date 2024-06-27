@@ -61,7 +61,10 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * ErrorMessage.
+         * The error message returned if the operation fails.
+         * <p>
+         * 
+         * This parameter is returned only when the return value of **Status** is **false**.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -69,7 +72,7 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +80,11 @@ public class DeleteStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the operation. Valid values:
+         * <p>
+         * 
+         * *   **false**: The operation fails.
+         * *   **true**: The operation is successful.
          */
         public Builder status(Boolean status) {
             this.status = status;

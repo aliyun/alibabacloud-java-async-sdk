@@ -173,6 +173,9 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * The name of the collection.
+         * <p>
+         * 
+         * >  You can call the [CreateCollection](~~2401497~~) operation to create a vector collection and call the [ListCollections](~~2401503~~) operation to query a list of vector collections.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -217,6 +220,9 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * The name of the manager account that has the rds_superuser permission.
+         * <p>
+         * 
+         * >  You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](~~2361789~~) operation.
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -235,6 +241,9 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * The name of the namespace.
+         * <p>
+         * 
+         * >  You can call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -253,9 +262,6 @@ public class GrantCollectionRequest extends Request {
 
         /**
          * The region ID of the instance.
-         * <p>
-         * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

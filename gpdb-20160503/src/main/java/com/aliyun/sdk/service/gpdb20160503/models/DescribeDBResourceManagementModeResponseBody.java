@@ -49,7 +49,7 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         private String resourceManagementMode; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,11 @@ public class DescribeDBResourceManagementModeResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceManagementMode.
+         * The resource management mode. Valid values:
+         * <p>
+         * 
+         * *   resourceGroup: resource group management.
+         * *   resourceQueue: resource queue management.
          */
         public Builder resourceManagementMode(String resourceManagementMode) {
             this.resourceManagementMode = resourceManagementMode;

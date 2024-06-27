@@ -83,7 +83,7 @@ public class DeleteHadoopDataSourceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class DeleteHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The service ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

@@ -170,7 +170,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the collection.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -179,7 +179,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -188,7 +191,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The condition that is used to filter the data to be updated. Specify this parameter in a format that is the same as the WHERE clause. You cannot leave both this parameter and Ids empty.
          */
         public Builder filter(String filter) {
             this.putQueryParameter("Filter", filter);
@@ -197,7 +200,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The row IDs of the data that you want to update. You must specify one of the Ids and Filter parameters.
+         * The row IDs of the data to be updated. You cannot leave both this parameter and Filter empty.
          */
         public Builder ids(java.util.List < String > ids) {
             String idsShrink = shrink(ids, "Ids", "json");
@@ -207,7 +210,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The data that you want to update, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
+         * The data to be updated, which is a JSON string in the MAP format. In the JSON string, key specifies the field name and value specifies the new data value.
          */
         public Builder metadata(java.util.Map < String, ? > metadata) {
             String metadataShrink = shrink(metadata, "Metadata", "json");
@@ -217,7 +220,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -226,7 +229,7 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -244,7 +247,10 @@ public class UpdateCollectionDataMetadataRequest extends Request {
         }
 
         /**
-         * The region ID of the instance.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

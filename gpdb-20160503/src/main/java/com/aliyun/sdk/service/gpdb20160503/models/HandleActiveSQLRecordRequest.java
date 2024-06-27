@@ -83,7 +83,7 @@ public class HandleActiveSQLRecordRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,12 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * OperateType.
+         * The type of the operation on the process ID. Valid values:
+         * <p>
+         * 
+         * *   **0**: cancel.
+         * *   **1**: terminate.
+         * *   **2**: forcefully terminate.
          */
         public Builder operateType(Integer operateType) {
             this.putQueryParameter("OperateType", operateType);
@@ -101,7 +106,7 @@ public class HandleActiveSQLRecordRequest extends Request {
         }
 
         /**
-         * Pids.
+         * The process IDs. A process ID is a unique identifier of a query.
          */
         public Builder pids(String pids) {
             this.putQueryParameter("Pids", pids);

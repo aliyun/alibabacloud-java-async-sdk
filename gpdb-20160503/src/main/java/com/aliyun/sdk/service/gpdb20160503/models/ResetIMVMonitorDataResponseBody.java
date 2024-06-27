@@ -49,7 +49,7 @@ public class ResetIMVMonitorDataResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,11 @@ public class ResetIMVMonitorDataResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder status(Boolean status) {
             this.status = status;

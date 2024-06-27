@@ -98,7 +98,10 @@ public class DeleteExtensionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -107,7 +110,7 @@ public class DeleteExtensionRequest extends Request {
         }
 
         /**
-         * DBNames.
+         * The name of the database.
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -116,7 +119,7 @@ public class DeleteExtensionRequest extends Request {
         }
 
         /**
-         * Extension.
+         * The name of the extension.
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -125,7 +128,7 @@ public class DeleteExtensionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

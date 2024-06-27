@@ -366,7 +366,7 @@ public class UpgradeDBInstanceRequest extends Request {
          * The storage capacity of each compute node. Unit: GB. Valid values: 50 to 6000, in 50 increments.
          * <p>
          * 
-         * > This parameter is available only for instances in elastic storage mode.
+         * >  This parameter is available only for instances in elastic storage mode.
          */
         public Builder storageSize(String storageSize) {
             this.putQueryParameter("StorageSize", storageSize);

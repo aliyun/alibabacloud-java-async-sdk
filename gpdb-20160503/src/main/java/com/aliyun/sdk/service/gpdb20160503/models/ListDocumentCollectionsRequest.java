@@ -112,7 +112,10 @@ public class ListDocumentCollectionsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -121,7 +124,10 @@ public class ListDocumentCollectionsRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace. Default value: public.
+         * <p>
+         * 
+         * >  You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -130,7 +136,10 @@ public class ListDocumentCollectionsRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
+         * <p>
+         * 
+         * >  This value is specified when you call the CreateNamespace operation.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -148,7 +157,7 @@ public class ListDocumentCollectionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -145,7 +145,10 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace. Default value: public.
+         * <p>
+         * 
+         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -154,7 +157,10 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
+         * <p>
+         * 
+         * >  This value is specified when you call the [CreateNamespace](~~2401495~~) operation.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);
@@ -172,7 +178,7 @@ public class DeleteDocumentCollectionRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

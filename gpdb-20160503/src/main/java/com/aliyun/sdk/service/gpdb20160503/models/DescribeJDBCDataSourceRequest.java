@@ -78,7 +78,7 @@ public class DescribeJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

@@ -61,7 +61,7 @@ public class CancelUpsertCollectionDataJobResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -69,7 +69,7 @@ public class CancelUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,11 @@ public class CancelUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the operation. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

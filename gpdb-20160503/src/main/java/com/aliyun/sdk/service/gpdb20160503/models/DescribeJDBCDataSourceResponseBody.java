@@ -165,7 +165,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceDescription.
+         * The description of the service. The description can be up to 256 characters in length.
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.dataSourceDescription = dataSourceDescription;
@@ -189,7 +189,12 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceStatus.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   Init
+         * *   Running
+         * *   Exception
          */
         public Builder dataSourceStatus(String dataSourceStatus) {
             this.dataSourceStatus = dataSourceStatus;
@@ -197,7 +202,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.dataSourceType = dataSourceType;
@@ -205,7 +210,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * JDBCConnectionString.
+         * The JDBC connection string.
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.JDBCConnectionString = JDBCConnectionString;
@@ -213,7 +218,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * JDBCPassword.
+         * The password of the database account.
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.JDBCPassword = JDBCPassword;
@@ -221,7 +226,7 @@ public class DescribeJDBCDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * JDBCUserName.
+         * The name of the database account.
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.JDBCUserName = JDBCUserName;

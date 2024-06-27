@@ -83,7 +83,7 @@ public class DescribeStreamingJobRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class DescribeStreamingJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(Integer jobId) {
             this.putQueryParameter("JobId", jobId);

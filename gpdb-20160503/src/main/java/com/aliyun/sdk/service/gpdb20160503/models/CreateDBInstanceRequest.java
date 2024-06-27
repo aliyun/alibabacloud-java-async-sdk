@@ -928,7 +928,7 @@ public class CreateDBInstanceRequest extends Request {
          * The IP address whitelist of the instance.
          * <p>
          * 
-         * A value of 127.0.0.1 specifies that no IP address is allowed for external access. You can call the [ModifySecurityIps](~~86928~~) operation to modify the IP address whitelist after you create an instance.
+         * A value of 127.0.0.1 denies access from any external IP address. You can call the [ModifySecurityIps](~~86928~~) operation to modify the IP address whitelist after you create an instance.
          */
         public Builder securityIPList(String securityIPList) {
             this.putQueryParameter("SecurityIPList", securityIPList);

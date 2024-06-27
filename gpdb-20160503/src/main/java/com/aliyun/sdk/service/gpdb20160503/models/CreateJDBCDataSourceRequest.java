@@ -188,7 +188,7 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * JDBCConnectionString.
+         * The JDBC connection string.
          */
         public Builder JDBCConnectionString(String JDBCConnectionString) {
             this.putQueryParameter("JDBCConnectionString", JDBCConnectionString);
@@ -197,7 +197,7 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * JDBCPassword.
+         * The password of the database account.
          */
         public Builder JDBCPassword(String JDBCPassword) {
             this.putQueryParameter("JDBCPassword", JDBCPassword);
@@ -206,7 +206,7 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * JDBCUserName.
+         * The name of the database account.
          */
         public Builder JDBCUserName(String JDBCUserName) {
             this.putQueryParameter("JDBCUserName", JDBCUserName);
@@ -215,7 +215,7 @@ public class CreateJDBCDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

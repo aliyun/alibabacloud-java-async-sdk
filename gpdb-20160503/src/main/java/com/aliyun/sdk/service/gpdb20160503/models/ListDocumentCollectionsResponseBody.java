@@ -85,7 +85,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Count.
+         * The total number of entries returned.
          */
         public Builder count(Integer count) {
             this.count = count;
@@ -93,7 +93,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Items.
+         * The queried document collections.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -101,7 +101,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +109,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;
@@ -229,7 +233,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             private String parser; 
 
             /**
-             * CollectionName.
+             * The name of the document collection.
              */
             public Builder collectionName(String collectionName) {
                 this.collectionName = collectionName;
@@ -237,7 +241,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Dimension.
+             * The number of vector dimensions.
              */
             public Builder dimension(Integer dimension) {
                 this.dimension = dimension;
@@ -245,7 +249,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddingModel.
+             * The name of the vector algorithm.
              */
             public Builder embeddingModel(String embeddingModel) {
                 this.embeddingModel = embeddingModel;
@@ -253,7 +257,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * FullTextRetrievalFields.
+             * The fields that are used for full-text search. Multiple fields are separated by commas (,).
              */
             public Builder fullTextRetrievalFields(String fullTextRetrievalFields) {
                 this.fullTextRetrievalFields = fullTextRetrievalFields;
@@ -261,7 +265,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata.
              */
             public Builder metadata(String metadata) {
                 this.metadata = metadata;
@@ -269,7 +273,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Metrics.
+             * The vector similarity algorithm.
              */
             public Builder metrics(String metrics) {
                 this.metrics = metrics;
@@ -277,7 +281,7 @@ public class ListDocumentCollectionsResponseBody extends TeaModel {
             }
 
             /**
-             * Parser.
+             * The analyzer that is used for full-text search.
              */
             public Builder parser(String parser) {
                 this.parser = parser;

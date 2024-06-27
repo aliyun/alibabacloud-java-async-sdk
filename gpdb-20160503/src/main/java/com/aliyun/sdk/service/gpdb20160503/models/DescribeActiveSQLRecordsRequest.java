@@ -166,7 +166,10 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -238,7 +241,7 @@ public class DescribeActiveSQLRecordsRequest extends Request {
         }
 
         /**
-         * User.
+         * The name of the database account.
          */
         public Builder user(String user) {
             this.putQueryParameter("User", user);

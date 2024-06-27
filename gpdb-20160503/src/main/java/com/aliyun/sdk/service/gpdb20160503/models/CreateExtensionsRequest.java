@@ -98,7 +98,10 @@ public class CreateExtensionsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a specific region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -107,7 +110,7 @@ public class CreateExtensionsRequest extends Request {
         }
 
         /**
-         * DBNames.
+         * The name of the database.
          */
         public Builder DBNames(String DBNames) {
             this.putQueryParameter("DBNames", DBNames);
@@ -116,7 +119,7 @@ public class CreateExtensionsRequest extends Request {
         }
 
         /**
-         * Extensions.
+         * The name of the extension that you want to install. Separate multiple extension names with commas (,).
          */
         public Builder extensions(String extensions) {
             this.putQueryParameter("Extensions", extensions);
@@ -125,7 +128,10 @@ public class CreateExtensionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

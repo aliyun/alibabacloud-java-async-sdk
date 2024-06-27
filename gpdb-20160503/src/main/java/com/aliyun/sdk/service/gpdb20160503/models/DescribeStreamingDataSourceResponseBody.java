@@ -217,7 +217,12 @@ public class DescribeStreamingDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   init
+         * *   running
+         * *   exception
          */
         public Builder status(String status) {
             this.status = status;

@@ -98,7 +98,7 @@ public class CheckHadoopDataSourceRequest extends Request {
         } 
 
         /**
-         * CheckDir.
+         * The Hadoop path that you want to check.
          */
         public Builder checkDir(String checkDir) {
             this.putQueryParameter("CheckDir", checkDir);
@@ -107,7 +107,7 @@ public class CheckHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -116,7 +116,7 @@ public class CheckHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -125,7 +125,10 @@ public class CheckHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

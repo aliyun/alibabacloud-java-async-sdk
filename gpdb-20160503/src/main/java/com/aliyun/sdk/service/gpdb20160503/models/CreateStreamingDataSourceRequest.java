@@ -196,7 +196,7 @@ public class CreateStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The real-time data service ID.
          */
         public Builder serviceId(Integer serviceId) {
             this.putQueryParameter("ServiceId", serviceId);

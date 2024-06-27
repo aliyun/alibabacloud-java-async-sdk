@@ -240,7 +240,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);
@@ -249,7 +249,16 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceType.
+         * The type of the data source. Valid values:
+         * <p>
+         * 
+         * *   mysql
+         * 
+         * - postgresql
+         * 
+         * *   hdfs
+         * 
+         * - hive
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putQueryParameter("DataSourceType", dataSourceType);
@@ -267,7 +276,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HDFSConf.
+         * The content of the Hadoop hdfs-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
          */
         public Builder HDFSConf(String HDFSConf) {
             this.putQueryParameter("HDFSConf", HDFSConf);
@@ -276,7 +285,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopCoreConf.
+         * The content of the Hadoop core-site.xml file.
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.putQueryParameter("HadoopCoreConf", hadoopCoreConf);
@@ -285,7 +294,11 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopCreateType.
+         * The type of the external service. Valid values:
+         * <p>
+         * 
+         * *   emr: E-MapReduce (EMR) Hadoop cluster.
+         * *   selfCreate: self-managed Hadoop cluster.
          */
         public Builder hadoopCreateType(String hadoopCreateType) {
             this.putQueryParameter("HadoopCreateType", hadoopCreateType);
@@ -294,7 +307,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HadoopHostsAddress.
+         * The IP address and hostname of the Hadoop cluster (data source) in the /etc/hosts file.
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.putQueryParameter("HadoopHostsAddress", hadoopHostsAddress);
@@ -303,7 +316,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * HiveConf.
+         * The content of the Hadoop hive-site.xml file. This parameter must be specified when DataSourceType is set to Hive.
          */
         public Builder hiveConf(String hiveConf) {
             this.putQueryParameter("HiveConf", hiveConf);
@@ -312,7 +325,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * MapReduceConf.
+         * The content of the Hadoop mapred-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.putQueryParameter("MapReduceConf", mapReduceConf);
@@ -321,7 +334,10 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -330,7 +346,7 @@ public class ModifyHadoopDataSourceRequest extends Request {
         }
 
         /**
-         * YarnConf.
+         * The content of the Hadoop yarn-site.xml file. This parameter must be specified when DataSourceType is set to HDFS.
          */
         public Builder yarnConf(String yarnConf) {
             this.putQueryParameter("YarnConf", yarnConf);

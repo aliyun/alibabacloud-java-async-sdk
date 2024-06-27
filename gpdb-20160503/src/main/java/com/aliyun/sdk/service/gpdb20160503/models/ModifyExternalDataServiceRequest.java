@@ -121,7 +121,10 @@ public class ModifyExternalDataServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +133,7 @@ public class ModifyExternalDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.putQueryParameter("ServiceDescription", serviceDescription);
@@ -148,7 +151,10 @@ public class ModifyExternalDataServiceRequest extends Request {
         }
 
         /**
-         * ServiceSpec.
+         * The specifications of the service. Unit: compute units (CUs). Valid values:
+         * <p>
+         * 
+         * *   8
          */
         public Builder serviceSpec(String serviceSpec) {
             this.putQueryParameter("ServiceSpec", serviceSpec);

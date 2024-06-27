@@ -142,7 +142,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the collection.
+         * <p>
+         * 
+         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
          */
         public Builder collection(String collection) {
             this.putBodyParameter("Collection", collection);
@@ -151,7 +154,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -160,7 +166,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the vector data upload job. You can call the `UpsertCollectionDataAsync` operation to query the job ID.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -169,7 +175,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace. Default value: public.
+         * <p>
+         * 
+         * >  You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -178,7 +187,10 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
+         * <p>
+         * 
+         * >  The value of this parameter is specified when you call the CreateNamespace operation.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putBodyParameter("NamespacePassword", namespacePassword);
@@ -196,7 +208,7 @@ public class GetUpsertCollectionDataJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

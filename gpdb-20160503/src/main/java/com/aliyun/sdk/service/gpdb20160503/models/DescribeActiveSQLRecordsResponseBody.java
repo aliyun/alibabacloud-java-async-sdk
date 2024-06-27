@@ -61,7 +61,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -69,7 +69,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * Queries.
+         * The queried SQL records.
          */
         public Builder queries(java.util.List < Queries> queries) {
             this.queries = queries;
@@ -237,7 +237,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             private String user; 
 
             /**
-             * ClientAddr.
+             * The IP address of the client.
              */
             public Builder clientAddr(String clientAddr) {
                 this.clientAddr = clientAddr;
@@ -245,7 +245,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Database.
+             * The name of the database.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -253,7 +253,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * PID.
+             * The progress ID.
              */
             public Builder PID(String PID) {
                 this.PID = PID;
@@ -261,7 +261,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Query.
+             * The SQL statement of the query.
              */
             public Builder query(String query) {
                 this.query = query;
@@ -269,7 +269,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryDuration.
+             * The execution duration of the query. Unit: seconds.
              */
             public Builder queryDuration(String queryDuration) {
                 this.queryDuration = queryDuration;
@@ -277,7 +277,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * QueryStart.
+             * The start time of the query.
              */
             public Builder queryStart(String queryStart) {
                 this.queryStart = queryStart;
@@ -285,7 +285,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SessionID.
+             * The session ID.
              */
             public Builder sessionID(String sessionID) {
                 this.sessionID = sessionID;
@@ -293,7 +293,11 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlTruncated.
+             * Indicates whether the SQL statement is truncated. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder sqlTruncated(String sqlTruncated) {
                 this.sqlTruncated = sqlTruncated;
@@ -301,7 +305,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * SqlTruncatedThreshold.
+             * The threshold that is used to truncate the SQL statement.
              */
             public Builder sqlTruncatedThreshold(String sqlTruncatedThreshold) {
                 this.sqlTruncatedThreshold = sqlTruncatedThreshold;
@@ -309,7 +313,11 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the asynchronous request. Valid values:
+             * <p>
+             * 
+             * *   **RUNNING**
+             * *   **BLOCK**
              */
             public Builder state(String state) {
                 this.state = state;
@@ -317,7 +325,7 @@ public class DescribeActiveSQLRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * User.
+             * The name of the database account.
              */
             public Builder user(String user) {
                 this.user = user;

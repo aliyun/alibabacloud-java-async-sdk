@@ -73,7 +73,7 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         private Boolean status; 
 
         /**
-         * DbInstanceId.
+         * The instance ID.
          */
         public Builder dbInstanceId(String dbInstanceId) {
             this.dbInstanceId = dbInstanceId;
@@ -81,7 +81,10 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The returned message.
+         * <p>
+         * 
+         * This parameter is returned only if the request fails.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -89,7 +92,7 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +100,11 @@ public class ModifyMasterSpecResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder status(Boolean status) {
             this.status = status;

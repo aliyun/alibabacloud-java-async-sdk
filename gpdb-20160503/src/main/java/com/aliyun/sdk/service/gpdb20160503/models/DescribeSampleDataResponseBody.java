@@ -121,7 +121,12 @@ public class DescribeSampleDataResponseBody extends TeaModel {
         }
 
         /**
-         * SampleDataStatus.
+         * The loading status of the sample dataset. Valid values:
+         * <p>
+         * 
+         * *   **loaded**
+         * *   **loading**
+         * *   **unload**
          */
         public Builder sampleDataStatus(String sampleDataStatus) {
             this.sampleDataStatus = sampleDataStatus;

@@ -73,7 +73,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.DBInstanceId = DBInstanceId;
@@ -81,7 +81,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -89,7 +89,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Results.
+         * The processing result of the active query.
          */
         public Builder results(java.util.List < Results> results) {
             this.results = results;
@@ -97,7 +97,11 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **false**
+         * *   **true**
          */
         public Builder status(String status) {
             this.status = status;
@@ -149,7 +153,7 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * Pid.
+             * The process ID, which is a unique identifier of the query.
              */
             public Builder pid(String pid) {
                 this.pid = pid;
@@ -157,7 +161,11 @@ public class HandleActiveSQLRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the processing was successful. Valid values:
+             * <p>
+             * 
+             * *   **false**
+             * *   **true**
              */
             public Builder status(String status) {
                 this.status = status;

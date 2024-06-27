@@ -89,7 +89,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceItems.
+         * The queried services.
          */
         public Builder serviceItems(java.util.List < ServiceItems> serviceItems) {
             this.serviceItems = serviceItems;
@@ -221,7 +221,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the service was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -229,7 +229,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the service was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -237,7 +237,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDescription.
+             * The description of the service.
              */
             public Builder serviceDescription(String serviceDescription) {
                 this.serviceDescription = serviceDescription;
@@ -245,7 +245,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -253,7 +253,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The name of the service.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -261,7 +261,7 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceSpec.
+             * The specifications of the service. Unit: compute units (CUs).
              */
             public Builder serviceSpec(String serviceSpec) {
                 this.serviceSpec = serviceSpec;
@@ -269,7 +269,10 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   pxf
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -277,7 +280,13 @@ public class ListExternalDataServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service. Valid values:
+             * <p>
+             * 
+             * *   Init
+             * *   Running
+             * *   Exception
+             * *   Paused
              */
             public Builder status(String status) {
                 this.status = status;

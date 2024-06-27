@@ -77,7 +77,11 @@ public class CreateCollectionResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the operation. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;

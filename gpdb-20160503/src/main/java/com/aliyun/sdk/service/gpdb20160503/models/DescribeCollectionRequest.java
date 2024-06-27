@@ -128,6 +128,9 @@ public class DescribeCollectionRequest extends Request {
 
         /**
          * The name of the collection.
+         * <p>
+         * 
+         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -149,6 +152,9 @@ public class DescribeCollectionRequest extends Request {
 
         /**
          * The name of the namespace.
+         * <p>
+         * 
+         * >  You can call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -176,9 +182,6 @@ public class DescribeCollectionRequest extends Request {
 
         /**
          * The region ID of the instance.
-         * <p>
-         * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

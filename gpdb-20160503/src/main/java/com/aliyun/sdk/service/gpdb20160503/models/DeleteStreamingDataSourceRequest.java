@@ -83,7 +83,7 @@ public class DeleteStreamingDataSourceRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class DeleteStreamingDataSourceRequest extends Request {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(Integer dataSourceId) {
             this.putQueryParameter("DataSourceId", dataSourceId);

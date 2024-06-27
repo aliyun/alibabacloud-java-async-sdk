@@ -142,7 +142,10 @@ public class CancelUploadDocumentJobRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the document collection.
+         * <p>
+         * 
+         * >  You can call the [CreateDocumentCollection](~~2618448~~) operation to create a document collection and call the [ListDocumentCollections](~~2618452~~) operation to query a list of document collections.
          */
         public Builder collection(String collection) {
             this.putBodyParameter("Collection", collection);
@@ -151,7 +154,10 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The ID of the instance for which vector engine optimization is enabled.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -160,7 +166,7 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the document upload job. You can call the `UploadDocumentAsync` operation to query the job ID.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("JobId", jobId);
@@ -169,7 +175,10 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace. Default value: public.
+         * <p>
+         * 
+         * >  You can call the CreateNamespace operation to create a namespace and call the ListNamespaces operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("Namespace", namespace);
@@ -178,7 +187,10 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
+         * <p>
+         * 
+         * >  The value of this parameter is specified when you call the CreateNamespace operation.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putBodyParameter("NamespacePassword", namespacePassword);
@@ -196,7 +208,7 @@ public class CancelUploadDocumentJobRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

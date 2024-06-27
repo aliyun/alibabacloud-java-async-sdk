@@ -49,7 +49,7 @@ public class CreateExtensionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Extensions.
+         * The name of the extension that you want to install. Multiple extension names are separated with commas (,).
          */
         public Builder extensions(String extensions) {
             this.extensions = extensions;
@@ -57,7 +57,7 @@ public class CreateExtensionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

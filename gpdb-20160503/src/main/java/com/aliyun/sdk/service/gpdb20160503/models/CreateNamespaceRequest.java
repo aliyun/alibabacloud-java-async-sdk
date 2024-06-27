@@ -155,6 +155,9 @@ public class CreateNamespaceRequest extends Request {
 
         /**
          * The name of the manager account that has the rds_superuser permission.
+         * <p>
+         * 
+         * >  You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](~~2361789~~) operation.
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -172,7 +175,10 @@ public class CreateNamespaceRequest extends Request {
         }
 
         /**
-         * The name of the namespace.
+         * The name of the namespace. After the namespace is created, the system automatically creates an account that has the same name.
+         * <p>
+         * 
+         * >  The name must comply with the naming conventions of PostgreSQL objects.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -200,9 +206,6 @@ public class CreateNamespaceRequest extends Request {
 
         /**
          * The region ID of the instance.
-         * <p>
-         * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

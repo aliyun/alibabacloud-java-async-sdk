@@ -69,7 +69,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
         }
 
         /**
-         * ImvInfos.
+         * The queried materialized views.
          */
         public Builder imvInfos(java.util.List < ImvInfos> imvInfos) {
             this.imvInfos = imvInfos;
@@ -141,7 +141,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             private String mv; 
 
             /**
-             * Base.
+             * The name of the table based on which the materialized view is created.
              */
             public Builder base(String base) {
                 this.base = base;
@@ -149,7 +149,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             }
 
             /**
-             * DetailInfo.
+             * The dependency between the materialized view and the base table and all metric values, which can be used to build a lineage graph.
              */
             public Builder detailInfo(String detailInfo) {
                 this.detailInfo = detailInfo;
@@ -157,7 +157,7 @@ public class DescribeIMVInfosResponseBody extends TeaModel {
             }
 
             /**
-             * MV.
+             * The name of the materialized view.
              */
             public Builder mv(String mv) {
                 this.mv = mv;

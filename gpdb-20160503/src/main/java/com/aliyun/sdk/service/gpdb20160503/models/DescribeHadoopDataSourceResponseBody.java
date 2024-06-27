@@ -229,7 +229,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         private String yarnConf; 
 
         /**
-         * CreateTime.
+         * The time when the service was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -237,7 +237,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceDescription.
+         * The description of the service. The description can be up to 256 characters in length.
          */
         public Builder dataSourceDescription(String dataSourceDescription) {
             this.dataSourceDescription = dataSourceDescription;
@@ -245,7 +245,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceDir.
+         * The service directory in which Hadoop-related configuration files are stored.
          */
         public Builder dataSourceDir(String dataSourceDir) {
             this.dataSourceDir = dataSourceDir;
@@ -253,7 +253,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceId.
+         * The data source ID.
          */
         public Builder dataSourceId(String dataSourceId) {
             this.dataSourceId = dataSourceId;
@@ -261,7 +261,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceName.
+         * The name of the service.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.dataSourceName = dataSourceName;
@@ -269,7 +269,12 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * DataSourceStatus.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   init
+         * *   running
+         * *   exception
          */
         public Builder dataSourceStatus(String dataSourceStatus) {
             this.dataSourceStatus = dataSourceStatus;
@@ -285,7 +290,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * EmrInstanceId.
+         * The E-MapReduce (EMR) Hadoop cluster ID.
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.emrInstanceId = emrInstanceId;
@@ -293,7 +298,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HDFSConf.
+         * The content of the Hadoop hdfs-site.xml file.
          */
         public Builder HDFSConf(String HDFSConf) {
             this.HDFSConf = HDFSConf;
@@ -301,7 +306,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HadoopCoreConf.
+         * The content of the Hadoop core-site.xml file.
          */
         public Builder hadoopCoreConf(String hadoopCoreConf) {
             this.hadoopCoreConf = hadoopCoreConf;
@@ -309,7 +314,11 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HadoopCreateType.
+         * The type of the external service. Valid values:
+         * <p>
+         * 
+         * *   HDFS
+         * *   HIVE
          */
         public Builder hadoopCreateType(String hadoopCreateType) {
             this.hadoopCreateType = hadoopCreateType;
@@ -317,7 +326,9 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HadoopHostsAddress.
+         * *   The address and hostname of the Hadoop cluster (data source) in the /etc/hosts directory.
+         * <p>
+         * *
          */
         public Builder hadoopHostsAddress(String hadoopHostsAddress) {
             this.hadoopHostsAddress = hadoopHostsAddress;
@@ -325,7 +336,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * HiveConf.
+         * The content of the Hadoop hive-site.xml file.
          */
         public Builder hiveConf(String hiveConf) {
             this.hiveConf = hiveConf;
@@ -333,7 +344,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * MapReduceConf.
+         * The content of the Hadoop MapReduceConf file.
          */
         public Builder mapReduceConf(String mapReduceConf) {
             this.mapReduceConf = mapReduceConf;
@@ -341,7 +352,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -349,7 +360,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusMessage.
+         * The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.
          */
         public Builder statusMessage(String statusMessage) {
             this.statusMessage = statusMessage;
@@ -357,7 +368,7 @@ public class DescribeHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * YarnConf.
+         * The content of the Hadoop yarn-site.xml file.
          */
         public Builder yarnConf(String yarnConf) {
             this.yarnConf = yarnConf;

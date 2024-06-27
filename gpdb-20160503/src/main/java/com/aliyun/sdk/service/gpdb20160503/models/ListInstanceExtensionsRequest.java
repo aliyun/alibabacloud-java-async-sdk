@@ -124,7 +124,10 @@ public class ListInstanceExtensionsRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -133,7 +136,7 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * Extension.
+         * The name of the extension.
          */
         public Builder extension(String extension) {
             this.putQueryParameter("Extension", extension);
@@ -142,7 +145,12 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * InstallStatus.
+         * The installation status of the extension. Valid values:
+         * <p>
+         * 
+         * *   installed
+         * *   installing
+         * *   uninstalled
          */
         public Builder installStatus(String installStatus) {
             this.putQueryParameter("InstallStatus", installStatus);
@@ -151,7 +159,7 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -160,7 +168,14 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Valid values:
+         * <p>
+         * 
+         * *   **30**
+         * *   **50**
+         * *   **100**
+         * 
+         * Default value: **30**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -169,7 +184,7 @@ public class ListInstanceExtensionsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

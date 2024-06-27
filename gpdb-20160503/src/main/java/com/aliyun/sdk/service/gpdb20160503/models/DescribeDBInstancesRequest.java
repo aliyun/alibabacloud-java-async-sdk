@@ -364,7 +364,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * The tag value.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +373,7 @@ public class DescribeDBInstancesRequest extends Request {
         }
 
         /**
-         * VpcId.
+         * The VPC ID. You can use this parameter to filter instances that reside in the specified VPC.
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);

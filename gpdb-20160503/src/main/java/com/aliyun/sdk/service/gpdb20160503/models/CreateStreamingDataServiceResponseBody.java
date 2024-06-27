@@ -57,7 +57,7 @@ public class CreateStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The real-time data service ID.
          */
         public Builder serviceId(Integer serviceId) {
             this.serviceId = serviceId;

@@ -97,7 +97,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         private Usage usage; 
 
         /**
-         * ChunkResult.
+         * The chunking result.
          */
         public Builder chunkResult(ChunkResult chunkResult) {
             this.chunkResult = chunkResult;
@@ -105,7 +105,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Job.
+         * The information about the document upload job.
          */
         public Builder job(Job job) {
             this.job = job;
@@ -113,7 +113,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -121,7 +121,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -129,7 +129,11 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the operation. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;
@@ -137,7 +141,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
         }
 
         /**
-         * Usage.
+         * The number of tokens that are used for document understanding or embedding.
          */
         public Builder usage(Usage usage) {
             this.usage = usage;
@@ -189,7 +193,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private String plainChunkFileUrl; 
 
             /**
-             * ChunkFileUrl.
+             * The URL of the file after chunking. The validity period of the URL is 2 hours. The file is in the JSONL format. Each line is in the `{"page_content":"*****", "metadata": {"**":"***","**":"***"}` format.
              */
             public Builder chunkFileUrl(String chunkFileUrl) {
                 this.chunkFileUrl = chunkFileUrl;
@@ -197,7 +201,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * PlainChunkFileUrl.
+             * The URL of the file that does not contain metadata after chunking. The validity period of the URL is 2 hours. The file is in the TXT format. Each line is a chunk. The file can be easily used for embedding.
              */
             public Builder plainChunkFileUrl(String plainChunkFileUrl) {
                 this.plainChunkFileUrl = plainChunkFileUrl;
@@ -310,7 +314,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Completed.
+             * Indicates whether the operation is complete.
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -318,7 +322,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -326,7 +330,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -334,7 +338,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Job ID。
+             * The job ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -342,7 +346,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the document upload job. Unit: %. A value of 100 indicates that the job is complete.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -350,7 +354,16 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job. Valid values: Valid values:
+             * <p>
+             * 
+             * *   Success
+             * *   Failed (See the Error parameter for failure reasons.)
+             * *   Cancelling
+             * *   Cancelled
+             * *   Start
+             * *   Running
+             * *   Pending
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +371,7 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the job was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -419,7 +432,10 @@ public class GetUploadDocumentJobResponseBody extends TeaModel {
             }
 
             /**
-             * EmbeddingTokens.
+             * The number of tokens that are used for vectorization.
+             * <p>
+             * 
+             * >  A token is the minimum unit for splitting text. A token can be a word, phrase, punctuation, or character.
              */
             public Builder embeddingTokens(Integer embeddingTokens) {
                 this.embeddingTokens = embeddingTokens;

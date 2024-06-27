@@ -85,7 +85,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         private Integer total; 
 
         /**
-         * Matches.
+         * The retrieved data.
          */
         public Builder matches(Matches matches) {
             this.matches = matches;
@@ -117,7 +117,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
         }
 
         /**
-         * Total.
+         * The total number of entries that match the search conditions. This parameter is returned only when the Offset parameter is not 0.
          */
         public Builder total(Integer total) {
             this.total = total;
@@ -234,7 +234,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             private Values values; 
 
             /**
-             * Id.
+             * The unique ID of the vector data.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -242,7 +242,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Metadata.
+             * The metadata.
              */
             public Builder metadata(java.util.Map < String, String > metadata) {
                 this.metadata = metadata;
@@ -250,7 +250,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Score.
+             * The similarity score of the data. It is related to the `l2, ip, or cosine` algorithm that is specified when you create an index.
              */
             public Builder score(Double score) {
                 this.score = score;
@@ -258,7 +258,7 @@ public class QueryCollectionDataResponseBody extends TeaModel {
             }
 
             /**
-             * Values.
+             * The retrieved vector data.
              */
             public Builder values(Values values) {
                 this.values = values;

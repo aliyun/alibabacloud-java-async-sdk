@@ -321,7 +321,7 @@ public class ModifyStreamingJobRequest extends Request {
         } 
 
         /**
-         * Account.
+         * The name of the database account.
          */
         public Builder account(String account) {
             this.putQueryParameter("Account", account);
@@ -330,7 +330,13 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * Consistency.
+         * The delivery guarantee setting.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ATLEAST
+         * *   EXACTLY
          */
         public Builder consistency(String consistency) {
             this.putQueryParameter("Consistency", consistency);
@@ -339,7 +345,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -348,7 +354,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * DestColumns.
+         * The destination fields.
          */
         public Builder destColumns(java.util.List < String > destColumns) {
             String destColumnsShrink = shrink(destColumns, "DestColumns", "json");
@@ -358,7 +364,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * DestDatabase.
+         * The name of the destination database.
          */
         public Builder destDatabase(String destDatabase) {
             this.putQueryParameter("DestDatabase", destDatabase);
@@ -376,7 +382,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * DestTable.
+         * The name of the destination table.
          */
         public Builder destTable(String destTable) {
             this.putQueryParameter("DestTable", destTable);
@@ -412,7 +418,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * JobConfig.
+         * The YAML configuration file of the job. This parameter must be specified when Mode is set to professional.
          */
         public Builder jobConfig(String jobConfig) {
             this.putQueryParameter("JobConfig", jobConfig);
@@ -421,7 +427,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * JobDescription.
+         * The description of the job.
          */
         public Builder jobDescription(String jobDescription) {
             this.putQueryParameter("JobDescription", jobDescription);
@@ -430,7 +436,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(Long jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -449,7 +455,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * Password.
+         * The password of the database account.
          */
         public Builder password(String password) {
             this.putQueryParameter("Password", password);
@@ -467,7 +473,7 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * SrcColumns.
+         * The source fields.
          */
         public Builder srcColumns(java.util.List < String > srcColumns) {
             String srcColumnsShrink = shrink(srcColumns, "SrcColumns", "json");
@@ -477,7 +483,13 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * TryRun.
+         * Specifies whether to test the real-time job. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * Default value: false.
          */
         public Builder tryRun(Boolean tryRun) {
             this.putQueryParameter("TryRun", tryRun);
@@ -496,7 +508,14 @@ public class ModifyStreamingJobRequest extends Request {
         }
 
         /**
-         * WriteMode.
+         * The write mode.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   insert
+         * *   update
+         * *   merge
          */
         public Builder writeMode(String writeMode) {
             this.putQueryParameter("WriteMode", writeMode);

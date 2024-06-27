@@ -98,7 +98,10 @@ public class UnbindDBResourceGroupWithRoleRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the information about all AnalyticDB for PostgreSQL instances within a region, including instance IDs.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -116,7 +119,7 @@ public class UnbindDBResourceGroupWithRoleRequest extends Request {
         }
 
         /**
-         * ResourceGroupName.
+         * The name of the resource group.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -125,7 +128,7 @@ public class UnbindDBResourceGroupWithRoleRequest extends Request {
         }
 
         /**
-         * RoleList.
+         * The roles.
          */
         public Builder roleList(java.util.List < String > roleList) {
             String roleListShrink = shrink(roleList, "RoleList", "simple");

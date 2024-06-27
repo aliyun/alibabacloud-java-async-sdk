@@ -29,8 +29,14 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ServiceIp")
     private String serviceIp;
 
+    @com.aliyun.core.annotation.NameInMap("ServiceManaged")
+    private Boolean serviceManaged;
+
     @com.aliyun.core.annotation.NameInMap("ServiceName")
     private String serviceName;
+
+    @com.aliyun.core.annotation.NameInMap("ServiceOwnerId")
+    private String serviceOwnerId;
 
     @com.aliyun.core.annotation.NameInMap("ServicePort")
     private Integer servicePort;
@@ -48,7 +54,9 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         this.serviceDescription = builder.serviceDescription;
         this.serviceId = builder.serviceId;
         this.serviceIp = builder.serviceIp;
+        this.serviceManaged = builder.serviceManaged;
         this.serviceName = builder.serviceName;
+        this.serviceOwnerId = builder.serviceOwnerId;
         this.servicePort = builder.servicePort;
         this.serviceSpec = builder.serviceSpec;
         this.status = builder.status;
@@ -105,10 +113,24 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
     }
 
     /**
+     * @return serviceManaged
+     */
+    public Boolean getServiceManaged() {
+        return this.serviceManaged;
+    }
+
+    /**
      * @return serviceName
      */
     public String getServiceName() {
         return this.serviceName;
+    }
+
+    /**
+     * @return serviceOwnerId
+     */
+    public String getServiceOwnerId() {
+        return this.serviceOwnerId;
     }
 
     /**
@@ -139,13 +161,15 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         private String serviceDescription; 
         private String serviceId; 
         private String serviceIp; 
+        private Boolean serviceManaged; 
         private String serviceName; 
+        private String serviceOwnerId; 
         private Integer servicePort; 
         private String serviceSpec; 
         private String status; 
 
         /**
-         * CreateTime.
+         * The time when the service was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -153,7 +177,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ModifyTime.
+         * The time when the service was last modified.
          */
         public Builder modifyTime(String modifyTime) {
             this.modifyTime = modifyTime;
@@ -161,7 +185,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -169,7 +193,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDescription.
+         * The description of the service.
          */
         public Builder serviceDescription(String serviceDescription) {
             this.serviceDescription = serviceDescription;
@@ -177,7 +201,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -185,7 +209,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceIp.
+         * The IP address of the service.
          */
         public Builder serviceIp(String serviceIp) {
             this.serviceIp = serviceIp;
@@ -193,7 +217,15 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceName.
+         * ServiceManaged.
+         */
+        public Builder serviceManaged(Boolean serviceManaged) {
+            this.serviceManaged = serviceManaged;
+            return this;
+        }
+
+        /**
+         * The name of the service.
          */
         public Builder serviceName(String serviceName) {
             this.serviceName = serviceName;
@@ -201,7 +233,15 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServicePort.
+         * ServiceOwnerId.
+         */
+        public Builder serviceOwnerId(String serviceOwnerId) {
+            this.serviceOwnerId = serviceOwnerId;
+            return this;
+        }
+
+        /**
+         * The port number of the service.
          */
         public Builder servicePort(Integer servicePort) {
             this.servicePort = servicePort;
@@ -209,7 +249,7 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceSpec.
+         * The specifications of the service.
          */
         public Builder serviceSpec(String serviceSpec) {
             this.serviceSpec = serviceSpec;
@@ -217,7 +257,13 @@ public class DescribeStreamingDataServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   Init
+         * *   Running
+         * *   Exception
+         * *   Paused
          */
         public Builder status(String status) {
             this.status = status;

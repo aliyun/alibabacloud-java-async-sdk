@@ -282,7 +282,10 @@ public class QueryCollectionDataRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the collection.
+         * <p>
+         * 
+         * >  You can call the [ListCollections](~~2401503~~) operation to query a list of collections.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -291,7 +294,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Content.
+         * The content that is used for full-text search. If you leave this parameter empty, only vector search is used. If you do not leave this parameter empty, two-way retrieval based on vector search and full-text search is used.
+         * <p>
+         * 
+         * >  You must specify at least one of the Content and Vector parameters.
          */
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
@@ -318,7 +324,14 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * HybridSearch.
+         * The two-way retrieval algorithm. This parameter is empty by default, which specifies that scores of vector search and full-text search are directly compared and sorted without additional weighting or adjustments.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   RRF: The reciprocal rank fusion (RRF) algorithm uses a constant k to control the fusion effect. For more information, see the description of the HybridSearchArgs parameter.
+         * *   Weight: This algorithm uses the alpha parameter to specify the proportion of the vector search score and the full-text search score and then sorts by weight. For more information, see the description of the HybridSearchArgs parameter.
+         * *   Cascaded: This algorithm performs first full-text search and then vector search.
          */
         public Builder hybridSearch(String hybridSearch) {
             this.putQueryParameter("HybridSearch", hybridSearch);
@@ -327,7 +340,28 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * HybridSearchArgs.
+         * The parameters of the two-way retrieval algorithm. The following parameters are supported:
+         * <p>
+         * 
+         * *   When HybridSearch is set to RRF, the scores are calculated by using the `1/(k+rank_i)` formula. The constant k is a positive integer that is greater than 1.
+         * 
+         * <!---->
+         * 
+         *     { 
+         *        "RRF": {
+         *         "k": 60
+         *        }
+         *     }
+         * 
+         * *   When HybridSearch is set to Weight, the scores are calculated by using the `alpha * vector_score + (1-alpha) * text_score` formula. The alpha parameter specifies the proportion of the vector search score and the full-text search score and ranges from 0 to 1. A value of 0 specifies full-text search and a value of 1 specifies vector search.
+         * 
+         * <!---->
+         * 
+         *     { 
+         *        "Weight": {
+         *         "alpha": 0.5
+         *        }
+         *     }
          */
         public Builder hybridSearchArgs(java.util.Map < String, java.util.Map<String, ?>> hybridSearchArgs) {
             String hybridSearchArgsShrink = shrink(hybridSearchArgs, "HybridSearchArgs", "json");
@@ -337,7 +371,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * IncludeMetadataFields.
+         * The metadata fields to be returned. Separate multiple fields with commas (,). This parameter is empty by default.
          */
         public Builder includeMetadataFields(String includeMetadataFields) {
             this.putQueryParameter("IncludeMetadataFields", includeMetadataFields);
@@ -346,7 +380,11 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * IncludeValues.
+         * Specifies whether to return vector data. Valid values:
+         * <p>
+         * 
+         * *   **true**: returns vector data.
+         * *   **false**: does not return vector data. In full-text search scenarios, set this parameter to false.
          */
         public Builder includeValues(Boolean includeValues) {
             this.putQueryParameter("IncludeValues", includeValues);
@@ -355,7 +393,14 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Metrics.
+         * The similarity algorithm for search. Valid values:
+         * <p>
+         * 
+         * *   **l2**: Euclidean distance.
+         * *   **ip**: inner product distance.
+         * *   **cosine**: cosine similarity.
+         * 
+         * >  If you leave this parameter empty, the l2, ip, or cosine algorithm that is specified when you create an index is used.
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);
@@ -364,7 +409,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace.
+         * <p>
+         * 
+         * >  You can call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -382,7 +430,14 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Offset.
+         * The starting point for paginated queries. This parameter is empty by default. This parameter does not support two-way retrieval scenarios.
+         * <p>
+         * 
+         * The value must be greater than or equal to 0. If you do not leave this parameter empty, the Total parameter is returned to indicate the total number of matched entries. You must specify this parameter and the TopK parameter in pairs. For example, to paginate 20 chunks at a time for a total of 45 chunks whose chunk_id values are 0 to 44, three requests are involved:
+         * 
+         * *   First request: Set the Offset value to 0 and the TopK value to 20. The chunks whose chunk_id values are 0 to 19 are returned.
+         * *   Second request: Set the Offset value to 20 and the TopK value to 20. The chunks whose chunk_id values are 20 to 39 are returned.
+         * *   Third request: Set the Offset value to 30 and the TopK value to 20. The chunks whose chunk_id values are 40 to 44 are returned.
          */
         public Builder offset(Integer offset) {
             this.putQueryParameter("Offset", offset);
@@ -391,7 +446,14 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * OrderBy.
+         * The fields by which to sort the results. This parameter is empty by default. This parameter does not support two-way retrieval scenarios.
+         * <p>
+         * 
+         * You must specify the default fields in the metadata or the table, such as id. You can specify the following number of fields:
+         * 
+         * *   One field, such as chunk_id.
+         * *   Multiple fields that are sorted in ascending order and separated by commas (,), such as block_id and chunk_id.
+         * *   Multiple fields that are sorted in descending order and separated by commas (,), such as block_id DESC, chunk_id DESC.
          */
         public Builder orderBy(String orderBy) {
             this.putQueryParameter("OrderBy", orderBy);
@@ -409,7 +471,7 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -427,7 +489,10 @@ public class QueryCollectionDataRequest extends Request {
         }
 
         /**
-         * Vector.
+         * The vector data. The length of the value must be the same as that of the Dimension parameter in the [CreateCollection](~~2401497~~) operation.
+         * <p>
+         * 
+         * >  If you leave this parameter empty, only full-text search results are returned.
          */
         public Builder vector(java.util.List < Double > vector) {
             String vectorShrink = shrink(vector, "Vector", "json");

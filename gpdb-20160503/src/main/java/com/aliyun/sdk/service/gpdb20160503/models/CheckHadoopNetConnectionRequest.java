@@ -83,7 +83,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class CheckHadoopNetConnectionRequest extends Request {
         }
 
         /**
-         * EmrInstanceId.
+         * The E-MapReduce (EMR) Hadoop cluster ID.
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);

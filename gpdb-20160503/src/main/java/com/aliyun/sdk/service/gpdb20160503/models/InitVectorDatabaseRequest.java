@@ -125,7 +125,10 @@ public class InitVectorDatabaseRequest extends Request {
         }
 
         /**
-         * The name of the database account that has the rds_superuser permission.
+         * The name of the manager account that has the rds_superuser permission.
+         * <p>
+         * 
+         * >  You can create an account on the Account Management page of the AnalyticDB for PostgreSQL console or by calling the [CreateAccount](~~2361789~~) operation.
          */
         public Builder managerAccount(String managerAccount) {
             this.putQueryParameter("ManagerAccount", managerAccount);
@@ -152,10 +155,10 @@ public class InitVectorDatabaseRequest extends Request {
         }
 
         /**
-         * The region ID.
+         * The region ID of the instance.
          * <p>
          * 
-         * > You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
+         * >  You can call the [DescribeRegions](~~86912~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

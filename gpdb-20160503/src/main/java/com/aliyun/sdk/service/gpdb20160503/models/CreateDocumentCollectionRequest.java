@@ -273,7 +273,40 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * EmbeddingModel.
+         * The vectorization algorithm.
+         * <p>
+         * 
+         * >  Valid values:
+         * 
+         * *   text-embedding-v1: the algorithm that produces 1536-dimensional vectors.
+         * 
+         * *   text-embedding-v2: the algorithm that produces 1536-dimensional vectors.
+         * 
+         * *   text2vec: the algorithm that produces 1024-dimensional vectors.
+         * 
+         * *   m3e-base: the algorithm that produces 768-dimensional vectors.
+         * 
+         * *   m3e-small: the algorithm that produces 512-dimensional vectors.
+         * 
+         * *   multimodal-embedding-one-peace-v1: the image vectorization algorithm that produces 1536-dimensional vectors.
+         * 
+         * *   clip-vit-b-32: the image vectorization algorithm that uses the Contrastive Language-Image Pre-Training (CLIP) ViT-B/32 model and produces 512-dimensional vectors.
+         * 
+         * *   clip-vit-b-16: the image vectorization algorithm that uses the CLIP ViT-B/16 model and produces 512-dimensional vectors.
+         * 
+         * *   clip-vit-l-14: the image vectorization algorithm that uses the CLIP ViT-L/14 model and produces 768-dimensional vectors.
+         * 
+         * *   clip-vit-l-14-336px: the image vectorization algorithm that uses the CLIP ViT-L/14@336px model and produces 768-dimensional vectors.
+         * 
+         * *   clip-rn50: the image vectorization algorithm that uses the CLIP RN50 model and produces 1024-dimensional vectors.
+         * 
+         * *   clip-rn101: the image vectorization algorithm that uses the CLIP RN101 model and produces 512-dimensional vectors.
+         * 
+         * *   clip-rn50x4: the image vectorization algorithm that uses the CLIP RN50x4 model and produces 640-dimensional vectors.
+         * 
+         * *   clip-rn50x16: the image vectorization algorithm that uses the CLIP RN50x16 model and produces 768-dimensional vectors.
+         * 
+         * *   clip-rn50x64: the image vectorization algorithm that uses the CLIP RN50x64 model and produces 1024-dimensional vectors.
          */
         public Builder embeddingModel(String embeddingModel) {
             this.putQueryParameter("EmbeddingModel", embeddingModel);
@@ -282,7 +315,14 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * ExternalStorage.
+         * Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.
+         * <p>
+         * 
+         * > 
+         * 
+         * *   0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.
+         * 
+         * *   1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.
          */
         public Builder externalStorage(Integer externalStorage) {
             this.putQueryParameter("ExternalStorage", externalStorage);
@@ -300,7 +340,18 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * HnswM.
+         * The maximum number of neighbors for the Hierarchical Navigable Small World (HNSW) algorithm. Valid values: 1 to 1000. In most cases, this parameter is automatically configured based on the value of the Dimension parameter. You do not need to configure this parameter.
+         * <p>
+         * 
+         * >  We recommend that you configure this parameter based on the value of the Dimension parameter.
+         * 
+         * *   If you set Dimension to a value less than or equal to 384, set the value of HnswM to 16.
+         * 
+         * *   If you set Dimension to a value greater than 384 and less than or equal to 768, set the value of HnswM to 32.
+         * 
+         * *   If you set Dimension to a value greater than 768 and less than or equal to 1024, set the value of HnswM to 64.
+         * 
+         * *   If you set Dimension to a value greater than 1024, set the value of HnswM to 128.
          */
         public Builder hnswM(Integer hnswM) {
             this.putQueryParameter("HnswM", hnswM);
@@ -372,7 +423,11 @@ public class CreateDocumentCollectionRequest extends Request {
         }
 
         /**
-         * PqEnable.
+         * Specifies whether to enable the product quantization (PQ) feature for index acceleration. We recommend that you enable this feature for more than 500,000 rows of data. Valid values:
+         * <p>
+         * 
+         * *   0: no.
+         * *   1 (default): yes.
          */
         public Builder pqEnable(Integer pqEnable) {
             this.putQueryParameter("PqEnable", pqEnable);

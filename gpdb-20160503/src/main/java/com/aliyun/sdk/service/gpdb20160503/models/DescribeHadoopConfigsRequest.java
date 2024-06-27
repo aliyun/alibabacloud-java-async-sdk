@@ -98,7 +98,14 @@ public class DescribeHadoopConfigsRequest extends Request {
         } 
 
         /**
-         * ConfigName.
+         * The name of the configuration file. Valid values:
+         * <p>
+         * 
+         * *   hdfs-site
+         * *   core-site
+         * *   yarn-site
+         * *   mapred-site
+         * *   hive-site
          */
         public Builder configName(String configName) {
             this.putQueryParameter("ConfigName", configName);
@@ -107,7 +114,7 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -116,7 +123,7 @@ public class DescribeHadoopConfigsRequest extends Request {
         }
 
         /**
-         * EmrInstanceId.
+         * The E-MapReduce (EMR) Hadoop cluster ID.
          */
         public Builder emrInstanceId(String emrInstanceId) {
             this.putQueryParameter("EmrInstanceId", emrInstanceId);

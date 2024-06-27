@@ -49,7 +49,7 @@ public class DescribeRolesResponseBody extends TeaModel {
         private RoleList roleList; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribeRolesResponseBody extends TeaModel {
         }
 
         /**
-         * RoleList.
+         * The roles.
          */
         public Builder roleList(RoleList roleList) {
             this.roleList = roleList;

@@ -142,7 +142,10 @@ public class DescribeDocumentRequest extends Request {
         } 
 
         /**
-         * Collection.
+         * The name of the document collection.
+         * <p>
+         * 
+         * >  You can call the [CreateDocumentCollection](~~2618448~~) operation to create a document collection and call the [ListDocumentCollections](~~2618452~~) operation to query a list of document collections.
          */
         public Builder collection(String collection) {
             this.putQueryParameter("Collection", collection);
@@ -160,7 +163,10 @@ public class DescribeDocumentRequest extends Request {
         }
 
         /**
-         * FileName.
+         * The name of the document.
+         * <p>
+         * 
+         * >  You can call the [ListDocuments](~~2618453~~) operation to query a list of documents.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -169,7 +175,10 @@ public class DescribeDocumentRequest extends Request {
         }
 
         /**
-         * Namespace.
+         * The name of the namespace. Default value: public.
+         * <p>
+         * 
+         * >  You can call the [CreateNamespace](~~2401495~~) operation to create a namespace and call the [ListNamespaces](~~2401502~~) operation to query a list of namespaces.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("Namespace", namespace);
@@ -178,7 +187,10 @@ public class DescribeDocumentRequest extends Request {
         }
 
         /**
-         * NamespacePassword.
+         * The password of the namespace.
+         * <p>
+         * 
+         * >  This value is specified when you call the [CreateNamespace](~~2401495~~) operation.
          */
         public Builder namespacePassword(String namespacePassword) {
             this.putQueryParameter("NamespacePassword", namespacePassword);

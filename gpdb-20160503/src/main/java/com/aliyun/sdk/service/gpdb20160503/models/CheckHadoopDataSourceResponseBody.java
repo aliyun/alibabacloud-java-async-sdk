@@ -61,7 +61,7 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Message.
+         * The returned message. If the service failed, an error message is returned. Otherwise, a pair of double quotation marks ("") is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -69,7 +69,7 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,11 @@ public class CheckHadoopDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   Running
+         * *   Failed
          */
         public Builder status(String status) {
             this.status = status;

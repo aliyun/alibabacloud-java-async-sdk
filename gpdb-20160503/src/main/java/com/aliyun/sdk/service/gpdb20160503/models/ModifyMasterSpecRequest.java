@@ -96,7 +96,7 @@ public class ModifyMasterSpecRequest extends Request {
         } 
 
         /**
-         * DBInstanceDescription.
+         * The description of the instance.
          */
         public Builder DBInstanceDescription(String DBInstanceDescription) {
             this.putQueryParameter("DBInstanceDescription", DBInstanceDescription);
@@ -105,7 +105,10 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * DBInstanceId.
+         * The instance ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeDBInstances](~~86911~~) operation to query the IDs of all AnalyticDB for PostgreSQL instances in a region.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -114,7 +117,16 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * MasterCU.
+         * The specifications of coordinator node resources. Valid values:
+         * <p>
+         * 
+         * *   2 CU
+         * *   4 CU
+         * *   8 CU
+         * *   16 CU
+         * *   32 CU
+         * 
+         * >  You are charged for coordinator node resources of more than 8 compute units (CUs).
          */
         public Builder masterCU(Integer masterCU) {
             this.putQueryParameter("MasterCU", masterCU);
@@ -123,7 +135,7 @@ public class ModifyMasterSpecRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the instance belongs. For information about how to obtain the ID of a resource group, see [View basic information of a resource group](~~151181~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);

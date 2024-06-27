@@ -73,7 +73,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * Job.
+         * The information about the vector data upload job.
          */
         public Builder job(Job job) {
             this.job = job;
@@ -81,7 +81,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -89,7 +89,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,11 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the operation. Valid values:
+         * <p>
+         * 
+         * *   **success**
+         * *   **fail**
          */
         public Builder status(String status) {
             this.status = status;
@@ -209,7 +213,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * Completed.
+             * Indicates whether the operation is complete.
              */
             public Builder completed(Boolean completed) {
                 this.completed = completed;
@@ -217,7 +221,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -225,7 +229,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * Error.
+             * The error message.
              */
             public Builder error(String error) {
                 this.error = error;
@@ -233,7 +237,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * Job ID。
+             * The job ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -241,7 +245,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The progress of the vector data upload job. The value of this parameter indicates the number of data entries that have been uploaded.
              */
             public Builder progress(Integer progress) {
                 this.progress = progress;
@@ -249,7 +253,22 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the job.
+             * <p>
+             * 
+             * >  Valid values:
+             * 
+             * *   Success
+             * 
+             * *   Failed (See the Error parameter for failure reasons.)
+             * 
+             * *   Cancelling
+             * 
+             * *   Cancelled
+             * 
+             * *   Start
+             * 
+             * *   Running
              */
             public Builder status(String status) {
                 this.status = status;
@@ -257,7 +276,7 @@ public class GetUpsertCollectionDataJobResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the job was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;

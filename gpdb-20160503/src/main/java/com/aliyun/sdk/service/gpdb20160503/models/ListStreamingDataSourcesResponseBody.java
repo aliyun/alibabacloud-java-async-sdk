@@ -73,7 +73,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         private Integer totalRecordCount; 
 
         /**
-         * DataSourceItems.
+         * The queried data sources.
          */
         public Builder dataSourceItems(java.util.List < DataSourceItems> dataSourceItems) {
             this.dataSourceItems = dataSourceItems;
@@ -81,7 +81,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -89,7 +89,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalRecordCount.
+         * The total number of entries returned.
          */
         public Builder totalRecordCount(Integer totalRecordCount) {
             this.totalRecordCount = totalRecordCount;
@@ -245,7 +245,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * CreateTime.
+             * The time when the data source was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -253,7 +253,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceConfig.
+             * The configurations of the data source.
              */
             public Builder dataSourceConfig(String dataSourceConfig) {
                 this.dataSourceConfig = dataSourceConfig;
@@ -261,7 +261,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceDescription.
+             * The description of the data source.
              */
             public Builder dataSourceDescription(String dataSourceDescription) {
                 this.dataSourceDescription = dataSourceDescription;
@@ -269,7 +269,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceId.
+             * The data source ID.
              */
             public Builder dataSourceId(Integer dataSourceId) {
                 this.dataSourceId = dataSourceId;
@@ -277,7 +277,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceName.
+             * The name of the data source.
              */
             public Builder dataSourceName(String dataSourceName) {
                 this.dataSourceName = dataSourceName;
@@ -285,7 +285,10 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * DataSourceType.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   kafka
              */
             public Builder dataSourceType(String dataSourceType) {
                 this.dataSourceType = dataSourceType;
@@ -293,7 +296,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The information about the service status. For example, if the service is in the exception state, the cause of the exception is displayed. If the service is in the running state, this parameter is left empty.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -301,7 +304,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifyTime.
+             * The time when the data source was last modified.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -309,7 +312,7 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(Integer serviceId) {
                 this.serviceId = serviceId;
@@ -317,7 +320,12 @@ public class ListStreamingDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service. Valid values:
+             * <p>
+             * 
+             * *   init
+             * *   running
+             * *   exception
              */
             public Builder status(String status) {
                 this.status = status;

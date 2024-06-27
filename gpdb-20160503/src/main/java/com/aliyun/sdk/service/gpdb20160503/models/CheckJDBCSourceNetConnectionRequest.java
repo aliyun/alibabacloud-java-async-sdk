@@ -83,7 +83,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         } 
 
         /**
-         * DBInstanceId.
+         * The instance ID.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -92,7 +92,7 @@ public class CheckJDBCSourceNetConnectionRequest extends Request {
         }
 
         /**
-         * JdbcConnectionString.
+         * The JDBC connection string.
          */
         public Builder jdbcConnectionString(String jdbcConnectionString) {
             this.putQueryParameter("JdbcConnectionString", jdbcConnectionString);
