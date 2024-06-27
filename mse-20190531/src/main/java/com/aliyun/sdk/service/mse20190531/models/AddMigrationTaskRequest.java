@@ -40,6 +40,10 @@ public class AddMigrationTaskRequest extends Request {
     private String requestPars;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SyncType")
+    private String syncType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("TargetClusterName")
     private String targetClusterName;
 
@@ -60,6 +64,7 @@ public class AddMigrationTaskRequest extends Request {
         this.originInstanceNamespace = builder.originInstanceNamespace;
         this.projectDesc = builder.projectDesc;
         this.requestPars = builder.requestPars;
+        this.syncType = builder.syncType;
         this.targetClusterName = builder.targetClusterName;
         this.targetClusterUrl = builder.targetClusterUrl;
         this.targetInstanceId = builder.targetInstanceId;
@@ -128,6 +133,13 @@ public class AddMigrationTaskRequest extends Request {
     }
 
     /**
+     * @return syncType
+     */
+    public String getSyncType() {
+        return this.syncType;
+    }
+
+    /**
      * @return targetClusterName
      */
     public String getTargetClusterName() {
@@ -156,6 +168,7 @@ public class AddMigrationTaskRequest extends Request {
         private String originInstanceNamespace; 
         private String projectDesc; 
         private String requestPars; 
+        private String syncType; 
         private String targetClusterName; 
         private String targetClusterUrl; 
         private String targetInstanceId; 
@@ -173,6 +186,7 @@ public class AddMigrationTaskRequest extends Request {
             this.originInstanceNamespace = request.originInstanceNamespace;
             this.projectDesc = request.projectDesc;
             this.requestPars = request.requestPars;
+            this.syncType = request.syncType;
             this.targetClusterName = request.targetClusterName;
             this.targetClusterUrl = request.targetClusterUrl;
             this.targetInstanceId = request.targetInstanceId;
@@ -247,6 +261,15 @@ public class AddMigrationTaskRequest extends Request {
         public Builder requestPars(String requestPars) {
             this.putQueryParameter("RequestPars", requestPars);
             this.requestPars = requestPars;
+            return this;
+        }
+
+        /**
+         * SyncType.
+         */
+        public Builder syncType(String syncType) {
+            this.putQueryParameter("SyncType", syncType);
+            this.syncType = syncType;
             return this;
         }
 

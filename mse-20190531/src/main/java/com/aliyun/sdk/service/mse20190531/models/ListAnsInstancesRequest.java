@@ -17,6 +17,7 @@ public class ListAnsInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @Deprecated
     private String clusterId;
 
     @com.aliyun.core.annotation.Query

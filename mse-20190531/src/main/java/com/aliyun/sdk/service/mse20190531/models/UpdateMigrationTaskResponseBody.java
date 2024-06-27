@@ -179,6 +179,9 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProjectDesc")
         private String projectDesc;
 
+        @com.aliyun.core.annotation.NameInMap("SyncType")
+        private String syncType;
+
         @com.aliyun.core.annotation.NameInMap("TargetClusterName")
         private String targetClusterName;
 
@@ -200,6 +203,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             this.originInstanceName = builder.originInstanceName;
             this.originInstanceNamespace = builder.originInstanceNamespace;
             this.projectDesc = builder.projectDesc;
+            this.syncType = builder.syncType;
             this.targetClusterName = builder.targetClusterName;
             this.targetClusterUrl = builder.targetClusterUrl;
             this.targetInstanceId = builder.targetInstanceId;
@@ -271,6 +275,13 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return syncType
+         */
+        public String getSyncType() {
+            return this.syncType;
+        }
+
+        /**
          * @return targetClusterName
          */
         public String getTargetClusterName() {
@@ -307,6 +318,7 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
             private String originInstanceName; 
             private String originInstanceNamespace; 
             private String projectDesc; 
+            private String syncType; 
             private String targetClusterName; 
             private String targetClusterUrl; 
             private String targetInstanceId; 
@@ -378,6 +390,14 @@ public class UpdateMigrationTaskResponseBody extends TeaModel {
              */
             public Builder projectDesc(String projectDesc) {
                 this.projectDesc = projectDesc;
+                return this;
+            }
+
+            /**
+             * SyncType.
+             */
+            public Builder syncType(String syncType) {
+                this.syncType = syncType;
                 return this;
             }
 

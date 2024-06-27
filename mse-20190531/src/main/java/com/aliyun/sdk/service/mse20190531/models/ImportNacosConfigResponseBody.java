@@ -201,9 +201,13 @@ public class ImportNacosConfigResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Group")
         private String group;
 
+        @com.aliyun.core.annotation.NameInMap("Reason")
+        private String reason;
+
         private FailData(Builder builder) {
             this.dataId = builder.dataId;
             this.group = builder.group;
+            this.reason = builder.reason;
         }
 
         public static Builder builder() {
@@ -228,9 +232,17 @@ public class ImportNacosConfigResponseBody extends TeaModel {
             return this.group;
         }
 
+        /**
+         * @return reason
+         */
+        public String getReason() {
+            return this.reason;
+        }
+
         public static final class Builder {
             private String dataId; 
             private String group; 
+            private String reason; 
 
             /**
              * The ID of the group.
@@ -245,6 +257,14 @@ public class ImportNacosConfigResponseBody extends TeaModel {
              */
             public Builder group(String group) {
                 this.group = group;
+                return this;
+            }
+
+            /**
+             * Reason.
+             */
+            public Builder reason(String reason) {
+                this.reason = reason;
                 return this;
             }
 
