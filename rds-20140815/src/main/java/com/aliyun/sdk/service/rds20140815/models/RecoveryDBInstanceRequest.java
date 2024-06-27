@@ -326,11 +326,10 @@ public class RecoveryDBInstanceRequest extends Request {
         }
 
         /**
-         * The name of the database.
+         * The name of the database. When you restore data to a new instance, the format of the database name is `Original database name 1,New database name 2`.
          * <p>
          * 
-         * *   If you want to restore databases to a new instance, the value is in the format of `Original database name 1,New database name 2`.
-         * *   If you want to restore databases to an existing instance, the value is in the format of `{"Original database name 1":"New database name 1","Original database name 2":"New database name 2"`.
+         * >  For more information about how to restore data to an existing instance, see [CopyDatabaseBetweenInstances](~~2628854~~).
          */
         public Builder dbNames(String dbNames) {
             this.putQueryParameter("DbNames", dbNames);

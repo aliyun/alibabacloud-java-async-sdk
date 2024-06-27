@@ -911,11 +911,8 @@ public class CloneDBInstanceRequest extends Request {
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**
              * *   Serverless ApsaraDB RDS for PostgreSQL instances: **1 to 12**
              * 
-             * > 
-             * 
-             * *   The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
-             * 
-             * *   This parameter is available only on the China site (aliyun.com).
+             * > *   The value of this parameter must be greater than or equal to the value of **MinCapacity** and can be specified only to an **integer**.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder maxCapacity(Double maxCapacity) {
                 this.maxCapacity = maxCapacity;
@@ -930,11 +927,8 @@ public class CloneDBInstanceRequest extends Request {
              * *   Serverless ApsaraDB RDS for SQL Server instances: **2 to 8**. Only integers are supported.
              * *   Serverless ApsaraDB RDS for PostgreSQL instances: **0.5 to 12**.
              * 
-             * > 
-             * 
-             * *   The value of this parameter must be less than or equal to the value of **MaxCapacity**.
-             * 
-             * *   This parameter is available only on the China site (aliyun.com).
+             * > *   The value of this parameter must be less than or equal to the value of **MaxCapacity**.
+             * > *   This parameter is available only on the China site (aliyun.com).
              */
             public Builder minCapacity(Double minCapacity) {
                 this.minCapacity = minCapacity;
