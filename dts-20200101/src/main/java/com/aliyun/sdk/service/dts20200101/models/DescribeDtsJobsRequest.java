@@ -16,6 +16,10 @@ public class DescribeDtsJobsRequest extends Request {
     private String dedicatedClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DestProductType")
+    private String destProductType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DtsBisLabel")
     private String dtsBisLabel;
 
@@ -82,6 +86,10 @@ public class DescribeDtsJobsRequest extends Request {
     private String resourceGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SrcProductType")
+    private String srcProductType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -104,6 +112,7 @@ public class DescribeDtsJobsRequest extends Request {
     private DescribeDtsJobsRequest(Builder builder) {
         super(builder);
         this.dedicatedClusterId = builder.dedicatedClusterId;
+        this.destProductType = builder.destProductType;
         this.dtsBisLabel = builder.dtsBisLabel;
         this.dtsInstanceId = builder.dtsInstanceId;
         this.dtsJobId = builder.dtsJobId;
@@ -120,6 +129,7 @@ public class DescribeDtsJobsRequest extends Request {
         this.region = builder.region;
         this.regionId = builder.regionId;
         this.resourceGroupId = builder.resourceGroupId;
+        this.srcProductType = builder.srcProductType;
         this.status = builder.status;
         this.tags = builder.tags;
         this.type = builder.type;
@@ -145,6 +155,13 @@ public class DescribeDtsJobsRequest extends Request {
      */
     public String getDedicatedClusterId() {
         return this.dedicatedClusterId;
+    }
+
+    /**
+     * @return destProductType
+     */
+    public String getDestProductType() {
+        return this.destProductType;
     }
 
     /**
@@ -260,6 +277,13 @@ public class DescribeDtsJobsRequest extends Request {
     }
 
     /**
+     * @return srcProductType
+     */
+    public String getSrcProductType() {
+        return this.srcProductType;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -296,6 +320,7 @@ public class DescribeDtsJobsRequest extends Request {
 
     public static final class Builder extends Request.Builder<DescribeDtsJobsRequest, Builder> {
         private String dedicatedClusterId; 
+        private String destProductType; 
         private String dtsBisLabel; 
         private String dtsInstanceId; 
         private String dtsJobId; 
@@ -312,6 +337,7 @@ public class DescribeDtsJobsRequest extends Request {
         private String region; 
         private String regionId; 
         private String resourceGroupId; 
+        private String srcProductType; 
         private String status; 
         private String tags; 
         private String type; 
@@ -325,6 +351,7 @@ public class DescribeDtsJobsRequest extends Request {
         private Builder(DescribeDtsJobsRequest request) {
             super(request);
             this.dedicatedClusterId = request.dedicatedClusterId;
+            this.destProductType = request.destProductType;
             this.dtsBisLabel = request.dtsBisLabel;
             this.dtsInstanceId = request.dtsInstanceId;
             this.dtsJobId = request.dtsJobId;
@@ -341,6 +368,7 @@ public class DescribeDtsJobsRequest extends Request {
             this.region = request.region;
             this.regionId = request.regionId;
             this.resourceGroupId = request.resourceGroupId;
+            this.srcProductType = request.srcProductType;
             this.status = request.status;
             this.tags = request.tags;
             this.type = request.type;
@@ -354,6 +382,15 @@ public class DescribeDtsJobsRequest extends Request {
         public Builder dedicatedClusterId(String dedicatedClusterId) {
             this.putQueryParameter("DedicatedClusterId", dedicatedClusterId);
             this.dedicatedClusterId = dedicatedClusterId;
+            return this;
+        }
+
+        /**
+         * DestProductType.
+         */
+        public Builder destProductType(String destProductType) {
+            this.putQueryParameter("DestProductType", destProductType);
+            this.destProductType = destProductType;
             return this;
         }
 
@@ -524,6 +561,15 @@ public class DescribeDtsJobsRequest extends Request {
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
             this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+
+        /**
+         * SrcProductType.
+         */
+        public Builder srcProductType(String srcProductType) {
+            this.putQueryParameter("SrcProductType", srcProductType);
+            this.srcProductType = srcProductType;
             return this;
         }
 
