@@ -4293,6 +4293,87 @@ public class UpdateEventStreamingRequest extends Request {
         } 
 
     }
+    public static class HeaderParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private HeaderParameters(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static HeaderParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that you want to use to transform events. Default value: JSONPATH.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The metric data.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public HeaderParameters build() {
+                return new HeaderParameters(this);
+            } 
+
+        } 
+
+    }
     public static class NetworkType extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -4867,6 +4948,9 @@ public class UpdateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
+        @com.aliyun.core.annotation.NameInMap("HeaderParameters")
+        private HeaderParameters headerParameters;
+
         @com.aliyun.core.annotation.NameInMap("NetworkType")
         private NetworkType networkType;
 
@@ -4891,6 +4975,7 @@ public class UpdateEventStreamingRequest extends Request {
         private SinkPrometheusParameters(Builder builder) {
             this.authorizationType = builder.authorizationType;
             this.data = builder.data;
+            this.headerParameters = builder.headerParameters;
             this.networkType = builder.networkType;
             this.password = builder.password;
             this.securityGroupId = builder.securityGroupId;
@@ -4920,6 +5005,13 @@ public class UpdateEventStreamingRequest extends Request {
          */
         public Data getData() {
             return this.data;
+        }
+
+        /**
+         * @return headerParameters
+         */
+        public HeaderParameters getHeaderParameters() {
+            return this.headerParameters;
         }
 
         /**
@@ -4974,6 +5066,7 @@ public class UpdateEventStreamingRequest extends Request {
         public static final class Builder {
             private AuthorizationType authorizationType; 
             private Data data; 
+            private HeaderParameters headerParameters; 
             private NetworkType networkType; 
             private Password password; 
             private SecurityGroupId securityGroupId; 
@@ -4995,6 +5088,14 @@ public class UpdateEventStreamingRequest extends Request {
              */
             public Builder data(Data data) {
                 this.data = data;
+                return this;
+            }
+
+            /**
+             * HeaderParameters.
+             */
+            public Builder headerParameters(HeaderParameters headerParameters) {
+                this.headerParameters = headerParameters;
                 return this;
             }
 
