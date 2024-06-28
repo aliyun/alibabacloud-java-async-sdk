@@ -21,6 +21,10 @@ public class DeleteContainerGroupRequest extends Request {
     private String containerGroupId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
+    private Boolean force;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
@@ -45,6 +49,7 @@ public class DeleteContainerGroupRequest extends Request {
         super(builder);
         this.clientToken = builder.clientToken;
         this.containerGroupId = builder.containerGroupId;
+        this.force = builder.force;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -77,6 +82,13 @@ public class DeleteContainerGroupRequest extends Request {
      */
     public String getContainerGroupId() {
         return this.containerGroupId;
+    }
+
+    /**
+     * @return force
+     */
+    public Boolean getForce() {
+        return this.force;
     }
 
     /**
@@ -117,6 +129,7 @@ public class DeleteContainerGroupRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteContainerGroupRequest, Builder> {
         private String clientToken; 
         private String containerGroupId; 
+        private Boolean force; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -131,6 +144,7 @@ public class DeleteContainerGroupRequest extends Request {
             super(request);
             this.clientToken = request.clientToken;
             this.containerGroupId = request.containerGroupId;
+            this.force = request.force;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -153,6 +167,15 @@ public class DeleteContainerGroupRequest extends Request {
         public Builder containerGroupId(String containerGroupId) {
             this.putQueryParameter("ContainerGroupId", containerGroupId);
             this.containerGroupId = containerGroupId;
+            return this;
+        }
+
+        /**
+         * Force.
+         */
+        public Builder force(Boolean force) {
+            this.putQueryParameter("Force", force);
+            this.force = force;
             return this;
         }
 
