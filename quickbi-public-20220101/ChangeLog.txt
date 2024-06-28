@@ -1,3 +1,6 @@
+2024-06-28 Version: 1.1.14
+- Generated java-async 2022-01-01 for quickbi-public.
+
 2024-06-27 Version: 1.1.13
 - Generated java-async 2022-01-01 for quickbi-public.
 
