@@ -48,6 +48,10 @@ public class EkycVerifyRequest extends Request {
     private String idOcrPictureUrl;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdThreshold")
+    private String idThreshold;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MerchantBizId")
     private String merchantBizId;
 
@@ -70,6 +74,7 @@ public class EkycVerifyRequest extends Request {
         this.facePictureUrl = builder.facePictureUrl;
         this.idOcrPictureBase64 = builder.idOcrPictureBase64;
         this.idOcrPictureUrl = builder.idOcrPictureUrl;
+        this.idThreshold = builder.idThreshold;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.productCode = builder.productCode;
@@ -152,6 +157,13 @@ public class EkycVerifyRequest extends Request {
     }
 
     /**
+     * @return idThreshold
+     */
+    public String getIdThreshold() {
+        return this.idThreshold;
+    }
+
+    /**
      * @return merchantBizId
      */
     public String getMerchantBizId() {
@@ -182,6 +194,7 @@ public class EkycVerifyRequest extends Request {
         private String facePictureUrl; 
         private String idOcrPictureBase64; 
         private String idOcrPictureUrl; 
+        private String idThreshold; 
         private String merchantBizId; 
         private String merchantUserId; 
         private String productCode; 
@@ -201,6 +214,7 @@ public class EkycVerifyRequest extends Request {
             this.facePictureUrl = request.facePictureUrl;
             this.idOcrPictureBase64 = request.idOcrPictureBase64;
             this.idOcrPictureUrl = request.idOcrPictureUrl;
+            this.idThreshold = request.idThreshold;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.productCode = request.productCode;
@@ -284,6 +298,15 @@ public class EkycVerifyRequest extends Request {
         public Builder idOcrPictureUrl(String idOcrPictureUrl) {
             this.putQueryParameter("IdOcrPictureUrl", idOcrPictureUrl);
             this.idOcrPictureUrl = idOcrPictureUrl;
+            return this;
+        }
+
+        /**
+         * IdThreshold.
+         */
+        public Builder idThreshold(String idThreshold) {
+            this.putQueryParameter("IdThreshold", idThreshold);
+            this.idThreshold = idThreshold;
             return this;
         }
 

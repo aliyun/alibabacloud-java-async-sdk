@@ -36,6 +36,10 @@ public class InitializeRequest extends Request {
     private String docType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DocVideo")
+    private String docVideo;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ExperienceCode")
     private String experienceCode;
 
@@ -56,6 +60,10 @@ public class InitializeRequest extends Request {
     private String idSpoof;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdThreshold")
+    private String idThreshold;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("LanguageConfig")
     private String languageConfig;
 
@@ -70,6 +78,10 @@ public class InitializeRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MetaInfo")
     private String metaInfo;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Model")
+    private String model;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Ocr")
@@ -107,15 +119,18 @@ public class InitializeRequest extends Request {
         this.crop = builder.crop;
         this.docScanMode = builder.docScanMode;
         this.docType = builder.docType;
+        this.docVideo = builder.docVideo;
         this.experienceCode = builder.experienceCode;
         this.facePictureBase64 = builder.facePictureBase64;
         this.facePictureUrl = builder.facePictureUrl;
         this.idFaceQuality = builder.idFaceQuality;
         this.idSpoof = builder.idSpoof;
+        this.idThreshold = builder.idThreshold;
         this.languageConfig = builder.languageConfig;
         this.merchantBizId = builder.merchantBizId;
         this.merchantUserId = builder.merchantUserId;
         this.metaInfo = builder.metaInfo;
+        this.model = builder.model;
         this.ocr = builder.ocr;
         this.productCode = builder.productCode;
         this.productFlow = builder.productFlow;
@@ -181,6 +196,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return docVideo
+     */
+    public String getDocVideo() {
+        return this.docVideo;
+    }
+
+    /**
      * @return experienceCode
      */
     public String getExperienceCode() {
@@ -216,6 +238,13 @@ public class InitializeRequest extends Request {
     }
 
     /**
+     * @return idThreshold
+     */
+    public String getIdThreshold() {
+        return this.idThreshold;
+    }
+
+    /**
      * @return languageConfig
      */
     public String getLanguageConfig() {
@@ -241,6 +270,13 @@ public class InitializeRequest extends Request {
      */
     public String getMetaInfo() {
         return this.metaInfo;
+    }
+
+    /**
+     * @return model
+     */
+    public String getModel() {
+        return this.model;
     }
 
     /**
@@ -299,15 +335,18 @@ public class InitializeRequest extends Request {
         private String crop; 
         private String docScanMode; 
         private String docType; 
+        private String docVideo; 
         private String experienceCode; 
         private String facePictureBase64; 
         private String facePictureUrl; 
         private String idFaceQuality; 
         private String idSpoof; 
+        private String idThreshold; 
         private String languageConfig; 
         private String merchantBizId; 
         private String merchantUserId; 
         private String metaInfo; 
+        private String model; 
         private String ocr; 
         private String productCode; 
         private String productFlow; 
@@ -328,15 +367,18 @@ public class InitializeRequest extends Request {
             this.crop = request.crop;
             this.docScanMode = request.docScanMode;
             this.docType = request.docType;
+            this.docVideo = request.docVideo;
             this.experienceCode = request.experienceCode;
             this.facePictureBase64 = request.facePictureBase64;
             this.facePictureUrl = request.facePictureUrl;
             this.idFaceQuality = request.idFaceQuality;
             this.idSpoof = request.idSpoof;
+            this.idThreshold = request.idThreshold;
             this.languageConfig = request.languageConfig;
             this.merchantBizId = request.merchantBizId;
             this.merchantUserId = request.merchantUserId;
             this.metaInfo = request.metaInfo;
+            this.model = request.model;
             this.ocr = request.ocr;
             this.productCode = request.productCode;
             this.productFlow = request.productFlow;
@@ -401,6 +443,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * DocVideo.
+         */
+        public Builder docVideo(String docVideo) {
+            this.putQueryParameter("DocVideo", docVideo);
+            this.docVideo = docVideo;
+            return this;
+        }
+
+        /**
          * ExperienceCode.
          */
         public Builder experienceCode(String experienceCode) {
@@ -446,6 +497,15 @@ public class InitializeRequest extends Request {
         }
 
         /**
+         * IdThreshold.
+         */
+        public Builder idThreshold(String idThreshold) {
+            this.putQueryParameter("IdThreshold", idThreshold);
+            this.idThreshold = idThreshold;
+            return this;
+        }
+
+        /**
          * LanguageConfig.
          */
         public Builder languageConfig(String languageConfig) {
@@ -478,6 +538,15 @@ public class InitializeRequest extends Request {
         public Builder metaInfo(String metaInfo) {
             this.putQueryParameter("MetaInfo", metaInfo);
             this.metaInfo = metaInfo;
+            return this;
+        }
+
+        /**
+         * Model.
+         */
+        public Builder model(String model) {
+            this.putQueryParameter("Model", model);
+            this.model = model;
             return this;
         }
 
