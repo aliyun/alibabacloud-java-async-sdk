@@ -133,7 +133,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * ArtifactId.
+         * The ID of the artifact.
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -141,7 +141,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactProperty.
+         * The content of the artifact.
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -149,7 +149,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactType.
+         * The type of the artifact.
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -157,7 +157,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactVersion.
+         * The version of the artifact.
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -165,7 +165,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the artifact.
          */
         public Builder description(String description) {
             this.description = description;
@@ -173,7 +173,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * The time when the artifact was modified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -181,7 +181,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -189,7 +189,15 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the artifact. Valid values:
+         * <p>
+         * 
+         * *   Created: The artifact is created.
+         * *   Scanning: The artifact is being scanned.
+         * *   ScanFailed: The artifact failed to be scanned.
+         * *   Delivering: The artifact is being distributed.
+         * *   Available: The artifact is available.
+         * *   Deleted: The artifact is deleted.
          */
         public Builder status(String status) {
             this.status = status;
@@ -197,7 +205,7 @@ public class ReleaseArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * The version name of the artifact.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

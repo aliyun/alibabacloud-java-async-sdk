@@ -54,7 +54,7 @@ public class ReleaseArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * The ID of the artifact.
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);

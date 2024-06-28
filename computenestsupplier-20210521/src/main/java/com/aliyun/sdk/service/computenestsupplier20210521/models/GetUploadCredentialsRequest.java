@@ -16,9 +16,14 @@ public class GetUploadCredentialsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Visibility")
+    private String visibility;
+
     private GetUploadCredentialsRequest(Builder builder) {
         super(builder);
         this.fileName = builder.fileName;
+        this.visibility = builder.visibility;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class GetUploadCredentialsRequest extends Request {
         return this.fileName;
     }
 
+    /**
+     * @return visibility
+     */
+    public String getVisibility() {
+        return this.visibility;
+    }
+
     public static final class Builder extends Request.Builder<GetUploadCredentialsRequest, Builder> {
         private String fileName; 
+        private String visibility; 
 
         private Builder() {
             super();
@@ -51,6 +64,7 @@ public class GetUploadCredentialsRequest extends Request {
         private Builder(GetUploadCredentialsRequest request) {
             super(request);
             this.fileName = request.fileName;
+            this.visibility = request.visibility;
         } 
 
         /**
@@ -59,6 +73,15 @@ public class GetUploadCredentialsRequest extends Request {
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
             this.fileName = fileName;
+            return this;
+        }
+
+        /**
+         * Visibility.
+         */
+        public Builder visibility(String visibility) {
+            this.putQueryParameter("Visibility", visibility);
+            this.visibility = visibility;
             return this;
         }
 

@@ -123,7 +123,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,7 +132,11 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * EnableUserPrometheus.
+         * Specifies whether to enable Prometheus on the customer side. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.putQueryParameter("EnableUserPrometheus", enableUserPrometheus);
@@ -141,7 +145,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * OperationName.
+         * The name of the configuration update operation.
          */
         public Builder operationName(String operationName) {
             this.putQueryParameter("OperationName", operationName);
@@ -150,7 +154,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The configuration parameters of the service instance.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -160,7 +164,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * PredefinedParametersName.
+         * The name of the specification package.
          */
         public Builder predefinedParametersName(String predefinedParametersName) {
             this.putQueryParameter("PredefinedParametersName", predefinedParametersName);
@@ -169,7 +173,7 @@ public class UpdateServiceInstanceSpecRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The service instance ID.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

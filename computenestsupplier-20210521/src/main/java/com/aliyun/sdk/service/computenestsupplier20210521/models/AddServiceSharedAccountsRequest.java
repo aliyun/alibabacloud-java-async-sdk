@@ -112,7 +112,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -121,7 +121,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -130,7 +130,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -139,7 +139,7 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * SharedAccounts.
+         * The shared account and permissions of the service.
          */
         public Builder sharedAccounts(java.util.List < SharedAccounts> sharedAccounts) {
             this.putQueryParameter("SharedAccounts", sharedAccounts);
@@ -148,7 +148,11 @@ public class AddServiceSharedAccountsRequest extends Request {
         }
 
         /**
-         * Type.
+         * The share type of the service. Default value: SharedAccount. Valid values:
+         * <p>
+         * 
+         * *   SharedAccount: The service is shared by multiple accounts.
+         * *   Reseller: The service is distributed.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -204,7 +208,11 @@ public class AddServiceSharedAccountsRequest extends Request {
             private String userAliUid; 
 
             /**
-             * Permission.
+             * The permissions on the service. Valid values:
+             * <p>
+             * 
+             * *   Deployable: Permissions to deploy the service.
+             * *   Accessible: Permissions to access the service.
              */
             public Builder permission(String permission) {
                 this.permission = permission;
@@ -212,7 +220,7 @@ public class AddServiceSharedAccountsRequest extends Request {
             }
 
             /**
-             * UserAliUid.
+             * The Alibaba Cloud account ID of the user.
              */
             public Builder userAliUid(String userAliUid) {
                 this.userAliUid = userAliUid;
