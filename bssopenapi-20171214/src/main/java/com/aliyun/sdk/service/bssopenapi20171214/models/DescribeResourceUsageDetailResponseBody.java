@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourceUsageDetailResponseBody</p>
  */
 public class DescribeResourceUsageDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeResourceUsageDetailResponseBody(Builder builder) {
@@ -132,73 +131,73 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("CapacityUnit")
+        @com.aliyun.core.annotation.NameInMap("CapacityUnit")
         private String capacityUnit;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductQuantity")
+        @com.aliyun.core.annotation.NameInMap("DeductQuantity")
         private Float deductQuantity;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("PostpaidCost")
+        @com.aliyun.core.annotation.NameInMap("PostpaidCost")
         private String postpaidCost;
 
-        @NameInMap("PotentialSavedCost")
+        @com.aliyun.core.annotation.NameInMap("PotentialSavedCost")
         private String potentialSavedCost;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Long quantity;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionNo")
+        @com.aliyun.core.annotation.NameInMap("RegionNo")
         private String regionNo;
 
-        @NameInMap("ReservationCost")
+        @com.aliyun.core.annotation.NameInMap("ReservationCost")
         private String reservationCost;
 
-        @NameInMap("ResourceInstanceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
-        @NameInMap("SavedCost")
+        @com.aliyun.core.annotation.NameInMap("SavedCost")
         private String savedCost;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusName")
+        @com.aliyun.core.annotation.NameInMap("StatusName")
         private String statusName;
 
-        @NameInMap("TotalQuantity")
+        @com.aliyun.core.annotation.NameInMap("TotalQuantity")
         private Float totalQuantity;
 
-        @NameInMap("UsagePercentage")
+        @com.aliyun.core.annotation.NameInMap("UsagePercentage")
         private Float usagePercentage;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private String userId;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private Items(Builder builder) {
@@ -613,16 +612,16 @@ public class DescribeResourceUsageDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

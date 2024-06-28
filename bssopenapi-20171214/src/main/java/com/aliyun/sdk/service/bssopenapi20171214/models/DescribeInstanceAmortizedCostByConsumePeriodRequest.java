@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAmortizedCostByConsumePeriodRequest</p>
  */
 public class DescribeInstanceAmortizedCostByConsumePeriodRequest extends Request {
-    @Body
-    @NameInMap("AmortizationPeriodFilter")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationPeriodFilter")
     private java.util.List < String > amortizationPeriodFilter;
 
-    @Body
-    @NameInMap("BillOwnerIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
     private java.util.List < String > billOwnerIdList;
 
-    @Body
-    @NameInMap("BillUserIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillUserIdList")
     private java.util.List < String > billUserIdList;
 
-    @Body
-    @NameInMap("BillingCycle")
-    @Validation(required = true, maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true, maxLength = 256)
     private String billingCycle;
 
-    @Body
-    @NameInMap("CostUnitCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CostUnitCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String costUnitCode;
 
-    @Body
-    @NameInMap("InstanceIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
     private java.util.List < String > instanceIdList;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
-    @Validation(maxLength = 2560)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
+    @com.aliyun.core.annotation.Validation(maxLength = 2560)
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productCode;
 
-    @Body
-    @NameInMap("ProductDetail")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String productDetail;
 
-    @Body
-    @NameInMap("SubscriptionType")
-    @Validation(maxLength = 256)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(maxLength = 256)
     private String subscriptionType;
 
     private DescribeInstanceAmortizedCostByConsumePeriodRequest(Builder builder) {

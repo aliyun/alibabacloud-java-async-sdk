@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddAccountRelationRequest</p>
  */
 public class AddAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildNick")
     private String childNick;
 
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long parentUserId;
 
-    @Query
-    @NameInMap("PermissionCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
     private java.util.List < String > permissionCodes;
 
-    @Query
-    @NameInMap("RelationType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @Query
-    @NameInMap("RoleCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCodes")
     private java.util.List < String > roleCodes;
 
     private AddAccountRelationRequest(Builder builder) {

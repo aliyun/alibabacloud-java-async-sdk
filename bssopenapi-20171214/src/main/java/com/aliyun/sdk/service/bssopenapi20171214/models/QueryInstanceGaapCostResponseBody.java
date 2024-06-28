@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryInstanceGaapCostResponseBody</p>
  */
 public class QueryInstanceGaapCostResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryInstanceGaapCostResponseBody(Builder builder) {
@@ -132,160 +131,160 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
-        @NameInMap("AccountingUnit")
+        @com.aliyun.core.annotation.NameInMap("AccountingUnit")
         private String accountingUnit;
 
-        @NameInMap("BillType")
+        @com.aliyun.core.annotation.NameInMap("BillType")
         private String billType;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private String deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private String deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private String deductedByPrepaidCard;
 
-        @NameInMap("GaapDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("GaapDeductedByCashCoupons")
         private String gaapDeductedByCashCoupons;
 
-        @NameInMap("GaapDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("GaapDeductedByCoupons")
         private String gaapDeductedByCoupons;
 
-        @NameInMap("GaapDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("GaapDeductedByPrepaidCard")
         private String gaapDeductedByPrepaidCard;
 
-        @NameInMap("GaapPaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("GaapPaymentAmount")
         private String gaapPaymentAmount;
 
-        @NameInMap("GaapPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("GaapPretaxAmount")
         private String gaapPretaxAmount;
 
-        @NameInMap("GaapPretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("GaapPretaxAmountLocal")
         private String gaapPretaxAmountLocal;
 
-        @NameInMap("GaapPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("GaapPretaxGrossAmount")
         private String gaapPretaxGrossAmount;
 
-        @NameInMap("GaapPricingDiscount")
+        @com.aliyun.core.annotation.NameInMap("GaapPricingDiscount")
         private String gaapPricingDiscount;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("MonthGaapDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapDeductedByCashCoupons")
         private String monthGaapDeductedByCashCoupons;
 
-        @NameInMap("MonthGaapDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapDeductedByCoupons")
         private String monthGaapDeductedByCoupons;
 
-        @NameInMap("MonthGaapDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapDeductedByPrepaidCard")
         private String monthGaapDeductedByPrepaidCard;
 
-        @NameInMap("MonthGaapPaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapPaymentAmount")
         private String monthGaapPaymentAmount;
 
-        @NameInMap("MonthGaapPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapPretaxAmount")
         private String monthGaapPretaxAmount;
 
-        @NameInMap("MonthGaapPretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapPretaxAmountLocal")
         private String monthGaapPretaxAmountLocal;
 
-        @NameInMap("MonthGaapPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapPretaxGrossAmount")
         private String monthGaapPretaxGrossAmount;
 
-        @NameInMap("MonthGaapPricingDiscount")
+        @com.aliyun.core.annotation.NameInMap("MonthGaapPricingDiscount")
         private String monthGaapPricingDiscount;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("PayTime")
+        @com.aliyun.core.annotation.NameInMap("PayTime")
         private String payTime;
 
-        @NameInMap("PayerAccount")
+        @com.aliyun.core.annotation.NameInMap("PayerAccount")
         private String payerAccount;
 
-        @NameInMap("PaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("PaymentAmount")
         private String paymentAmount;
 
-        @NameInMap("PaymentCurrency")
+        @com.aliyun.core.annotation.NameInMap("PaymentCurrency")
         private String paymentCurrency;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private String pretaxAmount;
 
-        @NameInMap("PretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmountLocal")
         private String pretaxAmountLocal;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private String pretaxGrossAmount;
 
-        @NameInMap("PricingDiscount")
+        @com.aliyun.core.annotation.NameInMap("PricingDiscount")
         private String pricingDiscount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("SubOrderId")
+        @com.aliyun.core.annotation.NameInMap("SubOrderId")
         private String subOrderId;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("UnallocatedDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedDeductedByCashCoupons")
         private String unallocatedDeductedByCashCoupons;
 
-        @NameInMap("UnallocatedDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedDeductedByCoupons")
         private String unallocatedDeductedByCoupons;
 
-        @NameInMap("UnallocatedDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedDeductedByPrepaidCard")
         private String unallocatedDeductedByPrepaidCard;
 
-        @NameInMap("UnallocatedPaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedPaymentAmount")
         private String unallocatedPaymentAmount;
 
-        @NameInMap("UnallocatedPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedPretaxAmount")
         private String unallocatedPretaxAmount;
 
-        @NameInMap("UnallocatedPretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedPretaxAmountLocal")
         private String unallocatedPretaxAmountLocal;
 
-        @NameInMap("UnallocatedPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedPretaxGrossAmount")
         private String unallocatedPretaxGrossAmount;
 
-        @NameInMap("UnallocatedPricingDiscount")
+        @com.aliyun.core.annotation.NameInMap("UnallocatedPricingDiscount")
         private String unallocatedPricingDiscount;
 
-        @NameInMap("UsageEndDate")
+        @com.aliyun.core.annotation.NameInMap("UsageEndDate")
         private String usageEndDate;
 
-        @NameInMap("UsageStartDate")
+        @com.aliyun.core.annotation.NameInMap("UsageStartDate")
         private String usageStartDate;
 
         private Module(Builder builder) {
@@ -1193,7 +1192,7 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
 
     }
     public static class Modules extends TeaModel {
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private java.util.List < Module> module;
 
         private Modules(Builder builder) {
@@ -1234,19 +1233,19 @@ public class QueryInstanceGaapCostResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Modules")
+        @com.aliyun.core.annotation.NameInMap("Modules")
         private Modules modules;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

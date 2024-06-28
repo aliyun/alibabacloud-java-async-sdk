@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSavingsPlansUsageTotalResponseBody</p>
  */
 public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeSavingsPlansUsageTotalResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
     } 
 
     public static class PeriodCoverage extends TeaModel {
-        @NameInMap("Percentage")
+        @com.aliyun.core.annotation.NameInMap("Percentage")
         private Float percentage;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private String period;
 
         private PeriodCoverage(Builder builder) {
@@ -196,16 +195,16 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     }
     public static class TotalUsage extends TeaModel {
-        @NameInMap("PoolValue")
+        @com.aliyun.core.annotation.NameInMap("PoolValue")
         private Float poolValue;
 
-        @NameInMap("PostpaidCost")
+        @com.aliyun.core.annotation.NameInMap("PostpaidCost")
         private Float postpaidCost;
 
-        @NameInMap("SavedCost")
+        @com.aliyun.core.annotation.NameInMap("SavedCost")
         private Float savedCost;
 
-        @NameInMap("UsagePercentage")
+        @com.aliyun.core.annotation.NameInMap("UsagePercentage")
         private Float usagePercentage;
 
         private TotalUsage(Builder builder) {
@@ -297,10 +296,10 @@ public class DescribeSavingsPlansUsageTotalResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PeriodCoverage")
+        @com.aliyun.core.annotation.NameInMap("PeriodCoverage")
         private java.util.List < PeriodCoverage> periodCoverage;
 
-        @NameInMap("TotalUsage")
+        @com.aliyun.core.annotation.NameInMap("TotalUsage")
         private TotalUsage totalUsage;
 
         private Data(Builder builder) {

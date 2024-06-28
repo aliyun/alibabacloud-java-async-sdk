@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ChangeResellerConsumeAmountRequest</p>
  */
 public class ChangeResellerConsumeAmountRequest extends Request {
-    @Query
-    @NameInMap("AdjustType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdjustType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String adjustType;
 
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amount;
 
-    @Query
-    @NameInMap("BusinessType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessType;
 
-    @Query
-    @NameInMap("Currency")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Currency")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String currency;
 
-    @Query
-    @NameInMap("ExtendMap")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendMap")
     private String extendMap;
 
-    @Query
-    @NameInMap("OutBizId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutBizId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outBizId;
 
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerId;
 
-    @Query
-    @NameInMap("Source")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Source")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String source;
 
     private ChangeResellerConsumeAmountRequest(Builder builder) {

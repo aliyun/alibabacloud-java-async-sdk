@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPriceEntityListResponseBody</p>
  */
 public class QueryPriceEntityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPriceEntityListResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
     } 
 
     public static class PriceFactorList extends TeaModel {
-        @NameInMap("PriceFactorCode")
+        @com.aliyun.core.annotation.NameInMap("PriceFactorCode")
         private String priceFactorCode;
 
-        @NameInMap("PriceFactorName")
+        @com.aliyun.core.annotation.NameInMap("PriceFactorName")
         private String priceFactorName;
 
-        @NameInMap("PriceFactorValueList")
+        @com.aliyun.core.annotation.NameInMap("PriceFactorValueList")
         private java.util.List < String > priceFactorValueList;
 
         private PriceFactorList(Builder builder) {
@@ -213,13 +212,13 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     }
     public static class PriceEntityInfoList extends TeaModel {
-        @NameInMap("PriceEntityCode")
+        @com.aliyun.core.annotation.NameInMap("PriceEntityCode")
         private String priceEntityCode;
 
-        @NameInMap("PriceEntityName")
+        @com.aliyun.core.annotation.NameInMap("PriceEntityName")
         private String priceEntityName;
 
-        @NameInMap("PriceFactorList")
+        @com.aliyun.core.annotation.NameInMap("PriceFactorList")
         private java.util.List < PriceFactorList> priceFactorList;
 
         private PriceEntityInfoList(Builder builder) {
@@ -294,7 +293,7 @@ public class QueryPriceEntityListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PriceEntityInfoList")
+        @com.aliyun.core.annotation.NameInMap("PriceEntityInfoList")
         private java.util.List < PriceEntityInfoList> priceEntityInfoList;
 
         private Data(Builder builder) {

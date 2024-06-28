@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySavingsPlansInstanceResponseBody</p>
  */
 public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySavingsPlansInstanceResponseBody(Builder builder) {
@@ -132,10 +131,10 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -193,76 +192,76 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("AllocationStatus")
+        @com.aliyun.core.annotation.NameInMap("AllocationStatus")
         private String allocationStatus;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("CurrentPoolValue")
+        @com.aliyun.core.annotation.NameInMap("CurrentPoolValue")
         private String currentPoolValue;
 
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private String cycle;
 
-        @NameInMap("DeductCycleType")
+        @com.aliyun.core.annotation.NameInMap("DeductCycleType")
         private String deductCycleType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("EndTimestamp")
+        @com.aliyun.core.annotation.NameInMap("EndTimestamp")
         private Long endTimestamp;
 
-        @NameInMap("InstanceFamily")
+        @com.aliyun.core.annotation.NameInMap("InstanceFamily")
         private String instanceFamily;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("LastBillTotalUsage")
+        @com.aliyun.core.annotation.NameInMap("LastBillTotalUsage")
         private String lastBillTotalUsage;
 
-        @NameInMap("LastBillUtilization")
+        @com.aliyun.core.annotation.NameInMap("LastBillUtilization")
         private String lastBillUtilization;
 
-        @NameInMap("PayMode")
+        @com.aliyun.core.annotation.NameInMap("PayMode")
         private String payMode;
 
-        @NameInMap("PoolValue")
+        @com.aliyun.core.annotation.NameInMap("PoolValue")
         private String poolValue;
 
-        @NameInMap("PrepayFee")
+        @com.aliyun.core.annotation.NameInMap("PrepayFee")
         private String prepayFee;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RestPoolValue")
+        @com.aliyun.core.annotation.NameInMap("RestPoolValue")
         private String restPoolValue;
 
-        @NameInMap("SavingsType")
+        @com.aliyun.core.annotation.NameInMap("SavingsType")
         private String savingsType;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StartTimestamp")
+        @com.aliyun.core.annotation.NameInMap("StartTimestamp")
         private Long startTimestamp;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
-        @NameInMap("TotalSave")
+        @com.aliyun.core.annotation.NameInMap("TotalSave")
         private String totalSave;
 
-        @NameInMap("Utilization")
+        @com.aliyun.core.annotation.NameInMap("Utilization")
         private String utilization;
 
         private Items(Builder builder) {
@@ -713,16 +712,16 @@ public class QuerySavingsPlansInstanceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

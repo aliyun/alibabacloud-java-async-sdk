@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCostBudgetsSummaryResponseBody</p>
  */
 public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeCostBudgetsSummaryResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("Budget")
+        @com.aliyun.core.annotation.NameInMap("Budget")
         private java.util.Map < String, ? > budget;
 
-        @NameInMap("BudgetName")
+        @com.aliyun.core.annotation.NameInMap("BudgetName")
         private String budgetName;
 
-        @NameInMap("BudgetStatus")
+        @com.aliyun.core.annotation.NameInMap("BudgetStatus")
         private String budgetStatus;
 
-        @NameInMap("BudgetType")
+        @com.aliyun.core.annotation.NameInMap("BudgetType")
         private String budgetType;
 
-        @NameInMap("CalculatedValues")
+        @com.aliyun.core.annotation.NameInMap("CalculatedValues")
         private java.util.Map < String, ? > calculatedValues;
 
-        @NameInMap("ConsumePeriod")
+        @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
         private java.util.Map < String, ? > consumePeriod;
 
         private Items(Builder builder) {
@@ -273,19 +272,19 @@ public class DescribeCostBudgetsSummaryResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

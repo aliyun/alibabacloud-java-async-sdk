@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryInstanceBillResponseBody</p>
  */
 public class QueryInstanceBillResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryInstanceBillResponseBody(Builder builder) {
@@ -132,127 +131,127 @@ public class QueryInstanceBillResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("AdjustAmount")
+        @com.aliyun.core.annotation.NameInMap("AdjustAmount")
         private Float adjustAmount;
 
-        @NameInMap("BillingDate")
+        @com.aliyun.core.annotation.NameInMap("BillingDate")
         private String billingDate;
 
-        @NameInMap("BillingItem")
+        @com.aliyun.core.annotation.NameInMap("BillingItem")
         private String billingItem;
 
-        @NameInMap("BillingType")
+        @com.aliyun.core.annotation.NameInMap("BillingType")
         private String billingType;
 
-        @NameInMap("CashAmount")
+        @com.aliyun.core.annotation.NameInMap("CashAmount")
         private Float cashAmount;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private String costUnit;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Float deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Float deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Float deductedByPrepaidCard;
 
-        @NameInMap("DeductedByResourcePackage")
+        @com.aliyun.core.annotation.NameInMap("DeductedByResourcePackage")
         private String deductedByResourcePackage;
 
-        @NameInMap("InstanceConfig")
+        @com.aliyun.core.annotation.NameInMap("InstanceConfig")
         private String instanceConfig;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("InternetIP")
+        @com.aliyun.core.annotation.NameInMap("InternetIP")
         private String internetIP;
 
-        @NameInMap("IntranetIP")
+        @com.aliyun.core.annotation.NameInMap("IntranetIP")
         private String intranetIP;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Float invoiceDiscount;
 
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private String item;
 
-        @NameInMap("ListPrice")
+        @com.aliyun.core.annotation.NameInMap("ListPrice")
         private String listPrice;
 
-        @NameInMap("ListPriceUnit")
+        @com.aliyun.core.annotation.NameInMap("ListPriceUnit")
         private String listPriceUnit;
 
-        @NameInMap("NickName")
+        @com.aliyun.core.annotation.NameInMap("NickName")
         private String nickName;
 
-        @NameInMap("OutstandingAmount")
+        @com.aliyun.core.annotation.NameInMap("OutstandingAmount")
         private Float outstandingAmount;
 
-        @NameInMap("OwnerID")
+        @com.aliyun.core.annotation.NameInMap("OwnerID")
         private String ownerID;
 
-        @NameInMap("PaymentAmount")
+        @com.aliyun.core.annotation.NameInMap("PaymentAmount")
         private Float paymentAmount;
 
-        @NameInMap("PipCode")
+        @com.aliyun.core.annotation.NameInMap("PipCode")
         private String pipCode;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Float pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Float pretaxGrossAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductDetail")
+        @com.aliyun.core.annotation.NameInMap("ProductDetail")
         private String productDetail;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("ServicePeriod")
+        @com.aliyun.core.annotation.NameInMap("ServicePeriod")
         private String servicePeriod;
 
-        @NameInMap("ServicePeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("ServicePeriodUnit")
         private String servicePeriodUnit;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Usage")
+        @com.aliyun.core.annotation.NameInMap("Usage")
         private String usage;
 
-        @NameInMap("UsageUnit")
+        @com.aliyun.core.annotation.NameInMap("UsageUnit")
         private String usageUnit;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private Item(Builder builder) {
@@ -992,7 +991,7 @@ public class QueryInstanceBillResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {
@@ -1039,25 +1038,25 @@ public class QueryInstanceBillResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private Items items;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

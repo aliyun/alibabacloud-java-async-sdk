@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryProductListResponseBody</p>
  */
 public class QueryProductListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryProductListResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class QueryProductListResponseBody extends TeaModel {
     } 
 
     public static class Product extends TeaModel {
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
         private Product(Builder builder) {
@@ -237,7 +236,7 @@ public class QueryProductListResponseBody extends TeaModel {
 
     }
     public static class ProductList extends TeaModel {
-        @NameInMap("Product")
+        @com.aliyun.core.annotation.NameInMap("Product")
         private java.util.List < Product> product;
 
         private ProductList(Builder builder) {
@@ -278,16 +277,16 @@ public class QueryProductListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ProductList")
+        @com.aliyun.core.annotation.NameInMap("ProductList")
         private ProductList productList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

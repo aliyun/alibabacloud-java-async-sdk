@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAccountTransactionsRequest</p>
  */
 public class QueryAccountTransactionsRequest extends Request {
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RecordID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordID")
     private String recordID;
 
-    @Query
-    @NameInMap("TransactionChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannel")
     private String transactionChannel;
 
-    @Query
-    @NameInMap("TransactionChannelSN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannelSN")
     private String transactionChannelSN;
 
-    @Query
-    @NameInMap("TransactionFlow")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionFlow")
     private String transactionFlow;
 
-    @Query
-    @NameInMap("TransactionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionNumber")
     private String transactionNumber;
 
-    @Query
-    @NameInMap("TransactionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionType")
     private String transactionType;
 
     private QueryAccountTransactionsRequest(Builder builder) {

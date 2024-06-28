@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryRelationListResponseBody</p>
  */
 public class QueryRelationListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryRelationListResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QueryRelationListResponseBody extends TeaModel {
     } 
 
     public static class FinancialRelationInfoList extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private Long accountId;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountNickName")
+        @com.aliyun.core.annotation.NameInMap("AccountNickName")
         private String accountNickName;
 
-        @NameInMap("AccountType")
+        @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("RelationId")
+        @com.aliyun.core.annotation.NameInMap("RelationId")
         private Long relationId;
 
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("SetupTime")
+        @com.aliyun.core.annotation.NameInMap("SetupTime")
         private String setupTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private FinancialRelationInfoList(Builder builder) {
@@ -353,16 +352,16 @@ public class QueryRelationListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("FinancialRelationInfoList")
+        @com.aliyun.core.annotation.NameInMap("FinancialRelationInfoList")
         private java.util.List < FinancialRelationInfoList> financialRelationInfoList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

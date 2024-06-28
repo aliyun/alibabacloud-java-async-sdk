@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyAccountRelationRequest</p>
  */
 public class ModifyAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildNick")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildNick")
     private String childNick;
 
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentUserId;
 
-    @Query
-    @NameInMap("PermissionCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PermissionCodes")
     private java.util.List < String > permissionCodes;
 
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RelationOperation")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationOperation")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String relationOperation;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
-    @Query
-    @NameInMap("RoleCodes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleCodes")
     private java.util.List < String > roleCodes;
 
     private ModifyAccountRelationRequest(Builder builder) {

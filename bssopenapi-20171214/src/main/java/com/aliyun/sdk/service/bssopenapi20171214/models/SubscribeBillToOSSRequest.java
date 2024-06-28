@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubscribeBillToOSSRequest</p>
  */
 public class SubscribeBillToOSSRequest extends Request {
-    @Query
-    @NameInMap("BeginBillingCycle")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginBillingCycle")
     private String beginBillingCycle;
 
-    @Query
-    @NameInMap("BucketOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketOwnerId")
     private Long bucketOwnerId;
 
-    @Query
-    @NameInMap("BucketPath")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BucketPath")
     private String bucketPath;
 
-    @Query
-    @NameInMap("MultAccountRelSubscribe")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultAccountRelSubscribe")
     private String multAccountRelSubscribe;
 
-    @Query
-    @NameInMap("RowLimitPerFile")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RowLimitPerFile")
     private Integer rowLimitPerFile;
 
-    @Query
-    @NameInMap("SubscribeBucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeBucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscribeBucket;
 
-    @Query
-    @NameInMap("SubscribeType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscribeType")
     private String subscribeType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsingSsl")
+    private String usingSsl;
 
     private SubscribeBillToOSSRequest(Builder builder) {
         super(builder);
@@ -50,6 +53,7 @@ public class SubscribeBillToOSSRequest extends Request {
         this.rowLimitPerFile = builder.rowLimitPerFile;
         this.subscribeBucket = builder.subscribeBucket;
         this.subscribeType = builder.subscribeType;
+        this.usingSsl = builder.usingSsl;
     }
 
     public static Builder builder() {
@@ -114,6 +118,13 @@ public class SubscribeBillToOSSRequest extends Request {
         return this.subscribeType;
     }
 
+    /**
+     * @return usingSsl
+     */
+    public String getUsingSsl() {
+        return this.usingSsl;
+    }
+
     public static final class Builder extends Request.Builder<SubscribeBillToOSSRequest, Builder> {
         private String beginBillingCycle; 
         private Long bucketOwnerId; 
@@ -122,6 +133,7 @@ public class SubscribeBillToOSSRequest extends Request {
         private Integer rowLimitPerFile; 
         private String subscribeBucket; 
         private String subscribeType; 
+        private String usingSsl; 
 
         private Builder() {
             super();
@@ -136,6 +148,7 @@ public class SubscribeBillToOSSRequest extends Request {
             this.rowLimitPerFile = request.rowLimitPerFile;
             this.subscribeBucket = request.subscribeBucket;
             this.subscribeType = request.subscribeType;
+            this.usingSsl = request.usingSsl;
         } 
 
         /**
@@ -181,7 +194,7 @@ public class SubscribeBillToOSSRequest extends Request {
         }
 
         /**
-         * RowLimitPerFile.
+         * The upper limit of the number of lines in a single file. When the bill file exceeds the upper limit, it will be split into multiple files and merged into a compressed package.
          */
         public Builder rowLimitPerFile(Integer rowLimitPerFile) {
             this.putQueryParameter("RowLimitPerFile", rowLimitPerFile);
@@ -212,6 +225,15 @@ public class SubscribeBillToOSSRequest extends Request {
         public Builder subscribeType(String subscribeType) {
             this.putQueryParameter("SubscribeType", subscribeType);
             this.subscribeType = subscribeType;
+            return this;
+        }
+
+        /**
+         * Whether to protect network communications through the SSL (Secure Sockets Layer) encryption protocol. When this parameter is set to true, it means that SSL encryption is enabled to ensure the security and integrity of data transmission.
+         */
+        public Builder usingSsl(String usingSsl) {
+            this.putQueryParameter("UsingSsl", usingSsl);
+            this.usingSsl = usingSsl;
             return this;
         }
 

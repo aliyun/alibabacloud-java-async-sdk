@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSavingsPlansInstanceRequest</p>
  */
 public class CreateSavingsPlansInstanceRequest extends Request {
-    @Query
-    @NameInMap("CommodityCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommodityCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
 
-    @Query
-    @NameInMap("Duration")
-    @Validation(required = true, minLength = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Duration")
+    @com.aliyun.core.annotation.Validation(required = true, minLength = 1)
     private String duration;
 
-    @Query
-    @NameInMap("EffectiveDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveDate")
     private String effectiveDate;
 
-    @Query
-    @NameInMap("ExtendMap")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendMap")
     private java.util.Map < String, String > extendMap;
 
-    @Query
-    @NameInMap("PayMode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayMode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payMode;
 
-    @Query
-    @NameInMap("PoolValue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PoolValue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String poolValue;
 
-    @Query
-    @NameInMap("PricingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PricingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pricingCycle;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("SpecType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecType")
     private String specType;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private String specification;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private CreateSavingsPlansInstanceRequest(Builder builder) {

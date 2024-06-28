@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCommodityListResponseBody</p>
  */
 public class QueryCommodityListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCommodityListResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class QueryCommodityListResponseBody extends TeaModel {
     } 
 
     public static class CommodityList extends TeaModel {
-        @NameInMap("ChargeType")
+        @com.aliyun.core.annotation.NameInMap("ChargeType")
         private String chargeType;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
         private CommodityList(Builder builder) {
@@ -213,7 +212,7 @@ public class QueryCommodityListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CommodityList")
+        @com.aliyun.core.annotation.NameInMap("CommodityList")
         private java.util.List < CommodityList> commodityList;
 
         private Data(Builder builder) {

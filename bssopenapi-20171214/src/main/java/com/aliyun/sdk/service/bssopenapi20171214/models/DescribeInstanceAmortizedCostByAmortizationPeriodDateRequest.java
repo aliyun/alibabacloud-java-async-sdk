@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest</p>
  */
 public class DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest extends Request {
-    @Body
-    @NameInMap("AmortizationDateEnd")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationDateEnd")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amortizationDateEnd;
 
-    @Body
-    @NameInMap("AmortizationDateStart")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AmortizationDateStart")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amortizationDateStart;
 
-    @Body
-    @NameInMap("BillOwnerIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillOwnerIdList")
     private java.util.List < String > billOwnerIdList;
 
-    @Body
-    @NameInMap("BillUserIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillUserIdList")
     private java.util.List < String > billUserIdList;
 
-    @Body
-    @NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
     private String billingCycle;
 
-    @Body
-    @NameInMap("CostUnitCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CostUnitCode")
     private String costUnitCode;
 
-    @Body
-    @NameInMap("InstanceIdList")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceIdList")
     private java.util.List < String > instanceIdList;
 
-    @Body
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Body
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Body
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Body
-    @NameInMap("ProductDetail")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ProductDetail")
     private String productDetail;
 
-    @Body
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
     private DescribeInstanceAmortizedCostByAmortizationPeriodDateRequest(Builder builder) {

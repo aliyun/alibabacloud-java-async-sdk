@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAccountBalanceResponseBody</p>
  */
 public class QueryAccountBalanceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAccountBalanceResponseBody(Builder builder) {
@@ -132,22 +131,22 @@ public class QueryAccountBalanceResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AvailableAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableAmount")
         private String availableAmount;
 
-        @NameInMap("AvailableCashAmount")
+        @com.aliyun.core.annotation.NameInMap("AvailableCashAmount")
         private String availableCashAmount;
 
-        @NameInMap("CreditAmount")
+        @com.aliyun.core.annotation.NameInMap("CreditAmount")
         private String creditAmount;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("MybankCreditAmount")
+        @com.aliyun.core.annotation.NameInMap("MybankCreditAmount")
         private String mybankCreditAmount;
 
-        @NameInMap("QuotaLimit")
+        @com.aliyun.core.annotation.NameInMap("QuotaLimit")
         private String quotaLimit;
 
         private Data(Builder builder) {

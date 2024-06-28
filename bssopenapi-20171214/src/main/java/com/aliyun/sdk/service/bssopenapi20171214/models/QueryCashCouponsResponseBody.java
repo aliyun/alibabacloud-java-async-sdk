@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCashCouponsResponseBody</p>
  */
 public class QueryCashCouponsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCashCouponsResponseBody(Builder builder) {
@@ -132,37 +131,37 @@ public class QueryCashCouponsResponseBody extends TeaModel {
     } 
 
     public static class CashCoupon extends TeaModel {
-        @NameInMap("ApplicableProducts")
+        @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
 
-        @NameInMap("ApplicableScenarios")
+        @com.aliyun.core.annotation.NameInMap("ApplicableScenarios")
         private String applicableScenarios;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("CashCouponId")
+        @com.aliyun.core.annotation.NameInMap("CashCouponId")
         private Long cashCouponId;
 
-        @NameInMap("CashCouponNo")
+        @com.aliyun.core.annotation.NameInMap("CashCouponNo")
         private String cashCouponNo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private String expiryTime;
 
-        @NameInMap("GrantedTime")
+        @com.aliyun.core.annotation.NameInMap("GrantedTime")
         private String grantedTime;
 
-        @NameInMap("NominalValue")
+        @com.aliyun.core.annotation.NameInMap("NominalValue")
         private String nominalValue;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CashCoupon(Builder builder) {
@@ -378,7 +377,7 @@ public class QueryCashCouponsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CashCoupon")
+        @com.aliyun.core.annotation.NameInMap("CashCoupon")
         private java.util.List < CashCoupon> cashCoupon;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubscriptionPriceResponseBody</p>
  */
 public class GetSubscriptionPriceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private GetSubscriptionPriceResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
     } 
 
     public static class ModuleDetail extends TeaModel {
-        @NameInMap("CostAfterDiscount")
+        @com.aliyun.core.annotation.NameInMap("CostAfterDiscount")
         private Float costAfterDiscount;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Float invoiceDiscount;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("OriginalCost")
+        @com.aliyun.core.annotation.NameInMap("OriginalCost")
         private Float originalCost;
 
-        @NameInMap("UnitPrice")
+        @com.aliyun.core.annotation.NameInMap("UnitPrice")
         private Float unitPrice;
 
         private ModuleDetail(Builder builder) {
@@ -253,7 +252,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     }
     public static class ModuleDetails extends TeaModel {
-        @NameInMap("ModuleDetail")
+        @com.aliyun.core.annotation.NameInMap("ModuleDetail")
         private java.util.List < ModuleDetail> moduleDetail;
 
         private ModuleDetails(Builder builder) {
@@ -294,13 +293,13 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     }
     public static class PromotionDetail extends TeaModel {
-        @NameInMap("PromotionDesc")
+        @com.aliyun.core.annotation.NameInMap("PromotionDesc")
         private String promotionDesc;
 
-        @NameInMap("PromotionId")
+        @com.aliyun.core.annotation.NameInMap("PromotionId")
         private Long promotionId;
 
-        @NameInMap("PromotionName")
+        @com.aliyun.core.annotation.NameInMap("PromotionName")
         private String promotionName;
 
         private PromotionDetail(Builder builder) {
@@ -375,7 +374,7 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     }
     public static class PromotionDetails extends TeaModel {
-        @NameInMap("PromotionDetail")
+        @com.aliyun.core.annotation.NameInMap("PromotionDetail")
         private java.util.List < PromotionDetail> promotionDetail;
 
         private PromotionDetails(Builder builder) {
@@ -416,25 +415,25 @@ public class GetSubscriptionPriceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("DiscountPrice")
+        @com.aliyun.core.annotation.NameInMap("DiscountPrice")
         private Float discountPrice;
 
-        @NameInMap("ModuleDetails")
+        @com.aliyun.core.annotation.NameInMap("ModuleDetails")
         private ModuleDetails moduleDetails;
 
-        @NameInMap("OriginalPrice")
+        @com.aliyun.core.annotation.NameInMap("OriginalPrice")
         private Float originalPrice;
 
-        @NameInMap("PromotionDetails")
+        @com.aliyun.core.annotation.NameInMap("PromotionDetails")
         private PromotionDetails promotionDetails;
 
-        @NameInMap("Quantity")
+        @com.aliyun.core.annotation.NameInMap("Quantity")
         private Integer quantity;
 
-        @NameInMap("TradePrice")
+        @com.aliyun.core.annotation.NameInMap("TradePrice")
         private Float tradePrice;
 
         private Data(Builder builder) {

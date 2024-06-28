@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AllocateCostUnitResourceRequest</p>
  */
 public class AllocateCostUnitResourceRequest extends Request {
-    @Query
-    @NameInMap("FromUnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fromUnitId;
 
-    @Query
-    @NameInMap("FromUnitUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FromUnitUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long fromUnitUserId;
 
-    @Query
-    @NameInMap("ResourceInstanceList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ResourceInstanceList> resourceInstanceList;
 
-    @Query
-    @NameInMap("ToUnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToUnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long toUnitId;
 
-    @Query
-    @NameInMap("ToUnitUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ToUnitUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long toUnitUserId;
 
     private AllocateCostUnitResourceRequest(Builder builder) {
@@ -175,19 +174,19 @@ public class AllocateCostUnitResourceRequest extends Request {
     } 
 
     public static class ResourceInstanceList extends TeaModel {
-        @NameInMap("ApportionCode")
+        @com.aliyun.core.annotation.NameInMap("ApportionCode")
         private String apportionCode;
 
-        @NameInMap("CommodityCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String commodityCode;
 
-        @NameInMap("ResourceId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String resourceId;
 
-        @NameInMap("ResourceUserId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ResourceUserId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long resourceUserId;
 
         private ResourceInstanceList(Builder builder) {

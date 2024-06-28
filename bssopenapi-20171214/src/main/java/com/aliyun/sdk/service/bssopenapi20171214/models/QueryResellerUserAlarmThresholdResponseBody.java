@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryResellerUserAlarmThresholdResponseBody</p>
  */
 public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Integer count;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryResellerUserAlarmThresholdResponseBody(Builder builder) {
@@ -152,16 +151,16 @@ public class QueryResellerUserAlarmThresholdResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Denominator")
+        @com.aliyun.core.annotation.NameInMap("Denominator")
         private Integer denominator;
 
-        @NameInMap("Numerator")
+        @com.aliyun.core.annotation.NameInMap("Numerator")
         private Integer numerator;
 
-        @NameInMap("ThresholdAmount")
+        @com.aliyun.core.annotation.NameInMap("ThresholdAmount")
         private String thresholdAmount;
 
-        @NameInMap("ThresholdType")
+        @com.aliyun.core.annotation.NameInMap("ThresholdType")
         private Integer thresholdType;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePricingModuleResponseBody</p>
  */
 public class DescribePricingModuleResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribePricingModuleResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class DescribePricingModuleResponseBody extends TeaModel {
     } 
 
     public static class AttributeValue extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private AttributeValue(Builder builder) {
@@ -240,7 +239,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class Values extends TeaModel {
-        @NameInMap("AttributeValue")
+        @com.aliyun.core.annotation.NameInMap("AttributeValue")
         private java.util.List < AttributeValue> attributeValue;
 
         private Values(Builder builder) {
@@ -281,16 +280,16 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class Attribute extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Values")
+        @com.aliyun.core.annotation.NameInMap("Values")
         private Values values;
 
         private Attribute(Builder builder) {
@@ -382,7 +381,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class AttributeList extends TeaModel {
-        @NameInMap("Attribute")
+        @com.aliyun.core.annotation.NameInMap("Attribute")
         private java.util.List < Attribute> attribute;
 
         private AttributeList(Builder builder) {
@@ -423,7 +422,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class ConfigList extends TeaModel {
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private java.util.List < String > configList;
 
         private ConfigList(Builder builder) {
@@ -464,19 +463,19 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class Module extends TeaModel {
-        @NameInMap("ConfigList")
+        @com.aliyun.core.annotation.NameInMap("ConfigList")
         private ConfigList configList;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
         private String moduleCode;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("PriceType")
+        @com.aliyun.core.annotation.NameInMap("PriceType")
         private String priceType;
 
         private Module(Builder builder) {
@@ -593,7 +592,7 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class ModuleList extends TeaModel {
-        @NameInMap("Module")
+        @com.aliyun.core.annotation.NameInMap("Module")
         private java.util.List < Module> module;
 
         private ModuleList(Builder builder) {
@@ -634,10 +633,10 @@ public class DescribePricingModuleResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AttributeList")
+        @com.aliyun.core.annotation.NameInMap("AttributeList")
         private AttributeList attributeList;
 
-        @NameInMap("ModuleList")
+        @com.aliyun.core.annotation.NameInMap("ModuleList")
         private ModuleList moduleList;
 
         private Data(Builder builder) {

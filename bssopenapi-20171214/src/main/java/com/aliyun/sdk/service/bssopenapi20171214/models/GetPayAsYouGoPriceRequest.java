@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPayAsYouGoPriceRequest</p>
  */
 public class GetPayAsYouGoPriceRequest extends Request {
-    @Query
-    @NameInMap("ModuleList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ModuleList> moduleList;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionType;
 
     private GetPayAsYouGoPriceRequest(Builder builder) {
@@ -188,16 +187,16 @@ public class GetPayAsYouGoPriceRequest extends Request {
     } 
 
     public static class ModuleList extends TeaModel {
-        @NameInMap("Config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String config;
 
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("PriceType")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("PriceType")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String priceType;
 
         private ModuleList(Builder builder) {

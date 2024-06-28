@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSplitItemBillRequest</p>
  */
 public class DescribeSplitItemBillRequest extends Request {
-    @Query
-    @NameInMap("BillOwnerId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillOwnerId")
+    @com.aliyun.core.annotation.Validation()
     private Long billOwnerId;
 
-    @Query
-    @NameInMap("BillingCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String billingCycle;
 
-    @Query
-    @NameInMap("BillingDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BillingDate")
     private String billingDate;
 
-    @Query
-    @NameInMap("Granularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Granularity")
     private String granularity;
 
-    @Query
-    @NameInMap("InstanceID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceID")
     private String instanceID;
 
-    @Query
-    @NameInMap("IsHideZeroCharge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsHideZeroCharge")
     private Boolean isHideZeroCharge;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipCode")
+    private String pipCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("SplitItemID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SplitItemID")
     private String splitItemID;
 
-    @Query
-    @NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
     private String subscriptionType;
 
-    @Query
-    @NameInMap("TagFilter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TagFilter")
     private java.util.List < TagFilter> tagFilter;
 
     private DescribeSplitItemBillRequest(Builder builder) {
@@ -81,6 +84,7 @@ public class DescribeSplitItemBillRequest extends Request {
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.ownerId = builder.ownerId;
+        this.pipCode = builder.pipCode;
         this.productCode = builder.productCode;
         this.productType = builder.productType;
         this.splitItemID = builder.splitItemID;
@@ -165,6 +169,13 @@ public class DescribeSplitItemBillRequest extends Request {
     }
 
     /**
+     * @return pipCode
+     */
+    public String getPipCode() {
+        return this.pipCode;
+    }
+
+    /**
      * @return productCode
      */
     public String getProductCode() {
@@ -209,6 +220,7 @@ public class DescribeSplitItemBillRequest extends Request {
         private Integer maxResults; 
         private String nextToken; 
         private Long ownerId; 
+        private String pipCode; 
         private String productCode; 
         private String productType; 
         private String splitItemID; 
@@ -230,6 +242,7 @@ public class DescribeSplitItemBillRequest extends Request {
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.ownerId = request.ownerId;
+            this.pipCode = request.pipCode;
             this.productCode = request.productCode;
             this.productType = request.productType;
             this.splitItemID = request.splitItemID;
@@ -325,6 +338,15 @@ public class DescribeSplitItemBillRequest extends Request {
         }
 
         /**
+         * PipCode.
+         */
+        public Builder pipCode(String pipCode) {
+            this.putQueryParameter("PipCode", pipCode);
+            this.pipCode = pipCode;
+            return this;
+        }
+
+        /**
          * The code of the service.
          */
         public Builder productCode(String productCode) {
@@ -377,10 +399,10 @@ public class DescribeSplitItemBillRequest extends Request {
     } 
 
     public static class TagFilter extends TeaModel {
-        @NameInMap("TagKey")
+        @com.aliyun.core.annotation.NameInMap("TagKey")
         private String tagKey;
 
-        @NameInMap("TagValues")
+        @com.aliyun.core.annotation.NameInMap("TagValues")
         private java.util.List < String > tagValues;
 
         private TagFilter(Builder builder) {

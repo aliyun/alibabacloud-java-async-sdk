@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryRedeemResponseBody</p>
  */
 public class QueryRedeemResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryRedeemResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QueryRedeemResponseBody extends TeaModel {
     } 
 
     public static class Redeem extends TeaModel {
-        @NameInMap("ApplicableProducts")
+        @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private String expiryTime;
 
-        @NameInMap("GrantedTime")
+        @com.aliyun.core.annotation.NameInMap("GrantedTime")
         private String grantedTime;
 
-        @NameInMap("NominalValue")
+        @com.aliyun.core.annotation.NameInMap("NominalValue")
         private String nominalValue;
 
-        @NameInMap("RedeemId")
+        @com.aliyun.core.annotation.NameInMap("RedeemId")
         private String redeemId;
 
-        @NameInMap("RedeemNo")
+        @com.aliyun.core.annotation.NameInMap("RedeemNo")
         private String redeemNo;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Redeem(Builder builder) {
@@ -365,7 +364,7 @@ public class QueryRedeemResponseBody extends TeaModel {
 
     }
     public static class DataRedeem extends TeaModel {
-        @NameInMap("Redeem")
+        @com.aliyun.core.annotation.NameInMap("Redeem")
         private java.util.List < Redeem> redeem;
 
         private DataRedeem(Builder builder) {
@@ -406,16 +405,16 @@ public class QueryRedeemResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Long pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Long pageSize;
 
-        @NameInMap("Redeem")
+        @com.aliyun.core.annotation.NameInMap("Redeem")
         private DataRedeem redeem;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetSubscriptionPriceRequest</p>
  */
 public class GetSubscriptionPriceRequest extends Request {
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("ModuleList")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ModuleList")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < ModuleList> moduleList;
 
-    @Query
-    @NameInMap("OrderType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String orderType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProductCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String productCode;
 
-    @Query
-    @NameInMap("ProductType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductType")
     private String productType;
 
-    @Query
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Integer quantity;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("ServicePeriodQuantity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePeriodQuantity")
     private Integer servicePeriodQuantity;
 
-    @Query
-    @NameInMap("ServicePeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ServicePeriodUnit")
     private String servicePeriodUnit;
 
-    @Query
-    @NameInMap("SubscriptionType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubscriptionType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String subscriptionType;
 
     private GetSubscriptionPriceRequest(Builder builder) {
@@ -313,18 +312,18 @@ public class GetSubscriptionPriceRequest extends Request {
     } 
 
     public static class ModuleList extends TeaModel {
-        @NameInMap("Config")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Config")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String config;
 
-        @NameInMap("ModuleCode")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("ModuleCode")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String moduleCode;
 
-        @NameInMap("ModuleStatus")
+        @com.aliyun.core.annotation.NameInMap("ModuleStatus")
         private Integer moduleStatus;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private ModuleList(Builder builder) {

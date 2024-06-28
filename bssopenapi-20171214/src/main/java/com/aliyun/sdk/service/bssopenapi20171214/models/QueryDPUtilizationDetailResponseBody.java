@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDPUtilizationDetailResponseBody</p>
  */
 public class QueryDPUtilizationDetailResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryDPUtilizationDetailResponseBody(Builder builder) {
@@ -132,46 +131,46 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
     } 
 
     public static class DetailList extends TeaModel {
-        @NameInMap("DeductDate")
+        @com.aliyun.core.annotation.NameInMap("DeductDate")
         private String deductDate;
 
-        @NameInMap("DeductFactorTotal")
+        @com.aliyun.core.annotation.NameInMap("DeductFactorTotal")
         private Float deductFactorTotal;
 
-        @NameInMap("DeductHours")
+        @com.aliyun.core.annotation.NameInMap("DeductHours")
         private Float deductHours;
 
-        @NameInMap("DeductMeasure")
+        @com.aliyun.core.annotation.NameInMap("DeductMeasure")
         private Float deductMeasure;
 
-        @NameInMap("DeductQuantity")
+        @com.aliyun.core.annotation.NameInMap("DeductQuantity")
         private Float deductQuantity;
 
-        @NameInMap("DeductedCommodityCode")
+        @com.aliyun.core.annotation.NameInMap("DeductedCommodityCode")
         private String deductedCommodityCode;
 
-        @NameInMap("DeductedInstanceId")
+        @com.aliyun.core.annotation.NameInMap("DeductedInstanceId")
         private String deductedInstanceId;
 
-        @NameInMap("DeductedProductDetail")
+        @com.aliyun.core.annotation.NameInMap("DeductedProductDetail")
         private String deductedProductDetail;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceSpec")
         private String instanceSpec;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ResCode")
+        @com.aliyun.core.annotation.NameInMap("ResCode")
         private String resCode;
 
-        @NameInMap("ShareUid")
+        @com.aliyun.core.annotation.NameInMap("ShareUid")
         private Long shareUid;
 
-        @NameInMap("Uid")
+        @com.aliyun.core.annotation.NameInMap("Uid")
         private Long uid;
 
         private DetailList(Builder builder) {
@@ -437,7 +436,7 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
 
     }
     public static class DataDetailList extends TeaModel {
-        @NameInMap("DetailList")
+        @com.aliyun.core.annotation.NameInMap("DetailList")
         private java.util.List < DetailList> detailList;
 
         private DataDetailList(Builder builder) {
@@ -478,10 +477,10 @@ public class QueryDPUtilizationDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DetailList")
+        @com.aliyun.core.annotation.NameInMap("DetailList")
         private DataDetailList detailList;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {

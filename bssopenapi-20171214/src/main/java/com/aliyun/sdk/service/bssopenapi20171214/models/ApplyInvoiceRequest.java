@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ApplyInvoiceRequest</p>
  */
 public class ApplyInvoiceRequest extends Request {
-    @Query
-    @NameInMap("AddressId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long addressId;
 
-    @Query
-    @NameInMap("ApplyUserNick")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApplyUserNick")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String applyUserNick;
 
-    @Query
-    @NameInMap("CustomerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long customerId;
 
-    @Query
-    @NameInMap("InvoiceAmount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceAmount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long invoiceAmount;
 
-    @Query
-    @NameInMap("InvoiceByAmount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoiceByAmount")
     private Boolean invoiceByAmount;
 
-    @Query
-    @NameInMap("InvoicingType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InvoicingType")
     private Integer invoicingType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProcessWay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProcessWay")
     private Integer processWay;
 
-    @Query
-    @NameInMap("SelectedIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SelectedIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Long > selectedIds;
 
-    @Query
-    @NameInMap("UserRemark")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserRemark")
     private String userRemark;
 
     private ApplyInvoiceRequest(Builder builder) {

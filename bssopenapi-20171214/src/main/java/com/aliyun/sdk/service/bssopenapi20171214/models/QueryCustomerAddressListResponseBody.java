@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCustomerAddressListResponseBody</p>
  */
 public class QueryCustomerAddressListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCustomerAddressListResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
     } 
 
     public static class CustomerInvoiceAddress extends TeaModel {
-        @NameInMap("Addressee")
+        @com.aliyun.core.annotation.NameInMap("Addressee")
         private String addressee;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("City")
+        @com.aliyun.core.annotation.NameInMap("City")
         private String city;
 
-        @NameInMap("County")
+        @com.aliyun.core.annotation.NameInMap("County")
         private String county;
 
-        @NameInMap("DeliveryAddress")
+        @com.aliyun.core.annotation.NameInMap("DeliveryAddress")
         private String deliveryAddress;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Phone")
+        @com.aliyun.core.annotation.NameInMap("Phone")
         private String phone;
 
-        @NameInMap("PostalCode")
+        @com.aliyun.core.annotation.NameInMap("PostalCode")
         private String postalCode;
 
-        @NameInMap("Province")
+        @com.aliyun.core.annotation.NameInMap("Province")
         private String province;
 
-        @NameInMap("Street")
+        @com.aliyun.core.annotation.NameInMap("Street")
         private String street;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private CustomerInvoiceAddress(Builder builder) {
@@ -393,7 +392,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
 
     }
     public static class CustomerInvoiceAddressList extends TeaModel {
-        @NameInMap("CustomerInvoiceAddress")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceAddress")
         private java.util.List < CustomerInvoiceAddress> customerInvoiceAddress;
 
         private CustomerInvoiceAddressList(Builder builder) {
@@ -434,7 +433,7 @@ public class QueryCustomerAddressListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CustomerInvoiceAddressList")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceAddressList")
         private CustomerInvoiceAddressList customerInvoiceAddressList;
 
         private Data(Builder builder) {

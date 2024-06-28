@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAccountTransactionDetailsRequest</p>
  */
 public class QueryAccountTransactionDetailsRequest extends Request {
-    @Query
-    @NameInMap("CreateTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeEnd")
     private String createTimeEnd;
 
-    @Query
-    @NameInMap("CreateTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimeStart")
     private String createTimeStart;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RecordID")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordID")
     private String recordID;
 
-    @Query
-    @NameInMap("TransactionChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannel")
     private String transactionChannel;
 
-    @Query
-    @NameInMap("TransactionChannelSN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionChannelSN")
     private String transactionChannelSN;
 
-    @Query
-    @NameInMap("TransactionNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionNumber")
     private String transactionNumber;
 
-    @Query
-    @NameInMap("TransactionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransactionType")
     private String transactionType;
 
     private QueryAccountTransactionDetailsRequest(Builder builder) {

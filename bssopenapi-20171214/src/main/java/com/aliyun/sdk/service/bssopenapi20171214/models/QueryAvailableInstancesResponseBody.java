@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAvailableInstancesResponseBody</p>
  */
 public class QueryAvailableInstancesResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAvailableInstancesResponseBody(Builder builder) {
@@ -132,58 +131,58 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
     } 
 
     public static class InstanceList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("ExpectedReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ExpectedReleaseTime")
         private String expectedReleaseTime;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("OwnerId")
+        @com.aliyun.core.annotation.NameInMap("OwnerId")
         private Long ownerId;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("ReleaseTime")
+        @com.aliyun.core.annotation.NameInMap("ReleaseTime")
         private String releaseTime;
 
-        @NameInMap("RenewStatus")
+        @com.aliyun.core.annotation.NameInMap("RenewStatus")
         private String renewStatus;
 
-        @NameInMap("RenewalDuration")
+        @com.aliyun.core.annotation.NameInMap("RenewalDuration")
         private Integer renewalDuration;
 
-        @NameInMap("RenewalDurationUnit")
+        @com.aliyun.core.annotation.NameInMap("RenewalDurationUnit")
         private String renewalDurationUnit;
 
-        @NameInMap("Seller")
+        @com.aliyun.core.annotation.NameInMap("Seller")
         private String seller;
 
-        @NameInMap("SellerId")
+        @com.aliyun.core.annotation.NameInMap("SellerId")
         private Long sellerId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("SubStatus")
+        @com.aliyun.core.annotation.NameInMap("SubStatus")
         private String subStatus;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
         private InstanceList(Builder builder) {
@@ -526,16 +525,16 @@ public class QueryAvailableInstancesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("InstanceList")
+        @com.aliyun.core.annotation.NameInMap("InstanceList")
         private java.util.List < InstanceList> instanceList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

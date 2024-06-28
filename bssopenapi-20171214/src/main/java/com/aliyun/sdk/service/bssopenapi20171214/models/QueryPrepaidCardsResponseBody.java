@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPrepaidCardsResponseBody</p>
  */
 public class QueryPrepaidCardsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPrepaidCardsResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
     } 
 
     public static class PrepaidCard extends TeaModel {
-        @NameInMap("ApplicableProducts")
+        @com.aliyun.core.annotation.NameInMap("ApplicableProducts")
         private String applicableProducts;
 
-        @NameInMap("ApplicableScenarios")
+        @com.aliyun.core.annotation.NameInMap("ApplicableScenarios")
         private String applicableScenarios;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("EffectiveTime")
+        @com.aliyun.core.annotation.NameInMap("EffectiveTime")
         private String effectiveTime;
 
-        @NameInMap("ExpiryTime")
+        @com.aliyun.core.annotation.NameInMap("ExpiryTime")
         private String expiryTime;
 
-        @NameInMap("GrantedTime")
+        @com.aliyun.core.annotation.NameInMap("GrantedTime")
         private String grantedTime;
 
-        @NameInMap("NominalValue")
+        @com.aliyun.core.annotation.NameInMap("NominalValue")
         private String nominalValue;
 
-        @NameInMap("PrepaidCardId")
+        @com.aliyun.core.annotation.NameInMap("PrepaidCardId")
         private Long prepaidCardId;
 
-        @NameInMap("PrepaidCardNo")
+        @com.aliyun.core.annotation.NameInMap("PrepaidCardNo")
         private String prepaidCardNo;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PrepaidCard(Builder builder) {
@@ -358,7 +357,7 @@ public class QueryPrepaidCardsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("PrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("PrepaidCard")
         private java.util.List < PrepaidCard> prepaidCard;
 
         private Data(Builder builder) {

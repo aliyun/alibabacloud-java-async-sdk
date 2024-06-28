@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RelieveAccountRelationRequest</p>
  */
 public class RelieveAccountRelationRequest extends Request {
-    @Query
-    @NameInMap("ChildUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChildUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long childUserId;
 
-    @Query
-    @NameInMap("ParentUserId")
-    @Validation()
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentUserId")
+    @com.aliyun.core.annotation.Validation()
     private Long parentUserId;
 
-    @Query
-    @NameInMap("RelationId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationId")
     private Long relationId;
 
-    @Query
-    @NameInMap("RelationType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RelationType")
     private String relationType;
 
-    @Query
-    @NameInMap("RequestId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RequestId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String requestId;
 
     private RelieveAccountRelationRequest(Builder builder) {

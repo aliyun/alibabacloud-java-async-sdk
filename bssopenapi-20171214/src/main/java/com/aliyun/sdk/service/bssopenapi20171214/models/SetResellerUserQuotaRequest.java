@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetResellerUserQuotaRequest</p>
  */
 public class SetResellerUserQuotaRequest extends Request {
-    @Query
-    @NameInMap("Amount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String amount;
 
-    @Query
-    @NameInMap("Currency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Currency")
     private String currency;
 
-    @Query
-    @NameInMap("OutBizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutBizId")
     private String outBizId;
 
-    @Query
-    @NameInMap("OwnerId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerId;
 
     private SetResellerUserQuotaRequest(Builder builder) {

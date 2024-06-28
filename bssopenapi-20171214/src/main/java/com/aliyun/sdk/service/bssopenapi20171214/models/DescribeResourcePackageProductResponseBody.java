@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResourcePackageProductResponseBody</p>
  */
 public class DescribeResourcePackageProductResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("OrderId")
+    @com.aliyun.core.annotation.NameInMap("OrderId")
     private Long orderId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeResourcePackageProductResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
     } 
 
     public static class Property extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Property(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Property")
+        @com.aliyun.core.annotation.NameInMap("Property")
         private java.util.List < Property> property;
 
         private Properties(Builder builder) {
@@ -254,13 +253,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class AvailableDuration extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Unit")
+        @com.aliyun.core.annotation.NameInMap("Unit")
         private String unit;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Integer value;
 
         private AvailableDuration(Builder builder) {
@@ -341,7 +340,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class AvailableDurations extends TeaModel {
-        @NameInMap("AvailableDuration")
+        @com.aliyun.core.annotation.NameInMap("AvailableDuration")
         private java.util.List < AvailableDuration> availableDuration;
 
         private AvailableDurations(Builder builder) {
@@ -382,13 +381,13 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class Specification extends TeaModel {
-        @NameInMap("AvailableDurations")
+        @com.aliyun.core.annotation.NameInMap("AvailableDurations")
         private AvailableDurations availableDurations;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Specification(Builder builder) {
@@ -463,7 +462,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class Specifications extends TeaModel {
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private java.util.List < Specification> specification;
 
         private Specifications(Builder builder) {
@@ -504,16 +503,16 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class PackageType extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("Specifications")
+        @com.aliyun.core.annotation.NameInMap("Specifications")
         private Specifications specifications;
 
         private PackageType(Builder builder) {
@@ -605,7 +604,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class PackageTypes extends TeaModel {
-        @NameInMap("PackageType")
+        @com.aliyun.core.annotation.NameInMap("PackageType")
         private java.util.List < PackageType> packageType;
 
         private PackageTypes(Builder builder) {
@@ -646,16 +645,16 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class ResourcePackage extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("PackageTypes")
+        @com.aliyun.core.annotation.NameInMap("PackageTypes")
         private PackageTypes packageTypes;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
         private ResourcePackage(Builder builder) {
@@ -747,7 +746,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class ResourcePackages extends TeaModel {
-        @NameInMap("ResourcePackage")
+        @com.aliyun.core.annotation.NameInMap("ResourcePackage")
         private java.util.List < ResourcePackage> resourcePackage;
 
         private ResourcePackages(Builder builder) {
@@ -788,7 +787,7 @@ public class DescribeResourcePackageProductResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ResourcePackages")
+        @com.aliyun.core.annotation.NameInMap("ResourcePackages")
         private ResourcePackages resourcePackages;
 
         private Data(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryEvaluateListResponseBody</p>
  */
 public class QueryEvaluateListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryEvaluateListResponseBody(Builder builder) {
@@ -132,67 +131,67 @@ public class QueryEvaluateListResponseBody extends TeaModel {
     } 
 
     public static class Evaluate extends TeaModel {
-        @NameInMap("BillCycle")
+        @com.aliyun.core.annotation.NameInMap("BillCycle")
         private String billCycle;
 
-        @NameInMap("BillId")
+        @com.aliyun.core.annotation.NameInMap("BillId")
         private Long billId;
 
-        @NameInMap("BizTime")
+        @com.aliyun.core.annotation.NameInMap("BizTime")
         private String bizTime;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("CanInvoiceAmount")
+        @com.aliyun.core.annotation.NameInMap("CanInvoiceAmount")
         private Long canInvoiceAmount;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InvoicedAmount")
+        @com.aliyun.core.annotation.NameInMap("InvoicedAmount")
         private Long invoicedAmount;
 
-        @NameInMap("ItemId")
+        @com.aliyun.core.annotation.NameInMap("ItemId")
         private Long itemId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OffsetAcceptAmount")
+        @com.aliyun.core.annotation.NameInMap("OffsetAcceptAmount")
         private Long offsetAcceptAmount;
 
-        @NameInMap("OffsetCostAmount")
+        @com.aliyun.core.annotation.NameInMap("OffsetCostAmount")
         private Long offsetCostAmount;
 
-        @NameInMap("OpId")
+        @com.aliyun.core.annotation.NameInMap("OpId")
         private String opId;
 
-        @NameInMap("OriginalAmount")
+        @com.aliyun.core.annotation.NameInMap("OriginalAmount")
         private Long originalAmount;
 
-        @NameInMap("OutBizId")
+        @com.aliyun.core.annotation.NameInMap("OutBizId")
         private String outBizId;
 
-        @NameInMap("PresentAmount")
+        @com.aliyun.core.annotation.NameInMap("PresentAmount")
         private Long presentAmount;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Integer status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Integer type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private Evaluate(Builder builder) {
@@ -585,7 +584,7 @@ public class QueryEvaluateListResponseBody extends TeaModel {
 
     }
     public static class EvaluateList extends TeaModel {
-        @NameInMap("Evaluate")
+        @com.aliyun.core.annotation.NameInMap("Evaluate")
         private java.util.List < Evaluate> evaluate;
 
         private EvaluateList(Builder builder) {
@@ -626,25 +625,25 @@ public class QueryEvaluateListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EvaluateList")
+        @com.aliyun.core.annotation.NameInMap("EvaluateList")
         private EvaluateList evaluateList;
 
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
-        @NameInMap("TotalInvoiceAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalInvoiceAmount")
         private Long totalInvoiceAmount;
 
-        @NameInMap("TotalUnAppliedInvoiceAmount")
+        @com.aliyun.core.annotation.NameInMap("TotalUnAppliedInvoiceAmount")
         private Long totalUnAppliedInvoiceAmount;
 
         private Data(Builder builder) {

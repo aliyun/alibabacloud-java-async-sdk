@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryAccountTransactionsResponseBody</p>
  */
 public class QueryAccountTransactionsResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryAccountTransactionsResponseBody(Builder builder) {
@@ -132,43 +131,43 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
     } 
 
     public static class AccountTransactionsList extends TeaModel {
-        @NameInMap("Amount")
+        @com.aliyun.core.annotation.NameInMap("Amount")
         private String amount;
 
-        @NameInMap("Balance")
+        @com.aliyun.core.annotation.NameInMap("Balance")
         private String balance;
 
-        @NameInMap("BillingCycle")
+        @com.aliyun.core.annotation.NameInMap("BillingCycle")
         private String billingCycle;
 
-        @NameInMap("FundType")
+        @com.aliyun.core.annotation.NameInMap("FundType")
         private String fundType;
 
-        @NameInMap("RecordID")
+        @com.aliyun.core.annotation.NameInMap("RecordID")
         private String recordID;
 
-        @NameInMap("Remarks")
+        @com.aliyun.core.annotation.NameInMap("Remarks")
         private String remarks;
 
-        @NameInMap("TransactionAccount")
+        @com.aliyun.core.annotation.NameInMap("TransactionAccount")
         private String transactionAccount;
 
-        @NameInMap("TransactionChannel")
+        @com.aliyun.core.annotation.NameInMap("TransactionChannel")
         private String transactionChannel;
 
-        @NameInMap("TransactionChannelSN")
+        @com.aliyun.core.annotation.NameInMap("TransactionChannelSN")
         private String transactionChannelSN;
 
-        @NameInMap("TransactionFlow")
+        @com.aliyun.core.annotation.NameInMap("TransactionFlow")
         private String transactionFlow;
 
-        @NameInMap("TransactionNumber")
+        @com.aliyun.core.annotation.NameInMap("TransactionNumber")
         private String transactionNumber;
 
-        @NameInMap("TransactionTime")
+        @com.aliyun.core.annotation.NameInMap("TransactionTime")
         private String transactionTime;
 
-        @NameInMap("TransactionType")
+        @com.aliyun.core.annotation.NameInMap("TransactionType")
         private String transactionType;
 
         private AccountTransactionsList(Builder builder) {
@@ -443,7 +442,7 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
 
     }
     public static class DataAccountTransactionsList extends TeaModel {
-        @NameInMap("AccountTransactionsList")
+        @com.aliyun.core.annotation.NameInMap("AccountTransactionsList")
         private java.util.List < AccountTransactionsList> accountTransactionsList;
 
         private DataAccountTransactionsList(Builder builder) {
@@ -484,19 +483,19 @@ public class QueryAccountTransactionsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("AccountTransactionsList")
+        @com.aliyun.core.annotation.NameInMap("AccountTransactionsList")
         private DataAccountTransactionsList accountTransactionsList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

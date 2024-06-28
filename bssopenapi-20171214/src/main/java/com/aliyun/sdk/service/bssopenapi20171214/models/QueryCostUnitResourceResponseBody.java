@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCostUnitResourceResponseBody</p>
  */
 public class QueryCostUnitResourceResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryCostUnitResourceResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
     } 
 
     public static class CostUnit extends TeaModel {
-        @NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
         private Long ownerUid;
 
-        @NameInMap("ParentUnitId")
+        @com.aliyun.core.annotation.NameInMap("ParentUnitId")
         private Long parentUnitId;
 
-        @NameInMap("UnitId")
+        @com.aliyun.core.annotation.NameInMap("UnitId")
         private Long unitId;
 
-        @NameInMap("UnitName")
+        @com.aliyun.core.annotation.NameInMap("UnitName")
         private String unitName;
 
         private CostUnit(Builder builder) {
@@ -233,25 +232,25 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     }
     public static class CostUnitStatisInfo extends TeaModel {
-        @NameInMap("ResourceCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceCount")
         private Long resourceCount;
 
-        @NameInMap("ResourceGroupCount")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroupCount")
         private Long resourceGroupCount;
 
-        @NameInMap("SubUnitCount")
+        @com.aliyun.core.annotation.NameInMap("SubUnitCount")
         private Long subUnitCount;
 
-        @NameInMap("TotalResourceCount")
+        @com.aliyun.core.annotation.NameInMap("TotalResourceCount")
         private Long totalResourceCount;
 
-        @NameInMap("TotalResourceGroupCount")
+        @com.aliyun.core.annotation.NameInMap("TotalResourceGroupCount")
         private Long totalResourceGroupCount;
 
-        @NameInMap("TotalUserCount")
+        @com.aliyun.core.annotation.NameInMap("TotalUserCount")
         private Long totalUserCount;
 
-        @NameInMap("UserCount")
+        @com.aliyun.core.annotation.NameInMap("UserCount")
         private Long userCount;
 
         private CostUnitStatisInfo(Builder builder) {
@@ -394,43 +393,49 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     }
     public static class ResourceInstanceDtoList extends TeaModel {
-        @NameInMap("ApportionCode")
+        @com.aliyun.core.annotation.NameInMap("ApportionCode")
         private String apportionCode;
 
-        @NameInMap("ApportionName")
+        @com.aliyun.core.annotation.NameInMap("ApportionName")
         private String apportionName;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("RelatedResources")
+        @com.aliyun.core.annotation.NameInMap("PipCode")
+        private String pipCode;
+
+        @com.aliyun.core.annotation.NameInMap("RelatedResources")
         private String relatedResources;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("ResourceId")
+        @com.aliyun.core.annotation.NameInMap("ResourceId")
         private String resourceId;
 
-        @NameInMap("ResourceNick")
+        @com.aliyun.core.annotation.NameInMap("ResourceNick")
         private String resourceNick;
 
-        @NameInMap("ResourceStatus")
+        @com.aliyun.core.annotation.NameInMap("ResourceSource")
+        private String resourceSource;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceStatus")
         private String resourceStatus;
 
-        @NameInMap("ResourceTag")
+        @com.aliyun.core.annotation.NameInMap("ResourceTag")
         private String resourceTag;
 
-        @NameInMap("ResourceType")
+        @com.aliyun.core.annotation.NameInMap("ResourceType")
         private String resourceType;
 
-        @NameInMap("ResourceUserId")
+        @com.aliyun.core.annotation.NameInMap("ResourceUserId")
         private Long resourceUserId;
 
-        @NameInMap("ResourceUserName")
+        @com.aliyun.core.annotation.NameInMap("ResourceUserName")
         private String resourceUserName;
 
         private ResourceInstanceDtoList(Builder builder) {
@@ -438,10 +443,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             this.apportionName = builder.apportionName;
             this.commodityCode = builder.commodityCode;
             this.commodityName = builder.commodityName;
+            this.pipCode = builder.pipCode;
             this.relatedResources = builder.relatedResources;
             this.resourceGroup = builder.resourceGroup;
             this.resourceId = builder.resourceId;
             this.resourceNick = builder.resourceNick;
+            this.resourceSource = builder.resourceSource;
             this.resourceStatus = builder.resourceStatus;
             this.resourceTag = builder.resourceTag;
             this.resourceType = builder.resourceType;
@@ -486,6 +493,13 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
         }
 
         /**
+         * @return pipCode
+         */
+        public String getPipCode() {
+            return this.pipCode;
+        }
+
+        /**
          * @return relatedResources
          */
         public String getRelatedResources() {
@@ -511,6 +525,13 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
          */
         public String getResourceNick() {
             return this.resourceNick;
+        }
+
+        /**
+         * @return resourceSource
+         */
+        public String getResourceSource() {
+            return this.resourceSource;
         }
 
         /**
@@ -553,10 +574,12 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             private String apportionName; 
             private String commodityCode; 
             private String commodityName; 
+            private String pipCode; 
             private String relatedResources; 
             private String resourceGroup; 
             private String resourceId; 
             private String resourceNick; 
+            private String resourceSource; 
             private String resourceStatus; 
             private String resourceTag; 
             private String resourceType; 
@@ -596,6 +619,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
             }
 
             /**
+             * PipCode.
+             */
+            public Builder pipCode(String pipCode) {
+                this.pipCode = pipCode;
+                return this;
+            }
+
+            /**
              * The resources related to the resource instance.
              */
             public Builder relatedResources(String relatedResources) {
@@ -624,6 +655,14 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
              */
             public Builder resourceNick(String resourceNick) {
                 this.resourceNick = resourceNick;
+                return this;
+            }
+
+            /**
+             * ResourceSource.
+             */
+            public Builder resourceSource(String resourceSource) {
+                this.resourceSource = resourceSource;
                 return this;
             }
 
@@ -675,22 +714,22 @@ public class QueryCostUnitResourceResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private CostUnit costUnit;
 
-        @NameInMap("CostUnitStatisInfo")
+        @com.aliyun.core.annotation.NameInMap("CostUnitStatisInfo")
         private CostUnitStatisInfo costUnitStatisInfo;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("ResourceInstanceDtoList")
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceDtoList")
         private java.util.List < ResourceInstanceDtoList> resourceInstanceDtoList;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

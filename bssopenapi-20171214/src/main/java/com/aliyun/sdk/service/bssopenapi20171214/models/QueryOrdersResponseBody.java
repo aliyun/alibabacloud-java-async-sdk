@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryOrdersResponseBody</p>
  */
 public class QueryOrdersResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryOrdersResponseBody(Builder builder) {
@@ -132,55 +131,55 @@ public class QueryOrdersResponseBody extends TeaModel {
     } 
 
     public static class Order extends TeaModel {
-        @NameInMap("AfterTaxAmount")
+        @com.aliyun.core.annotation.NameInMap("AfterTaxAmount")
         private String afterTaxAmount;
 
-        @NameInMap("CommodityCode")
+        @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Currency")
+        @com.aliyun.core.annotation.NameInMap("Currency")
         private String currency;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PaymentCurrency")
+        @com.aliyun.core.annotation.NameInMap("PaymentCurrency")
         private String paymentCurrency;
 
-        @NameInMap("PaymentStatus")
+        @com.aliyun.core.annotation.NameInMap("PaymentStatus")
         private String paymentStatus;
 
-        @NameInMap("PaymentTime")
+        @com.aliyun.core.annotation.NameInMap("PaymentTime")
         private String paymentTime;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private String pretaxAmount;
 
-        @NameInMap("PretaxAmountLocal")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmountLocal")
         private String pretaxAmountLocal;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private String pretaxGrossAmount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductType")
+        @com.aliyun.core.annotation.NameInMap("ProductType")
         private String productType;
 
-        @NameInMap("RelatedOrderId")
+        @com.aliyun.core.annotation.NameInMap("RelatedOrderId")
         private String relatedOrderId;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tax")
+        @com.aliyun.core.annotation.NameInMap("Tax")
         private String tax;
 
         private Order(Builder builder) {
@@ -510,7 +509,7 @@ public class QueryOrdersResponseBody extends TeaModel {
 
     }
     public static class OrderList extends TeaModel {
-        @NameInMap("Order")
+        @com.aliyun.core.annotation.NameInMap("Order")
         private java.util.List < Order> order;
 
         private OrderList(Builder builder) {
@@ -551,19 +550,19 @@ public class QueryOrdersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HostName")
+        @com.aliyun.core.annotation.NameInMap("HostName")
         private String hostName;
 
-        @NameInMap("OrderList")
+        @com.aliyun.core.annotation.NameInMap("OrderList")
         private OrderList orderList;
 
-        @NameInMap("PageNum")
+        @com.aliyun.core.annotation.NameInMap("PageNum")
         private Integer pageNum;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

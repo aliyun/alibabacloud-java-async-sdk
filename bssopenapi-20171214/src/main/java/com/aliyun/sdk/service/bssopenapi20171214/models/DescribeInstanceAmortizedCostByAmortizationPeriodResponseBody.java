@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody</p>
  */
 public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody(Builder builder) {
@@ -132,178 +131,178 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("AmortizationPeriod")
+        @com.aliyun.core.annotation.NameInMap("AmortizationPeriod")
         private String amortizationPeriod;
 
-        @NameInMap("AmortizationStatus")
+        @com.aliyun.core.annotation.NameInMap("AmortizationStatus")
         private String amortizationStatus;
 
-        @NameInMap("BillAccountID")
+        @com.aliyun.core.annotation.NameInMap("BillAccountID")
         private Long billAccountID;
 
-        @NameInMap("BillAccountName")
+        @com.aliyun.core.annotation.NameInMap("BillAccountName")
         private String billAccountName;
 
-        @NameInMap("BillOwnerID")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerID")
         private Long billOwnerID;
 
-        @NameInMap("BillOwnerName")
+        @com.aliyun.core.annotation.NameInMap("BillOwnerName")
         private String billOwnerName;
 
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("ConsumePeriod")
+        @com.aliyun.core.annotation.NameInMap("ConsumePeriod")
         private String consumePeriod;
 
-        @NameInMap("CostUnit")
+        @com.aliyun.core.annotation.NameInMap("CostUnit")
         private String costUnit;
 
-        @NameInMap("CostUnitCode")
+        @com.aliyun.core.annotation.NameInMap("CostUnitCode")
         private String costUnitCode;
 
-        @NameInMap("CurrentAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCashCoupons")
         private Double currentAmortizationDeductedByCashCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByCoupons")
         private Double currentAmortizationDeductedByCoupons;
 
-        @NameInMap("CurrentAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationDeductedByPrepaidCard")
         private Double currentAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("CurrentAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationExpenditureAmount")
         private Double currentAmortizationExpenditureAmount;
 
-        @NameInMap("CurrentAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationInvoiceDiscount")
         private Double currentAmortizationInvoiceDiscount;
 
-        @NameInMap("CurrentAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxAmount")
         private Double currentAmortizationPretaxAmount;
 
-        @NameInMap("CurrentAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationPretaxGrossAmount")
         private Double currentAmortizationPretaxGrossAmount;
 
-        @NameInMap("CurrentAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("CurrentAmortizationRoundDownDiscount")
         private Double currentAmortizationRoundDownDiscount;
 
-        @NameInMap("DeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCashCoupons")
         private Double deductedByCashCoupons;
 
-        @NameInMap("DeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("DeductedByCoupons")
         private Double deductedByCoupons;
 
-        @NameInMap("DeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("DeductedByPrepaidCard")
         private Double deductedByPrepaidCard;
 
-        @NameInMap("ExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("ExpenditureAmount")
         private Double expenditureAmount;
 
-        @NameInMap("InstanceID")
+        @com.aliyun.core.annotation.NameInMap("InstanceID")
         private String instanceID;
 
-        @NameInMap("InternetIP")
+        @com.aliyun.core.annotation.NameInMap("InternetIP")
         private String internetIP;
 
-        @NameInMap("IntranetIP")
+        @com.aliyun.core.annotation.NameInMap("IntranetIP")
         private String intranetIP;
 
-        @NameInMap("InvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("InvoiceDiscount")
         private Double invoiceDiscount;
 
-        @NameInMap("PretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxAmount")
         private Double pretaxAmount;
 
-        @NameInMap("PretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PretaxGrossAmount")
         private Double pretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCashCoupons")
         private Double previouslyAmortizedDeductedByCashCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByCoupons")
         private Double previouslyAmortizedDeductedByCoupons;
 
-        @NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedDeductedByPrepaidCard")
         private Double previouslyAmortizedDeductedByPrepaidCard;
 
-        @NameInMap("PreviouslyAmortizedExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedExpenditureAmount")
         private Double previouslyAmortizedExpenditureAmount;
 
-        @NameInMap("PreviouslyAmortizedInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedInvoiceDiscount")
         private Double previouslyAmortizedInvoiceDiscount;
 
-        @NameInMap("PreviouslyAmortizedPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxAmount")
         private Double previouslyAmortizedPretaxAmount;
 
-        @NameInMap("PreviouslyAmortizedPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedPretaxGrossAmount")
         private Double previouslyAmortizedPretaxGrossAmount;
 
-        @NameInMap("PreviouslyAmortizedRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("PreviouslyAmortizedRoundDownDiscount")
         private Double previouslyAmortizedRoundDownDiscount;
 
-        @NameInMap("ProductCode")
+        @com.aliyun.core.annotation.NameInMap("ProductCode")
         private String productCode;
 
-        @NameInMap("ProductDetail")
+        @com.aliyun.core.annotation.NameInMap("ProductDetail")
         private String productDetail;
 
-        @NameInMap("ProductDetailCode")
+        @com.aliyun.core.annotation.NameInMap("ProductDetailCode")
         private String productDetailCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RemainingAmortizationDeductedByCashCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCashCoupons")
         private Double remainingAmortizationDeductedByCashCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByCoupons")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByCoupons")
         private Double remainingAmortizationDeductedByCoupons;
 
-        @NameInMap("RemainingAmortizationDeductedByPrepaidCard")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationDeductedByPrepaidCard")
         private Double remainingAmortizationDeductedByPrepaidCard;
 
-        @NameInMap("RemainingAmortizationExpenditureAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationExpenditureAmount")
         private Double remainingAmortizationExpenditureAmount;
 
-        @NameInMap("RemainingAmortizationInvoiceDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationInvoiceDiscount")
         private Double remainingAmortizationInvoiceDiscount;
 
-        @NameInMap("RemainingAmortizationPretaxAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxAmount")
         private Double remainingAmortizationPretaxAmount;
 
-        @NameInMap("RemainingAmortizationPretaxGrossAmount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationPretaxGrossAmount")
         private Double remainingAmortizationPretaxGrossAmount;
 
-        @NameInMap("RemainingAmortizationRoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RemainingAmortizationRoundDownDiscount")
         private Double remainingAmortizationRoundDownDiscount;
 
-        @NameInMap("ResourceGroup")
+        @com.aliyun.core.annotation.NameInMap("ResourceGroup")
         private String resourceGroup;
 
-        @NameInMap("RoundDownDiscount")
+        @com.aliyun.core.annotation.NameInMap("RoundDownDiscount")
         private Double roundDownDiscount;
 
-        @NameInMap("SplitAccountName")
+        @com.aliyun.core.annotation.NameInMap("SplitAccountName")
         private String splitAccountName;
 
-        @NameInMap("SplitItemID")
+        @com.aliyun.core.annotation.NameInMap("SplitItemID")
         private String splitItemID;
 
-        @NameInMap("SplitItemName")
+        @com.aliyun.core.annotation.NameInMap("SplitItemName")
         private String splitItemName;
 
-        @NameInMap("SplitProductDetail")
+        @com.aliyun.core.annotation.NameInMap("SplitProductDetail")
         private String splitProductDetail;
 
-        @NameInMap("SubscriptionType")
+        @com.aliyun.core.annotation.NameInMap("SubscriptionType")
         private String subscriptionType;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private String zone;
 
         private Items(Builder builder) {
@@ -1321,22 +1320,22 @@ public class DescribeInstanceAmortizedCostByAmortizationPeriodResponseBody exten
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Data(Builder builder) {

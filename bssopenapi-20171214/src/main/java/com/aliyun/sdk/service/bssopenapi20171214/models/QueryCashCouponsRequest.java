@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryCashCouponsRequest</p>
  */
 public class QueryCashCouponsRequest extends Request {
-    @Query
-    @NameInMap("EffectiveOrNot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveOrNot")
     private Boolean effectiveOrNot;
 
-    @Query
-    @NameInMap("ExpiryTimeEnd")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiryTimeEnd")
     private String expiryTimeEnd;
 
-    @Query
-    @NameInMap("ExpiryTimeStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExpiryTimeStart")
     private String expiryTimeStart;
 
     private QueryCashCouponsRequest(Builder builder) {

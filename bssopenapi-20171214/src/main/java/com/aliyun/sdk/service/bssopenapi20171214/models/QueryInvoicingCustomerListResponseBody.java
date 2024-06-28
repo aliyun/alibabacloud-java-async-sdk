@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryInvoicingCustomerListResponseBody</p>
  */
 public class QueryInvoicingCustomerListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryInvoicingCustomerListResponseBody(Builder builder) {
@@ -132,67 +131,67 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
     } 
 
     public static class CustomerInvoice extends TeaModel {
-        @NameInMap("AdjustType")
+        @com.aliyun.core.annotation.NameInMap("AdjustType")
         private Long adjustType;
 
-        @NameInMap("Bank")
+        @com.aliyun.core.annotation.NameInMap("Bank")
         private String bank;
 
-        @NameInMap("BankNo")
+        @com.aliyun.core.annotation.NameInMap("BankNo")
         private String bankNo;
 
-        @NameInMap("CustomerType")
+        @com.aliyun.core.annotation.NameInMap("CustomerType")
         private Long customerType;
 
-        @NameInMap("DefaultRemark")
+        @com.aliyun.core.annotation.NameInMap("DefaultRemark")
         private String defaultRemark;
 
-        @NameInMap("EndCycle")
+        @com.aliyun.core.annotation.NameInMap("EndCycle")
         private Long endCycle;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("InvoiceTitle")
+        @com.aliyun.core.annotation.NameInMap("InvoiceTitle")
         private String invoiceTitle;
 
-        @NameInMap("IssueType")
+        @com.aliyun.core.annotation.NameInMap("IssueType")
         private Long issueType;
 
-        @NameInMap("OperatingLicenseAddress")
+        @com.aliyun.core.annotation.NameInMap("OperatingLicenseAddress")
         private String operatingLicenseAddress;
 
-        @NameInMap("OperatingLicensePhone")
+        @com.aliyun.core.annotation.NameInMap("OperatingLicensePhone")
         private String operatingLicensePhone;
 
-        @NameInMap("RegisterNo")
+        @com.aliyun.core.annotation.NameInMap("RegisterNo")
         private String registerNo;
 
-        @NameInMap("StartCycle")
+        @com.aliyun.core.annotation.NameInMap("StartCycle")
         private Long startCycle;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private Long status;
 
-        @NameInMap("TaxationLicense")
+        @com.aliyun.core.annotation.NameInMap("TaxationLicense")
         private String taxationLicense;
 
-        @NameInMap("TaxpayerType")
+        @com.aliyun.core.annotation.NameInMap("TaxpayerType")
         private Long taxpayerType;
 
-        @NameInMap("TitleChangeInstructions")
+        @com.aliyun.core.annotation.NameInMap("TitleChangeInstructions")
         private String titleChangeInstructions;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private Long type;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
-        @NameInMap("UserNick")
+        @com.aliyun.core.annotation.NameInMap("UserNick")
         private String userNick;
 
         private CustomerInvoice(Builder builder) {
@@ -585,7 +584,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
 
     }
     public static class CustomerInvoiceList extends TeaModel {
-        @NameInMap("CustomerInvoice")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoice")
         private java.util.List < CustomerInvoice> customerInvoice;
 
         private CustomerInvoiceList(Builder builder) {
@@ -626,7 +625,7 @@ public class QueryInvoicingCustomerListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("CustomerInvoiceList")
+        @com.aliyun.core.annotation.NameInMap("CustomerInvoiceList")
         private CustomerInvoiceList customerInvoiceList;
 
         private Data(Builder builder) {

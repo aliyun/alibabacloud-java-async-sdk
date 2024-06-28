@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPermissionListResponseBody</p>
  */
 public class QueryPermissionListResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryPermissionListResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class QueryPermissionListResponseBody extends TeaModel {
     } 
 
     public static class PermissionList extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("PermissionCode")
+        @com.aliyun.core.annotation.NameInMap("PermissionCode")
         private String permissionCode;
 
-        @NameInMap("PermissionName")
+        @com.aliyun.core.annotation.NameInMap("PermissionName")
         private String permissionName;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private PermissionList(Builder builder) {
@@ -233,28 +232,28 @@ public class QueryPermissionListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("MasterId")
+        @com.aliyun.core.annotation.NameInMap("MasterId")
         private Long masterId;
 
-        @NameInMap("MemberId")
+        @com.aliyun.core.annotation.NameInMap("MemberId")
         private Long memberId;
 
-        @NameInMap("PermissionList")
+        @com.aliyun.core.annotation.NameInMap("PermissionList")
         private java.util.List < PermissionList> permissionList;
 
-        @NameInMap("RelationType")
+        @com.aliyun.core.annotation.NameInMap("RelationType")
         private String relationType;
 
-        @NameInMap("SetupTime")
+        @com.aliyun.core.annotation.NameInMap("SetupTime")
         private String setupTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Data(Builder builder) {

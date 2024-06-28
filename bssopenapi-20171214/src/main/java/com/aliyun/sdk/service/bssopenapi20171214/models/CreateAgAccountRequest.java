@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAgAccountRequest</p>
  */
 public class CreateAgAccountRequest extends Request {
-    @Query
-    @NameInMap("AccountAttr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountAttr")
     private String accountAttr;
 
-    @Query
-    @NameInMap("CityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CityName")
     private String cityName;
 
-    @Query
-    @NameInMap("EnterpriseName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnterpriseName")
     private String enterpriseName;
 
-    @Query
-    @NameInMap("FirstName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FirstName")
     private String firstName;
 
-    @Query
-    @NameInMap("LastName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LastName")
     private String lastName;
 
-    @Query
-    @NameInMap("LoginEmail")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LoginEmail")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String loginEmail;
 
-    @Query
-    @NameInMap("NationCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NationCode")
     private String nationCode;
 
-    @Query
-    @NameInMap("Postcode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Postcode")
     private String postcode;
 
-    @Query
-    @NameInMap("ProvinceName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProvinceName")
     private String provinceName;
 
     private CreateAgAccountRequest(Builder builder) {

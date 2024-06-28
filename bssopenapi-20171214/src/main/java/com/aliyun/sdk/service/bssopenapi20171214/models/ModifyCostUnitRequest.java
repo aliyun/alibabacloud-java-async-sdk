@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyCostUnitRequest</p>
  */
 public class ModifyCostUnitRequest extends Request {
-    @Query
-    @NameInMap("UnitEntityList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitEntityList")
     private java.util.List < UnitEntityList> unitEntityList;
 
     private ModifyCostUnitRequest(Builder builder) {
@@ -70,16 +69,16 @@ public class ModifyCostUnitRequest extends Request {
     } 
 
     public static class UnitEntityList extends TeaModel {
-        @NameInMap("NewUnitName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("NewUnitName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String newUnitName;
 
-        @NameInMap("OwnerUid")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("OwnerUid")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long ownerUid;
 
-        @NameInMap("UnitId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("UnitId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private Long unitId;
 
         private UnitEntityList(Builder builder) {

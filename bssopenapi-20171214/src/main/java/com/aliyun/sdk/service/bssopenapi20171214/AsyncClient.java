@@ -132,8 +132,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeSplitItemBillResponse> describeSplitItemBill(DescribeSplitItemBillRequest request);
 
-    CompletableFuture<EnableBillGenerationResponse> enableBillGeneration(EnableBillGenerationRequest request);
-
     CompletableFuture<GetAccountRelationResponse> getAccountRelation(GetAccountRelationRequest request);
 
     CompletableFuture<GetCustomerAccountInfoResponse> getCustomerAccountInfo(GetCustomerAccountInfoRequest request);

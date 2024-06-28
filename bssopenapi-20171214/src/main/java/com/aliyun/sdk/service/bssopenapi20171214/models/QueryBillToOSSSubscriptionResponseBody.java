@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryBillToOSSSubscriptionResponseBody</p>
  */
 public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QueryBillToOSSSubscriptionResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
     } 
 
     public static class Item extends TeaModel {
-        @NameInMap("BucketOwnerId")
+        @com.aliyun.core.annotation.NameInMap("BucketOwnerId")
         private Long bucketOwnerId;
 
-        @NameInMap("BucketPath")
+        @com.aliyun.core.annotation.NameInMap("BucketPath")
         private String bucketPath;
 
-        @NameInMap("RowLimitPerFile")
+        @com.aliyun.core.annotation.NameInMap("RowLimitPerFile")
         private Integer rowLimitPerFile;
 
-        @NameInMap("SubscribeBucket")
+        @com.aliyun.core.annotation.NameInMap("SubscribeBucket")
         private String subscribeBucket;
 
-        @NameInMap("SubscribeLanguage")
+        @com.aliyun.core.annotation.NameInMap("SubscribeLanguage")
         private String subscribeLanguage;
 
-        @NameInMap("SubscribeTime")
+        @com.aliyun.core.annotation.NameInMap("SubscribeTime")
         private String subscribeTime;
 
-        @NameInMap("SubscribeType")
+        @com.aliyun.core.annotation.NameInMap("SubscribeType")
         private String subscribeType;
 
         private Item(Builder builder) {
@@ -303,7 +302,7 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Items extends TeaModel {
-        @NameInMap("Item")
+        @com.aliyun.core.annotation.NameInMap("Item")
         private java.util.List < Item> item;
 
         private Items(Builder builder) {
@@ -344,13 +343,13 @@ public class QueryBillToOSSSubscriptionResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("AccountID")
+        @com.aliyun.core.annotation.NameInMap("AccountID")
         private String accountID;
 
-        @NameInMap("AccountName")
+        @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private Items items;
 
         private Data(Builder builder) {

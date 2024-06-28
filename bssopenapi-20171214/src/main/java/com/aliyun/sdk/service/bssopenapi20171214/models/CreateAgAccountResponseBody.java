@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAgAccountResponseBody</p>
  */
 public class CreateAgAccountResponseBody extends TeaModel {
-    @NameInMap("AgRelationDto")
+    @com.aliyun.core.annotation.NameInMap("AgRelationDto")
     private AgRelationDto agRelationDto;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateAgAccountResponseBody(Builder builder) {
@@ -132,16 +131,16 @@ public class CreateAgAccountResponseBody extends TeaModel {
     } 
 
     public static class AgRelationDto extends TeaModel {
-        @NameInMap("Mpk")
+        @com.aliyun.core.annotation.NameInMap("Mpk")
         private String mpk;
 
-        @NameInMap("Pk")
+        @com.aliyun.core.annotation.NameInMap("Pk")
         private String pk;
 
-        @NameInMap("RamAdminRoleName")
+        @com.aliyun.core.annotation.NameInMap("RamAdminRoleName")
         private String ramAdminRoleName;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AgRelationDto(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCostUnitRequest</p>
  */
 public class DeleteCostUnitRequest extends Request {
-    @Query
-    @NameInMap("OwnerUid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerUid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long ownerUid;
 
-    @Query
-    @NameInMap("UnitId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UnitId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long unitId;
 
     private DeleteCostUnitRequest(Builder builder) {

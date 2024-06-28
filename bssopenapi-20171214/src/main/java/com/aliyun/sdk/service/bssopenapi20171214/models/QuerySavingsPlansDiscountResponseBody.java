@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.bssopenapi20171214.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySavingsPlansDiscountResponseBody</p>
  */
 public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private QuerySavingsPlansDiscountResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
     } 
 
     public static class Items extends TeaModel {
-        @NameInMap("CommodityName")
+        @com.aliyun.core.annotation.NameInMap("CommodityName")
         private String commodityName;
 
-        @NameInMap("ContractDiscountRate")
+        @com.aliyun.core.annotation.NameInMap("ContractDiscountRate")
         private String contractDiscountRate;
 
-        @NameInMap("Cycle")
+        @com.aliyun.core.annotation.NameInMap("Cycle")
         private String cycle;
 
-        @NameInMap("DiscountRate")
+        @com.aliyun.core.annotation.NameInMap("DiscountRate")
         private String discountRate;
 
-        @NameInMap("ModuleName")
+        @com.aliyun.core.annotation.NameInMap("ModuleName")
         private String moduleName;
 
-        @NameInMap("PayMode")
+        @com.aliyun.core.annotation.NameInMap("PayMode")
         private String payMode;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegionCode")
+        @com.aliyun.core.annotation.NameInMap("RegionCode")
         private String regionCode;
 
-        @NameInMap("Spec")
+        @com.aliyun.core.annotation.NameInMap("Spec")
         private String spec;
 
-        @NameInMap("SpnType")
+        @com.aliyun.core.annotation.NameInMap("SpnType")
         private String spnType;
 
         private Items(Builder builder) {
@@ -358,10 +357,10 @@ public class QuerySavingsPlansDiscountResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("HostId")
+        @com.aliyun.core.annotation.NameInMap("HostId")
         private String hostId;
 
-        @NameInMap("Items")
+        @com.aliyun.core.annotation.NameInMap("Items")
         private java.util.List < Items> items;
 
         private Data(Builder builder) {
