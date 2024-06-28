@@ -273,7 +273,7 @@ public class ModifyBgpGroupAttributeRequest extends Request {
          * <p>
          * 
          * *   **true**
-         * *   **false**
+         * *   **false** (default)
          */
         public Builder clearAuthKey(Boolean clearAuthKey) {
             this.putQueryParameter("ClearAuthKey", clearAuthKey);
@@ -308,13 +308,13 @@ public class ModifyBgpGroupAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to use a fake ASN. Valid values:
+         * Specifies whether to use a fake AS number. Valid values:
          * <p>
          * 
          * *   **false** (default)
          * *   **true**
          * 
-         * >  A router that runs BGP typically belongs only to one AS. If you need to replace an existing ASN with a new ASN and you cannot immediately modify BGP configurations, you can use fake ASNs to ensure service continuity.
+         * > A router that runs BGP typically belongs to only one AS. If you need to replace an AS with a new one, but you cannot immediately modify BGP configurations due to business requirements, you can specify a fake AS number to establish a connection with the local end. This ensures service continuity in scenarios such as AS migration or AS merging.
          */
         public Builder isFakeAsn(Boolean isFakeAsn) {
             this.putQueryParameter("IsFakeAsn", isFakeAsn);

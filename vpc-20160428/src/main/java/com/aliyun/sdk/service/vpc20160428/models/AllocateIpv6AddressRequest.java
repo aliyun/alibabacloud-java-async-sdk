@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class AllocateIpv6AddressRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    private String addressType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
@@ -67,6 +71,7 @@ public class AllocateIpv6AddressRequest extends Request {
 
     private AllocateIpv6AddressRequest(Builder builder) {
         super(builder);
+        this.addressType = builder.addressType;
         this.clientToken = builder.clientToken;
         this.dryRun = builder.dryRun;
         this.ipv6Address = builder.ipv6Address;
@@ -93,6 +98,13 @@ public class AllocateIpv6AddressRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressType
+     */
+    public String getAddressType() {
+        return this.addressType;
     }
 
     /**
@@ -187,6 +199,7 @@ public class AllocateIpv6AddressRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<AllocateIpv6AddressRequest, Builder> {
+        private String addressType; 
         private String clientToken; 
         private Boolean dryRun; 
         private String ipv6Address; 
@@ -207,6 +220,7 @@ public class AllocateIpv6AddressRequest extends Request {
 
         private Builder(AllocateIpv6AddressRequest request) {
             super(request);
+            this.addressType = request.addressType;
             this.clientToken = request.clientToken;
             this.dryRun = request.dryRun;
             this.ipv6Address = request.ipv6Address;
@@ -221,6 +235,15 @@ public class AllocateIpv6AddressRequest extends Request {
             this.tag = request.tag;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * AddressType.
+         */
+        public Builder addressType(String addressType) {
+            this.putQueryParameter("AddressType", addressType);
+            this.addressType = addressType;
+            return this;
+        }
 
         /**
          * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.

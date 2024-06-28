@@ -301,10 +301,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the pending order. Valid values:
+             * The type of the order that has not taken effect. Valid values:
              * <p>
              * 
-             * *   **RENEWCHANGE**: renewal with a specification change
+             * *   **RENEWCHANGE**: renewal with upgrade or downgrade
              * *   **TEMP_UPGRADE**: temporary upgrade
              * *   **RENEW**: renewal
              */
@@ -337,8 +337,8 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              * The status of the pending order.
              * <p>
              * 
-             * *   **1**: indicates that the order is an order for renewal or renewal with a specification change and the order has not taken effect.
-             * *   **2**: indicates that the order is an order for temporary upgrade and the order has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, the values of **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specifications of the VPN gateway.
+             * *   **1**: indicates that the order for renewal or the order for renewal with a specification change has not taken effect.
+             * *   **2**: indicates that the order of the temporary upgrade has taken effect. After the temporary upgrade expires, the system restores the VPN gateway to its previous specifications. In this case, the values of **ReservationIpsec**, **ReservationMaxConnections**, **ReservationSpec**, and **ReservationSsl** indicate the previous specifications of the VPN gateway.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -793,7 +793,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             private String vpnType; 
 
             /**
-             * Indicates whether Border Gateway Protocol (BGP) routes are automatically advertised to the VPC. Valid values:
+             * Indicates whether BGP routes are automatically advertised to the VPC.
              * <p>
              * 
              * *   **true**
@@ -805,11 +805,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The payment status of the VPN gateway. Valid values:
+             * The payment status of the VPN gateway.
              * <p>
              * 
-             * *   **Normal**: The VPN gateway runs as expected.
-             * *   **FinancialLocked**: The VPN gateway is locked due to overdue payments.
+             * *   **Normal**
+             * *   **FinancialLocked**
              */
             public Builder businessStatus(String businessStatus) {
                 this.businessStatus = businessStatus;
@@ -872,8 +872,8 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              * The BGP status of the VPN gateway. Valid values:
              * <p>
              * 
-             * *   **true**: The feature is enabled.
-             * *   **false**: The feature is disabled.
+             * *   **true**
+             * *   **false**
              */
             public Builder enableBgp(Boolean enableBgp) {
                 this.enableBgp = enableBgp;
@@ -892,7 +892,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * EniInstanceIds.
+             * The ENIs created by the system for the VPN gateway.
              */
             public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
                 this.eniInstanceIds = eniInstanceIds;
@@ -945,10 +945,10 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The pending orders.
+             * The information about pending orders.
              * <p>
              * 
-             * >  This parameter is returned only if **IncludeReservationData** is set to **true**.
+             * > This parameter is returned only if **IncludeReservationData** is set to **true**.
              */
             public Builder reservationData(ReservationData reservationData) {
                 this.reservationData = reservationData;
@@ -1042,11 +1042,11 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
              * *   **VpnNewImage**: indicates whether the VPN gateway is upgraded. Valid values:
              * 
              *     *   **true**
-             *     *   **false**
+             *     *   **false**: does not query only SQL statements that need to be optimized.
              * 
              * *   **description**: the description of the VPN gateway. This parameter is only for internal use.
              * 
-             * *   **VpnVersion**: the version number of the VPN gateway.
+             * *   **VpnVersion**: the version of the VPN gateway.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -1086,7 +1086,7 @@ public class DescribeVpnGatewaysResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the VPN gateway.
+             * The type of VPN gateway.
              * <p>
              * 
              * Only **Normal** may be returned, which indicates a standard VPN gateway.

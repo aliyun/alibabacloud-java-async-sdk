@@ -460,7 +460,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
         }
 
         /**
-         * EniInstanceIds.
+         * The ENIs created by the system for the VPN gateway.
          */
         public Builder eniInstanceIds(EniInstanceIds eniInstanceIds) {
             this.eniInstanceIds = eniInstanceIds;
@@ -939,7 +939,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The key of tag N.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -947,7 +947,7 @@ public class DescribeVpnGatewayResponseBody extends TeaModel {
             }
 
             /**
-             * The value of tag N.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

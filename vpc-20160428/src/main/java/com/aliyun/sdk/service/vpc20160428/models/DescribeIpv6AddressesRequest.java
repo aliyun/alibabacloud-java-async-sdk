@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeIpv6AddressesRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AddressType")
+    private String addressType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AssociatedInstanceId")
     private String associatedInstanceId;
 
@@ -95,6 +99,7 @@ public class DescribeIpv6AddressesRequest extends Request {
 
     private DescribeIpv6AddressesRequest(Builder builder) {
         super(builder);
+        this.addressType = builder.addressType;
         this.associatedInstanceId = builder.associatedInstanceId;
         this.associatedInstanceType = builder.associatedInstanceType;
         this.includeReservationData = builder.includeReservationData;
@@ -128,6 +133,13 @@ public class DescribeIpv6AddressesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return addressType
+     */
+    public String getAddressType() {
+        return this.addressType;
     }
 
     /**
@@ -271,6 +283,7 @@ public class DescribeIpv6AddressesRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeIpv6AddressesRequest, Builder> {
+        private String addressType; 
         private String associatedInstanceId; 
         private String associatedInstanceType; 
         private Boolean includeReservationData; 
@@ -298,6 +311,7 @@ public class DescribeIpv6AddressesRequest extends Request {
 
         private Builder(DescribeIpv6AddressesRequest request) {
             super(request);
+            this.addressType = request.addressType;
             this.associatedInstanceId = request.associatedInstanceId;
             this.associatedInstanceType = request.associatedInstanceType;
             this.includeReservationData = request.includeReservationData;
@@ -319,6 +333,15 @@ public class DescribeIpv6AddressesRequest extends Request {
             this.vSwitchId = request.vSwitchId;
             this.vpcId = request.vpcId;
         } 
+
+        /**
+         * AddressType.
+         */
+        public Builder addressType(String addressType) {
+            this.putQueryParameter("AddressType", addressType);
+            this.addressType = addressType;
+            return this;
+        }
 
         /**
          * The ID of the instance that is assigned the IPv6 address.

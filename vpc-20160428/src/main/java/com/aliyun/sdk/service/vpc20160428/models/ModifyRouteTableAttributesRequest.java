@@ -37,6 +37,10 @@ public class ModifyRouteTableAttributesRequest extends Request {
     private Long resourceOwnerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoutePropagationEnable")
+    private Boolean routePropagationEnable;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RouteTableId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String routeTableId;
@@ -53,6 +57,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.routePropagationEnable = builder.routePropagationEnable;
         this.routeTableId = builder.routeTableId;
         this.routeTableName = builder.routeTableName;
     }
@@ -113,6 +118,13 @@ public class ModifyRouteTableAttributesRequest extends Request {
     }
 
     /**
+     * @return routePropagationEnable
+     */
+    public Boolean getRoutePropagationEnable() {
+        return this.routePropagationEnable;
+    }
+
+    /**
      * @return routeTableId
      */
     public String getRouteTableId() {
@@ -133,6 +145,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private Boolean routePropagationEnable; 
         private String routeTableId; 
         private String routeTableName; 
 
@@ -148,6 +161,7 @@ public class ModifyRouteTableAttributesRequest extends Request {
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.routePropagationEnable = request.routePropagationEnable;
             this.routeTableId = request.routeTableId;
             this.routeTableName = request.routeTableName;
         } 
@@ -209,6 +223,15 @@ public class ModifyRouteTableAttributesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * RoutePropagationEnable.
+         */
+        public Builder routePropagationEnable(Boolean routePropagationEnable) {
+            this.putQueryParameter("RoutePropagationEnable", routePropagationEnable);
+            this.routePropagationEnable = routePropagationEnable;
             return this;
         }
 

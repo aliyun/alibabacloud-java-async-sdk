@@ -305,7 +305,13 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * EnableIpv6.
+         * Specifies whether to query vSwitches with IPv6 enabled in the region. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
+         * 
+         * If you do not set this parameter, the system queries all vSwitches in the specified region by default.
          */
         public Builder enableIpv6(Boolean enableIpv6) {
             this.putQueryParameter("EnableIpv6", enableIpv6);
@@ -347,7 +353,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Default value: **1**.
+         * The page number. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -356,7 +362,7 @@ public class DescribeVSwitchesRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Maximum value: **50**. Default value: **10**.
+         * The number of entries per page. Maximum value: **50**. Default value: **10**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

@@ -6,27 +6,14 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteIpv4GatewayRequest} extends {@link RequestModel}
+ * {@link GetPublicIpAddressPoolServiceStatusRequest} extends {@link RequestModel}
  *
- * <p>DeleteIpv4GatewayRequest</p>
+ * <p>GetPublicIpAddressPoolServiceStatusRequest</p>
  */
-public class DeleteIpv4GatewayRequest extends Request {
+public class GetPublicIpAddressPoolServiceStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("DryRun")
-    private Boolean dryRun;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InternetMode")
-    private String internetMode;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Ipv4GatewayId")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String ipv4GatewayId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -49,12 +36,9 @@ public class DeleteIpv4GatewayRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DeleteIpv4GatewayRequest(Builder builder) {
+    private GetPublicIpAddressPoolServiceStatusRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
-        this.dryRun = builder.dryRun;
-        this.internetMode = builder.internetMode;
-        this.ipv4GatewayId = builder.ipv4GatewayId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
@@ -66,7 +50,7 @@ public class DeleteIpv4GatewayRequest extends Request {
         return new Builder();
     }
 
-    public static DeleteIpv4GatewayRequest create() {
+    public static GetPublicIpAddressPoolServiceStatusRequest create() {
         return builder().build();
     }
 
@@ -80,27 +64,6 @@ public class DeleteIpv4GatewayRequest extends Request {
      */
     public String getClientToken() {
         return this.clientToken;
-    }
-
-    /**
-     * @return dryRun
-     */
-    public Boolean getDryRun() {
-        return this.dryRun;
-    }
-
-    /**
-     * @return internetMode
-     */
-    public String getInternetMode() {
-        return this.internetMode;
-    }
-
-    /**
-     * @return ipv4GatewayId
-     */
-    public String getIpv4GatewayId() {
-        return this.ipv4GatewayId;
     }
 
     /**
@@ -138,11 +101,8 @@ public class DeleteIpv4GatewayRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DeleteIpv4GatewayRequest, Builder> {
+    public static final class Builder extends Request.Builder<GetPublicIpAddressPoolServiceStatusRequest, Builder> {
         private String clientToken; 
-        private Boolean dryRun; 
-        private String internetMode; 
-        private String ipv4GatewayId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String regionId; 
@@ -153,12 +113,9 @@ public class DeleteIpv4GatewayRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteIpv4GatewayRequest request) {
+        private Builder(GetPublicIpAddressPoolServiceStatusRequest request) {
             super(request);
             this.clientToken = request.clientToken;
-            this.dryRun = request.dryRun;
-            this.internetMode = request.internetMode;
-            this.ipv4GatewayId = request.ipv4GatewayId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
@@ -167,47 +124,11 @@ public class DeleteIpv4GatewayRequest extends Request {
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.
-         * 
-         * >  If you do not specify this parameter, the system automatically uses the **request ID** as the **client token**. The **request ID** may be different for each request.
+         * ClientToken.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
             this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * Specifies whether to perform a dry run, without performing the actual request. Valid values:
-         * <p>
-         * 
-         * *   **true**: performs only a dry run, without performing the actual request. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the `DryRunOperation` error code is returned.
-         * *   **false** (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the operation is performed.
-         */
-        public Builder dryRun(Boolean dryRun) {
-            this.putQueryParameter("DryRun", dryRun);
-            this.dryRun = dryRun;
-            return this;
-        }
-
-        /**
-         * InternetMode.
-         */
-        public Builder internetMode(String internetMode) {
-            this.putQueryParameter("InternetMode", internetMode);
-            this.internetMode = internetMode;
-            return this;
-        }
-
-        /**
-         * The ID of the IPv4 gateway that you want to delete.
-         */
-        public Builder ipv4GatewayId(String ipv4GatewayId) {
-            this.putQueryParameter("Ipv4GatewayId", ipv4GatewayId);
-            this.ipv4GatewayId = ipv4GatewayId;
             return this;
         }
 
@@ -230,10 +151,7 @@ public class DeleteIpv4GatewayRequest extends Request {
         }
 
         /**
-         * The region ID of the IPv4 gateway that you want to delete.
-         * <p>
-         * 
-         * You can call the [DescribeRegions](~~36063~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -260,8 +178,8 @@ public class DeleteIpv4GatewayRequest extends Request {
         }
 
         @Override
-        public DeleteIpv4GatewayRequest build() {
-            return new DeleteIpv4GatewayRequest(this);
+        public GetPublicIpAddressPoolServiceStatusRequest build() {
+            return new GetPublicIpAddressPoolServiceStatusRequest(this);
         } 
 
     } 

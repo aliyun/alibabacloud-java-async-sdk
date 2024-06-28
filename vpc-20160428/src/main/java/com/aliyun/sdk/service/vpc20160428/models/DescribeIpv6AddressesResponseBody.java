@@ -482,6 +482,9 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
     }
     public static class Ipv6Address extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AddressType")
+        private String addressType;
+
         @com.aliyun.core.annotation.NameInMap("AllocationTime")
         private String allocationTime;
 
@@ -537,6 +540,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         private String vpcId;
 
         private Ipv6Address(Builder builder) {
+            this.addressType = builder.addressType;
             this.allocationTime = builder.allocationTime;
             this.associatedInstanceId = builder.associatedInstanceId;
             this.associatedInstanceType = builder.associatedInstanceType;
@@ -563,6 +567,13 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
 
         public static Ipv6Address create() {
             return builder().build();
+        }
+
+        /**
+         * @return addressType
+         */
+        public String getAddressType() {
+            return this.addressType;
         }
 
         /**
@@ -692,6 +703,7 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String addressType; 
             private String allocationTime; 
             private String associatedInstanceId; 
             private String associatedInstanceType; 
@@ -710,6 +722,14 @@ public class DescribeIpv6AddressesResponseBody extends TeaModel {
             private Tags tags; 
             private String vSwitchId; 
             private String vpcId; 
+
+            /**
+             * AddressType.
+             */
+            public Builder addressType(String addressType) {
+                this.addressType = addressType;
+                return this;
+            }
 
             /**
              * The time when the IPv6 address was created.
