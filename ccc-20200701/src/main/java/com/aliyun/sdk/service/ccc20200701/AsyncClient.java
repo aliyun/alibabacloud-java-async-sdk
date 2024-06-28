@@ -39,6 +39,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AddSkillGroupsToUserResponse> addSkillGroupsToUser(AddSkillGroupsToUserRequest request);
 
+    CompletableFuture<AddTicketTaskResponse> addTicketTask(AddTicketTaskRequest request);
+
     CompletableFuture<AddUsersToSkillGroupResponse> addUsersToSkillGroup(AddUsersToSkillGroupRequest request);
 
     CompletableFuture<AnalyzeConversationResponse> analyzeConversation(AnalyzeConversationRequest request);
@@ -93,6 +95,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSkillGroupResponse> createSkillGroup(CreateSkillGroupRequest request);
 
+    CompletableFuture<CreateTicketResponse> createTicket(CreateTicketRequest request);
+
     CompletableFuture<CreateUserResponse> createUser(CreateUserRequest request);
 
     CompletableFuture<DeleteAudioFileResponse> deleteAudioFile(DeleteAudioFileRequest request);
@@ -113,11 +117,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteSkillGroupResponse> deleteSkillGroup(DeleteSkillGroupRequest request);
 
+    CompletableFuture<DeleteTicketResponse> deleteTicket(DeleteTicketRequest request);
+
+    CompletableFuture<DeleteTicketTemplateResponse> deleteTicketTemplate(DeleteTicketTemplateRequest request);
+
     CompletableFuture<DisableSchemaPropertyResponse> disableSchemaProperty(DisableSchemaPropertyRequest request);
+
+    CompletableFuture<DisableTicketTemplateResponse> disableTicketTemplate(DisableTicketTemplateRequest request);
 
     CompletableFuture<DiscardEditingContactFlowResponse> discardEditingContactFlow(DiscardEditingContactFlowRequest request);
 
     CompletableFuture<EnableSchemaPropertyResponse> enableSchemaProperty(EnableSchemaPropertyRequest request);
+
+    CompletableFuture<EnableTicketTemplateResponse> enableTicketTemplate(EnableTicketTemplateRequest request);
 
     CompletableFuture<EndConferenceResponse> endConference(EndConferenceRequest request);
 
@@ -180,6 +192,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetSchemaResponse> getSchema(GetSchemaRequest request);
 
     CompletableFuture<GetSkillGroupResponse> getSkillGroup(GetSkillGroupRequest request);
+
+    CompletableFuture<GetTicketResponse> getTicket(GetTicketRequest request);
+
+    CompletableFuture<GetTicketSummaryReportResponse> getTicketSummaryReport(GetTicketSummaryReportRequest request);
+
+    CompletableFuture<GetTicketTemplateResponse> getTicketTemplate(GetTicketTemplateRequest request);
 
     CompletableFuture<GetTurnCredentialsResponse> getTurnCredentials(GetTurnCredentialsRequest request);
 
@@ -250,6 +268,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListCampaignsResponse> listCampaigns(ListCampaignsRequest request);
 
     CompletableFuture<ListCasesResponse> listCases(ListCasesRequest request);
+
+    CompletableFuture<ListCommonTicketFieldsResponse> listCommonTicketFields(ListCommonTicketFieldsRequest request);
 
     CompletableFuture<ListConfigItemsResponse> listConfigItems(ListConfigItemsRequest request);
 
@@ -343,6 +363,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListSkillLevelsOfUserResponse> listSkillLevelsOfUser(ListSkillLevelsOfUserRequest request);
 
+    CompletableFuture<ListTicketTasksResponse> listTicketTasks(ListTicketTasksRequest request);
+
+    CompletableFuture<ListTicketsResponse> listTickets(ListTicketsRequest request);
+
     CompletableFuture<ListUnassignedNumbersResponse> listUnassignedNumbers(ListUnassignedNumbersRequest request);
 
     CompletableFuture<ListUserLevelsOfSkillGroupResponse> listUserLevelsOfSkillGroup(ListUserLevelsOfSkillGroupRequest request);
@@ -391,7 +415,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RegisterDevicesResponse> registerDevices(RegisterDevicesRequest request);
 
+    CompletableFuture<RejectChatResponse> rejectChat(RejectChatRequest request);
+
+    CompletableFuture<RejectTicketResponse> rejectTicket(RejectTicketRequest request);
+
     CompletableFuture<ReleaseCallResponse> releaseCall(ReleaseCallRequest request);
+
+    CompletableFuture<ReleaseChatResponse> releaseChat(ReleaseChatRequest request);
 
     CompletableFuture<RemoveBlacklistCallTaggingResponse> removeBlacklistCallTagging(RemoveBlacklistCallTaggingRequest request);
 
@@ -416,6 +446,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ResetUserPasswordResponse> resetUserPassword(ResetUserPasswordRequest request);
 
     CompletableFuture<RestoreArchivedRecordingsResponse> restoreArchivedRecordings(RestoreArchivedRecordingsRequest request);
+
+    CompletableFuture<ResubmitTicketResponse> resubmitTicket(ResubmitTicketRequest request);
 
     CompletableFuture<ResumeCampaignResponse> resumeCampaign(ResumeCampaignRequest request);
 
@@ -455,6 +487,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<TakeBreakResponse> takeBreak(TakeBreakRequest request);
 
+    CompletableFuture<TerminateTicketResponse> terminateTicket(TerminateTicketRequest request);
+
+    CompletableFuture<TransferTicketTaskResponse> transferTicketTask(TransferTicketTaskRequest request);
+
     CompletableFuture<UnmuteCallResponse> unmuteCall(UnmuteCallRequest request);
 
     CompletableFuture<UnregisterDeviceResponse> unregisterDevice(UnregisterDeviceRequest request);
@@ -464,5 +500,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateConfigItemsResponse> updateConfigItems(UpdateConfigItemsRequest request);
 
     CompletableFuture<UpdateSchemaPropertyResponse> updateSchemaProperty(UpdateSchemaPropertyRequest request);
+
+    CompletableFuture<UpdateTicketResponse> updateTicket(UpdateTicketRequest request);
+
+    CompletableFuture<WithdrawTicketResponse> withdrawTicket(WithdrawTicketRequest request);
 
 }
