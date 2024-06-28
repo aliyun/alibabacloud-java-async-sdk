@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyPythonFileResponseBody</p>
  */
 public class VerifyPythonFileResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Syntax")
+    @com.aliyun.core.annotation.NameInMap("Syntax")
     private java.util.List < Syntax> syntax;
 
     private VerifyPythonFileResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class VerifyPythonFileResponseBody extends TeaModel {
     } 
 
     public static class Syntax extends TeaModel {
-        @NameInMap("EndColumn")
+        @com.aliyun.core.annotation.NameInMap("EndColumn")
         private Integer endColumn;
 
-        @NameInMap("EndLineNumber")
+        @com.aliyun.core.annotation.NameInMap("EndLineNumber")
         private Integer endLineNumber;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Severity")
+        @com.aliyun.core.annotation.NameInMap("Severity")
         private Integer severity;
 
-        @NameInMap("StartColumn")
+        @com.aliyun.core.annotation.NameInMap("StartColumn")
         private Integer startColumn;
 
-        @NameInMap("StartLineNumber")
+        @com.aliyun.core.annotation.NameInMap("StartLineNumber")
         private Integer startLineNumber;
 
         private Syntax(Builder builder) {

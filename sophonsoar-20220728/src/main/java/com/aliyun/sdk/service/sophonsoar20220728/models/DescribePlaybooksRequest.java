@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybooksRequest</p>
  */
 public class DescribePlaybooksRequest extends Request {
-    @Query
-    @NameInMap("Active")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Active")
     private Integer active;
 
-    @Query
-    @NameInMap("EndMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndMillis")
     private Long endMillis;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Order")
+    private String order;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnType")
     private String ownType;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private String pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Query
-    @NameInMap("StartMillis")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
+    private String sort;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartMillis")
     private Long startMillis;
 
     private DescribePlaybooksRequest(Builder builder) {
@@ -54,10 +61,12 @@ public class DescribePlaybooksRequest extends Request {
         this.endMillis = builder.endMillis;
         this.lang = builder.lang;
         this.name = builder.name;
+        this.order = builder.order;
         this.ownType = builder.ownType;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.playbookUuid = builder.playbookUuid;
+        this.sort = builder.sort;
         this.startMillis = builder.startMillis;
     }
 
@@ -103,6 +112,13 @@ public class DescribePlaybooksRequest extends Request {
     }
 
     /**
+     * @return order
+     */
+    public String getOrder() {
+        return this.order;
+    }
+
+    /**
      * @return ownType
      */
     public String getOwnType() {
@@ -131,6 +147,13 @@ public class DescribePlaybooksRequest extends Request {
     }
 
     /**
+     * @return sort
+     */
+    public String getSort() {
+        return this.sort;
+    }
+
+    /**
      * @return startMillis
      */
     public Long getStartMillis() {
@@ -142,10 +165,12 @@ public class DescribePlaybooksRequest extends Request {
         private Long endMillis; 
         private String lang; 
         private String name; 
+        private String order; 
         private String ownType; 
         private String pageNumber; 
         private String pageSize; 
         private String playbookUuid; 
+        private String sort; 
         private Long startMillis; 
 
         private Builder() {
@@ -158,10 +183,12 @@ public class DescribePlaybooksRequest extends Request {
             this.endMillis = request.endMillis;
             this.lang = request.lang;
             this.name = request.name;
+            this.order = request.order;
             this.ownType = request.ownType;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.playbookUuid = request.playbookUuid;
+            this.sort = request.sort;
             this.startMillis = request.startMillis;
         } 
 
@@ -210,6 +237,15 @@ public class DescribePlaybooksRequest extends Request {
         }
 
         /**
+         * Order.
+         */
+        public Builder order(String order) {
+            this.putQueryParameter("Order", order);
+            this.order = order;
+            return this;
+        }
+
+        /**
          * The type of the playbook. Valid values:
          * <p>
          * 
@@ -254,6 +290,15 @@ public class DescribePlaybooksRequest extends Request {
         public Builder playbookUuid(String playbookUuid) {
             this.putQueryParameter("PlaybookUuid", playbookUuid);
             this.playbookUuid = playbookUuid;
+            return this;
+        }
+
+        /**
+         * Sort.
+         */
+        public Builder sort(String sort) {
+            this.putQueryParameter("Sort", sort);
+            this.sort = sort;
             return this;
         }
 

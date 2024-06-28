@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeComponentListResponseBody</p>
  */
 public class DescribeComponentListResponseBody extends TeaModel {
-    @NameInMap("Components")
+    @com.aliyun.core.annotation.NameInMap("Components")
     private String components;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeComponentListResponseBody(Builder builder) {

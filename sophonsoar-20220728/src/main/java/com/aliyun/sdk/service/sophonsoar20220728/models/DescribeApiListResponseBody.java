@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApiListResponseBody</p>
  */
 public class DescribeApiListResponseBody extends TeaModel {
-    @NameInMap("ApiList")
+    @com.aliyun.core.annotation.NameInMap("ApiList")
     private java.util.List < ApiList> apiList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeApiListResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeApiListResponseBody extends TeaModel {
     } 
 
     public static class ApiList extends TeaModel {
-        @NameInMap("DocUrl")
+        @com.aliyun.core.annotation.NameInMap("DocUrl")
         private String docUrl;
 
-        @NameInMap("PopCode")
+        @com.aliyun.core.annotation.NameInMap("PopCode")
         private String popCode;
 
-        @NameInMap("ProductName")
+        @com.aliyun.core.annotation.NameInMap("ProductName")
         private String productName;
 
         private ApiList(Builder builder) {

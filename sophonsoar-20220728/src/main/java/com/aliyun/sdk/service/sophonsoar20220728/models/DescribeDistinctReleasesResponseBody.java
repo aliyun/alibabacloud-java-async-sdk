@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDistinctReleasesResponseBody</p>
  */
 public class DescribeDistinctReleasesResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeDistinctReleasesResponseBody(Builder builder) {
@@ -72,15 +71,19 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
+
+        @com.aliyun.core.annotation.NameInMap("TaskflowType")
+        private String taskflowType;
 
         private Records(Builder builder) {
             this.description = builder.description;
             this.taskflowMd5 = builder.taskflowMd5;
+            this.taskflowType = builder.taskflowType;
         }
 
         public static Builder builder() {
@@ -105,9 +108,17 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
             return this.taskflowMd5;
         }
 
+        /**
+         * @return taskflowType
+         */
+        public String getTaskflowType() {
+            return this.taskflowType;
+        }
+
         public static final class Builder {
             private String description; 
             private String taskflowMd5; 
+            private String taskflowType; 
 
             /**
              * The version description.
@@ -122,6 +133,14 @@ public class DescribeDistinctReleasesResponseBody extends TeaModel {
              */
             public Builder taskflowMd5(String taskflowMd5) {
                 this.taskflowMd5 = taskflowMd5;
+                return this;
+            }
+
+            /**
+             * TaskflowType.
+             */
+            public Builder taskflowType(String taskflowType) {
+                this.taskflowType = taskflowType;
                 return this;
             }
 

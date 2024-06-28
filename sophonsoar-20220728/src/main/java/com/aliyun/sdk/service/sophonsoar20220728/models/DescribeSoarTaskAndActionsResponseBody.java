@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSoarTaskAndActionsResponseBody</p>
  */
 public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
-    @NameInMap("Details")
+    @com.aliyun.core.annotation.NameInMap("Details")
     private Details details;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSoarTaskAndActionsResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
     } 
 
     public static class Actions extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("ActionUuid")
+        @com.aliyun.core.annotation.NameInMap("ActionUuid")
         private String actionUuid;
 
-        @NameInMap("AssetName")
+        @com.aliyun.core.annotation.NameInMap("AssetName")
         private String assetName;
 
-        @NameInMap("Component")
+        @com.aliyun.core.annotation.NameInMap("Component")
         private String component;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("RequestUuid")
+        @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TriggerUser")
+        @com.aliyun.core.annotation.NameInMap("TriggerUser")
         private String triggerUser;
 
         private Actions(Builder builder) {
@@ -340,46 +339,46 @@ public class DescribeSoarTaskAndActionsResponseBody extends TeaModel {
 
     }
     public static class Details extends TeaModel {
-        @NameInMap("Actions")
+        @com.aliyun.core.annotation.NameInMap("Actions")
         private java.util.List < Actions> actions;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("RawEventReq")
+        @com.aliyun.core.annotation.NameInMap("RawEventReq")
         private String rawEventReq;
 
-        @NameInMap("RequestUuid")
+        @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
 
-        @NameInMap("ResultLevel")
+        @com.aliyun.core.annotation.NameInMap("ResultLevel")
         private String resultLevel;
 
-        @NameInMap("ResultMessage")
+        @com.aliyun.core.annotation.NameInMap("ResultMessage")
         private String resultMessage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskFlowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskFlowMd5")
         private String taskFlowMd5;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskTenantId")
+        @com.aliyun.core.annotation.NameInMap("TaskTenantId")
         private String taskTenantId;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
-        @NameInMap("TriggerUser")
+        @com.aliyun.core.annotation.NameInMap("TriggerUser")
         private String triggerUser;
 
         private Details(Builder builder) {

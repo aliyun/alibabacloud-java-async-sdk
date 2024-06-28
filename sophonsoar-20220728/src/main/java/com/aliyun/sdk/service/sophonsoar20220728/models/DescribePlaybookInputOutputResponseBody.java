@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybookInputOutputResponseBody</p>
  */
 public class DescribePlaybookInputOutputResponseBody extends TeaModel {
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private Config config;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookInputOutputResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("ExeConfig")
+        @com.aliyun.core.annotation.NameInMap("ExeConfig")
         private String exeConfig;
 
-        @NameInMap("InputParams")
+        @com.aliyun.core.annotation.NameInMap("InputParams")
         private String inputParams;
 
-        @NameInMap("OutputParams")
+        @com.aliyun.core.annotation.NameInMap("OutputParams")
         private String outputParams;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
         private Config(Builder builder) {
@@ -146,7 +145,7 @@ public class DescribePlaybookInputOutputResponseBody extends TeaModel {
             private String playbookUuid; 
 
             /**
-             * ExeConfig.
+             * The execution method of the playbook is in JSONObject format.
              */
             public Builder exeConfig(String exeConfig) {
                 this.exeConfig = exeConfig;

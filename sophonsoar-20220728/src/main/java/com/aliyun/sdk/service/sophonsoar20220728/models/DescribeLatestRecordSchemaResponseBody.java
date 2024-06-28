@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeLatestRecordSchemaResponseBody</p>
  */
 public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
-    @NameInMap("PlaybookNodeSchema")
+    @com.aliyun.core.annotation.NameInMap("PlaybookNodeSchema")
     private PlaybookNodeSchema playbookNodeSchema;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeLatestRecordSchemaResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
     } 
 
     public static class NodeSchema extends TeaModel {
-        @NameInMap("ActionName")
+        @com.aliyun.core.annotation.NameInMap("ActionName")
         private String actionName;
 
-        @NameInMap("ComponentName")
+        @com.aliyun.core.annotation.NameInMap("ComponentName")
         private String componentName;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("OutputFields")
+        @com.aliyun.core.annotation.NameInMap("OutputFields")
         private java.util.List < String > outputFields;
 
         private NodeSchema(Builder builder) {
@@ -173,7 +172,7 @@ public class DescribeLatestRecordSchemaResponseBody extends TeaModel {
 
     }
     public static class PlaybookNodeSchema extends TeaModel {
-        @NameInMap("NodeSchema")
+        @com.aliyun.core.annotation.NameInMap("NodeSchema")
         private java.util.List < NodeSchema> nodeSchema;
 
         private PlaybookNodeSchema(Builder builder) {

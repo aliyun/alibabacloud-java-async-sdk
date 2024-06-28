@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyPlaybookRequest</p>
  */
 public class VerifyPlaybookRequest extends Request {
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
-    @Body
-    @NameInMap("TaskFlow")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TaskFlow")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskFlow;
 
     private VerifyPlaybookRequest(Builder builder) {

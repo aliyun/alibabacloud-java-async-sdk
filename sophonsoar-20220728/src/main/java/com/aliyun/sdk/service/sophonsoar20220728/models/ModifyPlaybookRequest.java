@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPlaybookRequest</p>
  */
 public class ModifyPlaybookRequest extends Request {
-    @Body
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Body
-    @NameInMap("DisplayName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DisplayName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String displayName;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
-    @Body
-    @NameInMap("Taskflow")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Taskflow")
     private String taskflow;
 
     private ModifyPlaybookRequest(Builder builder) {

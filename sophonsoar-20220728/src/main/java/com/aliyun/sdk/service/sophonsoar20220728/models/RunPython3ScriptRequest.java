@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RunPython3ScriptRequest</p>
  */
 public class RunPython3ScriptRequest extends Request {
-    @Body
-    @NameInMap("NodeName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NodeName")
     private String nodeName;
 
-    @Body
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Body
-    @NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
     private String playbookUuid;
 
-    @Body
-    @NameInMap("PythonScript")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PythonScript")
     private String pythonScript;
 
     private RunPython3ScriptRequest(Builder builder) {

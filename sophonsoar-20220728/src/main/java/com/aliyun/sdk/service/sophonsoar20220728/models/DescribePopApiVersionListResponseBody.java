@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePopApiVersionListResponseBody</p>
  */
 public class DescribePopApiVersionListResponseBody extends TeaModel {
-    @NameInMap("PopCode")
+    @com.aliyun.core.annotation.NameInMap("PopCode")
     private String popCode;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("VersionList")
+    @com.aliyun.core.annotation.NameInMap("VersionList")
     private java.util.List < VersionList> versionList;
 
     private DescribePopApiVersionListResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class DescribePopApiVersionListResponseBody extends TeaModel {
     } 
 
     public static class VersionList extends TeaModel {
-        @NameInMap("ApiName")
+        @com.aliyun.core.annotation.NameInMap("ApiName")
         private String apiName;
 
-        @NameInMap("PopCode")
+        @com.aliyun.core.annotation.NameInMap("PopCode")
         private String popCode;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
         private VersionList(Builder builder) {

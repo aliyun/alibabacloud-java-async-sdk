@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeComponentPlaybookResponseBody</p>
  */
 public class DescribeComponentPlaybookResponseBody extends TeaModel {
-    @NameInMap("Playbooks")
+    @com.aliyun.core.annotation.NameInMap("Playbooks")
     private java.util.List < Playbooks> playbooks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeComponentPlaybookResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeComponentPlaybookResponseBody extends TeaModel {
     } 
 
     public static class Playbooks extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("InputParams")
+        @com.aliyun.core.annotation.NameInMap("InputParams")
         private String inputParams;
 
         private Playbooks(Builder builder) {

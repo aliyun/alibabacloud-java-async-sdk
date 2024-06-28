@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSoarRecordsResponseBody</p>
  */
 public class DescribeSoarRecordsResponseBody extends TeaModel {
-    @NameInMap("Page")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Page")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Page page;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SoarExecuteRecords")
+    @com.aliyun.core.annotation.NameInMap("SoarExecuteRecords")
     private java.util.List < SoarExecuteRecords> soarExecuteRecords;
 
     private DescribeSoarRecordsResponseBody(Builder builder) {
@@ -93,13 +92,13 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
     } 
 
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -174,40 +173,40 @@ public class DescribeSoarRecordsResponseBody extends TeaModel {
 
     }
     public static class SoarExecuteRecords extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("RawEventReq")
+        @com.aliyun.core.annotation.NameInMap("RawEventReq")
         private String rawEventReq;
 
-        @NameInMap("RequestUuid")
+        @com.aliyun.core.annotation.NameInMap("RequestUuid")
         private String requestUuid;
 
-        @NameInMap("ResultMessage")
+        @com.aliyun.core.annotation.NameInMap("ResultMessage")
         private String resultMessage;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
 
-        @NameInMap("TriggerType")
+        @com.aliyun.core.annotation.NameInMap("TriggerType")
         private String triggerType;
 
-        @NameInMap("TriggerUser")
+        @com.aliyun.core.annotation.NameInMap("TriggerUser")
         private String triggerUser;
 
         private SoarExecuteRecords(Builder builder) {

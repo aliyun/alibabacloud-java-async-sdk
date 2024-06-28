@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybookReleasesResponseBody</p>
  */
 public class DescribePlaybookReleasesResponseBody extends TeaModel {
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookReleasesResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
     } 
 
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -173,22 +172,22 @@ public class DescribePlaybookReleasesResponseBody extends TeaModel {
 
     }
     public static class Records extends TeaModel {
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private Long gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Integer id;
 
-        @NameInMap("TaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("TaskflowMd5")
         private String taskflowMd5;
 
         private Records(Builder builder) {

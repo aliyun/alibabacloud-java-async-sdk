@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeComponentAssetsResponseBody</p>
  */
 public class DescribeComponentAssetsResponseBody extends TeaModel {
-    @NameInMap("ComponentAssets")
+    @com.aliyun.core.annotation.NameInMap("ComponentAssets")
     private java.util.List < ComponentAssets> componentAssets;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeComponentAssetsResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class DescribeComponentAssetsResponseBody extends TeaModel {
     } 
 
     public static class ComponentAssets extends TeaModel {
-        @NameInMap("AssetUuid")
+        @com.aliyun.core.annotation.NameInMap("AssetUuid")
         private String assetUuid;
 
-        @NameInMap("Componentname")
+        @com.aliyun.core.annotation.NameInMap("Componentname")
         private String componentname;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Params")
+        @com.aliyun.core.annotation.NameInMap("Params")
         private String params;
 
         private ComponentAssets(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TriggerSophonPlaybookRequest</p>
  */
 public class TriggerSophonPlaybookRequest extends Request {
-    @Query
-    @NameInMap("CommandName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommandName")
     private String commandName;
 
-    @Query
-    @NameInMap("InputParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputParams;
 
-    @Query
-    @NameInMap("SophonTaskId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SophonTaskId")
     private String sophonTaskId;
 
-    @Query
-    @NameInMap("TriggerType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerType")
     private String triggerType;
 
-    @Query
-    @NameInMap("Uuid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Uuid")
     private String uuid;
 
     private TriggerSophonPlaybookRequest(Builder builder) {

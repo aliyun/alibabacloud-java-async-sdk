@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSophonCommandsResponseBody</p>
  */
 public class DescribeSophonCommandsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeSophonCommandsResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
     } 
 
     public static class ParamConfig extends TeaModel {
-        @NameInMap("CheckField")
+        @com.aliyun.core.annotation.NameInMap("CheckField")
         private String checkField;
 
-        @NameInMap("Field")
+        @com.aliyun.core.annotation.NameInMap("Field")
         private String field;
 
-        @NameInMap("Necessary")
+        @com.aliyun.core.annotation.NameInMap("Necessary")
         private Boolean necessary;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ParamConfig(Builder builder) {
@@ -177,16 +176,16 @@ public class DescribeSophonCommandsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParamConfig")
+        @com.aliyun.core.annotation.NameInMap("ParamConfig")
         private java.util.List < ParamConfig> paramConfig;
 
         private Data(Builder builder) {

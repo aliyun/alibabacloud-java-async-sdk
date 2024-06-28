@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ComparePlaybooksRequest</p>
  */
 public class ComparePlaybooksRequest extends Request {
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("NewPlaybookReleaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NewPlaybookReleaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer newPlaybookReleaseId;
 
-    @Query
-    @NameInMap("OldPlaybookReleaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OldPlaybookReleaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer oldPlaybookReleaseId;
 
-    @Query
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private ComparePlaybooksRequest(Builder builder) {

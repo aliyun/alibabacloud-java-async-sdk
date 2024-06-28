@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyPlaybookInputOutputRequest</p>
  */
 public class ModifyPlaybookInputOutputRequest extends Request {
-    @Body
-    @NameInMap("ExeConfig")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExeConfig")
     private String exeConfig;
 
-    @Body
-    @NameInMap("InputParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InputParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String inputParams;
 
-    @Body
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Body
-    @NameInMap("OutputParams")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("OutputParams")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String outputParams;
 
-    @Body
-    @NameInMap("ParamType")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ParamType")
     private String paramType;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private ModifyPlaybookInputOutputRequest(Builder builder) {

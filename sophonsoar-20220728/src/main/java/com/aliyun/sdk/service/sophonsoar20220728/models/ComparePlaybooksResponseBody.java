@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ComparePlaybooksResponseBody</p>
  */
 public class ComparePlaybooksResponseBody extends TeaModel {
-    @NameInMap("CompareResult")
+    @com.aliyun.core.annotation.NameInMap("CompareResult")
     private CompareResult compareResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ComparePlaybooksResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ComparePlaybooksResponseBody extends TeaModel {
     } 
 
     public static class CompareResult extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("New")
+        @com.aliyun.core.annotation.NameInMap("New")
         private Boolean _new;
 
-        @NameInMap("Same")
+        @com.aliyun.core.annotation.NameInMap("Same")
         private Boolean same;
 
         private CompareResult(Builder builder) {

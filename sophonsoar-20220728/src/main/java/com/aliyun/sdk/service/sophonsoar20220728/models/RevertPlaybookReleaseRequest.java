@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevertPlaybookReleaseRequest</p>
  */
 public class RevertPlaybookReleaseRequest extends Request {
-    @Body
-    @NameInMap("IsPublish")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IsPublish")
     private Boolean isPublish;
 
-    @Body
-    @NameInMap("PlayReleaseId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlayReleaseId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer playReleaseId;
 
-    @Body
-    @NameInMap("PlaybookUuid")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String playbookUuid;
 
     private RevertPlaybookReleaseRequest(Builder builder) {

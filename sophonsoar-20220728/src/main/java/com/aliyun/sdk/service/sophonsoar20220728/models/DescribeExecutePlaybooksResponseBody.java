@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeExecutePlaybooksResponseBody</p>
  */
 public class DescribeExecutePlaybooksResponseBody extends TeaModel {
-    @NameInMap("PlaybookMetrics")
+    @com.aliyun.core.annotation.NameInMap("PlaybookMetrics")
     private java.util.List < PlaybookMetrics> playbookMetrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeExecutePlaybooksResponseBody(Builder builder) {
@@ -72,19 +71,19 @@ public class DescribeExecutePlaybooksResponseBody extends TeaModel {
     } 
 
     public static class PlaybookMetrics extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("ParamConfig")
+        @com.aliyun.core.annotation.NameInMap("ParamConfig")
         private String paramConfig;
 
-        @NameInMap("ParamType")
+        @com.aliyun.core.annotation.NameInMap("ParamType")
         private String paramType;
 
-        @NameInMap("Uuid")
+        @com.aliyun.core.annotation.NameInMap("Uuid")
         private String uuid;
 
         private PlaybookMetrics(Builder builder) {

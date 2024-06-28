@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePopApiRequest</p>
  */
 public class DescribePopApiRequest extends Request {
-    @Query
-    @NameInMap("ApiName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiName;
 
-    @Query
-    @NameInMap("ApiVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String apiVersion;
 
-    @Query
-    @NameInMap("Env")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Env")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String env;
 
-    @Query
-    @NameInMap("PopCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PopCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String popCode;
 
     private DescribePopApiRequest(Builder builder) {

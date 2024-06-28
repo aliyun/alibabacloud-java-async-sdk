@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyPlaybookResponseBody</p>
  */
 public class VerifyPlaybookResponseBody extends TeaModel {
-    @NameInMap("CheckTaskInfos")
+    @com.aliyun.core.annotation.NameInMap("CheckTaskInfos")
     private java.util.List < CheckTaskInfos> checkTaskInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private VerifyPlaybookResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class VerifyPlaybookResponseBody extends TeaModel {
     } 
 
     public static class CheckTaskInfos extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("RiskLevel")
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
         private String riskLevel;
 
         private CheckTaskInfos(Builder builder) {

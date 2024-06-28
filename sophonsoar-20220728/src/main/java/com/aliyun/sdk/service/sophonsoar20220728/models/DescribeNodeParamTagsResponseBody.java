@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeNodeParamTagsResponseBody</p>
  */
 public class DescribeNodeParamTagsResponseBody extends TeaModel {
-    @NameInMap("ParamReferredPaths")
+    @com.aliyun.core.annotation.NameInMap("ParamReferredPaths")
     private java.util.List < ParamReferredPaths> paramReferredPaths;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeNodeParamTagsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeNodeParamTagsResponseBody extends TeaModel {
     } 
 
     public static class ParamReferredPaths extends TeaModel {
-        @NameInMap("ParamName")
+        @com.aliyun.core.annotation.NameInMap("ParamName")
         private String paramName;
 
-        @NameInMap("ReferredPath")
+        @com.aliyun.core.annotation.NameInMap("ReferredPath")
         private java.util.List < String > referredPath;
 
         private ParamReferredPaths(Builder builder) {

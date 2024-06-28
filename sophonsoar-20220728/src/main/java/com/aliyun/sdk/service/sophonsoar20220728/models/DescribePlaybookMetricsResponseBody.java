@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybookMetricsResponseBody</p>
  */
 public class DescribePlaybookMetricsResponseBody extends TeaModel {
-    @NameInMap("Metrics")
+    @com.aliyun.core.annotation.NameInMap("Metrics")
     private Metrics metrics;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookMetricsResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class DescribePlaybookMetricsResponseBody extends TeaModel {
     } 
 
     public static class Metrics extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Integer active;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FailNum")
+        @com.aliyun.core.annotation.NameInMap("FailNum")
         private Integer failNum;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("HistoryMd5")
+        @com.aliyun.core.annotation.NameInMap("HistoryMd5")
         private Integer historyMd5;
 
-        @NameInMap("LastRuntime")
+        @com.aliyun.core.annotation.NameInMap("LastRuntime")
         private Long lastRuntime;
 
-        @NameInMap("OwnType")
+        @com.aliyun.core.annotation.NameInMap("OwnType")
         private String ownType;
 
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
-        @NameInMap("SuccNum")
+        @com.aliyun.core.annotation.NameInMap("SuccNum")
         private Integer succNum;
 
         private Metrics(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybookNodesOutputResponseBody</p>
  */
 public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
-    @NameInMap("PlaybookNodesOutput")
+    @com.aliyun.core.annotation.NameInMap("PlaybookNodesOutput")
     private PlaybookNodesOutput playbookNodesOutput;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookNodesOutputResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribePlaybookNodesOutputResponseBody extends TeaModel {
     } 
 
     public static class PlaybookNodesOutput extends TeaModel {
-        @NameInMap("NodeName")
+        @com.aliyun.core.annotation.NameInMap("NodeName")
         private String nodeName;
 
-        @NameInMap("NodeOutput")
+        @com.aliyun.core.annotation.NameInMap("NodeOutput")
         private String nodeOutput;
 
         private PlaybookNodesOutput(Builder builder) {

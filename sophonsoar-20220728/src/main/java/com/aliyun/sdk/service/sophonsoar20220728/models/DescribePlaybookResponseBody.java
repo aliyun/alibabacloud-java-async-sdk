@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybookResponseBody</p>
  */
 public class DescribePlaybookResponseBody extends TeaModel {
-    @NameInMap("Playbook")
+    @com.aliyun.core.annotation.NameInMap("Playbook")
     private Playbook playbook;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybookResponseBody(Builder builder) {
@@ -72,52 +71,52 @@ public class DescribePlaybookResponseBody extends TeaModel {
     } 
 
     public static class Playbook extends TeaModel {
-        @NameInMap("Creator")
+        @com.aliyun.core.annotation.NameInMap("Creator")
         private String creator;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("FailExeNum")
+        @com.aliyun.core.annotation.NameInMap("FailExeNum")
         private Integer failExeNum;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("InputParams")
+        @com.aliyun.core.annotation.NameInMap("InputParams")
         private String inputParams;
 
-        @NameInMap("LastExeTime")
+        @com.aliyun.core.annotation.NameInMap("LastExeTime")
         private Long lastExeTime;
 
-        @NameInMap("Modifier")
+        @com.aliyun.core.annotation.NameInMap("Modifier")
         private String modifier;
 
-        @NameInMap("OnlineActive")
+        @com.aliyun.core.annotation.NameInMap("OnlineActive")
         private Boolean onlineActive;
 
-        @NameInMap("OnlineReleaseTaskflowMd5")
+        @com.aliyun.core.annotation.NameInMap("OnlineReleaseTaskflowMd5")
         private String onlineReleaseTaskflowMd5;
 
-        @NameInMap("OwnType")
+        @com.aliyun.core.annotation.NameInMap("OwnType")
         private String ownType;
 
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
-        @NameInMap("SuccessExeNum")
+        @com.aliyun.core.annotation.NameInMap("SuccessExeNum")
         private Integer successExeNum;
 
-        @NameInMap("Taskflow")
+        @com.aliyun.core.annotation.NameInMap("Taskflow")
         private String taskflow;
 
-        @NameInMap("TaskflowType")
+        @com.aliyun.core.annotation.NameInMap("TaskflowType")
         private String taskflowType;
 
         private Playbook(Builder builder) {
@@ -409,7 +408,10 @@ public class DescribePlaybookResponseBody extends TeaModel {
             }
 
             /**
-             * TaskflowType.
+             * The playbook configuration type.
+             * <p>
+             * *   **xml**: XML format.
+             * *   **x6**: JSON format.
              */
             public Builder taskflowType(String taskflowType) {
                 this.taskflowType = taskflowType;

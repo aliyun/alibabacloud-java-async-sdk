@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.sophonsoar20220728.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlaybooksResponseBody</p>
  */
 public class DescribePlaybooksResponseBody extends TeaModel {
-    @NameInMap("Page")
+    @com.aliyun.core.annotation.NameInMap("Page")
     private Page page;
 
-    @NameInMap("Playbooks")
+    @com.aliyun.core.annotation.NameInMap("Playbooks")
     private java.util.List < Playbooks> playbooks;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribePlaybooksResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class DescribePlaybooksResponseBody extends TeaModel {
     } 
 
     public static class Page extends TeaModel {
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Integer totalCount;
 
         private Page(Builder builder) {
@@ -173,28 +172,32 @@ public class DescribePlaybooksResponseBody extends TeaModel {
 
     }
     public static class Playbooks extends TeaModel {
-        @NameInMap("Active")
+        @com.aliyun.core.annotation.NameInMap("Active")
         private Integer active;
 
-        @NameInMap("DisplayName")
+        @com.aliyun.core.annotation.NameInMap("DisplayName")
         private String displayName;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private Long gmtCreate;
 
-        @NameInMap("LastRuntime")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
+        private String gmtModified;
+
+        @com.aliyun.core.annotation.NameInMap("LastRuntime")
         private Long lastRuntime;
 
-        @NameInMap("OwnType")
+        @com.aliyun.core.annotation.NameInMap("OwnType")
         private String ownType;
 
-        @NameInMap("PlaybookUuid")
+        @com.aliyun.core.annotation.NameInMap("PlaybookUuid")
         private String playbookUuid;
 
         private Playbooks(Builder builder) {
             this.active = builder.active;
             this.displayName = builder.displayName;
             this.gmtCreate = builder.gmtCreate;
+            this.gmtModified = builder.gmtModified;
             this.lastRuntime = builder.lastRuntime;
             this.ownType = builder.ownType;
             this.playbookUuid = builder.playbookUuid;
@@ -230,6 +233,13 @@ public class DescribePlaybooksResponseBody extends TeaModel {
         }
 
         /**
+         * @return gmtModified
+         */
+        public String getGmtModified() {
+            return this.gmtModified;
+        }
+
+        /**
          * @return lastRuntime
          */
         public Long getLastRuntime() {
@@ -254,6 +264,7 @@ public class DescribePlaybooksResponseBody extends TeaModel {
             private Integer active; 
             private String displayName; 
             private Long gmtCreate; 
+            private String gmtModified; 
             private Long lastRuntime; 
             private String ownType; 
             private String playbookUuid; 
@@ -283,6 +294,14 @@ public class DescribePlaybooksResponseBody extends TeaModel {
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
+                return this;
+            }
+
+            /**
+             * GmtModified.
+             */
+            public Builder gmtModified(String gmtModified) {
+                this.gmtModified = gmtModified;
                 return this;
             }
 
