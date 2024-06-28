@@ -4869,6 +4869,87 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class InstanceEndpoint extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceEndpoint(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceEndpoint create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceEndpoint build() {
+                return new InstanceEndpoint(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRocketMQParametersInstanceId extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -4945,6 +5026,249 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             public SinkRocketMQParametersInstanceId build() {
                 return new SinkRocketMQParametersInstanceId(this);
+            } 
+
+        } 
+
+    }
+    public static class InstancePassword extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstancePassword(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstancePassword create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstancePassword build() {
+                return new InstancePassword(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceType extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceType(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceType create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceType build() {
+                return new InstanceType(this);
+            } 
+
+        } 
+
+    }
+    public static class InstanceUsername extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private InstanceUsername(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InstanceUsername create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The ID of the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public InstanceUsername build() {
+                return new InstanceUsername(this);
             } 
 
         } 
@@ -5031,6 +5355,87 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class SinkRocketMQParametersNetwork extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SinkRocketMQParametersNetwork(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkRocketMQParametersNetwork create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SinkRocketMQParametersNetwork build() {
+                return new SinkRocketMQParametersNetwork(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRocketMQParametersProperties extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -5107,6 +5512,87 @@ public class ListEventStreamingsResponseBody extends TeaModel {
 
             public SinkRocketMQParametersProperties build() {
                 return new SinkRocketMQParametersProperties(this);
+            } 
+
+        } 
+
+    }
+    public static class SecurityGroupId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private SecurityGroupId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SecurityGroupId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * The template based on which events are transformed.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The value before transformation.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public SecurityGroupId build() {
+                return new SecurityGroupId(this);
             } 
 
         } 
@@ -5274,18 +5760,198 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         } 
 
     }
+    public static class VSwitchIds extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VSwitchIds(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitchIds create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VSwitchIds build() {
+                return new VSwitchIds(this);
+            } 
+
+        } 
+
+    }
+    public static class VpcId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private VpcId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VpcId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * The method that is used to transform events. Default value: CONSTANT.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * None
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * The name of the topic on the Message Queue for Apache RocketMQ instance.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public VpcId build() {
+                return new VpcId(this);
+            } 
+
+        } 
+
+    }
     public static class SinkRocketMQParameters extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Body")
         private SinkRocketMQParametersBody body;
 
+        @com.aliyun.core.annotation.NameInMap("InstanceEndpoint")
+        private InstanceEndpoint instanceEndpoint;
+
         @com.aliyun.core.annotation.NameInMap("InstanceId")
         private SinkRocketMQParametersInstanceId instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("InstancePassword")
+        private InstancePassword instancePassword;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
+        private InstanceType instanceType;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceUsername")
+        private InstanceUsername instanceUsername;
 
         @com.aliyun.core.annotation.NameInMap("Keys")
         private Keys keys;
 
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private SinkRocketMQParametersNetwork network;
+
         @com.aliyun.core.annotation.NameInMap("Properties")
         private SinkRocketMQParametersProperties properties;
+
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
+        private SecurityGroupId securityGroupId;
 
         @com.aliyun.core.annotation.NameInMap("Tags")
         private Tags tags;
@@ -5293,13 +5959,27 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Topic")
         private SinkRocketMQParametersTopic topic;
 
+        @com.aliyun.core.annotation.NameInMap("VSwitchIds")
+        private VSwitchIds vSwitchIds;
+
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        private VpcId vpcId;
+
         private SinkRocketMQParameters(Builder builder) {
             this.body = builder.body;
+            this.instanceEndpoint = builder.instanceEndpoint;
             this.instanceId = builder.instanceId;
+            this.instancePassword = builder.instancePassword;
+            this.instanceType = builder.instanceType;
+            this.instanceUsername = builder.instanceUsername;
             this.keys = builder.keys;
+            this.network = builder.network;
             this.properties = builder.properties;
+            this.securityGroupId = builder.securityGroupId;
             this.tags = builder.tags;
             this.topic = builder.topic;
+            this.vSwitchIds = builder.vSwitchIds;
+            this.vpcId = builder.vpcId;
         }
 
         public static Builder builder() {
@@ -5318,10 +5998,38 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return instanceEndpoint
+         */
+        public InstanceEndpoint getInstanceEndpoint() {
+            return this.instanceEndpoint;
+        }
+
+        /**
          * @return instanceId
          */
         public SinkRocketMQParametersInstanceId getInstanceId() {
             return this.instanceId;
+        }
+
+        /**
+         * @return instancePassword
+         */
+        public InstancePassword getInstancePassword() {
+            return this.instancePassword;
+        }
+
+        /**
+         * @return instanceType
+         */
+        public InstanceType getInstanceType() {
+            return this.instanceType;
+        }
+
+        /**
+         * @return instanceUsername
+         */
+        public InstanceUsername getInstanceUsername() {
+            return this.instanceUsername;
         }
 
         /**
@@ -5332,10 +6040,24 @@ public class ListEventStreamingsResponseBody extends TeaModel {
         }
 
         /**
+         * @return network
+         */
+        public SinkRocketMQParametersNetwork getNetwork() {
+            return this.network;
+        }
+
+        /**
          * @return properties
          */
         public SinkRocketMQParametersProperties getProperties() {
             return this.properties;
+        }
+
+        /**
+         * @return securityGroupId
+         */
+        public SecurityGroupId getSecurityGroupId() {
+            return this.securityGroupId;
         }
 
         /**
@@ -5352,19 +6074,49 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             return this.topic;
         }
 
+        /**
+         * @return vSwitchIds
+         */
+        public VSwitchIds getVSwitchIds() {
+            return this.vSwitchIds;
+        }
+
+        /**
+         * @return vpcId
+         */
+        public VpcId getVpcId() {
+            return this.vpcId;
+        }
+
         public static final class Builder {
             private SinkRocketMQParametersBody body; 
+            private InstanceEndpoint instanceEndpoint; 
             private SinkRocketMQParametersInstanceId instanceId; 
+            private InstancePassword instancePassword; 
+            private InstanceType instanceType; 
+            private InstanceUsername instanceUsername; 
             private Keys keys; 
+            private SinkRocketMQParametersNetwork network; 
             private SinkRocketMQParametersProperties properties; 
+            private SecurityGroupId securityGroupId; 
             private Tags tags; 
             private SinkRocketMQParametersTopic topic; 
+            private VSwitchIds vSwitchIds; 
+            private VpcId vpcId; 
 
             /**
              * The message body.
              */
             public Builder body(SinkRocketMQParametersBody body) {
                 this.body = body;
+                return this;
+            }
+
+            /**
+             * InstanceEndpoint.
+             */
+            public Builder instanceEndpoint(InstanceEndpoint instanceEndpoint) {
+                this.instanceEndpoint = instanceEndpoint;
                 return this;
             }
 
@@ -5377,6 +6129,30 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
+             * InstancePassword.
+             */
+            public Builder instancePassword(InstancePassword instancePassword) {
+                this.instancePassword = instancePassword;
+                return this;
+            }
+
+            /**
+             * InstanceType.
+             */
+            public Builder instanceType(InstanceType instanceType) {
+                this.instanceType = instanceType;
+                return this;
+            }
+
+            /**
+             * InstanceUsername.
+             */
+            public Builder instanceUsername(InstanceUsername instanceUsername) {
+                this.instanceUsername = instanceUsername;
+                return this;
+            }
+
+            /**
              * The keys that are used to filter messages.
              */
             public Builder keys(Keys keys) {
@@ -5385,10 +6161,26 @@ public class ListEventStreamingsResponseBody extends TeaModel {
             }
 
             /**
+             * Network.
+             */
+            public Builder network(SinkRocketMQParametersNetwork network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
              * The attributes that are used to filter messages.
              */
             public Builder properties(SinkRocketMQParametersProperties properties) {
                 this.properties = properties;
+                return this;
+            }
+
+            /**
+             * SecurityGroupId.
+             */
+            public Builder securityGroupId(SecurityGroupId securityGroupId) {
+                this.securityGroupId = securityGroupId;
                 return this;
             }
 
@@ -5405,6 +6197,22 @@ public class ListEventStreamingsResponseBody extends TeaModel {
              */
             public Builder topic(SinkRocketMQParametersTopic topic) {
                 this.topic = topic;
+                return this;
+            }
+
+            /**
+             * VSwitchIds.
+             */
+            public Builder vSwitchIds(VSwitchIds vSwitchIds) {
+                this.vSwitchIds = vSwitchIds;
+                return this;
+            }
+
+            /**
+             * VpcId.
+             */
+            public Builder vpcId(VpcId vpcId) {
+                this.vpcId = vpcId;
                 return this;
             }
 
