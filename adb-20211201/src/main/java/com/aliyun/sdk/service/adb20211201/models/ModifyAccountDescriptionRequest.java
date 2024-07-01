@@ -26,11 +26,16 @@ public class ModifyAccountDescriptionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private ModifyAccountDescriptionRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -67,10 +72,18 @@ public class ModifyAccountDescriptionRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<ModifyAccountDescriptionRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -81,6 +94,7 @@ public class ModifyAccountDescriptionRequest extends Request {
             this.accountDescription = request.accountDescription;
             this.accountName = request.accountName;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
@@ -114,6 +128,15 @@ public class ModifyAccountDescriptionRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

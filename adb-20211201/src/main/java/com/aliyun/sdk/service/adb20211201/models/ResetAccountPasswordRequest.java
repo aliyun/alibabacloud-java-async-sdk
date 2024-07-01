@@ -30,12 +30,17 @@ public class ResetAccountPasswordRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private ResetAccountPasswordRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
         this.accountName = builder.accountName;
         this.accountPassword = builder.accountPassword;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -79,11 +84,19 @@ public class ResetAccountPasswordRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<ResetAccountPasswordRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -95,6 +108,7 @@ public class ResetAccountPasswordRequest extends Request {
             this.accountName = request.accountName;
             this.accountPassword = request.accountPassword;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
@@ -114,7 +128,7 @@ public class ResetAccountPasswordRequest extends Request {
          * The name of the database account.
          * <p>
          * 
-         * > You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts in a cluster, including the database account name.
+         * >  You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts of an AnalyticDB for MySQL cluster, including database account names.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -142,6 +156,15 @@ public class ResetAccountPasswordRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

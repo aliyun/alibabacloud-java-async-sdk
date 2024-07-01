@@ -108,7 +108,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * The permissions of the database account.
+         * The permissions that you want to grant to the database account.
          */
         public Builder accountPrivileges(java.util.List < AccountPrivileges> accountPrivileges) {
             String accountPrivilegesShrink = shrink(accountPrivileges, "AccountPrivileges", "json");
@@ -127,7 +127,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -193,7 +193,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             private String table; 
 
             /**
-             * The columns on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Column.
+             * The columns on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Column.
              */
             public Builder column(String column) {
                 this.column = column;
@@ -201,7 +201,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The databases on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Database, Table, or Column.
+             * The databases on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Database, Table, or Column.
              */
             public Builder database(String database) {
                 this.database = database;
@@ -209,7 +209,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The tables on which the database account has permissions. This parameter is required if the PrivilegeType parameter is set to Table or Column.
+             * The tables on which you want to grant permissions. This parameter must be specified when the PrivilegeType parameter is set to Table or Column.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -274,7 +274,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             private java.util.List < String > privileges; 
 
             /**
-             * The objects on which the permission takes effect, including databases, tables, and columns.
+             * The objects on which you want to grant permissions, including databases, tables, and columns.
              */
             public Builder privilegeObject(PrivilegeObject privilegeObject) {
                 this.privilegeObject = privilegeObject;
@@ -282,7 +282,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The permission level of the database account. You can call the `DescribeEnabledPrivileges` operation to query the permission level of the database account.
+             * The permission level that you want to assign to the database account. You can call the `DescribeEnabledPrivileges` operation to query the permission level that can be assigned to the database account.
              */
             public Builder privilegeType(String privilegeType) {
                 this.privilegeType = privilegeType;
@@ -290,7 +290,7 @@ public class ModifyAccountPrivilegesRequest extends Request {
             }
 
             /**
-             * The permissions that you want to modify. You can call the `DescribeEnabledPrivileges` operation to query the permissions of the database account.
+             * The permissions that you want to grant to the database account.
              */
             public Builder privileges(java.util.List < String > privileges) {
                 this.privileges = privileges;

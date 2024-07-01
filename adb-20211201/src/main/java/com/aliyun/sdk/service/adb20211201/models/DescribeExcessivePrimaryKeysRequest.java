@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSQLPatternsRequest} extends {@link RequestModel}
+ * {@link DescribeExcessivePrimaryKeysRequest} extends {@link RequestModel}
  *
- * <p>DescribeSQLPatternsRequest</p>
+ * <p>DescribeExcessivePrimaryKeysRequest</p>
  */
-public class DescribeSQLPatternsRequest extends Request {
+public class DescribeExcessivePrimaryKeysRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -21,10 +21,6 @@ public class DescribeSQLPatternsRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Keyword")
-    private String keyword;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -33,11 +29,21 @@ public class DescribeSQLPatternsRequest extends Request {
     private String order;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
+    private String ownerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
+    private Long ownerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 2147483647, minimum = 1)
     private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 10)
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
@@ -46,19 +52,30 @@ public class DescribeSQLPatternsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
+    private String resourceOwnerAccount;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
+    private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    private DescribeSQLPatternsRequest(Builder builder) {
+    private DescribeExcessivePrimaryKeysRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
         this.endTime = builder.endTime;
-        this.keyword = builder.keyword;
         this.lang = builder.lang;
         this.order = builder.order;
+        this.ownerAccount = builder.ownerAccount;
+        this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
+        this.resourceOwnerAccount = builder.resourceOwnerAccount;
+        this.resourceOwnerId = builder.resourceOwnerId;
         this.startTime = builder.startTime;
     }
 
@@ -66,7 +83,7 @@ public class DescribeSQLPatternsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeSQLPatternsRequest create() {
+    public static DescribeExcessivePrimaryKeysRequest create() {
         return builder().build();
     }
 
@@ -90,13 +107,6 @@ public class DescribeSQLPatternsRequest extends Request {
     }
 
     /**
-     * @return keyword
-     */
-    public String getKeyword() {
-        return this.keyword;
-    }
-
-    /**
      * @return lang
      */
     public String getLang() {
@@ -108,6 +118,20 @@ public class DescribeSQLPatternsRequest extends Request {
      */
     public String getOrder() {
         return this.order;
+    }
+
+    /**
+     * @return ownerAccount
+     */
+    public String getOwnerAccount() {
+        return this.ownerAccount;
+    }
+
+    /**
+     * @return ownerId
+     */
+    public Long getOwnerId() {
+        return this.ownerId;
     }
 
     /**
@@ -132,45 +156,65 @@ public class DescribeSQLPatternsRequest extends Request {
     }
 
     /**
+     * @return resourceOwnerAccount
+     */
+    public String getResourceOwnerAccount() {
+        return this.resourceOwnerAccount;
+    }
+
+    /**
+     * @return resourceOwnerId
+     */
+    public Long getResourceOwnerId() {
+        return this.resourceOwnerId;
+    }
+
+    /**
      * @return startTime
      */
     public String getStartTime() {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeSQLPatternsRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeExcessivePrimaryKeysRequest, Builder> {
         private String DBClusterId; 
         private String endTime; 
-        private String keyword; 
         private String lang; 
         private String order; 
+        private String ownerAccount; 
+        private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private String regionId; 
+        private String resourceOwnerAccount; 
+        private Long resourceOwnerId; 
         private String startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSQLPatternsRequest request) {
+        private Builder(DescribeExcessivePrimaryKeysRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
             this.endTime = request.endTime;
-            this.keyword = request.keyword;
             this.lang = request.lang;
             this.order = request.order;
+            this.ownerAccount = request.ownerAccount;
+            this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
+            this.resourceOwnerAccount = request.resourceOwnerAccount;
+            this.resourceOwnerId = request.resourceOwnerId;
             this.startTime = request.startTime;
         } 
 
         /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V5.0) cluster.
          * <p>
          * 
-         * > You can call the [DescribeDBClusters](~~129857~~) operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region, including cluster IDs.
+         * >  You can call the [DescribeDBClusters](~~129857~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V5.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -180,9 +224,6 @@ public class DescribeSQLPatternsRequest extends Request {
 
         /**
          * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
-         * <p>
-         * 
-         * > The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -191,19 +232,10 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * The keyword that is used for the query.
-         */
-        public Builder keyword(String keyword) {
-            this.putQueryParameter("Keyword", keyword);
-            this.keyword = keyword;
-            return this;
-        }
-
-        /**
-         * The language. Valid values:
+         * The language of file titles and error messages. Valid values:
          * <p>
          * 
-         * *   **zh** (default): simplified Chinese.
+         * *   **zh (default)**: simplified Chinese.
          * *   **en**: English.
          * *   **ja**: Japanese.
          * *   **zh-tw**: traditional Chinese.
@@ -215,27 +247,26 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * The order by which to sort query results. Specify the parameter value in the JSON format. Example: `[{"Field":"AverageQueryTime","Type":"Asc"}]`.
+         * The order in which table fields are sorted. Specify the value in the JSON format.
          * <p>
          * 
-         * *   `Field` specifies the field by which to sort the query results. Valid values:
+         * Example:
          * 
-         *     *   `PatternCreationTime`: the earliest commit time of the SQL pattern within the time range to query.
-         *     *   `AverageQueryTime`: the average total amount of time consumed by the SQL pattern within the time range to query.
-         *     *   `MaxQueryTime`: the maximum total amount of time consumed by the SQL pattern within the time range to query.
-         *     *   `AverageExecutionTime`: the average execution duration of the SQL pattern within the time range to query.
-         *     *   `MaxExecutionTime`: the maximum execution duration of the SQL pattern within the time range to query.
-         *     *   `AveragePeakMemory`: the average peak memory usage of the SQL pattern within the time range to query.
-         *     *   `MaxPeakMemory`: the maximum peak memory usage of the SQL pattern within the time range to query.
-         *     *   `AverageScanSize`: the average amount of data scanned based on the SQL pattern within the time range to query.
-         *     *   `MaxScanSize`: the maximum amount of data scanned based on the SQL pattern within the time range to query.
-         *     *   `QueryCount`: the number of queries performed in association with the SQL pattern within the time range to query.
-         *     *   `FailedCount`: the number of failed queries performed in association with the SQL pattern within the time range to query.
+         *     [
          * 
-         * *   `Type` specifies the sorting order. Valid values (case-insensitive):
+         *         {
          * 
-         *     *   `Asc`: ascending order.
-         *     *   `Desc`: descending order.
+         *             "Field":"Name",
+         * 
+         *             "Type":"Asc"
+         * 
+         *         }
+         * 
+         *     ]
+         * 
+         * In the preceding code, Field specifies the field that is used to sort the table data. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.
+         * 
+         * Field and Type are case-insensitive.
          */
         public Builder order(String order) {
             this.putQueryParameter("Order", order);
@@ -244,7 +275,25 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * The page number. Pages start from page 1. Default value: 1.
+         * OwnerAccount.
+         */
+        public Builder ownerAccount(String ownerAccount) {
+            this.putQueryParameter("OwnerAccount", ownerAccount);
+            this.ownerAccount = ownerAccount;
+            return this;
+        }
+
+        /**
+         * OwnerId.
+         */
+        public Builder ownerId(Long ownerId) {
+            this.putQueryParameter("OwnerId", ownerId);
+            this.ownerId = ownerId;
+            return this;
+        }
+
+        /**
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -256,8 +305,7 @@ public class DescribeSQLPatternsRequest extends Request {
          * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **10** (default)
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -268,7 +316,10 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
-         * The region ID of the cluster.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~143074~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -277,11 +328,25 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         /**
+         * ResourceOwnerAccount.
+         */
+        public Builder resourceOwnerAccount(String resourceOwnerAccount) {
+            this.putQueryParameter("ResourceOwnerAccount", resourceOwnerAccount);
+            this.resourceOwnerAccount = resourceOwnerAccount;
+            return this;
+        }
+
+        /**
+         * ResourceOwnerId.
+         */
+        public Builder resourceOwnerId(Long resourceOwnerId) {
+            this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
+            this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
          * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time must be in UTC.
-         * <p>
-         * 
-         * > *   Only data within the last 14 days can be queried.
-         * > * The maximum time range that can be specified is 24 hours.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -290,8 +355,8 @@ public class DescribeSQLPatternsRequest extends Request {
         }
 
         @Override
-        public DescribeSQLPatternsRequest build() {
-            return new DescribeSQLPatternsRequest(this);
+        public DescribeExcessivePrimaryKeysRequest build() {
+            return new DescribeExcessivePrimaryKeysRequest(this);
         } 
 
     } 

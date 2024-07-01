@@ -94,7 +94,10 @@ public class DescribeApsResourceGroupsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
+         * <p>
+         * 
+         * >  You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
          */
         public Builder regionId(String regionId) {
             this.putBodyParameter("RegionId", regionId);

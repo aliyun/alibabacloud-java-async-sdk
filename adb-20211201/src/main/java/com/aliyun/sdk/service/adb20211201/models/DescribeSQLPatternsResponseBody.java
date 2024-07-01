@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSQLPatternsResponseBody</p>
  */
 public class DescribeSQLPatternsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
@@ -27,6 +30,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     private Integer totalCount;
 
     private DescribeSQLPatternsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.patternDetails = builder.patternDetails;
@@ -40,6 +44,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
 
     public static DescribeSQLPatternsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -78,11 +89,20 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Integer pageNumber; 
         private Integer pageSize; 
         private java.util.List < PatternDetails> patternDetails; 
         private String requestId; 
         private Integer totalCount; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The page number.
@@ -389,13 +409,13 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the execution of the SQL pattern can be blocked. Valid values:
+             * Indicates whether the execution of the SQL pattern can be intercepted. Valid values:
              * <p>
              * 
              * *   **true**
              * *   **false**
              * 
-             * >  Only SELECT and INSERT statements can be blocked.
+             * >  Only SELECT and INSERT statements can be intercepted.
              */
             public Builder blockable(Boolean blockable) {
                 this.blockable = blockable;
@@ -483,7 +503,7 @@ public class DescribeSQLPatternsResponseBody extends TeaModel {
             }
 
             /**
-             * The database username that is used to commit the SQL pattern.
+             * The name of the database account that is used to commit the SQL pattern.
              */
             public Builder user(String user) {
                 this.user = user;

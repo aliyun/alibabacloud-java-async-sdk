@@ -33,8 +33,16 @@ public class CreateDBClusterRequest extends Request {
     private String DBClusterVersion;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DiskEncryption")
+    private Boolean diskEncryption;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EnableDefaultResourcePool")
     private Boolean enableDefaultResourcePool;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KmsId")
+    private String kmsId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PayType")
@@ -112,7 +120,9 @@ public class CreateDBClusterRequest extends Request {
         this.DBClusterDescription = builder.DBClusterDescription;
         this.DBClusterNetworkType = builder.DBClusterNetworkType;
         this.DBClusterVersion = builder.DBClusterVersion;
+        this.diskEncryption = builder.diskEncryption;
         this.enableDefaultResourcePool = builder.enableDefaultResourcePool;
+        this.kmsId = builder.kmsId;
         this.payType = builder.payType;
         this.period = builder.period;
         this.productForm = builder.productForm;
@@ -180,10 +190,24 @@ public class CreateDBClusterRequest extends Request {
     }
 
     /**
+     * @return diskEncryption
+     */
+    public Boolean getDiskEncryption() {
+        return this.diskEncryption;
+    }
+
+    /**
      * @return enableDefaultResourcePool
      */
     public Boolean getEnableDefaultResourcePool() {
         return this.enableDefaultResourcePool;
+    }
+
+    /**
+     * @return kmsId
+     */
+    public String getKmsId() {
+        return this.kmsId;
     }
 
     /**
@@ -304,7 +328,9 @@ public class CreateDBClusterRequest extends Request {
         private String DBClusterDescription; 
         private String DBClusterNetworkType; 
         private String DBClusterVersion; 
+        private Boolean diskEncryption; 
         private Boolean enableDefaultResourcePool; 
+        private String kmsId; 
         private String payType; 
         private String period; 
         private String productForm; 
@@ -333,7 +359,9 @@ public class CreateDBClusterRequest extends Request {
             this.DBClusterDescription = request.DBClusterDescription;
             this.DBClusterNetworkType = request.DBClusterNetworkType;
             this.DBClusterVersion = request.DBClusterVersion;
+            this.diskEncryption = request.diskEncryption;
             this.enableDefaultResourcePool = request.enableDefaultResourcePool;
+            this.kmsId = request.kmsId;
             this.payType = request.payType;
             this.period = request.period;
             this.productForm = request.productForm;
@@ -408,6 +436,15 @@ public class CreateDBClusterRequest extends Request {
         }
 
         /**
+         * DiskEncryption.
+         */
+        public Builder diskEncryption(Boolean diskEncryption) {
+            this.putQueryParameter("DiskEncryption", diskEncryption);
+            this.diskEncryption = diskEncryption;
+            return this;
+        }
+
+        /**
          * Specifies whether to allocate all reserved computing resources to the user_default resource group. Valid values:
          * <p>
          * 
@@ -417,6 +454,15 @@ public class CreateDBClusterRequest extends Request {
         public Builder enableDefaultResourcePool(Boolean enableDefaultResourcePool) {
             this.putQueryParameter("EnableDefaultResourcePool", enableDefaultResourcePool);
             this.enableDefaultResourcePool = enableDefaultResourcePool;
+            return this;
+        }
+
+        /**
+         * KmsId.
+         */
+        public Builder kmsId(String kmsId) {
+            this.putQueryParameter("KmsId", kmsId);
+            this.kmsId = kmsId;
             return this;
         }
 

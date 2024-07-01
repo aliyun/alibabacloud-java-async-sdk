@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDBClusterHealthStatusResponseBody</p>
  */
 public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("CS")
     private Cs cs;
 
@@ -27,6 +30,7 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     private Worker worker;
 
     private DescribeDBClusterHealthStatusResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.cs = builder.cs;
         this.executor = builder.executor;
         this.instanceStatus = builder.instanceStatus;
@@ -40,6 +44,13 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
 
     public static DescribeDBClusterHealthStatusResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -78,11 +89,20 @@ public class DescribeDBClusterHealthStatusResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private Cs cs; 
         private Executor executor; 
         private String instanceStatus; 
         private String requestId; 
         private Worker worker; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The access nodes of the queried cluster.

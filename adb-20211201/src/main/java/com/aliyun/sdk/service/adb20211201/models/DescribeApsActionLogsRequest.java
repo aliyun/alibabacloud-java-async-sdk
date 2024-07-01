@@ -245,7 +245,7 @@ public class DescribeApsActionLogsRequest extends Request {
          * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of the cluster.
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -254,10 +254,10 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mmZ** format. The time must be in UTC.
+         * The end time of the logs to be queried. Specify the time in the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time must be in UTC.
          * <p>
          * 
-         * >  The end time must be later than the start time. Their interval cannot be longer than 30 days.
+         * >  The end time must be later than the start time. The maximum time range that can be specified is 30 days.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -293,7 +293,7 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The number of the page to return. The value must be an integer that is greater than 0. Default value: 1.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -302,10 +302,10 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Default value: 30. Valid values:
+         * The number of entries per page. Valid values:
          * <p>
          * 
-         * *   **30**
+         * *   **30** (default)
          * *   **50**
          * *   **100**
          */
@@ -346,14 +346,14 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The task phase during which the logs to be queried are generated. Valid values:
+         * The phase during which the logs to be queried were generated. Valid values:
          * <p>
          * 
          * *   **StructureMigrate**: schema migration.
          * *   **FullDataSync**: full data synchronization.
          * *   **IncrementalSync**: incremental data synchronization.
          * 
-         * >  If you do not specify this parameter, logs of all the task phases are queried.
+         * >  If you do not specify this parameter, logs of all the phases are queried.
          */
         public Builder stage(String stage) {
             this.putQueryParameter("Stage", stage);
@@ -371,7 +371,7 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The type of the log. Separate multiple log types with commas (,). Valid values:
+         * The types of the logs. Separate multiple log types with commas (,). Valid values:
          * <p>
          * 
          * *   **INFO**
@@ -387,7 +387,7 @@ public class DescribeApsActionLogsRequest extends Request {
         }
 
         /**
-         * The ID of the real-time data ingestion task.
+         * The ID of the real-time data ingestion job.
          */
         public Builder workloadId(String workloadId) {
             this.putQueryParameter("WorkloadId", workloadId);

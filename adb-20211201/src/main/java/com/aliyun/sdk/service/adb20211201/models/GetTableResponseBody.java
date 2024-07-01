@@ -117,7 +117,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the table.
+         * The queried table.
          */
         public Builder table(TableModel table) {
             this.table = table;

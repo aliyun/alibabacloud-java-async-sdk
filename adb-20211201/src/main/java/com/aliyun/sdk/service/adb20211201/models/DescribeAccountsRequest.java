@@ -21,6 +21,10 @@ public class DescribeAccountsRequest extends Request {
     private String DBClusterId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
@@ -28,6 +32,7 @@ public class DescribeAccountsRequest extends Request {
         super(builder);
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
         this.ownerId = builder.ownerId;
     }
 
@@ -59,6 +64,13 @@ public class DescribeAccountsRequest extends Request {
     }
 
     /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
+    /**
      * @return ownerId
      */
     public String getOwnerId() {
@@ -68,6 +80,7 @@ public class DescribeAccountsRequest extends Request {
     public static final class Builder extends Request.Builder<DescribeAccountsRequest, Builder> {
         private String accountName; 
         private String DBClusterId; 
+        private String engine; 
         private String ownerId; 
 
         private Builder() {
@@ -78,6 +91,7 @@ public class DescribeAccountsRequest extends Request {
             super(request);
             this.accountName = request.accountName;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
             this.ownerId = request.ownerId;
         } 
 
@@ -99,6 +113,15 @@ public class DescribeAccountsRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

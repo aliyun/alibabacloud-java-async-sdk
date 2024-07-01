@@ -90,6 +90,108 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
 
     } 
 
+    public static class Ports extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Port")
+        private String port;
+
+        @com.aliyun.core.annotation.NameInMap("Protocol")
+        private String protocol;
+
+        private Ports(Builder builder) {
+            this.port = builder.port;
+            this.protocol = builder.protocol;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Ports create() {
+            return builder().build();
+        }
+
+        /**
+         * @return port
+         */
+        public String getPort() {
+            return this.port;
+        }
+
+        /**
+         * @return protocol
+         */
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public static final class Builder {
+            private String port; 
+            private String protocol; 
+
+            /**
+             * Port.
+             */
+            public Builder port(String port) {
+                this.port = port;
+                return this;
+            }
+
+            /**
+             * Protocol.
+             */
+            public Builder protocol(String protocol) {
+                this.protocol = protocol;
+                return this;
+            }
+
+            public Ports build() {
+                return new Ports(this);
+            } 
+
+        } 
+
+    }
+    public static class AddressPorts extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ports")
+        private java.util.List < Ports> ports;
+
+        private AddressPorts(Builder builder) {
+            this.ports = builder.ports;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static AddressPorts create() {
+            return builder().build();
+        }
+
+        /**
+         * @return ports
+         */
+        public java.util.List < Ports> getPorts() {
+            return this.ports;
+        }
+
+        public static final class Builder {
+            private java.util.List < Ports> ports; 
+
+            /**
+             * ports.
+             */
+            public Builder ports(java.util.List < Ports> ports) {
+                this.ports = ports;
+                return this;
+            }
+
+            public AddressPorts build() {
+                return new AddressPorts(this);
+            } 
+
+        } 
+
+    }
     public static class Address extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ConnectionString")
         private String connectionString;
@@ -106,6 +208,9 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Port")
         private String port;
 
+        @com.aliyun.core.annotation.NameInMap("Ports")
+        private AddressPorts ports;
+
         @com.aliyun.core.annotation.NameInMap("VPCId")
         private String VPCId;
 
@@ -118,6 +223,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             this.IPAddress = builder.IPAddress;
             this.netType = builder.netType;
             this.port = builder.port;
+            this.ports = builder.ports;
             this.VPCId = builder.VPCId;
             this.vSwitchId = builder.vSwitchId;
         }
@@ -166,6 +272,13 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
         }
 
         /**
+         * @return ports
+         */
+        public AddressPorts getPorts() {
+            return this.ports;
+        }
+
+        /**
          * @return VPCId
          */
         public String getVPCId() {
@@ -185,6 +298,7 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
             private String IPAddress; 
             private String netType; 
             private String port; 
+            private AddressPorts ports; 
             private String VPCId; 
             private String vSwitchId; 
 
@@ -241,6 +355,14 @@ public class DescribeClusterNetInfoResponseBody extends TeaModel {
              */
             public Builder port(String port) {
                 this.port = port;
+                return this;
+            }
+
+            /**
+             * Ports.
+             */
+            public Builder ports(AddressPorts ports) {
+                this.ports = ports;
                 return this;
             }
 

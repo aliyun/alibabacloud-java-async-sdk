@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDownloadRecordsResponseBody</p>
  */
 public class DescribeDownloadRecordsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
@@ -18,6 +21,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     private String requestId;
 
     private DescribeDownloadRecordsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.records = builder.records;
         this.requestId = builder.requestId;
     }
@@ -28,6 +32,13 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
 
     public static DescribeDownloadRecordsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -45,8 +56,17 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private java.util.List < Records> records; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The queried download tasks.
@@ -145,7 +165,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * The download task ID.
+             * The download job ID.
              */
             public Builder downloadId(Long downloadId) {
                 this.downloadId = downloadId;
@@ -153,7 +173,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The error message returned if the download task failed.
+             * The error message returned if the download job failed.
              */
             public Builder exceptionMsg(String exceptionMsg) {
                 this.exceptionMsg = exceptionMsg;
@@ -169,7 +189,7 @@ public class DescribeDownloadRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the download task. Valid values:
+             * The status of the download job. Valid values:
              * <p>
              * 
              * *   **running**

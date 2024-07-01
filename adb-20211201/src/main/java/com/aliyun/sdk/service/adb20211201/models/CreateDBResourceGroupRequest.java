@@ -237,7 +237,7 @@ public class CreateDBResourceGroupRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable the preemptible instance feature for the resource group. After you enable the preemptible instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the preemptible instance feature only for job resource groups. Valid values:
+         * Specifies whether to enable the spot instance feature for the resource group. After you enable the spot instance feature, you are charged for resources at a lower unit price but the resources are probably released. You can enable the spot instance feature only for job resource groups. Valid values:
          * <p>
          * 
          * *   **True**
@@ -407,7 +407,7 @@ public class CreateDBResourceGroupRequest extends Request {
              * 
              * *   The name can be up to 255 characters in length.
              * *   The name must start with a letter or digit.
-             * *   The name can contain letters, digits, hyphens (\_), and underscores (\_).
+             * *   The name can contain letters, digits, hyphens (-), and underscores (\_).
              */
             public Builder groupName(String groupName) {
                 this.groupName = groupName;

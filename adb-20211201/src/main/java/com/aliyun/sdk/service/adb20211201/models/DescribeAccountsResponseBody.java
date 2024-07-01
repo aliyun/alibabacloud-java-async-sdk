@@ -83,6 +83,9 @@ public class DescribeAccountsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountType")
         private String accountType;
 
+        @com.aliyun.core.annotation.NameInMap("Engine")
+        private String engine;
+
         @com.aliyun.core.annotation.NameInMap("RamUsers")
         private String ramUsers;
 
@@ -91,6 +94,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             this.accountName = builder.accountName;
             this.accountStatus = builder.accountStatus;
             this.accountType = builder.accountType;
+            this.engine = builder.engine;
             this.ramUsers = builder.ramUsers;
         }
 
@@ -131,6 +135,13 @@ public class DescribeAccountsResponseBody extends TeaModel {
         }
 
         /**
+         * @return engine
+         */
+        public String getEngine() {
+            return this.engine;
+        }
+
+        /**
          * @return ramUsers
          */
         public String getRamUsers() {
@@ -142,6 +153,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             private String accountName; 
             private String accountStatus; 
             private String accountType; 
+            private String engine; 
             private String ramUsers; 
 
             /**
@@ -161,7 +173,7 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the database account. Valid values:
+             * The status of the database account. Valid values:
              * <p>
              * 
              * *   **Creating**
@@ -186,7 +198,15 @@ public class DescribeAccountsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the RAM user.
+             * Engine.
+             */
+            public Builder engine(String engine) {
+                this.engine = engine;
+                return this;
+            }
+
+            /**
+             * The ID of the Resource Access Management (RAM) user.
              */
             public Builder ramUsers(String ramUsers) {
                 this.ramUsers = ramUsers;

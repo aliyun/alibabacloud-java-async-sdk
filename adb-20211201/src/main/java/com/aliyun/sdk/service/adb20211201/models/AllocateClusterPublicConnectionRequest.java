@@ -20,10 +20,15 @@ public class AllocateClusterPublicConnectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private AllocateClusterPublicConnectionRequest(Builder builder) {
         super(builder);
         this.connectionStringPrefix = builder.connectionStringPrefix;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<AllocateClusterPublicConnectionRequest, Builder> {
         private String connectionStringPrefix; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class AllocateClusterPublicConnectionRequest extends Request {
             super(request);
             this.connectionStringPrefix = request.connectionStringPrefix;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
@@ -86,6 +100,15 @@ public class AllocateClusterPublicConnectionRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

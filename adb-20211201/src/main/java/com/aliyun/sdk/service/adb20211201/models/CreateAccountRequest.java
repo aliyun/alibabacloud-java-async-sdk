@@ -35,6 +35,10 @@ public class CreateAccountRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private CreateAccountRequest(Builder builder) {
         super(builder);
         this.accountDescription = builder.accountDescription;
@@ -42,6 +46,7 @@ public class CreateAccountRequest extends Request {
         this.accountPassword = builder.accountPassword;
         this.accountType = builder.accountType;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -92,12 +97,20 @@ public class CreateAccountRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<CreateAccountRequest, Builder> {
         private String accountDescription; 
         private String accountName; 
         private String accountPassword; 
         private String accountType; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -110,6 +123,7 @@ public class CreateAccountRequest extends Request {
             this.accountPassword = request.accountPassword;
             this.accountType = request.accountType;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
@@ -173,6 +187,15 @@ public class CreateAccountRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

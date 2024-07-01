@@ -85,7 +85,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The queried cluster.
+         * The queried clusters.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -606,6 +606,9 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProductForm")
         private String productForm;
 
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
+        private String productVersion;
+
         @com.aliyun.core.annotation.NameInMap("RdsInstanceId")
         private String rdsInstanceId;
 
@@ -675,6 +678,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.port = builder.port;
             this.productForm = builder.productForm;
+            this.productVersion = builder.productVersion;
             this.rdsInstanceId = builder.rdsInstanceId;
             this.regionId = builder.regionId;
             this.reservedACU = builder.reservedACU;
@@ -902,6 +906,13 @@ public class DescribeDBClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return productVersion
+         */
+        public String getProductVersion() {
+            return this.productVersion;
+        }
+
+        /**
          * @return rdsInstanceId
          */
         public String getRdsInstanceId() {
@@ -1022,6 +1033,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             private String payType; 
             private String port; 
             private String productForm; 
+            private String productVersion; 
             private String rdsInstanceId; 
             private String regionId; 
             private String reservedACU; 
@@ -1057,7 +1069,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
+             * The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -1105,7 +1117,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster. Valid values:
+             * The status of the cluster. Valid values:
              * <p>
              * 
              * *   **Preparing**
@@ -1165,7 +1177,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The version of AnalyticDB for MySQL Data Lakehouse Edition. **5.0** is returned.
+             * The engine version of the AnalyticDB for MySQL Data Lakehouse Edition cluster. **5.0** is returned.
              */
             public Builder DBVersion(String DBVersion) {
                 this.DBVersion = DBVersion;
@@ -1197,7 +1209,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The database engine of the cluster. **AnalyticDB** is returned.
+             * The engine of the cluster. **AnalyticDB** is returned.
              */
             public Builder engine(String engine) {
                 this.engine = engine;
@@ -1213,11 +1225,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster expired. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
+             * The time when the cluster expires. The time follows the ISO 8601 standard in the *yyyy-MM-ddTHH:mm:ssZ* format. The time is displayed in UTC.
              * <p>
              * 
-             * > - The expiration time is returned for a subscription cluster.
-             * > - Anempty string is returned for a pay-as-you-go cluster.
+             * > 
+             * 
+             * *   If the billing method of the cluster is subscription, the actual expiration time is returned.
+             * 
+             * *   If the billing method of the cluster is pay-as-you-go, null is returned.
              */
             public Builder expireTime(String expireTime) {
                 this.expireTime = expireTime;
@@ -1231,8 +1246,11 @@ public class DescribeDBClustersResponseBody extends TeaModel {
              * *   **true**
              * *   **false**
              * 
-             * > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew expired clusters. For more information, see [Renewal policy](~~135246~~).
-             * > - This parameter is not returned for pay-as-you-go clusters.
+             * > 
+             * 
+             * *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135246~~).
+             * 
+             * *   This parameter is not returned for pay-as-you-go clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
@@ -1256,7 +1274,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The lock state of the cluster. Valid values:
+             * The lock status of the cluster. Valid values:
              * <p>
              * 
              * *   **Unlock**: The cluster is not locked.
@@ -1316,6 +1334,14 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
+             * ProductVersion.
+             */
+            public Builder productVersion(String productVersion) {
+                this.productVersion = productVersion;
+                return this;
+            }
+
+            /**
              * RdsInstanceId.
              */
             public Builder rdsInstanceId(String rdsInstanceId) {
@@ -1332,7 +1358,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The amount of remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+             * The remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
@@ -1364,7 +1390,7 @@ public class DescribeDBClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
+             * The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;

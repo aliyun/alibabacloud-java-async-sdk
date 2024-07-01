@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeApsActionLogsResponseBody</p>
  */
 public class DescribeApsActionLogsResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("ActionLogs")
     private java.util.List < ActionLogs> actionLogs;
 
@@ -33,6 +36,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     private String workloadId;
 
     private DescribeApsActionLogsResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.actionLogs = builder.actionLogs;
         this.DBClusterId = builder.DBClusterId;
         this.pageNumber = builder.pageNumber;
@@ -48,6 +52,13 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
 
     public static DescribeApsActionLogsResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -100,6 +111,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private java.util.List < ActionLogs> actionLogs; 
         private String DBClusterId; 
         private String pageNumber; 
@@ -109,7 +121,15 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         private String workloadId; 
 
         /**
-         * Details of the logs.
+         * The information about the request denial.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
+
+        /**
+         * The queried logs.
          */
         public Builder actionLogs(java.util.List < ActionLogs> actionLogs) {
             this.actionLogs = actionLogs;
@@ -125,7 +145,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(String pageNumber) {
             this.pageNumber = pageNumber;
@@ -133,7 +153,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of entries returned on each page.
+         * The number of entries per page.
          */
         public Builder pageSize(String pageSize) {
             this.pageSize = pageSize;
@@ -141,7 +161,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -157,7 +177,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the real-time data ingestion task.
+         * The ID of the real-time data ingestion job.
          */
         public Builder workloadId(String workloadId) {
             this.workloadId = workloadId;
@@ -241,7 +261,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The task phase during which the logs are generated. Valid values:
+             * The phase during which the log was generated. Valid values:
              * <p>
              * 
              * *   **StructureMigrate**: schema migration.
@@ -267,7 +287,7 @@ public class DescribeApsActionLogsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the log is generated. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
+             * The time when the log was generated. The time follows the ISO 8601 standard in the **yyyy-MM-ddTHH:mm:ssZ** format. The time is displayed in UTC.
              */
             public Builder time(String time) {
                 this.time = time;

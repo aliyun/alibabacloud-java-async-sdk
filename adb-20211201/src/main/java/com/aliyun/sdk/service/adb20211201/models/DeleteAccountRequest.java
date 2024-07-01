@@ -21,10 +21,15 @@ public class DeleteAccountRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private DeleteAccountRequest(Builder builder) {
         super(builder);
         this.accountName = builder.accountName;
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -54,9 +59,17 @@ public class DeleteAccountRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<DeleteAccountRequest, Builder> {
         private String accountName; 
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -66,13 +79,14 @@ public class DeleteAccountRequest extends Request {
             super(request);
             this.accountName = request.accountName;
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
          * The name of the database account.
          * <p>
          * 
-         * > You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts in a cluster, including the database account name.
+         * >  You can call the [DescribeAccounts](~~612430~~) operation to query the information about database accounts for a cluster, including the account name.
          */
         public Builder accountName(String accountName) {
             this.putQueryParameter("AccountName", accountName);
@@ -86,6 +100,15 @@ public class DeleteAccountRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

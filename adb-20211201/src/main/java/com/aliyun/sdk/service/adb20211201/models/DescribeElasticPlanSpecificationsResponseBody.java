@@ -85,7 +85,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The page number of the returned page.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -93,7 +93,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resource specifications returned per page.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -101,7 +101,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The resource specifications that can be scaled.
+         * The queried resource specifications.
          */
         public Builder specifications(java.util.List < String > specifications) {
             this.specifications = specifications;
@@ -117,7 +117,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
         }
 
         /**
-         * The number of resource specifications that can be scaled.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;

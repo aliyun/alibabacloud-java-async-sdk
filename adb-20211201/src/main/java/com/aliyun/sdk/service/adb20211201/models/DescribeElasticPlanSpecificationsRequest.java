@@ -83,10 +83,10 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
         } 
 
         /**
-         * The ID of the cluster.
+         * The cluster ID.
          * <p>
          * 
-         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the ID of an AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
+         * >  You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -98,8 +98,11 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
          * The name of the resource group.
          * <p>
          * 
-         * > *   This parameter is required only when you query the resource specifications that can be scaled for an interactive resource group.
-         * > *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a specific cluster.
+         * > 
+         * 
+         * *   This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.
+         * 
+         * *   You can call the [DescribeDBResourceGroup](~~459446~~) operation to query the name of a resource group within a cluster.
          */
         public Builder resourceGroupName(String resourceGroupName) {
             this.putQueryParameter("ResourceGroupName", resourceGroupName);
@@ -111,8 +114,8 @@ public class DescribeElasticPlanSpecificationsRequest extends Request {
          * The type of the scaling plan. Valid values:
          * <p>
          * 
-         * *   EXECUTOR: interactive resource groups, which fall into the computing resource category.
-         * *   WORKER: EIUs.
+         * *   EXECUTOR: the interactive resource group type, which specifies the computing resource type.
+         * *   WORKER: the elastic I/O unit (EIU) type.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

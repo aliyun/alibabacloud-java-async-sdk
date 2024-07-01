@@ -6,16 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyAuditLogConfigRequest} extends {@link RequestModel}
+ * {@link DescribePerformanceViewsRequest} extends {@link RequestModel}
  *
- * <p>ModifyAuditLogConfigRequest</p>
+ * <p>DescribePerformanceViewsRequest</p>
  */
-public class ModifyAuditLogConfigRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AuditLogStatus")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String auditLogStatus;
-
+public class DescribePerformanceViewsRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -42,9 +37,8 @@ public class ModifyAuditLogConfigRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private ModifyAuditLogConfigRequest(Builder builder) {
+    private DescribePerformanceViewsRequest(Builder builder) {
         super(builder);
-        this.auditLogStatus = builder.auditLogStatus;
         this.DBClusterId = builder.DBClusterId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
@@ -57,20 +51,13 @@ public class ModifyAuditLogConfigRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyAuditLogConfigRequest create() {
+    public static DescribePerformanceViewsRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return auditLogStatus
-     */
-    public String getAuditLogStatus() {
-        return this.auditLogStatus;
     }
 
     /**
@@ -115,8 +102,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyAuditLogConfigRequest, Builder> {
-        private String auditLogStatus; 
+    public static final class Builder extends Request.Builder<DescribePerformanceViewsRequest, Builder> {
         private String DBClusterId; 
         private String ownerAccount; 
         private Long ownerId; 
@@ -128,9 +114,8 @@ public class ModifyAuditLogConfigRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyAuditLogConfigRequest request) {
+        private Builder(DescribePerformanceViewsRequest request) {
             super(request);
-            this.auditLogStatus = request.auditLogStatus;
             this.DBClusterId = request.DBClusterId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
@@ -140,25 +125,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         } 
 
         /**
-         * The status to which you want to change the SQL audit feature. Valid values:
-         * <p>
-         * 
-         * *   **on**
-         * *   **off**
-         * 
-         * >  After you disable the SQL audit feature, all SQL audit logs are deleted. You must query and export SQL audit logs before you disable SQL audit. For more information, see [DescribeAuditLogRecords](~~612426~~). When you re-enable SQL audit, audit logs that are generated from the time when SQL audit was last enabled are available for queries.
-         */
-        public Builder auditLogStatus(String auditLogStatus) {
-            this.putQueryParameter("AuditLogStatus", auditLogStatus);
-            this.auditLogStatus = auditLogStatus;
-            return this;
-        }
-
-        /**
-         * The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
-         * <p>
-         * 
-         * > You can call the [DescribeDBClusters](~~454250~~) operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.
+         * DBClusterId.
          */
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
@@ -185,10 +152,7 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         /**
-         * The region ID.
-         * <p>
-         * 
-         * > You can call the [DescribeRegions](~~454314~~) operation to query the most recent region list.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -215,8 +179,8 @@ public class ModifyAuditLogConfigRequest extends Request {
         }
 
         @Override
-        public ModifyAuditLogConfigRequest build() {
-            return new ModifyAuditLogConfigRequest(this);
+        public DescribePerformanceViewsRequest build() {
+            return new DescribePerformanceViewsRequest(this);
         } 
 
     } 

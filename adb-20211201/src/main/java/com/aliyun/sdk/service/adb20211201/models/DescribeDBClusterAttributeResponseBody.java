@@ -49,7 +49,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The queried AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster information.
+         * The queried information about the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.
          */
         public Builder items(Items items) {
             this.items = items;
@@ -176,6 +176,12 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
     }
     public static class DBCluster extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ClickhouseEngineCacheSize")
+        private Integer clickhouseEngineCacheSize;
+
+        @com.aliyun.core.annotation.NameInMap("ClickhouseEngineEnabled")
+        private Boolean clickhouseEngineEnabled;
+
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
 
@@ -221,6 +227,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Expired")
         private String expired;
 
+        @com.aliyun.core.annotation.NameInMap("KmsId")
+        private String kmsId;
+
         @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
@@ -241,6 +250,9 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("ProductForm")
         private String productForm;
+
+        @com.aliyun.core.annotation.NameInMap("ProductVersion")
+        private String productVersion;
 
         @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
@@ -282,6 +294,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         private String zoneId;
 
         private DBCluster(Builder builder) {
+            this.clickhouseEngineCacheSize = builder.clickhouseEngineCacheSize;
+            this.clickhouseEngineEnabled = builder.clickhouseEngineEnabled;
             this.commodityCode = builder.commodityCode;
             this.computeResource = builder.computeResource;
             this.computeResourceTotal = builder.computeResourceTotal;
@@ -297,6 +311,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.engineVersion = builder.engineVersion;
             this.expireTime = builder.expireTime;
             this.expired = builder.expired;
+            this.kmsId = builder.kmsId;
             this.lockMode = builder.lockMode;
             this.lockReason = builder.lockReason;
             this.maintainTime = builder.maintainTime;
@@ -304,6 +319,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             this.payType = builder.payType;
             this.port = builder.port;
             this.productForm = builder.productForm;
+            this.productVersion = builder.productVersion;
             this.regionId = builder.regionId;
             this.reservedACU = builder.reservedACU;
             this.reservedNodeCount = builder.reservedNodeCount;
@@ -325,6 +341,20 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
 
         public static DBCluster create() {
             return builder().build();
+        }
+
+        /**
+         * @return clickhouseEngineCacheSize
+         */
+        public Integer getClickhouseEngineCacheSize() {
+            return this.clickhouseEngineCacheSize;
+        }
+
+        /**
+         * @return clickhouseEngineEnabled
+         */
+        public Boolean getClickhouseEngineEnabled() {
+            return this.clickhouseEngineEnabled;
         }
 
         /**
@@ -433,6 +463,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         /**
+         * @return kmsId
+         */
+        public String getKmsId() {
+            return this.kmsId;
+        }
+
+        /**
          * @return lockMode
          */
         public String getLockMode() {
@@ -479,6 +516,13 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
          */
         public String getProductForm() {
             return this.productForm;
+        }
+
+        /**
+         * @return productVersion
+         */
+        public String getProductVersion() {
+            return this.productVersion;
         }
 
         /**
@@ -573,6 +617,8 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer clickhouseEngineCacheSize; 
+            private Boolean clickhouseEngineEnabled; 
             private String commodityCode; 
             private String computeResource; 
             private String computeResourceTotal; 
@@ -588,6 +634,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String engineVersion; 
             private String expireTime; 
             private String expired; 
+            private String kmsId; 
             private String lockMode; 
             private String lockReason; 
             private String maintainTime; 
@@ -595,6 +642,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String payType; 
             private Integer port; 
             private String productForm; 
+            private String productVersion; 
             private String regionId; 
             private String reservedACU; 
             private Integer reservedNodeCount; 
@@ -610,6 +658,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             private String zoneId; 
 
             /**
+             * ClickhouseEngineCacheSize.
+             */
+            public Builder clickhouseEngineCacheSize(Integer clickhouseEngineCacheSize) {
+                this.clickhouseEngineCacheSize = clickhouseEngineCacheSize;
+                return this;
+            }
+
+            /**
+             * ClickhouseEngineEnabled.
+             */
+            public Builder clickhouseEngineEnabled(Boolean clickhouseEngineEnabled) {
+                this.clickhouseEngineEnabled = clickhouseEngineEnabled;
+                return this;
+            }
+
+            /**
              * The billing method of the cluster. Valid values:
              * <p>
              * 
@@ -622,7 +686,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of reserved computing resources. Each ACU is equivalent to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
+             * The specifications of reserved computing resources. Each ACU is approximately equal to 1 core and 4 GB memory. Computing resources are used to compute data. The increase in the computing resources can accelerate queries. You can scale computing resources based on your business requirements.
              */
             public Builder computeResource(String computeResource) {
                 this.computeResource = computeResource;
@@ -630,7 +694,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of computing resources in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+             * The total amount of computing resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
              */
             public Builder computeResourceTotal(String computeResourceTotal) {
                 this.computeResourceTotal = computeResourceTotal;
@@ -646,7 +710,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was created. The time follows the ISO 8601 standard in the `yyyy-MM-ddThh:mm:ssZ` format. The time is displayed in UTC.
+             * The time when the cluster was created. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -678,7 +742,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the cluster. Valid values:
+             * The status of the cluster. Valid values:
              * <p>
              * 
              * *   **Preparing**
@@ -697,7 +761,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The cluster type. By default, **Common** is returned, which indicates a common cluster.
+             * The type of the cluster. By default, **Common** is returned, which indicates a common cluster.
              */
             public Builder DBClusterType(String DBClusterType) {
                 this.DBClusterType = DBClusterType;
@@ -729,7 +793,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration time of the cluster.
+             * The time when the cluster expires.
              * <p>
              * 
              * *   If the billing method of the cluster is subscription, the actual expiration time is returned.
@@ -747,12 +811,22 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
              * *   **true**
              * *   **false**
              * 
+             * > 
              * 
-             * > - If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
-             * > - This parameter is not returned for pay-as-you-go clusters.
+             * *   If the cluster has expired, the system locks or releases the cluster within a period of time. We recommend that you renew the expired cluster. For more information, see [Renewal policy](~~135248~~).
+             * 
+             * *   This parameter is not returned for pay-as-you-go clusters.
              */
             public Builder expired(String expired) {
                 this.expired = expired;
+                return this;
+            }
+
+            /**
+             * KmsId.
+             */
+            public Builder kmsId(String kmsId) {
+                this.kmsId = kmsId;
                 return this;
             }
 
@@ -828,6 +902,14 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
+             * ProductVersion.
+             */
+            public Builder productVersion(String productVersion) {
+                this.productVersion = productVersion;
+                return this;
+            }
+
+            /**
              * The region ID of the cluster.
              */
             public Builder regionId(String regionId) {
@@ -836,7 +918,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The remaining reserved computing resources that are available in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+             * The amount of remaining reserved computing resources that are available in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
              */
             public Builder reservedACU(String reservedACU) {
                 this.reservedACU = reservedACU;
@@ -868,7 +950,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is equivalent to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
+             * The specifications of reserved storage resources. Each AnalyticDB compute unit (ACU) is approximately equal to 1 core and 4 GB memory. Storage resources are used to read and write data. The increase in the storage resources can improve the read and write performance of the cluster.
              */
             public Builder storageResource(String storageResource) {
                 this.storageResource = storageResource;
@@ -876,7 +958,7 @@ public class DescribeDBClusterAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of storage resources in the cluster. Each ACU is equivalent to 1 core and 4 GB memory.
+             * The total amount of storage resources in the cluster. Each ACU is approximately equal to 1 core and 4 GB memory.
              */
             public Builder storageResourceTotal(String storageResourceTotal) {
                 this.storageResourceTotal = storageResourceTotal;

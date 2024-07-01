@@ -16,9 +16,14 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBClusterId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    private String engine;
+
     private ReleaseClusterPublicConnectionRequest(Builder builder) {
         super(builder);
         this.DBClusterId = builder.DBClusterId;
+        this.engine = builder.engine;
     }
 
     public static Builder builder() {
@@ -41,8 +46,16 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         return this.DBClusterId;
     }
 
+    /**
+     * @return engine
+     */
+    public String getEngine() {
+        return this.engine;
+    }
+
     public static final class Builder extends Request.Builder<ReleaseClusterPublicConnectionRequest, Builder> {
         private String DBClusterId; 
+        private String engine; 
 
         private Builder() {
             super();
@@ -51,6 +64,7 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         private Builder(ReleaseClusterPublicConnectionRequest request) {
             super(request);
             this.DBClusterId = request.DBClusterId;
+            this.engine = request.engine;
         } 
 
         /**
@@ -59,6 +73,15 @@ public class ReleaseClusterPublicConnectionRequest extends Request {
         public Builder DBClusterId(String DBClusterId) {
             this.putQueryParameter("DBClusterId", DBClusterId);
             this.DBClusterId = DBClusterId;
+            return this;
+        }
+
+        /**
+         * Engine.
+         */
+        public Builder engine(String engine) {
+            this.putQueryParameter("Engine", engine);
+            this.engine = engine;
             return this;
         }
 

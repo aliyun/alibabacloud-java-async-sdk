@@ -97,12 +97,20 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ReservedAcuNumber")
         private Float reservedAcuNumber;
 
+        @com.aliyun.core.annotation.NameInMap("SpotAcuNumber")
+        private Float spotAcuNumber;
+
+        @com.aliyun.core.annotation.NameInMap("SpotAcuPercentage")
+        private Float spotAcuPercentage;
+
         @com.aliyun.core.annotation.NameInMap("TotalAcuNumber")
         private Float totalAcuNumber;
 
         private AcuUsageDetail(Builder builder) {
             this.elasticAcuNumber = builder.elasticAcuNumber;
             this.reservedAcuNumber = builder.reservedAcuNumber;
+            this.spotAcuNumber = builder.spotAcuNumber;
+            this.spotAcuPercentage = builder.spotAcuPercentage;
             this.totalAcuNumber = builder.totalAcuNumber;
         }
 
@@ -129,6 +137,20 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         }
 
         /**
+         * @return spotAcuNumber
+         */
+        public Float getSpotAcuNumber() {
+            return this.spotAcuNumber;
+        }
+
+        /**
+         * @return spotAcuPercentage
+         */
+        public Float getSpotAcuPercentage() {
+            return this.spotAcuPercentage;
+        }
+
+        /**
          * @return totalAcuNumber
          */
         public Float getTotalAcuNumber() {
@@ -138,6 +160,8 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
         public static final class Builder {
             private Float elasticAcuNumber; 
             private Float reservedAcuNumber; 
+            private Float spotAcuNumber; 
+            private Float spotAcuPercentage; 
             private Float totalAcuNumber; 
 
             /**
@@ -153,6 +177,22 @@ public class DescribeJobResourceUsageResponseBody extends TeaModel {
              */
             public Builder reservedAcuNumber(Float reservedAcuNumber) {
                 this.reservedAcuNumber = reservedAcuNumber;
+                return this;
+            }
+
+            /**
+             * SpotAcuNumber.
+             */
+            public Builder spotAcuNumber(Float spotAcuNumber) {
+                this.spotAcuNumber = spotAcuNumber;
+                return this;
+            }
+
+            /**
+             * SpotAcuPercentage.
+             */
+            public Builder spotAcuPercentage(Float spotAcuPercentage) {
+                this.spotAcuPercentage = spotAcuPercentage;
                 return this;
             }
 
