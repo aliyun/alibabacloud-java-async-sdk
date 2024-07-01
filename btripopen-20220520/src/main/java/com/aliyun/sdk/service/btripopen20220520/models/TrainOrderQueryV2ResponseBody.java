@@ -798,6 +798,9 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("order_status")
         private Integer orderStatus;
 
+        @com.aliyun.core.annotation.NameInMap("thirdPart_business_id")
+        private String thirdPartBusinessId;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
@@ -832,6 +835,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             this.itineraryId = builder.itineraryId;
             this.orderId = builder.orderId;
             this.orderStatus = builder.orderStatus;
+            this.thirdPartBusinessId = builder.thirdPartBusinessId;
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartDepartId = builder.thirdpartDepartId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
@@ -954,6 +958,13 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdPartBusinessId
+         */
+        public String getThirdPartBusinessId() {
+            return this.thirdPartBusinessId;
+        }
+
+        /**
          * @return thirdpartApplyId
          */
         public String getThirdpartApplyId() {
@@ -1011,6 +1022,7 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
             private String itineraryId; 
             private Long orderId; 
             private Integer orderStatus; 
+            private String thirdPartBusinessId; 
             private String thirdpartApplyId; 
             private String thirdpartDepartId; 
             private String thirdpartItineraryId; 
@@ -1135,6 +1147,14 @@ public class TrainOrderQueryV2ResponseBody extends TeaModel {
              */
             public Builder orderStatus(Integer orderStatus) {
                 this.orderStatus = orderStatus;
+                return this;
+            }
+
+            /**
+             * thirdPart_business_id.
+             */
+            public Builder thirdPartBusinessId(String thirdPartBusinessId) {
+                this.thirdPartBusinessId = thirdPartBusinessId;
                 return this;
             }
 

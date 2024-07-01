@@ -568,6 +568,9 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
+        @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
+        private String thirdpartBusinessId;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
@@ -641,6 +644,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             this.specialTypes = builder.specialTypes;
             this.takenTime = builder.takenTime;
             this.thirdpartApplyId = builder.thirdpartApplyId;
+            this.thirdpartBusinessId = builder.thirdpartBusinessId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.toAddress = builder.toAddress;
             this.toCityAdCode = builder.toCityAdCode;
@@ -976,6 +980,13 @@ public class CarOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartBusinessId
+         */
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -1084,6 +1095,7 @@ public class CarOrderListQueryResponseBody extends TeaModel {
             private java.util.List < String > specialTypes; 
             private String takenTime; 
             private String thirdpartApplyId; 
+            private String thirdpartBusinessId; 
             private String thirdpartItineraryId; 
             private String toAddress; 
             private String toCityAdCode; 
@@ -1451,6 +1463,14 @@ public class CarOrderListQueryResponseBody extends TeaModel {
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
+                return this;
+            }
+
+            /**
+             * thirdpart_business_id.
+             */
+            public Builder thirdpartBusinessId(String thirdpartBusinessId) {
+                this.thirdpartBusinessId = thirdpartBusinessId;
                 return this;
             }
 

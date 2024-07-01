@@ -799,6 +799,9 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
 
+        @com.aliyun.core.annotation.NameInMap("thirdPart_business_id")
+        private String thirdPartBusinessId;
+
         @com.aliyun.core.annotation.NameInMap("third_part_project_id")
         private String thirdPartProjectId;
 
@@ -858,6 +861,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             this.runTime = builder.runTime;
             this.seatType = builder.seatType;
             this.status = builder.status;
+            this.thirdPartBusinessId = builder.thirdPartBusinessId;
             this.thirdPartProjectId = builder.thirdPartProjectId;
             this.thirdpartApplyId = builder.thirdpartApplyId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
@@ -1075,6 +1079,13 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdPartBusinessId
+         */
+        public String getThirdPartBusinessId() {
+            return this.thirdPartBusinessId;
+        }
+
+        /**
          * @return thirdPartProjectId
          */
         public String getThirdPartProjectId() {
@@ -1173,6 +1184,7 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
             private String runTime; 
             private String seatType; 
             private Integer status; 
+            private String thirdPartBusinessId; 
             private String thirdPartProjectId; 
             private String thirdpartApplyId; 
             private String thirdpartItineraryId; 
@@ -1405,6 +1417,14 @@ public class TrainOrderListQueryResponseBody extends TeaModel {
              */
             public Builder status(Integer status) {
                 this.status = status;
+                return this;
+            }
+
+            /**
+             * thirdPart_business_id.
+             */
+            public Builder thirdPartBusinessId(String thirdPartBusinessId) {
+                this.thirdPartBusinessId = thirdPartBusinessId;
                 return this;
             }
 

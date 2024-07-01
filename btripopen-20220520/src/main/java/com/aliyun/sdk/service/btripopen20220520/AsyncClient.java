@@ -21,6 +21,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<AccessTokenResponse> accessToken(AccessTokenRequest request);
 
+    CompletableFuture<AddDepartmentResponse> addDepartment(AddDepartmentRequest request);
+
+    CompletableFuture<AddEmployeeResponse> addEmployee(AddEmployeeRequest request);
+
     CompletableFuture<AddEmployeesToCustomRoleResponse> addEmployeesToCustomRole(AddEmployeesToCustomRoleRequest request);
 
     CompletableFuture<AddInvoiceEntityResponse> addInvoiceEntity(AddInvoiceEntityRequest request);
@@ -93,6 +97,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteCustomRoleResponse> deleteCustomRole(DeleteCustomRoleRequest request);
 
+    CompletableFuture<DeleteDepartmentResponse> deleteDepartment(DeleteDepartmentRequest request);
+
     CompletableFuture<DeleteEmployeesFromCustomRoleResponse> deleteEmployeesFromCustomRole(DeleteEmployeesFromCustomRoleRequest request);
 
     CompletableFuture<DeleteInvoiceEntityResponse> deleteInvoiceEntity(DeleteInvoiceEntityRequest request);
@@ -108,6 +114,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<EstimatedPriceQueryResponse> estimatedPriceQuery(EstimatedPriceQueryRequest request);
 
     CompletableFuture<ExceedApplySyncResponse> exceedApplySync(ExceedApplySyncRequest request);
+
+    CompletableFuture<ExternalUserAddResponse> externalUserAdd(ExternalUserAddRequest request);
+
+    CompletableFuture<ExternalUserDeleteResponse> externalUserDelete(ExternalUserDeleteRequest request);
+
+    CompletableFuture<ExternalUserUpdateResponse> externalUserUpdate(ExternalUserUpdateRequest request);
 
     CompletableFuture<FlightBillSettlementQueryResponse> flightBillSettlementQuery(FlightBillSettlementQueryRequest request);
 
@@ -210,6 +222,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotelSearchResponse> hotelSearch(HotelSearchRequest request);
 
     CompletableFuture<HotelStaticInfoResponse> hotelStaticInfo(HotelStaticInfoRequest request);
+
+    CompletableFuture<HotelSuggestResponse> hotelSuggest(HotelSuggestRequest request);
 
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
 
@@ -360,6 +374,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<TripTaskQueryResponse> tripTaskQuery(TripTaskQueryRequest request);
 
     CompletableFuture<UpdateCustomRoleResponse> updateCustomRole(UpdateCustomRoleRequest request);
+
+    CompletableFuture<UpdateDepartmentResponse> updateDepartment(UpdateDepartmentRequest request);
+
+    CompletableFuture<UpdateEmployeeResponse> updateEmployee(UpdateEmployeeRequest request);
+
+    CompletableFuture<UpdateEmployeeLeaveStatusResponse> updateEmployeeLeaveStatus(UpdateEmployeeLeaveStatusRequest request);
 
     CompletableFuture<UserQueryResponse> userQuery(UserQueryRequest request);
 

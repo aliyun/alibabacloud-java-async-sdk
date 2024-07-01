@@ -400,6 +400,9 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("machine_code")
         private String machineCode;
 
+        @com.aliyun.core.annotation.NameInMap("ofd_oss_url")
+        private String ofdOssUrl;
+
         @com.aliyun.core.annotation.NameInMap("oss_url")
         private String ossUrl;
 
@@ -474,6 +477,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             this.invoiceType = builder.invoiceType;
             this.invoiceTypeDesc = builder.invoiceTypeDesc;
             this.machineCode = builder.machineCode;
+            this.ofdOssUrl = builder.ofdOssUrl;
             this.ossUrl = builder.ossUrl;
             this.passwordArea = builder.passwordArea;
             this.pdfOssUrl = builder.pdfOssUrl;
@@ -613,6 +617,13 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getMachineCode() {
             return this.machineCode;
+        }
+
+        /**
+         * @return ofdOssUrl
+         */
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         /**
@@ -765,6 +776,7 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
             private Integer invoiceType; 
             private String invoiceTypeDesc; 
             private String machineCode; 
+            private String ofdOssUrl; 
             private String ossUrl; 
             private String passwordArea; 
             private String pdfOssUrl; 
@@ -910,6 +922,14 @@ public class VatInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder machineCode(String machineCode) {
                 this.machineCode = machineCode;
+                return this;
+            }
+
+            /**
+             * ofd_oss_url.
+             */
+            public Builder ofdOssUrl(String ofdOssUrl) {
+                this.ofdOssUrl = ofdOssUrl;
                 return this;
             }
 

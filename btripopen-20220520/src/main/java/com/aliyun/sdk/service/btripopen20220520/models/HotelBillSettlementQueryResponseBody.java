@@ -151,6 +151,9 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
     } 
 
     public static class DataList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("agreement_promotion_fee")
+        private Double agreementPromotionFee;
+
         @com.aliyun.core.annotation.NameInMap("alipay_trade_no")
         private String alipayTradeNo;
 
@@ -380,6 +383,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         private Integer voucherType;
 
         private DataList(Builder builder) {
+            this.agreementPromotionFee = builder.agreementPromotionFee;
             this.alipayTradeNo = builder.alipayTradeNo;
             this.applyArrCityCode = builder.applyArrCityCode;
             this.applyArrCityName = builder.applyArrCityName;
@@ -464,6 +468,13 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
 
         public static DataList create() {
             return builder().build();
+        }
+
+        /**
+         * @return agreementPromotionFee
+         */
+        public Double getAgreementPromotionFee() {
+            return this.agreementPromotionFee;
         }
 
         /**
@@ -999,6 +1010,7 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Double agreementPromotionFee; 
             private String alipayTradeNo; 
             private String applyArrCityCode; 
             private String applyArrCityName; 
@@ -1075,6 +1087,14 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private String travelerMemberTypeName; 
             private String travelerName; 
             private Integer voucherType; 
+
+            /**
+             * agreement_promotion_fee.
+             */
+            public Builder agreementPromotionFee(Double agreementPromotionFee) {
+                this.agreementPromotionFee = agreementPromotionFee;
+                return this;
+            }
 
             /**
              * alipay_trade_no.

@@ -838,6 +838,9 @@ public class CarOrderQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("thirdpart_apply_id")
         private String thirdpartApplyId;
 
+        @com.aliyun.core.annotation.NameInMap("thirdpart_business_id")
+        private String thirdpartBusinessId;
+
         @com.aliyun.core.annotation.NameInMap("thirdpart_itinerary_id")
         private String thirdpartItineraryId;
 
@@ -863,6 +866,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             this.subOrderId = builder.subOrderId;
             this.thirdDepartId = builder.thirdDepartId;
             this.thirdpartApplyId = builder.thirdpartApplyId;
+            this.thirdpartBusinessId = builder.thirdpartBusinessId;
             this.thirdpartItineraryId = builder.thirdpartItineraryId;
             this.userId = builder.userId;
             this.userName = builder.userName;
@@ -982,6 +986,13 @@ public class CarOrderQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return thirdpartBusinessId
+         */
+        public String getThirdpartBusinessId() {
+            return this.thirdpartBusinessId;
+        }
+
+        /**
          * @return thirdpartItineraryId
          */
         public String getThirdpartItineraryId() {
@@ -1018,6 +1029,7 @@ public class CarOrderQueryResponseBody extends TeaModel {
             private Long subOrderId; 
             private String thirdDepartId; 
             private String thirdpartApplyId; 
+            private String thirdpartBusinessId; 
             private String thirdpartItineraryId; 
             private String userId; 
             private String userName; 
@@ -1139,6 +1151,14 @@ public class CarOrderQueryResponseBody extends TeaModel {
              */
             public Builder thirdpartApplyId(String thirdpartApplyId) {
                 this.thirdpartApplyId = thirdpartApplyId;
+                return this;
+            }
+
+            /**
+             * thirdpart_business_id.
+             */
+            public Builder thirdpartBusinessId(String thirdpartBusinessId) {
+                this.thirdpartBusinessId = thirdpartBusinessId;
                 return this;
             }
 
