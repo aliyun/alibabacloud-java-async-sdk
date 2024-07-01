@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryContactInfoResponseBody</p>
  */
 public class QueryContactInfoResponseBody extends TeaModel {
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @NameInMap("City")
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @NameInMap("CreateDate")
+    @com.aliyun.core.annotation.NameInMap("CreateDate")
     private String createDate;
 
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("PostalCode")
+    @com.aliyun.core.annotation.NameInMap("PostalCode")
     private String postalCode;
 
-    @NameInMap("Province")
+    @com.aliyun.core.annotation.NameInMap("Province")
     private String province;
 
-    @NameInMap("RegistrantName")
+    @com.aliyun.core.annotation.NameInMap("RegistrantName")
     private String registrantName;
 
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TelArea")
+    @com.aliyun.core.annotation.NameInMap("TelArea")
     private String telArea;
 
-    @NameInMap("TelExt")
+    @com.aliyun.core.annotation.NameInMap("TelExt")
     private String telExt;
 
-    @NameInMap("Telephone")
+    @com.aliyun.core.annotation.NameInMap("Telephone")
     private String telephone;
 
     private QueryContactInfoResponseBody(Builder builder) {

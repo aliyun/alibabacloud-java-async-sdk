@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryFailReasonForDomainRealNameVerificationResponseBody</p>
  */
 public class QueryFailReasonForDomainRealNameVerificationResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryFailReasonForDomainRealNameVerificationResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class QueryFailReasonForDomainRealNameVerificationResponseBody extends Te
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("FailReason")
+        @com.aliyun.core.annotation.NameInMap("FailReason")
         private String failReason;
 
         private Data(Builder builder) {

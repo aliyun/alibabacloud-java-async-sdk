@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitEmailVerificationResponseBody</p>
  */
 public class SubmitEmailVerificationResponseBody extends TeaModel {
-    @NameInMap("ExistList")
+    @com.aliyun.core.annotation.NameInMap("ExistList")
     private java.util.List < ExistList> existList;
 
-    @NameInMap("FailList")
+    @com.aliyun.core.annotation.NameInMap("FailList")
     private java.util.List < FailList> failList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessList")
+    @com.aliyun.core.annotation.NameInMap("SuccessList")
     private java.util.List < SuccessList> successList;
 
     private SubmitEmailVerificationResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
     } 
 
     public static class ExistList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private ExistList(Builder builder) {
@@ -193,13 +192,13 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     }
     public static class FailList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private FailList(Builder builder) {
@@ -274,13 +273,13 @@ public class SubmitEmailVerificationResponseBody extends TeaModel {
 
     }
     public static class SuccessList extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
         private SuccessList(Builder builder) {

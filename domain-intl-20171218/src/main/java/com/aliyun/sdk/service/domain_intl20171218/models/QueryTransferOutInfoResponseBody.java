@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTransferOutInfoResponseBody</p>
  */
 public class QueryTransferOutInfoResponseBody extends TeaModel {
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("ExpirationDate")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDate")
     private String expirationDate;
 
-    @NameInMap("PendingRequestDate")
+    @com.aliyun.core.annotation.NameInMap("PendingRequestDate")
     private String pendingRequestDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResultCode")
+    @com.aliyun.core.annotation.NameInMap("ResultCode")
     private String resultCode;
 
-    @NameInMap("ResultMsg")
+    @com.aliyun.core.annotation.NameInMap("ResultMsg")
     private String resultMsg;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private Integer status;
 
-    @NameInMap("TransferAuthorizationCodeSendDate")
+    @com.aliyun.core.annotation.NameInMap("TransferAuthorizationCodeSendDate")
     private String transferAuthorizationCodeSendDate;
 
     private QueryTransferOutInfoResponseBody(Builder builder) {

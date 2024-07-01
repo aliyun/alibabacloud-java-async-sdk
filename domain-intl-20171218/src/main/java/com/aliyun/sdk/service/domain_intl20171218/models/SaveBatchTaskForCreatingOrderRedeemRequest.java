@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveBatchTaskForCreatingOrderRedeemRequest</p>
  */
 public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
-    @Query
-    @NameInMap("CouponNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CouponNo")
     private String couponNo;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderRedeemParam")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderRedeemParam")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < OrderRedeemParam> orderRedeemParam;
 
-    @Query
-    @NameInMap("PromotionNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PromotionNo")
     private String promotionNo;
 
-    @Query
-    @NameInMap("UseCoupon")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCoupon")
     private Boolean useCoupon;
 
-    @Query
-    @NameInMap("UsePromotion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UsePromotion")
     private Boolean usePromotion;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private SaveBatchTaskForCreatingOrderRedeemRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class SaveBatchTaskForCreatingOrderRedeemRequest extends Request {
     } 
 
     public static class OrderRedeemParam extends TeaModel {
-        @NameInMap("CurrentExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("CurrentExpirationDate")
         private Long currentExpirationDate;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
         private OrderRedeemParam(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveSingleTaskForSaveArtExtensionRequest</p>
  */
 public class SaveSingleTaskForSaveArtExtensionRequest extends Request {
-    @Query
-    @NameInMap("DateOrPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DateOrPeriod")
     private String dateOrPeriod;
 
-    @Query
-    @NameInMap("Dimensions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Dimensions")
     private String dimensions;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("Features")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Features")
     private String features;
 
-    @Query
-    @NameInMap("InscriptionsAndMarkings")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InscriptionsAndMarkings")
     private String inscriptionsAndMarkings;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Maker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Maker")
     private String maker;
 
-    @Query
-    @NameInMap("MaterialsAndTechniques")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaterialsAndTechniques")
     private String materialsAndTechniques;
 
-    @Query
-    @NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
     private String objectType;
 
-    @Query
-    @NameInMap("Reference")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Reference")
     private String reference;
 
-    @Query
-    @NameInMap("Subject")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Subject")
     private String subject;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private SaveSingleTaskForSaveArtExtensionRequest(Builder builder) {

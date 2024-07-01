@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,73 +11,73 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainByInstanceIdResponseBody</p>
  */
 public class QueryDomainByInstanceIdResponseBody extends TeaModel {
-    @NameInMap("DnsList")
+    @com.aliyun.core.annotation.NameInMap("DnsList")
     private DnsList dnsList;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DomainNameProxyService")
+    @com.aliyun.core.annotation.NameInMap("DomainNameProxyService")
     private Boolean domainNameProxyService;
 
-    @NameInMap("DomainNameVerificationStatus")
+    @com.aliyun.core.annotation.NameInMap("DomainNameVerificationStatus")
     private String domainNameVerificationStatus;
 
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @NameInMap("EmailVerificationClientHold")
+    @com.aliyun.core.annotation.NameInMap("EmailVerificationClientHold")
     private Boolean emailVerificationClientHold;
 
-    @NameInMap("EmailVerificationStatus")
+    @com.aliyun.core.annotation.NameInMap("EmailVerificationStatus")
     private Integer emailVerificationStatus;
 
-    @NameInMap("ExpirationDate")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDate")
     private String expirationDate;
 
-    @NameInMap("ExpirationDateLong")
+    @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
     private Long expirationDateLong;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("Premium")
+    @com.aliyun.core.annotation.NameInMap("Premium")
     private Boolean premium;
 
-    @NameInMap("RealNameStatus")
+    @com.aliyun.core.annotation.NameInMap("RealNameStatus")
     private String realNameStatus;
 
-    @NameInMap("RegistrantName")
+    @com.aliyun.core.annotation.NameInMap("RegistrantName")
     private String registrantName;
 
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @NameInMap("RegistrantType")
+    @com.aliyun.core.annotation.NameInMap("RegistrantType")
     private String registrantType;
 
-    @NameInMap("RegistrantUpdatingStatus")
+    @com.aliyun.core.annotation.NameInMap("RegistrantUpdatingStatus")
     private String registrantUpdatingStatus;
 
-    @NameInMap("RegistrationDate")
+    @com.aliyun.core.annotation.NameInMap("RegistrationDate")
     private String registrationDate;
 
-    @NameInMap("RegistrationDateLong")
+    @com.aliyun.core.annotation.NameInMap("RegistrationDateLong")
     private Long registrationDateLong;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TransferOutStatus")
+    @com.aliyun.core.annotation.NameInMap("TransferOutStatus")
     private String transferOutStatus;
 
-    @NameInMap("TransferProhibitionLock")
+    @com.aliyun.core.annotation.NameInMap("TransferProhibitionLock")
     private String transferProhibitionLock;
 
-    @NameInMap("UpdateProhibitionLock")
+    @com.aliyun.core.annotation.NameInMap("UpdateProhibitionLock")
     private String updateProhibitionLock;
 
-    @NameInMap("UserId")
+    @com.aliyun.core.annotation.NameInMap("UserId")
     private String userId;
 
     private QueryDomainByInstanceIdResponseBody(Builder builder) {
@@ -492,7 +491,7 @@ public class QueryDomainByInstanceIdResponseBody extends TeaModel {
     } 
 
     public static class DnsList extends TeaModel {
-        @NameInMap("Dns")
+        @com.aliyun.core.annotation.NameInMap("Dns")
         private java.util.List < String > dns;
 
         private DnsList(Builder builder) {

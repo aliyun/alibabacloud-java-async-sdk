@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDomainResponseBody</p>
  */
 public class CheckDomainResponseBody extends TeaModel {
-    @NameInMap("Avail")
+    @com.aliyun.core.annotation.NameInMap("Avail")
     private String avail;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("DynamicCheck")
+    @com.aliyun.core.annotation.NameInMap("DynamicCheck")
     private Boolean dynamicCheck;
 
-    @NameInMap("Premium")
+    @com.aliyun.core.annotation.NameInMap("Premium")
     private String premium;
 
-    @NameInMap("Price")
+    @com.aliyun.core.annotation.NameInMap("Price")
     private Long price;
 
-    @NameInMap("Reason")
+    @com.aliyun.core.annotation.NameInMap("Reason")
     private String reason;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckDomainResponseBody(Builder builder) {

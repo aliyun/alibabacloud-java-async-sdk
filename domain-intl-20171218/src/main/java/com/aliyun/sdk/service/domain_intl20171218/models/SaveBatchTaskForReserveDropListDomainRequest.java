@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveBatchTaskForReserveDropListDomainRequest</p>
  */
 public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
-    @Query
-    @NameInMap("ContactTemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContactTemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String contactTemplateId;
 
-    @Query
-    @NameInMap("Domains")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domains")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < Domains> domains;
 
     private SaveBatchTaskForReserveDropListDomainRequest(Builder builder) {
@@ -95,11 +94,19 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
     } 
 
     public static class Domains extends TeaModel {
-        @NameInMap("DomainName")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Dns1")
+        private String dns1;
+
+        @com.aliyun.core.annotation.NameInMap("Dns2")
+        private String dns2;
+
+        @com.aliyun.core.annotation.NameInMap("DomainName")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String domainName;
 
         private Domains(Builder builder) {
+            this.dns1 = builder.dns1;
+            this.dns2 = builder.dns2;
             this.domainName = builder.domainName;
         }
 
@@ -112,6 +119,20 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         /**
+         * @return dns1
+         */
+        public String getDns1() {
+            return this.dns1;
+        }
+
+        /**
+         * @return dns2
+         */
+        public String getDns2() {
+            return this.dns2;
+        }
+
+        /**
          * @return domainName
          */
         public String getDomainName() {
@@ -119,7 +140,25 @@ public class SaveBatchTaskForReserveDropListDomainRequest extends Request {
         }
 
         public static final class Builder {
+            private String dns1; 
+            private String dns2; 
             private String domainName; 
+
+            /**
+             * Dns1.
+             */
+            public Builder dns1(String dns1) {
+                this.dns1 = dns1;
+                return this;
+            }
+
+            /**
+             * Dns2.
+             */
+            public Builder dns2(String dns2) {
+                this.dns2 = dns2;
+                return this;
+            }
 
             /**
              * DomainName.

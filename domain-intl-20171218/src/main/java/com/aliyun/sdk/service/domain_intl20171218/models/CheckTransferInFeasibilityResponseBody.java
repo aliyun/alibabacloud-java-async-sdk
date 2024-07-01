@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckTransferInFeasibilityResponseBody</p>
  */
 public class CheckTransferInFeasibilityResponseBody extends TeaModel {
-    @NameInMap("CanTransfer")
+    @com.aliyun.core.annotation.NameInMap("CanTransfer")
     private Boolean canTransfer;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("ProductId")
+    @com.aliyun.core.annotation.NameInMap("ProductId")
     private String productId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckTransferInFeasibilityResponseBody(Builder builder) {

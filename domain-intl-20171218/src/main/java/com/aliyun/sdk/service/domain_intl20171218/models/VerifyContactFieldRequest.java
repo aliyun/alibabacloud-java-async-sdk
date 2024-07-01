@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>VerifyContactFieldRequest</p>
  */
 public class VerifyContactFieldRequest extends Request {
-    @Query
-    @NameInMap("Address")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Address")
     private String address;
 
-    @Query
-    @NameInMap("City")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("City")
     private String city;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("Email")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Email")
     private String email;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PostalCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PostalCode")
     private String postalCode;
 
-    @Query
-    @NameInMap("Province")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Province")
     private String province;
 
-    @Query
-    @NameInMap("RegistrantName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantName")
     private String registrantName;
 
-    @Query
-    @NameInMap("RegistrantOrganization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantOrganization")
     private String registrantOrganization;
 
-    @Query
-    @NameInMap("RegistrantType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegistrantType")
     private String registrantType;
 
-    @Query
-    @NameInMap("TelArea")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelArea")
     private String telArea;
 
-    @Query
-    @NameInMap("TelExt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TelExt")
     private String telExt;
 
-    @Query
-    @NameInMap("Telephone")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Telephone")
     private String telephone;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private VerifyContactFieldRequest(Builder builder) {

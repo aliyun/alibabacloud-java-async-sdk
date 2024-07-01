@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTaskDetailHistoryResponseBody</p>
  */
 public class QueryTaskDetailHistoryResponseBody extends TeaModel {
-    @NameInMap("CurrentPageCursor")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageCursor")
     private CurrentPageCursor currentPageCursor;
 
-    @NameInMap("NextPageCursor")
+    @com.aliyun.core.annotation.NameInMap("NextPageCursor")
     private NextPageCursor nextPageCursor;
 
-    @NameInMap("Objects")
+    @com.aliyun.core.annotation.NameInMap("Objects")
     private java.util.List < Objects> objects;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePageCursor")
+    @com.aliyun.core.annotation.NameInMap("PrePageCursor")
     private PrePageCursor prePageCursor;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryTaskDetailHistoryResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
     } 
 
     public static class CurrentPageCursor extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TaskDetailNo")
+        @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
         private String taskDetailNo;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private CurrentPageCursor(Builder builder) {
@@ -413,40 +412,40 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
 
     }
     public static class NextPageCursor extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TaskDetailNo")
+        @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
         private String taskDetailNo;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private NextPageCursor(Builder builder) {
@@ -674,40 +673,40 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
 
     }
     public static class Objects extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TaskDetailNo")
+        @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
         private String taskDetailNo;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private Objects(Builder builder) {
@@ -935,40 +934,40 @@ public class QueryTaskDetailHistoryResponseBody extends TeaModel {
 
     }
     public static class PrePageCursor extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ErrorMsg")
+        @com.aliyun.core.annotation.NameInMap("ErrorMsg")
         private String errorMsg;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("TaskDetailNo")
+        @com.aliyun.core.annotation.NameInMap("TaskDetailNo")
         private String taskDetailNo;
 
-        @NameInMap("TaskNo")
+        @com.aliyun.core.annotation.NameInMap("TaskNo")
         private String taskNo;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TaskStatusCode")
+        @com.aliyun.core.annotation.NameInMap("TaskStatusCode")
         private Integer taskStatusCode;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("TaskTypeDescription")
+        @com.aliyun.core.annotation.NameInMap("TaskTypeDescription")
         private String taskTypeDescription;
 
-        @NameInMap("TryCount")
+        @com.aliyun.core.annotation.NameInMap("TryCount")
         private Integer tryCount;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private PrePageCursor(Builder builder) {

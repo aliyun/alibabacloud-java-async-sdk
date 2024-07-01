@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDSRecordResponseBody</p>
  */
 public class QueryDSRecordResponseBody extends TeaModel {
-    @NameInMap("DSRecordList")
+    @com.aliyun.core.annotation.NameInMap("DSRecordList")
     private java.util.List < DSRecordList> DSRecordList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryDSRecordResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class QueryDSRecordResponseBody extends TeaModel {
     } 
 
     public static class DSRecordList extends TeaModel {
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private Integer algorithm;
 
-        @NameInMap("Digest")
+        @com.aliyun.core.annotation.NameInMap("Digest")
         private String digest;
 
-        @NameInMap("DigestType")
+        @com.aliyun.core.annotation.NameInMap("DigestType")
         private Integer digestType;
 
-        @NameInMap("KeyTag")
+        @com.aliyun.core.annotation.NameInMap("KeyTag")
         private Integer keyTag;
 
         private DSRecordList(Builder builder) {

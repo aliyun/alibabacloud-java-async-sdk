@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchFuzzyMatchDomainSensitiveWordResponseBody</p>
  */
 public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SensitiveWordMatchResultList")
+    @com.aliyun.core.annotation.NameInMap("SensitiveWordMatchResultList")
     private SensitiveWordMatchResultList sensitiveWordMatchResultList;
 
     private BatchFuzzyMatchDomainSensitiveWordResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
     } 
 
     public static class MatchedSensitiveWord extends TeaModel {
-        @NameInMap("Word")
+        @com.aliyun.core.annotation.NameInMap("Word")
         private String word;
 
         private MatchedSensitiveWord(Builder builder) {
@@ -113,7 +112,7 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     }
     public static class MatchedSentiveWords extends TeaModel {
-        @NameInMap("MatchedSensitiveWord")
+        @com.aliyun.core.annotation.NameInMap("MatchedSensitiveWord")
         private java.util.List < MatchedSensitiveWord> matchedSensitiveWord;
 
         private MatchedSentiveWords(Builder builder) {
@@ -154,13 +153,13 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     }
     public static class SensitiveWordMatchResult extends TeaModel {
-        @NameInMap("Exist")
+        @com.aliyun.core.annotation.NameInMap("Exist")
         private Boolean exist;
 
-        @NameInMap("Keyword")
+        @com.aliyun.core.annotation.NameInMap("Keyword")
         private String keyword;
 
-        @NameInMap("MatchedSentiveWords")
+        @com.aliyun.core.annotation.NameInMap("MatchedSentiveWords")
         private MatchedSentiveWords matchedSentiveWords;
 
         private SensitiveWordMatchResult(Builder builder) {
@@ -235,7 +234,7 @@ public class BatchFuzzyMatchDomainSensitiveWordResponseBody extends TeaModel {
 
     }
     public static class SensitiveWordMatchResultList extends TeaModel {
-        @NameInMap("SensitiveWordMatchResult")
+        @com.aliyun.core.annotation.NameInMap("SensitiveWordMatchResult")
         private java.util.List < SensitiveWordMatchResult> sensitiveWordMatchResult;
 
         private SensitiveWordMatchResultList(Builder builder) {

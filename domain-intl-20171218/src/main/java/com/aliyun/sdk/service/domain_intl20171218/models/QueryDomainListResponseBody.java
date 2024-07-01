@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainListResponseBody</p>
  */
 public class QueryDomainListResponseBody extends TeaModel {
-    @NameInMap("CurrentPageNum")
+    @com.aliyun.core.annotation.NameInMap("CurrentPageNum")
     private Integer currentPageNum;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("NextPage")
+    @com.aliyun.core.annotation.NameInMap("NextPage")
     private Boolean nextPage;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PrePage")
+    @com.aliyun.core.annotation.NameInMap("PrePage")
     private Boolean prePage;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItemNum")
+    @com.aliyun.core.annotation.NameInMap("TotalItemNum")
     private Integer totalItemNum;
 
-    @NameInMap("TotalPageNum")
+    @com.aliyun.core.annotation.NameInMap("TotalPageNum")
     private Integer totalPageNum;
 
     private QueryDomainListResponseBody(Builder builder) {
@@ -192,49 +191,49 @@ public class QueryDomainListResponseBody extends TeaModel {
     } 
 
     public static class Domain extends TeaModel {
-        @NameInMap("DomainAuditStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainAuditStatus")
         private String domainAuditStatus;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("DomainType")
+        @com.aliyun.core.annotation.NameInMap("DomainType")
         private String domainType;
 
-        @NameInMap("ExpirationCurrDateDiff")
+        @com.aliyun.core.annotation.NameInMap("ExpirationCurrDateDiff")
         private Integer expirationCurrDateDiff;
 
-        @NameInMap("ExpirationDate")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDate")
         private String expirationDate;
 
-        @NameInMap("ExpirationDateLong")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDateLong")
         private Long expirationDateLong;
 
-        @NameInMap("ExpirationDateStatus")
+        @com.aliyun.core.annotation.NameInMap("ExpirationDateStatus")
         private String expirationDateStatus;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Premium")
+        @com.aliyun.core.annotation.NameInMap("Premium")
         private Boolean premium;
 
-        @NameInMap("ProductId")
+        @com.aliyun.core.annotation.NameInMap("ProductId")
         private String productId;
 
-        @NameInMap("RegistrantType")
+        @com.aliyun.core.annotation.NameInMap("RegistrantType")
         private String registrantType;
 
-        @NameInMap("RegistrationDate")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDate")
         private String registrationDate;
 
-        @NameInMap("RegistrationDateLong")
+        @com.aliyun.core.annotation.NameInMap("RegistrationDateLong")
         private Long registrationDateLong;
 
-        @NameInMap("Remark")
+        @com.aliyun.core.annotation.NameInMap("Remark")
         private String remark;
 
         private Domain(Builder builder) {
@@ -513,7 +512,7 @@ public class QueryDomainListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Domain")
+        @com.aliyun.core.annotation.NameInMap("Domain")
         private java.util.List < Domain> domain;
 
         private Data(Builder builder) {

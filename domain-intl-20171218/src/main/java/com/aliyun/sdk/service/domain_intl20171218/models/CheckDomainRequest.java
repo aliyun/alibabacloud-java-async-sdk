@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckDomainRequest</p>
  */
 public class CheckDomainRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("FeeCommand")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeeCommand")
     private String feeCommand;
 
-    @Query
-    @NameInMap("FeeCurrency")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeeCurrency")
     private String feeCurrency;
 
-    @Query
-    @NameInMap("FeePeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FeePeriod")
     private Integer feePeriod;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private CheckDomainRequest(Builder builder) {

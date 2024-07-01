@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.domain_intl20171218.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryDomainListRequest</p>
  */
 public class QueryDomainListRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ccompany")
+    private String ccompany;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndExpirationDate")
     private Long endExpirationDate;
 
-    @Query
-    @NameInMap("EndRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndRegistrationDate")
     private Long endRegistrationDate;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("OrderByType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderByType")
     private String orderByType;
 
-    @Query
-    @NameInMap("OrderKeyType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderKeyType")
     private String orderKeyType;
 
-    @Query
-    @NameInMap("PageNum")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageNum;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ProductDomainType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProductDomainType")
     private String productDomainType;
 
-    @Query
-    @NameInMap("QueryType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryType")
     private String queryType;
 
-    @Query
-    @NameInMap("StartExpirationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartExpirationDate")
     private Long startExpirationDate;
 
-    @Query
-    @NameInMap("StartRegistrationDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartRegistrationDate")
     private Long startRegistrationDate;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
     private QueryDomainListRequest(Builder builder) {
         super(builder);
+        this.ccompany = builder.ccompany;
         this.domainName = builder.domainName;
         this.endExpirationDate = builder.endExpirationDate;
         this.endRegistrationDate = builder.endRegistrationDate;
@@ -94,6 +98,13 @@ public class QueryDomainListRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return ccompany
+     */
+    public String getCcompany() {
+        return this.ccompany;
     }
 
     /**
@@ -188,6 +199,7 @@ public class QueryDomainListRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<QueryDomainListRequest, Builder> {
+        private String ccompany; 
         private String domainName; 
         private Long endExpirationDate; 
         private Long endRegistrationDate; 
@@ -208,6 +220,7 @@ public class QueryDomainListRequest extends Request {
 
         private Builder(QueryDomainListRequest request) {
             super(request);
+            this.ccompany = request.ccompany;
             this.domainName = request.domainName;
             this.endExpirationDate = request.endExpirationDate;
             this.endRegistrationDate = request.endRegistrationDate;
@@ -222,6 +235,15 @@ public class QueryDomainListRequest extends Request {
             this.startRegistrationDate = request.startRegistrationDate;
             this.userClientIp = request.userClientIp;
         } 
+
+        /**
+         * Ccompany.
+         */
+        public Builder ccompany(String ccompany) {
+            this.putQueryParameter("Ccompany", ccompany);
+            this.ccompany = ccompany;
+            return this;
+        }
 
         /**
          * DomainName.
