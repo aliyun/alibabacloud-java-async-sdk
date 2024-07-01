@@ -53,6 +53,10 @@ public class CreateServiceInstanceRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceAutoPay")
+    private Boolean resourceAutoPay;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
@@ -97,6 +101,7 @@ public class CreateServiceInstanceRequest extends Request {
         this.operationMetadata = builder.operationMetadata;
         this.parameters = builder.parameters;
         this.regionId = builder.regionId;
+        this.resourceAutoPay = builder.resourceAutoPay;
         this.resourceGroupId = builder.resourceGroupId;
         this.serviceId = builder.serviceId;
         this.serviceVersion = builder.serviceVersion;
@@ -191,6 +196,13 @@ public class CreateServiceInstanceRequest extends Request {
     }
 
     /**
+     * @return resourceAutoPay
+     */
+    public Boolean getResourceAutoPay() {
+        return this.resourceAutoPay;
+    }
+
+    /**
      * @return resourceGroupId
      */
     public String getResourceGroupId() {
@@ -257,6 +269,7 @@ public class CreateServiceInstanceRequest extends Request {
         private OperationMetadata operationMetadata; 
         private java.util.Map < String, ? > parameters; 
         private String regionId; 
+        private Boolean resourceAutoPay; 
         private String resourceGroupId; 
         private String serviceId; 
         private String serviceVersion; 
@@ -282,6 +295,7 @@ public class CreateServiceInstanceRequest extends Request {
             this.operationMetadata = request.operationMetadata;
             this.parameters = request.parameters;
             this.regionId = request.regionId;
+            this.resourceAutoPay = request.resourceAutoPay;
             this.resourceGroupId = request.resourceGroupId;
             this.serviceId = request.serviceId;
             this.serviceVersion = request.serviceVersion;
@@ -385,6 +399,15 @@ public class CreateServiceInstanceRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceAutoPay.
+         */
+        public Builder resourceAutoPay(Boolean resourceAutoPay) {
+            this.putQueryParameter("ResourceAutoPay", resourceAutoPay);
+            this.resourceAutoPay = resourceAutoPay;
             return this;
         }
 
