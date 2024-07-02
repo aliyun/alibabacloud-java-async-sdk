@@ -372,6 +372,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
+    CompletableFuture<ListLogsResponse> listLogs(ListLogsRequest request);
+
     /**
       * ### Method
       * ```java
