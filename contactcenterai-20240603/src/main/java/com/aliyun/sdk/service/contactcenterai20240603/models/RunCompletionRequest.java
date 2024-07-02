@@ -31,16 +31,16 @@ public class RunCompletionRequest extends Request {
     private Dialogue dialogue;
 
     @com.aliyun.core.annotation.Body
-    @com.aliyun.core.annotation.NameInMap("Dimensions")
-    private java.util.List < Dimensions> dimensions;
-
-    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Fields")
     private java.util.List < Fields> fields;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ModelCode")
     private String modelCode;
+
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ServiceInspection")
+    private ServiceInspection serviceInspection;
 
     @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("Stream")
@@ -57,9 +57,9 @@ public class RunCompletionRequest extends Request {
         this.appId = builder.appId;
         this.regionId = builder.regionId;
         this.dialogue = builder.dialogue;
-        this.dimensions = builder.dimensions;
         this.fields = builder.fields;
         this.modelCode = builder.modelCode;
+        this.serviceInspection = builder.serviceInspection;
         this.stream = builder.stream;
         this.templateIds = builder.templateIds;
     }
@@ -106,13 +106,6 @@ public class RunCompletionRequest extends Request {
     }
 
     /**
-     * @return dimensions
-     */
-    public java.util.List < Dimensions> getDimensions() {
-        return this.dimensions;
-    }
-
-    /**
      * @return fields
      */
     public java.util.List < Fields> getFields() {
@@ -124,6 +117,13 @@ public class RunCompletionRequest extends Request {
      */
     public String getModelCode() {
         return this.modelCode;
+    }
+
+    /**
+     * @return serviceInspection
+     */
+    public ServiceInspection getServiceInspection() {
+        return this.serviceInspection;
     }
 
     /**
@@ -145,9 +145,9 @@ public class RunCompletionRequest extends Request {
         private String appId; 
         private String regionId; 
         private Dialogue dialogue; 
-        private java.util.List < Dimensions> dimensions; 
         private java.util.List < Fields> fields; 
         private String modelCode; 
+        private ServiceInspection serviceInspection; 
         private Boolean stream; 
         private java.util.List < Long > templateIds; 
 
@@ -161,9 +161,9 @@ public class RunCompletionRequest extends Request {
             this.appId = request.appId;
             this.regionId = request.regionId;
             this.dialogue = request.dialogue;
-            this.dimensions = request.dimensions;
             this.fields = request.fields;
             this.modelCode = request.modelCode;
+            this.serviceInspection = request.serviceInspection;
             this.stream = request.stream;
             this.templateIds = request.templateIds;
         } 
@@ -205,15 +205,6 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * Dimensions.
-         */
-        public Builder dimensions(java.util.List < Dimensions> dimensions) {
-            this.putBodyParameter("Dimensions", dimensions);
-            this.dimensions = dimensions;
-            return this;
-        }
-
-        /**
          * Fields.
          */
         public Builder fields(java.util.List < Fields> fields) {
@@ -228,6 +219,15 @@ public class RunCompletionRequest extends Request {
         public Builder modelCode(String modelCode) {
             this.putBodyParameter("ModelCode", modelCode);
             this.modelCode = modelCode;
+            return this;
+        }
+
+        /**
+         * ServiceInspection.
+         */
+        public Builder serviceInspection(ServiceInspection serviceInspection) {
+            this.putBodyParameter("ServiceInspection", serviceInspection);
+            this.serviceInspection = serviceInspection;
             return this;
         }
 
@@ -400,24 +400,24 @@ public class RunCompletionRequest extends Request {
         } 
 
     }
-    public static class Dimensions extends TeaModel {
+    public static class EnumValues extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @com.aliyun.core.annotation.NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("EnumValue")
         @com.aliyun.core.annotation.Validation(required = true)
-        private String name;
+        private String enumValue;
 
-        private Dimensions(Builder builder) {
+        private EnumValues(Builder builder) {
             this.desc = builder.desc;
-            this.name = builder.name;
+            this.enumValue = builder.enumValue;
         }
 
         public static Builder builder() {
             return new Builder();
         }
 
-        public static Dimensions create() {
+        public static EnumValues create() {
             return builder().build();
         }
 
@@ -429,15 +429,15 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * @return name
+         * @return enumValue
          */
-        public String getName() {
-            return this.name;
+        public String getEnumValue() {
+            return this.enumValue;
         }
 
         public static final class Builder {
             private String desc; 
-            private String name; 
+            private String enumValue; 
 
             /**
              * Desc.
@@ -448,15 +448,15 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Name.
+             * EnumValue.
              */
-            public Builder name(String name) {
-                this.name = name;
+            public Builder enumValue(String enumValue) {
+                this.enumValue = enumValue;
                 return this;
             }
 
-            public Dimensions build() {
-                return new Dimensions(this);
+            public EnumValues build() {
+                return new EnumValues(this);
             } 
 
         } 
@@ -469,8 +469,8 @@ public class RunCompletionRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("Desc")
         private String desc;
 
-        @com.aliyun.core.annotation.NameInMap("Enums")
-        private java.util.List < String > enums;
+        @com.aliyun.core.annotation.NameInMap("EnumValues")
+        private java.util.List < EnumValues> enumValues;
 
         @com.aliyun.core.annotation.NameInMap("Name")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -479,7 +479,7 @@ public class RunCompletionRequest extends Request {
         private Fields(Builder builder) {
             this.code = builder.code;
             this.desc = builder.desc;
-            this.enums = builder.enums;
+            this.enumValues = builder.enumValues;
             this.name = builder.name;
         }
 
@@ -506,10 +506,10 @@ public class RunCompletionRequest extends Request {
         }
 
         /**
-         * @return enums
+         * @return enumValues
          */
-        public java.util.List < String > getEnums() {
-            return this.enums;
+        public java.util.List < EnumValues> getEnumValues() {
+            return this.enumValues;
         }
 
         /**
@@ -522,7 +522,7 @@ public class RunCompletionRequest extends Request {
         public static final class Builder {
             private String code; 
             private String desc; 
-            private java.util.List < String > enums; 
+            private java.util.List < EnumValues> enumValues; 
             private String name; 
 
             /**
@@ -542,10 +542,10 @@ public class RunCompletionRequest extends Request {
             }
 
             /**
-             * Enums.
+             * EnumValues.
              */
-            public Builder enums(java.util.List < String > enums) {
-                this.enums = enums;
+            public Builder enumValues(java.util.List < EnumValues> enumValues) {
+                this.enumValues = enumValues;
                 return this;
             }
 
@@ -559,6 +559,149 @@ public class RunCompletionRequest extends Request {
 
             public Fields build() {
                 return new Fields(this);
+            } 
+
+        } 
+
+    }
+    public static class InspectionContents extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Content")
+        private String content;
+
+        @com.aliyun.core.annotation.NameInMap("Title")
+        @com.aliyun.core.annotation.Validation(required = true)
+        private String title;
+
+        private InspectionContents(Builder builder) {
+            this.content = builder.content;
+            this.title = builder.title;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static InspectionContents create() {
+            return builder().build();
+        }
+
+        /**
+         * @return content
+         */
+        public String getContent() {
+            return this.content;
+        }
+
+        /**
+         * @return title
+         */
+        public String getTitle() {
+            return this.title;
+        }
+
+        public static final class Builder {
+            private String content; 
+            private String title; 
+
+            /**
+             * Content.
+             */
+            public Builder content(String content) {
+                this.content = content;
+                return this;
+            }
+
+            /**
+             * Title.
+             */
+            public Builder title(String title) {
+                this.title = title;
+                return this;
+            }
+
+            public InspectionContents build() {
+                return new InspectionContents(this);
+            } 
+
+        } 
+
+    }
+    public static class ServiceInspection extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("InspectionContents")
+        private java.util.List < InspectionContents> inspectionContents;
+
+        @com.aliyun.core.annotation.NameInMap("InspectionIntroduction")
+        private String inspectionIntroduction;
+
+        @com.aliyun.core.annotation.NameInMap("SceneIntroduction")
+        private String sceneIntroduction;
+
+        private ServiceInspection(Builder builder) {
+            this.inspectionContents = builder.inspectionContents;
+            this.inspectionIntroduction = builder.inspectionIntroduction;
+            this.sceneIntroduction = builder.sceneIntroduction;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ServiceInspection create() {
+            return builder().build();
+        }
+
+        /**
+         * @return inspectionContents
+         */
+        public java.util.List < InspectionContents> getInspectionContents() {
+            return this.inspectionContents;
+        }
+
+        /**
+         * @return inspectionIntroduction
+         */
+        public String getInspectionIntroduction() {
+            return this.inspectionIntroduction;
+        }
+
+        /**
+         * @return sceneIntroduction
+         */
+        public String getSceneIntroduction() {
+            return this.sceneIntroduction;
+        }
+
+        public static final class Builder {
+            private java.util.List < InspectionContents> inspectionContents; 
+            private String inspectionIntroduction; 
+            private String sceneIntroduction; 
+
+            /**
+             * InspectionContents.
+             */
+            public Builder inspectionContents(java.util.List < InspectionContents> inspectionContents) {
+                this.inspectionContents = inspectionContents;
+                return this;
+            }
+
+            /**
+             * InspectionIntroduction.
+             */
+            public Builder inspectionIntroduction(String inspectionIntroduction) {
+                this.inspectionIntroduction = inspectionIntroduction;
+                return this;
+            }
+
+            /**
+             * SceneIntroduction.
+             */
+            public Builder sceneIntroduction(String sceneIntroduction) {
+                this.sceneIntroduction = sceneIntroduction;
+                return this;
+            }
+
+            public ServiceInspection build() {
+                return new ServiceInspection(this);
             } 
 
         } 
