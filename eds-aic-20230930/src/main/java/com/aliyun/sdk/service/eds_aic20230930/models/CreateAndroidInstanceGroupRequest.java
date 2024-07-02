@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class CreateAndroidInstanceGroupRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Amount")
+    private Integer amount;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AutoPay")
     private Boolean autoPay;
 
@@ -70,6 +74,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
     private CreateAndroidInstanceGroupRequest(Builder builder) {
         super(builder);
+        this.amount = builder.amount;
         this.autoPay = builder.autoPay;
         this.autoRenew = builder.autoRenew;
         this.bizRegionId = builder.bizRegionId;
@@ -96,6 +101,13 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return amount
+     */
+    public Integer getAmount() {
+        return this.amount;
     }
 
     /**
@@ -190,6 +202,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<CreateAndroidInstanceGroupRequest, Builder> {
+        private Integer amount; 
         private Boolean autoPay; 
         private Boolean autoRenew; 
         private String bizRegionId; 
@@ -210,6 +223,7 @@ public class CreateAndroidInstanceGroupRequest extends Request {
 
         private Builder(CreateAndroidInstanceGroupRequest request) {
             super(request);
+            this.amount = request.amount;
             this.autoPay = request.autoPay;
             this.autoRenew = request.autoRenew;
             this.bizRegionId = request.bizRegionId;
@@ -224,6 +238,15 @@ public class CreateAndroidInstanceGroupRequest extends Request {
             this.policyGroupId = request.policyGroupId;
             this.vSwitchId = request.vSwitchId;
         } 
+
+        /**
+         * Amount.
+         */
+        public Builder amount(Integer amount) {
+            this.putQueryParameter("Amount", amount);
+            this.amount = amount;
+            return this;
+        }
 
         /**
          * AutoPay.

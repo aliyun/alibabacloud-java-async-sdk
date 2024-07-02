@@ -187,6 +187,9 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Disks")
         private java.util.List < Disks> disks;
 
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
+        private String errorCode;
+
         @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
@@ -253,6 +256,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             this.chargeType = builder.chargeType;
             this.cpu = builder.cpu;
             this.disks = builder.disks;
+            this.errorCode = builder.errorCode;
             this.gmtCreate = builder.gmtCreate;
             this.gmtExpired = builder.gmtExpired;
             this.gmtModified = builder.gmtModified;
@@ -316,6 +320,13 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
          */
         public java.util.List < Disks> getDisks() {
             return this.disks;
+        }
+
+        /**
+         * @return errorCode
+         */
+        public String getErrorCode() {
+            return this.errorCode;
         }
 
         /**
@@ -464,6 +475,7 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
             private String chargeType; 
             private String cpu; 
             private java.util.List < Disks> disks; 
+            private String errorCode; 
             private String gmtCreate; 
             private String gmtExpired; 
             private String gmtModified; 
@@ -522,6 +534,14 @@ public class DescribeAndroidInstanceGroupsResponseBody extends TeaModel {
              */
             public Builder disks(java.util.List < Disks> disks) {
                 this.disks = disks;
+                return this;
+            }
+
+            /**
+             * ErrorCode.
+             */
+            public Builder errorCode(String errorCode) {
+                this.errorCode = errorCode;
                 return this;
             }
 
