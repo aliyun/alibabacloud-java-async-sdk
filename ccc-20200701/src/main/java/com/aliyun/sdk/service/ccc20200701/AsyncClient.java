@@ -365,6 +365,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTicketTasksResponse> listTicketTasks(ListTicketTasksRequest request);
 
+    CompletableFuture<ListTicketTemplatesResponse> listTicketTemplates(ListTicketTemplatesRequest request);
+
     CompletableFuture<ListTicketsResponse> listTickets(ListTicketsRequest request);
 
     CompletableFuture<ListUnassignedNumbersResponse> listUnassignedNumbers(ListUnassignedNumbersRequest request);
