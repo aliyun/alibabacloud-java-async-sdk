@@ -271,6 +271,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<LinkMergeRequestLabelResponse> linkMergeRequestLabel(LinkMergeRequestLabelRequest request);
 
+    CompletableFuture<ListAllReleaseWorkflowsResponse> listAllReleaseWorkflows(ListAllReleaseWorkflowsRequest request);
+
+    CompletableFuture<ListAppReleaseStageExecutionIntegratedMetadataResponse> listAppReleaseStageExecutionIntegratedMetadata(ListAppReleaseStageExecutionIntegratedMetadataRequest request);
+
+    CompletableFuture<ListAppReleaseStageExecutionsResponse> listAppReleaseStageExecutions(ListAppReleaseStageExecutionsRequest request);
+
     CompletableFuture<ListApplicationMembersResponse> listApplicationMembers(ListApplicationMembersRequest request);
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
@@ -450,6 +456,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateMergeRequestResponse> updateMergeRequest(UpdateMergeRequestRequest request);
 
     CompletableFuture<UpdateMergeRequestPersonnelResponse> updateMergeRequestPersonnel(UpdateMergeRequestPersonnelRequest request);
+
+    CompletableFuture<UpdateOrganizationMemberResponse> updateOrganizationMember(UpdateOrganizationMemberRequest request);
 
     CompletableFuture<UpdatePipelineResponse> updatePipeline(UpdatePipelineRequest request);
 
