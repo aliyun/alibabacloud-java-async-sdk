@@ -172,6 +172,9 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("VulStatus")
         private String vulStatus;
 
+        @com.aliyun.core.annotation.NameInMap("lastScanTime")
+        private Long lastScanTime;
+
         private ImageInstanceList(Builder builder) {
             this.alarmCount = builder.alarmCount;
             this.alarmStatus = builder.alarmStatus;
@@ -200,6 +203,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             this.uuid = builder.uuid;
             this.vulCount = builder.vulCount;
             this.vulStatus = builder.vulStatus;
+            this.lastScanTime = builder.lastScanTime;
         }
 
         public static Builder builder() {
@@ -399,6 +403,13 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             return this.vulStatus;
         }
 
+        /**
+         * @return lastScanTime
+         */
+        public Long getLastScanTime() {
+            return this.lastScanTime;
+        }
+
         public static final class Builder {
             private Integer alarmCount; 
             private String alarmStatus; 
@@ -427,6 +438,7 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
             private String uuid; 
             private Integer vulCount; 
             private String vulStatus; 
+            private Long lastScanTime; 
 
             /**
              * The number of alerts that are generated for the image.
@@ -695,6 +707,14 @@ public class DescribeImageInstancesResponseBody extends TeaModel {
              */
             public Builder vulStatus(String vulStatus) {
                 this.vulStatus = vulStatus;
+                return this;
+            }
+
+            /**
+             * lastScanTime.
+             */
+            public Builder lastScanTime(Long lastScanTime) {
+                this.lastScanTime = lastScanTime;
                 return this;
             }
 

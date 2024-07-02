@@ -85,7 +85,7 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         private Integer sysCount; 
 
         /**
-         * AppCount.
+         * The number of application vulnerabilities.
          */
         public Builder appCount(Integer appCount) {
             this.appCount = appCount;
@@ -93,7 +93,7 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * CveCount.
+         * The number of Linux software vulnerabilities.
          */
         public Builder cveCount(Integer cveCount) {
             this.cveCount = cveCount;
@@ -101,7 +101,7 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RaspDefendCount.
+         * The number of vulnerabilities that can be defended by the application protection feature.
          */
         public Builder raspDefendCount(Integer raspDefendCount) {
             this.raspDefendCount = raspDefendCount;
@@ -109,7 +109,7 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DescribeVulMetaCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * SysCount.
+         * The number of Windows system vulnerabilities.
          */
         public Builder sysCount(Integer sysCount) {
             this.sysCount = sysCount;

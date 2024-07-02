@@ -296,6 +296,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
     }
     public static class SensitiveFileList extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Advice")
+        private String advice;
+
         @com.aliyun.core.annotation.NameInMap("ClassKey")
         private String classKey;
 
@@ -304,6 +307,9 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
+
+        @com.aliyun.core.annotation.NameInMap("Description")
+        private String description;
 
         @com.aliyun.core.annotation.NameInMap("FirstScanTime")
         private Long firstScanTime;
@@ -324,9 +330,11 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         private Integer unprocessedNum;
 
         private SensitiveFileList(Builder builder) {
+            this.advice = builder.advice;
             this.classKey = builder.classKey;
             this.className = builder.className;
             this.count = builder.count;
+            this.description = builder.description;
             this.firstScanTime = builder.firstScanTime;
             this.lastScanTime = builder.lastScanTime;
             this.riskLevel = builder.riskLevel;
@@ -341,6 +349,13 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
 
         public static SensitiveFileList create() {
             return builder().build();
+        }
+
+        /**
+         * @return advice
+         */
+        public String getAdvice() {
+            return this.advice;
         }
 
         /**
@@ -362,6 +377,13 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
          */
         public Integer getCount() {
             return this.count;
+        }
+
+        /**
+         * @return description
+         */
+        public String getDescription() {
+            return this.description;
         }
 
         /**
@@ -407,15 +429,25 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String advice; 
             private String classKey; 
             private String className; 
             private Integer count; 
+            private String description; 
             private Long firstScanTime; 
             private Long lastScanTime; 
             private String riskLevel; 
             private String sensitiveFileKey; 
             private String sensitiveFileName; 
             private Integer unprocessedNum; 
+
+            /**
+             * Advice.
+             */
+            public Builder advice(String advice) {
+                this.advice = advice;
+                return this;
+            }
 
             /**
              * The key of the sensitive file type.
@@ -438,6 +470,14 @@ public class DescribeImageSensitiveFileListResponseBody extends TeaModel {
              */
             public Builder count(Integer count) {
                 this.count = count;
+                return this;
+            }
+
+            /**
+             * Description.
+             */
+            public Builder description(String description) {
+                this.description = description;
                 return this;
             }
 

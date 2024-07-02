@@ -130,6 +130,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateHoneypotProbeBindResponse> createHoneypotProbeBind(CreateHoneypotProbeBindRequest request);
 
+    CompletableFuture<CreateHybridProxyClusterResponse> createHybridProxyCluster(CreateHybridProxyClusterRequest request);
+
     CompletableFuture<CreateInterceptionRuleResponse> createInterceptionRule(CreateInterceptionRuleRequest request);
 
     CompletableFuture<CreateInterceptionTargetResponse> createInterceptionTarget(CreateInterceptionTargetRequest request);

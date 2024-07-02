@@ -115,6 +115,9 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("HighLight")
         private String highLight;
 
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private Long id;
+
         @com.aliyun.core.annotation.NameInMap("Image")
         private String image;
 
@@ -190,6 +193,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             this.filePath = builder.filePath;
             this.firstScanTimestamp = builder.firstScanTimestamp;
             this.highLight = builder.highLight;
+            this.id = builder.id;
             this.image = builder.image;
             this.imageUuid = builder.imageUuid;
             this.instanceName = builder.instanceName;
@@ -276,6 +280,13 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
          */
         public String getHighLight() {
             return this.highLight;
+        }
+
+        /**
+         * @return id
+         */
+        public Long getId() {
+            return this.id;
         }
 
         /**
@@ -441,6 +452,7 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
             private String filePath; 
             private Long firstScanTimestamp; 
             private String highLight; 
+            private Long id; 
             private String image; 
             private String imageUuid; 
             private String instanceName; 
@@ -525,6 +537,14 @@ public class DescribeAffectedMaliciousFileImagesResponseBody extends TeaModel {
              */
             public Builder highLight(String highLight) {
                 this.highLight = highLight;
+                return this;
+            }
+
+            /**
+             * Id.
+             */
+            public Builder id(Long id) {
+                this.id = id;
                 return this;
             }
 

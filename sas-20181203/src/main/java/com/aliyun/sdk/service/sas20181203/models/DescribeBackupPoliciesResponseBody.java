@@ -210,6 +210,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
+        @com.aliyun.core.annotation.NameInMap("LastStatusSyncTime")
+        private Long lastStatusSyncTime;
+
         @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
@@ -221,6 +224,9 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("PolicyVersion")
         private String policyVersion;
+
+        @com.aliyun.core.annotation.NameInMap("PreStatus")
+        private String preStatus;
 
         @com.aliyun.core.annotation.NameInMap("RemarkedUuidList")
         private java.util.List < String > remarkedUuidList;
@@ -250,10 +256,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             this.healthClientCount = builder.healthClientCount;
             this.healthClientUuidList = builder.healthClientUuidList;
             this.id = builder.id;
+            this.lastStatusSyncTime = builder.lastStatusSyncTime;
             this.name = builder.name;
             this.policy = builder.policy;
             this.policyRegionId = builder.policyRegionId;
             this.policyVersion = builder.policyVersion;
+            this.preStatus = builder.preStatus;
             this.remarkedUuidList = builder.remarkedUuidList;
             this.serverType = builder.serverType;
             this.serviceErrorCount = builder.serviceErrorCount;
@@ -314,6 +322,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
         }
 
         /**
+         * @return lastStatusSyncTime
+         */
+        public Long getLastStatusSyncTime() {
+            return this.lastStatusSyncTime;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -339,6 +354,13 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
          */
         public String getPolicyVersion() {
             return this.policyVersion;
+        }
+
+        /**
+         * @return preStatus
+         */
+        public String getPreStatus() {
+            return this.preStatus;
         }
 
         /**
@@ -397,10 +419,12 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
             private Integer healthClientCount; 
             private java.util.List < String > healthClientUuidList; 
             private Long id; 
+            private Long lastStatusSyncTime; 
             private String name; 
             private String policy; 
             private String policyRegionId; 
             private String policyVersion; 
+            private String preStatus; 
             private java.util.List < String > remarkedUuidList; 
             private String serverType; 
             private Integer serviceErrorCount; 
@@ -458,6 +482,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              */
             public Builder id(Long id) {
                 this.id = id;
+                return this;
+            }
+
+            /**
+             * LastStatusSyncTime.
+             */
+            public Builder lastStatusSyncTime(Long lastStatusSyncTime) {
+                this.lastStatusSyncTime = lastStatusSyncTime;
                 return this;
             }
 
@@ -524,6 +556,14 @@ public class DescribeBackupPoliciesResponseBody extends TeaModel {
              */
             public Builder policyVersion(String policyVersion) {
                 this.policyVersion = policyVersion;
+                return this;
+            }
+
+            /**
+             * PreStatus.
+             */
+            public Builder preStatus(String preStatus) {
+                this.preStatus = preStatus;
                 return this;
             }
 

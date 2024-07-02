@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteVulAutoRepairConfigResponseBody} extends {@link TeaModel}
+ * {@link CreateHybridProxyClusterResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteVulAutoRepairConfigResponseBody</p>
+ * <p>CreateHybridProxyClusterResponseBody</p>
  */
-public class DeleteVulAutoRepairConfigResponseBody extends TeaModel {
+public class CreateHybridProxyClusterResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteVulAutoRepairConfigResponseBody(Builder builder) {
+    private CreateHybridProxyClusterResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class DeleteVulAutoRepairConfigResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteVulAutoRepairConfigResponseBody create() {
+    public static CreateHybridProxyClusterResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class DeleteVulAutoRepairConfigResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteVulAutoRepairConfigResponseBody build() {
-            return new DeleteVulAutoRepairConfigResponseBody(this);
+        public CreateHybridProxyClusterResponseBody build() {
+            return new CreateHybridProxyClusterResponseBody(this);
         } 
 
     } 

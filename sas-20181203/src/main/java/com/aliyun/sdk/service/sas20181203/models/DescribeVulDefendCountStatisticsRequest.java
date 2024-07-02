@@ -53,7 +53,11 @@ public class DescribeVulDefendCountStatisticsRequest extends Request {
         } 
 
         /**
-         * VulType.
+         * The type of the vulnerabilities. Valid values:
+         * <p>
+         * 
+         * *   app: application vulnerabilities
+         * *   emg: urgent vulnerabilities
          */
         public Builder vulType(String vulType) {
             this.putQueryParameter("VulType", vulType);

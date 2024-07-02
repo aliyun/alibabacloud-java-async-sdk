@@ -61,7 +61,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
         private Integer vulCount; 
 
         /**
-         * An array that consists of the statistics about the assets.
+         * The statistics about the servers.
          */
         public Builder machineInfoStatistics(java.util.List < MachineInfoStatistics> machineInfoStatistics) {
             this.machineInfoStatistics = machineInfoStatistics;
@@ -201,7 +201,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             private String uuid; 
 
             /**
-             * InternetIp.
+             * The public IP address of the server on which the exception was detected.
              */
             public Builder internetIp(String internetIp) {
                 this.internetIp = internetIp;
@@ -209,7 +209,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * IntranetIp.
+             * The private IP address of the server on which the exception was detected.
              */
             public Builder intranetIp(String intranetIp) {
                 this.intranetIp = intranetIp;
@@ -217,7 +217,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID.
+             * The instance ID of the server.
              */
             public Builder machineInstanceId(String machineInstanceId) {
                 this.machineInstanceId = machineInstanceId;
@@ -249,7 +249,7 @@ public class DescribeUuidsByVulNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the region in which the server resides.
+             * The region ID of the server.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

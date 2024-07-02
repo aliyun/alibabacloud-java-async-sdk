@@ -83,6 +83,9 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AgentlessMalicious")
         private Integer agentlessMalicious;
 
+        @com.aliyun.core.annotation.NameInMap("AgentlessSensitiveFile")
+        private Integer agentlessSensitiveFile;
+
         @com.aliyun.core.annotation.NameInMap("AgentlessVulCve")
         private Integer agentlessVulCve;
 
@@ -136,6 +139,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             this.agentlessAll = builder.agentlessAll;
             this.agentlessBaseline = builder.agentlessBaseline;
             this.agentlessMalicious = builder.agentlessMalicious;
+            this.agentlessSensitiveFile = builder.agentlessSensitiveFile;
             this.agentlessVulCve = builder.agentlessVulCve;
             this.agentlessVulSca = builder.agentlessVulSca;
             this.agentlessVulSys = builder.agentlessVulSys;
@@ -188,6 +192,13 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
          */
         public Integer getAgentlessMalicious() {
             return this.agentlessMalicious;
+        }
+
+        /**
+         * @return agentlessSensitiveFile
+         */
+        public Integer getAgentlessSensitiveFile() {
+            return this.agentlessSensitiveFile;
         }
 
         /**
@@ -307,6 +318,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
             private Integer agentlessAll; 
             private Integer agentlessBaseline; 
             private Integer agentlessMalicious; 
+            private Integer agentlessSensitiveFile; 
             private Integer agentlessVulCve; 
             private Integer agentlessVulSca; 
             private Integer agentlessVulSys; 
@@ -353,6 +365,14 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              */
             public Builder agentlessMalicious(Integer agentlessMalicious) {
                 this.agentlessMalicious = agentlessMalicious;
+                return this;
+            }
+
+            /**
+             * AgentlessSensitiveFile.
+             */
+            public Builder agentlessSensitiveFile(Integer agentlessSensitiveFile) {
+                this.agentlessSensitiveFile = agentlessSensitiveFile;
                 return this;
             }
 

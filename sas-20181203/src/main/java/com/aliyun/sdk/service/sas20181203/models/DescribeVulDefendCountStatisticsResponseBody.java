@@ -61,7 +61,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RaspDefendedCount.
+         * The number of defended vulnerabilities.
          */
         public Builder raspDefendedCount(Integer raspDefendedCount) {
             this.raspDefendedCount = raspDefendedCount;
@@ -69,7 +69,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RaspDefensibleCount.
+         * The number of supported vulnerabilities.
          */
         public Builder raspDefensibleCount(Integer raspDefensibleCount) {
             this.raspDefensibleCount = raspDefensibleCount;
@@ -77,7 +77,7 @@ public class DescribeVulDefendCountStatisticsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
