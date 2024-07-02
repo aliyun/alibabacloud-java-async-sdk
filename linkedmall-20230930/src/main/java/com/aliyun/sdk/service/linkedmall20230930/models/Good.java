@@ -20,10 +20,18 @@ public class Good extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("quantity")
     private Integer quantity;
 
+    @com.aliyun.core.annotation.NameInMap("skuId")
+    private String skuId;
+
+    @com.aliyun.core.annotation.NameInMap("skuTitle")
+    private String skuTitle;
+
     private Good(Builder builder) {
         this.goodName = builder.goodName;
         this.productId = builder.productId;
         this.quantity = builder.quantity;
+        this.skuId = builder.skuId;
+        this.skuTitle = builder.skuTitle;
     }
 
     public static Builder builder() {
@@ -55,10 +63,26 @@ public class Good extends TeaModel {
         return this.quantity;
     }
 
+    /**
+     * @return skuId
+     */
+    public String getSkuId() {
+        return this.skuId;
+    }
+
+    /**
+     * @return skuTitle
+     */
+    public String getSkuTitle() {
+        return this.skuTitle;
+    }
+
     public static final class Builder {
         private String goodName; 
         private String productId; 
         private Integer quantity; 
+        private String skuId; 
+        private String skuTitle; 
 
         /**
          * goodName.
@@ -81,6 +105,22 @@ public class Good extends TeaModel {
          */
         public Builder quantity(Integer quantity) {
             this.quantity = quantity;
+            return this;
+        }
+
+        /**
+         * skuId.
+         */
+        public Builder skuId(String skuId) {
+            this.skuId = skuId;
+            return this;
+        }
+
+        /**
+         * skuTitle.
+         */
+        public Builder skuTitle(String skuTitle) {
+            this.skuTitle = skuTitle;
             return this;
         }
 

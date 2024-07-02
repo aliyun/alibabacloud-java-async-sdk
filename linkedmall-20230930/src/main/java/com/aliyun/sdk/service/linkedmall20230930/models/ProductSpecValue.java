@@ -14,11 +14,15 @@ public class ProductSpecValue extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("value")
     private String value;
 
+    @com.aliyun.core.annotation.NameInMap("valueAlias")
+    private String valueAlias;
+
     @com.aliyun.core.annotation.NameInMap("valueId")
     private Long valueId;
 
     private ProductSpecValue(Builder builder) {
         this.value = builder.value;
+        this.valueAlias = builder.valueAlias;
         this.valueId = builder.valueId;
     }
 
@@ -38,6 +42,13 @@ public class ProductSpecValue extends TeaModel {
     }
 
     /**
+     * @return valueAlias
+     */
+    public String getValueAlias() {
+        return this.valueAlias;
+    }
+
+    /**
      * @return valueId
      */
     public Long getValueId() {
@@ -46,6 +57,7 @@ public class ProductSpecValue extends TeaModel {
 
     public static final class Builder {
         private String value; 
+        private String valueAlias; 
         private Long valueId; 
 
         /**
@@ -53,6 +65,14 @@ public class ProductSpecValue extends TeaModel {
          */
         public Builder value(String value) {
             this.value = value;
+            return this;
+        }
+
+        /**
+         * valueAlias.
+         */
+        public Builder valueAlias(String valueAlias) {
+            this.valueAlias = valueAlias;
             return this;
         }
 
