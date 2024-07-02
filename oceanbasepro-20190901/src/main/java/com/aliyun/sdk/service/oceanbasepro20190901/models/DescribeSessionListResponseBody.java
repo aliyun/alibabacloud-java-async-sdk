@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTenantReadableScnResponseBody} extends {@link TeaModel}
+ * {@link DescribeSessionListResponseBody} extends {@link TeaModel}
  *
- * <p>DescribeTenantReadableScnResponseBody</p>
+ * <p>DescribeSessionListResponseBody</p>
  */
-public class DescribeTenantReadableScnResponseBody extends TeaModel {
+public class DescribeSessionListResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
-    private Data data;
+    private java.util.List < Data> data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DescribeTenantReadableScnResponseBody(Builder builder) {
+    private DescribeSessionListResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -26,14 +26,14 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DescribeTenantReadableScnResponseBody create() {
+    public static DescribeSessionListResponseBody create() {
         return builder().build();
     }
 
     /**
      * @return data
      */
-    public Data getData() {
+    public java.util.List < Data> getData() {
         return this.data;
     }
 
@@ -45,37 +45,41 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private Data data; 
+        private java.util.List < Data> data; 
         private String requestId; 
 
         /**
-         * The data in the return result of the request.
+         * Data.
          */
-        public Builder data(Data data) {
+        public Builder data(java.util.List < Data> data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DescribeTenantReadableScnResponseBody build() {
-            return new DescribeTenantReadableScnResponseBody(this);
+        public DescribeSessionListResponseBody build() {
+            return new DescribeSessionListResponseBody(this);
         } 
 
     } 
 
     public static class Data extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ReadableScn")
-        private Long readableScn;
+        @com.aliyun.core.annotation.NameInMap("Host")
+        private String host;
+
+        @com.aliyun.core.annotation.NameInMap("SessionId")
+        private String sessionId;
 
         private Data(Builder builder) {
-            this.readableScn = builder.readableScn;
+            this.host = builder.host;
+            this.sessionId = builder.sessionId;
         }
 
         public static Builder builder() {
@@ -87,20 +91,36 @@ public class DescribeTenantReadableScnResponseBody extends TeaModel {
         }
 
         /**
-         * @return readableScn
+         * @return host
          */
-        public Long getReadableScn() {
-            return this.readableScn;
+        public String getHost() {
+            return this.host;
+        }
+
+        /**
+         * @return sessionId
+         */
+        public String getSessionId() {
+            return this.sessionId;
         }
 
         public static final class Builder {
-            private Long readableScn; 
+            private String host; 
+            private String sessionId; 
 
             /**
-             * The maximum readable timestamp.
+             * Host.
              */
-            public Builder readableScn(Long readableScn) {
-                this.readableScn = readableScn;
+            public Builder host(String host) {
+                this.host = host;
+                return this;
+            }
+
+            /**
+             * SessionId.
+             */
+            public Builder sessionId(String sessionId) {
+                this.sessionId = sessionId;
                 return this;
             }
 

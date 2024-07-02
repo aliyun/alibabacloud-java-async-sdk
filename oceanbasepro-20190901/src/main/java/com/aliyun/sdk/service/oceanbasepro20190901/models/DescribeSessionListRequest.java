@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTenantReadableScnRequest} extends {@link RequestModel}
+ * {@link DescribeSessionListRequest} extends {@link RequestModel}
  *
- * <p>DescribeTenantReadableScnRequest</p>
+ * <p>DescribeSessionListRequest</p>
  */
-public class DescribeTenantReadableScnRequest extends Request {
+public class DescribeSessionListRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -25,7 +25,7 @@ public class DescribeTenantReadableScnRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    private DescribeTenantReadableScnRequest(Builder builder) {
+    private DescribeSessionListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
@@ -36,7 +36,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeTenantReadableScnRequest create() {
+    public static DescribeSessionListRequest create() {
         return builder().build();
     }
 
@@ -66,7 +66,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeTenantReadableScnRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeSessionListRequest, Builder> {
         private String regionId; 
         private String instanceId; 
         private String tenantId; 
@@ -75,7 +75,7 @@ public class DescribeTenantReadableScnRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeTenantReadableScnRequest request) {
+        private Builder(DescribeSessionListRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
@@ -92,7 +92,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +101,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -110,8 +110,8 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         @Override
-        public DescribeTenantReadableScnRequest build() {
-            return new DescribeTenantReadableScnRequest(this);
+        public DescribeSessionListRequest build() {
+            return new DescribeSessionListRequest(this);
         } 
 
     } 

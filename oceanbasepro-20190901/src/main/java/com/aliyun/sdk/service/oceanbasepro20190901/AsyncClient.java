@@ -21,6 +21,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BatchKillProcessListResponse> batchKillProcessList(BatchKillProcessListRequest request);
 
+    CompletableFuture<BatchKillSessionListResponse> batchKillSessionList(BatchKillSessionListRequest request);
+
     CompletableFuture<CancelProjectModifyRecordResponse> cancelProjectModifyRecord(CancelProjectModifyRecordRequest request);
 
     CompletableFuture<CreateBackupSetDownloadLinkResponse> createBackupSetDownloadLink(CreateBackupSetDownloadLinkRequest request);
@@ -168,6 +170,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeSampleSqlRawTextsResponse> describeSampleSqlRawTexts(DescribeSampleSqlRawTextsRequest request);
 
     CompletableFuture<DescribeSecurityIpGroupsResponse> describeSecurityIpGroups(DescribeSecurityIpGroupsRequest request);
+
+    CompletableFuture<DescribeSessionListResponse> describeSessionList(DescribeSessionListRequest request);
 
     CompletableFuture<DescribeSlowSQLHistoryListResponse> describeSlowSQLHistoryList(DescribeSlowSQLHistoryListRequest request);
 

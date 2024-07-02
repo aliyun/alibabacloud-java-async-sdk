@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeTenantReadableScnRequest} extends {@link RequestModel}
+ * {@link BatchKillSessionListRequest} extends {@link RequestModel}
  *
- * <p>DescribeTenantReadableScnRequest</p>
+ * <p>BatchKillSessionListRequest</p>
  */
-public class DescribeTenantReadableScnRequest extends Request {
+public class BatchKillSessionListRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
@@ -21,14 +21,20 @@ public class DescribeTenantReadableScnRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SessionList")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String sessionList;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TenantId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String tenantId;
 
-    private DescribeTenantReadableScnRequest(Builder builder) {
+    private BatchKillSessionListRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
         this.instanceId = builder.instanceId;
+        this.sessionList = builder.sessionList;
         this.tenantId = builder.tenantId;
     }
 
@@ -36,7 +42,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeTenantReadableScnRequest create() {
+    public static BatchKillSessionListRequest create() {
         return builder().build();
     }
 
@@ -60,25 +66,34 @@ public class DescribeTenantReadableScnRequest extends Request {
     }
 
     /**
+     * @return sessionList
+     */
+    public String getSessionList() {
+        return this.sessionList;
+    }
+
+    /**
      * @return tenantId
      */
     public String getTenantId() {
         return this.tenantId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeTenantReadableScnRequest, Builder> {
+    public static final class Builder extends Request.Builder<BatchKillSessionListRequest, Builder> {
         private String regionId; 
         private String instanceId; 
+        private String sessionList; 
         private String tenantId; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeTenantReadableScnRequest request) {
+        private Builder(BatchKillSessionListRequest request) {
             super(request);
             this.regionId = request.regionId;
             this.instanceId = request.instanceId;
+            this.sessionList = request.sessionList;
             this.tenantId = request.tenantId;
         } 
 
@@ -92,7 +107,7 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         /**
-         * The ID of the OceanBase cluster.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -101,7 +116,16 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         /**
-         * The ID of the tenant.
+         * SessionList.
+         */
+        public Builder sessionList(String sessionList) {
+            this.putBodyParameter("SessionList", sessionList);
+            this.sessionList = sessionList;
+            return this;
+        }
+
+        /**
+         * TenantId.
          */
         public Builder tenantId(String tenantId) {
             this.putBodyParameter("TenantId", tenantId);
@@ -110,8 +134,8 @@ public class DescribeTenantReadableScnRequest extends Request {
         }
 
         @Override
-        public DescribeTenantReadableScnRequest build() {
-            return new DescribeTenantReadableScnRequest(this);
+        public BatchKillSessionListRequest build() {
+            return new BatchKillSessionListRequest(this);
         } 
 
     } 
