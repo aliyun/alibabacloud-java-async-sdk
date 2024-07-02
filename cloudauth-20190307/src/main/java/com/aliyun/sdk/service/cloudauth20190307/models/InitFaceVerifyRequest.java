@@ -148,6 +148,10 @@ public class InitFaceVerifyRequest extends Request {
     private String validityDate;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoEvidence")
+    private String videoEvidence;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("VoluntaryCustomizedContent")
     private String voluntaryCustomizedContent;
 
@@ -187,6 +191,7 @@ public class InitFaceVerifyRequest extends Request {
         this.uiCustomUrl = builder.uiCustomUrl;
         this.userId = builder.userId;
         this.validityDate = builder.validityDate;
+        this.videoEvidence = builder.videoEvidence;
         this.voluntaryCustomizedContent = builder.voluntaryCustomizedContent;
     }
 
@@ -442,6 +447,13 @@ public class InitFaceVerifyRequest extends Request {
     }
 
     /**
+     * @return videoEvidence
+     */
+    public String getVideoEvidence() {
+        return this.videoEvidence;
+    }
+
+    /**
      * @return voluntaryCustomizedContent
      */
     public String getVoluntaryCustomizedContent() {
@@ -483,6 +495,7 @@ public class InitFaceVerifyRequest extends Request {
         private String uiCustomUrl; 
         private String userId; 
         private String validityDate; 
+        private String videoEvidence; 
         private String voluntaryCustomizedContent; 
 
         private Builder() {
@@ -525,6 +538,7 @@ public class InitFaceVerifyRequest extends Request {
             this.uiCustomUrl = request.uiCustomUrl;
             this.userId = request.userId;
             this.validityDate = request.validityDate;
+            this.videoEvidence = request.videoEvidence;
             this.voluntaryCustomizedContent = request.voluntaryCustomizedContent;
         } 
 
@@ -831,6 +845,15 @@ public class InitFaceVerifyRequest extends Request {
         public Builder validityDate(String validityDate) {
             this.putQueryParameter("ValidityDate", validityDate);
             this.validityDate = validityDate;
+            return this;
+        }
+
+        /**
+         * VideoEvidence.
+         */
+        public Builder videoEvidence(String videoEvidence) {
+            this.putQueryParameter("VideoEvidence", videoEvidence);
+            this.videoEvidence = videoEvidence;
             return this;
         }
 
