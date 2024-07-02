@@ -40,6 +40,10 @@ public class CreateDataLimitRequest extends Request {
     private Integer featureType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstantlyScan")
+    private Boolean instantlyScan;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
@@ -93,6 +97,7 @@ public class CreateDataLimitRequest extends Request {
         this.engineType = builder.engineType;
         this.eventStatus = builder.eventStatus;
         this.featureType = builder.featureType;
+        this.instantlyScan = builder.instantlyScan;
         this.lang = builder.lang;
         this.logStoreDay = builder.logStoreDay;
         this.ocrStatus = builder.ocrStatus;
@@ -166,6 +171,13 @@ public class CreateDataLimitRequest extends Request {
      */
     public Integer getFeatureType() {
         return this.featureType;
+    }
+
+    /**
+     * @return instantlyScan
+     */
+    public Boolean getInstantlyScan() {
+        return this.instantlyScan;
     }
 
     /**
@@ -253,6 +265,7 @@ public class CreateDataLimitRequest extends Request {
         private String engineType; 
         private Integer eventStatus; 
         private Integer featureType; 
+        private Boolean instantlyScan; 
         private String lang; 
         private Integer logStoreDay; 
         private Integer ocrStatus; 
@@ -278,6 +291,7 @@ public class CreateDataLimitRequest extends Request {
             this.engineType = request.engineType;
             this.eventStatus = request.eventStatus;
             this.featureType = request.featureType;
+            this.instantlyScan = request.instantlyScan;
             this.lang = request.lang;
             this.logStoreDay = request.logStoreDay;
             this.ocrStatus = request.ocrStatus;
@@ -379,6 +393,15 @@ public class CreateDataLimitRequest extends Request {
         public Builder featureType(Integer featureType) {
             this.putQueryParameter("FeatureType", featureType);
             this.featureType = featureType;
+            return this;
+        }
+
+        /**
+         * InstantlyScan.
+         */
+        public Builder instantlyScan(Boolean instantlyScan) {
+            this.putQueryParameter("InstantlyScan", instantlyScan);
+            this.instantlyScan = instantlyScan;
             return this;
         }
 

@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.aliyun</groupId>
   <artifactId>alibabacloud-sddp20190103</artifactId>
-  <version>1.0.8</version>
+  <version>1.0.9</version>
   <packaging>jar</packaging>
   <name>alibabacloud-sddp20190103</name>
   <description>Alibaba Cloud Sddp (20190103) Async SDK for Java
