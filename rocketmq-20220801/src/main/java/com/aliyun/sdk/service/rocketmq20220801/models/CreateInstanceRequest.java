@@ -578,13 +578,57 @@ public class CreateInstanceRequest extends Request {
         } 
 
     }
+    public static class VSwitches extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("vSwitchId")
+        private String vSwitchId;
+
+        private VSwitches(Builder builder) {
+            this.vSwitchId = builder.vSwitchId;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static VSwitches create() {
+            return builder().build();
+        }
+
+        /**
+         * @return vSwitchId
+         */
+        public String getVSwitchId() {
+            return this.vSwitchId;
+        }
+
+        public static final class Builder {
+            private String vSwitchId; 
+
+            /**
+             * vSwitchId.
+             */
+            public Builder vSwitchId(String vSwitchId) {
+                this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            public VSwitches build() {
+                return new VSwitches(this);
+            } 
+
+        } 
+
+    }
     public static class VpcInfo extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("securityGroupIds")
         private String securityGroupIds;
 
         @com.aliyun.core.annotation.NameInMap("vSwitchId")
-        @com.aliyun.core.annotation.Validation(required = true)
+        @Deprecated
         private String vSwitchId;
+
+        @com.aliyun.core.annotation.NameInMap("vSwitches")
+        private java.util.List < VSwitches> vSwitches;
 
         @com.aliyun.core.annotation.NameInMap("vpcId")
         @com.aliyun.core.annotation.Validation(required = true)
@@ -593,6 +637,7 @@ public class CreateInstanceRequest extends Request {
         private VpcInfo(Builder builder) {
             this.securityGroupIds = builder.securityGroupIds;
             this.vSwitchId = builder.vSwitchId;
+            this.vSwitches = builder.vSwitches;
             this.vpcId = builder.vpcId;
         }
 
@@ -619,6 +664,13 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
+         * @return vSwitches
+         */
+        public java.util.List < VSwitches> getVSwitches() {
+            return this.vSwitches;
+        }
+
+        /**
          * @return vpcId
          */
         public String getVpcId() {
@@ -628,6 +680,7 @@ public class CreateInstanceRequest extends Request {
         public static final class Builder {
             private String securityGroupIds; 
             private String vSwitchId; 
+            private java.util.List < VSwitches> vSwitches; 
             private String vpcId; 
 
             /**
@@ -646,6 +699,14 @@ public class CreateInstanceRequest extends Request {
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
+                return this;
+            }
+
+            /**
+             * vSwitches.
+             */
+            public Builder vSwitches(java.util.List < VSwitches> vSwitches) {
+                this.vSwitches = vSwitches;
                 return this;
             }
 
