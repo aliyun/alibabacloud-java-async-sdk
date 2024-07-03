@@ -1,0 +1,134 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.sdk.service.searchengine20211025.models;
+
+import darabonba.core.RequestModel;
+import darabonba.core.TeaModel;
+import com.aliyun.sdk.gateway.pop.models.*;
+
+/**
+ * {@link ListAliasesResponseBody} extends {@link TeaModel}
+ *
+ * <p>ListAliasesResponseBody</p>
+ */
+public class ListAliasesResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("requestId")
+    private String requestId;
+
+    @com.aliyun.core.annotation.NameInMap("result")
+    private java.util.List < Result> result;
+
+    private ListAliasesResponseBody(Builder builder) {
+        this.requestId = builder.requestId;
+        this.result = builder.result;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
+
+    public static ListAliasesResponseBody create() {
+        return builder().build();
+    }
+
+    /**
+     * @return requestId
+     */
+    public String getRequestId() {
+        return this.requestId;
+    }
+
+    /**
+     * @return result
+     */
+    public java.util.List < Result> getResult() {
+        return this.result;
+    }
+
+    public static final class Builder {
+        private String requestId; 
+        private java.util.List < Result> result; 
+
+        /**
+         * id of request
+         */
+        public Builder requestId(String requestId) {
+            this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * List
+         */
+        public Builder result(java.util.List < Result> result) {
+            this.result = result;
+            return this;
+        }
+
+        public ListAliasesResponseBody build() {
+            return new ListAliasesResponseBody(this);
+        } 
+
+    } 
+
+    public static class Result extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("alias")
+        private String alias;
+
+        @com.aliyun.core.annotation.NameInMap("index")
+        private String index;
+
+        private Result(Builder builder) {
+            this.alias = builder.alias;
+            this.index = builder.index;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Result create() {
+            return builder().build();
+        }
+
+        /**
+         * @return alias
+         */
+        public String getAlias() {
+            return this.alias;
+        }
+
+        /**
+         * @return index
+         */
+        public String getIndex() {
+            return this.index;
+        }
+
+        public static final class Builder {
+            private String alias; 
+            private String index; 
+
+            /**
+             * alias.
+             */
+            public Builder alias(String alias) {
+                this.alias = alias;
+                return this;
+            }
+
+            /**
+             * index.
+             */
+            public Builder index(String index) {
+                this.index = index;
+                return this;
+            }
+
+            public Result build() {
+                return new Result(this);
+            } 
+
+        } 
+
+    }
+}

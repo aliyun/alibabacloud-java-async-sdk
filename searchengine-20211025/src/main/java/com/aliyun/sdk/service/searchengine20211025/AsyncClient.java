@@ -32,6 +32,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CloneSqlInstanceResponse> cloneSqlInstance(CloneSqlInstanceRequest request);
 
+    CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
+
     /**
       * ### Method
       * `POST`
@@ -85,6 +87,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteAdvanceConfigResponse> deleteAdvanceConfig(DeleteAdvanceConfigRequest request);
+
+    CompletableFuture<DeleteAliasResponse> deleteAlias(DeleteAliasRequest request);
 
     CompletableFuture<DeleteConfigDirResponse> deleteConfigDir(DeleteConfigDirRequest request);
 
@@ -266,6 +270,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListAdvanceConfigsResponse> listAdvanceConfigs(ListAdvanceConfigsRequest request);
 
+    CompletableFuture<ListAliasesResponse> listAliases(ListAliasesRequest request);
+
     /**
       * ### Method
       * GET
@@ -424,6 +430,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyAdvanceConfigFileResponse> modifyAdvanceConfigFile(ModifyAdvanceConfigFileRequest request);
+
+    CompletableFuture<ModifyAliasResponse> modifyAlias(ModifyAliasRequest request);
 
     /**
       * ### Method
