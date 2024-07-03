@@ -152,7 +152,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         } 
 
         /**
-         * The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
          */
         public Builder endTime(Long endTime) {
             this.putBodyParameter("EndTime", endTime);
@@ -170,7 +170,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The ID of the database instance.
+         * The database instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -182,8 +182,8 @@ public class DescribeSqlLogRecordsRequest extends Request {
          * The node ID.
          * <p>
          * 
-         * *   For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter is available only for Cluster Edition instances. By default, if this parameter is not specified, the information about the logs of the primary node is returned.
-         * *   Set this parameter to **polarx_cn** or **polarx_dn** if the node that you want to query belongs to a PolarDB-X 2.0 database instance. A value of polarx_cn indicates a compute node. A value of polarx_dn indicates a data node.
+         * *   For ApsaraDB RDS for MySQL instances and PolarDB for MySQL clusters, this parameter is valid only for instances of the Cluster Edition. If you do not specify this parameter, the log details of the primary node is queried by default.
+         * *   For PolarDB-X 2.0 instances, set this parameter to **polarx_cn** if the node is a compute node, or **polarx_dn** if the node is a data node.
          */
         public Builder nodeId(String nodeId) {
             this.putBodyParameter("NodeId", nodeId);
@@ -210,7 +210,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The role of the node of the PolarDB-X 2.0 database instance. Valid values:
+         * The role of the node of the PolarDB-X 2.0 instance. Valid values:
          * <p>
          * 
          * *   \*\*polarx_cn\*\*: compute node
@@ -223,7 +223,7 @@ public class DescribeSqlLogRecordsRequest extends Request {
         }
 
         /**
-         * The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.
+         * The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
          */
         public Builder startTime(Long startTime) {
             this.putBodyParameter("StartTime", startTime);
@@ -277,10 +277,10 @@ public class DescribeSqlLogRecordsRequest extends Request {
             private String value; 
 
             /**
-             * The name of the filter parameter.
+             * The filter parameter.
              * <p>
              * 
-             * >  For more information about the supported filter parameters and their valid values, see the following **supplement about the Key parameter**.
+             * >  For more information about the supported filter parameters and their valid values, see the **Supported parameters and values for Key** section of this topic.
              */
             public Builder key(String key) {
                 this.key = key;

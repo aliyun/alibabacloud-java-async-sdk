@@ -205,6 +205,9 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AccountName")
         private String accountName;
 
+        @com.aliyun.core.annotation.NameInMap("Collection")
+        private String collection;
+
         @com.aliyun.core.annotation.NameInMap("Consume")
         private Long consume;
 
@@ -300,6 +303,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
 
         private Queries(Builder builder) {
             this.accountName = builder.accountName;
+            this.collection = builder.collection;
             this.consume = builder.consume;
             this.cpuTime = builder.cpuTime;
             this.DBName = builder.DBName;
@@ -346,6 +350,13 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
          */
         public String getAccountName() {
             return this.accountName;
+        }
+
+        /**
+         * @return collection
+         */
+        public String getCollection() {
+            return this.collection;
         }
 
         /**
@@ -567,6 +578,7 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private String accountName; 
+            private String collection; 
             private Long consume; 
             private Long cpuTime; 
             private String DBName; 
@@ -604,6 +616,14 @@ public class DescribeSqlLogTaskResponseBody extends TeaModel {
              */
             public Builder accountName(String accountName) {
                 this.accountName = accountName;
+                return this;
+            }
+
+            /**
+             * Collection.
+             */
+            public Builder collection(String collection) {
+                this.collection = collection;
                 return this;
             }
 

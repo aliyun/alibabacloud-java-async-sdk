@@ -85,7 +85,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         private String success; 
 
         /**
-         * The response code.
+         * The HTTP status code that is returned.
          */
         public Builder code(String code) {
             this.code = code;
@@ -93,7 +93,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * The data that is returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -101,10 +101,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message.
+         * The message that is returned.
          * <p>
          * 
-         * >  If the request was successful, **Successful** is returned. If the request failed, error information such as an error code is returned.
+         * >  If the request is successful, **Successful** is returned. If the request fails, an error message that contains information such as an error code is returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -556,7 +556,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * This is a reserved parameter.
+             * A reserved parameter.
              */
             public Builder collection(String collection) {
                 this.collection = collection;
@@ -564,7 +564,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the query. Unit: milliseconds.
+             * The amount of time that is consumed to execute the SQL statement. Unit: millisecond.
              */
             public Builder consume(Long consume) {
                 this.consume = consume;
@@ -572,7 +572,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The CPU execution duration. Unit: microseconds.
+             * The CPU execution duration. Unit: microsecond.
              */
             public Builder cpuTime(Long cpuTime) {
                 this.cpuTime = cpuTime;
@@ -580,7 +580,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the database.
+             * The database name.
              */
             public Builder DBName(String DBName) {
                 this.DBName = DBName;
@@ -588,7 +588,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the query was performed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
+             * The time when the SQL statement was executed. The time follows the ISO 8601 standard in the `yyyy-MM-ddTHH:mm:ssZ` format. The time is displayed in UTC.
              */
             public Builder executeTime(String executeTime) {
                 this.executeTime = executeTime;
@@ -604,7 +604,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 database instance.
+             * The number of rows that are pulled by the compute nodes of the PolarDB-X 2.0 instance.
              */
             public Builder frows(Long frows) {
                 this.frows = frows;
@@ -620,7 +620,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The lock wait duration. Unit: milliseconds.
+             * The lock wait duration. Unit: millisecond.
              */
             public Builder lockTime(Long lockTime) {
                 this.lockTime = lockTime;
@@ -644,7 +644,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the query was performed. The value of this parameter is a UNIX timestamp. Unit: milliseconds.
+             * The timestamp generated when the SQL statement was executed. The value of this parameter is a UNIX timestamp. Unit: millisecond.
              */
             public Builder originTime(Long originTime) {
                 this.originTime = originTime;
@@ -652,7 +652,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The parallel queue time of the PolarDB for MySQL instance. Unit: milliseconds.
+             * The parallel queue time of the PolarDB for MySQL instance. Unit: millisecond.
              */
             public Builder parallelDegree(String parallelDegree) {
                 this.parallelDegree = parallelDegree;
@@ -660,7 +660,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The parallelism of the PolarDB for MySQL instance.
+             * The parallelism of the PolarDB for MySQL cluster.
              */
             public Builder parallelQueueTime(String parallelQueueTime) {
                 this.parallelQueueTime = parallelQueueTime;
@@ -676,7 +676,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of physical reads.
+             * The total number of physical reads.
              */
             public Builder physicRead(Long physicRead) {
                 this.physicRead = physicRead;
@@ -692,7 +692,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are returned.
+             * The number of rows returned by the SQL statement.
              */
             public Builder returnRows(Long returnRows) {
                 this.returnRows = returnRows;
@@ -700,7 +700,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 database instance.
+             * The total number of rows that are updated or returned by the compute nodes of the PolarDB-X 2.0 instance.
              */
             public Builder rows(Long rows) {
                 this.rows = rows;
@@ -708,7 +708,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of rows that are scanned.
+             * The number of scanned rows.
              */
             public Builder scanRows(Long scanRows) {
                 this.scanRows = scanRows;
@@ -716,7 +716,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of requests that are sent to the data nodes by the compute nodes of the PolarDB-X 2.0 database instance.
+             * The number of requests that are sent from the compute nodes to the data nodes of the PolarDB-X 2.0 instance.
              */
             public Builder scnt(Long scnt) {
                 this.scnt = scnt;
@@ -748,11 +748,11 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the query. Valid values:
+             * The execution status of the SQL statement.
              * <p>
              * 
-             * *   **0**: The query was successful.
-             * *   **1**: The query failed to be performed.
+             * *   **0**: The execution was successful.
+             * *   **1**: The execution failed.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -768,7 +768,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The trace ID of the PolarDB-X 2.0 database instance. The value is the execution ID of the SQL statement on the data nodes.
+             * The trace ID of the PolarDB-X 2.0 instance. The value is the execution ID of the SQL statement on the data node.
              */
             public Builder traceId(String traceId) {
                 this.traceId = traceId;
@@ -792,7 +792,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL instance. Valid values:
+             * Indicates whether the In-Memory Column Index (IMCI) feature is enabled for the PolarDB for MySQL cluster. Valid values:
              * <p>
              * 
              * *   **true**
@@ -812,7 +812,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of writes that are performed by the ApsaraDB RDS for SQL Server engine.
+             * The number of writes to the ApsaraDB RDS for SQL Server instance.
              */
             public Builder writes(Long writes) {
                 this.writes = writes;
@@ -954,7 +954,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             private Long totalRecords; 
 
             /**
-             * The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The end of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -965,10 +965,10 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
              * Indicates whether the task was complete. Valid values:
              * <p>
              * 
-             * *   **0**: The task failed.
-             * *   **1**: The task was complete.
+             * *   **0**: no
+             * *   **1**: yes
              * 
-             * >  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result by using the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.
+             * >  If the value of **Finish** is 0 and the value of **JobId** is returned, the request is an asynchronous request and the return result cannot be directly obtained. You must query the return result based on the value of **JobId**. Specify JobId as the key of **Filters** and the value of **JobId** as the value of Filters. Example: `Filters=[{"Key": "JobId", "Value": "******"}]`.
              */
             public Builder finish(String finish) {
                 this.finish = finish;
@@ -992,7 +992,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
+             * The beginning of the time range to query. This value is a UNIX timestamp. Unit: millisecond.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -1000,7 +1000,7 @@ public class DescribeSqlLogRecordsResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of entries returned.
+             * The total number of entries.
              */
             public Builder totalRecords(Long totalRecords) {
                 this.totalRecords = totalRecords;
