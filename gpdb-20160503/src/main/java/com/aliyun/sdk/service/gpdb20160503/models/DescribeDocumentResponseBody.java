@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDocumentResponseBody</p>
  */
 public class DescribeDocumentResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("ChunkFileUrl")
+    private String chunkFileUrl;
+
     @com.aliyun.core.annotation.NameInMap("DocsCount")
     private Integer docsCount;
 
@@ -32,11 +35,17 @@ public class DescribeDocumentResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
+    private String fileUrl;
+
     @com.aliyun.core.annotation.NameInMap("FileVersion")
     private Integer fileVersion;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
+
+    @com.aliyun.core.annotation.NameInMap("PlainChunkFileUrl")
+    private String plainChunkFileUrl;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
@@ -51,6 +60,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
     private String textSplitter;
 
     private DescribeDocumentResponseBody(Builder builder) {
+        this.chunkFileUrl = builder.chunkFileUrl;
         this.docsCount = builder.docsCount;
         this.documentLoader = builder.documentLoader;
         this.fileExt = builder.fileExt;
@@ -58,8 +68,10 @@ public class DescribeDocumentResponseBody extends TeaModel {
         this.fileMtime = builder.fileMtime;
         this.fileName = builder.fileName;
         this.fileSize = builder.fileSize;
+        this.fileUrl = builder.fileUrl;
         this.fileVersion = builder.fileVersion;
         this.message = builder.message;
+        this.plainChunkFileUrl = builder.plainChunkFileUrl;
         this.requestId = builder.requestId;
         this.source = builder.source;
         this.status = builder.status;
@@ -72,6 +84,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
 
     public static DescribeDocumentResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return chunkFileUrl
+     */
+    public String getChunkFileUrl() {
+        return this.chunkFileUrl;
     }
 
     /**
@@ -124,6 +143,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
 
     /**
+     * @return fileUrl
+     */
+    public String getFileUrl() {
+        return this.fileUrl;
+    }
+
+    /**
      * @return fileVersion
      */
     public Integer getFileVersion() {
@@ -135,6 +161,13 @@ public class DescribeDocumentResponseBody extends TeaModel {
      */
     public String getMessage() {
         return this.message;
+    }
+
+    /**
+     * @return plainChunkFileUrl
+     */
+    public String getPlainChunkFileUrl() {
+        return this.plainChunkFileUrl;
     }
 
     /**
@@ -166,6 +199,7 @@ public class DescribeDocumentResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String chunkFileUrl; 
         private Integer docsCount; 
         private String documentLoader; 
         private String fileExt; 
@@ -173,12 +207,22 @@ public class DescribeDocumentResponseBody extends TeaModel {
         private String fileMtime; 
         private String fileName; 
         private Long fileSize; 
+        private String fileUrl; 
         private Integer fileVersion; 
         private String message; 
+        private String plainChunkFileUrl; 
         private String requestId; 
         private String source; 
         private String status; 
         private String textSplitter; 
+
+        /**
+         * ChunkFileUrl.
+         */
+        public Builder chunkFileUrl(String chunkFileUrl) {
+            this.chunkFileUrl = chunkFileUrl;
+            return this;
+        }
 
         /**
          * DocsCount.
@@ -237,6 +281,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
         }
 
         /**
+         * FileUrl.
+         */
+        public Builder fileUrl(String fileUrl) {
+            this.fileUrl = fileUrl;
+            return this;
+        }
+
+        /**
          * FileVersion.
          */
         public Builder fileVersion(Integer fileVersion) {
@@ -249,6 +301,14 @@ public class DescribeDocumentResponseBody extends TeaModel {
          */
         public Builder message(String message) {
             this.message = message;
+            return this;
+        }
+
+        /**
+         * PlainChunkFileUrl.
+         */
+        public Builder plainChunkFileUrl(String plainChunkFileUrl) {
+            this.plainChunkFileUrl = plainChunkFileUrl;
             return this;
         }
 

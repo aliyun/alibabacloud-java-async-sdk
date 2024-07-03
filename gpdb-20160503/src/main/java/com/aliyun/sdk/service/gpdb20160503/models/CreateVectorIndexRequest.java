@@ -244,8 +244,6 @@ public class CreateVectorIndexRequest extends Request {
          * Specifies whether to use the memory mapping technology to create HNSW indexes. Valid values: 0 and 1. Default value: 0. We recommend that you set the value to 1 in scenarios that require upload speed but not data deletion.
          * <p>
          * 
-         * > 
-         * 
          * *   0: uses segmented paging storage to create indexes. This method uses the shared buffer of PostgreSQL for caching and supports the delete and update operations.
          * 
          * *   1: uses the memory mapping technology to create indexes. This method does not support the delete or update operation.
@@ -295,7 +293,14 @@ public class CreateVectorIndexRequest extends Request {
         }
 
         /**
-         * Distance Metrics。
+         * The method that is used to create vector indexes.Valid values:
+         * <p>
+         * 
+         * - l2: Euclidean distance.
+         * 
+         * - ip: inner product distance.
+         * 
+         * - cosine: cosine similarity.
          */
         public Builder metrics(String metrics) {
             this.putQueryParameter("Metrics", metrics);

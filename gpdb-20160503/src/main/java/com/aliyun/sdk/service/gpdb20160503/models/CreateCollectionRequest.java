@@ -355,9 +355,7 @@ public class CreateCollectionRequest extends Request {
          * The metadata of the vector data, which is a JSON string in the MAP format. The key specifies the field name, and the value specifies the data type.
          * <p>
          * 
-         * **
-         * 
-         * **Warning**Reserved fields such as id, vector, to_tsvector, and source cannot be used.
+         * ><warning>Reserved fields such as id, vector, to_tsvector, and source cannot be used.></warning>
          */
         public Builder metadata(String metadata) {
             this.putQueryParameter("Metadata", metadata);
