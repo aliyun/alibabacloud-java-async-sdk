@@ -180,7 +180,7 @@ public class ListAsyncTasksRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -189,7 +189,13 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * includePayload.
+         * Specifies whether to return input parameters of the asynchronous tasks. Valid values:
+         * <p>
+         * 
+         * *   true: returns the `invocationPayload` parameter in the response.
+         * *   false: does not return the `invocationPayload` parameter in the response.
+         * 
+         * >  The `invocationPayload` parameter indicates the input parameters of an asynchronous task.
          */
         public Builder includePayload(Boolean includePayload) {
             this.putQueryParameter("includePayload", includePayload);
@@ -198,7 +204,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * limit.
+         * The number of asynchronous tasks to return. Valid values: \[1,100]. Default value: 50.
          */
         public Builder limit(Integer limit) {
             this.putQueryParameter("limit", limit);
@@ -207,7 +213,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * nextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -216,7 +222,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * prefix.
+         * The ID prefix of asynchronous tasks. If this parameter is specified, a list of asynchronous tasks whose IDs match the prefix is returned.
          */
         public Builder prefix(String prefix) {
             this.putQueryParameter("prefix", prefix);
@@ -225,7 +231,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The function version or alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);
@@ -234,7 +240,11 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * sortOrderByTime.
+         * The order in which the returned asynchronous tasks are sorted.
+         * <p>
+         * 
+         * *   asc: in ascending order.
+         * *   desc: in descending order.
          */
         public Builder sortOrderByTime(String sortOrderByTime) {
             this.putQueryParameter("sortOrderByTime", sortOrderByTime);
@@ -243,7 +253,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * startedTimeBegin.
+         * The start time of the period in which the asynchronous tasks are launched.
          */
         public Builder startedTimeBegin(Long startedTimeBegin) {
             this.putQueryParameter("startedTimeBegin", startedTimeBegin);
@@ -252,7 +262,7 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * startedTimeEnd.
+         * The end time of the period in which the asynchronous tasks are launched.
          */
         public Builder startedTimeEnd(Long startedTimeEnd) {
             this.putQueryParameter("startedTimeEnd", startedTimeEnd);
@@ -261,7 +271,18 @@ public class ListAsyncTasksRequest extends Request {
         }
 
         /**
-         * status.
+         * The state of asynchronous tasks. The following items list the states of an asynchronous task:
+         * <p>
+         * 
+         * *   Enqueued: The asynchronous invocation is enqueued and is waiting to be executed.
+         * *   Succeeded: The invocation is successful.
+         * *   Failed: The invocation fails.
+         * *   Running: The invocation is being executed.
+         * *   Stopped: The invocation is terminated.
+         * *   Stopping: The invocation is being terminated.
+         * *   Invalid: The invocation is invalid and not executed due to specific reasons. For example, the function is deleted.
+         * *   Expired: The maximum validity period of messages is specified for asynchronous invocation. The invocation is discarded and not executed because the specified maximum validity period has elapsed.
+         * *   Retrying: The asynchronous invocation is being retried due to an execution error.
          */
         public Builder status(String status) {
             this.putQueryParameter("status", status);

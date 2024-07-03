@@ -83,7 +83,7 @@ public class StopAsyncTaskRequest extends Request {
         } 
 
         /**
-         * functionName.
+         * The function name.
          */
         public Builder functionName(String functionName) {
             this.putPathParameter("functionName", functionName);
@@ -92,7 +92,7 @@ public class StopAsyncTaskRequest extends Request {
         }
 
         /**
-         * taskId.
+         * The asynchronous task ID.
          */
         public Builder taskId(String taskId) {
             this.putPathParameter("taskId", taskId);
@@ -101,7 +101,7 @@ public class StopAsyncTaskRequest extends Request {
         }
 
         /**
-         * qualifier.
+         * The function version or alias.
          */
         public Builder qualifier(String qualifier) {
             this.putQueryParameter("qualifier", qualifier);

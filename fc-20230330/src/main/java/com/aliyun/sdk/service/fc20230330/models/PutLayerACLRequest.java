@@ -17,12 +17,18 @@ public class PutLayerACLRequest extends Request {
     private String layerName;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("acl")
+    private String acl;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("public")
+    @Deprecated
     private String _public;
 
     private PutLayerACLRequest(Builder builder) {
         super(builder);
         this.layerName = builder.layerName;
+        this.acl = builder.acl;
         this._public = builder._public;
     }
 
@@ -47,6 +53,13 @@ public class PutLayerACLRequest extends Request {
     }
 
     /**
+     * @return acl
+     */
+    public String getAcl() {
+        return this.acl;
+    }
+
+    /**
      * @return _public
      */
     public String get_public() {
@@ -55,6 +68,7 @@ public class PutLayerACLRequest extends Request {
 
     public static final class Builder extends Request.Builder<PutLayerACLRequest, Builder> {
         private String layerName; 
+        private String acl; 
         private String _public; 
 
         private Builder() {
@@ -64,6 +78,7 @@ public class PutLayerACLRequest extends Request {
         private Builder(PutLayerACLRequest request) {
             super(request);
             this.layerName = request.layerName;
+            this.acl = request.acl;
             this._public = request._public;
         } 
 
@@ -73,6 +88,15 @@ public class PutLayerACLRequest extends Request {
         public Builder layerName(String layerName) {
             this.putPathParameter("layerName", layerName);
             this.layerName = layerName;
+            return this;
+        }
+
+        /**
+         * acl.
+         */
+        public Builder acl(String acl) {
+            this.putQueryParameter("acl", acl);
+            this.acl = acl;
             return this;
         }
 
