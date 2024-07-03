@@ -14,6 +14,9 @@ public class GetModelVersionResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ApprovalStatus")
     private String approvalStatus;
 
+    @com.aliyun.core.annotation.NameInMap("CompressionSpec")
+    private java.util.Map < String, ? > compressionSpec;
+
     @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map < String, ? > evaluationSpec;
 
@@ -73,6 +76,7 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     private GetModelVersionResponseBody(Builder builder) {
         this.approvalStatus = builder.approvalStatus;
+        this.compressionSpec = builder.compressionSpec;
         this.evaluationSpec = builder.evaluationSpec;
         this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
@@ -107,6 +111,13 @@ public class GetModelVersionResponseBody extends TeaModel {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return compressionSpec
+     */
+    public java.util.Map < String, ? > getCompressionSpec() {
+        return this.compressionSpec;
     }
 
     /**
@@ -244,6 +255,7 @@ public class GetModelVersionResponseBody extends TeaModel {
 
     public static final class Builder {
         private String approvalStatus; 
+        private java.util.Map < String, ? > compressionSpec; 
         private java.util.Map < String, ? > evaluationSpec; 
         private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
@@ -269,6 +281,14 @@ public class GetModelVersionResponseBody extends TeaModel {
          */
         public Builder approvalStatus(String approvalStatus) {
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * CompressionSpec.
+         */
+        public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            this.compressionSpec = compressionSpec;
             return this;
         }
 

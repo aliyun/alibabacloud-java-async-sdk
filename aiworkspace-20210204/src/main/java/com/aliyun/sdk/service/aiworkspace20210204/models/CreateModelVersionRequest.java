@@ -21,6 +21,10 @@ public class CreateModelVersionRequest extends Request {
     private String approvalStatus;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CompressionSpec")
+    private java.util.Map < String, ? > compressionSpec;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EvaluationSpec")
     private java.util.Map < String, ? > evaluationSpec;
 
@@ -81,6 +85,7 @@ public class CreateModelVersionRequest extends Request {
         super(builder);
         this.modelId = builder.modelId;
         this.approvalStatus = builder.approvalStatus;
+        this.compressionSpec = builder.compressionSpec;
         this.evaluationSpec = builder.evaluationSpec;
         this.extraInfo = builder.extraInfo;
         this.formatType = builder.formatType;
@@ -122,6 +127,13 @@ public class CreateModelVersionRequest extends Request {
      */
     public String getApprovalStatus() {
         return this.approvalStatus;
+    }
+
+    /**
+     * @return compressionSpec
+     */
+    public java.util.Map < String, ? > getCompressionSpec() {
+        return this.compressionSpec;
     }
 
     /**
@@ -225,6 +237,7 @@ public class CreateModelVersionRequest extends Request {
     public static final class Builder extends Request.Builder<CreateModelVersionRequest, Builder> {
         private String modelId; 
         private String approvalStatus; 
+        private java.util.Map < String, ? > compressionSpec; 
         private java.util.Map < String, ? > evaluationSpec; 
         private java.util.Map < String, ? > extraInfo; 
         private String formatType; 
@@ -248,6 +261,7 @@ public class CreateModelVersionRequest extends Request {
             super(request);
             this.modelId = request.modelId;
             this.approvalStatus = request.approvalStatus;
+            this.compressionSpec = request.compressionSpec;
             this.evaluationSpec = request.evaluationSpec;
             this.extraInfo = request.extraInfo;
             this.formatType = request.formatType;
@@ -279,6 +293,15 @@ public class CreateModelVersionRequest extends Request {
         public Builder approvalStatus(String approvalStatus) {
             this.putBodyParameter("ApprovalStatus", approvalStatus);
             this.approvalStatus = approvalStatus;
+            return this;
+        }
+
+        /**
+         * CompressionSpec.
+         */
+        public Builder compressionSpec(java.util.Map < String, ? > compressionSpec) {
+            this.putBodyParameter("CompressionSpec", compressionSpec);
+            this.compressionSpec = compressionSpec;
             return this;
         }
 
