@@ -161,12 +161,12 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The expiration data. EOS executes a lifecycle rule for objects that were last updated before the expiration date.
+         * The expiration time. EOS executes a lifecycle rule for objects that were last updated before the expiration time.
          * <p>
          * 
-         * Specify the time that follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          * 
-         * > ExpirationDays and CreateBeforeDate are mutually exclusive.
+         * >  ExpirationDays and CreateBeforeDate are mutually exclusive.
          */
         public Builder createdBeforeDate(String createdBeforeDate) {
             this.putQueryParameter("CreatedBeforeDate", createdBeforeDate);
@@ -178,7 +178,7 @@ public class PutBucketLifecycleRequest extends Request {
          * The number of days from when the objects were last modified to when the lifecycle rule takes effect. The value must be a positive integer that is greater than 0.
          * <p>
          * 
-         * > ExpirationDays and CreateBeforeDate are mutually exclusive.
+         * >  ExpirationDays and CreateBeforeDate are mutually exclusive.
          */
         public Builder expirationDays(Long expirationDays) {
             this.putQueryParameter("ExpirationDays", expirationDays);
@@ -187,7 +187,7 @@ public class PutBucketLifecycleRequest extends Request {
         }
 
         /**
-         * The prefix of a rule. The prefix must be unique.
+         * The prefix of a object name. The prefix must be unique.
          * <p>
          * 
          * *   If you specify a prefix, the rule applies only to objects in the bucket that match the prefix.
@@ -204,7 +204,7 @@ public class PutBucketLifecycleRequest extends Request {
          * <p>
          * 
          * *   You do not need to configure this parameter when you create a rule. The system automatically generates a unique ID.
-         * *   When you update a rule, you need to specify the rule ID, and the rule must exist. Otherwise, an error occurs.
+         * *   When you update a rule, you need to specify this parameter. Make sure that the rule specified by RuleId exists. Otherwise, an error occurs.
          */
         public Builder ruleId(String ruleId) {
             this.putQueryParameter("RuleId", ruleId);
@@ -216,8 +216,8 @@ public class PutBucketLifecycleRequest extends Request {
          * The status of the rule. Valid values:
          * <p>
          * 
-         * *   **Enabled**: The rule is periodically executed.
-         * *   **Disabled**: The rule is ignored.
+         * *   **Enabled**
+         * *   **Disabled**
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

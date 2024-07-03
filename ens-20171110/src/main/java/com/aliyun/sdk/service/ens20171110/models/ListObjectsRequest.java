@@ -165,7 +165,7 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The position from which the list operation starts. The name of the object after which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be less than 1,024 bytes in length.
+         * The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than value of Marker are returned. The Marker parameter is used to list the returned objects by page, and its value must be smaller than 1,024 bytes in length.
          * <p>
          * 
          * Even if the value specified for Marker does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of Marker.
@@ -177,10 +177,7 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The maximum number of objects to return.
-         * <p>
-         * 
-         * Valid values: 0 to 1000. Default value: 100.
+         * The maximum number of objects to return. Valid values: 0 to 1000. Default value: 100.
          */
         public Builder maxKeys(Long maxKeys) {
             this.putQueryParameter("MaxKeys", maxKeys);
@@ -201,10 +198,7 @@ public class ListObjectsRequest extends Request {
         }
 
         /**
-         * The position from which the list operation starts. The name of the object after which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length.
-         * <p>
-         * 
-         * Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.
+         * The position from which the list operation starts. If this parameter is specified, objects whose names are alphabetically greater than the value of StartAfter are returned. The StartAfter parameter is used to list the returned objects by page, and its value must be less than 1,000 bytes in length. Even if the value specified for StartAfter does not exist in the list during a conditional query, the list starts from the object whose name is alphabetically greater than the value of StartAfter.
          */
         public Builder startAfter(String startAfter) {
             this.putQueryParameter("StartAfter", startAfter);

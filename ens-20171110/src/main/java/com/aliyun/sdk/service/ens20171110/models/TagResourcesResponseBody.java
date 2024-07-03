@@ -6,15 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReinitInstanceResponseBody} extends {@link TeaModel}
+ * {@link TagResourcesResponseBody} extends {@link TeaModel}
  *
- * <p>ReinitInstanceResponseBody</p>
+ * <p>TagResourcesResponseBody</p>
  */
-public class ReinitInstanceResponseBody extends TeaModel {
+public class TagResourcesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ReinitInstanceResponseBody(Builder builder) {
+    private TagResourcesResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -22,7 +22,7 @@ public class ReinitInstanceResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReinitInstanceResponseBody create() {
+    public static TagResourcesResponseBody create() {
         return builder().build();
     }
 
@@ -37,15 +37,15 @@ public class ReinitInstanceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The ID of the request.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public ReinitInstanceResponseBody build() {
-            return new ReinitInstanceResponseBody(this);
+        public TagResourcesResponseBody build() {
+            return new TagResourcesResponseBody(this);
         } 
 
     } 

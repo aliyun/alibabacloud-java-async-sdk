@@ -277,6 +277,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteVSwitchResponse> deleteVSwitch(DeleteVSwitchRequest request);
 
+    CompletableFuture<DeployInstanceSDGResponse> deployInstanceSDG(DeployInstanceSDGRequest request);
+
     CompletableFuture<DeploySDGResponse> deploySDG(DeploySDGRequest request);
 
     CompletableFuture<DescribeAICImagesResponse> describeAICImages(DescribeAICImagesRequest request);
@@ -410,7 +412,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeLoadBalancerAttributeResponse> describeLoadBalancerAttribute(DescribeLoadBalancerAttributeRequest request);
 
     /**
-      * > 
       * *   You can call this operation up to 100 times per second per account.
       * *   You can call this operation up to 10 times per second per user.
       *
@@ -484,6 +485,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeReservedResourceResponse> describeReservedResource(DescribeReservedResourceRequest request);
 
     CompletableFuture<DescribeResourceTimelineResponse> describeResourceTimeline(DescribeResourceTimelineRequest request);
+
+    CompletableFuture<DescribeSDGResponse> describeSDG(DescribeSDGRequest request);
 
     CompletableFuture<DescribeSDGDeploymentStatusResponse> describeSDGDeploymentStatus(DescribeSDGDeploymentStatusRequest request);
 
@@ -562,6 +565,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request);
 
+    CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
     CompletableFuture<ModifyEnsEipAddressAttributeResponse> modifyEnsEipAddressAttribute(ModifyEnsEipAddressAttributeRequest request);
 
     CompletableFuture<ModifyEpnInstanceResponse> modifyEpnInstance(ModifyEpnInstanceRequest request);
@@ -623,6 +628,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ModifyVSwitchAttributeResponse> modifyVSwitchAttribute(ModifyVSwitchAttributeRequest request);
 
+    CompletableFuture<PreloadRegionSDGResponse> preloadRegionSDG(PreloadRegionSDGRequest request);
+
     CompletableFuture<PushApplicationDataResponse> pushApplicationData(PushApplicationDataRequest request);
 
     CompletableFuture<PutBucketResponse> putBucket(PutBucketRequest request);
@@ -630,8 +637,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<PutBucketAclResponse> putBucketAcl(PutBucketAclRequest request);
 
     /**
-      * - You can configure up to 1000 rules. 
-      * - If an object meets multiple rules, the rule that has the earliest expiration time prevails.
+      * *   You can configure up to 1,000 rules.
+      * *   If an object meets multiple rules, the rule that has the earliest expiration time prevails.
       *
      */
     CompletableFuture<PutBucketLifecycleResponse> putBucketLifecycle(PutBucketLifecycleRequest request);
@@ -678,6 +685,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<RemoveBackendServersResponse> removeBackendServers(RemoveBackendServersRequest request);
+
+    CompletableFuture<RemoveInstanceSDGResponse> removeInstanceSDG(RemoveInstanceSDGRequest request);
 
     CompletableFuture<RemovePublicIpsFromEpnInstanceResponse> removePublicIpsFromEpnInstance(RemovePublicIpsFromEpnInstanceRequest request);
 
@@ -818,11 +827,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopSnatIpForSnatEntryResponse> stopSnatIpForSnatEntry(StopSnatIpForSnatEntryRequest request);
 
+    CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
+
     CompletableFuture<UnAssociateEnsEipAddressResponse> unAssociateEnsEipAddress(UnAssociateEnsEipAddressRequest request);
 
     CompletableFuture<UnassignPrivateIpAddressesResponse> unassignPrivateIpAddresses(UnassignPrivateIpAddressesRequest request);
 
     CompletableFuture<UnassociateNetworkAclResponse> unassociateNetworkAcl(UnassociateNetworkAclRequest request);
+
+    CompletableFuture<UnloadRegionSDGResponse> unloadRegionSDG(UnloadRegionSDGRequest request);
+
+    CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     CompletableFuture<UpdateEnsSaleControlResponse> updateEnsSaleControl(UpdateEnsSaleControlRequest request);
 

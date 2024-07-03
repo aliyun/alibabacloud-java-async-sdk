@@ -44,6 +44,10 @@ public class DescribeInstancesRequest extends Request {
     private String instanceResourceType;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceType")
+    private String instanceType;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IntranetIp")
     private String intranetIp;
 
@@ -93,6 +97,7 @@ public class DescribeInstancesRequest extends Request {
         this.instanceIds = builder.instanceIds;
         this.instanceName = builder.instanceName;
         this.instanceResourceType = builder.instanceResourceType;
+        this.instanceType = builder.instanceType;
         this.intranetIp = builder.intranetIp;
         this.networkId = builder.networkId;
         this.orderByParams = builder.orderByParams;
@@ -175,6 +180,13 @@ public class DescribeInstancesRequest extends Request {
     }
 
     /**
+     * @return instanceType
+     */
+    public String getInstanceType() {
+        return this.instanceType;
+    }
+
+    /**
      * @return intranetIp
      */
     public String getIntranetIp() {
@@ -253,6 +265,7 @@ public class DescribeInstancesRequest extends Request {
         private String instanceIds; 
         private String instanceName; 
         private String instanceResourceType; 
+        private String instanceType; 
         private String intranetIp; 
         private String networkId; 
         private String orderByParams; 
@@ -278,6 +291,7 @@ public class DescribeInstancesRequest extends Request {
             this.instanceIds = request.instanceIds;
             this.instanceName = request.instanceName;
             this.instanceResourceType = request.instanceResourceType;
+            this.instanceType = request.instanceType;
             this.intranetIp = request.intranetIp;
             this.networkId = request.networkId;
             this.orderByParams = request.orderByParams;
@@ -369,6 +383,15 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
+         * The instance type.
+         */
+        public Builder instanceType(String instanceType) {
+            this.putQueryParameter("InstanceType", instanceType);
+            this.instanceType = instanceType;
+            return this;
+        }
+
+        /**
          * The internal IP address of the instance.
          */
         public Builder intranetIp(String intranetIp) {
@@ -399,7 +422,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page **1**.
+         * The page number. Pages start from page **1**.
          * <p>
          * 
          * Default value: **1**.
@@ -455,7 +478,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that are added to the resource.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "Tags", "json");

@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteSDGResponseBody} extends {@link TeaModel}
+ * {@link DeployInstanceSDGResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteSDGResponseBody</p>
+ * <p>DeployInstanceSDGResponseBody</p>
  */
-public class DeleteSDGResponseBody extends TeaModel {
+public class DeployInstanceSDGResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteSDGResponseBody(Builder builder) {
+    private DeployInstanceSDGResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -26,7 +26,7 @@ public class DeleteSDGResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteSDGResponseBody create() {
+    public static DeployInstanceSDGResponseBody create() {
         return builder().build();
     }
 
@@ -57,70 +57,29 @@ public class DeleteSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteSDGResponseBody build() {
-            return new DeleteSDGResponseBody(this);
+        public DeployInstanceSDGResponseBody build() {
+            return new DeployInstanceSDGResponseBody(this);
         } 
 
     } 
 
-    public static class Item extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SdgId")
-        private String sdgId;
-
-        private Item(Builder builder) {
-            this.sdgId = builder.sdgId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Item create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sdgId
-         */
-        public String getSdgId() {
-            return this.sdgId;
-        }
-
-        public static final class Builder {
-            private String sdgId; 
-
-            /**
-             * SdgId.
-             */
-            public Builder sdgId(String sdgId) {
-                this.sdgId = sdgId;
-                return this;
-            }
-
-            public Item build() {
-                return new Item(this);
-            } 
-
-        } 
-
-    }
     public static class FailedItems extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ErrMessage")
         private String errMessage;
 
-        @com.aliyun.core.annotation.NameInMap("Item")
-        private Item item;
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
 
         private FailedItems(Builder builder) {
             this.errMessage = builder.errMessage;
-            this.item = builder.item;
+            this.instanceId = builder.instanceId;
         }
 
         public static Builder builder() {
@@ -139,15 +98,15 @@ public class DeleteSDGResponseBody extends TeaModel {
         }
 
         /**
-         * @return item
+         * @return instanceId
          */
-        public Item getItem() {
-            return this.item;
+        public String getInstanceId() {
+            return this.instanceId;
         }
 
         public static final class Builder {
             private String errMessage; 
-            private Item item; 
+            private String instanceId; 
 
             /**
              * ErrMessage.
@@ -158,10 +117,10 @@ public class DeleteSDGResponseBody extends TeaModel {
             }
 
             /**
-             * Item.
+             * InstanceId.
              */
-            public Builder item(Item item) {
-                this.item = item;
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
                 return this;
             }
 

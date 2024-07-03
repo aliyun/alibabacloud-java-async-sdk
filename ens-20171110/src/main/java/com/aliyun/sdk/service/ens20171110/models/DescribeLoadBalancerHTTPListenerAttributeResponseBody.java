@@ -74,6 +74,9 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
     @com.aliyun.core.annotation.NameInMap("UnhealthyThreshold")
     private Integer unhealthyThreshold;
 
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor")
+    private String xForwardedFor;
+
     private DescribeLoadBalancerHTTPListenerAttributeResponseBody(Builder builder) {
         this.bandwidth = builder.bandwidth;
         this.description = builder.description;
@@ -96,6 +99,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         this.serverCertificateId = builder.serverCertificateId;
         this.status = builder.status;
         this.unhealthyThreshold = builder.unhealthyThreshold;
+        this.xForwardedFor = builder.xForwardedFor;
     }
 
     public static Builder builder() {
@@ -253,6 +257,13 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         return this.unhealthyThreshold;
     }
 
+    /**
+     * @return xForwardedFor
+     */
+    public String getXForwardedFor() {
+        return this.xForwardedFor;
+    }
+
     public static final class Builder {
         private Integer bandwidth; 
         private String description; 
@@ -275,6 +286,7 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
         private String serverCertificateId; 
         private String status; 
         private Integer unhealthyThreshold; 
+        private String xForwardedFor; 
 
         /**
          * The maximum bandwidth of the EIP.
@@ -391,11 +403,8 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * *   Valid values: **1** to **300**.
          * *   Unit: seconds.
          * 
-         * > 
-         * 
-         * *   This parameter is returned only if you set HealthCheck to on.
-         * 
-         * *   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
+         * >*   This parameter is returned only if you set HealthCheck to on.
+         * >*   If the value of the HealthCheckTimeout parameter is smaller than the value of the HealthCheckInterval parameter, the timeout period specified by the HealthCheckTimeout parameter becomes invalid and the value of the HealthCheckInterval parameter is used as the timeout period.
          */
         public Builder healthCheckTimeout(Integer healthCheckTimeout) {
             this.healthCheckTimeout = healthCheckTimeout;
@@ -406,11 +415,8 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          * The Uniform Resource Identifier (URI) that is used for health checks. The URI must be **1** to **80** characters in length.
          * <p>
          * 
-         * > 
-         * 
-         * *   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
-         * 
-         * *   This parameter is returned only if you set HealthCheck to on.
+         * >*   The URL must start with a forward slash (`/`) and contain characters other than forward slashes (`/`).
+         * >*   This parameter is returned only if you set HealthCheck to on.
          */
         public Builder healthCheckURI(String healthCheckURI) {
             this.healthCheckURI = healthCheckURI;
@@ -525,6 +531,18 @@ public class DescribeLoadBalancerHTTPListenerAttributeResponseBody extends TeaMo
          */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.unhealthyThreshold = unhealthyThreshold;
+            return this;
+        }
+
+        /**
+         * Specifies whether to use the X-Forwarded-For header to obtain the real IP address of the client. Valid values:
+         * <p>
+         * 
+         * *   **on**
+         * *   **off** (default)
+         */
+        public Builder xForwardedFor(String xForwardedFor) {
+            this.xForwardedFor = xForwardedFor;
             return this;
         }
 

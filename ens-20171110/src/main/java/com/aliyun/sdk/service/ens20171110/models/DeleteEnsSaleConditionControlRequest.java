@@ -13,13 +13,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
 public class DeleteEnsSaleConditionControlRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("AliUidAccount")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String aliUidAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("CommodityCode")
     @com.aliyun.core.annotation.Validation(required = true)
     private String commodityCode;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomAccount")
+    private String customAccount;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SaleControls")
@@ -30,6 +33,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         super(builder);
         this.aliUidAccount = builder.aliUidAccount;
         this.commodityCode = builder.commodityCode;
+        this.customAccount = builder.customAccount;
         this.saleControls = builder.saleControls;
     }
 
@@ -61,6 +65,13 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
     }
 
     /**
+     * @return customAccount
+     */
+    public String getCustomAccount() {
+        return this.customAccount;
+    }
+
+    /**
      * @return saleControls
      */
     public java.util.List < SaleControls> getSaleControls() {
@@ -70,6 +81,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
     public static final class Builder extends Request.Builder<DeleteEnsSaleConditionControlRequest, Builder> {
         private String aliUidAccount; 
         private String commodityCode; 
+        private String customAccount; 
         private java.util.List < SaleControls> saleControls; 
 
         private Builder() {
@@ -80,6 +92,7 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
             super(request);
             this.aliUidAccount = request.aliUidAccount;
             this.commodityCode = request.commodityCode;
+            this.customAccount = request.customAccount;
             this.saleControls = request.saleControls;
         } 
 
@@ -98,6 +111,15 @@ public class DeleteEnsSaleConditionControlRequest extends Request {
         public Builder commodityCode(String commodityCode) {
             this.putQueryParameter("CommodityCode", commodityCode);
             this.commodityCode = commodityCode;
+            return this;
+        }
+
+        /**
+         * CustomAccount.
+         */
+        public Builder customAccount(String customAccount) {
+            this.putQueryParameter("CustomAccount", customAccount);
+            this.customAccount = customAccount;
             return this;
         }
 

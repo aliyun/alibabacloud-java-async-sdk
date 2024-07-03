@@ -128,7 +128,7 @@ public class DescribeApplicationRequest extends Request {
         }
 
         /**
-         * The region level by which edge resources of the application are collected. The value must be of the enumerated data type. Valid values:
+         * The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:
          * <p>
          * 
          * *   National: Chinese mainland
@@ -155,7 +155,7 @@ public class DescribeApplicationRequest extends Request {
         }
 
         /**
-         * ResourceSelector.
+         * The resource filter.
          */
         public Builder resourceSelector(String resourceSelector) {
             this.putQueryParameter("ResourceSelector", resourceSelector);

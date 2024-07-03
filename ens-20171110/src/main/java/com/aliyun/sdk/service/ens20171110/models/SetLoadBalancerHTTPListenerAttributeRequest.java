@@ -87,6 +87,10 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
     @com.aliyun.core.annotation.Validation(maximum = 10, minimum = 2)
     private Integer unhealthyThreshold;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("XForwardedFor")
+    private String xForwardedFor;
+
     private SetLoadBalancerHTTPListenerAttributeRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
@@ -105,6 +109,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         this.requestTimeout = builder.requestTimeout;
         this.scheduler = builder.scheduler;
         this.unhealthyThreshold = builder.unhealthyThreshold;
+        this.xForwardedFor = builder.xForwardedFor;
     }
 
     public static Builder builder() {
@@ -232,6 +237,13 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         return this.unhealthyThreshold;
     }
 
+    /**
+     * @return xForwardedFor
+     */
+    public String getXForwardedFor() {
+        return this.xForwardedFor;
+    }
+
     public static final class Builder extends Request.Builder<SetLoadBalancerHTTPListenerAttributeRequest, Builder> {
         private String description; 
         private String healthCheck; 
@@ -249,6 +261,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         private Integer requestTimeout; 
         private String scheduler; 
         private Integer unhealthyThreshold; 
+        private String xForwardedFor; 
 
         private Builder() {
             super();
@@ -272,6 +285,7 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
             this.requestTimeout = request.requestTimeout;
             this.scheduler = request.scheduler;
             this.unhealthyThreshold = request.unhealthyThreshold;
+            this.xForwardedFor = request.xForwardedFor;
         } 
 
         /**
@@ -483,6 +497,15 @@ public class SetLoadBalancerHTTPListenerAttributeRequest extends Request {
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             this.putQueryParameter("UnhealthyThreshold", unhealthyThreshold);
             this.unhealthyThreshold = unhealthyThreshold;
+            return this;
+        }
+
+        /**
+         * XForwardedFor.
+         */
+        public Builder xForwardedFor(String xForwardedFor) {
+            this.putQueryParameter("XForwardedFor", xForwardedFor);
+            this.xForwardedFor = xForwardedFor;
             return this;
         }
 

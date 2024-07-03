@@ -314,7 +314,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DiskSize.
+             * The size of the disk. Unit: GiB.
              */
             public Builder diskSize(Integer diskSize) {
                 this.diskSize = diskSize;
@@ -574,7 +574,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the vSwitch.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -1168,7 +1168,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * TagKey.
+             * The tag key.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -1176,7 +1176,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TagValue.
+             * The tag value.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;
@@ -1582,7 +1582,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             private InstanceTags tags; 
 
             /**
-             * AutoReleaseTime.
+             * The automatic release time of the instance.
              */
             public Builder autoReleaseTime(String autoReleaseTime) {
                 this.autoReleaseTime = autoReleaseTime;
@@ -1643,7 +1643,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
              * 
              * *   The hostname cannot start or end with a period (.) or hyphen (-). It cannot contain consecutive periods (.) or hyphens (-).
              * *   For a Windows instance, the hostname must be 2 to 15 characters in length and can contain letters, digits, and hyphens (-). The hostname cannot contain periods (.) or contain only digits.
-             * *   For other operating systems: The hostname must be 2 to 64 characters in length and can contain letters, digits, and hyphens (-). It can be separated by periods (.).
+             * *   For an instance that runs another operating system such as Linux, the hostname must be 2 to 64 characters in length. You can use periods (.) to separate the hostname into multiple segments. Each segment can contain letters, digits, and hyphens (-).
              */
             public Builder hostName(String hostName) {
                 this.hostName = hostName;
@@ -1675,7 +1675,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the virtual private cloud (VPC).
+             * The name of the instance.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -1683,7 +1683,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid values:
+             * The category of the instance. Valid values:
              * <p>
              * 
              * *   EnsInstance: ENS instances that you purchase.
@@ -1794,7 +1794,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SpotStrategy.
+             * The bidding policy of the preemptible instance.
              */
             public Builder spotStrategy(String spotStrategy) {
                 this.spotStrategy = spotStrategy;
@@ -1823,7 +1823,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags of the instance.
              */
             public Builder tags(InstanceTags tags) {
                 this.tags = tags;

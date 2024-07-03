@@ -25,6 +25,10 @@ public class PutBucketRequest extends Request {
     private String comment;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DispatchScope")
+    private String dispatchScope;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("EnsRegionId")
     private String ensRegionId;
 
@@ -37,6 +41,7 @@ public class PutBucketRequest extends Request {
         this.bucketAcl = builder.bucketAcl;
         this.bucketName = builder.bucketName;
         this.comment = builder.comment;
+        this.dispatchScope = builder.dispatchScope;
         this.ensRegionId = builder.ensRegionId;
         this.logicalBucketType = builder.logicalBucketType;
     }
@@ -76,6 +81,13 @@ public class PutBucketRequest extends Request {
     }
 
     /**
+     * @return dispatchScope
+     */
+    public String getDispatchScope() {
+        return this.dispatchScope;
+    }
+
+    /**
      * @return ensRegionId
      */
     public String getEnsRegionId() {
@@ -93,6 +105,7 @@ public class PutBucketRequest extends Request {
         private String bucketAcl; 
         private String bucketName; 
         private String comment; 
+        private String dispatchScope; 
         private String ensRegionId; 
         private String logicalBucketType; 
 
@@ -105,6 +118,7 @@ public class PutBucketRequest extends Request {
             this.bucketAcl = request.bucketAcl;
             this.bucketName = request.bucketName;
             this.comment = request.comment;
+            this.dispatchScope = request.dispatchScope;
             this.ensRegionId = request.ensRegionId;
             this.logicalBucketType = request.logicalBucketType;
         } 
@@ -124,10 +138,7 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * The name of the bucket.
-         * <p>
-         * 
-         * This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
+         * The name of the bucket. This parameter can contain 3 to 50 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot start or end with a hyphen (-).
          */
         public Builder bucketName(String bucketName) {
             this.putBodyParameter("BucketName", bucketName);
@@ -141,6 +152,15 @@ public class PutBucketRequest extends Request {
         public Builder comment(String comment) {
             this.putBodyParameter("Comment", comment);
             this.comment = comment;
+            return this;
+        }
+
+        /**
+         * DispatchScope.
+         */
+        public Builder dispatchScope(String dispatchScope) {
+            this.putBodyParameter("DispatchScope", dispatchScope);
+            this.dispatchScope = dispatchScope;
             return this;
         }
 

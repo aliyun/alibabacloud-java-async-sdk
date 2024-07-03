@@ -57,7 +57,7 @@ public class UpgradeApplicationResponseBody extends TeaModel {
         }
 
         /**
-         * TaskId.
+         * The task ID. You can use the task ID to query the upgrade progress or status.
          */
         public Builder taskId(String taskId) {
             this.taskId = taskId;

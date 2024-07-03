@@ -6,18 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DeleteSDGResponseBody} extends {@link TeaModel}
+ * {@link PreloadRegionSDGResponseBody} extends {@link TeaModel}
  *
- * <p>DeleteSDGResponseBody</p>
+ * <p>PreloadRegionSDGResponseBody</p>
  */
-public class DeleteSDGResponseBody extends TeaModel {
+public class PreloadRegionSDGResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private DeleteSDGResponseBody(Builder builder) {
+    private PreloadRegionSDGResponseBody(Builder builder) {
         this.data = builder.data;
         this.requestId = builder.requestId;
     }
@@ -26,7 +26,7 @@ public class DeleteSDGResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static DeleteSDGResponseBody create() {
+    public static PreloadRegionSDGResponseBody create() {
         return builder().build();
     }
 
@@ -57,70 +57,29 @@ public class DeleteSDGResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
             return this;
         }
 
-        public DeleteSDGResponseBody build() {
-            return new DeleteSDGResponseBody(this);
+        public PreloadRegionSDGResponseBody build() {
+            return new PreloadRegionSDGResponseBody(this);
         } 
 
     } 
 
-    public static class Item extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("SdgId")
-        private String sdgId;
-
-        private Item(Builder builder) {
-            this.sdgId = builder.sdgId;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Item create() {
-            return builder().build();
-        }
-
-        /**
-         * @return sdgId
-         */
-        public String getSdgId() {
-            return this.sdgId;
-        }
-
-        public static final class Builder {
-            private String sdgId; 
-
-            /**
-             * SdgId.
-             */
-            public Builder sdgId(String sdgId) {
-                this.sdgId = sdgId;
-                return this;
-            }
-
-            public Item build() {
-                return new Item(this);
-            } 
-
-        } 
-
-    }
     public static class FailedItems extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("ErrMessage")
-        private String errMessage;
+        @com.aliyun.core.annotation.NameInMap("DestinationRegionId")
+        private String destinationRegionId;
 
-        @com.aliyun.core.annotation.NameInMap("Item")
-        private Item item;
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
+        private String errorMessage;
 
         private FailedItems(Builder builder) {
-            this.errMessage = builder.errMessage;
-            this.item = builder.item;
+            this.destinationRegionId = builder.destinationRegionId;
+            this.errorMessage = builder.errorMessage;
         }
 
         public static Builder builder() {
@@ -132,36 +91,36 @@ public class DeleteSDGResponseBody extends TeaModel {
         }
 
         /**
-         * @return errMessage
+         * @return destinationRegionId
          */
-        public String getErrMessage() {
-            return this.errMessage;
+        public String getDestinationRegionId() {
+            return this.destinationRegionId;
         }
 
         /**
-         * @return item
+         * @return errorMessage
          */
-        public Item getItem() {
-            return this.item;
+        public String getErrorMessage() {
+            return this.errorMessage;
         }
 
         public static final class Builder {
-            private String errMessage; 
-            private Item item; 
+            private String destinationRegionId; 
+            private String errorMessage; 
 
             /**
-             * ErrMessage.
+             * DestinationRegionId.
              */
-            public Builder errMessage(String errMessage) {
-                this.errMessage = errMessage;
+            public Builder destinationRegionId(String destinationRegionId) {
+                this.destinationRegionId = destinationRegionId;
                 return this;
             }
 
             /**
-             * Item.
+             * ErrorMessage.
              */
-            public Builder item(Item item) {
-                this.item = item;
+            public Builder errorMessage(String errorMessage) {
+                this.errorMessage = errorMessage;
                 return this;
             }
 

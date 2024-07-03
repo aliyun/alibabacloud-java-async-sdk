@@ -6,35 +6,36 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListBucketsRequest} extends {@link RequestModel}
+ * {@link DescribeSDGRequest} extends {@link RequestModel}
  *
- * <p>ListBucketsRequest</p>
+ * <p>DescribeSDGRequest</p>
  */
-public class ListBucketsRequest extends Request {
+public class DescribeSDGRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageNumber")
-    private String pageNumber;
+    private Integer pageNumber;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PageSize")
-    private String pageSize;
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
+    private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Prefix")
-    private String prefix;
+    @com.aliyun.core.annotation.NameInMap("SDGIds")
+    private java.util.List < String > SDGIds;
 
-    private ListBucketsRequest(Builder builder) {
+    private DescribeSDGRequest(Builder builder) {
         super(builder);
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
-        this.prefix = builder.prefix;
+        this.SDGIds = builder.SDGIds;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ListBucketsRequest create() {
+    public static DescribeSDGRequest create() {
         return builder().build();
     }
 
@@ -46,70 +47,71 @@ public class ListBucketsRequest extends Request {
     /**
      * @return pageNumber
      */
-    public String getPageNumber() {
+    public Integer getPageNumber() {
         return this.pageNumber;
     }
 
     /**
      * @return pageSize
      */
-    public String getPageSize() {
+    public Integer getPageSize() {
         return this.pageSize;
     }
 
     /**
-     * @return prefix
+     * @return SDGIds
      */
-    public String getPrefix() {
-        return this.prefix;
+    public java.util.List < String > getSDGIds() {
+        return this.SDGIds;
     }
 
-    public static final class Builder extends Request.Builder<ListBucketsRequest, Builder> {
-        private String pageNumber; 
-        private String pageSize; 
-        private String prefix; 
+    public static final class Builder extends Request.Builder<DescribeSDGRequest, Builder> {
+        private Integer pageNumber; 
+        private Integer pageSize; 
+        private java.util.List < String > SDGIds; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ListBucketsRequest request) {
+        private Builder(DescribeSDGRequest request) {
             super(request);
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
-            this.prefix = request.prefix;
+            this.SDGIds = request.SDGIds;
         } 
 
         /**
-         * The page number. Pages start from page 1.
+         * PageNumber.
          */
-        public Builder pageNumber(String pageNumber) {
+        public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
             this.pageNumber = pageNumber;
             return this;
         }
 
         /**
-         * The maximum number of returned buckets. You can leave this parameter empty. The default value is 10. The value cannot be greater than 100.
+         * PageSize.
          */
-        public Builder pageSize(String pageSize) {
+        public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
             return this;
         }
 
         /**
-         * The prefix that returned bucket names must contain. If this parameter is not specified, prefix information will not be used as a filter.
+         * SDGIds.
          */
-        public Builder prefix(String prefix) {
-            this.putQueryParameter("Prefix", prefix);
-            this.prefix = prefix;
+        public Builder SDGIds(java.util.List < String > SDGIds) {
+            String SDGIdsShrink = shrink(SDGIds, "SDGIds", "json");
+            this.putQueryParameter("SDGIds", SDGIdsShrink);
+            this.SDGIds = SDGIds;
             return this;
         }
 
         @Override
-        public ListBucketsRequest build() {
-            return new ListBucketsRequest(this);
+        public DescribeSDGRequest build() {
+            return new DescribeSDGRequest(this);
         } 
 
     } 

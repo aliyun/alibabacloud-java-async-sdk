@@ -190,6 +190,11 @@ public class ListBucketsResponseBody extends TeaModel {
 
             /**
              * The access control list (ACL) of the bucket.
+             * <p>
+             * 
+             * *   **public-read-write**
+             * *   **public-read**
+             * *   **private** (default)
              */
             public Builder bucketAcl(String bucketAcl) {
                 this.bucketAcl = bucketAcl;
@@ -213,7 +218,7 @@ public class ListBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bucket was created. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The time when the bucket was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -229,7 +234,7 @@ public class ListBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * Single-node storage. Set the value to sink.
+             * The type of the single-node storage. Set the value to sink.
              */
             public Builder logicalBucketType(String logicalBucketType) {
                 this.logicalBucketType = logicalBucketType;
@@ -237,7 +242,7 @@ public class ListBucketsResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the bucket was modified. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+             * The time when the bucket was modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
