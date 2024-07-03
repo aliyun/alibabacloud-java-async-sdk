@@ -107,6 +107,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListIdpDepartmentsResponse> listIdpDepartments(ListIdpDepartmentsRequest request);
 
+    CompletableFuture<ListNacUserCertResponse> listNacUserCert(ListNacUserCertRequest request);
+
     CompletableFuture<ListPolicesForPrivateAccessApplicationResponse> listPolicesForPrivateAccessApplication(ListPolicesForPrivateAccessApplicationRequest request);
 
     CompletableFuture<ListPolicesForPrivateAccessTagResponse> listPolicesForPrivateAccessTag(ListPolicesForPrivateAccessTagRequest request);
@@ -160,6 +162,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateExcessiveDeviceRegistrationApplicationsStatusResponse> updateExcessiveDeviceRegistrationApplicationsStatus(UpdateExcessiveDeviceRegistrationApplicationsStatusRequest request);
 
     CompletableFuture<UpdateIdpDepartmentResponse> updateIdpDepartment(UpdateIdpDepartmentRequest request);
+
+    CompletableFuture<UpdateNacUserCertStatusResponse> updateNacUserCertStatus(UpdateNacUserCertStatusRequest request);
 
     CompletableFuture<UpdatePrivateAccessApplicationResponse> updatePrivateAccessApplication(UpdatePrivateAccessApplicationRequest request);
 
