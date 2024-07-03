@@ -139,7 +139,7 @@ public class ExitStandbyRequest extends Request {
         } 
 
         /**
-         * Specifies whether to asynchronously move the ECS instance out of the Standby state. Valid values:
+         * Specifies whether to remove the instance from the Standby state in an asynchronous manner. Valid values:
          * <p>
          * 
          * *   true
@@ -154,10 +154,10 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that the value is unique among different requests.
+         * The client token that is used to ensure the idempotence of the request.
          * <p>
          * 
-         * The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [How to ensure idempotence](~~25965~~).
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -166,7 +166,7 @@ public class ExitStandbyRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances. The value of this parameter can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
+         * The IDs of the ECS instances. The value can be a JSON array that consists of up to 20 instance IDs. Separate multiple instance IDs with commas (,).
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

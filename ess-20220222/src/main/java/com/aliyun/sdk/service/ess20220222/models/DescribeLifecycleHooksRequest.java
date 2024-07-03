@@ -165,7 +165,7 @@ public class DescribeLifecycleHooksRequest extends Request {
         } 
 
         /**
-         * The ID of the lifecycle hook.
+         * The IDs of the lifecycle hooks that you want to query.
          */
         public Builder lifecycleHookIds(java.util.List < String > lifecycleHookIds) {
             this.putQueryParameter("LifecycleHookIds", lifecycleHookIds);

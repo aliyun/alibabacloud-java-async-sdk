@@ -144,7 +144,7 @@ public class ChangeResourceGroupRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID of the scaling group.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -195,7 +195,10 @@ public class DetachInstancesRequest extends Request {
         } 
 
         /**
-         * 保证请求幂等性。从您的客户端生成一个参数值，确保不同请求间该参数值唯一。只支持ASCII字符，且不能超过64个字符。更多信息，请参见[如何保证幂等性](~~25965~~)。
+         * The client token that is used to ensure the idempotence of the request.
+         * <p>
+         * 
+         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see [Ensure idempotence](~~25965~~).
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -219,10 +222,12 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to remove the instances from the default server group and vServer groups of the Classic Load Balancer (CLB) instance that is associated with the scaling group, and whether to remove the IP addresses of the instances from the whitelist that manages access to the ApsaraDB RDS instance that is associated with the scaling group.
+         * Specifies whether to detach the ECS instances or elastic container instances that are marked for removal from the associated load balancers, and whether to remove the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.
          * <p>
          * 
-         * If you set this parameter to both, the instances are removed from the default sever group and vServer groups of the associated CLB instance, and the IP addresses of the instances are removed from the whitelist that manages access to the associated ApsaraDB RDS instance.
+         * Both: detaches the ECS instances or elastic container instances that are marked for removal from the associated load balancers and removes the private IP addresses of these instances from the IP address whitelists of the associated ApsaraDB RDS instances.
+         * 
+         * >  This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.
          */
         public Builder detachOption(String detachOption) {
             this.putQueryParameter("DetachOption", detachOption);
@@ -231,7 +236,12 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * IgnoreInvalidInstance.
+         * 从伸缩组移出一批实例时，是否忽略其中无效的实例。取值范围：
+         * <p>
+         * - true：从伸缩组中移出一批实例时，会忽略其中无效的实例。如果存在无效的实例，并且有效的实例被成功移除时，伸缩活动执行状态也会显示为警告状态，可以从伸缩活动详情查看无效的实例。
+         * - false：从伸缩组中移出一批实例时，不会忽略无效的实例。如果一批实例中存在无效的实例，请求会报错。
+         * 
+         * 默认值：false。
          */
         public Builder ignoreInvalidInstance(Boolean ignoreInvalidInstance) {
             this.putQueryParameter("IgnoreInvalidInstance", ignoreInvalidInstance);
@@ -240,7 +250,7 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * The IDs of the ECS instances or elastic container instances that you want to remove from the scaling group.
+         * The IDs of the ECS instances, elastic container instances, or Aliababa Cloud-managed third-party instances that you want to remove from a scaling group.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -249,11 +259,13 @@ public class DetachInstancesRequest extends Request {
         }
 
         /**
-         * Specifies whether to trigger a lifecycle hook for a scale-in activity. Valid values:
+         * Specifies whether to trigger a lifecycle hook for scale-in purposes when ECS instances or elastic container instances are removed from the scaling group. Valid values:
          * <p>
          * 
          * *   true
          * *   false
+         * 
+         * >  This parameter is not supported if you want to remove Alibaba Cloud-hosted third-party instances from a scaling group.
          * 
          * Default value: false.
          */

@@ -169,7 +169,11 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private java.util.List < String > ignoredLifecycleHookIds; 
 
             /**
-             * DisableLifecycleHook.
+             * Indicates whether all lifecycle hooks are disabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder disableLifecycleHook(Boolean disableLifecycleHook) {
                 this.disableLifecycleHook = disableLifecycleHook;
@@ -177,7 +181,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * IgnoredLifecycleHookIds.
+             * The IDs of the lifecycle hooks that are disabled.
              */
             public Builder ignoredLifecycleHookIds(java.util.List < String > ignoredLifecycleHookIds) {
                 this.ignoredLifecycleHookIds = ignoredLifecycleHookIds;
@@ -542,7 +546,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             private String triggerSourceType; 
 
             /**
-             * ActivityMetadata.
+             * The metadata of the scaling activity.
              */
             public Builder activityMetadata(String activityMetadata) {
                 this.activityMetadata = activityMetadata;
@@ -550,7 +554,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are manually added to the scaling group after the scaling activity is complete.
+             * The total number of instances that are manually added to the scaling group after the scaling activity was complete.
              */
             public Builder attachedCapacity(String attachedCapacity) {
                 this.attachedCapacity = attachedCapacity;
@@ -558,7 +562,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances that are created by Auto Scaling after the scaling activity is complete.
+             * The total number of instances that are created by Auto Scaling after the scaling activity was complete.
              */
             public Builder autoCreatedCapacity(String autoCreatedCapacity) {
                 this.autoCreatedCapacity = autoCreatedCapacity;
@@ -566,7 +570,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The reason why the scaling activity is triggered.
+             * The reason why the scaling activity was triggered.
              */
             public Builder cause(String cause) {
                 this.cause = cause;
@@ -574,7 +578,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are created during the scale-out.
+             * The number of instances that are created during the scale-out event.
              */
             public Builder createdCapacity(Integer createdCapacity) {
                 this.createdCapacity = createdCapacity;
@@ -582,7 +586,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are created during the scale-out.
+             * The instances that are created during the scale-out event.
              */
             public Builder createdInstances(java.util.List < String > createdInstances) {
                 this.createdInstances = createdInstances;
@@ -598,7 +602,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are released during the scale-in.
+             * The number of instances that are released during the scale-in event.
              */
             public Builder destroyedCapacity(Integer destroyedCapacity) {
                 this.destroyedCapacity = destroyedCapacity;
@@ -606,7 +610,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are released during the scale-in.
+             * The instances that are released during the scale-in event.
              */
             public Builder destroyedInstances(java.util.List < String > destroyedInstances) {
                 this.destroyedInstances = destroyedInstances;
@@ -622,7 +626,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling activity is complete.
+             * The time when the scaling activity was complete.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -646,7 +650,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * LifecycleHookContext.
+             * The context of the lifecycle hook.
              */
             public Builder lifecycleHookContext(LifecycleHookContext lifecycleHookContext) {
                 this.lifecycleHookContext = lifecycleHookContext;
@@ -678,10 +682,10 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * If you query a scale-out, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out.
+             * If you query a scale-out activity, the value of this parameter indicates the number of instances that are created or the number of instances that are started from the Economical Mode during the scale-out event.
              * <p>
              * 
-             * If you query a scale-in, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in.
+             * If you query a scale-in activity, the value of this parameter indicates the number of instances that are deleted or the number of instances that are stopped in the Economical Mode during the scale-in event.
              */
             public Builder scalingInstanceNumber(Integer scalingInstanceNumber) {
                 this.scalingInstanceNumber = scalingInstanceNumber;
@@ -689,7 +693,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the scaling activity is started.
+             * The time when the scaling activity was started.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -697,7 +701,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are started from the Economical Mode during the scale-out.
+             * The number of instances that are started from the Economical Mode during the scale-out event.
              */
             public Builder startedCapacity(Integer startedCapacity) {
                 this.startedCapacity = startedCapacity;
@@ -705,7 +709,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are started from the Economical Mode during the scale-out.
+             * The instances that are started from the Economical Mode during the scale-out event.
              */
             public Builder startedInstances(java.util.List < String > startedInstances) {
                 this.startedInstances = startedInstances;
@@ -736,7 +740,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The number of instances that are stopped in the Economical Mode during the scale-in.
+             * The number of instances that are stopped in the Economical Mode during the scale-in event.
              */
             public Builder stoppedCapacity(Integer stoppedCapacity) {
                 this.stoppedCapacity = stoppedCapacity;
@@ -744,7 +748,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The instances that are stopped in the Economical Mode during the scale-in.
+             * The instances that are stopped in the Economical Mode during the scale-in event.
              */
             public Builder stoppedInstances(java.util.List < String > stoppedInstances) {
                 this.stoppedInstances = stoppedInstances;
@@ -752,7 +756,7 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * The total number of instances in the scaling group after the scaling activity is complete.
+             * The total number of instances in the scaling group after the scaling activity was complete.
              */
             public Builder totalCapacity(String totalCapacity) {
                 this.totalCapacity = totalCapacity;
@@ -760,7 +764,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSourceId.
+             * The ID of the trigger source of the scaling activity.
+             * <p>
+             * 
+             * *   If TriggerSourceType is set to Cms, the ID of the trigger source is the ID of an event-triggered task.
+             * *   If TriggerSourceType is set to Api, the ID of the trigger source is the ID of an Alibaba Cloud account or a RAM user.
+             * *   If TriggerSourceType is set to Api, the ID of the trigger source is null.
              */
             public Builder triggerSourceId(String triggerSourceId) {
                 this.triggerSourceId = triggerSourceId;
@@ -768,7 +777,12 @@ public class DescribeScalingActivitiesResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerSourceType.
+             * The type of the trigger source of the scaling activity.
+             * <p>
+             * 
+             * *   Cms: triggered by an event-triggered task
+             * *   APIs: triggered by API calling
+             * *   Ess: triggered by a system task
              */
             public Builder triggerSourceType(String triggerSourceType) {
                 this.triggerSourceType = triggerSourceType;

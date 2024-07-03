@@ -155,8 +155,8 @@ public class DetachVServerGroupsRequest extends Request {
          * Specifies whether to remove the existing instances in the scaling group from the vServer group marked for detachment.
          * <p>
          * 
-         * *   true: If you set this parameter to `true`, the detachment of the load balancer from the scaling group entails automatic removal of the existing instances in the scaling group from the corresponding vServer group.
-         * *   false: If you set this parameter to `false`, the detachment of the load balancer from the scaling group does not entail automatic removal of the existing instances in the scaling group from the corresponding vServer group.
+         * *   true: If you set this parameter to `true`, the detachment of the load balancer from the scaling group causes automatic removal of the existing instances in the scaling group from the corresponding vServer group.
+         * *   false: If you set this parameter to `false`, the detachment of the load balancer from the scaling group does not cause automatic removal of the existing instances in the scaling group from the corresponding vServer group.
          * 
          * Default value: false.
          */

@@ -120,7 +120,7 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * Optional. The format of the configuration file. Default value: YAML. Set the value to YAML.
+         * Optional. Set the value to YAML.
          */
         public Builder format(String format) {
             this.putQueryParameter("Format", format);
@@ -138,7 +138,10 @@ public class ApplyEciScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The ID of the scaling configuration that you want to update. If you want to update a scaling configuration based on the value of Content, you must specify ScalingConfigurationId. If you want to create a scaling configuration based on the value of Content, you can leave ScalingConfigurationId empty.
+         * The ID of the scaling configuration.
+         * <p>
+         * 
+         * If you want the system to update a scaling configuration of the Elastic Container Instance type based on a YAML configuration file, you must specify `ScalingConfigurationId`. If you do not specify `ScalingConfigurationId`, the system creates a new scaling configuration based on the YAML configuration file.
          */
         public Builder scalingConfigurationId(String scalingConfigurationId) {
             this.putQueryParameter("ScalingConfigurationId", scalingConfigurationId);

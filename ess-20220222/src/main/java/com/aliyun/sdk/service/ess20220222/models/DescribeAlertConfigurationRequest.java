@@ -6,27 +6,18 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ModifyNotificationConfigurationRequest} extends {@link RequestModel}
+ * {@link DescribeAlertConfigurationRequest} extends {@link RequestModel}
  *
- * <p>ModifyNotificationConfigurationRequest</p>
+ * <p>DescribeAlertConfigurationRequest</p>
  */
-public class ModifyNotificationConfigurationRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NotificationArn")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private String notificationArn;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("NotificationTypes")
-    @com.aliyun.core.annotation.Validation(required = true)
-    private java.util.List < String > notificationTypes;
-
+public class DescribeAlertConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
@@ -38,10 +29,8 @@ public class ModifyNotificationConfigurationRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String scalingGroupId;
 
-    private ModifyNotificationConfigurationRequest(Builder builder) {
+    private DescribeAlertConfigurationRequest(Builder builder) {
         super(builder);
-        this.notificationArn = builder.notificationArn;
-        this.notificationTypes = builder.notificationTypes;
         this.ownerId = builder.ownerId;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -52,27 +41,13 @@ public class ModifyNotificationConfigurationRequest extends Request {
         return new Builder();
     }
 
-    public static ModifyNotificationConfigurationRequest create() {
+    public static DescribeAlertConfigurationRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return notificationArn
-     */
-    public String getNotificationArn() {
-        return this.notificationArn;
-    }
-
-    /**
-     * @return notificationTypes
-     */
-    public java.util.List < String > getNotificationTypes() {
-        return this.notificationTypes;
     }
 
     /**
@@ -103,9 +78,7 @@ public class ModifyNotificationConfigurationRequest extends Request {
         return this.scalingGroupId;
     }
 
-    public static final class Builder extends Request.Builder<ModifyNotificationConfigurationRequest, Builder> {
-        private String notificationArn; 
-        private java.util.List < String > notificationTypes; 
+    public static final class Builder extends Request.Builder<DescribeAlertConfigurationRequest, Builder> {
         private Long ownerId; 
         private String regionId; 
         private String resourceOwnerAccount; 
@@ -115,45 +88,13 @@ public class ModifyNotificationConfigurationRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyNotificationConfigurationRequest request) {
+        private Builder(DescribeAlertConfigurationRequest request) {
             super(request);
-            this.notificationArn = request.notificationArn;
-            this.notificationTypes = request.notificationTypes;
             this.ownerId = request.ownerId;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.scalingGroupId = request.scalingGroupId;
         } 
-
-        /**
-         * The Alibaba Cloud Resource Name (ARN) of the notification method. The following list describes the value formats of this parameter:
-         * <p>
-         * 
-         * *   If you use CloudMonitor as the notification method, specify the value in the `acs:ess:{region-id}:{account-id}:cloudmonitor` format.
-         * *   If you use an MNS queue as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
-         * *   If you use an MNS topic as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
-         * 
-         * The variables in the preceding formats have the following meanings:
-         * 
-         * *   region-id: the region ID of your scaling group.
-         * *   account-id: the ID of your Alibaba Cloud.
-         * *   queuename: the name of the MNS queue.
-         * *   topicname: the name of the MNS topic.
-         */
-        public Builder notificationArn(String notificationArn) {
-            this.putQueryParameter("NotificationArn", notificationArn);
-            this.notificationArn = notificationArn;
-            return this;
-        }
-
-        /**
-         * The event types.
-         */
-        public Builder notificationTypes(java.util.List < String > notificationTypes) {
-            this.putQueryParameter("NotificationTypes", notificationTypes);
-            this.notificationTypes = notificationTypes;
-            return this;
-        }
 
         /**
          * OwnerId.
@@ -165,7 +106,7 @@ public class ModifyNotificationConfigurationRequest extends Request {
         }
 
         /**
-         * The region ID of the scaling group.
+         * The region ID of the event-triggered task.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -192,8 +133,8 @@ public class ModifyNotificationConfigurationRequest extends Request {
         }
 
         @Override
-        public ModifyNotificationConfigurationRequest build() {
-            return new ModifyNotificationConfigurationRequest(this);
+        public DescribeAlertConfigurationRequest build() {
+            return new DescribeAlertConfigurationRequest(this);
         } 
 
     } 

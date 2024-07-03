@@ -144,6 +144,10 @@ public class ModifyScalingConfigurationRequest extends Request {
     private Long ownerId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Password")
+    private String password;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("PasswordInherit")
     private Boolean passwordInherit;
 
@@ -259,6 +263,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         this.override = builder.override;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
+        this.password = builder.password;
         this.passwordInherit = builder.passwordInherit;
         this.ramRoleName = builder.ramRoleName;
         this.resourceGroupId = builder.resourceGroupId;
@@ -526,6 +531,13 @@ public class ModifyScalingConfigurationRequest extends Request {
     }
 
     /**
+     * @return password
+     */
+    public String getPassword() {
+        return this.password;
+    }
+
+    /**
      * @return passwordInherit
      */
     public Boolean getPasswordInherit() {
@@ -699,6 +711,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         private Boolean override; 
         private String ownerAccount; 
         private Long ownerId; 
+        private String password; 
         private Boolean passwordInherit; 
         private String ramRoleName; 
         private String resourceGroupId; 
@@ -759,6 +772,7 @@ public class ModifyScalingConfigurationRequest extends Request {
             this.override = request.override;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
+            this.password = request.password;
             this.passwordInherit = request.passwordInherit;
             this.ramRoleName = request.ramRoleName;
             this.resourceGroupId = request.resourceGroupId;
@@ -867,7 +881,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -1133,6 +1147,15 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
+         * Password.
+         */
+        public Builder password(String password) {
+            this.putQueryParameter("Password", password);
+            this.password = password;
+            return this;
+        }
+
+        /**
          * Specifies whether to use the password that is preconfigured in the image. Before you use this parameter, make sure that a password is configured in the image.
          */
         public Builder passwordInherit(Boolean passwordInherit) {
@@ -1324,7 +1347,7 @@ public class ModifyScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The user data of the ECS instance. The data must be encoded in Base64. The maximum size of the data before encoding is 16 KB.
+         * The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

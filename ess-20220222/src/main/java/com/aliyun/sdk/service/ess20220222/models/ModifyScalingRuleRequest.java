@@ -390,7 +390,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * 监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度信息。
+         * The dimensions. This parameter is applicable to target tracking scaling rules. You can specify this parameter if your predefined metric requires extra dimensions. For example, if you predefine the LoadBalancerRealServerAverageQps metric, you must use this parameter to specify the rulePool dimension.
          */
         public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
@@ -434,7 +434,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.
+         * The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify `PredictiveValueBehavior`.
          */
         public Builder initialMaxSize(Integer initialMaxSize) {
             this.putQueryParameter("InitialMaxSize", initialMaxSize);
@@ -443,24 +443,24 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The predefined metric that you want to monitor. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule.
+         * The predefined metric. This parameter is required only if you create a target tracking scaling rule or predictive scaling rule.
          * <p>
          * 
-         * Valid values if you set the ScalingRuleType parameter to TargetTrackingScalingRule:
+         * Valid values if you create a target tracking scaling rule:
          * 
-         * *   CpuUtilization: the average CPU utilization
-         * *   ClassicInternetRx: the average inbound Internet traffic over the classic network
-         * *   ClassicInternetTx: the average outbound Internet traffic over the classic network
-         * *   VpcInternetRx: the average inbound Internet traffic over the virtual private cloud (VPC)
-         * *   VpcInternetTx: the average outbound Internet traffic over the VPC
-         * *   IntranetRx: the average inbound traffic over the internal network
-         * *   IntranetTx: the average outbound traffic over the internal network
+         * *   CpuUtilization: the average CPU utilization.
+         * *   IntranetTx: the outbound traffic over an internal network.
+         * *   IntranetRx: the inbound traffic over an internal network.
+         * *   VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.
+         * *   VpcInternetRx: the inbound traffic from the Internet to a VPC.
+         * *   MemoryUtilization: the memory usage.
+         * *   LoadBalancerRealServerAverageQps: the queries per second (QPS) per Application Load Balancer (ALB) server group.
          * 
-         * Valid values if you set the ScalingRuleType parameter to PredictiveScalingRule:
+         * Valid values if you create a predictive scaling rule:
          * 
-         * *   CpuUtilization: the average CPU utilization
-         * *   IntranetRx: the average inbound traffic over the internal network
-         * *   IntranetTx: the average outbound traffic over the internal network
+         * *   CpuUtilization: the average CPU utilization.
+         * *   IntranetRx: the inbound traffic over an internal network.
+         * *   IntranetTx: the outbound traffic over an internal network.
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -469,7 +469,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The minimum number of instances that must be scaled when the AdjustmentType parameter is set to PercentChangeInCapacity. This parameter takes effect only if you set the ScalingRuleType parameter to SimpleScalingRule or StepScalingRule.
+         * The minimum number of instances to scale. This parameter takes effect only if you create a simple scaling rule or step scaling rule and set `AdjustmentType` to `PercentChangeInCapacity`.
          */
         public Builder minAdjustmentMagnitude(Integer minAdjustmentMagnitude) {
             this.putQueryParameter("MinAdjustmentMagnitude", minAdjustmentMagnitude);
@@ -532,7 +532,7 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
+         * The ratio based on which the predicted value is increased when `PredictiveValueBehavior` is set to `PredictiveValueOverrideMaxWithBuffer`. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
          */
         public Builder predictiveValueBuffer(Integer predictiveValueBuffer) {
             this.putQueryParameter("PredictiveValueBuffer", predictiveValueBuffer);
@@ -586,7 +586,10 @@ public class ModifyScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
+         * The name of the scaling rule. The name must be 2 to 64 letters in length and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or digit.
+         * <p>
+         * 
+         * The name of each scaling rule must be unique under the same account within the same region.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -658,7 +661,7 @@ public class ModifyScalingRuleRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * 监控项关联的维度信息键。
+             * The dimension key of the metric.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -666,7 +669,7 @@ public class ModifyScalingRuleRequest extends Request {
             }
 
             /**
-             * 监控项关联的维度信息值。
+             * The dimension value of the metric.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;

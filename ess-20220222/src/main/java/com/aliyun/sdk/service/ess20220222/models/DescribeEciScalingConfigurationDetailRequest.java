@@ -97,7 +97,7 @@ public class DescribeEciScalingConfigurationDetailRequest extends Request {
         } 
 
         /**
-         * The output format. Set the value to yaml.
+         * The output format. Set the value to YAML.
          */
         public Builder outputFormat(String outputFormat) {
             this.putQueryParameter("OutputFormat", outputFormat);

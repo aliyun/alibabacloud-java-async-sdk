@@ -945,7 +945,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * DedicatedHostClusterId.
+         * The ID of the dedicated host cluster.
          */
         public Builder dedicatedHostClusterId(String dedicatedHostClusterId) {
             this.putQueryParameter("DedicatedHostClusterId", dedicatedHostClusterId);
@@ -1455,7 +1455,7 @@ public class CreateScalingConfigurationRequest extends Request {
         }
 
         /**
-         * The user data of the ECS instance. The data must be encoded in Base64. The maximum size of the data before encoding is 16 KB.
+         * The user data of the Elastic Compute Service (ECS) instance. The user data must be encoded in Base64 format. The size of raw data before Base64 encoding cannot exceed 32 KB.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

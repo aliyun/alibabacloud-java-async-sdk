@@ -404,7 +404,7 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * 监控项维度信息值，适用于目标追踪规则，当监控项需额外维度信息时设置，例如LoadBalancerRealServerAverageQps监控项需指定rulePool维度键值信息。
+         * The metric dimensions. This parameter is applicable to target tracking scaling rules. If your predefined metric requires extra dimensions, you must specify this parameter. For example, if you use LoadBalancerRealServerAverageQps as your predefined metric, you must use this parameter to specify the rulePool dimension.
          */
         public Builder alarmDimensions(java.util.List < AlarmDimensions> alarmDimensions) {
             this.putQueryParameter("AlarmDimensions", alarmDimensions);
@@ -453,10 +453,10 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The maximum number of ECS instances in the scaling group. If you specify this parameter, you must also specify the PredictiveValueBehavior parameter.
+         * The maximum number of ECS instances that can be contained in the scaling group. If you specify InitialMaxSize, you must specify `PredictiveValueBehavior`.
          * <p>
          * 
-         * The default value of this parameter is the value of the MaxSize parameter.
+         * The default value of this parameter is the value of MaxSize.
          */
         public Builder initialMaxSize(Integer initialMaxSize) {
             this.putQueryParameter("InitialMaxSize", initialMaxSize);
@@ -465,24 +465,24 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The predefined metric that you want to monitor. This parameter is required only if you set the ScalingRuleType parameter to TargetTrackingScalingRule or PredictiveScalingRule.
+         * The predefined metric of the scaling rule. If you set ScalingRuleType to TargetTrackingScalingRule or PredictiveScalingRule, you must specify this parameter.
          * <p>
          * 
-         * Valid values if you set the ScalingRuleType parameter to TargetTrackingScalingRule:
+         * Valid values if you set ScalingRuleType to TargetTrackingScalingRule:
          * 
-         * *   CpuUtilization: the average CPU utilization
-         * *   ClassicInternetRx: the average inbound Internet traffic over the classic network
-         * *   ClassicInternetTx: the average outbound Internet traffic over the classic network
-         * *   VpcInternetRx: the average inbound Internet traffic over the virtual private cloud (VPC)
-         * *   VpcInternetTx: the average outbound Internet traffic over the VPC
-         * *   IntranetRx: the average inbound traffic over the internal network
-         * *   IntranetTx: the average outbound traffic over the internal network
+         * *   CpuUtilization: the average CPU utilization.
+         * *   IntranetTx: the outbound traffic over an internal network.
+         * *   IntranetRx: the inbound traffic over an internal network.
+         * *   VpcInternetTx: the outbound traffic from a virtual private cloud (VPC) to the Internet.
+         * *   VpcInternetRx: the inbound traffic from the Internet to a VPC.
+         * *   MemoryUtilization: the memory usage.
+         * *   LoadBalancerRealServerAverageQps:the queries per second (QPS) per Application Load Balancer (ALB) server group.
          * 
-         * Valid values if you set the ScalingRuleType parameter to PredictiveScalingRule:
+         * Valid values if you set ScalingRuleType to PredictiveScalingRule:
          * 
-         * *   CpuUtilization: the average CPU utilization
-         * *   IntranetRx: the average inbound traffic over the internal network
-         * *   IntranetTx: the average outbound traffic over the internal network
+         * *   CpuUtilization: the average CPU utilization.
+         * *   IntranetRx: the inbound traffic over an internal network.
+         * *   IntranetTx: the outbound traffic over an internal network.
          */
         public Builder metricName(String metricName) {
             this.putQueryParameter("MetricName", metricName);
@@ -561,7 +561,7 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The percentage of the increment to the predicted value when the PredictiveValueBehavior parameter is set to PredictiveValueOverrideMaxWithBuffer. If the predicted value increased by this percentage is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
+         * The ratio based on which the predicted value is increased when you set `PredictiveValueBehavior` to `PredictiveValueOverrideMaxWithBuffer`. If the predicted value increased by this ratio is greater than the initial maximum capacity, the increased value is used as the maximum value for prediction tasks. Valid values: 0 to 100.
          * <p>
          * 
          * Default value: 0.
@@ -624,10 +624,12 @@ public class CreateScalingRuleRequest extends Request {
         }
 
         /**
-         * The name of the scaling rule. It must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). It must start with a letter or a digit. The name of a scaling rule must be unique in the scaling group to which the scaling rule belongs and within an Alibaba Cloud account.
+         * The name of the scaling rule. The name must be 2 to 64 characters in length, and can contain letters, digits, underscores (\_), hyphens (-), and periods (.). The name must start with a letter or a digit.
          * <p>
          * 
-         * If you do not specify this parameter, the value of the ScalingRuleId parameter is used.
+         * The name of each scaling rule must be unique under the same account within a region.
+         * 
+         * If you leave this parameter empty, the scaling rule ID is used.
          */
         public Builder scalingRuleName(String scalingRuleName) {
             this.putQueryParameter("ScalingRuleName", scalingRuleName);
@@ -639,10 +641,10 @@ public class CreateScalingRuleRequest extends Request {
          * The type of the scaling rule. Valid values:
          * <p>
          * 
-         * *   SimpleScalingRule: scales the number of ECS instances based on the values that are specified for the AdjustmentType and AdjustmentValue parameters.
-         * *   TargetTrackingScalingRule: calculates the number of ECS instances that must be scaled and maintains the value of a predefined metric close to the value that is specified for the TargetValue parameter.
-         * *   StepScalingRule: scales ECS instances in steps based on the specified thresholds and metric values.
-         * *   PredictiveScalingRule: uses machine learning to analyze historical monitoring data of the scaling group and predicts the future values of metrics. In addition, Auto Scaling automatically creates scheduled tasks to specify the boundary values for the scaling group.
+         * *   SimpleScalingRule: a simple scaling rule. Once a simple scaling rule is executed, Auto Scaling adjusts the number of ECS instances or elastic container instances in the scaling group based on the values of AdjustmentType and AdjustmentValue.
+         * *   TargetTrackingScalingRule: a target tracking scaling rule. Once a target tracking scaling rule is executed, Auto Scaling dynamically calculates the number of ECS instances or elastic container instances to scale based on the predefined metric (MetricName) and attempts to maintain the metric value close to the specified target value (TargetValue).
+         * *   StepScalingRule: a step scaling rule. Once a step scaling rule is executed, Auto Scaling scales instances step by step based on the predefined thresholds and metric values.
+         * *   PredictiveScalingRule: a predictive scaling rule. Once a predictive scaling rule is executed, Auto Scaling analyzes the historical monitoring data based on the machine learning technology and predicts the trends of metric data. Auto Scaling also creates scheduled tasks to enable dynamic adjustment of the boundary values for the scaling group.
          * 
          * Default value: SimpleScalingRule.
          */
@@ -716,7 +718,7 @@ public class CreateScalingRuleRequest extends Request {
             private String dimensionValue; 
 
             /**
-             * 监控项关联的维度信息键。
+             * The dimension key of the metric.
              */
             public Builder dimensionKey(String dimensionKey) {
                 this.dimensionKey = dimensionKey;
@@ -724,7 +726,7 @@ public class CreateScalingRuleRequest extends Request {
             }
 
             /**
-             * 监控项关联的维度信息值。
+             * The dimension value of the metric.
              */
             public Builder dimensionValue(String dimensionValue) {
                 this.dimensionValue = dimensionValue;

@@ -85,7 +85,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The lifecycle actions.
+         * The actions of the lifecycle hook.
          */
         public Builder lifecycleActions(java.util.List < LifecycleActions> lifecycleActions) {
             this.lifecycleActions = lifecycleActions;
@@ -205,7 +205,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             private String lifecycleHookId; 
 
             /**
-             * The IDs of the ECS instances to which the lifecycle hook applies.
+             * The IDs of the ECS instances on which the lifecycle hook takes effect
              */
             public Builder instanceIds(java.util.List < String > instanceIds) {
                 this.instanceIds = instanceIds;
@@ -213,11 +213,11 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The action that is performed after the lifecycle action triggered by the lifecycle hook is complete. Valid values:
+             * The subsequent action that Auto Scaling performs after the lifecycle hook times out. Valid values:
              * <p>
              * 
-             * *   CONTINUE: Auto Scaling continues to add ECS instances to the scaling group, or continues to remove ECS instances from the scaling group.
-             * *   ABANDON: Auto Scaling stops adding ECS instances to the scaling group and releases the ECS instances, or continues to respond to scale-in requests and remove ECS instances from the scaling group.
+             * *   CONTINUE: Auto Scaling continues to respond to a scale-in or scale-out request.
+             * *   ABANDON: Auto Scaling releases ECS instances that are created during scale-out events, or removes ECS instances from the scaling group during scale-in events.
              */
             public Builder lifecycleActionResult(String lifecycleActionResult) {
                 this.lifecycleActionResult = lifecycleActionResult;
@@ -225,7 +225,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the lifecycle action.
+             * The status of the lifecycle hook action.
              */
             public Builder lifecycleActionStatus(String lifecycleActionStatus) {
                 this.lifecycleActionStatus = lifecycleActionStatus;
@@ -233,7 +233,7 @@ public class DescribeLifecycleActionsResponseBody extends TeaModel {
             }
 
             /**
-             * The token of the lifecycle action.
+             * The token of the lifecycle hook action.
              */
             public Builder lifecycleActionToken(String lifecycleActionToken) {
                 this.lifecycleActionToken = lifecycleActionToken;

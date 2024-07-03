@@ -213,7 +213,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The number of the page to return. Pages start from page 1.
+         * The page number. Pages start from page 1.
          * <p>
          * 
          * Default value: 1.
@@ -225,7 +225,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The number of entries to return on each page. Valid values: 1 to 50.
+         * The number of entries per page. Maximum value: 50.
          * <p>
          * 
          * Default value: 10.
@@ -273,7 +273,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The actions that you want Auto Scaling to perform when the scheduled task is triggered.
+         * The scaling rules of the scheduled tasks. Once the scheduled tasks are triggered, the scaling rules are executed.
          */
         public Builder scheduledActions(java.util.List < String > scheduledActions) {
             this.putQueryParameter("ScheduledActions", scheduledActions);
@@ -282,7 +282,7 @@ public class DescribeScheduledTasksRequest extends Request {
         }
 
         /**
-         * The ID of the scheduled task that you want to query.
+         * The IDs of the scheduled tasks that you want to query.
          */
         public Builder scheduledTaskIds(java.util.List < String > scheduledTaskIds) {
             this.putQueryParameter("ScheduledTaskIds", scheduledTaskIds);

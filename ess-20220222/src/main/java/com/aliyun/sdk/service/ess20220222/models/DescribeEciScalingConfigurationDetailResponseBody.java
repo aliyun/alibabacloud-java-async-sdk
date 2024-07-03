@@ -153,7 +153,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String regionId; 
 
             /**
-             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the Container Registry Enterprise Edition instance are displayed. You can specify one or more domain names. Separate multiple domain names with commas (,).
+             * The domain names of the Container Registry Enterprise Edition instance. By default, all domain names of the instance are displayed. Multiple domain names are separated by commas (,).
              */
             public Builder domains(java.util.List < String > domains) {
                 this.domains = domains;
@@ -250,7 +250,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The key of the environment variable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -415,7 +415,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
              * The directory in which the container mounts the volume.
              * <p>
              * 
-             * >  Data in this directory is overwritten by data on the volume. Specify this parameter with caution.
+             * >  Data in this directory is overwritten by the data on the volume. Proceed with caution if you specify this parameter.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -423,12 +423,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the container are propagated back to the host and all containers of all pods that use the same volume.
+             * *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
+             * *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
+             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
              * 
              * Default value: None.
              */
@@ -438,7 +438,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the mounted volume.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1110,7 +1110,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             private String workingDir; 
 
             /**
-             * The startup arguments of the container.
+             * The arguments that are passed to the container startup commands.
              */
             public Builder args(java.util.List < String > args) {
                 this.args = args;
@@ -1118,7 +1118,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The startup commands of the container.
+             * The container startup commands.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;
@@ -1166,7 +1166,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The commands that are run by using the CLI in the container to specify the postStart callback function.
+             * The commands that are run by using a CLI for configuring the postStart callback function within the container.
              */
             public Builder lifecyclePostStartHandlerExecs(java.util.List < String > lifecyclePostStartHandlerExecs) {
                 this.lifecyclePostStartHandlerExecs = lifecyclePostStartHandlerExecs;
@@ -1174,7 +1174,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The host IP address detected by the HTTP GET requests that are used to specify the postStart callback function.
+             * The IP address of the host to the HTTP GET requests for configuring the postStart callback function are sent.
              */
             public Builder lifecyclePostStartHandlerHttpGetHost(String lifecyclePostStartHandlerHttpGetHost) {
                 this.lifecyclePostStartHandlerHttpGetHost = lifecyclePostStartHandlerHttpGetHost;
@@ -1182,7 +1182,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The path detected by the HTTP GET requests that are used to specify the postStart callback function.
+             * The path to the HTTP GET requests for configuring the postStart callback function are sent.
              */
             public Builder lifecyclePostStartHandlerHttpGetPath(String lifecyclePostStartHandlerHttpGetPath) {
                 this.lifecyclePostStartHandlerHttpGetPath = lifecyclePostStartHandlerHttpGetPath;
@@ -1190,7 +1190,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The port number detected by the HTTP Get requests that are used to specify the postStart callback function.
+             * The port over which the HTTP GET requests for configuring the postStart callback function are sent.
              */
             public Builder lifecyclePostStartHandlerHttpGetPort(Integer lifecyclePostStartHandlerHttpGetPort) {
                 this.lifecyclePostStartHandlerHttpGetPort = lifecyclePostStartHandlerHttpGetPort;
@@ -1198,7 +1198,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The protocol type of the HTTP Get requests that are used to specify the postStart callback function.
+             * The protocol type of the HTTP Get requests that are used for configuring the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerHttpGetScheme(String lifecyclePostStartHandlerHttpGetScheme) {
                 this.lifecyclePostStartHandlerHttpGetScheme = lifecyclePostStartHandlerHttpGetScheme;
@@ -1206,7 +1206,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The host IP address detected by the TCP sockets that are used to specify the postStart callback function.
+             * The IP address of the host detected by the TCP sockets that are used for configuring the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketHost(String lifecyclePostStartHandlerTcpSocketHost) {
                 this.lifecyclePostStartHandlerTcpSocketHost = lifecyclePostStartHandlerTcpSocketHost;
@@ -1214,7 +1214,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The port number detected by the TCP sockets that are used to specify the postStart callback function.
+             * The port detected by the TCP sockets that are used for configuring the postStart callback function.
              */
             public Builder lifecyclePostStartHandlerTcpSocketPort(Integer lifecyclePostStartHandlerTcpSocketPort) {
                 this.lifecyclePostStartHandlerTcpSocketPort = lifecyclePostStartHandlerTcpSocketPort;
@@ -1222,7 +1222,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The commands that are run by using the CLI in the container to specify the preStop callback function.
+             * The commands that are run by using a CLI for configuring the preStop callback function within the container.
              */
             public Builder lifecyclePreStopHandlerExecs(java.util.List < String > lifecyclePreStopHandlerExecs) {
                 this.lifecyclePreStopHandlerExecs = lifecyclePreStopHandlerExecs;
@@ -1230,7 +1230,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The host IP address detected by the HTTP Get requests that are used to specify the preStop callback function.
+             * The IP address of the host to which the HTTP GET requests for configuring the preStop callback function are sent.
              */
             public Builder lifecyclePreStopHandlerHttpGetHost(String lifecyclePreStopHandlerHttpGetHost) {
                 this.lifecyclePreStopHandlerHttpGetHost = lifecyclePreStopHandlerHttpGetHost;
@@ -1238,7 +1238,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The path detected by the HTTP Get requests that are used to specify the preStop callback function.
+             * The path to which the HTTP GET requests for configuring the preStop callback function are sent.
              */
             public Builder lifecyclePreStopHandlerHttpGetPath(String lifecyclePreStopHandlerHttpGetPath) {
                 this.lifecyclePreStopHandlerHttpGetPath = lifecyclePreStopHandlerHttpGetPath;
@@ -1246,7 +1246,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The port number detected by the HTTP Get requests that are used to specify the preStop callback function.
+             * The port over which the HTTP GET requests for configuring the preStop callback function are sent.
              */
             public Builder lifecyclePreStopHandlerHttpGetPort(Integer lifecyclePreStopHandlerHttpGetPort) {
                 this.lifecyclePreStopHandlerHttpGetPort = lifecyclePreStopHandlerHttpGetPort;
@@ -1254,7 +1254,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The protocol type of the HTTP Get requests that are used to specify the preStop callback function.
+             * The protocol type of the HTTP Get requests that are used for configuring the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerHttpGetScheme(String lifecyclePreStopHandlerHttpGetScheme) {
                 this.lifecyclePreStopHandlerHttpGetScheme = lifecyclePreStopHandlerHttpGetScheme;
@@ -1262,7 +1262,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The host IP address detected by the TCP sockets that are used to specify the preStop callback function.
+             * The IP address of the host detected by the TCP sockets that are used for configuring the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketHost(String lifecyclePreStopHandlerTcpSocketHost) {
                 this.lifecyclePreStopHandlerTcpSocketHost = lifecyclePreStopHandlerTcpSocketHost;
@@ -1270,7 +1270,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The port number detected by the TCP sockets that are used to specify the preStop callback function.
+             * The port detected by the TCP sockets that are used for configuring the preStop callback function.
              */
             public Builder lifecyclePreStopHandlerTcpSocketPort(Integer lifecyclePreStopHandlerTcpSocketPort) {
                 this.lifecyclePreStopHandlerTcpSocketPort = lifecyclePreStopHandlerTcpSocketPort;
@@ -1278,7 +1278,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The commands that are run in the container when you use the command line interface (CLI) to perform liveness probes.
+             * The commands that are run in the container when you use a CLI to perform liveness probes.
              */
             public Builder livenessProbeExecCommands(java.util.List < String > livenessProbeExecCommands) {
                 this.livenessProbeExecCommands = livenessProbeExecCommands;
@@ -1357,7 +1357,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The timeout period of the liveness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+             * The timeout period of a liveness probe. Default value: 1. Minimum value: 1. Unit: seconds.
              */
             public Builder livenessProbeTimeoutSeconds(Integer livenessProbeTimeoutSeconds) {
                 this.livenessProbeTimeoutSeconds = livenessProbeTimeoutSeconds;
@@ -1381,7 +1381,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The exposed ports and protocols of the container.
+             * The exposed ports and protocols.
              */
             public Builder ports(java.util.List < Ports> ports) {
                 this.ports = ports;
@@ -1389,7 +1389,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The commands that are run in the container when you use the CLI to perform readiness probes.
+             * The commands that are run in the container when you use a CLI to perform readiness probes.
              */
             public Builder readinessProbeExecCommands(java.util.List < String > readinessProbeExecCommands) {
                 this.readinessProbeExecCommands = readinessProbeExecCommands;
@@ -1416,7 +1416,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The path to which HTTP Get requests are sent when you use the HTTP requests to perform readiness probes.
+             * The path to which HTTP Get requests are sent when you use the HTTP Get requests to perform readiness probes.
              */
             public Builder readinessProbeHttpGetPort(Integer readinessProbeHttpGetPort) {
                 this.readinessProbeHttpGetPort = readinessProbeHttpGetPort;
@@ -1468,7 +1468,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The timeout period of the readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
+             * The timeout period of a readiness probe. Default value: 1. Minimum value: 1. Unit: seconds.
              */
             public Builder readinessProbeTimeoutSeconds(Integer readinessProbeTimeoutSeconds) {
                 this.readinessProbeTimeoutSeconds = readinessProbeTimeoutSeconds;
@@ -1484,7 +1484,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the root file system is read-only. Valid value: true.
+             * Indicates whether the root file system on which the container runs is read-only. Valid value: true.
              */
             public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
                 this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
@@ -1500,7 +1500,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the container allocates buffer resources to standard input streams when the container is run. If this parameter is not specified, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
+             * Indicates whether the container allocates buffer resources to standard input streams when the container is running. If this parameter is not specified, an end-of-file (EOF) error may occur when standard input streams in the container are read. Default value: false.
              */
             public Builder stdin(Boolean stdin) {
                 this.stdin = stdin;
@@ -1511,7 +1511,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
              * Indicates whether standard input streams are disconnected after a client is disconnected. If Stdin is set to true, standard input streams remain connected among multiple sessions.
              * <p>
              * 
-             * If StdinOnce is set to true, stdin is opened upon container startup, but remains empty until the first client attaches to stdin, and then remains open and receives data until the client disconnects. When the client disconnects, stdin is closed and remains closed until the container is restarted.
+             * If StdinOnce is set to true, standard input streams are connected after the container is started, and remain idle until a client is connected to receive data. After the client is disconnected, streams are also disconnected, and remain disconnected until the container restarts.
              */
             public Builder stdinOnce(Boolean stdinOnce) {
                 this.stdinOnce = stdinOnce;
@@ -1519,7 +1519,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether Interaction is enabled. Valid values:
+             * Specifies whether to enable the Interaction feature. Valid values:
              * <p>
              * 
              * *   true
@@ -1535,7 +1535,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The mounted volumes.
+             * The volumes that are mounted to the container.
              */
             public Builder volumeMounts(java.util.List < VolumeMounts> volumeMounts) {
                 this.volumeMounts = volumeMounts;
@@ -1819,7 +1819,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The key of the environment variable.
+             * The name of the environment variable.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1984,7 +1984,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
              * The directory to which the init container mounts the volume.
              * <p>
              * 
-             * >  Data in this directory is overwritten by the data on the volume. Specify this parameter with caution.
+             * >  Data in this directory is overwritten by the data on the volume. Proceed with caution if you specify this parameter.
              */
             public Builder mountPath(String mountPath) {
                 this.mountPath = mountPath;
@@ -1992,12 +1992,12 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The mount propagation settings of the volume. Mount propagation allows volumes that are mounted on one init container to be shared with other containers in the same pod, or even with other pods on the same node. Valid values:
+             * The mount propagation setting of the volume. Mount propagation enables volumes mounted on one container to be shared among other containers within the same pod or across distinct pods residing on the same node. Valid values:
              * <p>
              * 
-             * *   None: The volume mount does not receive subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   HostToCotainer: The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume.
-             * *   Bidirectional: The volume mount behaves the same as the HostToContainer mount. The volume mount receives subsequent mounts that are performed on the volume or on the subdirectories of the volume. In addition, all volume mounts that are performed on the init container are propagated back to the host and all containers of all pods that use the same volume.
+             * *   None: Subsequent mounts executed either on the volume itself or its subdirectories do not propagate to the already established volume mount.
+             * *   HostToCotainer: Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount.
+             * *   Bidirectional: This value is similar to HostToCotainer. Subsequent mounts executed either on the volume itself or its subdirectories propagate to the already established volume mount. In addition, any volume mounts executed on the container not only propagate back to the underlying host but also to all containers across every pod that uses the same volume.
              * 
              * Default value: None.
              */
@@ -2007,7 +2007,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The name of the mounted volume.
+             * The volume name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2251,7 +2251,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The init container image.
+             * The image of the init container.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2267,7 +2267,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The startup arguments of the init container.
+             * The arguments that are passed to the startup commands of the init container.
              */
             public Builder initContainerArgs(java.util.List < String > initContainerArgs) {
                 this.initContainerArgs = initContainerArgs;
@@ -2275,7 +2275,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The startup commands of the init container.
+             * The commands that are used to start the init container.
              */
             public Builder initContainerCommands(java.util.List < String > initContainerCommands) {
                 this.initContainerCommands = initContainerCommands;
@@ -2307,7 +2307,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The memory size that is allocated to the init container.
+             * The memory size of the init container.
              */
             public Builder memory(Float memory) {
                 this.memory = memory;
@@ -2331,7 +2331,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * Indicates whether the root file system is read-only. Valid value: true.
+             * Indicates whether the root file system on which the init container runs is read-only. Valid value: true.
              */
             public Builder securityContextReadOnlyRootFilesystem(Boolean securityContextReadOnlyRootFilesystem) {
                 this.securityContextReadOnlyRootFilesystem = securityContextReadOnlyRootFilesystem;
@@ -2339,7 +2339,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The ID of the user that runs the entry point of the init container.
+             * The ID of the user that runs the init container.
              */
             public Builder securityContextRunAsUser(String securityContextRunAsUser) {
                 this.securityContextRunAsUser = securityContextRunAsUser;
@@ -2823,7 +2823,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the volume stores data in the file system of a node by default. We recommend that you set this parameter to memory. In this case, the emptyDir volume stores data in the specified memory.
+             * The storage medium of the emptyDir volume. If you do not specify a storage medium for the emptyDir volume, the volume stores data in the file system of the node by default. We recommend that you set this parameter to memory. In this case, the emptyDir volume stores data in the specified memory.
              */
             public Builder emptyDirVolumeMedium(String emptyDirVolumeMedium) {
                 this.emptyDirVolumeMedium = emptyDirVolumeMedium;
@@ -2898,7 +2898,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The address of the Network File System (NFS) server.
+             * The endpoint of the NFS server.
              */
             public Builder NFSVolumeServer(String NFSVolumeServer) {
                 this.NFSVolumeServer = NFSVolumeServer;
@@ -3657,7 +3657,7 @@ public class DescribeEciScalingConfigurationDetailResponseBody extends TeaModel 
             }
 
             /**
-             * The containers that are run on the instance.
+             * The containers in the elastic container instance.
              */
             public Builder containers(java.util.List < Containers> containers) {
                 this.containers = containers;

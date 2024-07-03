@@ -261,7 +261,7 @@ public class ScaleWithAdjustmentRequest extends Request {
         }
 
         /**
-         * The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out.
+         * The overrides that allow you to adjust the scaling group of the Elastic Container Instance type during a scale-out event.
          */
         public Builder overrides(Overrides overrides) {
             String overridesShrink = shrink(overrides, "Overrides", "json");
@@ -425,7 +425,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             private String value; 
 
             /**
-             * The name of the environment variable. The name can be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. It cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
+             * The name of the environment variable. The name must be 1 to 128 characters in length and can contain letters, underscores (\_), and digits. The name cannot start with a digit. Specify the value in the `[0-9a-zA-Z]` format.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -542,7 +542,7 @@ public class ScaleWithAdjustmentRequest extends Request {
             }
 
             /**
-             * The startup commands of the container. You can specify up to 20 commands. Each command can contain up to 256 characters.
+             * The container startup commands. You can specify up to 20 commands. Each command can contain up to 256 characters.
              */
             public Builder commands(java.util.List < String > commands) {
                 this.commands = commands;

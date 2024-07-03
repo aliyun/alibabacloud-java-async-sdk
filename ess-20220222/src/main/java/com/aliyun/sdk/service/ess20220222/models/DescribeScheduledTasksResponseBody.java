@@ -101,7 +101,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Details of the scheduled tasks.
+         * The information collection of the scheduled tasks.
          */
         public Builder scheduledTasks(java.util.List < ScheduledTasks> scheduledTasks) {
             this.scheduledTasks = scheduledTasks;
@@ -321,7 +321,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The expected number of instances in the scaling group if you specify the ScalingGroupId parameter.
+             * The expected number of instances in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
              */
             public Builder desiredCapacity(Integer desiredCapacity) {
                 this.desiredCapacity = desiredCapacity;
@@ -329,7 +329,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The time period during which the failed scheduled task is retried. Unit: seconds. Valid values: 0 to 21600.
+             * The time window during which the scheduled task can be retried. Unit: seconds. Valid values: 0 to 21600.
              */
             public Builder launchExpirationTime(Integer launchExpirationTime) {
                 this.launchExpirationTime = launchExpirationTime;
@@ -345,7 +345,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The maximum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+             * The maximum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
              */
             public Builder maxValue(Integer maxValue) {
                 this.maxValue = maxValue;
@@ -353,7 +353,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The minimum number of instances in the scaling group if you specify the ScalingGroupId parameter.
+             * The minimum number of instances that must be contained in the scaling group. If you set `Scaling Method` to `Configure Number of Instances in Scaling Group`, you can specify this parameter.
              */
             public Builder minValue(Integer minValue) {
                 this.minValue = minValue;
@@ -369,7 +369,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The interval at which the scheduled task is repeated.
+             * The recurring interval of the scheduled task.
              */
             public Builder recurrenceType(String recurrenceType) {
                 this.recurrenceType = recurrenceType;
@@ -377,7 +377,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The number of recurrences of the scheduled task.
+             * The frequency of recurrence of the scheduled task.
              */
             public Builder recurrenceValue(String recurrenceValue) {
                 this.recurrenceValue = recurrenceValue;
@@ -393,7 +393,7 @@ public class DescribeScheduledTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The scaling rule that is executed when the scheduled task is triggered. This parameter is returned only after a scaling rule is specified for the scheduled task.
+             * The scaling rule of the scheduled task. A value is returned for this parameter only after you specify ScheduledActions.
              */
             public Builder scheduledAction(String scheduledAction) {
                 this.scheduledAction = scheduledAction;

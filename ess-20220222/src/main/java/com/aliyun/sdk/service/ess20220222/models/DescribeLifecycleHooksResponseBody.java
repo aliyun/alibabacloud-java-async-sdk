@@ -85,7 +85,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Details of the lifecycle hooks.
+         * The details of the lifecycle hooks.
          */
         public Builder lifecycleHooks(java.util.List < LifecycleHooks> lifecycleHooks) {
             this.lifecycleHooks = lifecycleHooks;
@@ -253,7 +253,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             private String scalingGroupId; 
 
             /**
-             * The action that Auto Scaling performs after the lifecycle hook ends.
+             * The next action that is performed after the lifecycle hook times out.
              */
             public Builder defaultResult(String defaultResult) {
                 this.defaultResult = defaultResult;
@@ -261,7 +261,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time before the lifecycle hook ends. Auto Scaling performs the specified action after the lifecycle hook ends.
+             * The period of time before the lifecycle hook times out. When the lifecycle hook times out, Auto Scaling performs the action that is specified by DefaultResult.
              */
             public Builder heartbeatTimeout(Integer heartbeatTimeout) {
                 this.heartbeatTimeout = heartbeatTimeout;
@@ -288,8 +288,8 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
              * The status of the lifecycle hook. Valid values:
              * <p>
              * 
-             * *   Active
-             * *   InActive
+             * *   Active: The lifecycle hook is enabled.
+             * *   InActive: The lifecycle hook is disabled.
              */
             public Builder lifecycleHookStatus(String lifecycleHookStatus) {
                 this.lifecycleHookStatus = lifecycleHookStatus;
@@ -305,18 +305,19 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The Alibaba Cloud Resource Name (ARN) of the method that is used by Auto Scaling to send notifications when the lifecycle hook takes effect. Specify the value in one of the following formats:
+             * The ARN of the notification recipient when the lifecycle hook takes effect. The value of this parameter is in one of the following formats:
              * <p>
              * 
-             * *   If you do not create a notification rule, specify the value in the `acs:ess:{region-id}:{account-id}:null/null` format.
-             * *   If you specify a Message Service (MNS) queue as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
-             * *   If you specify an MNS topic as the notification method, specify the value in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
-             * *   If you specify an Operation Orchestration Service (OOS) template as the notification method, specify the value in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.
+             * *   If you did not specify this parameter, the return value is in the `acs:ess:{region-id}:{account-id}:null/null` format.
+             * *   If you specified a Message Service (MNS) queue as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:queue/{queuename}` format.
+             * *   If you specified an MNS topic as the notification recipient, the return value is in the `acs:mns:{region-id}:{account-id}:topic/{topicname}` format.
+             * *   If you specified a CloudOps Orchestration Service (OOS) template as the notification recipient, the return value is in the `acs:oos:{region-id}:{account-id}:template/{templatename}` format.
+             * *   If you specified an event bus as the notification recipient, the return value is in the `acs:eventbridge:{region-id}:{account-id}:eventbus/default` format.
              * 
-             * The variables in the preceding parameter formats have the following meanings:
+             * The variables in the preceding formats have the following meanings:
              * 
-             * *   region-id: the region ID of the scaling group.
-             * *   account-id: the ID of the Alibaba Cloud account.
+             * *   region-id: the region ID of your scaling group.
+             * *   account-id: the ID of your Alibaba Cloud.
              * *   queuename: the name of the MNS queue.
              * *   topicname: the name of the MNS topic.
              * *   templatename: the name of the OOS template.
@@ -327,7 +328,7 @@ public class DescribeLifecycleHooksResponseBody extends TeaModel {
             }
 
             /**
-             * The fixed string that is included in a notification. Auto Scaling sends the notification when the lifecycle hook takes effect.
+             * The fixed string that is included in a notification that Auto Scaling sends when the lifecycle hook takes effect.
              */
             public Builder notificationMetadata(String notificationMetadata) {
                 this.notificationMetadata = notificationMetadata;

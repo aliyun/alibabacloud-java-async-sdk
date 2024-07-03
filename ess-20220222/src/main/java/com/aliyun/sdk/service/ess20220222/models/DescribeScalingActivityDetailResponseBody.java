@@ -61,7 +61,7 @@ public class DescribeScalingActivityDetailResponseBody extends TeaModel {
         private String scalingActivityId; 
 
         /**
-         * Details of the scaling activity.
+         * The details of the scaling activity. If the status of the scaling activity is Rejected, no result is displayed.
          */
         public Builder detail(String detail) {
             this.detail = detail;
