@@ -41,6 +41,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreatePostpaidInstanceResponse> createPostpaidInstance(CreatePostpaidInstanceRequest request);
 
+    CompletableFuture<CreateSM2CertResponse> createSM2Cert(CreateSM2CertRequest request);
+
     CompletableFuture<DeleteApisecAbnormalResponse> deleteApisecAbnormal(DeleteApisecAbnormalRequest request);
 
     CompletableFuture<DeleteApisecEventResponse> deleteApisecEvent(DeleteApisecEventRequest request);
@@ -78,6 +80,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
     CompletableFuture<DescribeCloudResourcesResponse> describeCloudResources(DescribeCloudResourcesRequest request);
+
+    CompletableFuture<DescribeDDoSStatusResponse> describeDDoSStatus(DescribeDDoSStatusRequest request);
 
     CompletableFuture<DescribeDefenseResourceResponse> describeDefenseResource(DescribeDefenseResourceRequest request);
 

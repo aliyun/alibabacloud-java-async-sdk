@@ -49,7 +49,7 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Projects.
+         * The names of the projects in Simple Log Service.
          */
         public Builder projects(java.util.List < String > projects) {
             this.projects = projects;
@@ -57,7 +57,7 @@ public class DescribeApisecSlsProjectsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

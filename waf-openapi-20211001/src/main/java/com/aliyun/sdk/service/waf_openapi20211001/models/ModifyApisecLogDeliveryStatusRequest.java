@@ -112,7 +112,12 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         } 
 
         /**
-         * AssertKey.
+         * The type of the log subscription. Valid values:
+         * <p>
+         * 
+         * *   **risk**: risk information.
+         * *   **event**: attack event information.
+         * *   **asset**: asset information.
          */
         public Builder assertKey(String assertKey) {
             this.putQueryParameter("AssertKey", assertKey);
@@ -121,7 +126,10 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Web Application Firewall (WAF) instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -130,7 +138,11 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region where the WAF instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -139,7 +151,7 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -148,7 +160,11 @@ public class ModifyApisecLogDeliveryStatusRequest extends Request {
         }
 
         /**
-         * Status.
+         * The status of API security log subscription. Valid values:
+         * <p>
+         * 
+         * *   **true**: enabled.
+         * *   **false**: disabled.
          */
         public Builder status(Boolean status) {
             this.putQueryParameter("Status", status);

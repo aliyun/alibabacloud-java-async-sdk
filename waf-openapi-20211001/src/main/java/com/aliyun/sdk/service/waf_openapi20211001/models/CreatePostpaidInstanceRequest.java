@@ -67,7 +67,7 @@ public class CreatePostpaidInstanceRequest extends Request {
         } 
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
+         * The region in which the Web Application Firewall (WAF) instance is deployed. Valid values:
          * <p>
          * 
          * *   **cn-hangzhou**: Chinese mainland.

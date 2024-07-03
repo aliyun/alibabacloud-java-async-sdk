@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeApisecLogDeliveriesRequest} extends {@link RequestModel}
+ * {@link DescribeDDoSStatusRequest} extends {@link RequestModel}
  *
- * <p>DescribeApisecLogDeliveriesRequest</p>
+ * <p>DescribeDDoSStatusRequest</p>
  */
-public class DescribeApisecLogDeliveriesRequest extends Request {
+public class DescribeDDoSStatusRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -24,7 +24,7 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private DescribeApisecLogDeliveriesRequest(Builder builder) {
+    private DescribeDDoSStatusRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -35,7 +35,7 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeApisecLogDeliveriesRequest create() {
+    public static DescribeDDoSStatusRequest create() {
         return builder().build();
     }
 
@@ -65,7 +65,7 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeApisecLogDeliveriesRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeDDoSStatusRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -74,7 +74,7 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeApisecLogDeliveriesRequest request) {
+        private Builder(DescribeDDoSStatusRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -82,10 +82,10 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
+         * The ID of the WAF instance that you want to query.
          * <p>
          * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
+         * >  You can call the [DescribeInstanceInfo](~~140857~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -94,7 +94,7 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
         }
 
         /**
-         * The region where the WAF instance is deployed. Valid values:
+         * The region in which the WAF instance is deployed. Valid values:
          * <p>
          * 
          * *   **cn-hangzhou**: Chinese mainland.
@@ -116,8 +116,8 @@ public class DescribeApisecLogDeliveriesRequest extends Request {
         }
 
         @Override
-        public DescribeApisecLogDeliveriesRequest build() {
-            return new DescribeApisecLogDeliveriesRequest(this);
+        public DescribeDDoSStatusRequest build() {
+            return new DescribeDDoSStatusRequest(this);
         } 
 
     } 

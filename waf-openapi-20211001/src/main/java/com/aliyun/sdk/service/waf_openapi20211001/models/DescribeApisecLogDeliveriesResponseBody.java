@@ -49,7 +49,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DeliveryConfigs.
+         * The configurations of API security log subscription.
          */
         public Builder deliveryConfigs(java.util.List < DeliveryConfigs> deliveryConfigs) {
             this.deliveryConfigs = deliveryConfigs;
@@ -57,7 +57,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -145,7 +145,12 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             private Boolean status; 
 
             /**
-             * AssertKey.
+             * The type of the log subscription. Valid values:
+             * <p>
+             * 
+             * *   **risk**: risk information.
+             * *   **event**: attack event information.
+             * *   **asset**: asset information.
              */
             public Builder assertKey(String assertKey) {
                 this.assertKey = assertKey;
@@ -153,7 +158,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * LogRegionId.
+             * The ID of the region where logs are stored.
              */
             public Builder logRegionId(String logRegionId) {
                 this.logRegionId = logRegionId;
@@ -161,7 +166,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * LogStoreName.
+             * The name of the Logstore in Simple Log Service.
              */
             public Builder logStoreName(String logStoreName) {
                 this.logStoreName = logStoreName;
@@ -169,7 +174,7 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectName.
+             * The name of the project in Simple Log Service.
              */
             public Builder projectName(String projectName) {
                 this.projectName = projectName;
@@ -177,7 +182,11 @@ public class DescribeApisecLogDeliveriesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of API security log subscription. Valid values:
+             * <p>
+             * 
+             * *   **true**: enabled.
+             * *   **false**: disabled.
              */
             public Builder status(Boolean status) {
                 this.status = status;
