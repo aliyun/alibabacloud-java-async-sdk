@@ -360,12 +360,16 @@ public class TextModerationPlusResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         @com.aliyun.core.annotation.NameInMap("Score")
         private Float score;
 
         private Data(Builder builder) {
             this.advice = builder.advice;
             this.result = builder.result;
+            this.riskLevel = builder.riskLevel;
             this.score = builder.score;
         }
 
@@ -392,6 +396,13 @@ public class TextModerationPlusResponseBody extends TeaModel {
         }
 
         /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
+        /**
          * @return score
          */
         public Float getScore() {
@@ -401,6 +412,7 @@ public class TextModerationPlusResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Advice> advice; 
             private java.util.List < Result> result; 
+            private String riskLevel; 
             private Float score; 
 
             /**
@@ -416,6 +428,14 @@ public class TextModerationPlusResponseBody extends TeaModel {
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 

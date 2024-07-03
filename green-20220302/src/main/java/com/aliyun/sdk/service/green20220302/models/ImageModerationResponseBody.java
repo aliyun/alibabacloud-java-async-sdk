@@ -1254,10 +1254,14 @@ public class ImageModerationResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
+        @com.aliyun.core.annotation.NameInMap("RiskLevel")
+        private String riskLevel;
+
         private Data(Builder builder) {
             this.dataId = builder.dataId;
             this.ext = builder.ext;
             this.result = builder.result;
+            this.riskLevel = builder.riskLevel;
         }
 
         public static Builder builder() {
@@ -1289,10 +1293,18 @@ public class ImageModerationResponseBody extends TeaModel {
             return this.result;
         }
 
+        /**
+         * @return riskLevel
+         */
+        public String getRiskLevel() {
+            return this.riskLevel;
+        }
+
         public static final class Builder {
             private String dataId; 
             private Ext ext; 
             private java.util.List < Result> result; 
+            private String riskLevel; 
 
             /**
              * DataId.
@@ -1315,6 +1327,14 @@ public class ImageModerationResponseBody extends TeaModel {
              */
             public Builder result(java.util.List < Result> result) {
                 this.result = result;
+                return this;
+            }
+
+            /**
+             * RiskLevel.
+             */
+            public Builder riskLevel(String riskLevel) {
+                this.riskLevel = riskLevel;
                 return this;
             }
 
