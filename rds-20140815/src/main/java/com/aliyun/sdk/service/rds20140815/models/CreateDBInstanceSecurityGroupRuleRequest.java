@@ -6,19 +6,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSlotsRequest} extends {@link RequestModel}
+ * {@link CreateDBInstanceSecurityGroupRuleRequest} extends {@link RequestModel}
  *
- * <p>DescribeSlotsRequest</p>
+ * <p>CreateDBInstanceSecurityGroupRuleRequest</p>
  */
-public class DescribeSlotsRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
+public class CreateDBInstanceSecurityGroupRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String DBInstanceId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
+    private String description;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpProtocol")
+    private String ipProtocol;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerAccount")
@@ -26,11 +30,12 @@ public class DescribeSlotsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
+    private String ownerId;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    @com.aliyun.core.annotation.NameInMap("PortRange")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String portRange;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -40,22 +45,28 @@ public class DescribeSlotsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeSlotsRequest(Builder builder) {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceCidrIp")
+    private String sourceCidrIp;
+
+    private CreateDBInstanceSecurityGroupRuleRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
+        this.description = builder.description;
+        this.ipProtocol = builder.ipProtocol;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceGroupId = builder.resourceGroupId;
+        this.portRange = builder.portRange;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.sourceCidrIp = builder.sourceCidrIp;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static DescribeSlotsRequest create() {
+    public static CreateDBInstanceSecurityGroupRuleRequest create() {
         return builder().build();
     }
 
@@ -65,17 +76,24 @@ public class DescribeSlotsRequest extends Request {
     }
 
     /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
-    }
-
-    /**
      * @return DBInstanceId
      */
     public String getDBInstanceId() {
         return this.DBInstanceId;
+    }
+
+    /**
+     * @return description
+     */
+    public String getDescription() {
+        return this.description;
+    }
+
+    /**
+     * @return ipProtocol
+     */
+    public String getIpProtocol() {
+        return this.ipProtocol;
     }
 
     /**
@@ -88,15 +106,15 @@ public class DescribeSlotsRequest extends Request {
     /**
      * @return ownerId
      */
-    public Long getOwnerId() {
+    public String getOwnerId() {
         return this.ownerId;
     }
 
     /**
-     * @return resourceGroupId
+     * @return portRange
      */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
+    public String getPortRange() {
+        return this.portRange;
     }
 
     /**
@@ -113,48 +131,65 @@ public class DescribeSlotsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeSlotsRequest, Builder> {
-        private String clientToken; 
+    /**
+     * @return sourceCidrIp
+     */
+    public String getSourceCidrIp() {
+        return this.sourceCidrIp;
+    }
+
+    public static final class Builder extends Request.Builder<CreateDBInstanceSecurityGroupRuleRequest, Builder> {
         private String DBInstanceId; 
+        private String description; 
+        private String ipProtocol; 
         private String ownerAccount; 
-        private Long ownerId; 
-        private String resourceGroupId; 
+        private String ownerId; 
+        private String portRange; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String sourceCidrIp; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeSlotsRequest request) {
+        private Builder(CreateDBInstanceSecurityGroupRuleRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
+            this.description = request.description;
+            this.ipProtocol = request.ipProtocol;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceGroupId = request.resourceGroupId;
+            this.portRange = request.portRange;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.sourceCidrIp = request.sourceCidrIp;
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
             this.DBInstanceId = DBInstanceId;
+            return this;
+        }
+
+        /**
+         * Description.
+         */
+        public Builder description(String description) {
+            this.putQueryParameter("Description", description);
+            this.description = description;
+            return this;
+        }
+
+        /**
+         * IpProtocol.
+         */
+        public Builder ipProtocol(String ipProtocol) {
+            this.putQueryParameter("IpProtocol", ipProtocol);
+            this.ipProtocol = ipProtocol;
             return this;
         }
 
@@ -170,18 +205,18 @@ public class DescribeSlotsRequest extends Request {
         /**
          * OwnerId.
          */
-        public Builder ownerId(Long ownerId) {
+        public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
             return this;
         }
 
         /**
-         * The resource group ID. You can leave this parameter empty.
+         * PortRange.
          */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
+        public Builder portRange(String portRange) {
+            this.putQueryParameter("PortRange", portRange);
+            this.portRange = portRange;
             return this;
         }
 
@@ -203,9 +238,18 @@ public class DescribeSlotsRequest extends Request {
             return this;
         }
 
+        /**
+         * SourceCidrIp.
+         */
+        public Builder sourceCidrIp(String sourceCidrIp) {
+            this.putQueryParameter("SourceCidrIp", sourceCidrIp);
+            this.sourceCidrIp = sourceCidrIp;
+            return this;
+        }
+
         @Override
-        public DescribeSlotsRequest build() {
-            return new DescribeSlotsRequest(this);
+        public CreateDBInstanceSecurityGroupRuleRequest build() {
+            return new CreateDBInstanceSecurityGroupRuleRequest(this);
         } 
 
     } 

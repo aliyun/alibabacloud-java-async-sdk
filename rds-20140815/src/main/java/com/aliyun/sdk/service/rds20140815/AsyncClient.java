@@ -343,6 +343,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateDBInstanceForRebuildResponse> createDBInstanceForRebuild(CreateDBInstanceForRebuildRequest request);
 
+    CompletableFuture<CreateDBInstanceSecurityGroupRuleResponse> createDBInstanceSecurityGroupRule(CreateDBInstanceSecurityGroupRuleRequest request);
+
     /**
       * ### Supported database engines
       * MySQL
@@ -611,6 +613,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DeleteDBInstanceEndpointAddressResponse> deleteDBInstanceEndpointAddress(DeleteDBInstanceEndpointAddressRequest request);
+
+    CompletableFuture<DeleteDBInstanceSecurityGroupRuleResponse> deleteDBInstanceSecurityGroupRule(DeleteDBInstanceSecurityGroupRuleRequest request);
 
     /**
       * ### [](#)Supported database engines
@@ -1127,6 +1131,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeDBInstanceSSLResponse> describeDBInstanceSSL(DescribeDBInstanceSSLRequest request);
+
+    CompletableFuture<DescribeDBInstanceSecurityGroupRuleResponse> describeDBInstanceSecurityGroupRule(DescribeDBInstanceSecurityGroupRuleRequest request);
 
     /**
       * ### [](#)Supported database engines
@@ -1715,16 +1721,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### [](#)Supported database engines
-      * *   MySQL
+      * *   RDS MySQL
       *     **
       *     **Note** This operation is not supported for RDS instances that run MySQL 5.7 on RDS Basic Edition.
-      * *   SQL Server
+      * *   RDS SQL Server
       *     **
       *     **Note** This operation is supported only for RDS instances that run SQL Server 2008 R2.
-      * *   MariaDB
+      * *   RDS MariaDB
       * ### [](#)Precautions
       * *   Slow query logs are not collected in real time and may show a latency of 6 to 8 hours.
-      * *   If the return result is empty, check whether the StartTime and EndTime parameters meet the UTC format. If the parameters meet the UTC format, no slow logs are generated within the specified time range.
+      * *   If the return result is empty, check whether the StartTime and EndTime parameters are in UTC. If yes, no slow logs are generated within the specified time range.
+      * *   Starting from December 13, 2023, the optimized template algorithm is used for slow queries. As a result, different **SQLHash** values are generated for the same SQLText before and after optimization. For more information, see [\\[Notice\\] Optimization of the template algorithm for slow queries](~~2637024~~).
       *
      */
     CompletableFuture<DescribeSlowLogsResponse> describeSlowLogs(DescribeSlowLogsRequest request);
@@ -1757,9 +1764,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * ### [](#)Supported database engines
+      * MySQL
       * PostgreSQL
       * ### [](#)References
-      * > Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+      * > Before you call this operation, read the following topics and make sure that you fully understand the prerequisites and impacts of this operation.
+      * *   [Check report for the major engine version upgrade of an ApsaraDB RDS for MySQL instance](~~2794383~~)
       * *   [Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance](~~203309~~)
       * *   [Introduction to the check report of a major engine version upgrade for an ApsaraDB RDS for PostgreSQL instance](~~218391~~)
       *
@@ -2246,6 +2255,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<ModifyDBInstanceSSLResponse> modifyDBInstanceSSL(ModifyDBInstanceSSLRequest request);
+
+    CompletableFuture<ModifyDBInstanceSecurityGroupRuleResponse> modifyDBInstanceSecurityGroupRule(ModifyDBInstanceSecurityGroupRuleRequest request);
 
     /**
       * ### Supported database engines

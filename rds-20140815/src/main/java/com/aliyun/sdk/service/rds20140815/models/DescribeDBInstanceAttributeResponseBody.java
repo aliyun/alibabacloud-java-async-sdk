@@ -335,7 +335,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The node status. Default value: true. Valid values:
+             * The node status. Valid values:
              * <p>
              * 
              * *   active
@@ -1770,7 +1770,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * CanTempUpgrade.
+             * Indicates whether the conditions for a temporary upgrade are met.
+             * <p>
+             * 
+             * >  Pay-as-you-go instances do not support temporary upgrades.
              */
             public Builder canTempUpgrade(Boolean canTempUpgrade) {
                 this.canTempUpgrade = canTempUpgrade;
@@ -1794,7 +1797,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * A reserved parameter. You do not need to specify this parameter.
+             * A reserved parameter.
              */
             public Builder coldDataEnabled(Boolean coldDataEnabled) {
                 this.coldDataEnabled = coldDataEnabled;
@@ -1963,7 +1966,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **local_ssd** or **ephemeral_ssd**: local SSD
              * *   **cloud_ssd**: standard SSD
-             * *   **cloud_essd**: Enterprise SSD (ESSD)
+             * *   **cloud_essd**: Enterprise SSD (ESSD).
              * *   **general_essd**: general ESSD
              */
             public Builder DBInstanceStorageType(String DBInstanceStorageType) {
@@ -1972,7 +1975,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The instance type. Valid values:
+             * The type of the instance. Valid values:
              * <p>
              * 
              * *   **Primary**: primary instance
@@ -1994,7 +1997,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the dedicated cluster to which the instances belong.
+             * The ID of the dedicated cluster to which the instance belongs.
              */
             public Builder dedicatedHostGroupId(String dedicatedHostGroupId) {
                 this.dedicatedHostGroupId = dedicatedHostGroupId;
@@ -2218,7 +2221,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
              * 
              * *   **Postpaid**: pay-as-you-go
              * *   **Prepaid**: subscription
-             * *   **SERVERLESS**: serverless
+             * *   **SERVERLESS**
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -2335,7 +2338,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TempUpgradeTimeEnd.
+             * The end time of the temporary upgrade of the instance.
+             * <p>
+             * 
+             * >  This parameter is unavailable for pay-as-you-go instances.
              */
             public Builder tempUpgradeTimeEnd(String tempUpgradeTimeEnd) {
                 this.tempUpgradeTimeEnd = tempUpgradeTimeEnd;
@@ -2343,7 +2349,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * TempUpgradeTimeStart.
+             * The start time of the temporary upgrade of the instance.
+             * <p>
+             * 
+             * >  This parameter is unavailable for pay-as-you-go instances.
              */
             public Builder tempUpgradeTimeStart(String tempUpgradeTimeStart) {
                 this.tempUpgradeTimeStart = tempUpgradeTimeStart;
@@ -2387,7 +2396,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the instance. This parameter is returned only when the instance resides in a VPC.
+             * The ID of the VPC. This parameter is returned only when the instance resides in a VPC.
              */
             public Builder vpcCloudInstanceId(String vpcCloudInstanceId) {
                 this.vpcCloudInstanceId = vpcCloudInstanceId;

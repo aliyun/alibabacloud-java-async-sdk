@@ -6,15 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeSlotsRequest} extends {@link RequestModel}
+ * {@link DescribeDBInstanceSecurityGroupRuleRequest} extends {@link RequestModel}
  *
- * <p>DescribeSlotsRequest</p>
+ * <p>DescribeDBInstanceSecurityGroupRuleRequest</p>
  */
-public class DescribeSlotsRequest extends Request {
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ClientToken")
-    private String clientToken;
-
+public class DescribeDBInstanceSecurityGroupRuleRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DBInstanceId")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -26,11 +22,7 @@ public class DescribeSlotsRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("OwnerId")
-    private Long ownerId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
-    private String resourceGroupId;
+    private String ownerId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
@@ -40,13 +32,11 @@ public class DescribeSlotsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private DescribeSlotsRequest(Builder builder) {
+    private DescribeDBInstanceSecurityGroupRuleRequest(Builder builder) {
         super(builder);
-        this.clientToken = builder.clientToken;
         this.DBInstanceId = builder.DBInstanceId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
-        this.resourceGroupId = builder.resourceGroupId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
     }
@@ -55,20 +45,13 @@ public class DescribeSlotsRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeSlotsRequest create() {
+    public static DescribeDBInstanceSecurityGroupRuleRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return clientToken
-     */
-    public String getClientToken() {
-        return this.clientToken;
     }
 
     /**
@@ -88,15 +71,8 @@ public class DescribeSlotsRequest extends Request {
     /**
      * @return ownerId
      */
-    public Long getOwnerId() {
+    public String getOwnerId() {
         return this.ownerId;
-    }
-
-    /**
-     * @return resourceGroupId
-     */
-    public String getResourceGroupId() {
-        return this.resourceGroupId;
     }
 
     /**
@@ -113,12 +89,10 @@ public class DescribeSlotsRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<DescribeSlotsRequest, Builder> {
-        private String clientToken; 
+    public static final class Builder extends Request.Builder<DescribeDBInstanceSecurityGroupRuleRequest, Builder> {
         private String DBInstanceId; 
         private String ownerAccount; 
-        private Long ownerId; 
-        private String resourceGroupId; 
+        private String ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
 
@@ -126,31 +100,17 @@ public class DescribeSlotsRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeSlotsRequest request) {
+        private Builder(DescribeDBInstanceSecurityGroupRuleRequest request) {
             super(request);
-            this.clientToken = request.clientToken;
             this.DBInstanceId = request.DBInstanceId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
-            this.resourceGroupId = request.resourceGroupId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
         } 
 
         /**
-         * The client token that is used to ensure the idempotence of the request.
-         * <p>
-         * 
-         * You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
-         */
-        public Builder clientToken(String clientToken) {
-            this.putQueryParameter("ClientToken", clientToken);
-            this.clientToken = clientToken;
-            return this;
-        }
-
-        /**
-         * The instance ID. You can call the DescribeDBInstances operation to query the instance ID.
+         * DBInstanceId.
          */
         public Builder DBInstanceId(String DBInstanceId) {
             this.putQueryParameter("DBInstanceId", DBInstanceId);
@@ -170,18 +130,9 @@ public class DescribeSlotsRequest extends Request {
         /**
          * OwnerId.
          */
-        public Builder ownerId(Long ownerId) {
+        public Builder ownerId(String ownerId) {
             this.putQueryParameter("OwnerId", ownerId);
             this.ownerId = ownerId;
-            return this;
-        }
-
-        /**
-         * The resource group ID. You can leave this parameter empty.
-         */
-        public Builder resourceGroupId(String resourceGroupId) {
-            this.putQueryParameter("ResourceGroupId", resourceGroupId);
-            this.resourceGroupId = resourceGroupId;
             return this;
         }
 
@@ -204,8 +155,8 @@ public class DescribeSlotsRequest extends Request {
         }
 
         @Override
-        public DescribeSlotsRequest build() {
-            return new DescribeSlotsRequest(this);
+        public DescribeDBInstanceSecurityGroupRuleRequest build() {
+            return new DescribeDBInstanceSecurityGroupRuleRequest(this);
         } 
 
     } 
