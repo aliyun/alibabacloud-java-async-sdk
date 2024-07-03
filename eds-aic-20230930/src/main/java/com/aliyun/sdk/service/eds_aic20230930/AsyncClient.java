@@ -65,6 +65,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSpecResponse> describeSpec(DescribeSpecRequest request);
 
+    CompletableFuture<DescribeTasksResponse> describeTasks(DescribeTasksRequest request);
+
     CompletableFuture<DetachKeyPairResponse> detachKeyPair(DetachKeyPairRequest request);
 
     CompletableFuture<DistributeImageResponse> distributeImage(DistributeImageRequest request);
