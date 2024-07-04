@@ -183,6 +183,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSnatEntryResponse> createSnatEntry(CreateSnatEntryRequest request);
 
+    CompletableFuture<CreateStorageGatewayResponse> createStorageGateway(CreateStorageGatewayRequest request);
+
     CompletableFuture<CreateVSwitchResponse> createVSwitch(CreateVSwitchRequest request);
 
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
@@ -270,6 +272,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteSnatEntryResponse> deleteSnatEntry(DeleteSnatEntryRequest request);
 
     CompletableFuture<DeleteSnatIpForSnatEntryResponse> deleteSnatIpForSnatEntry(DeleteSnatIpForSnatEntryRequest request);
+
+    CompletableFuture<DeleteStorageGatewayResponse> deleteStorageGateway(DeleteStorageGatewayRequest request);
 
     /**
       * Before you delete a vSwitch, make sure that no instances exist in the vSwitch.

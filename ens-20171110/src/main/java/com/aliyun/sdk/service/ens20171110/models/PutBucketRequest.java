@@ -156,7 +156,12 @@ public class PutBucketRequest extends Request {
         }
 
         /**
-         * DispatchScope.
+         * Scheduling Scope, this parameter is only effective for globally scheduled Buckets.
+         * <p>
+         * 
+         * - domestic
+         * 
+         * - oversea
          */
         public Builder dispatchScope(String dispatchScope) {
             this.putBodyParameter("DispatchScope", dispatchScope);
