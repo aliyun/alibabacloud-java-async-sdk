@@ -129,7 +129,7 @@ public class TagResourcesRequest extends Request {
         }
 
         /**
-         * The list of tags to be bound.
+         * The tags.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putQueryParameter("Tags", tags);

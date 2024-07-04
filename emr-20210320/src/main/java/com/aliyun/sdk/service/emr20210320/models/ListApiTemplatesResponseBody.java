@@ -86,7 +86,7 @@ public class ListApiTemplatesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * ApiTemplates.
+         * The API operation templates.
          */
         public Builder apiTemplates(java.util.List < ApiTemplate > apiTemplates) {
             this.apiTemplates = apiTemplates;

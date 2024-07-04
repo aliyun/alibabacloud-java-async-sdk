@@ -85,7 +85,7 @@ public class ListInstanceTypesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * InstanceTypes.
+         * The instance types.
          */
         public Builder instanceTypes(java.util.List < InstanceType > instanceTypes) {
             this.instanceTypes = instanceTypes;

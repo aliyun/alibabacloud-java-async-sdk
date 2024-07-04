@@ -47,6 +47,10 @@ public class UpdateApplicationConfigsRequest extends Request {
     private String nodeId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RefreshConfig")
+    private Boolean refreshConfig;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -61,6 +65,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         this.description = builder.description;
         this.nodeGroupId = builder.nodeGroupId;
         this.nodeId = builder.nodeId;
+        this.refreshConfig = builder.refreshConfig;
         this.regionId = builder.regionId;
     }
 
@@ -134,6 +139,13 @@ public class UpdateApplicationConfigsRequest extends Request {
     }
 
     /**
+     * @return refreshConfig
+     */
+    public Boolean getRefreshConfig() {
+        return this.refreshConfig;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -149,6 +161,7 @@ public class UpdateApplicationConfigsRequest extends Request {
         private String description; 
         private String nodeGroupId; 
         private String nodeId; 
+        private Boolean refreshConfig; 
         private String regionId; 
 
         private Builder() {
@@ -165,6 +178,7 @@ public class UpdateApplicationConfigsRequest extends Request {
             this.description = request.description;
             this.nodeGroupId = request.nodeGroupId;
             this.nodeId = request.nodeId;
+            this.refreshConfig = request.refreshConfig;
             this.regionId = request.regionId;
         } 
 
@@ -246,6 +260,15 @@ public class UpdateApplicationConfigsRequest extends Request {
         public Builder nodeId(String nodeId) {
             this.putQueryParameter("NodeId", nodeId);
             this.nodeId = nodeId;
+            return this;
+        }
+
+        /**
+         * Specifies whether to refresh the configurations.
+         */
+        public Builder refreshConfig(Boolean refreshConfig) {
+            this.putQueryParameter("RefreshConfig", refreshConfig);
+            this.refreshConfig = refreshConfig;
             return this;
         }
 

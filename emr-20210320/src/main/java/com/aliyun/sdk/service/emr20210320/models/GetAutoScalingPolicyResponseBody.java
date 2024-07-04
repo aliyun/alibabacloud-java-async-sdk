@@ -144,9 +144,6 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MetricsTrigger")
         private MetricsTrigger metricsTrigger;
 
-        @com.aliyun.core.annotation.NameInMap("MinAdjustmentValue")
-        private Integer minAdjustmentValue;
-
         @com.aliyun.core.annotation.NameInMap("RuleName")
         private String ruleName;
 
@@ -161,7 +158,6 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             this.adjustmentType = builder.adjustmentType;
             this.adjustmentValue = builder.adjustmentValue;
             this.metricsTrigger = builder.metricsTrigger;
-            this.minAdjustmentValue = builder.minAdjustmentValue;
             this.ruleName = builder.ruleName;
             this.timeTrigger = builder.timeTrigger;
             this.triggerType = builder.triggerType;
@@ -204,13 +200,6 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * @return minAdjustmentValue
-         */
-        public Integer getMinAdjustmentValue() {
-            return this.minAdjustmentValue;
-        }
-
-        /**
          * @return ruleName
          */
         public String getRuleName() {
@@ -236,17 +225,16 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             private String adjustmentType; 
             private Integer adjustmentValue; 
             private MetricsTrigger metricsTrigger; 
-            private Integer minAdjustmentValue; 
             private String ruleName; 
             private TimeTrigger timeTrigger; 
             private String triggerType; 
 
             /**
-             * The type of the scaling activity. Valid values:
+             * The scaling type. Valid values:
              * <p>
              * 
-             * *   SCALE_OUT: scale-out rules
-             * *   SCALE_IN: scale-in rules
+             * *   SCALE_OUT
+             * *   SCALE_IN
              */
             public Builder activityType(String activityType) {
                 this.activityType = activityType;
@@ -262,7 +250,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The adjustment value. The value must be a positive number, which indicates the number of instances to be scaled out or in.
+             * The adjustment value. The parameter value must be a positive integer, which indicates the number of instances that you want to add or remove.
              */
             public Builder adjustmentValue(Integer adjustmentValue) {
                 this.adjustmentValue = adjustmentValue;
@@ -270,18 +258,10 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of scaling by load.
+             * The description of load-based scaling.
              */
             public Builder metricsTrigger(MetricsTrigger metricsTrigger) {
                 this.metricsTrigger = metricsTrigger;
-                return this;
-            }
-
-            /**
-             * MinAdjustmentValue.
-             */
-            public Builder minAdjustmentValue(Integer minAdjustmentValue) {
-                this.minAdjustmentValue = minAdjustmentValue;
                 return this;
             }
 
@@ -294,7 +274,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The description of scaling by time.
+             * The description of time-based scaling.
              */
             public Builder timeTrigger(TimeTrigger timeTrigger) {
                 this.timeTrigger = timeTrigger;
@@ -302,11 +282,11 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the scaling rule. Valid values:
+             * The type of the auto scaling rule. Valid values:
              * <p>
              * 
-             * *   TIME_TRIGGER: scaling by time.
-             * *   METRICS_TRIGGER: scaling by load.
+             * *   TIME_TRIGGER: time-based scaling
+             * *   METRICS_TRIGGER: load-based scaling
              */
             public Builder triggerType(String triggerType) {
                 this.triggerType = triggerType;
@@ -427,7 +407,7 @@ public class GetAutoScalingPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The scaling rules.
+             * The auto scaling rules.
              */
             public Builder scalingRules(java.util.List < ScalingRules> scalingRules) {
                 this.scalingRules = scalingRules;

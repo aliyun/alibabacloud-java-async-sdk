@@ -29,10 +29,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateNodeGroupResponse> createNodeGroup(CreateNodeGroupRequest request);
 
-    /**
-      * 缩容节点。
-      *
-     */
+    CompletableFuture<CreateScriptResponse> createScript(CreateScriptRequest request);
+
     CompletableFuture<DecreaseNodesResponse> decreaseNodes(DecreaseNodesRequest request);
 
     /**
@@ -42,6 +40,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteApiTemplateResponse> deleteApiTemplate(DeleteApiTemplateRequest request);
 
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
+
+    CompletableFuture<DeleteScriptResponse> deleteScript(DeleteScriptRequest request);
 
     CompletableFuture<GetApiTemplateResponse> getApiTemplate(GetApiTemplateRequest request);
 
@@ -151,10 +151,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetNodeGroupResponse> getNodeGroup(GetNodeGroupRequest request);
 
-    /**
-      * 获取操作详情。
-      *
-     */
     CompletableFuture<GetOperationResponse> getOperation(GetOperationRequest request);
 
     CompletableFuture<IncreaseNodesResponse> increaseNodes(IncreaseNodesRequest request);
@@ -261,6 +257,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListDoctorReportsResponse> listDoctorReports(ListDoctorReportsRequest request);
 
+    CompletableFuture<ListInspectionHistoryResponse> listInspectionHistory(ListInspectionHistoryRequest request);
+
     CompletableFuture<ListInstanceTypesResponse> listInstanceTypes(ListInstanceTypesRequest request);
 
     CompletableFuture<ListNodeGroupsResponse> listNodeGroups(ListNodeGroupsRequest request);
@@ -274,9 +272,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListReleaseVersionsResponse> listReleaseVersions(ListReleaseVersionsRequest request);
 
     /**
-      * 查询集群脚本。
+      * 查询资源巡检项。
       *
      */
+    CompletableFuture<ListResourceHealthInspectionsResponse> listResourceHealthInspections(ListResourceHealthInspectionsRequest request);
+
     CompletableFuture<ListScriptsResponse> listScripts(ListScriptsRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
@@ -289,20 +289,12 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RemoveAutoScalingPolicyResponse> removeAutoScalingPolicy(RemoveAutoScalingPolicyRequest request);
 
-    /**
-      * 执行集群模板
-      *
-     */
     CompletableFuture<RunApiTemplateResponse> runApiTemplate(RunApiTemplateRequest request);
 
     CompletableFuture<RunApplicationActionResponse> runApplicationAction(RunApplicationActionRequest request);
 
     CompletableFuture<TagResourcesResponse> tagResources(TagResourcesRequest request);
 
-    /**
-      * 删除指定资源标签。
-      *
-     */
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
     /**
@@ -312,5 +304,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateApiTemplateResponse> updateApiTemplate(UpdateApiTemplateRequest request);
 
     CompletableFuture<UpdateApplicationConfigsResponse> updateApplicationConfigs(UpdateApplicationConfigsRequest request);
+
+    CompletableFuture<UpdateScriptResponse> updateScript(UpdateScriptRequest request);
 
 }

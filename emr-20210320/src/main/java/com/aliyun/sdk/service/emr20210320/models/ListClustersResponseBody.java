@@ -85,7 +85,7 @@ public class ListClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * The list of clusters.
+         * The clusters.
          */
         public Builder clusters(java.util.List < ClusterSummary > clusters) {
             this.clusters = clusters;

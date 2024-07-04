@@ -109,7 +109,7 @@ public class ListScriptsResponseBody extends TeaModel {
         }
 
         /**
-         * Scripts.
+         * The scripts.
          */
         public Builder scripts(java.util.List < Scripts> scripts) {
             this.scripts = scripts;
@@ -301,7 +301,7 @@ public class ListScriptsResponseBody extends TeaModel {
             private Long startTime; 
 
             /**
-             * API名称。
+             * The name of the API operation.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -309,7 +309,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 结束执行时间。
+             * The time when the system finishes the running of the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -317,7 +317,11 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 执行失败策略。
+             * The policy that is used to handle execution failures of the script. Valid values:
+             * <p>
+             * 
+             * *   FAILED_CONTINUE
+             * *   FAILED_BLOCK
              */
             public Builder executionFailStrategy(String executionFailStrategy) {
                 this.executionFailStrategy = executionFailStrategy;
@@ -325,7 +329,11 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 执行时机。
+             * The time based on which the system runs the script. Valid values:
+             * <p>
+             * 
+             * *   BEFORE_INSTALL
+             * *   AFTER_STARTED
              */
             public Builder executionMoment(String executionMoment) {
                 this.executionMoment = executionMoment;
@@ -333,7 +341,12 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * ExecutionState.
+             * The status of the script. This parameter is returned only if the `ScriptType` parameter is set to `NORMAL`. Valid values:
+             * <p>
+             * 
+             * *   SCRIPT_COMPLETED
+             * *   SCRIPT_SUBMISSION_FAILED
+             * *   SCRIPT_RUNNING
              */
             public Builder executionState(String executionState) {
                 this.executionState = executionState;
@@ -341,7 +354,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 最近一次编辑时间。
+             * The time when the script was last modified.
              */
             public Builder lastUpdateTime(Long lastUpdateTime) {
                 this.lastUpdateTime = lastUpdateTime;
@@ -349,7 +362,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 节点选择器。
+             * The node selector.
              */
             public Builder nodeSelector(NodeSelector nodeSelector) {
                 this.nodeSelector = nodeSelector;
@@ -357,7 +370,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 区域ID。
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -365,7 +378,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群脚本执行参数。
+             * The runtime parameters of the script.
              */
             public Builder scriptArgs(String scriptArgs) {
                 this.scriptArgs = scriptArgs;
@@ -373,7 +386,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 脚本ID。
+             * The script ID.
              */
             public Builder scriptId(String scriptId) {
                 this.scriptId = scriptId;
@@ -381,7 +394,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群脚本名称。
+             * The name of the script.
              */
             public Builder scriptName(String scriptName) {
                 this.scriptName = scriptName;
@@ -389,7 +402,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 集群脚本路径。
+             * The path in which the script is stored.
              */
             public Builder scriptPath(String scriptPath) {
                 this.scriptPath = scriptPath;
@@ -397,7 +410,7 @@ public class ListScriptsResponseBody extends TeaModel {
             }
 
             /**
-             * 开始执行时间。
+             * The time when the system starts to run the script. This parameter is returned only if the ScriptType parameter is set to NORMAL.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;

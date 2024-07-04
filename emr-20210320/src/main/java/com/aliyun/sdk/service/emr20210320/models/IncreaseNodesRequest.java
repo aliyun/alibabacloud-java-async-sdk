@@ -20,6 +20,10 @@ public class IncreaseNodesRequest extends Request {
     private Boolean autoPayOrder;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
+    private Boolean autoRenew;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClusterId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
@@ -55,6 +59,7 @@ public class IncreaseNodesRequest extends Request {
         super(builder);
         this.applicationConfigs = builder.applicationConfigs;
         this.autoPayOrder = builder.autoPayOrder;
+        this.autoRenew = builder.autoRenew;
         this.clusterId = builder.clusterId;
         this.increaseNodeCount = builder.increaseNodeCount;
         this.minIncreaseNodeCount = builder.minIncreaseNodeCount;
@@ -89,6 +94,13 @@ public class IncreaseNodesRequest extends Request {
      */
     public Boolean getAutoPayOrder() {
         return this.autoPayOrder;
+    }
+
+    /**
+     * @return autoRenew
+     */
+    public Boolean getAutoRenew() {
+        return this.autoRenew;
     }
 
     /**
@@ -143,6 +155,7 @@ public class IncreaseNodesRequest extends Request {
     public static final class Builder extends Request.Builder<IncreaseNodesRequest, Builder> {
         private java.util.List < ApplicationConfig > applicationConfigs; 
         private Boolean autoPayOrder; 
+        private Boolean autoRenew; 
         private String clusterId; 
         private Integer increaseNodeCount; 
         private Integer minIncreaseNodeCount; 
@@ -159,6 +172,7 @@ public class IncreaseNodesRequest extends Request {
             super(request);
             this.applicationConfigs = request.applicationConfigs;
             this.autoPayOrder = request.autoPayOrder;
+            this.autoRenew = request.autoRenew;
             this.clusterId = request.clusterId;
             this.increaseNodeCount = request.increaseNodeCount;
             this.minIncreaseNodeCount = request.minIncreaseNodeCount;
@@ -193,6 +207,15 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
+         * AutoRenew.
+         */
+        public Builder autoRenew(Boolean autoRenew) {
+            this.putQueryParameter("AutoRenew", autoRenew);
+            this.autoRenew = autoRenew;
+            return this;
+        }
+
+        /**
          * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
@@ -211,7 +234,11 @@ public class IncreaseNodesRequest extends Request {
         }
 
         /**
-         * MinIncreaseNodeCount.
+         * The minimum number of nodes that can be added. Valid values: 1 to 500.
+         * <p>
+         * 
+         * *   If you configure this parameter, and the number of available Elastic Compute Service (ECS) instances is less than the value of the IncreaseNodeCount parameter, the system tries to add nodes based on the number specified by the `MinIncreaseNodeCount` parameter. If the minimum number of nodes are added, the scale-out status is `PARTIAL_COMPLETED`.
+         * *   If you do not configure this parameter, and the number of available ECS instances is less than the value of the IncreaseNodeCount parameter, the scale-out process fails. The scale-out status is `FAILED`.
          */
         public Builder minIncreaseNodeCount(Integer minIncreaseNodeCount) {
             this.putQueryParameter("MinIncreaseNodeCount", minIncreaseNodeCount);

@@ -129,7 +129,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
             private String nodeName; 
 
             /**
-             * NodeId.
+             * The ID of the abnormal node.
              */
             public Builder nodeId(String nodeId) {
                 this.nodeId = nodeId;
@@ -137,7 +137,7 @@ public class RunApplicationActionResponseBody extends TeaModel {
             }
 
             /**
-             * NodeName.
+             * The name of the abnormal node.
              */
             public Builder nodeName(String nodeName) {
                 this.nodeName = nodeName;

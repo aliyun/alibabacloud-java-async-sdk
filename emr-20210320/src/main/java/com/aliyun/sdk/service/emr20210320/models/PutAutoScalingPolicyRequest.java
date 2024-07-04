@@ -121,7 +121,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 最大最小值约束。
+         * The maximum and minimum numbers of nodes in a node group.
          */
         public Builder constraints(ScalingConstraints constraints) {
             this.putQueryParameter("Constraints", constraints);
@@ -148,9 +148,7 @@ public class PutAutoScalingPolicyRequest extends Request {
         }
 
         /**
-         * 弹性伸缩规则描述列表。
-         * <p>
-         * <p>
+         * The auto scaling rules. Number of elements in the array: 0 to 100.
          */
         public Builder scalingRules(java.util.List < ScalingRule > scalingRules) {
             this.putQueryParameter("ScalingRules", scalingRules);

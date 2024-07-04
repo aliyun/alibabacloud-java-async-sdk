@@ -49,7 +49,7 @@ public class GetOperationResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The operation that is performed.
+         * The operation that was performed.
          */
         public Builder operation(Operation operation) {
             this.operation = operation;

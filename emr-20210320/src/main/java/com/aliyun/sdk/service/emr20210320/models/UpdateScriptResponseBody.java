@@ -6,20 +6,15 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetApiTemplateResponseBody} extends {@link TeaModel}
+ * {@link UpdateScriptResponseBody} extends {@link TeaModel}
  *
- * <p>GetApiTemplateResponseBody</p>
+ * <p>UpdateScriptResponseBody</p>
  */
-public class GetApiTemplateResponseBody extends TeaModel {
-    @com.aliyun.core.annotation.NameInMap("Data")
-    @Deprecated
-    private ApiTemplate data;
-
+public class UpdateScriptResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private GetApiTemplateResponseBody(Builder builder) {
-        this.data = builder.data;
+    private UpdateScriptResponseBody(Builder builder) {
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +22,8 @@ public class GetApiTemplateResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetApiTemplateResponseBody create() {
+    public static UpdateScriptResponseBody create() {
         return builder().build();
-    }
-
-    /**
-     * @return data
-     */
-    public ApiTemplate getData() {
-        return this.data;
     }
 
     /**
@@ -46,16 +34,7 @@ public class GetApiTemplateResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private ApiTemplate data; 
         private String requestId; 
-
-        /**
-         * The content of the API operation template.
-         */
-        public Builder data(ApiTemplate data) {
-            this.data = data;
-            return this;
-        }
 
         /**
          * 请求ID。
@@ -65,8 +44,8 @@ public class GetApiTemplateResponseBody extends TeaModel {
             return this;
         }
 
-        public GetApiTemplateResponseBody build() {
-            return new GetApiTemplateResponseBody(this);
+        public UpdateScriptResponseBody build() {
+            return new UpdateScriptResponseBody(this);
         } 
 
     } 

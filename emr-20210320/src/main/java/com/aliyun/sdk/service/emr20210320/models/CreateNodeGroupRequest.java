@@ -93,7 +93,7 @@ public class CreateNodeGroupRequest extends Request {
         }
 
         /**
-         * The information about a machine group.
+         * The information about the node group.
          */
         public Builder nodeGroup(NodeGroupConfig nodeGroup) {
             this.putQueryParameter("NodeGroup", nodeGroup);

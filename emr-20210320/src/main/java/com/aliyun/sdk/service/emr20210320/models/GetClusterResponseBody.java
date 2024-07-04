@@ -49,7 +49,7 @@ public class GetClusterResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details of the master instance.
+         * The details of the cluster.
          */
         public Builder cluster(Cluster cluster) {
             this.cluster = cluster;
