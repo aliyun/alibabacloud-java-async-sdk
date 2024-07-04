@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAndAnalyzeNetworkPathResponseBody</p>
  */
 public class CreateAndAnalyzeNetworkPathResponseBody extends TeaModel {
-    @NameInMap("NetworkReachableAnalysisId")
+    @com.aliyun.core.annotation.NameInMap("NetworkReachableAnalysisId")
     private String networkReachableAnalysisId;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceId")
+    @com.aliyun.core.annotation.NameInMap("SourceId")
     private String sourceId;
 
-    @NameInMap("SourceIpAddress")
+    @com.aliyun.core.annotation.NameInMap("SourceIpAddress")
     private String sourceIpAddress;
 
-    @NameInMap("SourcePort")
+    @com.aliyun.core.annotation.NameInMap("SourcePort")
     private String sourcePort;
 
-    @NameInMap("SourceType")
+    @com.aliyun.core.annotation.NameInMap("SourceType")
     private String sourceType;
 
-    @NameInMap("TargetId")
+    @com.aliyun.core.annotation.NameInMap("TargetId")
     private String targetId;
 
-    @NameInMap("TargetIpAddress")
+    @com.aliyun.core.annotation.NameInMap("TargetIpAddress")
     private String targetIpAddress;
 
-    @NameInMap("TargetPort")
+    @com.aliyun.core.annotation.NameInMap("TargetPort")
     private String targetPort;
 
-    @NameInMap("TargetType")
+    @com.aliyun.core.annotation.NameInMap("TargetType")
     private String targetType;
 
     private CreateAndAnalyzeNetworkPathResponseBody(Builder builder) {

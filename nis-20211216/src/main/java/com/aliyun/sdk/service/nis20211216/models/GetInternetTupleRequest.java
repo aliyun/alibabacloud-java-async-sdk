@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,97 +11,97 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInternetTupleRequest</p>
  */
 public class GetInternetTupleRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < Long > accountIds;
 
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 253402271999000D)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CloudIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIp")
     private String cloudIp;
 
-    @Query
-    @NameInMap("CloudIpList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIpList")
     private java.util.List < String > cloudIpList;
 
-    @Query
-    @NameInMap("CloudIsp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudIsp")
     private String cloudIsp;
 
-    @Query
-    @NameInMap("CloudPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CloudPort")
     private String cloudPort;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 253402271999000D)
     private Long endTime;
 
-    @Query
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @Query
-    @NameInMap("InstanceList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceList")
     private java.util.List < String > instanceList;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OtherCity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherCity")
     private String otherCity;
 
-    @Query
-    @NameInMap("OtherCountry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherCountry")
     private String otherCountry;
 
-    @Query
-    @NameInMap("OtherIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIp")
     private String otherIp;
 
-    @Query
-    @NameInMap("OtherIsp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIsp")
     private String otherIsp;
 
-    @Query
-    @NameInMap("OtherPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherPort")
     private String otherPort;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("TopN")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopN")
     private Integer topN;
 
-    @Query
-    @NameInMap("TupleType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TupleType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer tupleType;
 
-    @Query
-    @NameInMap("UseMultiAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseMultiAccount")
     private Boolean useMultiAccount;
 
     private GetInternetTupleRequest(Builder builder) {
@@ -463,19 +462,6 @@ public class GetInternetTupleRequest extends Request {
          * *   Rtt
          * *   ByteCount
          * *   PacketCount
-         * *   InByteCount
-         * *   OutByteCount
-         * *   InPacketCount
-         * *   OutPacketCount
-         * *   InRetranCount
-         * *   OutRetranCount
-         * *   InDupAckCount
-         * *   OutDupAckCount
-         * *   InOutOrderCount
-         * *   OutOutOrderCount
-         * *   RetranCount
-         * *   OutOrderCount
-         * *   DupAckCount
          * *   RetransmitRate
          */
         public Builder orderBy(String orderBy) {

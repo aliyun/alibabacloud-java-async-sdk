@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetInternetTupleResponseBody</p>
  */
 public class GetInternetTupleResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private java.util.List < Data> data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetInternetTupleResponseBody(Builder builder) {
@@ -72,100 +71,100 @@ public class GetInternetTupleResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessRegion")
+        @com.aliyun.core.annotation.NameInMap("AccessRegion")
         private String accessRegion;
 
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private String beginTime;
 
-        @NameInMap("ByteCount")
+        @com.aliyun.core.annotation.NameInMap("ByteCount")
         private Double byteCount;
 
-        @NameInMap("CloudCity")
+        @com.aliyun.core.annotation.NameInMap("CloudCity")
         private String cloudCity;
 
-        @NameInMap("CloudCountry")
+        @com.aliyun.core.annotation.NameInMap("CloudCountry")
         private String cloudCountry;
 
-        @NameInMap("CloudIp")
+        @com.aliyun.core.annotation.NameInMap("CloudIp")
         private String cloudIp;
 
-        @NameInMap("CloudIsp")
+        @com.aliyun.core.annotation.NameInMap("CloudIsp")
         private String cloudIsp;
 
-        @NameInMap("CloudPort")
+        @com.aliyun.core.annotation.NameInMap("CloudPort")
         private String cloudPort;
 
-        @NameInMap("CloudProduct")
+        @com.aliyun.core.annotation.NameInMap("CloudProduct")
         private String cloudProduct;
 
-        @NameInMap("CloudProvince")
+        @com.aliyun.core.annotation.NameInMap("CloudProvince")
         private String cloudProvince;
 
-        @NameInMap("Direction")
+        @com.aliyun.core.annotation.NameInMap("Direction")
         private String direction;
 
-        @NameInMap("InByteCount")
+        @com.aliyun.core.annotation.NameInMap("InByteCount")
         private Double inByteCount;
 
-        @NameInMap("InOutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("InOutOrderCount")
         private Double inOutOrderCount;
 
-        @NameInMap("InPacketCount")
+        @com.aliyun.core.annotation.NameInMap("InPacketCount")
         private Double inPacketCount;
 
-        @NameInMap("InRetranCount")
+        @com.aliyun.core.annotation.NameInMap("InRetranCount")
         private Double inRetranCount;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("OtherCity")
+        @com.aliyun.core.annotation.NameInMap("OtherCity")
         private String otherCity;
 
-        @NameInMap("OtherCountry")
+        @com.aliyun.core.annotation.NameInMap("OtherCountry")
         private String otherCountry;
 
-        @NameInMap("OtherIp")
+        @com.aliyun.core.annotation.NameInMap("OtherIp")
         private String otherIp;
 
-        @NameInMap("OtherIsp")
+        @com.aliyun.core.annotation.NameInMap("OtherIsp")
         private String otherIsp;
 
-        @NameInMap("OtherPort")
+        @com.aliyun.core.annotation.NameInMap("OtherPort")
         private String otherPort;
 
-        @NameInMap("OtherProduct")
+        @com.aliyun.core.annotation.NameInMap("OtherProduct")
         private String otherProduct;
 
-        @NameInMap("OtherProvince")
+        @com.aliyun.core.annotation.NameInMap("OtherProvince")
         private String otherProvince;
 
-        @NameInMap("OutByteCount")
+        @com.aliyun.core.annotation.NameInMap("OutByteCount")
         private Double outByteCount;
 
-        @NameInMap("OutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("OutOrderCount")
         private Double outOrderCount;
 
-        @NameInMap("OutOutOrderCount")
+        @com.aliyun.core.annotation.NameInMap("OutOutOrderCount")
         private Double outOutOrderCount;
 
-        @NameInMap("OutPacketCount")
+        @com.aliyun.core.annotation.NameInMap("OutPacketCount")
         private Double outPacketCount;
 
-        @NameInMap("OutRetranCount")
+        @com.aliyun.core.annotation.NameInMap("OutRetranCount")
         private Double outRetranCount;
 
-        @NameInMap("PacketCount")
+        @com.aliyun.core.annotation.NameInMap("PacketCount")
         private Double packetCount;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("RetransmitRate")
+        @com.aliyun.core.annotation.NameInMap("RetransmitRate")
         private Double retransmitRate;
 
-        @NameInMap("Rtt")
+        @com.aliyun.core.annotation.NameInMap("Rtt")
         private Double rtt;
 
         private Data(Builder builder) {

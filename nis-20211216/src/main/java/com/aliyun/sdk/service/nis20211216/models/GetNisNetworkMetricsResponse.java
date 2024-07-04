@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetInternetTupleResponse} extends {@link TeaModel}
+ * {@link GetNisNetworkMetricsResponse} extends {@link TeaModel}
  *
- * <p>GetInternetTupleResponse</p>
+ * <p>GetNisNetworkMetricsResponse</p>
  */
-public class GetInternetTupleResponse extends Response {
+public class GetNisNetworkMetricsResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class GetInternetTupleResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private GetInternetTupleResponseBody body;
+    private GetNisNetworkMetricsResponseBody body;
 
-    private GetInternetTupleResponse(BuilderImpl builder) {
+    private GetNisNetworkMetricsResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static GetInternetTupleResponse create() {
+    public static GetNisNetworkMetricsResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class GetInternetTupleResponse extends Response {
     /**
      * @return body
      */
-    public GetInternetTupleResponseBody getBody() {
+    public GetNisNetworkMetricsResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<GetInternetTupleResponse, Builder> {
+    public interface Builder extends Response.Builder<GetNisNetworkMetricsResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(GetInternetTupleResponseBody body);
+        Builder body(GetNisNetworkMetricsResponseBody body);
 
         @Override
-        GetInternetTupleResponse build();
+        GetNisNetworkMetricsResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<GetInternetTupleResponse, Builder>
+            extends Response.BuilderImpl<GetNisNetworkMetricsResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private GetInternetTupleResponseBody body; 
+        private GetNisNetworkMetricsResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(GetInternetTupleResponse response) {
+        private BuilderImpl(GetNisNetworkMetricsResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class GetInternetTupleResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(GetInternetTupleResponseBody body) {
+        public Builder body(GetNisNetworkMetricsResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public GetInternetTupleResponse build() {
-            return new GetInternetTupleResponse(this);
+        public GetNisNetworkMetricsResponse build() {
+            return new GetNisNetworkMetricsResponse(this);
         } 
 
     } 

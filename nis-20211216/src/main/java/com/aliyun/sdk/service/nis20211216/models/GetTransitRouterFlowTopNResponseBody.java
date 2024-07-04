@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTransitRouterFlowTopNResponseBody</p>
  */
 public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TransitRouterFlowTopN")
+    @com.aliyun.core.annotation.NameInMap("TransitRouterFlowTopN")
     private java.util.List < TransitRouterFlowTopN> transitRouterFlowTopN;
 
     private GetTransitRouterFlowTopNResponseBody(Builder builder) {
@@ -72,46 +71,46 @@ public class GetTransitRouterFlowTopNResponseBody extends TeaModel {
     } 
 
     public static class TransitRouterFlowTopN extends TeaModel {
-        @NameInMap("AccountId")
+        @com.aliyun.core.annotation.NameInMap("AccountId")
         private String accountId;
 
-        @NameInMap("BandwithPackageId")
+        @com.aliyun.core.annotation.NameInMap("BandwithPackageId")
         private String bandwithPackageId;
 
-        @NameInMap("Bytes")
+        @com.aliyun.core.annotation.NameInMap("Bytes")
         private Double bytes;
 
-        @NameInMap("CenId")
+        @com.aliyun.core.annotation.NameInMap("CenId")
         private String cenId;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("OtherIp")
+        @com.aliyun.core.annotation.NameInMap("OtherIp")
         private String otherIp;
 
-        @NameInMap("OtherPort")
+        @com.aliyun.core.annotation.NameInMap("OtherPort")
         private String otherPort;
 
-        @NameInMap("OtherRegion")
+        @com.aliyun.core.annotation.NameInMap("OtherRegion")
         private String otherRegion;
 
-        @NameInMap("Packets")
+        @com.aliyun.core.annotation.NameInMap("Packets")
         private Double packets;
 
-        @NameInMap("Protocol")
+        @com.aliyun.core.annotation.NameInMap("Protocol")
         private String protocol;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("ThisIp")
+        @com.aliyun.core.annotation.NameInMap("ThisIp")
         private String thisIp;
 
-        @NameInMap("ThisPort")
+        @com.aliyun.core.annotation.NameInMap("ThisPort")
         private String thisPort;
 
-        @NameInMap("ThisRegion")
+        @com.aliyun.core.annotation.NameInMap("ThisRegion")
         private String thisRegion;
 
         private TransitRouterFlowTopN(Builder builder) {

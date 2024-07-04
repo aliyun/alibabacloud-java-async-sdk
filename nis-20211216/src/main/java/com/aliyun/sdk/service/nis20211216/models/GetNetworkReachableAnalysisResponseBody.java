@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNetworkReachableAnalysisResponseBody</p>
  */
 public class GetNetworkReachableAnalysisResponseBody extends TeaModel {
-    @NameInMap("AliUid")
+    @com.aliyun.core.annotation.NameInMap("AliUid")
     private Long aliUid;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("NetworkPathId")
+    @com.aliyun.core.annotation.NameInMap("NetworkPathId")
     private String networkPathId;
 
-    @NameInMap("NetworkPathParameter")
+    @com.aliyun.core.annotation.NameInMap("NetworkPathParameter")
     private String networkPathParameter;
 
-    @NameInMap("NetworkReachableAnalysisId")
+    @com.aliyun.core.annotation.NameInMap("NetworkReachableAnalysisId")
     private String networkReachableAnalysisId;
 
-    @NameInMap("NetworkReachableAnalysisResult")
+    @com.aliyun.core.annotation.NameInMap("NetworkReachableAnalysisResult")
     private String networkReachableAnalysisResult;
 
-    @NameInMap("NetworkReachableAnalysisStatus")
+    @com.aliyun.core.annotation.NameInMap("NetworkReachableAnalysisStatus")
     private String networkReachableAnalysisStatus;
 
-    @NameInMap("Reachable")
+    @com.aliyun.core.annotation.NameInMap("Reachable")
     private Boolean reachable;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNetworkReachableAnalysisResponseBody(Builder builder) {

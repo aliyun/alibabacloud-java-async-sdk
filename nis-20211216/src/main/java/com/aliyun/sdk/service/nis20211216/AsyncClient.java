@@ -56,6 +56,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<GetNetworkReachableAnalysisResponse> getNetworkReachableAnalysis(GetNetworkReachableAnalysisRequest request);
 
+    CompletableFuture<GetNisNetworkMetricsResponse> getNisNetworkMetrics(GetNisNetworkMetricsRequest request);
+
+    CompletableFuture<GetNisNetworkRankingResponse> getNisNetworkRanking(GetNisNetworkRankingRequest request);
+
     CompletableFuture<GetTransitRouterFlowTopNResponse> getTransitRouterFlowTopN(GetTransitRouterFlowTopNRequest request);
 
     CompletableFuture<GetVbrFlowTopNResponse> getVbrFlowTopN(GetVbrFlowTopNRequest request);

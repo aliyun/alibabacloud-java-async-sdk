@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetNatTopNResponseBody</p>
  */
 public class GetNatTopNResponseBody extends TeaModel {
-    @NameInMap("IsTopNOpen")
+    @com.aliyun.core.annotation.NameInMap("IsTopNOpen")
     private Boolean isTopNOpen;
 
-    @NameInMap("NatGatewayTopN")
+    @com.aliyun.core.annotation.NameInMap("NatGatewayTopN")
     private java.util.List < NatGatewayTopN> natGatewayTopN;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetNatTopNResponseBody(Builder builder) {
@@ -96,31 +95,31 @@ public class GetNatTopNResponseBody extends TeaModel {
     } 
 
     public static class NatGatewayTopN extends TeaModel {
-        @NameInMap("ActiveSessionCount")
+        @com.aliyun.core.annotation.NameInMap("ActiveSessionCount")
         private Float activeSessionCount;
 
-        @NameInMap("InBps")
+        @com.aliyun.core.annotation.NameInMap("InBps")
         private Float inBps;
 
-        @NameInMap("InFlowPerMinute")
+        @com.aliyun.core.annotation.NameInMap("InFlowPerMinute")
         private Float inFlowPerMinute;
 
-        @NameInMap("InPps")
+        @com.aliyun.core.annotation.NameInMap("InPps")
         private Float inPps;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("NewSessionPerSecond")
+        @com.aliyun.core.annotation.NameInMap("NewSessionPerSecond")
         private Float newSessionPerSecond;
 
-        @NameInMap("OutBps")
+        @com.aliyun.core.annotation.NameInMap("OutBps")
         private Float outBps;
 
-        @NameInMap("OutFlowPerMinute")
+        @com.aliyun.core.annotation.NameInMap("OutFlowPerMinute")
         private Float outFlowPerMinute;
 
-        @NameInMap("OutPps")
+        @com.aliyun.core.annotation.NameInMap("OutPps")
         private Float outPps;
 
         private NatGatewayTopN(Builder builder) {

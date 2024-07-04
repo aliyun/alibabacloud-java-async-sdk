@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.nis20211216.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,81 +11,81 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTransitRouterFlowTopNRequest</p>
  */
 public class GetTransitRouterFlowTopNRequest extends Request {
-    @Query
-    @NameInMap("AccountIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AccountIds")
     private java.util.List < Long > accountIds;
 
-    @Query
-    @NameInMap("BandwithPackageId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BandwithPackageId")
     private String bandwithPackageId;
 
-    @Query
-    @NameInMap("BeginTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long beginTime;
 
-    @Query
-    @NameInMap("CenId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CenId")
     private String cenId;
 
-    @Query
-    @NameInMap("Direction")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Direction")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String direction;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("GroupBy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupBy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupBy;
 
-    @Query
-    @NameInMap("OrderBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderBy")
     private String orderBy;
 
-    @Query
-    @NameInMap("OtherIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherIp")
     private String otherIp;
 
-    @Query
-    @NameInMap("OtherPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherPort")
     private String otherPort;
 
-    @Query
-    @NameInMap("OtherRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OtherRegion")
     private String otherRegion;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @Query
-    @NameInMap("Sort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Sort")
     private String sort;
 
-    @Query
-    @NameInMap("ThisIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisIp")
     private String thisIp;
 
-    @Query
-    @NameInMap("ThisPort")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisPort")
     private String thisPort;
 
-    @Query
-    @NameInMap("ThisRegion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ThisRegion")
     private String thisRegion;
 
-    @Query
-    @NameInMap("TopN")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TopN")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer topN;
 
-    @Query
-    @NameInMap("UseMultiAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseMultiAccount")
     private Boolean useMultiAccount;
 
     private GetTransitRouterFlowTopNRequest(Builder builder) {
