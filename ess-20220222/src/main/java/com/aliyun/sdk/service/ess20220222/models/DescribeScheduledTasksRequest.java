@@ -29,6 +29,14 @@ public class DescribeScheduledTasksRequest extends Request {
     private Integer pageSize;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecurrenceType")
+    private String recurrenceType;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecurrenceValue")
+    private String recurrenceValue;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -57,12 +65,22 @@ public class DescribeScheduledTasksRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ScheduledTaskNames")
     private java.util.List < String > scheduledTaskNames;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskEnabled")
+    private Boolean taskEnabled;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskName")
+    private String taskName;
+
     private DescribeScheduledTasksRequest(Builder builder) {
         super(builder);
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
+        this.recurrenceType = builder.recurrenceType;
+        this.recurrenceValue = builder.recurrenceValue;
         this.regionId = builder.regionId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
@@ -70,6 +88,8 @@ public class DescribeScheduledTasksRequest extends Request {
         this.scheduledActions = builder.scheduledActions;
         this.scheduledTaskIds = builder.scheduledTaskIds;
         this.scheduledTaskNames = builder.scheduledTaskNames;
+        this.taskEnabled = builder.taskEnabled;
+        this.taskName = builder.taskName;
     }
 
     public static Builder builder() {
@@ -111,6 +131,20 @@ public class DescribeScheduledTasksRequest extends Request {
      */
     public Integer getPageSize() {
         return this.pageSize;
+    }
+
+    /**
+     * @return recurrenceType
+     */
+    public String getRecurrenceType() {
+        return this.recurrenceType;
+    }
+
+    /**
+     * @return recurrenceValue
+     */
+    public String getRecurrenceValue() {
+        return this.recurrenceValue;
     }
 
     /**
@@ -162,11 +196,27 @@ public class DescribeScheduledTasksRequest extends Request {
         return this.scheduledTaskNames;
     }
 
+    /**
+     * @return taskEnabled
+     */
+    public Boolean getTaskEnabled() {
+        return this.taskEnabled;
+    }
+
+    /**
+     * @return taskName
+     */
+    public String getTaskName() {
+        return this.taskName;
+    }
+
     public static final class Builder extends Request.Builder<DescribeScheduledTasksRequest, Builder> {
         private String ownerAccount; 
         private Long ownerId; 
         private Integer pageNumber; 
         private Integer pageSize; 
+        private String recurrenceType; 
+        private String recurrenceValue; 
         private String regionId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
@@ -174,6 +224,8 @@ public class DescribeScheduledTasksRequest extends Request {
         private java.util.List < String > scheduledActions; 
         private java.util.List < String > scheduledTaskIds; 
         private java.util.List < String > scheduledTaskNames; 
+        private Boolean taskEnabled; 
+        private String taskName; 
 
         private Builder() {
             super();
@@ -185,6 +237,8 @@ public class DescribeScheduledTasksRequest extends Request {
             this.ownerId = request.ownerId;
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
+            this.recurrenceType = request.recurrenceType;
+            this.recurrenceValue = request.recurrenceValue;
             this.regionId = request.regionId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
@@ -192,6 +246,8 @@ public class DescribeScheduledTasksRequest extends Request {
             this.scheduledActions = request.scheduledActions;
             this.scheduledTaskIds = request.scheduledTaskIds;
             this.scheduledTaskNames = request.scheduledTaskNames;
+            this.taskEnabled = request.taskEnabled;
+            this.taskName = request.taskName;
         } 
 
         /**
@@ -233,6 +289,24 @@ public class DescribeScheduledTasksRequest extends Request {
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
             this.pageSize = pageSize;
+            return this;
+        }
+
+        /**
+         * RecurrenceType.
+         */
+        public Builder recurrenceType(String recurrenceType) {
+            this.putQueryParameter("RecurrenceType", recurrenceType);
+            this.recurrenceType = recurrenceType;
+            return this;
+        }
+
+        /**
+         * RecurrenceValue.
+         */
+        public Builder recurrenceValue(String recurrenceValue) {
+            this.putQueryParameter("RecurrenceValue", recurrenceValue);
+            this.recurrenceValue = recurrenceValue;
             return this;
         }
 
@@ -296,6 +370,24 @@ public class DescribeScheduledTasksRequest extends Request {
         public Builder scheduledTaskNames(java.util.List < String > scheduledTaskNames) {
             this.putQueryParameter("ScheduledTaskNames", scheduledTaskNames);
             this.scheduledTaskNames = scheduledTaskNames;
+            return this;
+        }
+
+        /**
+         * TaskEnabled.
+         */
+        public Builder taskEnabled(Boolean taskEnabled) {
+            this.putQueryParameter("TaskEnabled", taskEnabled);
+            this.taskEnabled = taskEnabled;
+            return this;
+        }
+
+        /**
+         * TaskName.
+         */
+        public Builder taskName(String taskName) {
+            this.putQueryParameter("TaskName", taskName);
+            this.taskName = taskName;
             return this;
         }
 
