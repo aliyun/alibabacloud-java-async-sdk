@@ -23,6 +23,14 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ApplyFileUploadLeaseResponse> applyFileUploadLease(ApplyFileUploadLeaseRequest request);
 
+    CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
+
     CompletableFuture<DescribeFileResponse> describeFile(DescribeFileRequest request);
+
+    CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
+
+    CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
+
+    CompletableFuture<SubmitIndexJobResponse> submitIndexJob(SubmitIndexJobRequest request);
 
 }
