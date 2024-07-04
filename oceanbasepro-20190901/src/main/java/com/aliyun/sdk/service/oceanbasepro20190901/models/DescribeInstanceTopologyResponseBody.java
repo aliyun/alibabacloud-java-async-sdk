@@ -1201,7 +1201,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedCpu; 
 
             /**
-             * The size of used storage space of the node, in GB.
+             * TotalCpu.
              */
             public Builder totalCpu(Integer totalCpu) {
                 this.totalCpu = totalCpu;
@@ -1209,7 +1209,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether migration can be performed.
+             * UsedCpu.
              */
             public Builder usedCpu(Float usedCpu) {
                 this.usedCpu = usedCpu;
@@ -1262,7 +1262,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Double usedDiskSize; 
 
             /**
-             * The deployment type of the primary zone.
+             * TotalDiskSize.
              */
             public Builder totalDiskSize(Double totalDiskSize) {
                 this.totalDiskSize = totalDiskSize;
@@ -1270,17 +1270,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the tenant.   
-             * <p>
-             * - PENDING_CREATE: The tenant is being created.   
-             * - RESTORE: The tenant is being recovered.   
-             * - ONLINE: The tenant is running.   
-             * - SPEC_MODIFYING: The specification of the tenant is being modified.   
-             * - ALLOCATING_INTERNET_ADDRESS: An Internet address is being allocated.   
-             * - PENDING_OFFLINE_INTERNET_ADDRESS: The Internet address is being disabled.   
-             * - PRIMARY_ZONE_MODIFYING: The tenant is switching to a new primary zone.   
-             * - PARAMETER_MODIFYING: Parameters are being modified.   
-             * - WHITE_LIST_MODIFYING: The whitelist is being modified.
+             * UsedDiskSize.
              */
             public Builder usedDiskSize(Double usedDiskSize) {
                 this.usedDiskSize = usedDiskSize;
@@ -1333,7 +1323,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private Float usedMemory; 
 
             /**
-             * The ID of the replica node.
+             * TotalMemory.
              */
             public Builder totalMemory(Long totalMemory) {
                 this.totalMemory = totalMemory;
@@ -1341,7 +1331,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information of node resources.
+             * UsedMemory.
              */
             public Builder usedMemory(Float usedMemory) {
                 this.usedMemory = usedMemory;
@@ -1406,7 +1396,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private NodeResourceMemory memory; 
 
             /**
-             * The memory size of the tenant, in GB.
+             * Cpu.
              */
             public Builder cpu(NodeResourceCpu cpu) {
                 this.cpu = cpu;
@@ -1414,7 +1404,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the CPU resources of the node.
+             * DiskSize.
              */
             public Builder diskSize(NodeResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
@@ -1422,10 +1412,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             }
 
             /**
-             * The role to access the zone. Valid values:   
-             * <p>
-             *  - ReadWrite: a role that has the read and write privileges.
-             *  - ReadOnly: a role that has only the read-only privilege.
+             * Memory.
              */
             public Builder memory(NodeResourceMemory memory) {
                 this.memory = memory;
@@ -1453,7 +1440,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         private String nodeId;
 
         @com.aliyun.core.annotation.NameInMap("NodeResource")
-        private java.util.List < NodeResource> nodeResource;
+        private NodeResource nodeResource;
 
         @com.aliyun.core.annotation.NameInMap("NodeStatus")
         private String nodeStatus;
@@ -1514,7 +1501,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
         /**
          * @return nodeResource
          */
-        public java.util.List < NodeResource> getNodeResource() {
+        public NodeResource getNodeResource() {
             return this.nodeResource;
         }
 
@@ -1544,7 +1531,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private String logicalZone; 
             private Long nodeCopyId; 
             private String nodeId; 
-            private java.util.List < NodeResource> nodeResource; 
+            private NodeResource nodeResource; 
             private String nodeStatus; 
             private Long readOnlyCopyId; 
             private String replicaType; 
@@ -1584,7 +1571,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             /**
              * The ID of the node.
              */
-            public Builder nodeResource(java.util.List < NodeResource> nodeResource) {
+            public Builder nodeResource(NodeResource nodeResource) {
                 this.nodeResource = nodeResource;
                 return this;
             }
@@ -1708,7 +1695,7 @@ public class DescribeInstanceTopologyResponseBody extends TeaModel {
             private ZoneResourceDiskSize diskSize; 
 
             /**
-             * The information about the CPU resources of the node.
+             * DiskSize.
              */
             public Builder diskSize(ZoneResourceDiskSize diskSize) {
                 this.diskSize = diskSize;
