@@ -158,6 +158,9 @@ public class TargetAudio extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("BitrateOption")
         private String bitrateOption;
 
+        @com.aliyun.core.annotation.NameInMap("BitsPerSample")
+        private Integer bitsPerSample;
+
         @com.aliyun.core.annotation.NameInMap("Channel")
         private Integer channel;
 
@@ -176,6 +179,7 @@ public class TargetAudio extends TeaModel {
         private TranscodeAudio(Builder builder) {
             this.bitrate = builder.bitrate;
             this.bitrateOption = builder.bitrateOption;
+            this.bitsPerSample = builder.bitsPerSample;
             this.channel = builder.channel;
             this.codec = builder.codec;
             this.quality = builder.quality;
@@ -203,6 +207,13 @@ public class TargetAudio extends TeaModel {
          */
         public String getBitrateOption() {
             return this.bitrateOption;
+        }
+
+        /**
+         * @return bitsPerSample
+         */
+        public Integer getBitsPerSample() {
+            return this.bitsPerSample;
         }
 
         /**
@@ -243,6 +254,7 @@ public class TargetAudio extends TeaModel {
         public static final class Builder {
             private Integer bitrate; 
             private String bitrateOption; 
+            private Integer bitsPerSample; 
             private Integer channel; 
             private String codec; 
             private Integer quality; 
@@ -262,6 +274,14 @@ public class TargetAudio extends TeaModel {
              */
             public Builder bitrateOption(String bitrateOption) {
                 this.bitrateOption = bitrateOption;
+                return this;
+            }
+
+            /**
+             * BitsPerSample.
+             */
+            public Builder bitsPerSample(Integer bitsPerSample) {
+                this.bitsPerSample = bitsPerSample;
                 return this;
             }
 

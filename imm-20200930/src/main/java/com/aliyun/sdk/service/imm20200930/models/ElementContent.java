@@ -14,6 +14,9 @@ public class ElementContent extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
+    @com.aliyun.core.annotation.NameInMap("TimeRange")
+    private java.util.List < Long > timeRange;
+
     @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
@@ -22,6 +25,7 @@ public class ElementContent extends TeaModel {
 
     private ElementContent(Builder builder) {
         this.content = builder.content;
+        this.timeRange = builder.timeRange;
         this.type = builder.type;
         this.URL = builder.URL;
     }
@@ -42,6 +46,13 @@ public class ElementContent extends TeaModel {
     }
 
     /**
+     * @return timeRange
+     */
+    public java.util.List < Long > getTimeRange() {
+        return this.timeRange;
+    }
+
+    /**
      * @return type
      */
     public String getType() {
@@ -57,6 +68,7 @@ public class ElementContent extends TeaModel {
 
     public static final class Builder {
         private String content; 
+        private java.util.List < Long > timeRange; 
         private String type; 
         private String URL; 
 
@@ -65,6 +77,14 @@ public class ElementContent extends TeaModel {
          */
         public Builder content(String content) {
             this.content = content;
+            return this;
+        }
+
+        /**
+         * TimeRange.
+         */
+        public Builder timeRange(java.util.List < Long > timeRange) {
+            this.timeRange = timeRange;
             return this;
         }
 

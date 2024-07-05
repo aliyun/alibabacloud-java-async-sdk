@@ -104,6 +104,9 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("FileModifiedTime")
     private String fileModifiedTime;
 
+    @com.aliyun.core.annotation.NameInMap("FileStatus")
+    private String fileStatus;
+
     @com.aliyun.core.annotation.NameInMap("Filename")
     private String filename;
 
@@ -200,6 +203,12 @@ public class File extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("ProjectName")
     private String projectName;
 
+    @com.aliyun.core.annotation.NameInMap("Reason")
+    private String reason;
+
+    @com.aliyun.core.annotation.NameInMap("SceneElements")
+    private java.util.List < SceneElement > sceneElements;
+
     @com.aliyun.core.annotation.NameInMap("SemanticTypes")
     private java.util.List < String > semanticTypes;
 
@@ -283,6 +292,7 @@ public class File extends TeaModel {
         this.fileCreateTime = builder.fileCreateTime;
         this.fileHash = builder.fileHash;
         this.fileModifiedTime = builder.fileModifiedTime;
+        this.fileStatus = builder.fileStatus;
         this.filename = builder.filename;
         this.formatLongName = builder.formatLongName;
         this.formatName = builder.formatName;
@@ -315,6 +325,8 @@ public class File extends TeaModel {
         this.produceTime = builder.produceTime;
         this.programCount = builder.programCount;
         this.projectName = builder.projectName;
+        this.reason = builder.reason;
+        this.sceneElements = builder.sceneElements;
         this.semanticTypes = builder.semanticTypes;
         this.serverSideDataEncryption = builder.serverSideDataEncryption;
         this.serverSideEncryption = builder.serverSideEncryption;
@@ -560,6 +572,13 @@ public class File extends TeaModel {
     }
 
     /**
+     * @return fileStatus
+     */
+    public String getFileStatus() {
+        return this.fileStatus;
+    }
+
+    /**
      * @return filename
      */
     public String getFilename() {
@@ -784,6 +803,20 @@ public class File extends TeaModel {
     }
 
     /**
+     * @return reason
+     */
+    public String getReason() {
+        return this.reason;
+    }
+
+    /**
+     * @return sceneElements
+     */
+    public java.util.List < SceneElement > getSceneElements() {
+        return this.sceneElements;
+    }
+
+    /**
      * @return semanticTypes
      */
     public java.util.List < String > getSemanticTypes() {
@@ -934,6 +967,7 @@ public class File extends TeaModel {
         private String fileCreateTime; 
         private String fileHash; 
         private String fileModifiedTime; 
+        private String fileStatus; 
         private String filename; 
         private String formatLongName; 
         private String formatName; 
@@ -966,6 +1000,8 @@ public class File extends TeaModel {
         private String produceTime; 
         private Long programCount; 
         private String projectName; 
+        private String reason; 
+        private java.util.List < SceneElement > sceneElements; 
         private java.util.List < String > semanticTypes; 
         private String serverSideDataEncryption; 
         private String serverSideEncryption; 
@@ -1233,6 +1269,14 @@ public class File extends TeaModel {
         }
 
         /**
+         * FileStatus.
+         */
+        public Builder fileStatus(String fileStatus) {
+            this.fileStatus = fileStatus;
+            return this;
+        }
+
+        /**
          * Filename.
          */
         public Builder filename(String filename) {
@@ -1485,6 +1529,22 @@ public class File extends TeaModel {
          */
         public Builder projectName(String projectName) {
             this.projectName = projectName;
+            return this;
+        }
+
+        /**
+         * Reason.
+         */
+        public Builder reason(String reason) {
+            this.reason = reason;
+            return this;
+        }
+
+        /**
+         * SceneElements.
+         */
+        public Builder sceneElements(java.util.List < SceneElement > sceneElements) {
+            this.sceneElements = sceneElements;
             return this;
         }
 
