@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateParentPlatformRequest</p>
  */
 public class CreateParentPlatformRequest extends Request {
-    @Query
-    @NameInMap("AutoStart")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoStart")
     private Boolean autoStart;
 
-    @Query
-    @NameInMap("ClientAuth")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientAuth")
     private Boolean clientAuth;
 
-    @Query
-    @NameInMap("ClientPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientPassword")
     private String clientPassword;
 
-    @Query
-    @NameInMap("ClientUsername")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientUsername")
     private String clientUsername;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GbId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GbId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String gbId;
 
-    @Query
-    @NameInMap("Ip")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ip")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ip;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Port")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Port")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long port;
 
-    @Query
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
     private CreateParentPlatformRequest(Builder builder) {
@@ -182,19 +181,19 @@ public class CreateParentPlatformRequest extends Request {
             super();
         } 
 
-        private Builder(CreateParentPlatformRequest response) {
-            super(response);
-            this.autoStart = response.autoStart;
-            this.clientAuth = response.clientAuth;
-            this.clientPassword = response.clientPassword;
-            this.clientUsername = response.clientUsername;
-            this.description = response.description;
-            this.gbId = response.gbId;
-            this.ip = response.ip;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.port = response.port;
-            this.protocol = response.protocol;
+        private Builder(CreateParentPlatformRequest request) {
+            super(request);
+            this.autoStart = request.autoStart;
+            this.clientAuth = request.clientAuth;
+            this.clientPassword = request.clientPassword;
+            this.clientUsername = request.clientUsername;
+            this.description = request.description;
+            this.gbId = request.gbId;
+            this.ip = request.ip;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.port = request.port;
+            this.protocol = request.protocol;
         } 
 
         /**

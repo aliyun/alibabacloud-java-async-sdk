@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchForbidVsStreamResponseBody</p>
  */
 public class BatchForbidVsStreamResponseBody extends TeaModel {
-    @NameInMap("ForbidResult")
+    @com.aliyun.core.annotation.NameInMap("ForbidResult")
     private ForbidResult forbidResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private BatchForbidVsStreamResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
     } 
 
     public static class Channels extends TeaModel {
-        @NameInMap("Channel")
+        @com.aliyun.core.annotation.NameInMap("Channel")
         private java.util.List < String > channel;
 
         private Channels(Builder builder) {
@@ -113,16 +112,16 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
 
     }
     public static class ForbidResultInfo extends TeaModel {
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private Channels channels;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private String detail;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private String result;
 
         private ForbidResultInfo(Builder builder) {
@@ -214,7 +213,7 @@ public class BatchForbidVsStreamResponseBody extends TeaModel {
 
     }
     public static class ForbidResult extends TeaModel {
-        @NameInMap("ForbidResultInfo")
+        @com.aliyun.core.annotation.NameInMap("ForbidResultInfo")
         private java.util.List < ForbidResultInfo> forbidResultInfo;
 
         private ForbidResult(Builder builder) {

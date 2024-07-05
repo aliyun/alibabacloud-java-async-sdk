@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,47 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDeviceAlarmRequest</p>
  */
 public class CreateDeviceAlarmRequest extends Request {
-    @Query
-    @NameInMap("Alarm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Alarm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer alarm;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer channelId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTime;
 
-    @Query
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("ObjectType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer objectType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    @Query
-    @NameInMap("SubAlarm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubAlarm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer subAlarm;
 
     private CreateDeviceAlarmRequest(Builder builder) {
@@ -159,17 +158,17 @@ public class CreateDeviceAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDeviceAlarmRequest response) {
-            super(response);
-            this.alarm = response.alarm;
-            this.channelId = response.channelId;
-            this.endTime = response.endTime;
-            this.expire = response.expire;
-            this.id = response.id;
-            this.objectType = response.objectType;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
-            this.subAlarm = response.subAlarm;
+        private Builder(CreateDeviceAlarmRequest request) {
+            super(request);
+            this.alarm = request.alarm;
+            this.channelId = request.channelId;
+            this.endTime = request.endTime;
+            this.expire = request.expire;
+            this.id = request.id;
+            this.objectType = request.objectType;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
+            this.subAlarm = request.subAlarm;
         } 
 
         /**

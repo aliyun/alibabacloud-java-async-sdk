@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindDirectoryRequest</p>
  */
 public class BindDirectoryRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("DirectoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DirectoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String directoryId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private BindDirectoryRequest(Builder builder) {
@@ -76,11 +75,11 @@ public class BindDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(BindDirectoryRequest response) {
-            super(response);
-            this.deviceId = response.deviceId;
-            this.directoryId = response.directoryId;
-            this.ownerId = response.ownerId;
+        private Builder(BindDirectoryRequest request) {
+            super(request);
+            this.deviceId = request.deviceId;
+            this.directoryId = request.directoryId;
+            this.ownerId = request.ownerId;
         } 
 
         /**

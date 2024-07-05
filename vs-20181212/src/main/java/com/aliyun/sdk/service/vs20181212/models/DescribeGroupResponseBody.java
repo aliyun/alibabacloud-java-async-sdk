@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,70 +11,70 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeGroupResponseBody</p>
  */
 public class DescribeGroupResponseBody extends TeaModel {
-    @NameInMap("AliasId")
+    @com.aliyun.core.annotation.NameInMap("AliasId")
     private String aliasId;
 
-    @NameInMap("App")
+    @com.aliyun.core.annotation.NameInMap("App")
     private String app;
 
-    @NameInMap("Callback")
+    @com.aliyun.core.annotation.NameInMap("Callback")
     private String callback;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("Enabled")
+    @com.aliyun.core.annotation.NameInMap("Enabled")
     private Boolean enabled;
 
-    @NameInMap("GbId")
+    @com.aliyun.core.annotation.NameInMap("GbId")
     private String gbId;
 
-    @NameInMap("GbIp")
+    @com.aliyun.core.annotation.NameInMap("GbIp")
     private String gbIp;
 
-    @NameInMap("GbPort")
+    @com.aliyun.core.annotation.NameInMap("GbPort")
     private Long gbPort;
 
-    @NameInMap("GbTcpPorts")
+    @com.aliyun.core.annotation.NameInMap("GbTcpPorts")
     private java.util.List < String > gbTcpPorts;
 
-    @NameInMap("GbUdpPorts")
+    @com.aliyun.core.annotation.NameInMap("GbUdpPorts")
     private java.util.List < String > gbUdpPorts;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("InProtocol")
+    @com.aliyun.core.annotation.NameInMap("InProtocol")
     private String inProtocol;
 
-    @NameInMap("LazyPull")
+    @com.aliyun.core.annotation.NameInMap("LazyPull")
     private Boolean lazyPull;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("OutProtocol")
+    @com.aliyun.core.annotation.NameInMap("OutProtocol")
     private String outProtocol;
 
-    @NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
     private String playDomain;
 
-    @NameInMap("PushDomain")
+    @com.aliyun.core.annotation.NameInMap("PushDomain")
     private String pushDomain;
 
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Stats")
+    @com.aliyun.core.annotation.NameInMap("Stats")
     private Stats stats;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeGroupResponseBody(Builder builder) {
@@ -472,16 +471,16 @@ public class DescribeGroupResponseBody extends TeaModel {
     } 
 
     public static class Stats extends TeaModel {
-        @NameInMap("DeviceNum")
+        @com.aliyun.core.annotation.NameInMap("DeviceNum")
         private Long deviceNum;
 
-        @NameInMap("IedNum")
+        @com.aliyun.core.annotation.NameInMap("IedNum")
         private Long iedNum;
 
-        @NameInMap("IpcNum")
+        @com.aliyun.core.annotation.NameInMap("IpcNum")
         private Long ipcNum;
 
-        @NameInMap("PlatformNum")
+        @com.aliyun.core.annotation.NameInMap("PlatformNum")
         private Long platformNum;
 
         private Stats(Builder builder) {

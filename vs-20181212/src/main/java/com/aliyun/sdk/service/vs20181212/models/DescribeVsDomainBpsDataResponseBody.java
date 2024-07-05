@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainBpsDataResponseBody</p>
  */
 public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
-    @NameInMap("BpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataPerInterval")
     private BpsDataPerInterval bpsDataPerInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVsDomainBpsDataResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("BpsValue")
+        @com.aliyun.core.annotation.NameInMap("BpsValue")
         private String bpsValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeVsDomainBpsDataResponseBody extends TeaModel {
 
     }
     public static class BpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataPerInterval(Builder builder) {

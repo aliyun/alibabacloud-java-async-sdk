@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDeviceGatewayResponseBody</p>
  */
 public class DescribeDeviceGatewayResponseBody extends TeaModel {
-    @NameInMap("Host")
+    @com.aliyun.core.annotation.NameInMap("Host")
     private String host;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Long port;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Token")
+    @com.aliyun.core.annotation.NameInMap("Token")
     private String token;
 
     private DescribeDeviceGatewayResponseBody(Builder builder) {

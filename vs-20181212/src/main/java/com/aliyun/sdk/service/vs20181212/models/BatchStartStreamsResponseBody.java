@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchStartStreamsResponseBody</p>
  */
 public class BatchStartStreamsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private BatchStartStreamsResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class BatchStartStreamsResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private Results(Builder builder) {

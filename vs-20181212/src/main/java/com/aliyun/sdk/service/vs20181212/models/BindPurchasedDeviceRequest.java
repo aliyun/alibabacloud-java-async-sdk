@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindPurchasedDeviceRequest</p>
  */
 public class BindPurchasedDeviceRequest extends Request {
-    @Query
-    @NameInMap("DeviceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeviceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceId;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String region;
 
     private BindPurchasedDeviceRequest(Builder builder) {
@@ -90,12 +89,12 @@ public class BindPurchasedDeviceRequest extends Request {
             super();
         } 
 
-        private Builder(BindPurchasedDeviceRequest response) {
-            super(response);
-            this.deviceId = response.deviceId;
-            this.groupId = response.groupId;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
+        private Builder(BindPurchasedDeviceRequest request) {
+            super(request);
+            this.deviceId = request.deviceId;
+            this.groupId = request.groupId;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
         } 
 
         /**

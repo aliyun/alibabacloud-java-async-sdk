@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.vs20181212;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.vs20181212.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -17,14 +18,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     static AsyncClient create() {
         return builder().build();
     }
-
-    CompletableFuture<AddDeviceResponse> addDevice(AddDeviceRequest request);
-
-    CompletableFuture<AddRegisteredDeviceResponse> addRegisteredDevice(AddRegisteredDeviceRequest request);
-
-    CompletableFuture<AddRegisteredVendorResponse> addRegisteredVendor(AddRegisteredVendorRequest request);
-
-    CompletableFuture<AddRenderingDeviceInternetPortsResponse> addRenderingDeviceInternetPorts(AddRenderingDeviceInternetPortsRequest request);
 
     CompletableFuture<AddVsPullStreamInfoConfigResponse> addVsPullStreamInfoConfig(AddVsPullStreamInfoConfigRequest request);
 
@@ -74,13 +67,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<BindTemplateResponse> bindTemplate(BindTemplateRequest request);
 
-    CompletableFuture<CaptureDeviceSnapshotResponse> captureDeviceSnapshot(CaptureDeviceSnapshotRequest request);
-
     CompletableFuture<ContinuousAdjustResponse> continuousAdjust(ContinuousAdjustRequest request);
 
     CompletableFuture<ContinuousMoveResponse> continuousMove(ContinuousMoveRequest request);
-
-    CompletableFuture<CreateAIConfigResponse> createAIConfig(CreateAIConfigRequest request);
 
     CompletableFuture<CreateClusterResponse> createCluster(CreateClusterRequest request);
 
@@ -88,23 +77,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDeviceAlarmResponse> createDeviceAlarm(CreateDeviceAlarmRequest request);
 
-    CompletableFuture<CreateDeviceSnapshotResponse> createDeviceSnapshot(CreateDeviceSnapshotRequest request);
-
     CompletableFuture<CreateDirectoryResponse> createDirectory(CreateDirectoryRequest request);
 
     CompletableFuture<CreateGroupResponse> createGroup(CreateGroupRequest request);
 
     CompletableFuture<CreateParentPlatformResponse> createParentPlatform(CreateParentPlatformRequest request);
 
-    CompletableFuture<CreateRenderingDeviceResponse> createRenderingDevice(CreateRenderingDeviceRequest request);
+    CompletableFuture<CreateRenderingInstanceResponse> createRenderingInstance(CreateRenderingInstanceRequest request);
 
     CompletableFuture<CreateStreamSnapshotResponse> createStreamSnapshot(CreateStreamSnapshotRequest request);
 
     CompletableFuture<CreateTemplateResponse> createTemplate(CreateTemplateRequest request);
 
-    CompletableFuture<DeleteAIConfigResponse> deleteAIConfig(DeleteAIConfigRequest request);
-
-    CompletableFuture<DeleteBucketResponse> deleteBucket(DeleteBucketRequest request);
+    CompletableFuture<DeleteCloudAppResponse> deleteCloudApp(DeleteCloudAppRequest request);
 
     CompletableFuture<DeleteClusterResponse> deleteCluster(DeleteClusterRequest request);
 
@@ -112,29 +97,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteDirectoryResponse> deleteDirectory(DeleteDirectoryRequest request);
 
+    CompletableFuture<DeleteFileResponse> deleteFile(DeleteFileRequest request);
+
     CompletableFuture<DeleteGroupResponse> deleteGroup(DeleteGroupRequest request);
 
     CompletableFuture<DeleteParentPlatformResponse> deleteParentPlatform(DeleteParentPlatformRequest request);
 
     CompletableFuture<DeletePresetResponse> deletePreset(DeletePresetRequest request);
 
-    CompletableFuture<DeletePurchasedDeviceResponse> deletePurchasedDevice(DeletePurchasedDeviceRequest request);
+    CompletableFuture<DeletePublicKeyResponse> deletePublicKey(DeletePublicKeyRequest request);
 
-    CompletableFuture<DeleteRenderingDeviceInternetPortsResponse> deleteRenderingDeviceInternetPorts(DeleteRenderingDeviceInternetPortsRequest request);
-
-    CompletableFuture<DeleteRenderingDevicesResponse> deleteRenderingDevices(DeleteRenderingDevicesRequest request);
+    CompletableFuture<DeleteRenderingInstanceConfigurationResponse> deleteRenderingInstanceConfiguration(DeleteRenderingInstanceConfigurationRequest request);
 
     CompletableFuture<DeleteTemplateResponse> deleteTemplate(DeleteTemplateRequest request);
 
     CompletableFuture<DeleteVsPullStreamInfoConfigResponse> deleteVsPullStreamInfoConfig(DeleteVsPullStreamInfoConfigRequest request);
 
     CompletableFuture<DeleteVsStreamsNotifyUrlConfigResponse> deleteVsStreamsNotifyUrlConfig(DeleteVsStreamsNotifyUrlConfigRequest request);
-
-    CompletableFuture<DescribeAIConfigResponse> describeAIConfig(DescribeAIConfigRequest request);
-
-    CompletableFuture<DescribeAIConfigListResponse> describeAIConfigList(DescribeAIConfigListRequest request);
-
-    CompletableFuture<DescribeAIEventListResponse> describeAIEventList(DescribeAIEventListRequest request);
 
     CompletableFuture<DescribeAccountStatResponse> describeAccountStat(DescribeAccountStatRequest request);
 
@@ -160,13 +139,9 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeDirectoryResponse> describeDirectory(DescribeDirectoryRequest request);
 
-    CompletableFuture<DescribeExternalStreamURLResponse> describeExternalStreamURL(DescribeExternalStreamURLRequest request);
-
     CompletableFuture<DescribeGroupResponse> describeGroup(DescribeGroupRequest request);
 
     CompletableFuture<DescribeGroupsResponse> describeGroups(DescribeGroupsRequest request);
-
-    CompletableFuture<DescribeNodeDevicesInfoResponse> describeNodeDevicesInfo(DescribeNodeDevicesInfoRequest request);
 
     CompletableFuture<DescribeParentPlatformResponse> describeParentPlatform(DescribeParentPlatformRequest request);
 
@@ -176,13 +151,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribePresetsResponse> describePresets(DescribePresetsRequest request);
 
+    CompletableFuture<DescribePublishStreamStatusResponse> describePublishStreamStatus(DescribePublishStreamStatusRequest request);
+
     CompletableFuture<DescribePurchasedDeviceResponse> describePurchasedDevice(DescribePurchasedDeviceRequest request);
 
     CompletableFuture<DescribePurchasedDevicesResponse> describePurchasedDevices(DescribePurchasedDevicesRequest request);
 
     CompletableFuture<DescribeRecordsResponse> describeRecords(DescribeRecordsRequest request);
 
-    CompletableFuture<DescribeRenderingDevicesResponse> describeRenderingDevices(DescribeRenderingDevicesRequest request);
+    CompletableFuture<DescribeRenderingInstanceResponse> describeRenderingInstance(DescribeRenderingInstanceRequest request);
+
+    CompletableFuture<DescribeRenderingInstanceConfigurationResponse> describeRenderingInstanceConfiguration(DescribeRenderingInstanceConfigurationRequest request);
 
     CompletableFuture<DescribeStreamResponse> describeStream(DescribeStreamRequest request);
 
@@ -195,6 +174,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeTemplateResponse> describeTemplate(DescribeTemplateRequest request);
 
     CompletableFuture<DescribeTemplatesResponse> describeTemplates(DescribeTemplatesRequest request);
+
+    CompletableFuture<DescribeUserDevicesResponse> describeUserDevices(DescribeUserDevicesRequest request);
 
     CompletableFuture<DescribeVodStreamURLResponse> describeVodStreamURL(DescribeVodStreamURLRequest request);
 
@@ -211,8 +192,6 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVsDomainConfigsResponse> describeVsDomainConfigs(DescribeVsDomainConfigsRequest request);
 
     CompletableFuture<DescribeVsDomainDetailResponse> describeVsDomainDetail(DescribeVsDomainDetailRequest request);
-
-    CompletableFuture<DescribeVsDomainOnlineUserNumResponse> describeVsDomainOnlineUserNum(DescribeVsDomainOnlineUserNumRequest request);
 
     CompletableFuture<DescribeVsDomainPvDataResponse> describeVsDomainPvData(DescribeVsDomainPvDataRequest request);
 
@@ -232,13 +211,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVsDomainUvDataResponse> describeVsDomainUvData(DescribeVsDomainUvDataRequest request);
 
-    CompletableFuture<DescribeVsPullStreamConfigResponse> describeVsPullStreamConfig(DescribeVsPullStreamConfigRequest request);
-
     CompletableFuture<DescribeVsPullStreamInfoConfigResponse> describeVsPullStreamInfoConfig(DescribeVsPullStreamInfoConfigRequest request);
-
-    CompletableFuture<DescribeVsStorageTrafficUsageDataResponse> describeVsStorageTrafficUsageData(DescribeVsStorageTrafficUsageDataRequest request);
-
-    CompletableFuture<DescribeVsStorageUsageDataResponse> describeVsStorageUsageData(DescribeVsStorageUsageDataRequest request);
 
     CompletableFuture<DescribeVsStreamsNotifyUrlConfigResponse> describeVsStreamsNotifyUrlConfig(DescribeVsStreamsNotifyUrlConfigRequest request);
 
@@ -252,21 +225,29 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeVsUserResourcePackageResponse> describeVsUserResourcePackage(DescribeVsUserResourcePackageRequest request);
 
+    CompletableFuture<DescribeVsVerifyContentResponse> describeVsVerifyContent(DescribeVsVerifyContentRequest request);
+
     CompletableFuture<ForbidVsStreamResponse> forbidVsStream(ForbidVsStreamRequest request);
 
-    CompletableFuture<GetBucketInfoResponse> getBucketInfo(GetBucketInfoRequest request);
-
-    CompletableFuture<GetObjectTotalResponse> getObjectTotal(GetObjectTotalRequest request);
+    CompletableFuture<GetRenderingInstanceStreamingInfoResponse> getRenderingInstanceStreamingInfo(GetRenderingInstanceStreamingInfoRequest request);
 
     CompletableFuture<GotoPresetResponse> gotoPreset(GotoPresetRequest request);
 
-    CompletableFuture<ListBucketsResponse> listBuckets(ListBucketsRequest request);
+    CompletableFuture<InstallCloudAppResponse> installCloudApp(InstallCloudAppRequest request);
 
-    CompletableFuture<ListDeviceChannelsResponse> listDeviceChannels(ListDeviceChannelsRequest request);
+    CompletableFuture<ListCloudAppInstallationsResponse> listCloudAppInstallations(ListCloudAppInstallationsRequest request);
 
-    CompletableFuture<ListDeviceRecordsResponse> listDeviceRecords(ListDeviceRecordsRequest request);
+    CompletableFuture<ListCloudAppsResponse> listCloudApps(ListCloudAppsRequest request);
 
-    CompletableFuture<ListObjectsResponse> listObjects(ListObjectsRequest request);
+    CompletableFuture<ListFilePushStatusesResponse> listFilePushStatuses(ListFilePushStatusesRequest request);
+
+    CompletableFuture<ListFilesResponse> listFiles(ListFilesRequest request);
+
+    CompletableFuture<ListPublicKeysResponse> listPublicKeys(ListPublicKeysRequest request);
+
+    CompletableFuture<ListRenderingInstancesResponse> listRenderingInstances(ListRenderingInstancesRequest request);
+
+    CompletableFuture<ManageLoginResponse> manageLogin(ManageLoginRequest request);
 
     CompletableFuture<ModifyDeviceResponse> modifyDevice(ModifyDeviceRequest request);
 
@@ -282,21 +263,23 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyParentPlatformResponse> modifyParentPlatform(ModifyParentPlatformRequest request);
 
-    CompletableFuture<ModifyPurchasedDeviceResponse> modifyPurchasedDevice(ModifyPurchasedDeviceRequest request);
+    CompletableFuture<ModifyRenderingInstanceBandwidthResponse> modifyRenderingInstanceBandwidth(ModifyRenderingInstanceBandwidthRequest request);
 
     CompletableFuture<ModifyTemplateResponse> modifyTemplate(ModifyTemplateRequest request);
 
     CompletableFuture<OpenVsServiceResponse> openVsService(OpenVsServiceRequest request);
 
-    CompletableFuture<OperateRenderingDevicesResponse> operateRenderingDevices(OperateRenderingDevicesRequest request);
+    CompletableFuture<PushFileResponse> pushFile(PushFileRequest request);
 
-    CompletableFuture<PrepareUploadResponse> prepareUpload(PrepareUploadRequest request);
+    CompletableFuture<RebootRenderingInstanceResponse> rebootRenderingInstance(RebootRenderingInstanceRequest request);
 
-    CompletableFuture<PutBucketResponse> putBucket(PutBucketRequest request);
+    CompletableFuture<ReleaseRenderingInstanceResponse> releaseRenderingInstance(ReleaseRenderingInstanceRequest request);
 
-    CompletableFuture<ResetRenderingDevicesResponse> resetRenderingDevices(ResetRenderingDevicesRequest request);
+    CompletableFuture<RenewRenderingInstanceResponse> renewRenderingInstance(RenewRenderingInstanceRequest request);
 
     CompletableFuture<ResumeVsStreamResponse> resumeVsStream(ResumeVsStreamRequest request);
+
+    CompletableFuture<SendRenderingInstanceCommandsResponse> sendRenderingInstanceCommands(SendRenderingInstanceCommandsRequest request);
 
     CompletableFuture<SetPresetResponse> setPreset(SetPresetRequest request);
 
@@ -307,6 +290,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StartDeviceResponse> startDevice(StartDeviceRequest request);
 
     CompletableFuture<StartParentPlatformResponse> startParentPlatform(StartParentPlatformRequest request);
+
+    CompletableFuture<StartPublishStreamResponse> startPublishStream(StartPublishStreamRequest request);
 
     CompletableFuture<StartRecordStreamResponse> startRecordStream(StartRecordStreamRequest request);
 
@@ -320,7 +305,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StopMoveResponse> stopMove(StopMoveRequest request);
 
-    CompletableFuture<StopParentPlatformResponse> stopParentPlatform(StopParentPlatformRequest request);
+    CompletableFuture<StopPublishStreamResponse> stopPublishStream(StopPublishStreamRequest request);
 
     CompletableFuture<StopRecordStreamResponse> stopRecordStream(StopRecordStreamRequest request);
 
@@ -330,8 +315,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<SyncCatalogsResponse> syncCatalogs(SyncCatalogsRequest request);
 
-    CompletableFuture<SyncDeviceChannelsResponse> syncDeviceChannels(SyncDeviceChannelsRequest request);
-
     CompletableFuture<UnbindDirectoryResponse> unbindDirectory(UnbindDirectoryRequest request);
 
     CompletableFuture<UnbindParentPlatformDeviceResponse> unbindParentPlatformDevice(UnbindParentPlatformDeviceRequest request);
@@ -340,22 +323,26 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UnbindTemplateResponse> unbindTemplate(UnbindTemplateRequest request);
 
+    CompletableFuture<UninstallCloudAppResponse> uninstallCloudApp(UninstallCloudAppRequest request);
+
     CompletableFuture<UnlockDeviceResponse> unlockDevice(UnlockDeviceRequest request);
 
-    CompletableFuture<UpdateAIConfigResponse> updateAIConfig(UpdateAIConfigRequest request);
-
-    CompletableFuture<UpdateBucketInfoResponse> updateBucketInfo(UpdateBucketInfoRequest request);
+    CompletableFuture<UpdateCloudAppInfoResponse> updateCloudAppInfo(UpdateCloudAppInfoRequest request);
 
     CompletableFuture<UpdateClusterResponse> updateCluster(UpdateClusterRequest request);
 
-    CompletableFuture<UpdateRenderingDeviceSpecResponse> updateRenderingDeviceSpec(UpdateRenderingDeviceSpecRequest request);
+    CompletableFuture<UpdateFileInfoResponse> updateFileInfo(UpdateFileInfoRequest request);
+
+    CompletableFuture<UpdateRenderingInstanceConfigurationResponse> updateRenderingInstanceConfiguration(UpdateRenderingInstanceConfigurationRequest request);
 
     CompletableFuture<UpdateVsPullStreamInfoConfigResponse> updateVsPullStreamInfoConfig(UpdateVsPullStreamInfoConfigRequest request);
 
-    CompletableFuture<UpgradeRenderingDevicesHostOSResponse> upgradeRenderingDevicesHostOS(UpgradeRenderingDevicesHostOSRequest request);
+    CompletableFuture<UploadCloudAppResponse> uploadCloudApp(UploadCloudAppRequest request);
 
-    CompletableFuture<UpgradeRenderingDevicesImageResponse> upgradeRenderingDevicesImage(UpgradeRenderingDevicesImageRequest request);
+    CompletableFuture<UploadFileResponse> uploadFile(UploadFileRequest request);
 
-    CompletableFuture<UploadDeviceRecordResponse> uploadDeviceRecord(UploadDeviceRecordRequest request);
+    CompletableFuture<UploadPublicKeyResponse> uploadPublicKey(UploadPublicKeyRequest request);
+
+    CompletableFuture<VerifyVsDomainOwnerResponse> verifyVsDomainOwner(VerifyVsDomainOwnerRequest request);
 
 }

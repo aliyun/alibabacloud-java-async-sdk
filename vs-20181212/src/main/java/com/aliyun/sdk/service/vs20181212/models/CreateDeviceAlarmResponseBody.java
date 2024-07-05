@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDeviceAlarmResponseBody</p>
  */
 public class CreateDeviceAlarmResponseBody extends TeaModel {
-    @NameInMap("AlarmDelay")
+    @com.aliyun.core.annotation.NameInMap("AlarmDelay")
     private Long alarmDelay;
 
-    @NameInMap("AlarmId")
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
     private String alarmId;
 
-    @NameInMap("Expire")
+    @com.aliyun.core.annotation.NameInMap("Expire")
     private Long expire;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Url")
+    @com.aliyun.core.annotation.NameInMap("Url")
     private String url;
 
     private CreateDeviceAlarmResponseBody(Builder builder) {

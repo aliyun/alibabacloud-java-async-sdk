@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsStreamsPublishListResponseBody</p>
  */
 public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Integer pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("PublishInfo")
+    @com.aliyun.core.annotation.NameInMap("PublishInfo")
     private PublishInfo publishInfo;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Integer totalNum;
 
-    @NameInMap("TotalPage")
+    @com.aliyun.core.annotation.NameInMap("TotalPage")
     private Integer totalPage;
 
     private DescribeVsStreamsPublishListResponseBody(Builder builder) {
@@ -152,43 +151,43 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
     } 
 
     public static class LiveStreamPublishInfo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("ClientAddr")
+        @com.aliyun.core.annotation.NameInMap("ClientAddr")
         private String clientAddr;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EdgeNodeAddr")
+        @com.aliyun.core.annotation.NameInMap("EdgeNodeAddr")
         private String edgeNodeAddr;
 
-        @NameInMap("PublishDomain")
+        @com.aliyun.core.annotation.NameInMap("PublishDomain")
         private String publishDomain;
 
-        @NameInMap("PublishTime")
+        @com.aliyun.core.annotation.NameInMap("PublishTime")
         private String publishTime;
 
-        @NameInMap("PublishType")
+        @com.aliyun.core.annotation.NameInMap("PublishType")
         private String publishType;
 
-        @NameInMap("PublishUrl")
+        @com.aliyun.core.annotation.NameInMap("PublishUrl")
         private String publishUrl;
 
-        @NameInMap("StopTime")
+        @com.aliyun.core.annotation.NameInMap("StopTime")
         private String stopTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("StreamUrl")
+        @com.aliyun.core.annotation.NameInMap("StreamUrl")
         private String streamUrl;
 
-        @NameInMap("TranscodeId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeId")
         private String transcodeId;
 
-        @NameInMap("Transcoded")
+        @com.aliyun.core.annotation.NameInMap("Transcoded")
         private String transcoded;
 
         private LiveStreamPublishInfo(Builder builder) {
@@ -433,7 +432,7 @@ public class DescribeVsStreamsPublishListResponseBody extends TeaModel {
 
     }
     public static class PublishInfo extends TeaModel {
-        @NameInMap("LiveStreamPublishInfo")
+        @com.aliyun.core.annotation.NameInMap("LiveStreamPublishInfo")
         private java.util.List < LiveStreamPublishInfo> liveStreamPublishInfo;
 
         private PublishInfo(Builder builder) {

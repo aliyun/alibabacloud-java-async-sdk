@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeTemplatesResponseBody</p>
  */
 public class DescribeTemplatesResponseBody extends TeaModel {
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Templates")
+    @com.aliyun.core.annotation.NameInMap("Templates")
     private java.util.List < Templates> templates;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeTemplatesResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeTemplatesResponseBody extends TeaModel {
     } 
 
     public static class TransConfigs extends TeaModel {
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private Long fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private Long gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Long height;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("VideoBitrate")
+        @com.aliyun.core.annotation.NameInMap("VideoBitrate")
         private Long videoBitrate;
 
-        @NameInMap("VideoCodec")
+        @com.aliyun.core.annotation.NameInMap("VideoCodec")
         private String videoCodec;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Long width;
 
-        @NameInMap("id")
+        @com.aliyun.core.annotation.NameInMap("id")
         private String id;
 
         private TransConfigs(Builder builder) {
@@ -333,70 +332,70 @@ public class DescribeTemplatesResponseBody extends TeaModel {
 
     }
     public static class Templates extends TeaModel {
-        @NameInMap("Callback")
+        @com.aliyun.core.annotation.NameInMap("Callback")
         private String callback;
 
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FileFormat")
+        @com.aliyun.core.annotation.NameInMap("FileFormat")
         private String fileFormat;
 
-        @NameInMap("Flv")
+        @com.aliyun.core.annotation.NameInMap("Flv")
         private String flv;
 
-        @NameInMap("HlsM3u8")
+        @com.aliyun.core.annotation.NameInMap("HlsM3u8")
         private String hlsM3u8;
 
-        @NameInMap("HlsTs")
+        @com.aliyun.core.annotation.NameInMap("HlsTs")
         private String hlsTs;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private Long interval;
 
-        @NameInMap("JpgOnDemand")
+        @com.aliyun.core.annotation.NameInMap("JpgOnDemand")
         private String jpgOnDemand;
 
-        @NameInMap("JpgOverwrite")
+        @com.aliyun.core.annotation.NameInMap("JpgOverwrite")
         private String jpgOverwrite;
 
-        @NameInMap("JpgSequence")
+        @com.aliyun.core.annotation.NameInMap("JpgSequence")
         private String jpgSequence;
 
-        @NameInMap("Mp4")
+        @com.aliyun.core.annotation.NameInMap("Mp4")
         private String mp4;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OssBucket")
+        @com.aliyun.core.annotation.NameInMap("OssBucket")
         private String ossBucket;
 
-        @NameInMap("OssEndpoint")
+        @com.aliyun.core.annotation.NameInMap("OssEndpoint")
         private String ossEndpoint;
 
-        @NameInMap("OssFilePrefix")
+        @com.aliyun.core.annotation.NameInMap("OssFilePrefix")
         private String ossFilePrefix;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Retention")
+        @com.aliyun.core.annotation.NameInMap("Retention")
         private Long retention;
 
-        @NameInMap("TransConfigs")
+        @com.aliyun.core.annotation.NameInMap("TransConfigs")
         private java.util.List < TransConfigs> transConfigs;
 
-        @NameInMap("Trigger")
+        @com.aliyun.core.annotation.NameInMap("Trigger")
         private String trigger;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Templates(Builder builder) {

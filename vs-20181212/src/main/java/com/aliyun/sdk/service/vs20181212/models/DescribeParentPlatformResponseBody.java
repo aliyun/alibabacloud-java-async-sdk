@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParentPlatformResponseBody</p>
  */
 public class DescribeParentPlatformResponseBody extends TeaModel {
-    @NameInMap("AutoStart")
+    @com.aliyun.core.annotation.NameInMap("AutoStart")
     private Boolean autoStart;
 
-    @NameInMap("ClientAuth")
+    @com.aliyun.core.annotation.NameInMap("ClientAuth")
     private Boolean clientAuth;
 
-    @NameInMap("ClientGbId")
+    @com.aliyun.core.annotation.NameInMap("ClientGbId")
     private String clientGbId;
 
-    @NameInMap("ClientIp")
+    @com.aliyun.core.annotation.NameInMap("ClientIp")
     private String clientIp;
 
-    @NameInMap("ClientPassword")
+    @com.aliyun.core.annotation.NameInMap("ClientPassword")
     private String clientPassword;
 
-    @NameInMap("ClientPort")
+    @com.aliyun.core.annotation.NameInMap("ClientPort")
     private Long clientPort;
 
-    @NameInMap("ClientUsername")
+    @com.aliyun.core.annotation.NameInMap("ClientUsername")
     private String clientUsername;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GbId")
+    @com.aliyun.core.annotation.NameInMap("GbId")
     private String gbId;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("Ip")
+    @com.aliyun.core.annotation.NameInMap("Ip")
     private String ip;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("Port")
+    @com.aliyun.core.annotation.NameInMap("Port")
     private Long port;
 
-    @NameInMap("Protocol")
+    @com.aliyun.core.annotation.NameInMap("Protocol")
     private String protocol;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private DescribeParentPlatformResponseBody(Builder builder) {

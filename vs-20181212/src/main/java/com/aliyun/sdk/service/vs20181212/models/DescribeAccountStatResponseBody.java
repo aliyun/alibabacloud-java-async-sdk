@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountStatResponseBody</p>
  */
 public class DescribeAccountStatResponseBody extends TeaModel {
-    @NameInMap("GroupLimit")
+    @com.aliyun.core.annotation.NameInMap("GroupLimit")
     private Long groupLimit;
 
-    @NameInMap("GroupNum")
+    @com.aliyun.core.annotation.NameInMap("GroupNum")
     private Long groupNum;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateLimit")
+    @com.aliyun.core.annotation.NameInMap("TemplateLimit")
     private Long templateLimit;
 
-    @NameInMap("TemplateNum")
+    @com.aliyun.core.annotation.NameInMap("TemplateNum")
     private Long templateNum;
 
     private DescribeAccountStatResponseBody(Builder builder) {
@@ -114,7 +113,7 @@ public class DescribeAccountStatResponseBody extends TeaModel {
         }
 
         /**
-         * Id.
+         * ID
          */
         public Builder id(String id) {
             this.id = id;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClusterRequest</p>
  */
 public class CreateClusterRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("InternalPorts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPorts")
     private String internalPorts;
 
-    @Query
-    @NameInMap("MaintainTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainTime")
     private String maintainTime;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
     private CreateClusterRequest(Builder builder) {
@@ -114,14 +113,14 @@ public class CreateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(CreateClusterRequest response) {
-            super(response);
-            this.description = response.description;
-            this.internalPorts = response.internalPorts;
-            this.maintainTime = response.maintainTime;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.securityGroupId = response.securityGroupId;
+        private Builder(CreateClusterRequest request) {
+            super(request);
+            this.description = request.description;
+            this.internalPorts = request.internalPorts;
+            this.maintainTime = request.maintainTime;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

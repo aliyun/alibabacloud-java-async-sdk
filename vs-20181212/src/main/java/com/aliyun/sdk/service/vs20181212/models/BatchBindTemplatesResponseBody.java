@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchBindTemplatesResponseBody</p>
  */
 public class BatchBindTemplatesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private BatchBindTemplatesResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class BatchBindTemplatesResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
         private Results(Builder builder) {

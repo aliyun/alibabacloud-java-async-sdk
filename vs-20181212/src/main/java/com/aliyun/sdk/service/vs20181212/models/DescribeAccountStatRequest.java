@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeAccountStatRequest</p>
  */
 public class DescribeAccountStatRequest extends Request {
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeAccountStatRequest(Builder builder) {
@@ -61,10 +60,10 @@ public class DescribeAccountStatRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeAccountStatRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeAccountStatRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**

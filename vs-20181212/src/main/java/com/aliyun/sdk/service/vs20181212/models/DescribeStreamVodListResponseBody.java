@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStreamVodListResponseBody</p>
  */
 public class DescribeStreamVodListResponseBody extends TeaModel {
-    @NameInMap("Records")
+    @com.aliyun.core.annotation.NameInMap("Records")
     private java.util.List < Records> records;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeStreamVodListResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
     } 
 
     public static class Records extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
         private Records(Builder builder) {

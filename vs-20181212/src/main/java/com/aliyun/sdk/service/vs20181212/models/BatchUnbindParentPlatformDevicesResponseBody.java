@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchUnbindParentPlatformDevicesResponseBody</p>
  */
 public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Results")
+    @com.aliyun.core.annotation.NameInMap("Results")
     private java.util.List < Results> results;
 
     private BatchUnbindParentPlatformDevicesResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class BatchUnbindParentPlatformDevicesResponseBody extends TeaModel {
     } 
 
     public static class Results extends TeaModel {
-        @NameInMap("DeviceId")
+        @com.aliyun.core.annotation.NameInMap("DeviceId")
         private String deviceId;
 
-        @NameInMap("Error")
+        @com.aliyun.core.annotation.NameInMap("Error")
         private String error;
 
-        @NameInMap("ParentPlatformId")
+        @com.aliyun.core.annotation.NameInMap("ParentPlatformId")
         private String parentPlatformId;
 
         private Results(Builder builder) {

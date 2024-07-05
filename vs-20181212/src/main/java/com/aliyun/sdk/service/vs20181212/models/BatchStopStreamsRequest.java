@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchStopStreamsRequest</p>
  */
 public class BatchStopStreamsRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private BatchStopStreamsRequest(Builder builder) {
@@ -75,11 +74,11 @@ public class BatchStopStreamsRequest extends Request {
             super();
         } 
 
-        private Builder(BatchStopStreamsRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(BatchStopStreamsRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

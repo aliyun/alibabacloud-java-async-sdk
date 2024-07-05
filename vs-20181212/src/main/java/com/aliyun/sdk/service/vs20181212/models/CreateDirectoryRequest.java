@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateDirectoryRequest</p>
  */
 public class CreateDirectoryRequest extends Request {
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ParentId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentId;
 
     private CreateDirectoryRequest(Builder builder) {
@@ -103,13 +102,13 @@ public class CreateDirectoryRequest extends Request {
             super();
         } 
 
-        private Builder(CreateDirectoryRequest response) {
-            super(response);
-            this.description = response.description;
-            this.groupId = response.groupId;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.parentId = response.parentId;
+        private Builder(CreateDirectoryRequest request) {
+            super(request);
+            this.description = request.description;
+            this.groupId = request.groupId;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.parentId = request.parentId;
         } 
 
         /**

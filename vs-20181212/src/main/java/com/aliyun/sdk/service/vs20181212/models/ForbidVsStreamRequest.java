@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ForbidVsStreamRequest</p>
  */
 public class ForbidVsStreamRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ControlStreamAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlStreamAction")
     private String controlStreamAction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("LiveStreamType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String liveStreamType;
 
-    @Query
-    @NameInMap("Oneshot")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Oneshot")
     private String oneshot;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResumeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResumeTime")
     private String resumeTime;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private ForbidVsStreamRequest(Builder builder) {
@@ -143,16 +142,16 @@ public class ForbidVsStreamRequest extends Request {
             super();
         } 
 
-        private Builder(ForbidVsStreamRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.controlStreamAction = response.controlStreamAction;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.oneshot = response.oneshot;
-            this.ownerId = response.ownerId;
-            this.resumeTime = response.resumeTime;
-            this.streamName = response.streamName;
+        private Builder(ForbidVsStreamRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.controlStreamAction = request.controlStreamAction;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.oneshot = request.oneshot;
+            this.ownerId = request.ownerId;
+            this.resumeTime = request.resumeTime;
+            this.streamName = request.streamName;
         } 
 
         /**

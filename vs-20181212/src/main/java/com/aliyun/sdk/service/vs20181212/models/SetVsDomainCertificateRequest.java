@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetVsDomainCertificateRequest</p>
  */
 public class SetVsDomainCertificateRequest extends Request {
-    @Query
-    @NameInMap("CertName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
     private String certName;
 
-    @Query
-    @NameInMap("CertType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertType")
     private String certType;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("ForceSet")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceSet")
     private String forceSet;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("SSLPri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPri")
     private String SSLPri;
 
-    @Query
-    @NameInMap("SSLProtocol")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLProtocol")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String SSLProtocol;
 
-    @Query
-    @NameInMap("SSLPub")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SSLPub")
     private String SSLPub;
 
     private SetVsDomainCertificateRequest(Builder builder) {
@@ -154,17 +153,17 @@ public class SetVsDomainCertificateRequest extends Request {
             super();
         } 
 
-        private Builder(SetVsDomainCertificateRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.certType = response.certType;
-            this.domainName = response.domainName;
-            this.forceSet = response.forceSet;
-            this.ownerId = response.ownerId;
-            this.region = response.region;
-            this.SSLPri = response.SSLPri;
-            this.SSLProtocol = response.SSLProtocol;
-            this.SSLPub = response.SSLPub;
+        private Builder(SetVsDomainCertificateRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.certType = request.certType;
+            this.domainName = request.domainName;
+            this.forceSet = request.forceSet;
+            this.ownerId = request.ownerId;
+            this.region = request.region;
+            this.SSLPri = request.SSLPri;
+            this.SSLProtocol = request.SSLProtocol;
+            this.SSLPub = request.SSLPub;
         } 
 
         /**

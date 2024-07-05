@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,39 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterDevicesRequest</p>
  */
 public class DescribeClusterDevicesRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EdgeNodeName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EdgeNodeName")
     private String edgeNodeName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Long pageSize;
 
-    @Query
-    @NameInMap("Platform")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Platform")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private String specification;
 
     private DescribeClusterDevicesRequest(Builder builder) {
@@ -142,16 +141,16 @@ public class DescribeClusterDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeClusterDevicesRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.description = response.description;
-            this.edgeNodeName = response.edgeNodeName;
-            this.ownerId = response.ownerId;
-            this.pageNo = response.pageNo;
-            this.pageSize = response.pageSize;
-            this.platform = response.platform;
-            this.specification = response.specification;
+        private Builder(DescribeClusterDevicesRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.description = request.description;
+            this.edgeNodeName = request.edgeNodeName;
+            this.ownerId = request.ownerId;
+            this.pageNo = request.pageNo;
+            this.pageSize = request.pageSize;
+            this.platform = request.platform;
+            this.specification = request.specification;
         } 
 
         /**

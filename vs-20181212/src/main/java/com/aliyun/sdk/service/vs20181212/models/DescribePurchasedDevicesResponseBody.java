@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePurchasedDevicesResponseBody</p>
  */
 public class DescribePurchasedDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
+    @com.aliyun.core.annotation.NameInMap("Devices")
     private java.util.List < Devices> devices;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribePurchasedDevicesResponseBody(Builder builder) {
@@ -152,40 +151,40 @@ public class DescribePurchasedDevicesResponseBody extends TeaModel {
     } 
 
     public static class Devices extends TeaModel {
-        @NameInMap("CreatedTime")
+        @com.aliyun.core.annotation.NameInMap("CreatedTime")
         private String createdTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("RegisterCode")
+        @com.aliyun.core.annotation.NameInMap("RegisterCode")
         private String registerCode;
 
-        @NameInMap("SubType")
+        @com.aliyun.core.annotation.NameInMap("SubType")
         private String subType;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Vendor")
+        @com.aliyun.core.annotation.NameInMap("Vendor")
         private String vendor;
 
         private Devices(Builder builder) {

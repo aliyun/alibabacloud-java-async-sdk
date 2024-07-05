@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainTrafficDataResponseBody</p>
  */
 public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficDataPerInterval")
     private TrafficDataPerInterval trafficDataPerInterval;
 
     private DescribeVsDomainTrafficDataResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private String trafficValue;
 
         private DataModule(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeVsDomainTrafficDataResponseBody extends TeaModel {
 
     }
     public static class TrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private TrafficDataPerInterval(Builder builder) {

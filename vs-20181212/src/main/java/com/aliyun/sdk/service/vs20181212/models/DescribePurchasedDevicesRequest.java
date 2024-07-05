@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,48 +11,48 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePurchasedDevicesRequest</p>
  */
 public class DescribePurchasedDevicesRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
     private String groupId;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortDirection")
     private String sortDirection;
 
-    @Query
-    @NameInMap("SubType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubType")
     private String subType;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @Query
-    @NameInMap("Vendor")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vendor")
     private String vendor;
 
     private DescribePurchasedDevicesRequest(Builder builder) {
@@ -178,19 +177,19 @@ public class DescribePurchasedDevicesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribePurchasedDevicesRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.id = response.id;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.sortBy = response.sortBy;
-            this.sortDirection = response.sortDirection;
-            this.subType = response.subType;
-            this.type = response.type;
-            this.vendor = response.vendor;
+        private Builder(DescribePurchasedDevicesRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.id = request.id;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.sortBy = request.sortBy;
+            this.sortDirection = request.sortDirection;
+            this.subType = request.subType;
+            this.type = request.type;
+            this.vendor = request.vendor;
         } 
 
         /**

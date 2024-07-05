@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTemplateRequest</p>
  */
 public class DeleteTemplateRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DeleteTemplateRequest(Builder builder) {
@@ -62,10 +61,10 @@ public class DeleteTemplateRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteTemplateRequest response) {
-            super(response);
-            this.id = response.id;
-            this.ownerId = response.ownerId;
+        private Builder(DeleteTemplateRequest request) {
+            super(request);
+            this.id = request.id;
+            this.ownerId = request.ownerId;
         } 
 
         /**

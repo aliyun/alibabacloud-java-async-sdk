@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeContainerInstanceIdRequest</p>
  */
 public class DescribeContainerInstanceIdRequest extends Request {
-    @Query
-    @NameInMap("NodeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nodeName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PodIndex")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PodIndex")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer podIndex;
 
     private DescribeContainerInstanceIdRequest(Builder builder) {
@@ -76,11 +75,11 @@ public class DescribeContainerInstanceIdRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeContainerInstanceIdRequest response) {
-            super(response);
-            this.nodeName = response.nodeName;
-            this.ownerId = response.ownerId;
-            this.podIndex = response.podIndex;
+        private Builder(DescribeContainerInstanceIdRequest request) {
+            super(request);
+            this.nodeName = request.nodeName;
+            this.ownerId = request.ownerId;
+            this.podIndex = request.podIndex;
         } 
 
         /**

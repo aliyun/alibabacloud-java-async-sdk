@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDeviceAlarmRequest</p>
  */
 public class ModifyDeviceAlarmRequest extends Request {
-    @Query
-    @NameInMap("AlarmId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AlarmId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String alarmId;
 
-    @Query
-    @NameInMap("ChannelId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ChannelId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer channelId;
 
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Status")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Status")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer status;
 
     private ModifyDeviceAlarmRequest(Builder builder) {
@@ -104,13 +103,13 @@ public class ModifyDeviceAlarmRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDeviceAlarmRequest response) {
-            super(response);
-            this.alarmId = response.alarmId;
-            this.channelId = response.channelId;
-            this.id = response.id;
-            this.ownerId = response.ownerId;
-            this.status = response.status;
+        private Builder(ModifyDeviceAlarmRequest request) {
+            super(request);
+            this.alarmId = request.alarmId;
+            this.channelId = request.channelId;
+            this.id = request.id;
+            this.ownerId = request.ownerId;
+            this.status = request.status;
         } 
 
         /**

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsPullStreamInfoConfigResponseBody</p>
  */
 public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
-    @NameInMap("LiveAppRecordList")
+    @com.aliyun.core.annotation.NameInMap("LiveAppRecordList")
     private LiveAppRecordList liveAppRecordList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsPullStreamInfoConfigResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
     } 
 
     public static class LiveAppRecord extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("SourceUrl")
+        @com.aliyun.core.annotation.NameInMap("SourceUrl")
         private String sourceUrl;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
         private LiveAppRecord(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeVsPullStreamInfoConfigResponseBody extends TeaModel {
 
     }
     public static class LiveAppRecordList extends TeaModel {
-        @NameInMap("LiveAppRecord")
+        @com.aliyun.core.annotation.NameInMap("LiveAppRecord")
         private java.util.List < LiveAppRecord> liveAppRecord;
 
         private LiveAppRecordList(Builder builder) {

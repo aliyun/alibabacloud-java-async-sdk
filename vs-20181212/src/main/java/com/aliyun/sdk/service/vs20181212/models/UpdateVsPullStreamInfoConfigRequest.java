@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateVsPullStreamInfoConfigRequest</p>
  */
 public class UpdateVsPullStreamInfoConfigRequest extends Request {
-    @Query
-    @NameInMap("Always")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Always")
     private String always;
 
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SourceUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SourceUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceUrl;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private UpdateVsPullStreamInfoConfigRequest(Builder builder) {
@@ -143,16 +142,16 @@ public class UpdateVsPullStreamInfoConfigRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateVsPullStreamInfoConfigRequest response) {
-            super(response);
-            this.always = response.always;
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.endTime = response.endTime;
-            this.ownerId = response.ownerId;
-            this.sourceUrl = response.sourceUrl;
-            this.startTime = response.startTime;
-            this.streamName = response.streamName;
+        private Builder(UpdateVsPullStreamInfoConfigRequest request) {
+            super(request);
+            this.always = request.always;
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.endTime = request.endTime;
+            this.ownerId = request.ownerId;
+            this.sourceUrl = request.sourceUrl;
+            this.startTime = request.startTime;
+            this.streamName = request.streamName;
         } 
 
         /**

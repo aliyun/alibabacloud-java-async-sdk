@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateClusterRequest</p>
  */
 public class UpdateClusterRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("EffectiveTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EffectiveTime")
     private String effectiveTime;
 
-    @Query
-    @NameInMap("InternalPorts")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InternalPorts")
     private String internalPorts;
 
-    @Query
-    @NameInMap("MaintainTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaintainTime")
     private String maintainTime;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("SecurityGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
     private String securityGroupId;
 
     private UpdateClusterRequest(Builder builder) {
@@ -140,16 +139,16 @@ public class UpdateClusterRequest extends Request {
             super();
         } 
 
-        private Builder(UpdateClusterRequest response) {
-            super(response);
-            this.clusterId = response.clusterId;
-            this.description = response.description;
-            this.effectiveTime = response.effectiveTime;
-            this.internalPorts = response.internalPorts;
-            this.maintainTime = response.maintainTime;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.securityGroupId = response.securityGroupId;
+        private Builder(UpdateClusterRequest request) {
+            super(request);
+            this.clusterId = request.clusterId;
+            this.description = request.description;
+            this.effectiveTime = request.effectiveTime;
+            this.internalPorts = request.internalPorts;
+            this.maintainTime = request.maintainTime;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.securityGroupId = request.securityGroupId;
         } 
 
         /**

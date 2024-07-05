@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyDeviceCaptureRequest</p>
  */
 public class ModifyDeviceCaptureRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Image")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Image")
     private Integer image;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Video")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Video")
     private Integer video;
 
     private ModifyDeviceCaptureRequest(Builder builder) {
@@ -88,12 +87,12 @@ public class ModifyDeviceCaptureRequest extends Request {
             super();
         } 
 
-        private Builder(ModifyDeviceCaptureRequest response) {
-            super(response);
-            this.id = response.id;
-            this.image = response.image;
-            this.ownerId = response.ownerId;
-            this.video = response.video;
+        private Builder(ModifyDeviceCaptureRequest request) {
+            super(request);
+            this.id = request.id;
+            this.image = request.image;
+            this.ownerId = request.ownerId;
+            this.video = request.video;
         } 
 
         /**

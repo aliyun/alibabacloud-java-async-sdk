@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterDevicesResponseBody</p>
  */
 public class DescribeClusterDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
+    @com.aliyun.core.annotation.NameInMap("Devices")
     private java.util.List < Devices> devices;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeClusterDevicesResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
     } 
 
     public static class IpInfos extends TeaModel {
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPort")
+        @com.aliyun.core.annotation.NameInMap("ExternalPort")
         private String externalPort;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("InternalIp")
+        @com.aliyun.core.annotation.NameInMap("InternalIp")
         private String internalIp;
 
-        @NameInMap("InternalPort")
+        @com.aliyun.core.annotation.NameInMap("InternalPort")
         private String internalPort;
 
-        @NameInMap("IpProtocol")
+        @com.aliyun.core.annotation.NameInMap("IpProtocol")
         private String ipProtocol;
 
-        @NameInMap("NatType")
+        @com.aliyun.core.annotation.NameInMap("NatType")
         private String natType;
 
         private IpInfos(Builder builder) {
@@ -253,19 +252,31 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
 
     }
     public static class Network extends TeaModel {
-        @NameInMap("ContainerPorts")
+        @com.aliyun.core.annotation.NameInMap("ContainerPorts")
         private String containerPorts;
 
-        @NameInMap("ExternalIp")
+        @com.aliyun.core.annotation.NameInMap("ExternalIp")
         private String externalIp;
 
-        @NameInMap("ExternalPorts")
+        @com.aliyun.core.annotation.NameInMap("ExternalIsp")
+        private String externalIsp;
+
+        @com.aliyun.core.annotation.NameInMap("ExternalPorts")
         private String externalPorts;
+
+        @com.aliyun.core.annotation.NameInMap("OutgoingIp")
+        private String outgoingIp;
+
+        @com.aliyun.core.annotation.NameInMap("OutgoingIsp")
+        private String outgoingIsp;
 
         private Network(Builder builder) {
             this.containerPorts = builder.containerPorts;
             this.externalIp = builder.externalIp;
+            this.externalIsp = builder.externalIsp;
             this.externalPorts = builder.externalPorts;
+            this.outgoingIp = builder.outgoingIp;
+            this.outgoingIsp = builder.outgoingIsp;
         }
 
         public static Builder builder() {
@@ -291,16 +302,40 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return externalIsp
+         */
+        public String getExternalIsp() {
+            return this.externalIsp;
+        }
+
+        /**
          * @return externalPorts
          */
         public String getExternalPorts() {
             return this.externalPorts;
         }
 
+        /**
+         * @return outgoingIp
+         */
+        public String getOutgoingIp() {
+            return this.outgoingIp;
+        }
+
+        /**
+         * @return outgoingIsp
+         */
+        public String getOutgoingIsp() {
+            return this.outgoingIsp;
+        }
+
         public static final class Builder {
             private String containerPorts; 
             private String externalIp; 
+            private String externalIsp; 
             private String externalPorts; 
+            private String outgoingIp; 
+            private String outgoingIsp; 
 
             /**
              * ContainerPorts.
@@ -319,10 +354,34 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             }
 
             /**
+             * ExternalIsp.
+             */
+            public Builder externalIsp(String externalIsp) {
+                this.externalIsp = externalIsp;
+                return this;
+            }
+
+            /**
              * ExternalPorts.
              */
             public Builder externalPorts(String externalPorts) {
                 this.externalPorts = externalPorts;
+                return this;
+            }
+
+            /**
+             * OutgoingIp.
+             */
+            public Builder outgoingIp(String outgoingIp) {
+                this.outgoingIp = outgoingIp;
+                return this;
+            }
+
+            /**
+             * OutgoingIsp.
+             */
+            public Builder outgoingIsp(String outgoingIsp) {
+                this.outgoingIsp = outgoingIsp;
                 return this;
             }
 
@@ -334,18 +393,22 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
 
     }
     public static class PodInfos extends TeaModel {
-        @NameInMap("Network")
+        @com.aliyun.core.annotation.NameInMap("Network")
         private java.util.List < Network> network;
 
-        @NameInMap("PodId")
+        @com.aliyun.core.annotation.NameInMap("PodId")
         private String podId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("PodIp")
+        private String podIp;
+
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private PodInfos(Builder builder) {
             this.network = builder.network;
             this.podId = builder.podId;
+            this.podIp = builder.podIp;
             this.status = builder.status;
         }
 
@@ -372,6 +435,13 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         }
 
         /**
+         * @return podIp
+         */
+        public String getPodIp() {
+            return this.podIp;
+        }
+
+        /**
          * @return status
          */
         public String getStatus() {
@@ -381,6 +451,7 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
         public static final class Builder {
             private java.util.List < Network> network; 
             private String podId; 
+            private String podIp; 
             private String status; 
 
             /**
@@ -400,6 +471,14 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             }
 
             /**
+             * PodIp.
+             */
+            public Builder podIp(String podIp) {
+                this.podIp = podIp;
+                return this;
+            }
+
+            /**
              * Status.
              */
             public Builder status(String status) {
@@ -415,52 +494,55 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
 
     }
     public static class Devices extends TeaModel {
-        @NameInMap("AutoRenew")
+        @com.aliyun.core.annotation.NameInMap("AutoRenew")
         private Boolean autoRenew;
 
-        @NameInMap("AutoRenewPeriod")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
         private Integer autoRenewPeriod;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EdgeNodeName")
+        @com.aliyun.core.annotation.NameInMap("EdgeNodeName")
         private String edgeNodeName;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("HostRom")
+        private String hostRom;
+
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("InstanceChargeType")
+        @com.aliyun.core.annotation.NameInMap("InstanceChargeType")
         private String instanceChargeType;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("IpInfos")
+        @com.aliyun.core.annotation.NameInMap("IpInfos")
         private java.util.List < IpInfos> ipInfos;
 
-        @NameInMap("MacAddress")
+        @com.aliyun.core.annotation.NameInMap("MacAddress")
         private String macAddress;
 
-        @NameInMap("Period")
+        @com.aliyun.core.annotation.NameInMap("Period")
         private Integer period;
 
-        @NameInMap("PeriodUnit")
+        @com.aliyun.core.annotation.NameInMap("PeriodUnit")
         private String periodUnit;
 
-        @NameInMap("PlatformType")
+        @com.aliyun.core.annotation.NameInMap("PlatformType")
         private String platformType;
 
-        @NameInMap("PodInfos")
+        @com.aliyun.core.annotation.NameInMap("PodInfos")
         private java.util.List < PodInfos> podInfos;
 
-        @NameInMap("Server")
+        @com.aliyun.core.annotation.NameInMap("Server")
         private String server;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Devices(Builder builder) {
@@ -468,6 +550,7 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             this.autoRenewPeriod = builder.autoRenewPeriod;
             this.description = builder.description;
             this.edgeNodeName = builder.edgeNodeName;
+            this.hostRom = builder.hostRom;
             this.imageId = builder.imageId;
             this.instanceChargeType = builder.instanceChargeType;
             this.instanceId = builder.instanceId;
@@ -516,6 +599,13 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
          */
         public String getEdgeNodeName() {
             return this.edgeNodeName;
+        }
+
+        /**
+         * @return hostRom
+         */
+        public String getHostRom() {
+            return this.hostRom;
         }
 
         /**
@@ -607,6 +697,7 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
             private Integer autoRenewPeriod; 
             private String description; 
             private String edgeNodeName; 
+            private String hostRom; 
             private String imageId; 
             private String instanceChargeType; 
             private String instanceId; 
@@ -649,6 +740,14 @@ public class DescribeClusterDevicesResponseBody extends TeaModel {
              */
             public Builder edgeNodeName(String edgeNodeName) {
                 this.edgeNodeName = edgeNodeName;
+                return this;
+            }
+
+            /**
+             * HostRom.
+             */
+            public Builder hostRom(String hostRom) {
+                this.hostRom = hostRom;
                 return this;
             }
 

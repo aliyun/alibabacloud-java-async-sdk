@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StartRecordStreamRequest</p>
  */
 public class StartRecordStreamRequest extends Request {
-    @Query
-    @NameInMap("App")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("App")
     private String app;
 
-    @Query
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PlayDomain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDomain")
     private String playDomain;
 
     private StartRecordStreamRequest(Builder builder) {
@@ -100,13 +99,13 @@ public class StartRecordStreamRequest extends Request {
             super();
         } 
 
-        private Builder(StartRecordStreamRequest response) {
-            super(response);
-            this.app = response.app;
-            this.id = response.id;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.playDomain = response.playDomain;
+        private Builder(StartRecordStreamRequest request) {
+            super(request);
+            this.app = request.app;
+            this.id = request.id;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.playDomain = request.playDomain;
         } 
 
         /**

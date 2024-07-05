@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsStreamsNotifyUrlConfigResponseBody</p>
  */
 public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
-    @NameInMap("LiveStreamsNotifyConfig")
+    @com.aliyun.core.annotation.NameInMap("LiveStreamsNotifyConfig")
     private LiveStreamsNotifyConfig liveStreamsNotifyConfig;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsStreamsNotifyUrlConfigResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribeVsStreamsNotifyUrlConfigResponseBody extends TeaModel {
     } 
 
     public static class LiveStreamsNotifyConfig extends TeaModel {
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("NotifyUrl")
+        @com.aliyun.core.annotation.NameInMap("NotifyUrl")
         private String notifyUrl;
 
         private LiveStreamsNotifyConfig(Builder builder) {

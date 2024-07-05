@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainRecordDataResponseBody</p>
  */
 public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
-    @NameInMap("RecordDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("RecordDataPerInterval")
     private RecordDataPerInterval recordDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsDomainRecordDataResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("RecordValue")
+        @com.aliyun.core.annotation.NameInMap("RecordValue")
         private String recordValue;
 
-        @NameInMap("StreamCountValue")
+        @com.aliyun.core.annotation.NameInMap("StreamCountValue")
         private String streamCountValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private DataModule(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeVsDomainRecordDataResponseBody extends TeaModel {
 
     }
     public static class RecordDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private RecordDataPerInterval(Builder builder) {

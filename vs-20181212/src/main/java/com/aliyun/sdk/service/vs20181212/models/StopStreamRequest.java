@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StopStreamRequest</p>
  */
 public class StopStreamRequest extends Request {
-    @Query
-    @NameInMap("Id")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Id")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String id;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private StopStreamRequest(Builder builder) {
@@ -88,12 +87,12 @@ public class StopStreamRequest extends Request {
             super();
         } 
 
-        private Builder(StopStreamRequest response) {
-            super(response);
-            this.id = response.id;
-            this.name = response.name;
-            this.ownerId = response.ownerId;
-            this.startTime = response.startTime;
+        private Builder(StopStreamRequest request) {
+            super(request);
+            this.id = request.id;
+            this.name = request.name;
+            this.ownerId = request.ownerId;
+            this.startTime = request.startTime;
         } 
 
         /**

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ResumeVsStreamRequest</p>
  */
 public class ResumeVsStreamRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("ControlStreamAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlStreamAction")
     private String controlStreamAction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("LiveStreamType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String liveStreamType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private ResumeVsStreamRequest(Builder builder) {
@@ -117,14 +116,14 @@ public class ResumeVsStreamRequest extends Request {
             super();
         } 
 
-        private Builder(ResumeVsStreamRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.controlStreamAction = response.controlStreamAction;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.ownerId = response.ownerId;
-            this.streamName = response.streamName;
+        private Builder(ResumeVsStreamRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.controlStreamAction = request.controlStreamAction;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
         } 
 
         /**

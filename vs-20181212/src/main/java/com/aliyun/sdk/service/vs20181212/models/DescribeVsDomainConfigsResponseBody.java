@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainConfigsResponseBody</p>
  */
 public class DescribeVsDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
     private java.util.List < DomainConfigs> domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVsDomainConfigsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
     } 
 
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArgs(Builder builder) {
@@ -133,16 +132,16 @@ public class DescribeVsDomainConfigsResponseBody extends TeaModel {
 
     }
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
         private java.util.List < FunctionArgs> functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfigs(Builder builder) {

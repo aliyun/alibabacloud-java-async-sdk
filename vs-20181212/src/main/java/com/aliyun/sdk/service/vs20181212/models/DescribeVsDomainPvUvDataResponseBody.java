@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainPvUvDataResponseBody</p>
  */
 public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("PvUvDataInfos")
+    @com.aliyun.core.annotation.NameInMap("PvUvDataInfos")
     private PvUvDataInfos pvUvDataInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVsDomainPvUvDataResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
     } 
 
     public static class PvUvDataInfo extends TeaModel {
-        @NameInMap("PV")
-        private String PV;
+        @com.aliyun.core.annotation.NameInMap("PV")
+        private String pv;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("UV")
-        private String UV;
+        @com.aliyun.core.annotation.NameInMap("UV")
+        private String uv;
 
         private PvUvDataInfo(Builder builder) {
-            this.PV = builder.PV;
+            this.pv = builder.pv;
             this.timeStamp = builder.timeStamp;
-            this.UV = builder.UV;
+            this.uv = builder.uv;
         }
 
         public static Builder builder() {
@@ -176,10 +175,10 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return PV
+         * @return pv
          */
-        public String getPV() {
-            return this.PV;
+        public String getPv() {
+            return this.pv;
         }
 
         /**
@@ -190,22 +189,22 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
         }
 
         /**
-         * @return UV
+         * @return uv
          */
-        public String getUV() {
-            return this.UV;
+        public String getUv() {
+            return this.uv;
         }
 
         public static final class Builder {
-            private String PV; 
+            private String pv; 
             private String timeStamp; 
-            private String UV; 
+            private String uv; 
 
             /**
              * PV.
              */
-            public Builder PV(String PV) {
-                this.PV = PV;
+            public Builder pv(String pv) {
+                this.pv = pv;
                 return this;
             }
 
@@ -220,8 +219,8 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
             /**
              * UV.
              */
-            public Builder UV(String UV) {
-                this.UV = UV;
+            public Builder uv(String uv) {
+                this.uv = uv;
                 return this;
             }
 
@@ -233,7 +232,7 @@ public class DescribeVsDomainPvUvDataResponseBody extends TeaModel {
 
     }
     public static class PvUvDataInfos extends TeaModel {
-        @NameInMap("PvUvDataInfo")
+        @com.aliyun.core.annotation.NameInMap("PvUvDataInfo")
         private java.util.List < PvUvDataInfo> pvUvDataInfo;
 
         private PvUvDataInfos(Builder builder) {

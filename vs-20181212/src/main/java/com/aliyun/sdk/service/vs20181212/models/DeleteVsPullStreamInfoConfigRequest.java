@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteVsPullStreamInfoConfigRequest</p>
  */
 public class DeleteVsPullStreamInfoConfigRequest extends Request {
-    @Query
-    @NameInMap("AppName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String appName;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StreamName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String streamName;
 
     private DeleteVsPullStreamInfoConfigRequest(Builder builder) {
@@ -90,12 +89,12 @@ public class DeleteVsPullStreamInfoConfigRequest extends Request {
             super();
         } 
 
-        private Builder(DeleteVsPullStreamInfoConfigRequest response) {
-            super(response);
-            this.appName = response.appName;
-            this.domainName = response.domainName;
-            this.ownerId = response.ownerId;
-            this.streamName = response.streamName;
+        private Builder(DeleteVsPullStreamInfoConfigRequest request) {
+            super(request);
+            this.appName = request.appName;
+            this.domainName = request.domainName;
+            this.ownerId = request.ownerId;
+            this.streamName = request.streamName;
         } 
 
         /**

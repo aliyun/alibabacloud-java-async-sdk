@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsCertificateDetailRequest</p>
  */
 public class DescribeVsCertificateDetailRequest extends Request {
-    @Query
-    @NameInMap("CertName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CertName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String certName;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private DescribeVsCertificateDetailRequest(Builder builder) {
@@ -62,10 +61,10 @@ public class DescribeVsCertificateDetailRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeVsCertificateDetailRequest response) {
-            super(response);
-            this.certName = response.certName;
-            this.ownerId = response.ownerId;
+        private Builder(DescribeVsCertificateDetailRequest request) {
+            super(request);
+            this.certName = request.certName;
+            this.ownerId = request.ownerId;
         } 
 
         /**

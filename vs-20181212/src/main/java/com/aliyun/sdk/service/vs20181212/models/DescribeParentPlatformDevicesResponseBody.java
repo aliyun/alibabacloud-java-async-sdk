@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeParentPlatformDevicesResponseBody</p>
  */
 public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
-    @NameInMap("Devices")
+    @com.aliyun.core.annotation.NameInMap("Devices")
     private java.util.List < Devices> devices;
 
-    @NameInMap("PageCount")
+    @com.aliyun.core.annotation.NameInMap("PageCount")
     private Long pageCount;
 
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeParentPlatformDevicesResponseBody(Builder builder) {
@@ -152,19 +151,19 @@ public class DescribeParentPlatformDevicesResponseBody extends TeaModel {
     } 
 
     public static class Devices extends TeaModel {
-        @NameInMap("GbId")
+        @com.aliyun.core.annotation.NameInMap("GbId")
         private String gbId;
 
-        @NameInMap("GroupId")
+        @com.aliyun.core.annotation.NameInMap("GroupId")
         private String groupId;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private String parentId;
 
         private Devices(Builder builder) {

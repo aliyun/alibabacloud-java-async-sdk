@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchResumeVsStreamRequest</p>
  */
 public class BatchResumeVsStreamRequest extends Request {
-    @Query
-    @NameInMap("Channel")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Channel")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String channel;
 
-    @Query
-    @NameInMap("ControlStreamAction")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ControlStreamAction")
     private String controlStreamAction;
 
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("LiveStreamType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LiveStreamType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String liveStreamType;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
     private BatchResumeVsStreamRequest(Builder builder) {
@@ -103,13 +102,13 @@ public class BatchResumeVsStreamRequest extends Request {
             super();
         } 
 
-        private Builder(BatchResumeVsStreamRequest response) {
-            super(response);
-            this.channel = response.channel;
-            this.controlStreamAction = response.controlStreamAction;
-            this.domainName = response.domainName;
-            this.liveStreamType = response.liveStreamType;
-            this.ownerId = response.ownerId;
+        private Builder(BatchResumeVsStreamRequest request) {
+            super(request);
+            this.channel = request.channel;
+            this.controlStreamAction = request.controlStreamAction;
+            this.domainName = request.domainName;
+            this.liveStreamType = request.liveStreamType;
+            this.ownerId = request.ownerId;
         } 
 
         /**

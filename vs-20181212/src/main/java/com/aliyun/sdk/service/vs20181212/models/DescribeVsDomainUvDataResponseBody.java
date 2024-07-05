@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVsDomainUvDataResponseBody</p>
  */
 public class DescribeVsDomainUvDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("UvDataInterval")
+    @com.aliyun.core.annotation.NameInMap("UvDataInterval")
     private UvDataInterval uvDataInterval;
 
     private DescribeVsDomainUvDataResponseBody(Builder builder) {
@@ -152,10 +151,10 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
     } 
 
     public static class UsageData extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private UsageData(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribeVsDomainUvDataResponseBody extends TeaModel {
 
     }
     public static class UvDataInterval extends TeaModel {
-        @NameInMap("UsageData")
+        @com.aliyun.core.annotation.NameInMap("UsageData")
         private java.util.List < UsageData> usageData;
 
         private UvDataInterval(Builder builder) {

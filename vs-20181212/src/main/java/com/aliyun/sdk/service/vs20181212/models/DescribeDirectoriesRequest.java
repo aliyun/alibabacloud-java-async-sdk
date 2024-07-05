@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vs20181212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDirectoriesRequest</p>
  */
 public class DescribeDirectoriesRequest extends Request {
-    @Query
-    @NameInMap("GroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("GroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String groupId;
 
-    @Query
-    @NameInMap("NoPagination")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NoPagination")
     private Boolean noPagination;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNum")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNum")
     private Long pageNum;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("SortDirection")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortDirection")
     private String sortDirection;
 
     private DescribeDirectoriesRequest(Builder builder) {
@@ -140,16 +139,16 @@ public class DescribeDirectoriesRequest extends Request {
             super();
         } 
 
-        private Builder(DescribeDirectoriesRequest response) {
-            super(response);
-            this.groupId = response.groupId;
-            this.noPagination = response.noPagination;
-            this.ownerId = response.ownerId;
-            this.pageNum = response.pageNum;
-            this.pageSize = response.pageSize;
-            this.parentId = response.parentId;
-            this.sortBy = response.sortBy;
-            this.sortDirection = response.sortDirection;
+        private Builder(DescribeDirectoriesRequest request) {
+            super(request);
+            this.groupId = request.groupId;
+            this.noPagination = request.noPagination;
+            this.ownerId = request.ownerId;
+            this.pageNum = request.pageNum;
+            this.pageSize = request.pageSize;
+            this.parentId = request.parentId;
+            this.sortBy = request.sortBy;
+            this.sortDirection = request.sortDirection;
         } 
 
         /**
