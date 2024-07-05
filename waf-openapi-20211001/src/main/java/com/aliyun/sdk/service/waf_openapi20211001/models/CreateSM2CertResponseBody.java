@@ -49,7 +49,7 @@ public class CreateSM2CertResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * CertIdentifier.
+         * The ID of the certificate.
          */
         public Builder certIdentifier(String certIdentifier) {
             this.certIdentifier = certIdentifier;
@@ -57,7 +57,7 @@ public class CreateSM2CertResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

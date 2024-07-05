@@ -225,6 +225,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyTemplateResourcesResponse> modifyTemplateResources(ModifyTemplateResourcesRequest request);
 
+    CompletableFuture<ReleaseInstanceResponse> releaseInstance(ReleaseInstanceRequest request);
+
     /**
       * SyncProductInstance is an asynchronous operation. You can call the [DescribeProductInstances](~~2743168~~) operation to query the status of the task.
       *

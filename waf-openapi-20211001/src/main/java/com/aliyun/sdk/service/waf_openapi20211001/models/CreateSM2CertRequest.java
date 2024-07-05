@@ -151,7 +151,7 @@ public class CreateSM2CertRequest extends Request {
         } 
 
         /**
-         * CertName.
+         * The name of the SM certificate.
          */
         public Builder certName(String certName) {
             this.putQueryParameter("CertName", certName);
@@ -160,7 +160,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * EncryptCertificate.
+         * The content of the SM certificate.
          */
         public Builder encryptCertificate(String encryptCertificate) {
             this.putQueryParameter("EncryptCertificate", encryptCertificate);
@@ -169,7 +169,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * EncryptPrivateKey.
+         * The private key of the SM certificate.
          */
         public Builder encryptPrivateKey(String encryptPrivateKey) {
             this.putQueryParameter("EncryptPrivateKey", encryptPrivateKey);
@@ -178,7 +178,10 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the WAF instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstance](~~433756~~) operation to query the ID of the WAF instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -187,7 +190,11 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region in which the WAF instance is deployed. Valid values:
+         * <p>
+         * 
+         * *   **cn-hangzhou**: Chinese mainland.
+         * *   **ap-southeast-1**: outside the Chinese mainland.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -196,7 +203,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * ResourceManagerResourceGroupId.
+         * The ID of the Alibaba Cloud resource group.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -205,7 +212,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * SignCertificate.
+         * The content of the signing certificate for the SM certificate.
          */
         public Builder signCertificate(String signCertificate) {
             this.putQueryParameter("SignCertificate", signCertificate);
@@ -214,7 +221,7 @@ public class CreateSM2CertRequest extends Request {
         }
 
         /**
-         * SignPrivateKey.
+         * The private key of the signing certificate for the SM certificate.
          */
         public Builder signPrivateKey(String signPrivateKey) {
             this.putQueryParameter("SignPrivateKey", signPrivateKey);
