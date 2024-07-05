@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitFpFileDeleteJobRequest</p>
  */
 public class SubmitFpFileDeleteJobRequest extends Request {
-    @Query
-    @NameInMap("FileIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileIds")
     private String fileIds;
 
-    @Query
-    @NameInMap("FpDBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FpDBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fpDBId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryKeys")
+    private String primaryKeys;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitFpFileDeleteJobRequest(Builder builder) {
@@ -53,6 +55,7 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.pipelineId = builder.pipelineId;
+        this.primaryKeys = builder.primaryKeys;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.userData = builder.userData;
@@ -107,6 +110,13 @@ public class SubmitFpFileDeleteJobRequest extends Request {
     }
 
     /**
+     * @return primaryKeys
+     */
+    public String getPrimaryKeys() {
+        return this.primaryKeys;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -133,6 +143,7 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         private String ownerAccount; 
         private Long ownerId; 
         private String pipelineId; 
+        private String primaryKeys; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String userData; 
@@ -148,13 +159,14 @@ public class SubmitFpFileDeleteJobRequest extends Request {
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.pipelineId = request.pipelineId;
+            this.primaryKeys = request.primaryKeys;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.userData = request.userData;
         } 
 
         /**
-         * FileIds.
+         * The IDs of the media files that you want to delete. Separate multiple file IDs with commas (,). You can delete up to 200 media files at a time. You can obtain media file IDs from the response parameters of the [ListFpShotFiles](~~209266~~) operation.
          */
         public Builder fileIds(String fileIds) {
             this.putQueryParameter("FileIds", fileIds);
@@ -163,7 +175,7 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * FpDBId.
+         * The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -190,11 +202,23 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the ApsaraVideo Media Processing (MPS) queue to which the job is submitted. The MPS queue is bound with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **MPS queue and Callback** in the left-side navigation pane.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
             this.pipelineId = pipelineId;
+            return this;
+        }
+
+        /**
+         * The primary keys of the files to be deleted. Separate multiple primary keys with commas (,). You can delete up to 200 primary keys at a time. You can obtain the primary keys of media files from the response parameters of the [ListFpShotFiles](~~209266~~) operation.
+         * <p>
+         * 
+         * >  This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         */
+        public Builder primaryKeys(String primaryKeys) {
+            this.putQueryParameter("PrimaryKeys", primaryKeys);
+            this.primaryKeys = primaryKeys;
             return this;
         }
 
@@ -217,7 +241,7 @@ public class SubmitFpFileDeleteJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom data. The value can contain letters and digits and can be up to 128 bytes in length.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

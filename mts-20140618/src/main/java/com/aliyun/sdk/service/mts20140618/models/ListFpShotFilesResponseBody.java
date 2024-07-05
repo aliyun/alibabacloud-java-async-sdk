@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFpShotFilesResponseBody</p>
  */
 public class ListFpShotFilesResponseBody extends TeaModel {
-    @NameInMap("FpShotFileList")
+    @com.aliyun.core.annotation.NameInMap("FpShotFileList")
     private FpShotFileList fpShotFileList;
 
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListFpShotFilesResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FpShotFileList.
+         * The media fingerprint files. For more information, see the "FpShotFile" section of the [Data types](~~29251~~) topic.
          */
         public Builder fpShotFileList(FpShotFileList fpShotFileList) {
             this.fpShotFileList = fpShotFileList;
@@ -70,7 +69,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -78,7 +77,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class ListFpShotFilesResponseBody extends TeaModel {
     } 
 
     public static class InputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private InputFile(Builder builder) {
@@ -142,7 +141,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the input file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -150,7 +149,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The ID of the OSS region in which the input file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -158,7 +157,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -173,19 +172,23 @@ public class ListFpShotFilesResponseBody extends TeaModel {
 
     }
     public static class FpShotFile extends TeaModel {
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
+
+        @com.aliyun.core.annotation.NameInMap("StoreTime")
+        private String storeTime;
 
         private FpShotFile(Builder builder) {
             this.fileId = builder.fileId;
             this.inputFile = builder.inputFile;
             this.primaryKey = builder.primaryKey;
+            this.storeTime = builder.storeTime;
         }
 
         public static Builder builder() {
@@ -217,13 +220,21 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             return this.primaryKey;
         }
 
+        /**
+         * @return storeTime
+         */
+        public String getStoreTime() {
+            return this.storeTime;
+        }
+
         public static final class Builder {
             private String fileId; 
             private InputFile inputFile; 
             private String primaryKey; 
+            private String storeTime; 
 
             /**
-             * FileId.
+             * The ID of the video file.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -231,7 +242,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * InputFile.
+             * The information about the input file.
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -239,10 +250,21 @@ public class ListFpShotFilesResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * The unique primary key of the input video.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
+                return this;
+            }
+
+            /**
+             * The time when the media fingerprint file was stored. The time follows the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time is displayed in UTC.
+             * <p>
+             * 
+             * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+             */
+            public Builder storeTime(String storeTime) {
+                this.storeTime = storeTime;
                 return this;
             }
 
@@ -254,7 +276,7 @@ public class ListFpShotFilesResponseBody extends TeaModel {
 
     }
     public static class FpShotFileList extends TeaModel {
-        @NameInMap("FpShotFile")
+        @com.aliyun.core.annotation.NameInMap("FpShotFile")
         private java.util.List < FpShotFile> fpShotFile;
 
         private FpShotFileList(Builder builder) {

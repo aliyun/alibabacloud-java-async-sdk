@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaInfoJobListResponseBody</p>
  */
 public class QueryMediaInfoJobListResponseBody extends TeaModel {
-    @NameInMap("MediaInfoJobList")
+    @com.aliyun.core.annotation.NameInMap("MediaInfoJobList")
     private MediaInfoJobList mediaInfoJobList;
 
-    @NameInMap("NonExistMediaInfoJobIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaInfoJobIds")
     private NonExistMediaInfoJobIds nonExistMediaInfoJobIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMediaInfoJobListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaInfoJobList.
+         * The details of each returned media information analysis job.
          */
         public Builder mediaInfoJobList(MediaInfoJobList mediaInfoJobList) {
             this.mediaInfoJobList = mediaInfoJobList;
@@ -70,7 +69,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistMediaInfoJobIds.
+         * Nonexistent media information analysis jobs.
          */
         public Builder nonExistMediaInfoJobIds(NonExistMediaInfoJobIds nonExistMediaInfoJobIds) {
             this.nonExistMediaInfoJobIds = nonExistMediaInfoJobIds;
@@ -78,7 +77,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private Input(Builder builder) {
@@ -142,7 +141,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The OSS bucket in which the input file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -150,7 +149,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The ID of the OSS region.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -158,7 +157,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the Object Storage Service (OSS) object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -173,13 +172,13 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class MNSMessageResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
         private MNSMessageResult(Builder builder) {
@@ -223,7 +222,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * ErrorCode.
+             * The error code returned if the job failed. This parameter is not returned if the job is successful.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -231,7 +230,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the job failed. This parameter is not returned if the job is successful.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -239,7 +238,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * The ID of the message returned if the job was successful. This parameter is not returned if the job fails.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -254,28 +253,28 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class Format extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FormatLongName")
+        @com.aliyun.core.annotation.NameInMap("FormatLongName")
         private String formatLongName;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("NumPrograms")
+        @com.aliyun.core.annotation.NameInMap("NumPrograms")
         private String numPrograms;
 
-        @NameInMap("NumStreams")
+        @com.aliyun.core.annotation.NameInMap("NumStreams")
         private String numStreams;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Format(Builder builder) {
@@ -364,7 +363,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Bitrate.
+             * The total bitrate.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -372,7 +371,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The total duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -380,7 +379,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FormatLongName.
+             * The full name of the container format.
              */
             public Builder formatLongName(String formatLongName) {
                 this.formatLongName = formatLongName;
@@ -388,7 +387,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * The short name of the container format.
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -396,7 +395,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumPrograms.
+             * The total number of program streams.
              */
             public Builder numPrograms(String numPrograms) {
                 this.numPrograms = numPrograms;
@@ -404,7 +403,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumStreams.
+             * The total number of media streams.
              */
             public Builder numStreams(String numStreams) {
                 this.numStreams = numStreams;
@@ -412,7 +411,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the image file.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -420,7 +419,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -435,52 +434,52 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class AudioStream extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("ChannelLayout")
+        @com.aliyun.core.annotation.NameInMap("ChannelLayout")
         private String channelLayout;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("SampleFmt")
+        @com.aliyun.core.annotation.NameInMap("SampleFmt")
         private String sampleFmt;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private AudioStream(Builder builder) {
@@ -641,7 +640,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * Bitrate.
+             * The bitrate of the media file.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -649,7 +648,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * The number of sound channels.
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -657,7 +656,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * The output layout of the sound channels.
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -665,7 +664,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the encoding format.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -673,7 +672,14 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the encoding format. Valid values:
+             * <p>
+             * 
+             * *   **acc**
+             * *   **mp3**
+             * *   **mp4**
+             * *   **ogg**
+             * *   **flac**
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -681,7 +687,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the encoding format.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -689,7 +695,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the encoding format.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -697,7 +703,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -705,7 +711,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the media file.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -713,7 +719,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -721,7 +727,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html?spm=a2c4g.11186623.2.66.243851cd2SntfN#Metadata).
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -729,7 +735,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -737,7 +743,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * The sampling format.
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -745,7 +751,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * The sampling rate.
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -753,7 +759,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -761,7 +767,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -776,7 +782,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class AudioStreamList extends TeaModel {
-        @NameInMap("AudioStream")
+        @com.aliyun.core.annotation.NameInMap("AudioStream")
         private java.util.List < AudioStream> audioStream;
 
         private AudioStreamList(Builder builder) {
@@ -817,34 +823,34 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleStream extends TeaModel {
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private SubtitleStream(Builder builder) {
@@ -951,7 +957,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * CodecLongName.
+             * The full name of the encoding format.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -959,7 +965,11 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the encoding format. Valid values:
+             * <p>
+             * 
+             * *   **srt**
+             * *   **ass**
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -967,7 +977,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the encoding format.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -975,7 +985,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the encoding format.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -983,7 +993,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -991,7 +1001,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -999,7 +1009,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the subtitle stream. The value indicates the position of the subtitle stream in all subtitle streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1007,7 +1017,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1015,7 +1025,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1023,7 +1033,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1038,7 +1048,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleStreamList extends TeaModel {
-        @NameInMap("SubtitleStream")
+        @com.aliyun.core.annotation.NameInMap("SubtitleStream")
         private java.util.List < SubtitleStream> subtitleStream;
 
         private SubtitleStreamList(Builder builder) {
@@ -1079,13 +1089,13 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class NetworkCost extends TeaModel {
-        @NameInMap("AvgBitrate")
+        @com.aliyun.core.annotation.NameInMap("AvgBitrate")
         private String avgBitrate;
 
-        @NameInMap("CostBandwidth")
+        @com.aliyun.core.annotation.NameInMap("CostBandwidth")
         private String costBandwidth;
 
-        @NameInMap("PreloadTime")
+        @com.aliyun.core.annotation.NameInMap("PreloadTime")
         private String preloadTime;
 
         private NetworkCost(Builder builder) {
@@ -1129,7 +1139,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String preloadTime; 
 
             /**
-             * AvgBitrate.
+             * The average bitrate of the video stream.
              */
             public Builder avgBitrate(String avgBitrate) {
                 this.avgBitrate = avgBitrate;
@@ -1137,7 +1147,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CostBandwidth.
+             * The maximum bandwidth that is consumed.
              */
             public Builder costBandwidth(String costBandwidth) {
                 this.costBandwidth = costBandwidth;
@@ -1145,7 +1155,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PreloadTime.
+             * The time consumed to preload the video.
              */
             public Builder preloadTime(String preloadTime) {
                 this.preloadTime = preloadTime;
@@ -1160,85 +1170,85 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class VideoStream extends TeaModel {
-        @NameInMap("AvgFPS")
+        @com.aliyun.core.annotation.NameInMap("AvgFPS")
         private String avgFPS;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("ColorPrimaries")
+        @com.aliyun.core.annotation.NameInMap("ColorPrimaries")
         private String colorPrimaries;
 
-        @NameInMap("ColorRange")
+        @com.aliyun.core.annotation.NameInMap("ColorRange")
         private String colorRange;
 
-        @NameInMap("ColorTransfer")
+        @com.aliyun.core.annotation.NameInMap("ColorTransfer")
         private String colorTransfer;
 
-        @NameInMap("Dar")
+        @com.aliyun.core.annotation.NameInMap("Dar")
         private String dar;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("HasBFrames")
+        @com.aliyun.core.annotation.NameInMap("HasBFrames")
         private String hasBFrames;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("NetworkCost")
+        @com.aliyun.core.annotation.NameInMap("NetworkCost")
         private NetworkCost networkCost;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Rotate")
+        @com.aliyun.core.annotation.NameInMap("Rotate")
         private String rotate;
 
-        @NameInMap("Sar")
+        @com.aliyun.core.annotation.NameInMap("Sar")
         private String sar;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private VideoStream(Builder builder) {
@@ -1498,7 +1508,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * AvgFPS.
+             * The average frame rate.
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -1506,7 +1516,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * The bitrate of the media file.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1514,7 +1524,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the encoding format.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -1522,7 +1532,13 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the encoding format. Valid values:
+             * <p>
+             * 
+             * *   **h264**
+             * *   **h265**
+             * *   **gif**
+             * *   **webp**
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -1530,7 +1546,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the encoding format.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -1538,7 +1554,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the encoding format.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -1546,7 +1562,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -1554,7 +1570,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ColorPrimaries.
+             * The level of color reconstruction.
              */
             public Builder colorPrimaries(String colorPrimaries) {
                 this.colorPrimaries = colorPrimaries;
@@ -1562,7 +1578,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ColorRange.
+             * The color range.
              */
             public Builder colorRange(String colorRange) {
                 this.colorRange = colorRange;
@@ -1570,7 +1586,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ColorTransfer.
+             * The color channel.
              */
             public Builder colorTransfer(String colorTransfer) {
                 this.colorTransfer = colorTransfer;
@@ -1578,7 +1594,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * The display aspect ratio (DAR).
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -1586,7 +1602,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the media file.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1594,7 +1610,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the media file.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -1602,7 +1618,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * Indicates whether the video stream contains bidirectional frames (B-frames). A value of 1 indicates that the video stream contains B-frames. A value of 0 indicates that the video stream does not contain B-frames.
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -1610,7 +1626,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the video stream in pixels.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1618,7 +1634,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the video stream. The value indicates the position of the video stream in all video streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -1626,7 +1642,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language.
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -1634,7 +1650,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The codec level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -1642,7 +1658,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkCost.
+             * The network bandwidth that is consumed.
              */
             public Builder networkCost(NetworkCost networkCost) {
                 this.networkCost = networkCost;
@@ -1650,7 +1666,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -1658,7 +1674,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * The pixel format.
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -1666,7 +1682,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The codec profile.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -1674,7 +1690,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * The rotation angle of the video.
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -1682,7 +1698,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * The sample aspect ratio (SAR).
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -1690,7 +1706,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1698,7 +1714,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -1706,7 +1722,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the video in pixels.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1721,7 +1737,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class VideoStreamList extends TeaModel {
-        @NameInMap("VideoStream")
+        @com.aliyun.core.annotation.NameInMap("VideoStream")
         private java.util.List < VideoStream> videoStream;
 
         private VideoStreamList(Builder builder) {
@@ -1762,13 +1778,13 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class Streams extends TeaModel {
-        @NameInMap("AudioStreamList")
+        @com.aliyun.core.annotation.NameInMap("AudioStreamList")
         private AudioStreamList audioStreamList;
 
-        @NameInMap("SubtitleStreamList")
+        @com.aliyun.core.annotation.NameInMap("SubtitleStreamList")
         private SubtitleStreamList subtitleStreamList;
 
-        @NameInMap("VideoStreamList")
+        @com.aliyun.core.annotation.NameInMap("VideoStreamList")
         private VideoStreamList videoStreamList;
 
         private Streams(Builder builder) {
@@ -1812,7 +1828,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private VideoStreamList videoStreamList; 
 
             /**
-             * AudioStreamList.
+             * The information about each audio stream.
              */
             public Builder audioStreamList(AudioStreamList audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -1820,7 +1836,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamList.
+             * The information about each subtitle stream.
              */
             public Builder subtitleStreamList(SubtitleStreamList subtitleStreamList) {
                 this.subtitleStreamList = subtitleStreamList;
@@ -1828,7 +1844,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamList.
+             * The information about each video stream.
              */
             public Builder videoStreamList(VideoStreamList videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -1843,31 +1859,31 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileFormat")
+        @com.aliyun.core.annotation.NameInMap("FileFormat")
         private String fileFormat;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private Format format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Streams")
+        @com.aliyun.core.annotation.NameInMap("Streams")
         private Streams streams;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private Properties(Builder builder) {
@@ -1965,7 +1981,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * The bitrate of the media file.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1973,7 +1989,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the media file.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1981,7 +1997,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FileFormat.
+             * The format of the input media file.
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
@@ -1989,7 +2005,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the image file.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -1997,7 +2013,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * The format information.
              */
             public Builder format(Format format) {
                 this.format = format;
@@ -2005,7 +2021,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the media file.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -2013,7 +2029,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the video. Unit: pixel.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -2021,7 +2037,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Streams.
+             * The media streams that are contained in the input media file.
              */
             public Builder streams(Streams streams) {
                 this.streams = streams;
@@ -2029,7 +2045,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the video. Unit: pixel.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -2044,37 +2060,37 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class MediaInfoJob extends TeaModel {
-        @NameInMap("Async")
+        @com.aliyun.core.annotation.NameInMap("Async")
         private Boolean async;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MNSMessageResult")
+        @com.aliyun.core.annotation.NameInMap("MNSMessageResult")
         private MNSMessageResult MNSMessageResult;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaInfoJob(Builder builder) {
@@ -2190,7 +2206,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Async.
+             * Indicates whether the job is in asynchronous mode.
              */
             public Builder async(Boolean async) {
                 this.async = async;
@@ -2198,7 +2214,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Code.
+             * The error code returned if the job fails.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -2206,7 +2222,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the job was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -2214,7 +2230,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The information about the job input.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -2222,7 +2238,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The ID of the job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -2230,7 +2246,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MNSMessageResult.
+             * The message sent by MNS to notify you of the job result.
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -2238,7 +2254,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned if the job fails.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -2246,7 +2262,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the MPS queue.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -2254,7 +2270,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The information about the input file. For more information, see [AliyunProperties](~~29251~~).
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -2262,7 +2278,12 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the job.
+             * <p>
+             * 
+             * *   **Analyzing**: The job is being run.
+             * *   **Success**: The job is successful.
+             * *   **Fail**: The job fails.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -2270,7 +2291,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The custom data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -2285,7 +2306,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class MediaInfoJobList extends TeaModel {
-        @NameInMap("MediaInfoJob")
+        @com.aliyun.core.annotation.NameInMap("MediaInfoJob")
         private java.util.List < MediaInfoJob> mediaInfoJob;
 
         private MediaInfoJobList(Builder builder) {
@@ -2326,7 +2347,7 @@ public class QueryMediaInfoJobListResponseBody extends TeaModel {
 
     }
     public static class NonExistMediaInfoJobIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistMediaInfoJobIds(Builder builder) {

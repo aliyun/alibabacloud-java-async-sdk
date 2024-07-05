@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdatePipelineResponseBody</p>
  */
 public class UpdatePipelineResponseBody extends TeaModel {
-    @NameInMap("Pipeline")
+    @com.aliyun.core.annotation.NameInMap("Pipeline")
     private Pipeline pipeline;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdatePipelineResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Pipeline.
+         * The details of the MPS queue.
          */
         public Builder pipeline(Pipeline pipeline) {
             this.pipeline = pipeline;
@@ -58,7 +57,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,16 +71,16 @@ public class UpdatePipelineResponseBody extends TeaModel {
     } 
 
     public static class NotifyConfig extends TeaModel {
-        @NameInMap("MqTag")
+        @com.aliyun.core.annotation.NameInMap("MqTag")
         private String mqTag;
 
-        @NameInMap("MqTopic")
+        @com.aliyun.core.annotation.NameInMap("MqTopic")
         private String mqTopic;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private NotifyConfig(Builder builder) {
@@ -134,7 +133,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * MqTag.
+             * The tags of the messages.
              */
             public Builder mqTag(String mqTag) {
                 this.mqTag = mqTag;
@@ -142,7 +141,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * MqTopic.
+             * The queue of messages that are received.
              */
             public Builder mqTopic(String mqTopic) {
                 this.mqTopic = mqTopic;
@@ -150,7 +149,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The queue that is created in MNS.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -158,7 +157,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The topic that is created in MNS.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -173,25 +172,25 @@ public class UpdatePipelineResponseBody extends TeaModel {
 
     }
     public static class Pipeline extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyConfig")
+        @com.aliyun.core.annotation.NameInMap("NotifyConfig")
         private NotifyConfig notifyConfig;
 
-        @NameInMap("QuotaAllocate")
+        @com.aliyun.core.annotation.NameInMap("QuotaAllocate")
         private Long quotaAllocate;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Pipeline(Builder builder) {
@@ -271,7 +270,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Id.
+             * The ID of the MPS queue.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -279,7 +278,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The new name of the MPS queue.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +286,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyConfig.
+             * The MNS configuration.
              */
             public Builder notifyConfig(NotifyConfig notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -295,7 +294,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaAllocate.
+             * The quota that is allocated to the MPS queue.
              */
             public Builder quotaAllocate(Long quotaAllocate) {
                 this.quotaAllocate = quotaAllocate;
@@ -303,7 +302,7 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role that is assigned to the current RAM user.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -311,7 +310,20 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * The type of the MPS queue. Default value: **Standard**. Valid values:
+             * <p>
+             * 
+             * *   **Boost**: MPS queue with transcoding speed boosted
+             * *   **Standard**: standard MPS queue
+             * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0
+             * *   **AIVideoCover**: MPS queue for intelligent snapshot capture
+             * *   **AIVideoFPShot**: MPS queue for media fingerprinting
+             * *   **AIVideoCensor**: MPS queue for automated review
+             * *   **AIVideoMCU**: MPS queue for smart tagging
+             * *   **AIVideoSummary**: MPS queue for video synopsis
+             * *   **AIVideoPorn**: MPS queue for pornography detection in videos
+             * *   **AIAudioKWS**: MPS queue for keyword recognition in audio
+             * *   **AIAudioASR**: MPS queue for speech-to-text conversion
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -319,7 +331,11 @@ public class UpdatePipelineResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the MPS queue. Valid values:
+             * <p>
+             * 
+             * *   **Active**: The MPS queue is active.
+             * *   **Paused**: The MPS queue is paused.
              */
             public Builder state(String state) {
                 this.state = state;

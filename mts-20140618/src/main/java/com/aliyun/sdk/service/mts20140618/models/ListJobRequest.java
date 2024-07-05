@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListJobRequest</p>
  */
 public class ListJobRequest extends Request {
-    @Query
-    @NameInMap("EndOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndOfJobCreatedTimeRange")
     private String endOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("MaximumPageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumPageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maximumPageSize;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOfJobCreatedTimeRange")
     private String startOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private ListJobRequest(Builder builder) {
@@ -181,7 +180,7 @@ public class ListJobRequest extends Request {
         } 
 
         /**
-         * EndOfJobCreatedTimeRange.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          */
         public Builder endOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
             this.putQueryParameter("EndOfJobCreatedTimeRange", endOfJobCreatedTimeRange);
@@ -190,7 +189,11 @@ public class ListJobRequest extends Request {
         }
 
         /**
-         * MaximumPageSize.
+         * The number of entries per page.
+         * <p>
+         * 
+         * *   Default value: **10**.
+         * *   Valid values: **1 to 100**.
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -199,7 +202,7 @@ public class ListJobRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * The token that is used to retrieve the next page of the query results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextPageToken.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -226,7 +229,7 @@ public class ListJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the MPS queue to which the job is submitted. To obtain the ID of an MPS queue, you can log on to the [MPS console](https://mps.console.aliyun.com/overview) and choose **Global Settings** > **MPS Queue and Callback** in the left-side navigation pane.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -253,7 +256,7 @@ public class ListJobRequest extends Request {
         }
 
         /**
-         * StartOfJobCreatedTimeRange.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
          */
         public Builder startOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
             this.putQueryParameter("StartOfJobCreatedTimeRange", startOfJobCreatedTimeRange);
@@ -262,7 +265,15 @@ public class ListJobRequest extends Request {
         }
 
         /**
-         * State.
+         * The state of the transcoding job. Default value: **All**. Valid values:
+         * <p>
+         * 
+         * *   **All**
+         * *   **Submitted**
+         * *   **Transcoding**
+         * *   **TranscodeSuccess**
+         * *   **TranscodeFail**
+         * *   **TranscodeCancelled**
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

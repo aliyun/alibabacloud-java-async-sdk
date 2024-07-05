@@ -1,63 +1,62 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReportFpShotJobResultRequest} extends {@link RequestModel}
+ * {@link CreateCustomGroupRequest} extends {@link RequestModel}
  *
- * <p>ReportFpShotJobResultRequest</p>
+ * <p>CreateCustomGroupRequest</p>
  */
-public class ReportFpShotJobResultRequest extends Request {
-    @Query
-    @NameInMap("Details")
-    private String details;
+public class CreateCustomGroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String algorithm;
 
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
-    private String jobId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomGroupDescription")
+    private String customGroupDescription;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomGroupName")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String customGroupName;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Result")
-    @Validation(required = true)
-    private String result;
-
-    private ReportFpShotJobResultRequest(Builder builder) {
+    private CreateCustomGroupRequest(Builder builder) {
         super(builder);
-        this.details = builder.details;
-        this.jobId = builder.jobId;
+        this.algorithm = builder.algorithm;
+        this.customGroupDescription = builder.customGroupDescription;
+        this.customGroupName = builder.customGroupName;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.result = builder.result;
     }
 
     public static Builder builder() {
         return new Builder();
     }
 
-    public static ReportFpShotJobResultRequest create() {
+    public static CreateCustomGroupRequest create() {
         return builder().build();
     }
 
@@ -67,17 +66,24 @@ public class ReportFpShotJobResultRequest extends Request {
     }
 
     /**
-     * @return details
+     * @return algorithm
      */
-    public String getDetails() {
-        return this.details;
+    public String getAlgorithm() {
+        return this.algorithm;
     }
 
     /**
-     * @return jobId
+     * @return customGroupDescription
      */
-    public String getJobId() {
-        return this.jobId;
+    public String getCustomGroupDescription() {
+        return this.customGroupDescription;
+    }
+
+    /**
+     * @return customGroupName
+     */
+    public String getCustomGroupName() {
+        return this.customGroupName;
     }
 
     /**
@@ -108,52 +114,54 @@ public class ReportFpShotJobResultRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return result
-     */
-    public String getResult() {
-        return this.result;
-    }
-
-    public static final class Builder extends Request.Builder<ReportFpShotJobResultRequest, Builder> {
-        private String details; 
-        private String jobId; 
+    public static final class Builder extends Request.Builder<CreateCustomGroupRequest, Builder> {
+        private String algorithm; 
+        private String customGroupDescription; 
+        private String customGroupName; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String result; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(ReportFpShotJobResultRequest request) {
+        private Builder(CreateCustomGroupRequest request) {
             super(request);
-            this.details = request.details;
-            this.jobId = request.jobId;
+            this.algorithm = request.algorithm;
+            this.customGroupDescription = request.customGroupDescription;
+            this.customGroupName = request.customGroupName;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.result = request.result;
         } 
 
         /**
-         * Details.
+         * Algorithm.
          */
-        public Builder details(String details) {
-            this.putQueryParameter("Details", details);
-            this.details = details;
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
             return this;
         }
 
         /**
-         * JobId.
+         * CustomGroupDescription.
          */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
+        public Builder customGroupDescription(String customGroupDescription) {
+            this.putQueryParameter("CustomGroupDescription", customGroupDescription);
+            this.customGroupDescription = customGroupDescription;
+            return this;
+        }
+
+        /**
+         * CustomGroupName.
+         */
+        public Builder customGroupName(String customGroupName) {
+            this.putQueryParameter("CustomGroupName", customGroupName);
+            this.customGroupName = customGroupName;
             return this;
         }
 
@@ -193,18 +201,9 @@ public class ReportFpShotJobResultRequest extends Request {
             return this;
         }
 
-        /**
-         * Result.
-         */
-        public Builder result(String result) {
-            this.putQueryParameter("Result", result);
-            this.result = result;
-            return this;
-        }
-
         @Override
-        public ReportFpShotJobResultRequest build() {
-            return new ReportFpShotJobResultRequest(this);
+        public CreateCustomGroupRequest build() {
+            return new CreateCustomGroupRequest(this);
         } 
 
     } 

@@ -1,40 +1,46 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link QueryEditingJobListRequest} extends {@link RequestModel}
+ * {@link DeleteCustomGroupRequest} extends {@link RequestModel}
  *
- * <p>QueryEditingJobListRequest</p>
+ * <p>DeleteCustomGroupRequest</p>
  */
-public class QueryEditingJobListRequest extends Request {
-    @Query
-    @NameInMap("JobIds")
-    private String jobIds;
+public class DeleteCustomGroupRequest extends Request {
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String algorithm;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CustomGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String customGroupId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    private QueryEditingJobListRequest(Builder builder) {
+    private DeleteCustomGroupRequest(Builder builder) {
         super(builder);
-        this.jobIds = builder.jobIds;
+        this.algorithm = builder.algorithm;
+        this.customGroupId = builder.customGroupId;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -45,7 +51,7 @@ public class QueryEditingJobListRequest extends Request {
         return new Builder();
     }
 
-    public static QueryEditingJobListRequest create() {
+    public static DeleteCustomGroupRequest create() {
         return builder().build();
     }
 
@@ -55,10 +61,17 @@ public class QueryEditingJobListRequest extends Request {
     }
 
     /**
-     * @return jobIds
+     * @return algorithm
      */
-    public String getJobIds() {
-        return this.jobIds;
+    public String getAlgorithm() {
+        return this.algorithm;
+    }
+
+    /**
+     * @return customGroupId
+     */
+    public String getCustomGroupId() {
+        return this.customGroupId;
     }
 
     /**
@@ -89,8 +102,9 @@ public class QueryEditingJobListRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    public static final class Builder extends Request.Builder<QueryEditingJobListRequest, Builder> {
-        private String jobIds; 
+    public static final class Builder extends Request.Builder<DeleteCustomGroupRequest, Builder> {
+        private String algorithm; 
+        private String customGroupId; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -100,9 +114,10 @@ public class QueryEditingJobListRequest extends Request {
             super();
         } 
 
-        private Builder(QueryEditingJobListRequest request) {
+        private Builder(DeleteCustomGroupRequest request) {
             super(request);
-            this.jobIds = request.jobIds;
+            this.algorithm = request.algorithm;
+            this.customGroupId = request.customGroupId;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -110,11 +125,24 @@ public class QueryEditingJobListRequest extends Request {
         } 
 
         /**
-         * JobIds.
+         * The custom type of the image library. Valid values:
+         * <p>
+         * 
+         * *   landmark: custom landmarks.
+         * *   object: custom objects.
          */
-        public Builder jobIds(String jobIds) {
-            this.putQueryParameter("JobIds", jobIds);
-            this.jobIds = jobIds;
+        public Builder algorithm(String algorithm) {
+            this.putQueryParameter("Algorithm", algorithm);
+            this.algorithm = algorithm;
+            return this;
+        }
+
+        /**
+         * The ID of the custom image library.
+         */
+        public Builder customGroupId(String customGroupId) {
+            this.putQueryParameter("CustomGroupId", customGroupId);
+            this.customGroupId = customGroupId;
             return this;
         }
 
@@ -155,8 +183,8 @@ public class QueryEditingJobListRequest extends Request {
         }
 
         @Override
-        public QueryEditingJobListRequest build() {
-            return new QueryEditingJobListRequest(this);
+        public DeleteCustomGroupRequest build() {
+            return new DeleteCustomGroupRequest(this);
         } 
 
     } 

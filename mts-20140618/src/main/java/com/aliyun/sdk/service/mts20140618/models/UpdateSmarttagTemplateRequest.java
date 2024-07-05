@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,69 +11,77 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateSmarttagTemplateRequest</p>
  */
 public class UpdateSmarttagTemplateRequest extends Request {
-    @Query
-    @NameInMap("AnalyseTypes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalyseTypes")
     private String analyseTypes;
 
-    @Query
-    @NameInMap("FaceCategoryIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceCategoryIds")
     private String faceCategoryIds;
 
-    @Query
-    @NameInMap("FaceCustomParamsConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FaceCustomParamsConfig")
     private String faceCustomParamsConfig;
 
-    @Query
-    @NameInMap("Industry")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Industry")
     private String industry;
 
-    @Query
-    @NameInMap("IsDefault")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsDefault")
     private Boolean isDefault;
 
-    @Query
-    @NameInMap("KeywordConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KeywordConfig")
     private String keywordConfig;
 
-    @Query
-    @NameInMap("KnowledgeConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("KnowledgeConfig")
     private String knowledgeConfig;
 
-    @Query
-    @NameInMap("LabelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelType")
     private String labelType;
 
-    @Query
-    @NameInMap("LabelVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LabelVersion")
     private String labelVersion;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LandmarkGroupIds")
+    private String landmarkGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ObjectGroupIds")
+    private String objectGroupIds;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private String scene;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private UpdateSmarttagTemplateRequest(Builder builder) {
@@ -88,6 +95,8 @@ public class UpdateSmarttagTemplateRequest extends Request {
         this.knowledgeConfig = builder.knowledgeConfig;
         this.labelType = builder.labelType;
         this.labelVersion = builder.labelVersion;
+        this.landmarkGroupIds = builder.landmarkGroupIds;
+        this.objectGroupIds = builder.objectGroupIds;
         this.ownerAccount = builder.ownerAccount;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
@@ -174,6 +183,20 @@ public class UpdateSmarttagTemplateRequest extends Request {
     }
 
     /**
+     * @return landmarkGroupIds
+     */
+    public String getLandmarkGroupIds() {
+        return this.landmarkGroupIds;
+    }
+
+    /**
+     * @return objectGroupIds
+     */
+    public String getObjectGroupIds() {
+        return this.objectGroupIds;
+    }
+
+    /**
      * @return ownerAccount
      */
     public String getOwnerAccount() {
@@ -232,6 +255,8 @@ public class UpdateSmarttagTemplateRequest extends Request {
         private String knowledgeConfig; 
         private String labelType; 
         private String labelVersion; 
+        private String landmarkGroupIds; 
+        private String objectGroupIds; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
@@ -255,6 +280,8 @@ public class UpdateSmarttagTemplateRequest extends Request {
             this.knowledgeConfig = request.knowledgeConfig;
             this.labelType = request.labelType;
             this.labelVersion = request.labelVersion;
+            this.landmarkGroupIds = request.landmarkGroupIds;
+            this.objectGroupIds = request.objectGroupIds;
             this.ownerAccount = request.ownerAccount;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
@@ -342,6 +369,24 @@ public class UpdateSmarttagTemplateRequest extends Request {
         public Builder labelVersion(String labelVersion) {
             this.putQueryParameter("LabelVersion", labelVersion);
             this.labelVersion = labelVersion;
+            return this;
+        }
+
+        /**
+         * LandmarkGroupIds.
+         */
+        public Builder landmarkGroupIds(String landmarkGroupIds) {
+            this.putQueryParameter("LandmarkGroupIds", landmarkGroupIds);
+            this.landmarkGroupIds = landmarkGroupIds;
+            return this;
+        }
+
+        /**
+         * ObjectGroupIds.
+         */
+        public Builder objectGroupIds(String objectGroupIds) {
+            this.putQueryParameter("ObjectGroupIds", objectGroupIds);
+            this.objectGroupIds = objectGroupIds;
             return this;
         }
 

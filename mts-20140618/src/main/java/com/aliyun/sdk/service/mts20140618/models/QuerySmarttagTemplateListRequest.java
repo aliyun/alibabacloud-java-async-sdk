@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QuerySmarttagTemplateListRequest</p>
  */
 public class QuerySmarttagTemplateListRequest extends Request {
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private QuerySmarttagTemplateListRequest(Builder builder) {
@@ -146,7 +145,7 @@ public class QuerySmarttagTemplateListRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The ID of the template. You can obtain the template ID from the response of the [AddSmarttagTemplate](~~187759~~) operation. If you set this parameter to a specific value, the information about the corresponding template is returned. If you do not specify this parameter, the operation returns the information about all the templates that are created by the current RAM user.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

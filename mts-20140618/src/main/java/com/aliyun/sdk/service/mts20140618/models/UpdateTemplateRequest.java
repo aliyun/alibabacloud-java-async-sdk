@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,50 +11,50 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTemplateRequest</p>
  */
 public class UpdateTemplateRequest extends Request {
-    @Query
-    @NameInMap("Audio")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Audio")
     private String audio;
 
-    @Query
-    @NameInMap("Container")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Container")
     private String container;
 
-    @Query
-    @NameInMap("MuxConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MuxConfig")
     private String muxConfig;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateId;
 
-    @Query
-    @NameInMap("TransConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TransConfig")
     private String transConfig;
 
-    @Query
-    @NameInMap("Video")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Video")
     private String video;
 
     private UpdateTemplateRequest(Builder builder) {
@@ -196,7 +195,7 @@ public class UpdateTemplateRequest extends Request {
         } 
 
         /**
-         * Audio.
+         * The transmuxing configurations. The value is a JSON object. For more information, see the [MuxConfig](~~29253~~) parameter of the "Parameter details" topic.
          */
         public Builder audio(String audio) {
             this.putQueryParameter("Audio", audio);
@@ -205,7 +204,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Container.
+         * The configurations of the video stream. The value is a JSON object. For more information, see the [Video](~~29253~~) parameter of the "Parameter details" topic.
          */
         public Builder container(String container) {
             this.putQueryParameter("Container", container);
@@ -214,7 +213,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * MuxConfig.
+         * The general transcoding configurations. The value is a JSON object. For more information, see the [TransConfig](~~29253~~) parameter of the "Parameter details" topic.
          */
         public Builder muxConfig(String muxConfig) {
             this.putQueryParameter("MuxConfig", muxConfig);
@@ -223,7 +222,14 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Name.
+         * The container format. The value is a JSON object. Default format: **MP4**.
+         * <p>
+         * 
+         * *   Video formats: FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4)
+         * *   Audio formats: MP3, MP4, OGG, FLAC, and M4A
+         * *   Images formats: GIF and WebP
+         * 
+         * For more information, see the [Container](~~29253~~) parameter of the "Parameter details" topic.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -268,7 +274,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The name of the template. The name can be up to 128 bytes in length.
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);
@@ -277,7 +283,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * TransConfig.
+         * The ID of the request.
          */
         public Builder transConfig(String transConfig) {
             this.putQueryParameter("TransConfig", transConfig);
@@ -286,7 +292,7 @@ public class UpdateTemplateRequest extends Request {
         }
 
         /**
-         * Video.
+         * The configurations of the audio stream. The value is a JSON object. For more information, see the [Audio](~~29253~~) parameter of the "Parameter details" topic.
          */
         public Builder video(String video) {
             this.putQueryParameter("Video", video);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMediaWorkflowResponseBody</p>
  */
 public class AddMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflow")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
     private MediaWorkflow mediaWorkflow;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddMediaWorkflowResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflow.
+         * The information about the media workflow.
          */
         public Builder mediaWorkflow(MediaWorkflow mediaWorkflow) {
             this.mediaWorkflow = mediaWorkflow;
@@ -58,7 +57,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
     } 
 
     public static class MediaWorkflow extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private String topology;
 
-        @NameInMap("TriggerMode")
+        @com.aliyun.core.annotation.NameInMap("TriggerMode")
         private String triggerMode;
 
         private MediaWorkflow(Builder builder) {
@@ -158,7 +157,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             private String triggerMode; 
 
             /**
-             * CreationTime.
+             * The time when the media workflow was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -166,7 +165,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow. We recommend that you keep this ID for later operations on this workflow.
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -174,7 +173,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the media workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -182,7 +181,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the media workflow. By default, the created workflow is in the **Active** state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -190,7 +189,7 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * The topology of the media workflow. The value is a JSON object that contains the activities and activity dependencies.
              */
             public Builder topology(String topology) {
                 this.topology = topology;
@@ -198,7 +197,11 @@ public class AddMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerMode.
+             * The triggering mode of the media workflow. Valid values:
+             * <p>
+             * 
+             * *   **OssAutoTrigger**: The media workflow is automatically triggered.
+             * *   **NotInAuto**: The media workflow is not automatically triggered.
              */
             public Builder triggerMode(String triggerMode) {
                 this.triggerMode = triggerMode;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,47 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFpShotFilesRequest</p>
  */
 public class ListFpShotFilesRequest extends Request {
-    @Query
-    @NameInMap("FpDBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    private String endTime;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FpDBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fpDBId;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    private String startTime;
 
     private ListFpShotFilesRequest(Builder builder) {
         super(builder);
+        this.endTime = builder.endTime;
         this.fpDBId = builder.fpDBId;
         this.nextPageToken = builder.nextPageToken;
         this.ownerAccount = builder.ownerAccount;
@@ -51,6 +59,7 @@ public class ListFpShotFilesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.startTime = builder.startTime;
     }
 
     public static Builder builder() {
@@ -64,6 +73,13 @@ public class ListFpShotFilesRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return endTime
+     */
+    public String getEndTime() {
+        return this.endTime;
     }
 
     /**
@@ -115,7 +131,15 @@ public class ListFpShotFilesRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return startTime
+     */
+    public String getStartTime() {
+        return this.startTime;
+    }
+
     public static final class Builder extends Request.Builder<ListFpShotFilesRequest, Builder> {
+        private String endTime; 
         private String fpDBId; 
         private String nextPageToken; 
         private String ownerAccount; 
@@ -123,6 +147,7 @@ public class ListFpShotFilesRequest extends Request {
         private Integer pageSize; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String startTime; 
 
         private Builder() {
             super();
@@ -130,6 +155,7 @@ public class ListFpShotFilesRequest extends Request {
 
         private Builder(ListFpShotFilesRequest request) {
             super(request);
+            this.endTime = request.endTime;
             this.fpDBId = request.fpDBId;
             this.nextPageToken = request.nextPageToken;
             this.ownerAccount = request.ownerAccount;
@@ -137,10 +163,23 @@ public class ListFpShotFilesRequest extends Request {
             this.pageSize = request.pageSize;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.startTime = request.startTime;
         } 
 
         /**
-         * FpDBId.
+         * The end of the time range to query. The media files to be returned must be stored before the specified end time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         */
+        public Builder endTime(String endTime) {
+            this.putQueryParameter("EndTime", endTime);
+            this.endTime = endTime;
+            return this;
+        }
+
+        /**
+         * The ID of the media fingerprint library whose files you want to query. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -149,7 +188,7 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -176,7 +215,7 @@ public class ListFpShotFilesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries to return on each page. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -199,6 +238,18 @@ public class ListFpShotFilesRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * The beginning of the time range to query. The media files to be returned must be stored after the specified start time. Specify the time in the ISO 8601 standard in the `YYYY-MM-DDThh:mm:ssZ` format. The time must be in UTC.
+         * <p>
+         * 
+         * > This parameter is available only in the China (Beijing), China (Hangzhou), and China (Shanghai) regions.
+         */
+        public Builder startTime(String startTime) {
+            this.putQueryParameter("StartTime", startTime);
+            this.startTime = startTime;
             return this;
         }
 

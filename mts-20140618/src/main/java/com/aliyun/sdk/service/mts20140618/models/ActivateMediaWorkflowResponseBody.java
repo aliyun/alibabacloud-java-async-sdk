@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ActivateMediaWorkflowResponseBody</p>
  */
 public class ActivateMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflow")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
     private MediaWorkflow mediaWorkflow;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ActivateMediaWorkflowResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflow.
+         * The details of the media workflow.
          */
         public Builder mediaWorkflow(MediaWorkflow mediaWorkflow) {
             this.mediaWorkflow = mediaWorkflow;
@@ -58,7 +57,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
     } 
 
     public static class MediaWorkflow extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private String topology;
 
         private MediaWorkflow(Builder builder) {
@@ -146,7 +145,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             private String topology; 
 
             /**
-             * CreationTime.
+             * The time when the media workflow was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -154,7 +153,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow.
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -162,7 +161,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the media workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +169,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the media workflow. The value is **Active**.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -178,7 +177,7 @@ public class ActivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * The topology of the media workflow.
              */
             public Builder topology(String topology) {
                 this.topology = topology;

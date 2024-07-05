@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCustomPersonsRequest</p>
  */
 public class ListCustomPersonsRequest extends Request {
-    @Query
-    @NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
     private String categoryId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PersonId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PersonId")
     private String personId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListCustomPersonsRequest(Builder builder) {
@@ -124,7 +123,10 @@ public class ListCustomPersonsRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * The ID of the figure library about which you want to query information. The ID is used to uniquely identify a custom figure library. Make sure that the ID is unique. If you do not specify this parameter, the operation returns all the custom figure libraries. The ID can be up to 120 characters in length and is not case-sensitive.
+         * <p>
+         * 
+         * > You cannot specify the ID of the system figure library for this parameter.
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -151,7 +153,7 @@ public class ListCustomPersonsRequest extends Request {
         }
 
         /**
-         * PersonId.
+         * The ID of the figure about which you want to query information. The ID is used to uniquely identify a figure. Make sure that the ID is unique. If you do not specify this parameter, the operation returns the information about all the figures in the specified figure library.
          */
         public Builder personId(String personId) {
             this.putQueryParameter("PersonId", personId);

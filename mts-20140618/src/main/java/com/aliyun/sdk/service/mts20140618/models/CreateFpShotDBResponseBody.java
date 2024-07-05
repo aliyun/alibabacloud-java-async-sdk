@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateFpShotDBResponseBody</p>
  */
 public class CreateFpShotDBResponseBody extends TeaModel {
-    @NameInMap("FpShotDB")
+    @com.aliyun.core.annotation.NameInMap("FpShotDB")
     private FpShotDB fpShotDB;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateFpShotDBResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * FpShotDB.
+         * The details of the media fingerprint library.
          */
         public Builder fpShotDB(FpShotDB fpShotDB) {
             this.fpShotDB = fpShotDB;
@@ -58,7 +57,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class CreateFpShotDBResponseBody extends TeaModel {
     } 
 
     public static class FpShotDB extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private String config;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("FpDBId")
+        @com.aliyun.core.annotation.NameInMap("FpDBId")
         private String fpDBId;
 
-        @NameInMap("ModelId")
+        @com.aliyun.core.annotation.NameInMap("ModelId")
         private Integer modelId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private FpShotDB(Builder builder) {
@@ -158,7 +157,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Config.
+             * The configurations of the media fingerprint library.
              */
             public Builder config(String config) {
                 this.config = config;
@@ -166,7 +165,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the media fingerprint library.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -174,7 +173,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * FpDBId.
+             * The ID of the media fingerprint library. We recommend that you keep this ID for subsequent operation calls.
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -182,7 +181,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * ModelId.
+             * The model ID of the media fingerprint library.
              */
             public Builder modelId(Integer modelId) {
                 this.modelId = modelId;
@@ -190,7 +189,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the media fingerprint library.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +197,7 @@ public class CreateFpShotDBResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the media fingerprint library. After the media fingerprint library is created, it enters the **offline** state. After the media fingerprint library is processed at the backend, it enters the **active** state.
              */
             public Builder state(String state) {
                 this.state = state;

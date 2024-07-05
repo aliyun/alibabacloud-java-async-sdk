@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,45 +11,45 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMediaRequest</p>
  */
 public class UpdateMediaRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private UpdateMediaRequest(Builder builder) {
@@ -181,7 +180,11 @@ public class UpdateMediaRequest extends Request {
         } 
 
         /**
-         * CateId.
+         * The ID of the category to which the media file belongs. The value must be an integer.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, the value is NULL.
+         * *   The value cannot be negative.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -190,7 +193,11 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * The URL of the thumbnail. This parameter is used to specify the storage location of the thumbnail. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **OSS console** and click **Buckets** in the left-side navigation pane.
+         * <p>
+         * 
+         * *   The value can be up to 3,200 bytes in length.
+         * *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](~~423796~~).
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -199,7 +206,11 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the media file. Multiple character types, such as letters and digits, are supported.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, the value is NULL.
+         * *   The value is encoded in UTF-8 and can be up to 1,024 bytes in length.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -208,7 +219,7 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * MediaId.
+         * The ID of the media file whose basic information you want to update. To obtain the ID of the media file, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Media Management** > **Media List** in the left-side navigation pane.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -253,7 +264,12 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that you want to add to the media file.
+         * <p>
+         * 
+         * *   You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).
+         * *   Each tag can be up to 32 bytes in length.
+         * *   The value is encoded in UTF-8.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -262,7 +278,11 @@ public class UpdateMediaRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the media file. Multiple character types, such as letters and digits, are supported.
+         * <p>
+         * 
+         * *   If you do not specify this parameter, the value is NULL.
+         * *   The value is encoded in UTF-8 and can be up to 128 bytes in length.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

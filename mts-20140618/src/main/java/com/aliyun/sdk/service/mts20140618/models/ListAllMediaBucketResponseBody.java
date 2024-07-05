@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAllMediaBucketResponseBody</p>
  */
 public class ListAllMediaBucketResponseBody extends TeaModel {
-    @NameInMap("MediaBucketList")
+    @com.aliyun.core.annotation.NameInMap("MediaBucketList")
     private MediaBucketList mediaBucketList;
 
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAllMediaBucketResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaBucketList.
+         * The media buckets returned.
          */
         public Builder mediaBucketList(MediaBucketList mediaBucketList) {
             this.mediaBucketList = mediaBucketList;
@@ -70,7 +69,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
 
         /**
-         * NextPageToken.
+         * The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.nextPageToken = nextPageToken;
@@ -78,7 +77,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
     } 
 
     public static class MediaBucket extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Referer")
+        @com.aliyun.core.annotation.NameInMap("Referer")
         private String referer;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private MediaBucket(Builder builder) {
@@ -142,7 +141,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Bucket.
+             * The name of the media bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -150,7 +149,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Referer.
+             * The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).
              */
             public Builder referer(String referer) {
                 this.referer = referer;
@@ -158,7 +157,11 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the media bucket. Valid values:
+             * <p>
+             * 
+             * *   Input: input media bucket
+             * *   Output: output media bucket
              */
             public Builder type(String type) {
                 this.type = type;
@@ -173,7 +176,7 @@ public class ListAllMediaBucketResponseBody extends TeaModel {
 
     }
     public static class MediaBucketList extends TeaModel {
-        @NameInMap("MediaBucket")
+        @com.aliyun.core.annotation.NameInMap("MediaBucket")
         private java.util.List < MediaBucket> mediaBucket;
 
         private MediaBucketList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaInfoJobListRequest</p>
  */
 public class QueryMediaInfoJobListRequest extends Request {
-    @Query
-    @NameInMap("MediaInfoJobIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaInfoJobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaInfoJobIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private QueryMediaInfoJobListRequest(Builder builder) {
@@ -111,7 +110,13 @@ public class QueryMediaInfoJobListRequest extends Request {
         } 
 
         /**
-         * MediaInfoJobIds.
+         * The IDs of the media information analysis jobs.
+         * <p>
+         * 
+         * *   You can query up to 10 jobs at a time. Separate multiple IDs with commas (,).
+         * *   You can obtain the details from the response parameters of the [SubmitMediaInfoJob](~~602827~~) operation.
+         * 
+         * >  If you do not specify the JobIds parameter, the **InvalidParameter** error code is returned.
          */
         public Builder mediaInfoJobIds(String mediaInfoJobIds) {
             this.putQueryParameter("MediaInfoJobIds", mediaInfoJobIds);

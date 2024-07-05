@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitFpFileDeleteJobResponseBody</p>
  */
 public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitFpFileDeleteJobResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +57,7 @@ public class SubmitFpFileDeleteJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

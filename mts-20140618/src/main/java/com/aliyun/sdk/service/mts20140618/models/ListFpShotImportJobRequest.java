@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListFpShotImportJobRequest</p>
  */
 public class ListFpShotImportJobRequest extends Request {
-    @Query
-    @NameInMap("JobIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobIds;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private ListFpShotImportJobRequest(Builder builder) {
@@ -111,7 +110,7 @@ public class ListFpShotImportJobRequest extends Request {
         } 
 
         /**
-         * JobIds.
+         * The job IDs. You can obtain the job IDs from the response to the [ImportFpShotJob](~~312262~~) operation. You can specify a maximum of 10 job IDs in a request. Separate multiple job IDs with commas (,).
          */
         public Builder jobIds(String jobIds) {
             this.putQueryParameter("JobIds", jobIds);

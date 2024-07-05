@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSnapshotJobResponseBody</p>
  */
 public class SubmitSnapshotJobResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SnapshotJob")
+    @com.aliyun.core.annotation.NameInMap("SnapshotJob")
     private SnapshotJob snapshotJob;
 
     private SubmitSnapshotJobResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         private SnapshotJob snapshotJob; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
-         * SnapshotJob.
+         * The information about the snapshot job.
          */
         public Builder snapshotJob(SnapshotJob snapshotJob) {
             this.snapshotJob = snapshotJob;
@@ -72,16 +71,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private Input(Builder builder) {
@@ -134,7 +133,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * The OSS bucket that stores the object.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -142,7 +141,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The region in which the OSS bucket resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -150,7 +149,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The OSS object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -158,7 +157,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -173,13 +172,13 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class MNSMessageResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
         private MNSMessageResult(Builder builder) {
@@ -223,7 +222,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * ErrorCode.
+             * The error code returned if the job fails. This parameter is not returned if the job is successful.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -231,7 +230,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the job fails. This parameter is not returned if the job is successful.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -239,7 +238,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * The ID of the message. This parameter is not returned if the job fails.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -254,16 +253,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class OutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private OutputFile(Builder builder) {
@@ -316,7 +315,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * The OSS bucket that stores the output snapshot.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -324,7 +323,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the OSS bucket for storing the output snapshot resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -332,7 +331,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The OSS object that is generated as the output file of the snapshot job.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -340,7 +339,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The Alibaba Cloud Resource Name (ARN) of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -355,31 +354,31 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class TileOut extends TeaModel {
-        @NameInMap("CellHeight")
+        @com.aliyun.core.annotation.NameInMap("CellHeight")
         private String cellHeight;
 
-        @NameInMap("CellSelStep")
+        @com.aliyun.core.annotation.NameInMap("CellSelStep")
         private String cellSelStep;
 
-        @NameInMap("CellWidth")
+        @com.aliyun.core.annotation.NameInMap("CellWidth")
         private String cellWidth;
 
-        @NameInMap("Color")
+        @com.aliyun.core.annotation.NameInMap("Color")
         private String color;
 
-        @NameInMap("Columns")
+        @com.aliyun.core.annotation.NameInMap("Columns")
         private String columns;
 
-        @NameInMap("IsKeepCellPic")
+        @com.aliyun.core.annotation.NameInMap("IsKeepCellPic")
         private String isKeepCellPic;
 
-        @NameInMap("Lines")
+        @com.aliyun.core.annotation.NameInMap("Lines")
         private String lines;
 
-        @NameInMap("Margin")
+        @com.aliyun.core.annotation.NameInMap("Margin")
         private String margin;
 
-        @NameInMap("Padding")
+        @com.aliyun.core.annotation.NameInMap("Padding")
         private String padding;
 
         private TileOut(Builder builder) {
@@ -477,7 +476,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String padding; 
 
             /**
-             * CellHeight.
+             * The height of a single image. The default value is the height of the output snapshot.
              */
             public Builder cellHeight(String cellHeight) {
                 this.cellHeight = cellHeight;
@@ -485,7 +484,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * CellSelStep.
+             * The step for selecting a single image.
              */
             public Builder cellSelStep(String cellSelStep) {
                 this.cellSelStep = cellSelStep;
@@ -493,7 +492,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * CellWidth.
+             * The width of a single image. The default value is the width of the output snapshot.
              */
             public Builder cellWidth(String cellWidth) {
                 this.cellWidth = cellWidth;
@@ -501,7 +500,13 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Color.
+             * The background color.
+             * <p>
+             * 
+             * *   Default value: **black**.
+             * *   You can set the Color parameter to a **color keyword** or **random** in the request.
+             * 
+             * > If you want to set the background color to black, you can specify the color keyword in one of the following three formats: Black, black, and #000000.
              */
             public Builder color(String color) {
                 this.color = color;
@@ -509,7 +514,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Columns.
+             * The number of columns that the tiled image contains. Default value: **10**.
              */
             public Builder columns(String columns) {
                 this.columns = columns;
@@ -517,7 +522,12 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * IsKeepCellPic.
+             * Indicates whether the single images are retained. Valid values:
+             * <p>
+             * 
+             * *   **true**: The single images are retained.
+             * *   **false**: The single images are not retained.
+             * *   Default value: **true**.
              */
             public Builder isKeepCellPic(String isKeepCellPic) {
                 this.isKeepCellPic = isKeepCellPic;
@@ -525,7 +535,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Lines.
+             * The number of rows that the tiled image contains. Default value: **10**.
              */
             public Builder lines(String lines) {
                 this.lines = lines;
@@ -533,7 +543,11 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Margin.
+             * The margin width of the tiled image.
+             * <p>
+             * 
+             * *   Default value: **0**.
+             * *   Unit: pixel.
              */
             public Builder margin(String margin) {
                 this.margin = margin;
@@ -541,7 +555,11 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Padding.
+             * The distance between two consecutive single images in the tiled image.
+             * <p>
+             * 
+             * *   Default value: **0**.
+             * *   Unit: pixel.
              */
             public Builder padding(String padding) {
                 this.padding = padding;
@@ -556,16 +574,16 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class TileOutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private TileOutputFile(Builder builder) {
@@ -618,7 +636,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * The OSS bucket that stores the object.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -626,7 +644,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The ID of the region in which the OSS bucket that stores the object is located.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -634,7 +652,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The OSS object that is generated as the output file of the tiling job.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -642,7 +660,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The ARN of the specified RAM role. Format: acs:ram::$accountID:role/$roleName.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -656,32 +674,76 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         } 
 
     }
+    public static class TimeArray extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("TimePointList")
+        private java.util.List < Long > timePointList;
+
+        private TimeArray(Builder builder) {
+            this.timePointList = builder.timePointList;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static TimeArray create() {
+            return builder().build();
+        }
+
+        /**
+         * @return timePointList
+         */
+        public java.util.List < Long > getTimePointList() {
+            return this.timePointList;
+        }
+
+        public static final class Builder {
+            private java.util.List < Long > timePointList; 
+
+            /**
+             * TimePointList.
+             */
+            public Builder timePointList(java.util.List < Long > timePointList) {
+                this.timePointList = timePointList;
+                return this;
+            }
+
+            public TimeArray build() {
+                return new TimeArray(this);
+            } 
+
+        } 
+
+    }
     public static class SnapshotConfig extends TeaModel {
-        @NameInMap("FrameType")
+        @com.aliyun.core.annotation.NameInMap("FrameType")
         private String frameType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Interval")
+        @com.aliyun.core.annotation.NameInMap("Interval")
         private String interval;
 
-        @NameInMap("Num")
+        @com.aliyun.core.annotation.NameInMap("Num")
         private String num;
 
-        @NameInMap("OutputFile")
+        @com.aliyun.core.annotation.NameInMap("OutputFile")
         private OutputFile outputFile;
 
-        @NameInMap("TileOut")
+        @com.aliyun.core.annotation.NameInMap("TileOut")
         private TileOut tileOut;
 
-        @NameInMap("TileOutputFile")
+        @com.aliyun.core.annotation.NameInMap("TileOutputFile")
         private TileOutputFile tileOutputFile;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("TimeArray")
+        private TimeArray timeArray;
+
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private SnapshotConfig(Builder builder) {
@@ -693,6 +755,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             this.tileOut = builder.tileOut;
             this.tileOutputFile = builder.tileOutputFile;
             this.time = builder.time;
+            this.timeArray = builder.timeArray;
             this.width = builder.width;
         }
 
@@ -761,6 +824,13 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
         }
 
         /**
+         * @return timeArray
+         */
+        public TimeArray getTimeArray() {
+            return this.timeArray;
+        }
+
+        /**
          * @return width
          */
         public String getWidth() {
@@ -776,10 +846,17 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private TileOut tileOut; 
             private TileOutputFile tileOutputFile; 
             private String time; 
+            private TimeArray timeArray; 
             private String width; 
 
             /**
-             * FrameType.
+             * The type of the snapshot. Default value: **Normal**. Valid values:
+             * <p>
+             * 
+             * *   **normal**: normal frames.
+             * *   **intra**: I-frames (keyframes).
+             * 
+             * > If the FrameType parameter is set to intra in the request, only keyframes are captured. If no keyframe is found at the specified point in time, the keyframe closest to the specified point in time is captured. Keyframes are captured faster than normal frames if the same snapshot rules are applied.
              */
             public Builder frameType(String frameType) {
                 this.frameType = frameType;
@@ -787,7 +864,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the output snapshot.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -795,7 +872,12 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Interval.
+             * The interval for capturing snapshots.
+             * <p>
+             * 
+             * *   If this parameter is specified in the request, snapshots are captured at intervals. The value must be greater than 0 in the request.
+             * *   Unit: seconds.
+             * *   Default value: **10**.
              */
             public Builder interval(String interval) {
                 this.interval = interval;
@@ -803,7 +885,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Num.
+             * The number of snapshots. If the Num parameter is set in the request, snapshots are captured at intervals.
              */
             public Builder num(String num) {
                 this.num = num;
@@ -811,7 +893,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * The information about the output file of the snapshot job.
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -819,7 +901,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TileOut.
+             * The tiling configurations.
              */
             public Builder tileOut(TileOut tileOut) {
                 this.tileOut = tileOut;
@@ -827,7 +909,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TileOutputFile.
+             * The information about the output file of the tiling job.
              */
             public Builder tileOutputFile(TileOutputFile tileOutputFile) {
                 this.tileOutputFile = tileOutputFile;
@@ -835,7 +917,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The start time for capturing snapshots. Unit: milliseconds.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -843,7 +925,15 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * TimeArray.
+             */
+            public Builder timeArray(TimeArray timeArray) {
+                this.timeArray = timeArray;
+                return this;
+            }
+
+            /**
+             * The width of the output snapshot.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -858,40 +948,40 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
 
     }
     public static class SnapshotJob extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private String count;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("MNSMessageResult")
+        @com.aliyun.core.annotation.NameInMap("MNSMessageResult")
         private MNSMessageResult MNSMessageResult;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("SnapshotConfig")
+        @com.aliyun.core.annotation.NameInMap("SnapshotConfig")
         private SnapshotConfig snapshotConfig;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("TileCount")
+        @com.aliyun.core.annotation.NameInMap("TileCount")
         private String tileCount;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private SnapshotJob(Builder builder) {
@@ -1016,7 +1106,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * The error code returned if the job fails. This parameter is not returned if the job is successful.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1024,7 +1114,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of snapshots that are captured.
              */
             public Builder count(String count) {
                 this.count = count;
@@ -1032,7 +1122,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the job was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1040,7 +1130,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the snapshot job.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1048,7 +1138,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The information about the job input.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -1056,7 +1146,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * MNSMessageResult.
+             * The message sent by MNS to notify the user of the job result.
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -1064,7 +1154,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned if the job fails. This parameter is not returned if the job is successful.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1072,7 +1162,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the MPS queue to which the snapshot job is submitted.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1080,7 +1170,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotConfig.
+             * The snapshot configurations.
              */
             public Builder snapshotConfig(SnapshotConfig snapshotConfig) {
                 this.snapshotConfig = snapshotConfig;
@@ -1088,7 +1178,13 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the snapshot job. Valid values:
+             * <p>
+             * 
+             * *   **Submitted**: The job is submitted.
+             * *   **Snapshoting**: The job is being processed.
+             * *   **Success**: The job is successful.
+             * *   **Fail**: The job fails.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1096,7 +1192,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * TileCount.
+             * The number of single images that are contained in the tiled image.
              */
             public Builder tileCount(String tileCount) {
                 this.tileCount = tileCount;
@@ -1104,7 +1200,7 @@ public class SubmitSnapshotJobResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The custom data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;

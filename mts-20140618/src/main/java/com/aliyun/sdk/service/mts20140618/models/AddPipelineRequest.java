@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddPipelineRequest</p>
  */
 public class AddPipelineRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("NotifyConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyConfig")
     private String notifyConfig;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Role")
     private String role;
 
-    @Query
-    @NameInMap("Speed")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Speed")
     private String speed;
 
-    @Query
-    @NameInMap("SpeedLevel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpeedLevel")
     private Long speedLevel;
 
     private AddPipelineRequest(Builder builder) {
@@ -167,7 +166,7 @@ public class AddPipelineRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the MPS queue. The name can be up to 128 bytes in size.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -176,7 +175,7 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * NotifyConfig.
+         * The Message Service (MNS) configuration.
          */
         public Builder notifyConfig(String notifyConfig) {
             this.putQueryParameter("NotifyConfig", notifyConfig);
@@ -221,7 +220,7 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * Role.
+         * The role.
          */
         public Builder role(String role) {
             this.putQueryParameter("Role", role);
@@ -230,7 +229,16 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * Speed.
+         * The type of the MPS queue. Valid values:
+         * <p>
+         * 
+         * *   **Boost**: MPS queue with transcoding speed boosted.
+         * *   **Standard**: standard MPS queue.
+         * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0.
+         * *   **AIVideoCover**: MPS queue for intelligent snapshot capture.
+         * *   **AIVideoTag**: MPS queue for video tagging. The supported regions are China (Shanghai), China (Beijing), and China (Hangzhou).
+         * 
+         * Default value: **Standard**.
          */
         public Builder speed(String speed) {
             this.putQueryParameter("Speed", speed);
@@ -239,7 +247,7 @@ public class AddPipelineRequest extends Request {
         }
 
         /**
-         * SpeedLevel.
+         * The level of the MPS queue. Valid values: **1 to 3**.
          */
         public Builder speedLevel(Long speedLevel) {
             this.putQueryParameter("SpeedLevel", speedLevel);

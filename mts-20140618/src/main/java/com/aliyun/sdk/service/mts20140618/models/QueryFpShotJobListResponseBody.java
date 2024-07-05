@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryFpShotJobListResponseBody</p>
  */
 public class QueryFpShotJobListResponseBody extends TeaModel {
-    @NameInMap("FpShotJobList")
+    @com.aliyun.core.annotation.NameInMap("FpShotJobList")
     private FpShotJobList fpShotJobList;
 
-    @NameInMap("NonExistIds")
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
+    private String nextPageToken;
+
+    @com.aliyun.core.annotation.NameInMap("NonExistIds")
     private NonExistIds nonExistIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryFpShotJobListResponseBody(Builder builder) {
         this.fpShotJobList = builder.fpShotJobList;
+        this.nextPageToken = builder.nextPageToken;
         this.nonExistIds = builder.nonExistIds;
         this.requestId = builder.requestId;
     }
@@ -43,6 +46,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     }
 
     /**
+     * @return nextPageToken
+     */
+    public String getNextPageToken() {
+        return this.nextPageToken;
+    }
+
+    /**
      * @return nonExistIds
      */
     public NonExistIds getNonExistIds() {
@@ -58,11 +68,12 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     public static final class Builder {
         private FpShotJobList fpShotJobList; 
+        private String nextPageToken; 
         private NonExistIds nonExistIds; 
         private String requestId; 
 
         /**
-         * FpShotJobList.
+         * The information about media fingerprint analysis jobs.
          */
         public Builder fpShotJobList(FpShotJobList fpShotJobList) {
             this.fpShotJobList = fpShotJobList;
@@ -70,7 +81,15 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistIds.
+         * The token that is used to retrieve the next page of the query results. The value is a 32-bit UUID. If the returned query results cannot be displayed within one page, this parameter is returned. The value of this parameter is updated for each query.
+         */
+        public Builder nextPageToken(String nextPageToken) {
+            this.nextPageToken = nextPageToken;
+            return this;
+        }
+
+        /**
+         * The IDs of the jobs that do not exist.
          */
         public Builder nonExistIds(NonExistIds nonExistIds) {
             this.nonExistIds = nonExistIds;
@@ -78,7 +97,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +111,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
     } 
 
     public static class FpShotConfig extends TeaModel {
-        @NameInMap("FpDBId")
+        @com.aliyun.core.annotation.NameInMap("FpDBId")
         private String fpDBId;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("SaveType")
+        @com.aliyun.core.annotation.NameInMap("SaveType")
         private String saveType;
 
         private FpShotConfig(Builder builder) {
@@ -142,7 +161,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String saveType; 
 
             /**
-             * FpDBId.
+             * The ID of the media fingerprint library.
              */
             public Builder fpDBId(String fpDBId) {
                 this.fpDBId = fpDBId;
@@ -150,7 +169,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * The unique primary key of the video.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -158,7 +177,12 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SaveType.
+             * The storage type. Valid values:
+             * <p>
+             * 
+             * *   **nosave**: The fingerprints of the job input are not saved to the media fingerprint library.
+             * *   **save**: The fingerprints of the job input are saved to the media fingerprint library only if the job input is not duplicated with media content in the media fingerprint library.
+             * *   **forcesave**: The fingerprints of the job input are forcibly saved to the media fingerprint library.
              */
             public Builder saveType(String saveType) {
                 this.saveType = saveType;
@@ -173,10 +197,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class Duplication extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Duplication(Builder builder) {
@@ -211,7 +235,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the similar audio clip in the audio file that has similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -219,7 +243,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start point in time of the similar audio clip in the audio file that has similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -234,10 +258,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Input(Builder builder) {
@@ -272,7 +296,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the similar audio clip in the input audio.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -280,7 +304,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start point in time of the similar audio clip in the input audio.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -295,13 +319,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotSlice extends TeaModel {
-        @NameInMap("Duplication")
+        @com.aliyun.core.annotation.NameInMap("Duplication")
         private Duplication duplication;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private FpShotSlice(Builder builder) {
@@ -345,7 +369,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * Duplication.
+             * The start point in time and duration of the similar audio clip in the audio file that has similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder duplication(Duplication duplication) {
                 this.duplication = duplication;
@@ -353,7 +377,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The start point in time and duration of the similar audio clip in the input audio.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -361,7 +385,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The similarity of the input audio against the audio file that has similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -376,7 +400,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotSlices extends TeaModel {
-        @NameInMap("FpShotSlice")
+        @com.aliyun.core.annotation.NameInMap("FpShotSlice")
         private java.util.List < FpShotSlice> fpShotSlice;
 
         private FpShotSlices(Builder builder) {
@@ -417,13 +441,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShot extends TeaModel {
-        @NameInMap("FpShotSlices")
+        @com.aliyun.core.annotation.NameInMap("FpShotSlices")
         private FpShotSlices fpShotSlices;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private FpShot(Builder builder) {
@@ -467,7 +491,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * FpShotSlices.
+             * The audio files that have similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder fpShotSlices(FpShotSlices fpShotSlices) {
                 this.fpShotSlices = fpShotSlices;
@@ -475,7 +499,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * The unique primary key of the input audio.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -483,7 +507,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The overall similarity of the input audio against audio files that have similar fingerprints to the input audio in the audio fingerprint library.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -498,7 +522,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class AudioFpShots extends TeaModel {
-        @NameInMap("FpShot")
+        @com.aliyun.core.annotation.NameInMap("FpShot")
         private java.util.List < FpShot> fpShot;
 
         private AudioFpShots(Builder builder) {
@@ -539,10 +563,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotSliceDuplication extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private FpShotSliceDuplication(Builder builder) {
@@ -577,7 +601,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the similar video clip in the video file that has similar fingerprints to the input video in the video fingerprint library.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -585,7 +609,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start point in time of the similar video clip in the video file that has similar fingerprints to the input video in the video fingerprint library.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -600,10 +624,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotSliceInput extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private FpShotSliceInput(Builder builder) {
@@ -638,7 +662,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the similar video clip in the input video.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -646,7 +670,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start point in time of the similar video clip in the input video.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -661,13 +685,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotSlicesFpShotSlice extends TeaModel {
-        @NameInMap("Duplication")
+        @com.aliyun.core.annotation.NameInMap("Duplication")
         private FpShotSliceDuplication duplication;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private FpShotSliceInput input;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private FpShotSlicesFpShotSlice(Builder builder) {
@@ -711,7 +735,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * Duplication.
+             * The start point in time and duration of the similar video clip in the video file that has similar fingerprints to the input video in the video fingerprint library.
              */
             public Builder duplication(FpShotSliceDuplication duplication) {
                 this.duplication = duplication;
@@ -719,7 +743,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The start time and duration of the similar video clip in the input video.
              */
             public Builder input(FpShotSliceInput input) {
                 this.input = input;
@@ -727,7 +751,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The similarity of the input video clip against the video file that has similar fingerprints to the input video in the video fingerprint library.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -742,7 +766,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotFpShotSlices extends TeaModel {
-        @NameInMap("FpShotSlice")
+        @com.aliyun.core.annotation.NameInMap("FpShotSlice")
         private java.util.List < FpShotSlicesFpShotSlice> fpShotSlice;
 
         private FpShotFpShotSlices(Builder builder) {
@@ -783,13 +807,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotsFpShot extends TeaModel {
-        @NameInMap("FpShotSlices")
+        @com.aliyun.core.annotation.NameInMap("FpShotSlices")
         private FpShotFpShotSlices fpShotSlices;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private FpShotsFpShot(Builder builder) {
@@ -833,7 +857,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * FpShotSlices.
+             * The video files that have similar fingerprints to the input video in the video fingerprint library.
              */
             public Builder fpShotSlices(FpShotFpShotSlices fpShotSlices) {
                 this.fpShotSlices = fpShotSlices;
@@ -841,7 +865,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PrimaryKey.
+             * The unique primary key of the input video.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -849,7 +873,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The overall similarity of the input video against video files that have similar fingerprints to the input video in the video fingerprint library.
+             * <p>
+             * 
+             * >  The overall similarity is the average value of the similarities of the input video clips with the clips of the video that has a similar fingerprint. If multiple video files that have similar fingerprints to the input video exist in the video fingerprint library, the similarities of the input video against multiple similar video clips are returned.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -864,7 +891,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShots extends TeaModel {
-        @NameInMap("FpShot")
+        @com.aliyun.core.annotation.NameInMap("FpShot")
         private java.util.List < FpShotsFpShot> fpShot;
 
         private FpShots(Builder builder) {
@@ -905,10 +932,10 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class InputFragment extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private InputFragment(Builder builder) {
@@ -943,7 +970,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the similar text snippet in the input text.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -951,7 +978,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start time of the similar text snippet in the input text.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -966,16 +993,16 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class TextFpShotSlice extends TeaModel {
-        @NameInMap("DuplicationText")
+        @com.aliyun.core.annotation.NameInMap("DuplicationText")
         private String duplicationText;
 
-        @NameInMap("InputFragment")
+        @com.aliyun.core.annotation.NameInMap("InputFragment")
         private InputFragment inputFragment;
 
-        @NameInMap("InputText")
+        @com.aliyun.core.annotation.NameInMap("InputText")
         private String inputText;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private TextFpShotSlice(Builder builder) {
@@ -1028,7 +1055,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String similarity; 
 
             /**
-             * DuplicationText.
+             * The text snippet that has similar fingerprints to the input text in the text fingerprint library.
              */
             public Builder duplicationText(String duplicationText) {
                 this.duplicationText = duplicationText;
@@ -1036,7 +1063,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * InputFragment.
+             * The start point in time and duration of the similar text snippet in the input text.
              */
             public Builder inputFragment(InputFragment inputFragment) {
                 this.inputFragment = inputFragment;
@@ -1044,7 +1071,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * InputText.
+             * The input text for text fingerprint analysis.
              */
             public Builder inputText(String inputText) {
                 this.inputText = inputText;
@@ -1052,7 +1079,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The similarity of the input text against the text snippet that has similar fingerprints to the input text in the text fingerprint library.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -1067,7 +1094,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class TextFpShotSlices extends TeaModel {
-        @NameInMap("TextFpShotSlice")
+        @com.aliyun.core.annotation.NameInMap("TextFpShotSlice")
         private java.util.List < TextFpShotSlice> textFpShotSlice;
 
         private TextFpShotSlices(Builder builder) {
@@ -1108,13 +1135,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class TextFpShot extends TeaModel {
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
-        @NameInMap("TextFpShotSlices")
+        @com.aliyun.core.annotation.NameInMap("TextFpShotSlices")
         private TextFpShotSlices textFpShotSlices;
 
         private TextFpShot(Builder builder) {
@@ -1158,7 +1185,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private TextFpShotSlices textFpShotSlices; 
 
             /**
-             * PrimaryKey.
+             * The unique primary key of the input text.
              */
             public Builder primaryKey(String primaryKey) {
                 this.primaryKey = primaryKey;
@@ -1166,7 +1193,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Similarity.
+             * The similarity of the input text against text snippets that have similar fingerprints to the input text in the text fingerprint library.
              */
             public Builder similarity(String similarity) {
                 this.similarity = similarity;
@@ -1174,7 +1201,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TextFpShotSlices.
+             * The text snippets that have similar fingerprints to the input text in the text fingerprint library.
              */
             public Builder textFpShotSlices(TextFpShotSlices textFpShotSlices) {
                 this.textFpShotSlices = textFpShotSlices;
@@ -1189,7 +1216,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class TextFpShots extends TeaModel {
-        @NameInMap("TextFpShot")
+        @com.aliyun.core.annotation.NameInMap("TextFpShot")
         private java.util.List < TextFpShot> textFpShot;
 
         private TextFpShots(Builder builder) {
@@ -1230,13 +1257,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotResult extends TeaModel {
-        @NameInMap("AudioFpShots")
+        @com.aliyun.core.annotation.NameInMap("AudioFpShots")
         private AudioFpShots audioFpShots;
 
-        @NameInMap("FpShots")
+        @com.aliyun.core.annotation.NameInMap("FpShots")
         private FpShots fpShots;
 
-        @NameInMap("TextFpShots")
+        @com.aliyun.core.annotation.NameInMap("TextFpShots")
         private TextFpShots textFpShots;
 
         private FpShotResult(Builder builder) {
@@ -1280,7 +1307,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private TextFpShots textFpShots; 
 
             /**
-             * AudioFpShots.
+             * The audio fingerprint analysis results.
              */
             public Builder audioFpShots(AudioFpShots audioFpShots) {
                 this.audioFpShots = audioFpShots;
@@ -1288,7 +1315,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FpShots.
+             * The video fingerprint analysis results.
              */
             public Builder fpShots(FpShots fpShots) {
                 this.fpShots = fpShots;
@@ -1296,7 +1323,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TextFpShots.
+             * The text fingerprint analysis results.
              */
             public Builder textFpShots(TextFpShots textFpShots) {
                 this.textFpShots = textFpShots;
@@ -1311,13 +1338,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class InputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private InputFile(Builder builder) {
@@ -1361,7 +1388,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The OSS bucket in which the job input resides.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1369,7 +1396,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the job input resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1377,7 +1404,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The Object Storage Service (OSS) object that is used as the job input.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1392,48 +1419,52 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotJob extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FileId")
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Integer duration;
+
+        @com.aliyun.core.annotation.NameInMap("FileId")
         private String fileId;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("FpShotConfig")
+        @com.aliyun.core.annotation.NameInMap("FpShotConfig")
         private FpShotConfig fpShotConfig;
 
-        @NameInMap("FpShotResult")
+        @com.aliyun.core.annotation.NameInMap("FpShotResult")
         private FpShotResult fpShotResult;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private String input;
 
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private FpShotJob(Builder builder) {
             this.code = builder.code;
             this.creationTime = builder.creationTime;
+            this.duration = builder.duration;
             this.fileId = builder.fileId;
             this.finishTime = builder.finishTime;
             this.fpShotConfig = builder.fpShotConfig;
@@ -1467,6 +1498,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
          */
         public String getCreationTime() {
             return this.creationTime;
+        }
+
+        /**
+         * @return duration
+         */
+        public Integer getDuration() {
+            return this.duration;
         }
 
         /**
@@ -1549,6 +1587,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
         public static final class Builder {
             private String code; 
             private String creationTime; 
+            private Integer duration; 
             private String fileId; 
             private String finishTime; 
             private FpShotConfig fpShotConfig; 
@@ -1562,7 +1601,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * Code.
+             * The error code returned if the job fails.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1570,7 +1609,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the job was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -1578,7 +1617,17 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FileId.
+             * The length of the input file.
+             * <p>
+             * Unit: seconds.
+             */
+            public Builder duration(Integer duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * The ID of the uploaded file.
              */
             public Builder fileId(String fileId) {
                 this.fileId = fileId;
@@ -1586,7 +1635,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the job was complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -1594,7 +1643,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FpShotConfig.
+             * The configurations of the job.
              */
             public Builder fpShotConfig(FpShotConfig fpShotConfig) {
                 this.fpShotConfig = fpShotConfig;
@@ -1602,7 +1651,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FpShotResult.
+             * The results of the media fingerprint analysis job.
              */
             public Builder fpShotResult(FpShotResult fpShotResult) {
                 this.fpShotResult = fpShotResult;
@@ -1610,7 +1659,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the job.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -1618,7 +1667,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The information about the job input.
              */
             public Builder input(String input) {
                 this.input = input;
@@ -1626,7 +1675,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * InputFile.
+             * The information about the job input.
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -1634,7 +1683,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned if the job fails. This parameter is not returned if the job is successful.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1642,7 +1691,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the MPS queue to which the analysis job is submitted.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -1650,7 +1699,13 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the job. Valid values:
+             * <p>
+             * 
+             * *   **Queuing**: The job is waiting in the queue.
+             * *   **Analysing**: The job is in progress.
+             * *   **Success**: The job is successful.
+             * *   **Fail**: The job fails.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -1658,7 +1713,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The custom data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -1673,7 +1728,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class FpShotJobList extends TeaModel {
-        @NameInMap("FpShotJob")
+        @com.aliyun.core.annotation.NameInMap("FpShotJob")
         private java.util.List < FpShotJob> fpShotJob;
 
         private FpShotJobList(Builder builder) {
@@ -1714,7 +1769,7 @@ public class QueryFpShotJobListResponseBody extends TeaModel {
 
     }
     public static class NonExistIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistIds(Builder builder) {

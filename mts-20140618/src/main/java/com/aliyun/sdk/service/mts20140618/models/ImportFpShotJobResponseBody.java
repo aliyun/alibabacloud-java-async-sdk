@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportFpShotJobResponseBody</p>
  */
 public class ImportFpShotJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ImportFpShotJobResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ImportFpShotJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the import job. We recommend that you save this ID for subsequent operations.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +57,7 @@ public class ImportFpShotJobResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

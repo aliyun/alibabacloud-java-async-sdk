@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMediaPublishStateRequest</p>
  */
 public class UpdateMediaPublishStateRequest extends Request {
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Publish")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Publish")
     private Boolean publish;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private UpdateMediaPublishStateRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class UpdateMediaPublishStateRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the media file whose publishing status you want to update. You can obtain the ID of a media file from the response of the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage**. The ID of the video is displayed on the Basics tab.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -152,7 +151,11 @@ public class UpdateMediaPublishStateRequest extends Request {
         }
 
         /**
-         * Publish.
+         * The publishing status. Default value: **Initialed**. Valid values:
+         * <p>
+         * 
+         * *   **true**: published.
+         * *   **false**: unpublished.
          */
         public Builder publish(Boolean publish) {
             this.putQueryParameter("Publish", publish);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryPipelineListResponseBody</p>
  */
 public class QueryPipelineListResponseBody extends TeaModel {
-    @NameInMap("NonExistPids")
+    @com.aliyun.core.annotation.NameInMap("NonExistPids")
     private NonExistPids nonExistPids;
 
-    @NameInMap("PipelineList")
+    @com.aliyun.core.annotation.NameInMap("PipelineList")
     private PipelineList pipelineList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryPipelineListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * NonExistPids.
+         * The IDs of MPS queues that do not exist.
          */
         public Builder nonExistPids(NonExistPids nonExistPids) {
             this.nonExistPids = nonExistPids;
@@ -70,7 +69,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
         }
 
         /**
-         * PipelineList.
+         * The MPS queues.
          */
         public Builder pipelineList(PipelineList pipelineList) {
             this.pipelineList = pipelineList;
@@ -78,7 +77,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,7 +91,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
     } 
 
     public static class NonExistPids extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistPids(Builder builder) {
@@ -132,17 +131,98 @@ public class QueryPipelineListResponseBody extends TeaModel {
         } 
 
     }
+    public static class ExtendConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("IsBoostNew")
+        private Boolean isBoostNew;
+
+        @com.aliyun.core.annotation.NameInMap("MaxMultiSpeed")
+        private Integer maxMultiSpeed;
+
+        @com.aliyun.core.annotation.NameInMap("MultiSpeedDowngradePolicy")
+        private String multiSpeedDowngradePolicy;
+
+        private ExtendConfig(Builder builder) {
+            this.isBoostNew = builder.isBoostNew;
+            this.maxMultiSpeed = builder.maxMultiSpeed;
+            this.multiSpeedDowngradePolicy = builder.multiSpeedDowngradePolicy;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ExtendConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return isBoostNew
+         */
+        public Boolean getIsBoostNew() {
+            return this.isBoostNew;
+        }
+
+        /**
+         * @return maxMultiSpeed
+         */
+        public Integer getMaxMultiSpeed() {
+            return this.maxMultiSpeed;
+        }
+
+        /**
+         * @return multiSpeedDowngradePolicy
+         */
+        public String getMultiSpeedDowngradePolicy() {
+            return this.multiSpeedDowngradePolicy;
+        }
+
+        public static final class Builder {
+            private Boolean isBoostNew; 
+            private Integer maxMultiSpeed; 
+            private String multiSpeedDowngradePolicy; 
+
+            /**
+             * IsBoostNew.
+             */
+            public Builder isBoostNew(Boolean isBoostNew) {
+                this.isBoostNew = isBoostNew;
+                return this;
+            }
+
+            /**
+             * MaxMultiSpeed.
+             */
+            public Builder maxMultiSpeed(Integer maxMultiSpeed) {
+                this.maxMultiSpeed = maxMultiSpeed;
+                return this;
+            }
+
+            /**
+             * MultiSpeedDowngradePolicy.
+             */
+            public Builder multiSpeedDowngradePolicy(String multiSpeedDowngradePolicy) {
+                this.multiSpeedDowngradePolicy = multiSpeedDowngradePolicy;
+                return this;
+            }
+
+            public ExtendConfig build() {
+                return new ExtendConfig(this);
+            } 
+
+        } 
+
+    }
     public static class NotifyConfig extends TeaModel {
-        @NameInMap("MqTag")
+        @com.aliyun.core.annotation.NameInMap("MqTag")
         private String mqTag;
 
-        @NameInMap("MqTopic")
+        @com.aliyun.core.annotation.NameInMap("MqTopic")
         private String mqTopic;
 
-        @NameInMap("QueueName")
+        @com.aliyun.core.annotation.NameInMap("QueueName")
         private String queueName;
 
-        @NameInMap("Topic")
+        @com.aliyun.core.annotation.NameInMap("Topic")
         private String topic;
 
         private NotifyConfig(Builder builder) {
@@ -195,7 +275,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             private String topic; 
 
             /**
-             * MqTag.
+             * The tag string.
              */
             public Builder mqTag(String mqTag) {
                 this.mqTag = mqTag;
@@ -203,7 +283,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * MqTopic.
+             * The queue of messages that are received.
              */
             public Builder mqTopic(String mqTopic) {
                 this.mqTopic = mqTopic;
@@ -211,7 +291,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * QueueName.
+             * The name of the queue that is created in MNS.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -219,7 +299,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * Topic.
+             * The name of the topic that is created in MNS.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -234,31 +314,35 @@ public class QueryPipelineListResponseBody extends TeaModel {
 
     }
     public static class Pipeline extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("ExtendConfig")
+        private ExtendConfig extendConfig;
+
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("NotifyConfig")
+        @com.aliyun.core.annotation.NameInMap("NotifyConfig")
         private NotifyConfig notifyConfig;
 
-        @NameInMap("QuotaAllocate")
+        @com.aliyun.core.annotation.NameInMap("QuotaAllocate")
         private Long quotaAllocate;
 
-        @NameInMap("Role")
+        @com.aliyun.core.annotation.NameInMap("Role")
         private String role;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("SpeedLevel")
+        @com.aliyun.core.annotation.NameInMap("SpeedLevel")
         private Long speedLevel;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Pipeline(Builder builder) {
+            this.extendConfig = builder.extendConfig;
             this.id = builder.id;
             this.name = builder.name;
             this.notifyConfig = builder.notifyConfig;
@@ -275,6 +359,13 @@ public class QueryPipelineListResponseBody extends TeaModel {
 
         public static Pipeline create() {
             return builder().build();
+        }
+
+        /**
+         * @return extendConfig
+         */
+        public ExtendConfig getExtendConfig() {
+            return this.extendConfig;
         }
 
         /**
@@ -334,6 +425,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private ExtendConfig extendConfig; 
             private String id; 
             private String name; 
             private NotifyConfig notifyConfig; 
@@ -344,7 +436,15 @@ public class QueryPipelineListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * Id.
+             * ExtendConfig.
+             */
+            public Builder extendConfig(ExtendConfig extendConfig) {
+                this.extendConfig = extendConfig;
+                return this;
+            }
+
+            /**
+             * The ID of the MPS queue.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -352,7 +452,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the MPS queue.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -360,7 +460,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * NotifyConfig.
+             * The Message Service (MNS) configuration.
              */
             public Builder notifyConfig(NotifyConfig notifyConfig) {
                 this.notifyConfig = notifyConfig;
@@ -368,7 +468,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * QuotaAllocate.
+             * The quota that is allocated to the MPS queue.
              */
             public Builder quotaAllocate(Long quotaAllocate) {
                 this.quotaAllocate = quotaAllocate;
@@ -376,7 +476,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * Role.
+             * The role that is assigned to the current RAM user.
              */
             public Builder role(String role) {
                 this.role = role;
@@ -384,7 +484,20 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * Speed.
+             * The type of the MPS queue. Default value: **Standard**. Valid values:
+             * <p>
+             * 
+             * *   **Boost**: MPS queue with transcoding speed boosted
+             * *   **Standard**: standard MPS queue
+             * *   **NarrowBandHDV2**: MPS queue that supports Narrowband HD 2.0
+             * *   **AIVideoCover**: MPS queue for intelligent snapshot capture
+             * *   **AIVideoFPShot**: MPS queue for media fingerprinting
+             * *   **AIVideoCensor**: MPS queue for automated review
+             * *   **AIVideoMCU**: MPS queue for smart tagging
+             * *   **AIVideoSummary**: MPS queue for video synopsis
+             * *   **AIVideoPorn**: MPS queue for pornography detection in videos
+             * *   **AIAudioKWS**: MPS queue for keyword recognition in audio
+             * *   **AIAudioASR**: MPS queue for speech-to-text conversion
              */
             public Builder speed(String speed) {
                 this.speed = speed;
@@ -392,7 +505,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * SpeedLevel.
+             * The level of the MPS queue.
              */
             public Builder speedLevel(Long speedLevel) {
                 this.speedLevel = speedLevel;
@@ -400,7 +513,11 @@ public class QueryPipelineListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the MPS queue. Valid values:
+             * <p>
+             * 
+             * *   **Active**: The MPS queue is active.
+             * *   **Paused**: The MPS queue is paused.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -415,7 +532,7 @@ public class QueryPipelineListResponseBody extends TeaModel {
 
     }
     public static class PipelineList extends TeaModel {
-        @NameInMap("Pipeline")
+        @com.aliyun.core.annotation.NameInMap("Pipeline")
         private java.util.List < Pipeline> pipeline;
 
         private PipelineList(Builder builder) {

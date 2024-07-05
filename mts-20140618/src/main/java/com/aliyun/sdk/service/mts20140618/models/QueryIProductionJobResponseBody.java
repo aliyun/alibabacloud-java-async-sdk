@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryIProductionJobResponseBody</p>
  */
 public class QueryIProductionJobResponseBody extends TeaModel {
-    @NameInMap("FunctionName")
+    @com.aliyun.core.annotation.NameInMap("FunctionName")
     private String functionName;
 
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("JobParams")
+    @com.aliyun.core.annotation.NameInMap("JobParams")
     private String jobParams;
 
-    @NameInMap("Output")
+    @com.aliyun.core.annotation.NameInMap("Output")
     private String output;
 
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Result")
+    @com.aliyun.core.annotation.NameInMap("Result")
     private String result;
 
-    @NameInMap("State")
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private QueryIProductionJobResponseBody(Builder builder) {

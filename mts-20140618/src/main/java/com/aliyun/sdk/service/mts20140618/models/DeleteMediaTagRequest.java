@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMediaTagRequest</p>
  */
 public class DeleteMediaTagRequest extends Request {
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tag")
     private String tag;
 
     private DeleteMediaTagRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class DeleteMediaTagRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the media file for which you want to remove a tag. To obtain the ID of a media file, you can call the [AddMedia](~~44458~~) operation. Alternatively, perform the following operations in the ApsaraVideo Media Processing (MPS) console: In the left-side navigation pane, choose **Media Management** > **Media List**. Find the required video and click **Manage** in the Actions column. The ID of the video is displayed on the Basics tab.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -170,7 +169,10 @@ public class DeleteMediaTagRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The media tag that you want to remove. The value is encoded in UTF-8 and can be up to 32 bytes in length.
+         * <p>
+         * 
+         * > You can remove only one tag at a time.
          */
         public Builder tag(String tag) {
             this.putQueryParameter("Tag", tag);

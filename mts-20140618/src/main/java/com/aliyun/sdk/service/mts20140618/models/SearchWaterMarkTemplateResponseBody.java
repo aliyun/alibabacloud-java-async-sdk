@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchWaterMarkTemplateResponseBody</p>
  */
 public class SearchWaterMarkTemplateResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("WaterMarkTemplateList")
+    @com.aliyun.core.annotation.NameInMap("WaterMarkTemplateList")
     private WaterMarkTemplateList waterMarkTemplateList;
 
     private SearchWaterMarkTemplateResponseBody(Builder builder) {
@@ -86,7 +85,11 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         private WaterMarkTemplateList waterMarkTemplateList; 
 
         /**
-         * PageNumber.
+         * The width of the watermark image in the output video. The value can be an integer or a decimal.
+         * <p>
+         * 
+         * *   **Integer**: the width of the watermark image. This indicates the absolute position. Unit: pixel.
+         * *   **Decimal**: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
          */
         public Builder pageNumber(Long pageNumber) {
             this.pageNumber = pageNumber;
@@ -94,7 +97,13 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:
+         * <p>
+         * 
+         * *   **Width**: the width edge.
+         * *   **Height**: the height edge.
+         * *   **Long**: the long edge.
+         * *   **Short**: the short edge.
          */
         public Builder pageSize(Long pageSize) {
             this.pageSize = pageSize;
@@ -102,7 +111,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -110,7 +119,13 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The type of the watermark. Valid values:
+         * <p>
+         * 
+         * *   Image: an image watermark.
+         * *   Text: a text watermark.
+         * 
+         * >  Only watermarks of the **Image** types are supported.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -118,7 +133,11 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * WaterMarkTemplateList.
+         * The height of the watermark image in the output video. The value can be an integer or a decimal.
+         * <p>
+         * 
+         * *   **Integer**: the height of the watermark image. This indicates the absolute position. Unit: pixel.
+         * *   **Decimal**: the ratio of the height of the watermark image to the height of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
          */
         public Builder waterMarkTemplateList(WaterMarkTemplateList waterMarkTemplateList) {
             this.waterMarkTemplateList = waterMarkTemplateList;
@@ -132,16 +151,16 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
     } 
 
     public static class RatioRefer extends TeaModel {
-        @NameInMap("Dx")
+        @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
 
-        @NameInMap("Dy")
+        @com.aliyun.core.annotation.NameInMap("Dy")
         private String dy;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private RatioRefer(Builder builder) {
@@ -194,7 +213,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Dx.
+             * The horizontal offset. Unit: pixel.
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -202,7 +221,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Dy.
+             * The timeline of the watermark.
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -210,7 +229,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the watermark image. Unit: pixel.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -218,7 +237,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the watermark image. Unit: pixel.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -233,10 +252,10 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
 
     }
     public static class Timeline extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Timeline(Builder builder) {
@@ -271,7 +290,13 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The horizontal offset of the watermark relative to the output video image. Default value: **0**. The default value indicates no offset.
+             * <p>
+             * 
+             * The value can be an integer or a decimal.
+             * 
+             * *   **Integer**: the vertical offset. This indicates the absolute position. Unit: pixel.
+             * *   **Decimal**: the ratio of the horizontal offset to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -279,7 +304,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The total number of returned entries.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -294,37 +319,37 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
 
     }
     public static class WaterMarkTemplate extends TeaModel {
-        @NameInMap("Dx")
+        @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
 
-        @NameInMap("Dy")
+        @com.aliyun.core.annotation.NameInMap("Dy")
         private String dy;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RatioRefer")
+        @com.aliyun.core.annotation.NameInMap("RatioRefer")
         private RatioRefer ratioRefer;
 
-        @NameInMap("ReferPos")
+        @com.aliyun.core.annotation.NameInMap("ReferPos")
         private String referPos;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Timeline")
+        @com.aliyun.core.annotation.NameInMap("Timeline")
         private Timeline timeline;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private WaterMarkTemplate(Builder builder) {
@@ -440,7 +465,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Dx.
+             * The name of the watermark template.
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -448,7 +473,13 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Dy.
+             * The values of the Height, Width, Dx, and Dy parameters relative to the reference edges. If the values of the Height, Width, Dx, and Dy parameters are decimals between 0 and 1, the values are calculated by referring to the following edges in sequence:
+             * <p>
+             * 
+             * *   **Width**: the width edge.
+             * *   **Height**: the height edge.
+             * *   **Long**: the long edge.
+             * *   **Short**: the short edge.
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -456,7 +487,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The ID of the watermark template.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -464,7 +495,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The vertical offset. Unit: pixel.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -472,7 +503,11 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The width of the watermark image in the output video. The value can be an integer or a decimal.
+             * <p>
+             * 
+             * *   **Integer**: the width of the watermark image. This indicates the absolute position. Unit: pixel.
+             * *   **Decimal**: the ratio of the width of the watermark image to the width of the output video. The ratio varies based on the size of the video. Four decimal places are supported, such as 0.9999. More decimal places are discarded.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -480,7 +515,11 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * RatioRefer.
+             * The status of the watermark template. Valid values: Valid values:
+             * <p>
+             * 
+             * *   **Normal**: The watermark template is normal.
+             * *   **Deleted**: The watermark template is deleted.
              */
             public Builder ratioRefer(RatioRefer ratioRefer) {
                 this.ratioRefer = ratioRefer;
@@ -488,7 +527,11 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * ReferPos.
+             * The beginning of the time range during which the watermark is displayed.
+             * <p>
+             * 
+             * *   Unit: seconds.
+             * *   Default value: **0**.
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -496,7 +539,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The display duration of the watermark. Default value: **ToEND**. The default value indicates that the watermark is displayed until the video ends.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -504,7 +547,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Timeline.
+             * The timeline of the watermark.
              */
             public Builder timeline(Timeline timeline) {
                 this.timeline = timeline;
@@ -512,7 +555,13 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The position of the watermark. Valid values:
+             * <p>
+             * 
+             * *   TopRight: the upper-right corner.
+             * *   TopLeft: the upper-left corner.
+             * *   BottomRight: the lower-right corner.
+             * *   BottomLeft: the lower-left corner.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -520,7 +569,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The vertical offset. Unit: pixel.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -535,7 +584,7 @@ public class SearchWaterMarkTemplateResponseBody extends TeaModel {
 
     }
     public static class WaterMarkTemplateList extends TeaModel {
-        @NameInMap("WaterMarkTemplate")
+        @com.aliyun.core.annotation.NameInMap("WaterMarkTemplate")
         private java.util.List < WaterMarkTemplate> waterMarkTemplate;
 
         private WaterMarkTemplateList(Builder builder) {

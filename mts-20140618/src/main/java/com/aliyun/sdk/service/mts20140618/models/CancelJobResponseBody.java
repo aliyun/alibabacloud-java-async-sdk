@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelJobResponseBody</p>
  */
 public class CancelJobResponseBody extends TeaModel {
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CancelJobResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class CancelJobResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobId.
+         * The ID of the job.
          */
         public Builder jobId(String jobId) {
             this.jobId = jobId;
@@ -58,7 +57,7 @@ public class CancelJobResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

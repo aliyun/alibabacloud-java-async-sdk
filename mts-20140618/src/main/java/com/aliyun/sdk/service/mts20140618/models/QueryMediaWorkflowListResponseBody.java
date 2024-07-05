@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaWorkflowListResponseBody</p>
  */
 public class QueryMediaWorkflowListResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflowList")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowList")
     private MediaWorkflowList mediaWorkflowList;
 
-    @NameInMap("NonExistMediaWorkflowIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaWorkflowIds")
     private NonExistMediaWorkflowIds nonExistMediaWorkflowIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMediaWorkflowListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflowList.
+         * The media workflows.
          */
         public Builder mediaWorkflowList(MediaWorkflowList mediaWorkflowList) {
             this.mediaWorkflowList = mediaWorkflowList;
@@ -70,7 +69,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistMediaWorkflowIds.
+         * The workflows that do not exist.
          */
         public Builder nonExistMediaWorkflowIds(NonExistMediaWorkflowIds nonExistMediaWorkflowIds) {
             this.nonExistMediaWorkflowIds = nonExistMediaWorkflowIds;
@@ -78,7 +77,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,22 +91,22 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
     } 
 
     public static class MediaWorkflow extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private String topology;
 
-        @NameInMap("TriggerMode")
+        @com.aliyun.core.annotation.NameInMap("TriggerMode")
         private String triggerMode;
 
         private MediaWorkflow(Builder builder) {
@@ -178,7 +177,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             private String triggerMode; 
 
             /**
-             * CreationTime.
+             * The time when the media workflow was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -186,7 +185,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow.
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -194,7 +193,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the media workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +201,12 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The state of the media workflow. Valid values:
+             * <p>
+             * 
+             * *   **Inactive**: The media workflow was deactivated.
+             * *   **Active**: The media workflow was activated.
+             * *   **Deleted**: The media workflow was deleted.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -210,7 +214,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * The topology of the media workflow.
              */
             public Builder topology(String topology) {
                 this.topology = topology;
@@ -218,7 +222,11 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             }
 
             /**
-             * TriggerMode.
+             * The trigger mode of the media workflow. Valid values:
+             * <p>
+             * 
+             * *   **OssAutoTrigger**: The media workflow is automatically triggered.
+             * *   **NotInAuto**: The media workflow is not automatically triggered.
              */
             public Builder triggerMode(String triggerMode) {
                 this.triggerMode = triggerMode;
@@ -233,7 +241,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
 
     }
     public static class MediaWorkflowList extends TeaModel {
-        @NameInMap("MediaWorkflow")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
         private java.util.List < MediaWorkflow> mediaWorkflow;
 
         private MediaWorkflowList(Builder builder) {
@@ -274,7 +282,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
 
     }
     public static class NonExistMediaWorkflowIds extends TeaModel {
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private java.util.List < String > mediaWorkflowId;
 
         private NonExistMediaWorkflowIds(Builder builder) {
@@ -300,7 +308,7 @@ public class QueryMediaWorkflowListResponseBody extends TeaModel {
             private java.util.List < String > mediaWorkflowId; 
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow.
              */
             public Builder mediaWorkflowId(java.util.List < String > mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;

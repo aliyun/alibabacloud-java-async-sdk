@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitAnalysisJobRequest</p>
  */
 public class SubmitAnalysisJobRequest extends Request {
-    @Query
-    @NameInMap("AnalysisConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AnalysisConfig")
     private String analysisConfig;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String input;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitAnalysisJobRequest(Builder builder) {
@@ -168,7 +167,7 @@ public class SubmitAnalysisJobRequest extends Request {
         } 
 
         /**
-         * AnalysisConfig.
+         * The job configurations. Set this parameter as required. For more information, see the "AnalysisConfig" section of the [Parameter details](~~29253~~) topic.
          */
         public Builder analysisConfig(String analysisConfig) {
             this.putQueryParameter("AnalysisConfig", analysisConfig);
@@ -177,7 +176,10 @@ public class SubmitAnalysisJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * The input information about the preset template analysis job to be submitted. The value must be a JSON object. You must log on to the Object Storage Service (OSS) console to grant the read permissions on the specified OSS bucket to MPS. For more information, see the "Input" section of the [Parameter details](~~29253~~) topic.
+         * <p>
+         * 
+         * > The OSS bucket must reside in the same region as your MPS service.
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -204,7 +206,7 @@ public class SubmitAnalysisJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the MPS queue to which the job is submitted. To view the ID of the MPS queue, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane. If you want to enable asynchronous notifications, make sure that the MPS queue is bound to a Message Service (MNS) topic.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -213,7 +215,11 @@ public class SubmitAnalysisJobRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the job in the MPS queue to which the job is submitted.
+         * <p>
+         * 
+         * *   Valid values: **1 to 10**. A value of 10 indicates the highest priority.
+         * *   Default value: **6**.
          */
         public Builder priority(String priority) {
             this.putQueryParameter("Priority", priority);
@@ -240,7 +246,7 @@ public class SubmitAnalysisJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom data. The custom data can contain letters, digits, and hyphens (-), and can be up to 1,024 bytes in length. The custom data cannot start with a special character.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

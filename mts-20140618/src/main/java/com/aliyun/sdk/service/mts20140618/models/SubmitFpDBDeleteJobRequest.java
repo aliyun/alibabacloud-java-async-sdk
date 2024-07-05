@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitFpDBDeleteJobRequest</p>
  */
 public class SubmitFpDBDeleteJobRequest extends Request {
-    @Query
-    @NameInMap("DelType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DelType")
     private String delType;
 
-    @Query
-    @NameInMap("FpDBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FpDBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fpDBId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitFpDBDeleteJobRequest(Builder builder) {
@@ -153,7 +152,12 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         } 
 
         /**
-         * DelType.
+         * The operation type. Valid values:
+         * <p>
+         * 
+         * *   **Purge**: clears the media fingerprint library. The content in the library is deleted, but the library is not deleted.
+         * *   **Delete**: deletes the media fingerprint library. Both the library and its content are deleted.
+         * *   Default value: **Purge**.
          */
         public Builder delType(String delType) {
             this.putQueryParameter("DelType", delType);
@@ -162,7 +166,7 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * FpDBId.
+         * The ID of the media fingerprint library. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -189,7 +193,7 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the ApsaraVideo Media Processing (MPS) queue. This ID can be used to associate the job with a notification method. To view the MPS queue ID, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -216,7 +220,7 @@ public class SubmitFpDBDeleteJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom data. The value can contain letters and digits and can be up to 128 bytes in length.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

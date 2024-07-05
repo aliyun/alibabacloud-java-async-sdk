@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaWorkflowExecutionListResponseBody</p>
  */
 public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflowExecutionList")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowExecutionList")
     private MediaWorkflowExecutionList mediaWorkflowExecutionList;
 
-    @NameInMap("NonExistRunIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistRunIds")
     private NonExistRunIds nonExistRunIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryMediaWorkflowExecutionListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflowExecutionList.
+         * The details of the media workflows.
          */
         public Builder mediaWorkflowExecutionList(MediaWorkflowExecutionList mediaWorkflowExecutionList) {
             this.mediaWorkflowExecutionList = mediaWorkflowExecutionList;
@@ -70,7 +69,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistRunIds.
+         * The IDs of the execution instances that do not exist.
          */
         public Builder nonExistRunIds(NonExistRunIds nonExistRunIds) {
             this.nonExistRunIds = nonExistRunIds;
@@ -78,7 +77,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
     } 
 
     public static class MNSMessageResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
         private MNSMessageResult(Builder builder) {
@@ -142,7 +141,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * ErrorCode.
+             * The error code returned if the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -150,7 +149,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the MNS message fails to be sent. This parameter is not returned if the MNS message is sent.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -158,7 +157,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * The ID of the message that indicates the MNS message is sent. This parameter is not returned if the MNS message fails to be sent.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -173,31 +172,31 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class Activity extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MNSMessageResult")
+        @com.aliyun.core.annotation.NameInMap("MNSMessageResult")
         private MNSMessageResult MNSMessageResult;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Activity(Builder builder) {
@@ -295,7 +294,11 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Code.
+             * The error code.
+             * <p>
+             * 
+             * *   This parameter is returned only if **Fail** is returned for the State parameter.
+             * *   This parameter is not returned if the method status is **Success**.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -303,7 +306,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the method ends.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -311,7 +314,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The IDs of the jobs that are generated when the methods are called, such as the job IDs for the analysis, transcode, and snapshot methods.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -319,7 +322,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * MNSMessageResult.
+             * The message sent by Message Service (MNS) to notify the user of the job result.
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -327,7 +330,11 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message.
+             * <p>
+             * 
+             * *   This parameter is returned only if **Fail** is returned for the State parameter.
+             * *   This parameter is not returned if the method status is **Success**.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -335,7 +342,10 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the method.
+             * <p>
+             * 
+             * > The name of each method in a media workflow is unique.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -343,7 +353,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The time when the method is called.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -351,7 +361,15 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the workflow method. Valid values:
+             * <p>
+             * 
+             * *   Running: The method is being called.
+             * *   Success: The method is called.
+             * *   Fail: The method failed to be called.
+             * *   Skipped: The method is skipped.
+             * 
+             * > For example, after the analysis is complete, the transcode method is called and high-definition and standard-definition transcoding jobs are created. The system determines whether to run the jobs based on the analysis result. If the resolution of the input video is low, the high-definition transcoding job may be skipped.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -359,7 +377,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The methods that are supported in the media workflow. Valid values: Start, Snapshot, Transcode, Analysis, and Report. For more information, see [Methods supported for media workflows](~~68494~~).
              */
             public Builder type(String type) {
                 this.type = type;
@@ -374,7 +392,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class ActivityList extends TeaModel {
-        @NameInMap("Activity")
+        @com.aliyun.core.annotation.NameInMap("Activity")
         private java.util.List < Activity> activity;
 
         private ActivityList(Builder builder) {
@@ -415,13 +433,13 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class InputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private InputFile(Builder builder) {
@@ -465,7 +483,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the input file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -473,7 +491,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The ID of the OSS region in which the input file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -481,7 +499,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -496,10 +514,10 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private Input(Builder builder) {
@@ -534,7 +552,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private String userData; 
 
             /**
-             * InputFile.
+             * The input file of the media workflow.
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -542,7 +560,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The user-defined data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -557,28 +575,28 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class MediaWorkflowExecution extends TeaModel {
-        @NameInMap("ActivityList")
+        @com.aliyun.core.annotation.NameInMap("ActivityList")
         private ActivityList activityList;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RunId")
+        @com.aliyun.core.annotation.NameInMap("RunId")
         private String runId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private MediaWorkflowExecution(Builder builder) {
@@ -667,7 +685,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private String state; 
 
             /**
-             * ActivityList.
+             * The methods that are called in the media workflow.
              */
             public Builder activityList(ActivityList activityList) {
                 this.activityList = activityList;
@@ -675,7 +693,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the media workflow was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -683,7 +701,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The input data of the media workflow.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -691,7 +709,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * MediaId.
+             * The ID of the media asset. A media file contains all the information about a media workflow.
              */
             public Builder mediaId(String mediaId) {
                 this.mediaId = mediaId;
@@ -699,7 +717,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow.
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -707,7 +725,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the media workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -715,7 +733,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * RunId.
+             * The ID of the execution instance.
              */
             public Builder runId(String runId) {
                 this.runId = runId;
@@ -723,7 +741,15 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The status of the media workflow. Valid values:
+             * <p>
+             * 
+             * *   Running: The media workflow is running.
+             * *   Completed: The media workflow is complete.
+             * 
+             * > Completed only indicates that the media workflow is complete. View the status of each method in the workflow, such as the transcode and snapshot methods, to check whether the method is called.
+             * 
+             * *   Fail: The media workflow fails.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -738,7 +764,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class MediaWorkflowExecutionList extends TeaModel {
-        @NameInMap("MediaWorkflowExecution")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowExecution")
         private java.util.List < MediaWorkflowExecution> mediaWorkflowExecution;
 
         private MediaWorkflowExecutionList(Builder builder) {
@@ -779,7 +805,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
 
     }
     public static class NonExistRunIds extends TeaModel {
-        @NameInMap("RunId")
+        @com.aliyun.core.annotation.NameInMap("RunId")
         private java.util.List < String > runId;
 
         private NonExistRunIds(Builder builder) {
@@ -805,7 +831,7 @@ public class QueryMediaWorkflowExecutionListResponseBody extends TeaModel {
             private java.util.List < String > runId; 
 
             /**
-             * RunId.
+             * The ID of the execution instance.
              */
             public Builder runId(java.util.List < String > runId) {
                 this.runId = runId;

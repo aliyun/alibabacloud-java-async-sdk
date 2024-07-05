@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterCustomFaceRequest</p>
  */
 public class RegisterCustomFaceRequest extends Request {
-    @Query
-    @NameInMap("CategoryId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CategoryId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String categoryId;
 
-    @Query
-    @NameInMap("ImageUrl")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageUrl")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String imageUrl;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PersonId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PersonId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String personId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private RegisterCustomFaceRequest(Builder builder) {
@@ -141,7 +140,7 @@ public class RegisterCustomFaceRequest extends Request {
         } 
 
         /**
-         * CategoryId.
+         * The ID of the figure library in which you want to register a custom face. The ID is used to uniquely identify a figure library. You can specify the ID of a custom figure library. Make sure that the ID is unique and keep the ID for future API operation calls. If you set this parameter to the ID of a system figure library, the custom face is registered in the system figure library. The ID can be up to 120 characters in length and is not case-sensitive.
          */
         public Builder categoryId(String categoryId) {
             this.putQueryParameter("CategoryId", categoryId);
@@ -150,7 +149,7 @@ public class RegisterCustomFaceRequest extends Request {
         }
 
         /**
-         * ImageUrl.
+         * The URL of the facial image that you want to register for the specified figure. The image must contain only one face.
          */
         public Builder imageUrl(String imageUrl) {
             this.putQueryParameter("ImageUrl", imageUrl);
@@ -177,7 +176,7 @@ public class RegisterCustomFaceRequest extends Request {
         }
 
         /**
-         * PersonId.
+         * The ID of the figure for which you want to register a custom face. The ID is used to uniquely identify a figure. You can specify a figure ID. Make sure that the ID is unique and keep the ID for future API operation calls. The ID can be up to 120 characters in length and is not case-sensitive. The value returned is of the String type.
          */
         public Builder personId(String personId) {
             this.putQueryParameter("PersonId", personId);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,30 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindOutputBucketRequest</p>
  */
 public class BindOutputBucketRequest extends Request {
-    @Query
-    @NameInMap("Bucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucket;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RoleArn")
-    private String roleArn;
 
     private BindOutputBucketRequest(Builder builder) {
         super(builder);
@@ -44,7 +39,6 @@ public class BindOutputBucketRequest extends Request {
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.roleArn = builder.roleArn;
     }
 
     public static Builder builder() {
@@ -95,20 +89,12 @@ public class BindOutputBucketRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return roleArn
-     */
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
     public static final class Builder extends Request.Builder<BindOutputBucketRequest, Builder> {
         private String bucket; 
         private String ownerAccount; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String roleArn; 
 
         private Builder() {
             super();
@@ -121,11 +107,10 @@ public class BindOutputBucketRequest extends Request {
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.roleArn = request.roleArn;
         } 
 
         /**
-         * Bucket.
+         * The name of the Object Storage Service (OSS) bucket that you want to bind. The name can be up to 64 bytes in size and can contain letters, digits, and hyphens (-). The name cannot start with a special character.
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -166,15 +151,6 @@ public class BindOutputBucketRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * RoleArn.
-         */
-        public Builder roleArn(String roleArn) {
-            this.putQueryParameter("RoleArn", roleArn);
-            this.roleArn = roleArn;
             return this;
         }
 

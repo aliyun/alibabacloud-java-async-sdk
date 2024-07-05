@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitMediaInfoJobRequest</p>
  */
 public class SubmitMediaInfoJobRequest extends Request {
-    @Query
-    @NameInMap("Async")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Async")
     private Boolean async;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String input;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitMediaInfoJobRequest(Builder builder) {
@@ -153,7 +152,11 @@ public class SubmitMediaInfoJobRequest extends Request {
         } 
 
         /**
-         * Async.
+         * Specifies whether to enable the asynchronous mode for the job. We recommend that you set this parameter to true. Valid values:
+         * <p>
+         * 
+         * *   **true**: enables the asynchronous mode.
+         * *   **false**: does not enable the asynchronous mode.
          */
         public Builder async(Boolean async) {
             this.putQueryParameter("Async", async);
@@ -162,7 +165,10 @@ public class SubmitMediaInfoJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * The information about the input media file. The value is a JSON string. You must perform the following operations to add the OSS bucket in which the input media file is stored as a media bucket: Log on to the **MPS console**, choose **Workflows** > **Media Buckets** in the left-side navigation pane, and then click **Add Bucket**. After you add the OSS bucket as a media bucket, you must perform URL encoding for the OSS object. For example, `{"Bucket":"example-bucket","Location":"example-location","Object":"example%2Fexample.flv"}` indicates the `example-bucket.example-location.aliyuncs.com/example/example.flv` file.
+         * <p>
+         * 
+         * > The OSS bucket must reside in the same region as your MPS service.
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -189,7 +195,7 @@ public class SubmitMediaInfoJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the MPS queue to which the analysis job is submitted. To view the ID of the MPS queue, log on to the **MPS console** and choose **Global Settings** > **Pipelines** in the left-side navigation pane.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -216,7 +222,7 @@ public class SubmitMediaInfoJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The custom data. The custom data can contain letters, digits, and hyphens (-), and can be up to 1,024 bytes in length. The custom data cannot start with a special character.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMediaWorkflowRequest</p>
  */
 public class AddMediaWorkflowRequest extends Request {
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Topology")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Topology")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String topology;
 
-    @Query
-    @NameInMap("TriggerMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TriggerMode")
     private String triggerMode;
 
     private AddMediaWorkflowRequest(Builder builder) {
@@ -140,7 +139,13 @@ public class AddMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * Name.
+         * The name of the media workflow.
+         * <p>
+         * 
+         * *   The value cannot be empty.
+         * *   The name cannot be the same as that of an existing media workflow within the current Alibaba Cloud account.
+         * *   The name can be up to 64 characters in length.
+         * *   The value must be encoded in the UTF-8 format.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -185,7 +190,10 @@ public class AddMediaWorkflowRequest extends Request {
         }
 
         /**
-         * Topology.
+         * The topology of the media workflow. The value must be a JSON object that contains the activities and activity dependencies. For more information, see the **Sample topology** section of this topic.
+         * <p>
+         * 
+         * >  The Object Storage Service (OSS) bucket must reside in the same region as your MPS service.
          */
         public Builder topology(String topology) {
             this.putQueryParameter("Topology", topology);
@@ -194,7 +202,11 @@ public class AddMediaWorkflowRequest extends Request {
         }
 
         /**
-         * TriggerMode.
+         * The triggering mode of the media workflow. Valid values:
+         * <p>
+         * 
+         * *   **OssAutoTrigger**: The media workflow is automatically triggered.
+         * *   **NotInAuto**: The media workflow is not automatically triggered.
          */
         public Builder triggerMode(String triggerMode) {
             this.putQueryParameter("TriggerMode", triggerMode);

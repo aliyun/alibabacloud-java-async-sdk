@@ -1,25 +1,24 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReportFpShotJobResultResponseBody} extends {@link TeaModel}
+ * {@link RegisterCustomViewResponseBody} extends {@link TeaModel}
  *
- * <p>ReportFpShotJobResultResponseBody</p>
+ * <p>RegisterCustomViewResponseBody</p>
  */
-public class ReportFpShotJobResultResponseBody extends TeaModel {
-    @NameInMap("JobId")
-    private String jobId;
+public class RegisterCustomViewResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("CustomViewId")
+    private String customViewId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    private ReportFpShotJobResultResponseBody(Builder builder) {
-        this.jobId = builder.jobId;
+    private RegisterCustomViewResponseBody(Builder builder) {
+        this.customViewId = builder.customViewId;
         this.requestId = builder.requestId;
     }
 
@@ -27,15 +26,15 @@ public class ReportFpShotJobResultResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static ReportFpShotJobResultResponseBody create() {
+    public static RegisterCustomViewResponseBody create() {
         return builder().build();
     }
 
     /**
-     * @return jobId
+     * @return customViewId
      */
-    public String getJobId() {
-        return this.jobId;
+    public String getCustomViewId() {
+        return this.customViewId;
     }
 
     /**
@@ -46,14 +45,14 @@ public class ReportFpShotJobResultResponseBody extends TeaModel {
     }
 
     public static final class Builder {
-        private String jobId; 
+        private String customViewId; 
         private String requestId; 
 
         /**
-         * JobId.
+         * CustomViewId.
          */
-        public Builder jobId(String jobId) {
-            this.jobId = jobId;
+        public Builder customViewId(String customViewId) {
+            this.customViewId = customViewId;
             return this;
         }
 
@@ -65,8 +64,8 @@ public class ReportFpShotJobResultResponseBody extends TeaModel {
             return this;
         }
 
-        public ReportFpShotJobResultResponseBody build() {
-            return new ReportFpShotJobResultResponseBody(this);
+        public RegisterCustomViewResponseBody build() {
+            return new RegisterCustomViewResponseBody(this);
         } 
 
     } 

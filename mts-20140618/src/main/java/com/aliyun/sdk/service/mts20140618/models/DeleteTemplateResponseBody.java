@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTemplateResponseBody</p>
  */
 public class DeleteTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
     private DeleteTemplateResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DeleteTemplateResponseBody extends TeaModel {
         private String templateId; 
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class DeleteTemplateResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateId.
+         * The ID of the custom transcoding template that is deleted.
          */
         public Builder templateId(String templateId) {
             this.templateId = templateId;

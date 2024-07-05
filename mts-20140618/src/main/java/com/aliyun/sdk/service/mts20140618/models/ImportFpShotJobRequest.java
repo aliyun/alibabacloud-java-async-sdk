@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImportFpShotJobRequest</p>
  */
 public class ImportFpShotJobRequest extends Request {
-    @Query
-    @NameInMap("FpDBId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FpDBId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fpDBId;
 
-    @Query
-    @NameInMap("FpImportConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FpImportConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fpImportConfig;
 
-    @Query
-    @NameInMap("Input")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String input;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private ImportFpShotJobRequest(Builder builder) {
@@ -169,7 +168,7 @@ public class ImportFpShotJobRequest extends Request {
         } 
 
         /**
-         * FpDBId.
+         * The ID of the text fingerprint library to which the text file is imported. You can specify only one job of importing text files to a text fingerprint library at a time. You can obtain the library ID from the response parameters of the [CreateFpShotDB](~~170149~~) operation.
          */
         public Builder fpDBId(String fpDBId) {
             this.putQueryParameter("FpDBId", fpDBId);
@@ -178,7 +177,11 @@ public class ImportFpShotJobRequest extends Request {
         }
 
         /**
-         * FpImportConfig.
+         * The job configurations. The value must be a JSON object. Example: `{"SaveType":"onlysave"}`. The `SaveType` field indicates the storage type. Valid values of the SaveType field:
+         * <p>
+         * 
+         * *   **save**: The fingerprints of the text file are saved to the text fingerprint library only if the text file is not duplicated with content in the text fingerprint library.
+         * *   **onlysave**: The fingerprints of the text file are saved to the text fingerprint library.
          */
         public Builder fpImportConfig(String fpImportConfig) {
             this.putQueryParameter("FpImportConfig", fpImportConfig);
@@ -187,7 +190,10 @@ public class ImportFpShotJobRequest extends Request {
         }
 
         /**
-         * Input.
+         * The Object Storage Service (OSS) URL of the text file to be imported to the text fingerprint library. The value must be a JSON object. Example: {"Bucket":"example-bucket","Location":"oss-cn-shanghai","Object":"example.flv"}.
+         * <p>
+         * 
+         * > The OSS bucket must reside in the same region as your MPS service.
          */
         public Builder input(String input) {
             this.putQueryParameter("Input", input);
@@ -214,7 +220,7 @@ public class ImportFpShotJobRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the ApsaraVideo Media Processing (MPS) queue. To view the ID of the MPS queue, perform the following steps: Log on to the **MPS console**. In the left-side navigation pane, choose **Global Settings** > **Pipelines**. The MPS queue is associated with a specified Message Service (MNS) topic. You can submit jobs for different services to different MPS queues. If you do not specify this parameter, the job is submitted to the default MPS queue and no MNS topic is associated with the MPS queue.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -241,7 +247,7 @@ public class ImportFpShotJobRequest extends Request {
         }
 
         /**
-         * UserData.
+         * The user-defined data. The value can contain letters, digits, and special characters. The value can be up to 128 bytes in length.
          */
         public Builder userData(String userData) {
             this.putQueryParameter("UserData", userData);

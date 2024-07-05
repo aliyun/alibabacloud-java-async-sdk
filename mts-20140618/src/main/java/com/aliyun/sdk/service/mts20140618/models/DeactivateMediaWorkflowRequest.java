@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeactivateMediaWorkflowRequest</p>
  */
 public class DeactivateMediaWorkflowRequest extends Request {
-    @Query
-    @NameInMap("MediaWorkflowId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaWorkflowId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
     private DeactivateMediaWorkflowRequest(Builder builder) {
@@ -111,7 +110,7 @@ public class DeactivateMediaWorkflowRequest extends Request {
         } 
 
         /**
-         * MediaWorkflowId.
+         * The ID of the media workflow that is deactivated.
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);

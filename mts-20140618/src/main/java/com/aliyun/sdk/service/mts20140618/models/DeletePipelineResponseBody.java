@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeletePipelineResponseBody</p>
  */
 public class DeletePipelineResponseBody extends TeaModel {
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeletePipelineResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DeletePipelineResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * PipelineId.
+         * The ID of the MPS queue that is deleted.
          */
         public Builder pipelineId(String pipelineId) {
             this.pipelineId = pipelineId;
@@ -58,7 +57,7 @@ public class DeletePipelineResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

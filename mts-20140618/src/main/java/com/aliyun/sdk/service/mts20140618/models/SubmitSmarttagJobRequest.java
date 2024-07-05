@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,62 +11,66 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSmarttagJobRequest</p>
  */
 public class SubmitSmarttagJobRequest extends Request {
-    @Query
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
     private String content;
 
-    @Query
-    @NameInMap("ContentAddr")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentAddr")
     private String contentAddr;
 
-    @Query
-    @NameInMap("ContentType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ContentType")
     private String contentType;
 
-    @Query
-    @NameInMap("Input")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Input")
     private String input;
 
-    @Query
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private String notifyUrl;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Params")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Params")
     private String params;
 
-    @Query
-    @NameInMap("PipelineId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    private String priority;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitSmarttagJobRequest(Builder builder) {
@@ -81,6 +84,7 @@ public class SubmitSmarttagJobRequest extends Request {
         this.ownerId = builder.ownerId;
         this.params = builder.params;
         this.pipelineId = builder.pipelineId;
+        this.priority = builder.priority;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
         this.templateId = builder.templateId;
@@ -165,6 +169,13 @@ public class SubmitSmarttagJobRequest extends Request {
     }
 
     /**
+     * @return priority
+     */
+    public String getPriority() {
+        return this.priority;
+    }
+
+    /**
      * @return resourceOwnerAccount
      */
     public String getResourceOwnerAccount() {
@@ -209,6 +220,7 @@ public class SubmitSmarttagJobRequest extends Request {
         private Long ownerId; 
         private String params; 
         private String pipelineId; 
+        private String priority; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
         private String templateId; 
@@ -230,6 +242,7 @@ public class SubmitSmarttagJobRequest extends Request {
             this.ownerId = request.ownerId;
             this.params = request.params;
             this.pipelineId = request.pipelineId;
+            this.priority = request.priority;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
             this.templateId = request.templateId;
@@ -319,6 +332,15 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
+         * The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job is added. Valid values: 0 to 9. Default value: 5.
+         */
+        public Builder priority(String priority) {
+            this.putQueryParameter("Priority", priority);
+            this.priority = priority;
+            return this;
+        }
+
+        /**
          * ResourceOwnerAccount.
          */
         public Builder resourceOwnerAccount(String resourceOwnerAccount) {
@@ -337,7 +359,7 @@ public class SubmitSmarttagJobRequest extends Request {
         }
 
         /**
-         * TemplateId.
+         * The template ID, which is used to specify the analysis algorithm of the smart tagging job. For more information about how to manage templates, see [AddSmarttagTemplate](~~602910~~), [QuerySmarttagTemplateList](~~187770~~), [UpdateSmarttagTemplate](~~187776~~), and [DeleteSmarttagTemplate](~~187775~~).
          */
         public Builder templateId(String templateId) {
             this.putQueryParameter("TemplateId", templateId);

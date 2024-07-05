@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,61 +11,61 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddMediaRequest</p>
  */
 public class AddMediaRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileURL")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileURL")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileURL;
 
-    @Query
-    @NameInMap("InputUnbind")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InputUnbind")
     private Boolean inputUnbind;
 
-    @Query
-    @NameInMap("MediaWorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
     private String mediaWorkflowId;
 
-    @Query
-    @NameInMap("MediaWorkflowUserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflowUserData")
     private String mediaWorkflowUserData;
 
-    @Query
-    @NameInMap("OverrideParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverrideParams")
     private String overrideParams;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
     private AddMediaRequest(Builder builder) {
@@ -237,7 +236,7 @@ public class AddMediaRequest extends Request {
         } 
 
         /**
-         * CateId.
+         * The ID of the category to which the media file belongs. The value cannot be negative.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -246,7 +245,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * CoverURL.
+         * The URL of the thumbnail. To obtain the URL, you can log on to the **MPS console** and choose **Workflows** > **Media Buckets**. Alternatively, you can log on to the **OSS console** and click **My OSS Paths**.
+         * <p>
+         * 
+         * *   The value can be up to 3,200 bytes in length.
+         * *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](~~423796~~).
          */
         public Builder coverURL(String coverURL) {
             this.putQueryParameter("CoverURL", coverURL);
@@ -255,7 +258,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the media file.
+         * <p>
+         * 
+         * *   The description can be up to 1,024 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -264,7 +271,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * FileURL.
+         * The path of the input file. You can query the path of the input file in the MPS or OSS console. For more information, see the **Triggering and matching rules for a workflow** section of this topic.
+         * <p>
+         * 
+         * *   The value can be up to 3,200 bytes in length.
+         * *   The URL complies with RFC 2396 and is encoded in UTF-8, with reserved characters being percent-encoded. For more information, see [URL encoding](~~423796~~).
          */
         public Builder fileURL(String fileURL) {
             this.putQueryParameter("FileURL", fileURL);
@@ -273,7 +284,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * InputUnbind.
+         * Specifies whether to check if the media workflow supports the specified input path. We recommend that you set this parameter to true to prevent errors that may result from invalid paths. Valid values:
+         * <p>
+         * 
+         * *   **true**: checks whether the workflow supports the specified input path.
+         * *   **false**: does not check whether the workflow supports the specified input path.
          */
         public Builder inputUnbind(Boolean inputUnbind) {
             this.putQueryParameter("InputUnbind", inputUnbind);
@@ -282,7 +297,7 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * MediaWorkflowId.
+         * The ID of the media workflow that you want to run for the media file. To query the ID of a media workflow, you can log on to the MPS console or call the [AddMediaWorkflow](~~44437~~) operation.
          */
         public Builder mediaWorkflowId(String mediaWorkflowId) {
             this.putQueryParameter("MediaWorkflowId", mediaWorkflowId);
@@ -291,7 +306,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * MediaWorkflowUserData.
+         * The custom data of the media workflow.
+         * <p>
+         * 
+         * *   The value can be up to 1,024 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder mediaWorkflowUserData(String mediaWorkflowUserData) {
             this.putQueryParameter("MediaWorkflowUserData", mediaWorkflowUserData);
@@ -300,7 +319,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * OverrideParams.
+         * The subtitle settings that are used to overwrite the original settings.
+         * <p>
+         * 
+         * *   Example 1: Use `{"WebVTTSubtitleOverrides",[{"RefActivityName":"subtitleNode","WebVTTSubtitleURL":"http://test.oss-cn-hangzhou.aliyuncs.com/example1.vtt"}]}` to overwrite the original subtitle settings during HTTP Live Streaming (HLS) packaging.
+         * *   Example 2: Use `{"subtitleTransNodeName":{"InputConfig":{"Format":"stl","InputFile":{"URL":"http://subtitleBucket.oss-cn-hangzhou.aliyuncs.com/package/example/CENG.stl"}}}}` to overwrite the original subtitle settings during Dynamic Adaptive Streaming over HTTP (DASH) packaging.
          */
         public Builder overrideParams(String overrideParams) {
             this.putQueryParameter("OverrideParams", overrideParams);
@@ -345,7 +368,14 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * Tags.
+         * The tags that you want to add to the media file.
+         * <p>
+         * 
+         * > In MPS, each tag that is specified for a media file is independent. You can search for all the media files that have the same tags in the Media Library.
+         * 
+         * *   You can specify up to 16 tags for a media file. Separate multiple tags with commas (,).
+         * *   Each tag can be up to 32 bytes in size
+         * *   The value must be encoded in UTF-8.
          */
         public Builder tags(String tags) {
             this.putQueryParameter("Tags", tags);
@@ -354,7 +384,11 @@ public class AddMediaRequest extends Request {
         }
 
         /**
-         * Title.
+         * The title of the media file.
+         * <p>
+         * 
+         * *   The title can be up to 128 bytes in length.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder title(String title) {
             this.putQueryParameter("Title", title);

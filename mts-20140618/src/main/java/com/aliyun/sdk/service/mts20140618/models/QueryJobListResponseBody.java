@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryJobListResponseBody</p>
  */
 public class QueryJobListResponseBody extends TeaModel {
-    @NameInMap("JobList")
+    @com.aliyun.core.annotation.NameInMap("JobList")
     private JobList jobList;
 
-    @NameInMap("NonExistJobIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistJobIds")
     private NonExistJobIds nonExistJobIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryJobListResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class QueryJobListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * JobList.
+         * The transcoding jobs.
          */
         public Builder jobList(JobList jobList) {
             this.jobList = jobList;
@@ -70,7 +69,7 @@ public class QueryJobListResponseBody extends TeaModel {
         }
 
         /**
-         * NonExistJobIds.
+         * The list of nonexistent job IDs. If all queried job IDs exist, the response does not contain this parameter.
          */
         public Builder nonExistJobIds(NonExistJobIds nonExistJobIds) {
             this.nonExistJobIds = nonExistJobIds;
@@ -78,7 +77,7 @@ public class QueryJobListResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class QueryJobListResponseBody extends TeaModel {
     } 
 
     public static class Input extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private Input(Builder builder) {
@@ -142,7 +141,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the input file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -150,7 +149,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the input file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -158,7 +157,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -173,13 +172,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class MNSMessageResult extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("MessageId")
+        @com.aliyun.core.annotation.NameInMap("MessageId")
         private String messageId;
 
         private MNSMessageResult(Builder builder) {
@@ -223,7 +222,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String messageId; 
 
             /**
-             * ErrorCode.
+             * The error code returned if the job failed. This parameter is not returned if the job was successful.
              */
             public Builder errorCode(String errorCode) {
                 this.errorCode = errorCode;
@@ -231,7 +230,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ErrorMessage.
+             * The error message returned if the job failed. This parameter is not returned if the job was successful.
              */
             public Builder errorMessage(String errorMessage) {
                 this.errorMessage = errorMessage;
@@ -239,7 +238,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MessageId.
+             * The ID of the message returned if the job was successful.
              */
             public Builder messageId(String messageId) {
                 this.messageId = messageId;
@@ -254,10 +253,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Volume extends TeaModel {
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("Method")
+        @com.aliyun.core.annotation.NameInMap("Method")
         private String method;
 
         private Volume(Builder builder) {
@@ -292,7 +291,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String method; 
 
             /**
-             * Level.
+             * The volume adjustment range. Default value: -20. Unit: dB.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -300,7 +299,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Method.
+             * The method that is used to adjust the volume. Valid values:
+             * <p>
+             * 
+             * *   **auto**
+             * *   **dynamic**
+             * *   **linear**
              */
             public Builder method(String method) {
                 this.method = method;
@@ -315,25 +319,25 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Audio extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Qscale")
+        @com.aliyun.core.annotation.NameInMap("Qscale")
         private String qscale;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
-        @NameInMap("Volume")
+        @com.aliyun.core.annotation.NameInMap("Volume")
         private Volume volume;
 
         private Audio(Builder builder) {
@@ -413,7 +417,11 @@ public class QueryJobListResponseBody extends TeaModel {
             private Volume volume; 
 
             /**
-             * Bitrate.
+             * The audio bitrate of the output file.
+             * <p>
+             * 
+             * *   Unit: Kbit/s.
+             * *   Default value: **128**.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -421,7 +429,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * The number of sound channels.
+             * <p>
+             * 
+             * *   Valid values: 1, 2, 3, 4, 5, 6, 7, and 8.
+             * *   Default value: **2**.
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -429,7 +441,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * The audio codec.
+             * <p>
+             * 
+             * *   Valid values: aac, mp3, vorbis, and flac.
+             * *   Default value: **aac**.
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -437,7 +453,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The codec profile of the audio. Valid values when the value of Codec is aac: aaclow, aache, aachev2, aacld, and aaceld.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -445,7 +461,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Qscale.
+             * The level of quality control on the audio.
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -453,7 +469,14 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * The sampling rate.
+             * <p>
+             * 
+             * *   Valid values: 22050, 32000, 44100, 48000, and 96000.
+             * *   Unit: Hz.
+             * *   Default value: 44100.
+             * 
+             * >  If the video container format is FLV and the audio codec is MP3, the value of this parameter cannot be 32000, 48000, or 96000. If the audio codec is MP3, the value of this parameter cannot be 96000.
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -461,7 +484,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Volume.
+             * The volume configurations.
              */
             public Builder volume(Volume volume) {
                 this.volume = volume;
@@ -476,10 +499,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class TimeSpan extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Seek")
+        @com.aliyun.core.annotation.NameInMap("Seek")
         private String seek;
 
         private TimeSpan(Builder builder) {
@@ -514,7 +537,16 @@ public class QueryJobListResponseBody extends TeaModel {
             private String seek; 
 
             /**
-             * Duration.
+             * The duration of the clip.
+             * <p>
+             * 
+             * *   Format: `hh:mm:ss[.SSS]`.
+             * *   Example: 01:00:59.999.
+             * 
+             * Or
+             * 
+             * *   Format: `sssss[.SSS]`.
+             * *   Example: 32000.23.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -522,7 +554,16 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Seek.
+             * The point in time when the clip starts.
+             * <p>
+             * 
+             * *   Format: `hh:mm:ss[.SSS]`.
+             * *   Example: 01:59:59.999.
+             * 
+             * Or
+             * 
+             * *   Format: `sssss[.SSS]`.
+             * *   Example: 32000.23.
              */
             public Builder seek(String seek) {
                 this.seek = seek;
@@ -537,7 +578,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Clip extends TeaModel {
-        @NameInMap("TimeSpan")
+        @com.aliyun.core.annotation.NameInMap("TimeSpan")
         private TimeSpan timeSpan;
 
         private Clip(Builder builder) {
@@ -563,7 +604,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private TimeSpan timeSpan; 
 
             /**
-             * TimeSpan.
+             * The time span of the clip.
              */
             public Builder timeSpan(TimeSpan timeSpan) {
                 this.timeSpan = timeSpan;
@@ -578,7 +619,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Container extends TeaModel {
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
         private Container(Builder builder) {
@@ -604,7 +645,15 @@ public class QueryJobListResponseBody extends TeaModel {
             private String format; 
 
             /**
-             * Format.
+             * The container format.
+             * <p>
+             * 
+             * *   Default value: mp4.
+             * *   Video formats include FLV, MP4, HLS (M3U8 + TS), and MPEG-DASH (MPD + fMP4).
+             * *   Audio formats include MP3, MP4, Ogg, FLAC, and M4A.
+             * *   Image formats include GIF and WebP. If the container format is GIF, the video codec must be GIF.
+             * *   If the container format is WebP, the video codec must be WebP.
+             * *   If the container format is FLV, the video codec cannot be H.265.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -619,22 +668,22 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Encryption extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("KeyType")
+        @com.aliyun.core.annotation.NameInMap("KeyType")
         private String keyType;
 
-        @NameInMap("KeyUri")
+        @com.aliyun.core.annotation.NameInMap("KeyUri")
         private String keyUri;
 
-        @NameInMap("SkipCnt")
+        @com.aliyun.core.annotation.NameInMap("SkipCnt")
         private String skipCnt;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Encryption(Builder builder) {
@@ -705,7 +754,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * Id.
+             * The encryption ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -713,7 +762,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The key that is used to encrypt the video.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -721,7 +770,10 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * KeyType.
+             * The key encryption method. Valid values: Base64 and KMS.
+             * <p>
+             * 
+             * >  For example, if the key is `encryptionkey128`, the key can be encrypted as `Base64("encryptionkey128")` or `KMS(Base64("encryptionkey128")` depending on the encryption method used.
              */
             public Builder keyType(String keyType) {
                 this.keyType = keyType;
@@ -729,7 +781,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * KeyUri.
+             * The URL that is used to request the key. The URL is Base64-encoded.
              */
             public Builder keyUri(String keyUri) {
                 this.keyUri = keyUri;
@@ -737,7 +789,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SkipCnt.
+             * The number of unencrypted frames at the beginning of the video. Leaving these frames unencrypted enables video playback to quickly start.
              */
             public Builder skipCnt(String skipCnt) {
                 this.skipCnt = skipCnt;
@@ -745,7 +797,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The encryption type. Only **hls-aes-128** may be returned.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -760,10 +812,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Ts extends TeaModel {
-        @NameInMap("Md5Support")
+        @com.aliyun.core.annotation.NameInMap("Md5Support")
         private Boolean md5Support;
 
-        @NameInMap("SizeSupport")
+        @com.aliyun.core.annotation.NameInMap("SizeSupport")
         private Boolean sizeSupport;
 
         private Ts(Builder builder) {
@@ -798,7 +850,11 @@ public class QueryJobListResponseBody extends TeaModel {
             private Boolean sizeSupport; 
 
             /**
-             * Md5Support.
+             * Indicates whether the output of the MD5 value of the TS file is supported in the M3U8 file. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder md5Support(Boolean md5Support) {
                 this.md5Support = md5Support;
@@ -806,7 +862,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SizeSupport.
+             * Indicates whether the output of the size of the TS file is supported in the M3U8 file. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder sizeSupport(Boolean sizeSupport) {
                 this.sizeSupport = sizeSupport;
@@ -821,7 +881,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class M3U8NonStandardSupport extends TeaModel {
-        @NameInMap("TS")
+        @com.aliyun.core.annotation.NameInMap("TS")
         private Ts ts;
 
         private M3U8NonStandardSupport(Builder builder) {
@@ -847,7 +907,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private Ts ts; 
 
             /**
-             * TS.
+             * The non-standard support configurations for TS files. The value is a JSON object. For more information, see the TS section of the [Parameter details](~~29253~~) topic.
              */
             public Builder ts(Ts ts) {
                 this.ts = ts;
@@ -862,16 +922,16 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Merge extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("MergeURL")
+        @com.aliyun.core.annotation.NameInMap("MergeURL")
         private String mergeURL;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Merge(Builder builder) {
@@ -924,7 +984,11 @@ public class QueryJobListResponseBody extends TeaModel {
             private String start; 
 
             /**
-             * Duration.
+             * The duration of the clip.
+             * <p>
+             * 
+             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
+             * *   Examples: 01:59:59.999 and 32000.23.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -932,7 +996,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MergeURL.
+             * The OSS URL of the clip.
+             * <p>
+             * 
+             * *   Example: `http://example-bucket-.oss-cn-hangzhou.aliyuncs.com/example-object.flv`.
+             * *   The object must be URL-encoded by using the UTF-8 standard. For more information, see [URL encoding](~~423796~~).
              */
             public Builder mergeURL(String mergeURL) {
                 this.mergeURL = mergeURL;
@@ -940,7 +1008,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The Alibaba Cloud Resource Name (ARN) of the Resource Access Management (RAM) role used for delegated authorization.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -948,7 +1016,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The start point in time of the clip.
+             * <p>
+             * 
+             * *   Format: `hh:mm:ss[.SSS]` or `sssss[.SSS]`.
+             * *   Examples: 01:59:59.999 and 32000.23.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -963,7 +1035,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class MergeList extends TeaModel {
-        @NameInMap("Merge")
+        @com.aliyun.core.annotation.NameInMap("Merge")
         private java.util.List < Merge> merge;
 
         private MergeList(Builder builder) {
@@ -1003,17 +1075,198 @@ public class QueryJobListResponseBody extends TeaModel {
         } 
 
     }
+    public static class MultiSpeedInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("DowngradePolicy")
+        private String downgradePolicy;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
+        private Double duration;
+
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private String enable;
+
+        @com.aliyun.core.annotation.NameInMap("Message")
+        private String message;
+
+        @com.aliyun.core.annotation.NameInMap("RealSpeed")
+        private Double realSpeed;
+
+        @com.aliyun.core.annotation.NameInMap("SettingSpeed")
+        private Integer settingSpeed;
+
+        @com.aliyun.core.annotation.NameInMap("TimeCost")
+        private Double timeCost;
+
+        private MultiSpeedInfo(Builder builder) {
+            this.code = builder.code;
+            this.downgradePolicy = builder.downgradePolicy;
+            this.duration = builder.duration;
+            this.enable = builder.enable;
+            this.message = builder.message;
+            this.realSpeed = builder.realSpeed;
+            this.settingSpeed = builder.settingSpeed;
+            this.timeCost = builder.timeCost;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static MultiSpeedInfo create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return downgradePolicy
+         */
+        public String getDowngradePolicy() {
+            return this.downgradePolicy;
+        }
+
+        /**
+         * @return duration
+         */
+        public Double getDuration() {
+            return this.duration;
+        }
+
+        /**
+         * @return enable
+         */
+        public String getEnable() {
+            return this.enable;
+        }
+
+        /**
+         * @return message
+         */
+        public String getMessage() {
+            return this.message;
+        }
+
+        /**
+         * @return realSpeed
+         */
+        public Double getRealSpeed() {
+            return this.realSpeed;
+        }
+
+        /**
+         * @return settingSpeed
+         */
+        public Integer getSettingSpeed() {
+            return this.settingSpeed;
+        }
+
+        /**
+         * @return timeCost
+         */
+        public Double getTimeCost() {
+            return this.timeCost;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String downgradePolicy; 
+            private Double duration; 
+            private String enable; 
+            private String message; 
+            private Double realSpeed; 
+            private Integer settingSpeed; 
+            private Double timeCost; 
+
+            /**
+             * The error code returned if high-speed transcoding is not enabled.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * The downgrade policy if high-speed transcoding is not supported.
+             */
+            public Builder downgradePolicy(String downgradePolicy) {
+                this.downgradePolicy = downgradePolicy;
+                return this;
+            }
+
+            /**
+             * The duration of the output video.
+             */
+            public Builder duration(Double duration) {
+                this.duration = duration;
+                return this;
+            }
+
+            /**
+             * Indicates whether high-speed transcoding is enabled.
+             */
+            public Builder enable(String enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            /**
+             * The error message returned if high-speed transcoding is not enabled.
+             */
+            public Builder message(String message) {
+                this.message = message;
+                return this;
+            }
+
+            /**
+             * The actual transcoding speed.
+             */
+            public Builder realSpeed(Double realSpeed) {
+                this.realSpeed = realSpeed;
+                return this;
+            }
+
+            /**
+             * The speed setting.
+             */
+            public Builder settingSpeed(Integer settingSpeed) {
+                this.settingSpeed = settingSpeed;
+                return this;
+            }
+
+            /**
+             * The amount of time consumed.
+             */
+            public Builder timeCost(Double timeCost) {
+                this.timeCost = timeCost;
+                return this;
+            }
+
+            public MultiSpeedInfo build() {
+                return new MultiSpeedInfo(this);
+            } 
+
+        } 
+
+    }
     public static class Gif extends TeaModel {
-        @NameInMap("DitherMode")
+        @com.aliyun.core.annotation.NameInMap("DitherMode")
         private String ditherMode;
 
-        @NameInMap("FinalDelay")
+        @com.aliyun.core.annotation.NameInMap("FinalDelay")
         private String finalDelay;
 
-        @NameInMap("IsCustomPalette")
+        @com.aliyun.core.annotation.NameInMap("IsCustomPalette")
         private String isCustomPalette;
 
-        @NameInMap("Loop")
+        @com.aliyun.core.annotation.NameInMap("Loop")
         private String loop;
 
         private Gif(Builder builder) {
@@ -1066,7 +1319,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * DitherMode.
+             * The color dithering algorithm of the palette. Valid values: sierra and bayer.
              */
             public Builder ditherMode(String ditherMode) {
                 this.ditherMode = ditherMode;
@@ -1074,7 +1327,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FinalDelay.
+             * The duration for which the final frame is paused. Unit: centisecond.
              */
             public Builder finalDelay(String finalDelay) {
                 this.finalDelay = finalDelay;
@@ -1082,7 +1335,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCustomPalette.
+             * Indicates whether a custom palette is used. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isCustomPalette(String isCustomPalette) {
                 this.isCustomPalette = isCustomPalette;
@@ -1090,7 +1347,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Loop.
+             * The loop count.
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -1105,7 +1362,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Segment extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
         private Segment(Builder builder) {
@@ -1131,7 +1388,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String duration; 
 
             /**
-             * Duration.
+             * The segment length. Unit: seconds.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1146,7 +1403,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Webp extends TeaModel {
-        @NameInMap("Loop")
+        @com.aliyun.core.annotation.NameInMap("Loop")
         private String loop;
 
         private Webp(Builder builder) {
@@ -1172,7 +1429,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String loop; 
 
             /**
-             * Loop.
+             * The loop count.
              */
             public Builder loop(String loop) {
                 this.loop = loop;
@@ -1187,13 +1444,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class MuxConfig extends TeaModel {
-        @NameInMap("Gif")
+        @com.aliyun.core.annotation.NameInMap("Gif")
         private Gif gif;
 
-        @NameInMap("Segment")
+        @com.aliyun.core.annotation.NameInMap("Segment")
         private Segment segment;
 
-        @NameInMap("Webp")
+        @com.aliyun.core.annotation.NameInMap("Webp")
         private Webp webp;
 
         private MuxConfig(Builder builder) {
@@ -1237,7 +1494,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private Webp webp; 
 
             /**
-             * Gif.
+             * The transmuxing configurations for GIF.
              */
             public Builder gif(Gif gif) {
                 this.gif = gif;
@@ -1245,7 +1502,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Segment.
+             * The segment configurations. The value is a JSON object.
              */
             public Builder segment(Segment segment) {
                 this.segment = segment;
@@ -1253,7 +1510,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Webp.
+             * The transmuxing configurations for WebP.
              */
             public Builder webp(Webp webp) {
                 this.webp = webp;
@@ -1268,16 +1525,16 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Opening extends TeaModel {
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
-        @NameInMap("openUrl")
+        @com.aliyun.core.annotation.NameInMap("openUrl")
         private String openUrl;
 
         private Opening(Builder builder) {
@@ -1330,7 +1587,13 @@ public class QueryJobListResponseBody extends TeaModel {
             private String openUrl; 
 
             /**
-             * Height.
+             * The height of the opening part.
+             * <p>
+             * 
+             * *   Valid values: values in the range of (0,4096), -1, and full.
+             * *   A value of -1 indicates that the original height of the opening part is retained.
+             * *   A value of full indicates that the height of the opening part equals the height of the main part.
+             * *   Default value: **-1**.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -1338,7 +1601,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The amount of time after which the opening part is played.
+             * <p>
+             * 
+             * *   The value starts from 0.
+             * *   Unit: seconds.
+             * *   Default value: **0**.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -1346,7 +1614,13 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the opening part.
+             * <p>
+             * 
+             * *   Valid values: values in the range of (0,4096), -1, and full.
+             * *   A value of -1 indicates that the original width of the opening part is retained.
+             * *   A value of full indicates that the width of the opening part equals the width of the main part.
+             * *   Default value: **-1**.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -1354,7 +1628,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * openUrl.
+             * The OSS URL of the opening part.
              */
             public Builder openUrl(String openUrl) {
                 this.openUrl = openUrl;
@@ -1369,7 +1643,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class OpeningList extends TeaModel {
-        @NameInMap("Opening")
+        @com.aliyun.core.annotation.NameInMap("Opening")
         private java.util.List < Opening> opening;
 
         private OpeningList(Builder builder) {
@@ -1410,16 +1684,16 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class OutSubtitleFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private OutSubtitleFile(Builder builder) {
@@ -1472,7 +1746,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the output caption is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1480,7 +1754,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the output caption resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1488,7 +1762,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the output caption.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1496,7 +1770,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The ARN of the RAM role used for delegated authorization.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1511,16 +1785,16 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class OutSubtitle extends TeaModel {
-        @NameInMap("Map")
+        @com.aliyun.core.annotation.NameInMap("Map")
         private String map;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("OutSubtitleFile")
+        @com.aliyun.core.annotation.NameInMap("OutSubtitleFile")
         private OutSubtitleFile outSubtitleFile;
 
-        @NameInMap("Success")
+        @com.aliyun.core.annotation.NameInMap("Success")
         private Boolean success;
 
         private OutSubtitle(Builder builder) {
@@ -1573,7 +1847,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private Boolean success; 
 
             /**
-             * Map.
+             * The video track. Format: `0:{Stream}:{Stream sequence number}`, which is `0:v:{video_index}`. The value of Stream is v, which indicates a video stream. The sequence number is the index of the video stream in the list and starts from 0.
              */
             public Builder map(String map) {
                 this.map = map;
@@ -1581,7 +1855,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned if the job failed to be created. This parameter is not returned if the job was created.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -1589,7 +1863,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OutSubtitleFile.
+             * The details of the output caption.
              */
             public Builder outSubtitleFile(OutSubtitleFile outSubtitleFile) {
                 this.outSubtitleFile = outSubtitleFile;
@@ -1597,7 +1871,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Success.
+             * Indicates whether the job was successful. Valid values:
+             * <p>
+             * 
+             * *   **true**: The job was successful.
+             * *   **false**: The job failed.
              */
             public Builder success(Boolean success) {
                 this.success = success;
@@ -1612,7 +1890,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class OutSubtitleList extends TeaModel {
-        @NameInMap("OutSubtitle")
+        @com.aliyun.core.annotation.NameInMap("OutSubtitle")
         private java.util.List < OutSubtitle> outSubtitle;
 
         private OutSubtitleList(Builder builder) {
@@ -1653,16 +1931,16 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class OutputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
-        @NameInMap("RoleArn")
+        @com.aliyun.core.annotation.NameInMap("RoleArn")
         private String roleArn;
 
         private OutputFile(Builder builder) {
@@ -1715,7 +1993,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String roleArn; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the output file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -1723,7 +2001,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the output file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -1731,7 +2009,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the output file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -1739,7 +2017,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * RoleArn.
+             * The ARN of the RAM role used for delegated authorization.
              */
             public Builder roleArn(String roleArn) {
                 this.roleArn = roleArn;
@@ -1754,28 +2032,28 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Format extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FormatLongName")
+        @com.aliyun.core.annotation.NameInMap("FormatLongName")
         private String formatLongName;
 
-        @NameInMap("FormatName")
+        @com.aliyun.core.annotation.NameInMap("FormatName")
         private String formatName;
 
-        @NameInMap("NumPrograms")
+        @com.aliyun.core.annotation.NameInMap("NumPrograms")
         private String numPrograms;
 
-        @NameInMap("NumStreams")
+        @com.aliyun.core.annotation.NameInMap("NumStreams")
         private String numStreams;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private String size;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
         private Format(Builder builder) {
@@ -1864,7 +2142,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String startTime; 
 
             /**
-             * Bitrate.
+             * The total bitrate.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -1872,7 +2150,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The total duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -1880,7 +2158,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FormatLongName.
+             * The full name of the container format.
              */
             public Builder formatLongName(String formatLongName) {
                 this.formatLongName = formatLongName;
@@ -1888,7 +2166,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FormatName.
+             * The short name of the container format. Valid values: mov, mp4, m4a, 3gp, 3g2, and mj2.
              */
             public Builder formatName(String formatName) {
                 this.formatName = formatName;
@@ -1896,7 +2174,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumPrograms.
+             * The total number of program streams.
              */
             public Builder numPrograms(String numPrograms) {
                 this.numPrograms = numPrograms;
@@ -1904,7 +2182,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumStreams.
+             * The total number of media streams.
              */
             public Builder numStreams(String numStreams) {
                 this.numStreams = numStreams;
@@ -1912,7 +2190,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Size.
+             * The size of the media file.
              */
             public Builder size(String size) {
                 this.size = size;
@@ -1920,7 +2198,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -1935,7 +2213,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SourceLogo extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
         private SourceLogo(Builder builder) {
@@ -1961,7 +2239,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String source; 
 
             /**
-             * Source.
+             * The keyword.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -1976,7 +2254,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SourceLogos extends TeaModel {
-        @NameInMap("SourceLogo")
+        @com.aliyun.core.annotation.NameInMap("SourceLogo")
         private java.util.List < SourceLogo> sourceLogo;
 
         private SourceLogos(Builder builder) {
@@ -2017,52 +2295,52 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class AudioStream extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("ChannelLayout")
+        @com.aliyun.core.annotation.NameInMap("ChannelLayout")
         private String channelLayout;
 
-        @NameInMap("Channels")
+        @com.aliyun.core.annotation.NameInMap("Channels")
         private String channels;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("SampleFmt")
+        @com.aliyun.core.annotation.NameInMap("SampleFmt")
         private String sampleFmt;
 
-        @NameInMap("Samplerate")
+        @com.aliyun.core.annotation.NameInMap("Samplerate")
         private String samplerate;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
         private AudioStream(Builder builder) {
@@ -2223,7 +2501,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String timebase; 
 
             /**
-             * Bitrate.
+             * The bitrate of the audio stream.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2231,7 +2509,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ChannelLayout.
+             * The output layout of the sound channels.
              */
             public Builder channelLayout(String channelLayout) {
                 this.channelLayout = channelLayout;
@@ -2239,7 +2517,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Channels.
+             * The number of sound channels.
              */
             public Builder channels(String channels) {
                 this.channels = channels;
@@ -2247,7 +2525,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the codec.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -2255,7 +2533,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the codec.
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -2263,7 +2541,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the codec.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -2271,7 +2549,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the codec.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -2279,7 +2557,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -2287,7 +2565,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the audio stream.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -2295,7 +2573,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the audio stream. The value indicates the position of the audio stream in all audio streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -2303,7 +2581,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language of the audio stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -2311,7 +2589,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -2319,7 +2597,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SampleFmt.
+             * The sampling format.
              */
             public Builder sampleFmt(String sampleFmt) {
                 this.sampleFmt = sampleFmt;
@@ -2327,7 +2605,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Samplerate.
+             * The sampling rate.
              */
             public Builder samplerate(String samplerate) {
                 this.samplerate = samplerate;
@@ -2335,7 +2613,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -2343,7 +2621,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base of the audio stream.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -2358,7 +2636,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class AudioStreamList extends TeaModel {
-        @NameInMap("AudioStream")
+        @com.aliyun.core.annotation.NameInMap("AudioStream")
         private java.util.List < AudioStream> audioStream;
 
         private AudioStreamList(Builder builder) {
@@ -2399,10 +2677,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleStream extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
         private SubtitleStream(Builder builder) {
@@ -2437,7 +2715,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String lang; 
 
             /**
-             * Index.
+             * The sequence number of the caption stream. The value indicates the position of the caption stream in all caption streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -2445,7 +2723,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language of the caption stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -2460,7 +2738,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleStreamList extends TeaModel {
-        @NameInMap("SubtitleStream")
+        @com.aliyun.core.annotation.NameInMap("SubtitleStream")
         private java.util.List < SubtitleStream> subtitleStream;
 
         private SubtitleStreamList(Builder builder) {
@@ -2501,13 +2779,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class NetworkCost extends TeaModel {
-        @NameInMap("AvgBitrate")
+        @com.aliyun.core.annotation.NameInMap("AvgBitrate")
         private String avgBitrate;
 
-        @NameInMap("CostBandwidth")
+        @com.aliyun.core.annotation.NameInMap("CostBandwidth")
         private String costBandwidth;
 
-        @NameInMap("PreloadTime")
+        @com.aliyun.core.annotation.NameInMap("PreloadTime")
         private String preloadTime;
 
         private NetworkCost(Builder builder) {
@@ -2551,7 +2829,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String preloadTime; 
 
             /**
-             * AvgBitrate.
+             * The average bitrate.
              */
             public Builder avgBitrate(String avgBitrate) {
                 this.avgBitrate = avgBitrate;
@@ -2559,7 +2837,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CostBandwidth.
+             * The maximum bandwidth that was consumed.
              */
             public Builder costBandwidth(String costBandwidth) {
                 this.costBandwidth = costBandwidth;
@@ -2567,7 +2845,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PreloadTime.
+             * The amount of time consumed to preload the video stream.
              */
             public Builder preloadTime(String preloadTime) {
                 this.preloadTime = preloadTime;
@@ -2582,82 +2860,82 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class VideoStream extends TeaModel {
-        @NameInMap("AvgFPS")
+        @com.aliyun.core.annotation.NameInMap("AvgFPS")
         private String avgFPS;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CodecLongName")
+        @com.aliyun.core.annotation.NameInMap("CodecLongName")
         private String codecLongName;
 
-        @NameInMap("CodecName")
+        @com.aliyun.core.annotation.NameInMap("CodecName")
         private String codecName;
 
-        @NameInMap("CodecTag")
+        @com.aliyun.core.annotation.NameInMap("CodecTag")
         private String codecTag;
 
-        @NameInMap("CodecTagString")
+        @com.aliyun.core.annotation.NameInMap("CodecTagString")
         private String codecTagString;
 
-        @NameInMap("CodecTimeBase")
+        @com.aliyun.core.annotation.NameInMap("CodecTimeBase")
         private String codecTimeBase;
 
-        @NameInMap("Dar")
+        @com.aliyun.core.annotation.NameInMap("Dar")
         private String dar;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("HasBFrames")
+        @com.aliyun.core.annotation.NameInMap("HasBFrames")
         private String hasBFrames;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private String index;
 
-        @NameInMap("Lang")
+        @com.aliyun.core.annotation.NameInMap("Lang")
         private String lang;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private String level;
 
-        @NameInMap("NetworkCost")
+        @com.aliyun.core.annotation.NameInMap("NetworkCost")
         private NetworkCost networkCost;
 
-        @NameInMap("NumFrames")
+        @com.aliyun.core.annotation.NameInMap("NumFrames")
         private String numFrames;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Sar")
+        @com.aliyun.core.annotation.NameInMap("Sar")
         private String sar;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("Timebase")
+        @com.aliyun.core.annotation.NameInMap("Timebase")
         private String timebase;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
-        @NameInMap("bitsPerRawSample")
+        @com.aliyun.core.annotation.NameInMap("bitsPerRawSample")
         private String bitsPerRawSample;
 
-        @NameInMap("colorPrimaries")
+        @com.aliyun.core.annotation.NameInMap("colorPrimaries")
         private String colorPrimaries;
 
-        @NameInMap("colorTransfer")
+        @com.aliyun.core.annotation.NameInMap("colorTransfer")
         private String colorTransfer;
 
         private VideoStream(Builder builder) {
@@ -2908,7 +3186,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String colorTransfer; 
 
             /**
-             * AvgFPS.
+             * The average frame rate of the video stream.
              */
             public Builder avgFPS(String avgFPS) {
                 this.avgFPS = avgFPS;
@@ -2916,7 +3194,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Bitrate.
+             * The video bitrate.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -2924,7 +3202,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecLongName.
+             * The full name of the codec.
              */
             public Builder codecLongName(String codecLongName) {
                 this.codecLongName = codecLongName;
@@ -2932,7 +3210,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecName.
+             * The short name of the codec.
              */
             public Builder codecName(String codecName) {
                 this.codecName = codecName;
@@ -2940,7 +3218,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTag.
+             * The tag of the codec.
              */
             public Builder codecTag(String codecTag) {
                 this.codecTag = codecTag;
@@ -2948,7 +3226,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTagString.
+             * The tag string of the codec.
              */
             public Builder codecTagString(String codecTagString) {
                 this.codecTagString = codecTagString;
@@ -2956,7 +3234,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CodecTimeBase.
+             * The codec time base.
              */
             public Builder codecTimeBase(String codecTimeBase) {
                 this.codecTimeBase = codecTimeBase;
@@ -2964,7 +3242,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Dar.
+             * The display aspect ratio (DAR) of the video stream.
              */
             public Builder dar(String dar) {
                 this.dar = dar;
@@ -2972,7 +3250,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The duration of the video stream.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -2980,7 +3258,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the video stream.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -2988,7 +3266,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * HasBFrames.
+             * Indicates whether the video stream contains bidirectional frames (B-frames).
              */
             public Builder hasBFrames(String hasBFrames) {
                 this.hasBFrames = hasBFrames;
@@ -2996,7 +3274,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the video stream in pixels.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -3004,7 +3282,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Index.
+             * The sequence number of the video stream. The value indicates the position of the video stream in all video streams.
              */
             public Builder index(String index) {
                 this.index = index;
@@ -3012,7 +3290,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Lang.
+             * The language of the video stream. For more information, see [FFmpeg documentation](https://www.ffmpeg.org/ffmpeg-all.html#Metadata) and [ISO 639](https://en.wikipedia.org/wiki/List_of_ISO\_639-1\_codes).
              */
             public Builder lang(String lang) {
                 this.lang = lang;
@@ -3020,7 +3298,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Level.
+             * The codec level.
              */
             public Builder level(String level) {
                 this.level = level;
@@ -3028,7 +3306,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkCost.
+             * The network bandwidth that was consumed.
              */
             public Builder networkCost(NetworkCost networkCost) {
                 this.networkCost = networkCost;
@@ -3036,7 +3314,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * NumFrames.
+             * The total number of frames.
              */
             public Builder numFrames(String numFrames) {
                 this.numFrames = numFrames;
@@ -3044,7 +3322,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * The pixel format of the video stream.
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -3052,7 +3330,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The codec profile.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -3060,7 +3338,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Sar.
+             * The sample aspect ratio (SAR) of the video stream.
              */
             public Builder sar(String sar) {
                 this.sar = sar;
@@ -3068,7 +3346,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * StartTime.
+             * The start time.
              */
             public Builder startTime(String startTime) {
                 this.startTime = startTime;
@@ -3076,7 +3354,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Timebase.
+             * The time base of the video stream.
              */
             public Builder timebase(String timebase) {
                 this.timebase = timebase;
@@ -3084,7 +3362,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the video stream in pixels.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -3092,7 +3370,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * bitsPerRawSample.
+             * The number of binary bits used by each sample or pixel.
              */
             public Builder bitsPerRawSample(String bitsPerRawSample) {
                 this.bitsPerRawSample = bitsPerRawSample;
@@ -3100,7 +3378,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * colorPrimaries.
+             * The primary colors.
              */
             public Builder colorPrimaries(String colorPrimaries) {
                 this.colorPrimaries = colorPrimaries;
@@ -3108,7 +3386,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * colorTransfer.
+             * The color transfer configuration.
              */
             public Builder colorTransfer(String colorTransfer) {
                 this.colorTransfer = colorTransfer;
@@ -3123,7 +3401,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class VideoStreamList extends TeaModel {
-        @NameInMap("VideoStream")
+        @com.aliyun.core.annotation.NameInMap("VideoStream")
         private java.util.List < VideoStream> videoStream;
 
         private VideoStreamList(Builder builder) {
@@ -3164,13 +3442,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Streams extends TeaModel {
-        @NameInMap("AudioStreamList")
+        @com.aliyun.core.annotation.NameInMap("AudioStreamList")
         private AudioStreamList audioStreamList;
 
-        @NameInMap("SubtitleStreamList")
+        @com.aliyun.core.annotation.NameInMap("SubtitleStreamList")
         private SubtitleStreamList subtitleStreamList;
 
-        @NameInMap("VideoStreamList")
+        @com.aliyun.core.annotation.NameInMap("VideoStreamList")
         private VideoStreamList videoStreamList;
 
         private Streams(Builder builder) {
@@ -3214,7 +3492,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private VideoStreamList videoStreamList; 
 
             /**
-             * AudioStreamList.
+             * The audio streams.
              */
             public Builder audioStreamList(AudioStreamList audioStreamList) {
                 this.audioStreamList = audioStreamList;
@@ -3222,7 +3500,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleStreamList.
+             * The caption streams.
              */
             public Builder subtitleStreamList(SubtitleStreamList subtitleStreamList) {
                 this.subtitleStreamList = subtitleStreamList;
@@ -3230,7 +3508,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamList.
+             * The video streams.
              */
             public Builder videoStreamList(VideoStreamList videoStreamList) {
                 this.videoStreamList = videoStreamList;
@@ -3245,34 +3523,34 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Properties extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("FileFormat")
+        @com.aliyun.core.annotation.NameInMap("FileFormat")
         private String fileFormat;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private Format format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("SourceLogos")
+        @com.aliyun.core.annotation.NameInMap("SourceLogos")
         private SourceLogos sourceLogos;
 
-        @NameInMap("Streams")
+        @com.aliyun.core.annotation.NameInMap("Streams")
         private Streams streams;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private Properties(Builder builder) {
@@ -3379,7 +3657,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * The video bitrate.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -3387,7 +3665,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Duration.
+             * The video duration.
              */
             public Builder duration(String duration) {
                 this.duration = duration;
@@ -3395,7 +3673,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FileFormat.
+             * The video format.
              */
             public Builder fileFormat(String fileFormat) {
                 this.fileFormat = fileFormat;
@@ -3403,7 +3681,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FileSize.
+             * The size of the media file.
              */
             public Builder fileSize(String fileSize) {
                 this.fileSize = fileSize;
@@ -3411,7 +3689,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Format.
+             * The format information.
              */
             public Builder format(Format format) {
                 this.format = format;
@@ -3419,7 +3697,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the video.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -3427,7 +3705,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The video height.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -3435,7 +3713,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SourceLogos.
+             * The non-engine layer keywords.
              */
             public Builder sourceLogos(SourceLogos sourceLogos) {
                 this.sourceLogos = sourceLogos;
@@ -3443,7 +3721,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Streams.
+             * The stream information.
              */
             public Builder streams(Streams streams) {
                 this.streams = streams;
@@ -3451,7 +3729,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The video width.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -3466,13 +3744,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class ExtSubtitleInput extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private ExtSubtitleInput(Builder builder) {
@@ -3516,7 +3794,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the input caption file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -3524,7 +3802,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the input caption file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -3532,7 +3810,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the OSS object that is used as the input caption file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -3547,13 +3825,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class ExtSubtitle extends TeaModel {
-        @NameInMap("CharEnc")
+        @com.aliyun.core.annotation.NameInMap("CharEnc")
         private String charEnc;
 
-        @NameInMap("FontName")
+        @com.aliyun.core.annotation.NameInMap("FontName")
         private String fontName;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private ExtSubtitleInput input;
 
         private ExtSubtitle(Builder builder) {
@@ -3597,7 +3875,13 @@ public class QueryJobListResponseBody extends TeaModel {
             private ExtSubtitleInput input; 
 
             /**
-             * CharEnc.
+             * The character set used by the external caption.
+             * <p>
+             * 
+             * *   Valid values: UTF-8, GBK, BIG5, and auto.
+             * *   Default value: **auto**.
+             * 
+             * >  If the value of CharEnc is auto, the detected character set may not be the actual character set. We recommend that you set this parameter to another value.
              */
             public Builder charEnc(String charEnc) {
                 this.charEnc = charEnc;
@@ -3605,7 +3889,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FontName.
+             * The font of the hardcoded captions converted from external captions. Default value: SimSum. For more information, see [Fonts](~~59950~~).
              */
             public Builder fontName(String fontName) {
                 this.fontName = fontName;
@@ -3613,7 +3897,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The input caption file.
+             * <p>
+             * 
+             * *   SRT and ASS files are supported. For more information, see the Input section of the [Parameter details](~~29253~~) topic.
+             * *   Example: `{"Bucket":"example-bucket","Location":"oss-cn-hangzhou","Object":"example.srt"}`.
              */
             public Builder input(ExtSubtitleInput input) {
                 this.input = input;
@@ -3628,7 +3916,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class ExtSubtitleList extends TeaModel {
-        @NameInMap("ExtSubtitle")
+        @com.aliyun.core.annotation.NameInMap("ExtSubtitle")
         private java.util.List < ExtSubtitle> extSubtitle;
 
         private ExtSubtitleList(Builder builder) {
@@ -3669,7 +3957,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Subtitle extends TeaModel {
-        @NameInMap("Map")
+        @com.aliyun.core.annotation.NameInMap("Map")
         private String map;
 
         private Subtitle(Builder builder) {
@@ -3695,7 +3983,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String map; 
 
             /**
-             * Map.
+             * The audio track. Format: `0:{Stream}:{Stream sequence number}`, which is `0:a:{audio_index}`. The value of Stream is a, which indicates an audio stream. The sequence number is the index of the audio stream in the list and starts from 0.
              */
             public Builder map(String map) {
                 this.map = map;
@@ -3710,7 +3998,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleList extends TeaModel {
-        @NameInMap("Subtitle")
+        @com.aliyun.core.annotation.NameInMap("Subtitle")
         private java.util.List < Subtitle> subtitle;
 
         private SubtitleList(Builder builder) {
@@ -3751,10 +4039,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SubtitleConfig extends TeaModel {
-        @NameInMap("ExtSubtitleList")
+        @com.aliyun.core.annotation.NameInMap("ExtSubtitleList")
         private ExtSubtitleList extSubtitleList;
 
-        @NameInMap("SubtitleList")
+        @com.aliyun.core.annotation.NameInMap("SubtitleList")
         private SubtitleList subtitleList;
 
         private SubtitleConfig(Builder builder) {
@@ -3789,7 +4077,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private SubtitleList subtitleList; 
 
             /**
-             * ExtSubtitleList.
+             * The external captions.
              */
             public Builder extSubtitleList(ExtSubtitleList extSubtitleList) {
                 this.extSubtitleList = extSubtitleList;
@@ -3797,7 +4085,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleList.
+             * The captions.
              */
             public Builder subtitleList(SubtitleList subtitleList) {
                 this.subtitleList = subtitleList;
@@ -3812,7 +4100,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class SuperReso extends TeaModel {
-        @NameInMap("IsHalfSample")
+        @com.aliyun.core.annotation.NameInMap("IsHalfSample")
         private String isHalfSample;
 
         private SuperReso(Builder builder) {
@@ -3838,7 +4126,11 @@ public class QueryJobListResponseBody extends TeaModel {
             private String isHalfSample; 
 
             /**
-             * IsHalfSample.
+             * Indicates whether parameters related to the sampling rate are obtained. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isHalfSample(String isHalfSample) {
                 this.isHalfSample = isHalfSample;
@@ -3853,25 +4145,25 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class TailSlate extends TeaModel {
-        @NameInMap("BgColor")
+        @com.aliyun.core.annotation.NameInMap("BgColor")
         private String bgColor;
 
-        @NameInMap("BlendDuration")
+        @com.aliyun.core.annotation.NameInMap("BlendDuration")
         private String blendDuration;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("IsMergeAudio")
+        @com.aliyun.core.annotation.NameInMap("IsMergeAudio")
         private Boolean isMergeAudio;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
-        @NameInMap("TailUrl")
+        @com.aliyun.core.annotation.NameInMap("TailUrl")
         private String tailUrl;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private TailSlate(Builder builder) {
@@ -3951,7 +4243,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * BgColor.
+             * The color of the bars that are added to the ending part if the size of the ending part is smaller than that of the main part. Default value: White. For more information, see [Parameter details](~~29253~~).
              */
             public Builder bgColor(String bgColor) {
                 this.bgColor = bgColor;
@@ -3959,7 +4251,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * BlendDuration.
+             * The duration of the transition between the main part and the ending part. A fade transition is used: The last frame of the main part fades out, and the first frame of the ending part fades in. Unit: seconds. Default value: 0.
              */
             public Builder blendDuration(String blendDuration) {
                 this.blendDuration = blendDuration;
@@ -3967,7 +4259,13 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the ending part.
+             * <p>
+             * 
+             * *   Valid values: values in the range of (0,4096), -1, and full.
+             * *   A value of -1 indicates that the original height of the ending part is retained.
+             * *   A value of full indicates that the height of the ending part equals the height of the main part.
+             * *   Default value: -1.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -3975,7 +4273,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsMergeAudio.
+             * Indicates whether the audio content of the ending part is merged. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder isMergeAudio(Boolean isMergeAudio) {
                 this.isMergeAudio = isMergeAudio;
@@ -3983,7 +4285,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Start.
+             * The time when the ending part is played.
              */
             public Builder start(String start) {
                 this.start = start;
@@ -3991,7 +4293,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TailUrl.
+             * The OSS URL of the ending part.
              */
             public Builder tailUrl(String tailUrl) {
                 this.tailUrl = tailUrl;
@@ -3999,7 +4301,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the ending part. Valid values: values in the range of (0,4096), -1, and full.
+             * <p>
+             * 
+             * *   A value of -1 indicates that the original width of the ending part is retained.
+             * *   A value of full indicates that the width of the ending part equals the width of the main part.
+             * *   Default value: -1.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -4014,7 +4321,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class TailSlateList extends TeaModel {
-        @NameInMap("TailSlate")
+        @com.aliyun.core.annotation.NameInMap("TailSlate")
         private java.util.List < TailSlate> tailSlate;
 
         private TailSlateList(Builder builder) {
@@ -4055,28 +4362,28 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class TransConfig extends TeaModel {
-        @NameInMap("AdjDarMethod")
+        @com.aliyun.core.annotation.NameInMap("AdjDarMethod")
         private String adjDarMethod;
 
-        @NameInMap("IsCheckAudioBitrate")
+        @com.aliyun.core.annotation.NameInMap("IsCheckAudioBitrate")
         private String isCheckAudioBitrate;
 
-        @NameInMap("IsCheckAudioBitrateFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckAudioBitrateFail")
         private String isCheckAudioBitrateFail;
 
-        @NameInMap("IsCheckReso")
+        @com.aliyun.core.annotation.NameInMap("IsCheckReso")
         private String isCheckReso;
 
-        @NameInMap("IsCheckResoFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckResoFail")
         private String isCheckResoFail;
 
-        @NameInMap("IsCheckVideoBitrate")
+        @com.aliyun.core.annotation.NameInMap("IsCheckVideoBitrate")
         private String isCheckVideoBitrate;
 
-        @NameInMap("IsCheckVideoBitrateFail")
+        @com.aliyun.core.annotation.NameInMap("IsCheckVideoBitrateFail")
         private String isCheckVideoBitrateFail;
 
-        @NameInMap("TransMode")
+        @com.aliyun.core.annotation.NameInMap("TransMode")
         private String transMode;
 
         private TransConfig(Builder builder) {
@@ -4165,7 +4472,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String transMode; 
 
             /**
-             * AdjDarMethod.
+             * The method of resolution adjustment. Default value: **none**. Valid values: rescale, crop, pad, and none.
              */
             public Builder adjDarMethod(String adjDarMethod) {
                 this.adjDarMethod = adjDarMethod;
@@ -4173,7 +4480,17 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckAudioBitrate.
+             * Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input bitrate is retained and the specified audio bitrate does not take effect. This parameter has a lower priority than IsCheckAudioBitrateFail. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * 
+             * *   **false**
+             * 
+             * *   Default value:
+             * 
+             *     *   If this parameter is empty and the codec of the output audio is different from that of the input audio, the default value is false.
+             *     *   If this parameter is empty and the codec of the output audio is the same as that of the input audio, the default value is true.
              */
             public Builder isCheckAudioBitrate(String isCheckAudioBitrate) {
                 this.isCheckAudioBitrate = isCheckAudioBitrate;
@@ -4181,7 +4498,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckAudioBitrateFail.
+             * Indicates whether the audio bitrate is checked. If the bitrate of the output audio is higher than that of the input audio, the input audio is not transcoded and a transcoding failure is returned. This parameter has a higher priority than IsCheckAudioBitrate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * *   Default value: **false**.
              */
             public Builder isCheckAudioBitrateFail(String isCheckAudioBitrateFail) {
                 this.isCheckAudioBitrateFail = isCheckAudioBitrateFail;
@@ -4189,7 +4511,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckReso.
+             * Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, the input resolution is retained. Valid values:
+             * <p>
+             * 
+             * *   **true**:
+             * *   **false**
+             * *   Default value: **false**.
              */
             public Builder isCheckReso(String isCheckReso) {
                 this.isCheckReso = isCheckReso;
@@ -4197,7 +4524,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckResoFail.
+             * Indicates whether the resolution is checked. If the output resolution is higher than the input resolution based on the width or height, a transcoding failure is returned. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * *   Default value: **false**.
              */
             public Builder isCheckResoFail(String isCheckResoFail) {
                 this.isCheckResoFail = isCheckResoFail;
@@ -4205,7 +4537,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckVideoBitrate.
+             * Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input bitrate is retained. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * *   Default value: **false**.
              */
             public Builder isCheckVideoBitrate(String isCheckVideoBitrate) {
                 this.isCheckVideoBitrate = isCheckVideoBitrate;
@@ -4213,7 +4550,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * IsCheckVideoBitrateFail.
+             * Indicates whether the video bitrate is checked. If the bitrate of the output video is higher than that of the input video, the input video is not transcoded and a transcoding failure is returned. This parameter has a higher priority than IsCheckVideoBitrate. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
+             * *   Default value: **false**.
              */
             public Builder isCheckVideoBitrateFail(String isCheckVideoBitrateFail) {
                 this.isCheckVideoBitrateFail = isCheckVideoBitrateFail;
@@ -4221,7 +4563,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TransMode.
+             * The transcoding mode.
+             * <p>
+             * 
+             * *   Valid values: onepass, twopass, and CBR.
+             * *   Default value: **onepass**.
              */
             public Builder transMode(String transMode) {
                 this.transMode = transMode;
@@ -4236,10 +4582,10 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class BitrateBnd extends TeaModel {
-        @NameInMap("Max")
+        @com.aliyun.core.annotation.NameInMap("Max")
         private String max;
 
-        @NameInMap("Min")
+        @com.aliyun.core.annotation.NameInMap("Min")
         private String min;
 
         private BitrateBnd(Builder builder) {
@@ -4274,7 +4620,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String min; 
 
             /**
-             * Max.
+             * The maximum bitrate.
              */
             public Builder max(String max) {
                 this.max = max;
@@ -4282,7 +4628,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Min.
+             * The minimum bitrate.
              */
             public Builder min(String min) {
                 this.min = min;
@@ -4297,64 +4643,64 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Video extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("BitrateBnd")
+        @com.aliyun.core.annotation.NameInMap("BitrateBnd")
         private BitrateBnd bitrateBnd;
 
-        @NameInMap("Bufsize")
+        @com.aliyun.core.annotation.NameInMap("Bufsize")
         private String bufsize;
 
-        @NameInMap("Codec")
+        @com.aliyun.core.annotation.NameInMap("Codec")
         private String codec;
 
-        @NameInMap("Crf")
+        @com.aliyun.core.annotation.NameInMap("Crf")
         private String crf;
 
-        @NameInMap("Crop")
+        @com.aliyun.core.annotation.NameInMap("Crop")
         private String crop;
 
-        @NameInMap("Degrain")
+        @com.aliyun.core.annotation.NameInMap("Degrain")
         private String degrain;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Gop")
+        @com.aliyun.core.annotation.NameInMap("Gop")
         private String gop;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("MaxFps")
+        @com.aliyun.core.annotation.NameInMap("MaxFps")
         private String maxFps;
 
-        @NameInMap("Maxrate")
+        @com.aliyun.core.annotation.NameInMap("Maxrate")
         private String maxrate;
 
-        @NameInMap("Pad")
+        @com.aliyun.core.annotation.NameInMap("Pad")
         private String pad;
 
-        @NameInMap("PixFmt")
+        @com.aliyun.core.annotation.NameInMap("PixFmt")
         private String pixFmt;
 
-        @NameInMap("Preset")
+        @com.aliyun.core.annotation.NameInMap("Preset")
         private String preset;
 
-        @NameInMap("Profile")
+        @com.aliyun.core.annotation.NameInMap("Profile")
         private String profile;
 
-        @NameInMap("Qscale")
+        @com.aliyun.core.annotation.NameInMap("Qscale")
         private String qscale;
 
-        @NameInMap("ResoPriority")
+        @com.aliyun.core.annotation.NameInMap("ResoPriority")
         private String resoPriority;
 
-        @NameInMap("ScanMode")
+        @com.aliyun.core.annotation.NameInMap("ScanMode")
         private String scanMode;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private Video(Builder builder) {
@@ -4551,7 +4897,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Bitrate.
+             * The average bitrate of the video. Unit: Kbit/s.
              */
             public Builder bitrate(String bitrate) {
                 this.bitrate = bitrate;
@@ -4559,7 +4905,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * BitrateBnd.
+             * The average bitrate range of the video.
              */
             public Builder bitrateBnd(BitrateBnd bitrateBnd) {
                 this.bitrateBnd = bitrateBnd;
@@ -4567,7 +4913,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Bufsize.
+             * The buffer size.
+             * <p>
+             * 
+             * *   Unit: KB.
+             * *   Default value: **6000**.
              */
             public Builder bufsize(String bufsize) {
                 this.bufsize = bufsize;
@@ -4575,7 +4925,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Codec.
+             * The video codec.
+             * <p>
+             * 
+             * *   Valid values: H.264 and H.265.
+             * *   Default value: H.264.
              */
             public Builder codec(String codec) {
                 this.codec = codec;
@@ -4583,7 +4937,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Crf.
+             * The constant rate factor.
+             * <p>
+             * 
+             * *   Default value when the value of Codec is H.264: **23**, default value when the value of Codec is H.265: **26**.
+             * *   If the value of this parameter is returned, the value of Bitrate becomes invalid.
              */
             public Builder crf(String crf) {
                 this.crf = crf;
@@ -4591,7 +4949,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Crop.
+             * The method of video cropping. Valid values:
+             * <p>
+             * 
+             * *   **border**: automatically detects and removes borders.
+             * *   A value in the width:height:left:top format: The video image is cropped based on custom settings.
              */
             public Builder crop(String crop) {
                 this.crop = crop;
@@ -4599,7 +4961,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Degrain.
+             * The strength of the independent noise reduction algorithm.
              */
             public Builder degrain(String degrain) {
                 this.degrain = degrain;
@@ -4607,7 +4969,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Fps.
+             * The frame rate of the video.
+             * <p>
+             * 
+             * *   Unit: frames per second.
+             * *   The value is 60 if the frame rate of the input file exceeds 60.
+             * *   Default value: the frame rate of the input video.
              */
             public Builder fps(String fps) {
                 this.fps = fps;
@@ -4615,7 +4982,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Gop.
+             * The maximum interval between keyframes or the maximum number of frames in a frame group. Unit: seconds.
+             * <p>
+             * 
+             * *   Default value: **250**.
+             * *   If the maximum number of frames is returned, the value does not contain a unit.
              */
             public Builder gop(String gop) {
                 this.gop = gop;
@@ -4623,7 +4994,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the video.
+             * <p>
+             * 
+             * *   Unit: pixel.
+             * *   Default value: the height of the input video.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -4631,7 +5006,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MaxFps.
+             * The maximum frame rate.
              */
             public Builder maxFps(String maxFps) {
                 this.maxFps = maxFps;
@@ -4639,7 +5014,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Maxrate.
+             * The maximum bitrate of the video. Unit: Kbit/s.
              */
             public Builder maxrate(String maxrate) {
                 this.maxrate = maxrate;
@@ -4647,7 +5022,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Pad.
+             * The black bars that are added to the video.
+             * <p>
+             * 
+             * *   Unit: pixel.
+             * *   Format: width:height:left:top.
              */
             public Builder pad(String pad) {
                 this.pad = pad;
@@ -4655,7 +5034,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PixFmt.
+             * The pixel format of the video. Valid values: standard pixel formats such as yuv420p and yuvj420p.
              */
             public Builder pixFmt(String pixFmt) {
                 this.pixFmt = pixFmt;
@@ -4663,7 +5042,14 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Preset.
+             * The preset video algorithm. Default value: **medium**. Valid values:
+             * <p>
+             * 
+             * *   **veryfast**
+             * *   **fast**
+             * *   **medium**
+             * *   **slow**
+             * *   **slower**
              */
             public Builder preset(String preset) {
                 this.preset = preset;
@@ -4671,7 +5057,15 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Profile.
+             * The codec profile of the video. Valid values: baseline, main, and high.
+             * <p>
+             * 
+             * >  If multiple definitions are involved, we recommend that you use baseline for the lowest definition to ensure normal playback on low-end devices, and use main or high for other definitions.
+             * 
+             * *   **baseline**: applicable to mobile devices.
+             * *   **main**: applicable to standard-definition devices.
+             * *   **high**: applicable to high-definition devices.
+             * *   Default value: **high**.
              */
             public Builder profile(String profile) {
                 this.profile = profile;
@@ -4679,7 +5073,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Qscale.
+             * The level of quality control on the video.
              */
             public Builder qscale(String qscale) {
                 this.qscale = qscale;
@@ -4687,7 +5081,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ResoPriority.
+             * The resource priority.
              */
             public Builder resoPriority(String resoPriority) {
                 this.resoPriority = resoPriority;
@@ -4695,7 +5089,19 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ScanMode.
+             * The scan mode. Valid values:
+             * <p>
+             * 
+             * *   If this parameter is left **empty**, the scan mode of the input video is used.
+             * *   **auto**: automatic deinterlacing.
+             * *   **progressive**: progressive scan.
+             * *   **interlaced**: interlaced scan.
+             * *   **By default**, this parameter is left empty.
+             * 
+             * **Best practice**: The interlaced scan mode saves data traffic than the progressive scan mode but provides poor image quality. Therefore, the progressive scan mode is commonly used in mainstream video production.
+             * 
+             * *   If **progressive** or **interlaced** is used when the scan mode of the input video is neither of them, the transcoding job fails.
+             * *   We recommend that you use **the scan mode of the input video** or **automatic deinterlacing** for higher compatibility.
              */
             public Builder scanMode(String scanMode) {
                 this.scanMode = scanMode;
@@ -4703,7 +5109,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the video.
+             * <p>
+             * 
+             * *   Unit: pixel.
+             * *   Default value: the width of the input video.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -4718,13 +5128,13 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class InputFile extends TeaModel {
-        @NameInMap("Bucket")
+        @com.aliyun.core.annotation.NameInMap("Bucket")
         private String bucket;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("Object")
+        @com.aliyun.core.annotation.NameInMap("Object")
         private String object;
 
         private InputFile(Builder builder) {
@@ -4768,7 +5178,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private String object; 
 
             /**
-             * Bucket.
+             * The name of the OSS bucket in which the input file is stored.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -4776,7 +5186,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Location.
+             * The OSS region in which the input file resides.
              */
             public Builder location(String location) {
                 this.location = location;
@@ -4784,7 +5194,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Object.
+             * The name of the Object Storage Service (OSS) object that is used as the input file.
              */
             public Builder object(String object) {
                 this.object = object;
@@ -4799,28 +5209,28 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class WaterMark extends TeaModel {
-        @NameInMap("Dx")
+        @com.aliyun.core.annotation.NameInMap("Dx")
         private String dx;
 
-        @NameInMap("Dy")
+        @com.aliyun.core.annotation.NameInMap("Dy")
         private String dy;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("InputFile")
+        @com.aliyun.core.annotation.NameInMap("InputFile")
         private InputFile inputFile;
 
-        @NameInMap("ReferPos")
+        @com.aliyun.core.annotation.NameInMap("ReferPos")
         private String referPos;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WaterMarkTemplateId")
+        @com.aliyun.core.annotation.NameInMap("WaterMarkTemplateId")
         private String waterMarkTemplateId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private WaterMark(Builder builder) {
@@ -4909,7 +5319,18 @@ public class QueryJobListResponseBody extends TeaModel {
             private String width; 
 
             /**
-             * Dx.
+             * The horizontal offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Default value: 0. The value can be an integer or a decimal number.
+             * <p>
+             * 
+             * *   An integer indicates the pixel value of the horizontal offset.
+             * 
+             *     *   Valid values: **\[8,4096]**.
+             *     *   Unit: pixel.
+             * 
+             * *   A decimal number indicates the ratio of the horizontal offset to the width in the output video resolution.
+             * 
+             *     *   Valid values: (0,1).
+             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.
              */
             public Builder dx(String dx) {
                 this.dx = dx;
@@ -4917,7 +5338,18 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Dy.
+             * The vertical offset of the watermark image relative to the output video. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
+             * <p>
+             * 
+             * *   An integer indicates the pixel value of the vertical offset.
+             * 
+             *     *   Valid values: **\[8,4096]**.
+             *     *   Unit: pixel.
+             * 
+             * *   A decimal number indicates the ratio of the vertical offset to the height in the output video resolution.
+             * 
+             *     *   Valid values: **(0,1)**.
+             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.
              */
             public Builder dy(String dy) {
                 this.dy = dy;
@@ -4925,7 +5357,18 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Height.
+             * The height of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
+             * <p>
+             * 
+             * *   An integer indicates the pixel value of the watermark height.
+             * 
+             *     *   Valid values: **\[8,4096]**.
+             *     *   Unit: pixel.
+             * 
+             * *   A decimal number indicates the ratio of the watermark height to the height in the output video resolution.
+             * 
+             *     *   Valid values: **(0,1)**.
+             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.
              */
             public Builder height(String height) {
                 this.height = height;
@@ -4933,7 +5376,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * InputFile.
+             * The watermark input file. PNG images and MOV files are supported.
              */
             public Builder inputFile(InputFile inputFile) {
                 this.inputFile = inputFile;
@@ -4941,7 +5384,13 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * ReferPos.
+             * The position of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. Valid values:
+             * <p>
+             * 
+             * *   TopRight
+             * *   TopLeft
+             * *   BottomRight
+             * *   BottomLeft
              */
             public Builder referPos(String referPos) {
                 this.referPos = referPos;
@@ -4949,7 +5398,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the watermark. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. For more information, see [Parameter details](~~29253~~). Valid values:
+             * <p>
+             * 
+             * *   Image
+             * *   Text
              */
             public Builder type(String type) {
                 this.type = type;
@@ -4957,7 +5410,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * WaterMarkTemplateId.
+             * The ID of the watermark template.
              */
             public Builder waterMarkTemplateId(String waterMarkTemplateId) {
                 this.waterMarkTemplateId = waterMarkTemplateId;
@@ -4965,7 +5418,18 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Width.
+             * The width of the watermark image. If this parameter is specified in the request, the corresponding parameter in the watermark template is overwritten. The value can be an integer or a decimal number.
+             * <p>
+             * 
+             * *   An integer indicates the pixel value of the watermark width.
+             * 
+             *     *   Valid values: **\[8,4096]**.
+             *     *   Unit: pixel.
+             * 
+             * *   A decimal number indicates the ratio of the watermark width to the width in the output video resolution.
+             * 
+             *     *   Valid values: **(0,1)**.
+             *     *   The decimal number can be accurate to four decimal places, such as 0.9999. Excessive digits are automatically discarded.
              */
             public Builder width(String width) {
                 this.width = width;
@@ -4980,7 +5444,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class WaterMarkList extends TeaModel {
-        @NameInMap("WaterMark")
+        @com.aliyun.core.annotation.NameInMap("WaterMark")
         private java.util.List < WaterMark> waterMark;
 
         private WaterMarkList(Builder builder) {
@@ -5021,85 +5485,88 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Output extends TeaModel {
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
 
-        @NameInMap("AudioStreamMap")
+        @com.aliyun.core.annotation.NameInMap("AudioStreamMap")
         private String audioStreamMap;
 
-        @NameInMap("Clip")
+        @com.aliyun.core.annotation.NameInMap("Clip")
         private Clip clip;
 
-        @NameInMap("Container")
+        @com.aliyun.core.annotation.NameInMap("Container")
         private Container container;
 
-        @NameInMap("DeWatermark")
+        @com.aliyun.core.annotation.NameInMap("DeWatermark")
         private String deWatermark;
 
-        @NameInMap("Encryption")
+        @com.aliyun.core.annotation.NameInMap("Encryption")
         private Encryption encryption;
 
-        @NameInMap("ExtendData")
+        @com.aliyun.core.annotation.NameInMap("ExtendData")
         private String extendData;
 
-        @NameInMap("M3U8NonStandardSupport")
+        @com.aliyun.core.annotation.NameInMap("M3U8NonStandardSupport")
         private M3U8NonStandardSupport m3U8NonStandardSupport;
 
-        @NameInMap("MergeConfigUrl")
+        @com.aliyun.core.annotation.NameInMap("MergeConfigUrl")
         private String mergeConfigUrl;
 
-        @NameInMap("MergeList")
+        @com.aliyun.core.annotation.NameInMap("MergeList")
         private MergeList mergeList;
 
-        @NameInMap("MuxConfig")
+        @com.aliyun.core.annotation.NameInMap("MultiSpeedInfo")
+        private MultiSpeedInfo multiSpeedInfo;
+
+        @com.aliyun.core.annotation.NameInMap("MuxConfig")
         private MuxConfig muxConfig;
 
-        @NameInMap("OpeningList")
+        @com.aliyun.core.annotation.NameInMap("OpeningList")
         private OpeningList openingList;
 
-        @NameInMap("OutSubtitleList")
+        @com.aliyun.core.annotation.NameInMap("OutSubtitleList")
         private OutSubtitleList outSubtitleList;
 
-        @NameInMap("OutputFile")
+        @com.aliyun.core.annotation.NameInMap("OutputFile")
         private OutputFile outputFile;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Properties")
+        @com.aliyun.core.annotation.NameInMap("Properties")
         private Properties properties;
 
-        @NameInMap("Rotate")
+        @com.aliyun.core.annotation.NameInMap("Rotate")
         private String rotate;
 
-        @NameInMap("SubtitleConfig")
+        @com.aliyun.core.annotation.NameInMap("SubtitleConfig")
         private SubtitleConfig subtitleConfig;
 
-        @NameInMap("SuperReso")
+        @com.aliyun.core.annotation.NameInMap("SuperReso")
         private SuperReso superReso;
 
-        @NameInMap("TailSlateList")
+        @com.aliyun.core.annotation.NameInMap("TailSlateList")
         private TailSlateList tailSlateList;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TransConfig")
+        @com.aliyun.core.annotation.NameInMap("TransConfig")
         private TransConfig transConfig;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private Video video;
 
-        @NameInMap("VideoStreamMap")
+        @com.aliyun.core.annotation.NameInMap("VideoStreamMap")
         private String videoStreamMap;
 
-        @NameInMap("WaterMarkConfigUrl")
+        @com.aliyun.core.annotation.NameInMap("WaterMarkConfigUrl")
         private String waterMarkConfigUrl;
 
-        @NameInMap("WaterMarkList")
+        @com.aliyun.core.annotation.NameInMap("WaterMarkList")
         private WaterMarkList waterMarkList;
 
         private Output(Builder builder) {
@@ -5113,6 +5580,7 @@ public class QueryJobListResponseBody extends TeaModel {
             this.m3U8NonStandardSupport = builder.m3U8NonStandardSupport;
             this.mergeConfigUrl = builder.mergeConfigUrl;
             this.mergeList = builder.mergeList;
+            this.multiSpeedInfo = builder.multiSpeedInfo;
             this.muxConfig = builder.muxConfig;
             this.openingList = builder.openingList;
             this.outSubtitleList = builder.outSubtitleList;
@@ -5208,6 +5676,13 @@ public class QueryJobListResponseBody extends TeaModel {
          */
         public MergeList getMergeList() {
             return this.mergeList;
+        }
+
+        /**
+         * @return multiSpeedInfo
+         */
+        public MultiSpeedInfo getMultiSpeedInfo() {
+            return this.multiSpeedInfo;
         }
 
         /**
@@ -5340,6 +5815,7 @@ public class QueryJobListResponseBody extends TeaModel {
             private M3U8NonStandardSupport m3U8NonStandardSupport; 
             private String mergeConfigUrl; 
             private MergeList mergeList; 
+            private MultiSpeedInfo multiSpeedInfo; 
             private MuxConfig muxConfig; 
             private OpeningList openingList; 
             private OutSubtitleList outSubtitleList; 
@@ -5359,7 +5835,10 @@ public class QueryJobListResponseBody extends TeaModel {
             private WaterMarkList waterMarkList; 
 
             /**
-             * Audio.
+             * The audio configurations.
+             * <p>
+             * 
+             * >  If this parameter is specified in the request, the corresponding parameters in the specified transcoding template are overwritten.
              */
             public Builder audio(Audio audio) {
                 this.audio = audio;
@@ -5367,7 +5846,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * AudioStreamMap.
+             * The sequence number of the audio stream.
+             * <p>
+             * 
+             * *   Format: 0:a:{Sequence number}. Example: 0:a:0.
+             * *   The sequence number is the index of the audio stream in the list and starts from 0.
+             * *   If no sequence number is specified, the default audio stream is used.
              */
             public Builder audioStreamMap(String audioStreamMap) {
                 this.audioStreamMap = audioStreamMap;
@@ -5375,7 +5859,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Clip.
+             * The information about clips.
              */
             public Builder clip(Clip clip) {
                 this.clip = clip;
@@ -5383,7 +5867,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Container.
+             * The container format configurations.
              */
             public Builder container(Container container) {
                 this.container = container;
@@ -5391,7 +5875,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * DeWatermark.
+             * The configurations of watermark blurring. The value is a JSON object. For more information, see the DeWatermark section of the [Parameter details](~~29253~~) topic.
              */
             public Builder deWatermark(String deWatermark) {
                 this.deWatermark = deWatermark;
@@ -5399,7 +5883,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Encryption.
+             * The encryption configurations. The encrypted video file is generated in the M3U8 format.
              */
             public Builder encryption(Encryption encryption) {
                 this.encryption = encryption;
@@ -5407,7 +5891,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * 扩展字段
+             * The custom fields.
              */
             public Builder extendData(String extendData) {
                 this.extendData = extendData;
@@ -5415,7 +5899,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * M3U8NonStandardSupport.
+             * The non-standard support configurations for M3U8. The value is a JSON object. For more information, see the M3U8NonStandardSupport section of the [Parameter details](~~29253~~) topic.
              */
             public Builder m3U8NonStandardSupport(M3U8NonStandardSupport m3U8NonStandardSupport) {
                 this.m3U8NonStandardSupport = m3U8NonStandardSupport;
@@ -5423,7 +5907,12 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MergeConfigUrl.
+             * The URL of the merging configuration file. Only one of MergeList and MergeConfigUrl takes effect.
+             * <p>
+             * 
+             * *   The configuration file specified by MergeConfigUrl can contain up to 50 clips.
+             * *   MergeConfigUrl indicates the URL of the configuration file for merging clips. Make sure that the configuration file is stored as an object in OSS and that MPS can access the OSS object. For information about the file content, see the details about merging parameters.
+             * *   Example of the content of the merging configuration file: `{"MergeList":[{"MergeURL":"http://exampleBucket****.oss-cn-hangzhou.aliyuncs.com/video_01.mp4"}]}`.
              */
             public Builder mergeConfigUrl(String mergeConfigUrl) {
                 this.mergeConfigUrl = mergeConfigUrl;
@@ -5431,7 +5920,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MergeList.
+             * The configurations of clip merging. Up to four clips can be merged.
              */
             public Builder mergeList(MergeList mergeList) {
                 this.mergeList = mergeList;
@@ -5439,7 +5928,15 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MuxConfig.
+             * The information about the high-speed transcoding job. This information is available only for jobs that are submitted by using an MPS queue for high-speed transcoding. This does not support MPS queues for high-speed transcoding of an earlier version.
+             */
+            public Builder multiSpeedInfo(MultiSpeedInfo multiSpeedInfo) {
+                this.multiSpeedInfo = multiSpeedInfo;
+                return this;
+            }
+
+            /**
+             * The transmuxing configurations. The transmuxing configurations. If this parameter is specified in the request, the corresponding parameters in the specified transcoding template are overwritten.
              */
             public Builder muxConfig(MuxConfig muxConfig) {
                 this.muxConfig = muxConfig;
@@ -5447,7 +5944,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OpeningList.
+             * The opening parts. The value is a JSON object.
              */
             public Builder openingList(OpeningList openingList) {
                 this.openingList = openingList;
@@ -5455,7 +5952,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OutSubtitleList.
+             * The output captions.
              */
             public Builder outSubtitleList(OutSubtitleList outSubtitleList) {
                 this.outSubtitleList = outSubtitleList;
@@ -5463,7 +5960,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * OutputFile.
+             * The details of the output file.
              */
             public Builder outputFile(OutputFile outputFile) {
                 this.outputFile = outputFile;
@@ -5471,7 +5968,11 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Priority.
+             * The priority of the job in the ApsaraVideo Media Processing (MPS) queue to which the job is added.
+             * <p>
+             * 
+             * *   A value of 10 indicates the highest priority.
+             * *   Default value: **6**.
              */
             public Builder priority(String priority) {
                 this.priority = priority;
@@ -5479,7 +5980,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Properties.
+             * The media properties.
              */
             public Builder properties(Properties properties) {
                 this.properties = properties;
@@ -5487,7 +5988,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Rotate.
+             * The rotation angle of the video.
              */
             public Builder rotate(String rotate) {
                 this.rotate = rotate;
@@ -5495,7 +5996,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SubtitleConfig.
+             * The caption configurations.
              */
             public Builder subtitleConfig(SubtitleConfig subtitleConfig) {
                 this.subtitleConfig = subtitleConfig;
@@ -5503,7 +6004,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * SuperReso.
+             * The configurations for using the resolution of the source video.
              */
             public Builder superReso(SuperReso superReso) {
                 this.superReso = superReso;
@@ -5511,7 +6012,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TailSlateList.
+             * The ending parts.
              */
             public Builder tailSlateList(TailSlateList tailSlateList) {
                 this.tailSlateList = tailSlateList;
@@ -5519,7 +6020,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateId.
+             * The template ID.
              */
             public Builder templateId(String templateId) {
                 this.templateId = templateId;
@@ -5527,7 +6028,10 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * TransConfig.
+             * The general transcoding configurations.
+             * <p>
+             * 
+             * >  If this parameter is specified in the request, the corresponding parameters in the specified transcoding template are overwritten.
              */
             public Builder transConfig(TransConfig transConfig) {
                 this.transConfig = transConfig;
@@ -5535,7 +6039,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * UserData.
+             * The custom data.
              */
             public Builder userData(String userData) {
                 this.userData = userData;
@@ -5543,7 +6047,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Video.
+             * The video configurations.
              */
             public Builder video(Video video) {
                 this.video = video;
@@ -5551,7 +6055,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * VideoStreamMap.
+             * The sequence number of the video stream. The sequence number is the index of the video stream in the list and starts from 0. If no sequence number is specified, the default video stream is used.
              */
             public Builder videoStreamMap(String videoStreamMap) {
                 this.videoStreamMap = videoStreamMap;
@@ -5559,7 +6063,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * WaterMarkConfigUrl.
+             * The URL of the watermark configuration file.
              */
             public Builder waterMarkConfigUrl(String waterMarkConfigUrl) {
                 this.waterMarkConfigUrl = waterMarkConfigUrl;
@@ -5567,7 +6071,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * WaterMarkList.
+             * The watermarks.
              */
             public Builder waterMarkList(WaterMarkList waterMarkList) {
                 this.waterMarkList = waterMarkList;
@@ -5582,38 +6086,41 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class Job extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MNSMessageResult")
+        @com.aliyun.core.annotation.NameInMap("MNSMessageResult")
         private MNSMessageResult MNSMessageResult;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Output")
+        @com.aliyun.core.annotation.NameInMap("Output")
         private Output output;
 
-        @NameInMap("Percent")
+        @com.aliyun.core.annotation.NameInMap("Percent")
         private Long percent;
 
-        @NameInMap("PipelineId")
+        @com.aliyun.core.annotation.NameInMap("PipelineId")
         private String pipelineId;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
+
+        @com.aliyun.core.annotation.NameInMap("SubmitTime")
+        private String submitTime;
 
         private Job(Builder builder) {
             this.code = builder.code;
@@ -5627,6 +6134,7 @@ public class QueryJobListResponseBody extends TeaModel {
             this.percent = builder.percent;
             this.pipelineId = builder.pipelineId;
             this.state = builder.state;
+            this.submitTime = builder.submitTime;
         }
 
         public static Builder builder() {
@@ -5714,6 +6222,13 @@ public class QueryJobListResponseBody extends TeaModel {
             return this.state;
         }
 
+        /**
+         * @return submitTime
+         */
+        public String getSubmitTime() {
+            return this.submitTime;
+        }
+
         public static final class Builder {
             private String code; 
             private String creationTime; 
@@ -5726,9 +6241,10 @@ public class QueryJobListResponseBody extends TeaModel {
             private Long percent; 
             private String pipelineId; 
             private String state; 
+            private String submitTime; 
 
             /**
-             * Code.
+             * The error code returned if the job failed. If the job was successful, this parameter is not returned.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -5736,7 +6252,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * CreationTime.
+             * The time when the job was created.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -5744,7 +6260,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * FinishTime.
+             * The time when the job was complete.
              */
             public Builder finishTime(String finishTime) {
                 this.finishTime = finishTime;
@@ -5752,7 +6268,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Input.
+             * The information about the job input.
              */
             public Builder input(Input input) {
                 this.input = input;
@@ -5760,7 +6276,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * JobId.
+             * The job ID.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -5768,7 +6284,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * MNSMessageResult.
+             * The message sent by Message Service (MNS) to notify users of the job result.
              */
             public Builder MNSMessageResult(MNSMessageResult MNSMessageResult) {
                 this.MNSMessageResult = MNSMessageResult;
@@ -5776,7 +6292,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Message.
+             * The error message returned if the job failed. If the job was successful, this parameter is not returned.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -5784,7 +6300,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Output.
+             * The job output.
              */
             public Builder output(Output output) {
                 this.output = output;
@@ -5792,7 +6308,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * Percent.
+             * The transcoding progress.
              */
             public Builder percent(Long percent) {
                 this.percent = percent;
@@ -5800,7 +6316,7 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * PipelineId.
+             * The ID of the MPS queue that is used to run the job.
              */
             public Builder pipelineId(String pipelineId) {
                 this.pipelineId = pipelineId;
@@ -5808,10 +6324,25 @@ public class QueryJobListResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The job state. Valid values:
+             * <p>
+             * 
+             * *   **Submitted**: The job was submitted.
+             * *   **Transcoding**: Transcoding is in process.
+             * *   **TranscodeSuccess**: The job was successful.
+             * *   **TranscodeFail**: The job failed.
+             * *   **TranscodeCancelled**: The job was canceled.
              */
             public Builder state(String state) {
                 this.state = state;
+                return this;
+            }
+
+            /**
+             * The time when the job was submitted.
+             */
+            public Builder submitTime(String submitTime) {
+                this.submitTime = submitTime;
                 return this;
             }
 
@@ -5823,7 +6354,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class JobList extends TeaModel {
-        @NameInMap("Job")
+        @com.aliyun.core.annotation.NameInMap("Job")
         private java.util.List < Job> job;
 
         private JobList(Builder builder) {
@@ -5864,7 +6395,7 @@ public class QueryJobListResponseBody extends TeaModel {
 
     }
     public static class NonExistJobIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistJobIds(Builder builder) {

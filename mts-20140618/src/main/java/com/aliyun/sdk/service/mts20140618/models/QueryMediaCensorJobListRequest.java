@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryMediaCensorJobListRequest</p>
  */
 public class QueryMediaCensorJobListRequest extends Request {
-    @Query
-    @NameInMap("EndOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndOfJobCreatedTimeRange")
     private String endOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("JobId")
-    private String jobId;
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobIds")
+    private String jobIds;
 
-    @Query
-    @NameInMap("MaximumPageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaximumPageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Long maximumPageSize;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("StartOfJobCreatedTimeRange")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartOfJobCreatedTimeRange")
     private String startOfJobCreatedTimeRange;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
     private QueryMediaCensorJobListRequest(Builder builder) {
         super(builder);
         this.endOfJobCreatedTimeRange = builder.endOfJobCreatedTimeRange;
-        this.jobId = builder.jobId;
+        this.jobIds = builder.jobIds;
         this.maximumPageSize = builder.maximumPageSize;
         this.nextPageToken = builder.nextPageToken;
         this.ownerAccount = builder.ownerAccount;
@@ -93,10 +92,10 @@ public class QueryMediaCensorJobListRequest extends Request {
     }
 
     /**
-     * @return jobId
+     * @return jobIds
      */
-    public String getJobId() {
-        return this.jobId;
+    public String getJobIds() {
+        return this.jobIds;
     }
 
     /**
@@ -164,7 +163,7 @@ public class QueryMediaCensorJobListRequest extends Request {
 
     public static final class Builder extends Request.Builder<QueryMediaCensorJobListRequest, Builder> {
         private String endOfJobCreatedTimeRange; 
-        private String jobId; 
+        private String jobIds; 
         private Long maximumPageSize; 
         private String nextPageToken; 
         private String ownerAccount; 
@@ -182,7 +181,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         private Builder(QueryMediaCensorJobListRequest request) {
             super(request);
             this.endOfJobCreatedTimeRange = request.endOfJobCreatedTimeRange;
-            this.jobId = request.jobId;
+            this.jobIds = request.jobIds;
             this.maximumPageSize = request.maximumPageSize;
             this.nextPageToken = request.nextPageToken;
             this.ownerAccount = request.ownerAccount;
@@ -195,7 +194,11 @@ public class QueryMediaCensorJobListRequest extends Request {
         } 
 
         /**
-         * EndOfJobCreatedTimeRange.
+         * The end of the time range within which the jobs to be queried were created.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
+         * *   The time must be in UTC.
          */
         public Builder endOfJobCreatedTimeRange(String endOfJobCreatedTimeRange) {
             this.putQueryParameter("EndOfJobCreatedTimeRange", endOfJobCreatedTimeRange);
@@ -204,16 +207,20 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * JobId.
+         * The ID of the content moderation job. You can call the [SubmitMediaCensorJob](~~91779~~) operation to query the ID of the content moderation job. Separate multiple IDs with commas (,).
          */
-        public Builder jobId(String jobId) {
-            this.putQueryParameter("JobId", jobId);
-            this.jobId = jobId;
+        public Builder jobIds(String jobIds) {
+            this.putQueryParameter("JobIds", jobIds);
+            this.jobIds = jobIds;
             return this;
         }
 
         /**
-         * MaximumPageSize.
+         * The maximum number of entries to return on each page.
+         * <p>
+         * 
+         * *   Default value: **30**.
+         * *   Valid values: **1 to 300**.
          */
         public Builder maximumPageSize(Long maximumPageSize) {
             this.putQueryParameter("MaximumPageSize", maximumPageSize);
@@ -222,7 +229,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * NextPageToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The returned value of NextPageToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextPageToken(String nextPageToken) {
             this.putQueryParameter("NextPageToken", nextPageToken);
@@ -249,7 +256,7 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * PipelineId.
+         * The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job. To obtain the ID of the MPS queue, perform the following steps: Log on to the [**MPS console**](https://mps.console.aliyun.com/overview). In the left-side navigation pane, choose **Global Settings** > **Pipelines**.
          */
         public Builder pipelineId(String pipelineId) {
             this.putQueryParameter("PipelineId", pipelineId);
@@ -276,7 +283,11 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * StartOfJobCreatedTimeRange.
+         * The beginning of the time range within which the jobs to be queried were created.
+         * <p>
+         * 
+         * *   Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.
+         * *   The time must be in UTC.
          */
         public Builder startOfJobCreatedTimeRange(String startOfJobCreatedTimeRange) {
             this.putQueryParameter("StartOfJobCreatedTimeRange", startOfJobCreatedTimeRange);
@@ -285,7 +296,14 @@ public class QueryMediaCensorJobListRequest extends Request {
         }
 
         /**
-         * State.
+         * The status of the jobs to be queried. Valid values:
+         * <p>
+         * 
+         * *   **All**: all jobs.
+         * *   **Queuing**: the jobs that are being queued.
+         * *   **Analysing**: the jobs that are in progress.
+         * *   **Fail**: failed jobs.
+         * *   **Success**: successful jobs.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);

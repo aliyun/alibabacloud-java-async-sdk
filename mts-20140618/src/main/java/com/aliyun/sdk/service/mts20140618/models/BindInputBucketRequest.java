@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,30 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindInputBucketRequest</p>
  */
 public class BindInputBucketRequest extends Request {
-    @Query
-    @NameInMap("Bucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucket;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Referer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Referer")
     private String referer;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
-
-    @Query
-    @NameInMap("RoleArn")
-    private String roleArn;
 
     private BindInputBucketRequest(Builder builder) {
         super(builder);
@@ -49,7 +44,6 @@ public class BindInputBucketRequest extends Request {
         this.referer = builder.referer;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
-        this.roleArn = builder.roleArn;
     }
 
     public static Builder builder() {
@@ -107,13 +101,6 @@ public class BindInputBucketRequest extends Request {
         return this.resourceOwnerId;
     }
 
-    /**
-     * @return roleArn
-     */
-    public String getRoleArn() {
-        return this.roleArn;
-    }
-
     public static final class Builder extends Request.Builder<BindInputBucketRequest, Builder> {
         private String bucket; 
         private String ownerAccount; 
@@ -121,7 +108,6 @@ public class BindInputBucketRequest extends Request {
         private String referer; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
-        private String roleArn; 
 
         private Builder() {
             super();
@@ -135,11 +121,13 @@ public class BindInputBucketRequest extends Request {
             this.referer = request.referer;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
-            this.roleArn = request.roleArn;
         } 
 
         /**
-         * Bucket.
+         * The name of the input media bucket to be bound. The name can be up to 64 bytes in size. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane.
+         * <p>
+         * 
+         * > The bucket name can contain lowercase letters, digits, and hyphens (-), and cannot start or end with a hyphen (-).
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -166,7 +154,7 @@ public class BindInputBucketRequest extends Request {
         }
 
         /**
-         * Referer.
+         * The settings of Object Storage Service (OSS) hotlink protection. For more information, see [Hotlink protection](~~31869~~).
          */
         public Builder referer(String referer) {
             this.putQueryParameter("Referer", referer);
@@ -189,15 +177,6 @@ public class BindInputBucketRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
-            return this;
-        }
-
-        /**
-         * RoleArn.
-         */
-        public Builder roleArn(String roleArn) {
-            this.putQueryParameter("RoleArn", roleArn);
-            this.roleArn = roleArn;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeactivateMediaWorkflowResponseBody</p>
  */
 public class DeactivateMediaWorkflowResponseBody extends TeaModel {
-    @NameInMap("MediaWorkflow")
+    @com.aliyun.core.annotation.NameInMap("MediaWorkflow")
     private MediaWorkflow mediaWorkflow;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeactivateMediaWorkflowResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * MediaWorkflow.
+         * The topology of the media workflow.
          */
         public Builder mediaWorkflow(MediaWorkflow mediaWorkflow) {
             this.mediaWorkflow = mediaWorkflow;
@@ -58,7 +57,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The name of the media workflow that is deactivated.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,19 +71,19 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
     } 
 
     public static class MediaWorkflow extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("MediaWorkflowId")
+        @com.aliyun.core.annotation.NameInMap("MediaWorkflowId")
         private String mediaWorkflowId;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Topology")
+        @com.aliyun.core.annotation.NameInMap("Topology")
         private String topology;
 
         private MediaWorkflow(Builder builder) {
@@ -146,7 +145,13 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             private String topology; 
 
             /**
-             * CreationTime.
+             * *   After you deactivate a media workflow, you can modify the workflow information.
+             * <p>
+             * *   After you delete or deactivate a media workflow, the workflow cannot be used. In this case, the workflow is not automatically triggered when you upload a file to the bucket specified by the workflow.
+             * 
+             * ## Limits on QPS
+             * 
+             * You can call this operation up to 100 times per second. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation. For more information, see [QPS limits](https://www.alibabacloud.com/help/en/apsaravideo-for-media-processing/latest/qps-limit).
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -154,7 +159,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * MediaWorkflowId.
+             * The ID of the media workflow that you want to deactivate. To obtain the ID of the media workflow, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Workflow Settings** in the left-side navigation pane.
              */
             public Builder mediaWorkflowId(String mediaWorkflowId) {
                 this.mediaWorkflowId = mediaWorkflowId;
@@ -162,7 +167,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The details of the media workflow.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -170,7 +175,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * State.
+             * The topology of the media workflow.The status of the media workflow. The value is **Inactive**.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -178,7 +183,7 @@ public class DeactivateMediaWorkflowResponseBody extends TeaModel {
             }
 
             /**
-             * Topology.
+             * The status of the media workflow. The value is **Inactive**.
              */
             public Builder topology(String topology) {
                 this.topology = topology;

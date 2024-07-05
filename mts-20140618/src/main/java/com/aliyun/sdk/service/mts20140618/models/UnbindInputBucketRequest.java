@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnbindInputBucketRequest</p>
  */
 public class UnbindInputBucketRequest extends Request {
-    @Query
-    @NameInMap("Bucket")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Bucket")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bucket;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("RoleArn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleArn")
     private String roleArn;
 
     private UnbindInputBucketRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class UnbindInputBucketRequest extends Request {
         } 
 
         /**
-         * Bucket.
+         * The name of the input media bucket to be unbound. To obtain the media bucket name, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Workflows** > **Media Buckets** in the left-side navigation pane. Alternatively, you can log on to the **Object Storage Service (OSS) console** and click **Historical Paths**.
          */
         public Builder bucket(String bucket) {
             this.putQueryParameter("Bucket", bucket);
@@ -170,7 +169,7 @@ public class UnbindInputBucketRequest extends Request {
         }
 
         /**
-         * RoleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the role used for delegated authorization.
          */
         public Builder roleArn(String roleArn) {
             this.putQueryParameter("RoleArn", roleArn);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTemplateListResponse</p>
  */
 public class QueryTemplateListResponse extends Response {
-    @NameInMap("headers")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
-    @NameInMap("body")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("statusCode")
+    private Integer statusCode;
+
+    @com.aliyun.core.annotation.NameInMap("body")
     private QueryTemplateListResponseBody body;
 
     private QueryTemplateListResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
+        this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
@@ -43,6 +44,13 @@ public class QueryTemplateListResponse extends Response {
     }
 
     /**
+     * @return statusCode
+     */
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return body
      */
     public QueryTemplateListResponseBody getBody() {
@@ -52,6 +60,8 @@ public class QueryTemplateListResponse extends Response {
     public interface Builder extends Response.Builder<QueryTemplateListResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
+
+        Builder statusCode(Integer statusCode);
 
         Builder body(QueryTemplateListResponseBody body);
 
@@ -64,6 +74,7 @@ public class QueryTemplateListResponse extends Response {
             extends Response.BuilderImpl<QueryTemplateListResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
+        private Integer statusCode; 
         private QueryTemplateListResponseBody body; 
 
         private BuilderImpl() {
@@ -73,6 +84,7 @@ public class QueryTemplateListResponse extends Response {
         private BuilderImpl(QueryTemplateListResponse response) {
             super(response);
             this.headers = response.headers;
+            this.statusCode = response.statusCode;
             this.body = response.body;
         } 
 
@@ -82,6 +94,15 @@ public class QueryTemplateListResponse extends Response {
         @Override
         public Builder headers(java.util.Map < String, String > headers) {
             this.headers = headers;
+            return this;
+        }
+
+        /**
+         * statusCode.
+         */
+        @Override
+        public Builder statusCode(Integer statusCode) {
+            this.statusCode = statusCode;
             return this;
         }
 

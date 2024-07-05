@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.mts20140618.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ImAuditRequest</p>
  */
 public class ImAuditRequest extends Request {
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("Contents")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Contents")
     private String contents;
 
-    @Query
-    @NameInMap("Images")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Images")
     private String images;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Scenes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scenes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String scenes;
 
     private ImAuditRequest(Builder builder) {
@@ -139,7 +138,7 @@ public class ImAuditRequest extends Request {
         } 
 
         /**
-         * BizType.
+         * The business type. By default, the public business type is used.
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -148,7 +147,7 @@ public class ImAuditRequest extends Request {
         }
 
         /**
-         * Contents.
+         * The custom text entries. You can specify up to 5 text entries. The value must be a JSON array. You must specify at least one of the Images and Contents parameters.
          */
         public Builder contents(String contents) {
             this.putQueryParameter("Contents", contents);
@@ -157,7 +156,11 @@ public class ImAuditRequest extends Request {
         }
 
         /**
-         * Images.
+         * The image URLs. You can specify up to 5 image URLs. The value must be a JSON array. To view the URLs of the images, you can log on to the **ApsaraVideo Media Processing (MPS) console** and choose **Media Management** > **Media List** in the left-side navigation pane. You must set at least one of the Images and Contents parameters. The image to be moderated must meet the following limits. Otherwise, the moderation task may fail.
+         * <p>
+         * 
+         * *   The image size cannot exceed 20 MB, the height or width of the image cannot exceed 30,000 pixels, and the image cannot exceed 0.25 billion pixels.
+         * *   We recommend that you upload images of at least 256 × 256 pixels to ensure required moderation result.
          */
         public Builder images(String images) {
             this.putQueryParameter("Images", images);
@@ -193,7 +196,16 @@ public class ImAuditRequest extends Request {
         }
 
         /**
-         * Scenes.
+         * The moderation scenarios. Separate multiple scenarios with commas (,). For example, if you specify {"porn","terrorism"} for this parameter, both pornographic content detection and terrorist content detection are performed on the images and text. Valid values:
+         * <p>
+         * 
+         * *   porn: pornography
+         * *   terrorism: terrorist content
+         * *   ad: ad violation
+         * *   qrcode: QR code
+         * *   live: undesirable scene
+         * *   logo: special logo
+         * *   antispam: text anti-spam (valid only for text)
          */
         public Builder scenes(String scenes) {
             this.putQueryParameter("Scenes", scenes);
