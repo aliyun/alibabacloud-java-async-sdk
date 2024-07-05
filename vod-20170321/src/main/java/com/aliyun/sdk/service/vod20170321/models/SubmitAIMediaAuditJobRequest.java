@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitAIMediaAuditJobRequest</p>
  */
 public class SubmitAIMediaAuditJobRequest extends Request {
-    @Query
-    @NameInMap("MediaAuditConfiguration")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaAuditConfiguration")
     private String mediaAuditConfiguration;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
-    @Query
-    @NameInMap("TemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateId")
     private String templateId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private SubmitAIMediaAuditJobRequest(Builder builder) {

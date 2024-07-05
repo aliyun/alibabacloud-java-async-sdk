@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCategoriesRequest</p>
  */
 public class GetCategoriesRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
-    @Query
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
     private GetCategoriesRequest(Builder builder) {
@@ -110,7 +109,11 @@ public class GetCategoriesRequest extends Request {
         } 
 
         /**
-         * The ID of the category. Default value: **-1**, which indicates the parent category ID of a level 1 category.
+         * The ID of the category. If you specify this parameter, the system queries the category based on the ID. You can specify only one category ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.
+         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -137,7 +140,7 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The method for sorting the results. Valid values:
+         * The sorting method of the results. Valid values:
          * <p>
          * 
          * *   **CreationTime:Desc** (default): The results are sorted in reverse chronological order based on the creation time.
@@ -150,11 +153,11 @@ public class GetCategoriesRequest extends Request {
         }
 
         /**
-         * The type of the category. Valid values:
+         * The type of the category. If you specify this parameter, the system queries the category based on the type. Valid values:
          * <p>
          * 
-         * *   **default** (default): default category
-         * *   **material**: material category
+         * *   **default** (default): audio, video, and image files
+         * *   **material**: short video materials
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);

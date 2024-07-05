@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeQpsDataResponseBody</p>
  */
 public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainRealTimeQpsDataResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
     } 
 
     public static class QpsModel extends TeaModel {
-        @NameInMap("Qps")
+        @com.aliyun.core.annotation.NameInMap("Qps")
         private Float qps;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private QpsModel(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
             private String timeStamp; 
 
             /**
-             * Qps.
+             * The number of queries per second.
              */
             public Builder qps(Float qps) {
                 this.qps = qps;
@@ -118,7 +117,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the returned data. The time follows the ISO 8601 standard. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -133,7 +132,7 @@ public class DescribeVodDomainRealTimeQpsDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("QpsModel")
+        @com.aliyun.core.annotation.NameInMap("QpsModel")
         private java.util.List < QpsModel> qpsModel;
 
         private Data(Builder builder) {

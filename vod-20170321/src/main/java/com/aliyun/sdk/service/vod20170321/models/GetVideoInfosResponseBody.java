@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVideoInfosResponseBody</p>
  */
 public class GetVideoInfosResponseBody extends TeaModel {
-    @NameInMap("NonExistVideoIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List < String > nonExistVideoIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoList")
+    @com.aliyun.core.annotation.NameInMap("VideoList")
     private java.util.List < VideoList> videoList;
 
     private GetVideoInfosResponseBody(Builder builder) {
@@ -92,61 +91,64 @@ public class GetVideoInfosResponseBody extends TeaModel {
     } 
 
     public static class VideoList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("DownloadSwitch")
+        private String downloadSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("RestoreExpiration")
+        @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
-        @NameInMap("RestoreStatus")
+        @com.aliyun.core.annotation.NameInMap("RestoreStatus")
         private String restoreStatus;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private java.util.List < String > snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
         private String templateGroupId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private VideoList(Builder builder) {
@@ -156,6 +158,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             this.coverURL = builder.coverURL;
             this.creationTime = builder.creationTime;
             this.description = builder.description;
+            this.downloadSwitch = builder.downloadSwitch;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
             this.restoreExpiration = builder.restoreExpiration;
@@ -219,6 +222,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return downloadSwitch
+         */
+        public String getDownloadSwitch() {
+            return this.downloadSwitch;
         }
 
         /**
@@ -319,6 +329,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             private String coverURL; 
             private String creationTime; 
             private String description; 
+            private String downloadSwitch; 
             private Float duration; 
             private String modificationTime; 
             private String restoreExpiration; 
@@ -366,7 +377,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video file was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the media file was created. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -382,7 +393,19 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The duration of the audio or video file. Unit: seconds. 86,400 seconds is equivalent to 24 hours.
+             * Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see [Configure download settings](~~86107~~). Valid values:
+             * <p>
+             * 
+             * *   **on**: the offline download feature is enabled.
+             * *   **off**: the offline download feature is not enabled.
+             */
+            public Builder downloadSwitch(String downloadSwitch) {
+                this.downloadSwitch = downloadSwitch;
+                return this;
+            }
+
+            /**
+             * The duration of the audio or video file. Unit: seconds.
              */
             public Builder duration(Float duration) {
                 this.duration = duration;
@@ -390,7 +413,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the audio or video file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*hh:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video file was last updated. The time is in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -398,7 +421,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The period of time in which the audio or video file remains in the restored state.
+             * The period of time in which the audio file remains in the restored state.
              */
             public Builder restoreExpiration(String restoreExpiration) {
                 this.restoreExpiration = restoreExpiration;
@@ -406,7 +429,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The restoration status of the audio or video file. Valid values:
+             * The restoration status of the audio file. Valid values:
              * <p>
              * 
              * *   **Processing**
@@ -427,7 +450,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The URL array of video snapshots.
+             * The video snapshot URLs.
              */
             public Builder snapshots(java.util.List < String > snapshots) {
                 this.snapshots = snapshots;
@@ -438,13 +461,13 @@ public class GetVideoInfosResponseBody extends TeaModel {
              * The status of the video. Valid values:
              * <p>
              * 
-             * *   **Uploading**: The video is being uploaded.
-             * *   **UploadFail**: The video failed to be uploaded.
-             * *   **UploadSucc**: The video is uploaded.
-             * *   **Transcoding**: The video is being transcoded.
-             * *   **TranscodeFail**: The video failed to be transcoded.
-             * *   **Blocked**: The video is blocked.
-             * *   **Normal**: The video is normal.
+             * *   **Uploading**
+             * *   **UploadFail**
+             * *   **UploadSucc**
+             * *   **Transcoding**
+             * *   **TranscodeFail**
+             * *   **Blocked**
+             * *   **Normal**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -452,7 +475,7 @@ public class GetVideoInfosResponseBody extends TeaModel {
             }
 
             /**
-             * The storage class of the audio or video file. Valid values:
+             * The storage class of the audio file. Valid values:
              * <p>
              * 
              * *   **Standard**: All media resources are stored as Standard objects.
@@ -461,8 +484,8 @@ public class GetVideoInfosResponseBody extends TeaModel {
              * *   **ColdArchive**: All media resources are stored as Cold Archive objects.
              * *   **SourceIA**: Only the source files are IA objects.
              * *   **SourceArchive**: Only the source files are Archive objects.
-             * *   **SourceColdArchive**: Only the source files are Cold Archive objects.
-             * *   **Changing**: The storage class of the audio or video file is being changed.
+             * *   **SourceColdArchive**: Only the source file is stored as a Cold Archive object.
+             * *   **Changing**: The storage class of the video file is being changed.
              * *   **SourceChanging**: The storage class of the source file is being changed.
              */
             public Builder storageClass(String storageClass) {

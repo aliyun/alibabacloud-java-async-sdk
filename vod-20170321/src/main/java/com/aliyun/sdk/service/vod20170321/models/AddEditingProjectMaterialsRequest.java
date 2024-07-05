@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,35 +11,35 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddEditingProjectMaterialsRequest</p>
  */
 public class AddEditingProjectMaterialsRequest extends Request {
-    @Query
-    @NameInMap("MaterialIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaterialIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String materialIds;
 
-    @Query
-    @NameInMap("MaterialType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaterialType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String materialType;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ProjectId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String projectId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
     private AddEditingProjectMaterialsRequest(Builder builder) {

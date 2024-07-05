@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaRefreshJobsResponseBody</p>
  */
 public class GetMediaRefreshJobsResponseBody extends TeaModel {
-    @NameInMap("MediaRefreshJobs")
+    @com.aliyun.core.annotation.NameInMap("MediaRefreshJobs")
     private java.util.List < MediaRefreshJobs> mediaRefreshJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaRefreshJobsResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class GetMediaRefreshJobsResponseBody extends TeaModel {
     } 
 
     public static class MediaRefreshJobs extends TeaModel {
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FilterPolicy")
+        @com.aliyun.core.annotation.NameInMap("FilterPolicy")
         private String filterPolicy;
 
-        @NameInMap("GmtCreate")
+        @com.aliyun.core.annotation.NameInMap("GmtCreate")
         private String gmtCreate;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaRefreshJobId")
+        @com.aliyun.core.annotation.NameInMap("MediaRefreshJobId")
         private String mediaRefreshJobId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SuccessPlayUrls")
+        @com.aliyun.core.annotation.NameInMap("SuccessPlayUrls")
         private String successPlayUrls;
 
-        @NameInMap("TaskIds")
+        @com.aliyun.core.annotation.NameInMap("TaskIds")
         private String taskIds;
 
-        @NameInMap("TaskType")
+        @com.aliyun.core.annotation.NameInMap("TaskType")
         private String taskType;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private MediaRefreshJobs(Builder builder) {

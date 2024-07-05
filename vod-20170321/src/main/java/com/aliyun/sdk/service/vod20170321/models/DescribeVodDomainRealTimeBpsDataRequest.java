@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeBpsDataRequest</p>
  */
 public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainRealTimeBpsDataRequest(Builder builder) {
@@ -125,7 +124,7 @@ public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +133,10 @@ public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * <p>
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,7 +145,7 @@ public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the ISP. If you do not set this parameter, all ISPs are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -152,7 +154,7 @@ public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. If you do not set this parameter, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -170,7 +172,10 @@ public class DescribeVodDomainRealTimeBpsDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

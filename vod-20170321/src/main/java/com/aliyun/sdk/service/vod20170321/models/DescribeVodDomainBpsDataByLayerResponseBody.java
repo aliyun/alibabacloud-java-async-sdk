@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainBpsDataByLayerResponseBody</p>
  */
 public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
-    @NameInMap("BpsDataInterval")
+    @com.aliyun.core.annotation.NameInMap("BpsDataInterval")
     private BpsDataInterval bpsDataInterval;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private Integer dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainBpsDataByLayerResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * BpsDataInterval.
+         * The bandwidth returned at each time interval. Unit: bit/s.
          */
         public Builder bpsDataInterval(BpsDataInterval bpsDataInterval) {
             this.bpsDataInterval = bpsDataInterval;
@@ -70,7 +69,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * DataInterval.
+         * The time interval between the entries returned. Unit: seconds.
          */
         public Builder dataInterval(Integer dataInterval) {
             this.dataInterval = dataInterval;
@@ -78,7 +77,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -92,13 +91,13 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("TrafficValue")
+        @com.aliyun.core.annotation.NameInMap("TrafficValue")
         private Long trafficValue;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private Double value;
 
         private DataModule(Builder builder) {
@@ -142,7 +141,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             private Double value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -150,7 +149,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * TrafficValue.
+             * The total traffic. Unit: bytes.
              */
             public Builder trafficValue(Long trafficValue) {
                 this.trafficValue = trafficValue;
@@ -158,7 +157,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The peak bandwidth. Unit: bit/s.
              */
             public Builder value(Double value) {
                 this.value = value;
@@ -173,7 +172,7 @@ public class DescribeVodDomainBpsDataByLayerResponseBody extends TeaModel {
 
     }
     public static class BpsDataInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private BpsDataInterval(Builder builder) {

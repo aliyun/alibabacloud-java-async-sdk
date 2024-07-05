@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitAIJobResponseBody</p>
  */
 public class SubmitAIJobResponseBody extends TeaModel {
-    @NameInMap("AIJobList")
+    @com.aliyun.core.annotation.NameInMap("AIJobList")
     private AIJobList AIJobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitAIJobResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class SubmitAIJobResponseBody extends TeaModel {
     } 
 
     public static class AIJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AIJob(Builder builder) {
@@ -157,7 +156,7 @@ public class SubmitAIJobResponseBody extends TeaModel {
 
     }
     public static class AIJobList extends TeaModel {
-        @NameInMap("AIJob")
+        @com.aliyun.core.annotation.NameInMap("AIJob")
         private java.util.List < AIJob> AIJob;
 
         private AIJobList(Builder builder) {

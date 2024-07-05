@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,26 +11,26 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateMediaStorageClassRequest</p>
  */
 public class UpdateMediaStorageClassRequest extends Request {
-    @Query
-    @NameInMap("AllowUpdateWithoutTimeLimit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AllowUpdateWithoutTimeLimit")
     private Boolean allowUpdateWithoutTimeLimit;
 
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
-    @Query
-    @NameInMap("RestoreTier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTier")
     private String restoreTier;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
-    @Query
-    @NameInMap("StorageClass")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageClass")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String storageClass;
 
     private UpdateMediaStorageClassRequest(Builder builder) {

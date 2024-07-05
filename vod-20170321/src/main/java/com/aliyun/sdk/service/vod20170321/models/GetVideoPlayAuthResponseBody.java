@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVideoPlayAuthResponseBody</p>
  */
 public class GetVideoPlayAuthResponseBody extends TeaModel {
-    @NameInMap("PlayAuth")
+    @com.aliyun.core.annotation.NameInMap("PlayAuth")
     private String playAuth;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoMeta")
+    @com.aliyun.core.annotation.NameInMap("VideoMeta")
     private VideoMeta videoMeta;
 
     private GetVideoPlayAuthResponseBody(Builder builder) {
@@ -78,7 +77,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
         }
 
         /**
-         * The metadata of the media file.
+         * The metadata of the audio or video file.
          */
         public Builder videoMeta(VideoMeta videoMeta) {
             this.videoMeta = videoMeta;
@@ -92,19 +91,19 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
     } 
 
     public static class VideoMeta extends TeaModel {
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private VideoMeta(Builder builder) {
@@ -182,7 +181,7 @@ public class GetVideoPlayAuthResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the media file. For more information about the value range and description, see [Status: the status of a video](~~52839~~).
+             * The status of the media file. For more information about the value range and description, see [Status: the status of a video](~~52839#title-vqg-8cz-7p8~~).
              */
             public Builder status(String status) {
                 this.status = status;

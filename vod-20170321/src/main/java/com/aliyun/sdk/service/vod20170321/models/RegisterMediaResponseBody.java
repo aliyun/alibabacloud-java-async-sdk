@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterMediaResponseBody</p>
  */
 public class RegisterMediaResponseBody extends TeaModel {
-    @NameInMap("FailedFileURLs")
+    @com.aliyun.core.annotation.NameInMap("FailedFileURLs")
     private java.util.List < String > failedFileURLs;
 
-    @NameInMap("RegisteredMediaList")
+    @com.aliyun.core.annotation.NameInMap("RegisteredMediaList")
     private java.util.List < RegisteredMediaList> registeredMediaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RegisterMediaResponseBody(Builder builder) {
@@ -92,13 +91,13 @@ public class RegisterMediaResponseBody extends TeaModel {
     } 
 
     public static class RegisteredMediaList extends TeaModel {
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("NewRegister")
+        @com.aliyun.core.annotation.NameInMap("NewRegister")
         private Boolean newRegister;
 
         private RegisteredMediaList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMessageCallbackResponseBody</p>
  */
 public class GetMessageCallbackResponseBody extends TeaModel {
-    @NameInMap("MessageCallback")
+    @com.aliyun.core.annotation.NameInMap("MessageCallback")
     private MessageCallback messageCallback;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMessageCallbackResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class GetMessageCallbackResponseBody extends TeaModel {
     } 
 
     public static class MessageCallback extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AuthKey")
+        @com.aliyun.core.annotation.NameInMap("AuthKey")
         private String authKey;
 
-        @NameInMap("AuthSwitch")
+        @com.aliyun.core.annotation.NameInMap("AuthSwitch")
         private String authSwitch;
 
-        @NameInMap("CallbackType")
+        @com.aliyun.core.annotation.NameInMap("CallbackType")
         private String callbackType;
 
-        @NameInMap("CallbackURL")
+        @com.aliyun.core.annotation.NameInMap("CallbackURL")
         private String callbackURL;
 
-        @NameInMap("EventTypeList")
+        @com.aliyun.core.annotation.NameInMap("EventTypeList")
         private String eventTypeList;
 
-        @NameInMap("MnsEndpoint")
+        @com.aliyun.core.annotation.NameInMap("MnsEndpoint")
         private String mnsEndpoint;
 
-        @NameInMap("MnsQueueName")
+        @com.aliyun.core.annotation.NameInMap("MnsQueueName")
         private String mnsQueueName;
 
         private MessageCallback(Builder builder) {

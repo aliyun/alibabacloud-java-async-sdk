@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MoveAppResourceResponseBody</p>
  */
 public class MoveAppResourceResponseBody extends TeaModel {
-    @NameInMap("FailedResourceIds")
+    @com.aliyun.core.annotation.NameInMap("FailedResourceIds")
     private java.util.List < String > failedResourceIds;
 
-    @NameInMap("NonExistResourceIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistResourceIds")
     private java.util.List < String > nonExistResourceIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private MoveAppResourceResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeByteHitRateDataResponseBody</p>
  */
 public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainRealTimeByteHitRateDataResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
     } 
 
     public static class ByteHitRateDataModel extends TeaModel {
-        @NameInMap("ByteHitRate")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRate")
         private Float byteHitRate;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private ByteHitRateDataModel(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
             private String timeStamp; 
 
             /**
-             * ByteHitRate.
+             * The byte hit ratio in percentage.
              */
             public Builder byteHitRate(Float byteHitRate) {
                 this.byteHitRate = byteHitRate;
@@ -118,7 +117,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -133,7 +132,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataResponseBody extends TeaMod
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("ByteHitRateDataModel")
+        @com.aliyun.core.annotation.NameInMap("ByteHitRateDataModel")
         private java.util.List < ByteHitRateDataModel> byteHitRateDataModel;
 
         private Data(Builder builder) {

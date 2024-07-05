@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainConfigsResponseBody</p>
  */
 public class DescribeVodDomainConfigsResponseBody extends TeaModel {
-    @NameInMap("DomainConfigs")
+    @com.aliyun.core.annotation.NameInMap("DomainConfigs")
     private DomainConfigs domainConfigs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainConfigsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
     } 
 
     public static class FunctionArg extends TeaModel {
-        @NameInMap("ArgName")
+        @com.aliyun.core.annotation.NameInMap("ArgName")
         private String argName;
 
-        @NameInMap("ArgValue")
+        @com.aliyun.core.annotation.NameInMap("ArgValue")
         private String argValue;
 
         private FunctionArg(Builder builder) {
@@ -133,7 +132,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
     }
     public static class FunctionArgs extends TeaModel {
-        @NameInMap("FunctionArg")
+        @com.aliyun.core.annotation.NameInMap("FunctionArg")
         private java.util.List < FunctionArg> functionArg;
 
         private FunctionArgs(Builder builder) {
@@ -174,16 +173,16 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
     }
     public static class DomainConfig extends TeaModel {
-        @NameInMap("ConfigId")
+        @com.aliyun.core.annotation.NameInMap("ConfigId")
         private String configId;
 
-        @NameInMap("FunctionArgs")
+        @com.aliyun.core.annotation.NameInMap("FunctionArgs")
         private FunctionArgs functionArgs;
 
-        @NameInMap("FunctionName")
+        @com.aliyun.core.annotation.NameInMap("FunctionName")
         private String functionName;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private DomainConfig(Builder builder) {
@@ -281,7 +280,7 @@ public class DescribeVodDomainConfigsResponseBody extends TeaModel {
 
     }
     public static class DomainConfigs extends TeaModel {
-        @NameInMap("DomainConfig")
+        @com.aliyun.core.annotation.NameInMap("DomainConfig")
         private java.util.List < DomainConfig> domainConfig;
 
         private DomainConfigs(Builder builder) {

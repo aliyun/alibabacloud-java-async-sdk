@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestoreMediaRequest</p>
  */
 public class RestoreMediaRequest extends Request {
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
-    @Query
-    @NameInMap("RestoreDays")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreDays")
     private String restoreDays;
 
-    @Query
-    @NameInMap("RestoreTier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RestoreTier")
     private String restoreTier;
 
-    @Query
-    @NameInMap("Scope")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scope")
     private String scope;
 
     private RestoreMediaRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class RestoreMediaRequest extends Request {
         } 
 
         /**
-         * The ID of the media asset. You can specify a maximum of 20 IDs. Separate multiple IDs with commas (,). You can use one of the following methods to obtain the ID of the media asset.
+         * The ID of the media asset (VideoId). Separate multiple IDs with commas (,). You can specify a maximum of 20 IDs. You can use one of the following methods to obtain the ID of the media asset:
          * <p>
          * 
          * *   Log on to the ApsaraVideo VOD console. In the left-side navigation pane, choose Media Files > Audio/Video. On the Video and Audio page, view the ID of the media asset. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.

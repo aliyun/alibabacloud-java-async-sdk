@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetImageInfosResponseBody</p>
  */
 public class GetImageInfosResponseBody extends TeaModel {
-    @NameInMap("ImageInfo")
+    @com.aliyun.core.annotation.NameInMap("ImageInfo")
     private java.util.List < ImageInfo> imageInfo;
 
-    @NameInMap("NonExistImageIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistImageIds")
     private java.util.List < String > nonExistImageIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetImageInfosResponseBody(Builder builder) {
@@ -92,19 +91,19 @@ public class GetImageInfosResponseBody extends TeaModel {
     } 
 
     public static class Mezzanine extends TeaModel {
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Integer height;
 
-        @NameInMap("OriginalFileName")
+        @com.aliyun.core.annotation.NameInMap("OriginalFileName")
         private String originalFileName;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Integer width;
 
         private Mezzanine(Builder builder) {
@@ -213,43 +212,43 @@ public class GetImageInfosResponseBody extends TeaModel {
 
     }
     public static class ImageInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ImageType")
+        @com.aliyun.core.annotation.NameInMap("ImageType")
         private String imageType;
 
-        @NameInMap("Mezzanine")
+        @com.aliyun.core.annotation.NameInMap("Mezzanine")
         private Mezzanine mezzanine;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private ImageInfo(Builder builder) {

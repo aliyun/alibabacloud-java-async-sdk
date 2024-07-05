@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadStreamByURLResponseBody</p>
  */
 public class UploadStreamByURLResponseBody extends TeaModel {
-    @NameInMap("FileURL")
+    @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SourceURL")
+    @com.aliyun.core.annotation.NameInMap("SourceURL")
     private String sourceURL;
 
-    @NameInMap("StreamJobId")
+    @com.aliyun.core.annotation.NameInMap("StreamJobId")
     private String streamJobId;
 
     private UploadStreamByURLResponseBody(Builder builder) {

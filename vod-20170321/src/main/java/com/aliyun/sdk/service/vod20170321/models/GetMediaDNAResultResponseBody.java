@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaDNAResultResponseBody</p>
  */
 public class GetMediaDNAResultResponseBody extends TeaModel {
-    @NameInMap("DNAResult")
+    @com.aliyun.core.annotation.NameInMap("DNAResult")
     private DNAResult DNAResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaDNAResultResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
     } 
 
     public static class Duplication extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Duplication(Builder builder) {
@@ -133,10 +132,10 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     }
     public static class Input extends TeaModel {
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Start")
+        @com.aliyun.core.annotation.NameInMap("Start")
         private String start;
 
         private Input(Builder builder) {
@@ -194,10 +193,10 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     }
     public static class Detail extends TeaModel {
-        @NameInMap("Duplication")
+        @com.aliyun.core.annotation.NameInMap("Duplication")
         private Duplication duplication;
 
-        @NameInMap("Input")
+        @com.aliyun.core.annotation.NameInMap("Input")
         private Input input;
 
         private Detail(Builder builder) {
@@ -255,13 +254,13 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     }
     public static class VideoDNA extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
-        @NameInMap("PrimaryKey")
+        @com.aliyun.core.annotation.NameInMap("PrimaryKey")
         private String primaryKey;
 
-        @NameInMap("Similarity")
+        @com.aliyun.core.annotation.NameInMap("Similarity")
         private String similarity;
 
         private VideoDNA(Builder builder) {
@@ -336,7 +335,7 @@ public class GetMediaDNAResultResponseBody extends TeaModel {
 
     }
     public static class DNAResult extends TeaModel {
-        @NameInMap("VideoDNA")
+        @com.aliyun.core.annotation.NameInMap("VideoDNA")
         private java.util.List < VideoDNA> videoDNA;
 
         private DNAResult(Builder builder) {

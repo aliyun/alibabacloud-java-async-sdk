@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayTopVideosResponseBody</p>
  */
 public class DescribePlayTopVideosResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TopPlayVideos")
+    @com.aliyun.core.annotation.NameInMap("TopPlayVideos")
     private TopPlayVideos topPlayVideos;
 
-    @NameInMap("TotalNum")
+    @com.aliyun.core.annotation.NameInMap("TotalNum")
     private Long totalNum;
 
     private DescribePlayTopVideosResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
     } 
 
     public static class TopPlayVideoStatis extends TeaModel {
-        @NameInMap("PlayDuration")
+        @com.aliyun.core.annotation.NameInMap("PlayDuration")
         private String playDuration;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UV")
+        @com.aliyun.core.annotation.NameInMap("UV")
         private String uv;
 
-        @NameInMap("VV")
+        @com.aliyun.core.annotation.NameInMap("VV")
         private String vv;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private TopPlayVideoStatis(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribePlayTopVideosResponseBody extends TeaModel {
 
     }
     public static class TopPlayVideos extends TeaModel {
-        @NameInMap("TopPlayVideoStatis")
+        @com.aliyun.core.annotation.NameInMap("TopPlayVideoStatis")
         private java.util.List < TopPlayVideoStatis> topPlayVideoStatis;
 
         private TopPlayVideos(Builder builder) {

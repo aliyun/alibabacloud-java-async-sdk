@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUploadAttachedMediaRequest</p>
  */
 public class CreateUploadAttachedMediaRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("BusinessType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String businessType;
 
-    @Query
-    @NameInMap("CateIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateIds")
     private String cateIds;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
     private String fileName;
 
-    @Query
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private String fileSize;
 
-    @Query
-    @NameInMap("MediaExt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaExt")
     private String mediaExt;
 
-    @Query
-    @NameInMap("StorageLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocation")
     private String storageLocation;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private CreateUploadAttachedMediaRequest(Builder builder) {

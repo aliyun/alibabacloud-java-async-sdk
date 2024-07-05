@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaAuditResultResponseBody</p>
  */
 public class GetMediaAuditResultResponseBody extends TeaModel {
-    @NameInMap("MediaAuditResult")
+    @com.aliyun.core.annotation.NameInMap("MediaAuditResult")
     private MediaAuditResult mediaAuditResult;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaAuditResultResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
     } 
 
     public static class AudioResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private AudioResult(Builder builder) {
@@ -190,16 +189,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class Result extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
         private Result(Builder builder) {
@@ -324,19 +323,19 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class ImageResult extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Result")
+        @com.aliyun.core.annotation.NameInMap("Result")
         private java.util.List < Result> result;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private ImageResult(Builder builder) {
@@ -455,22 +454,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class TextResult extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Scene")
+        @com.aliyun.core.annotation.NameInMap("Scene")
         private String scene;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private TextResult(Builder builder) {
@@ -610,10 +609,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class CounterList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private CounterList(Builder builder) {
@@ -675,16 +674,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class TopList extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private TopList(Builder builder) {
@@ -780,22 +779,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class AdResult extends TeaModel {
-        @NameInMap("AverageScore")
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
 
-        @NameInMap("CounterList")
+        @com.aliyun.core.annotation.NameInMap("CounterList")
         private java.util.List < CounterList> counterList;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MaxScore")
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
         private String maxScore;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TopList")
+        @com.aliyun.core.annotation.NameInMap("TopList")
         private java.util.List < TopList> topList;
 
         private AdResult(Builder builder) {
@@ -930,10 +929,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LiveResultCounterList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private LiveResultCounterList(Builder builder) {
@@ -995,16 +994,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LiveResultTopList extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private LiveResultTopList(Builder builder) {
@@ -1100,22 +1099,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LiveResult extends TeaModel {
-        @NameInMap("AverageScore")
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
 
-        @NameInMap("CounterList")
+        @com.aliyun.core.annotation.NameInMap("CounterList")
         private java.util.List < LiveResultCounterList> counterList;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MaxScore")
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
         private String maxScore;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TopList")
+        @com.aliyun.core.annotation.NameInMap("TopList")
         private java.util.List < LiveResultTopList> topList;
 
         private LiveResult(Builder builder) {
@@ -1250,10 +1249,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LogoResultCounterList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private LogoResultCounterList(Builder builder) {
@@ -1315,16 +1314,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LogoResultTopList extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private LogoResultTopList(Builder builder) {
@@ -1420,22 +1419,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class LogoResult extends TeaModel {
-        @NameInMap("AverageScore")
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
 
-        @NameInMap("CounterList")
+        @com.aliyun.core.annotation.NameInMap("CounterList")
         private java.util.List < LogoResultCounterList> counterList;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MaxScore")
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
         private String maxScore;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TopList")
+        @com.aliyun.core.annotation.NameInMap("TopList")
         private java.util.List < LogoResultTopList> topList;
 
         private LogoResult(Builder builder) {
@@ -1570,10 +1569,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class PornResultCounterList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private PornResultCounterList(Builder builder) {
@@ -1636,16 +1635,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class PornResultTopList extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private PornResultTopList(Builder builder) {
@@ -1742,22 +1741,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class PornResult extends TeaModel {
-        @NameInMap("AverageScore")
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
 
-        @NameInMap("CounterList")
+        @com.aliyun.core.annotation.NameInMap("CounterList")
         private java.util.List < PornResultCounterList> counterList;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MaxScore")
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
         private String maxScore;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TopList")
+        @com.aliyun.core.annotation.NameInMap("TopList")
         private java.util.List < PornResultTopList> topList;
 
         private PornResult(Builder builder) {
@@ -1888,10 +1887,10 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class TerrorismResultCounterList extends TeaModel {
-        @NameInMap("Count")
+        @com.aliyun.core.annotation.NameInMap("Count")
         private Integer count;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
         private TerrorismResultCounterList(Builder builder) {
@@ -1965,16 +1964,16 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class TerrorismResultTopList extends TeaModel {
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private TerrorismResultTopList(Builder builder) {
@@ -2082,22 +2081,22 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class TerrorismResult extends TeaModel {
-        @NameInMap("AverageScore")
+        @com.aliyun.core.annotation.NameInMap("AverageScore")
         private String averageScore;
 
-        @NameInMap("CounterList")
+        @com.aliyun.core.annotation.NameInMap("CounterList")
         private java.util.List < TerrorismResultCounterList> counterList;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("MaxScore")
+        @com.aliyun.core.annotation.NameInMap("MaxScore")
         private String maxScore;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TopList")
+        @com.aliyun.core.annotation.NameInMap("TopList")
         private java.util.List < TerrorismResultTopList> topList;
 
         private TerrorismResult(Builder builder) {
@@ -2244,25 +2243,25 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class VideoResult extends TeaModel {
-        @NameInMap("AdResult")
+        @com.aliyun.core.annotation.NameInMap("AdResult")
         private AdResult adResult;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("LiveResult")
+        @com.aliyun.core.annotation.NameInMap("LiveResult")
         private LiveResult liveResult;
 
-        @NameInMap("LogoResult")
+        @com.aliyun.core.annotation.NameInMap("LogoResult")
         private LogoResult logoResult;
 
-        @NameInMap("PornResult")
+        @com.aliyun.core.annotation.NameInMap("PornResult")
         private PornResult pornResult;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TerrorismResult")
+        @com.aliyun.core.annotation.NameInMap("TerrorismResult")
         private TerrorismResult terrorismResult;
 
         private VideoResult(Builder builder) {
@@ -2415,25 +2414,25 @@ public class GetMediaAuditResultResponseBody extends TeaModel {
 
     }
     public static class MediaAuditResult extends TeaModel {
-        @NameInMap("AbnormalModules")
+        @com.aliyun.core.annotation.NameInMap("AbnormalModules")
         private String abnormalModules;
 
-        @NameInMap("AudioResult")
+        @com.aliyun.core.annotation.NameInMap("AudioResult")
         private java.util.List < AudioResult> audioResult;
 
-        @NameInMap("ImageResult")
+        @com.aliyun.core.annotation.NameInMap("ImageResult")
         private java.util.List < ImageResult> imageResult;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("Suggestion")
+        @com.aliyun.core.annotation.NameInMap("Suggestion")
         private String suggestion;
 
-        @NameInMap("TextResult")
+        @com.aliyun.core.annotation.NameInMap("TextResult")
         private java.util.List < TextResult> textResult;
 
-        @NameInMap("VideoResult")
+        @com.aliyun.core.annotation.NameInMap("VideoResult")
         private VideoResult videoResult;
 
         private MediaAuditResult(Builder builder) {

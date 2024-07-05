@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDigitalWatermarkExtractResultResponseBody</p>
  */
 public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
-    @NameInMap("AiExtractResultList")
+    @com.aliyun.core.annotation.NameInMap("AiExtractResultList")
     private java.util.List < AiExtractResultList> aiExtractResultList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetDigitalWatermarkExtractResultResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the job.
+         * The details of the watermark extraction job.
          */
         public Builder aiExtractResultList(java.util.List < AiExtractResultList> aiExtractResultList) {
             this.aiExtractResultList = aiExtractResultList;
@@ -72,22 +71,22 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
     } 
 
     public static class AiExtractResultList extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("WaterMarkText")
+        @com.aliyun.core.annotation.NameInMap("WaterMarkText")
         private String waterMarkText;
 
         private AiExtractResultList(Builder builder) {
@@ -158,7 +157,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             private String waterMarkText; 
 
             /**
-             * The time when the job was created.
+             * The time when the watermark extraction job was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -174,7 +173,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the job.
+             * The ID of the watermark extraction job.
              */
             public Builder jobId(String jobId) {
                 this.jobId = jobId;
@@ -182,7 +181,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the job was modified.
+             * The time when the watermark extraction job was last updated.
              */
             public Builder modifyTime(String modifyTime) {
                 this.modifyTime = modifyTime;
@@ -190,7 +189,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the job. Valid values:
+             * The status of the watermark extraction job. Valid values:
              * <p>
              * 
              * *   **Success**
@@ -203,7 +202,7 @@ public class GetDigitalWatermarkExtractResultResponseBody extends TeaModel {
             }
 
             /**
-             * The extracted watermark text.
+             * The extracted watermark content.
              */
             public Builder waterMarkText(String waterMarkText) {
                 this.waterMarkText = waterMarkText;

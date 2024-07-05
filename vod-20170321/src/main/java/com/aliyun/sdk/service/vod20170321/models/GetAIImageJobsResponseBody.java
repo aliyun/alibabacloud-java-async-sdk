@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAIImageJobsResponseBody</p>
  */
 public class GetAIImageJobsResponseBody extends TeaModel {
-    @NameInMap("AIImageJobList")
+    @com.aliyun.core.annotation.NameInMap("AIImageJobList")
     private java.util.List < AIImageJobList> AIImageJobList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAIImageJobsResponseBody(Builder builder) {
@@ -72,34 +71,34 @@ public class GetAIImageJobsResponseBody extends TeaModel {
     } 
 
     public static class AIImageJobList extends TeaModel {
-        @NameInMap("AIImageResult")
+        @com.aliyun.core.annotation.NameInMap("AIImageResult")
         private String AIImageResult;
 
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private AIImageJobList(Builder builder) {

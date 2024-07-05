@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,33 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitTranscodeJobsRequest</p>
  */
 public class SubmitTranscodeJobsRequest extends Request {
-    @Query
-    @NameInMap("EncryptConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptConfig")
     private String encryptConfig;
 
-    @Query
-    @NameInMap("OverrideParams")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OverrideParams")
     private String overrideParams;
 
-    @Query
-    @NameInMap("PipelineId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PipelineId")
     private String pipelineId;
 
-    @Query
-    @NameInMap("Priority")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
     private String priority;
 
-    @Query
-    @NameInMap("TemplateGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateGroupId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
     private SubmitTranscodeJobsRequest(Builder builder) {

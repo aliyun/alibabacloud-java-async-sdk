@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeByteHitRateDataRequest</p>
  */
 public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainRealTimeByteHitRateDataRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -106,7 +105,12 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -124,7 +128,10 @@ public class DescribeVodDomainRealTimeByteHitRateDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

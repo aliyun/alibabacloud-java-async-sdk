@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateCategoryRequest</p>
  */
 public class UpdateCategoryRequest extends Request {
-    @Query
-    @NameInMap("CateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cateId;
 
-    @Query
-    @NameInMap("CateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String cateName;
 
     private UpdateCategoryRequest(Builder builder) {
@@ -70,7 +69,11 @@ public class UpdateCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category.
+         * The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the **Audio and Video / Image Category** or **Short Video Material Category** tab, view the category ID.
+         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);
@@ -83,7 +86,7 @@ public class UpdateCategoryRequest extends Request {
          * <p>
          * 
          * *   The value can be up to 64 bytes in length.
-         * *   The string must be encoded in the UTF-8 format.
+         * *   The value must be encoded in UTF-8.
          */
         public Builder cateName(String cateName) {
             this.putQueryParameter("CateName", cateName);

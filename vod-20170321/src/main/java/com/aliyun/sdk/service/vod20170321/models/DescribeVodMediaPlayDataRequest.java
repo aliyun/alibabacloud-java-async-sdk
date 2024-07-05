@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodMediaPlayDataRequest</p>
  */
 public class DescribeVodMediaPlayDataRequest extends Request {
-    @Query
-    @NameInMap("MediaId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
     private String mediaId;
 
-    @Query
-    @NameInMap("OrderName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderName")
     private String orderName;
 
-    @Query
-    @NameInMap("OrderType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrderType")
     private String orderType;
 
-    @Query
-    @NameInMap("Os")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Os")
     private String os;
 
-    @Query
-    @NameInMap("PageNo")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long pageSize;
 
-    @Query
-    @NameInMap("PlayDate")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayDate")
     private String playDate;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("TerminalType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TerminalType")
     private String terminalType;
 
     private DescribeVodMediaPlayDataRequest(Builder builder) {
@@ -168,7 +167,12 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         } 
 
         /**
-         * MediaId.
+         * The ID of the media file (VideoId). You can specify this parameter to query all playback data of a media file. You can specify only one media ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the media ID.
+         * *   Obtain the value of the VideoId parameter in the response to the [CreateUploadVideo](~~CreateUploadVideo~~) operation that you called to upload the audio or video file.
+         * *   Obtain the value of VideoId by calling the [SearchMedia](~~SearchMedia~~) operation. This method is applicable to files that have been uploaded.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);
@@ -177,7 +181,13 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * OrderName.
+         * The name of the metric. This parameter must be specified together with the `OrderType` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
+         * <p>
+         * 
+         * *   **PlaySuccessVv**: the total number of views.
+         * *   **PlayPerVv**: the average views per viewer.
+         * *   **PlayDuration**: the total playback duration.
+         * *   **PlayDurationPerUv**: the average playback duration per viewer.
          */
         public Builder orderName(String orderName) {
             this.putQueryParameter("OrderName", orderName);
@@ -186,7 +196,11 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * OrderType.
+         * The sort type. This parameter must be specified together with the `OrderName` parameter. You can specify this parameter to sort the returned data in ascending or descending order based on specific metrics. Valid values:
+         * <p>
+         * 
+         * *   **ASC**: The returned data is sorted in ascending order.
+         * *   **DESC**: The returned data is sorted in descending order.
          */
         public Builder orderType(String orderType) {
             this.putQueryParameter("OrderType", orderType);
@@ -195,7 +209,14 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * Os.
+         * The operating system of the player. You can specify this parameter to query all playback data generated on a specific operating system. Valid values:
+         * <p>
+         * 
+         * *   **Android**
+         * *   **iOS**
+         * *   **Windows**
+         * *   **macOS**
+         * *   **Linux**
          */
         public Builder os(String os) {
             this.putQueryParameter("Os", os);
@@ -204,7 +225,7 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * PageNo.
+         * The number of the page. You can specify a page number to return data from the specified page.
          */
         public Builder pageNo(Long pageNo) {
             this.putQueryParameter("PageNo", pageNo);
@@ -213,7 +234,7 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100.
          */
         public Builder pageSize(Long pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -222,7 +243,7 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * PlayDate.
+         * The playback time. You can specify this parameter to query all playback data generated only on the specified date. You can query data only by day. Specify the value in the yyyyMMdd format.
          */
         public Builder playDate(String playDate) {
             this.putQueryParameter("PlayDate", playDate);
@@ -231,7 +252,17 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * Region.
+         * The region in which ApsaraVideo VOD is activated. You can specify this parameter to query all playback data generated only in a specific region. Valid values:
+         * <p>
+         * 
+         * *   **cn-beijing**: China (Beijing)
+         * *   **cn-shanghai**: China (Shanghai)
+         * *   **cn-shenzhen**: China (Shenzhen)
+         * *   **ap-northeast-1**: Japan (Tokyo)
+         * *   **ap-southeast-1**: Singapore
+         * *   **ap-southeast-5**: Indonesia (Jakarta)
+         * *   **eu-central-1**: Germany (Frankfurt)
+         * *   **ap-south-1**: India (Mumbai)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -240,7 +271,11 @@ public class DescribeVodMediaPlayDataRequest extends Request {
         }
 
         /**
-         * TerminalType.
+         * The type of the player SDK. You can specify this parameter to query all playback data generated by using a specific type of player SDK. Valid values:
+         * <p>
+         * 
+         * *   **Native**: ApsaraVideo Player SDK for Android or ApsaraVideo Player SDK for iOS
+         * *   **Web**: ApsaraVideo Player SDK for Web
          */
         public Builder terminalType(String terminalType) {
             this.putQueryParameter("TerminalType", terminalType);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayTopVideosRequest</p>
  */
 public class DescribePlayTopVideosRequest extends Request {
-    @Query
-    @NameInMap("BizDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bizDate;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Long pageNo;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 1000, minimum = 10)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 1000, minimum = 10)
     private Long pageSize;
 
     private DescribePlayTopVideosRequest(Builder builder) {

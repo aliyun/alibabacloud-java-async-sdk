@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTranscodeTaskResponseBody</p>
  */
 public class ListTranscodeTaskResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeTaskList")
+    @com.aliyun.core.annotation.NameInMap("TranscodeTaskList")
     private java.util.List < TranscodeTaskList> transcodeTaskList;
 
     private ListTranscodeTaskResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListTranscodeTaskResponseBody extends TeaModel {
     } 
 
     public static class TranscodeTaskList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("TaskStatus")
+        @com.aliyun.core.annotation.NameInMap("TaskStatus")
         private String taskStatus;
 
-        @NameInMap("TranscodeTaskId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTaskId")
         private String transcodeTaskId;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
-        @NameInMap("Trigger")
+        @com.aliyun.core.annotation.NameInMap("Trigger")
         private String trigger;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private TranscodeTaskList(Builder builder) {

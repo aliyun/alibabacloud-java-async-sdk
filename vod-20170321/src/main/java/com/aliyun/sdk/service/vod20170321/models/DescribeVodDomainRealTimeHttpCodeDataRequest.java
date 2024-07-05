@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeHttpCodeDataRequest</p>
  */
 public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainRealTimeHttpCodeDataRequest(Builder builder) {
@@ -125,7 +124,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
+         * <p>
+         * 
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify at most 100 domain names in each call.
+         * *   If you specify multiple domain names, merged data is returned.
+         * *   To obtain the accelerated domain name, perform the following steps: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management > CDN Configuration > Domain Names**. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the [DescribeVodUserDomains](~~DescribeVodUserDomains~~) operation to query the accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -134,7 +138,12 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -143,7 +152,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the ISP. If you do not set this parameter, all ISPs are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -152,7 +161,7 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. If you do not set this parameter, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -170,7 +179,10 @@ public class DescribeVodDomainRealTimeHttpCodeDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

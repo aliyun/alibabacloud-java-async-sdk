@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeTrafficDataResponseBody</p>
  */
 public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RealTimeTrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("RealTimeTrafficDataPerInterval")
     private RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainRealTimeTrafficDataResponseBody(Builder builder) {
@@ -98,7 +97,10 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval at which data is returned. Unit: seconds.
+         * <p>
+         * 
+         * The returned value varies based on the time range per query. Valid values: 60 (1 minute), 300 (5 minutes), and 3600 (1 hour). For more information, see the **Time granularity** section in the **API documentation**.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +108,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +116,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +124,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RealTimeTrafficDataPerInterval.
+         * The details of traffic data in each time interval.
          */
         public Builder realTimeTrafficDataPerInterval(RealTimeTrafficDataPerInterval realTimeTrafficDataPerInterval) {
             this.realTimeTrafficDataPerInterval = realTimeTrafficDataPerInterval;
@@ -130,7 +132,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +140,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -152,10 +154,10 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -190,7 +192,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -198,7 +200,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The traffic data. Unit: bytes.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -213,7 +215,7 @@ public class DescribeVodDomainRealTimeTrafficDataResponseBody extends TeaModel {
 
     }
     public static class RealTimeTrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private RealTimeTrafficDataPerInterval(Builder builder) {

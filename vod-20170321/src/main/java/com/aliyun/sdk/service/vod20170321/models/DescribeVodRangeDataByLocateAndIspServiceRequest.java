@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodRangeDataByLocateAndIspServiceRequest</p>
  */
 public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeVodRangeDataByLocateAndIspServiceRequest(Builder builder) {
@@ -127,7 +126,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -136,7 +135,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -145,7 +144,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the ISP. If you leave this parameter empty, all ISPs are queried.
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -154,7 +153,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. If you leave this parameter empty, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -172,7 +171,7 @@ public class DescribeVodRangeDataByLocateAndIspServiceRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVideoInfoResponseBody</p>
  */
 public class GetVideoInfoResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Video")
+    @com.aliyun.core.annotation.NameInMap("Video")
     private Video video;
 
     private GetVideoInfoResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
     } 
 
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < String > snapshot;
 
         private Snapshots(Builder builder) {
@@ -113,70 +112,73 @@ public class GetVideoInfoResponseBody extends TeaModel {
 
     }
     public static class Video extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AuditStatus")
+        @com.aliyun.core.annotation.NameInMap("AuditStatus")
         private String auditStatus;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("CustomMediaInfo")
+        @com.aliyun.core.annotation.NameInMap("CustomMediaInfo")
         private String customMediaInfo;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("DownloadSwitch")
+        private String downloadSwitch;
+
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RestoreExpiration")
+        @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
-        @NameInMap("RestoreStatus")
+        @com.aliyun.core.annotation.NameInMap("RestoreStatus")
         private String restoreStatus;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
         private String templateGroupId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private Video(Builder builder) {
@@ -188,6 +190,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             this.creationTime = builder.creationTime;
             this.customMediaInfo = builder.customMediaInfo;
             this.description = builder.description;
+            this.downloadSwitch = builder.downloadSwitch;
             this.duration = builder.duration;
             this.modificationTime = builder.modificationTime;
             this.regionId = builder.regionId;
@@ -266,6 +269,13 @@ public class GetVideoInfoResponseBody extends TeaModel {
          */
         public String getDescription() {
             return this.description;
+        }
+
+        /**
+         * @return downloadSwitch
+         */
+        public String getDownloadSwitch() {
+            return this.downloadSwitch;
         }
 
         /**
@@ -375,6 +385,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             private String creationTime; 
             private String customMediaInfo; 
             private String description; 
+            private String downloadSwitch; 
             private Float duration; 
             private String modificationTime; 
             private String regionId; 
@@ -399,11 +410,11 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The review status of the video. Valid values:
+             * The final review result of the audio or video file. Valid values:
              * <p>
              * 
              * *   **Normal**: pass
-             * *   **Blocked**: failed
+             * *   **Blocked**: blocked
              */
             public Builder auditStatus(String auditStatus) {
                 this.auditStatus = auditStatus;
@@ -459,6 +470,18 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
+             * Indicates whether the offline download feature is enabled. If you enable the offline download feature, users can download and play videos by using the ApsaraVideo Player on a local PC. For more information, see [Configure download settings](~~86107~~). Valid values:
+             * <p>
+             * 
+             * *   **on**: the offline download feature is enabled.
+             * *   **off**: the offline download feature is not enabled.
+             */
+            public Builder downloadSwitch(String downloadSwitch) {
+                this.downloadSwitch = downloadSwitch;
+                return this;
+            }
+
+            /**
              * The duration of the media file. Unit: seconds.
              */
             public Builder duration(Float duration) {
@@ -467,7 +490,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the media file was updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the audio or video file was last updated. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder modificationTime(String modificationTime) {
                 this.modificationTime = modificationTime;
@@ -520,16 +543,16 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the video. For information about the operations that can be performed on videos in different statuses and limits, see the Status: the status of a video section of the [Basic data types](~~52839~~) topic. Valid values:
+             * The status of the media file. For more information about the operations that you can perform on files in different statuses and usage limits, see [Status: the status of a video](~~52839#title-vqg-8cz-7p8~~). Valid values:
              * <p>
              * 
-             * *   **Uploading**: The video is being uploaded.
-             * *   **UploadFail**: The video failed to be uploaded.
-             * *   **UploadSucc**: The video has been uploaded.
-             * *   **Transcoding**: The video is being transcoded.
-             * *   **TranscodeFail**: The video failed to be transcoded.
-             * *   **Blocked**: The video is blocked.
-             * *   **Normal**: The video is normal.
+             * *   **Uploading**
+             * *   **UploadFail**
+             * *   **UploadSucc**
+             * *   **Transcoding**
+             * *   **TranscodeFail**
+             * *   **Blocked**
+             * *   **Normal**
              */
             public Builder status(String status) {
                 this.status = status;
@@ -564,7 +587,7 @@ public class GetVideoInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The tags of the media file. Multiple tags are separated by commas (,).
+             * The tags of the audio or video file. Multiple tags are separated by commas (,).
              */
             public Builder tags(String tags) {
                 this.tags = tags;

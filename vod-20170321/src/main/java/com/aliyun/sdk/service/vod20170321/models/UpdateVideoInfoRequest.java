@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateVideoInfoRequest</p>
  */
 public class UpdateVideoInfoRequest extends Request {
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private UpdateVideoInfoRequest(Builder builder) {

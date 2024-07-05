@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainSrcBpsDataResponseBody</p>
  */
 public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SrcBpsDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("SrcBpsDataPerInterval")
     private SrcBpsDataPerInterval srcBpsDataPerInterval;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainSrcBpsDataResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * The time interval between the entries returned. Unit: seconds.
+         * The time interval at which data is returned, which is the time granularity. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +105,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The accelerated domain name.
+         * The accelerated domain name whose ICP filing status you want to update.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +113,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried.
+         * The end of the time range.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -130,7 +129,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * Details about the origin bandwidth data returned at each time interval. Unit: bit/s.
+         * The origin bandwidth data at each time interval.
          */
         public Builder srcBpsDataPerInterval(SrcBpsDataPerInterval srcBpsDataPerInterval) {
             this.srcBpsDataPerInterval = srcBpsDataPerInterval;
@@ -138,7 +137,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
         }
 
         /**
-         * The start of the time range during which data was queried.
+         * The beginning of the time range.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -152,13 +151,13 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("HttpsValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -202,7 +201,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * The bandwidth values of origin HTTPS requests.
+             * The bandwidth consumed for fetching resources from the origin over HTTPS.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -210,7 +209,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +217,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
             }
 
             /**
-             * The bandwidth value at each time interval.
+             * The total origin bandwidth data. Unit: bit/s.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -233,7 +232,7 @@ public class DescribeVodDomainSrcBpsDataResponseBody extends TeaModel {
 
     }
     public static class SrcBpsDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private SrcBpsDataPerInterval(Builder builder) {

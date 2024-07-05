@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayVideoStatisResponseBody</p>
  */
 public class DescribePlayVideoStatisResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoPlayStatisDetails")
+    @com.aliyun.core.annotation.NameInMap("VideoPlayStatisDetails")
     private VideoPlayStatisDetails videoPlayStatisDetails;
 
     private DescribePlayVideoStatisResponseBody(Builder builder) {
@@ -72,22 +71,22 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
     } 
 
     public static class VideoPlayStatisDetail extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("PlayDuration")
+        @com.aliyun.core.annotation.NameInMap("PlayDuration")
         private String playDuration;
 
-        @NameInMap("PlayRange")
+        @com.aliyun.core.annotation.NameInMap("PlayRange")
         private String playRange;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UV")
+        @com.aliyun.core.annotation.NameInMap("UV")
         private String uv;
 
-        @NameInMap("VV")
+        @com.aliyun.core.annotation.NameInMap("VV")
         private String vv;
 
         private VideoPlayStatisDetail(Builder builder) {
@@ -213,7 +212,7 @@ public class DescribePlayVideoStatisResponseBody extends TeaModel {
 
     }
     public static class VideoPlayStatisDetails extends TeaModel {
-        @NameInMap("VideoPlayStatisDetail")
+        @com.aliyun.core.annotation.NameInMap("VideoPlayStatisDetail")
         private java.util.List < VideoPlayStatisDetail> videoPlayStatisDetail;
 
         private VideoPlayStatisDetails(Builder builder) {

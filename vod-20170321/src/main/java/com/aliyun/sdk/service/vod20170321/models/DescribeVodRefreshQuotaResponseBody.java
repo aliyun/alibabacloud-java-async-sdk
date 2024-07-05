@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodRefreshQuotaResponseBody</p>
  */
 public class DescribeVodRefreshQuotaResponseBody extends TeaModel {
-    @NameInMap("BlockQuota")
+    @com.aliyun.core.annotation.NameInMap("BlockQuota")
     private String blockQuota;
 
-    @NameInMap("DirQuota")
+    @com.aliyun.core.annotation.NameInMap("DirQuota")
     private String dirQuota;
 
-    @NameInMap("DirRemain")
+    @com.aliyun.core.annotation.NameInMap("DirRemain")
     private String dirRemain;
 
-    @NameInMap("PreloadQuota")
+    @com.aliyun.core.annotation.NameInMap("PreloadQuota")
     private String preloadQuota;
 
-    @NameInMap("PreloadRemain")
+    @com.aliyun.core.annotation.NameInMap("PreloadRemain")
     private String preloadRemain;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UrlQuota")
+    @com.aliyun.core.annotation.NameInMap("UrlQuota")
     private String urlQuota;
 
-    @NameInMap("UrlRemain")
+    @com.aliyun.core.annotation.NameInMap("UrlRemain")
     private String urlRemain;
 
-    @NameInMap("blockRemain")
+    @com.aliyun.core.annotation.NameInMap("blockRemain")
     private String blockRemain;
 
     private DescribeVodRefreshQuotaResponseBody(Builder builder) {

@@ -27,7 +27,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddAITemplateResponse> addAITemplate(AddAITemplateRequest request);
 
     /**
-      * A maximum of three category levels can be created. Each category can contain up to 100 subcategories.
+      * *   You can create a maximum of 3 levels of categories for audio, video, and image files and 2 levels of categories for short video materials. Each category level can contain a maximum of 100 subcategories. To create categories for audio and video files, set `Type` to `default`. To create categories for short video materials, set `Type` to `material`.
+      * *   After you create a category, you can categorize media resources during upload or categorize the uploaded media resources. For more information, see [Manage video categories](~~86070~~).
       *
      */
     CompletableFuture<AddCategoryResponse> addCategory(AddCategoryRequest request);
@@ -73,7 +74,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<AddVodTemplateResponse> addVodTemplate(AddVodTemplateRequest request);
 
     /**
-      * > ApsaraVideo VOD supports static image watermarks such as PNG files and dynamic image watermarks such as GIF, APNG, and MOV files.
+      * *   You can call this operation to create an `Image` watermark template or a `Text` watermark template. You can use static images in the PNG format or dynamic images in the GIF, APNG, and MOV formats as image watermarks.
+      * *   After you call this operation to create a watermark template, you must call the [AddTranscodeTemplateGroup](~~AddTranscodeTemplateGroup~~) or [UpdateTranscodeTemplateGroup](~~UpdateTranscodeTemplateGroup~~) operation to associate the watermark template with a transcoding template group. This way, you can add watermarks to videos during transcoding.
+      * *   For more information, see [Video watermarks](~~99369~~).
       *
      */
     CompletableFuture<AddWatermarkResponse> addWatermark(AddWatermarkRequest request);
@@ -175,13 +178,15 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteAppInfoResponse> deleteAppInfo(DeleteAppInfoRequest request);
 
     /**
-      * This operation physically deletes auxiliary media assets. Deleted auxiliary media assets cannot be recovered. Exercise caution when you call this operation.
+      * *   This operation physically deletes auxiliary media assets. You cannot recover the auxiliary media assets that you deleted. Exercise caution when you call this operation.
+      * *   You can delete a maximum of 20 auxiliary media assets in one request.
       *
      */
     CompletableFuture<DeleteAttachedMediaResponse> deleteAttachedMedia(DeleteAttachedMediaRequest request);
 
     /**
-      * > If a video category is deleted, its subcategories, including level 2 and level 3 categories, are also deleted. Exercise caution when you call this operation.
+      * *   **After you call this operation to delete a category, all subcategories including level 2 and level 3 categories are deleted at the same time. Exercise caution when you call this operation.**
+      * *   If you have classified specific media resources to a category, the category names labeled on these media resources are automatically deleted when you delete the category.
       *
      */
     CompletableFuture<DeleteCategoryResponse> deleteCategory(DeleteCategoryRequest request);
@@ -267,8 +272,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteVodTemplateResponse> deleteVodTemplate(DeleteVodTemplateRequest request);
 
     /**
-      * > *   The default watermark cannot be deleted.
-      * > *   If you delete a watermark, its mezzanine file is also physically deleted and cannot be recovered.
+      * *   **After you delete an image watermark template, the source watermark file is physically deleted and cannot be restored. Exercise caution when you call this operation.**
+      * *   You cannot delete the default watermark template. To delete a default watermark template, call the [SetDefaultWatermark](~~SetDefaultWatermark~~) operation to set another watermark template as the default one.
       *
      */
     CompletableFuture<DeleteWatermarkResponse> deleteWatermark(DeleteWatermarkRequest request);
@@ -329,6 +334,16 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainBpsDataResponse> describeVodDomainBpsData(DescribeVodDomainBpsDataRequest request);
 
+    /**
+      * You can call this API operation up to 20 times per second per account. If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range. Time granularity
+      * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |15 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|3 to 4 hours|
+      * |1 day|90 days|366 days|4 hours in most cases, not more than 24 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainBpsDataByLayerResponse> describeVodDomainBpsDataByLayer(DescribeVodDomainBpsDataByLayerRequest request);
 
     /**
@@ -349,6 +364,19 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainDetailResponse> describeVodDomainDetail(DescribeVodDomainDetailRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 24 hours is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay when you do not set `Interval`.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      * |1 day|31 days ≤ Time span of a single query ≤ 366 days|366 days|4 hours in most cases, not more than 24 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainHitRateDataResponse> describeVodDomainHitRateData(DescribeVodDomainHitRateDataRequest request);
 
     /**
@@ -362,34 +390,144 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainLogResponse> describeVodDomainLog(DescribeVodDomainLogRequest request);
 
+    /**
+      * * You can call this operation up to 100 times per second per account.
+      * * If you do not set the StartTime or EndTime parameter, the request returns the data collected in the last 24 hours. If you set both these parameters, the request returns the data collected within the specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the Interval parameter. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|3 days|93 days|15 minutes|
+      * |1 hour|31 days|186 days|3 to 4 hours|
+      * |1 day|366 days|366 days|4 hours in most cases, not more than 24 hours|
+      * ---
+      *
+     */
+    CompletableFuture<DescribeVodDomainQpsDataResponse> describeVodDomainQpsData(DescribeVodDomainQpsDataRequest request);
+
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 Hour &#x3C; Time range per query ≤ 3 days|93 days|15 minutes|
+      * |1 hour|3 days &#x3C; Time range per query ≤ 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeBpsDataResponse> describeVodDomainRealTimeBpsData(DescribeVodDomainRealTimeBpsDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 100 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 Hour &#x3C; Time range per query ≤ 3 days|93 days|15 minutes|
+      * |1 hour|3 days &#x3C; Time range per query ≤ 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeByteHitRateDataResponse> describeVodDomainRealTimeByteHitRateData(DescribeVodDomainRealTimeByteHitRateDataRequest request);
 
+    /**
+      * You can query data within the last seven days. Data is collected every minute. You can call this API operation up to 10 times per second per account.
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeDetailDataResponse> describeVodDomainRealTimeDetailData(DescribeVodDomainRealTimeDetailDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 100 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available (days)|Data latency|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 hour &#x3C; Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeHttpCodeDataResponse> describeVodDomainRealTimeHttpCodeData(DescribeVodDomainRealTimeHttpCodeDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 Hour &#x3C; Time range per query ≤ 3 days|93 days|15 minutes|
+      * |1 hour|3 days &#x3C; Time range per query ≤ 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeQpsDataResponse> describeVodDomainRealTimeQpsData(DescribeVodDomainRealTimeQpsDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 100 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * * By default, the POST method is used for Go. To use the FET method, you must declare `request.Method="GET"`.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 hour &#x3C; Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeReqHitRateDataResponse> describeVodDomainRealTimeReqHitRateData(DescribeVodDomainRealTimeReqHitRateDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 100 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 1 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |1 minute|Time range per query ≤ 1 hour|7 days|5 minutes|
+      * |5 minutes|1 Hour &#x3C; Time range per query ≤ 3 days|93 days|15 minutes|
+      * |1 hour|3 days &#x3C; Time range per query ≤ 31 days|186 days|3 to 4 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainRealTimeTrafficDataResponse> describeVodDomainRealTimeTrafficData(DescribeVodDomainRealTimeTrafficDataRequest request);
 
+    /**
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 24 hours is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay when you do not set `Interval`.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      * |1 day|31 days ≤ Time range per query ≤ 90 days|366 days|4 hours in most cases, not more than 24 hours|
+      *
+     */
     CompletableFuture<DescribeVodDomainReqHitRateDataResponse> describeVodDomainReqHitRateData(DescribeVodDomainReqHitRateDataRequest request);
 
     /**
-      * * This operation is available only in the **China (Shanghai)** region.
-      * * ApsaraVideo VOD stores the origin bandwidth data for 90 days before the data is deleted.
-      * * If you do not set the `StartTime` or `EndTime` parameter, the request returns the data collected in the last 24 hours. If you set both the `StartTime` and `EndTime` parameters, the request returns the data collected within the specified time range.
-      * * You can specify a maximum of 500 domain names in a request. Separate multiple domain names with commas (,). If you specify multiple domain names in a request, aggregation results are returned.
-      * ### Time granularity
-      * The time granularity supported by the Interval parameter varies based on the time range per query specified by using `StartTime` and `EndTime`. The following table describes the time period within which historical data is available and the data delay.
-      * |Time granularity|Time range per query (days)|Historical data available (days)|Data delay|
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 24 hours is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay when you do not set `Interval`.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
       * |---|---|---|---|
-      * |5 minutes|(0, 3\\]|93|15 minutes|
-      * |1 hour|(3, 31\\]|186|4 hours|
-      * |1 day|(31, 366\\]|366|04:00 on the next day|
+      * |5 minutes|Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      * |1 day|31 days ≤ Time span of a single query ≤ 366 days|366 days|4 hours in most cases, not more than 24 hours|
       *
      */
     CompletableFuture<DescribeVodDomainSrcBpsDataResponse> describeVodDomainSrcBpsData(DescribeVodDomainSrcBpsDataRequest request);
@@ -411,11 +549,16 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodDomainSrcTrafficDataResponse> describeVodDomainSrcTrafficData(DescribeVodDomainSrcTrafficDataRequest request);
 
     /**
-      * *   This operation is available only in the **China (Shanghai)** region.
-      * *   You can specify multiple accelerated domain names in a request.
-      * *   If you do not specify the StartTime or EndTime parameter, data of the last 24 hours is returned. You can specify the StartTime and EndTime parameters to query data that is generated in the specified time range. You can query data of the last 90 days.
-      * ### QPS limit
-      * You can call this operation up to 100 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
+      * * This operation is supported only in the **China (Shanghai)** region.
+      * * You can specify a maximum of 500 accelerated domain names.
+      * * If you specify neither `StartTime` nor `EndTime`, the data of the last 24 hour is queried. You can specify both `StartTime` and `EndTime` parameters to query data of a specified time range.
+      * **Time granularity**
+      * The time granularity varies with the time range specified by the `StartTime` and `EndTime` parameters. The following table describes the time period within which historical data is available and the data delay when you do not set `Interval`.
+      * |Time granularity|Time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|Time range per query &#x3C; 3 days|93 days|15 minutes|
+      * |1 hour|3 days ≤ Time range per query &#x3C; 31 days|186 days|3 to 4 hours|
+      * |1 day|31 days ≤ Time range per query ≤ 366 days|366 days|4 hours in most cases, not more than 24 hours|
       *
      */
     CompletableFuture<DescribeVodDomainTrafficDataResponse> describeVodDomainTrafficData(DescribeVodDomainTrafficDataRequest request);
@@ -428,8 +571,30 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeVodDomainUsageDataResponse> describeVodDomainUsageData(DescribeVodDomainUsageDataRequest request);
 
+    /**
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   Playback data in ApsaraVideo Player SDK is collected based on media IDs.
+      * *   Before you call this operation, make sure that the following requirements are met:
+      *     *   ApsaraVideo Player SDK for Android or iOS
+      *         *   ApsaraVideo Player SDK for Android or iOS V5.4.9.2 or later is used.
+      *         *   A license for ApsaraVideo Player SDK is obtained. For more information, see [Manage licenses](~~469166~~).
+      *         *   The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs. For more information, see [Integrate ApsaraVideo Player SDK for Android](~~311525#section-dc4-gp6-xk2~~) and [Integrate ApsaraVideo Player SDK for iOS](~~313855#section-cmf-k7d-jg5~~).
+      *     *   ApsaraVideo Player SDK for Web
+      *         *   ApsaraVideo Player SDK for Web V2.16.0 or later is used.
+      *         *   A license for **playback quality monitoring** is obtained. To apply for the license, [submit a request on Yida to enable value-added features for ApsaraVideo Player SDK for Web](https://yida.alibaba-inc.com/o/webplayer#/). For more information, see the description of the `license` parameter in the [API operations](~~125572#section-3ty-gwp-6pa~~) topic.
+      *         *   The log reporting feature is enabled. By default, the feature is enabled for ApsaraVideo Player SDKs.
+      *
+     */
     CompletableFuture<DescribeVodMediaPlayDataResponse> describeVodMediaPlayData(DescribeVodMediaPlayDataRequest request);
 
+    /**
+      * The data is collected every 5 minutes. You can call this API operation up to 20 times per second per account. Time granularity
+      * The time granularity supported by Interval, the maximum time period within which historical data is available, and the data delay vary based on the time range to query, as described in the following table.
+      * |Time granularity|Maximum time range per query|Historical data available|Data delay|
+      * |---|---|---|---|
+      * |5 minutes|1 hour|93 days|15 minutes|
+      *
+     */
     CompletableFuture<DescribeVodRangeDataByLocateAndIspServiceResponse> describeVodRangeDataByLocateAndIspService(DescribeVodRangeDataByLocateAndIspServiceRequest request);
 
     /**
@@ -455,6 +620,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   This operation is available only in the **China (Shanghai)** region.
+      * *   If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.
+      *
+     */
+    CompletableFuture<DescribeVodTieringStorageDataResponse> describeVodTieringStorageData(DescribeVodTieringStorageDataRequest request);
+
+    /**
+      * *   This operation is available only in the **China (Shanghai)** region.
+      * *   If you specify a time range within 7 days, the request returns the data based on hours. If you specify a time range longer than 7 days, the request returns the data based on days. The maximum time range is 31 days.
+      *
+     */
+    CompletableFuture<DescribeVodTieringStorageRetrievalDataResponse> describeVodTieringStorageRetrievalData(DescribeVodTieringStorageRetrievalDataRequest request);
+
+    /**
+      * *   This operation is available only in the **China (Shanghai)** region.
       * *   If the time range to query is less than or equal to seven days, the system returns the statistics collected on an hourly basis. If the time range to query is greater than seven days, the system returns the statistics collected on a daily basis. The maximum time range that you can specify to query is 31 days.
       *
      */
@@ -470,7 +649,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeVodVerifyContentResponse> describeVodVerifyContent(DescribeVodVerifyContentRequest request);
 
     /**
-      * You can grant a maximum of 10 application permissions to a RAM user or RAM role.
+      * >  You can grant a maximum of 10 application permissions to a RAM user or RAM role.
       *
      */
     CompletableFuture<DetachAppPolicyFromIdentityResponse> detachAppPolicyFromIdentity(DetachAppPolicyFromIdentityRequest request);
@@ -532,7 +711,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetDefaultAITemplateResponse> getDefaultAITemplate(GetDefaultAITemplateRequest request);
 
     /**
-      * *   You can call this operation to query the results of digital watermark extraction jobs that are created in the last two years.
+      * *   This operation is supported only in the China (Shanghai) and China (Beijing) regions.
+      * *   You can call this operation to query the watermark content after you call the [SubmitDigitalWatermarkExtractJob](~~SubmitDigitalWatermarkExtractJob~~) operation to extract the copyright or user-tracing watermark in a video.
+      * *   You can query watermark content extracted only from watermark extraction jobs that are submitted in the last 2 years.
       *
      */
     CompletableFuture<GetDigitalWatermarkExtractResultResponse> getDigitalWatermarkExtractResult(GetDigitalWatermarkExtractResultRequest request);
@@ -600,8 +781,7 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     /**
       * *   **Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for outbound traffic when you download or play videos based on URLs in ApsaraVideo VOD. For more information about billing of outbound traffic, see [Billing of outbound traffic](~~188308#section-rwh-e88-f7j~~). If you have configured an accelerated domain name, see [Billing of the acceleration service](~~188308#section-c5t-oq9-15e~~). If you have activated the acceleration service, you are charged acceleration fees when you upload media files to ApsaraVideo VOD. For more information, see [Billing of acceleration traffic](~~188310#section_sta_zm2\\_tsv~~).**
-      * *   You can use the ID of a media file to query the playback URL of the file. After you integrate ApsaraVideo Player SDK for URL-based playback or a third-party player, you can use the obtained playback URLs to play audio and video files.
-      * *   Only videos whose Status is Normal can be played. The Status parameter in the response indicates the status of the video. For more information, see [Overview](~~57290~~).
+      * *   Only videos whose Status is Normal can be played. For more information, see [Overview](~~57290~~).
       * *   If video playback fails, you can call the [GetMezzanineInfo](~~GetMezzanineInfo~~) operation to check whether the video source information is correct.
       *
      */
@@ -650,15 +830,14 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetUploadDetailsResponse> getUploadDetails(GetUploadDetailsRequest request);
 
     /**
-      * * You can call this operation to obtain basic information about multiple media files based on media IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.
-      * * After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive notifications for the **VideoAnalysisComplete** event. For more information, see [Overview](~~55627~~) .
+      * After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the [VideoAnalysisComplete](~~99935~~) event and call this operation to query information about a media file after you receive notifications for the [VideoAnalysisComplete](~~99935~~) event. For more information, see [Overview](~~55627~~).
       *
      */
     CompletableFuture<GetVideoInfoResponse> getVideoInfo(GetVideoInfoRequest request);
 
     /**
-      * *   You can call this operation to obtain basic information about multiple media files based on media IDs. The basic information includes the title, description, duration, thumbnail URL, status, creation time, size, snapshots, category, and tags.
-      * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the **VideoAnalysisComplete** event and call this operation to query information about a media file after you receive notifications for the **VideoAnalysisComplete** event. For more information, see [Overview](~~55627~~).
+      * *   You can specify up to 20 audio or video file IDs in each request.
+      * *   After a media file is uploaded, ApsaraVideo VOD processes the source file. Then, information about the media file is asynchronously generated. You can configure notifications for the [VideoAnalysisComplete](~~99935~~) event and call this operation to query information about a media file after you receive notifications for the [VideoAnalysisComplete](~~99935~~) event. For more information, see [Overview](~~55627~~).
       *
      */
     CompletableFuture<GetVideoInfosResponse> getVideoInfos(GetVideoInfosRequest request);
@@ -670,11 +849,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<GetVideoListResponse> getVideoList(GetVideoListRequest request);
 
     /**
-      * ###
-      * *   You can call this operation to obtain a playback credential when you use ApsaraVideo Player SDK to play a media file based on PlayAuth. The credential is used to obtain the playback URL.
+      * *   You can call this operation to obtain a playback credential when you use ApsaraVideo Player SDK to play a media file based on PlayAuth. The credential is used to obtain the playback URL. For more information, see [ApsaraVideo Player SDK](~~125579~~).
       * *   You cannot obtain the playback URL of a video by using a credential that has expired. A new credential is required.
-      * ### QPS limit
-      * You can call this operation up to 360 times per second per account. Requests that exceed this limit are dropped and you will experience service interruptions. We recommend that you take note of this limit when you call this operation. For more information, see [QPS limit on API operations](~~342790~~).
       *
      */
     CompletableFuture<GetVideoPlayAuthResponse> getVideoPlayAuth(GetVideoPlayAuthRequest request);
@@ -854,8 +1030,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SetEditingProjectMaterialsResponse> setEditingProjectMaterials(SetEditingProjectMaterialsRequest request);
 
     /**
-      * ## Usage note
-      * ApsaraVideo VOD supports the HTTP and MNS callback methods. For more information, see [Event notification](~~55627~~).
+      * HTTP callbacks and MNS callbacks are supported. For more information, see [Overview](~~55627~~).
       *
      */
     CompletableFuture<SetMessageCallbackResponse> setMessageCallback(SetMessageCallbackRequest request);
@@ -899,9 +1074,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<SubmitAIMediaAuditJobResponse> submitAIMediaAuditJob(SubmitAIMediaAuditJobRequest request);
 
     /**
-      * *   **Make sure that you understand the billing method and price of ApsaraVideo VOD before you call this operation. You are charged for using the digital watermark feature. For more information about billing, see [Billing of digital watermarks](~~188310#section-rcb-x9z-6p1~~).**
-      * *   You must upload the video from which you want to extract the digital watermark to ApsaraVideo VOD.
-      * *   The duration of the video from which you want to extract the digital watermark must exceed 3 minutes.
+      * *   **Make sure that you understand the billing methods and price of ApsaraVideo VOD before you call this operation. You are charged for generating and extracting digital watermarks. For more information, see [Billing](~~188310#62b9c940403se~~).**
+      * *   This operation is supported only in the **China (Shanghai)** and **China (Beijing)** regions.
+      * *   Before you submit a digital watermark extraction job, make sure that the following conditions are met:
+      *     *   The video from which you want to extract the watermark is uploaded to the ApsaraVideo VOD.
+      *     *   The video from which you want to extract the watermark is longer than 6 minutes.
       *
      */
     CompletableFuture<SubmitDigitalWatermarkExtractJobResponse> submitDigitalWatermarkExtractJob(SubmitDigitalWatermarkExtractJobRequest request);
@@ -974,6 +1151,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<UpdateAttachedMediaInfosResponse> updateAttachedMediaInfos(UpdateAttachedMediaInfosRequest request);
 
+    /**
+      * After you create a category, you can call this operation to modify the name of the category. If you have classified specific media resources to this category, the category names that are labeled on the media resources are automatically updated.
+      *
+     */
     CompletableFuture<UpdateCategoryResponse> updateCategory(UpdateCategoryRequest request);
 
     CompletableFuture<UpdateEditingProjectResponse> updateEditingProject(UpdateEditingProjectRequest request);
@@ -1016,7 +1197,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateVodTemplateResponse> updateVodTemplate(UpdateVodTemplateRequest request);
 
     /**
-      * You can modify only the name and configurations of a watermark.
+      * *   You can modify the name and configurations of the watermark template after you call the [AddWatermark](~~AddWatermark~~) operation to create a watermark template.
+      * *   You cannot call this operation to change the image in an image watermark template.
       *
      */
     CompletableFuture<UpdateWatermarkResponse> updateWatermark(UpdateWatermarkRequest request);

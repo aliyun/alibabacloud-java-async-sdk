@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAttachedMediaRequest</p>
  */
 public class DeleteAttachedMediaRequest extends Request {
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
     private DeleteAttachedMediaRequest(Builder builder) {
@@ -55,11 +54,11 @@ public class DeleteAttachedMediaRequest extends Request {
         } 
 
         /**
-         * The list of auxiliary media asset IDs.
+         * The ID of the auxiliary media asset that you want to delete. You can obtain the ID of the auxiliary media asset from the MediaId parameter in the response to the [CreateUploadAttachedMedia](~~98467~~) operation.
          * <p>
          * 
          * *   Separate multiple IDs with commas (,).
-         * *   A maximum of 20 IDs can be specified.
+         * *   You can specify a maximum of 20 IDs.
          */
         public Builder mediaIds(String mediaIds) {
             this.putQueryParameter("MediaIds", mediaIds);

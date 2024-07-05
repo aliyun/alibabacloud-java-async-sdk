@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCategoryRequest</p>
  */
 public class DeleteCategoryRequest extends Request {
-    @Query
-    @NameInMap("CateId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long cateId;
 
     private DeleteCategoryRequest(Builder builder) {
@@ -55,7 +54,13 @@ public class DeleteCategoryRequest extends Request {
         } 
 
         /**
-         * The ID of the category.
+         * The ID of the category. You can specify only one ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). Choose **Configuration Management** > **Media Management** > **Categories**. On the Audio and Video / Image Category or Short Video Material Category tab, view the category ID.
+         * *   Obtain the category ID from the response to the [AddCategory](~~AddCategory~~) operation.
+         * 
+         * >  If you specify the ID of a parent category, all subcategories under the parent category are deleted at the same time.
          */
         public Builder cateId(Long cateId) {
             this.putQueryParameter("CateId", cateId);

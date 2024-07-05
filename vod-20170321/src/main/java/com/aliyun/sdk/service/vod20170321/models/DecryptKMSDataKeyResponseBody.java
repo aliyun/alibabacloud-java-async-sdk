@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DecryptKMSDataKeyResponseBody</p>
  */
 public class DecryptKMSDataKeyResponseBody extends TeaModel {
-    @NameInMap("KeyId")
+    @com.aliyun.core.annotation.NameInMap("KeyId")
     private String keyId;
 
-    @NameInMap("Plaintext")
+    @com.aliyun.core.annotation.NameInMap("Plaintext")
     private String plaintext;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DecryptKMSDataKeyResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * KeyId.
+         * The ID of the customer master key (CMK) that was used to decrypt the ciphertext.
          */
         public Builder keyId(String keyId) {
             this.keyId = keyId;
@@ -70,7 +69,7 @@ public class DecryptKMSDataKeyResponseBody extends TeaModel {
         }
 
         /**
-         * Plaintext.
+         * The plaintext that is generated after decryption.
          */
         public Builder plaintext(String plaintext) {
             this.plaintext = plaintext;

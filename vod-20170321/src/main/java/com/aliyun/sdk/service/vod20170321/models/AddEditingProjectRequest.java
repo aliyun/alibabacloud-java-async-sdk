@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddEditingProjectRequest</p>
  */
 public class AddEditingProjectRequest extends Request {
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("Division")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Division")
     private String division;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
-    @Query
-    @NameInMap("Timeline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeline")
     private String timeline;
 
-    @Query
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
     private AddEditingProjectRequest(Builder builder) {

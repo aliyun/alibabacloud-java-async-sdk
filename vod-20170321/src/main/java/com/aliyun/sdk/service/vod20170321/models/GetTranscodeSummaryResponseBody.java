@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTranscodeSummaryResponseBody</p>
  */
 public class GetTranscodeSummaryResponseBody extends TeaModel {
-    @NameInMap("NonExistVideoIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List < String > nonExistVideoIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeSummaryList")
+    @com.aliyun.core.annotation.NameInMap("TranscodeSummaryList")
     private java.util.List < TranscodeSummaryList> transcodeSummaryList;
 
     private GetTranscodeSummaryResponseBody(Builder builder) {
@@ -92,49 +91,49 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
     } 
 
     public static class TranscodeJobInfoSummaryList extends TeaModel {
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("Filesize")
+        @com.aliyun.core.annotation.NameInMap("Filesize")
         private Long filesize;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("TranscodeJobStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeJobStatus")
         private String transcodeJobStatus;
 
-        @NameInMap("TranscodeProgress")
+        @com.aliyun.core.annotation.NameInMap("TranscodeProgress")
         private Long transcodeProgress;
 
-        @NameInMap("TranscodeTemplateId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateId")
         private String transcodeTemplateId;
 
-        @NameInMap("WatermarkIdList")
+        @com.aliyun.core.annotation.NameInMap("WatermarkIdList")
         private java.util.List < String > watermarkIdList;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private TranscodeJobInfoSummaryList(Builder builder) {
@@ -418,22 +417,22 @@ public class GetTranscodeSummaryResponseBody extends TeaModel {
 
     }
     public static class TranscodeSummaryList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("TranscodeJobInfoSummaryList")
+        @com.aliyun.core.annotation.NameInMap("TranscodeJobInfoSummaryList")
         private java.util.List < TranscodeJobInfoSummaryList> transcodeJobInfoSummaryList;
 
-        @NameInMap("TranscodeStatus")
+        @com.aliyun.core.annotation.NameInMap("TranscodeStatus")
         private String transcodeStatus;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private TranscodeSummaryList(Builder builder) {

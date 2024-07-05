@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWatermarkRequest</p>
  */
 public class ListWatermarkRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
     private ListWatermarkRequest(Builder builder) {
@@ -54,7 +53,10 @@ public class ListWatermarkRequest extends Request {
         } 
 
         /**
-         * AppId.
+         * The ID of the application. Default value: **app-1000000**.
+         * <p>
+         * 
+         * If you have activated the multi-application service, specify the ID of the application to query all image and text watermark templates in the specified application. If you leave this parameter empty, image and text watermark templates in all applications are queried. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);

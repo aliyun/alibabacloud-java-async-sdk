@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDynamicImageResponseBody</p>
  */
 public class ListDynamicImageResponseBody extends TeaModel {
-    @NameInMap("DynamicImageList")
+    @com.aliyun.core.annotation.NameInMap("DynamicImageList")
     private java.util.List < DynamicImageList> dynamicImageList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDynamicImageResponseBody(Builder builder) {
@@ -72,37 +71,37 @@ public class ListDynamicImageResponseBody extends TeaModel {
     } 
 
     public static class DynamicImageList extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("DynamicImageId")
+        @com.aliyun.core.annotation.NameInMap("DynamicImageId")
         private String dynamicImageId;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private String height;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private String width;
 
         private DynamicImageList(Builder builder) {

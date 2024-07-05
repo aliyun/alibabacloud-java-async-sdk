@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPlayInfoResponseBody</p>
  */
 public class GetPlayInfoResponseBody extends TeaModel {
-    @NameInMap("PlayInfoList")
+    @com.aliyun.core.annotation.NameInMap("PlayInfoList")
     private PlayInfoList playInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoBase")
+    @com.aliyun.core.annotation.NameInMap("VideoBase")
     private VideoBase videoBase;
 
     private GetPlayInfoResponseBody(Builder builder) {
@@ -92,73 +91,73 @@ public class GetPlayInfoResponseBody extends TeaModel {
     } 
 
     public static class PlayInfo extends TeaModel {
-        @NameInMap("BitDepth")
+        @com.aliyun.core.annotation.NameInMap("BitDepth")
         private Integer bitDepth;
 
-        @NameInMap("Bitrate")
+        @com.aliyun.core.annotation.NameInMap("Bitrate")
         private String bitrate;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Definition")
+        @com.aliyun.core.annotation.NameInMap("Definition")
         private String definition;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("Encrypt")
+        @com.aliyun.core.annotation.NameInMap("Encrypt")
         private Long encrypt;
 
-        @NameInMap("EncryptType")
+        @com.aliyun.core.annotation.NameInMap("EncryptType")
         private String encryptType;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("Fps")
+        @com.aliyun.core.annotation.NameInMap("Fps")
         private String fps;
 
-        @NameInMap("HDRType")
+        @com.aliyun.core.annotation.NameInMap("HDRType")
         private String HDRType;
 
-        @NameInMap("Height")
+        @com.aliyun.core.annotation.NameInMap("Height")
         private Long height;
 
-        @NameInMap("JobExt")
+        @com.aliyun.core.annotation.NameInMap("JobExt")
         private String jobExt;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("JobType")
+        @com.aliyun.core.annotation.NameInMap("JobType")
         private Integer jobType;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("NarrowBandType")
+        @com.aliyun.core.annotation.NameInMap("NarrowBandType")
         private String narrowBandType;
 
-        @NameInMap("PlayURL")
+        @com.aliyun.core.annotation.NameInMap("PlayURL")
         private String playURL;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Specification")
+        @com.aliyun.core.annotation.NameInMap("Specification")
         private String specification;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StreamType")
+        @com.aliyun.core.annotation.NameInMap("StreamType")
         private String streamType;
 
-        @NameInMap("WatermarkId")
+        @com.aliyun.core.annotation.NameInMap("WatermarkId")
         private String watermarkId;
 
-        @NameInMap("Width")
+        @com.aliyun.core.annotation.NameInMap("Width")
         private Long width;
 
         private PlayInfo(Builder builder) {
@@ -414,8 +413,8 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * *   **SD**: high definition
              * *   **HD**: ultra-high definition
              * *   **OD**: original definition
-             * *   **2K**: 2K
-             * *   **4K**: 4K
+             * *   **2K**
+             * *   **4K**
              * *   **SQ**: standard sound quality
              * *   **HQ**: high sound quality
              * *   **AUTO**: adaptive bitrate
@@ -464,7 +463,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * <p>
              * 
              * *   If the media file is a video file, the valid values are **mp4** and **m3u8**.
-             * *   If the media file is an audio-only file, the value is **mp3**.
+             * *   If the media asset is an audio-only file, the value is **mp3**.
              */
             public Builder format(String format) {
                 this.format = format;
@@ -523,7 +522,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
              * The type of the digital watermark. Valid values:
              * <p>
              * 
-             * *   **1**: tracing watermark
+             * *   **1**: user-tracing watermark
              * *   **2**: copyright watermark
              */
             public Builder jobType(Integer jobType) {
@@ -540,14 +539,12 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The type of Narrowband HD transcoding. Valid values:
+             * The transcoding type. Valid values:
              * <p>
              * 
              * *   **0**: regular transcoding
              * *   **1.0**: Narrowband HD™ 1.0 transcoding
              * *   **2.0**: Narrowband HD™ 2.0 transcoding
-             * 
-             * This parameter is returned only when a definition that is available in the built-in Narrowband HD™ 1.0 transcoding template is specified. For more information, see the [Definition parameter in the TranscodeTemplate](~~52839~~) table.
              */
             public Builder narrowBandType(String narrowBandType) {
                 this.narrowBandType = narrowBandType;
@@ -555,7 +552,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The playback URL of the media stream.
+             * The playback URL of the video stream.
              */
             public Builder playURL(String playURL) {
                 this.playURL = playURL;
@@ -571,7 +568,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671~~).
+             * The specifications of transcoded audio and video streams. For more information about the valid values, see [Output specifications](~~124671#section-6bv-l0g-opq~~).
              */
             public Builder specification(String specification) {
                 this.specification = specification;
@@ -622,7 +619,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     }
     public static class PlayInfoList extends TeaModel {
-        @NameInMap("PlayInfo")
+        @com.aliyun.core.annotation.NameInMap("PlayInfo")
         private java.util.List < PlayInfo> playInfo;
 
         private PlayInfoList(Builder builder) {
@@ -663,31 +660,31 @@ public class GetPlayInfoResponseBody extends TeaModel {
 
     }
     public static class VideoBase extends TeaModel {
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DanMuURL")
+        @com.aliyun.core.annotation.NameInMap("DanMuURL")
         private String danMuURL;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private String duration;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private VideoBase(Builder builder) {
@@ -829,7 +826,7 @@ public class GetPlayInfoResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the audio or video file. For more information about the value range and description, see the [Status](~~52839~~) table.
+             * The status of the media file. For more information about the value range and description, see the [Status](~~52839#title-vqg-8cz-7p8~~) table.
              */
             public Builder status(String status) {
                 this.status = status;

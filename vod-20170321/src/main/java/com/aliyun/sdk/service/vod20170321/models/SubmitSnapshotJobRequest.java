@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitSnapshotJobRequest</p>
  */
 public class SubmitSnapshotJobRequest extends Request {
-    @Query
-    @NameInMap("Count")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Count")
     private Long count;
 
-    @Query
-    @NameInMap("Height")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Height")
     private String height;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private Long interval;
 
-    @Query
-    @NameInMap("SnapshotTemplateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotTemplateId")
     private String snapshotTemplateId;
 
-    @Query
-    @NameInMap("SpecifiedOffsetTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedOffsetTime")
     private Long specifiedOffsetTime;
 
-    @Query
-    @NameInMap("SpecifiedOffsetTimes")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpecifiedOffsetTimes")
     private java.util.List < Long > specifiedOffsetTimes;
 
-    @Query
-    @NameInMap("SpriteSnapshotConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SpriteSnapshotConfig")
     private String spriteSnapshotConfig;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
-    @Query
-    @NameInMap("Width")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Width")
     private String width;
 
     private SubmitSnapshotJobRequest(Builder builder) {

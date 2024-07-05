@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddTranscodeTemplateGroupRequest</p>
  */
 public class AddTranscodeTemplateGroupRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("TranscodeTemplateGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
     private String transcodeTemplateGroupId;
 
-    @Query
-    @NameInMap("TranscodeTemplateList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateList")
     private String transcodeTemplateList;
 
     private AddTranscodeTemplateGroupRequest(Builder builder) {

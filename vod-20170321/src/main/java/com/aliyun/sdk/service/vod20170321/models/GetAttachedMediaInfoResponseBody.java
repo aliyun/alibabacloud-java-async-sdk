@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAttachedMediaInfoResponseBody</p>
  */
 public class GetAttachedMediaInfoResponseBody extends TeaModel {
-    @NameInMap("AttachedMediaList")
+    @com.aliyun.core.annotation.NameInMap("AttachedMediaList")
     private java.util.List < AttachedMediaList> attachedMediaList;
 
-    @NameInMap("NonExistMediaIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
     private java.util.List < String > nonExistMediaIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetAttachedMediaInfoResponseBody(Builder builder) {
@@ -92,16 +91,16 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
     } 
 
     public static class Categories extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
         private Categories(Builder builder) {
@@ -196,40 +195,40 @@ public class GetAttachedMediaInfoResponseBody extends TeaModel {
 
     }
     public static class AttachedMediaList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < Categories> categories;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private AttachedMediaList(Builder builder) {

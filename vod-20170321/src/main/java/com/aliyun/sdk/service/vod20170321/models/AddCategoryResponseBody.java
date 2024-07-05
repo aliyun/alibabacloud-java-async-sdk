@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddCategoryResponseBody</p>
  */
 public class AddCategoryResponseBody extends TeaModel {
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.NameInMap("Category")
     private Category category;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddCategoryResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class AddCategoryResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The information about the video category.
+         * The information about the category.
          */
         public Builder category(Category category) {
             this.category = category;
@@ -72,19 +71,19 @@ public class AddCategoryResponseBody extends TeaModel {
     } 
 
     public static class Category extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private Category(Builder builder) {
@@ -146,7 +145,7 @@ public class AddCategoryResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The ID of the video category.
+             * The ID of the category. You can use the value of this parameter when you call the [UpdateCategory](~~UpdateCategory~~), [DeleteCategory](~~DeleteCategory~~), and [GetCategories](~~GetCategories~~) operations.
              */
             public Builder cateId(Long cateId) {
                 this.cateId = cateId;
@@ -155,10 +154,6 @@ public class AddCategoryResponseBody extends TeaModel {
 
             /**
              * The name of the category.
-             * <p>
-             * 
-             * - The value can be up to 64 bytes in length.
-             * - The string must be encoded in the UTF-8 format.
              */
             public Builder cateName(String cateName) {
                 this.cateName = cateName;
@@ -166,7 +161,12 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the category. A value of **0** indicates a level 1 category.
+             * The level of the category. Valid values:
+             * <p>
+             * 
+             * *   **0**: level 1 category
+             * *   **1**: level 2 category
+             * *   **1**: level 3 category
              */
             public Builder level(Long level) {
                 this.level = level;
@@ -174,7 +174,7 @@ public class AddCategoryResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the parent category. The parent category ID of a level 1 category is **-1**.
+             * The ID of the parent category.
              */
             public Builder parentId(Long parentId) {
                 this.parentId = parentId;
@@ -185,8 +185,8 @@ public class AddCategoryResponseBody extends TeaModel {
              * The type of the category. Valid values:
              * <p>
              * 
-             * - **default** (default): default category
-             * - **material**: material category
+             * *   **default**: audio, video, and image files
+             * *   **material**: short video materials
              */
             public Builder type(String type) {
                 this.type = type;

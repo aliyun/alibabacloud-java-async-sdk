@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaAuditAudioResultDetailResponseBody</p>
  */
 public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
-    @NameInMap("MediaAuditAudioResultDetail")
+    @com.aliyun.core.annotation.NameInMap("MediaAuditAudioResultDetail")
     private MediaAuditAudioResultDetail mediaAuditAudioResultDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaAuditAudioResultDetailResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("Label")
+        @com.aliyun.core.annotation.NameInMap("Label")
         private String label;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private Long startTime;
 
-        @NameInMap("Text")
+        @com.aliyun.core.annotation.NameInMap("Text")
         private String text;
 
         private List(Builder builder) {
@@ -181,13 +180,13 @@ public class GetMediaAuditAudioResultDetailResponseBody extends TeaModel {
 
     }
     public static class MediaAuditAudioResultDetail extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("PageTotal")
+        @com.aliyun.core.annotation.NameInMap("PageTotal")
         private Integer pageTotal;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private MediaAuditAudioResultDetail(Builder builder) {

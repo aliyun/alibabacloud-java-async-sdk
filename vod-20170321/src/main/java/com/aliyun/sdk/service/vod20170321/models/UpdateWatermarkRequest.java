@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateWatermarkRequest</p>
  */
 public class UpdateWatermarkRequest extends Request {
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("WatermarkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkConfig;
 
-    @Query
-    @NameInMap("WatermarkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkId;
 
     private UpdateWatermarkRequest(Builder builder) {
@@ -84,9 +83,11 @@ public class UpdateWatermarkRequest extends Request {
         } 
 
         /**
-         * The name of the watermark. Only letters and digits are supported.
+         * The name of the watermark template to which you want to change.
          * <p>
-         * *   The name can be up to 128 bytes in length.
+         * 
+         * *   Only letters and digits are supported.
+         * *   The name cannot exceed 128 bytes.
          * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
@@ -96,9 +97,7 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The configurations such as the position and effect of the text watermark or image watermark. The value is a JSON-formatted string.
-         * <p>
-         * > The value of this parameter varies with the watermark type. For more information about the data structure, see the "WatermarkConfig" section of the [Media processing parameters](~~98618~~) topic.
+         * The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);
@@ -107,7 +106,11 @@ public class UpdateWatermarkRequest extends Request {
         }
 
         /**
-         * The ID of the watermark.
+         * The ID of the watermark template. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:
+         * <p>
+         * 
+         * *   Obtain the watermark template ID from the response to the [AddWatermark](~~AddWatermark~~) operation that you call to create a watermark template.
+         * *   Obtain the watermark template ID from the response to the [ListWatermark](~~ListWatermark~~) operation that you call to query all watermark templates within your account.
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

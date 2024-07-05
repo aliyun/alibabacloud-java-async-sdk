@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetPlayInfoRequest</p>
  */
 public class GetPlayInfoRequest extends Request {
-    @Query
-    @NameInMap("AdditionType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AdditionType")
     private String additionType;
 
-    @Query
-    @NameInMap("AuthTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
     private Long authTimeout;
 
-    @Query
-    @NameInMap("Definition")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Definition")
     private String definition;
 
-    @Query
-    @NameInMap("DigitalWatermarkType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DigitalWatermarkType")
     private String digitalWatermarkType;
 
-    @Query
-    @NameInMap("Formats")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Formats")
     private String formats;
 
-    @Query
-    @NameInMap("OutputType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OutputType")
     private String outputType;
 
-    @Query
-    @NameInMap("PlayConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PlayConfig")
     private String playConfig;
 
-    @Query
-    @NameInMap("ReAuthInfo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ReAuthInfo")
     private String reAuthInfo;
 
-    @Query
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private String streamType;
 
-    @Query
-    @NameInMap("Trace")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Trace")
     private String trace;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private GetPlayInfoRequest(Builder builder) {
@@ -209,10 +208,10 @@ public class GetPlayInfoRequest extends Request {
         } 
 
         /**
-         * The URL of the masked live comment data. Set the value to **danmu**.
+         * The URL of the masked live comment data. Value: **danmu**.
          * <p>
          * 
-         * > This parameter takes effect only when the outputType parameter is set to **cdn**.
+         * >  This parameter takes effect only when the `outputType` parameter is set to `cdn`.
          */
         public Builder additionType(String additionType) {
             this.putQueryParameter("AdditionType", additionType);
@@ -253,13 +252,14 @@ public class GetPlayInfoRequest extends Request {
          * *   **SD**: high definition
          * *   **HD**: ultra-high definition
          * *   **OD**: original definition
-         * *   **2K**: 2K
-         * *   **4K**: 4K
+         * *   **2K**
+         * *   **4K**
          * *   **SQ**: standard sound quality
          * *   **HQ**: high sound quality
          * *   **AUTO**: adaptive bitrate
          * 
-         * > By default, ApsaraVideo VOD returns video streams in all preceding qualities. However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate](~~52839~~) table.
+         * > *   By default, ApsaraVideo VOD returns video streams in all the preceding qualities.
+         * > *   However, video streams for adaptive bitrate streaming are returned only if the PackageSetting parameter is specified in the transcoding template. For more information, see the [PackageSetting parameter in the TranscodeTemplate table](~~52839#title-4fk-cg8-gzx~~).
          */
         public Builder definition(String definition) {
             this.putQueryParameter("Definition", definition);
@@ -287,9 +287,11 @@ public class GetPlayInfoRequest extends Request {
          * *   **mp4**
          * *   **m3u8**
          * *   **mp3**
+         * *   **flv**
          * *   **mpd**
          * 
-         * > By default, ApsaraVideo VOD returns video streams in all the preceding formats. However, video streams in the MPD format are returned only if the MPD container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate](~~52839~~) table.
+         * > *   By default, ApsaraVideo VOD returns video streams in all the preceding formats.
+         * >*   However, video streams in the MPD format are returned only if the `dash` container format is specified in the transcoding template. For more information, see the [Container parameter in the TranscodeTemplate table](~~52839#title-7rr-3hj-gy5~~).
          */
         public Builder formats(String formats) {
             this.putQueryParameter("Formats", formats);
@@ -311,11 +313,11 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The custom playback configuration. The value must be a JSON string. You can specify a domain name for playback. For more information, see [PlayConfig](~~86952~~).
+         * The custom playback configuration. The value must be a JSON string. You can specify a domain name for playback. For more information, see [PlayConfig](~~86952#section-9g7-s9b-v7z~~).
          * <p>
          * 
          * > *   If you do not set the PlayConfig parameter or the `PlayDomain` parameter that is nested under the PlayConfig parameter, the default domain name specified in ApsaraVideo VOD is used in this operation. If no default domain name is specified, the domain names are queried in reverse chronological order based on the time when the domain names were last modified. To prevent domain name issues, we recommend that you perform the following steps to specify the default playback domain name: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management** > **Media Management** > **Storage**. Find the domain name that you want to configure and click **Manage** in the Actions column. On the page that appears, set the default playback domain name in the **Origin Domain Name** section.
-         * >*   If you set the `EncryptType` parameter nested under the PlayConfig parameter to `AliyunVoDEncryption`, the playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography are not automatically returned to ensure video security. To return playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography, you must set the `ResultType` parameter to `Multiple`.
+         * > *   If you set the `EncryptType` parameter nested under the PlayConfig parameter to `AliyunVoDEncryption`, the playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography are not automatically returned to ensure video security. To return playback URLs of videos encrypted by using Alibaba Cloud proprietary cryptography, you must set the `ResultType` parameter to `Multiple`.
          */
         public Builder playConfig(String playConfig) {
             this.putQueryParameter("PlayConfig", playConfig);
@@ -324,7 +326,7 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The CDN reauthentication configuration. The value is a JSON string. If CDN reauthentication is enabled, you can use this parameter to specify the UID and rand fields for URL authentication. For more information, see [URL authentication](~~57007~~).
+         * The CDN reauthentication configuration. The value must be a JSON string. If CDN reauthentication is enabled, you can use this parameter to specify the `UID` and `rand` fields for URL authentication. For more information, see [URL authentication](~~2249352~~).
          */
         public Builder reAuthInfo(String reAuthInfo) {
             this.putQueryParameter("ReAuthInfo", reAuthInfo);
@@ -374,12 +376,12 @@ public class GetPlayInfoRequest extends Request {
         }
 
         /**
-         * The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the media ID:
+         * The ID of the media file. You can specify only one ID. You can use one of the following methods to obtain the ID:
          * <p>
          * 
-         * *   Log on to the [ApsaraVideo VOD](https://vod.console.aliyun.com) console. In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the Video and Audio page, you can view the ID of the audio or video file. This method is applicable to files that are uploaded by using the ApsaraVideo VOD console.
-         * *   Obtain the value of the VideoId parameter from the response to the [CreateUploadVideo](~~55407~~) operation.
-         * *   Obtain the value of the VideoId parameter from the response to the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video**. On the page that appears, view the media ID.
+         * *   Obtain the value of the VideoId parameter in the response to the [CreateUploadVideo](~~55407~~) operation that you called to upload the audio or video file.
+         * *   Obtain the value of VideoId by calling the [SearchMedia](~~86044~~) operation. This method is applicable to files that have been uploaded.
          */
         public Builder videoId(String videoId) {
             this.putQueryParameter("VideoId", videoId);

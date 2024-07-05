@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVodTemplateResponseBody</p>
  */
 public class ListVodTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VodTemplateInfoList")
+    @com.aliyun.core.annotation.NameInMap("VodTemplateInfoList")
     private java.util.List < VodTemplateInfoList> vodTemplateInfoList;
 
     private ListVodTemplateResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListVodTemplateResponseBody extends TeaModel {
     } 
 
     public static class VodTemplateInfoList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
-        @NameInMap("VodTemplateId")
+        @com.aliyun.core.annotation.NameInMap("VodTemplateId")
         private String vodTemplateId;
 
         private VodTemplateInfoList(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,52 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ProduceEditingProjectVideoRequest</p>
  */
 public class ProduceEditingProjectVideoRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("MediaMetadata")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaMetadata")
     private String mediaMetadata;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("ProduceConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProduceConfig")
     private String produceConfig;
 
-    @Query
-    @NameInMap("ProjectId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProjectId")
     private String projectId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
-    @Query
-    @NameInMap("Timeline")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Timeline")
     private String timeline;
 
-    @Query
-    @NameInMap("Title")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private ProduceEditingProjectVideoRequest(Builder builder) {

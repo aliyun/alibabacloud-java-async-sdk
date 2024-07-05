@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteMezzaninesRequest</p>
  */
 public class DeleteMezzaninesRequest extends Request {
-    @Query
-    @NameInMap("Force")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Force")
     private Boolean force;
 
-    @Query
-    @NameInMap("VideoIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoIds;
 
     private DeleteMezzaninesRequest(Builder builder) {

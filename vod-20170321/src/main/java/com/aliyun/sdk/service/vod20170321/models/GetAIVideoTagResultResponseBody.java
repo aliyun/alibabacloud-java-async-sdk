@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAIVideoTagResultResponseBody</p>
  */
 public class GetAIVideoTagResultResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VideoTagResult")
+    @com.aliyun.core.annotation.NameInMap("VideoTagResult")
     private VideoTagResult videoTagResult;
 
     private GetAIVideoTagResultResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
     } 
 
     public static class Category extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
         private Category(Builder builder) {
@@ -113,10 +112,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
     public static class Keyword extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private java.util.List < String > times;
 
         private Keyword(Builder builder) {
@@ -174,10 +173,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
     public static class Location extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private java.util.List < String > times;
 
         private Location(Builder builder) {
@@ -235,13 +234,13 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
     public static class Person extends TeaModel {
-        @NameInMap("FaceUrl")
+        @com.aliyun.core.annotation.NameInMap("FaceUrl")
         private String faceUrl;
 
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private java.util.List < String > times;
 
         private Person(Builder builder) {
@@ -319,10 +318,10 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
     public static class Time extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private String tag;
 
-        @NameInMap("Times")
+        @com.aliyun.core.annotation.NameInMap("Times")
         private java.util.List < String > times;
 
         private Time(Builder builder) {
@@ -380,19 +379,19 @@ public class GetAIVideoTagResultResponseBody extends TeaModel {
 
     }
     public static class VideoTagResult extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private java.util.List < Category> category;
 
-        @NameInMap("Keyword")
+        @com.aliyun.core.annotation.NameInMap("Keyword")
         private java.util.List < Keyword> keyword;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private java.util.List < Location> location;
 
-        @NameInMap("Person")
+        @com.aliyun.core.annotation.NameInMap("Person")
         private java.util.List < Person> person;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private java.util.List < Time> time;
 
         private VideoTagResult(Builder builder) {

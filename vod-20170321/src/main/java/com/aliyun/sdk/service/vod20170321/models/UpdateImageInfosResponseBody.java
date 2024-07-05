@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateImageInfosResponseBody</p>
  */
 public class UpdateImageInfosResponseBody extends TeaModel {
-    @NameInMap("NonExistImageIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistImageIds")
     private NonExistImageIds nonExistImageIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private UpdateImageInfosResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class UpdateImageInfosResponseBody extends TeaModel {
     } 
 
     public static class NonExistImageIds extends TeaModel {
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private java.util.List < String > imageId;
 
         private NonExistImageIds(Builder builder) {

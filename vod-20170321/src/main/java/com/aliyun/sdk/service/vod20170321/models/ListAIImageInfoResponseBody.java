@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAIImageInfoResponseBody</p>
  */
 public class ListAIImageInfoResponseBody extends TeaModel {
-    @NameInMap("AIImageInfoList")
+    @com.aliyun.core.annotation.NameInMap("AIImageInfoList")
     private java.util.List < AIImageInfoList> AIImageInfoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAIImageInfoResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListAIImageInfoResponseBody extends TeaModel {
     } 
 
     public static class AIImageInfoList extends TeaModel {
-        @NameInMap("AIImageInfoId")
+        @com.aliyun.core.annotation.NameInMap("AIImageInfoId")
         private String AIImageInfoId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FileURL")
+        @com.aliyun.core.annotation.NameInMap("FileURL")
         private String fileURL;
 
-        @NameInMap("Format")
+        @com.aliyun.core.annotation.NameInMap("Format")
         private String format;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private String score;
 
-        @NameInMap("Version")
+        @com.aliyun.core.annotation.NameInMap("Version")
         private String version;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private AIImageInfoList(Builder builder) {

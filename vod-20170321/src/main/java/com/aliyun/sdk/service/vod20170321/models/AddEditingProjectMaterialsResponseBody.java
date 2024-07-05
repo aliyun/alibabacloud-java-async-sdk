@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddEditingProjectMaterialsResponseBody</p>
  */
 public class AddEditingProjectMaterialsResponseBody extends TeaModel {
-    @NameInMap("MaterialList")
+    @com.aliyun.core.annotation.NameInMap("MaterialList")
     private java.util.List < MaterialList> materialList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AddEditingProjectMaterialsResponseBody(Builder builder) {
@@ -72,55 +71,55 @@ public class AddEditingProjectMaterialsResponseBody extends TeaModel {
     } 
 
     public static class MaterialList extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CustomerId")
+        @com.aliyun.core.annotation.NameInMap("CustomerId")
         private Long customerId;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("MaterialId")
+        @com.aliyun.core.annotation.NameInMap("MaterialId")
         private String materialId;
 
-        @NameInMap("MaterialType")
+        @com.aliyun.core.annotation.NameInMap("MaterialType")
         private String materialType;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private java.util.List < String > snapshots;
 
-        @NameInMap("SpriteConfig")
+        @com.aliyun.core.annotation.NameInMap("SpriteConfig")
         private String spriteConfig;
 
-        @NameInMap("Sprites")
+        @com.aliyun.core.annotation.NameInMap("Sprites")
         private java.util.List < String > sprites;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private MaterialList(Builder builder) {

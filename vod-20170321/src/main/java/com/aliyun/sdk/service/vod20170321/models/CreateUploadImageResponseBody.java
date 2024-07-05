@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUploadImageResponseBody</p>
  */
 public class CreateUploadImageResponseBody extends TeaModel {
-    @NameInMap("FileURL")
+    @com.aliyun.core.annotation.NameInMap("FileURL")
     private String fileURL;
 
-    @NameInMap("ImageId")
+    @com.aliyun.core.annotation.NameInMap("ImageId")
     private String imageId;
 
-    @NameInMap("ImageURL")
+    @com.aliyun.core.annotation.NameInMap("ImageURL")
     private String imageURL;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadAddress")
+    @com.aliyun.core.annotation.NameInMap("UploadAddress")
     private String uploadAddress;
 
-    @NameInMap("UploadAuth")
+    @com.aliyun.core.annotation.NameInMap("UploadAuth")
     private String uploadAuth;
 
     private CreateUploadImageResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAuditHistoryResponseBody</p>
  */
 public class GetAuditHistoryResponseBody extends TeaModel {
-    @NameInMap("Histories")
+    @com.aliyun.core.annotation.NameInMap("Histories")
     private java.util.List < Histories> histories;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private GetAuditHistoryResponseBody(Builder builder) {
@@ -115,19 +114,19 @@ public class GetAuditHistoryResponseBody extends TeaModel {
     } 
 
     public static class Histories extends TeaModel {
-        @NameInMap("Auditor")
+        @com.aliyun.core.annotation.NameInMap("Auditor")
         private String auditor;
 
-        @NameInMap("Comment")
+        @com.aliyun.core.annotation.NameInMap("Comment")
         private String comment;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Histories(Builder builder) {

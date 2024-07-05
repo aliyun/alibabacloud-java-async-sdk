@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAIJobResponseBody</p>
  */
 public class ListAIJobResponseBody extends TeaModel {
-    @NameInMap("AIJobList")
+    @com.aliyun.core.annotation.NameInMap("AIJobList")
     private AIJobList AIJobList;
 
-    @NameInMap("NonExistAIJobIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistAIJobIds")
     private NonExistAIJobIds nonExistAIJobIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAIJobResponseBody(Builder builder) {
@@ -92,31 +91,31 @@ public class ListAIJobResponseBody extends TeaModel {
     } 
 
     public static class AIJob extends TeaModel {
-        @NameInMap("Code")
+        @com.aliyun.core.annotation.NameInMap("Code")
         private String code;
 
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private String data;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
         private AIJob(Builder builder) {
@@ -303,7 +302,7 @@ public class ListAIJobResponseBody extends TeaModel {
 
     }
     public static class AIJobList extends TeaModel {
-        @NameInMap("AIJob")
+        @com.aliyun.core.annotation.NameInMap("AIJob")
         private java.util.List < AIJob> AIJob;
 
         private AIJobList(Builder builder) {
@@ -344,7 +343,7 @@ public class ListAIJobResponseBody extends TeaModel {
 
     }
     public static class NonExistAIJobIds extends TeaModel {
-        @NameInMap("String")
+        @com.aliyun.core.annotation.NameInMap("String")
         private java.util.List < String > string;
 
         private NonExistAIJobIds(Builder builder) {

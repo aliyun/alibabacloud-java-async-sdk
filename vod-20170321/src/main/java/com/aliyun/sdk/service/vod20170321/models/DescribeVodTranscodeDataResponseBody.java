@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodTranscodeDataResponseBody</p>
  */
 public class DescribeVodTranscodeDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeData")
+    @com.aliyun.core.annotation.NameInMap("TranscodeData")
     private TranscodeData transcodeData;
 
     private DescribeVodTranscodeDataResponseBody(Builder builder) {
@@ -96,10 +95,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
     } 
 
     public static class DataItem extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataItem(Builder builder) {
@@ -162,7 +161,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("DataItem")
+        @com.aliyun.core.annotation.NameInMap("DataItem")
         private java.util.List < DataItem> dataItem;
 
         private Data(Builder builder) {
@@ -203,10 +202,10 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
 
     }
     public static class TranscodeDataItem extends TeaModel {
-        @NameInMap("Data")
+        @com.aliyun.core.annotation.NameInMap("Data")
         private Data data;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private TranscodeDataItem(Builder builder) {
@@ -264,7 +263,7 @@ public class DescribeVodTranscodeDataResponseBody extends TeaModel {
 
     }
     public static class TranscodeData extends TeaModel {
-        @NameInMap("TranscodeDataItem")
+        @com.aliyun.core.annotation.NameInMap("TranscodeDataItem")
         private java.util.List < TranscodeDataItem> transcodeDataItem;
 
         private TranscodeData(Builder builder) {

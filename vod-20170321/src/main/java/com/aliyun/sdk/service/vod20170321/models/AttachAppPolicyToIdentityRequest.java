@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachAppPolicyToIdentityRequest</p>
  */
 public class AttachAppPolicyToIdentityRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("IdentityName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityName;
 
-    @Query
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Query
-    @NameInMap("PolicyNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyNames;
 
     private AttachAppPolicyToIdentityRequest(Builder builder) {

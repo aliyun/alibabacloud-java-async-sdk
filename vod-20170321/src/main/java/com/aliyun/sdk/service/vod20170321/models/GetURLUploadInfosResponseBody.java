@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetURLUploadInfosResponseBody</p>
  */
 public class GetURLUploadInfosResponseBody extends TeaModel {
-    @NameInMap("NonExists")
+    @com.aliyun.core.annotation.NameInMap("NonExists")
     private java.util.List < String > nonExists;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("URLUploadInfoList")
+    @com.aliyun.core.annotation.NameInMap("URLUploadInfoList")
     private java.util.List < URLUploadInfoList> URLUploadInfoList;
 
     private GetURLUploadInfosResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class GetURLUploadInfosResponseBody extends TeaModel {
     } 
 
     public static class URLUploadInfoList extends TeaModel {
-        @NameInMap("CompleteTime")
+        @com.aliyun.core.annotation.NameInMap("CompleteTime")
         private String completeTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("ErrorCode")
+        @com.aliyun.core.annotation.NameInMap("ErrorCode")
         private String errorCode;
 
-        @NameInMap("ErrorMessage")
+        @com.aliyun.core.annotation.NameInMap("ErrorMessage")
         private String errorMessage;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private String fileSize;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UploadURL")
+        @com.aliyun.core.annotation.NameInMap("UploadURL")
         private String uploadURL;
 
-        @NameInMap("UserData")
+        @com.aliyun.core.annotation.NameInMap("UserData")
         private String userData;
 
         private URLUploadInfoList(Builder builder) {

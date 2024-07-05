@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListLiveRecordVideoResponseBody</p>
  */
 public class ListLiveRecordVideoResponseBody extends TeaModel {
-    @NameInMap("LiveRecordVideoList")
+    @com.aliyun.core.annotation.NameInMap("LiveRecordVideoList")
     private LiveRecordVideoList liveRecordVideoList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private ListLiveRecordVideoResponseBody(Builder builder) {
@@ -92,7 +91,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
     } 
 
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < String > snapshot;
 
         private Snapshots(Builder builder) {
@@ -133,46 +132,46 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     }
     public static class Video extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("TemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
         private String templateGroupId;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private Video(Builder builder) {
@@ -443,25 +442,25 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     }
     public static class LiveRecordVideo extends TeaModel {
-        @NameInMap("AppName")
+        @com.aliyun.core.annotation.NameInMap("AppName")
         private String appName;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("PlaylistId")
+        @com.aliyun.core.annotation.NameInMap("PlaylistId")
         private String playlistId;
 
-        @NameInMap("RecordEndTime")
+        @com.aliyun.core.annotation.NameInMap("RecordEndTime")
         private String recordEndTime;
 
-        @NameInMap("RecordStartTime")
+        @com.aliyun.core.annotation.NameInMap("RecordStartTime")
         private String recordStartTime;
 
-        @NameInMap("StreamName")
+        @com.aliyun.core.annotation.NameInMap("StreamName")
         private String streamName;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private Video video;
 
         private LiveRecordVideo(Builder builder) {
@@ -604,7 +603,7 @@ public class ListLiveRecordVideoResponseBody extends TeaModel {
 
     }
     public static class LiveRecordVideoList extends TeaModel {
-        @NameInMap("LiveRecordVideo")
+        @com.aliyun.core.annotation.NameInMap("LiveRecordVideo")
         private java.util.List < LiveRecordVideo> liveRecordVideo;
 
         private LiveRecordVideoList(Builder builder) {

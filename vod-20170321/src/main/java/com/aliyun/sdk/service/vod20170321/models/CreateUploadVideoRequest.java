@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateUploadVideoRequest</p>
  */
 public class CreateUploadVideoRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("CateId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CateId")
     private Long cateId;
 
-    @Query
-    @NameInMap("CoverURL")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoverURL")
     private String coverURL;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("FileName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fileName;
 
-    @Query
-    @NameInMap("FileSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileSize")
     private Long fileSize;
 
-    @Query
-    @NameInMap("StorageLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocation")
     private String storageLocation;
 
-    @Query
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private String tags;
 
-    @Query
-    @NameInMap("TemplateGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
     private String templateGroupId;
 
-    @Query
-    @NameInMap("Title")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Title")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String title;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private String workflowId;
 
     private CreateUploadVideoRequest(Builder builder) {

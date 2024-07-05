@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitTranscodeJobsResponseBody</p>
  */
 public class SubmitTranscodeJobsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeJobs")
+    @com.aliyun.core.annotation.NameInMap("TranscodeJobs")
     private TranscodeJobs transcodeJobs;
 
-    @NameInMap("TranscodeTaskId")
+    @com.aliyun.core.annotation.NameInMap("TranscodeTaskId")
     private String transcodeTaskId;
 
     private SubmitTranscodeJobsResponseBody(Builder builder) {
@@ -95,7 +94,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
     } 
 
     public static class TranscodeJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private TranscodeJob(Builder builder) {
@@ -139,7 +138,7 @@ public class SubmitTranscodeJobsResponseBody extends TeaModel {
 
     }
     public static class TranscodeJobs extends TeaModel {
-        @NameInMap("TranscodeJob")
+        @com.aliyun.core.annotation.NameInMap("TranscodeJob")
         private java.util.List < TranscodeJob> transcodeJob;
 
         private TranscodeJobs(Builder builder) {

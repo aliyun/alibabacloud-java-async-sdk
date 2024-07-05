@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RestoreMediaResponseBody</p>
  */
 public class RestoreMediaResponseBody extends TeaModel {
-    @NameInMap("ForbiddenList")
+    @com.aliyun.core.annotation.NameInMap("ForbiddenList")
     private ForbiddenList forbiddenList;
 
-    @NameInMap("IgnoredList")
+    @com.aliyun.core.annotation.NameInMap("IgnoredList")
     private IgnoredList ignoredList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private RestoreMediaResponseBody(Builder builder) {
@@ -112,10 +111,10 @@ public class RestoreMediaResponseBody extends TeaModel {
     } 
 
     public static class MediaForbiddenReasonDTO extends TeaModel {
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("Reason")
+        @com.aliyun.core.annotation.NameInMap("Reason")
         private String reason;
 
         private MediaForbiddenReasonDTO(Builder builder) {
@@ -173,7 +172,7 @@ public class RestoreMediaResponseBody extends TeaModel {
 
     }
     public static class ForbiddenList extends TeaModel {
-        @NameInMap("MediaForbiddenReasonDTO")
+        @com.aliyun.core.annotation.NameInMap("MediaForbiddenReasonDTO")
         private java.util.List < MediaForbiddenReasonDTO> mediaForbiddenReasonDTO;
 
         private ForbiddenList(Builder builder) {
@@ -214,7 +213,7 @@ public class RestoreMediaResponseBody extends TeaModel {
 
     }
     public static class IgnoredList extends TeaModel {
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private java.util.List < String > mediaId;
 
         private IgnoredList(Builder builder) {

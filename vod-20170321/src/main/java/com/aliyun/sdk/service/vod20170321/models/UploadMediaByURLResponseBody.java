@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMediaByURLResponseBody</p>
  */
 public class UploadMediaByURLResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadJobs")
+    @com.aliyun.core.annotation.NameInMap("UploadJobs")
     private java.util.List < UploadJobs> uploadJobs;
 
     private UploadMediaByURLResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class UploadMediaByURLResponseBody extends TeaModel {
     } 
 
     public static class UploadJobs extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("SourceURL")
+        @com.aliyun.core.annotation.NameInMap("SourceURL")
         private String sourceURL;
 
         private UploadJobs(Builder builder) {

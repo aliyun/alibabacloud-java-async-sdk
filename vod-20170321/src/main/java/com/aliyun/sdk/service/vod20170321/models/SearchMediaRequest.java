@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchMediaRequest</p>
  */
 public class SearchMediaRequest extends Request {
-    @Query
-    @NameInMap("Fields")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Fields")
     private String fields;
 
-    @Query
-    @NameInMap("Match")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Match")
     private String match;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("ScrollToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ScrollToken")
     private String scrollToken;
 
-    @Query
-    @NameInMap("SearchType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchType")
     private String searchType;
 
-    @Query
-    @NameInMap("SortBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortBy")
     private String sortBy;
 
     private SearchMediaRequest(Builder builder) {

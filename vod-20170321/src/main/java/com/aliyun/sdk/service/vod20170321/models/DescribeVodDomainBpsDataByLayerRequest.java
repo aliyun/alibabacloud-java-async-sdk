@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainBpsDataByLayerRequest</p>
  */
 public class DescribeVodDomainBpsDataByLayerRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("Layer")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Layer")
     private String layer;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainBpsDataByLayerRequest(Builder builder) {
@@ -152,7 +151,7 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify a maximum of 500 accelerated domain names. Separate multiple domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -161,7 +160,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -170,7 +172,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time interval between the data entries. Unit: seconds.
+         * <p>
+         * 
+         * The time granularity varies based on the maximum time range per query. Valid values: 300 (5 minutes), 3600 (1 hour), and 86400 (1 day). For more information, see the supported time granularity described in Usage notes.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -179,7 +184,7 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -188,7 +193,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * Layer.
+         * The layer at which you want to query the data.
+         * <p>
+         * 
+         * Network layer: IPv4 and IPv6. Application layer: http, https, and quic. all: specifies that both the network and application layers are included. Default value: all.
          */
         public Builder layer(String layer) {
             this.putQueryParameter("Layer", layer);
@@ -197,7 +205,7 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -215,7 +223,10 @@ public class DescribeVodDomainBpsDataByLayerRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RegisterMediaRequest</p>
  */
 public class RegisterMediaRequest extends Request {
-    @Query
-    @NameInMap("RegisterMetadatas")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegisterMetadatas")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String registerMetadatas;
 
-    @Query
-    @NameInMap("TemplateGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
     private String templateGroupId;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private String workflowId;
 
     private RegisterMediaRequest(Builder builder) {

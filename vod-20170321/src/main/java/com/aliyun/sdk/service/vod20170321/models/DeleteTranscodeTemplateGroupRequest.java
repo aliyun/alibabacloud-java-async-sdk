@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTranscodeTemplateGroupRequest</p>
  */
 public class DeleteTranscodeTemplateGroupRequest extends Request {
-    @Query
-    @NameInMap("ForceDelGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ForceDelGroup")
     private String forceDelGroup;
 
-    @Query
-    @NameInMap("TranscodeTemplateGroupId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String transcodeTemplateGroupId;
 
-    @Query
-    @NameInMap("TranscodeTemplateIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateIds")
     private String transcodeTemplateIds;
 
     private DeleteTranscodeTemplateGroupRequest(Builder builder) {

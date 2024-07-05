@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddVodTemplateRequest</p>
  */
 public class AddVodTemplateRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("TemplateConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateConfig;
 
-    @Query
-    @NameInMap("TemplateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateType;
 
     private AddVodTemplateRequest(Builder builder) {
@@ -121,7 +120,7 @@ public class AddVodTemplateRequest extends Request {
         }
 
         /**
-         * The configurations of the snapshot template. The value must be a JSON string. For more information about the data structure, see [SnapshotTemplateConfig](~~98618~~).
+         * The configurations of the snapshot template. The value must be a JSON string. For more information about the data structure, see [SnapshotTemplateConfig](~~98618~~) and [DynamicImageTemplateConfig](~~98618~~).
          */
         public Builder templateConfig(String templateConfig) {
             this.putQueryParameter("TemplateConfig", templateConfig);

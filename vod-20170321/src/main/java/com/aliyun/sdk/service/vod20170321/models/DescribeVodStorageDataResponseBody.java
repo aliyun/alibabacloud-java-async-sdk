@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodStorageDataResponseBody</p>
  */
 public class DescribeVodStorageDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StorageData")
+    @com.aliyun.core.annotation.NameInMap("StorageData")
     private StorageData storageData;
 
     private DescribeVodStorageDataResponseBody(Builder builder) {
@@ -96,13 +95,13 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
     } 
 
     public static class StorageDataItem extends TeaModel {
-        @NameInMap("NetworkOut")
+        @com.aliyun.core.annotation.NameInMap("NetworkOut")
         private String networkOut;
 
-        @NameInMap("StorageUtilization")
+        @com.aliyun.core.annotation.NameInMap("StorageUtilization")
         private String storageUtilization;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
         private StorageDataItem(Builder builder) {
@@ -177,7 +176,7 @@ public class DescribeVodStorageDataResponseBody extends TeaModel {
 
     }
     public static class StorageData extends TeaModel {
-        @NameInMap("StorageDataItem")
+        @com.aliyun.core.annotation.NameInMap("StorageDataItem")
         private java.util.List < StorageDataItem> storageDataItem;
 
         private StorageData(Builder builder) {

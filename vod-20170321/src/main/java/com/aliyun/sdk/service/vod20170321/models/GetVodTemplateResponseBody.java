@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetVodTemplateResponseBody</p>
  */
 public class GetVodTemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("VodTemplateInfo")
+    @com.aliyun.core.annotation.NameInMap("VodTemplateInfo")
     private VodTemplateInfo vodTemplateInfo;
 
     private GetVodTemplateResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class GetVodTemplateResponseBody extends TeaModel {
     } 
 
     public static class VodTemplateInfo extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
-        @NameInMap("VodTemplateId")
+        @com.aliyun.core.annotation.NameInMap("VodTemplateId")
         private String vodTemplateId;
 
         private VodTemplateInfo(Builder builder) {

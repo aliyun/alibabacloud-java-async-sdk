@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetAuditSecurityIpRequest</p>
  */
 public class SetAuditSecurityIpRequest extends Request {
-    @Query
-    @NameInMap("Ips")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ips")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ips;
 
-    @Query
-    @NameInMap("OperateMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OperateMode")
     private String operateMode;
 
-    @Query
-    @NameInMap("SecurityGroupName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
     private String securityGroupName;
 
     private SetAuditSecurityIpRequest(Builder builder) {

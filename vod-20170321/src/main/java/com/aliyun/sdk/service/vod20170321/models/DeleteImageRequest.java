@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteImageRequest</p>
  */
 public class DeleteImageRequest extends Request {
-    @Query
-    @NameInMap("DeleteImageType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DeleteImageType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String deleteImageType;
 
-    @Query
-    @NameInMap("ImageIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageIds")
     private String imageIds;
 
-    @Query
-    @NameInMap("ImageType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageType")
     private String imageType;
 
-    @Query
-    @NameInMap("ImageURLs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ImageURLs")
     private String imageURLs;
 
-    @Query
-    @NameInMap("VideoId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
     private String videoId;
 
     private DeleteImageRequest(Builder builder) {

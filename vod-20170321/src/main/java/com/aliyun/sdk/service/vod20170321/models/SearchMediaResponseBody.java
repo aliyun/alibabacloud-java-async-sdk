@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchMediaResponseBody</p>
  */
 public class SearchMediaResponseBody extends TeaModel {
-    @NameInMap("MediaList")
+    @com.aliyun.core.annotation.NameInMap("MediaList")
     private java.util.List < MediaList> mediaList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ScrollToken")
+    @com.aliyun.core.annotation.NameInMap("ScrollToken")
     private String scrollToken;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SearchMediaResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class SearchMediaResponseBody extends TeaModel {
     } 
 
     public static class Occurrences extends TeaModel {
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
-        @NameInMap("Score")
+        @com.aliyun.core.annotation.NameInMap("Score")
         private Double score;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Double to;
 
         private Occurrences(Builder builder) {
@@ -193,16 +192,16 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class AiLabelInfo extends TeaModel {
-        @NameInMap("Category")
+        @com.aliyun.core.annotation.NameInMap("Category")
         private String category;
 
-        @NameInMap("LabelId")
+        @com.aliyun.core.annotation.NameInMap("LabelId")
         private String labelId;
 
-        @NameInMap("LabelName")
+        @com.aliyun.core.annotation.NameInMap("LabelName")
         private String labelName;
 
-        @NameInMap("Occurrences")
+        @com.aliyun.core.annotation.NameInMap("Occurrences")
         private java.util.List < Occurrences> occurrences;
 
         private AiLabelInfo(Builder builder) {
@@ -294,13 +293,13 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class OcrInfo extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("From")
+        @com.aliyun.core.annotation.NameInMap("From")
         private Double from;
 
-        @NameInMap("To")
+        @com.aliyun.core.annotation.NameInMap("To")
         private Double to;
 
         private OcrInfo(Builder builder) {
@@ -375,10 +374,10 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class AiData extends TeaModel {
-        @NameInMap("AiLabelInfo")
+        @com.aliyun.core.annotation.NameInMap("AiLabelInfo")
         private java.util.List < AiLabelInfo> aiLabelInfo;
 
-        @NameInMap("OcrInfo")
+        @com.aliyun.core.annotation.NameInMap("OcrInfo")
         private java.util.List < OcrInfo> ocrInfo;
 
         private AiData(Builder builder) {
@@ -436,16 +435,16 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class AiRoughData extends TeaModel {
-        @NameInMap("AiCategory")
+        @com.aliyun.core.annotation.NameInMap("AiCategory")
         private String aiCategory;
 
-        @NameInMap("AiJobId")
+        @com.aliyun.core.annotation.NameInMap("AiJobId")
         private String aiJobId;
 
-        @NameInMap("SaveType")
+        @com.aliyun.core.annotation.NameInMap("SaveType")
         private String saveType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AiRoughData(Builder builder) {
@@ -537,16 +536,16 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class Categories extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("Level")
+        @com.aliyun.core.annotation.NameInMap("Level")
         private Long level;
 
-        @NameInMap("ParentId")
+        @com.aliyun.core.annotation.NameInMap("ParentId")
         private Long parentId;
 
         private Categories(Builder builder) {
@@ -638,40 +637,40 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class AttachedMedia extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("Categories")
+        @com.aliyun.core.annotation.NameInMap("Categories")
         private java.util.List < Categories> categories;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private AttachedMedia(Builder builder) {
@@ -909,73 +908,73 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class Audio extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("AudioId")
+        @com.aliyun.core.annotation.NameInMap("AudioId")
         private String audioId;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DownloadSwitch")
+        @com.aliyun.core.annotation.NameInMap("DownloadSwitch")
         private String downloadSwitch;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("MediaSource")
+        @com.aliyun.core.annotation.NameInMap("MediaSource")
         private String mediaSource;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("PreprocessStatus")
+        @com.aliyun.core.annotation.NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
-        @NameInMap("RestoreExpiration")
+        @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
-        @NameInMap("RestoreStatus")
+        @com.aliyun.core.annotation.NameInMap("RestoreStatus")
         private String restoreStatus;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private java.util.List < String > snapshots;
 
-        @NameInMap("SpriteSnapshots")
+        @com.aliyun.core.annotation.NameInMap("SpriteSnapshots")
         private java.util.List < String > spriteSnapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("TranscodeMode")
+        @com.aliyun.core.annotation.NameInMap("TranscodeMode")
         private String transcodeMode;
 
         private Audio(Builder builder) {
@@ -1432,40 +1431,40 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class Image extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ImageId")
+        @com.aliyun.core.annotation.NameInMap("ImageId")
         private String imageId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("URL")
+        @com.aliyun.core.annotation.NameInMap("URL")
         private String URL;
 
         private Image(Builder builder) {
@@ -1698,73 +1697,73 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class Video extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Long cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DownloadSwitch")
+        @com.aliyun.core.annotation.NameInMap("DownloadSwitch")
         private String downloadSwitch;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("MediaSource")
+        @com.aliyun.core.annotation.NameInMap("MediaSource")
         private String mediaSource;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("PreprocessStatus")
+        @com.aliyun.core.annotation.NameInMap("PreprocessStatus")
         private String preprocessStatus;
 
-        @NameInMap("RestoreExpiration")
+        @com.aliyun.core.annotation.NameInMap("RestoreExpiration")
         private String restoreExpiration;
 
-        @NameInMap("RestoreStatus")
+        @com.aliyun.core.annotation.NameInMap("RestoreStatus")
         private String restoreStatus;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private java.util.List < String > snapshots;
 
-        @NameInMap("SpriteSnapshots")
+        @com.aliyun.core.annotation.NameInMap("SpriteSnapshots")
         private java.util.List < String > spriteSnapshots;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageClass")
+        @com.aliyun.core.annotation.NameInMap("StorageClass")
         private String storageClass;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("TranscodeMode")
+        @com.aliyun.core.annotation.NameInMap("TranscodeMode")
         private String transcodeMode;
 
-        @NameInMap("VideoId")
+        @com.aliyun.core.annotation.NameInMap("VideoId")
         private String videoId;
 
         private Video(Builder builder) {
@@ -2225,31 +2224,31 @@ public class SearchMediaResponseBody extends TeaModel {
 
     }
     public static class MediaList extends TeaModel {
-        @NameInMap("AiData")
+        @com.aliyun.core.annotation.NameInMap("AiData")
         private AiData aiData;
 
-        @NameInMap("AiRoughData")
+        @com.aliyun.core.annotation.NameInMap("AiRoughData")
         private AiRoughData aiRoughData;
 
-        @NameInMap("AttachedMedia")
+        @com.aliyun.core.annotation.NameInMap("AttachedMedia")
         private AttachedMedia attachedMedia;
 
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private Audio audio;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Image")
+        @com.aliyun.core.annotation.NameInMap("Image")
         private Image image;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("MediaType")
+        @com.aliyun.core.annotation.NameInMap("MediaType")
         private String mediaType;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private Video video;
 
         private MediaList(Builder builder) {

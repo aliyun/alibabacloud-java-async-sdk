@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UploadMediaByURLRequest</p>
  */
 public class UploadMediaByURLRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("SessionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SessionId")
     private String sessionId;
 
-    @Query
-    @NameInMap("StorageLocation")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StorageLocation")
     private String storageLocation;
 
-    @Query
-    @NameInMap("TemplateGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateGroupId")
     private String templateGroupId;
 
-    @Query
-    @NameInMap("UploadMetadatas")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadMetadatas")
     private String uploadMetadatas;
 
-    @Query
-    @NameInMap("UploadURLs")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UploadURLs")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String uploadURLs;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
-    @Query
-    @NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private String workflowId;
 
     private UploadMediaByURLRequest(Builder builder) {

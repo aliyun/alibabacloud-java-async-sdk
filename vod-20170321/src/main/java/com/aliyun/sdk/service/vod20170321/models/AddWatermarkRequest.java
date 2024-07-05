@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,27 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddWatermarkRequest</p>
  */
 public class AddWatermarkRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("FileUrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FileUrl")
     private String fileUrl;
 
-    @Query
-    @NameInMap("Name")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String name;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("WatermarkConfig")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkConfig")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkConfig;
 
     private AddWatermarkRequest(Builder builder) {
@@ -113,7 +112,7 @@ public class AddWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the application. Default value: **app-1000000**. For more information, see [Overview](~~113600~~).
+         * The ID of the application. Default value: **app-1000000**. If you have activated the multi-application service, specify the ID of the application to add the watermark template in the specified application. For more information, see [Overview](~~113600~~).
          */
         public Builder appId(String appId) {
             this.putQueryParameter("AppId", appId);
@@ -122,7 +121,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The Object Storage Service (OSS) URL of the watermark file. This parameter is required if you add image watermarks.
+         * The URL of the watermark file. The URL must be an Object Storage Service (OSS) URL and cannot contain the information used for URL signing.
+         * <p>
+         * 
+         * > *   This parameter is required if you set `Type` to `Image`.
+         * > *  You can obtain the URL from the `FileURL` parameter in the response to the [CreateUploadAttachedMedia](~~CreateUploadAttachedMedia~~) operation that you call to upload the watermark image to ApsaraVideo VOD.
          */
         public Builder fileUrl(String fileUrl) {
             this.putQueryParameter("FileUrl", fileUrl);
@@ -131,10 +134,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The name of the watermark. The name can contain only letters and digits.
+         * The name of the watermark template.
          * <p>
          * 
-         * *   The name can be up to 128 bytes in length.
+         * *   Only letters and digits are supported.
+         * *   The name cannot exceed 128 bytes.
          * *   The value must be encoded in UTF-8.
          */
         public Builder name(String name) {
@@ -144,11 +148,11 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The type of the watermark. Valid values:
+         * The type of the watermark template. Valid values:
          * <p>
          * 
-         * *   **Image** (default)
-         * *   **Text**
+         * *   **Image** (default): image watermark template
+         * *   **Text**: text watermark template
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -157,10 +161,7 @@ public class AddWatermarkRequest extends Request {
         }
 
         /**
-         * The configurations such as the position and effect of the text watermark or image watermark. The value must be a JSON string.
-         * <p>
-         * 
-         * > The value of this parameter varies based on the watermark type. For more information about the data structure, see [WatermarkConfig](~~98618~~).
+         * The configuration information of the watermark such as the display position and special effects. The value must be a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
          */
         public Builder watermarkConfig(String watermarkConfig) {
             this.putQueryParameter("WatermarkConfig", watermarkConfig);

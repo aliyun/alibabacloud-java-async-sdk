@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAITemplateResponseBody</p>
  */
 public class ListAITemplateResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TemplateInfoList")
+    @com.aliyun.core.annotation.NameInMap("TemplateInfoList")
     private java.util.List < TemplateInfoList> templateInfoList;
 
     private ListAITemplateResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class ListAITemplateResponseBody extends TeaModel {
     } 
 
     public static class TemplateInfoList extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("TemplateConfig")
+        @com.aliyun.core.annotation.NameInMap("TemplateConfig")
         private String templateConfig;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private String templateType;
 
         private TemplateInfoList(Builder builder) {

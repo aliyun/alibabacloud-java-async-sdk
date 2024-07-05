@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainHitRateDataResponseBody</p>
  */
 public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("HitRateInterval")
+    @com.aliyun.core.annotation.NameInMap("HitRateInterval")
     private HitRateInterval hitRateInterval;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainHitRateDataResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         private String startTime; 
 
         /**
-         * DataInterval.
+         * The time interval at which data is returned, which is the time granularity. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -106,7 +105,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * DomainName.
+         * The accelerated domain name.
          */
         public Builder domainName(String domainName) {
             this.domainName = domainName;
@@ -114,7 +113,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The end of the time range.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -122,7 +121,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * HitRateInterval.
+         * The byte hit rate data at each time interval.
          */
         public Builder hitRateInterval(HitRateInterval hitRateInterval) {
             this.hitRateInterval = hitRateInterval;
@@ -130,7 +129,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -138,7 +137,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -152,13 +151,13 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("HttpsValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -202,7 +201,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * HttpsValue.
+             * The HTTPS byte hit rate.
              */
             public Builder httpsValue(String httpsValue) {
                 this.httpsValue = httpsValue;
@@ -210,7 +209,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * TimeStamp.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -218,7 +217,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The total byte hit rate.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -233,7 +232,7 @@ public class DescribeVodDomainHitRateDataResponseBody extends TeaModel {
 
     }
     public static class HitRateInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private HitRateInterval(Builder builder) {

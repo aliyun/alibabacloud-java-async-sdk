@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSnapshotsResponseBody</p>
  */
 public class ListSnapshotsResponseBody extends TeaModel {
-    @NameInMap("MediaSnapshot")
+    @com.aliyun.core.annotation.NameInMap("MediaSnapshot")
     private MediaSnapshot mediaSnapshot;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListSnapshotsResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class ListSnapshotsResponseBody extends TeaModel {
     } 
 
     public static class Snapshot extends TeaModel {
-        @NameInMap("Index")
+        @com.aliyun.core.annotation.NameInMap("Index")
         private Long index;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private Snapshot(Builder builder) {
@@ -133,7 +132,7 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     }
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < Snapshot> snapshot;
 
         private Snapshots(Builder builder) {
@@ -174,19 +173,19 @@ public class ListSnapshotsResponseBody extends TeaModel {
 
     }
     public static class MediaSnapshot extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
-        @NameInMap("Regular")
+        @com.aliyun.core.annotation.NameInMap("Regular")
         private String regular;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private MediaSnapshot(Builder builder) {

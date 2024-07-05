@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AttachAppPolicyToIdentityResponseBody</p>
  */
 public class AttachAppPolicyToIdentityResponseBody extends TeaModel {
-    @NameInMap("FailedPolicyNames")
+    @com.aliyun.core.annotation.NameInMap("FailedPolicyNames")
     private java.util.List < String > failedPolicyNames;
 
-    @NameInMap("NonExistPolicyNames")
+    @com.aliyun.core.annotation.NameInMap("NonExistPolicyNames")
     private java.util.List < String > nonExistPolicyNames;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private AttachAppPolicyToIdentityResponseBody(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,44 +11,44 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeDetailDataRequest</p>
  */
 public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Field")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Field")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String field;
 
-    @Query
-    @NameInMap("IspNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IspNameEn")
     private String ispNameEn;
 
-    @Query
-    @NameInMap("LocationNameEn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LocationNameEn")
     private String locationNameEn;
 
-    @Query
-    @NameInMap("Merge")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Merge")
     private String merge;
 
-    @Query
-    @NameInMap("MergeLocIsp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MergeLocIsp")
     private String mergeLocIsp;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
     private DescribeVodDomainRealTimeDetailDataRequest(Builder builder) {
@@ -170,7 +169,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name. You can specify a maximum of 20 accelerated domain names in each call. Separate domain names with commas (,).
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -179,7 +178,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:40:00Z.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -188,7 +190,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Field.
+         * The type of data that you want to query. You can specify multiple data types and separate them with commas (,). Valid values:
+         * <p>
+         * 
+         * qps: the number of queries per second bps: bandwidth data http_code: HTTP status codes
          */
         public Builder field(String field) {
             this.putQueryParameter("Field", field);
@@ -197,7 +202,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * IspNameEn.
+         * The name of the Internet service provider (ISP).
          */
         public Builder ispNameEn(String ispNameEn) {
             this.putQueryParameter("IspNameEn", ispNameEn);
@@ -206,7 +211,7 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * LocationNameEn.
+         * The name of the region. If you do not specify a region, data in all regions is queried.
          */
         public Builder locationNameEn(String locationNameEn) {
             this.putQueryParameter("LocationNameEn", locationNameEn);
@@ -215,7 +220,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * Merge.
+         * Specifies whether to return a summary value. Valid values:
+         * <p>
+         * 
+         * true false (default)
          */
         public Builder merge(String merge) {
             this.putQueryParameter("Merge", merge);
@@ -224,7 +232,13 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * MergeLocIsp.
+         * Specifies whether to return a summary value. Valid values:
+         * <p>
+         * 
+         * *   **true**: groups the results by domain name and merges the results by region and ISP.
+         * *   **false**: groups the results by domain name.
+         * 
+         * Default value: **false**.
          */
         public Builder mergeLocIsp(String mergeLocIsp) {
             this.putQueryParameter("MergeLocIsp", mergeLocIsp);
@@ -242,7 +256,10 @@ public class DescribeVodDomainRealTimeDetailDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Example: 2019-11-30T05:33:00Z.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

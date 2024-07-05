@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAIMediaAuditJobRequest</p>
  */
 public class GetAIMediaAuditJobRequest extends Request {
-    @Query
-    @NameInMap("JobId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String jobId;
 
     private GetAIMediaAuditJobRequest(Builder builder) {

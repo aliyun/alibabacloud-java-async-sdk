@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppPoliciesForIdentityResponseBody</p>
  */
 public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
-    @NameInMap("AppPolicyList")
+    @com.aliyun.core.annotation.NameInMap("AppPolicyList")
     private java.util.List < AppPolicyList> appPolicyList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListAppPoliciesForIdentityResponseBody(Builder builder) {
@@ -75,25 +74,25 @@ public class ListAppPoliciesForIdentityResponseBody extends TeaModel {
     } 
 
     public static class AppPolicyList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("PolicyName")
+        @com.aliyun.core.annotation.NameInMap("PolicyName")
         private String policyName;
 
-        @NameInMap("PolicyType")
+        @com.aliyun.core.annotation.NameInMap("PolicyType")
         private String policyType;
 
-        @NameInMap("PolicyValue")
+        @com.aliyun.core.annotation.NameInMap("PolicyValue")
         private String policyValue;
 
         private AppPolicyList(Builder builder) {

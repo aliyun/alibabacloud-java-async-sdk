@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMediaAuditResultDetailResponseBody</p>
  */
 public class GetMediaAuditResultDetailResponseBody extends TeaModel {
-    @NameInMap("MediaAuditResultDetail")
+    @com.aliyun.core.annotation.NameInMap("MediaAuditResultDetail")
     private MediaAuditResultDetail mediaAuditResultDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMediaAuditResultDetailResponseBody(Builder builder) {
@@ -72,40 +71,40 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
     } 
 
     public static class List extends TeaModel {
-        @NameInMap("AdLabel")
+        @com.aliyun.core.annotation.NameInMap("AdLabel")
         private String adLabel;
 
-        @NameInMap("AdScore")
+        @com.aliyun.core.annotation.NameInMap("AdScore")
         private String adScore;
 
-        @NameInMap("LiveLabel")
+        @com.aliyun.core.annotation.NameInMap("LiveLabel")
         private String liveLabel;
 
-        @NameInMap("LiveScore")
+        @com.aliyun.core.annotation.NameInMap("LiveScore")
         private String liveScore;
 
-        @NameInMap("LogoLabel")
+        @com.aliyun.core.annotation.NameInMap("LogoLabel")
         private String logoLabel;
 
-        @NameInMap("LogoScore")
+        @com.aliyun.core.annotation.NameInMap("LogoScore")
         private String logoScore;
 
-        @NameInMap("PornLabel")
+        @com.aliyun.core.annotation.NameInMap("PornLabel")
         private String pornLabel;
 
-        @NameInMap("PornScore")
+        @com.aliyun.core.annotation.NameInMap("PornScore")
         private String pornScore;
 
-        @NameInMap("TerrorismLabel")
+        @com.aliyun.core.annotation.NameInMap("TerrorismLabel")
         private String terrorismLabel;
 
-        @NameInMap("TerrorismScore")
+        @com.aliyun.core.annotation.NameInMap("TerrorismScore")
         private String terrorismScore;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private String timestamp;
 
-        @NameInMap("Url")
+        @com.aliyun.core.annotation.NameInMap("Url")
         private String url;
 
         private List(Builder builder) {
@@ -359,10 +358,10 @@ public class GetMediaAuditResultDetailResponseBody extends TeaModel {
 
     }
     public static class MediaAuditResultDetail extends TeaModel {
-        @NameInMap("List")
+        @com.aliyun.core.annotation.NameInMap("List")
         private java.util.List < List> list;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private MediaAuditResultDetail(Builder builder) {

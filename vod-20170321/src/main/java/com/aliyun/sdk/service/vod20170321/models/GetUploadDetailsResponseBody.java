@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUploadDetailsResponseBody</p>
  */
 public class GetUploadDetailsResponseBody extends TeaModel {
-    @NameInMap("ForbiddenMediaIds")
+    @com.aliyun.core.annotation.NameInMap("ForbiddenMediaIds")
     private java.util.List < String > forbiddenMediaIds;
 
-    @NameInMap("NonExistMediaIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
     private java.util.List < String > nonExistMediaIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UploadDetails")
+    @com.aliyun.core.annotation.NameInMap("UploadDetails")
     private java.util.List < UploadDetails> uploadDetails;
 
     private GetUploadDetailsResponseBody(Builder builder) {
@@ -112,43 +111,43 @@ public class GetUploadDetailsResponseBody extends TeaModel {
     } 
 
     public static class UploadDetails extends TeaModel {
-        @NameInMap("CompletionTime")
+        @com.aliyun.core.annotation.NameInMap("CompletionTime")
         private String completionTime;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("DeviceModel")
+        @com.aliyun.core.annotation.NameInMap("DeviceModel")
         private String deviceModel;
 
-        @NameInMap("FileSize")
+        @com.aliyun.core.annotation.NameInMap("FileSize")
         private Long fileSize;
 
-        @NameInMap("MediaId")
+        @com.aliyun.core.annotation.NameInMap("MediaId")
         private String mediaId;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
-        @NameInMap("UploadIP")
+        @com.aliyun.core.annotation.NameInMap("UploadIP")
         private String uploadIP;
 
-        @NameInMap("UploadRatio")
+        @com.aliyun.core.annotation.NameInMap("UploadRatio")
         private Float uploadRatio;
 
-        @NameInMap("UploadSize")
+        @com.aliyun.core.annotation.NameInMap("UploadSize")
         private Long uploadSize;
 
-        @NameInMap("UploadSource")
+        @com.aliyun.core.annotation.NameInMap("UploadSource")
         private String uploadSource;
 
-        @NameInMap("UploadStatus")
+        @com.aliyun.core.annotation.NameInMap("UploadStatus")
         private String uploadStatus;
 
         private UploadDetails(Builder builder) {

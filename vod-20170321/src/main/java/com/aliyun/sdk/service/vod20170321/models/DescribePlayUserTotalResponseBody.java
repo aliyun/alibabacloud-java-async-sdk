@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayUserTotalResponseBody</p>
  */
 public class DescribePlayUserTotalResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserPlayStatisTotals")
+    @com.aliyun.core.annotation.NameInMap("UserPlayStatisTotals")
     private UserPlayStatisTotals userPlayStatisTotals;
 
     private DescribePlayUserTotalResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
     } 
 
     public static class Uv extends TeaModel {
-        @NameInMap("Android")
+        @com.aliyun.core.annotation.NameInMap("Android")
         private String android;
 
-        @NameInMap("Flash")
+        @com.aliyun.core.annotation.NameInMap("Flash")
         private String flash;
 
-        @NameInMap("HTML5")
+        @com.aliyun.core.annotation.NameInMap("HTML5")
         private String HTML5;
 
-        @NameInMap("iOS")
+        @com.aliyun.core.annotation.NameInMap("iOS")
         private String iOS;
 
         private Uv(Builder builder) {
@@ -173,16 +172,16 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     }
     public static class Vv extends TeaModel {
-        @NameInMap("Android")
+        @com.aliyun.core.annotation.NameInMap("Android")
         private String android;
 
-        @NameInMap("Flash")
+        @com.aliyun.core.annotation.NameInMap("Flash")
         private String flash;
 
-        @NameInMap("HTML5")
+        @com.aliyun.core.annotation.NameInMap("HTML5")
         private String HTML5;
 
-        @NameInMap("iOS")
+        @com.aliyun.core.annotation.NameInMap("iOS")
         private String iOS;
 
         private Vv(Builder builder) {
@@ -274,19 +273,19 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     }
     public static class UserPlayStatisTotal extends TeaModel {
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
-        @NameInMap("PlayDuration")
+        @com.aliyun.core.annotation.NameInMap("PlayDuration")
         private String playDuration;
 
-        @NameInMap("PlayRange")
+        @com.aliyun.core.annotation.NameInMap("PlayRange")
         private String playRange;
 
-        @NameInMap("UV")
+        @com.aliyun.core.annotation.NameInMap("UV")
         private Uv uv;
 
-        @NameInMap("VV")
+        @com.aliyun.core.annotation.NameInMap("VV")
         private Vv vv;
 
         private UserPlayStatisTotal(Builder builder) {
@@ -395,7 +394,7 @@ public class DescribePlayUserTotalResponseBody extends TeaModel {
 
     }
     public static class UserPlayStatisTotals extends TeaModel {
-        @NameInMap("UserPlayStatisTotal")
+        @com.aliyun.core.annotation.NameInMap("UserPlayStatisTotal")
         private java.util.List < UserPlayStatisTotal> userPlayStatisTotal;
 
         private UserPlayStatisTotals(Builder builder) {

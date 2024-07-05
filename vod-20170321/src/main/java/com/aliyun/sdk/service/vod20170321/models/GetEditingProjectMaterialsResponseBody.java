@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetEditingProjectMaterialsResponseBody</p>
  */
 public class GetEditingProjectMaterialsResponseBody extends TeaModel {
-    @NameInMap("MaterialList")
+    @com.aliyun.core.annotation.NameInMap("MaterialList")
     private MaterialList materialList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetEditingProjectMaterialsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
     } 
 
     public static class Snapshots extends TeaModel {
-        @NameInMap("Snapshot")
+        @com.aliyun.core.annotation.NameInMap("Snapshot")
         private java.util.List < String > snapshot;
 
         private Snapshots(Builder builder) {
@@ -113,7 +112,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     }
     public static class Sprites extends TeaModel {
-        @NameInMap("Sprite")
+        @com.aliyun.core.annotation.NameInMap("Sprite")
         private java.util.List < String > sprite;
 
         private Sprites(Builder builder) {
@@ -154,55 +153,55 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     }
     public static class Material extends TeaModel {
-        @NameInMap("CateId")
+        @com.aliyun.core.annotation.NameInMap("CateId")
         private Integer cateId;
 
-        @NameInMap("CateName")
+        @com.aliyun.core.annotation.NameInMap("CateName")
         private String cateName;
 
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("MaterialId")
+        @com.aliyun.core.annotation.NameInMap("MaterialId")
         private String materialId;
 
-        @NameInMap("MaterialType")
+        @com.aliyun.core.annotation.NameInMap("MaterialType")
         private String materialType;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("Size")
+        @com.aliyun.core.annotation.NameInMap("Size")
         private Long size;
 
-        @NameInMap("Snapshots")
+        @com.aliyun.core.annotation.NameInMap("Snapshots")
         private Snapshots snapshots;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SpriteConfig")
+        @com.aliyun.core.annotation.NameInMap("SpriteConfig")
         private String spriteConfig;
 
-        @NameInMap("Sprites")
+        @com.aliyun.core.annotation.NameInMap("Sprites")
         private Sprites sprites;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private String tags;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Material(Builder builder) {
@@ -526,7 +525,7 @@ public class GetEditingProjectMaterialsResponseBody extends TeaModel {
 
     }
     public static class MaterialList extends TeaModel {
-        @NameInMap("Material")
+        @com.aliyun.core.annotation.NameInMap("Material")
         private java.util.List < Material> material;
 
         private MaterialList(Builder builder) {

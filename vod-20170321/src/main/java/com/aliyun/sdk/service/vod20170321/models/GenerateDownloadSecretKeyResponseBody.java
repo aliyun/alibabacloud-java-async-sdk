@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GenerateDownloadSecretKeyResponseBody</p>
  */
 public class GenerateDownloadSecretKeyResponseBody extends TeaModel {
-    @NameInMap("AppEncryptKey")
+    @com.aliyun.core.annotation.NameInMap("AppEncryptKey")
     private String appEncryptKey;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GenerateDownloadSecretKeyResponseBody(Builder builder) {

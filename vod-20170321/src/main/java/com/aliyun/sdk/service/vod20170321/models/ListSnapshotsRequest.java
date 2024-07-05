@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListSnapshotsRequest</p>
  */
 public class ListSnapshotsRequest extends Request {
-    @Query
-    @NameInMap("AuthTimeout")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthTimeout")
     private String authTimeout;
 
-    @Query
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private String pageNo;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private String pageSize;
 
-    @Query
-    @NameInMap("SnapshotType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SnapshotType")
     private String snapshotType;
 
-    @Query
-    @NameInMap("VideoId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VideoId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String videoId;
 
     private ListSnapshotsRequest(Builder builder) {

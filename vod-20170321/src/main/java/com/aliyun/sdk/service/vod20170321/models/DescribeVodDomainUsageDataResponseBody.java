@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainUsageDataResponseBody</p>
  */
 public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
-    @NameInMap("Area")
+    @com.aliyun.core.annotation.NameInMap("Area")
     private String area;
 
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("Type")
+    @com.aliyun.core.annotation.NameInMap("Type")
     private String type;
 
-    @NameInMap("UsageDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("UsageDataPerInterval")
     private UsageDataPerInterval usageDataPerInterval;
 
     private DescribeVodDomainUsageDataResponseBody(Builder builder) {
@@ -196,10 +195,10 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -257,7 +256,7 @@ public class DescribeVodDomainUsageDataResponseBody extends TeaModel {
 
     }
     public static class UsageDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private UsageDataPerInterval(Builder builder) {

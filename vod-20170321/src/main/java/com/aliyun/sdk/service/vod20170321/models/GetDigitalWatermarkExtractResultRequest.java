@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDigitalWatermarkExtractResultRequest</p>
  */
 public class GetDigitalWatermarkExtractResultRequest extends Request {
-    @Query
-    @NameInMap("ExtractType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtractType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String extractType;
 
-    @Query
-    @NameInMap("JobId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("JobId")
     private String jobId;
 
-    @Query
-    @NameInMap("MediaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaId;
 
-    @Query
-    @NameInMap("OwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerAccount")
     private String ownerAccount;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private String ownerId;
 
-    @Query
-    @NameInMap("ResourceOwnerAccount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerAccount")
     private String resourceOwnerAccount;
 
-    @Query
-    @NameInMap("ResourceOwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private String resourceOwnerId;
 
     private GetDigitalWatermarkExtractResultRequest(Builder builder) {
@@ -140,11 +139,11 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         } 
 
         /**
-         * The type of the digital watermark. Valid values:
+         * The type of the watermark. Valid values:
          * <p>
          * 
-         * *   TraceMark: tracing watermark
-         * *   CopyrightMark: copyright watermark
+         * *   **TraceMark**: user-tracing watermark
+         * *   **CopyrightMark**: copyright watermark
          */
         public Builder extractType(String extractType) {
             this.putQueryParameter("ExtractType", extractType);
@@ -153,7 +152,11 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         }
 
         /**
-         * The ID of the job.
+         * The ID of the watermark extraction job.
+         * <p>
+         * 
+         * *   You can obtain the ID from the response to the [SubmitDigitalWatermarkExtractJob](~~SubmitDigitalWatermarkExtractJob~~) operation.
+         * *   If you specify this parameter, the result of the specified watermark extraction job is returned. If you leave this parameter empty, the results of all watermark extraction jobs submitted for the video are returned.
          */
         public Builder jobId(String jobId) {
             this.putQueryParameter("JobId", jobId);
@@ -162,7 +165,11 @@ public class GetDigitalWatermarkExtractResultRequest extends Request {
         }
 
         /**
-         * The ID of the video file. You can query the video ID by using the ApsaraVideo VOD console or calling the SearchMedia operation.
+         * The ID of the video from which you want to query the watermark content. You can specify only one ID. You can use one of the following methods to obtain the ID:
+         * <p>
+         * 
+         * *   Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Media Files** > **Audio/Video** to view the video ID.
+         * *   Obtain the VideoId from the response to the [SearchMedia](~~SearchMedia~~) operation.
          */
         public Builder mediaId(String mediaId) {
             this.putQueryParameter("MediaId", mediaId);

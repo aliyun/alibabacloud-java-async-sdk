@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachAppPolicyFromIdentityResponseBody</p>
  */
 public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
-    @NameInMap("FailedPolicyNames")
+    @com.aliyun.core.annotation.NameInMap("FailedPolicyNames")
     private java.util.List < String > failedPolicyNames;
 
-    @NameInMap("NonExistPolicyNames")
+    @com.aliyun.core.annotation.NameInMap("NonExistPolicyNames")
     private java.util.List < String > nonExistPolicyNames;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DetachAppPolicyFromIdentityResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class DetachAppPolicyFromIdentityResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the policy that failed to be detached from the identity.
+         * The names of the policies that failed to be granted to the RAM user or RAM role.
          */
         public Builder failedPolicyNames(java.util.List < String > failedPolicyNames) {
             this.failedPolicyNames = failedPolicyNames;

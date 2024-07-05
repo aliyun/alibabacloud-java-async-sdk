@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshMediaPlayUrlsResponseBody</p>
  */
 public class RefreshMediaPlayUrlsResponseBody extends TeaModel {
-    @NameInMap("ForbiddenMediaIds")
+    @com.aliyun.core.annotation.NameInMap("ForbiddenMediaIds")
     private String forbiddenMediaIds;
 
-    @NameInMap("MediaRefreshJobId")
+    @com.aliyun.core.annotation.NameInMap("MediaRefreshJobId")
     private String mediaRefreshJobId;
 
-    @NameInMap("NonExistMediaIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistMediaIds")
     private String nonExistMediaIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private RefreshMediaPlayUrlsResponseBody(Builder builder) {

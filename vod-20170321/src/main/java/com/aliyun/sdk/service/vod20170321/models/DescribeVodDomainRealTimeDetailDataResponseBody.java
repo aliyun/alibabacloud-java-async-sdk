@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainRealTimeDetailDataResponseBody</p>
  */
 public class DescribeVodDomainRealTimeDetailDataResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private String data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainRealTimeDetailDataResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeVodDomainRealTimeDetailDataResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned results.
          */
         public Builder data(String data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class DescribeVodDomainRealTimeDetailDataResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The ID of the request.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

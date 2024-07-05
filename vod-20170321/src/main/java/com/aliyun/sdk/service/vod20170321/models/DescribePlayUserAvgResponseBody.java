@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePlayUserAvgResponseBody</p>
  */
 public class DescribePlayUserAvgResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("UserPlayStatisAvgs")
+    @com.aliyun.core.annotation.NameInMap("UserPlayStatisAvgs")
     private UserPlayStatisAvgs userPlayStatisAvgs;
 
     private DescribePlayUserAvgResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
     } 
 
     public static class UserPlayStatisAvg extends TeaModel {
-        @NameInMap("AvgPlayCount")
+        @com.aliyun.core.annotation.NameInMap("AvgPlayCount")
         private String avgPlayCount;
 
-        @NameInMap("AvgPlayDuration")
+        @com.aliyun.core.annotation.NameInMap("AvgPlayDuration")
         private String avgPlayDuration;
 
-        @NameInMap("Date")
+        @com.aliyun.core.annotation.NameInMap("Date")
         private String date;
 
         private UserPlayStatisAvg(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribePlayUserAvgResponseBody extends TeaModel {
 
     }
     public static class UserPlayStatisAvgs extends TeaModel {
-        @NameInMap("UserPlayStatisAvg")
+        @com.aliyun.core.annotation.NameInMap("UserPlayStatisAvg")
         private java.util.List < UserPlayStatisAvg> userPlayStatisAvg;
 
         private UserPlayStatisAvgs(Builder builder) {

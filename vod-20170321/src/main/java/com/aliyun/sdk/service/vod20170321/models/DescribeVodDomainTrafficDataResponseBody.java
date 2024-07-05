@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainTrafficDataResponseBody</p>
  */
 public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
-    @NameInMap("DataInterval")
+    @com.aliyun.core.annotation.NameInMap("DataInterval")
     private String dataInterval;
 
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
-    @NameInMap("TotalTraffic")
+    @com.aliyun.core.annotation.NameInMap("TotalTraffic")
     private String totalTraffic;
 
-    @NameInMap("TrafficDataPerInterval")
+    @com.aliyun.core.annotation.NameInMap("TrafficDataPerInterval")
     private TrafficDataPerInterval trafficDataPerInterval;
 
     private DescribeVodDomainTrafficDataResponseBody(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         private TrafficDataPerInterval trafficDataPerInterval; 
 
         /**
-         * The time interval between the entries returned. Unit: seconds.
+         * The time interval at which data is returned, which is the time granularity. Unit: seconds.
          */
         public Builder dataInterval(String dataInterval) {
             this.dataInterval = dataInterval;
@@ -126,7 +125,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The end of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The end of the time range.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -142,7 +141,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The beginning of the time range during which data was queried. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+         * The beginning of the time range.
          */
         public Builder startTime(String startTime) {
             this.startTime = startTime;
@@ -158,7 +157,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
         }
 
         /**
-         * The network traffic that was collected at each interval.
+         * The amount of network traffic at each time interval.
          */
         public Builder trafficDataPerInterval(TrafficDataPerInterval trafficDataPerInterval) {
             this.trafficDataPerInterval = trafficDataPerInterval;
@@ -172,25 +171,25 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
     } 
 
     public static class DataModule extends TeaModel {
-        @NameInMap("DomesticValue")
+        @com.aliyun.core.annotation.NameInMap("DomesticValue")
         private String domesticValue;
 
-        @NameInMap("HttpsDomesticValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsDomesticValue")
         private String httpsDomesticValue;
 
-        @NameInMap("HttpsOverseasValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsOverseasValue")
         private String httpsOverseasValue;
 
-        @NameInMap("HttpsValue")
+        @com.aliyun.core.annotation.NameInMap("HttpsValue")
         private String httpsValue;
 
-        @NameInMap("OverseasValue")
+        @com.aliyun.core.annotation.NameInMap("OverseasValue")
         private String overseasValue;
 
-        @NameInMap("TimeStamp")
+        @com.aliyun.core.annotation.NameInMap("TimeStamp")
         private String timeStamp;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private DataModule(Builder builder) {
@@ -310,7 +309,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the returned data. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The timestamp of the data returned. The time follows the ISO 8601 standard in the yyyy-MM-ddThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder timeStamp(String timeStamp) {
                 this.timeStamp = timeStamp;
@@ -318,7 +317,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
             }
 
             /**
-             * The total amount of network traffic. Unit: bytes.
+             * The total traffic. Unit: bytes.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -333,7 +332,7 @@ public class DescribeVodDomainTrafficDataResponseBody extends TeaModel {
 
     }
     public static class TrafficDataPerInterval extends TeaModel {
-        @NameInMap("DataModule")
+        @com.aliyun.core.annotation.NameInMap("DataModule")
         private java.util.List < DataModule> dataModule;
 
         private TrafficDataPerInterval(Builder builder) {

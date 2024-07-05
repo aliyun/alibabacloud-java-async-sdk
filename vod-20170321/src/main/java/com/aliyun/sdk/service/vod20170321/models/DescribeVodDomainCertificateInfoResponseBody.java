@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainCertificateInfoResponseBody</p>
  */
 public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
-    @NameInMap("CertInfos")
+    @com.aliyun.core.annotation.NameInMap("CertInfos")
     private CertInfos certInfos;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainCertificateInfoResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
     } 
 
     public static class CertInfo extends TeaModel {
-        @NameInMap("CertDomainName")
+        @com.aliyun.core.annotation.NameInMap("CertDomainName")
         private String certDomainName;
 
-        @NameInMap("CertExpireTime")
+        @com.aliyun.core.annotation.NameInMap("CertExpireTime")
         private String certExpireTime;
 
-        @NameInMap("CertLife")
+        @com.aliyun.core.annotation.NameInMap("CertLife")
         private String certLife;
 
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("CertOrg")
+        @com.aliyun.core.annotation.NameInMap("CertOrg")
         private String certOrg;
 
-        @NameInMap("CertType")
+        @com.aliyun.core.annotation.NameInMap("CertType")
         private String certType;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("ServerCertificateStatus")
+        @com.aliyun.core.annotation.NameInMap("ServerCertificateStatus")
         private String serverCertificateStatus;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CertInfo(Builder builder) {
@@ -293,7 +292,7 @@ public class DescribeVodDomainCertificateInfoResponseBody extends TeaModel {
 
     }
     public static class CertInfos extends TeaModel {
-        @NameInMap("CertInfo")
+        @com.aliyun.core.annotation.NameInMap("CertInfo")
         private java.util.List < CertInfo> certInfo;
 
         private CertInfos(Builder builder) {

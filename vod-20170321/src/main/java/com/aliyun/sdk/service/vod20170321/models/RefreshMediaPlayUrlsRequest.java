@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,42 +11,42 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RefreshMediaPlayUrlsRequest</p>
  */
 public class RefreshMediaPlayUrlsRequest extends Request {
-    @Query
-    @NameInMap("Definitions")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Definitions")
     private String definitions;
 
-    @Query
-    @NameInMap("Formats")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Formats")
     private String formats;
 
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
-    @Query
-    @NameInMap("ResultType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultType")
     private String resultType;
 
-    @Query
-    @NameInMap("SliceCount")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SliceCount")
     private Integer sliceCount;
 
-    @Query
-    @NameInMap("SliceFlag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SliceFlag")
     private Boolean sliceFlag;
 
-    @Query
-    @NameInMap("StreamType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StreamType")
     private String streamType;
 
-    @Query
-    @NameInMap("TaskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TaskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String taskType;
 
-    @Query
-    @NameInMap("UserData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserData")
     private String userData;
 
     private RefreshMediaPlayUrlsRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,23 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DetachAppPolicyFromIdentityRequest</p>
  */
 public class DetachAppPolicyFromIdentityRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("IdentityName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityName;
 
-    @Query
-    @NameInMap("IdentityType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identityType;
 
-    @Query
-    @NameInMap("PolicyNames")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PolicyNames")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String policyNames;
 
     private DetachAppPolicyFromIdentityRequest(Builder builder) {
@@ -99,8 +98,9 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         } 
 
         /**
-         * The ID of the application. This parameter is optional when the PolicyNames parameter is set to VODAppAdministratorAccess. This parameter is required when the PolicyNames parameter is set to other values.
+         * The ID of the application. This parameter is optional if you set PolicyNames to VODAppAdministratorAccess. This parameter is required if you set PolicyNames to a value other than VODAppAdministratorAccess.
          * <p>
+         * 
          * *   Default value: **app-1000000**.
          * *   For more information, see [Overview](~~113600~~).
          */
@@ -111,10 +111,11 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The name of the identity.
+         * The ID of the RAM user or the name of the RAM role.
          * <p>
-         * *   Specifies the ID of the RAM user when the IdentityType parameter is set to RamUser.
-         * *   Specifies the name of the RAM role when the IdentityType parameter is set to RamRole.
+         * 
+         * *   Specifies the ID of the RAM user for this parameter if you set IdentityType to RamUser.
+         * *   Specifies the name of the RAM role for this parameter if you set IdentityType to RamRole.
          */
         public Builder identityName(String identityName) {
             this.putQueryParameter("IdentityName", identityName);
@@ -125,8 +126,9 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         /**
          * The type of the identity. Valid values:
          * <p>
-         * *   **RamUser**: a RAM user.
-         * *   **RamRole**: a RAM role.
+         * 
+         * *   **RamUser**: RAM user
+         * *   **RamRole**: RAM role
          */
         public Builder identityType(String identityType) {
             this.putQueryParameter("IdentityType", identityType);
@@ -135,11 +137,12 @@ public class DetachAppPolicyFromIdentityRequest extends Request {
         }
 
         /**
-         * The name of the policy. Separate multiple policies with commas (,). Only system policies are supported.
+         * The name of the policy. Separate multiple names with commas (,). Only system policies are supported.
          * <p>
-         * *   **VODAppFullAccess**: authorizes an identity to manage all resources in an application.
-         * *   **VODAppReadOnlyAccess**: authorizes an identity to access all resources in an application in read-only mode.
-         * *   **VODAppAdministratorAccess**: assigns the application administrator role to an identity.
+         * 
+         * *   **VODAppFullAccess**: permissions to manage all resources in an application
+         * *   **VODAppReadOnlyAccess**: permissions to read all resources in an application
+         * *   **VODAppAdministratorAccess**: permissions of the application administrator
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListTranscodeTemplateGroupResponseBody</p>
  */
 public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeTemplateGroupList")
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupList")
     private java.util.List < TranscodeTemplateGroupList> transcodeTemplateGroupList;
 
     private ListTranscodeTemplateGroupResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class ListTranscodeTemplateGroupResponseBody extends TeaModel {
     } 
 
     public static class TranscodeTemplateGroupList extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private String locked;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
         private TranscodeTemplateGroupList(Builder builder) {

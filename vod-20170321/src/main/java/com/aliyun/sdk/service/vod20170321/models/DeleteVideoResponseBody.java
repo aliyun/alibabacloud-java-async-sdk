@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteVideoResponseBody</p>
  */
 public class DeleteVideoResponseBody extends TeaModel {
-    @NameInMap("ForbiddenVideoIds")
+    @com.aliyun.core.annotation.NameInMap("ForbiddenVideoIds")
     private java.util.List < String > forbiddenVideoIds;
 
-    @NameInMap("NonExistVideoIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistVideoIds")
     private java.util.List < String > nonExistVideoIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteVideoResponseBody(Builder builder) {

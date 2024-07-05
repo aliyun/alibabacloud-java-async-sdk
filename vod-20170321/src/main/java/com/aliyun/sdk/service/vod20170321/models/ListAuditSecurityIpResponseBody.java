@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAuditSecurityIpResponseBody</p>
  */
 public class ListAuditSecurityIpResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SecurityIpList")
+    @com.aliyun.core.annotation.NameInMap("SecurityIpList")
     private java.util.List < SecurityIpList> securityIpList;
 
     private ListAuditSecurityIpResponseBody(Builder builder) {
@@ -72,16 +71,16 @@ public class ListAuditSecurityIpResponseBody extends TeaModel {
     } 
 
     public static class SecurityIpList extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Ips")
+        @com.aliyun.core.annotation.NameInMap("Ips")
         private String ips;
 
-        @NameInMap("ModificationTime")
+        @com.aliyun.core.annotation.NameInMap("ModificationTime")
         private String modificationTime;
 
-        @NameInMap("SecurityGroupName")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupName")
         private String securityGroupName;
 
         private SecurityIpList(Builder builder) {

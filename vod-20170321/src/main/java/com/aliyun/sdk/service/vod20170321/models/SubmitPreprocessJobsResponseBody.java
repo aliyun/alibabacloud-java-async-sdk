@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitPreprocessJobsResponseBody</p>
  */
 public class SubmitPreprocessJobsResponseBody extends TeaModel {
-    @NameInMap("PreprocessJobs")
+    @com.aliyun.core.annotation.NameInMap("PreprocessJobs")
     private PreprocessJobs preprocessJobs;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private SubmitPreprocessJobsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
     } 
 
     public static class PreprocessJob extends TeaModel {
-        @NameInMap("JobId")
+        @com.aliyun.core.annotation.NameInMap("JobId")
         private String jobId;
 
         private PreprocessJob(Builder builder) {
@@ -113,7 +112,7 @@ public class SubmitPreprocessJobsResponseBody extends TeaModel {
 
     }
     public static class PreprocessJobs extends TeaModel {
-        @NameInMap("PreprocessJob")
+        @com.aliyun.core.annotation.NameInMap("PreprocessJob")
         private java.util.List < PreprocessJob> preprocessJob;
 
         private PreprocessJobs(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAppPoliciesForIdentityRequest</p>
  */
 public class ListAppPoliciesForIdentityRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("IdentityName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityName")
     private String identityName;
 
-    @Query
-    @NameInMap("IdentityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IdentityType")
     private String identityType;
 
     private ListAppPoliciesForIdentityRequest(Builder builder) {

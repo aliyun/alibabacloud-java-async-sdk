@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainDetailResponseBody</p>
  */
 public class DescribeVodDomainDetailResponseBody extends TeaModel {
-    @NameInMap("DomainDetail")
+    @com.aliyun.core.annotation.NameInMap("DomainDetail")
     private DomainDetail domainDetail;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeVodDomainDetailResponseBody(Builder builder) {
@@ -72,20 +71,23 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
     } 
 
     public static class Source extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("Enabled")
+        @com.aliyun.core.annotation.NameInMap("Enabled")
         private String enabled;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
-        @NameInMap("Priority")
+        @com.aliyun.core.annotation.NameInMap("Priority")
         private String priority;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
+
+        @com.aliyun.core.annotation.NameInMap("Weight")
+        private String weight;
 
         private Source(Builder builder) {
             this.content = builder.content;
@@ -93,6 +95,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             this.port = builder.port;
             this.priority = builder.priority;
             this.type = builder.type;
+            this.weight = builder.weight;
         }
 
         public static Builder builder() {
@@ -138,12 +141,20 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
             return this.type;
         }
 
+        /**
+         * @return weight
+         */
+        public String getWeight() {
+            return this.weight;
+        }
+
         public static final class Builder {
             private String content; 
             private String enabled; 
             private Integer port; 
             private String priority; 
             private String type; 
+            private String weight; 
 
             /**
              * The address of the origin server.
@@ -192,6 +203,14 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * The weight of the origin server if multiple origin servers have been specified.
+             */
+            public Builder weight(String weight) {
+                this.weight = weight;
+                return this;
+            }
+
             public Source build() {
                 return new Source(this);
             } 
@@ -200,7 +219,7 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     }
     public static class Sources extends TeaModel {
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private java.util.List < Source> source;
 
         private Sources(Builder builder) {
@@ -241,40 +260,40 @@ public class DescribeVodDomainDetailResponseBody extends TeaModel {
 
     }
     public static class DomainDetail extends TeaModel {
-        @NameInMap("CertName")
+        @com.aliyun.core.annotation.NameInMap("CertName")
         private String certName;
 
-        @NameInMap("Cname")
+        @com.aliyun.core.annotation.NameInMap("Cname")
         private String cname;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DomainName")
+        @com.aliyun.core.annotation.NameInMap("DomainName")
         private String domainName;
 
-        @NameInMap("DomainStatus")
+        @com.aliyun.core.annotation.NameInMap("DomainStatus")
         private String domainStatus;
 
-        @NameInMap("GmtCreated")
+        @com.aliyun.core.annotation.NameInMap("GmtCreated")
         private String gmtCreated;
 
-        @NameInMap("GmtModified")
+        @com.aliyun.core.annotation.NameInMap("GmtModified")
         private String gmtModified;
 
-        @NameInMap("SSLProtocol")
+        @com.aliyun.core.annotation.NameInMap("SSLProtocol")
         private String SSLProtocol;
 
-        @NameInMap("SSLPub")
+        @com.aliyun.core.annotation.NameInMap("SSLPub")
         private String SSLPub;
 
-        @NameInMap("Scope")
+        @com.aliyun.core.annotation.NameInMap("Scope")
         private String scope;
 
-        @NameInMap("Sources")
+        @com.aliyun.core.annotation.NameInMap("Sources")
         private Sources sources;
 
-        @NameInMap("Weight")
+        @com.aliyun.core.annotation.NameInMap("Weight")
         private String weight;
 
         private DomainDetail(Builder builder) {

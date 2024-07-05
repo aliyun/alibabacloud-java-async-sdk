@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteTranscodeTemplateGroupResponseBody</p>
  */
 public class DeleteTranscodeTemplateGroupResponseBody extends TeaModel {
-    @NameInMap("NonExistTranscodeTemplateIds")
+    @com.aliyun.core.annotation.NameInMap("NonExistTranscodeTemplateIds")
     private java.util.List < String > nonExistTranscodeTemplateIds;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteTranscodeTemplateGroupResponseBody(Builder builder) {

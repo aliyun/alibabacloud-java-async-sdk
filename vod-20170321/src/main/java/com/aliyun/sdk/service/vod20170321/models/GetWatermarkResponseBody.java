@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetWatermarkResponseBody</p>
  */
 public class GetWatermarkResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("WatermarkInfo")
+    @com.aliyun.core.annotation.NameInMap("WatermarkInfo")
     private WatermarkInfo watermarkInfo;
 
     private GetWatermarkResponseBody(Builder builder) {
@@ -58,7 +57,7 @@ public class GetWatermarkResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the watermark.
+         * The information about the watermark template.
          */
         public Builder watermarkInfo(WatermarkInfo watermarkInfo) {
             this.watermarkInfo = watermarkInfo;
@@ -72,28 +71,28 @@ public class GetWatermarkResponseBody extends TeaModel {
     } 
 
     public static class WatermarkInfo extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("FileUrl")
+        @com.aliyun.core.annotation.NameInMap("FileUrl")
         private String fileUrl;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("WatermarkConfig")
+        @com.aliyun.core.annotation.NameInMap("WatermarkConfig")
         private String watermarkConfig;
 
-        @NameInMap("WatermarkId")
+        @com.aliyun.core.annotation.NameInMap("WatermarkId")
         private String watermarkId;
 
         private WatermarkInfo(Builder builder) {
@@ -190,7 +189,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the watermark was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
+             * The time when the watermark template was created. The time follows the ISO 8601 standard in the *yyyy-MM-dd*T*HH:mm:ss*Z format. The time is displayed in UTC.
              */
             public Builder creationTime(String creationTime) {
                 this.creationTime = creationTime;
@@ -198,7 +197,10 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The Object Storage Service (OSS) URL or CDN URL of the watermark file. A text watermark does not have a file URL.
+             * The URL of the watermark file. The URL is an Object Storage Service (OSS) URL or an Alibaba Cloud CDN URL.
+             * <p>
+             * 
+             * >  This parameter is returned only for image watermark templates.
              */
             public Builder fileUrl(String fileUrl) {
                 this.fileUrl = fileUrl;
@@ -206,7 +208,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the watermark is the default one. Valid values:
+             * Indicates whether the watermark template is the default one. Valid values:
              * <p>
              * 
              * *   **Default**
@@ -218,7 +220,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the watermark.
+             * The name of the watermark template.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -226,11 +228,11 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the watermark. Valid values:
+             * The type of the watermark template. Valid values:
              * <p>
              * 
-             * *   **Image**
-             * *   **Text**
+             * *   **Image**: image watermark template
+             * *   **Text**: text watermark template
              */
             public Builder type(String type) {
                 this.type = type;
@@ -238,7 +240,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration information such as the position and effect about the text watermark or image watermark. The value is a JSON string. For more information about the data structure, see the "WatermarkConfig: specifies the watermark configurations" section of the [Parameters for media processing](~~98618~~) topic.
+             * The configuration information of the watermark such as the display position and special effects. The value is a JSON string. The configuration parameters for image and text watermarks are different. For more information about the parameter structure, see [WatermarkConfig](~~98618#section-h01-44s-2lr~~).
              */
             public Builder watermarkConfig(String watermarkConfig) {
                 this.watermarkConfig = watermarkConfig;
@@ -246,7 +248,7 @@ public class GetWatermarkResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the watermark.
+             * The ID of the watermark template.
              */
             public Builder watermarkId(String watermarkId) {
                 this.watermarkId = watermarkId;

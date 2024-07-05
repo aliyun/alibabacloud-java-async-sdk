@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,9 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteWatermarkRequest</p>
  */
 public class DeleteWatermarkRequest extends Request {
-    @Query
-    @NameInMap("WatermarkId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WatermarkId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String watermarkId;
 
     private DeleteWatermarkRequest(Builder builder) {
@@ -55,7 +54,11 @@ public class DeleteWatermarkRequest extends Request {
         } 
 
         /**
-         * The ID of the watermark.
+         * The ID of watermark template that you want to delete. You can specify only one watermark template ID. You can obtain the ID by using one of the following methods:
+         * <p>
+         * 
+         * *   Obtain the watermark template ID from the response to the [AddWatermark](~~AddWatermark~~) operation that you call to create a watermark template.
+         * *   Obtain the watermark template ID from the response to the [ListWatermark](~~ListWatermark~~) operation that you call to query all watermark templates within your account.
          */
         public Builder watermarkId(String watermarkId) {
             this.putQueryParameter("WatermarkId", watermarkId);

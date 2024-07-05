@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodRefreshTasksResponseBody</p>
  */
 public class DescribeVodRefreshTasksResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tasks")
+    @com.aliyun.core.annotation.NameInMap("Tasks")
     private Tasks tasks;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private DescribeVodRefreshTasksResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
     } 
 
     public static class Task extends TeaModel {
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ObjectPath")
+        @com.aliyun.core.annotation.NameInMap("ObjectPath")
         private String objectPath;
 
-        @NameInMap("ObjectType")
+        @com.aliyun.core.annotation.NameInMap("ObjectType")
         private String objectType;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("TaskId")
+        @com.aliyun.core.annotation.NameInMap("TaskId")
         private String taskId;
 
         private Task(Builder builder) {
@@ -309,7 +308,7 @@ public class DescribeVodRefreshTasksResponseBody extends TeaModel {
 
     }
     public static class Tasks extends TeaModel {
-        @NameInMap("Task")
+        @com.aliyun.core.annotation.NameInMap("Task")
         private java.util.List < Task> task;
 
         private Tasks(Builder builder) {

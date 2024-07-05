@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetTranscodeTemplateGroupResponseBody</p>
  */
 public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TranscodeTemplateGroup")
+    @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroup")
     private TranscodeTemplateGroup transcodeTemplateGroup;
 
     private GetTranscodeTemplateGroupResponseBody(Builder builder) {
@@ -72,58 +71,58 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
     } 
 
     public static class TranscodeTemplateList extends TeaModel {
-        @NameInMap("Audio")
+        @com.aliyun.core.annotation.NameInMap("Audio")
         private String audio;
 
-        @NameInMap("Clip")
+        @com.aliyun.core.annotation.NameInMap("Clip")
         private String clip;
 
-        @NameInMap("Container")
+        @com.aliyun.core.annotation.NameInMap("Container")
         private String container;
 
-        @NameInMap("CopyrightMark")
+        @com.aliyun.core.annotation.NameInMap("CopyrightMark")
         private String copyrightMark;
 
-        @NameInMap("Definition")
+        @com.aliyun.core.annotation.NameInMap("Definition")
         private String definition;
 
-        @NameInMap("EncryptSetting")
+        @com.aliyun.core.annotation.NameInMap("EncryptSetting")
         private String encryptSetting;
 
-        @NameInMap("MuxConfig")
+        @com.aliyun.core.annotation.NameInMap("MuxConfig")
         private String muxConfig;
 
-        @NameInMap("PackageSetting")
+        @com.aliyun.core.annotation.NameInMap("PackageSetting")
         private String packageSetting;
 
-        @NameInMap("Rotate")
+        @com.aliyun.core.annotation.NameInMap("Rotate")
         private String rotate;
 
-        @NameInMap("SubtitleList")
+        @com.aliyun.core.annotation.NameInMap("SubtitleList")
         private String subtitleList;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TraceMark")
+        @com.aliyun.core.annotation.NameInMap("TraceMark")
         private String traceMark;
 
-        @NameInMap("TransConfig")
+        @com.aliyun.core.annotation.NameInMap("TransConfig")
         private String transConfig;
 
-        @NameInMap("TranscodeFileRegular")
+        @com.aliyun.core.annotation.NameInMap("TranscodeFileRegular")
         private String transcodeFileRegular;
 
-        @NameInMap("TranscodeTemplateId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateId")
         private String transcodeTemplateId;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("Video")
+        @com.aliyun.core.annotation.NameInMap("Video")
         private String video;
 
-        @NameInMap("WatermarkIds")
+        @com.aliyun.core.annotation.NameInMap("WatermarkIds")
         private java.util.List < String > watermarkIds;
 
         private TranscodeTemplateList(Builder builder) {
@@ -482,28 +481,28 @@ public class GetTranscodeTemplateGroupResponseBody extends TeaModel {
 
     }
     public static class TranscodeTemplateGroup extends TeaModel {
-        @NameInMap("AppId")
+        @com.aliyun.core.annotation.NameInMap("AppId")
         private String appId;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("IsDefault")
+        @com.aliyun.core.annotation.NameInMap("IsDefault")
         private String isDefault;
 
-        @NameInMap("Locked")
+        @com.aliyun.core.annotation.NameInMap("Locked")
         private String locked;
 
-        @NameInMap("ModifyTime")
+        @com.aliyun.core.annotation.NameInMap("ModifyTime")
         private String modifyTime;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("TranscodeTemplateGroupId")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateGroupId")
         private String transcodeTemplateGroupId;
 
-        @NameInMap("TranscodeTemplateList")
+        @com.aliyun.core.annotation.NameInMap("TranscodeTemplateList")
         private java.util.List < TranscodeTemplateList> transcodeTemplateList;
 
         private TranscodeTemplateGroup(Builder builder) {

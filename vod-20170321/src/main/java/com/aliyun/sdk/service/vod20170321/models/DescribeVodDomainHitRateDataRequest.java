@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodDomainHitRateDataRequest</p>
  */
 public class DescribeVodDomainHitRateDataRequest extends Request {
-    @Query
-    @NameInMap("DomainName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DomainName")
     private String domainName;
 
-    @Query
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("StartTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
     private DescribeVodDomainHitRateDataRequest(Builder builder) {
@@ -110,7 +109,12 @@ public class DescribeVodDomainHitRateDataRequest extends Request {
         } 
 
         /**
-         * DomainName.
+         * The accelerated domain name.
+         * <p>
+         * 
+         * *   If you leave this parameter empty, the merged data of all your accelerated domain names is returned.
+         * *   You can specify multiple domain names and separate them with commas (,). You can specify a maximum of 500 domain names in each call.
+         * *   To obtain the accelerated domain name, perform the following steps: Log on to the [ApsaraVideo VOD console](https://vod.console.aliyun.com). In the left-side navigation pane, choose **Configuration Management > CDN Configuration > Domain Names**. On the Domain Names page, view the accelerated domain names. Alternatively, you can call the [DescribeVodUserDomains](~~DescribeVodUserDomains~~) operation to query the accelerated domain names.
          */
         public Builder domainName(String domainName) {
             this.putQueryParameter("DomainName", domainName);
@@ -119,7 +123,12 @@ public class DescribeVodDomainHitRateDataRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query.
+         * <p>
+         * 
+         * Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
+         * 
+         * >  The end time must be later than the start time.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -128,7 +137,12 @@ public class DescribeVodDomainHitRateDataRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The time granularity. Unit: seconds. Valid values: **300**, **3600**, and **86400**. If you leave this parameter empty or specify an invalid value, the default value is used. The supported time granularity varies based on the time range specified by `EndTime` and `StartTime`. The following content describes the supported time granularity.
+         * <p>
+         * 
+         * *   Time range per query < 3 days: **300** (default), **3600**, and **86400**
+         * *   3 days ≤ Time range per query < 31 days: **3600** (default) and **86400**
+         * *   31 days ≤ Time range per query ≤ 90 days: **86400** (default)
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -146,7 +160,7 @@ public class DescribeVodDomainHitRateDataRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);

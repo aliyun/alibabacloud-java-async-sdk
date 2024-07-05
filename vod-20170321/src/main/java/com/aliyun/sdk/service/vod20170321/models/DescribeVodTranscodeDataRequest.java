@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeVodTranscodeDataRequest</p>
  */
 public class DescribeVodTranscodeDataRequest extends Request {
-    @Query
-    @NameInMap("AppId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AppId")
     private String appId;
 
-    @Query
-    @NameInMap("EndTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endTime;
 
-    @Query
-    @NameInMap("Interval")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Interval")
     private String interval;
 
-    @Query
-    @NameInMap("OwnerId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OwnerId")
     private Long ownerId;
 
-    @Query
-    @NameInMap("Region")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
     private String region;
 
-    @Query
-    @NameInMap("Specification")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Specification")
     private String specification;
 
-    @Query
-    @NameInMap("StartTime")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTime")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String startTime;
 
-    @Query
-    @NameInMap("Storage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Storage")
     private String storage;
 
     private DescribeVodTranscodeDataRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetUploadDetailsRequest</p>
  */
 public class GetUploadDetailsRequest extends Request {
-    @Query
-    @NameInMap("MediaIds")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaIds")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String mediaIds;
 
-    @Query
-    @NameInMap("MediaType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MediaType")
     private String mediaType;
 
     private GetUploadDetailsRequest(Builder builder) {

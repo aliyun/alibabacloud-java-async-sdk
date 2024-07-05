@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.vod20170321.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchEditingProjectResponseBody</p>
  */
 public class SearchEditingProjectResponseBody extends TeaModel {
-    @NameInMap("ProjectList")
+    @com.aliyun.core.annotation.NameInMap("ProjectList")
     private ProjectList projectList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
     private SearchEditingProjectResponseBody(Builder builder) {
@@ -92,34 +91,34 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     } 
 
     public static class Project extends TeaModel {
-        @NameInMap("CoverURL")
+        @com.aliyun.core.annotation.NameInMap("CoverURL")
         private String coverURL;
 
-        @NameInMap("CreationTime")
+        @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Duration")
+        @com.aliyun.core.annotation.NameInMap("Duration")
         private Float duration;
 
-        @NameInMap("ModifiedTime")
+        @com.aliyun.core.annotation.NameInMap("ModifiedTime")
         private String modifiedTime;
 
-        @NameInMap("ProjectId")
+        @com.aliyun.core.annotation.NameInMap("ProjectId")
         private String projectId;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageLocation")
+        @com.aliyun.core.annotation.NameInMap("StorageLocation")
         private String storageLocation;
 
-        @NameInMap("Title")
+        @com.aliyun.core.annotation.NameInMap("Title")
         private String title;
 
         private Project(Builder builder) {
@@ -322,7 +321,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
     }
     public static class ProjectList extends TeaModel {
-        @NameInMap("Project")
+        @com.aliyun.core.annotation.NameInMap("Project")
         private java.util.List < Project> project;
 
         private ProjectList(Builder builder) {
