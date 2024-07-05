@@ -95,6 +95,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateTagResourcesResponse> createTagResources(CreateTagResourcesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<CreateWebCCRuleResponse> createWebCCRule(CreateWebCCRuleRequest request);
 
     CompletableFuture<CreateWebRuleResponse> createWebRule(CreateWebRuleRequest request);
@@ -129,6 +133,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DeleteTagResourcesResponse> deleteTagResources(DeleteTagResourcesRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DeleteWebCCRuleResponse> deleteWebCCRule(DeleteWebCCRuleRequest request);
 
     CompletableFuture<DeleteWebCCRuleV2Response> deleteWebCCRuleV2(DeleteWebCCRuleV2Request request);
@@ -228,6 +236,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<DescribeDefenseRecordsResponse> describeDefenseRecords(DescribeDefenseRecordsRequest request);
+
+    CompletableFuture<DescribeDestinationPortEventResponse> describeDestinationPortEvent(DescribeDestinationPortEventRequest request);
 
     CompletableFuture<DescribeDomainAttackEventsResponse> describeDomainAttackEvents(DescribeDomainAttackEventsRequest request);
 
@@ -458,6 +468,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeWebAreaBlockConfigsResponse> describeWebAreaBlockConfigs(DescribeWebAreaBlockConfigsRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<DescribeWebCCRulesResponse> describeWebCCRules(DescribeWebCCRulesRequest request);
 
     CompletableFuture<DescribeWebCCRulesV2Response> describeWebCCRulesV2(DescribeWebCCRulesV2Request request);
@@ -598,6 +612,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ModifyWebCCGlobalSwitchResponse> modifyWebCCGlobalSwitch(ModifyWebCCGlobalSwitchRequest request);
 
+    /**
+      * @deprecated
+      *
+     */
     CompletableFuture<ModifyWebCCRuleResponse> modifyWebCCRule(ModifyWebCCRuleRequest request);
 
     CompletableFuture<ModifyWebCacheCustomRuleResponse> modifyWebCacheCustomRule(ModifyWebCacheCustomRuleRequest request);

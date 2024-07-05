@@ -6,15 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link DescribeDDosEventSrcIpRequest} extends {@link RequestModel}
+ * {@link DescribeDestinationPortEventRequest} extends {@link RequestModel}
  *
- * <p>DescribeDDosEventSrcIpRequest</p>
+ * <p>DescribeDestinationPortEventRequest</p>
  */
-public class DescribeDDosEventSrcIpRequest extends Request {
-    @com.aliyun.core.annotation.Host
-    @com.aliyun.core.annotation.NameInMap("RegionId")
-    private String regionId;
-
+public class DescribeDestinationPortEventRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -31,16 +27,21 @@ public class DescribeDDosEventSrcIpRequest extends Request {
     private Long range;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Region")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String region;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
-    private DescribeDDosEventSrcIpRequest(Builder builder) {
+    private DescribeDestinationPortEventRequest(Builder builder) {
         super(builder);
-        this.regionId = builder.regionId;
         this.eventType = builder.eventType;
         this.ip = builder.ip;
         this.range = builder.range;
+        this.region = builder.region;
         this.startTime = builder.startTime;
     }
 
@@ -48,20 +49,13 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         return new Builder();
     }
 
-    public static DescribeDDosEventSrcIpRequest create() {
+    public static DescribeDestinationPortEventRequest create() {
         return builder().build();
     }
 
     @Override
     public Builder toBuilder() {
         return new Builder(this);
-    }
-
-    /**
-     * @return regionId
-     */
-    public String getRegionId() {
-        return this.regionId;
     }
 
     /**
@@ -86,47 +80,41 @@ public class DescribeDDosEventSrcIpRequest extends Request {
     }
 
     /**
+     * @return region
+     */
+    public String getRegion() {
+        return this.region;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
         return this.startTime;
     }
 
-    public static final class Builder extends Request.Builder<DescribeDDosEventSrcIpRequest, Builder> {
-        private String regionId; 
+    public static final class Builder extends Request.Builder<DescribeDestinationPortEventRequest, Builder> {
         private String eventType; 
         private String ip; 
         private Long range; 
+        private String region; 
         private Long startTime; 
 
         private Builder() {
             super();
         } 
 
-        private Builder(DescribeDDosEventSrcIpRequest request) {
+        private Builder(DescribeDestinationPortEventRequest request) {
             super(request);
-            this.regionId = request.regionId;
             this.eventType = request.eventType;
             this.ip = request.ip;
             this.range = request.range;
+            this.region = request.region;
             this.startTime = request.startTime;
         } 
 
         /**
-         * RegionId.
-         */
-        public Builder regionId(String regionId) {
-            this.putHostParameter("RegionId", regionId);
-            this.regionId = regionId;
-            return this;
-        }
-
-        /**
-         * The type of the attack event that you want to query. Valid values:
-         * <p>
-         * 
-         * *   **defense**: attack events that trigger traffic scrubbing
-         * *   **blackhole**: attack events that trigger blackhole filtering
+         * EventType.
          */
         public Builder eventType(String eventType) {
             this.putQueryParameter("EventType", eventType);
@@ -135,7 +123,7 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * The IP address of the attacked Anti-DDoS Pro or Anti-DDoS Premium instance.
+         * Ip.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -144,7 +132,7 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * The number of source IP addresses that you want to return. The source IP addresses are returned in descending order of attack traffic. By default, the top **five** source IP addresses are returned.
+         * Range.
          */
         public Builder range(Long range) {
             this.putQueryParameter("Range", range);
@@ -153,10 +141,16 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         /**
-         * The UNIX timestamp when the query starts. Unit: seconds.
-         * <p>
-         * 
-         * > You can call the [DescribeDDosAllEventList](~~188604~~) operation to query the beginning time of all attack events.
+         * Region.
+         */
+        public Builder region(String region) {
+            this.putQueryParameter("Region", region);
+            this.region = region;
+            return this;
+        }
+
+        /**
+         * StartTime.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
@@ -165,8 +159,8 @@ public class DescribeDDosEventSrcIpRequest extends Request {
         }
 
         @Override
-        public DescribeDDosEventSrcIpRequest build() {
-            return new DescribeDDosEventSrcIpRequest(this);
+        public DescribeDestinationPortEventRequest build() {
+            return new DescribeDestinationPortEventRequest(this);
         } 
 
     } 

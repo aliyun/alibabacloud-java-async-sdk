@@ -11,6 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeDDosEventAreaRequest</p>
  */
 public class DescribeDDosEventAreaRequest extends Request {
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("EventType")
     @com.aliyun.core.annotation.Validation(required = true)
@@ -22,14 +26,20 @@ public class DescribeDDosEventAreaRequest extends Request {
     private String ip;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Range")
+    private Long range;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("StartTime")
     @com.aliyun.core.annotation.Validation(required = true)
     private Long startTime;
 
     private DescribeDDosEventAreaRequest(Builder builder) {
         super(builder);
+        this.regionId = builder.regionId;
         this.eventType = builder.eventType;
         this.ip = builder.ip;
+        this.range = builder.range;
         this.startTime = builder.startTime;
     }
 
@@ -47,6 +57,13 @@ public class DescribeDDosEventAreaRequest extends Request {
     }
 
     /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
+    /**
      * @return eventType
      */
     public String getEventType() {
@@ -61,6 +78,13 @@ public class DescribeDDosEventAreaRequest extends Request {
     }
 
     /**
+     * @return range
+     */
+    public Long getRange() {
+        return this.range;
+    }
+
+    /**
      * @return startTime
      */
     public Long getStartTime() {
@@ -68,8 +92,10 @@ public class DescribeDDosEventAreaRequest extends Request {
     }
 
     public static final class Builder extends Request.Builder<DescribeDDosEventAreaRequest, Builder> {
+        private String regionId; 
         private String eventType; 
         private String ip; 
+        private Long range; 
         private Long startTime; 
 
         private Builder() {
@@ -78,10 +104,21 @@ public class DescribeDDosEventAreaRequest extends Request {
 
         private Builder(DescribeDDosEventAreaRequest request) {
             super(request);
+            this.regionId = request.regionId;
             this.eventType = request.eventType;
             this.ip = request.ip;
+            this.range = request.range;
             this.startTime = request.startTime;
         } 
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putHostParameter("RegionId", regionId);
+            this.regionId = regionId;
+            return this;
+        }
 
         /**
          * The type of the attack event that you want to query. Valid values:
@@ -102,6 +139,15 @@ public class DescribeDDosEventAreaRequest extends Request {
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
             this.ip = ip;
+            return this;
+        }
+
+        /**
+         * Range.
+         */
+        public Builder range(Long range) {
+            this.putQueryParameter("Range", range);
+            this.range = range;
             return this;
         }
 
