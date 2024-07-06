@@ -141,6 +141,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ExportDoNotCallNumbersResponse> exportDoNotCallNumbers(ExportDoNotCallNumbersRequest request);
 
+    CompletableFuture<FinishTicketTaskResponse> finishTicketTask(FinishTicketTaskRequest request);
+
     CompletableFuture<GetAccessChannelOfStagingResponse> getAccessChannelOfStaging(GetAccessChannelOfStagingRequest request);
 
     CompletableFuture<GetAudioFileResponse> getAudioFile(GetAudioFileRequest request);
