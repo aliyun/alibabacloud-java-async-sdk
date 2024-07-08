@@ -160,6 +160,8 @@ public class ModifyMountTargetRequest extends Request {
          * 
          * *   Active: The mount target is available.
          * *   Inactive: The mount target is unavailable.
+         * 
+         * >  Only General-purpose Apsara File Storage NAS (NAS) file systems support changing the mount target status.
          */
         public Builder status(String status) {
             this.putQueryParameter("Status", status);

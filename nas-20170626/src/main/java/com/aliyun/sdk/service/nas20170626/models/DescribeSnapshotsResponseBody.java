@@ -346,7 +346,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -408,7 +408,11 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
             }
 
             /**
-             * SnapshotType.
+             * The snapshot type. Valid values:
+             * <p>
+             * 
+             * *   auto: automatically created snapshots
+             * *   user: manually created snapshots
              */
             public Builder snapshotType(String snapshotType) {
                 this.snapshotType = snapshotType;

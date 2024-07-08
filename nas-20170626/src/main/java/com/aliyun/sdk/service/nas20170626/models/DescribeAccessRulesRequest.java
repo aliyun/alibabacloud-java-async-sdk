@@ -120,7 +120,7 @@ public class DescribeAccessRulesRequest extends Request {
         }
 
         /**
-         * The ID of the rule.
+         * The rule ID.
          */
         public Builder accessRuleId(String accessRuleId) {
             this.putQueryParameter("AccessRuleId", accessRuleId);

@@ -693,6 +693,47 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         } 
 
     }
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableOplock")
+        private Boolean enableOplock;
+
+        private Options(Builder builder) {
+            this.enableOplock = builder.enableOplock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableOplock
+         */
+        public Boolean getEnableOplock() {
+            return this.enableOplock;
+        }
+
+        public static final class Builder {
+            private Boolean enableOplock; 
+
+            /**
+             * EnableOplock.
+             */
+            public Builder enableOplock(Boolean enableOplock) {
+                this.enableOplock = enableOplock;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
     public static class Package extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ExpiredTime")
         private String expiredTime;
@@ -1053,6 +1094,9 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("MountTargets")
         private MountTargets mountTargets;
 
+        @com.aliyun.core.annotation.NameInMap("Options")
+        private Options options;
+
         @com.aliyun.core.annotation.NameInMap("Packages")
         private Packages packages;
 
@@ -1100,6 +1144,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             this.meteredIASize = builder.meteredIASize;
             this.meteredSize = builder.meteredSize;
             this.mountTargets = builder.mountTargets;
+            this.options = builder.options;
             this.packages = builder.packages;
             this.protocolType = builder.protocolType;
             this.regionId = builder.regionId;
@@ -1233,6 +1278,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         }
 
         /**
+         * @return options
+         */
+        public Options getOptions() {
+            return this.options;
+        }
+
+        /**
          * @return packages
          */
         public Packages getPackages() {
@@ -1319,6 +1371,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
             private Long meteredIASize; 
             private Long meteredSize; 
             private MountTargets mountTargets; 
+            private Options options; 
             private Packages packages; 
             private String protocolType; 
             private String regionId; 
@@ -1493,6 +1546,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
              */
             public Builder mountTargets(MountTargets mountTargets) {
                 this.mountTargets = mountTargets;
+                return this;
+            }
+
+            /**
+             * Options.
+             */
+            public Builder options(Options options) {
+                this.options = options;
                 return this;
             }
 

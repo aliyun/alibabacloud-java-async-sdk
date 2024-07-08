@@ -253,7 +253,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             private String userAccess; 
 
             /**
-             * AccessGroupName.
+             * The name of the permission group.
              */
             public Builder accessGroupName(String accessGroupName) {
                 this.accessGroupName = accessGroupName;
@@ -269,7 +269,13 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   standard: General-purpose Apsara File Storage NAS (NAS) file system
+             * *   extreme: Extreme NAS file system
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;
@@ -312,7 +318,7 @@ public class DescribeAccessRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

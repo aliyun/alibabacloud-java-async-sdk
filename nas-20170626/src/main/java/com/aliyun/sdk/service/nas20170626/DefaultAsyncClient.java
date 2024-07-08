@@ -1917,7 +1917,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * Only General-purpose NFS file systems support the directory quota feature.
+      * Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
       *
      */
     @Override

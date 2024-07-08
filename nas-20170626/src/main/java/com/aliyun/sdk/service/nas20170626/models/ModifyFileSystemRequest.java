@@ -20,10 +20,15 @@ public class ModifyFileSystemRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String fileSystemId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Options")
+    private Options options;
+
     private ModifyFileSystemRequest(Builder builder) {
         super(builder);
         this.description = builder.description;
         this.fileSystemId = builder.fileSystemId;
+        this.options = builder.options;
     }
 
     public static Builder builder() {
@@ -53,9 +58,17 @@ public class ModifyFileSystemRequest extends Request {
         return this.fileSystemId;
     }
 
+    /**
+     * @return options
+     */
+    public Options getOptions() {
+        return this.options;
+    }
+
     public static final class Builder extends Request.Builder<ModifyFileSystemRequest, Builder> {
         private String description; 
         private String fileSystemId; 
+        private Options options; 
 
         private Builder() {
             super();
@@ -65,6 +78,7 @@ public class ModifyFileSystemRequest extends Request {
             super(request);
             this.description = request.description;
             this.fileSystemId = request.fileSystemId;
+            this.options = request.options;
         } 
 
         /**
@@ -98,6 +112,16 @@ public class ModifyFileSystemRequest extends Request {
             return this;
         }
 
+        /**
+         * Options.
+         */
+        public Builder options(Options options) {
+            String optionsShrink = shrink(options, "Options", "json");
+            this.putQueryParameter("Options", optionsShrink);
+            this.options = options;
+            return this;
+        }
+
         @Override
         public ModifyFileSystemRequest build() {
             return new ModifyFileSystemRequest(this);
@@ -105,4 +129,45 @@ public class ModifyFileSystemRequest extends Request {
 
     } 
 
+    public static class Options extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("EnableOplock")
+        private Boolean enableOplock;
+
+        private Options(Builder builder) {
+            this.enableOplock = builder.enableOplock;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Options create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enableOplock
+         */
+        public Boolean getEnableOplock() {
+            return this.enableOplock;
+        }
+
+        public static final class Builder {
+            private Boolean enableOplock; 
+
+            /**
+             * EnableOplock.
+             */
+            public Builder enableOplock(Boolean enableOplock) {
+                this.enableOplock = enableOplock;
+                return this;
+            }
+
+            public Options build() {
+                return new Options(this);
+            } 
+
+        } 
+
+    }
 }

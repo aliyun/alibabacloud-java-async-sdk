@@ -300,7 +300,7 @@ public class DescribeAutoSnapshotPoliciesResponseBody extends TeaModel {
             }
 
             /**
-             * FileSystemType.
+             * The type of the file system.
              */
             public Builder fileSystemType(String fileSystemType) {
                 this.fileSystemType = fileSystemType;

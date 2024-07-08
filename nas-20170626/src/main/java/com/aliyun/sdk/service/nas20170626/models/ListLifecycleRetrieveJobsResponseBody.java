@@ -288,7 +288,7 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * Paths.
+             * The execution path of the data retrieval task.
              */
             public Builder paths(java.util.List < String > paths) {
                 this.paths = paths;
@@ -318,7 +318,11 @@ public class ListLifecycleRetrieveJobsResponseBody extends TeaModel {
             }
 
             /**
-             * StorageType.
+             * The storage class.
+             * <p>
+             * 
+             * *   InfrequentAccess: the IA storage class.
+             * *   Archive: the Archive storage class.
              */
             public Builder storageType(String storageType) {
                 this.storageType = storageType;

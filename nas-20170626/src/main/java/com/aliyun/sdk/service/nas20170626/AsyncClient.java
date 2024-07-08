@@ -657,7 +657,7 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<RetryLifecycleRetrieveJobResponse> retryLifecycleRetrieveJob(RetryLifecycleRetrieveJobRequest request);
 
     /**
-      * Only General-purpose NFS file systems support the directory quota feature.
+      * Only General-purpose Apsara File Storage NAS (NAS) file systems support the directory quota feature.
       *
      */
     CompletableFuture<SetDirQuotaResponse> setDirQuota(SetDirQuotaRequest request);

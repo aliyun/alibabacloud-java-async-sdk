@@ -49,7 +49,7 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The details about the file or directory.
+         * The details about the files or directories.
          */
         public Builder entry(Entry entry) {
             this.entry = entry;
@@ -243,7 +243,15 @@ public class GetDirectoryOrFilePropertiesResponseBody extends TeaModel {
             }
 
             /**
-             * HasArchiveFile.
+             * Indicates whether the directory contains files stored in the Archive storage class.
+             * <p>
+             * 
+             * This parameter is returned only if the Type parameter is set to Directory.
+             * 
+             * Valid values:
+             * 
+             * *   true: The directory contains files stored in the Archive storage class.
+             * *   false: The directory does not contain files stored in the Archive storage class.
              */
             public Builder hasArchiveFile(Boolean hasArchiveFile) {
                 this.hasArchiveFile = hasArchiveFile;

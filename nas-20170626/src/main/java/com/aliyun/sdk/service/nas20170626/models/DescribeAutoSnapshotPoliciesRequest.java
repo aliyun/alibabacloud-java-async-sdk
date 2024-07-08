@@ -108,7 +108,7 @@ public class DescribeAutoSnapshotPoliciesRequest extends Request {
          * The type of the file system.
          * <p>
          * 
-         * Valid value: extreme, which indicates Extreme NAS file systems.
+         * Valid value: extreme, which indicates Extreme Apsara File Storage NAS (NAS) file systems.
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

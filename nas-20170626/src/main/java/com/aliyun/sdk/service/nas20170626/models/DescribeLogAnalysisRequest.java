@@ -97,7 +97,14 @@ public class DescribeLogAnalysisRequest extends Request {
         } 
 
         /**
-         * FileSystemType.
+         * The type of the file system.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   standard: General-purpose NAS file system
+         * *   extreme: Extreme NAS file system
+         * *   all (default): all types
          */
         public Builder fileSystemType(String fileSystemType) {
             this.putQueryParameter("FileSystemType", fileSystemType);

@@ -166,7 +166,11 @@ public class SetDirQuotaRequest extends Request {
         }
 
         /**
-         * The absolute path of a directory.
+         * The absolute path of the directory in the file system.
+         * <p>
+         * 
+         * > *   You can set quotas only for the directories that have been created in a NAS file system. The path of the directory that you specify for a quota is the absolute path of the directory in the NAS file system, but not the local path of the compute node, such as an Elastic Compute Service (ECS) instance or a container.
+         * > *   Directories whose names contain Chinese characters are not supported.
          */
         public Builder path(String path) {
             this.putQueryParameter("Path", path);
