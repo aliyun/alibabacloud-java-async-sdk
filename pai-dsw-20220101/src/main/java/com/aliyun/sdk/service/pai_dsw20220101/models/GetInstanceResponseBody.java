@@ -20,6 +20,9 @@ public class GetInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("AccumulatedRunningTimeInMs")
     private Long accumulatedRunningTimeInMs;
 
+    @com.aliyun.core.annotation.NameInMap("Affinity")
+    private Affinity affinity;
+
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List < CloudDisks> cloudDisks;
 
@@ -147,6 +150,7 @@ public class GetInstanceResponseBody extends TeaModel {
         this.acceleratorType = builder.acceleratorType;
         this.accessibility = builder.accessibility;
         this.accumulatedRunningTimeInMs = builder.accumulatedRunningTimeInMs;
+        this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
         this.code = builder.code;
         this.datasets = builder.datasets;
@@ -217,6 +221,13 @@ public class GetInstanceResponseBody extends TeaModel {
      */
     public Long getAccumulatedRunningTimeInMs() {
         return this.accumulatedRunningTimeInMs;
+    }
+
+    /**
+     * @return affinity
+     */
+    public Affinity getAffinity() {
+        return this.affinity;
     }
 
     /**
@@ -510,6 +521,7 @@ public class GetInstanceResponseBody extends TeaModel {
         private String acceleratorType; 
         private String accessibility; 
         private Long accumulatedRunningTimeInMs; 
+        private Affinity affinity; 
         private java.util.List < CloudDisks> cloudDisks; 
         private String code; 
         private java.util.List < Datasets> datasets; 
@@ -573,6 +585,14 @@ public class GetInstanceResponseBody extends TeaModel {
          */
         public Builder accumulatedRunningTimeInMs(Long accumulatedRunningTimeInMs) {
             this.accumulatedRunningTimeInMs = accumulatedRunningTimeInMs;
+            return this;
+        }
+
+        /**
+         * Affinity.
+         */
+        public Builder affinity(Affinity affinity) {
+            this.affinity = affinity;
             return this;
         }
 
@@ -910,6 +930,88 @@ public class GetInstanceResponseBody extends TeaModel {
 
     } 
 
+    public static class CPU extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private CPU(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CPU create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public CPU build() {
+                return new CPU(this);
+            } 
+
+        } 
+
+    }
+    public static class Affinity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CPU")
+        private CPU CPU;
+
+        private Affinity(Builder builder) {
+            this.CPU = builder.CPU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Affinity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return CPU
+         */
+        public CPU getCPU() {
+            return this.CPU;
+        }
+
+        public static final class Builder {
+            private CPU CPU; 
+
+            /**
+             * CPU.
+             */
+            public Builder CPU(CPU CPU) {
+                this.CPU = CPU;
+                return this;
+            }
+
+            public Affinity build() {
+                return new Affinity(this);
+            } 
+
+        } 
+
+    }
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;

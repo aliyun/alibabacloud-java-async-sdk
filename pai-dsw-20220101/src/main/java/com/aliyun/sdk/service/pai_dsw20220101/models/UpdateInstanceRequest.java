@@ -21,6 +21,10 @@ public class UpdateInstanceRequest extends Request {
     private String accessibility;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Affinity")
+    private Affinity affinity;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("CloudDisks")
     private java.util.List < CloudDisks> cloudDisks;
 
@@ -88,6 +92,7 @@ public class UpdateInstanceRequest extends Request {
         super(builder);
         this.instanceId = builder.instanceId;
         this.accessibility = builder.accessibility;
+        this.affinity = builder.affinity;
         this.cloudDisks = builder.cloudDisks;
         this.datasets = builder.datasets;
         this.disassociateDatasets = builder.disassociateDatasets;
@@ -131,6 +136,13 @@ public class UpdateInstanceRequest extends Request {
      */
     public String getAccessibility() {
         return this.accessibility;
+    }
+
+    /**
+     * @return affinity
+     */
+    public Affinity getAffinity() {
+        return this.affinity;
     }
 
     /**
@@ -248,6 +260,7 @@ public class UpdateInstanceRequest extends Request {
     public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String instanceId; 
         private String accessibility; 
+        private Affinity affinity; 
         private java.util.List < CloudDisks> cloudDisks; 
         private java.util.List < Datasets> datasets; 
         private Boolean disassociateDatasets; 
@@ -273,6 +286,7 @@ public class UpdateInstanceRequest extends Request {
             super(request);
             this.instanceId = request.instanceId;
             this.accessibility = request.accessibility;
+            this.affinity = request.affinity;
             this.cloudDisks = request.cloudDisks;
             this.datasets = request.datasets;
             this.disassociateDatasets = request.disassociateDatasets;
@@ -306,6 +320,15 @@ public class UpdateInstanceRequest extends Request {
         public Builder accessibility(String accessibility) {
             this.putBodyParameter("Accessibility", accessibility);
             this.accessibility = accessibility;
+            return this;
+        }
+
+        /**
+         * Affinity.
+         */
+        public Builder affinity(Affinity affinity) {
+            this.putBodyParameter("Affinity", affinity);
+            this.affinity = affinity;
             return this;
         }
 
@@ -460,6 +483,88 @@ public class UpdateInstanceRequest extends Request {
 
     } 
 
+    public static class CPU extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Enable")
+        private Boolean enable;
+
+        private CPU(Builder builder) {
+            this.enable = builder.enable;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static CPU create() {
+            return builder().build();
+        }
+
+        /**
+         * @return enable
+         */
+        public Boolean getEnable() {
+            return this.enable;
+        }
+
+        public static final class Builder {
+            private Boolean enable; 
+
+            /**
+             * Enable.
+             */
+            public Builder enable(Boolean enable) {
+                this.enable = enable;
+                return this;
+            }
+
+            public CPU build() {
+                return new CPU(this);
+            } 
+
+        } 
+
+    }
+    public static class Affinity extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CPU")
+        private CPU CPU;
+
+        private Affinity(Builder builder) {
+            this.CPU = builder.CPU;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Affinity create() {
+            return builder().build();
+        }
+
+        /**
+         * @return CPU
+         */
+        public CPU getCPU() {
+            return this.CPU;
+        }
+
+        public static final class Builder {
+            private CPU CPU; 
+
+            /**
+             * CPU.
+             */
+            public Builder CPU(CPU CPU) {
+                this.CPU = CPU;
+                return this;
+            }
+
+            public Affinity build() {
+                return new Affinity(this);
+            } 
+
+        } 
+
+    }
     public static class CloudDisks extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Capacity")
         private String capacity;
