@@ -17,6 +17,10 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
     private String authCode;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FlowName")
+    private String flowName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InputNumber")
     @com.aliyun.core.annotation.Validation(required = true)
     private String inputNumber;
@@ -38,14 +42,20 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("ResourceOwnerId")
     private Long resourceOwnerId;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResultCount")
+    private String resultCount;
+
     private DescribePhoneNumberOperatorAttributeRequest(Builder builder) {
         super(builder);
         this.authCode = builder.authCode;
+        this.flowName = builder.flowName;
         this.inputNumber = builder.inputNumber;
         this.mask = builder.mask;
         this.ownerId = builder.ownerId;
         this.resourceOwnerAccount = builder.resourceOwnerAccount;
         this.resourceOwnerId = builder.resourceOwnerId;
+        this.resultCount = builder.resultCount;
     }
 
     public static Builder builder() {
@@ -66,6 +76,13 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
      */
     public String getAuthCode() {
         return this.authCode;
+    }
+
+    /**
+     * @return flowName
+     */
+    public String getFlowName() {
+        return this.flowName;
     }
 
     /**
@@ -103,13 +120,22 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
         return this.resourceOwnerId;
     }
 
+    /**
+     * @return resultCount
+     */
+    public String getResultCount() {
+        return this.resultCount;
+    }
+
     public static final class Builder extends Request.Builder<DescribePhoneNumberOperatorAttributeRequest, Builder> {
         private String authCode; 
+        private String flowName; 
         private String inputNumber; 
         private String mask; 
         private Long ownerId; 
         private String resourceOwnerAccount; 
         private Long resourceOwnerId; 
+        private String resultCount; 
 
         private Builder() {
             super();
@@ -118,11 +144,13 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
         private Builder(DescribePhoneNumberOperatorAttributeRequest request) {
             super(request);
             this.authCode = request.authCode;
+            this.flowName = request.flowName;
             this.inputNumber = request.inputNumber;
             this.mask = request.mask;
             this.ownerId = request.ownerId;
             this.resourceOwnerAccount = request.resourceOwnerAccount;
             this.resourceOwnerId = request.resourceOwnerId;
+            this.resultCount = request.resultCount;
         } 
 
         /**
@@ -134,6 +162,15 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
             this.authCode = authCode;
+            return this;
+        }
+
+        /**
+         * FlowName.
+         */
+        public Builder flowName(String flowName) {
+            this.putQueryParameter("FlowName", flowName);
+            this.flowName = flowName;
             return this;
         }
 
@@ -193,6 +230,15 @@ public class DescribePhoneNumberOperatorAttributeRequest extends Request {
         public Builder resourceOwnerId(Long resourceOwnerId) {
             this.putQueryParameter("ResourceOwnerId", resourceOwnerId);
             this.resourceOwnerId = resourceOwnerId;
+            return this;
+        }
+
+        /**
+         * ResultCount.
+         */
+        public Builder resultCount(String resultCount) {
+            this.putQueryParameter("ResultCount", resultCount);
+            this.resultCount = resultCount;
             return this;
         }
 

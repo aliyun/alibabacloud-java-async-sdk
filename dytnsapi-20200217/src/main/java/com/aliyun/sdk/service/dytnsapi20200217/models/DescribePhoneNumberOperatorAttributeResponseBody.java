@@ -11,6 +11,9 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribePhoneNumberOperatorAttributeResponseBody</p>
  */
 public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
+    @com.aliyun.core.annotation.NameInMap("AccessDeniedDetail")
+    private String accessDeniedDetail;
+
     @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
@@ -24,6 +27,7 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
     private String requestId;
 
     private DescribePhoneNumberOperatorAttributeResponseBody(Builder builder) {
+        this.accessDeniedDetail = builder.accessDeniedDetail;
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
@@ -36,6 +40,13 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
 
     public static DescribePhoneNumberOperatorAttributeResponseBody create() {
         return builder().build();
+    }
+
+    /**
+     * @return accessDeniedDetail
+     */
+    public String getAccessDeniedDetail() {
+        return this.accessDeniedDetail;
     }
 
     /**
@@ -67,10 +78,19 @@ public class DescribePhoneNumberOperatorAttributeResponseBody extends TeaModel {
     }
 
     public static final class Builder {
+        private String accessDeniedDetail; 
         private String code; 
         private Data data; 
         private String message; 
         private String requestId; 
+
+        /**
+         * AccessDeniedDetail.
+         */
+        public Builder accessDeniedDetail(String accessDeniedDetail) {
+            this.accessDeniedDetail = accessDeniedDetail;
+            return this;
+        }
 
         /**
          * The response code. Valid values:
