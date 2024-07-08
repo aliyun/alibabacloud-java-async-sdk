@@ -151,6 +151,9 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
     } 
 
     public static class Module extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("apply_id")
+        private Long applyId;
+
         @com.aliyun.core.annotation.NameInMap("corp_code_order_id")
         private String corpCodeOrderId;
 
@@ -206,6 +209,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         private String userId;
 
         private Module(Builder builder) {
+            this.applyId = builder.applyId;
             this.corpCodeOrderId = builder.corpCodeOrderId;
             this.corpId = builder.corpId;
             this.corpPayAmount = builder.corpPayAmount;
@@ -232,6 +236,13 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
 
         public static Module create() {
             return builder().build();
+        }
+
+        /**
+         * @return applyId
+         */
+        public Long getApplyId() {
+            return this.applyId;
         }
 
         /**
@@ -361,6 +372,7 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Long applyId; 
             private String corpCodeOrderId; 
             private String corpId; 
             private Long corpPayAmount; 
@@ -379,6 +391,14 @@ public class MealOrderDetailQueryResponseBody extends TeaModel {
             private String settleTime; 
             private String userAlipayId; 
             private String userId; 
+
+            /**
+             * apply_id.
+             */
+            public Builder applyId(Long applyId) {
+                this.applyId = applyId;
+                return this;
+            }
 
             /**
              * corp_code_order_id.

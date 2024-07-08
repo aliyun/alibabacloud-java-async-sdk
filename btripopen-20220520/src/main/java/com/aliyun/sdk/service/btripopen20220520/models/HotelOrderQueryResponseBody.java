@@ -151,6 +151,15 @@ public class HotelOrderQueryResponseBody extends TeaModel {
     } 
 
     public static class HotelInfo extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("brand_code")
+        private String brandCode;
+
+        @com.aliyun.core.annotation.NameInMap("brand_group")
+        private String brandGroup;
+
+        @com.aliyun.core.annotation.NameInMap("brand_name")
+        private String brandName;
+
         @com.aliyun.core.annotation.NameInMap("check_in")
         private Long checkIn;
 
@@ -185,6 +194,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         private String roomType;
 
         private HotelInfo(Builder builder) {
+            this.brandCode = builder.brandCode;
+            this.brandGroup = builder.brandGroup;
+            this.brandName = builder.brandName;
             this.checkIn = builder.checkIn;
             this.checkOut = builder.checkOut;
             this.city = builder.city;
@@ -204,6 +216,27 @@ public class HotelOrderQueryResponseBody extends TeaModel {
 
         public static HotelInfo create() {
             return builder().build();
+        }
+
+        /**
+         * @return brandCode
+         */
+        public String getBrandCode() {
+            return this.brandCode;
+        }
+
+        /**
+         * @return brandGroup
+         */
+        public String getBrandGroup() {
+            return this.brandGroup;
+        }
+
+        /**
+         * @return brandName
+         */
+        public String getBrandName() {
+            return this.brandName;
         }
 
         /**
@@ -284,6 +317,9 @@ public class HotelOrderQueryResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private String brandCode; 
+            private String brandGroup; 
+            private String brandName; 
             private Long checkIn; 
             private Long checkOut; 
             private String city; 
@@ -295,6 +331,30 @@ public class HotelOrderQueryResponseBody extends TeaModel {
             private Integer night; 
             private Integer roomNum; 
             private String roomType; 
+
+            /**
+             * brand_code.
+             */
+            public Builder brandCode(String brandCode) {
+                this.brandCode = brandCode;
+                return this;
+            }
+
+            /**
+             * brand_group.
+             */
+            public Builder brandGroup(String brandGroup) {
+                this.brandGroup = brandGroup;
+                return this;
+            }
+
+            /**
+             * brand_name.
+             */
+            public Builder brandName(String brandName) {
+                this.brandName = brandName;
+                return this;
+            }
 
             /**
              * check_in.

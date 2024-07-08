@@ -211,6 +211,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("cascade_department")
         private String cascadeDepartment;
 
+        @com.aliyun.core.annotation.NameInMap("change_affiliate_no")
+        private String changeAffiliateNo;
+
+        @com.aliyun.core.annotation.NameInMap("change_apply_id")
+        private String changeApplyId;
+
         @com.aliyun.core.annotation.NameInMap("change_fee")
         private Double changeFee;
 
@@ -292,6 +298,12 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("project_name")
         private String projectName;
 
+        @com.aliyun.core.annotation.NameInMap("refund_affiliate_no")
+        private String refundAffiliateNo;
+
+        @com.aliyun.core.annotation.NameInMap("refund_apply_id")
+        private String refundApplyId;
+
         @com.aliyun.core.annotation.NameInMap("refund_fee")
         private Double refundFee;
 
@@ -330,6 +342,9 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("short_ticket_no")
         private String shortTicketNo;
+
+        @com.aliyun.core.annotation.NameInMap("speed_package_fee")
+        private Double speedPackageFee;
 
         @com.aliyun.core.annotation.NameInMap("status")
         private Integer status;
@@ -394,6 +409,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.businessTripResult = builder.businessTripResult;
             this.capitalDirection = builder.capitalDirection;
             this.cascadeDepartment = builder.cascadeDepartment;
+            this.changeAffiliateNo = builder.changeAffiliateNo;
+            this.changeApplyId = builder.changeApplyId;
             this.changeFee = builder.changeFee;
             this.changeResult = builder.changeResult;
             this.coachNo = builder.coachNo;
@@ -421,6 +438,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.printTicketPrice = builder.printTicketPrice;
             this.projectCode = builder.projectCode;
             this.projectName = builder.projectName;
+            this.refundAffiliateNo = builder.refundAffiliateNo;
+            this.refundApplyId = builder.refundApplyId;
             this.refundFee = builder.refundFee;
             this.refundReason = builder.refundReason;
             this.remark = builder.remark;
@@ -434,6 +453,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             this.settlementTime = builder.settlementTime;
             this.settlementType = builder.settlementType;
             this.shortTicketNo = builder.shortTicketNo;
+            this.speedPackageFee = builder.speedPackageFee;
             this.status = builder.status;
             this.taxRate = builder.taxRate;
             this.thirdItineraryId = builder.thirdItineraryId;
@@ -596,6 +616,20 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getCascadeDepartment() {
             return this.cascadeDepartment;
+        }
+
+        /**
+         * @return changeAffiliateNo
+         */
+        public String getChangeAffiliateNo() {
+            return this.changeAffiliateNo;
+        }
+
+        /**
+         * @return changeApplyId
+         */
+        public String getChangeApplyId() {
+            return this.changeApplyId;
         }
 
         /**
@@ -788,6 +822,20 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return refundAffiliateNo
+         */
+        public String getRefundAffiliateNo() {
+            return this.refundAffiliateNo;
+        }
+
+        /**
+         * @return refundApplyId
+         */
+        public String getRefundApplyId() {
+            return this.refundApplyId;
+        }
+
+        /**
          * @return refundFee
          */
         public Double getRefundFee() {
@@ -876,6 +924,13 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
          */
         public String getShortTicketNo() {
             return this.shortTicketNo;
+        }
+
+        /**
+         * @return speedPackageFee
+         */
+        public Double getSpeedPackageFee() {
+            return this.speedPackageFee;
         }
 
         /**
@@ -997,6 +1052,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String businessTripResult; 
             private String capitalDirection; 
             private String cascadeDepartment; 
+            private String changeAffiliateNo; 
+            private String changeApplyId; 
             private Double changeFee; 
             private String changeResult; 
             private String coachNo; 
@@ -1024,6 +1081,8 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private Double printTicketPrice; 
             private String projectCode; 
             private String projectName; 
+            private String refundAffiliateNo; 
+            private String refundApplyId; 
             private Double refundFee; 
             private String refundReason; 
             private String remark; 
@@ -1037,6 +1096,7 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             private String settlementTime; 
             private String settlementType; 
             private String shortTicketNo; 
+            private Double speedPackageFee; 
             private Integer status; 
             private String taxRate; 
             private String thirdItineraryId; 
@@ -1209,6 +1269,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder cascadeDepartment(String cascadeDepartment) {
                 this.cascadeDepartment = cascadeDepartment;
+                return this;
+            }
+
+            /**
+             * change_affiliate_no.
+             */
+            public Builder changeAffiliateNo(String changeAffiliateNo) {
+                this.changeAffiliateNo = changeAffiliateNo;
+                return this;
+            }
+
+            /**
+             * change_apply_id.
+             */
+            public Builder changeApplyId(String changeApplyId) {
+                this.changeApplyId = changeApplyId;
                 return this;
             }
 
@@ -1429,6 +1505,22 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
             }
 
             /**
+             * refund_affiliate_no.
+             */
+            public Builder refundAffiliateNo(String refundAffiliateNo) {
+                this.refundAffiliateNo = refundAffiliateNo;
+                return this;
+            }
+
+            /**
+             * refund_apply_id.
+             */
+            public Builder refundApplyId(String refundApplyId) {
+                this.refundApplyId = refundApplyId;
+                return this;
+            }
+
+            /**
              * refund_fee.
              */
             public Builder refundFee(Double refundFee) {
@@ -1529,6 +1621,14 @@ public class TrainBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder shortTicketNo(String shortTicketNo) {
                 this.shortTicketNo = shortTicketNo;
+                return this;
+            }
+
+            /**
+             * speed_package_fee.
+             */
+            public Builder speedPackageFee(Double speedPackageFee) {
+                this.speedPackageFee = speedPackageFee;
                 return this;
             }
 

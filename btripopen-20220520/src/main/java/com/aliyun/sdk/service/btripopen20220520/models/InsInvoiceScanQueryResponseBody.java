@@ -361,6 +361,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("bill_date")
         private String billDate;
 
+        @com.aliyun.core.annotation.NameInMap("category")
+        private Integer category;
+
         @com.aliyun.core.annotation.NameInMap("check_code")
         private String checkCode;
 
@@ -403,8 +406,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
+        @com.aliyun.core.annotation.NameInMap("invoice_type")
+        private Integer invoiceType;
+
         @com.aliyun.core.annotation.NameInMap("machine_code")
         private String machineCode;
+
+        @com.aliyun.core.annotation.NameInMap("ofd_oss_url")
+        private String ofdOssUrl;
 
         @com.aliyun.core.annotation.NameInMap("order_id")
         private Long orderId;
@@ -466,10 +475,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("total_amount_in_words")
         private String totalAmountInWords;
 
+        @com.aliyun.core.annotation.NameInMap("xml_oss_url")
+        private String xmlOssUrl;
+
         private Items(Builder builder) {
             this.amountWithTax = builder.amountWithTax;
             this.amountWithoutTax = builder.amountWithoutTax;
             this.billDate = builder.billDate;
+            this.category = builder.category;
             this.checkCode = builder.checkCode;
             this.costCenter = builder.costCenter;
             this.department = builder.department;
@@ -484,7 +497,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             this.invoiceLocation = builder.invoiceLocation;
             this.invoiceNo = builder.invoiceNo;
             this.invoiceTitle = builder.invoiceTitle;
+            this.invoiceType = builder.invoiceType;
             this.machineCode = builder.machineCode;
+            this.ofdOssUrl = builder.ofdOssUrl;
             this.orderId = builder.orderId;
             this.ossUrl = builder.ossUrl;
             this.passenger = builder.passenger;
@@ -505,6 +520,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             this.taxAmount = builder.taxAmount;
             this.taxRate = builder.taxRate;
             this.totalAmountInWords = builder.totalAmountInWords;
+            this.xmlOssUrl = builder.xmlOssUrl;
         }
 
         public static Builder builder() {
@@ -534,6 +550,13 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
          */
         public String getBillDate() {
             return this.billDate;
+        }
+
+        /**
+         * @return category
+         */
+        public Integer getCategory() {
+            return this.category;
         }
 
         /**
@@ -635,10 +658,24 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return invoiceType
+         */
+        public Integer getInvoiceType() {
+            return this.invoiceType;
+        }
+
+        /**
          * @return machineCode
          */
         public String getMachineCode() {
             return this.machineCode;
+        }
+
+        /**
+         * @return ofdOssUrl
+         */
+        public String getOfdOssUrl() {
+            return this.ofdOssUrl;
         }
 
         /**
@@ -781,10 +818,18 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             return this.totalAmountInWords;
         }
 
+        /**
+         * @return xmlOssUrl
+         */
+        public String getXmlOssUrl() {
+            return this.xmlOssUrl;
+        }
+
         public static final class Builder {
             private String amountWithTax; 
             private String amountWithoutTax; 
             private String billDate; 
+            private Integer category; 
             private String checkCode; 
             private String costCenter; 
             private String department; 
@@ -799,7 +844,9 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String invoiceLocation; 
             private String invoiceNo; 
             private String invoiceTitle; 
+            private Integer invoiceType; 
             private String machineCode; 
+            private String ofdOssUrl; 
             private Long orderId; 
             private String ossUrl; 
             private String passenger; 
@@ -820,6 +867,7 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             private String taxAmount; 
             private String taxRate; 
             private String totalAmountInWords; 
+            private String xmlOssUrl; 
 
             /**
              * amount_with_tax.
@@ -842,6 +890,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder billDate(String billDate) {
                 this.billDate = billDate;
+                return this;
+            }
+
+            /**
+             * category.
+             */
+            public Builder category(Integer category) {
+                this.category = category;
                 return this;
             }
 
@@ -958,10 +1014,26 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
             }
 
             /**
+             * invoice_type.
+             */
+            public Builder invoiceType(Integer invoiceType) {
+                this.invoiceType = invoiceType;
+                return this;
+            }
+
+            /**
              * 机器码
              */
             public Builder machineCode(String machineCode) {
                 this.machineCode = machineCode;
+                return this;
+            }
+
+            /**
+             * ofd_oss_url.
+             */
+            public Builder ofdOssUrl(String ofdOssUrl) {
+                this.ofdOssUrl = ofdOssUrl;
                 return this;
             }
 
@@ -1122,6 +1194,14 @@ public class InsInvoiceScanQueryResponseBody extends TeaModel {
              */
             public Builder totalAmountInWords(String totalAmountInWords) {
                 this.totalAmountInWords = totalAmountInWords;
+                return this;
+            }
+
+            /**
+             * xml_oss_url.
+             */
+            public Builder xmlOssUrl(String xmlOssUrl) {
+                this.xmlOssUrl = xmlOssUrl;
                 return this;
             }
 

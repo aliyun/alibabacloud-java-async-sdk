@@ -223,8 +223,6 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<HotelStaticInfoResponse> hotelStaticInfo(HotelStaticInfoRequest request);
 
-    CompletableFuture<HotelSuggestResponse> hotelSuggest(HotelSuggestRequest request);
-
     CompletableFuture<IeFlightBillSettlementQueryResponse> ieFlightBillSettlementQuery(IeFlightBillSettlementQueryRequest request);
 
     CompletableFuture<IeHotelBillSettlementQueryResponse> ieHotelBillSettlementQuery(IeHotelBillSettlementQueryRequest request);

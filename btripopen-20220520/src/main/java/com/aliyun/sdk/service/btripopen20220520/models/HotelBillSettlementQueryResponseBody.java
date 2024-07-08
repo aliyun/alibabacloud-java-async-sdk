@@ -268,6 +268,18 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("index")
         private String index;
 
+        @com.aliyun.core.annotation.NameInMap("ins_order_id")
+        private String insOrderId;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_number")
+        private String insuranceNumber;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_price")
+        private Double insurancePrice;
+
+        @com.aliyun.core.annotation.NameInMap("insurance_product_name")
+        private String insuranceProductName;
+
         @com.aliyun.core.annotation.NameInMap("invoice_title")
         private String invoiceTitle;
 
@@ -422,6 +434,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             this.fuPointFee = builder.fuPointFee;
             this.hotelName = builder.hotelName;
             this.index = builder.index;
+            this.insOrderId = builder.insOrderId;
+            this.insuranceNumber = builder.insuranceNumber;
+            this.insurancePrice = builder.insurancePrice;
+            this.insuranceProductName = builder.insuranceProductName;
             this.invoiceTitle = builder.invoiceTitle;
             this.isEarlyDeparture = builder.isEarlyDeparture;
             this.isNegotiation = builder.isNegotiation;
@@ -744,6 +760,34 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return insOrderId
+         */
+        public String getInsOrderId() {
+            return this.insOrderId;
+        }
+
+        /**
+         * @return insuranceNumber
+         */
+        public String getInsuranceNumber() {
+            return this.insuranceNumber;
+        }
+
+        /**
+         * @return insurancePrice
+         */
+        public Double getInsurancePrice() {
+            return this.insurancePrice;
+        }
+
+        /**
+         * @return insuranceProductName
+         */
+        public String getInsuranceProductName() {
+            return this.insuranceProductName;
+        }
+
+        /**
          * @return invoiceTitle
          */
         public String getInvoiceTitle() {
@@ -1049,6 +1093,10 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
             private Double fuPointFee; 
             private String hotelName; 
             private String index; 
+            private String insOrderId; 
+            private String insuranceNumber; 
+            private Double insurancePrice; 
+            private String insuranceProductName; 
             private String invoiceTitle; 
             private String isEarlyDeparture; 
             private String isNegotiation; 
@@ -1397,6 +1445,38 @@ public class HotelBillSettlementQueryResponseBody extends TeaModel {
              */
             public Builder index(String index) {
                 this.index = index;
+                return this;
+            }
+
+            /**
+             * ins_order_id.
+             */
+            public Builder insOrderId(String insOrderId) {
+                this.insOrderId = insOrderId;
+                return this;
+            }
+
+            /**
+             * insurance_number.
+             */
+            public Builder insuranceNumber(String insuranceNumber) {
+                this.insuranceNumber = insuranceNumber;
+                return this;
+            }
+
+            /**
+             * insurance_price.
+             */
+            public Builder insurancePrice(Double insurancePrice) {
+                this.insurancePrice = insurancePrice;
+                return this;
+            }
+
+            /**
+             * insurance_product_name.
+             */
+            public Builder insuranceProductName(String insuranceProductName) {
+                this.insuranceProductName = insuranceProductName;
                 return this;
             }
 
