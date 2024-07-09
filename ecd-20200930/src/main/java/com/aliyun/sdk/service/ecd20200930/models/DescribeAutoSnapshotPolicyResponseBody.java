@@ -221,7 +221,7 @@ public class DescribeAutoSnapshotPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * The cron expression that specifies when WUYING Workspace creates snapshots on the cloud computers.
+             * The cron expression that specifies when Elastic Desktop Service creates snapshots on the cloud computers.
              */
             public Builder cronExpression(String cronExpression) {
                 this.cronExpression = cronExpression;

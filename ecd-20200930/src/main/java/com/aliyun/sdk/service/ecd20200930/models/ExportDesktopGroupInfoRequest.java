@@ -310,7 +310,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * The region ID. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -319,7 +319,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags attached to the cloud computer pool. You can specify 1 to 20 tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -373,7 +373,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag. If you specify the `Tag` parameter, you must also specify the `Key` parameter. The tag key can be up to 128 characters in length and cannot contain `http://` or `https://`. The tag key cannot start with `aliyun` or `acs:`. You cannot specify an empty string as a tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -381,7 +381,7 @@ public class ExportDesktopGroupInfoRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of the tag. The tag value can be an empty string. The tag value can be up to 128 characters in length. It cannot start with `acs:` and cannot contain `http://` or `https://`.
              */
             public Builder value(String value) {
                 this.value = value;

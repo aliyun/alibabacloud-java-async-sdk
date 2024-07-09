@@ -204,7 +204,7 @@ public class ModifyDesktopSpecRequest extends Request {
          * 
          *     <!-- -->
          * 
-         *     You can log on to the WUYING Workspace console and complete the payment based on the order ID on the Orders page.
+         *     You can log on to the Elastic Desktop Service console and complete the payment based on the order ID on the Orders page.
          * 
          *     <!-- -->
          */

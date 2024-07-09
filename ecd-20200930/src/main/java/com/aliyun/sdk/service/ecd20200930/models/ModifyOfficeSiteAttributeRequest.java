@@ -139,7 +139,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         } 
 
         /**
-         * The method to connect to cloud computers from WUYING clients.
+         * The method to connect to cloud computers from Alibaba Cloud Workspace clients.
          * <p>
          * 
          * >  VPC connection relies on the Alibaba Cloud PrivateLink service. You can use PrivateLink for free. When you set this parameter to `VPC` or `Any`, the system automatically activates PrivateLink.
@@ -148,7 +148,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
          * 
          * *   INTERNET (default): allows end users to connect to cloud computers over the Internet.
          * *   VPC: allows end users to connect to cloud computers over VPCs.
-         * *   ANY: allows end users to connect to cloud computers over the Internet and VPCs. When end users connect to cloud computers from WUYING clients, you can choose a connection method based on your business requirements.
+         * *   ANY: allows end users to connect to cloud computers over the Internet and VPCs. When end users connect to cloud computers from Elastic Desktop Service, you can choose a connection method based on your business requirements.
          */
         public Builder desktopAccessType(String desktopAccessType) {
             this.putQueryParameter("DesktopAccessType", desktopAccessType);
@@ -172,7 +172,7 @@ public class ModifyOfficeSiteAttributeRequest extends Request {
         }
 
         /**
-         * Specifies whether to enable two-factor verification when an end user logs on to a WUYING client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.
+         * Specifies whether to enable two-factor verification when an end user logs on to an Alibaba Cloud Workspace client. This parameter is required only for convenience office networks. If two-factor verification is enabled, the system checks whether security risks exist within the logon account when the end user uses a convenience user to log on to the client. If risks are detected, the system sends a verification code to the email address that is associated with the account of the convenience user. Then, the end user can log on to the client only when the verification code is correct.
          */
         public Builder needVerifyLoginRisk(Boolean needVerifyLoginRisk) {
             this.putQueryParameter("NeedVerifyLoginRisk", needVerifyLoginRisk);

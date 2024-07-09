@@ -26,16 +26,11 @@ public class MigrateDesktopsRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String targetOfficeSiteId;
 
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("TargetSubnetId")
-    private String targetSubnetId;
-
     private MigrateDesktopsRequest(Builder builder) {
         super(builder);
         this.desktopId = builder.desktopId;
         this.regionId = builder.regionId;
         this.targetOfficeSiteId = builder.targetOfficeSiteId;
-        this.targetSubnetId = builder.targetSubnetId;
     }
 
     public static Builder builder() {
@@ -72,18 +67,10 @@ public class MigrateDesktopsRequest extends Request {
         return this.targetOfficeSiteId;
     }
 
-    /**
-     * @return targetSubnetId
-     */
-    public String getTargetSubnetId() {
-        return this.targetSubnetId;
-    }
-
     public static final class Builder extends Request.Builder<MigrateDesktopsRequest, Builder> {
         private java.util.List < String > desktopId; 
         private String regionId; 
         private String targetOfficeSiteId; 
-        private String targetSubnetId; 
 
         private Builder() {
             super();
@@ -94,7 +81,6 @@ public class MigrateDesktopsRequest extends Request {
             this.desktopId = request.desktopId;
             this.regionId = request.regionId;
             this.targetOfficeSiteId = request.targetOfficeSiteId;
-            this.targetSubnetId = request.targetSubnetId;
         } 
 
         /**
@@ -121,15 +107,6 @@ public class MigrateDesktopsRequest extends Request {
         public Builder targetOfficeSiteId(String targetOfficeSiteId) {
             this.putQueryParameter("TargetOfficeSiteId", targetOfficeSiteId);
             this.targetOfficeSiteId = targetOfficeSiteId;
-            return this;
-        }
-
-        /**
-         * TargetSubnetId.
-         */
-        public Builder targetSubnetId(String targetSubnetId) {
-            this.putQueryParameter("TargetSubnetId", targetSubnetId);
-            this.targetSubnetId = targetSubnetId;
             return this;
         }
 

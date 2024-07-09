@@ -257,7 +257,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The key of the tag.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -265,7 +265,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The value of the tag.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -1325,7 +1325,7 @@ public class DescribeDesktopGroupsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags attached to the cloud computer pool.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

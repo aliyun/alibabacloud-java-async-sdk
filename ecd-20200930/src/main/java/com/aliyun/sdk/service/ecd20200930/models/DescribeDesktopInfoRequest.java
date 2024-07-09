@@ -77,7 +77,7 @@ public class DescribeDesktopInfoRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

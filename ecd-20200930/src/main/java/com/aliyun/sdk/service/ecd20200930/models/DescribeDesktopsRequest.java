@@ -56,6 +56,10 @@ public class DescribeDesktopsRequest extends Request {
     private String expiredTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FillResourceGroup")
+    private Boolean fillResourceGroup;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("FilterDesktopGroup")
     private Boolean filterDesktopGroup;
 
@@ -122,6 +126,10 @@ public class DescribeDesktopsRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
+    private String resourceGroupId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("SnapshotPolicyId")
     private String snapshotPolicyId;
 
@@ -150,6 +158,7 @@ public class DescribeDesktopsRequest extends Request {
         this.endUserId = builder.endUserId;
         this.excludedEndUserId = builder.excludedEndUserId;
         this.expiredTime = builder.expiredTime;
+        this.fillResourceGroup = builder.fillResourceGroup;
         this.filterDesktopGroup = builder.filterDesktopGroup;
         this.gpuInstanceGroupId = builder.gpuInstanceGroupId;
         this.groupId = builder.groupId;
@@ -166,6 +175,7 @@ public class DescribeDesktopsRequest extends Request {
         this.qosRuleId = builder.qosRuleId;
         this.queryFotaUpdate = builder.queryFotaUpdate;
         this.regionId = builder.regionId;
+        this.resourceGroupId = builder.resourceGroupId;
         this.snapshotPolicyId = builder.snapshotPolicyId;
         this.subPayType = builder.subPayType;
         this.tag = builder.tag;
@@ -260,6 +270,13 @@ public class DescribeDesktopsRequest extends Request {
      */
     public String getExpiredTime() {
         return this.expiredTime;
+    }
+
+    /**
+     * @return fillResourceGroup
+     */
+    public Boolean getFillResourceGroup() {
+        return this.fillResourceGroup;
     }
 
     /**
@@ -375,6 +392,13 @@ public class DescribeDesktopsRequest extends Request {
     }
 
     /**
+     * @return resourceGroupId
+     */
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
+    }
+
+    /**
      * @return snapshotPolicyId
      */
     public String getSnapshotPolicyId() {
@@ -414,6 +438,7 @@ public class DescribeDesktopsRequest extends Request {
         private java.util.List < String > endUserId; 
         private java.util.List < String > excludedEndUserId; 
         private String expiredTime; 
+        private Boolean fillResourceGroup; 
         private Boolean filterDesktopGroup; 
         private String gpuInstanceGroupId; 
         private String groupId; 
@@ -430,6 +455,7 @@ public class DescribeDesktopsRequest extends Request {
         private String qosRuleId; 
         private Boolean queryFotaUpdate; 
         private String regionId; 
+        private String resourceGroupId; 
         private String snapshotPolicyId; 
         private String subPayType; 
         private java.util.List < Tag> tag; 
@@ -452,6 +478,7 @@ public class DescribeDesktopsRequest extends Request {
             this.endUserId = request.endUserId;
             this.excludedEndUserId = request.excludedEndUserId;
             this.expiredTime = request.expiredTime;
+            this.fillResourceGroup = request.fillResourceGroup;
             this.filterDesktopGroup = request.filterDesktopGroup;
             this.gpuInstanceGroupId = request.gpuInstanceGroupId;
             this.groupId = request.groupId;
@@ -468,6 +495,7 @@ public class DescribeDesktopsRequest extends Request {
             this.qosRuleId = request.qosRuleId;
             this.queryFotaUpdate = request.queryFotaUpdate;
             this.regionId = request.regionId;
+            this.resourceGroupId = request.resourceGroupId;
             this.snapshotPolicyId = request.snapshotPolicyId;
             this.subPayType = request.subPayType;
             this.tag = request.tag;
@@ -573,6 +601,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder expiredTime(String expiredTime) {
             this.putQueryParameter("ExpiredTime", expiredTime);
             this.expiredTime = expiredTime;
+            return this;
+        }
+
+        /**
+         * FillResourceGroup.
+         */
+        public Builder fillResourceGroup(Boolean fillResourceGroup) {
+            this.putQueryParameter("FillResourceGroup", fillResourceGroup);
+            this.fillResourceGroup = fillResourceGroup;
             return this;
         }
 
@@ -724,6 +761,15 @@ public class DescribeDesktopsRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * ResourceGroupId.
+         */
+        public Builder resourceGroupId(String resourceGroupId) {
+            this.putQueryParameter("ResourceGroupId", resourceGroupId);
+            this.resourceGroupId = resourceGroupId;
             return this;
         }
 

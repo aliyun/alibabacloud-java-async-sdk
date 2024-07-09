@@ -80,6 +80,10 @@ public class CreatePolicyGroupRequest extends Request {
     private String localDrive;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxReconnectTime")
+    private Integer maxReconnectTime;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
@@ -243,6 +247,7 @@ public class CreatePolicyGroupRequest extends Request {
         this.html5FileTransfer = builder.html5FileTransfer;
         this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
         this.localDrive = builder.localDrive;
+        this.maxReconnectTime = builder.maxReconnectTime;
         this.name = builder.name;
         this.netRedirect = builder.netRedirect;
         this.preemptLogin = builder.preemptLogin;
@@ -411,6 +416,13 @@ public class CreatePolicyGroupRequest extends Request {
      */
     public String getLocalDrive() {
         return this.localDrive;
+    }
+
+    /**
+     * @return maxReconnectTime
+     */
+    public Integer getMaxReconnectTime() {
+        return this.maxReconnectTime;
     }
 
     /**
@@ -683,6 +695,7 @@ public class CreatePolicyGroupRequest extends Request {
         private String html5FileTransfer; 
         private String internetCommunicationProtocol; 
         private String localDrive; 
+        private Integer maxReconnectTime; 
         private String name; 
         private String netRedirect; 
         private String preemptLogin; 
@@ -743,6 +756,7 @@ public class CreatePolicyGroupRequest extends Request {
             this.html5FileTransfer = request.html5FileTransfer;
             this.internetCommunicationProtocol = request.internetCommunicationProtocol;
             this.localDrive = request.localDrive;
+            this.maxReconnectTime = request.maxReconnectTime;
             this.name = request.name;
             this.netRedirect = request.netRedirect;
             this.preemptLogin = request.preemptLogin;
@@ -1136,6 +1150,15 @@ public class CreatePolicyGroupRequest extends Request {
         public Builder localDrive(String localDrive) {
             this.putQueryParameter("LocalDrive", localDrive);
             this.localDrive = localDrive;
+            return this;
+        }
+
+        /**
+         * MaxReconnectTime.
+         */
+        public Builder maxReconnectTime(Integer maxReconnectTime) {
+            this.putQueryParameter("MaxReconnectTime", maxReconnectTime);
+            this.maxReconnectTime = maxReconnectTime;
             return this;
         }
 

@@ -12,6 +12,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  */
 public class DescribeDesktopSessionsRequest extends Request {
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CheckOsSession")
+    private Boolean checkOsSession;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DesktopId")
     private java.util.List < String > desktopId;
 
@@ -52,8 +56,13 @@ public class DescribeDesktopSessionsRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("StartTime")
     private String startTime;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SubPayType")
+    private String subPayType;
+
     private DescribeDesktopSessionsRequest(Builder builder) {
         super(builder);
+        this.checkOsSession = builder.checkOsSession;
         this.desktopId = builder.desktopId;
         this.desktopName = builder.desktopName;
         this.endTime = builder.endTime;
@@ -64,6 +73,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         this.regionId = builder.regionId;
         this.sessionStatus = builder.sessionStatus;
         this.startTime = builder.startTime;
+        this.subPayType = builder.subPayType;
     }
 
     public static Builder builder() {
@@ -77,6 +87,13 @@ public class DescribeDesktopSessionsRequest extends Request {
     @Override
     public Builder toBuilder() {
         return new Builder(this);
+    }
+
+    /**
+     * @return checkOsSession
+     */
+    public Boolean getCheckOsSession() {
+        return this.checkOsSession;
     }
 
     /**
@@ -149,7 +166,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         return this.startTime;
     }
 
+    /**
+     * @return subPayType
+     */
+    public String getSubPayType() {
+        return this.subPayType;
+    }
+
     public static final class Builder extends Request.Builder<DescribeDesktopSessionsRequest, Builder> {
+        private Boolean checkOsSession; 
         private java.util.List < String > desktopId; 
         private String desktopName; 
         private String endTime; 
@@ -160,6 +185,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         private String regionId; 
         private String sessionStatus; 
         private String startTime; 
+        private String subPayType; 
 
         private Builder() {
             super();
@@ -167,6 +193,7 @@ public class DescribeDesktopSessionsRequest extends Request {
 
         private Builder(DescribeDesktopSessionsRequest request) {
             super(request);
+            this.checkOsSession = request.checkOsSession;
             this.desktopId = request.desktopId;
             this.desktopName = request.desktopName;
             this.endTime = request.endTime;
@@ -177,7 +204,17 @@ public class DescribeDesktopSessionsRequest extends Request {
             this.regionId = request.regionId;
             this.sessionStatus = request.sessionStatus;
             this.startTime = request.startTime;
+            this.subPayType = request.subPayType;
         } 
+
+        /**
+         * CheckOsSession.
+         */
+        public Builder checkOsSession(Boolean checkOsSession) {
+            this.putQueryParameter("CheckOsSession", checkOsSession);
+            this.checkOsSession = checkOsSession;
+            return this;
+        }
 
         /**
          * The IDs of the cloud computers. You can specify the IDs of 1 to 100 cloud computers.
@@ -243,7 +280,7 @@ public class DescribeDesktopSessionsRequest extends Request {
         }
 
         /**
-         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by WUYING Workspace.
+         * The ID of the region. You can call the [DescribeRegions](~~196646~~) operation to query the regions supported by Elastic Desktop Service.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -272,6 +309,15 @@ public class DescribeDesktopSessionsRequest extends Request {
         public Builder startTime(String startTime) {
             this.putQueryParameter("StartTime", startTime);
             this.startTime = startTime;
+            return this;
+        }
+
+        /**
+         * SubPayType.
+         */
+        public Builder subPayType(String subPayType) {
+            this.putQueryParameter("SubPayType", subPayType);
+            this.subPayType = subPayType;
             return this;
         }
 

@@ -16,6 +16,14 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     private String adHostname;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDCHostname")
+    private String backupDCHostname;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDns")
+    private String backupDns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DnsAddress")
     private java.util.List < String > dnsAddress;
 
@@ -64,6 +72,8 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
     private ModifyADConnectorOfficeSiteRequest(Builder builder) {
         super(builder);
         this.adHostname = builder.adHostname;
+        this.backupDCHostname = builder.backupDCHostname;
+        this.backupDns = builder.backupDns;
         this.dnsAddress = builder.dnsAddress;
         this.domainName = builder.domainName;
         this.domainPassword = builder.domainPassword;
@@ -95,6 +105,20 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
      */
     public String getAdHostname() {
         return this.adHostname;
+    }
+
+    /**
+     * @return backupDCHostname
+     */
+    public String getBackupDCHostname() {
+        return this.backupDCHostname;
+    }
+
+    /**
+     * @return backupDns
+     */
+    public String getBackupDns() {
+        return this.backupDns;
     }
 
     /**
@@ -176,6 +200,8 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
 
     public static final class Builder extends Request.Builder<ModifyADConnectorOfficeSiteRequest, Builder> {
         private String adHostname; 
+        private String backupDCHostname; 
+        private String backupDns; 
         private java.util.List < String > dnsAddress; 
         private String domainName; 
         private String domainPassword; 
@@ -195,6 +221,8 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         private Builder(ModifyADConnectorOfficeSiteRequest request) {
             super(request);
             this.adHostname = request.adHostname;
+            this.backupDCHostname = request.backupDCHostname;
+            this.backupDns = request.backupDns;
             this.dnsAddress = request.dnsAddress;
             this.domainName = request.domainName;
             this.domainPassword = request.domainPassword;
@@ -214,6 +242,24 @@ public class ModifyADConnectorOfficeSiteRequest extends Request {
         public Builder adHostname(String adHostname) {
             this.putQueryParameter("AdHostname", adHostname);
             this.adHostname = adHostname;
+            return this;
+        }
+
+        /**
+         * BackupDCHostname.
+         */
+        public Builder backupDCHostname(String backupDCHostname) {
+            this.putQueryParameter("BackupDCHostname", backupDCHostname);
+            this.backupDCHostname = backupDCHostname;
+            return this;
+        }
+
+        /**
+         * BackupDns.
+         */
+        public Builder backupDns(String backupDns) {
+            this.putQueryParameter("BackupDns", backupDns);
+            this.backupDns = backupDns;
             return this;
         }
 

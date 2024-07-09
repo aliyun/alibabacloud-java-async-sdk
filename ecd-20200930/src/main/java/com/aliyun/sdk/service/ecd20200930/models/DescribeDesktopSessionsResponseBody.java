@@ -121,6 +121,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("OfficeSiteName")
         private String officeSiteName;
 
+        @com.aliyun.core.annotation.NameInMap("OsSessionStatus")
+        private String osSessionStatus;
+
         @com.aliyun.core.annotation.NameInMap("OsType")
         private String osType;
 
@@ -139,6 +142,9 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SessionStatus")
         private String sessionStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SubPayType")
+        private String subPayType;
+
         @com.aliyun.core.annotation.NameInMap("TotalConnectionTime")
         private Long totalConnectionTime;
 
@@ -153,12 +159,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             this.latestConnectionTime = builder.latestConnectionTime;
             this.officeSiteId = builder.officeSiteId;
             this.officeSiteName = builder.officeSiteName;
+            this.osSessionStatus = builder.osSessionStatus;
             this.osType = builder.osType;
             this.protocolType = builder.protocolType;
             this.sessionEndTime = builder.sessionEndTime;
             this.sessionIdleTime = builder.sessionIdleTime;
             this.sessionStartTime = builder.sessionStartTime;
             this.sessionStatus = builder.sessionStatus;
+            this.subPayType = builder.subPayType;
             this.totalConnectionTime = builder.totalConnectionTime;
         }
 
@@ -241,6 +249,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return osSessionStatus
+         */
+        public String getOsSessionStatus() {
+            return this.osSessionStatus;
+        }
+
+        /**
          * @return osType
          */
         public String getOsType() {
@@ -283,6 +298,13 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
         }
 
         /**
+         * @return subPayType
+         */
+        public String getSubPayType() {
+            return this.subPayType;
+        }
+
+        /**
          * @return totalConnectionTime
          */
         public Long getTotalConnectionTime() {
@@ -300,12 +322,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             private Long latestConnectionTime; 
             private String officeSiteId; 
             private String officeSiteName; 
+            private String osSessionStatus; 
             private String osType; 
             private String protocolType; 
             private String sessionEndTime; 
             private Long sessionIdleTime; 
             private String sessionStartTime; 
             private String sessionStatus; 
+            private String subPayType; 
             private Long totalConnectionTime; 
 
             /**
@@ -389,6 +413,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
             }
 
             /**
+             * OsSessionStatus.
+             */
+            public Builder osSessionStatus(String osSessionStatus) {
+                this.osSessionStatus = osSessionStatus;
+                return this;
+            }
+
+            /**
              * The OS.
              * <p>
              * 
@@ -451,6 +483,14 @@ public class DescribeDesktopSessionsResponseBody extends TeaModel {
              */
             public Builder sessionStatus(String sessionStatus) {
                 this.sessionStatus = sessionStatus;
+                return this;
+            }
+
+            /**
+             * SubPayType.
+             */
+            public Builder subPayType(String subPayType) {
+                this.subPayType = subPayType;
                 return this;
             }
 

@@ -16,6 +16,14 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     private String adHostname;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDCHostname")
+    private String backupDCHostname;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BackupDns")
+    private String backupDns;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Bandwidth")
     private Integer bandwidth;
 
@@ -99,6 +107,8 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
     private CreateADConnectorOfficeSiteRequest(Builder builder) {
         super(builder);
         this.adHostname = builder.adHostname;
+        this.backupDCHostname = builder.backupDCHostname;
+        this.backupDns = builder.backupDns;
         this.bandwidth = builder.bandwidth;
         this.cenId = builder.cenId;
         this.cenOwnerId = builder.cenOwnerId;
@@ -138,6 +148,20 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
      */
     public String getAdHostname() {
         return this.adHostname;
+    }
+
+    /**
+     * @return backupDCHostname
+     */
+    public String getBackupDCHostname() {
+        return this.backupDCHostname;
+    }
+
+    /**
+     * @return backupDns
+     */
+    public String getBackupDns() {
+        return this.backupDns;
     }
 
     /**
@@ -275,6 +299,8 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
 
     public static final class Builder extends Request.Builder<CreateADConnectorOfficeSiteRequest, Builder> {
         private String adHostname; 
+        private String backupDCHostname; 
+        private String backupDns; 
         private Integer bandwidth; 
         private String cenId; 
         private Long cenOwnerId; 
@@ -302,6 +328,8 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         private Builder(CreateADConnectorOfficeSiteRequest request) {
             super(request);
             this.adHostname = request.adHostname;
+            this.backupDCHostname = request.backupDCHostname;
+            this.backupDns = request.backupDns;
             this.bandwidth = request.bandwidth;
             this.cenId = request.cenId;
             this.cenOwnerId = request.cenOwnerId;
@@ -329,6 +357,24 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         public Builder adHostname(String adHostname) {
             this.putQueryParameter("AdHostname", adHostname);
             this.adHostname = adHostname;
+            return this;
+        }
+
+        /**
+         * BackupDCHostname.
+         */
+        public Builder backupDCHostname(String backupDCHostname) {
+            this.putQueryParameter("BackupDCHostname", backupDCHostname);
+            this.backupDCHostname = backupDCHostname;
+            return this;
+        }
+
+        /**
+         * BackupDns.
+         */
+        public Builder backupDns(String backupDns) {
+            this.putQueryParameter("BackupDns", backupDns);
+            this.backupDns = backupDns;
             return this;
         }
 
@@ -380,7 +426,7 @@ public class CreateADConnectorOfficeSiteRequest extends Request {
         }
 
         /**
-         * The method to connect to cloud computers from WUYING clients.
+         * The method to connect to cloud computers from Alibaba Cloud Workspace clients.
          * <p>
          * 
          * >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to `VPC` or `Any`, PrivateLink is automatically activated.

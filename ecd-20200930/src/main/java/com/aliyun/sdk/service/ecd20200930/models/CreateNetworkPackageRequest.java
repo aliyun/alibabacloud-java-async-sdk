@@ -203,7 +203,7 @@ public class CreateNetworkPackageRequest extends Request {
          * 
          *     <!-- -->
          * 
-         *     To make the payment, log on to the WUYING Workspace console, go to the Orders page, and find the order based on the order ID.
+         *     To make the payment, log on to the Elastic Desktop Service console, go to the Orders page, and find the order based on the order ID.
          * 
          *     <!-- -->
          */

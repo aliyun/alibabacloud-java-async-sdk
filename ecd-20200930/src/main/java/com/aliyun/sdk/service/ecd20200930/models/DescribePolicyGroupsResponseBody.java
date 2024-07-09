@@ -378,7 +378,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              * Valid values:
              * 
              * *   html5: web client
-             * *   linux: WUYING hardware terminal
+             * *   linux: Alibaba Cloud Workspace hardware terminal
              * *   android: Android client
              * *   windows: Windows client
              * *   ios: iOS client
@@ -783,6 +783,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Clipboard")
         private String clipboard;
 
+        @com.aliyun.core.annotation.NameInMap("ColorEnhancement")
+        private String colorEnhancement;
+
         @com.aliyun.core.annotation.NameInMap("CpuDownGradeDuration")
         private Integer cpuDownGradeDuration;
 
@@ -800,6 +803,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("CpuSingleRateLimit")
         private Integer cpuSingleRateLimit;
+
+        @com.aliyun.core.annotation.NameInMap("DisplayMode")
+        private String displayMode;
 
         @com.aliyun.core.annotation.NameInMap("DomainList")
         private String domainList;
@@ -833,6 +839,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("LocalDrive")
         private String localDrive;
+
+        @com.aliyun.core.annotation.NameInMap("MaxReconnectTime")
+        private Integer maxReconnectTime;
 
         @com.aliyun.core.annotation.NameInMap("MemoryDownGradeDuration")
         private Integer memoryDownGradeDuration;
@@ -879,6 +888,9 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("PrinterRedirection")
         private String printerRedirection;
 
+        @com.aliyun.core.annotation.NameInMap("QualityEnhancement")
+        private String qualityEnhancement;
+
         @com.aliyun.core.annotation.NameInMap("RecordContent")
         private String recordContent;
 
@@ -921,11 +933,35 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ScopeValue")
         private java.util.List < String > scopeValue;
 
+        @com.aliyun.core.annotation.NameInMap("SmoothEnhancement")
+        private String smoothEnhancement;
+
+        @com.aliyun.core.annotation.NameInMap("StreamingMode")
+        private String streamingMode;
+
+        @com.aliyun.core.annotation.NameInMap("TargetFps")
+        private Integer targetFps;
+
         @com.aliyun.core.annotation.NameInMap("UsbRedirect")
         private String usbRedirect;
 
         @com.aliyun.core.annotation.NameInMap("UsbSupplyRedirectRule")
         private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule;
+
+        @com.aliyun.core.annotation.NameInMap("VideoEncAvgKbps")
+        private Integer videoEncAvgKbps;
+
+        @com.aliyun.core.annotation.NameInMap("VideoEncMaxQP")
+        private Integer videoEncMaxQP;
+
+        @com.aliyun.core.annotation.NameInMap("VideoEncMinQP")
+        private Integer videoEncMinQP;
+
+        @com.aliyun.core.annotation.NameInMap("VideoEncPeakKbps")
+        private Integer videoEncPeakKbps;
+
+        @com.aliyun.core.annotation.NameInMap("VideoEncPolicy")
+        private String videoEncPolicy;
 
         @com.aliyun.core.annotation.NameInMap("VideoRedirect")
         private String videoRedirect;
@@ -980,12 +1016,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.cameraRedirect = builder.cameraRedirect;
             this.clientTypes = builder.clientTypes;
             this.clipboard = builder.clipboard;
+            this.colorEnhancement = builder.colorEnhancement;
             this.cpuDownGradeDuration = builder.cpuDownGradeDuration;
             this.cpuProcessors = builder.cpuProcessors;
             this.cpuProtectedMode = builder.cpuProtectedMode;
             this.cpuRateLimit = builder.cpuRateLimit;
             this.cpuSampleDuration = builder.cpuSampleDuration;
             this.cpuSingleRateLimit = builder.cpuSingleRateLimit;
+            this.displayMode = builder.displayMode;
             this.domainList = builder.domainList;
             this.domainResolveRule = builder.domainResolveRule;
             this.domainResolveRuleType = builder.domainResolveRuleType;
@@ -997,6 +1035,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.html5FileTransfer = builder.html5FileTransfer;
             this.internetCommunicationProtocol = builder.internetCommunicationProtocol;
             this.localDrive = builder.localDrive;
+            this.maxReconnectTime = builder.maxReconnectTime;
             this.memoryDownGradeDuration = builder.memoryDownGradeDuration;
             this.memoryProcessors = builder.memoryProcessors;
             this.memoryProtectedMode = builder.memoryProtectedMode;
@@ -1012,6 +1051,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.preemptLogin = builder.preemptLogin;
             this.preemptLoginUsers = builder.preemptLoginUsers;
             this.printerRedirection = builder.printerRedirection;
+            this.qualityEnhancement = builder.qualityEnhancement;
             this.recordContent = builder.recordContent;
             this.recordContentExpires = builder.recordContentExpires;
             this.recording = builder.recording;
@@ -1026,8 +1066,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             this.remoteCoordinate = builder.remoteCoordinate;
             this.scope = builder.scope;
             this.scopeValue = builder.scopeValue;
+            this.smoothEnhancement = builder.smoothEnhancement;
+            this.streamingMode = builder.streamingMode;
+            this.targetFps = builder.targetFps;
             this.usbRedirect = builder.usbRedirect;
             this.usbSupplyRedirectRule = builder.usbSupplyRedirectRule;
+            this.videoEncAvgKbps = builder.videoEncAvgKbps;
+            this.videoEncMaxQP = builder.videoEncMaxQP;
+            this.videoEncMinQP = builder.videoEncMinQP;
+            this.videoEncPeakKbps = builder.videoEncPeakKbps;
+            this.videoEncPolicy = builder.videoEncPolicy;
             this.videoRedirect = builder.videoRedirect;
             this.visualQuality = builder.visualQuality;
             this.watermark = builder.watermark;
@@ -1103,6 +1151,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return colorEnhancement
+         */
+        public String getColorEnhancement() {
+            return this.colorEnhancement;
+        }
+
+        /**
          * @return cpuDownGradeDuration
          */
         public Integer getCpuDownGradeDuration() {
@@ -1142,6 +1197,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public Integer getCpuSingleRateLimit() {
             return this.cpuSingleRateLimit;
+        }
+
+        /**
+         * @return displayMode
+         */
+        public String getDisplayMode() {
+            return this.displayMode;
         }
 
         /**
@@ -1219,6 +1281,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public String getLocalDrive() {
             return this.localDrive;
+        }
+
+        /**
+         * @return maxReconnectTime
+         */
+        public Integer getMaxReconnectTime() {
+            return this.maxReconnectTime;
         }
 
         /**
@@ -1327,6 +1396,13 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return qualityEnhancement
+         */
+        public String getQualityEnhancement() {
+            return this.qualityEnhancement;
+        }
+
+        /**
          * @return recordContent
          */
         public String getRecordContent() {
@@ -1425,6 +1501,27 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
         }
 
         /**
+         * @return smoothEnhancement
+         */
+        public String getSmoothEnhancement() {
+            return this.smoothEnhancement;
+        }
+
+        /**
+         * @return streamingMode
+         */
+        public String getStreamingMode() {
+            return this.streamingMode;
+        }
+
+        /**
+         * @return targetFps
+         */
+        public Integer getTargetFps() {
+            return this.targetFps;
+        }
+
+        /**
          * @return usbRedirect
          */
         public String getUsbRedirect() {
@@ -1436,6 +1533,41 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
          */
         public java.util.List < UsbSupplyRedirectRule> getUsbSupplyRedirectRule() {
             return this.usbSupplyRedirectRule;
+        }
+
+        /**
+         * @return videoEncAvgKbps
+         */
+        public Integer getVideoEncAvgKbps() {
+            return this.videoEncAvgKbps;
+        }
+
+        /**
+         * @return videoEncMaxQP
+         */
+        public Integer getVideoEncMaxQP() {
+            return this.videoEncMaxQP;
+        }
+
+        /**
+         * @return videoEncMinQP
+         */
+        public Integer getVideoEncMinQP() {
+            return this.videoEncMinQP;
+        }
+
+        /**
+         * @return videoEncPeakKbps
+         */
+        public Integer getVideoEncPeakKbps() {
+            return this.videoEncPeakKbps;
+        }
+
+        /**
+         * @return videoEncPolicy
+         */
+        public String getVideoEncPolicy() {
+            return this.videoEncPolicy;
         }
 
         /**
@@ -1551,12 +1683,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String cameraRedirect; 
             private java.util.List < ClientTypes> clientTypes; 
             private String clipboard; 
+            private String colorEnhancement; 
             private Integer cpuDownGradeDuration; 
             private java.util.List < String > cpuProcessors; 
             private String cpuProtectedMode; 
             private Integer cpuRateLimit; 
             private Integer cpuSampleDuration; 
             private Integer cpuSingleRateLimit; 
+            private String displayMode; 
             private String domainList; 
             private java.util.List < DomainResolveRule> domainResolveRule; 
             private String domainResolveRuleType; 
@@ -1568,6 +1702,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String html5FileTransfer; 
             private String internetCommunicationProtocol; 
             private String localDrive; 
+            private Integer maxReconnectTime; 
             private Integer memoryDownGradeDuration; 
             private java.util.List < String > memoryProcessors; 
             private String memoryProtectedMode; 
@@ -1583,6 +1718,7 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String preemptLogin; 
             private java.util.List < String > preemptLoginUsers; 
             private String printerRedirection; 
+            private String qualityEnhancement; 
             private String recordContent; 
             private Long recordContentExpires; 
             private String recording; 
@@ -1597,8 +1733,16 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             private String remoteCoordinate; 
             private String scope; 
             private java.util.List < String > scopeValue; 
+            private String smoothEnhancement; 
+            private String streamingMode; 
+            private Integer targetFps; 
             private String usbRedirect; 
             private java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule; 
+            private Integer videoEncAvgKbps; 
+            private Integer videoEncMaxQP; 
+            private Integer videoEncMinQP; 
+            private Integer videoEncPeakKbps; 
+            private String videoEncPolicy; 
             private String videoRedirect; 
             private String visualQuality; 
             private String watermark; 
@@ -1694,6 +1838,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * ColorEnhancement.
+             */
+            public Builder colorEnhancement(String colorEnhancement) {
+                this.colorEnhancement = colorEnhancement;
+                return this;
+            }
+
+            /**
              * The CPU underclocking duration. Valid values: 30 to 120.
              */
             public Builder cpuDownGradeDuration(Integer cpuDownGradeDuration) {
@@ -1738,6 +1890,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder cpuSingleRateLimit(Integer cpuSingleRateLimit) {
                 this.cpuSingleRateLimit = cpuSingleRateLimit;
+                return this;
+            }
+
+            /**
+             * DisplayMode.
+             */
+            public Builder displayMode(String displayMode) {
+                this.displayMode = displayMode;
                 return this;
             }
 
@@ -1871,6 +2031,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder localDrive(String localDrive) {
                 this.localDrive = localDrive;
+                return this;
+            }
+
+            /**
+             * MaxReconnectTime.
+             */
+            public Builder maxReconnectTime(Integer maxReconnectTime) {
+                this.maxReconnectTime = maxReconnectTime;
                 return this;
             }
 
@@ -2024,6 +2192,14 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * QualityEnhancement.
+             */
+            public Builder qualityEnhancement(String qualityEnhancement) {
+                this.qualityEnhancement = qualityEnhancement;
+                return this;
+            }
+
+            /**
              * Indicates whether the custom screen recording feature is enabled. Valid values:
              * <p>
              * 
@@ -2168,6 +2344,30 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
             }
 
             /**
+             * SmoothEnhancement.
+             */
+            public Builder smoothEnhancement(String smoothEnhancement) {
+                this.smoothEnhancement = smoothEnhancement;
+                return this;
+            }
+
+            /**
+             * StreamingMode.
+             */
+            public Builder streamingMode(String streamingMode) {
+                this.streamingMode = streamingMode;
+                return this;
+            }
+
+            /**
+             * TargetFps.
+             */
+            public Builder targetFps(Integer targetFps) {
+                this.targetFps = targetFps;
+                return this;
+            }
+
+            /**
              * Indicates whether the USB redirection feature is enabled.
              * <p>
              * 
@@ -2186,6 +2386,46 @@ public class DescribePolicyGroupsResponseBody extends TeaModel {
              */
             public Builder usbSupplyRedirectRule(java.util.List < UsbSupplyRedirectRule> usbSupplyRedirectRule) {
                 this.usbSupplyRedirectRule = usbSupplyRedirectRule;
+                return this;
+            }
+
+            /**
+             * VideoEncAvgKbps.
+             */
+            public Builder videoEncAvgKbps(Integer videoEncAvgKbps) {
+                this.videoEncAvgKbps = videoEncAvgKbps;
+                return this;
+            }
+
+            /**
+             * VideoEncMaxQP.
+             */
+            public Builder videoEncMaxQP(Integer videoEncMaxQP) {
+                this.videoEncMaxQP = videoEncMaxQP;
+                return this;
+            }
+
+            /**
+             * VideoEncMinQP.
+             */
+            public Builder videoEncMinQP(Integer videoEncMinQP) {
+                this.videoEncMinQP = videoEncMinQP;
+                return this;
+            }
+
+            /**
+             * VideoEncPeakKbps.
+             */
+            public Builder videoEncPeakKbps(Integer videoEncPeakKbps) {
+                this.videoEncPeakKbps = videoEncPeakKbps;
+                return this;
+            }
+
+            /**
+             * VideoEncPolicy.
+             */
+            public Builder videoEncPolicy(String videoEncPolicy) {
+                this.videoEncPolicy = videoEncPolicy;
                 return this;
             }
 

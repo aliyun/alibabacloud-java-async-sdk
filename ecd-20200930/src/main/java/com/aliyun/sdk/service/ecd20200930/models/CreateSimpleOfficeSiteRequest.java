@@ -248,7 +248,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
          * The Cloud Enterprise Network (CEN) instance ID.
          * <p>
          * 
-         * >  If you want end users to connect to cloud computers from WUYING clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.
+         * >  If you want end users to connect to cloud computers from Alibaba Cloud Workspace clients over VPCs, you can attach the office network to a CEN instance. The CEN instance is the one that connects to your on-premises network over VPN Gateway or Express Connect.
          */
         public Builder cenId(String cenId) {
             this.putQueryParameter("CenId", cenId);
@@ -312,7 +312,7 @@ public class CreateSimpleOfficeSiteRequest extends Request {
         }
 
         /**
-         * The method to connect to cloud computers from WUYING clients.
+         * The method to connect to cloud computers from Alibaba Cloud Workspace clients.
          * <p>
          * 
          * >  The VPC connection depends on Alibaba Cloud PrivateLink. You can use PrivateLink for free. When you set this parameter to VPC or Any, PrivateLink is automatically activated.````

@@ -409,6 +409,15 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ADConnectors")
         private java.util.List < ADConnectors> ADConnectors;
 
+        @com.aliyun.core.annotation.NameInMap("AdHostname")
+        private String adHostname;
+
+        @com.aliyun.core.annotation.NameInMap("BackupDCHostname")
+        private String backupDCHostname;
+
+        @com.aliyun.core.annotation.NameInMap("BackupDns")
+        private String backupDns;
+
         @com.aliyun.core.annotation.NameInMap("CreationTime")
         private String creationTime;
 
@@ -492,6 +501,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
         private Directories(Builder builder) {
             this.ADConnectors = builder.ADConnectors;
+            this.adHostname = builder.adHostname;
+            this.backupDCHostname = builder.backupDCHostname;
+            this.backupDns = builder.backupDns;
             this.creationTime = builder.creationTime;
             this.customSecurityGroupId = builder.customSecurityGroupId;
             this.desktopAccessType = builder.desktopAccessType;
@@ -534,6 +546,27 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
          */
         public java.util.List < ADConnectors> getADConnectors() {
             return this.ADConnectors;
+        }
+
+        /**
+         * @return adHostname
+         */
+        public String getAdHostname() {
+            return this.adHostname;
+        }
+
+        /**
+         * @return backupDCHostname
+         */
+        public String getBackupDCHostname() {
+            return this.backupDCHostname;
+        }
+
+        /**
+         * @return backupDns
+         */
+        public String getBackupDns() {
+            return this.backupDns;
         }
 
         /**
@@ -727,6 +760,9 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < ADConnectors> ADConnectors; 
+            private String adHostname; 
+            private String backupDCHostname; 
+            private String backupDns; 
             private String creationTime; 
             private String customSecurityGroupId; 
             private String desktopAccessType; 
@@ -760,6 +796,30 @@ public class DescribeDirectoriesResponseBody extends TeaModel {
              */
             public Builder ADConnectors(java.util.List < ADConnectors> ADConnectors) {
                 this.ADConnectors = ADConnectors;
+                return this;
+            }
+
+            /**
+             * The hostname of the domain controller. The hostname must comply with the hostname naming convention of Windows. This parameter is returned only when the directory type is AD office network.
+             */
+            public Builder adHostname(String adHostname) {
+                this.adHostname = adHostname;
+                return this;
+            }
+
+            /**
+             * BackupDCHostname.
+             */
+            public Builder backupDCHostname(String backupDCHostname) {
+                this.backupDCHostname = backupDCHostname;
+                return this;
+            }
+
+            /**
+             * BackupDns.
+             */
+            public Builder backupDns(String backupDns) {
+                this.backupDns = backupDns;
                 return this;
             }
 

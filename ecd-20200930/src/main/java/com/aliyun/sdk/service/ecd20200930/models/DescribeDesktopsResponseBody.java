@@ -379,6 +379,67 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         } 
 
     }
+    public static class ResourceGroups extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Id")
+        private String id;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private ResourceGroups(Builder builder) {
+            this.id = builder.id;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ResourceGroups create() {
+            return builder().build();
+        }
+
+        /**
+         * @return id
+         */
+        public String getId() {
+            return this.id;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String id; 
+            private String name; 
+
+            /**
+             * Id.
+             */
+            public Builder id(String id) {
+                this.id = id;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public ResourceGroups build() {
+                return new ResourceGroups(this);
+            } 
+
+        } 
+
+    }
     public static class Sessions extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("EndUserId")
         private String endUserId;
@@ -663,6 +724,9 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ProtocolType")
         private String protocolType;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceGroups")
+        private java.util.List < ResourceGroups> resourceGroups;
+
         @com.aliyun.core.annotation.NameInMap("SessionType")
         private String sessionType;
 
@@ -747,6 +811,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             this.policyGroupNameList = builder.policyGroupNameList;
             this.progress = builder.progress;
             this.protocolType = builder.protocolType;
+            this.resourceGroups = builder.resourceGroups;
             this.sessionType = builder.sessionType;
             this.sessions = builder.sessions;
             this.snapshotPolicyId = builder.snapshotPolicyId;
@@ -1099,6 +1164,13 @@ public class DescribeDesktopsResponseBody extends TeaModel {
         }
 
         /**
+         * @return resourceGroups
+         */
+        public java.util.List < ResourceGroups> getResourceGroups() {
+            return this.resourceGroups;
+        }
+
+        /**
          * @return sessionType
          */
         public String getSessionType() {
@@ -1230,6 +1302,7 @@ public class DescribeDesktopsResponseBody extends TeaModel {
             private java.util.List < String > policyGroupNameList; 
             private String progress; 
             private String protocolType; 
+            private java.util.List < ResourceGroups> resourceGroups; 
             private String sessionType; 
             private java.util.List < Sessions> sessions; 
             private String snapshotPolicyId; 
@@ -1753,6 +1826,14 @@ public class DescribeDesktopsResponseBody extends TeaModel {
              */
             public Builder protocolType(String protocolType) {
                 this.protocolType = protocolType;
+                return this;
+            }
+
+            /**
+             * ResourceGroups.
+             */
+            public Builder resourceGroups(java.util.List < ResourceGroups> resourceGroups) {
+                this.resourceGroups = resourceGroups;
                 return this;
             }
 
