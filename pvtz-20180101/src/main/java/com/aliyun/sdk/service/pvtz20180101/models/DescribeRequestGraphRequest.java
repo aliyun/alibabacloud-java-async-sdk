@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRequestGraphRequest</p>
  */
 public class DescribeRequestGraphRequest extends Request {
-    @Query
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @Query
-    @NameInMap("BizType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BizType")
     private String bizType;
 
-    @Query
-    @NameInMap("EndTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("StartTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long startTimestamp;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeRequestGraphRequest(Builder builder) {
@@ -154,7 +153,11 @@ public class DescribeRequestGraphRequest extends Request {
         } 
 
         /**
-         * BizId.
+         * The business ID. BizId is specified together with BizType.
+         * <p>
+         * 
+         * *   If you set BizType to AUTH_ZONE, set BizId to a zone ID.
+         * *   If you set BizType to RESOLVER_RULE, set BizId to the ID of a forwarding rule.
          */
         public Builder bizId(String bizId) {
             this.putQueryParameter("BizId", bizId);
@@ -163,7 +166,11 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * BizType.
+         * The business type. Valid values:
+         * <p>
+         * 
+         * *   AUTH_ZONE: authoritative zone
+         * *   RESOLVER_RULE: forwarding rule
          */
         public Builder bizType(String bizType) {
             this.putQueryParameter("BizType", bizType);
@@ -172,7 +179,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -181,7 +188,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -190,7 +197,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -199,7 +206,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -208,7 +215,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * VPC ID
+         * The ID of the virtual private cloud (VPC).
          */
         public Builder vpcId(String vpcId) {
             this.putQueryParameter("VpcId", vpcId);
@@ -217,7 +224,7 @@ public class DescribeRequestGraphRequest extends Request {
         }
 
         /**
-         * zone ID
+         * The global ID of the zone. To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

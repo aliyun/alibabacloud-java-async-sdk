@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckZoneNameResponseBody</p>
  */
 public class CheckZoneNameResponseBody extends TeaModel {
-    @NameInMap("Check")
+    @com.aliyun.core.annotation.NameInMap("Check")
     private Boolean check;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CheckZoneNameResponseBody(Builder builder) {
@@ -62,7 +61,11 @@ public class CheckZoneNameResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Check.
+         * Indicates whether the zone name is valid. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder check(Boolean check) {
             this.check = check;
@@ -70,7 +73,7 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +81,7 @@ public class CheckZoneNameResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeZonesRequest</p>
  */
 public class DescribeZonesRequest extends Request {
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("QueryRegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryRegionId")
     private String queryRegionId;
 
-    @Query
-    @NameInMap("QueryVpcId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryVpcId")
     private String queryVpcId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ResourceTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceTag")
     private java.util.List < ResourceTag> resourceTag;
 
-    @Query
-    @NameInMap("SearchMode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SearchMode")
     private String searchMode;
 
-    @Query
-    @NameInMap("ZoneTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneTag")
     private java.util.List < String > zoneTag;
 
-    @Query
-    @NameInMap("ZoneType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneType")
     private String zoneType;
 
     private DescribeZonesRequest(Builder builder) {
@@ -195,7 +194,7 @@ public class DescribeZonesRequest extends Request {
         } 
 
         /**
-         * Keyword.
+         * The keyword of the zone name. The search is performed in the %KeyWord % mode and is not case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -204,7 +203,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -213,7 +212,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page 1. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -222,7 +221,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: 100. Default value: 20.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -231,7 +230,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * QueryRegionId.
+         * The region ID.
          */
         public Builder queryRegionId(String queryRegionId) {
             this.putQueryParameter("QueryRegionId", queryRegionId);
@@ -240,7 +239,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * VPC ID。
+         * The virtual private cloud (VPC) ID.
          */
         public Builder queryVpcId(String queryVpcId) {
             this.putQueryParameter("QueryVpcId", queryVpcId);
@@ -249,7 +248,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -258,7 +257,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ResourceTag.
+         * The tag added to the resource.
          */
         public Builder resourceTag(java.util.List < ResourceTag> resourceTag) {
             this.putQueryParameter("ResourceTag", resourceTag);
@@ -267,7 +266,11 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * SearchMode.
+         * The search mode. Valid values:
+         * <p>
+         * 
+         * *   **LIKE (default)**: fuzzy search
+         * *   **EXACT**: exact search
          */
         public Builder searchMode(String searchMode) {
             this.putQueryParameter("SearchMode", searchMode);
@@ -276,7 +279,7 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ZoneTag.
+         * The type of the cloud service.
          */
         public Builder zoneTag(java.util.List < String > zoneTag) {
             this.putQueryParameter("ZoneTag", zoneTag);
@@ -285,7 +288,13 @@ public class DescribeZonesRequest extends Request {
         }
 
         /**
-         * ZoneType.
+         * The type of zones to query. Default value: AUTH_ZONE.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **AUTH_ZONE**: authoritative zone
+         * *   **CLOUD_PRODUCT_ZONE**: authoritative zone for cloud services
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);
@@ -301,10 +310,10 @@ public class DescribeZonesRequest extends Request {
     } 
 
     public static class ResourceTag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private ResourceTag(Builder builder) {
@@ -339,7 +348,7 @@ public class DescribeZonesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The key of tag N added to the resource.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -347,7 +356,7 @@ public class DescribeZonesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The value of tag N added to the resource.
              */
             public Builder value(String value) {
                 this.value = value;

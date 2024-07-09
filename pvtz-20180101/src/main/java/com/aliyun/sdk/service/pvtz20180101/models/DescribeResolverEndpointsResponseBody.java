@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResolverEndpointsResponseBody</p>
  */
 public class DescribeResolverEndpointsResponseBody extends TeaModel {
-    @NameInMap("Endpoints")
+    @com.aliyun.core.annotation.NameInMap("Endpoints")
     private java.util.List < Endpoints> endpoints;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeResolverEndpointsResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * Endpoints.
+         * The information about endpoints.
          */
         public Builder endpoints(java.util.List < Endpoints> endpoints) {
             this.endpoints = endpoints;
@@ -106,7 +105,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +113,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +121,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +129,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +137,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -152,16 +151,16 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
     } 
 
     public static class IpConfigs extends TeaModel {
-        @NameInMap("AzId")
+        @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private IpConfigs(Builder builder) {
@@ -214,7 +213,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             private String vSwitchId; 
 
             /**
-             * AzId.
+             * The ID of the zone where the vSwitch resides.
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -222,7 +221,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -230,7 +229,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IPv4 address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -238,7 +237,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;
@@ -253,43 +252,43 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
 
     }
     public static class Endpoints extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("IpConfigs")
+        @com.aliyun.core.annotation.NameInMap("IpConfigs")
         private java.util.List < IpConfigs> ipConfigs;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("SecurityGroupId")
+        @com.aliyun.core.annotation.NameInMap("SecurityGroupId")
         private String securityGroupId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VpcRegionId")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionId")
         private String vpcRegionId;
 
-        @NameInMap("VpcRegionName")
+        @com.aliyun.core.annotation.NameInMap("VpcRegionName")
         private String vpcRegionName;
 
         private Endpoints(Builder builder) {
@@ -423,7 +422,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             private String vpcRegionName; 
 
             /**
-             * CreateTime.
+             * The time when the endpoint was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -431,7 +430,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -439,7 +438,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The endpoint ID.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -447,7 +446,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * IpConfigs.
+             * The source IP addresses of outbound traffic.
              */
             public Builder ipConfigs(java.util.List < IpConfigs> ipConfigs) {
                 this.ipConfigs = ipConfigs;
@@ -455,7 +454,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The endpoint name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -463,7 +462,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroupId.
+             * The security group ID.
              */
             public Builder securityGroupId(String securityGroupId) {
                 this.securityGroupId = securityGroupId;
@@ -471,7 +470,15 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the endpoint. Valid values:
+             * <p>
+             * 
+             * *   SUCCESS: The endpoint works as expected.
+             * *   INIT: The endpoint is being created.
+             * *   FAILED: The endpoint fails to be created.
+             * *   CHANGE_INIT: The endpoint is being modified.
+             * *   CHANGE_FAILED: The endpoint fails to be modified.
+             * *   EXCEPTION: The endpoint encounters an exception.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -479,7 +486,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the endpoint was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -487,7 +494,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * The time when the endpoint was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -495,7 +502,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The ID of the outbound virtual private cloud (VPC).
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -503,7 +510,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The VPC name.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -511,7 +518,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcRegionId.
+             * The region ID of the outbound VPC.
              */
             public Builder vpcRegionId(String vpcRegionId) {
                 this.vpcRegionId = vpcRegionId;
@@ -519,7 +526,7 @@ public class DescribeResolverEndpointsResponseBody extends TeaModel {
             }
 
             /**
-             * VpcRegionName.
+             * The name of the region where the outbound VPC resides.
              */
             public Builder vpcRegionName(String vpcRegionName) {
                 this.vpcRegionName = vpcRegionName;

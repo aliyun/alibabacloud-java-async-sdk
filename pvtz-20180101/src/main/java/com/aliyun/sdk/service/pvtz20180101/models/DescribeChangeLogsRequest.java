@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,41 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChangeLogsRequest</p>
  */
 public class DescribeChangeLogsRequest extends Request {
-    @Query
-    @NameInMap("EndTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndTimestamp")
     private Long endTimestamp;
 
-    @Query
-    @NameInMap("EntityType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EntityType")
     private String entityType;
 
-    @Query
-    @NameInMap("Keyword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Keyword")
     private String keyword;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer pageSize;
 
-    @Query
-    @NameInMap("StartTimestamp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StartTimestamp")
     private Long startTimestamp;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeChangeLogsRequest(Builder builder) {
@@ -167,7 +166,7 @@ public class DescribeChangeLogsRequest extends Request {
         } 
 
         /**
-         * EndTimestamp.
+         * The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder endTimestamp(Long endTimestamp) {
             this.putQueryParameter("EndTimestamp", endTimestamp);
@@ -176,7 +175,13 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * EntityType.
+         * The type of operation logs. Valid values:
+         * <p>
+         * 
+         * *   **PV_ZONE**: the logs that record the operations on zones
+         * *   **PV_RECORD**: the logs that record the operations on DNS records
+         * 
+         * If you set this parameter to other values, all types of operation logs are queried.
          */
         public Builder entityType(String entityType) {
             this.putQueryParameter("EntityType", entityType);
@@ -185,7 +190,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * Keyword.
+         * The keyword for searches in "%KeyWord%" mode. The value is not case-sensitive.
          */
         public Builder keyword(String keyword) {
             this.putQueryParameter("Keyword", keyword);
@@ -194,7 +199,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -203,7 +208,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Pages start from page **1**. Default value: **1**.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -212,7 +217,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **100**. Default value: **20**.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);
@@ -221,7 +226,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);
@@ -230,7 +235,7 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -239,7 +244,10 @@ public class DescribeChangeLogsRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The global ID of the zone.\
+         * <p>
+         * If you specify this parameter, the logs that record the operations on the Domain Name System (DNS) records of the specified zone are queried.\
+         * If you leave this parameter empty, the logs that record the operations on all zones that belong to the current Alibaba Cloud account and the DNS records of these zones are queried.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);

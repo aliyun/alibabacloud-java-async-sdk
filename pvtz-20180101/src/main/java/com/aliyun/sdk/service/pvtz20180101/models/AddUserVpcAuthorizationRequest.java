@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddUserVpcAuthorizationRequest</p>
  */
 public class AddUserVpcAuthorizationRequest extends Request {
-    @Query
-    @NameInMap("AuthChannel")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthChannel")
     private String authChannel;
 
-    @Query
-    @NameInMap("AuthCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthCode")
     private String authCode;
 
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long authorizedUserId;
 
     private AddUserVpcAuthorizationRequest(Builder builder) {
@@ -97,7 +96,12 @@ public class AddUserVpcAuthorizationRequest extends Request {
         } 
 
         /**
-         * AuthChannel.
+         * The authorization method. Valid values:
+         * <p>
+         * 
+         * *   AUTH_CODE: An authorization code is used to associate VPCs across accounts. The system checks whether the value of AuthCode is valid.
+         * *   RESOURCE_DIRECTORY: A resource directory is used to associate VPCs across accounts. The system checks whether the value of AuthorizedUserId and the current account are in the same resource directory.
+         * *   If this parameter is empty, an authorization code is used to associate VPCs across accounts.
          */
         public Builder authChannel(String authChannel) {
             this.putQueryParameter("AuthChannel", authChannel);
@@ -106,7 +110,10 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * AuthCode.
+         * The verification code.
+         * <p>
+         * 
+         * This parameter is required when AuthType is set to NORMAL or is left empty and AuthChannel is set to AUTH_CODE or is left empty.
          */
         public Builder authCode(String authCode) {
             this.putQueryParameter("AuthCode", authCode);
@@ -115,7 +122,11 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * AuthType.
+         * The authorization scope. Valid values:
+         * <p>
+         * 
+         * *   NORMAL: general authorization.
+         * *   CLOUD_PRODUCT: cloud service-related authorization
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -124,7 +135,7 @@ public class AddUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);

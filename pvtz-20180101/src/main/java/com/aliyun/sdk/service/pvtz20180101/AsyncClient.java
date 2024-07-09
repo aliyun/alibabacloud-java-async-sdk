@@ -73,6 +73,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeZoneRecordsResponse> describeZoneRecords(DescribeZoneRecordsRequest request);
 
+    /**
+      * We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs to which a zone is bound, you can call the DescribeZoneInfo operation based on the zone ID.
+      *
+     */
     CompletableFuture<DescribeZoneVpcTreeResponse> describeZoneVpcTree(DescribeZoneVpcTreeRequest request);
 
     CompletableFuture<DescribeZonesResponse> describeZones(DescribeZonesRequest request);

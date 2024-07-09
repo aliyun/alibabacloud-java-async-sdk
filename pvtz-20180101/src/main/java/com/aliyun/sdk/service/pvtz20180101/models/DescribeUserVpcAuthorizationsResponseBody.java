@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserVpcAuthorizationsResponseBody</p>
  */
 public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
-    @NameInMap("Users")
+    @com.aliyun.core.annotation.NameInMap("Users")
     private java.util.List < Users> users;
 
     private DescribeUserVpcAuthorizationsResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         private java.util.List < Users> users; 
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +105,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +113,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -130,7 +129,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -138,7 +137,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
         }
 
         /**
-         * Users.
+         * The information about the Alibaba Cloud accounts.
          */
         public Builder users(java.util.List < Users> users) {
             this.users = users;
@@ -152,19 +151,19 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
     } 
 
     public static class Users extends TeaModel {
-        @NameInMap("AuthType")
+        @com.aliyun.core.annotation.NameInMap("AuthType")
         private String authType;
 
-        @NameInMap("AuthorizedAliyunId")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedAliyunId")
         private String authorizedAliyunId;
 
-        @NameInMap("AuthorizedUserId")
+        @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
         private Long authorizedUserId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
         private Users(Builder builder) {
@@ -226,7 +225,10 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             private Long createTimestamp; 
 
             /**
-             * AuthType.
+             * The authorization scope. Valid value:
+             * <p>
+             * 
+             * *   NORMAL: general authorization.
              */
             public Builder authType(String authType) {
                 this.authType = authType;
@@ -234,7 +236,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizedAliyunId.
+             * The name of the Alibaba Cloud account.
              */
             public Builder authorizedAliyunId(String authorizedAliyunId) {
                 this.authorizedAliyunId = authorizedAliyunId;
@@ -242,7 +244,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * AuthorizedUserId.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder authorizedUserId(Long authorizedUserId) {
                 this.authorizedUserId = authorizedUserId;
@@ -250,7 +252,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the authorization was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -258,7 +260,7 @@ public class DescribeUserVpcAuthorizationsResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The time when the authorization was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;

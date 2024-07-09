@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResolverRulesResponseBody</p>
  */
 public class DescribeResolverRulesResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Rules")
+    @com.aliyun.core.annotation.NameInMap("Rules")
     private java.util.List < Rules> rules;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeResolverRulesResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -106,7 +105,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -114,7 +113,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * Rules.
+         * The forwarding rules.
          */
         public Builder rules(java.util.List < Rules> rules) {
             this.rules = rules;
@@ -130,7 +129,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +137,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages returned.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -152,22 +151,22 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
     } 
 
     public static class BindVpcs extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcName")
+        @com.aliyun.core.annotation.NameInMap("VpcName")
         private String vpcName;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
-        @NameInMap("VpcUserId")
+        @com.aliyun.core.annotation.NameInMap("VpcUserId")
         private String vpcUserId;
 
         private BindVpcs(Builder builder) {
@@ -238,7 +237,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String vpcUserId; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -246,7 +245,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The region name.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -254,7 +253,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -262,7 +261,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcName.
+             * The VPC name.
              */
             public Builder vpcName(String vpcName) {
                 this.vpcName = vpcName;
@@ -270,7 +269,11 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcType.
+             * The type of the virtual private cloud (VPC). Valid values:
+             * <p>
+             * 
+             * *   STANDARD: standard VPC
+             * *   EDS: Elastic Desktop Service (EDS) workspace VPC
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -278,7 +281,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * VpcUserId.
+             * The Alibaba Cloud account to which the VPC belongs.
              */
             public Builder vpcUserId(String vpcUserId) {
                 this.vpcUserId = vpcUserId;
@@ -293,10 +296,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     }
     public static class ForwardIps extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("Port")
+        @com.aliyun.core.annotation.NameInMap("Port")
         private Integer port;
 
         private ForwardIps(Builder builder) {
@@ -331,7 +334,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private Integer port; 
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -339,7 +342,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Port.
+             * The port number.
              */
             public Builder port(Integer port) {
                 this.port = port;
@@ -354,40 +357,40 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
 
     }
     public static class Rules extends TeaModel {
-        @NameInMap("BindVpcs")
+        @com.aliyun.core.annotation.NameInMap("BindVpcs")
         private java.util.List < BindVpcs> bindVpcs;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("CreateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
         private Long createTimestamp;
 
-        @NameInMap("EndpointId")
+        @com.aliyun.core.annotation.NameInMap("EndpointId")
         private String endpointId;
 
-        @NameInMap("EndpointName")
+        @com.aliyun.core.annotation.NameInMap("EndpointName")
         private String endpointName;
 
-        @NameInMap("ForwardIps")
+        @com.aliyun.core.annotation.NameInMap("ForwardIps")
         private java.util.List < ForwardIps> forwardIps;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
-        @NameInMap("UpdateTimestamp")
+        @com.aliyun.core.annotation.NameInMap("UpdateTimestamp")
         private Long updateTimestamp;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private Rules(Builder builder) {
@@ -512,7 +515,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * BindVpcs.
+             * The VPCs associated with the forwarding rule.
              */
             public Builder bindVpcs(java.util.List < BindVpcs> bindVpcs) {
                 this.bindVpcs = bindVpcs;
@@ -520,7 +523,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the forwarding was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -528,7 +531,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimestamp.
+             * The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder createTimestamp(Long createTimestamp) {
                 this.createTimestamp = createTimestamp;
@@ -536,7 +539,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The endpoint ID.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -544,7 +547,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointName.
+             * The endpoint name.
              */
             public Builder endpointName(String endpointName) {
                 this.endpointName = endpointName;
@@ -552,7 +555,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ForwardIps.
+             * The destination IP addresses.
              */
             public Builder forwardIps(java.util.List < ForwardIps> forwardIps) {
                 this.forwardIps = forwardIps;
@@ -560,7 +563,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The ID of the forwarding rule.
              */
             public Builder id(String id) {
                 this.id = id;
@@ -568,7 +571,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the forwarding rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -576,7 +579,10 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The type of the forwarding rule. Valid value:
+             * <p>
+             * 
+             * *   OUTBOUND: Domain Name System (DNS) requests are forwarded to one or more IP addresses.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -584,7 +590,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the forwarding rule was last modified. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -592,7 +598,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTimestamp.
+             * The timestamp when the forwarding rule was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder updateTimestamp(Long updateTimestamp) {
                 this.updateTimestamp = updateTimestamp;
@@ -600,7 +606,7 @@ public class DescribeResolverRulesResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The name of the forward zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;

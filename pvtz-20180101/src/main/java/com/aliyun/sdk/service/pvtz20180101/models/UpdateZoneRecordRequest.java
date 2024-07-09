@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,54 +11,54 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateZoneRecordRequest</p>
  */
 public class UpdateZoneRecordRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Line")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Line")
     private String line;
 
-    @Query
-    @NameInMap("Priority")
-    @Validation(maximum = 99, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Priority")
+    @com.aliyun.core.annotation.Validation(maximum = 99, minimum = 1)
     private Integer priority;
 
-    @Query
-    @NameInMap("RecordId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RecordId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long recordId;
 
-    @Query
-    @NameInMap("Rr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Rr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String rr;
 
-    @Query
-    @NameInMap("Ttl")
-    @Validation(maximum = 86400, minimum = 5)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Ttl")
+    @com.aliyun.core.annotation.Validation(maximum = 86400, minimum = 5)
     private Integer ttl;
 
-    @Query
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("Value")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Value")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String value;
 
-    @Query
-    @NameInMap("Weight")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Weight")
     private Integer weight;
 
     private UpdateZoneRecordRequest(Builder builder) {
@@ -200,7 +199,7 @@ public class UpdateZoneRecordRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -209,7 +208,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -218,7 +217,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Line.
+         * The resolution line.
          */
         public Builder line(String line) {
             this.putQueryParameter("Line", line);
@@ -227,7 +226,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Priority.
+         * The priority of the mail exchanger (MX) record. Valid values: **1 to 99**.
+         * <p>
+         * 
+         * This parameter is required if the type of the DNS record is MX.
          */
         public Builder priority(Integer priority) {
             this.putQueryParameter("Priority", priority);
@@ -236,7 +238,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(Long recordId) {
             this.putQueryParameter("RecordId", recordId);
@@ -245,7 +247,10 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Rr.
+         * The hostname.
+         * <p>
+         * 
+         * For example, you must set this parameter to @ if you want to resolve @.example.com.
          */
         public Builder rr(String rr) {
             this.putQueryParameter("Rr", rr);
@@ -254,7 +259,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The time-to-live (TTL) of the DNS record.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -263,7 +268,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Type.
+         * The type of the DNS record. Valid values: **A**, **AAAA**, **CNAME**, **TXT**, **MX**, **PTR**, and **SRV**.
          */
         public Builder type(String type) {
             this.putQueryParameter("Type", type);
@@ -272,7 +277,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -281,7 +286,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Value.
+         * The record value.
          */
         public Builder value(String value) {
             this.putQueryParameter("Value", value);
@@ -290,7 +295,7 @@ public class UpdateZoneRecordRequest extends Request {
         }
 
         /**
-         * Weight.
+         * The weight of the address. Valid values: **1 to 100**.
          */
         public Builder weight(Integer weight) {
             this.putQueryParameter("Weight", weight);

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateResolverEndpointRequest</p>
  */
 public class UpdateResolverEndpointRequest extends Request {
-    @Query
-    @NameInMap("EndpointId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EndpointId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String endpointId;
 
-    @Query
-    @NameInMap("IpConfig")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpConfig")
     private java.util.List < IpConfig> ipConfig;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
     private UpdateResolverEndpointRequest(Builder builder) {
@@ -97,7 +96,7 @@ public class UpdateResolverEndpointRequest extends Request {
         } 
 
         /**
-         * EndpointId.
+         * The endpoint ID.
          */
         public Builder endpointId(String endpointId) {
             this.putQueryParameter("EndpointId", endpointId);
@@ -106,7 +105,7 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * IpConfig.
+         * The source IP addresses of outbound traffic. You must add two to six source IP addresses to ensure high availability.
          */
         public Builder ipConfig(java.util.List < IpConfig> ipConfig) {
             this.putQueryParameter("IpConfig", ipConfig);
@@ -115,7 +114,7 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -124,7 +123,7 @@ public class UpdateResolverEndpointRequest extends Request {
         }
 
         /**
-         * Name.
+         * The endpoint name.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -140,16 +139,16 @@ public class UpdateResolverEndpointRequest extends Request {
     } 
 
     public static class IpConfig extends TeaModel {
-        @NameInMap("AzId")
+        @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
 
-        @NameInMap("CidrBlock")
+        @com.aliyun.core.annotation.NameInMap("CidrBlock")
         private String cidrBlock;
 
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private String ip;
 
-        @NameInMap("VSwitchId")
+        @com.aliyun.core.annotation.NameInMap("VSwitchId")
         private String vSwitchId;
 
         private IpConfig(Builder builder) {
@@ -202,7 +201,7 @@ public class UpdateResolverEndpointRequest extends Request {
             private String vSwitchId; 
 
             /**
-             * AzId.
+             * The zone ID.
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -210,7 +209,7 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * CidrBlock.
+             * The IPv4 CIDR block of the vSwitch.
              */
             public Builder cidrBlock(String cidrBlock) {
                 this.cidrBlock = cidrBlock;
@@ -218,7 +217,7 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * Ip.
+             * The IP address.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -226,7 +225,7 @@ public class UpdateResolverEndpointRequest extends Request {
             }
 
             /**
-             * VSwitchId.
+             * The vSwitch ID.
              */
             public Builder vSwitchId(String vSwitchId) {
                 this.vSwitchId = vSwitchId;

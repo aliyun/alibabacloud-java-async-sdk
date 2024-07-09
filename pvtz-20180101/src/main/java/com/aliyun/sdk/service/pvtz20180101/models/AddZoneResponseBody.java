@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddZoneResponseBody</p>
  */
 public class AddZoneResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
-    @NameInMap("ZoneName")
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
     private String zoneName;
 
     private AddZoneResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class AddZoneResponseBody extends TeaModel {
         private String zoneName; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +81,7 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -90,7 +89,7 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * zone ID。
+         * The global ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -98,7 +97,7 @@ public class AddZoneResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneName.
+         * The name of the zone.
          */
         public Builder zoneName(String zoneName) {
             this.zoneName = zoneName;

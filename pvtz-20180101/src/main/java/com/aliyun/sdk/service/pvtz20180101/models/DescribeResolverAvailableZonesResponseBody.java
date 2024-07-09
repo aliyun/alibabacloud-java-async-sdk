@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResolverAvailableZonesResponseBody</p>
  */
 public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
-    @NameInMap("AvailableZones")
+    @com.aliyun.core.annotation.NameInMap("AvailableZones")
     private java.util.List < AvailableZones> availableZones;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeResolverAvailableZonesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableZones.
+         * The information about the queried zones.
          */
         public Builder availableZones(java.util.List < AvailableZones> availableZones) {
             this.availableZones = availableZones;
@@ -58,7 +57,7 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
     } 
 
     public static class AvailableZones extends TeaModel {
-        @NameInMap("AzId")
+        @com.aliyun.core.annotation.NameInMap("AzId")
         private String azId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private AvailableZones(Builder builder) {
@@ -110,7 +109,7 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * AzId.
+             * The zone ID.
              */
             public Builder azId(String azId) {
                 this.azId = azId;
@@ -118,7 +117,11 @@ public class DescribeResolverAvailableZonesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of resources in the zone. Valid values:
+             * <p>
+             * 
+             * *   NORMAL: The resources are in the normal state.
+             * *   SOLD_OUT: The resources are sold out.
              */
             public Builder status(String status) {
                 this.status = status;

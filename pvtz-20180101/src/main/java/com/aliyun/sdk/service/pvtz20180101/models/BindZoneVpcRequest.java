@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BindZoneVpcRequest</p>
  */
 public class BindZoneVpcRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("Vpcs")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Vpcs")
     private java.util.List < Vpcs> vpcs;
 
-    @Query
-    @NameInMap("ZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String zoneId;
 
     private BindZoneVpcRequest(Builder builder) {
@@ -111,7 +110,7 @@ public class BindZoneVpcRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -120,7 +119,7 @@ public class BindZoneVpcRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -129,7 +128,7 @@ public class BindZoneVpcRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -138,7 +137,7 @@ public class BindZoneVpcRequest extends Request {
         }
 
         /**
-         * Vpcs.
+         * The information about VPCs.
          */
         public Builder vpcs(java.util.List < Vpcs> vpcs) {
             this.putQueryParameter("Vpcs", vpcs);
@@ -147,7 +146,7 @@ public class BindZoneVpcRequest extends Request {
         }
 
         /**
-         * ZoneId.
+         * The global ID of the zone.
          */
         public Builder zoneId(String zoneId) {
             this.putQueryParameter("ZoneId", zoneId);
@@ -163,13 +162,13 @@ public class BindZoneVpcRequest extends Request {
     } 
 
     public static class Vpcs extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
         private Vpcs(Builder builder) {
@@ -213,7 +212,7 @@ public class BindZoneVpcRequest extends Request {
             private String vpcType; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -221,7 +220,7 @@ public class BindZoneVpcRequest extends Request {
             }
 
             /**
-             * VpcId.
+             * The VPC ID. If you do not specify this parameter, the VPCs that are bound to the zone are unbound from the zone.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -229,7 +228,11 @@ public class BindZoneVpcRequest extends Request {
             }
 
             /**
-             * VpcType.
+             * The type of the VPC. Valid values:
+             * <p>
+             * 
+             * *   **STANDARD**: standard VPC
+             * *   **EDS**: Elastic Desktop Service (EDS) workspace VPC
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;

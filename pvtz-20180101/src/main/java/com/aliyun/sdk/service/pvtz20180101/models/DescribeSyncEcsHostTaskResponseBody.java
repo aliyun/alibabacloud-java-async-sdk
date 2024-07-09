@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeSyncEcsHostTaskResponseBody</p>
  */
 public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
-    @NameInMap("EcsRegions")
+    @com.aliyun.core.annotation.NameInMap("EcsRegions")
     private EcsRegions ecsRegions;
 
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeSyncEcsHostTaskResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         private String zoneId; 
 
         /**
-         * EcsRegions.
+         * The information about regions.
          */
         public Builder ecsRegions(EcsRegions ecsRegions) {
             this.ecsRegions = ecsRegions;
@@ -106,7 +105,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Regions.
+         * The information about the regions within the current account.
          */
         public Builder regions(Regions regions) {
             this.regions = regions;
@@ -114,7 +113,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -122,7 +121,11 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The state of the task. Valid values:
+         * <p>
+         * 
+         * *   ON
+         * *   OFF
          */
         public Builder status(String status) {
             this.status = status;
@@ -130,7 +133,11 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the task was successful. Valid values:
+         * <p>
+         * 
+         * *   True
+         * *   False
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -138,7 +145,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneId.
+         * The zone ID.
          */
         public Builder zoneId(String zoneId) {
             this.zoneId = zoneId;
@@ -152,7 +159,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
     } 
 
     public static class RegionIds extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < String > regionId;
 
         private RegionIds(Builder builder) {
@@ -193,10 +200,10 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     }
     public static class EcsRegion extends TeaModel {
-        @NameInMap("RegionIds")
+        @com.aliyun.core.annotation.NameInMap("RegionIds")
         private RegionIds regionIds;
 
-        @NameInMap("UserId")
+        @com.aliyun.core.annotation.NameInMap("UserId")
         private Long userId;
 
         private EcsRegion(Builder builder) {
@@ -231,7 +238,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * RegionIds.
+             * The region IDs.
              */
             public Builder regionIds(RegionIds regionIds) {
                 this.regionIds = regionIds;
@@ -239,7 +246,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The Alibaba Cloud account to which the region belongs. This parameter is used in cross-account synchronization scenarios.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;
@@ -254,7 +261,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     }
     public static class EcsRegions extends TeaModel {
-        @NameInMap("EcsRegion")
+        @com.aliyun.core.annotation.NameInMap("EcsRegion")
         private java.util.List < EcsRegion> ecsRegion;
 
         private EcsRegions(Builder builder) {
@@ -295,7 +302,7 @@ public class DescribeSyncEcsHostTaskResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private java.util.List < String > regionId;
 
         private Regions(Builder builder) {

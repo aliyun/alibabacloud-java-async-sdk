@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRegionsRequest</p>
  */
 public class DescribeRegionsRequest extends Request {
-    @Query
-    @NameInMap("AcceptLanguage")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AcceptLanguage")
     private String acceptLanguage;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
     private Long authorizedUserId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("Scene")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Scene")
     private String scene;
 
-    @Query
-    @NameInMap("UserClientIp")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserClientIp")
     private String userClientIp;
 
-    @Query
-    @NameInMap("VpcType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcType")
     private String vpcType;
 
     private DescribeRegionsRequest(Builder builder) {
@@ -124,7 +123,12 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * AcceptLanguage.
+         * The supported language. Valid values:
+         * <p>
+         * 
+         * *   zh-CN: Chinese
+         * *   en-US: English
+         * *   ja: Japanese
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("AcceptLanguage", acceptLanguage);
@@ -133,7 +137,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * The ID of the Alibaba Cloud account to which the permissions on the resources are granted.
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);
@@ -142,7 +146,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -151,7 +155,12 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * Scene.
+         * The scenario. Valid values:
+         * <p>
+         * 
+         * *   AUTH: the built-in authoritative module
+         * *   FWD: the forward module
+         * *   RA: the traffic analysis module
          */
         public Builder scene(String scene) {
             this.putQueryParameter("Scene", scene);
@@ -160,7 +169,7 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * UserClientIp.
+         * The IP address of the client.
          */
         public Builder userClientIp(String userClientIp) {
             this.putQueryParameter("UserClientIp", userClientIp);
@@ -169,7 +178,11 @@ public class DescribeRegionsRequest extends Request {
         }
 
         /**
-         * VpcType.
+         * The type of the virtual private cloud (VPC). Valid values:
+         * <p>
+         * 
+         * *   STANDARD: standard VPC
+         * *   EDS: Elastic Desktop Service (EDS) workspace VPC
          */
         public Builder vpcType(String vpcType) {
             this.putQueryParameter("VpcType", vpcType);

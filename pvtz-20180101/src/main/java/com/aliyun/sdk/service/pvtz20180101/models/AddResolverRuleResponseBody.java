@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddResolverRuleResponseBody</p>
  */
 public class AddResolverRuleResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RuleId")
+    @com.aliyun.core.annotation.NameInMap("RuleId")
     private String ruleId;
 
     private AddResolverRuleResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class AddResolverRuleResponseBody extends TeaModel {
         private String ruleId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -58,7 +57,7 @@ public class AddResolverRuleResponseBody extends TeaModel {
         }
 
         /**
-         * RuleId.
+         * The forwarding rule ID.
          */
         public Builder ruleId(String ruleId) {
             this.ruleId = ruleId;

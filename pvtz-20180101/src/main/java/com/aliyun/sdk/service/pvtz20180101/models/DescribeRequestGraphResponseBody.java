@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRequestGraphResponseBody</p>
  */
 public class DescribeRequestGraphResponseBody extends TeaModel {
-    @NameInMap("RequestDetails")
+    @com.aliyun.core.annotation.NameInMap("RequestDetails")
     private RequestDetails requestDetails;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeRequestGraphResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestDetails.
+         * The information about the DNS requests.
          */
         public Builder requestDetails(RequestDetails requestDetails) {
             this.requestDetails = requestDetails;
@@ -58,7 +57,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,13 +71,13 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
     } 
 
     public static class ZoneRequestTop extends TeaModel {
-        @NameInMap("RequestCount")
+        @com.aliyun.core.annotation.NameInMap("RequestCount")
         private Long requestCount;
 
-        @NameInMap("Time")
+        @com.aliyun.core.annotation.NameInMap("Time")
         private String time;
 
-        @NameInMap("Timestamp")
+        @com.aliyun.core.annotation.NameInMap("Timestamp")
         private Long timestamp;
 
         private ZoneRequestTop(Builder builder) {
@@ -122,7 +121,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * RequestCount.
+             * The number of DNS requests.
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -130,7 +129,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Time.
+             * The statistical time. The value is a string. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -138,7 +137,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
             }
 
             /**
-             * Timestamp.
+             * The statistical timestamp. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;
@@ -153,7 +152,7 @@ public class DescribeRequestGraphResponseBody extends TeaModel {
 
     }
     public static class RequestDetails extends TeaModel {
-        @NameInMap("ZoneRequestTop")
+        @com.aliyun.core.annotation.NameInMap("ZoneRequestTop")
         private java.util.List < ZoneRequestTop> zoneRequestTop;
 
         private RequestDetails(Builder builder) {

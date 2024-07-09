@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteUserVpcAuthorizationRequest</p>
  */
 public class DeleteUserVpcAuthorizationRequest extends Request {
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long authorizedUserId;
 
     private DeleteUserVpcAuthorizationRequest(Builder builder) {
@@ -69,7 +68,11 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * The authorization scope. Valid values:
+         * <p>
+         * 
+         * *   NORMAL: general authorization
+         * *   NORMAL: cloud service-related authorization
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -78,7 +81,7 @@ public class DeleteUserVpcAuthorizationRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);

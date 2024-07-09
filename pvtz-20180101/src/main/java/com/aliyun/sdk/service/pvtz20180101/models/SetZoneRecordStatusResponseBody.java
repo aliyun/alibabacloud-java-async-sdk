@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SetZoneRecordStatusResponseBody</p>
  */
 public class SetZoneRecordStatusResponseBody extends TeaModel {
-    @NameInMap("RecordId")
+    @com.aliyun.core.annotation.NameInMap("RecordId")
     private Long recordId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
     private SetZoneRecordStatusResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RecordId.
+         * The ID of the DNS record.
          */
         public Builder recordId(Long recordId) {
             this.recordId = recordId;
@@ -70,7 +69,7 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class SetZoneRecordStatusResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the DNS record.
          */
         public Builder status(String status) {
             this.status = status;

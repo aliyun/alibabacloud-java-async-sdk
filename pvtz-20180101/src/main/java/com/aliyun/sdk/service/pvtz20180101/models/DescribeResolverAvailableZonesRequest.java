@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeResolverAvailableZonesRequest</p>
  */
 public class DescribeResolverAvailableZonesRequest extends Request {
-    @Query
-    @NameInMap("AzId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AzId")
     private String azId;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ResolverRegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResolverRegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String resolverRegionId;
 
     private DescribeResolverAvailableZonesRequest(Builder builder) {
@@ -83,7 +82,7 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         } 
 
         /**
-         * AzId.
+         * The zone ID.
          */
         public Builder azId(String azId) {
             this.putQueryParameter("AzId", azId);
@@ -92,7 +91,7 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -101,7 +100,7 @@ public class DescribeResolverAvailableZonesRequest extends Request {
         }
 
         /**
-         * ResolverRegionId.
+         * The region ID.
          */
         public Builder resolverRegionId(String resolverRegionId) {
             this.putQueryParameter("ResolverRegionId", resolverRegionId);

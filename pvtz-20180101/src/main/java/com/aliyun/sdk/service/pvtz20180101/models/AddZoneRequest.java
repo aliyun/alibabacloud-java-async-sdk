@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AddZoneRequest</p>
  */
 public class AddZoneRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("DnsGroup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DnsGroup")
     private String dnsGroup;
 
-    @Query
-    @NameInMap("Lang")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lang")
     private String lang;
 
-    @Query
-    @NameInMap("ProxyPattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ProxyPattern")
     private String proxyPattern;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("ZoneName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneName")
     private String zoneName;
 
-    @Query
-    @NameInMap("ZoneTag")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneTag")
     private String zoneTag;
 
-    @Query
-    @NameInMap("ZoneType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ZoneType")
     private String zoneType;
 
     private AddZoneRequest(Builder builder) {
@@ -152,7 +151,7 @@ public class AddZoneRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -161,7 +160,11 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * DnsGroup.
+         * The logical location of the built-in authoritative module in which the zone is added. Valid values:
+         * <p>
+         * 
+         * *   Normal zone: regular module
+         * *   Fast Zone: acceleration module
          */
         public Builder dnsGroup(String dnsGroup) {
             this.putQueryParameter("DnsGroup", dnsGroup);
@@ -170,7 +173,7 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * Lang.
+         * The language.
          */
         public Builder lang(String lang) {
             this.putQueryParameter("Lang", lang);
@@ -179,7 +182,9 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ProxyPattern.
+         * *   Specifies whether to enable the recursive resolution proxy feature for the zone. Valid values: **ZONE**: disables the recursive resolution proxy feature for the zone.
+         * <p>
+         * *   **RECORD**: enables the recursive resolution proxy feature for the zone.
          */
         public Builder proxyPattern(String proxyPattern) {
             this.putQueryParameter("ProxyPattern", proxyPattern);
@@ -188,7 +193,7 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -197,7 +202,7 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneName.
+         * The name of the zone.
          */
         public Builder zoneName(String zoneName) {
             this.putQueryParameter("ZoneName", zoneName);
@@ -206,7 +211,7 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneTag.
+         * This parameter is not available. You can ignore it.
          */
         public Builder zoneTag(String zoneTag) {
             this.putQueryParameter("ZoneTag", zoneTag);
@@ -215,7 +220,7 @@ public class AddZoneRequest extends Request {
         }
 
         /**
-         * ZoneType.
+         * This parameter is not available. You can ignore it.
          */
         public Builder zoneType(String zoneType) {
             this.putQueryParameter("ZoneType", zoneType);

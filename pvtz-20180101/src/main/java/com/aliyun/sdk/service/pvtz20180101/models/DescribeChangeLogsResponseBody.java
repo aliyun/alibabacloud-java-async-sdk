@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeChangeLogsResponseBody</p>
  */
 public class DescribeChangeLogsResponseBody extends TeaModel {
-    @NameInMap("ChangeLogs")
+    @com.aliyun.core.annotation.NameInMap("ChangeLogs")
     private ChangeLogs changeLogs;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalItems")
+    @com.aliyun.core.annotation.NameInMap("TotalItems")
     private Integer totalItems;
 
-    @NameInMap("TotalPages")
+    @com.aliyun.core.annotation.NameInMap("TotalPages")
     private Integer totalPages;
 
     private DescribeChangeLogsResponseBody(Builder builder) {
@@ -98,7 +97,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         private Integer totalPages; 
 
         /**
-         * ChangeLogs.
+         * The operation logs.
          */
         public Builder changeLogs(ChangeLogs changeLogs) {
             this.changeLogs = changeLogs;
@@ -106,7 +105,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageNumber.
+         * The page number.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.pageNumber = pageNumber;
@@ -114,7 +113,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page.
          */
         public Builder pageSize(Integer pageSize) {
             this.pageSize = pageSize;
@@ -122,7 +121,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -130,7 +129,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalItems.
+         * The total number of entries returned.
          */
         public Builder totalItems(Integer totalItems) {
             this.totalItems = totalItems;
@@ -138,7 +137,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalPages.
+         * The total number of pages.
          */
         public Builder totalPages(Integer totalPages) {
             this.totalPages = totalPages;
@@ -152,40 +151,40 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
     } 
 
     public static class ChangeLog extends TeaModel {
-        @NameInMap("Content")
+        @com.aliyun.core.annotation.NameInMap("Content")
         private String content;
 
-        @NameInMap("CreatorId")
+        @com.aliyun.core.annotation.NameInMap("CreatorId")
         private String creatorId;
 
-        @NameInMap("CreatorSubType")
+        @com.aliyun.core.annotation.NameInMap("CreatorSubType")
         private String creatorSubType;
 
-        @NameInMap("CreatorType")
+        @com.aliyun.core.annotation.NameInMap("CreatorType")
         private String creatorType;
 
-        @NameInMap("EntityId")
+        @com.aliyun.core.annotation.NameInMap("EntityId")
         private String entityId;
 
-        @NameInMap("EntityName")
+        @com.aliyun.core.annotation.NameInMap("EntityName")
         private String entityName;
 
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private Long id;
 
-        @NameInMap("OperAction")
+        @com.aliyun.core.annotation.NameInMap("OperAction")
         private String operAction;
 
-        @NameInMap("OperIp")
+        @com.aliyun.core.annotation.NameInMap("OperIp")
         private String operIp;
 
-        @NameInMap("OperObject")
+        @com.aliyun.core.annotation.NameInMap("OperObject")
         private String operObject;
 
-        @NameInMap("OperTime")
+        @com.aliyun.core.annotation.NameInMap("OperTime")
         private String operTime;
 
-        @NameInMap("OperTimestamp")
+        @com.aliyun.core.annotation.NameInMap("OperTimestamp")
         private Long operTimestamp;
 
         private ChangeLog(Builder builder) {
@@ -310,7 +309,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             private Long operTimestamp; 
 
             /**
-             * Content.
+             * The details of the operation.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -318,7 +317,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The operator ID.
              */
             public Builder creatorId(String creatorId) {
                 this.creatorId = creatorId;
@@ -326,7 +325,13 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorSubType.
+             * The subtype of the operator. Valid values:
+             * <p>
+             * 
+             * *   CUSTOMER: Alibaba Cloud account
+             * *   SUB: RAM user
+             * *   STS: assumed role that obtains the Security Token Service (STS) token of a RAM role
+             * *   OTHER: other types
              */
             public Builder creatorSubType(String creatorSubType) {
                 this.creatorSubType = creatorSubType;
@@ -334,7 +339,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorType.
+             * The operator type. No value or **USER** is returned for this parameter.
              */
             public Builder creatorType(String creatorType) {
                 this.creatorType = creatorType;
@@ -342,7 +347,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityId.
+             * The ID of the object on which the operation was performed.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -350,7 +355,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * EntityName.
+             * The name of the object on which the operation was performed.
              */
             public Builder entityName(String entityName) {
                 this.entityName = entityName;
@@ -358,7 +363,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * Id.
+             * The log ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -366,7 +371,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperAction.
+             * The operation type.
              */
             public Builder operAction(String operAction) {
                 this.operAction = operAction;
@@ -374,7 +379,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperIp.
+             * The IP address of the client.
              */
             public Builder operIp(String operIp) {
                 this.operIp = operIp;
@@ -382,7 +387,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperObject.
+             * The type of the object on which the operation is performed.
              */
             public Builder operObject(String operObject) {
                 this.operObject = operObject;
@@ -390,7 +395,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTime.
+             * The time when the operation is performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.
              */
             public Builder operTime(String operTime) {
                 this.operTime = operTime;
@@ -398,7 +403,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
             }
 
             /**
-             * OperTimestamp.
+             * The time when the operation was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.
              */
             public Builder operTimestamp(Long operTimestamp) {
                 this.operTimestamp = operTimestamp;
@@ -413,7 +418,7 @@ public class DescribeChangeLogsResponseBody extends TeaModel {
 
     }
     public static class ChangeLogs extends TeaModel {
-        @NameInMap("ChangeLog")
+        @com.aliyun.core.annotation.NameInMap("ChangeLog")
         private java.util.List < ChangeLog> changeLog;
 
         private ChangeLogs(Builder builder) {

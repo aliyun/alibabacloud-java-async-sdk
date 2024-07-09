@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeUserVpcAuthorizationsRequest</p>
  */
 public class DescribeUserVpcAuthorizationsRequest extends Request {
-    @Query
-    @NameInMap("AuthType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthType")
     private String authType;
 
-    @Query
-    @NameInMap("AuthorizedUserId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AuthorizedUserId")
     private Long authorizedUserId;
 
-    @Query
-    @NameInMap("PageNumber")
-    @Validation(maximum = 9999999)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Validation(maximum = 9999999)
     private Integer pageNumber;
 
-    @Query
-    @NameInMap("PageSize")
-    @Validation(maximum = 100)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
+    @com.aliyun.core.annotation.Validation(maximum = 100)
     private Integer pageSize;
 
     private DescribeUserVpcAuthorizationsRequest(Builder builder) {
@@ -98,7 +97,11 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         } 
 
         /**
-         * AuthType.
+         * The authorization scope. Valid values:
+         * <p>
+         * 
+         * *   NORMAL: general authorization.
+         * *   CLOUD_PRODUCT: cloud service-related authorization
          */
         public Builder authType(String authType) {
             this.putQueryParameter("AuthType", authType);
@@ -107,7 +110,7 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * AuthorizedUserId.
+         * The ID of the Alibaba Cloud account.
          */
         public Builder authorizedUserId(Long authorizedUserId) {
             this.putQueryParameter("AuthorizedUserId", authorizedUserId);
@@ -116,7 +119,7 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * PageNumber.
+         * The page number. Default value: 1.
          */
         public Builder pageNumber(Integer pageNumber) {
             this.putQueryParameter("PageNumber", pageNumber);
@@ -125,7 +128,7 @@ public class DescribeUserVpcAuthorizationsRequest extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Default value: 20. Maximum value: 100.
          */
         public Builder pageSize(Integer pageSize) {
             this.putQueryParameter("PageSize", pageSize);

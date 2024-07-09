@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.pvtz20180101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeStatisticSummaryResponseBody</p>
  */
 public class DescribeStatisticSummaryResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
-    @NameInMap("VpcRequestTops")
+    @com.aliyun.core.annotation.NameInMap("VpcRequestTops")
     private VpcRequestTops vpcRequestTops;
 
-    @NameInMap("ZoneRequestTops")
+    @com.aliyun.core.annotation.NameInMap("ZoneRequestTops")
     private ZoneRequestTops zoneRequestTops;
 
     private DescribeStatisticSummaryResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         private ZoneRequestTops zoneRequestTops; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -82,7 +81,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Long totalCount) {
             this.totalCount = totalCount;
@@ -90,7 +89,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * VpcRequestTops.
+         * The top 3 virtual private clouds (VPCs) that initiate the largest number of DNS requests.
          */
         public Builder vpcRequestTops(VpcRequestTops vpcRequestTops) {
             this.vpcRequestTops = vpcRequestTops;
@@ -98,7 +97,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
         }
 
         /**
-         * ZoneRequestTops.
+         * The top 3 zones with the largest number of DNS requests.
          */
         public Builder zoneRequestTops(ZoneRequestTops zoneRequestTops) {
             this.zoneRequestTops = zoneRequestTops;
@@ -112,22 +111,22 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
     } 
 
     public static class VpcRequestTop extends TeaModel {
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("RegionName")
+        @com.aliyun.core.annotation.NameInMap("RegionName")
         private String regionName;
 
-        @NameInMap("RequestCount")
+        @com.aliyun.core.annotation.NameInMap("RequestCount")
         private Long requestCount;
 
-        @NameInMap("TunnelId")
+        @com.aliyun.core.annotation.NameInMap("TunnelId")
         private String tunnelId;
 
-        @NameInMap("VpcId")
+        @com.aliyun.core.annotation.NameInMap("VpcId")
         private String vpcId;
 
-        @NameInMap("VpcType")
+        @com.aliyun.core.annotation.NameInMap("VpcType")
         private String vpcType;
 
         private VpcRequestTop(Builder builder) {
@@ -198,7 +197,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             private String vpcType; 
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -206,7 +205,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RegionName.
+             * The name of the region.
              */
             public Builder regionName(String regionName) {
                 this.regionName = regionName;
@@ -214,7 +213,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCount.
+             * The number of DNS requests.
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -222,7 +221,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * TunnelId.
+             * The tunnel ID.
              */
             public Builder tunnelId(String tunnelId) {
                 this.tunnelId = tunnelId;
@@ -230,7 +229,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VPC ID
+             * The VPC ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -238,7 +237,11 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * VpcType.
+             * The type of the VPC. Valid values:
+             * <p>
+             * 
+             * *   STANDARD: standard VPC
+             * *   EDS: Elastic Desktop Service (EDS) workspace VPC
              */
             public Builder vpcType(String vpcType) {
                 this.vpcType = vpcType;
@@ -253,7 +256,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
 
     }
     public static class VpcRequestTops extends TeaModel {
-        @NameInMap("VpcRequestTop")
+        @com.aliyun.core.annotation.NameInMap("VpcRequestTop")
         private java.util.List < VpcRequestTop> vpcRequestTop;
 
         private VpcRequestTops(Builder builder) {
@@ -294,13 +297,13 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
 
     }
     public static class ZoneRequestTop extends TeaModel {
-        @NameInMap("BizType")
+        @com.aliyun.core.annotation.NameInMap("BizType")
         private String bizType;
 
-        @NameInMap("RequestCount")
+        @com.aliyun.core.annotation.NameInMap("RequestCount")
         private Long requestCount;
 
-        @NameInMap("ZoneName")
+        @com.aliyun.core.annotation.NameInMap("ZoneName")
         private String zoneName;
 
         private ZoneRequestTop(Builder builder) {
@@ -344,7 +347,11 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * BizType.
+             * The business type. Valid values:
+             * <p>
+             * 
+             * *   AUTH_ZONE: authoritative zone
+             * *   RESOLVER_RULE: forwarding rule
              */
             public Builder bizType(String bizType) {
                 this.bizType = bizType;
@@ -352,7 +359,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * RequestCount.
+             * The number of DNS requests.
              */
             public Builder requestCount(Long requestCount) {
                 this.requestCount = requestCount;
@@ -360,7 +367,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
             }
 
             /**
-             * ZoneName.
+             * The name of the zone.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -375,7 +382,7 @@ public class DescribeStatisticSummaryResponseBody extends TeaModel {
 
     }
     public static class ZoneRequestTops extends TeaModel {
-        @NameInMap("ZoneRequestTop")
+        @com.aliyun.core.annotation.NameInMap("ZoneRequestTop")
         private java.util.List < ZoneRequestTop> zoneRequestTop;
 
         private ZoneRequestTops(Builder builder) {
