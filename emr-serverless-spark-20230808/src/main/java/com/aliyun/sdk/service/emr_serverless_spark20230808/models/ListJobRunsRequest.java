@@ -222,7 +222,7 @@ public class ListJobRunsRequest extends Request {
         } 
 
         /**
-         * 工作空间id。
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -231,7 +231,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 创建用户Uid。
+         * The ID of the user who creates a Spark job.
          */
         public Builder creator(String creator) {
             this.putQueryParameter("creator", creator);
@@ -240,7 +240,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * The range of end time.
          */
         public Builder endTime(EndTime endTime) {
             String endTimeShrink = shrink(endTime, "endTime", "json");
@@ -259,7 +259,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 作业id。
+         * The job ID.
          */
         public Builder jobRunId(String jobRunId) {
             this.putQueryParameter("jobRunId", jobRunId);
@@ -268,7 +268,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。
+         * The maximum number of entries to return.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -277,7 +277,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 作业名称。
+         * The job name.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -286,7 +286,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -295,7 +295,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -304,7 +304,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * resourceQueueId.
+         * The name of the resource queue on which the Spark jobs run.
          */
         public Builder resourceQueueId(String resourceQueueId) {
             this.putQueryParameter("resourceQueueId", resourceQueueId);
@@ -313,7 +313,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * The range of start time.
          */
         public Builder startTime(StartTime startTime) {
             String startTimeShrink = shrink(startTime, "startTime", "json");
@@ -323,7 +323,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 作业状态。
+         * The job states.
          */
         public Builder states(java.util.List < String > states) {
             String statesShrink = shrink(states, "states", "json");
@@ -333,7 +333,7 @@ public class ListJobRunsRequest extends Request {
         }
 
         /**
-         * 标签。
+         * The tags of the job.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -388,7 +388,7 @@ public class ListJobRunsRequest extends Request {
             private Long startTime; 
 
             /**
-             * endTime.
+             * The end of the end time range.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -396,7 +396,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * startTime.
+             * The beginning of the end time range.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -449,7 +449,7 @@ public class ListJobRunsRequest extends Request {
             private Long startTime; 
 
             /**
-             * endTime.
+             * The end of the start time range.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -457,7 +457,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * startTime.
+             * The beginning of the start time range.
              */
             public Builder startTime(Long startTime) {
                 this.startTime = startTime;
@@ -510,7 +510,7 @@ public class ListJobRunsRequest extends Request {
             private String value; 
 
             /**
-             * key.
+             * The key of tag N.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -518,7 +518,7 @@ public class ListJobRunsRequest extends Request {
             }
 
             /**
-             * value.
+             * The value of tag N.
              */
             public Builder value(String value) {
                 this.value = value;

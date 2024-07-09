@@ -85,7 +85,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 一次获取的最大记录数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * 下一页TOKEN。
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * releaseVersions.
+         * The versions.
          */
         public Builder releaseVersions(java.util.List < ReleaseVersions> releaseVersions) {
             this.releaseVersions = releaseVersions;
@@ -109,7 +109,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * 记录总数。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -241,7 +241,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * communityVersion.
+             * The version number of open source Spark.
              */
             public Builder communityVersion(String communityVersion) {
                 this.communityVersion = communityVersion;
@@ -249,7 +249,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * cpuArchitectures.
+             * The CPU architectures.
              */
             public Builder cpuArchitectures(java.util.List < String > cpuArchitectures) {
                 this.cpuArchitectures = cpuArchitectures;
@@ -257,7 +257,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * gmtCreate.
+             * The creation time.
              */
             public Builder gmtCreate(Long gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -265,7 +265,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * iaasType.
+             * The type of the Infrastructure as a Service (IaaS) layer.
              */
             public Builder iaasType(String iaasType) {
                 this.iaasType = iaasType;
@@ -273,7 +273,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * The version.
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -281,7 +281,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * scalaVersion.
+             * The version of Scala.
              */
             public Builder scalaVersion(String scalaVersion) {
                 this.scalaVersion = scalaVersion;
@@ -289,7 +289,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The status of the version.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -297,7 +297,7 @@ public class ListReleaseVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the version.
              */
             public Builder type(String type) {
                 this.type = type;

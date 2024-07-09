@@ -49,7 +49,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             private String schema; 
 
             /**
-             * rows.
+             * The queried data, which is a string in the JSON format.
              */
             public Builder rows(String rows) {
                 this.rows = rows;
@@ -117,7 +117,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * schema.
+             * The information about the schema, which is a string in the JSON format.
              */
             public Builder schema(String schema) {
                 this.schema = schema;
@@ -218,7 +218,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             private String statementId; 
 
             /**
-             * executionTime.
+             * The list of time that is consumed by SQL queries.
              */
             public Builder executionTime(java.util.List < Long > executionTime) {
                 this.executionTime = executionTime;
@@ -226,7 +226,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * sqlErrorCode.
+             * The error code.
              */
             public Builder sqlErrorCode(String sqlErrorCode) {
                 this.sqlErrorCode = sqlErrorCode;
@@ -234,7 +234,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * sqlErrorMessage.
+             * The error message.
              */
             public Builder sqlErrorMessage(String sqlErrorMessage) {
                 this.sqlErrorMessage = sqlErrorMessage;
@@ -242,7 +242,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * sqlOutputs.
+             * The query results.
              */
             public Builder sqlOutputs(java.util.List < SqlOutputs> sqlOutputs) {
                 this.sqlOutputs = sqlOutputs;
@@ -250,7 +250,16 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * state.
+             * The query status.
+             * <p>
+             * 
+             * Valid values:
+             * 
+             * *   running
+             * *   available
+             * *   cancelled
+             * *   error
+             * *   cancelling
              */
             public Builder state(String state) {
                 this.state = state;
@@ -258,7 +267,7 @@ public class GetSqlStatementResponseBody extends TeaModel {
             }
 
             /**
-             * statementId.
+             * The query ID.
              */
             public Builder statementId(String statementId) {
                 this.statementId = statementId;

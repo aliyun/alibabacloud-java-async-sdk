@@ -16,6 +16,10 @@ public class ListSessionClustersRequest extends Request {
     private String workspaceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("kind")
+    private String kind;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("maxResults")
     private Integer maxResults;
 
@@ -38,6 +42,7 @@ public class ListSessionClustersRequest extends Request {
     private ListSessionClustersRequest(Builder builder) {
         super(builder);
         this.workspaceId = builder.workspaceId;
+        this.kind = builder.kind;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.queueName = builder.queueName;
@@ -63,6 +68,13 @@ public class ListSessionClustersRequest extends Request {
      */
     public String getWorkspaceId() {
         return this.workspaceId;
+    }
+
+    /**
+     * @return kind
+     */
+    public String getKind() {
+        return this.kind;
     }
 
     /**
@@ -102,6 +114,7 @@ public class ListSessionClustersRequest extends Request {
 
     public static final class Builder extends Request.Builder<ListSessionClustersRequest, Builder> {
         private String workspaceId; 
+        private String kind; 
         private Integer maxResults; 
         private String nextToken; 
         private String queueName; 
@@ -115,6 +128,7 @@ public class ListSessionClustersRequest extends Request {
         private Builder(ListSessionClustersRequest request) {
             super(request);
             this.workspaceId = request.workspaceId;
+            this.kind = request.kind;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.queueName = request.queueName;
@@ -123,7 +137,7 @@ public class ListSessionClustersRequest extends Request {
         } 
 
         /**
-         * 工作空间id。
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -132,7 +146,16 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * 一次获取的最大记录数。
+         * kind.
+         */
+        public Builder kind(String kind) {
+            this.putQueryParameter("kind", kind);
+            this.kind = kind;
+            return this;
+        }
+
+        /**
+         * The maximum number of entries to return.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -141,7 +164,7 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -150,7 +173,7 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * queueName.
+         * The name of the queue.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("queueName", queueName);
@@ -159,7 +182,7 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -168,7 +191,7 @@ public class ListSessionClustersRequest extends Request {
         }
 
         /**
-         * 作业名称。
+         * The name of the job.
          */
         public Builder sessionClusterId(String sessionClusterId) {
             this.putQueryParameter("sessionClusterId", sessionClusterId);

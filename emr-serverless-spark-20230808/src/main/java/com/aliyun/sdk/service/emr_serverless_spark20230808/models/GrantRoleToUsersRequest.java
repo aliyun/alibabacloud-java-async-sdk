@@ -81,7 +81,7 @@ public class GrantRoleToUsersRequest extends Request {
         } 
 
         /**
-         * roleArn.
+         * The Alibaba Cloud Resource Name (ARN) of the role.
          */
         public Builder roleArn(String roleArn) {
             this.putBodyParameter("roleArn", roleArn);
@@ -99,7 +99,7 @@ public class GrantRoleToUsersRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

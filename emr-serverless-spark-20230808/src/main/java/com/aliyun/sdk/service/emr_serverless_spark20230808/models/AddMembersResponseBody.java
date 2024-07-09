@@ -37,7 +37,7 @@ public class AddMembersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

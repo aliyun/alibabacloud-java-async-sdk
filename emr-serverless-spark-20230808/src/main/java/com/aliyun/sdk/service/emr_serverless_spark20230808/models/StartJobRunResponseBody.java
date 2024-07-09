@@ -49,7 +49,7 @@ public class StartJobRunResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * jobRunId.
+         * The job ID.
          */
         public Builder jobRunId(String jobRunId) {
             this.jobRunId = jobRunId;
@@ -57,7 +57,7 @@ public class StartJobRunResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

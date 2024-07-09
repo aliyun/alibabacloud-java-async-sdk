@@ -85,7 +85,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * sessionClusters.
+         * The SQL Computes.
          */
         public Builder sessionClusters(java.util.List < SessionClusters> sessionClusters) {
             this.sessionClusters = sessionClusters;
@@ -117,7 +117,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -181,7 +181,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String configItemValue; 
 
             /**
-             * configFileName.
+             * The name of the configuration file.
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -189,7 +189,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * configItemKey.
+             * The key of the configuration item.
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -197,7 +197,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * configItemValue.
+             * The value of the configuration item.
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -238,7 +238,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private Boolean enable; 
 
             /**
-             * enable.
+             * Indicates whether automatic startup is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -291,7 +291,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private Integer idleTimeoutMinutes; 
 
             /**
-             * enable.
+             * Indicates whether automatic termination is enabled.
              */
             public Builder enable(Boolean enable) {
                 this.enable = enable;
@@ -299,7 +299,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * idleTimeoutMinutes.
+             * The idle timeout period. The SQL Compute is automatically terminated if the idle timeout period is exceeded.
              */
             public Builder idleTimeoutMinutes(Integer idleTimeoutMinutes) {
                 this.idleTimeoutMinutes = idleTimeoutMinutes;
@@ -352,7 +352,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * The status change code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -360,7 +360,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The status change message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -384,11 +384,23 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("autoStopConfiguration")
         private AutoStopConfiguration autoStopConfiguration;
 
+        @com.aliyun.core.annotation.NameInMap("domain")
+        private String domain;
+
+        @com.aliyun.core.annotation.NameInMap("draftId")
+        private String draftId;
+
+        @com.aliyun.core.annotation.NameInMap("kind")
+        private String kind;
+
         @com.aliyun.core.annotation.NameInMap("name")
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("queueName")
         private String queueName;
+
+        @com.aliyun.core.annotation.NameInMap("releaseVersion")
+        private String releaseVersion;
 
         @com.aliyun.core.annotation.NameInMap("sessionClusterId")
         private String sessionClusterId;
@@ -405,6 +417,9 @@ public class ListSessionClustersResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("userName")
         private String userName;
 
+        @com.aliyun.core.annotation.NameInMap("webUI")
+        private String webUI;
+
         @com.aliyun.core.annotation.NameInMap("workspaceId")
         private String workspaceId;
 
@@ -412,13 +427,18 @@ public class ListSessionClustersResponseBody extends TeaModel {
             this.applicationConfigs = builder.applicationConfigs;
             this.autoStartConfiguration = builder.autoStartConfiguration;
             this.autoStopConfiguration = builder.autoStopConfiguration;
+            this.domain = builder.domain;
+            this.draftId = builder.draftId;
+            this.kind = builder.kind;
             this.name = builder.name;
             this.queueName = builder.queueName;
+            this.releaseVersion = builder.releaseVersion;
             this.sessionClusterId = builder.sessionClusterId;
             this.state = builder.state;
             this.stateChangeReason = builder.stateChangeReason;
             this.userId = builder.userId;
             this.userName = builder.userName;
+            this.webUI = builder.webUI;
             this.workspaceId = builder.workspaceId;
         }
 
@@ -452,6 +472,27 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return domain
+         */
+        public String getDomain() {
+            return this.domain;
+        }
+
+        /**
+         * @return draftId
+         */
+        public String getDraftId() {
+            return this.draftId;
+        }
+
+        /**
+         * @return kind
+         */
+        public String getKind() {
+            return this.kind;
+        }
+
+        /**
          * @return name
          */
         public String getName() {
@@ -463,6 +504,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
          */
         public String getQueueName() {
             return this.queueName;
+        }
+
+        /**
+         * @return releaseVersion
+         */
+        public String getReleaseVersion() {
+            return this.releaseVersion;
         }
 
         /**
@@ -501,6 +549,13 @@ public class ListSessionClustersResponseBody extends TeaModel {
         }
 
         /**
+         * @return webUI
+         */
+        public String getWebUI() {
+            return this.webUI;
+        }
+
+        /**
          * @return workspaceId
          */
         public String getWorkspaceId() {
@@ -511,17 +566,22 @@ public class ListSessionClustersResponseBody extends TeaModel {
             private java.util.List < ApplicationConfigs> applicationConfigs; 
             private AutoStartConfiguration autoStartConfiguration; 
             private AutoStopConfiguration autoStopConfiguration; 
+            private String domain; 
+            private String draftId; 
+            private String kind; 
             private String name; 
             private String queueName; 
+            private String releaseVersion; 
             private String sessionClusterId; 
             private String state; 
             private StateChangeReason stateChangeReason; 
             private String userId; 
             private String userName; 
+            private String webUI; 
             private String workspaceId; 
 
             /**
-             * applicationConfigs.
+             * The SQL Compute configurations, which are equivalent to the configurations of the Spark job.
              */
             public Builder applicationConfigs(java.util.List < ApplicationConfigs> applicationConfigs) {
                 this.applicationConfigs = applicationConfigs;
@@ -529,7 +589,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * autoStartConfiguration.
+             * The automatic startup configurations.
              */
             public Builder autoStartConfiguration(AutoStartConfiguration autoStartConfiguration) {
                 this.autoStartConfiguration = autoStartConfiguration;
@@ -537,7 +597,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * autoStopConfiguration.
+             * The automatic termination configurations.
              */
             public Builder autoStopConfiguration(AutoStopConfiguration autoStopConfiguration) {
                 this.autoStopConfiguration = autoStopConfiguration;
@@ -545,7 +605,31 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * domain.
+             */
+            public Builder domain(String domain) {
+                this.domain = domain;
+                return this;
+            }
+
+            /**
+             * draftId.
+             */
+            public Builder draftId(String draftId) {
+                this.draftId = draftId;
+                return this;
+            }
+
+            /**
+             * kind.
+             */
+            public Builder kind(String kind) {
+                this.kind = kind;
+                return this;
+            }
+
+            /**
+             * The name of the SQL Compute.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -553,7 +637,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 作业实例名称。
+             * The name of the queue on which the SQL Compute runs.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -561,7 +645,15 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * SQL Compute id
+             * releaseVersion.
+             */
+            public Builder releaseVersion(String releaseVersion) {
+                this.releaseVersion = releaseVersion;
+                return this;
+            }
+
+            /**
+             * The SQL Compute ID.
              */
             public Builder sessionClusterId(String sessionClusterId) {
                 this.sessionClusterId = sessionClusterId;
@@ -569,7 +661,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 作业状态。
+             * The status of the SQL Compute.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -577,7 +669,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * The details of the last status change of the SQL Compute.
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -585,7 +677,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 任务实例ID。
+             * The user ID.
              */
             public Builder userId(String userId) {
                 this.userId = userId;
@@ -593,7 +685,7 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * userName.
+             * The name of the user.
              */
             public Builder userName(String userName) {
                 this.userName = userName;
@@ -601,7 +693,15 @@ public class ListSessionClustersResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间id。
+             * webUI.
+             */
+            public Builder webUI(String webUI) {
+                this.webUI = webUI;
+                return this;
+            }
+
+            /**
+             * The workspace ID.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

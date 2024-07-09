@@ -85,7 +85,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * jobRuns.
+         * The list of Spark jobs.
          */
         public Builder jobRuns(java.util.List < JobRuns> jobRuns) {
             this.jobRuns = jobRuns;
@@ -93,7 +93,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求所返回的最大记录条数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 返回读取到的数据位置，空代表数据已经读取完毕。
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListJobRunsResponseBody extends TeaModel {
         }
 
         /**
-         * 本次请求条件下的数据总量。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -157,7 +157,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private java.util.List < Configuration > configurations; 
 
             /**
-             * configurations.
+             * The SparkConf objects.
              */
             public Builder configurations(java.util.List < Configuration > configurations) {
                 this.configurations = configurations;
@@ -210,7 +210,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -218,7 +218,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -439,7 +439,14 @@ public class ListJobRunsResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * 作业代码类型。
+             * The code type of the job. Valid values:
+             * <p>
+             * 
+             * SQL
+             * 
+             * JAR
+             * 
+             * PYTHON
              */
             public Builder codeType(String codeType) {
                 this.codeType = codeType;
@@ -447,7 +454,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * configurationOverrides.
+             * The advanced configurations of Spark.
              */
             public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
                 this.configurationOverrides = configurationOverrides;
@@ -455,7 +462,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 创建用户Uid。
+             * The ID of the user who created the job.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -463,7 +470,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 作业结束时间。
+             * The end time of the job.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -471,7 +478,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 运行超时时间。
+             * The timeout period of the job.
              */
             public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
                 this.executionTimeoutSeconds = executionTimeoutSeconds;
@@ -479,7 +486,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * jobDriver.
+             * The information about Spark Driver.
              */
             public Builder jobDriver(JobDriver jobDriver) {
                 this.jobDriver = jobDriver;
@@ -487,7 +494,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 任务实例ID。
+             * The job ID.
              */
             public Builder jobRunId(String jobRunId) {
                 this.jobRunId = jobRunId;
@@ -495,7 +502,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * log.
+             * The path where the operational logs are stored.
              */
             public Builder log(RunLog log) {
                 this.log = log;
@@ -503,7 +510,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 作业实例名称。
+             * The job name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -511,7 +518,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * releaseVersion.
+             * The version of Spark on which the jobs run.
              */
             public Builder releaseVersion(String releaseVersion) {
                 this.releaseVersion = releaseVersion;
@@ -519,7 +526,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 作业状态。
+             * The job state.
              */
             public Builder state(String state) {
                 this.state = state;
@@ -527,7 +534,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * The reason of the job status change.
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -535,7 +542,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 作业提交时间。
+             * The time when the job was submitted.
              */
             public Builder submitTime(Long submitTime) {
                 this.submitTime = submitTime;
@@ -543,7 +550,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 标签。
+             * The tags of the job.
              */
             public Builder tags(java.util.List < Tag > tags) {
                 this.tags = tags;
@@ -551,7 +558,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 作业web ui。
+             * The web UI of the job.
              */
             public Builder webUI(String webUI) {
                 this.webUI = webUI;
@@ -559,7 +566,7 @@ public class ListJobRunsResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间id。
+             * The workspace ID.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

@@ -49,7 +49,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * data.
+         * The data returned.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -57,7 +57,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
         }
 
         /**
-         * requestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -97,7 +97,7 @@ public class CreateSqlStatementResponseBody extends TeaModel {
             private String statementId; 
 
             /**
-             * statementId.
+             * The ID of the SQL query.
              */
             public Builder statementId(String statementId) {
                 this.statementId = statementId;

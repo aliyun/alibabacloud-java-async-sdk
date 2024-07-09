@@ -85,7 +85,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         private java.util.List < Workspaces> workspaces; 
 
         /**
-         * 一次获取的最大记录数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 下一页TOKEN。
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * 记录总数。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -117,7 +117,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
         }
 
         /**
-         * workspaces.
+         * The workspaces.
          */
         public Builder workspaces(java.util.List < Workspaces> workspaces) {
             this.workspaces = workspaces;
@@ -169,7 +169,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String message; 
 
             /**
-             * code.
+             * The error code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -177,7 +177,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * message.
+             * The error message.
              */
             public Builder message(String message) {
                 this.message = message;
@@ -434,7 +434,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             private String workspaceStatus; 
 
             /**
-             * 是否自动续费(pre付费类型必须)。
+             * Indicates whether auto-renewal is enabled. This parameter is required only if the paymentType parameter is set to Subscription.
              */
             public Builder autoRenew(Boolean autoRenew) {
                 this.autoRenew = autoRenew;
@@ -442,7 +442,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 自动续费时长(pre付费类型必须)。
+             * The auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
              */
             public Builder autoRenewPeriod(Integer autoRenewPeriod) {
                 this.autoRenewPeriod = autoRenewPeriod;
@@ -450,7 +450,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 自动续费周期(pre付费类型必须)。
+             * The unit of the auto-renewal duration. This parameter is required only if the paymentType parameter is set to Subscription.
              */
             public Builder autoRenewPeriodUnit(String autoRenewPeriodUnit) {
                 this.autoRenewPeriodUnit = autoRenewPeriodUnit;
@@ -458,7 +458,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time when the workspace was created.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -466,7 +466,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * dlf catalog 信息。
+             * The information of the Data Lake Formation (DLF) catalog.
              */
             public Builder dlfCatalogId(String dlfCatalogId) {
                 this.dlfCatalogId = dlfCatalogId;
@@ -474,7 +474,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 订购周期数量(pre付费类型必须)。
+             * The subscription period. This parameter is required only if the paymentType parameter is set to Subscription.
              */
             public Builder duration(Integer duration) {
                 this.duration = duration;
@@ -482,7 +482,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * endTime.
+             * The time when the workspace was released.
              */
             public Builder endTime(Long endTime) {
                 this.endTime = endTime;
@@ -490,7 +490,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 失败原因。
+             * The reason for the failure.
              */
             public Builder failReason(String failReason) {
                 this.failReason = failReason;
@@ -498,7 +498,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 订购周期(pre付费类型必须)。
+             * The unit of the subscription duration. This parameter is required only if the paymentType parameter is set to Subscription.
              */
             public Builder paymentDurationUnit(String paymentDurationUnit) {
                 this.paymentDurationUnit = paymentDurationUnit;
@@ -506,7 +506,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 支付状态。
+             * The status of the payment.
              */
             public Builder paymentStatus(String paymentStatus) {
                 this.paymentStatus = paymentStatus;
@@ -514,7 +514,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 付费类型。
+             * The payment type.
              */
             public Builder paymentType(String paymentType) {
                 this.paymentType = paymentType;
@@ -522,7 +522,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -530,7 +530,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * releaseType.
+             * The reason why the workspace is released.
              */
             public Builder releaseType(String releaseType) {
                 this.releaseType = releaseType;
@@ -538,7 +538,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 资源规格。
+             * The resource specifications.
              */
             public Builder resourceSpec(String resourceSpec) {
                 this.resourceSpec = resourceSpec;
@@ -546,7 +546,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * stateChangeReason.
+             * The information about the workspace status change.
              */
             public Builder stateChangeReason(StateChangeReason stateChangeReason) {
                 this.stateChangeReason = stateChangeReason;
@@ -554,7 +554,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * oss 路径。
+             * The Object Storage Service (OSS) path.
              */
             public Builder storage(String storage) {
                 this.storage = storage;
@@ -562,7 +562,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * Workspace Id。
+             * The workspace ID.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;
@@ -570,7 +570,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间名称。
+             * The name of the workspace.
              */
             public Builder workspaceName(String workspaceName) {
                 this.workspaceName = workspaceName;
@@ -578,7 +578,7 @@ public class ListWorkspacesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间状态。
+             * The workspace status.
              */
             public Builder workspaceStatus(String workspaceStatus) {
                 this.workspaceStatus = workspaceStatus;

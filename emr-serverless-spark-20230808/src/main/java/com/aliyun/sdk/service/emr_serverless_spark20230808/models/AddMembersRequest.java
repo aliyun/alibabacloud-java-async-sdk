@@ -92,7 +92,7 @@ public class AddMembersRequest extends Request {
         }
 
         /**
-         * workspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putBodyParameter("workspaceId", workspaceId);
@@ -101,7 +101,7 @@ public class AddMembersRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

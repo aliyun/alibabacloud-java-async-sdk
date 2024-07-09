@@ -95,7 +95,7 @@ public class ListReleaseVersionsRequest extends Request {
         } 
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -104,7 +104,13 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * releaseType.
+         * The type of the version.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   stable
+         * *   beta
          */
         public Builder releaseType(String releaseType) {
             this.putQueryParameter("releaseType", releaseType);
@@ -113,7 +119,7 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * releaseVersion.
+         * The version of Serverless Spark.
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putQueryParameter("releaseVersion", releaseVersion);
@@ -122,7 +128,13 @@ public class ListReleaseVersionsRequest extends Request {
         }
 
         /**
-         * releaseVersionStatus.
+         * The status of the version. Valid values:
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   ONLINE
+         * *   OFFLINE
          */
         public Builder releaseVersionStatus(String releaseVersionStatus) {
             this.putQueryParameter("releaseVersionStatus", releaseVersionStatus);

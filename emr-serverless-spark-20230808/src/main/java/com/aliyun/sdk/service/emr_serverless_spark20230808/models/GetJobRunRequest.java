@@ -83,7 +83,7 @@ public class GetJobRunRequest extends Request {
         } 
 
         /**
-         * 工作空间id。
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -92,7 +92,7 @@ public class GetJobRunRequest extends Request {
         }
 
         /**
-         * 任务实例ID。
+         * The job ID.
          */
         public Builder jobRunId(String jobRunId) {
             this.putPathParameter("jobRunId", jobRunId);
@@ -101,7 +101,7 @@ public class GetJobRunRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

@@ -137,7 +137,7 @@ public class CreateSqlStatementRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -146,7 +146,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * codeContent.
+         * The SQL code. You can specify one or more SQL statements.
          */
         public Builder codeContent(String codeContent) {
             this.putBodyParameter("codeContent", codeContent);
@@ -155,7 +155,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * defaultCatalog.
+         * The default Data Lake Formation (DLF) catalog ID.
          */
         public Builder defaultCatalog(String defaultCatalog) {
             this.putBodyParameter("defaultCatalog", defaultCatalog);
@@ -164,7 +164,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * defaultDatabase.
+         * The name of the default database.
          */
         public Builder defaultDatabase(String defaultDatabase) {
             this.putBodyParameter("defaultDatabase", defaultDatabase);
@@ -173,7 +173,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * limit.
+         * The maximum number of entries to return. Valid values: 1 to 10000.
          */
         public Builder limit(Integer limit) {
             this.putBodyParameter("limit", limit);
@@ -182,7 +182,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * sqlComputeId.
+         * The SQL Compute ID. You can create an SQL Compute in the workspace created in EMR Serverless Spark.
          */
         public Builder sqlComputeId(String sqlComputeId) {
             this.putBodyParameter("sqlComputeId", sqlComputeId);
@@ -191,7 +191,7 @@ public class CreateSqlStatementRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

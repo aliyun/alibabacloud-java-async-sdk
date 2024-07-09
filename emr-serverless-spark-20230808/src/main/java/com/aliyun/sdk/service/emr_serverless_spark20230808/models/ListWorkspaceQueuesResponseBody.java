@@ -85,7 +85,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * 一次获取的最大记录数。
+         * The maximum number of entries returned.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * 下一页TOKEN。
+         * A pagination token. It can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * queues.
+         * The list of queues.
          */
         public Builder queues(java.util.List < Queues> queues) {
             this.queues = queues;
@@ -109,7 +109,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
         }
 
         /**
-         * 记录总数。
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -205,7 +205,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String displayName; 
 
             /**
-             * 行为 arn。
+             * The Alibaba Cloud Resource Name (ARN) of a behavior.
              */
             public Builder actionArn(String actionArn) {
                 this.actionArn = actionArn;
@@ -213,7 +213,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 权限名称。
+             * The name of the permission.
              */
             public Builder actionName(String actionName) {
                 this.actionName = actionName;
@@ -221,7 +221,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * action 依赖列表。
+             * The dependencies of the operation.
              */
             public Builder dependencies(java.util.List < String > dependencies) {
                 this.dependencies = dependencies;
@@ -229,7 +229,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * action 描述。
+             * The description of the operation.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -237,7 +237,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 权限展示名称。
+             * The display name of the permission.
              */
             public Builder displayName(String displayName) {
                 this.displayName = displayName;
@@ -422,7 +422,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             private String workspaceId; 
 
             /**
-             * 队列允许的操作
+             * The operations allowed for the queue.
              */
             public Builder allowActions(java.util.List < AllowActions> allowActions) {
                 this.allowActions = allowActions;
@@ -430,7 +430,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * The ID of the user who created the queue.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -438,7 +438,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * environments.
+             * The environment types of the queue.
              */
             public Builder environments(java.util.List < String > environments) {
                 this.environments = environments;
@@ -446,7 +446,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列资源最大容量
+             * The maximum capacity of resources that can be used in the queue.
              */
             public Builder maxResource(String maxResource) {
                 this.maxResource = maxResource;
@@ -454,7 +454,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列资源最小容量
+             * The minimum capacity of resources that can be used in the queue.
              */
             public Builder minResource(String minResource) {
                 this.minResource = minResource;
@@ -462,7 +462,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列Label
+             * The queue label.
              */
             public Builder properties(String properties) {
                 this.properties = properties;
@@ -470,7 +470,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列名称。
+             * The name of the queue.
              */
             public Builder queueName(String queueName) {
                 this.queueName = queueName;
@@ -478,7 +478,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列架构
+             * The queue architecture.
              */
             public Builder queueScope(String queueScope) {
                 this.queueScope = queueScope;
@@ -486,7 +486,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * queueStatus.
+             * The status of the queue.
              */
             public Builder queueStatus(String queueStatus) {
                 this.queueStatus = queueStatus;
@@ -494,7 +494,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列类型
+             * The queue type.
              */
             public Builder queueType(String queueType) {
                 this.queueType = queueType;
@@ -502,7 +502,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * regionId。
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -510,7 +510,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 队列资源使用容量
+             * The capacity of resources that are used in the queue.
              */
             public Builder usedResource(String usedResource) {
                 this.usedResource = usedResource;
@@ -518,7 +518,7 @@ public class ListWorkspaceQueuesResponseBody extends TeaModel {
             }
 
             /**
-             * 工作空间id。
+             * The workspace ID.
              */
             public Builder workspaceId(String workspaceId) {
                 this.workspaceId = workspaceId;

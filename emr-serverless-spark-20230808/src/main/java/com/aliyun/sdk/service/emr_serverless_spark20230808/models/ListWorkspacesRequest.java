@@ -109,7 +109,7 @@ public class ListWorkspacesRequest extends Request {
         } 
 
         /**
-         * 一次获取的最大记录数。
+         * The maximum number of entries to return.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("maxResults", maxResults);
@@ -118,7 +118,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * name.
+         * Fuzzy match is supported.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -127,7 +127,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * 标记当前开始读取的位置，置空表示从头开始。
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("nextToken", nextToken);
@@ -136,7 +136,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -145,7 +145,7 @@ public class ListWorkspacesRequest extends Request {
         }
 
         /**
-         * state.
+         * The workspace status.
          */
         public Builder state(String state) {
             this.putQueryParameter("state", state);

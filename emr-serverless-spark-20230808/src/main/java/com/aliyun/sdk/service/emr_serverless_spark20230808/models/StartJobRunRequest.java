@@ -208,7 +208,7 @@ public class StartJobRunRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -217,7 +217,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * clientToken.
+         * The client token that is used to ensure the idempotence of the request.
          */
         public Builder clientToken(String clientToken) {
             this.putBodyParameter("clientToken", clientToken);
@@ -226,7 +226,12 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * codeType.
+         * The code type of the job. Valid values:
+         * <p>
+         * 
+         * *   SQL
+         * *   JAR
+         * *   PYTHON
          */
         public Builder codeType(String codeType) {
             this.putBodyParameter("codeType", codeType);
@@ -235,7 +240,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * configurationOverrides.
+         * The advanced configurations of Spark.
          */
         public Builder configurationOverrides(ConfigurationOverrides configurationOverrides) {
             this.putBodyParameter("configurationOverrides", configurationOverrides);
@@ -244,7 +249,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * executionTimeoutSeconds.
+         * The timeout period of the job.
          */
         public Builder executionTimeoutSeconds(Integer executionTimeoutSeconds) {
             this.putBodyParameter("executionTimeoutSeconds", executionTimeoutSeconds);
@@ -253,7 +258,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * jobDriver.
+         * The information about Spark Driver.
          */
         public Builder jobDriver(JobDriver jobDriver) {
             this.putBodyParameter("jobDriver", jobDriver);
@@ -262,7 +267,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * jobId.
+         * The job ID.
          */
         public Builder jobId(String jobId) {
             this.putBodyParameter("jobId", jobId);
@@ -271,7 +276,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * name.
+         * The job name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -280,7 +285,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * releaseVersion.
+         * The version number of Spark.
          */
         public Builder releaseVersion(String releaseVersion) {
             this.putBodyParameter("releaseVersion", releaseVersion);
@@ -289,7 +294,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * resourceQueueId.
+         * The name of the resource queue on which the Spark job runs.
          */
         public Builder resourceQueueId(String resourceQueueId) {
             this.putBodyParameter("resourceQueueId", resourceQueueId);
@@ -298,7 +303,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * tags.
+         * The tags of the job.
          */
         public Builder tags(java.util.List < Tag > tags) {
             this.putBodyParameter("tags", tags);
@@ -307,7 +312,7 @@ public class StartJobRunRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
@@ -373,7 +378,7 @@ public class StartJobRunRequest extends Request {
             private String configItemValue; 
 
             /**
-             * configFileName.
+             * The configuration file of SparkConf.
              */
             public Builder configFileName(String configFileName) {
                 this.configFileName = configFileName;
@@ -381,7 +386,7 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * configItemKey.
+             * The key of SparkConf.
              */
             public Builder configItemKey(String configItemKey) {
                 this.configItemKey = configItemKey;
@@ -389,7 +394,7 @@ public class StartJobRunRequest extends Request {
             }
 
             /**
-             * configItemValue.
+             * The value of SparkConf.
              */
             public Builder configItemValue(String configItemValue) {
                 this.configItemValue = configItemValue;
@@ -430,7 +435,7 @@ public class StartJobRunRequest extends Request {
             private java.util.List < Configurations> configurations; 
 
             /**
-             * configurations.
+             * The SparkConf objects.
              */
             public Builder configurations(java.util.List < Configurations> configurations) {
                 this.configurations = configurations;

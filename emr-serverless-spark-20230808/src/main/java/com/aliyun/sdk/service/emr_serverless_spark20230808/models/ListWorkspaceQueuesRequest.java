@@ -81,7 +81,7 @@ public class ListWorkspaceQueuesRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -90,7 +90,13 @@ public class ListWorkspaceQueuesRequest extends Request {
         }
 
         /**
-         * environment.
+         * The environment type.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   dev
+         * *   production
          */
         public Builder environment(String environment) {
             this.putQueryParameter("environment", environment);
@@ -99,7 +105,7 @@ public class ListWorkspaceQueuesRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);

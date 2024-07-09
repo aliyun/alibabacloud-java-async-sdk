@@ -81,7 +81,7 @@ public class TerminateSqlStatementRequest extends Request {
         } 
 
         /**
-         * workspaceId.
+         * The workspace ID.
          */
         public Builder workspaceId(String workspaceId) {
             this.putPathParameter("workspaceId", workspaceId);
@@ -90,7 +90,7 @@ public class TerminateSqlStatementRequest extends Request {
         }
 
         /**
-         * statementId.
+         * The interactive query ID.
          */
         public Builder statementId(String statementId) {
             this.putPathParameter("statementId", statementId);
@@ -99,7 +99,7 @@ public class TerminateSqlStatementRequest extends Request {
         }
 
         /**
-         * regionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("regionId", regionId);
