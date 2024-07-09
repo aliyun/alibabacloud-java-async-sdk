@@ -21,11 +21,17 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateDocumentAnalyzeTaskResponse> createDocumentAnalyzeTask(CreateDocumentAnalyzeTaskRequest request);
 
+    CompletableFuture<CreateImageAnalyzeTaskResponse> createImageAnalyzeTask(CreateImageAnalyzeTaskRequest request);
+
     CompletableFuture<GetDocumentAnalyzeTaskStatusResponse> getDocumentAnalyzeTaskStatus(GetDocumentAnalyzeTaskStatusRequest request);
 
     CompletableFuture<GetDocumentRankResponse> getDocumentRank(GetDocumentRankRequest request);
 
     CompletableFuture<GetDocumentSplitResponse> getDocumentSplit(GetDocumentSplitRequest request);
+
+    CompletableFuture<GetImageAnalyzeTaskStatusResponse> getImageAnalyzeTaskStatus(GetImageAnalyzeTaskStatusRequest request);
+
+    CompletableFuture<GetQueryAnalysisResponse> getQueryAnalysis(GetQueryAnalysisRequest request);
 
     CompletableFuture<GetTextEmbeddingResponse> getTextEmbedding(GetTextEmbeddingRequest request);
 

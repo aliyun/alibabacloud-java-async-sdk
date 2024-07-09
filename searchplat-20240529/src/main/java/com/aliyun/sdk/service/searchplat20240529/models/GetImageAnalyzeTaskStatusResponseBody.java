@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link GetDocumentAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
+ * {@link GetImageAnalyzeTaskStatusResponseBody} extends {@link TeaModel}
  *
- * <p>GetDocumentAnalyzeTaskStatusResponseBody</p>
+ * <p>GetImageAnalyzeTaskStatusResponseBody</p>
  */
-public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
+public class GetImageAnalyzeTaskStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("latency")
     private Integer latency;
 
@@ -23,7 +23,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("usage")
     private Usage usage;
 
-    private GetDocumentAnalyzeTaskStatusResponseBody(Builder builder) {
+    private GetImageAnalyzeTaskStatusResponseBody(Builder builder) {
         this.latency = builder.latency;
         this.requestId = builder.requestId;
         this.result = builder.result;
@@ -34,7 +34,7 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static GetDocumentAnalyzeTaskStatusResponseBody create() {
+    public static GetImageAnalyzeTaskStatusResponseBody create() {
         return builder().build();
     }
 
@@ -104,8 +104,8 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
             return this;
         }
 
-        public GetDocumentAnalyzeTaskStatusResponseBody build() {
-            return new GetDocumentAnalyzeTaskStatusResponseBody(this);
+        public GetImageAnalyzeTaskStatusResponseBody build() {
+            return new GetImageAnalyzeTaskStatusResponseBody(this);
         } 
 
     } 
@@ -293,18 +293,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
 
     }
     public static class Usage extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("image_count")
-        private Long imageCount;
-
-        @com.aliyun.core.annotation.NameInMap("table_count")
-        private Long tableCount;
+        @com.aliyun.core.annotation.NameInMap("pv_count")
+        private Long pvCount;
 
         @com.aliyun.core.annotation.NameInMap("token_count")
         private Long tokenCount;
 
         private Usage(Builder builder) {
-            this.imageCount = builder.imageCount;
-            this.tableCount = builder.tableCount;
+            this.pvCount = builder.pvCount;
             this.tokenCount = builder.tokenCount;
         }
 
@@ -317,17 +313,10 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
 
         /**
-         * @return imageCount
+         * @return pvCount
          */
-        public Long getImageCount() {
-            return this.imageCount;
-        }
-
-        /**
-         * @return tableCount
-         */
-        public Long getTableCount() {
-            return this.tableCount;
+        public Long getPvCount() {
+            return this.pvCount;
         }
 
         /**
@@ -338,23 +327,14 @@ public class GetDocumentAnalyzeTaskStatusResponseBody extends TeaModel {
         }
 
         public static final class Builder {
-            private Long imageCount; 
-            private Long tableCount; 
+            private Long pvCount; 
             private Long tokenCount; 
 
             /**
-             * image_count.
+             * pv_count.
              */
-            public Builder imageCount(Long imageCount) {
-                this.imageCount = imageCount;
-                return this;
-            }
-
-            /**
-             * table_count.
-             */
-            public Builder tableCount(Long tableCount) {
-                this.tableCount = tableCount;
+            public Builder pvCount(Long pvCount) {
+                this.pvCount = pvCount;
                 return this;
             }
 
