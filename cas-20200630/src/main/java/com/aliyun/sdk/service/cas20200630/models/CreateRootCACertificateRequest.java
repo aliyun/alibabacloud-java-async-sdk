@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRootCACertificateRequest</p>
  */
 public class CreateRootCACertificateRequest extends Request {
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
-    @Query
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Query
-    @NameInMap("CountryCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryCode")
     private String countryCode;
 
-    @Query
-    @NameInMap("Locality")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locality")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String locality;
 
-    @Query
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationUnit;
 
-    @Query
-    @NameInMap("State")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String state;
 
-    @Query
-    @NameInMap("Years")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Years")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer years;
 
     private CreateRootCACertificateRequest(Builder builder) {
@@ -179,7 +178,7 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * 10
+         * The common name or abbreviation of the organization. The value can contain letters.
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -188,7 +187,10 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The certificate chain of the root CA certificate.
+         * The code of the country or region in which the organization is located. You can enter an alpha-2 code. For example, you can use **CN** to indicate China and use **US** to indicate the United States.
+         * <p>
+         * 
+         * For more information about country codes, see the **"Country codes"** section of the [Manage company profiles](~~198289~~) topic.
          */
         public Builder countryCode(String countryCode) {
             this.putQueryParameter("CountryCode", countryCode);
@@ -197,7 +199,7 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The common name or abbreviation of the organization. The value can contain letters.
+         * The name of the city in which the organization is located. The value can contain letters.
          */
         public Builder locality(String locality) {
             this.putQueryParameter("Locality", locality);
@@ -206,10 +208,7 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The validity period of the root CA certificate. Unit: years.
-         * <p>
-         * 
-         * >  We recommend that you set this parameter to a value from 5 to 10.
+         * The name of the organization that is associated with the root CA certificate. You can enter the name of your enterprise or company. The value can contain letters.
          */
         public Builder organization(String organization) {
             this.putQueryParameter("Organization", organization);
@@ -218,7 +217,7 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.
+         * The name of the department or branch in the organization. The value can contain letters.
          */
         public Builder organizationUnit(String organizationUnit) {
             this.putQueryParameter("OrganizationUnit", organizationUnit);
@@ -227,7 +226,7 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * Alibaba
+         * The name of the province, municipality, or autonomous region in which the organization is located. The value can contain letters.
          */
         public Builder state(String state) {
             this.putQueryParameter("State", state);
@@ -236,7 +235,10 @@ public class CreateRootCACertificateRequest extends Request {
         }
 
         /**
-         * The name of the department or branch in the organization. The value can contain letters.
+         * The validity period of the root CA certificate. Unit: years.
+         * <p>
+         * 
+         * >  We recommend that you set this parameter to a value from 5 to 10.
          */
         public Builder years(Integer years) {
             this.putQueryParameter("Years", years);

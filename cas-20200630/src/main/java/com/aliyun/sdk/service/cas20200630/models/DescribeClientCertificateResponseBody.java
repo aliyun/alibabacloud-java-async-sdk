@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClientCertificateResponseBody</p>
  */
 public class DescribeClientCertificateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private Certificate certificate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientCertificateResponseBody(Builder builder) {
@@ -72,70 +71,70 @@ public class DescribeClientCertificateResponseBody extends TeaModel {
     } 
 
     public static class Certificate extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("Days")
+        @com.aliyun.core.annotation.NameInMap("Days")
         private Integer days;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("KeySize")
+        @com.aliyun.core.annotation.NameInMap("KeySize")
         private Integer keySize;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private String locality;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Organization")
+        @com.aliyun.core.annotation.NameInMap("Organization")
         private String organization;
 
-        @NameInMap("OrganizationUnit")
+        @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
         private String organizationUnit;
 
-        @NameInMap("ParentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Sha2")
+        @com.aliyun.core.annotation.NameInMap("Sha2")
         private String sha2;
 
-        @NameInMap("SignAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignAlgorithm")
         private String signAlgorithm;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubjectDN")
+        @com.aliyun.core.annotation.NameInMap("SubjectDN")
         private String subjectDN;
 
-        @NameInMap("X509Certificate")
+        @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private Certificate(Builder builder) {

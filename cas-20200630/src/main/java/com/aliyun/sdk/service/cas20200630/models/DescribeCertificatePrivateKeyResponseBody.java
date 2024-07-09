@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificatePrivateKeyResponseBody</p>
  */
 public class DescribeCertificatePrivateKeyResponseBody extends TeaModel {
-    @NameInMap("EncryptedData")
+    @com.aliyun.core.annotation.NameInMap("EncryptedData")
     private String encryptedData;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeCertificatePrivateKeyResponseBody(Builder builder) {

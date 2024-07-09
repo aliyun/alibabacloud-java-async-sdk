@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,74 +11,74 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServerCertificateWithCsrRequest</p>
  */
 public class CreateServerCertificateWithCsrRequest extends Request {
-    @Query
-    @NameInMap("AfterTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AfterTime")
     private Long afterTime;
 
-    @Query
-    @NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
     private String algorithm;
 
-    @Query
-    @NameInMap("BeforeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
 
-    @Query
-    @NameInMap("CommonName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
     private String commonName;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("Csr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Csr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String csr;
 
-    @Query
-    @NameInMap("Days")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Days")
     private Integer days;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("EnableCrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrl")
     private Long enableCrl;
 
-    @Query
-    @NameInMap("Immediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Immediately")
     private Integer immediately;
 
-    @Query
-    @NameInMap("Locality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locality")
     private String locality;
 
-    @Query
-    @NameInMap("Months")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Months")
     private Integer months;
 
-    @Query
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
     private String organizationUnit;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("Years")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Years")
     private Integer years;
 
     private CreateServerCertificateWithCsrRequest(Builder builder) {
@@ -326,10 +325,7 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         }
 
         /**
-         * The common name of the certificate. The value can contain letters.
-         * <p>
-         * 
-         * >  If you specify the **CsrPemString** parameter, the value of the **CommonName** parameter is determined by the **CsrPemString** parameter.
+         * The name of the certificate user. The user of a server certificate is a server. We recommend that you enter the domain name or IP address of the server.
          */
         public Builder commonName(String commonName) {
             this.putQueryParameter("CommonName", commonName);
@@ -338,10 +334,7 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         }
 
         /**
-         * The code of the country in which the organization is located, such as **CN**.
-         * <p>
-         * 
-         * >  This parameter is available and required only when the **RegistrantProfileId** parameter is not specified. In this case, you must specify this parameter. If this parameter is not specified, the domain name fails to be registered.
+         * The code of the country in which the organization is located, such as CN or US.
          */
         public Builder country(String country) {
             this.putQueryParameter("Country", country);
@@ -350,7 +343,10 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         }
 
         /**
-         * The content of the CSR file. You can generate a CSR file by using the OpenSSL tool or Keytool. For more information, see [How do I create a CSR file?](~~42218~~) You can also create a CSR file in the Certificate Management Service console. For more information, see [Create a CSR](~~313297~~).
+         * The content of the CSR.
+         * <p>
+         * 
+         * You can generate a CSR by using the OpenSSL tool or the Keytool tool. For more information, see [How do I create a CSR file?](~~42218~~)
          */
         public Builder csr(String csr) {
             this.putQueryParameter("Csr", csr);
@@ -359,16 +355,17 @@ public class CreateServerCertificateWithCsrRequest extends Request {
         }
 
         /**
-         * The validity period of the server certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
+         * The validity period of the server certificate. Unit: days.
          * <p>
+         * 
+         * You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
          * 
          * *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********
          * *   If you do not specify the **Days** parameter, you must specify both the **BeforeTime** and **AfterTime** parameters.
          * 
          * > 
          * 
-         * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters together, the validity period of the server certificate is determined by the value of the **Days** parameter.
-         * 
+         * *   If you specify the **Days**, **BeforeTime**, and **AfterTime** parameters at the same time, the validity period of the server certificate is determined by the value of the **Days** parameter.
          * *   The validity period of the server certificate cannot exceed the validity period of the intermediate CA certificate. You can call the [DescribeCACertificate](~~328096~~) operation to query the validity period of an intermediate CA certificate.
          */
         public Builder days(Integer days) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,8 +11,8 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCACertificateRequest</p>
  */
 public class DescribeCACertificateRequest extends Request {
-    @Query
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
     private DescribeCACertificateRequest(Builder builder) {

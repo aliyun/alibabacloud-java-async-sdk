@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetCAInstanceStatusResponseBody</p>
  */
 public class GetCAInstanceStatusResponseBody extends TeaModel {
-    @NameInMap("InstanceStatusList")
+    @com.aliyun.core.annotation.NameInMap("InstanceStatusList")
     private java.util.List < InstanceStatusList> instanceStatusList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetCAInstanceStatusResponseBody(Builder builder) {
@@ -72,31 +71,31 @@ public class GetCAInstanceStatusResponseBody extends TeaModel {
     } 
 
     public static class InstanceStatusList extends TeaModel {
-        @NameInMap("AfterTime")
+        @com.aliyun.core.annotation.NameInMap("AfterTime")
         private Long afterTime;
 
-        @NameInMap("BeforeTime")
+        @com.aliyun.core.annotation.NameInMap("BeforeTime")
         private Long beforeTime;
 
-        @NameInMap("CertIssuedCount")
+        @com.aliyun.core.annotation.NameInMap("CertIssuedCount")
         private Integer certIssuedCount;
 
-        @NameInMap("CertTotalCount")
+        @com.aliyun.core.annotation.NameInMap("CertTotalCount")
         private Integer certTotalCount;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Type")
+        @com.aliyun.core.annotation.NameInMap("Type")
         private String type;
 
-        @NameInMap("UseExpireTime")
+        @com.aliyun.core.annotation.NameInMap("UseExpireTime")
         private Long useExpireTime;
 
         private InstanceStatusList(Builder builder) {

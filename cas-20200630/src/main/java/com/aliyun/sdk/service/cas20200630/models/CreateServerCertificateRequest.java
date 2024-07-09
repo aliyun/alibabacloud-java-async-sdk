@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,71 +11,71 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateServerCertificateRequest</p>
  */
 public class CreateServerCertificateRequest extends Request {
-    @Query
-    @NameInMap("AfterTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AfterTime")
     private Long afterTime;
 
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
-    @Query
-    @NameInMap("BeforeTime")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BeforeTime")
     private Long beforeTime;
 
-    @Query
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Query
-    @NameInMap("Country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Country")
     private String country;
 
-    @Query
-    @NameInMap("Days")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Days")
     private Integer days;
 
-    @Query
-    @NameInMap("Domain")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Domain")
     private String domain;
 
-    @Query
-    @NameInMap("EnableCrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrl")
     private Long enableCrl;
 
-    @Query
-    @NameInMap("Immediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Immediately")
     private Integer immediately;
 
-    @Query
-    @NameInMap("Locality")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locality")
     private String locality;
 
-    @Query
-    @NameInMap("Months")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Months")
     private Integer months;
 
-    @Query
-    @NameInMap("Organization")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
     private String organizationUnit;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("State")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
     private String state;
 
-    @Query
-    @NameInMap("Years")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Years")
     private Integer years;
 
     private CreateServerCertificateRequest(Builder builder) {
@@ -334,7 +333,7 @@ public class CreateServerCertificateRequest extends Request {
          * The validity period of the server certificate. Unit: days. You must specify at least one of the **Days**, **BeforeTime**, and **AfterTime** parameters. The **BeforeTime** and **AfterTime** parameters must be both empty or both specified. The following list describes how to specify these parameters:
          * <p>
          * 
-         * *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.********
+         * *   If you specify the **Days** parameter, you can specify both the **BeforeTime** and **AfterTime** parameters or leave them both empty.
          * *   If you do not specify the **Days** parameter, you must specify both the **BeforeTime** and **AfterTime** parameters.
          * 
          * > 

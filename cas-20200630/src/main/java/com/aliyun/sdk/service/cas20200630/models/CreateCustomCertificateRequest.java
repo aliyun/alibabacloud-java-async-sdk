@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateCustomCertificateRequest</p>
  */
 public class CreateCustomCertificateRequest extends Request {
-    @Query
-    @NameInMap("ApiPassthrough")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ApiPassthrough")
     private ApiPassthrough apiPassthrough;
 
-    @Query
-    @NameInMap("Csr")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Csr")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String csr;
 
-    @Query
-    @NameInMap("EnableCrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrl")
     private Long enableCrl;
 
-    @Query
-    @NameInMap("Immediately")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Immediately")
     private Integer immediately;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("Validity")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Validity")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String validity;
 
     private CreateCustomCertificateRequest(Builder builder) {
@@ -209,28 +208,28 @@ public class CreateCustomCertificateRequest extends Request {
     } 
 
     public static class KeyUsage extends TeaModel {
-        @NameInMap("ContentCommitment")
+        @com.aliyun.core.annotation.NameInMap("ContentCommitment")
         private Boolean contentCommitment;
 
-        @NameInMap("DataEncipherment")
+        @com.aliyun.core.annotation.NameInMap("DataEncipherment")
         private Boolean dataEncipherment;
 
-        @NameInMap("DecipherOnly")
+        @com.aliyun.core.annotation.NameInMap("DecipherOnly")
         private Boolean decipherOnly;
 
-        @NameInMap("DigitalSignature")
+        @com.aliyun.core.annotation.NameInMap("DigitalSignature")
         private Boolean digitalSignature;
 
-        @NameInMap("EncipherOnly")
+        @com.aliyun.core.annotation.NameInMap("EncipherOnly")
         private Boolean encipherOnly;
 
-        @NameInMap("KeyAgreement")
+        @com.aliyun.core.annotation.NameInMap("KeyAgreement")
         private Boolean keyAgreement;
 
-        @NameInMap("KeyEncipherment")
+        @com.aliyun.core.annotation.NameInMap("KeyEncipherment")
         private Boolean keyEncipherment;
 
-        @NameInMap("NonRepudiation")
+        @com.aliyun.core.annotation.NameInMap("NonRepudiation")
         private Boolean nonRepudiation;
 
         private KeyUsage(Builder builder) {
@@ -390,11 +389,11 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class SubjectAlternativeNames extends TeaModel {
-        @NameInMap("Type")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("Type")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String type;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private SubjectAlternativeNames(Builder builder) {
@@ -458,16 +457,16 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class Extensions extends TeaModel {
-        @NameInMap("Criticals")
+        @com.aliyun.core.annotation.NameInMap("Criticals")
         private java.util.List < String > criticals;
 
-        @NameInMap("ExtendedKeyUsages")
+        @com.aliyun.core.annotation.NameInMap("ExtendedKeyUsages")
         private java.util.List < String > extendedKeyUsages;
 
-        @NameInMap("KeyUsage")
+        @com.aliyun.core.annotation.NameInMap("KeyUsage")
         private KeyUsage keyUsage;
 
-        @NameInMap("SubjectAlternativeNames")
+        @com.aliyun.core.annotation.NameInMap("SubjectAlternativeNames")
         private java.util.List < SubjectAlternativeNames> subjectAlternativeNames;
 
         private Extensions(Builder builder) {
@@ -559,10 +558,10 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class CustomAttributes extends TeaModel {
-        @NameInMap("ObjectIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ObjectIdentifier")
         private String objectIdentifier;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private CustomAttributes(Builder builder) {
@@ -635,25 +634,25 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class Subject extends TeaModel {
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("Country")
+        @com.aliyun.core.annotation.NameInMap("Country")
         private String country;
 
-        @NameInMap("CustomAttributes")
+        @com.aliyun.core.annotation.NameInMap("CustomAttributes")
         private java.util.List < CustomAttributes> customAttributes;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private String locality;
 
-        @NameInMap("Organization")
+        @com.aliyun.core.annotation.NameInMap("Organization")
         private String organization;
 
-        @NameInMap("OrganizationUnit")
+        @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
         private String organizationUnit;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
         private Subject(Builder builder) {
@@ -796,13 +795,13 @@ public class CreateCustomCertificateRequest extends Request {
 
     }
     public static class ApiPassthrough extends TeaModel {
-        @NameInMap("Extensions")
+        @com.aliyun.core.annotation.NameInMap("Extensions")
         private Extensions extensions;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Subject")
+        @com.aliyun.core.annotation.NameInMap("Subject")
         private Subject subject;
 
         private ApiPassthrough(Builder builder) {

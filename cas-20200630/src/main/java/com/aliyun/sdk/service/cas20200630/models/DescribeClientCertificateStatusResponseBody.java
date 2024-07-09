@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClientCertificateStatusResponseBody</p>
  */
 public class DescribeClientCertificateStatusResponseBody extends TeaModel {
-    @NameInMap("CertificateStatus")
+    @com.aliyun.core.annotation.NameInMap("CertificateStatus")
     private java.util.List < CertificateStatus> certificateStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeClientCertificateStatusResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeClientCertificateStatusResponseBody extends TeaModel {
     } 
 
     public static class CertificateStatus extends TeaModel {
-        @NameInMap("RevokeTime")
+        @com.aliyun.core.annotation.NameInMap("RevokeTime")
         private Long revokeTime;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private CertificateStatus(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateRootCACertificateResponseBody</p>
  */
 public class CreateRootCACertificateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private String certificate;
 
-    @NameInMap("CertificateChain")
+    @com.aliyun.core.annotation.NameInMap("CertificateChain")
     private String certificateChain;
 
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CreateRootCACertificateResponseBody(Builder builder) {
@@ -74,7 +73,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The name of the city in which the organization is located. The value can contain letters.
+         * The root CA certificate in the PEM format.
          */
         public Builder certificate(String certificate) {
             this.certificate = certificate;
@@ -82,7 +81,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * RSA_2048
+         * The certificate chain of the root CA certificate.
          */
         public Builder certificateChain(String certificateChain) {
             this.certificateChain = certificateChain;
@@ -98,7 +97,7 @@ public class CreateRootCACertificateResponseBody extends TeaModel {
         }
 
         /**
-         * Zhejiang
+         * The ID of the request, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

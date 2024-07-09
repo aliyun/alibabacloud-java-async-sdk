@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateClientCertificateResponseBody</p>
  */
 public class CreateClientCertificateResponseBody extends TeaModel {
-    @NameInMap("CertificateChain")
+    @com.aliyun.core.annotation.NameInMap("CertificateChain")
     private String certificateChain;
 
-    @NameInMap("Identifier")
+    @com.aliyun.core.annotation.NameInMap("Identifier")
     private String identifier;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SerialNumber")
+    @com.aliyun.core.annotation.NameInMap("SerialNumber")
     private String serialNumber;
 
-    @NameInMap("X509Certificate")
+    @com.aliyun.core.annotation.NameInMap("X509Certificate")
     private String x509Certificate;
 
     private CreateClientCertificateResponseBody(Builder builder) {

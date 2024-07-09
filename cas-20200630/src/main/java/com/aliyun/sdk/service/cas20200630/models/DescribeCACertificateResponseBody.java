@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCACertificateResponseBody</p>
  */
 public class DescribeCACertificateResponseBody extends TeaModel {
-    @NameInMap("Certificate")
+    @com.aliyun.core.annotation.NameInMap("Certificate")
     private Certificate certificate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Years")
+    @com.aliyun.core.annotation.NameInMap("Years")
     private Integer years;
 
     private DescribeCACertificateResponseBody(Builder builder) {
@@ -92,94 +91,102 @@ public class DescribeCACertificateResponseBody extends TeaModel {
     } 
 
     public static class Certificate extends TeaModel {
-        @NameInMap("AfterDate")
+        @com.aliyun.core.annotation.NameInMap("AfterDate")
         private Long afterDate;
 
-        @NameInMap("Algorithm")
+        @com.aliyun.core.annotation.NameInMap("Algorithm")
         private String algorithm;
 
-        @NameInMap("BeforeDate")
+        @com.aliyun.core.annotation.NameInMap("BeforeDate")
         private Long beforeDate;
 
-        @NameInMap("CertIssuedCount")
+        @com.aliyun.core.annotation.NameInMap("CaCertChain")
+        private String caCertChain;
+
+        @com.aliyun.core.annotation.NameInMap("CertIssuedCount")
         private Long certIssuedCount;
 
-        @NameInMap("CertRemainingCount")
+        @com.aliyun.core.annotation.NameInMap("CertRemainingCount")
         private Long certRemainingCount;
 
-        @NameInMap("CertTotalCount")
+        @com.aliyun.core.annotation.NameInMap("CertTotalCount")
         private Long certTotalCount;
 
-        @NameInMap("CertificateType")
+        @com.aliyun.core.annotation.NameInMap("CertificateType")
         private String certificateType;
 
-        @NameInMap("CommonName")
+        @com.aliyun.core.annotation.NameInMap("CommonName")
         private String commonName;
 
-        @NameInMap("CountryCode")
+        @com.aliyun.core.annotation.NameInMap("CountryCode")
         private String countryCode;
 
-        @NameInMap("CrlStatus")
+        @com.aliyun.core.annotation.NameInMap("CrlDay")
+        private Integer crlDay;
+
+        @com.aliyun.core.annotation.NameInMap("CrlStatus")
         private String crlStatus;
 
-        @NameInMap("CrlUrl")
+        @com.aliyun.core.annotation.NameInMap("CrlUrl")
         private String crlUrl;
 
-        @NameInMap("Identifier")
+        @com.aliyun.core.annotation.NameInMap("Identifier")
         private String identifier;
 
-        @NameInMap("KeySize")
+        @com.aliyun.core.annotation.NameInMap("KeySize")
         private Integer keySize;
 
-        @NameInMap("Locality")
+        @com.aliyun.core.annotation.NameInMap("Locality")
         private String locality;
 
-        @NameInMap("Md5")
+        @com.aliyun.core.annotation.NameInMap("Md5")
         private String md5;
 
-        @NameInMap("Organization")
+        @com.aliyun.core.annotation.NameInMap("Organization")
         private String organization;
 
-        @NameInMap("OrganizationUnit")
+        @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
         private String organizationUnit;
 
-        @NameInMap("ParentIdentifier")
+        @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
         private String parentIdentifier;
 
-        @NameInMap("Sans")
+        @com.aliyun.core.annotation.NameInMap("Sans")
         private String sans;
 
-        @NameInMap("SerialNumber")
+        @com.aliyun.core.annotation.NameInMap("SerialNumber")
         private String serialNumber;
 
-        @NameInMap("Sha2")
+        @com.aliyun.core.annotation.NameInMap("Sha2")
         private String sha2;
 
-        @NameInMap("SignAlgorithm")
+        @com.aliyun.core.annotation.NameInMap("SignAlgorithm")
         private String signAlgorithm;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("SubjectDN")
+        @com.aliyun.core.annotation.NameInMap("SubjectDN")
         private String subjectDN;
 
-        @NameInMap("X509Certificate")
+        @com.aliyun.core.annotation.NameInMap("X509Certificate")
         private String x509Certificate;
 
         private Certificate(Builder builder) {
             this.afterDate = builder.afterDate;
             this.algorithm = builder.algorithm;
             this.beforeDate = builder.beforeDate;
+            this.caCertChain = builder.caCertChain;
             this.certIssuedCount = builder.certIssuedCount;
             this.certRemainingCount = builder.certRemainingCount;
             this.certTotalCount = builder.certTotalCount;
             this.certificateType = builder.certificateType;
             this.commonName = builder.commonName;
             this.countryCode = builder.countryCode;
+            this.crlDay = builder.crlDay;
             this.crlStatus = builder.crlStatus;
             this.crlUrl = builder.crlUrl;
             this.identifier = builder.identifier;
@@ -229,6 +236,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
         }
 
         /**
+         * @return caCertChain
+         */
+        public String getCaCertChain() {
+            return this.caCertChain;
+        }
+
+        /**
          * @return certIssuedCount
          */
         public Long getCertIssuedCount() {
@@ -268,6 +282,13 @@ public class DescribeCACertificateResponseBody extends TeaModel {
          */
         public String getCountryCode() {
             return this.countryCode;
+        }
+
+        /**
+         * @return crlDay
+         */
+        public Integer getCrlDay() {
+            return this.crlDay;
         }
 
         /**
@@ -393,12 +414,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
             private Long afterDate; 
             private String algorithm; 
             private Long beforeDate; 
+            private String caCertChain; 
             private Long certIssuedCount; 
             private Long certRemainingCount; 
             private Long certTotalCount; 
             private String certificateType; 
             private String commonName; 
             private String countryCode; 
+            private Integer crlDay; 
             private String crlStatus; 
             private String crlUrl; 
             private String identifier; 
@@ -443,6 +466,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder beforeDate(Long beforeDate) {
                 this.beforeDate = beforeDate;
+                return this;
+            }
+
+            /**
+             * CA certificate chain.
+             */
+            public Builder caCertChain(String caCertChain) {
+                this.caCertChain = caCertChain;
                 return this;
             }
 
@@ -498,6 +529,14 @@ public class DescribeCACertificateResponseBody extends TeaModel {
              */
             public Builder countryCode(String countryCode) {
                 this.countryCode = countryCode;
+                return this;
+            }
+
+            /**
+             * CrlDay.
+             */
+            public Builder crlDay(Integer crlDay) {
+                this.crlDay = crlDay;
                 return this;
             }
 

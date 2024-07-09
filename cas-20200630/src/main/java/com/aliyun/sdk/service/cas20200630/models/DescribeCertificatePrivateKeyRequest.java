@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,14 +11,14 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeCertificatePrivateKeyRequest</p>
  */
 public class DescribeCertificatePrivateKeyRequest extends Request {
-    @Query
-    @NameInMap("EncryptedCode")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EncryptedCode")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String encryptedCode;
 
-    @Query
-    @NameInMap("Identifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Identifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String identifier;
 
     private DescribeCertificatePrivateKeyRequest(Builder builder) {
@@ -72,8 +71,6 @@ public class DescribeCertificatePrivateKeyRequest extends Request {
         /**
          * The password that is used to encrypt the private key. The password can contain letters, digits, and special characters, such as `, + - _ #`. The password can be up to 32 bytes in length.
          * <p>
-         * 
-         * **
          * 
          * **Warning** You must remember the password that you specify. The password is required to decrypt the encrypted private key. If you forget the password, the encrypted private key that is returned cannot be decrypted. You must call this operation again.
          */

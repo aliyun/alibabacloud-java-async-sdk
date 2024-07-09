@@ -1,3 +1,6 @@
+2024-07-09 Version: 1.0.4
+- Generated java-async 2020-06-30 for cas.
+
 2024-01-25 Version: 1.0.3
 - Update Tea.
 

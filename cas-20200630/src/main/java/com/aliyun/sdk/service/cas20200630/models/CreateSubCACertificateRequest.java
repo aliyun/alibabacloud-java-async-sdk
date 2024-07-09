@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cas20200630.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,64 +11,64 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateSubCACertificateRequest</p>
  */
 public class CreateSubCACertificateRequest extends Request {
-    @Query
-    @NameInMap("Algorithm")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Algorithm")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String algorithm;
 
-    @Query
-    @NameInMap("CommonName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CommonName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String commonName;
 
-    @Query
-    @NameInMap("CountryCode")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CountryCode")
     private String countryCode;
 
-    @Query
-    @NameInMap("CrlDay")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CrlDay")
     private Integer crlDay;
 
-    @Query
-    @NameInMap("EnableCrl")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EnableCrl")
     private Boolean enableCrl;
 
-    @Query
-    @NameInMap("ExtendedKeyUsages")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExtendedKeyUsages")
     private java.util.List < String > extendedKeyUsages;
 
-    @Query
-    @NameInMap("Locality")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Locality")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String locality;
 
-    @Query
-    @NameInMap("Organization")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Organization")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organization;
 
-    @Query
-    @NameInMap("OrganizationUnit")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("OrganizationUnit")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String organizationUnit;
 
-    @Query
-    @NameInMap("ParentIdentifier")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ParentIdentifier")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String parentIdentifier;
 
-    @Query
-    @NameInMap("PathLenConstraint")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PathLenConstraint")
     private Integer pathLenConstraint;
 
-    @Query
-    @NameInMap("State")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("State")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String state;
 
-    @Query
-    @NameInMap("Years")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Years")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer years;
 
     private CreateSubCACertificateRequest(Builder builder) {
