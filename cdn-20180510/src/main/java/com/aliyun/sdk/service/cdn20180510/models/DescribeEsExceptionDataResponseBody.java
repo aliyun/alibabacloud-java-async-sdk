@@ -70,47 +70,6 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
 
     } 
 
-    public static class Points extends TeaModel {
-        @com.aliyun.core.annotation.NameInMap("Points")
-        private java.util.List < String > points;
-
-        private Points(Builder builder) {
-            this.points = builder.points;
-        }
-
-        public static Builder builder() {
-            return new Builder();
-        }
-
-        public static Points create() {
-            return builder().build();
-        }
-
-        /**
-         * @return points
-         */
-        public java.util.List < String > getPoints() {
-            return this.points;
-        }
-
-        public static final class Builder {
-            private java.util.List < String > points; 
-
-            /**
-             * The data points.
-             */
-            public Builder points(java.util.List < String > points) {
-                this.points = points;
-                return this;
-            }
-
-            public Points build() {
-                return new Points(this);
-            } 
-
-        } 
-
-    }
     public static class Contents extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Columns")
         private java.util.List < String > columns;
@@ -119,7 +78,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         private String name;
 
         @com.aliyun.core.annotation.NameInMap("Points")
-        private java.util.List < Points> points;
+        private java.util.List < String > points;
 
         private Contents(Builder builder) {
             this.columns = builder.columns;
@@ -152,14 +111,14 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
         /**
          * @return points
          */
-        public java.util.List < Points> getPoints() {
+        public java.util.List < String > getPoints() {
             return this.points;
         }
 
         public static final class Builder {
             private java.util.List < String > columns; 
             private String name; 
-            private java.util.List < Points> points; 
+            private java.util.List < String > points; 
 
             /**
              * Information about the time column and the error column name.
@@ -180,7 +139,7 @@ public class DescribeEsExceptionDataResponseBody extends TeaModel {
             /**
              * The time columns and error column names.
              */
-            public Builder points(java.util.List < Points> points) {
+            public Builder points(java.util.List < String > points) {
                 this.points = points;
                 return this;
             }

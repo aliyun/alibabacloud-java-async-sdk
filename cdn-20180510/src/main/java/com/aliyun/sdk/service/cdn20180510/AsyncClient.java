@@ -271,6 +271,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<DescribeCdnDomainStagingConfigResponse> describeCdnDomainStagingConfig(DescribeCdnDomainStagingConfigRequest request);
 
+    CompletableFuture<DescribeCdnFullDomainsBlockIPConfigResponse> describeCdnFullDomainsBlockIPConfig(DescribeCdnFullDomainsBlockIPConfigRequest request);
+
+    CompletableFuture<DescribeCdnFullDomainsBlockIPHistoryResponse> describeCdnFullDomainsBlockIPHistory(DescribeCdnFullDomainsBlockIPHistoryRequest request);
+
     /**
       * > You can call this operation up to 100 times per second per account.
       *
@@ -1201,6 +1205,8 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SetCdnDomainStagingConfigResponse> setCdnDomainStagingConfig(SetCdnDomainStagingConfigRequest request);
+
+    CompletableFuture<SetCdnFullDomainsBlockIPResponse> setCdnFullDomainsBlockIP(SetCdnFullDomainsBlockIPRequest request);
 
     /**
       * @deprecated

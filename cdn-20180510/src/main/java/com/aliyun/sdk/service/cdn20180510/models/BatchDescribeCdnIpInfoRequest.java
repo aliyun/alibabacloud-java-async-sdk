@@ -81,7 +81,11 @@ public class BatchDescribeCdnIpInfoRequest extends Request {
         }
 
         /**
-         * Language.
+         * The language of the query results. Valid values:
+         * <p>
+         * 
+         * *   **zh** (default): Simplified Chinese.
+         * *   **en**: English.
          */
         public Builder language(String language) {
             this.putQueryParameter("Language", language);
