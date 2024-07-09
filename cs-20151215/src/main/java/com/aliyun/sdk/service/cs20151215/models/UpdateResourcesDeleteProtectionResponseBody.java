@@ -85,7 +85,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         private java.util.List < String > resources; 
 
         /**
-         * namespace.
+         * The namespace to which the resource belongs.
          */
         public Builder namespace(String namespace) {
             this.namespace = namespace;
@@ -93,7 +93,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * protection.
+         * Indicates the status of deletion protection. A value of true indicates that deletion protection is enabled and a value of false indicates that deletion protection is disabled.
          */
         public Builder protection(String protection) {
             this.protection = protection;
@@ -109,7 +109,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * resource_type.
+         * The type of resource for which deletion protection is enabled or disabled.
          */
         public Builder resourceType(String resourceType) {
             this.resourceType = resourceType;
@@ -117,7 +117,7 @@ public class UpdateResourcesDeleteProtectionResponseBody extends TeaModel {
         }
 
         /**
-         * resources.
+         * The list of resources whose deletion protection status is updated.
          */
         public Builder resources(java.util.List < String > resources) {
             this.resources = resources;

@@ -1641,6 +1641,9 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ram_policy")
         private String ramPolicy;
 
+        @com.aliyun.core.annotation.NameInMap("ram_role_name")
+        private String ramRoleName;
+
         @com.aliyun.core.annotation.NameInMap("rds_instances")
         private java.util.List < String > rdsInstances;
 
@@ -1733,6 +1736,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             this.platform = builder.platform;
             this.privatePoolOptions = builder.privatePoolOptions;
             this.ramPolicy = builder.ramPolicy;
+            this.ramRoleName = builder.ramRoleName;
             this.rdsInstances = builder.rdsInstances;
             this.scalingGroupId = builder.scalingGroupId;
             this.scalingPolicy = builder.scalingPolicy;
@@ -1941,6 +1945,13 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
         }
 
         /**
+         * @return ramRoleName
+         */
+        public String getRamRoleName() {
+            return this.ramRoleName;
+        }
+
+        /**
          * @return rdsInstances
          */
         public java.util.List < String > getRdsInstances() {
@@ -2120,6 +2131,7 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
             private String platform; 
             private PrivatePoolOptions privatePoolOptions; 
             private String ramPolicy; 
+            private String ramRoleName; 
             private java.util.List < String > rdsInstances; 
             private String scalingGroupId; 
             private String scalingPolicy; 
@@ -2383,6 +2395,14 @@ public class DescribeClusterNodePoolDetailResponseBody extends TeaModel {
              */
             public Builder ramPolicy(String ramPolicy) {
                 this.ramPolicy = ramPolicy;
+                return this;
+            }
+
+            /**
+             * ram_role_name.
+             */
+            public Builder ramRoleName(String ramRoleName) {
+                this.ramRoleName = ramRoleName;
                 return this;
             }
 

@@ -186,7 +186,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             private Boolean protection; 
 
             /**
-             * name.
+             * The name of the resource.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -194,7 +194,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * namespace.
+             * The namespace to which the resource belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -202,7 +202,7 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * resource.
+             * The type of resource for which deletion protection is enabled.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -210,7 +210,13 @@ public class DescribeResourcesDeleteProtectionResponse extends Response {
             }
 
             /**
-             * protection.
+             * Indicates whether deletion protection is enabled.
+             * <p>
+             * 
+             * *   true: deletion protection is enabled.
+             * *   false: deletion protection is disabled.
+             * 
+             * Default value: false
              */
             public Builder protection(Boolean protection) {
                 this.protection = protection;

@@ -174,9 +174,9 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
              * 
              * Valid values:
              * 
-             * *   nntf: You can ignore the vulnerability
-             * *   later: You can fix the vulnerability later
-             * *   asap: You need to fix the vulnerability at the earliest opportunity
+             * *   nntf: You can ignore the vulnerability.
+             * *   later: You can fix the vulnerability later.
+             * *   asap: You need to fix the vulnerability at the earliest opportunity.
              */
             public Builder necessity(String necessity) {
                 this.necessity = necessity;
@@ -184,7 +184,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             }
 
             /**
-             * need_reboot.
+             * Indicates whether a restart is required.
              */
             public Builder needReboot(Boolean needReboot) {
                 this.needReboot = needReboot;
@@ -249,7 +249,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
             private java.util.List < VulList> vulList; 
 
             /**
-             * The node ID.
+             * The ID of the node.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;

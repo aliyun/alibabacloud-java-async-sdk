@@ -110,7 +110,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -119,7 +119,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * enable.
+         * Specify whether to enable deletion protection. Set the value to true to enable deletion protection and set the value to false to disable deletion protection.
          */
         public Builder enable(Boolean enable) {
             this.putBodyParameter("enable", enable);
@@ -128,7 +128,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * namespace.
+         * The namespace to which the resource belongs.
          */
         public Builder namespace(String namespace) {
             this.putBodyParameter("namespace", namespace);
@@ -137,7 +137,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * resource_type.
+         * The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.
          */
         public Builder resourceType(String resourceType) {
             this.putBodyParameter("resource_type", resourceType);
@@ -146,7 +146,7 @@ public class UpdateResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * resources.
+         * The resources list.
          */
         public Builder resources(java.util.List < String > resources) {
             this.putBodyParameter("resources", resources);

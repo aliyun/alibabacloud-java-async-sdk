@@ -97,7 +97,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         } 
 
         /**
-         * ClusterId.
+         * The ID of the cluster.
          */
         public Builder clusterId(String clusterId) {
             this.putPathParameter("ClusterId", clusterId);
@@ -106,7 +106,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * ResourceType.
+         * The type of resource for which deletion protection is enabled or disabled. You can specify namespaces or Services.
          */
         public Builder resourceType(String resourceType) {
             this.putPathParameter("ResourceType", resourceType);
@@ -115,7 +115,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * namespace.
+         * The namespace to which the resource belongs.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -124,7 +124,7 @@ public class DescribeResourcesDeleteProtectionRequest extends Request {
         }
 
         /**
-         * resources.
+         * The name of the resource that you want to query. Separate multiple resource names with commas (,).
          */
         public Builder resources(String resources) {
             this.putQueryParameter("resources", resources);
