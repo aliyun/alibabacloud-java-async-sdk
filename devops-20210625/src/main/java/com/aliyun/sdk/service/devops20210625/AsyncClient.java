@@ -33,6 +33,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateBranchResponse> createBranch(CreateBranchRequest request);
 
+    CompletableFuture<CreateChangeRequestResponse> createChangeRequest(CreateChangeRequestRequest request);
+
     CompletableFuture<CreateCheckRunResponse> createCheckRun(CreateCheckRunRequest request);
 
     CompletableFuture<CreateCommentResponse> createComment(CreateCommentRequest request);
@@ -280,6 +282,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListApplicationMembersResponse> listApplicationMembers(ListApplicationMembersRequest request);
 
     CompletableFuture<ListApplicationsResponse> listApplications(ListApplicationsRequest request);
+
+    CompletableFuture<ListChangeRequestWorkflowExecutionsResponse> listChangeRequestWorkflowExecutions(ListChangeRequestWorkflowExecutionsRequest request);
+
+    CompletableFuture<ListChangeRequestsResponse> listChangeRequests(ListChangeRequestsRequest request);
 
     CompletableFuture<ListCheckRunsResponse> listCheckRuns(ListCheckRunsRequest request);
 
