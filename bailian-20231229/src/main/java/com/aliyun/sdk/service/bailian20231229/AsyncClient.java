@@ -31,6 +31,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
 
+    CompletableFuture<SubmitIndexAddDocumentsJobResponse> submitIndexAddDocumentsJob(SubmitIndexAddDocumentsJobRequest request);
+
     CompletableFuture<SubmitIndexJobResponse> submitIndexJob(SubmitIndexJobRequest request);
 
 }
