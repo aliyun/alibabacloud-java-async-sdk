@@ -278,6 +278,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<QueryAnalysisJobListResponse> queryAnalysisJobList(QueryAnalysisJobListRequest request);
 
+    CompletableFuture<QueryCopyrightExtractJobResponse> queryCopyrightExtractJob(QueryCopyrightExtractJobRequest request);
+
+    CompletableFuture<QueryCopyrightJobResponse> queryCopyrightJob(QueryCopyrightJobRequest request);
+
     /**
       * You can call this operation to query the specified jobs of clearing or deleting a media fingerprint library based on the job IDs. If you do not specify job IDs, the system returns the latest 20 jobs that are submitted.
       * ### QPS limit
@@ -411,6 +415,12 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<QueryTemplateListResponse> queryTemplateList(QueryTemplateListRequest request);
 
+    CompletableFuture<QueryTraceAbJobResponse> queryTraceAbJob(QueryTraceAbJobRequest request);
+
+    CompletableFuture<QueryTraceExtractJobResponse> queryTraceExtractJob(QueryTraceExtractJobRequest request);
+
+    CompletableFuture<QueryTraceM3u8JobResponse> queryTraceM3u8Job(QueryTraceM3u8JobRequest request);
+
     /**
       * You can call this operation to query up to 10 watermark templates at a time.
       * ### QPS limit
@@ -466,6 +476,10 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SubmitAnalysisJobResponse> submitAnalysisJob(SubmitAnalysisJobRequest request);
+
+    CompletableFuture<SubmitCopyrightExtractJobResponse> submitCopyrightExtractJob(SubmitCopyrightExtractJobRequest request);
+
+    CompletableFuture<SubmitCopyrightJobResponse> submitCopyrightJob(SubmitCopyrightJobRequest request);
 
     /**
       * You can call this operation to clear or delete the specified media fingerprint library based on the library ID. If you clear a media fingerprint library, the content in the library is deleted, but the library is not deleted. If you delete a media fingerprint library, both the library and the content in the library are deleted. If you do not specify the operation type, the system clears the media fingerprint library by default.
@@ -549,6 +563,12 @@ public interface AsyncClient extends SdkAutoCloseable {
       *
      */
     CompletableFuture<SubmitSnapshotJobResponse> submitSnapshotJob(SubmitSnapshotJobRequest request);
+
+    CompletableFuture<SubmitTraceAbJobResponse> submitTraceAbJob(SubmitTraceAbJobRequest request);
+
+    CompletableFuture<SubmitTraceExtractJobResponse> submitTraceExtractJob(SubmitTraceExtractJobRequest request);
+
+    CompletableFuture<SubmitTraceM3u8JobResponse> submitTraceM3u8Job(SubmitTraceM3u8JobRequest request);
 
     /**
       * The response parameters.
