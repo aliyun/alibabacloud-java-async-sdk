@@ -257,7 +257,11 @@ public class DescribeCenInterRegionBandwidthLimitsResponseBody extends TeaModel 
             }
 
             /**
-             * BandwidthType.
+             * The bandwidth allocation method. Valid values:
+             * <p>
+             * 
+             * *   **BandwidthPackage**: allocates bandwidth from a bandwidth plan.
+             * *   **DataTransfer**: bandwidth is billed based on the pay-by-data-transfer metering method.
              */
             public Builder bandwidthType(String bandwidthType) {
                 this.bandwidthType = bandwidthType;

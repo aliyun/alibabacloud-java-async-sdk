@@ -2538,6 +2538,14 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ### Prerequisites
+      * The Cloud Enterprise Network (CEN) instance is associated with a bandwidth plan. For more information, see the [CreateCenBandwidthPackage](~~65919~~) and [AssociateCenBandwidthPackage](~~65934~~) topics.
+      * You can call the **SetCenInterRegionBandwidthLimit** operation to configure, modify, or remove the maximum bandwidth value of an inter-region connection.
+      * - If you set **BandwidthLimit** to a value other than 0, the maximum bandwidth value of the inter-region connection is set or changed to the specified value.
+      * - If you set **BandwidthLimit** to 0, no bandwidth resource is allocated to the inter-region connection.
+      *
+     */
     @Override
     public CompletableFuture<SetCenInterRegionBandwidthLimitResponse> setCenInterRegionBandwidthLimit(SetCenInterRegionBandwidthLimitRequest request) {
         try {
