@@ -20,10 +20,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
+    private Integer totalCount;
+
     private DescribeOfficeSitesResponseBody(Builder builder) {
         this.nextToken = builder.nextToken;
         this.officeSites = builder.officeSites;
         this.requestId = builder.requestId;
+        this.totalCount = builder.totalCount;
     }
 
     public static Builder builder() {
@@ -55,10 +59,18 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         return this.requestId;
     }
 
+    /**
+     * @return totalCount
+     */
+    public Integer getTotalCount() {
+        return this.totalCount;
+    }
+
     public static final class Builder {
         private String nextToken; 
         private java.util.List < OfficeSites> officeSites; 
         private String requestId; 
+        private Integer totalCount; 
 
         /**
          * The token that determines the start point of the next query. If this parameter is empty, all results are returned.
@@ -81,6 +93,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
+            return this;
+        }
+
+        /**
+         * TotalCount.
+         */
+        public Builder totalCount(Integer totalCount) {
+            this.totalCount = totalCount;
             return this;
         }
 
@@ -466,6 +486,9 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("RdsLicenseStatus")
         private String rdsLicenseStatus;
 
+        @com.aliyun.core.annotation.NameInMap("SecurityProtection")
+        private String securityProtection;
+
         @com.aliyun.core.annotation.NameInMap("SsoEnabled")
         private Boolean ssoEnabled;
 
@@ -540,6 +563,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             this.rdsLicenseAddress = builder.rdsLicenseAddress;
             this.rdsLicenseDomainName = builder.rdsLicenseDomainName;
             this.rdsLicenseStatus = builder.rdsLicenseStatus;
+            this.securityProtection = builder.securityProtection;
             this.ssoEnabled = builder.ssoEnabled;
             this.ssoType = builder.ssoType;
             this.status = builder.status;
@@ -822,6 +846,13 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
         }
 
         /**
+         * @return securityProtection
+         */
+        public String getSecurityProtection() {
+            return this.securityProtection;
+        }
+
+        /**
          * @return ssoEnabled
          */
         public Boolean getSsoEnabled() {
@@ -943,6 +974,7 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
             private String rdsLicenseAddress; 
             private String rdsLicenseDomainName; 
             private String rdsLicenseStatus; 
+            private String securityProtection; 
             private Boolean ssoEnabled; 
             private String ssoType; 
             private String status; 
@@ -1290,6 +1322,14 @@ public class DescribeOfficeSitesResponseBody extends TeaModel {
              */
             public Builder rdsLicenseStatus(String rdsLicenseStatus) {
                 this.rdsLicenseStatus = rdsLicenseStatus;
+                return this;
+            }
+
+            /**
+             * SecurityProtection.
+             */
+            public Builder securityProtection(String securityProtection) {
+                this.securityProtection = securityProtection;
                 return this;
             }
 

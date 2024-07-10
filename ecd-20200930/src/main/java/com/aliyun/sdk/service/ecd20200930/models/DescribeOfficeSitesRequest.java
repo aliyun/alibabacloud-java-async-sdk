@@ -34,6 +34,10 @@ public class DescribeOfficeSitesRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityProtection")
+    private String securityProtection;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
@@ -44,6 +48,7 @@ public class DescribeOfficeSitesRequest extends Request {
         this.officeSiteId = builder.officeSiteId;
         this.officeSiteType = builder.officeSiteType;
         this.regionId = builder.regionId;
+        this.securityProtection = builder.securityProtection;
         this.status = builder.status;
     }
 
@@ -96,6 +101,13 @@ public class DescribeOfficeSitesRequest extends Request {
     }
 
     /**
+     * @return securityProtection
+     */
+    public String getSecurityProtection() {
+        return this.securityProtection;
+    }
+
+    /**
      * @return status
      */
     public String getStatus() {
@@ -108,6 +120,7 @@ public class DescribeOfficeSitesRequest extends Request {
         private java.util.List < String > officeSiteId; 
         private String officeSiteType; 
         private String regionId; 
+        private String securityProtection; 
         private String status; 
 
         private Builder() {
@@ -121,6 +134,7 @@ public class DescribeOfficeSitesRequest extends Request {
             this.officeSiteId = request.officeSiteId;
             this.officeSiteType = request.officeSiteType;
             this.regionId = request.regionId;
+            this.securityProtection = request.securityProtection;
             this.status = request.status;
         } 
 
@@ -189,6 +203,15 @@ public class DescribeOfficeSitesRequest extends Request {
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * SecurityProtection.
+         */
+        public Builder securityProtection(String securityProtection) {
+            this.putQueryParameter("SecurityProtection", securityProtection);
+            this.securityProtection = securityProtection;
             return this;
         }
 
