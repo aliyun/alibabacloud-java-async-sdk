@@ -87,6 +87,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<RecognizeGeneralResponse> recognizeGeneral(RecognizeGeneralRequest request);
 
+    CompletableFuture<RecognizeGeneralStructureResponse> recognizeGeneralStructure(RecognizeGeneralStructureRequest request);
+
     CompletableFuture<RecognizeHKIdcardResponse> recognizeHKIdcard(RecognizeHKIdcardRequest request);
 
     CompletableFuture<RecognizeHandwritingResponse> recognizeHandwriting(RecognizeHandwritingRequest request);
