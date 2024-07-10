@@ -854,11 +854,15 @@ public class BuildPipelineRun extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("UpdateApplicationInput")
         private String updateApplicationInput;
 
+        @com.aliyun.core.annotation.NameInMap("UpdateTraffic")
+        private Boolean updateTraffic;
+
         private DeployConfig(Builder builder) {
             this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
             this.maximumInstanceCount = builder.maximumInstanceCount;
             this.minimumInstanceCount = builder.minimumInstanceCount;
             this.updateApplicationInput = builder.updateApplicationInput;
+            this.updateTraffic = builder.updateTraffic;
         }
 
         public static Builder builder() {
@@ -897,11 +901,19 @@ public class BuildPipelineRun extends TeaModel {
             return this.updateApplicationInput;
         }
 
+        /**
+         * @return updateTraffic
+         */
+        public Boolean getUpdateTraffic() {
+            return this.updateTraffic;
+        }
+
         public static final class Builder {
             private Boolean alwaysAllocateCPU; 
             private Integer maximumInstanceCount; 
             private Integer minimumInstanceCount; 
             private String updateApplicationInput; 
+            private Boolean updateTraffic; 
 
             /**
              * AlwaysAllocateCPU.
@@ -932,6 +944,14 @@ public class BuildPipelineRun extends TeaModel {
              */
             public Builder updateApplicationInput(String updateApplicationInput) {
                 this.updateApplicationInput = updateApplicationInput;
+                return this;
+            }
+
+            /**
+             * UpdateTraffic.
+             */
+            public Builder updateTraffic(Boolean updateTraffic) {
+                this.updateTraffic = updateTraffic;
                 return this;
             }
 

@@ -119,7 +119,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
         }
 
         /**
-         * The ID of the request.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -243,7 +243,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             private Long runnings; 
 
             /**
-             * The ID of the application.
+             * The application ID.
              */
             public Builder appId(String appId) {
                 this.appId = appId;
@@ -251,7 +251,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether an auto scaling policy is enabled. The following limits are imposed on the ID:
+             * Indicates whether an auto scaling policy is enabled. Valid values:
              * <p>
              * 
              * *   **1**: An auto scaling policy is enabled.
@@ -279,7 +279,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the application.
+             * The application name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -287,7 +287,7 @@ public class GetAvailabilityMetricResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the namespace.
+             * The namespace ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

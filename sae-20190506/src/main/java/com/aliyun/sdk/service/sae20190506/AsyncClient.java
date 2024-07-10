@@ -59,6 +59,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateSecretResponse> createSecret(CreateSecretRequest request);
 
+    CompletableFuture<CreateWebApplicationResponse> createWebApplication(CreateWebApplicationRequest request);
+
+    CompletableFuture<CreateWebCustomDomainResponse> createWebCustomDomain(CreateWebCustomDomainRequest request);
+
     CompletableFuture<DeleteApplicationResponse> deleteApplication(DeleteApplicationRequest request);
 
     CompletableFuture<DeleteApplicationScalingRuleResponse> deleteApplicationScalingRule(DeleteApplicationScalingRuleRequest request);
@@ -76,6 +80,12 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DeleteNamespaceResponse> deleteNamespace(DeleteNamespaceRequest request);
 
     CompletableFuture<DeleteSecretResponse> deleteSecret(DeleteSecretRequest request);
+
+    CompletableFuture<DeleteWebApplicationResponse> deleteWebApplication(DeleteWebApplicationRequest request);
+
+    CompletableFuture<DeleteWebApplicationRevisionResponse> deleteWebApplicationRevision(DeleteWebApplicationRevisionRequest request);
+
+    CompletableFuture<DeleteWebCustomDomainResponse> deleteWebCustomDomain(DeleteWebCustomDomainRequest request);
 
     CompletableFuture<DeployApplicationResponse> deployApplication(DeployApplicationRequest request);
 
@@ -135,6 +145,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DescribeSecretResponse> describeSecret(DescribeSecretRequest request);
 
+    CompletableFuture<DescribeWebApplicationResponse> describeWebApplication(DescribeWebApplicationRequest request);
+
+    CompletableFuture<DescribeWebApplicationResourceStaticsResponse> describeWebApplicationResourceStatics(DescribeWebApplicationResourceStaticsRequest request);
+
+    CompletableFuture<DescribeWebApplicationRevisionResponse> describeWebApplicationRevision(DescribeWebApplicationRevisionRequest request);
+
+    CompletableFuture<DescribeWebApplicationScalingConfigResponse> describeWebApplicationScalingConfig(DescribeWebApplicationScalingConfigRequest request);
+
+    CompletableFuture<DescribeWebApplicationTrafficConfigResponse> describeWebApplicationTrafficConfig(DescribeWebApplicationTrafficConfigRequest request);
+
+    CompletableFuture<DescribeWebCustomDomainResponse> describeWebCustomDomain(DescribeWebCustomDomainRequest request);
+
+    CompletableFuture<DescribeWebInstanceLogsResponse> describeWebInstanceLogs(DescribeWebInstanceLogsRequest request);
+
     CompletableFuture<DisableApplicationScalingRuleResponse> disableApplicationScalingRule(DisableApplicationScalingRuleRequest request);
 
     CompletableFuture<EnableApplicationScalingRuleResponse> enableApplicationScalingRule(EnableApplicationScalingRuleRequest request);
@@ -185,11 +209,21 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
 
+    CompletableFuture<ListWebApplicationInstancesResponse> listWebApplicationInstances(ListWebApplicationInstancesRequest request);
+
+    CompletableFuture<ListWebApplicationRevisionsResponse> listWebApplicationRevisions(ListWebApplicationRevisionsRequest request);
+
+    CompletableFuture<ListWebApplicationsResponse> listWebApplications(ListWebApplicationsRequest request);
+
+    CompletableFuture<ListWebCustomDomainsResponse> listWebCustomDomains(ListWebCustomDomainsRequest request);
+
     /**
       * > Make sure that your account balance is greater than 0. Otherwise, the SAE service cannot be activated.
       *
      */
     CompletableFuture<OpenSaeServiceResponse> openSaeService(OpenSaeServiceRequest request);
+
+    CompletableFuture<PublishWebApplicationRevisionResponse> publishWebApplicationRevision(PublishWebApplicationRevisionRequest request);
 
     CompletableFuture<QueryResourceStaticsResponse> queryResourceStatics(QueryResourceStaticsRequest request);
 
@@ -207,7 +241,11 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<StartApplicationResponse> startApplication(StartApplicationRequest request);
 
+    CompletableFuture<StartWebApplicationResponse> startWebApplication(StartWebApplicationRequest request);
+
     CompletableFuture<StopApplicationResponse> stopApplication(StopApplicationRequest request);
+
+    CompletableFuture<StopWebApplicationResponse> stopWebApplication(StopWebApplicationRequest request);
 
     CompletableFuture<SuspendJobResponse> suspendJob(SuspendJobRequest request);
 
@@ -243,5 +281,13 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<UpdateNamespaceVpcResponse> updateNamespaceVpc(UpdateNamespaceVpcRequest request);
 
     CompletableFuture<UpdateSecretResponse> updateSecret(UpdateSecretRequest request);
+
+    CompletableFuture<UpdateWebApplicationResponse> updateWebApplication(UpdateWebApplicationRequest request);
+
+    CompletableFuture<UpdateWebApplicationScalingConfigResponse> updateWebApplicationScalingConfig(UpdateWebApplicationScalingConfigRequest request);
+
+    CompletableFuture<UpdateWebApplicationTrafficConfigResponse> updateWebApplicationTrafficConfig(UpdateWebApplicationTrafficConfigRequest request);
+
+    CompletableFuture<UpdateWebCustomDomainResponse> updateWebCustomDomain(UpdateWebCustomDomainRequest request);
 
 }

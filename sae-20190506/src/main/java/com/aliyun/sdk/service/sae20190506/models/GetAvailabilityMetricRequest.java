@@ -96,7 +96,12 @@ public class GetAvailabilityMetricRequest extends Request {
         } 
 
         /**
-         * AppSource.
+         * The SAE application type. Valid values:
+         * <p>
+         * 
+         * *   **micro_service**
+         * *   **web**
+         * *   **job**
          */
         public Builder appSource(String appSource) {
             this.putQueryParameter("AppSource", appSource);
@@ -105,7 +110,11 @@ public class GetAvailabilityMetricRequest extends Request {
         }
 
         /**
-         * CpuStrategy.
+         * The CPU allocation policy. Valid values:
+         * <p>
+         * 
+         * *   **request**: CPU cores are allocated only when a request is initiated.
+         * *   **always**: Fixed CPU cores are always allocated.
          */
         public Builder cpuStrategy(String cpuStrategy) {
             this.putQueryParameter("CpuStrategy", cpuStrategy);
@@ -114,7 +123,7 @@ public class GetAvailabilityMetricRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The number of entries to return. Valid values: 0 to 100.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -123,7 +132,7 @@ public class GetAvailabilityMetricRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

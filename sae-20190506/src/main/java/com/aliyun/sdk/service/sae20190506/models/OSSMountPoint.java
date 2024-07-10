@@ -19,10 +19,6 @@ public class OSSMountPoint extends TeaModel {
     @com.aliyun.core.annotation.Validation(maxLength = 128)
     private String bucketPath;
 
-    @com.aliyun.core.annotation.NameInMap("endpoint")
-    @com.aliyun.core.annotation.Validation(maxLength = 128)
-    private String endpoint;
-
     @com.aliyun.core.annotation.NameInMap("mountDir")
     @com.aliyun.core.annotation.Validation(maxLength = 64, minLength = 2)
     private String mountDir;
@@ -33,7 +29,6 @@ public class OSSMountPoint extends TeaModel {
     private OSSMountPoint(Builder builder) {
         this.bucketName = builder.bucketName;
         this.bucketPath = builder.bucketPath;
-        this.endpoint = builder.endpoint;
         this.mountDir = builder.mountDir;
         this.readOnly = builder.readOnly;
     }
@@ -61,13 +56,6 @@ public class OSSMountPoint extends TeaModel {
     }
 
     /**
-     * @return endpoint
-     */
-    public String getEndpoint() {
-        return this.endpoint;
-    }
-
-    /**
      * @return mountDir
      */
     public String getMountDir() {
@@ -84,7 +72,6 @@ public class OSSMountPoint extends TeaModel {
     public static final class Builder {
         private String bucketName; 
         private String bucketPath; 
-        private String endpoint; 
         private String mountDir; 
         private Boolean readOnly; 
 
@@ -101,14 +88,6 @@ public class OSSMountPoint extends TeaModel {
          */
         public Builder bucketPath(String bucketPath) {
             this.bucketPath = bucketPath;
-            return this;
-        }
-
-        /**
-         * endpoint.
-         */
-        public Builder endpoint(String endpoint) {
-            this.endpoint = endpoint;
             return this;
         }
 
