@@ -130,9 +130,520 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
     } 
 
+    public static class BillModuleProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("AttrApiCode")
+        private String attrApiCode;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleApiCode")
+        private String moduleApiCode;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private BillModuleProperties(Builder builder) {
+            this.attrApiCode = builder.attrApiCode;
+            this.moduleApiCode = builder.moduleApiCode;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BillModuleProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return attrApiCode
+         */
+        public String getAttrApiCode() {
+            return this.attrApiCode;
+        }
+
+        /**
+         * @return moduleApiCode
+         */
+        public String getModuleApiCode() {
+            return this.moduleApiCode;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String attrApiCode; 
+            private String moduleApiCode; 
+            private String value; 
+
+            /**
+             * AttrApiCode.
+             */
+            public Builder attrApiCode(String attrApiCode) {
+                this.attrApiCode = attrApiCode;
+                return this;
+            }
+
+            /**
+             * ModuleApiCode.
+             */
+            public Builder moduleApiCode(String moduleApiCode) {
+                this.moduleApiCode = moduleApiCode;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public BillModuleProperties build() {
+                return new BillModuleProperties(this);
+            } 
+
+        } 
+
+    }
+    public static class BillModuleConfigBillModuleProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("billModuleProperties")
+        private java.util.List < BillModuleProperties> billModuleProperties;
+
+        private BillModuleConfigBillModuleProperties(Builder builder) {
+            this.billModuleProperties = builder.billModuleProperties;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BillModuleConfigBillModuleProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return billModuleProperties
+         */
+        public java.util.List < BillModuleProperties> getBillModuleProperties() {
+            return this.billModuleProperties;
+        }
+
+        public static final class Builder {
+            private java.util.List < BillModuleProperties> billModuleProperties; 
+
+            /**
+             * billModuleProperties.
+             */
+            public Builder billModuleProperties(java.util.List < BillModuleProperties> billModuleProperties) {
+                this.billModuleProperties = billModuleProperties;
+                return this;
+            }
+
+            public BillModuleConfigBillModuleProperties build() {
+                return new BillModuleConfigBillModuleProperties(this);
+            } 
+
+        } 
+
+    }
+    public static class BillModuleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiCode")
+        private String apiCode;
+
+        @com.aliyun.core.annotation.NameInMap("BillModuleProperties")
+        private BillModuleConfigBillModuleProperties billModuleProperties;
+
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private BillModuleConfig(Builder builder) {
+            this.apiCode = builder.apiCode;
+            this.billModuleProperties = builder.billModuleProperties;
+            this.code = builder.code;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static BillModuleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiCode
+         */
+        public String getApiCode() {
+            return this.apiCode;
+        }
+
+        /**
+         * @return billModuleProperties
+         */
+        public BillModuleConfigBillModuleProperties getBillModuleProperties() {
+            return this.billModuleProperties;
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String apiCode; 
+            private BillModuleConfigBillModuleProperties billModuleProperties; 
+            private String code; 
+            private String name; 
+
+            /**
+             * ApiCode.
+             */
+            public Builder apiCode(String apiCode) {
+                this.apiCode = apiCode;
+                return this;
+            }
+
+            /**
+             * BillModuleProperties.
+             */
+            public Builder billModuleProperties(BillModuleConfigBillModuleProperties billModuleProperties) {
+                this.billModuleProperties = billModuleProperties;
+                return this;
+            }
+
+            /**
+             * The status code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public BillModuleConfig build() {
+                return new BillModuleConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class OrderBillModuleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("billModuleConfig")
+        private java.util.List < BillModuleConfig> billModuleConfig;
+
+        private OrderBillModuleConfig(Builder builder) {
+            this.billModuleConfig = builder.billModuleConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrderBillModuleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return billModuleConfig
+         */
+        public java.util.List < BillModuleConfig> getBillModuleConfig() {
+            return this.billModuleConfig;
+        }
+
+        public static final class Builder {
+            private java.util.List < BillModuleConfig> billModuleConfig; 
+
+            /**
+             * billModuleConfig.
+             */
+            public Builder billModuleConfig(java.util.List < BillModuleConfig> billModuleConfig) {
+                this.billModuleConfig = billModuleConfig;
+                return this;
+            }
+
+            public OrderBillModuleConfig build() {
+                return new OrderBillModuleConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class ModuleProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private ModuleProperties(Builder builder) {
+            this.code = builder.code;
+            this.name = builder.name;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static ModuleProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private String name; 
+            private String value; 
+
+            /**
+             * The status code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public ModuleProperties build() {
+                return new ModuleProperties(this);
+            } 
+
+        } 
+
+    }
+    public static class OriginalModuleConfigModuleProperties extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("moduleProperties")
+        private java.util.List < ModuleProperties> moduleProperties;
+
+        private OriginalModuleConfigModuleProperties(Builder builder) {
+            this.moduleProperties = builder.moduleProperties;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OriginalModuleConfigModuleProperties create() {
+            return builder().build();
+        }
+
+        /**
+         * @return moduleProperties
+         */
+        public java.util.List < ModuleProperties> getModuleProperties() {
+            return this.moduleProperties;
+        }
+
+        public static final class Builder {
+            private java.util.List < ModuleProperties> moduleProperties; 
+
+            /**
+             * moduleProperties.
+             */
+            public Builder moduleProperties(java.util.List < ModuleProperties> moduleProperties) {
+                this.moduleProperties = moduleProperties;
+                return this;
+            }
+
+            public OriginalModuleConfigModuleProperties build() {
+                return new OriginalModuleConfigModuleProperties(this);
+            } 
+
+        } 
+
+    }
+    public static class OriginalModuleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Code")
+        private String code;
+
+        @com.aliyun.core.annotation.NameInMap("ModuleProperties")
+        private OriginalModuleConfigModuleProperties moduleProperties;
+
+        @com.aliyun.core.annotation.NameInMap("Name")
+        private String name;
+
+        private OriginalModuleConfig(Builder builder) {
+            this.code = builder.code;
+            this.moduleProperties = builder.moduleProperties;
+            this.name = builder.name;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OriginalModuleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return code
+         */
+        public String getCode() {
+            return this.code;
+        }
+
+        /**
+         * @return moduleProperties
+         */
+        public OriginalModuleConfigModuleProperties getModuleProperties() {
+            return this.moduleProperties;
+        }
+
+        /**
+         * @return name
+         */
+        public String getName() {
+            return this.name;
+        }
+
+        public static final class Builder {
+            private String code; 
+            private OriginalModuleConfigModuleProperties moduleProperties; 
+            private String name; 
+
+            /**
+             * The status code.
+             */
+            public Builder code(String code) {
+                this.code = code;
+                return this;
+            }
+
+            /**
+             * ModuleProperties.
+             */
+            public Builder moduleProperties(OriginalModuleConfigModuleProperties moduleProperties) {
+                this.moduleProperties = moduleProperties;
+                return this;
+            }
+
+            /**
+             * Name.
+             */
+            public Builder name(String name) {
+                this.name = name;
+                return this;
+            }
+
+            public OriginalModuleConfig build() {
+                return new OriginalModuleConfig(this);
+            } 
+
+        } 
+
+    }
+    public static class OrderOriginalModuleConfig extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("originalModuleConfig")
+        private java.util.List < OriginalModuleConfig> originalModuleConfig;
+
+        private OrderOriginalModuleConfig(Builder builder) {
+            this.originalModuleConfig = builder.originalModuleConfig;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static OrderOriginalModuleConfig create() {
+            return builder().build();
+        }
+
+        /**
+         * @return originalModuleConfig
+         */
+        public java.util.List < OriginalModuleConfig> getOriginalModuleConfig() {
+            return this.originalModuleConfig;
+        }
+
+        public static final class Builder {
+            private java.util.List < OriginalModuleConfig> originalModuleConfig; 
+
+            /**
+             * originalModuleConfig.
+             */
+            public Builder originalModuleConfig(java.util.List < OriginalModuleConfig> originalModuleConfig) {
+                this.originalModuleConfig = originalModuleConfig;
+                return this;
+            }
+
+            public OrderOriginalModuleConfig build() {
+                return new OrderOriginalModuleConfig(this);
+            } 
+
+        } 
+
+    }
     public static class Order extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("AfterTaxAmount")
         private String afterTaxAmount;
+
+        @com.aliyun.core.annotation.NameInMap("BillModuleConfig")
+        private OrderBillModuleConfig billModuleConfig;
 
         @com.aliyun.core.annotation.NameInMap("CommodityCode")
         private String commodityCode;
@@ -166,6 +677,9 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
         @com.aliyun.core.annotation.NameInMap("OriginalConfig")
         private String originalConfig;
+
+        @com.aliyun.core.annotation.NameInMap("OriginalModuleConfig")
+        private OrderOriginalModuleConfig originalModuleConfig;
 
         @com.aliyun.core.annotation.NameInMap("PaymentCurrency")
         private String paymentCurrency;
@@ -217,6 +731,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
         private Order(Builder builder) {
             this.afterTaxAmount = builder.afterTaxAmount;
+            this.billModuleConfig = builder.billModuleConfig;
             this.commodityCode = builder.commodityCode;
             this.config = builder.config;
             this.createTime = builder.createTime;
@@ -228,6 +743,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             this.orderSubType = builder.orderSubType;
             this.orderType = builder.orderType;
             this.originalConfig = builder.originalConfig;
+            this.originalModuleConfig = builder.originalModuleConfig;
             this.paymentCurrency = builder.paymentCurrency;
             this.paymentStatus = builder.paymentStatus;
             this.paymentTime = builder.paymentTime;
@@ -259,6 +775,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
          */
         public String getAfterTaxAmount() {
             return this.afterTaxAmount;
+        }
+
+        /**
+         * @return billModuleConfig
+         */
+        public OrderBillModuleConfig getBillModuleConfig() {
+            return this.billModuleConfig;
         }
 
         /**
@@ -336,6 +859,13 @@ public class GetOrderDetailResponseBody extends TeaModel {
          */
         public String getOriginalConfig() {
             return this.originalConfig;
+        }
+
+        /**
+         * @return originalModuleConfig
+         */
+        public OrderOriginalModuleConfig getOriginalModuleConfig() {
+            return this.originalModuleConfig;
         }
 
         /**
@@ -452,6 +982,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
 
         public static final class Builder {
             private String afterTaxAmount; 
+            private OrderBillModuleConfig billModuleConfig; 
             private String commodityCode; 
             private String config; 
             private String createTime; 
@@ -463,6 +994,7 @@ public class GetOrderDetailResponseBody extends TeaModel {
             private String orderSubType; 
             private String orderType; 
             private String originalConfig; 
+            private OrderOriginalModuleConfig originalModuleConfig; 
             private String paymentCurrency; 
             private String paymentStatus; 
             private String paymentTime; 
@@ -485,6 +1017,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
              */
             public Builder afterTaxAmount(String afterTaxAmount) {
                 this.afterTaxAmount = afterTaxAmount;
+                return this;
+            }
+
+            /**
+             * BillModuleConfig.
+             */
+            public Builder billModuleConfig(OrderBillModuleConfig billModuleConfig) {
+                this.billModuleConfig = billModuleConfig;
                 return this;
             }
 
@@ -586,6 +1126,14 @@ public class GetOrderDetailResponseBody extends TeaModel {
              */
             public Builder originalConfig(String originalConfig) {
                 this.originalConfig = originalConfig;
+                return this;
+            }
+
+            /**
+             * OriginalModuleConfig.
+             */
+            public Builder originalModuleConfig(OrderOriginalModuleConfig originalModuleConfig) {
+                this.originalModuleConfig = originalModuleConfig;
                 return this;
             }
 
