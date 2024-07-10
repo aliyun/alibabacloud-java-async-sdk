@@ -18,7 +18,6 @@ public class QueryDeviceStatRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("DeviceType")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String deviceType;
 
     @com.aliyun.core.annotation.Query
