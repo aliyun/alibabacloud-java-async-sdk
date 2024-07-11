@@ -301,7 +301,7 @@ public class GetSecretParameterResponseBody extends TeaModel {
             }
 
             /**
-             * DKMSInstanceId.
+             * The instance ID of the KMS instance.
              */
             public Builder DKMSInstanceId(String DKMSInstanceId) {
                 this.DKMSInstanceId = DKMSInstanceId;

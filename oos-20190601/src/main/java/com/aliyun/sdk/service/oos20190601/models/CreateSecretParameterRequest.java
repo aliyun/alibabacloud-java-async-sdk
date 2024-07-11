@@ -219,7 +219,7 @@ public class CreateSecretParameterRequest extends Request {
         }
 
         /**
-         * DKMSInstanceId.
+         * The instance ID of the KMS instance.
          */
         public Builder DKMSInstanceId(String DKMSInstanceId) {
             this.putQueryParameter("DKMSInstanceId", DKMSInstanceId);

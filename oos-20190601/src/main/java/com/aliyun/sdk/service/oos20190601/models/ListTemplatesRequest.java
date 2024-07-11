@@ -32,6 +32,10 @@ public class ListTemplatesRequest extends Request {
     private Boolean hasTrigger;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsExample")
+    private Boolean isExample;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("IsFavorite")
     private Boolean isFavorite;
 
@@ -86,6 +90,7 @@ public class ListTemplatesRequest extends Request {
         this.createdDateAfter = builder.createdDateAfter;
         this.createdDateBefore = builder.createdDateBefore;
         this.hasTrigger = builder.hasTrigger;
+        this.isExample = builder.isExample;
         this.isFavorite = builder.isFavorite;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
@@ -146,6 +151,13 @@ public class ListTemplatesRequest extends Request {
      */
     public Boolean getHasTrigger() {
         return this.hasTrigger;
+    }
+
+    /**
+     * @return isExample
+     */
+    public Boolean getIsExample() {
+        return this.isExample;
     }
 
     /**
@@ -238,6 +250,7 @@ public class ListTemplatesRequest extends Request {
         private String createdDateAfter; 
         private String createdDateBefore; 
         private Boolean hasTrigger; 
+        private Boolean isExample; 
         private Boolean isFavorite; 
         private Integer maxResults; 
         private String nextToken; 
@@ -262,6 +275,7 @@ public class ListTemplatesRequest extends Request {
             this.createdDateAfter = request.createdDateAfter;
             this.createdDateBefore = request.createdDateBefore;
             this.hasTrigger = request.hasTrigger;
+            this.isExample = request.isExample;
             this.isFavorite = request.isFavorite;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
@@ -328,6 +342,15 @@ public class ListTemplatesRequest extends Request {
         public Builder hasTrigger(Boolean hasTrigger) {
             this.putQueryParameter("HasTrigger", hasTrigger);
             this.hasTrigger = hasTrigger;
+            return this;
+        }
+
+        /**
+         * IsExample.
+         */
+        public Builder isExample(Boolean isExample) {
+            this.putQueryParameter("IsExample", isExample);
+            this.isExample = isExample;
             return this;
         }
 

@@ -37,6 +37,10 @@ public class ListGitRepositoriesRequest extends Request {
     @com.aliyun.core.annotation.Validation(required = true)
     private String platform;
 
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    private String regionId;
+
     private ListGitRepositoriesRequest(Builder builder) {
         super(builder);
         this.clientToken = builder.clientToken;
@@ -45,6 +49,7 @@ public class ListGitRepositoriesRequest extends Request {
         this.pageNumber = builder.pageNumber;
         this.pageSize = builder.pageSize;
         this.platform = builder.platform;
+        this.regionId = builder.regionId;
     }
 
     public static Builder builder() {
@@ -102,6 +107,13 @@ public class ListGitRepositoriesRequest extends Request {
         return this.platform;
     }
 
+    /**
+     * @return regionId
+     */
+    public String getRegionId() {
+        return this.regionId;
+    }
+
     public static final class Builder extends Request.Builder<ListGitRepositoriesRequest, Builder> {
         private String clientToken; 
         private String orgName; 
@@ -109,6 +121,7 @@ public class ListGitRepositoriesRequest extends Request {
         private Integer pageNumber; 
         private Integer pageSize; 
         private String platform; 
+        private String regionId; 
 
         private Builder() {
             super();
@@ -122,6 +135,7 @@ public class ListGitRepositoriesRequest extends Request {
             this.pageNumber = request.pageNumber;
             this.pageSize = request.pageSize;
             this.platform = request.platform;
+            this.regionId = request.regionId;
         } 
 
         /**
@@ -175,6 +189,15 @@ public class ListGitRepositoriesRequest extends Request {
         public Builder platform(String platform) {
             this.putQueryParameter("Platform", platform);
             this.platform = platform;
+            return this;
+        }
+
+        /**
+         * RegionId.
+         */
+        public Builder regionId(String regionId) {
+            this.putQueryParameter("RegionId", regionId);
+            this.regionId = regionId;
             return this;
         }
 
