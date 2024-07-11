@@ -85,7 +85,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +93,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +101,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectFlow.
+         * The information about the schema design process.
          */
         public Builder projectFlow(ProjectFlow projectFlow) {
             this.projectFlow = projectFlow;
@@ -109,7 +109,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -229,7 +233,11 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             private java.util.List < String > publishStrategies; 
 
             /**
-             * BackToDesign.
+             * Indicates whether the ticket can be returned to the schema design node. Valid values:
+             * <p>
+             * 
+             * *   **1**: The ticket can be returned to the schema design node.
+             * *   **0**: The ticket cannot be returned to the schema design node. This value can be returned only for the PUBLISH node.
              */
             public Builder backToDesign(Boolean backToDesign) {
                 this.backToDesign = backToDesign;
@@ -237,7 +245,11 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * CanSkip.
+             * Indicates whether the current node can be skipped. Valid values:
+             * <p>
+             * 
+             * *   **1**: The current node can be skipped.
+             * *   **0**: The current node cannot be skipped. This value can be returned only for the PUBLISH node.
              */
             public Builder canSkip(Boolean canSkip) {
                 this.canSkip = canSkip;
@@ -245,7 +257,13 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeRole.
+             * The role of the node in the process.
+             * <p>
+             * 
+             * *   START: The ticket was created.
+             * *   DESIGN: The schema is being created.
+             * *   PUBLISH: The schema is published.
+             * *   END: The ticket is complete.
              */
             public Builder nodeRole(String nodeRole) {
                 this.nodeRole = nodeRole;
@@ -253,7 +271,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * NodeTitle.
+             * The title of the node.
              */
             public Builder nodeTitle(String nodeTitle) {
                 this.nodeTitle = nodeTitle;
@@ -261,7 +279,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * Position.
+             * The position of the node in the process. The value starts from 1.
              */
             public Builder position(Integer position) {
                 this.position = position;
@@ -269,7 +287,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * PublishAnchor.
+             * Indicates whether the node is the anchor node. A schema design process has only one anchor node, on which the schema is published. After the schema is published on the anchor node, a post-publish image is generated and the DDL metadata lock is released.
              */
             public Builder publishAnchor(Boolean publishAnchor) {
                 this.publishAnchor = publishAnchor;
@@ -277,7 +295,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * PublishStrategies.
+             * The available publishing strategies.
              */
             public Builder publishStrategies(java.util.List < String > publishStrategies) {
                 this.publishStrategies = publishStrategies;
@@ -354,7 +372,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             private String ruleName; 
 
             /**
-             * CurrentPosition.
+             * The position of the current node in the process.
              */
             public Builder currentPosition(Integer currentPosition) {
                 this.currentPosition = currentPosition;
@@ -362,7 +380,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * FlowNodeArray.
+             * The nodes in the process.
              */
             public Builder flowNodeArray(java.util.List < FlowNodeArray> flowNodeArray) {
                 this.flowNodeArray = flowNodeArray;
@@ -370,7 +388,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RuleComment.
+             * The description of the security rule set that is applied to the schema design ticket.
              */
             public Builder ruleComment(String ruleComment) {
                 this.ruleComment = ruleComment;
@@ -378,7 +396,7 @@ public class GetTableDesignProjectFlowResponseBody extends TeaModel {
             }
 
             /**
-             * RuleName.
+             * The name of the security rule set that is applied to the schema design ticket.
              */
             public Builder ruleName(String ruleName) {
                 this.ruleName = ruleName;

@@ -45,6 +45,10 @@ public class ApproveOrderRequest extends Request {
     private Long oldApprover;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
@@ -63,6 +67,7 @@ public class ApproveOrderRequest extends Request {
         this.newApprover = builder.newApprover;
         this.newApproverList = builder.newApproverList;
         this.oldApprover = builder.oldApprover;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tid = builder.tid;
         this.workflowInstanceId = builder.workflowInstanceId;
     }
@@ -137,6 +142,13 @@ public class ApproveOrderRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -159,6 +171,7 @@ public class ApproveOrderRequest extends Request {
         private Long newApprover; 
         private String newApproverList; 
         private Long oldApprover; 
+        private String realLoginUserUid; 
         private Long tid; 
         private Long workflowInstanceId; 
 
@@ -176,6 +189,7 @@ public class ApproveOrderRequest extends Request {
             this.newApprover = request.newApprover;
             this.newApproverList = request.newApproverList;
             this.oldApprover = request.oldApprover;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tid = request.tid;
             this.workflowInstanceId = request.workflowInstanceId;
         } 
@@ -260,6 +274,15 @@ public class ApproveOrderRequest extends Request {
         public Builder oldApprover(Long oldApprover) {
             this.putQueryParameter("OldApprover", oldApprover);
             this.oldApprover = oldApprover;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

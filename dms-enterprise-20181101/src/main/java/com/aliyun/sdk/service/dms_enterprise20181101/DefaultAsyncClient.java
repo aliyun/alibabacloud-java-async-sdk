@@ -269,6 +269,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can call this API operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     @Override
     public CompletableFuture<CreateDataArchiveOrderResponse> createDataArchiveOrder(CreateDataArchiveOrderRequest request) {
         try {

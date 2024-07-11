@@ -25,6 +25,10 @@ public class ExecuteDataExportRequest extends Request {
     private Long orderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("Tid")
     private Long tid;
 
@@ -33,6 +37,7 @@ public class ExecuteDataExportRequest extends Request {
         this.regionId = builder.regionId;
         this.actionDetail = builder.actionDetail;
         this.orderId = builder.orderId;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.tid = builder.tid;
     }
 
@@ -71,6 +76,13 @@ public class ExecuteDataExportRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return tid
      */
     public Long getTid() {
@@ -81,6 +93,7 @@ public class ExecuteDataExportRequest extends Request {
         private String regionId; 
         private java.util.Map < String, ? > actionDetail; 
         private Long orderId; 
+        private String realLoginUserUid; 
         private Long tid; 
 
         private Builder() {
@@ -92,6 +105,7 @@ public class ExecuteDataExportRequest extends Request {
             this.regionId = request.regionId;
             this.actionDetail = request.actionDetail;
             this.orderId = request.orderId;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.tid = request.tid;
         } 
 
@@ -128,6 +142,15 @@ public class ExecuteDataExportRequest extends Request {
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 

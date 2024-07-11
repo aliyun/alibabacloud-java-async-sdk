@@ -81,6 +81,10 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<CreateAuthorityTemplateResponse> createAuthorityTemplate(CreateAuthorityTemplateRequest request);
 
+    /**
+      * You can call this API operation only for database instances that are managed in Security Collaboration mode.
+      *
+     */
     CompletableFuture<CreateDataArchiveOrderResponse> createDataArchiveOrder(CreateDataArchiveOrderRequest request);
 
     /**

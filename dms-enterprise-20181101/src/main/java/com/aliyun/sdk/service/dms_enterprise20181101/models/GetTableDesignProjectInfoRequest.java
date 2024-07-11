@@ -92,7 +92,7 @@ public class GetTableDesignProjectInfoRequest extends Request {
         }
 
         /**
-         * OrderId.
+         * The ID of the schema design ticket. You can call the [ListOrders](~~465867~~) operation to obtain the ID.
          */
         public Builder orderId(Long orderId) {
             this.putQueryParameter("OrderId", orderId);
@@ -101,7 +101,10 @@ public class GetTableDesignProjectInfoRequest extends Request {
         }
 
         /**
-         * Tid.
+         * The tenant ID.
+         * <p>
+         * 
+         * >  To view the tenant ID, go to the Data Management (DMS) console and move the pointer over the profile picture in the upper-right corner. For more information, see [View information about the current tenant](~~181330~~) section of the "Manage DMS tenants" topic
          */
         public Builder tid(Long tid) {
             this.putQueryParameter("Tid", tid);

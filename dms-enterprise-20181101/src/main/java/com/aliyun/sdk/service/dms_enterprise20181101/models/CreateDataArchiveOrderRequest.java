@@ -517,12 +517,12 @@ public class CreateDataArchiveOrderRequest extends Request {
              * 
              * >  If you set ArchiveMethod to a value other than inner_oss, you must connect the destination database for archiving data to Data Management (DMS) before you create the data archiving ticket. After the database is connected to DMS, the database is displayed in the Instances Connected section of the DMS console.
              * 
-             * *   **inner_oss**: dedicated storage, which is a built-in Object Storage Service (OSS) bucket.
-             * *   **oss_userself**: OSS bucket of the user.
+             * *   **inner_oss**: dedicated storage space, which is a built-in space.
+             * *   **oss_userself**: Object Storage Service (OSS) bucket of the user.
              * *   **mysql**: ApsaraDB RDS for MySQL instance.
              * *   **polardb**: PolarDB for MySQL cluster.
              * *   **adb_mysql**: AnalyticDB for MySQL V3.0 cluster.
-             * *   **lindorm**: ApsaraDB for Lindorm instance.
+             * *   **lindorm**: Lindorm instance.
              */
             public Builder archiveMethod(String archiveMethod) {
                 this.archiveMethod = archiveMethod;
@@ -578,7 +578,7 @@ public class CreateDataArchiveOrderRequest extends Request {
              * <p>
              * 
              * *   **def**: Set this parameter to def if the source database is of the two-layer logical schema, such as a MySQL database, a PolarDB for MySQL cluster, or an AnalyticDB for MySQL instance.
-             * *   **An empty string**: Set this parameter to an empty string if the source database is an ApsaraDB for Lindorm or ApsaraDB for MongoDB instance.
+             * *   **Empty string**: Set this parameter to an empty string if the source database is a Lindorm or ApsaraDB for MongoDB instance.
              * *   **Catalog name**: Set this parameter to the catalog name of the source database if the source database is of the three-layer logical schema, such as a PostgreSQL database.
              */
             public Builder sourceCatalogName(String sourceCatalogName) {
@@ -611,7 +611,7 @@ public class CreateDataArchiveOrderRequest extends Request {
             }
 
             /**
-             * The table names mapped to the destination database. If you call an API operation to create the data archiving ticket, you do not need to specify this parameter. The default value is used.
+             * The table names mapped to the destination database. This parameter is not required and the default value is used.
              */
             public Builder tableMapping(java.util.List < String > tableMapping) {
                 this.tableMapping = tableMapping;
@@ -622,8 +622,8 @@ public class CreateDataArchiveOrderRequest extends Request {
              * The host of the destination instance. If the destination instance can be accessed over an internal network or the Internet, preferentially set the value to the internal endpoint of the destination instance.
              * <p>
              * 
-             * *   If the data is archived in an OSS bucket, set the value to the name of the bucket.
-             * *   If the data is archived in the dedicated storage space, set the value to inner_oss.
+             * *   If data is archived in an OSS bucket, set the value to the name of the bucket.
+             * *   If data is archived in dedicated storage space, set the value to inner_oss.
              */
             public Builder targetInstanceHost(String targetInstanceHost) {
                 this.targetInstanceHost = targetInstanceHost;

@@ -85,7 +85,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * ErrorCode.
+         * The error code returned if the request failed.
          */
         public Builder errorCode(String errorCode) {
             this.errorCode = errorCode;
@@ -93,7 +93,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ErrorMessage.
+         * The error message returned if the request failed.
          */
         public Builder errorMessage(String errorMessage) {
             this.errorMessage = errorMessage;
@@ -101,7 +101,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * ProjectInfo.
+         * The information about the schema design project.
          */
         public Builder projectInfo(ProjectInfo projectInfo) {
             this.projectInfo = projectInfo;
@@ -109,7 +109,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID. You can use the request ID to query logs and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,11 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. Valid values:
+         * <p>
+         * 
+         * *   **true**
+         * *   **false**
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -229,7 +233,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private String searchName; 
 
             /**
-             * Alias.
+             * The alias of the database instance.
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -237,7 +241,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DbId.
+             * The database ID.
              */
             public Builder dbId(Integer dbId) {
                 this.dbId = dbId;
@@ -245,7 +249,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * DbType.
+             * The type of the database. For more information about the valid values of this parameter, see [DbType parameter](~~198106~~).
              */
             public Builder dbType(String dbType) {
                 this.dbType = dbType;
@@ -253,7 +257,17 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * EnvType.
+             * The type of the environment in which the database instance is deployed. Valid values:
+             * <p>
+             * 
+             * *   **product**: production environment.
+             * *   **dev**: development environment.
+             * *   **pre**: pre-release environment.
+             * *   **test**: test environment.
+             * *   **sit**: system integration testing (SIT) environment.
+             * *   **uat**: user acceptance testing (UAT) environment.
+             * *   **pet**: stress testing environment.
+             * *   **stag**: staging environment.
              */
             public Builder envType(String envType) {
                 this.envType = envType;
@@ -261,7 +275,11 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Logic.
+             * Indicates whether the database is a logical database. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder logic(Boolean logic) {
                 this.logic = logic;
@@ -269,7 +287,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SchemaName.
+             * The database name.
              */
             public Builder schemaName(String schemaName) {
                 this.schemaName = schemaName;
@@ -277,7 +295,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * SearchName.
+             * The name that is used to search for the database.
              */
             public Builder searchName(String searchName) {
                 this.searchName = searchName;
@@ -414,7 +432,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             private String title; 
 
             /**
-             * BaseDatabase.
+             * The information about the change base database of the schema design ticket.
              */
             public Builder baseDatabase(BaseDatabase baseDatabase) {
                 this.baseDatabase = baseDatabase;
@@ -422,7 +440,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * CreatorId.
+             * The ID of the user who created the ticket.
              */
             public Builder creatorId(Long creatorId) {
                 this.creatorId = creatorId;
@@ -430,7 +448,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the schema design project.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -438,7 +456,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the ticket was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -446,7 +464,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the ticket was last modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -454,7 +472,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * OrderId.
+             * The ticket ID.
              */
             public Builder orderId(Long orderId) {
                 this.orderId = orderId;
@@ -462,7 +480,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * ProjectId.
+             * The project ID.
              */
             public Builder projectId(Long projectId) {
                 this.projectId = projectId;
@@ -470,7 +488,12 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the schema design project. Valid values:
+             * <p>
+             * 
+             * *   **DESIGN**: The schema is being designed.
+             * *   **PUBLISHED**: The schema is published.
+             * *   **CLOSE**: The ticket is closed.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -478,7 +501,7 @@ public class GetTableDesignProjectInfoResponseBody extends TeaModel {
             }
 
             /**
-             * Title.
+             * The name of the schema design project.
              */
             public Builder title(String title) {
                 this.title = title;

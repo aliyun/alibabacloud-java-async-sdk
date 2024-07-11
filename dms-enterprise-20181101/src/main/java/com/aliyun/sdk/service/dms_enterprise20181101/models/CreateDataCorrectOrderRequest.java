@@ -30,6 +30,10 @@ public class CreateDataCorrectOrderRequest extends Request {
     private Param param;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RealLoginUserUid")
+    private String realLoginUserUid;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RelatedUserList")
     private java.util.List < Long > relatedUserList;
 
@@ -44,6 +48,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         this.attachmentKey = builder.attachmentKey;
         this.comment = builder.comment;
         this.param = builder.param;
+        this.realLoginUserUid = builder.realLoginUserUid;
         this.relatedUserList = builder.relatedUserList;
         this.tid = builder.tid;
     }
@@ -90,6 +95,13 @@ public class CreateDataCorrectOrderRequest extends Request {
     }
 
     /**
+     * @return realLoginUserUid
+     */
+    public String getRealLoginUserUid() {
+        return this.realLoginUserUid;
+    }
+
+    /**
      * @return relatedUserList
      */
     public java.util.List < Long > getRelatedUserList() {
@@ -108,6 +120,7 @@ public class CreateDataCorrectOrderRequest extends Request {
         private String attachmentKey; 
         private String comment; 
         private Param param; 
+        private String realLoginUserUid; 
         private java.util.List < Long > relatedUserList; 
         private Long tid; 
 
@@ -121,6 +134,7 @@ public class CreateDataCorrectOrderRequest extends Request {
             this.attachmentKey = request.attachmentKey;
             this.comment = request.comment;
             this.param = request.param;
+            this.realLoginUserUid = request.realLoginUserUid;
             this.relatedUserList = request.relatedUserList;
             this.tid = request.tid;
         } 
@@ -159,6 +173,15 @@ public class CreateDataCorrectOrderRequest extends Request {
             String paramShrink = shrink(param, "Param", "json");
             this.putQueryParameter("Param", paramShrink);
             this.param = param;
+            return this;
+        }
+
+        /**
+         * RealLoginUserUid.
+         */
+        public Builder realLoginUserUid(String realLoginUserUid) {
+            this.putQueryParameter("RealLoginUserUid", realLoginUserUid);
+            this.realLoginUserUid = realLoginUserUid;
             return this;
         }
 
