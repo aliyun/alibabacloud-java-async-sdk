@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueConsumersResponseBody</p>
  */
 public class ListQueueConsumersResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListQueueConsumersResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,7 +71,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
     } 
 
     public static class Consumers extends TeaModel {
-        @NameInMap("ConsumerTag")
+        @com.aliyun.core.annotation.NameInMap("ConsumerTag")
         private String consumerTag;
 
         private Consumers(Builder builder) {
@@ -98,7 +97,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             private String consumerTag; 
 
             /**
-             * ConsumerTag.
+             * The consumer tag.
              */
             public Builder consumerTag(String consumerTag) {
                 this.consumerTag = consumerTag;
@@ -113,13 +112,13 @@ public class ListQueueConsumersResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Consumers")
+        @com.aliyun.core.annotation.NameInMap("Consumers")
         private java.util.List < Consumers> consumers;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -163,7 +162,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * Consumers.
+             * The consumers.
              */
             public Builder consumers(java.util.List < Consumers> consumers) {
                 this.consumers = consumers;
@@ -171,7 +170,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * The maximum number of entries returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -179,7 +178,7 @@ public class ListQueueConsumersResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

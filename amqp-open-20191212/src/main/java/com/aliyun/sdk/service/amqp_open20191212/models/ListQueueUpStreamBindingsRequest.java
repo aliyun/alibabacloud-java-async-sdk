@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueUpStreamBindingsRequest</p>
  */
 public class ListQueueUpStreamBindingsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
-    @Query
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private ListQueueUpStreamBindingsRequest(Builder builder) {
@@ -138,7 +136,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +145,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -156,7 +154,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -165,7 +163,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The queue name.
          */
         public Builder queueName(String queueName) {
             this.putQueryParameter("QueueName", queueName);
@@ -174,7 +172,7 @@ public class ListQueueUpStreamBindingsRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The virtual host (vhost) name.
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

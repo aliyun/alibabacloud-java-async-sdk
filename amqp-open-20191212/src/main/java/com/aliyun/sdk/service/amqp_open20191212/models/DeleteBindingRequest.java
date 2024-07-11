@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,39 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteBindingRequest</p>
  */
 public class DeleteBindingRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("BindingKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindingKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindingKey;
 
-    @Body
-    @NameInMap("BindingType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("BindingType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bindingType;
 
-    @Body
-    @NameInMap("DestinationName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DestinationName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String destinationName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("SourceExchange")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SourceExchange")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String sourceExchange;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private DeleteBindingRequest(Builder builder) {
@@ -154,7 +152,7 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * BindingKey.
+         * The binding key.
          */
         public Builder bindingKey(String bindingKey) {
             this.putBodyParameter("BindingKey", bindingKey);
@@ -163,7 +161,11 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * BindingType.
+         * The type of the object that you want to unbind from the source exchange. Valid values:
+         * <p>
+         * 
+         * *   **QUEUE**
+         * *   **EXCHANGE**
          */
         public Builder bindingType(String bindingType) {
             this.putBodyParameter("BindingType", bindingType);
@@ -172,7 +174,7 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * DestinationName.
+         * The name of the object that you want to unbind from the source exchange.
          */
         public Builder destinationName(String destinationName) {
             this.putBodyParameter("DestinationName", destinationName);
@@ -181,7 +183,7 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -190,7 +192,7 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * SourceExchange.
+         * The name of the source exchange.
          */
         public Builder sourceExchange(String sourceExchange) {
             this.putBodyParameter("SourceExchange", sourceExchange);
@@ -199,7 +201,7 @@ public class DeleteBindingRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The vhost name.
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

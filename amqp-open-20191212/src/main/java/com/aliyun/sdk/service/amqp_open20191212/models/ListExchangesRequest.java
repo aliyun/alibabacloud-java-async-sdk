@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,27 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExchangesRequest</p>
  */
 public class ListExchangesRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private ListExchangesRequest(Builder builder) {
@@ -123,7 +121,7 @@ public class ListExchangesRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -132,7 +130,7 @@ public class ListExchangesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return. Valid values: **1 to 100**
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -141,7 +139,11 @@ public class ListExchangesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. Valid values:
+         * <p>
+         * 
+         * *   If you call this operation for the first time or a next query is not required, leave this parameter empty.
+         * *   If a next query is to be sent, set the value to the value of `NextToken` that is returned from the previous request.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -150,7 +152,7 @@ public class ListExchangesRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The vhost name.
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

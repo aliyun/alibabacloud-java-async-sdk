@@ -6,11 +6,11 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ListQueueUpStreamBindingsResponse} extends {@link TeaModel}
+ * {@link UpdateInstanceResponse} extends {@link TeaModel}
  *
- * <p>ListQueueUpStreamBindingsResponse</p>
+ * <p>UpdateInstanceResponse</p>
  */
-public class ListQueueUpStreamBindingsResponse extends Response {
+public class UpdateInstanceResponse extends Response {
     @com.aliyun.core.annotation.NameInMap("headers")
     private java.util.Map < String, String > headers;
 
@@ -18,16 +18,16 @@ public class ListQueueUpStreamBindingsResponse extends Response {
     private Integer statusCode;
 
     @com.aliyun.core.annotation.NameInMap("body")
-    private ListQueueUpStreamBindingsResponseBody body;
+    private UpdateInstanceResponseBody body;
 
-    private ListQueueUpStreamBindingsResponse(BuilderImpl builder) {
+    private UpdateInstanceResponse(BuilderImpl builder) {
         super(builder);
         this.headers = builder.headers;
         this.statusCode = builder.statusCode;
         this.body = builder.body;
     }
 
-    public static ListQueueUpStreamBindingsResponse create() {
+    public static UpdateInstanceResponse create() {
         return new BuilderImpl().build();
     }
 
@@ -53,35 +53,35 @@ public class ListQueueUpStreamBindingsResponse extends Response {
     /**
      * @return body
      */
-    public ListQueueUpStreamBindingsResponseBody getBody() {
+    public UpdateInstanceResponseBody getBody() {
         return this.body;
     }
 
-    public interface Builder extends Response.Builder<ListQueueUpStreamBindingsResponse, Builder> {
+    public interface Builder extends Response.Builder<UpdateInstanceResponse, Builder> {
 
         Builder headers(java.util.Map < String, String > headers);
 
         Builder statusCode(Integer statusCode);
 
-        Builder body(ListQueueUpStreamBindingsResponseBody body);
+        Builder body(UpdateInstanceResponseBody body);
 
         @Override
-        ListQueueUpStreamBindingsResponse build();
+        UpdateInstanceResponse build();
 
     } 
 
     private static final class BuilderImpl
-            extends Response.BuilderImpl<ListQueueUpStreamBindingsResponse, Builder>
+            extends Response.BuilderImpl<UpdateInstanceResponse, Builder>
             implements Builder {
         private java.util.Map < String, String > headers; 
         private Integer statusCode; 
-        private ListQueueUpStreamBindingsResponseBody body; 
+        private UpdateInstanceResponseBody body; 
 
         private BuilderImpl() {
             super();
         } 
 
-        private BuilderImpl(ListQueueUpStreamBindingsResponse response) {
+        private BuilderImpl(UpdateInstanceResponse response) {
             super(response);
             this.headers = response.headers;
             this.statusCode = response.statusCode;
@@ -110,14 +110,14 @@ public class ListQueueUpStreamBindingsResponse extends Response {
          * body.
          */
         @Override
-        public Builder body(ListQueueUpStreamBindingsResponseBody body) {
+        public Builder body(UpdateInstanceResponseBody body) {
             this.body = body;
             return this;
         }
 
         @Override
-        public ListQueueUpStreamBindingsResponse build() {
-            return new ListQueueUpStreamBindingsResponse(this);
+        public UpdateInstanceResponse build() {
+            return new UpdateInstanceResponse(this);
         } 
 
     } 

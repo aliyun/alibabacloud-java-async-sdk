@@ -39,6 +39,9 @@ public final class DefaultAsyncClient implements AsyncClient {
         this.handler.close();
     }
 
+    /**
+      *
+     */
     @Override
     public CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request) {
         try {
@@ -151,6 +154,12 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ## [](#)Usage notes
+      * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+      * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+      *
+     */
     @Override
     public CompletableFuture<DeleteExchangeResponse> deleteExchange(DeleteExchangeRequest request) {
         try {
@@ -179,6 +188,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+      *
+     */
     @Override
     public CompletableFuture<DeleteVirtualHostResponse> deleteVirtualHost(DeleteVirtualHostRequest request) {
         try {
@@ -291,6 +304,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+      *
+     */
     @Override
     public CompletableFuture<ListQueueConsumersResponse> listQueueConsumers(ListQueueConsumersRequest request) {
         try {
@@ -342,6 +359,20 @@ public final class DefaultAsyncClient implements AsyncClient {
             return this.handler.execute(params);
         } catch (Exception e) {
             CompletableFuture<ListVirtualHostsResponse> future = new CompletableFuture<>();
+            future.completeExceptionally(e);
+            return future;
+        }
+    }
+
+    @Override
+    public CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request) {
+        try {
+            this.handler.validateRequestModel(request);
+            TeaRequest teaRequest = REQUEST.copy().setStyle(RequestStyle.RPC).setAction("UpdateInstance").setMethod(HttpMethod.POST).setPathRegex("/").setBodyType(BodyType.JSON).setBodyIsForm(false).setReqBodyType(BodyType.JSON).formModel(request);
+            ClientExecutionParams params = new ClientExecutionParams().withInput(request).withRequest(teaRequest).withOutput(UpdateInstanceResponse.create());
+            return this.handler.execute(params);
+        } catch (Exception e) {
+            CompletableFuture<UpdateInstanceResponse> future = new CompletableFuture<>();
             future.completeExceptionally(e);
             return future;
         }

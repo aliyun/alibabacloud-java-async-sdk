@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DataValue</p>
  */
 public class DataValue extends TeaModel {
-    @NameInMap("masterUid")
+    @com.aliyun.core.annotation.NameInMap("masterUid")
     private Long masterUid;
 
-    @NameInMap("cInstanceId")
+    @com.aliyun.core.annotation.NameInMap("cInstanceId")
     private String cInstanceId;
 
-    @NameInMap("accessKey")
+    @com.aliyun.core.annotation.NameInMap("accessKey")
     private String accessKey;
 
-    @NameInMap("userName")
+    @com.aliyun.core.annotation.NameInMap("userName")
     private String userName;
 
-    @NameInMap("password")
+    @com.aliyun.core.annotation.NameInMap("password")
     private String password;
 
-    @NameInMap("deleted")
+    @com.aliyun.core.annotation.NameInMap("deleted")
     private Long deleted;
 
-    @NameInMap("createTimestamp")
+    @com.aliyun.core.annotation.NameInMap("createTimestamp")
     private Long createTimestamp;
 
     private DataValue(Builder builder) {
@@ -110,7 +109,7 @@ public class DataValue extends TeaModel {
         private Long createTimestamp; 
 
         /**
-         * masterUid.
+         * The Alibaba Cloud account ID or Resource Access Management (RAM) user to which the AccessKey pair that is used to create the static username and password belongs.
          */
         public Builder masterUid(Long masterUid) {
             this.masterUid = masterUid;
@@ -118,7 +117,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * cInstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance.
          */
         public Builder cInstanceId(String cInstanceId) {
             this.cInstanceId = cInstanceId;
@@ -126,7 +125,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * accessKey.
+         * The AccessKey ID that is used to create the static username and password.
          */
         public Builder accessKey(String accessKey) {
             this.accessKey = accessKey;
@@ -134,7 +133,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * userName.
+         * The static username.
          */
         public Builder userName(String userName) {
             this.userName = userName;
@@ -142,7 +141,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * password.
+         * The static password.
          */
         public Builder password(String password) {
             this.password = password;
@@ -150,7 +149,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * deleted.
+         * The timestamp that indicates when the static username and password were deleted. Unit: milliseconds.
          */
         public Builder deleted(Long deleted) {
             this.deleted = deleted;
@@ -158,7 +157,7 @@ public class DataValue extends TeaModel {
         }
 
         /**
-         * createTimestamp.
+         * The timestamp that indicates when the static username and password were created. Unit: milliseconds.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.createTimestamp = createTimestamp;

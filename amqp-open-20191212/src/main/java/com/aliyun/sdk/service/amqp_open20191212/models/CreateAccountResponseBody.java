@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccountResponseBody</p>
  */
 public class CreateAccountResponseBody extends TeaModel {
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
     private CreateAccountResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class CreateAccountResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The HTTP status code. The status code 200 indicates that the request was successful.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -94,7 +93,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -102,7 +101,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The returned message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -110,7 +109,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class CreateAccountResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the call is successful.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -132,22 +131,22 @@ public class CreateAccountResponseBody extends TeaModel {
     } 
 
     public static class Data extends TeaModel {
-        @NameInMap("AccessKey")
+        @com.aliyun.core.annotation.NameInMap("AccessKey")
         private String accessKey;
 
-        @NameInMap("CreateTimeStamp")
+        @com.aliyun.core.annotation.NameInMap("CreateTimeStamp")
         private Long createTimeStamp;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("MasterUId")
+        @com.aliyun.core.annotation.NameInMap("MasterUId")
         private Long masterUId;
 
-        @NameInMap("Password")
+        @com.aliyun.core.annotation.NameInMap("Password")
         private String password;
 
-        @NameInMap("UserName")
+        @com.aliyun.core.annotation.NameInMap("UserName")
         private String userName;
 
         private Data(Builder builder) {
@@ -218,7 +217,7 @@ public class CreateAccountResponseBody extends TeaModel {
             private String userName; 
 
             /**
-             * AccessKey ID。
+             * The AccessKey ID that is used to create the password.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -226,7 +225,7 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTimeStamp.
+             * The timestamp that indicates when the password was created. Unit: milliseconds.
              */
             public Builder createTimeStamp(Long createTimeStamp) {
                 this.createTimeStamp = createTimeStamp;
@@ -234,7 +233,7 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the ApsaraMQ for RabbitMQ instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -242,7 +241,7 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * MasterUId.
+             * The Alibaba Cloud account ID or RAM user to which the AccessKey pair that is used to create the static username and password belongs.
              */
             public Builder masterUId(Long masterUId) {
                 this.masterUId = masterUId;
@@ -250,7 +249,7 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The created static password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -258,7 +257,7 @@ public class CreateAccountResponseBody extends TeaModel {
             }
 
             /**
-             * UserName.
+             * The created static username.
              */
             public Builder userName(String userName) {
                 this.userName = userName;

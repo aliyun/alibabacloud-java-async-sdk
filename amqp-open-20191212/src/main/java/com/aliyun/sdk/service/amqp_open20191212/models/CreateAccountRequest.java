@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,38 +11,38 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateAccountRequest</p>
  */
 public class CreateAccountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("accountAccessKey")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("accountAccessKey")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String accountAccessKey;
 
-    @Query
-    @NameInMap("createTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("createTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long createTimestamp;
 
-    @Query
-    @NameInMap("instanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("instanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("secretSign")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("secretSign")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String secretSign;
 
-    @Query
-    @NameInMap("signature")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("signature")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String signature;
 
-    @Query
-    @NameInMap("userName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("userName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private CreateAccountRequest(Builder builder) {
@@ -153,7 +152,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * accountAccessKey.
+         * The AccessKey ID of your Alibaba Cloud account or RAM user. For information about how to obtain an AccessKey pair, see [Create an AccessKey pair](~~116401~~).
+         * <p>
+         * 
+         * >  If you use the pair of static username and password that is created by using the Accesskey pair of a RAM user to access ApsaraMQ for RabbitMQ to send and receive messages, make sure that the RAM user is granted the required permissions. For more information, see [RAM policies](~~146559~~).
          */
         public Builder accountAccessKey(String accountAccessKey) {
             this.putQueryParameter("accountAccessKey", accountAccessKey);
@@ -162,7 +164,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * createTimestamp.
+         * The timestamp that indicates when the password is created. Unit: milliseconds.
+         * <p>
+         * 
+         * >  This timestamp is specified by you and is used to generate a static password. The timestamp is not the timestamp that indicates when the system generates the password.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.putQueryParameter("createTimestamp", createTimestamp);
@@ -171,7 +176,7 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * The ID of the instance for which you want to create a pair of static username and password.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -180,7 +185,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * secretSign.
+         * The AccessKey secret signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.
+         * <p>
+         * 
+         * The system uses the HMAC-SHA1 algorithm to generate the AccessKey secret signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the **"Sample code on how to generate a signature"** section of this topic.
          */
         public Builder secretSign(String secretSign) {
             this.putQueryParameter("secretSign", secretSign);
@@ -189,7 +197,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * signature.
+         * The signature. The system generates a static password based on the signature in the request, the AccessKey secret signature, and the username.
+         * <p>
+         * 
+         * The system uses the HMAC-SHA1 algorithm to generate the signature based on the timestamp that indicates when the username is created and the AccessKey ID. For more information, see the **"Sample code on how to generate a signature"** section of this topic.
          */
         public Builder signature(String signature) {
             this.putQueryParameter("signature", signature);
@@ -198,7 +209,10 @@ public class CreateAccountRequest extends Request {
         }
 
         /**
-         * userName.
+         * The static username that you want to create.
+         * <p>
+         * 
+         * The value of this parameter is a Base64-encoded string that is generated based on the instance ID and AccessKey ID. For more information, see the "**Sample code on how to generate a username**" section of this topic.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("userName", userName);

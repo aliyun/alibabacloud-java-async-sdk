@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteVirtualHostRequest</p>
  */
 public class DeleteVirtualHostRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private DeleteVirtualHostRequest(Builder builder) {
@@ -94,7 +92,7 @@ public class DeleteVirtualHostRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance to which the vhost you want to delete belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -103,7 +101,7 @@ public class DeleteVirtualHostRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The name of the vhost that you want to delete.
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

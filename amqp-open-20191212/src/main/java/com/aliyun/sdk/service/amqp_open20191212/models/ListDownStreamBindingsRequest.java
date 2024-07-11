@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDownStreamBindingsRequest</p>
  */
 public class ListDownStreamBindingsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ExchangeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ExchangeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String exchangeName;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("MaxResults")
-    @Validation(required = true, maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Validation(required = true, maximum = 100, minimum = 1)
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private ListDownStreamBindingsRequest(Builder builder) {
@@ -138,7 +136,7 @@ public class ListDownStreamBindingsRequest extends Request {
         }
 
         /**
-         * ExchangeName.
+         * The exchange name.
          */
         public Builder exchangeName(String exchangeName) {
             this.putQueryParameter("ExchangeName", exchangeName);
@@ -147,7 +145,7 @@ public class ListDownStreamBindingsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance to which the exchange belongs.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -156,7 +154,7 @@ public class ListDownStreamBindingsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The maximum number of entries to return.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +163,7 @@ public class ListDownStreamBindingsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +172,7 @@ public class ListDownStreamBindingsRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The name of the vhost to which the exchange belongs.
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

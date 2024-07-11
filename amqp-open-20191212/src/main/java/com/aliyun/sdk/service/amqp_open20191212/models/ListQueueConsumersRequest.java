@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,33 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListQueueConsumersRequest</p>
  */
 public class ListQueueConsumersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("QueryCount")
-    @Validation(maximum = 100, minimum = 1)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryCount")
+    @com.aliyun.core.annotation.Validation(maximum = 100, minimum = 1)
     private Integer queryCount;
 
-    @Query
-    @NameInMap("Queue")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Queue")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queue;
 
-    @Query
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private ListQueueConsumersRequest(Builder builder) {
@@ -138,7 +136,7 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -147,7 +145,7 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The token that marks the end position of the previous returned page. To obtain the next batch of data, call the operation again by using the value of NextToken returned by the previous request. If you call this operation for the first time or want to query all results, set NextToken to an empty string.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -156,7 +154,10 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * QueryCount.
+         * The number of data entries to return. If you do not configure this parameter, the default value 1 is used.
+         * <p>
+         * 
+         * Valid values: 1 to 100.
          */
         public Builder queryCount(Integer queryCount) {
             this.putQueryParameter("QueryCount", queryCount);
@@ -165,7 +166,7 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * Queue.
+         * The name of the queue for which you want to query online consumers.
          */
         public Builder queue(String queue) {
             this.putQueryParameter("Queue", queue);
@@ -174,7 +175,7 @@ public class ListQueueConsumersRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The virtual host (vhost) name.
          */
         public Builder virtualHost(String virtualHost) {
             this.putQueryParameter("VirtualHost", virtualHost);

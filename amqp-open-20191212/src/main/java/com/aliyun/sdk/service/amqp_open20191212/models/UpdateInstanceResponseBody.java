@@ -6,16 +6,16 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link UpdateInstanceNameResponseBody} extends {@link TeaModel}
+ * {@link UpdateInstanceResponseBody} extends {@link TeaModel}
  *
- * <p>UpdateInstanceNameResponseBody</p>
+ * <p>UpdateInstanceResponseBody</p>
  */
-public class UpdateInstanceNameResponseBody extends TeaModel {
+public class UpdateInstanceResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("Code")
     private Integer code;
 
     @com.aliyun.core.annotation.NameInMap("Data")
-    private String data;
+    private Object data;
 
     @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
@@ -23,14 +23,18 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @com.aliyun.core.annotation.NameInMap("Success")
-    private Boolean success;
+    @com.aliyun.core.annotation.NameInMap("StatusCode")
+    private String statusCode;
 
-    private UpdateInstanceNameResponseBody(Builder builder) {
+    @com.aliyun.core.annotation.NameInMap("Success")
+    private String success;
+
+    private UpdateInstanceResponseBody(Builder builder) {
         this.code = builder.code;
         this.data = builder.data;
         this.message = builder.message;
         this.requestId = builder.requestId;
+        this.statusCode = builder.statusCode;
         this.success = builder.success;
     }
 
@@ -38,7 +42,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         return new Builder();
     }
 
-    public static UpdateInstanceNameResponseBody create() {
+    public static UpdateInstanceResponseBody create() {
         return builder().build();
     }
 
@@ -52,7 +56,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     /**
      * @return data
      */
-    public String getData() {
+    public Object getData() {
         return this.data;
     }
 
@@ -71,21 +75,29 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
     }
 
     /**
+     * @return statusCode
+     */
+    public String getStatusCode() {
+        return this.statusCode;
+    }
+
+    /**
      * @return success
      */
-    public Boolean getSuccess() {
+    public String getSuccess() {
         return this.success;
     }
 
     public static final class Builder {
         private Integer code; 
-        private String data; 
+        private Object data; 
         private String message; 
         private String requestId; 
-        private Boolean success; 
+        private String statusCode; 
+        private String success; 
 
         /**
-         * The returned HTTP status code.
+         * Code.
          */
         public Builder code(Integer code) {
             this.code = code;
@@ -93,15 +105,15 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * The returned data.
+         * Data.
          */
-        public Builder data(String data) {
+        public Builder data(Object data) {
             this.data = data;
             return this;
         }
 
         /**
-         * The error message that is returned when an error occurs during the update of the instance name.
+         * Message.
          */
         public Builder message(String message) {
             this.message = message;
@@ -109,7 +121,7 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * The request ID.
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,15 +129,23 @@ public class UpdateInstanceNameResponseBody extends TeaModel {
         }
 
         /**
-         * The returned message that indicates the request is successful.
+         * StatusCode.
          */
-        public Builder success(Boolean success) {
+        public Builder statusCode(String statusCode) {
+            this.statusCode = statusCode;
+            return this;
+        }
+
+        /**
+         * Success.
+         */
+        public Builder success(String success) {
             this.success = success;
             return this;
         }
 
-        public UpdateInstanceNameResponseBody build() {
-            return new UpdateInstanceNameResponseBody(this);
+        public UpdateInstanceResponseBody build() {
+            return new UpdateInstanceResponseBody(this);
         } 
 
     } 

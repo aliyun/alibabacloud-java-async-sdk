@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListExchangesResponseBody</p>
  */
 public class ListExchangesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListExchangesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListExchangesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListExchangesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,22 +71,22 @@ public class ListExchangesResponseBody extends TeaModel {
     } 
 
     public static class Exchanges extends TeaModel {
-        @NameInMap("Attributes")
+        @com.aliyun.core.annotation.NameInMap("Attributes")
         private java.util.Map < String, ? > attributes;
 
-        @NameInMap("AutoDeleteState")
+        @com.aliyun.core.annotation.NameInMap("AutoDeleteState")
         private Boolean autoDeleteState;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private Long createTime;
 
-        @NameInMap("ExchangeType")
+        @com.aliyun.core.annotation.NameInMap("ExchangeType")
         private String exchangeType;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("VHostName")
+        @com.aliyun.core.annotation.NameInMap("VHostName")
         private String vHostName;
 
         private Exchanges(Builder builder) {
@@ -158,7 +157,7 @@ public class ListExchangesResponseBody extends TeaModel {
             private String vHostName; 
 
             /**
-             * Attributes.
+             * The attributes. This parameter is unavailable in the current version.
              */
             public Builder attributes(java.util.Map < String, ? > attributes) {
                 this.attributes = attributes;
@@ -166,7 +165,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * AutoDeleteState.
+             * Indicates whether the exchange was automatically deleted.
              */
             public Builder autoDeleteState(Boolean autoDeleteState) {
                 this.autoDeleteState = autoDeleteState;
@@ -174,7 +173,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The timestamp that indicates when the exchange was created. Unit: milliseconds.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -182,7 +181,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * ExchangeType.
+             * The exchange type.
              */
             public Builder exchangeType(String exchangeType) {
                 this.exchangeType = exchangeType;
@@ -190,7 +189,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The exchange name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -198,7 +197,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * VHostName.
+             * The vhost name.
              */
             public Builder vHostName(String vHostName) {
                 this.vHostName = vHostName;
@@ -213,13 +212,13 @@ public class ListExchangesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Exchanges")
+        @com.aliyun.core.annotation.NameInMap("Exchanges")
         private java.util.List < Exchanges> exchanges;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -263,7 +262,7 @@ public class ListExchangesResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * Exchange。
+             * The exchanges.
              */
             public Builder exchanges(java.util.List < Exchanges> exchanges) {
                 this.exchanges = exchanges;
@@ -271,7 +270,7 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * The maximum number of entries returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -279,7 +278,11 @@ public class ListExchangesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token that marks the end of the current returned page.``
+             * <p>
+             * 
+             * *   If the value of this parameter is empty, the next query is not required and the token used to start the next query is unavailable.``
+             * *   If the value of this parameter is not empty, the next query is required, and the value is the token used to start the next query.``
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

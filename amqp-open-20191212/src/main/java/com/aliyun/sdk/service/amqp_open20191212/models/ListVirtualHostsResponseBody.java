@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListVirtualHostsResponseBody</p>
  */
 public class ListVirtualHostsResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListVirtualHostsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,7 +71,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
     } 
 
     public static class VirtualHosts extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
         private VirtualHosts(Builder builder) {
@@ -98,7 +97,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * Name.
+             * The vhost name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -113,13 +112,13 @@ public class ListVirtualHostsResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
-        @NameInMap("VirtualHosts")
+        @com.aliyun.core.annotation.NameInMap("VirtualHosts")
         private java.util.List < VirtualHosts> virtualHosts;
 
         private Data(Builder builder) {
@@ -163,7 +162,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             private java.util.List < VirtualHosts> virtualHosts; 
 
             /**
-             * MaxResults.
+             * The maximum number of entries returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -171,7 +170,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;
@@ -179,7 +178,7 @@ public class ListVirtualHostsResponseBody extends TeaModel {
             }
 
             /**
-             * Vhost。
+             * The vhosts.
              */
             public Builder virtualHosts(java.util.List < VirtualHosts> virtualHosts) {
                 this.virtualHosts = virtualHosts;

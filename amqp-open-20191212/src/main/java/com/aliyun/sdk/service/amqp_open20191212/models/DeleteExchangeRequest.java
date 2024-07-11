@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,23 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteExchangeRequest</p>
  */
 public class DeleteExchangeRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("ExchangeName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExchangeName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String exchangeName;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private DeleteExchangeRequest(Builder builder) {
@@ -109,7 +107,7 @@ public class DeleteExchangeRequest extends Request {
         }
 
         /**
-         * ExchangeName.
+         * The name of the exchange that you want to delete.
          */
         public Builder exchangeName(String exchangeName) {
             this.putBodyParameter("ExchangeName", exchangeName);
@@ -118,7 +116,7 @@ public class DeleteExchangeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance whose exchange you want to delete.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -127,7 +125,7 @@ public class DeleteExchangeRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The vhost to which the exchange that you want to delete belongs.
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

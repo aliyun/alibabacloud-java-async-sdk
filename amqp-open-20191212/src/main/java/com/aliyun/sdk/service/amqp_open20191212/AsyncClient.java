@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.amqp_open20191212;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.amqp_open20191212.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -18,6 +19,9 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    /**
+      *
+     */
     CompletableFuture<CreateAccountResponse> createAccount(CreateAccountRequest request);
 
     CompletableFuture<CreateBindingResponse> createBinding(CreateBindingRequest request);
@@ -34,10 +38,20 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteBindingResponse> deleteBinding(DeleteBindingRequest request);
 
+    /**
+      * ## [](#)Usage notes
+      * *   You cannot delete exchanges of the **headers** and **x-jms-topic** types.
+      * *   You cannot delete built-in exchanges in a vhost. These exchanges are amq.direct, amq.topic, and amq.fanout.
+      *
+     */
     CompletableFuture<DeleteExchangeResponse> deleteExchange(DeleteExchangeRequest request);
 
     CompletableFuture<DeleteQueueResponse> deleteQueue(DeleteQueueRequest request);
 
+    /**
+      * Before you delete a vhost, make sure that all exchanges and queues in the vhost are deleted.
+      *
+     */
     CompletableFuture<DeleteVirtualHostResponse> deleteVirtualHost(DeleteVirtualHostRequest request);
 
     CompletableFuture<GetMetadataAmountResponse> getMetadataAmount(GetMetadataAmountRequest request);
@@ -54,6 +68,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
 
+    /**
+      * ApsaraMQ for RabbitMQ allows you to query only online consumers.
+      *
+     */
     CompletableFuture<ListQueueConsumersResponse> listQueueConsumers(ListQueueConsumersRequest request);
 
     CompletableFuture<ListQueueUpStreamBindingsResponse> listQueueUpStreamBindings(ListQueueUpStreamBindingsRequest request);
@@ -61,6 +79,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListQueuesResponse> listQueues(ListQueuesRequest request);
 
     CompletableFuture<ListVirtualHostsResponse> listVirtualHosts(ListVirtualHostsRequest request);
+
+    CompletableFuture<UpdateInstanceResponse> updateInstance(UpdateInstanceRequest request);
 
     CompletableFuture<UpdateInstanceNameResponse> updateInstanceName(UpdateInstanceNameRequest request);
 

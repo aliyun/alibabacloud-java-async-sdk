@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,56 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateQueueRequest</p>
  */
 public class CreateQueueRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("AutoDeleteState")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoDeleteState")
     private Boolean autoDeleteState;
 
-    @Body
-    @NameInMap("AutoExpireState")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("AutoExpireState")
     private Long autoExpireState;
 
-    @Body
-    @NameInMap("DeadLetterExchange")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeadLetterExchange")
     private String deadLetterExchange;
 
-    @Body
-    @NameInMap("DeadLetterRoutingKey")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DeadLetterRoutingKey")
     private String deadLetterRoutingKey;
 
-    @Body
-    @NameInMap("ExclusiveState")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("ExclusiveState")
     private Boolean exclusiveState;
 
-    @Body
-    @NameInMap("InstanceId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
-    @Body
-    @NameInMap("MaxLength")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaxLength")
     private Long maxLength;
 
-    @Body
-    @NameInMap("MaximumPriority")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MaximumPriority")
     private Integer maximumPriority;
 
-    @Body
-    @NameInMap("MessageTTL")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MessageTTL")
     private Long messageTTL;
 
-    @Body
-    @NameInMap("QueueName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("QueueName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String queueName;
 
-    @Body
-    @NameInMap("VirtualHost")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("VirtualHost")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String virtualHost;
 
     private CreateQueueRequest(Builder builder) {
@@ -221,7 +219,11 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * AutoDeleteState.
+         * Specifies whether to automatically delete the queue. Valid values:
+         * <p>
+         * 
+         * *   true: The queue is automatically deleted. After the last consumer unsubscribes from the queue, the queue is automatically deleted.
+         * *   false: The queue is not automatically deleted.
          */
         public Builder autoDeleteState(Boolean autoDeleteState) {
             this.putBodyParameter("AutoDeleteState", autoDeleteState);
@@ -230,7 +232,12 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * AutoExpireState.
+         * The validity period after which the queue is automatically deleted. If the queue is not accessed within the specified period of time, the queue is automatically deleted.
+         * <p>
+         * 
+         * Unit: milliseconds.
+         * 
+         * >  You can use the feature that corresponds to this parameter only after you enable the feature. To enable the feature, [submit a ticket](https://ticket-intl.console.aliyun.com/#/ticket/createIndex).
          */
         public Builder autoExpireState(Long autoExpireState) {
             this.putBodyParameter("AutoExpireState", autoExpireState);
@@ -239,7 +246,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * DeadLetterExchange.
+         * The dead-letter exchange. A dead-letter exchange is used to receive rejected messages.
+         * <p>
+         * 
+         * If a consumer rejects a message that cannot be redelivered, ApsaraMQ for RabbitMQ routes the message to the specified dead-letter exchange. Then, the dead-letter exchange routes the message to the queue that is bound to the dead-letter exchange for storage.
          */
         public Builder deadLetterExchange(String deadLetterExchange) {
             this.putBodyParameter("DeadLetterExchange", deadLetterExchange);
@@ -248,7 +258,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * DeadLetterRoutingKey.
+         * The dead-letter routing key. The key must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
          */
         public Builder deadLetterRoutingKey(String deadLetterRoutingKey) {
             this.putBodyParameter("DeadLetterRoutingKey", deadLetterRoutingKey);
@@ -257,7 +267,11 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * ExclusiveState.
+         * Specifies whether the exchange is an exclusive exchange. Valid values:
+         * <p>
+         * 
+         * *   true: The exchange is an exclusive exchange. Only the connection that declares the exclusive exchange can use the exclusive exchange. After the connection is closed, the exclusive exchange is automatically deleted.
+         * *   false: The exchange is not an exclusive exchange.
          */
         public Builder exclusiveState(Boolean exclusiveState) {
             this.putBodyParameter("ExclusiveState", exclusiveState);
@@ -266,7 +280,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the ApsaraMQ for RabbitMQ instance on which you want to create a queue.
          */
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
@@ -275,7 +289,10 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * MaxLength.
+         * This parameter is unavailable in the current version of ApsaraMQ for RabbitMQ.
+         * <p>
+         * 
+         * The maximum number of messages that can be stored in the queue. If this threshold is exceeded, the earliest stored messages in the queue are deleted.
          */
         public Builder maxLength(Long maxLength) {
             this.putBodyParameter("MaxLength", maxLength);
@@ -284,7 +301,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * MaximumPriority.
+         * Queue priorities are not supported. The value does not affect the call or return results.
          */
         public Builder maximumPriority(Integer maximumPriority) {
             this.putBodyParameter("MaximumPriority", maximumPriority);
@@ -293,7 +310,11 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * MessageTTL.
+         * The message time to live (TTL) of the queue.
+         * <p>
+         * 
+         * *   If the retention period of a message in the queue exceeds the message TTL of the queue, the message expires.
+         * *   The message TTL must be set to a non-negative integer. The maximum message TTL is one day. Unit: milliseconds. For example, if the message TTL is 1,000 milliseconds, the message can be retained for up to 1 second in the queue.
          */
         public Builder messageTTL(Long messageTTL) {
             this.putBodyParameter("MessageTTL", messageTTL);
@@ -302,7 +323,11 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * QueueName.
+         * The name of the queue that you want to create.
+         * <p>
+         * 
+         * *   The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
+         * *   After the queue is created, you cannot change the name of the queue. If you want to change the name of the queue, delete the queue and create another queue.
          */
         public Builder queueName(String queueName) {
             this.putBodyParameter("QueueName", queueName);
@@ -311,7 +336,7 @@ public class CreateQueueRequest extends Request {
         }
 
         /**
-         * VirtualHost.
+         * The name of the vhost to which the queue that you want to create belongs. The name must be 1 to 255 characters in length, and can contain only letters, digits, hyphens (-), underscores (\_), periods (.), number signs (#), forward slashes (/), and at signs (@).
          */
         public Builder virtualHost(String virtualHost) {
             this.putBodyParameter("VirtualHost", virtualHost);

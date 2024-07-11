@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteQueueResponseBody</p>
  */
 public class DeleteQueueResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DeleteQueueResponseBody(Builder builder) {
@@ -38,7 +37,7 @@ public class DeleteQueueResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

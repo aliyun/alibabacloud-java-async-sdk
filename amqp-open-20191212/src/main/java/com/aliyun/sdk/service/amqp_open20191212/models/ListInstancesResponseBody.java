@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstancesResponseBody</p>
  */
 public class ListInstancesResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListInstancesResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListInstancesResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * Data.
+         * The returned data.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -58,7 +57,7 @@ public class ListInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,10 +71,10 @@ public class ListInstancesResponseBody extends TeaModel {
     } 
 
     public static class Tags extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tags(Builder builder) {
@@ -110,7 +109,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * 标签键。
              */
             public Builder key(String key) {
                 this.key = key;
@@ -118,7 +117,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * 标签值。
              */
             public Builder value(String value) {
                 this.value = value;
@@ -133,58 +132,58 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
     public static class Instances extends TeaModel {
-        @NameInMap("AutoRenewInstance")
+        @com.aliyun.core.annotation.NameInMap("AutoRenewInstance")
         private Boolean autoRenewInstance;
 
-        @NameInMap("ClassicEndpoint")
+        @com.aliyun.core.annotation.NameInMap("ClassicEndpoint")
         private String classicEndpoint;
 
-        @NameInMap("ExpireTime")
+        @com.aliyun.core.annotation.NameInMap("ExpireTime")
         private Long expireTime;
 
-        @NameInMap("InstanceId")
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
         private String instanceId;
 
-        @NameInMap("InstanceName")
+        @com.aliyun.core.annotation.NameInMap("InstanceName")
         private String instanceName;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MaxEipTps")
+        @com.aliyun.core.annotation.NameInMap("MaxEipTps")
         private Integer maxEipTps;
 
-        @NameInMap("MaxQueue")
+        @com.aliyun.core.annotation.NameInMap("MaxQueue")
         private Integer maxQueue;
 
-        @NameInMap("MaxTps")
+        @com.aliyun.core.annotation.NameInMap("MaxTps")
         private Integer maxTps;
 
-        @NameInMap("MaxVhost")
+        @com.aliyun.core.annotation.NameInMap("MaxVhost")
         private Integer maxVhost;
 
-        @NameInMap("OrderCreateTime")
+        @com.aliyun.core.annotation.NameInMap("OrderCreateTime")
         private Long orderCreateTime;
 
-        @NameInMap("OrderType")
+        @com.aliyun.core.annotation.NameInMap("OrderType")
         private String orderType;
 
-        @NameInMap("PrivateEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PrivateEndpoint")
         private String privateEndpoint;
 
-        @NameInMap("PublicEndpoint")
+        @com.aliyun.core.annotation.NameInMap("PublicEndpoint")
         private String publicEndpoint;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StorageSize")
+        @com.aliyun.core.annotation.NameInMap("StorageSize")
         private Integer storageSize;
 
-        @NameInMap("SupportEIP")
+        @com.aliyun.core.annotation.NameInMap("SupportEIP")
         private Boolean supportEIP;
 
-        @NameInMap("Tags")
+        @com.aliyun.core.annotation.NameInMap("Tags")
         private java.util.List < Tags> tags;
 
         private Instances(Builder builder) {
@@ -363,7 +362,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * AutoRenewInstance.
+             * Indicates whether the instance is automatically renewed.
              */
             public Builder autoRenewInstance(Boolean autoRenewInstance) {
                 this.autoRenewInstance = autoRenewInstance;
@@ -371,7 +370,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ClassicEndpoint.
+             * The endpoint that is used to access the instance over the classic network. This parameter is no longer available.
              */
             public Builder classicEndpoint(String classicEndpoint) {
                 this.classicEndpoint = classicEndpoint;
@@ -379,7 +378,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireTime.
+             * The timestamp that indicates when the instance expires. Unit: milliseconds.
              */
             public Builder expireTime(Long expireTime) {
                 this.expireTime = expireTime;
@@ -387,7 +386,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The instance ID
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -395,7 +394,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceName.
+             * The instance name.
              */
             public Builder instanceName(String instanceName) {
                 this.instanceName = instanceName;
@@ -403,7 +402,12 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceType.
+             * The instance type.
+             * <p>
+             * 
+             * *   PROFESSIONAL: Professional Edition
+             * *   ENTERPRISE: Enterprise Edition
+             * *   VIP: Enterprise Platinum Edition
              */
             public Builder instanceType(String instanceType) {
                 this.instanceType = instanceType;
@@ -411,7 +415,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxEipTps.
+             * The maximum number of Internet-based transactions per second (TPS) for the instance.
              */
             public Builder maxEipTps(Integer maxEipTps) {
                 this.maxEipTps = maxEipTps;
@@ -419,7 +423,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxQueue.
+             * The maximum number of queues on the instance.
              */
             public Builder maxQueue(Integer maxQueue) {
                 this.maxQueue = maxQueue;
@@ -427,7 +431,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxTps.
+             * The maximum number of VPC-based TPS for the instance.
              */
             public Builder maxTps(Integer maxTps) {
                 this.maxTps = maxTps;
@@ -435,7 +439,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxVhost.
+             * The maximum number of vhosts on the instance.
              */
             public Builder maxVhost(Integer maxVhost) {
                 this.maxVhost = maxVhost;
@@ -443,7 +447,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderCreateTime.
+             * The timestamp that indicates when the order was created. Unit: milliseconds.
              */
             public Builder orderCreateTime(Long orderCreateTime) {
                 this.orderCreateTime = orderCreateTime;
@@ -451,7 +455,11 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OrderType.
+             * The billing method. Valid values:
+             * <p>
+             * 
+             * *   PrePaid: the subscription billing method.
+             * *   POST_PAID: the pay-as-you-go billing method.
              */
             public Builder orderType(String orderType) {
                 this.orderType = orderType;
@@ -459,7 +467,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateEndpoint.
+             * The virtual private cloud (VPC) endpoint of the instance.
              */
             public Builder privateEndpoint(String privateEndpoint) {
                 this.privateEndpoint = privateEndpoint;
@@ -467,7 +475,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublicEndpoint.
+             * The public endpoint of the instance.
              */
             public Builder publicEndpoint(String publicEndpoint) {
                 this.publicEndpoint = publicEndpoint;
@@ -475,7 +483,13 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The instance status. Valid values:
+             * <p>
+             * 
+             * *   DEPLOYING: The instance is being deployed.
+             * *   EXPIRED: The instance is expired.
+             * *   SERVING: The instance is running.
+             * *   RELEASED: The instance is released.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -483,7 +497,10 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StorageSize.
+             * The disk size. Unit: GB.
+             * <p>
+             * 
+             * >  For Professional Edition instances and Enterprise Edition instances, this parameter is unavailable and \*\*-1\*\* is returned.
              */
             public Builder storageSize(Integer storageSize) {
                 this.storageSize = storageSize;
@@ -491,7 +508,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupportEIP.
+             * Indicates whether the instance supports elastic IP addresses (EIPs).
              */
             public Builder supportEIP(Boolean supportEIP) {
                 this.supportEIP = supportEIP;
@@ -499,7 +516,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * 标签列表。
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -514,13 +531,13 @@ public class ListInstancesResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Instances")
+        @com.aliyun.core.annotation.NameInMap("Instances")
         private java.util.List < Instances> instances;
 
-        @NameInMap("MaxResults")
+        @com.aliyun.core.annotation.NameInMap("MaxResults")
         private Integer maxResults;
 
-        @NameInMap("NextToken")
+        @com.aliyun.core.annotation.NameInMap("NextToken")
         private String nextToken;
 
         private Data(Builder builder) {
@@ -564,7 +581,7 @@ public class ListInstancesResponseBody extends TeaModel {
             private String nextToken; 
 
             /**
-             * Instances.
+             * The instances.
              */
             public Builder instances(java.util.List < Instances> instances) {
                 this.instances = instances;
@@ -572,7 +589,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * MaxResults.
+             * The maximum number of entries returned.
              */
             public Builder maxResults(Integer maxResults) {
                 this.maxResults = maxResults;
@@ -580,7 +597,7 @@ public class ListInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * NextToken.
+             * The token that marks the end of the current returned page. If this parameter is empty, all data is retrieved.
              */
             public Builder nextToken(String nextToken) {
                 this.nextToken = nextToken;

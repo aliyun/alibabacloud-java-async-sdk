@@ -6,30 +6,23 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link CreateInstanceRequest} extends {@link RequestModel}
+ * {@link UpdateInstanceRequest} extends {@link RequestModel}
  *
- * <p>CreateInstanceRequest</p>
+ * <p>UpdateInstanceRequest</p>
  */
-public class CreateInstanceRequest extends Request {
+public class UpdateInstanceRequest extends Request {
     @com.aliyun.core.annotation.Host
     @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AutoRenew")
-    private Boolean autoRenew;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
-    private Integer autoRenewPeriod;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("InstanceName")
-    private String instanceName;
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
+    @com.aliyun.core.annotation.Validation(required = true)
+    private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceType")
@@ -48,29 +41,13 @@ public class CreateInstanceRequest extends Request {
     private Long maxPrivateTps;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PaymentType")
+    @com.aliyun.core.annotation.NameInMap("ModifyType")
     @com.aliyun.core.annotation.Validation(required = true)
-    private String paymentType;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("Period")
-    private Integer period;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("PeriodCycle")
-    private String periodCycle;
+    private String modifyType;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("QueueCapacity")
     private Integer queueCapacity;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RenewStatus")
-    private String renewStatus;
-
-    @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("RenewalDurationUnit")
-    private String renewalDurationUnit;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ServerlessChargeType")
@@ -92,23 +69,17 @@ public class CreateInstanceRequest extends Request {
     @com.aliyun.core.annotation.NameInMap("TracingStorageTime")
     private Integer tracingStorageTime;
 
-    private CreateInstanceRequest(Builder builder) {
+    private UpdateInstanceRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
-        this.autoRenew = builder.autoRenew;
-        this.autoRenewPeriod = builder.autoRenewPeriod;
         this.clientToken = builder.clientToken;
-        this.instanceName = builder.instanceName;
+        this.instanceId = builder.instanceId;
         this.instanceType = builder.instanceType;
         this.maxConnections = builder.maxConnections;
         this.maxEipTps = builder.maxEipTps;
         this.maxPrivateTps = builder.maxPrivateTps;
-        this.paymentType = builder.paymentType;
-        this.period = builder.period;
-        this.periodCycle = builder.periodCycle;
+        this.modifyType = builder.modifyType;
         this.queueCapacity = builder.queueCapacity;
-        this.renewStatus = builder.renewStatus;
-        this.renewalDurationUnit = builder.renewalDurationUnit;
         this.serverlessChargeType = builder.serverlessChargeType;
         this.storageSize = builder.storageSize;
         this.supportEip = builder.supportEip;
@@ -120,7 +91,7 @@ public class CreateInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static CreateInstanceRequest create() {
+    public static UpdateInstanceRequest create() {
         return builder().build();
     }
 
@@ -137,20 +108,6 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return autoRenew
-     */
-    public Boolean getAutoRenew() {
-        return this.autoRenew;
-    }
-
-    /**
-     * @return autoRenewPeriod
-     */
-    public Integer getAutoRenewPeriod() {
-        return this.autoRenewPeriod;
-    }
-
-    /**
      * @return clientToken
      */
     public String getClientToken() {
@@ -158,10 +115,10 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return instanceName
+     * @return instanceId
      */
-    public String getInstanceName() {
-        return this.instanceName;
+    public String getInstanceId() {
+        return this.instanceId;
     }
 
     /**
@@ -193,24 +150,10 @@ public class CreateInstanceRequest extends Request {
     }
 
     /**
-     * @return paymentType
+     * @return modifyType
      */
-    public String getPaymentType() {
-        return this.paymentType;
-    }
-
-    /**
-     * @return period
-     */
-    public Integer getPeriod() {
-        return this.period;
-    }
-
-    /**
-     * @return periodCycle
-     */
-    public String getPeriodCycle() {
-        return this.periodCycle;
+    public String getModifyType() {
+        return this.modifyType;
     }
 
     /**
@@ -218,20 +161,6 @@ public class CreateInstanceRequest extends Request {
      */
     public Integer getQueueCapacity() {
         return this.queueCapacity;
-    }
-
-    /**
-     * @return renewStatus
-     */
-    public String getRenewStatus() {
-        return this.renewStatus;
-    }
-
-    /**
-     * @return renewalDurationUnit
-     */
-    public String getRenewalDurationUnit() {
-        return this.renewalDurationUnit;
     }
 
     /**
@@ -269,22 +198,16 @@ public class CreateInstanceRequest extends Request {
         return this.tracingStorageTime;
     }
 
-    public static final class Builder extends Request.Builder<CreateInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<UpdateInstanceRequest, Builder> {
         private String regionId; 
-        private Boolean autoRenew; 
-        private Integer autoRenewPeriod; 
         private String clientToken; 
-        private String instanceName; 
+        private String instanceId; 
         private String instanceType; 
         private Integer maxConnections; 
         private Long maxEipTps; 
         private Long maxPrivateTps; 
-        private String paymentType; 
-        private Integer period; 
-        private String periodCycle; 
+        private String modifyType; 
         private Integer queueCapacity; 
-        private String renewStatus; 
-        private String renewalDurationUnit; 
         private String serverlessChargeType; 
         private Integer storageSize; 
         private Boolean supportEip; 
@@ -295,23 +218,17 @@ public class CreateInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(CreateInstanceRequest request) {
+        private Builder(UpdateInstanceRequest request) {
             super(request);
             this.regionId = request.regionId;
-            this.autoRenew = request.autoRenew;
-            this.autoRenewPeriod = request.autoRenewPeriod;
             this.clientToken = request.clientToken;
-            this.instanceName = request.instanceName;
+            this.instanceId = request.instanceId;
             this.instanceType = request.instanceType;
             this.maxConnections = request.maxConnections;
             this.maxEipTps = request.maxEipTps;
             this.maxPrivateTps = request.maxPrivateTps;
-            this.paymentType = request.paymentType;
-            this.period = request.period;
-            this.periodCycle = request.periodCycle;
+            this.modifyType = request.modifyType;
             this.queueCapacity = request.queueCapacity;
-            this.renewStatus = request.renewStatus;
-            this.renewalDurationUnit = request.renewalDurationUnit;
             this.serverlessChargeType = request.serverlessChargeType;
             this.storageSize = request.storageSize;
             this.supportEip = request.supportEip;
@@ -329,24 +246,6 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * AutoRenew.
-         */
-        public Builder autoRenew(Boolean autoRenew) {
-            this.putQueryParameter("AutoRenew", autoRenew);
-            this.autoRenew = autoRenew;
-            return this;
-        }
-
-        /**
-         * AutoRenewPeriod.
-         */
-        public Builder autoRenewPeriod(Integer autoRenewPeriod) {
-            this.putQueryParameter("AutoRenewPeriod", autoRenewPeriod);
-            this.autoRenewPeriod = autoRenewPeriod;
-            return this;
-        }
-
-        /**
          * ClientToken.
          */
         public Builder clientToken(String clientToken) {
@@ -356,11 +255,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * InstanceName.
+         * InstanceId.
          */
-        public Builder instanceName(String instanceName) {
-            this.putQueryParameter("InstanceName", instanceName);
-            this.instanceName = instanceName;
+        public Builder instanceId(String instanceId) {
+            this.putQueryParameter("InstanceId", instanceId);
+            this.instanceId = instanceId;
             return this;
         }
 
@@ -401,29 +300,11 @@ public class CreateInstanceRequest extends Request {
         }
 
         /**
-         * PaymentType.
+         * ModifyType.
          */
-        public Builder paymentType(String paymentType) {
-            this.putQueryParameter("PaymentType", paymentType);
-            this.paymentType = paymentType;
-            return this;
-        }
-
-        /**
-         * Period.
-         */
-        public Builder period(Integer period) {
-            this.putQueryParameter("Period", period);
-            this.period = period;
-            return this;
-        }
-
-        /**
-         * PeriodCycle.
-         */
-        public Builder periodCycle(String periodCycle) {
-            this.putQueryParameter("PeriodCycle", periodCycle);
-            this.periodCycle = periodCycle;
+        public Builder modifyType(String modifyType) {
+            this.putQueryParameter("ModifyType", modifyType);
+            this.modifyType = modifyType;
             return this;
         }
 
@@ -433,24 +314,6 @@ public class CreateInstanceRequest extends Request {
         public Builder queueCapacity(Integer queueCapacity) {
             this.putQueryParameter("QueueCapacity", queueCapacity);
             this.queueCapacity = queueCapacity;
-            return this;
-        }
-
-        /**
-         * autoRenew和renewStatus都是续费方式，当两个同时填写时，以renewStatus为准
-         */
-        public Builder renewStatus(String renewStatus) {
-            this.putQueryParameter("RenewStatus", renewStatus);
-            this.renewStatus = renewStatus;
-            return this;
-        }
-
-        /**
-         * RenewalDurationUnit.
-         */
-        public Builder renewalDurationUnit(String renewalDurationUnit) {
-            this.putQueryParameter("RenewalDurationUnit", renewalDurationUnit);
-            this.renewalDurationUnit = renewalDurationUnit;
             return this;
         }
 
@@ -500,8 +363,8 @@ public class CreateInstanceRequest extends Request {
         }
 
         @Override
-        public CreateInstanceRequest build() {
-            return new CreateInstanceRequest(this);
+        public UpdateInstanceRequest build() {
+            return new UpdateInstanceRequest(this);
         } 
 
     } 

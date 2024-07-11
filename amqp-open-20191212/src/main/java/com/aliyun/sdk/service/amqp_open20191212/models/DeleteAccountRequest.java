@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.amqp_open20191212.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteAccountRequest</p>
  */
 public class DeleteAccountRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CreateTimestamp")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreateTimestamp")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Long createTimestamp;
 
-    @Query
-    @NameInMap("UserName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String userName;
 
     private DeleteAccountRequest(Builder builder) {
@@ -93,7 +92,10 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * CreateTimestamp.
+         * The timestamp that indicates when the pair of static username and password that you want to delete was created. Unit: milliseconds.
+         * <p>
+         * 
+         * You can call the [ListAccounts](~~472730~~) operation to view the timestamp.
          */
         public Builder createTimestamp(Long createTimestamp) {
             this.putQueryParameter("CreateTimestamp", createTimestamp);
@@ -102,7 +104,7 @@ public class DeleteAccountRequest extends Request {
         }
 
         /**
-         * UserName.
+         * The pair of username and password that you want to delete.
          */
         public Builder userName(String userName) {
             this.putQueryParameter("UserName", userName);
