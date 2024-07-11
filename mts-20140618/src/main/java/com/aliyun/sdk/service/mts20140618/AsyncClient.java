@@ -522,6 +522,8 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<SubmitIProductionJobResponse> submitIProductionJob(SubmitIProductionJobRequest request);
 
+    CompletableFuture<SubmitImageCopyrightResponse> submitImageCopyright(SubmitImageCopyrightRequest request);
+
     /**
       * *   SubmitJobs is an asynchronous operation. After you submit transcoding jobs, the jobs are added to an MPS queue to be scheduled and run. The transcoding jobs may not have been complete when the response is returned. After you call this operation, you can call the [QueryJobList](~~602836~~) operation to query the job results. You can also associate a Message Service (MNS) queue or topic with the MPS queue to receive notifications on the jobs. For more information, see [Receive notifications](https://www.alibabacloud.com/help/zh/apsaravideo-for-media-processing/latest/receive-message-notifications).
       * *   An input file can be up to 100 GB in size. If the size of the input file exceeds this limit, the job may fail.
