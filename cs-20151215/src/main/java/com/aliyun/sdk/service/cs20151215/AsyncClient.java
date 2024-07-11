@@ -420,6 +420,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<UntagResourcesResponse> untagResources(UntagResourcesRequest request);
 
+    CompletableFuture<UpdateClusterAuditLogConfigResponse> updateClusterAuditLogConfig(UpdateClusterAuditLogConfigRequest request);
+
     CompletableFuture<UpdateContactGroupForAlertResponse> updateContactGroupForAlert(UpdateContactGroupForAlertRequest request);
 
     CompletableFuture<UpdateControlPlaneLogResponse> updateControlPlaneLog(UpdateControlPlaneLogRequest request);
