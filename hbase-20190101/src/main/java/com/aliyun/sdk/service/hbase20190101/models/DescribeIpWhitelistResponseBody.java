@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeIpWhitelistResponseBody</p>
  */
 public class DescribeIpWhitelistResponseBody extends TeaModel {
-    @NameInMap("Groups")
+    @com.aliyun.core.annotation.NameInMap("Groups")
     private Groups groups;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeIpWhitelistResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
     } 
 
     public static class IpList extends TeaModel {
-        @NameInMap("Ip")
+        @com.aliyun.core.annotation.NameInMap("Ip")
         private java.util.List < String > ip;
 
         private IpList(Builder builder) {
@@ -113,13 +112,13 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
 
     }
     public static class Group extends TeaModel {
-        @NameInMap("GroupName")
+        @com.aliyun.core.annotation.NameInMap("GroupName")
         private String groupName;
 
-        @NameInMap("IpList")
+        @com.aliyun.core.annotation.NameInMap("IpList")
         private IpList ipList;
 
-        @NameInMap("IpVersion")
+        @com.aliyun.core.annotation.NameInMap("IpVersion")
         private Integer ipVersion;
 
         private Group(Builder builder) {
@@ -194,7 +193,7 @@ public class DescribeIpWhitelistResponseBody extends TeaModel {
 
     }
     public static class Groups extends TeaModel {
-        @NameInMap("Group")
+        @com.aliyun.core.annotation.NameInMap("Group")
         private java.util.List < Group> group;
 
         private Groups(Builder builder) {

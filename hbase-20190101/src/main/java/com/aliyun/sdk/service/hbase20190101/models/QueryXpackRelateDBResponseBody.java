@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryXpackRelateDBResponseBody</p>
  */
 public class QueryXpackRelateDBResponseBody extends TeaModel {
-    @NameInMap("ClusterList")
+    @com.aliyun.core.annotation.NameInMap("ClusterList")
     private ClusterList clusterList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private QueryXpackRelateDBResponseBody(Builder builder) {
@@ -72,25 +71,25 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
     } 
 
     public static class Cluster extends TeaModel {
-        @NameInMap("ClusterId")
+        @com.aliyun.core.annotation.NameInMap("ClusterId")
         private String clusterId;
 
-        @NameInMap("ClusterName")
+        @com.aliyun.core.annotation.NameInMap("ClusterName")
         private String clusterName;
 
-        @NameInMap("DBType")
+        @com.aliyun.core.annotation.NameInMap("DBType")
         private String DBType;
 
-        @NameInMap("DBVersion")
+        @com.aliyun.core.annotation.NameInMap("DBVersion")
         private String DBVersion;
 
-        @NameInMap("IsRelated")
+        @com.aliyun.core.annotation.NameInMap("IsRelated")
         private Boolean isRelated;
 
-        @NameInMap("LockMode")
+        @com.aliyun.core.annotation.NameInMap("LockMode")
         private String lockMode;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Cluster(Builder builder) {
@@ -233,7 +232,7 @@ public class QueryXpackRelateDBResponseBody extends TeaModel {
 
     }
     public static class ClusterList extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private java.util.List < Cluster> cluster;
 
         private ClusterList(Builder builder) {

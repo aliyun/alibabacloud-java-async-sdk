@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceServiceConfigurationsResponseBody</p>
  */
 public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
-    @NameInMap("ConfigureList")
+    @com.aliyun.core.annotation.NameInMap("ConfigureList")
     private ConfigureList configureList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private ListInstanceServiceConfigurationsResponseBody(Builder builder) {
@@ -132,25 +131,25 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("ConfigureName")
+        @com.aliyun.core.annotation.NameInMap("ConfigureName")
         private String configureName;
 
-        @NameInMap("ConfigureUnit")
+        @com.aliyun.core.annotation.NameInMap("ConfigureUnit")
         private String configureUnit;
 
-        @NameInMap("DefaultValue")
+        @com.aliyun.core.annotation.NameInMap("DefaultValue")
         private String defaultValue;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("NeedRestart")
+        @com.aliyun.core.annotation.NameInMap("NeedRestart")
         private String needRestart;
 
-        @NameInMap("RunningValue")
+        @com.aliyun.core.annotation.NameInMap("RunningValue")
         private String runningValue;
 
-        @NameInMap("ValueRange")
+        @com.aliyun.core.annotation.NameInMap("ValueRange")
         private String valueRange;
 
         private Config(Builder builder) {
@@ -293,7 +292,7 @@ public class ListInstanceServiceConfigurationsResponseBody extends TeaModel {
 
     }
     public static class ConfigureList extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private java.util.List < Config> config;
 
         private ConfigureList(Builder builder) {

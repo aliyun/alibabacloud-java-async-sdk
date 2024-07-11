@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeRestoreFullDetailsResponseBody</p>
  */
 public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("RestoreFull")
+    @com.aliyun.core.annotation.NameInMap("RestoreFull")
     private RestoreFull restoreFull;
 
     private DescribeRestoreFullDetailsResponseBody(Builder builder) {
@@ -72,28 +71,28 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
     } 
 
     public static class RestoreFullDetail extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private RestoreFullDetail(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
 
     }
     public static class RestoreFullDetails extends TeaModel {
-        @NameInMap("RestoreFullDetail")
+        @com.aliyun.core.annotation.NameInMap("RestoreFullDetail")
         private java.util.List < RestoreFullDetail> restoreFullDetail;
 
         private RestoreFullDetails(Builder builder) {
@@ -294,28 +293,28 @@ public class DescribeRestoreFullDetailsResponseBody extends TeaModel {
 
     }
     public static class RestoreFull extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("Fail")
+        @com.aliyun.core.annotation.NameInMap("Fail")
         private Integer fail;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("RestoreFullDetails")
+        @com.aliyun.core.annotation.NameInMap("RestoreFullDetails")
         private RestoreFullDetails restoreFullDetails;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("Succeed")
+        @com.aliyun.core.annotation.NameInMap("Succeed")
         private Integer succeed;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Long total;
 
         private RestoreFull(Builder builder) {

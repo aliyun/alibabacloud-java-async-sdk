@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryHBaseHaDBResponseBody</p>
  */
 public class QueryHBaseHaDBResponseBody extends TeaModel {
-    @NameInMap("ClusterList")
+    @com.aliyun.core.annotation.NameInMap("ClusterList")
     private ClusterList clusterList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private QueryHBaseHaDBResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
     } 
 
     public static class HaSlbConn extends TeaModel {
-        @NameInMap("HbaseType")
+        @com.aliyun.core.annotation.NameInMap("HbaseType")
         private String hbaseType;
 
-        @NameInMap("SlbConnAddr")
+        @com.aliyun.core.annotation.NameInMap("SlbConnAddr")
         private String slbConnAddr;
 
-        @NameInMap("SlbType")
+        @com.aliyun.core.annotation.NameInMap("SlbType")
         private String slbType;
 
         private HaSlbConn(Builder builder) {
@@ -213,7 +212,7 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
     }
     public static class HaSlbConnList extends TeaModel {
-        @NameInMap("HaSlbConn")
+        @com.aliyun.core.annotation.NameInMap("HaSlbConn")
         private java.util.List < HaSlbConn> haSlbConn;
 
         private HaSlbConnList(Builder builder) {
@@ -254,19 +253,19 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
     }
     public static class Cluster extends TeaModel {
-        @NameInMap("ActiveName")
+        @com.aliyun.core.annotation.NameInMap("ActiveName")
         private String activeName;
 
-        @NameInMap("BdsName")
+        @com.aliyun.core.annotation.NameInMap("BdsName")
         private String bdsName;
 
-        @NameInMap("HaName")
+        @com.aliyun.core.annotation.NameInMap("HaName")
         private String haName;
 
-        @NameInMap("HaSlbConnList")
+        @com.aliyun.core.annotation.NameInMap("HaSlbConnList")
         private HaSlbConnList haSlbConnList;
 
-        @NameInMap("StandbyName")
+        @com.aliyun.core.annotation.NameInMap("StandbyName")
         private String standbyName;
 
         private Cluster(Builder builder) {
@@ -375,7 +374,7 @@ public class QueryHBaseHaDBResponseBody extends TeaModel {
 
     }
     public static class ClusterList extends TeaModel {
-        @NameInMap("Cluster")
+        @com.aliyun.core.annotation.NameInMap("Cluster")
         private java.util.List < Cluster> cluster;
 
         private ClusterList(Builder builder) {

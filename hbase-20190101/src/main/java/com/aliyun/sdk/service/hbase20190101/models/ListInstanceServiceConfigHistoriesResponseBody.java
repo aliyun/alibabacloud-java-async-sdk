@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListInstanceServiceConfigHistoriesResponseBody</p>
  */
 public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
-    @NameInMap("ConfigureHistoryList")
+    @com.aliyun.core.annotation.NameInMap("ConfigureHistoryList")
     private ConfigureHistoryList configureHistoryList;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageRecordCount")
+    @com.aliyun.core.annotation.NameInMap("PageRecordCount")
     private Integer pageRecordCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalRecordCount")
+    @com.aliyun.core.annotation.NameInMap("TotalRecordCount")
     private Long totalRecordCount;
 
     private ListInstanceServiceConfigHistoriesResponseBody(Builder builder) {
@@ -132,19 +131,19 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
     } 
 
     public static class Config extends TeaModel {
-        @NameInMap("ConfigureName")
+        @com.aliyun.core.annotation.NameInMap("ConfigureName")
         private String configureName;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Effective")
+        @com.aliyun.core.annotation.NameInMap("Effective")
         private String effective;
 
-        @NameInMap("NewValue")
+        @com.aliyun.core.annotation.NameInMap("NewValue")
         private String newValue;
 
-        @NameInMap("OldValue")
+        @com.aliyun.core.annotation.NameInMap("OldValue")
         private String oldValue;
 
         private Config(Builder builder) {
@@ -253,7 +252,7 @@ public class ListInstanceServiceConfigHistoriesResponseBody extends TeaModel {
 
     }
     public static class ConfigureHistoryList extends TeaModel {
-        @NameInMap("Config")
+        @com.aliyun.core.annotation.NameInMap("Config")
         private java.util.List < Config> config;
 
         private ConfigureHistoryList(Builder builder) {

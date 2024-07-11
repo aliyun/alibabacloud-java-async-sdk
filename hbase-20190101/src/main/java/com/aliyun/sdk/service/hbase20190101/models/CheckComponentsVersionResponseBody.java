@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CheckComponentsVersionResponseBody</p>
  */
 public class CheckComponentsVersionResponseBody extends TeaModel {
-    @NameInMap("Components")
+    @com.aliyun.core.annotation.NameInMap("Components")
     private Components components;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private CheckComponentsVersionResponseBody(Builder builder) {
@@ -72,10 +71,10 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
     } 
 
     public static class Component extends TeaModel {
-        @NameInMap("Component")
+        @com.aliyun.core.annotation.NameInMap("Component")
         private String component;
 
-        @NameInMap("IsLatestVersion")
+        @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
         private String isLatestVersion;
 
         private Component(Builder builder) {
@@ -133,7 +132,7 @@ public class CheckComponentsVersionResponseBody extends TeaModel {
 
     }
     public static class Components extends TeaModel {
-        @NameInMap("Component")
+        @com.aliyun.core.annotation.NameInMap("Component")
         private java.util.List < Component> component;
 
         private Components(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeMultiZoneAvailableRegionsResponseBody</p>
  */
 public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private Regions regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeMultiZoneAvailableRegionsResponseBody(Builder builder) {
@@ -72,7 +71,7 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
     } 
 
     public static class Zones extends TeaModel {
-        @NameInMap("Zone")
+        @com.aliyun.core.annotation.NameInMap("Zone")
         private java.util.List < String > zone;
 
         private Zones(Builder builder) {
@@ -113,10 +112,10 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
     }
     public static class AvailableCombine extends TeaModel {
-        @NameInMap("Id")
+        @com.aliyun.core.annotation.NameInMap("Id")
         private String id;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private Zones zones;
 
         private AvailableCombine(Builder builder) {
@@ -174,7 +173,7 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
     }
     public static class AvailableCombines extends TeaModel {
-        @NameInMap("AvailableCombine")
+        @com.aliyun.core.annotation.NameInMap("AvailableCombine")
         private java.util.List < AvailableCombine> availableCombine;
 
         private AvailableCombines(Builder builder) {
@@ -215,16 +214,16 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
     }
     public static class Region extends TeaModel {
-        @NameInMap("AvailableCombines")
+        @com.aliyun.core.annotation.NameInMap("AvailableCombines")
         private AvailableCombines availableCombines;
 
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
+        @com.aliyun.core.annotation.NameInMap("RegionEndpoint")
         private String regionEndpoint;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Region(Builder builder) {
@@ -316,7 +315,7 @@ public class DescribeMultiZoneAvailableRegionsResponseBody extends TeaModel {
 
     }
     public static class Regions extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private java.util.List < Region> region;
 
         private Regions(Builder builder) {

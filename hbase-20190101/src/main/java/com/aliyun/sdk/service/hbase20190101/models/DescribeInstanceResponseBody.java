@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,164 +11,167 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceResponseBody</p>
  */
 public class DescribeInstanceResponseBody extends TeaModel {
-    @NameInMap("AutoRenewal")
+    @com.aliyun.core.annotation.NameInMap("AutoRenewal")
     private Boolean autoRenewal;
 
-    @NameInMap("BackupStatus")
+    @com.aliyun.core.annotation.NameInMap("BackupStatus")
     private String backupStatus;
 
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("ColdStorageSize")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageSize")
     private Integer coldStorageSize;
 
-    @NameInMap("ColdStorageStatus")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageStatus")
     private String coldStorageStatus;
 
-    @NameInMap("ConfirmMaintainTime")
+    @com.aliyun.core.annotation.NameInMap("ConfirmMaintainTime")
     private String confirmMaintainTime;
 
-    @NameInMap("CoreDiskCount")
+    @com.aliyun.core.annotation.NameInMap("CoreDiskCount")
     private String coreDiskCount;
 
-    @NameInMap("CoreDiskSize")
+    @com.aliyun.core.annotation.NameInMap("CoreDiskSize")
     private Integer coreDiskSize;
 
-    @NameInMap("CoreDiskType")
+    @com.aliyun.core.annotation.NameInMap("CoreDiskType")
     private String coreDiskType;
 
-    @NameInMap("CoreInstanceType")
+    @com.aliyun.core.annotation.NameInMap("CoreInstanceType")
     private String coreInstanceType;
 
-    @NameInMap("CoreNodeCount")
+    @com.aliyun.core.annotation.NameInMap("CoreNodeCount")
     private Integer coreNodeCount;
 
-    @NameInMap("CreatedTime")
+    @com.aliyun.core.annotation.NameInMap("CreatedTime")
     private String createdTime;
 
-    @NameInMap("CreatedTimeUTC")
+    @com.aliyun.core.annotation.NameInMap("CreatedTimeUTC")
     private String createdTimeUTC;
 
-    @NameInMap("Duration")
+    @com.aliyun.core.annotation.NameInMap("Duration")
     private Integer duration;
 
-    @NameInMap("EnableHbaseProxy")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("EnableHbaseProxy")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean enableHbaseProxy;
 
-    @NameInMap("EncryptionKey")
+    @com.aliyun.core.annotation.NameInMap("EncryptionKey")
     private String encryptionKey;
 
-    @NameInMap("EncryptionType")
+    @com.aliyun.core.annotation.NameInMap("EncryptionType")
     private String encryptionType;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("ExpireTimeUTC")
+    @com.aliyun.core.annotation.NameInMap("ExpireTimeUTC")
     private String expireTimeUTC;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("IsDeletionProtection")
+    @com.aliyun.core.annotation.NameInMap("IsDeletionProtection")
     private Boolean isDeletionProtection;
 
-    @NameInMap("IsHa")
+    @com.aliyun.core.annotation.NameInMap("IsHa")
     private Boolean isHa;
 
-    @NameInMap("IsLatestVersion")
+    @com.aliyun.core.annotation.NameInMap("IsLatestVersion")
     private Boolean isLatestVersion;
 
-    @NameInMap("IsMultiModel")
+    @com.aliyun.core.annotation.NameInMap("IsMultiModel")
     private Boolean isMultiModel;
 
-    @NameInMap("LproxyMinorVersion")
+    @com.aliyun.core.annotation.NameInMap("LproxyMinorVersion")
     private String lproxyMinorVersion;
 
-    @NameInMap("MaintainEndTime")
+    @com.aliyun.core.annotation.NameInMap("MaintainEndTime")
     private String maintainEndTime;
 
-    @NameInMap("MaintainStartTime")
+    @com.aliyun.core.annotation.NameInMap("MaintainStartTime")
     private String maintainStartTime;
 
-    @NameInMap("MajorVersion")
+    @com.aliyun.core.annotation.NameInMap("MajorVersion")
     private String majorVersion;
 
-    @NameInMap("MasterDiskSize")
+    @com.aliyun.core.annotation.NameInMap("MasterDiskSize")
     private Integer masterDiskSize;
 
-    @NameInMap("MasterDiskType")
+    @com.aliyun.core.annotation.NameInMap("MasterDiskType")
     private String masterDiskType;
 
-    @NameInMap("MasterInstanceType")
+    @com.aliyun.core.annotation.NameInMap("MasterInstanceType")
     private String masterInstanceType;
 
-    @NameInMap("MasterNodeCount")
+    @com.aliyun.core.annotation.NameInMap("MasterNodeCount")
     private Integer masterNodeCount;
 
-    @NameInMap("MinorVersion")
+    @com.aliyun.core.annotation.NameInMap("MinorVersion")
     private String minorVersion;
 
-    @NameInMap("ModuleId")
+    @com.aliyun.core.annotation.NameInMap("ModuleId")
     private Integer moduleId;
 
-    @NameInMap("ModuleStackVersion")
+    @com.aliyun.core.annotation.NameInMap("ModuleStackVersion")
     private String moduleStackVersion;
 
-    @NameInMap("NeedUpgrade")
+    @com.aliyun.core.annotation.NameInMap("NeedUpgrade")
     private Boolean needUpgrade;
 
-    @NameInMap("NeedUpgradeComps")
+    @com.aliyun.core.annotation.NameInMap("NeedUpgradeComps")
     private NeedUpgradeComps needUpgradeComps;
 
-    @NameInMap("NetworkType")
+    @com.aliyun.core.annotation.NameInMap("NetworkType")
     private String networkType;
 
-    @NameInMap("ParentId")
+    @com.aliyun.core.annotation.NameInMap("ParentId")
     private String parentId;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("Tags")
+    @com.aliyun.core.annotation.NameInMap("Tags")
     private Tags tags;
 
-    @NameInMap("TaskProgress")
+    @com.aliyun.core.annotation.NameInMap("TaskProgress")
     private String taskProgress;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("TaskStatus")
+    private String taskStatus;
+
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("VswitchId")
+    @com.aliyun.core.annotation.NameInMap("VswitchId")
     private String vswitchId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeInstanceResponseBody(Builder builder) {
@@ -223,6 +225,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         this.status = builder.status;
         this.tags = builder.tags;
         this.taskProgress = builder.taskProgress;
+        this.taskStatus = builder.taskStatus;
         this.vpcId = builder.vpcId;
         this.vswitchId = builder.vswitchId;
         this.zoneId = builder.zoneId;
@@ -587,6 +590,13 @@ public class DescribeInstanceResponseBody extends TeaModel {
     }
 
     /**
+     * @return taskStatus
+     */
+    public String getTaskStatus() {
+        return this.taskStatus;
+    }
+
+    /**
      * @return vpcId
      */
     public String getVpcId() {
@@ -658,6 +668,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
         private String status; 
         private Tags tags; 
         private String taskProgress; 
+        private String taskStatus; 
         private String vpcId; 
         private String vswitchId; 
         private String zoneId; 
@@ -1063,6 +1074,14 @@ public class DescribeInstanceResponseBody extends TeaModel {
         }
 
         /**
+         * TaskStatus.
+         */
+        public Builder taskStatus(String taskStatus) {
+            this.taskStatus = taskStatus;
+            return this;
+        }
+
+        /**
          * VpcId.
          */
         public Builder vpcId(String vpcId) {
@@ -1093,7 +1112,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
     } 
 
     public static class NeedUpgradeComps extends TeaModel {
-        @NameInMap("Comps")
+        @com.aliyun.core.annotation.NameInMap("Comps")
         private java.util.List < String > comps;
 
         private NeedUpgradeComps(Builder builder) {
@@ -1134,10 +1153,10 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Tag extends TeaModel {
-        @NameInMap("Key")
+        @com.aliyun.core.annotation.NameInMap("Key")
         private String key;
 
-        @NameInMap("Value")
+        @com.aliyun.core.annotation.NameInMap("Value")
         private String value;
 
         private Tag(Builder builder) {
@@ -1195,7 +1214,7 @@ public class DescribeInstanceResponseBody extends TeaModel {
 
     }
     public static class Tags extends TeaModel {
-        @NameInMap("Tag")
+        @com.aliyun.core.annotation.NameInMap("Tag")
         private java.util.List < Tag> tag;
 
         private Tags(Builder builder) {

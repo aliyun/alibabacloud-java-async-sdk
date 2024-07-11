@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeClusterConnectionResponseBody</p>
  */
 public class DescribeClusterConnectionResponseBody extends TeaModel {
-    @NameInMap("DbType")
+    @com.aliyun.core.annotation.NameInMap("DbType")
     private String dbType;
 
-    @NameInMap("IsMultimod")
+    @com.aliyun.core.annotation.NameInMap("IsMultimod")
     private String isMultimod;
 
-    @NameInMap("NetType")
+    @com.aliyun.core.annotation.NameInMap("NetType")
     private String netType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ServiceConnAddrs")
+    @com.aliyun.core.annotation.NameInMap("ServiceConnAddrs")
     private ServiceConnAddrs serviceConnAddrs;
 
-    @NameInMap("SlbConnAddrs")
+    @com.aliyun.core.annotation.NameInMap("SlbConnAddrs")
     private SlbConnAddrs slbConnAddrs;
 
-    @NameInMap("ThriftConn")
+    @com.aliyun.core.annotation.NameInMap("ThriftConn")
     private ThriftConn thriftConn;
 
-    @NameInMap("UiProxyConnAddrInfo")
+    @com.aliyun.core.annotation.NameInMap("UiProxyConnAddrInfo")
     private UiProxyConnAddrInfo uiProxyConnAddrInfo;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("ZkConnAddrs")
+    @com.aliyun.core.annotation.NameInMap("ZkConnAddrs")
     private ZkConnAddrs zkConnAddrs;
 
     private DescribeClusterConnectionResponseBody(Builder builder) {
@@ -252,13 +251,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
     } 
 
     public static class ConnAddrInfo extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private ConnAddrInfo(Builder builder) {
@@ -333,10 +332,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class ServiceConnAddr extends TeaModel {
-        @NameInMap("ConnAddrInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrInfo")
         private ConnAddrInfo connAddrInfo;
 
-        @NameInMap("ConnType")
+        @com.aliyun.core.annotation.NameInMap("ConnType")
         private String connType;
 
         private ServiceConnAddr(Builder builder) {
@@ -394,7 +393,7 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class ServiceConnAddrs extends TeaModel {
-        @NameInMap("ServiceConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ServiceConnAddr")
         private java.util.List < ServiceConnAddr> serviceConnAddr;
 
         private ServiceConnAddrs(Builder builder) {
@@ -435,13 +434,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class SlbConnAddrConnAddrInfo extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private SlbConnAddrConnAddrInfo(Builder builder) {
@@ -516,10 +515,10 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class SlbConnAddr extends TeaModel {
-        @NameInMap("ConnAddrInfo")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrInfo")
         private SlbConnAddrConnAddrInfo connAddrInfo;
 
-        @NameInMap("SlbType")
+        @com.aliyun.core.annotation.NameInMap("SlbType")
         private String slbType;
 
         private SlbConnAddr(Builder builder) {
@@ -577,7 +576,7 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class SlbConnAddrs extends TeaModel {
-        @NameInMap("SlbConnAddr")
+        @com.aliyun.core.annotation.NameInMap("SlbConnAddr")
         private java.util.List < SlbConnAddr> slbConnAddr;
 
         private SlbConnAddrs(Builder builder) {
@@ -618,13 +617,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class ThriftConn extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private ThriftConn(Builder builder) {
@@ -699,13 +698,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class UiProxyConnAddrInfo extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private UiProxyConnAddrInfo(Builder builder) {
@@ -780,13 +779,13 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class ZkConnAddr extends TeaModel {
-        @NameInMap("ConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ConnAddr")
         private String connAddr;
 
-        @NameInMap("ConnAddrPort")
+        @com.aliyun.core.annotation.NameInMap("ConnAddrPort")
         private String connAddrPort;
 
-        @NameInMap("NetType")
+        @com.aliyun.core.annotation.NameInMap("NetType")
         private String netType;
 
         private ZkConnAddr(Builder builder) {
@@ -861,7 +860,7 @@ public class DescribeClusterConnectionResponseBody extends TeaModel {
 
     }
     public static class ZkConnAddrs extends TeaModel {
-        @NameInMap("ZkConnAddr")
+        @com.aliyun.core.annotation.NameInMap("ZkConnAddr")
         private java.util.List < ZkConnAddr> zkConnAddr;
 
         private ZkConnAddrs(Builder builder) {

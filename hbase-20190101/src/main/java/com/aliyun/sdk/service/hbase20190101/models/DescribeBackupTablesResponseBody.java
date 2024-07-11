@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupTablesResponseBody</p>
  */
 public class DescribeBackupTablesResponseBody extends TeaModel {
-    @NameInMap("BackupRecords")
+    @com.aliyun.core.annotation.NameInMap("BackupRecords")
     private BackupRecords backupRecords;
 
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private Tables tables;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private DescribeBackupTablesResponseBody(Builder builder) {
@@ -152,28 +151,28 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
     } 
 
     public static class BackupRecord extends TeaModel {
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private String endTime;
 
-        @NameInMap("Message")
+        @com.aliyun.core.annotation.NameInMap("Message")
         private String message;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("StartTime")
+        @com.aliyun.core.annotation.NameInMap("StartTime")
         private String startTime;
 
-        @NameInMap("State")
+        @com.aliyun.core.annotation.NameInMap("State")
         private String state;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private String table;
 
         private BackupRecord(Builder builder) {
@@ -333,7 +332,7 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
 
     }
     public static class BackupRecords extends TeaModel {
-        @NameInMap("BackupRecord")
+        @com.aliyun.core.annotation.NameInMap("BackupRecord")
         private java.util.List < BackupRecord> backupRecord;
 
         private BackupRecords(Builder builder) {
@@ -374,7 +373,7 @@ public class DescribeBackupTablesResponseBody extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < String > table;
 
         private Tables(Builder builder) {

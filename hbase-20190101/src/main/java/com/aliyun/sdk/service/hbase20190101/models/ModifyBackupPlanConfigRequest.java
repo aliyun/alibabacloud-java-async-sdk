@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,29 +11,29 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ModifyBackupPlanConfigRequest</p>
  */
 public class ModifyBackupPlanConfigRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("FullBackupCycle")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("FullBackupCycle")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String fullBackupCycle;
 
-    @Query
-    @NameInMap("MinHFileBackupCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MinHFileBackupCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String minHFileBackupCount;
 
-    @Query
-    @NameInMap("NextFullBackupDate")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextFullBackupDate")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String nextFullBackupDate;
 
-    @Query
-    @NameInMap("Tables")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Tables")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String tables;
 
     private ModifyBackupPlanConfigRequest(Builder builder) {

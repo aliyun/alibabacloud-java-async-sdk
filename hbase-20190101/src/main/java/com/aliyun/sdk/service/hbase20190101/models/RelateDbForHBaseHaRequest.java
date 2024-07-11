@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,96 +11,96 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RelateDbForHBaseHaRequest</p>
  */
 public class RelateDbForHBaseHaRequest extends Request {
-    @Query
-    @NameInMap("ClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String clusterId;
 
-    @Query
-    @NameInMap("HaActive")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActive")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haActive;
 
-    @Query
-    @NameInMap("HaActiveClusterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveClusterKey")
     private String haActiveClusterKey;
 
-    @Query
-    @NameInMap("HaActiveDBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveDBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haActiveDBType;
 
-    @Query
-    @NameInMap("HaActiveHbaseFsDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveHbaseFsDir")
     private String haActiveHbaseFsDir;
 
-    @Query
-    @NameInMap("HaActiveHdfsUri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveHdfsUri")
     private String haActiveHdfsUri;
 
-    @Query
-    @NameInMap("HaActivePassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActivePassword")
     private String haActivePassword;
 
-    @Query
-    @NameInMap("HaActiveUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveUser")
     private String haActiveUser;
 
-    @Query
-    @NameInMap("HaActiveVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaActiveVersion")
     private String haActiveVersion;
 
-    @Query
-    @NameInMap("HaMigrateType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaMigrateType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haMigrateType;
 
-    @Query
-    @NameInMap("HaStandby")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandby")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haStandby;
 
-    @Query
-    @NameInMap("HaStandbyClusterKey")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyClusterKey")
     private String haStandbyClusterKey;
 
-    @Query
-    @NameInMap("HaStandbyDBType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyDBType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haStandbyDBType;
 
-    @Query
-    @NameInMap("HaStandbyHbaseFsDir")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyHbaseFsDir")
     private String haStandbyHbaseFsDir;
 
-    @Query
-    @NameInMap("HaStandbyHdfsUri")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyHdfsUri")
     private String haStandbyHdfsUri;
 
-    @Query
-    @NameInMap("HaStandbyPassword")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyPassword")
     private String haStandbyPassword;
 
-    @Query
-    @NameInMap("HaStandbyUser")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyUser")
     private String haStandbyUser;
 
-    @Query
-    @NameInMap("HaStandbyVersion")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaStandbyVersion")
     private String haStandbyVersion;
 
-    @Query
-    @NameInMap("HaTables")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaTables")
     private String haTables;
 
-    @Query
-    @NameInMap("IsActiveStandard")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsActiveStandard")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isActiveStandard;
 
-    @Query
-    @NameInMap("IsStandbyStandard")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsStandbyStandard")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Boolean isStandbyStandard;
 
     private RelateDbForHBaseHaRequest(Builder builder) {

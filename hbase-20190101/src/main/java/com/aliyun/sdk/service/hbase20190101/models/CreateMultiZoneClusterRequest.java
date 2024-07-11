@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,142 +11,142 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateMultiZoneClusterRequest</p>
  */
 public class CreateMultiZoneClusterRequest extends Request {
-    @Query
-    @NameInMap("ArbiterVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arbiterVSwitchId;
 
-    @Query
-    @NameInMap("ArbiterZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArbiterZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String arbiterZoneId;
 
-    @Query
-    @NameInMap("ArchVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ArchVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String archVersion;
 
-    @Query
-    @NameInMap("AutoRenewPeriod")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("AutoRenewPeriod")
     private Integer autoRenewPeriod;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ClusterName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClusterName")
     private String clusterName;
 
-    @Query
-    @NameInMap("CoreDiskSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer coreDiskSize;
 
-    @Query
-    @NameInMap("CoreDiskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreDiskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coreDiskType;
 
-    @Query
-    @NameInMap("CoreInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String coreInstanceType;
 
-    @Query
-    @NameInMap("CoreNodeCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CoreNodeCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer coreNodeCount;
 
-    @Query
-    @NameInMap("Engine")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Engine")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engine;
 
-    @Query
-    @NameInMap("EngineVersion")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("EngineVersion")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String engineVersion;
 
-    @Query
-    @NameInMap("LogDiskSize")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDiskSize")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer logDiskSize;
 
-    @Query
-    @NameInMap("LogDiskType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogDiskType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logDiskType;
 
-    @Query
-    @NameInMap("LogInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String logInstanceType;
 
-    @Query
-    @NameInMap("LogNodeCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LogNodeCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer logNodeCount;
 
-    @Query
-    @NameInMap("MasterInstanceType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MasterInstanceType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String masterInstanceType;
 
-    @Query
-    @NameInMap("MultiZoneCombination")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MultiZoneCombination")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String multiZoneCombination;
 
-    @Query
-    @NameInMap("PayType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PayType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String payType;
 
-    @Query
-    @NameInMap("Period")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Period")
     private Integer period;
 
-    @Query
-    @NameInMap("PeriodUnit")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PeriodUnit")
     private String periodUnit;
 
-    @Query
-    @NameInMap("PrimaryVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryVSwitchId;
 
-    @Query
-    @NameInMap("PrimaryZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PrimaryZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String primaryZoneId;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @Query
-    @NameInMap("SecurityIPList")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SecurityIPList")
     private String securityIPList;
 
-    @Query
-    @NameInMap("StandbyVSwitchId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyVSwitchId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String standbyVSwitchId;
 
-    @Query
-    @NameInMap("StandbyZoneId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("StandbyZoneId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String standbyZoneId;
 
-    @Query
-    @NameInMap("VpcId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("VpcId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String vpcId;
 
     private CreateMultiZoneClusterRequest(Builder builder) {

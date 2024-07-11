@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>EnableHBaseueBackupRequest</p>
  */
 public class EnableHBaseueBackupRequest extends Request {
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("ColdStorageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ColdStorageSize")
     private Integer coldStorageSize;
 
-    @Query
-    @NameInMap("HbaseueClusterId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaseueClusterId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hbaseueClusterId;
 
-    @Query
-    @NameInMap("NodeCount")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NodeCount")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Integer nodeCount;
 
     private EnableHBaseueBackupRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SwitchHbaseHaSlbRequest</p>
  */
 public class SwitchHbaseHaSlbRequest extends Request {
-    @Query
-    @NameInMap("BdsId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BdsId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String bdsId;
 
-    @Query
-    @NameInMap("HaId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haId;
 
-    @Query
-    @NameInMap("HaTypes")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HaTypes")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String haTypes;
 
-    @Query
-    @NameInMap("HbaseType")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("HbaseType")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String hbaseType;
 
     private SwitchHbaseHaSlbRequest(Builder builder) {

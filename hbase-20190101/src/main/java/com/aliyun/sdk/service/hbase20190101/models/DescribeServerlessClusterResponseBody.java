@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,82 +11,82 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeServerlessClusterResponseBody</p>
  */
 public class DescribeServerlessClusterResponseBody extends TeaModel {
-    @NameInMap("AutoRenew")
+    @com.aliyun.core.annotation.NameInMap("AutoRenew")
     private String autoRenew;
 
-    @NameInMap("ClusterType")
+    @com.aliyun.core.annotation.NameInMap("ClusterType")
     private String clusterType;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("CuSize")
+    @com.aliyun.core.annotation.NameInMap("CuSize")
     private String cuSize;
 
-    @NameInMap("DiskSize")
+    @com.aliyun.core.annotation.NameInMap("DiskSize")
     private String diskSize;
 
-    @NameInMap("ExpireTime")
+    @com.aliyun.core.annotation.NameInMap("ExpireTime")
     private String expireTime;
 
-    @NameInMap("HaType")
+    @com.aliyun.core.annotation.NameInMap("HaType")
     private String haType;
 
-    @NameInMap("HasUser")
+    @com.aliyun.core.annotation.NameInMap("HasUser")
     private String hasUser;
 
-    @NameInMap("InnerEndpoint")
+    @com.aliyun.core.annotation.NameInMap("InnerEndpoint")
     private String innerEndpoint;
 
-    @NameInMap("InstanceId")
+    @com.aliyun.core.annotation.NameInMap("InstanceId")
     private String instanceId;
 
-    @NameInMap("InstanceName")
+    @com.aliyun.core.annotation.NameInMap("InstanceName")
     private String instanceName;
 
-    @NameInMap("IsDeletionProtection")
+    @com.aliyun.core.annotation.NameInMap("IsDeletionProtection")
     private String isDeletionProtection;
 
-    @NameInMap("LockMode")
+    @com.aliyun.core.annotation.NameInMap("LockMode")
     private String lockMode;
 
-    @NameInMap("MainVersion")
+    @com.aliyun.core.annotation.NameInMap("MainVersion")
     private String mainVersion;
 
-    @NameInMap("OuterEndpoint")
+    @com.aliyun.core.annotation.NameInMap("OuterEndpoint")
     private String outerEndpoint;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("ReserverMaxQpsNum")
+    @com.aliyun.core.annotation.NameInMap("ReserverMaxQpsNum")
     private String reserverMaxQpsNum;
 
-    @NameInMap("ReserverMinQpsNum")
+    @com.aliyun.core.annotation.NameInMap("ReserverMinQpsNum")
     private String reserverMinQpsNum;
 
-    @NameInMap("ResourceGroupId")
+    @com.aliyun.core.annotation.NameInMap("ResourceGroupId")
     private String resourceGroupId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("UpdateStatus")
+    @com.aliyun.core.annotation.NameInMap("UpdateStatus")
     private String updateStatus;
 
-    @NameInMap("VSwitchId")
+    @com.aliyun.core.annotation.NameInMap("VSwitchId")
     private String vSwitchId;
 
-    @NameInMap("VpcId")
+    @com.aliyun.core.annotation.NameInMap("VpcId")
     private String vpcId;
 
-    @NameInMap("ZoneId")
+    @com.aliyun.core.annotation.NameInMap("ZoneId")
     private String zoneId;
 
     private DescribeServerlessClusterResponseBody(Builder builder) {

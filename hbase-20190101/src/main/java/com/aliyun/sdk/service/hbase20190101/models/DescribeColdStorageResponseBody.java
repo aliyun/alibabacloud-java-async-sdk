@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeColdStorageResponseBody</p>
  */
 public class DescribeColdStorageResponseBody extends TeaModel {
-    @NameInMap("ClusterId")
+    @com.aliyun.core.annotation.NameInMap("ClusterId")
     private String clusterId;
 
-    @NameInMap("ColdStorageSize")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageSize")
     private String coldStorageSize;
 
-    @NameInMap("ColdStorageType")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageType")
     private String coldStorageType;
 
-    @NameInMap("ColdStorageUseAmount")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageUseAmount")
     private String coldStorageUseAmount;
 
-    @NameInMap("ColdStorageUsePercent")
+    @com.aliyun.core.annotation.NameInMap("ColdStorageUsePercent")
     private String coldStorageUsePercent;
 
-    @NameInMap("OpenStatus")
+    @com.aliyun.core.annotation.NameInMap("OpenStatus")
     private String openStatus;
 
-    @NameInMap("PayType")
+    @com.aliyun.core.annotation.NameInMap("PayType")
     private String payType;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeColdStorageResponseBody(Builder builder) {

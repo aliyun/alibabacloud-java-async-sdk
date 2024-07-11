@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupSummaryResponseBody</p>
  */
 public class DescribeBackupSummaryResponseBody extends TeaModel {
-    @NameInMap("Full")
+    @com.aliyun.core.annotation.NameInMap("Full")
     private Full full;
 
-    @NameInMap("Incr")
+    @com.aliyun.core.annotation.NameInMap("Incr")
     private Incr incr;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeBackupSummaryResponseBody(Builder builder) {
@@ -92,25 +91,25 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
     } 
 
     public static class Record extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataSize")
+        @com.aliyun.core.annotation.NameInMap("DataSize")
         private String dataSize;
 
-        @NameInMap("FinishTime")
+        @com.aliyun.core.annotation.NameInMap("FinishTime")
         private String finishTime;
 
-        @NameInMap("Process")
+        @com.aliyun.core.annotation.NameInMap("Process")
         private String process;
 
-        @NameInMap("RecordId")
+        @com.aliyun.core.annotation.NameInMap("RecordId")
         private String recordId;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Record(Builder builder) {
@@ -253,7 +252,7 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     }
     public static class Records extends TeaModel {
-        @NameInMap("Record")
+        @com.aliyun.core.annotation.NameInMap("Record")
         private java.util.List < Record> record;
 
         private Records(Builder builder) {
@@ -294,22 +293,22 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     }
     public static class Full extends TeaModel {
-        @NameInMap("HasMore")
+        @com.aliyun.core.annotation.NameInMap("HasMore")
         private String hasMore;
 
-        @NameInMap("NextFullBackupDate")
+        @com.aliyun.core.annotation.NameInMap("NextFullBackupDate")
         private String nextFullBackupDate;
 
-        @NameInMap("PageNumber")
+        @com.aliyun.core.annotation.NameInMap("PageNumber")
         private Integer pageNumber;
 
-        @NameInMap("PageSize")
+        @com.aliyun.core.annotation.NameInMap("PageSize")
         private Integer pageSize;
 
-        @NameInMap("Records")
+        @com.aliyun.core.annotation.NameInMap("Records")
         private Records records;
 
-        @NameInMap("Total")
+        @com.aliyun.core.annotation.NameInMap("Total")
         private Integer total;
 
         private Full(Builder builder) {
@@ -435,22 +434,22 @@ public class DescribeBackupSummaryResponseBody extends TeaModel {
 
     }
     public static class Incr extends TeaModel {
-        @NameInMap("BackupLogSize")
+        @com.aliyun.core.annotation.NameInMap("BackupLogSize")
         private String backupLogSize;
 
-        @NameInMap("Pos")
+        @com.aliyun.core.annotation.NameInMap("Pos")
         private String pos;
 
-        @NameInMap("QueueLogNum")
+        @com.aliyun.core.annotation.NameInMap("QueueLogNum")
         private String queueLogNum;
 
-        @NameInMap("RunningLogNum")
+        @com.aliyun.core.annotation.NameInMap("RunningLogNum")
         private String runningLogNum;
 
-        @NameInMap("Speed")
+        @com.aliyun.core.annotation.NameInMap("Speed")
         private String speed;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Incr(Builder builder) {

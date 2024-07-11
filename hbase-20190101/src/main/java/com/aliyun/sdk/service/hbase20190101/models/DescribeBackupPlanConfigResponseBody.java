@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeBackupPlanConfigResponseBody</p>
  */
 public class DescribeBackupPlanConfigResponseBody extends TeaModel {
-    @NameInMap("FullBackupCycle")
+    @com.aliyun.core.annotation.NameInMap("FullBackupCycle")
     private Integer fullBackupCycle;
 
-    @NameInMap("MinHFileBackupCount")
+    @com.aliyun.core.annotation.NameInMap("MinHFileBackupCount")
     private Integer minHFileBackupCount;
 
-    @NameInMap("NextFullBackupDate")
+    @com.aliyun.core.annotation.NameInMap("NextFullBackupDate")
     private String nextFullBackupDate;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Tables")
+    @com.aliyun.core.annotation.NameInMap("Tables")
     private Tables tables;
 
     private DescribeBackupPlanConfigResponseBody(Builder builder) {
@@ -132,7 +131,7 @@ public class DescribeBackupPlanConfigResponseBody extends TeaModel {
     } 
 
     public static class Tables extends TeaModel {
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private java.util.List < String > table;
 
         private Tables(Builder builder) {

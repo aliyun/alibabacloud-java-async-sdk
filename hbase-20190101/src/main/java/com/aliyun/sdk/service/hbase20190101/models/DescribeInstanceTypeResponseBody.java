@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.hbase20190101.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DescribeInstanceTypeResponseBody</p>
  */
 public class DescribeInstanceTypeResponseBody extends TeaModel {
-    @NameInMap("InstanceTypeSpecList")
+    @com.aliyun.core.annotation.NameInMap("InstanceTypeSpecList")
     private InstanceTypeSpecList instanceTypeSpecList;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private DescribeInstanceTypeResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
     } 
 
     public static class InstanceTypeSpec extends TeaModel {
-        @NameInMap("CpuSize")
+        @com.aliyun.core.annotation.NameInMap("CpuSize")
         private Long cpuSize;
 
-        @NameInMap("InstanceType")
+        @com.aliyun.core.annotation.NameInMap("InstanceType")
         private String instanceType;
 
-        @NameInMap("MemSize")
+        @com.aliyun.core.annotation.NameInMap("MemSize")
         private Long memSize;
 
         private InstanceTypeSpec(Builder builder) {
@@ -153,7 +152,7 @@ public class DescribeInstanceTypeResponseBody extends TeaModel {
 
     }
     public static class InstanceTypeSpecList extends TeaModel {
-        @NameInMap("InstanceTypeSpec")
+        @com.aliyun.core.annotation.NameInMap("InstanceTypeSpec")
         private java.util.List < InstanceTypeSpec> instanceTypeSpec;
 
         private InstanceTypeSpecList(Builder builder) {
