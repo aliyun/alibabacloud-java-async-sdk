@@ -20,6 +20,14 @@ public class FlightRefundDetailV2Request extends Request {
     private String orderId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_order_id")
+    private String outOrderId;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("out_refund_apply_id")
+    private String outRefundApplyId;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("refund_apply_id")
     private String refundApplyId;
 
@@ -31,6 +39,8 @@ public class FlightRefundDetailV2Request extends Request {
         super(builder);
         this.isvName = builder.isvName;
         this.orderId = builder.orderId;
+        this.outOrderId = builder.outOrderId;
+        this.outRefundApplyId = builder.outRefundApplyId;
         this.refundApplyId = builder.refundApplyId;
         this.xAcsBtripCorpToken = builder.xAcsBtripCorpToken;
     }
@@ -63,6 +73,20 @@ public class FlightRefundDetailV2Request extends Request {
     }
 
     /**
+     * @return outOrderId
+     */
+    public String getOutOrderId() {
+        return this.outOrderId;
+    }
+
+    /**
+     * @return outRefundApplyId
+     */
+    public String getOutRefundApplyId() {
+        return this.outRefundApplyId;
+    }
+
+    /**
      * @return refundApplyId
      */
     public String getRefundApplyId() {
@@ -79,6 +103,8 @@ public class FlightRefundDetailV2Request extends Request {
     public static final class Builder extends Request.Builder<FlightRefundDetailV2Request, Builder> {
         private String isvName; 
         private String orderId; 
+        private String outOrderId; 
+        private String outRefundApplyId; 
         private String refundApplyId; 
         private String xAcsBtripCorpToken; 
 
@@ -90,6 +116,8 @@ public class FlightRefundDetailV2Request extends Request {
             super(request);
             this.isvName = request.isvName;
             this.orderId = request.orderId;
+            this.outOrderId = request.outOrderId;
+            this.outRefundApplyId = request.outRefundApplyId;
             this.refundApplyId = request.refundApplyId;
             this.xAcsBtripCorpToken = request.xAcsBtripCorpToken;
         } 
@@ -109,6 +137,24 @@ public class FlightRefundDetailV2Request extends Request {
         public Builder orderId(String orderId) {
             this.putQueryParameter("order_id", orderId);
             this.orderId = orderId;
+            return this;
+        }
+
+        /**
+         * out_order_id.
+         */
+        public Builder outOrderId(String outOrderId) {
+            this.putQueryParameter("out_order_id", outOrderId);
+            this.outOrderId = outOrderId;
+            return this;
+        }
+
+        /**
+         * out_refund_apply_id.
+         */
+        public Builder outRefundApplyId(String outRefundApplyId) {
+            this.putQueryParameter("out_refund_apply_id", outRefundApplyId);
+            this.outRefundApplyId = outRefundApplyId;
             return this;
         }
 

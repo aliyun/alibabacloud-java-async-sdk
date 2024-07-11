@@ -69,6 +69,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CarSceneQueryResponse> carSceneQuery(CarSceneQueryRequest request);
 
+    CompletableFuture<ChannelCorpCreateResponse> channelCorpCreate(ChannelCorpCreateRequest request);
+
     CompletableFuture<CitySearchResponse> citySearch(CitySearchRequest request);
 
     CompletableFuture<CommonApplyQueryResponse> commonApplyQuery(CommonApplyQueryRequest request);
@@ -202,6 +204,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<HotelIndexInfoResponse> hotelIndexInfo(HotelIndexInfoRequest request);
 
     CompletableFuture<HotelOrderCancelResponse> hotelOrderCancel(HotelOrderCancelRequest request);
+
+    CompletableFuture<HotelOrderChangeApplyResponse> hotelOrderChangeApply(HotelOrderChangeApplyRequest request);
+
+    CompletableFuture<HotelOrderChangeDetailResponse> hotelOrderChangeDetail(HotelOrderChangeDetailRequest request);
 
     CompletableFuture<HotelOrderCreateResponse> hotelOrderCreate(HotelOrderCreateRequest request);
 

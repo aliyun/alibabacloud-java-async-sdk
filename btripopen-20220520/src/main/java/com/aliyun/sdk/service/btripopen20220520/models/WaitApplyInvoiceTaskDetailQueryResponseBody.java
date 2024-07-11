@@ -208,6 +208,9 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("telephone")
         private String telephone;
 
+        @com.aliyun.core.annotation.NameInMap("train_acceleration_package_invoice_fee")
+        private String trainAccelerationPackageInvoiceFee;
+
         @com.aliyun.core.annotation.NameInMap("train_invoice_fee")
         private String trainInvoiceFee;
 
@@ -234,6 +237,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             this.remark = builder.remark;
             this.serviceFee = builder.serviceFee;
             this.telephone = builder.telephone;
+            this.trainAccelerationPackageInvoiceFee = builder.trainAccelerationPackageInvoiceFee;
             this.trainInvoiceFee = builder.trainInvoiceFee;
             this.vehicleInvoiceFee = builder.vehicleInvoiceFee;
         }
@@ -380,6 +384,13 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
         }
 
         /**
+         * @return trainAccelerationPackageInvoiceFee
+         */
+        public String getTrainAccelerationPackageInvoiceFee() {
+            return this.trainAccelerationPackageInvoiceFee;
+        }
+
+        /**
          * @return trainInvoiceFee
          */
         public String getTrainInvoiceFee() {
@@ -413,6 +424,7 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
             private String remark; 
             private String serviceFee; 
             private String telephone; 
+            private String trainAccelerationPackageInvoiceFee; 
             private String trainInvoiceFee; 
             private String vehicleInvoiceFee; 
 
@@ -565,6 +577,14 @@ public class WaitApplyInvoiceTaskDetailQueryResponseBody extends TeaModel {
              */
             public Builder telephone(String telephone) {
                 this.telephone = telephone;
+                return this;
+            }
+
+            /**
+             * train_acceleration_package_invoice_fee.
+             */
+            public Builder trainAccelerationPackageInvoiceFee(String trainAccelerationPackageInvoiceFee) {
+                this.trainAccelerationPackageInvoiceFee = trainAccelerationPackageInvoiceFee;
                 return this;
             }
 
