@@ -43,6 +43,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<DeleteAppVersionResponse> deleteAppVersion(DeleteAppVersionRequest request);
 
+    CompletableFuture<DescribeInstanceStatsInfoResponse> describeInstanceStatsInfo(DescribeInstanceStatsInfoRequest request);
+
     CompletableFuture<GetAdaptationResponse> getAdaptation(GetAdaptationRequest request);
 
     CompletableFuture<GetAppResponse> getApp(GetAppRequest request);
