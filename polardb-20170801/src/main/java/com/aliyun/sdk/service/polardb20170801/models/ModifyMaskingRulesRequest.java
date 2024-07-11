@@ -198,7 +198,11 @@ public class ModifyMaskingRulesRequest extends Request {
         }
 
         /**
-         * RuleVersion.
+         * The version of the masking rule. Default value: v1. Valid values:
+         * <p>
+         * 
+         * *   v1
+         * *   v2
          */
         public Builder ruleVersion(String ruleVersion) {
             this.putQueryParameter("RuleVersion", ruleVersion);

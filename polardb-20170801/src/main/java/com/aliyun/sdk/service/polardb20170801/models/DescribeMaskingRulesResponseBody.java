@@ -184,7 +184,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
             }
 
             /**
-             * RuleVersion.
+             * The version of the masking rule. Valid values: v1 and v2. Default value: v1
              */
             public Builder ruleVersion(String ruleVersion) {
                 this.ruleVersion = ruleVersion;
