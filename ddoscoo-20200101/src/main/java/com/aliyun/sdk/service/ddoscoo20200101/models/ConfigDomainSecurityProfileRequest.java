@@ -83,7 +83,7 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         } 
 
         /**
-         * Cluster.
+         * This parameter is unavailable.
          */
         public Builder cluster(String cluster) {
             this.putQueryParameter("Cluster", cluster);
@@ -92,7 +92,19 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * Config.
+         * The configurations for the global mitigation policy feature. The configurations include the following fields:
+         * <p>
+         * 
+         * *   **global_rule_mode**: optional. The mode for the global mitigation policy feature. Data type: string. Valid values:
+         * 
+         *     *   **weak**: loose.
+         *     *   **default**: normal.
+         *     *   **hard**: strict.
+         * 
+         * *   **global_rule_enable**: optional. Specifies whether to enable the global mitigation policy feature. Data type: string. Valid values:
+         * 
+         *     *   **0**: disabled.
+         *     *   **1**: enabled.
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);
@@ -101,7 +113,10 @@ public class ConfigDomainSecurityProfileRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

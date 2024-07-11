@@ -49,7 +49,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the specifications of instances.
+         * The details of the specifications of the instance.
          */
         public Builder instanceSpecs(java.util.List < InstanceSpecs> instanceSpecs) {
             this.instanceSpecs = instanceSpecs;
@@ -289,7 +289,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             private Integer siteLimit; 
 
             /**
-             * The clean bandwidth of normal services. Unit: Mbit/s.
+             * The clean bandwidth. Unit: Mbit/s.
              */
             public Builder bandwidthMbps(Integer bandwidthMbps) {
                 this.bandwidthMbps = bandwidthMbps;
@@ -321,10 +321,10 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The number of available advanced mitigation sessions for this month. If **-1** is returned, advanced mitigation capabilities are unlimited.
+             * The number of available advanced mitigation sessions for this month. **-1**: unlimited
              * <p>
              * 
-             * > This parameter is returned only when **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Premium instances are queried.
+             * >  This parameter is returned only when the request parameter **RegionId** is set to **ap-southeast-1**. If RegionId is set to ap-southeast-1, the specifications of Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.
              */
             public Builder defenseCount(Integer defenseCount) {
                 this.defenseCount = defenseCount;
@@ -368,7 +368,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticQps.
+             * The burstable QPS. Unit: QPS
              */
             public Builder elasticQps(Long elasticQps) {
                 this.elasticQps = elasticQps;
@@ -376,7 +376,11 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * ElasticQpsMode.
+             * The metering method of the burstable QPS. Valid values:
+             * <p>
+             * 
+             * *   **day**: the metering method of daily 95th percentile
+             * *   **month**: the metering method of monthly 95th percentile
              */
             public Builder elasticQpsMode(String elasticQpsMode) {
                 this.elasticQpsMode = elasticQpsMode;
@@ -390,8 +394,8 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
              * *   **default**: Standard
              * *   **enhance**: Enhanced
              * *   **cnhk**: Chinese Mainland Acceleration (CMA)
-             * *   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard function plan
-             * *   **cnhk_enhance**: Sec-CMA enhanced function plan
+             * *   **cnhk_default**: Secure Chinese Mainland Acceleration (Sec-CMA) standard
+             * *   **cnhk_enhance**: Sec-CMA enhanced
              */
             public Builder functionVersion(String functionVersion) {
                 this.functionVersion = functionVersion;
@@ -415,7 +419,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * The clean queries per second (QPS) of normal services.
+             * The clean QPS.
              */
             public Builder qpsLimit(Integer qpsLimit) {
                 this.qpsLimit = qpsLimit;
@@ -423,7 +427,7 @@ public class DescribeInstanceSpecsResponseBody extends TeaModel {
             }
 
             /**
-             * 实例业务带宽限速值。取值：0～15360，0表示不限速。单位：mbps。
+             * The threshold of the clean bandwidth. Valid values: 0 to 15360. The value 0 indicates that rate limiting is never triggered. Unit: Mbit/s
              */
             public Builder realLimitBw(Long realLimitBw) {
                 this.realLimitBw = realLimitBw;

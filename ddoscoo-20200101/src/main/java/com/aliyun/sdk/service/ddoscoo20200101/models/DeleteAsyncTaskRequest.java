@@ -103,7 +103,7 @@ public class DeleteAsyncTaskRequest extends Request {
          * The ID of the task that you want to delete.
          * <p>
          * 
-         * > You can call the [DescribeAsyncTasks](~~159405~~) operation to query the IDs of all asynchronous export tasks.
+         * >  You can call the [DescribeAsyncTasks](~~DescribeAsyncTasks~~) operation to query the IDs of all asynchronous export tasks.
          */
         public Builder taskId(Integer taskId) {
             this.putQueryParameter("TaskId", taskId);

@@ -196,7 +196,11 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Act.
+         * The action on the requests that trigger the custom frequency control rule. Valid values:
+         * <p>
+         * 
+         * *   **close**: blocks the requests.
+         * *   **captcha**: triggers Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests.
          */
         public Builder act(String act) {
             this.putQueryParameter("Act", act);
@@ -214,7 +218,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -232,7 +239,13 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The matching mode. Valid values:
+         * <p>
+         * 
+         * *   **prefix**: prefix match.
+         * *   **match**: exact match.
+         * 
+         * >  If the **URI** of the check path contains parameters, you must set this parameter to **prefix**.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -241,7 +254,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the rule. The name can be up to 128 characters in length and contain letters, digits, and underscores (\_).
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -250,7 +263,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group to which the Anti-DDoS Proxy instance belongs in Resource Management. This parameter is empty by default, which indicates that the instance belongs to the default resource group.
+         * <p>
+         * 
+         * For more information about resource groups, see [Create a resource group](~~94485~~).
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -259,7 +275,7 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The blocking duration. Valid values: **60** to **86400**. Unit: seconds.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -268,7 +284,10 @@ public class CreateWebCCRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * The check path.
+         * <p>
+         * 
+         * >  The URI cannot be modified. The domain name of the website, the check path, and the rule name uniquely identify a rule.
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

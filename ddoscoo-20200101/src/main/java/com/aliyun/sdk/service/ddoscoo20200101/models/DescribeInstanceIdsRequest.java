@@ -104,7 +104,14 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * Edition.
+         * The type of the instance to query. Valid values:
+         * <p>
+         * 
+         * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+         * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+         * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+         * *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
+         * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -113,7 +120,7 @@ public class DescribeInstanceIdsRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of instances to query.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);

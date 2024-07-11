@@ -109,7 +109,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
         }
 
         /**
-         * An array that consists of the details of the tag key.
+         * The details about the tag keys.
          */
         public Builder tagKeys(java.util.List < TagKeys> tagKeys) {
             this.tagKeys = tagKeys;
@@ -169,7 +169,7 @@ public class DescribeTagKeysResponseBody extends TeaModel {
             private String tagKey; 
 
             /**
-             * The number of Anti-DDoS Pro instances to which the tag key is added.
+             * The number of Anti-DDoS Proxy (Chinese Mainland) instances to which the tag key is added.
              */
             public Builder tagCount(Integer tagCount) {
                 this.tagCount = tagCount;

@@ -49,7 +49,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the connections established over the port.
+         * Details about the connections established over the port.
          */
         public Builder connsList(java.util.List < ConnsList> connsList) {
             this.connsList = connsList;
@@ -153,7 +153,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * The number of concurrent connections.
+             * >  This parameter is in internal preview. Do not use this parameter.
              */
             public Builder conns(Long conns) {
                 this.conns = conns;
@@ -161,7 +161,7 @@ public class DescribePortConnsListResponseBody extends TeaModel {
             }
 
             /**
-             * The new connection creation rate.
+             * The number of new connections.
              */
             public Builder cps(Long cps) {
                 this.cps = cps;

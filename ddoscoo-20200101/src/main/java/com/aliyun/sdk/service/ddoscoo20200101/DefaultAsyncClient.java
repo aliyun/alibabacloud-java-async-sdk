@@ -383,10 +383,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Pro instances at a time.
-      * > Anti-DDoS Premium does not support the tag feature.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call the CreateTagResources operation to add a tag to multiple Anti-DDoS Proxy (Chinese Mainland) instances at a time.
+      * >  Anti-DDoS Proxy (Outside Chinese Mainland) does not support the tag feature.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -553,10 +553,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Pro instances.
-      * > Only Anti-DDoS Pro supports tags.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call the DeleteTagResources operation to remove tags from Anti-DDoS Proxy (Chinese Mainland) instances.
+      * >  Only Anti-DDoS Proxy (Chinese Mainland) supports tags.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -758,10 +758,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * This operation is used to query the Diversion from Origin Server configurations of one or more Anti-DDoS Pro instances.
-      * > This operation is suitable only for Anti-DDoS Pro.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query the Diversion from Origin Server configurations of one or more Anti-DDoS Proxy (Chinese Mainland) instances.
+      * >  This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -927,10 +927,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Premium instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of available global advanced mitigation sessions.
-      * > This operation is suitable only for Anti-DDoS Premium.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call the DescribeDefenseCountStatistics operation to query the information about advanced mitigation sessions of an Anti-DDoS Proxy (Outside Chinese Mainland) instance. For example, you can query the number of advanced mitigation sessions that are used within the current calendar month and the number of remaining advanced mitigation sessions.
+      * >  This operation is suitable only for Anti-DDoS Proxy (Outside Chinese Mainland).
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -1811,10 +1811,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call this operation to query all tag keys and the Anti-DDoS Pro instances to which the tag keys are added by page.
-      * > The tag feature is suitable only for Anti-DDoS Pro.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call this operation to query all tag keys and the number of Anti-DDoS Proxy (Chinese Mainland) instances to which each tag key is added by page.
+      * >  Only Anti-DDoS Proxy (Chinese Mainland) supports tags.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -1832,10 +1832,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Pro instance.
-      * > Only Anti-DDoS Pro supports tags.
-      * ### Limits
-      * You can call this operation up to 10 times per second per account. If the number of the calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
+      * You can call the DescribeTagResources operation to query the information about the tags that are added to an Anti-DDoS Proxy (Chinese Mainland) instance.
+      * >  Only Anti-DDoS Proxy (Chinese Mainland) supports tags.
+      * ### [](#qps-)QPS limits
+      * You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. As a result, your business may be affected. We recommend that you take note of the limit when you call this operation.
       *
      */
     @Override
@@ -2325,7 +2325,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
+      * >  This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
       *
      */
     @Override
@@ -2375,7 +2375,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
+      * >  This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
       *
      */
     @Override
@@ -2410,6 +2410,10 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
+    /**
+      * You can enable burstable QPS only for IPv4 instances.
+      *
+     */
     @Override
     public CompletableFuture<ModifyElasticBizQpsResponse> modifyElasticBizQps(ModifyElasticBizQpsRequest request) {
         try {
@@ -2467,7 +2471,7 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * > This operation is suitable only for Anti-DDoS Pro.
+      * >  This operation is suitable only for Anti-DDoS Proxy (Chinese Mainland).
       *
      */
     @Override

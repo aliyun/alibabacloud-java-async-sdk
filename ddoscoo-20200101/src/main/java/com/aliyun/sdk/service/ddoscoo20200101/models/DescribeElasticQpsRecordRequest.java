@@ -107,7 +107,7 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a timestamp. Unit: milliseconds.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -116,7 +116,7 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the Anti-DDoS Proxy instance to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -125,7 +125,7 @@ public class DescribeElasticQpsRecordRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a timestamp. Unit: milliseconds.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);

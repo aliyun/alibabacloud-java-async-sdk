@@ -480,7 +480,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Frequency Control policy is enabled. Valid values:
+             * Indicates whether Frequency Control is enabled. Valid values:
              * <p>
              * 
              * *   **true**
@@ -492,7 +492,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Custom Rule switch of the Frequency Control policy is turned on. Valid values:
+             * Indicates whether the Custom Rules switch of Frequency Control is turned on. Valid values:
              * <p>
              * 
              * *   **true**
@@ -504,7 +504,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Frequency Control policy. Valid values:
+             * The mode of Frequency Control. Valid values:
              * <p>
              * 
              * *   **default**: the Normal mode
@@ -562,7 +562,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Enforce HTTPS Routing is turned on. Valid values:
+             * Indicates whether Enable HTTPS Redirection is turned on. Valid values:
              * <p>
              * 
              * *   **true**
@@ -574,7 +574,7 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether Enable HTTP is turned on. Valid values:
+             * Indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Valid values:
              * <p>
              * 
              * *   **true**
@@ -589,9 +589,9 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * The advanced HTTPS settings. This parameter takes effect only when the value of the **ProxyType** parameter includes **https**. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
              * <p>
              * 
-             * *   **Http2https**: indicates whether the feature of redirecting HTTP requests to HTTPS requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-             * *   **Https2http**: indicates whether the feature of redirecting HTTPS requests to HTTP requests is enabled. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is disabled. The value 1 indicates that the feature is enabled.
-             * *   **Http2**: indicates whether HTTP/2 is supported. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that HTTP/2 is not supported. The value 1 indicates that HTTP/2 is supported.
+             * *   **Http2https**: indicates whether Enable HTTPS Redirection is turned on. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTPS Redirection is turned on. The value 1 indicates that Enable HTTPS Redirection is turned off.
+             * *   **Https2http**: indicates whether Enable HTTP Redirection of Back-to-origin Requests is turned on. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that the feature is turned on. The value 1 indicates that the feature is turned off.
+             * *   **Http2**: indicates whether Enable HTTP/2 is turned on. Data type: integer. Valid values: **0** and **1**. The value 0 indicates that Enable HTTP/2 is turned off. The value 1 indicates that Enable HTTP/2 is turned on.
              */
             public Builder httpsExt(String httpsExt) {
                 this.httpsExt = httpsExt;
@@ -607,10 +607,11 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the Online Certificate Status Protocol (OCSP) feature is enabled. Valid values:
+             * Indicates whether the Online Certificate Status Protocol (OCSP) feature is turned on. Valid values:
              * <p>
-             * - **true**: yes
-             * - **false**: no
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder ocspEnabled(Boolean ocspEnabled) {
                 this.ocspEnabled = ocspEnabled;
@@ -618,12 +619,12 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
             }
 
             /**
-             * The load balancing algorithm for back-to-origin traffic. Valid values:
+             * The scheduling algorithm for back-to-origin traffic. Valid values:
              * <p>
              * 
              * *   **ip_hash**: the IP hash algorithm. This algorithm is used to redirect the requests from the same IP address to the same origin server.
              * *   **rr**: the round-robin algorithm. This algorithm is used to redirect requests to origin servers in turn.
-             * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from Anti-DDoS Pro or Anti-DDoS Premium instances to origin servers based on the intelligent DNS resolution feature.
+             * *   **least_time**: the least response time algorithm. This algorithm is used to minimize the latency when requests are forwarded from the instance to origin servers based on the intelligent DNS resolution feature.
              */
             public Builder policyMode(String policyMode) {
                 this.policyMode = policyMode;
@@ -634,8 +635,8 @@ public class DescribeDomainResourceResponseBody extends TeaModel {
              * Indicates whether the instance forwards the traffic that is destined for the website. Valid values:
              * <p>
              * 
-             * *   **true**: Anti-DDoS Pro or Anti-DDoS Premium forwards the traffic that is destined for the website.
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder proxyEnabled(Boolean proxyEnabled) {
                 this.proxyEnabled = proxyEnabled;

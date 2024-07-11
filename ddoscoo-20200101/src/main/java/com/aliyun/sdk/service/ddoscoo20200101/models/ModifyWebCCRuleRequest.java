@@ -259,7 +259,7 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Ttl.
+         * The blocking duration. Valid values: **60** to **86400**. Unit: seconds.
          */
         public Builder ttl(Integer ttl) {
             this.putQueryParameter("Ttl", ttl);
@@ -268,7 +268,10 @@ public class ModifyWebCCRuleRequest extends Request {
         }
 
         /**
-         * Uri.
+         * The check path.
+         * <p>
+         * 
+         * >  You cannot modify the Uniform Resource Identifier (URI). The domain name of the website, the check path, and the rule name uniquely identify a rule.
          */
         public Builder uri(String uri) {
             this.putQueryParameter("Uri", uri);

@@ -119,7 +119,7 @@ public class ConfigWebIpSetRequest extends Request {
         }
 
         /**
-         * IP address N or CIDR block N that you want to add to the blacklist. The maximum value of N is 200. You can add up to 200 IP addresses or CIDR blocks to the blacklist.
+         * The IP addresses and CIDR blocks in the blacklist. You can add up to 200 IP addresses or CIDR blocks to the blacklist.
          */
         public Builder blackList(java.util.List < String > blackList) {
             this.putQueryParameter("BlackList", blackList);
@@ -149,7 +149,7 @@ public class ConfigWebIpSetRequest extends Request {
         }
 
         /**
-         * IP address N or CIDR block N that you want to add to the whitelist. The maximum value of N is 200. You can add up to 200 IP addresses or CIDR blocks to the whitelist.
+         * The IP addresses and CIDR blocks in the whitelist. You can add up to 200 IP addresses or CIDR blocks to the whitelist.
          */
         public Builder whiteList(java.util.List < String > whiteList) {
             this.putQueryParameter("WhiteList", whiteList);

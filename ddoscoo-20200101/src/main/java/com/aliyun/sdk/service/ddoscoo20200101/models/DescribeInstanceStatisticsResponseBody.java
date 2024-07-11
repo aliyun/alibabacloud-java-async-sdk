@@ -49,7 +49,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The statistics on the instances.
+         * The statistics on the instance.
          */
         public Builder instanceStatistics(java.util.List < InstanceStatistics> instanceStatistics) {
             this.instanceStatistics = instanceStatistics;
@@ -148,7 +148,7 @@ public class DescribeInstanceStatisticsResponseBody extends TeaModel {
              * The number of advanced mitigation sessions that are used in this month.
              * <p>
              * 
-             * > This parameter is returned only if Anti-DDoS Premium instances are queried.
+             * >  This parameter is returned only if Anti-DDoS Proxy (Outside Chinese Mainland) instances are queried.
              */
             public Builder defenseCountUsage(Integer defenseCountUsage) {
                 this.defenseCountUsage = defenseCountUsage;

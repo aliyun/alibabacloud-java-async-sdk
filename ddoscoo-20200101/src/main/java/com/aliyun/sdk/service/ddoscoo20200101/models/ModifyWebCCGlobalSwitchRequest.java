@@ -92,7 +92,11 @@ public class ModifyWebCCGlobalSwitchRequest extends Request {
         }
 
         /**
-         * CcGlobalSwitch.
+         * Specifies whether the HTTP flood mitigation feature is enabled. Valid values:
+         * <p>
+         * 
+         * *   **open**
+         * *   **close**
          */
         public Builder ccGlobalSwitch(String ccGlobalSwitch) {
             this.putQueryParameter("CcGlobalSwitch", ccGlobalSwitch);
@@ -101,7 +105,10 @@ public class ModifyWebCCGlobalSwitchRequest extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

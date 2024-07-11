@@ -191,7 +191,7 @@ public class CreateDomainResourceRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of the protocol type and port number.
+         * The details about the protocol type and port number.
          */
         public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
             this.putQueryParameter("ProxyTypes", proxyTypes);
@@ -216,7 +216,7 @@ public class CreateDomainResourceRequest extends Request {
          * 
          * *   **1**: domain name
          * 
-         *     If you deploy proxies, such as a Web Application Firewall (WAF) instance, between the origin server and the Anti-DDoS Pro or Anti-DDoS Premium instance, set the value to 1. If you use the domain name, you must enter the address of the proxy, such as the CNAME of WAF.
+         *     This parameter is suitable for scenarios where another proxy service, such as Web Application Firewall (WAF), is deployed between the origin server and Anti-DDoS Pro or Anti-DDoS Premium. The address is the jump address of the proxy service, such as the CNAME address of WAF.
          */
         public Builder rsType(Integer rsType) {
             this.putQueryParameter("RsType", rsType);
@@ -271,7 +271,7 @@ public class CreateDomainResourceRequest extends Request {
             private String proxyType; 
 
             /**
-             * An array that consists of port numbers.
+             * The port numbers.
              */
             public Builder proxyPorts(java.util.List < Integer > proxyPorts) {
                 this.proxyPorts = proxyPorts;

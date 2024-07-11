@@ -77,7 +77,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
         }
 
         /**
-         * An array consisting of the details of the tags that are added to the Anti-DDoS Pro instance.
+         * The tags that are added to the Anti-DDoS Proxy (Chinese Mainland) instance.
          */
         public Builder tagResources(TagResources tagResources) {
             this.tagResources = tagResources;
@@ -153,7 +153,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             private String tagValue; 
 
             /**
-             * The ID of the Anti-DDoS Pro instance.
+             * The ID of the Anti-DDoS Proxy (Chinese Mainland) instance.
              */
             public Builder resourceId(String resourceId) {
                 this.resourceId = resourceId;
@@ -161,7 +161,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the resource. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Pro instance.
+             * The resource type. The value is fixed as **INSTANCE**, which indicates an Anti-DDoS Proxy instance.
              */
             public Builder resourceType(String resourceType) {
                 this.resourceType = resourceType;
@@ -169,7 +169,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The key of the tag that is added to the Anti-DDoS Pro instance.
+             * The key of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
              */
             public Builder tagKey(String tagKey) {
                 this.tagKey = tagKey;
@@ -177,7 +177,7 @@ public class DescribeTagResourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The value of the tag that is added to the Anti-DDoS Pro instance.
+             * The value of the tag that is added to the Anti-DDoS Proxy (Chinese Mainland) instance.
              */
             public Builder tagValue(String tagValue) {
                 this.tagValue = tagValue;

@@ -191,7 +191,7 @@ public class ModifyDomainResourceRequest extends Request {
         }
 
         /**
-         * An array that consists of the details of the protocol type and port number.
+         * The details about the protocol type and port number.
          */
         public Builder proxyTypes(java.util.List < ProxyTypes> proxyTypes) {
             this.putQueryParameter("ProxyTypes", proxyTypes);
@@ -271,7 +271,7 @@ public class ModifyDomainResourceRequest extends Request {
             private String proxyType; 
 
             /**
-             * An array that consists of port numbers.
+             * The port numbers.
              */
             public Builder proxyPorts(java.util.List < Integer > proxyPorts) {
                 this.proxyPorts = proxyPorts;

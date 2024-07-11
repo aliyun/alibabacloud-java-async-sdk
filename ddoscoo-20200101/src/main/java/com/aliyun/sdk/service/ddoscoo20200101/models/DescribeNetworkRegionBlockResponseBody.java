@@ -121,7 +121,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             private String regionBlockSwitch; 
 
             /**
-             * An array consisting of the codes of the countries or areas from which the requests are blocked.
+             * The codes of the countries or areas from which the requests are blocked.
              */
             public Builder countries(java.util.List < Long > countries) {
                 this.countries = countries;
@@ -129,7 +129,7 @@ public class DescribeNetworkRegionBlockResponseBody extends TeaModel {
             }
 
             /**
-             * An array consisting of the codes of the administrative regions in China from which the requests are blocked.
+             * The codes of the administrative regions in China from which the requests are blocked.
              */
             public Builder provinces(java.util.List < Long > provinces) {
                 this.provinces = provinces;

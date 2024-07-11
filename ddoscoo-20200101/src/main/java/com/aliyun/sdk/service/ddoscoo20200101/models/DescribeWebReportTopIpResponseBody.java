@@ -49,7 +49,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * DataList.
+         * The response parameters.
          */
         public Builder dataList(java.util.List < DataList> dataList) {
             this.dataList = dataList;
@@ -57,7 +57,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -133,7 +133,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             private String sourceIp; 
 
             /**
-             * AreaId.
+             * The ID of the location.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -141,7 +141,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * Count.
+             * The number of entries returned.
              */
             public Builder count(Long count) {
                 this.count = count;
@@ -149,7 +149,27 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * Isp.
+             * The Internet service provider (ISP) for the attack. Valid values:
+             * <p>
+             * 
+             * *   **100017**: China Telecom
+             * *   **100026**: China Unicom
+             * *   **100025**: China Mobile
+             * *   **100027**: China Education and Research Network
+             * *   **100020**: China Mobile Tietong
+             * *   **1000143**: Dr.Peng Telecom & Media Group
+             * *   **100080**: Beijing Gehua CATV Network
+             * *   **1000139**: National Radio and Television Administration
+             * *   **100023**: Oriental Cable Network
+             * *   **100063**: Founder Broadband
+             * *   **1000337**: China Internet Exchange
+             * *   **100021**: 21Vianet Group
+             * *   **1000333**: Wasu Media Holding
+             * *   **100093**: Wangsu Science & Technology
+             * *   **1000401**: Tencent
+             * *   **100099**: Baidu
+             * *   **1000323**: Alibaba Cloud
+             * *   **100098**: Alibaba
              */
             public Builder isp(String isp) {
                 this.isp = isp;
@@ -157,7 +177,7 @@ public class DescribeWebReportTopIpResponseBody extends TeaModel {
             }
 
             /**
-             * SourceIp.
+             * The source IP address.
              */
             public Builder sourceIp(String sourceIp) {
                 this.sourceIp = sourceIp;

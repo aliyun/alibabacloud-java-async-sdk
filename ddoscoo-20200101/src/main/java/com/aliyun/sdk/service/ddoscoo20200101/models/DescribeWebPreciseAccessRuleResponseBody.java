@@ -49,7 +49,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array consisting of the configuration of the accurate access control rule that is created for the website.
+         * The configuration of the accurate access control rule that is created for the website.
          */
         public Builder preciseAccessConfigList(java.util.List < PreciseAccessConfigList> preciseAccessConfigList) {
             this.preciseAccessConfigList = preciseAccessConfigList;
@@ -169,10 +169,10 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The custom HTTP header.
+             * The custom HTTP request header.
              * <p>
              * 
-             * > This parameter takes effect only when **Field** is set to **header**.
+             * >  This parameter takes effect only when **Field** is set to **header**.
              */
             public Builder headerName(String headerName) {
                 this.headerName = headerName;
@@ -272,9 +272,9 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
              * The action triggered if the rule is matched. Valid values:
              * <p>
              * 
-             * *   **accept**: allows the requests that match the rule.
-             * *   **block**: blocks the requests that match the rule.
-             * *   **challenge**: implements Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule.
+             * *   **accept**: The requests that match the rule are allowed.
+             * *   **block**: The requests that match the rule are blocked.
+             * *   **challenge**: Completely Automated Public Turing test to tell Computers and Humans Apart (CAPTCHA) verification for the requests that match the rule is implemented.
              */
             public Builder action(String action) {
                 this.action = action;
@@ -290,7 +290,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. **0** indicates that the rule takes effect all the time.
+             * The validity period of the rule. Unit: seconds. This parameter takes effect only when **action** of a rule is **block**. Access requests that match the rule are blocked within the specified validity period of the rule. The value **0** indicates that the whitelist takes effect all the time.
              */
             public Builder expires(Long expires) {
                 this.expires = expires;
@@ -298,7 +298,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the rule.
+             * The name of the scheduling rule.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -309,7 +309,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
              * The source of the rule. Valid values:
              * <p>
              * 
-             * *   **manual**: manually created. This is the default value.
+             * *   **manual** (default): manually created.
              * *   **auto**: automatically generated.
              */
             public Builder owner(String owner) {
@@ -371,7 +371,7 @@ public class DescribeWebPreciseAccessRuleResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of the rules.
+             * The scheduling rules.
              */
             public Builder ruleList(java.util.List < RuleList> ruleList) {
                 this.ruleList = ruleList;

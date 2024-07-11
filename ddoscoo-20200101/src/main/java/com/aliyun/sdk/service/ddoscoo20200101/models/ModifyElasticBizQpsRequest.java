@@ -106,7 +106,10 @@ public class ModifyElasticBizQpsRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The ID of the Anti-DDoS Proxy instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -115,7 +118,11 @@ public class ModifyElasticBizQpsRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The metering method for the burstable QPS. Valid values:
+         * <p>
+         * 
+         * *   **month**: monthly 95th percentile
+         * *   **day**: daily 95th percentile QPS
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);
@@ -124,7 +131,10 @@ public class ModifyElasticBizQpsRequest extends Request {
         }
 
         /**
-         * OpsElasticQps.
+         * The burstable QPS value.
+         * <p>
+         * 
+         * >  The default value is 300,000 for the Chinese mainland and 150,000 for regions outside the Chinese mainland.
          */
         public Builder opsElasticQps(Long opsElasticQps) {
             this.putQueryParameter("OpsElasticQps", opsElasticQps);

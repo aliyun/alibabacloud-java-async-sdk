@@ -144,8 +144,8 @@ public class ModifyCnameReuseRequest extends Request {
          * Specifies whether to enable CNAME reuse. Valid values:
          * <p>
          * 
-         * *   **1**: enables CNAME reuse.
-         * *   **2**: disables CNAME reuse.
+         * *   **0:** disabled
+         * *   **1:** enabled
          */
         public Builder enable(Integer enable) {
             this.putQueryParameter("Enable", enable);

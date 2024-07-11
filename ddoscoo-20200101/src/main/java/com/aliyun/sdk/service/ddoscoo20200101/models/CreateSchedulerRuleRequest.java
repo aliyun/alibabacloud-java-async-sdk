@@ -172,13 +172,14 @@ public class CreateSchedulerRuleRequest extends Request {
         }
 
         /**
-         * The type of the custom defense rule. Valid values:
+         * The type of the rule. Valid values:
          * <p>
          * 
          * *   **2**: tiered protection
          * *   **3**: network acceleration
-         * *   **5**: CDN interaction
+         * *   **5**: Alibaba Cloud CDN (CDN) interaction
          * *   **6**: cloud service interaction
+         * *   **8**: secure acceleration
          */
         public Builder ruleType(Integer ruleType) {
             this.putQueryParameter("RuleType", ruleType);

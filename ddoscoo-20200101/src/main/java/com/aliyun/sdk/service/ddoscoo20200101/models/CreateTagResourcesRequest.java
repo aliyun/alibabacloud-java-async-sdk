@@ -112,7 +112,7 @@ public class CreateTagResourcesRequest extends Request {
         } 
 
         /**
-         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
+         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -133,7 +133,7 @@ public class CreateTagResourcesRequest extends Request {
         }
 
         /**
-         * An array consisting of the IDs of the Anti-DDoS Pro instances to which you want to add the tag.
+         * The IDs of the Anti-DDoS Proxy (Chinese Mainland) instances to which you want to add the tag.
          */
         public Builder resourceIds(java.util.List < String > resourceIds) {
             this.putQueryParameter("ResourceIds", resourceIds);

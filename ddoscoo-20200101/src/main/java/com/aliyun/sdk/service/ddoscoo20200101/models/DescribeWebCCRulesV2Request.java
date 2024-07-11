@@ -95,7 +95,7 @@ public class DescribeWebCCRulesV2Request extends Request {
         } 
 
         /**
-         * Domain.
+         * The domain name of the website that you want to add to the Anti-DDoS Proxy instance for protection.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -104,7 +104,7 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * Offset.
+         * The number of entries that you want the system to skip before the system returns entries. Default value: **0**.
          */
         public Builder offset(String offset) {
             this.putQueryParameter("Offset", offset);
@@ -113,7 +113,11 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * Owner.
+         * The method used to create the rule. Valid values:
+         * <p>
+         * 
+         * *   **manual** (default): manually created.
+         * *   **clover**: automatically created.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -122,7 +126,7 @@ public class DescribeWebCCRulesV2Request extends Request {
         }
 
         /**
-         * PageSize.
+         * The number of entries per page. Maximum value: **20**. Default value: **20**.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("PageSize", pageSize);

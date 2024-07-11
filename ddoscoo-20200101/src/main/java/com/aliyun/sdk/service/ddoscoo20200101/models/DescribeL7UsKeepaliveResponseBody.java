@@ -49,7 +49,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         private RsKeepalive rsKeepalive; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
         }
 
         /**
-         * RsKeepalive.
+         * The value of the Back-to-origin Persistent Connections parameter.
          */
         public Builder rsKeepalive(RsKeepalive rsKeepalive) {
             this.rsKeepalive = rsKeepalive;
@@ -121,7 +121,11 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             private Long keepaliveTimeout; 
 
             /**
-             * Enabled.
+             * Indicates whether Back-to-origin Persistent Connections is turned on. Valid values:
+             * <p>
+             * 
+             * *   **true**
+             * *   **false**
              */
             public Builder enabled(Boolean enabled) {
                 this.enabled = enabled;
@@ -129,7 +133,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveRequests.
+             * The number of requests that reuse persistent connections.
              */
             public Builder keepaliveRequests(Long keepaliveRequests) {
                 this.keepaliveRequests = keepaliveRequests;
@@ -137,7 +141,7 @@ public class DescribeL7UsKeepaliveResponseBody extends TeaModel {
             }
 
             /**
-             * KeepaliveTimeout.
+             * The timeout period of idle persistent connections.
              */
             public Builder keepaliveTimeout(Long keepaliveTimeout) {
                 this.keepaliveTimeout = keepaliveTimeout;

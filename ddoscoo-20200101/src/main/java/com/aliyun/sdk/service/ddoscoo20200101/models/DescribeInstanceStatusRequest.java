@@ -69,10 +69,10 @@ public class DescribeInstanceStatusRequest extends Request {
         } 
 
         /**
-         * The ID of the instance to query.
+         * The ID of the Anti-DDoS Proxy instance to query.
          * <p>
          * 
-         * > You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all Anti-DDoS Pro or Anti-DDoS Premium instances.
+         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all Anti-DDoS Proxy (Chinese Mainland) or Anti-DDoS Proxy (Outside Chinese Mainland) instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -81,11 +81,11 @@ public class DescribeInstanceStatusRequest extends Request {
         }
 
         /**
-         * The type of the instance to query. Valid values:
+         * The type of the Anti-DDoS Proxy instance to query. Valid values:
          * <p>
          * 
-         * *   **1**: an Anti-DDoS Pro instance
-         * *   **2**: an Anti-DDoS Premium instance
+         * *   **1**: an Anti-DDoS Proxy (Chinese Mainland) instance
+         * *   **2**: an Anti-DDoS Proxy (Outside Chinese Mainland) instance
          */
         public Builder productType(Integer productType) {
             this.putQueryParameter("ProductType", productType);

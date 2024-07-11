@@ -106,13 +106,13 @@ public class ModifyWebIpSetSwitchRequest extends Request {
         }
 
         /**
-         * The details of the Black Lists and White Lists (Domain Names) policy. This parameter is a JSON string. The string contains the following fields:
+         * The details of the Blacklist/Whitelist (Domain Names) feature. This parameter is a JSON string. The value consists of the following fields:
          * <p>
          * 
-         * *   **Bwlist_Enable**: the status of the Black Lists and White Lists (Domain Names) policy. This field is required and must be of the integer type. Valid values:
+         * **bwlist_enable**: the status of the Blacklist/Whitelist (Domain Names) feature. This field is required and must be of the integer type. Valid values:
          * 
-         *     *   **0**: disabled
-         *     *   **1**: enabled
+         * *   0: turned off
+         * *   1: turned on
          */
         public Builder config(String config) {
             this.putQueryParameter("Config", config);

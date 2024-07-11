@@ -92,7 +92,10 @@ public class ModifyQpsModeRequest extends Request {
         }
 
         /**
-         * InstanceId.
+         * The region ID of the Anti-DDoS Pro instance.
+         * <p>
+         * 
+         * >  You can call the [DescribeInstanceIds](~~157459~~) operation to query the IDs of all instances.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -101,7 +104,11 @@ public class ModifyQpsModeRequest extends Request {
         }
 
         /**
-         * Mode.
+         * The metering method of QPS. Valid values:
+         * <p>
+         * 
+         * *   **month**: monthly 95th percentile QPS.
+         * *   **day**: daily 95th percentile QPS.
          */
         public Builder mode(String mode) {
             this.putQueryParameter("Mode", mode);

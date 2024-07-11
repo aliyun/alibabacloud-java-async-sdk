@@ -49,7 +49,7 @@ public class DescribeDDosEventIspResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * An array that consists of the ISPs for the volumetric attack.
+         * The ISPs for the volumetric attack.
          */
         public Builder isps(java.util.List < Isps> isps) {
             this.isps = isps;

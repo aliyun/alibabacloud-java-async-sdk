@@ -61,7 +61,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * The information about the instance.
+         * The extended information about the Anti-DDoS Proxy instance.
          */
         public Builder instanceExtSpecs(java.util.List < InstanceExtSpecs> instanceExtSpecs) {
             this.instanceExtSpecs = instanceExtSpecs;
@@ -177,7 +177,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The instance ID
+             * The ID of the instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -193,14 +193,14 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the instance. Valid value:
+             * The type of the instance. Valid values:
              * <p>
              * 
-             * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-             * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-             * *   **2**: Anti-DDoS Premium instance of the CMA mitigation plan
-             * *   **3**: Anti-DDoS Premium instance of the Secure Chinese Mainland Acceleration (Sec-CMA) plan
-             * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+             * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+             * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+             * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+             * *   **3**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Secure Chinese Mainland Acceleration (Sec-CMA) mitigation plan
+             * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
              */
             public Builder productPlan(Long productPlan) {
                 this.productPlan = productPlan;
@@ -208,7 +208,7 @@ public class DescribeInstanceExtResponseBody extends TeaModel {
             }
 
             /**
-             * The Internet service provider (ISP) line resource of the Anti-DDoS Pro instance.
+             * The Internet service provider (ISP) line of the Anti-DDoS Proxy (Chinese Mainland) instance.
              */
             public Builder servicePartner(String servicePartner) {
                 this.servicePartner = servicePartner;

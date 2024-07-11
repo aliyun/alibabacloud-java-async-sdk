@@ -181,7 +181,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             private String startDate; 
 
             /**
-             * CertIdentifier.
+             * The global certificate ID, which is in the certificate ID-cn-hangzhou format. If the ID of the certificate is 123, CertIdentifier is 123-cn-hangzhou.
              */
             public Builder certIdentifier(String certIdentifier) {
                 this.certIdentifier = certIdentifier;
@@ -200,8 +200,8 @@ public class DescribeCertsResponseBody extends TeaModel {
              * Indicates whether the certificate is associated with the domain name. Valid values:
              * <p>
              * 
-             * *   **true**: The certificate is associated with the domain name.
-             * *   **false**: The certificate is not associated with the domain name.
+             * *   **true**
+             * *   **false**
              */
             public Builder domainRelated(Boolean domainRelated) {
                 this.domainRelated = domainRelated;
@@ -209,7 +209,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The expiration date of the certificate. string
+             * The expiration date of the certificate. The value is a string.
              */
             public Builder endDate(String endDate) {
                 this.endDate = endDate;
@@ -217,7 +217,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the certificate.
+             * The certificate ID.
              */
             public Builder id(Integer id) {
                 this.id = id;
@@ -241,7 +241,7 @@ public class DescribeCertsResponseBody extends TeaModel {
             }
 
             /**
-             * The issuance date of the certificate. string
+             * The issuance date of the certificate. The value is a string.
              */
             public Builder startDate(String startDate) {
                 this.startDate = startDate;

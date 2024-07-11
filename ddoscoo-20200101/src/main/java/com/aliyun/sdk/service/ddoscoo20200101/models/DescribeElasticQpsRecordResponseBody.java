@@ -49,7 +49,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * ElasticQpsList.
+         * The QPS information about the instance.
          */
         public Builder elasticQpsList(java.util.List < ElasticQpsList> elasticQpsList) {
             this.elasticQpsList = elasticQpsList;
@@ -57,7 +57,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -193,7 +193,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             private Long status; 
 
             /**
-             * Date.
+             * The timestamp. Unit: milliseconds.
              */
             public Builder date(Long date) {
                 this.date = date;
@@ -201,7 +201,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * InstanceId.
+             * The ID of the Anti-DDoS Proxy instance.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -209,7 +209,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Ip.
+             * The IP address of the Anti-DDoS Proxy instance.
              */
             public Builder ip(String ip) {
                 this.ip = ip;
@@ -217,7 +217,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OpsElasticQps.
+             * The burstable QPS value. A value of 0 indicates that the burstable QPS feature is not enabled.
              */
             public Builder opsElasticQps(Long opsElasticQps) {
                 this.opsElasticQps = opsElasticQps;
@@ -225,7 +225,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OpsQps.
+             * The service QPS (active).
              */
             public Builder opsQps(Long opsQps) {
                 this.opsQps = opsQps;
@@ -233,7 +233,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * OriginQps.
+             * The service QPS (purchased).
              */
             public Builder originQps(Long originQps) {
                 this.originQps = originQps;
@@ -241,7 +241,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Qps.
+             * The daily peak 95th percentile QPS.
              */
             public Builder qps(Long qps) {
                 this.qps = qps;
@@ -249,7 +249,7 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * QpsPeak.
+             * The daily peak traffic.
              */
             public Builder qpsPeak(Long qpsPeak) {
                 this.qpsPeak = qpsPeak;
@@ -257,7 +257,12 @@ public class DescribeElasticQpsRecordResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * Indicates whether the instance has expired or is released. Valid values:
+             * <p>
+             * 
+             * *   **1**: The instance runs as expected.
+             * *   **2**: The instance has expired.
+             * *   **4**: The instance is released.
              */
             public Builder status(Long status) {
                 this.status = status;

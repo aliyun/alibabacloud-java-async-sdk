@@ -53,7 +53,10 @@ public class DescribeL7UsKeepaliveRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);

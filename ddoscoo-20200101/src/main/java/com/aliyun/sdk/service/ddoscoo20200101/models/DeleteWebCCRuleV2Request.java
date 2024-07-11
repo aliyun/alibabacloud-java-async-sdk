@@ -105,7 +105,10 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -114,7 +117,11 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * Owner.
+         * The source of the rule. Valid values:
+         * <p>
+         * 
+         * *   **manual** (default): manually created.
+         * *   **clover**: automatically created. Specify this value when you want to delete intelligent protection rules.
          */
         public Builder owner(String owner) {
             this.putQueryParameter("Owner", owner);
@@ -123,7 +130,7 @@ public class DeleteWebCCRuleV2Request extends Request {
         }
 
         /**
-         * RuleNames.
+         * The names of the rules that you want to delete.
          */
         public Builder ruleNames(String ruleNames) {
             this.putQueryParameter("RuleNames", ruleNames);

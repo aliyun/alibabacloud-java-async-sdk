@@ -73,7 +73,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         private Integer upstreamRetry; 
 
         /**
-         * The details of the parameters for back-to-origin.
+         * The details about the parameters for back-to-origin processing.
          */
         public Builder attributes(java.util.List < Attributes> attributes) {
             this.attributes = attributes;
@@ -102,7 +102,11 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
         }
 
         /**
-         * UpstreamRetry.
+         * The back-to-origin retry switch. Valid values:
+         * <p>
+         * 
+         * *   **1**: on
+         * *   **0**: off
          */
         public Builder upstreamRetry(Integer upstreamRetry) {
             this.upstreamRetry = upstreamRetry;
@@ -214,7 +218,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer weight; 
 
             /**
-             * ConnectTimeout.
+             * The timeout period for a new connection. Valid values: **1** to **10**. Unit: seconds. Default value: **5**.
              */
             public Builder connectTimeout(Integer connectTimeout) {
                 this.connectTimeout = connectTimeout;
@@ -222,7 +226,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * FailTimeout.
+             * The expiration time of a connection, in seconds. If the number of failures at the origin server exceeds the **MaxFails** value, the address of the origin server is set to down and the expiration time is **FailTimeout**. The final value is the maximum value of **ConnectTimeout** and **FailTimeout**. Valid values: **1** to **3600**. Unit: seconds. Default value: **10**.
              */
             public Builder failTimeout(Integer failTimeout) {
                 this.failTimeout = failTimeout;
@@ -230,7 +234,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * MaxFails.
+             * The maximum number of failures. This parameter is related to health check. Valid values: **1** to **10**. Unit: seconds. Default value: **3**.
              */
             public Builder maxFails(Integer maxFails) {
                 this.maxFails = maxFails;
@@ -238,7 +242,11 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * Mode.
+             * The primary/secondary flag. Valid values:
+             * <p>
+             * 
+             * *   **active**: primary
+             * *   **backup**: secondary
              */
             public Builder mode(String mode) {
                 this.mode = mode;
@@ -246,7 +254,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * ReadTimeout.
+             * The timeout period for a read connection. Valid values: **10** to **300**. Unit: seconds. Default value: **120**.
              */
             public Builder readTimeout(Integer readTimeout) {
                 this.readTimeout = readTimeout;
@@ -254,7 +262,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             }
 
             /**
-             * SendTimeout.
+             * The timeout period for a write connection. Valid values: **10** to **300**. Unit: seconds. Default value: **120**.
              */
             public Builder sendTimeout(Integer sendTimeout) {
                 this.sendTimeout = sendTimeout;
@@ -330,7 +338,7 @@ public class DescribeL7RsPolicyResponseBody extends TeaModel {
             private Integer rsType; 
 
             /**
-             * The parameter for back-to-origin.
+             * The parameter for back-to-origin processing.
              */
             public Builder attribute(Attribute attribute) {
                 this.attribute = attribute;

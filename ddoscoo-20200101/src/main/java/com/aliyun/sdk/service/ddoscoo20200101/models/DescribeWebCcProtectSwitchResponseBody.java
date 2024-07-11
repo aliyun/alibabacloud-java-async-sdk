@@ -49,7 +49,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * The status of each protection policy for a website.
+         * The status of each mitigation policy for the website.
          */
         public Builder protectSwitchList(java.util.List < ProtectSwitchList> protectSwitchList) {
             this.protectSwitchList = protectSwitchList;
@@ -217,11 +217,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             private Integer regionBlockEnable; 
 
             /**
-             * The mode of the Intelligent Protection policy. Valid values:
+             * The mode of Intelligent Protection. Valid values:
              * <p>
              * 
-             * *   **watch**: the Warning mode
-             * *   **defense**: the Defense mode
+             * *   **watch**: Warning
+             * *   **defense**: Defense
              */
             public Builder aiMode(String aiMode) {
                 this.aiMode = aiMode;
@@ -229,11 +229,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Intelligent Protection policy. Valid values:
+             * The status of Intelligent Protection. Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder aiRuleEnable(Integer aiRuleEnable) {
                 this.aiRuleEnable = aiRuleEnable;
@@ -241,12 +241,12 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the Intelligent Protection policy. Valid values:
+             * The level of Intelligent Protection. Valid values:
              * <p>
              * 
-             * *   **level30**: the Low level
-             * *   **level60**: the Normal level
-             * *   **level90**: the Strict level
+             * *   **level30**: Loose
+             * *   **level60**: Normal
+             * *   **level90**: Strict
              */
             public Builder aiTemplate(String aiTemplate) {
                 this.aiTemplate = aiTemplate;
@@ -254,11 +254,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Black Lists and White Lists (Domain Names) policy. Valid values:
+             * The status of Blacklist/Whitelist (Domain Names). Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder blackWhiteListEnable(Integer blackWhiteListEnable) {
                 this.blackWhiteListEnable = blackWhiteListEnable;
@@ -266,11 +266,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Custom Rule switch for the Frequency Control policy. Valid values:
+             * The status of the Custom Rules switch for Frequency Control. Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder ccCustomRuleEnable(Integer ccCustomRuleEnable) {
                 this.ccCustomRuleEnable = ccCustomRuleEnable;
@@ -278,11 +278,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Frequency Control policy. Valid values:
+             * The status of Frequency Control. Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder ccEnable(Integer ccEnable) {
                 this.ccEnable = ccEnable;
@@ -298,7 +298,7 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The mode of the Frequency Control policy. Valid values:
+             * The mode of Frequency Control. Valid values:
              * <p>
              * 
              * *   **default**: Normal
@@ -320,11 +320,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Accurate Access Control policy. Valid values:
+             * The status of Accurate Access Control. Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder preciseRuleEnable(Integer preciseRuleEnable) {
                 this.preciseRuleEnable = preciseRuleEnable;
@@ -332,11 +332,11 @@ public class DescribeWebCcProtectSwitchResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the Location Blacklist (Domain Names) policy. Valid values:
+             * The status of Location Blacklist (Domain Names). Valid values:
              * <p>
              * 
-             * *   **0**: disabled
-             * *   **1**: enabled
+             * *   **0**: turned off
+             * *   **1:** turned on
              */
             public Builder regionBlockEnable(Integer regionBlockEnable) {
                 this.regionBlockEnable = regionBlockEnable;

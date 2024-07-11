@@ -68,7 +68,10 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         } 
 
         /**
-         * Domain.
+         * The domain name of the website.
+         * <p>
+         * 
+         * >  A forwarding rule must be configured for the domain name. You can call the [DescribeDomains](~~91724~~) operation to query all domain names.
          */
         public Builder domain(String domain) {
             this.putQueryParameter("Domain", domain);
@@ -77,7 +80,12 @@ public class ConfigL7UsKeepaliveRequest extends Request {
         }
 
         /**
-         * UpstreamKeepalive.
+         * The settings for back-to-origin persistent connections. The value is a string that consists of a JSON struct. The JSON struct contains the following fields:
+         * <p>
+         * 
+         * *   **enabled**: the switch for back-to-origin persistent connections. This field is required, and the value is of the Boolean type.
+         * *   **keepalive_requests**: the number of requests that reuse a persistent connection. This field is required, and the value is of the integer type.
+         * *   **keepalive_timeout**: the timeout period for an idle persistent connection. This field is required, and the value is of the integer type.
          */
         public Builder upstreamKeepalive(String upstreamKeepalive) {
             this.putQueryParameter("UpstreamKeepalive", upstreamKeepalive);

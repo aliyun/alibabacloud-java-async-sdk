@@ -61,7 +61,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
         private Long totalCount; 
 
         /**
-         * An array that consists of the details of a port forwarding rule.
+         * The details of a port forwarding rule.
          */
         public Builder networkRules(java.util.List < NetworkRules> networkRules) {
             this.networkRules = networkRules;
@@ -216,8 +216,8 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
              * Indicates whether the port forwarding rule is automatically created. Valid values:
              * <p>
              * 
-             * *   **true**: yes
-             * *   **false**: no
+             * *   **true**
+             * *   **false**
              */
             public Builder isAutoCreate(Boolean isAutoCreate) {
                 this.isAutoCreate = isAutoCreate;
@@ -237,7 +237,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * An array that consists of IP addresses of origin servers.
+             * The IP addresses of origin servers.
              */
             public Builder realServers(java.util.List < String > realServers) {
                 this.realServers = realServers;
@@ -245,7 +245,7 @@ public class DescribeNetworkRulesResponseBody extends TeaModel {
             }
 
             /**
-             * Remark.
+             * The remarks of the port forwarding rule.
              */
             public Builder remark(String remark) {
                 this.remark = remark;

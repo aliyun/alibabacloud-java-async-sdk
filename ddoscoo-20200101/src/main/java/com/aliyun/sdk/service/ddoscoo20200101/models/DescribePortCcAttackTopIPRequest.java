@@ -98,7 +98,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         } 
 
         /**
-         * Ip.
+         * The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -107,7 +107,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * Limit.
+         * The maximum number of entries to return.
          */
         public Builder limit(Long limit) {
             this.putQueryParameter("Limit", limit);
@@ -116,7 +116,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * Port.
+         * The attacked port.
          */
         public Builder port(String port) {
             this.putQueryParameter("Port", port);
@@ -125,7 +125,7 @@ public class DescribePortCcAttackTopIPRequest extends Request {
         }
 
         /**
-         * StartTimestamp.
+         * The beginning of the time range to query. Unit: seconds.
          */
         public Builder startTimestamp(Long startTimestamp) {
             this.putQueryParameter("StartTimestamp", startTimestamp);

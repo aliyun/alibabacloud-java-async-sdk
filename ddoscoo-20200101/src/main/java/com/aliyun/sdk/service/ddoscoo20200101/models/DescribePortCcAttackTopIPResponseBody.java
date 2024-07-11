@@ -49,7 +49,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         private java.util.List < TopIp> topIp; 
 
         /**
-         * RequestId.
+         * The request ID, which is used to locate and troubleshoot issues.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
         }
 
         /**
-         * TopIp.
+         * The information about the source IP address of the attack.
          */
         public Builder topIp(java.util.List < TopIp> topIp) {
             this.topIp = topIp;
@@ -121,7 +121,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             private String srcIp; 
 
             /**
-             * AreaId.
+             * The code of the location from which the attack is initiated. For more information, see [Codes of administrative regions in China and codes of countries and areas](~~167926~~). For example, **110000** indicates Beijing, China, and **us** indicates the United States.
              */
             public Builder areaId(String areaId) {
                 this.areaId = areaId;
@@ -129,7 +129,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             }
 
             /**
-             * Pv.
+             * The number of attacks from the IP address.
              */
             public Builder pv(Long pv) {
                 this.pv = pv;
@@ -137,7 +137,7 @@ public class DescribePortCcAttackTopIPResponseBody extends TeaModel {
             }
 
             /**
-             * SrcIp.
+             * The source IP address of the attack.
              */
             public Builder srcIp(String srcIp) {
                 this.srcIp = srcIp;

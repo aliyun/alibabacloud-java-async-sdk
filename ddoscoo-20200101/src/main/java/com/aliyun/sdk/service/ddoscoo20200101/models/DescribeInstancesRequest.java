@@ -235,10 +235,10 @@ public class DescribeInstancesRequest extends Request {
          * The mitigation plan of the instance to query. Valid values:
          * <p>
          * 
-         * *   **0**: Anti-DDoS Premium instance of the Insurance mitigation plan
-         * *   **1**: Anti-DDoS Premium instance of the Unlimited mitigation plan
-         * *   **2**: Anti-DDoS Premium instance of the Mainland China Acceleration (MCA) mitigation plan
-         * *   **9**: Anti-DDoS Pro instance of the Profession mitigation plan
+         * *   **0**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Insurance mitigation plan
+         * *   **1**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Unlimited mitigation plan
+         * *   **2**: Anti-DDoS Proxy (Outside Chinese Mainland) instance of the Chinese Mainland Acceleration (CMA) mitigation plan
+         * *   **9**: Anti-DDoS Proxy (Chinese Mainland) instance of the Profession mitigation plan
          */
         public Builder edition(Integer edition) {
             this.putQueryParameter("Edition", edition);
@@ -278,7 +278,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * InstanceIds.
+         * The IDs of the instances to query. You can specify up to 200 instance IDs.
          */
         public Builder instanceIds(java.util.List < String > instanceIds) {
             this.putQueryParameter("InstanceIds", instanceIds);
@@ -335,7 +335,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Status.
+         * The states of the instances to query. You can specify up to two states.
          */
         public Builder status(java.util.List < Integer > status) {
             this.putQueryParameter("Status", status);
@@ -344,7 +344,7 @@ public class DescribeInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags that are added to the instances to query.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -398,10 +398,10 @@ public class DescribeInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+             * The key of the tag that is added to the instance to query. You can specify up to 200 tag keys. When you specify tags, take note of the following rules:
              * <p>
              * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
              * *   Separate multiple tags with commas (,).
              * 
              * >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.
@@ -412,10 +412,10 @@ public class DescribeInstancesRequest extends Request {
             }
 
             /**
-             * The value of tag N that is added to the instance to query. The maximum value of N is 200. You can specify up to 200 tags. When you specify tags, take note of the following rules:
+             * The value of the tag that is added to the instance to query. You can specify up to 200 tag values. When you specify tags, take note of the following rules:
              * <p>
              * 
-             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated by a comma (,).
+             * *   Each tag consists of a key (**Key**) and a value (**Value**), which are separated with a comma (,).
              * *   Separate multiple tags with commas (,).
              * 
              * >  The tag key (**Key**) and tag value (**Value**) must be specified in pairs.

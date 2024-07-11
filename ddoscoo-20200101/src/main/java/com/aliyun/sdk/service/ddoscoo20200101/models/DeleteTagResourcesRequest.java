@@ -139,7 +139,7 @@ public class DeleteTagResourcesRequest extends Request {
         }
 
         /**
-         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Pro instance in the Chinese mainland.
+         * The region ID of the instance. Set the value to **cn-hangzhou**, which indicates an Anti-DDoS Proxy (Chinese Mainland) instance.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);

@@ -112,7 +112,10 @@ public class DescribeElasticQpsRequest extends Request {
         } 
 
         /**
-         * EndTime.
+         * The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder endTime(Long endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -121,7 +124,7 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * Interval.
+         * The sampling interval. Unit: seconds. The value must be a multiple of 60. Default value: 60. Unit: seconds. The query result varies depending on the sampling interval.
          */
         public Builder interval(String interval) {
             this.putQueryParameter("Interval", interval);
@@ -130,7 +133,7 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * Ip.
+         * The IP address of the Anti-DDoS Proxy instance to query.
          */
         public Builder ip(String ip) {
             this.putQueryParameter("Ip", ip);
@@ -139,7 +142,11 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * Region.
+         * The type of the service. Valid values:
+         * <p>
+         * 
+         * *   **cn**: Anti-DDoS Proxy (Chinese Mainland)
+         * *   **cn-hongkong**: Anti-DDoS Proxy (Outside Chinese Mainland)
          */
         public Builder region(String region) {
             this.putQueryParameter("Region", region);
@@ -148,7 +155,10 @@ public class DescribeElasticQpsRequest extends Request {
         }
 
         /**
-         * StartTime.
+         * The beginning of the time range to query. The value is a UNIX timestamp. Unit: seconds.
+         * <p>
+         * 
+         * >  This UNIX timestamp must indicate a point in time that is accurate to the minute.
          */
         public Builder startTime(Long startTime) {
             this.putQueryParameter("StartTime", startTime);
