@@ -34,6 +34,10 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     private LabelInputConfig labelInputConfig;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("RealTimeIterateInterval")
+    private Long realTimeIterateInterval;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("TrainingSetConfig")
     private TrainingSetConfig trainingSetConfig;
 
@@ -44,6 +48,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         this.regionId = builder.regionId;
         this.featureViewConfig = builder.featureViewConfig;
         this.labelInputConfig = builder.labelInputConfig;
+        this.realTimeIterateInterval = builder.realTimeIterateInterval;
         this.trainingSetConfig = builder.trainingSetConfig;
     }
 
@@ -96,6 +101,13 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
     }
 
     /**
+     * @return realTimeIterateInterval
+     */
+    public Long getRealTimeIterateInterval() {
+        return this.realTimeIterateInterval;
+    }
+
+    /**
      * @return trainingSetConfig
      */
     public TrainingSetConfig getTrainingSetConfig() {
@@ -108,6 +120,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         private String regionId; 
         private java.util.Map < String, FeatureViewConfigValue > featureViewConfig; 
         private LabelInputConfig labelInputConfig; 
+        private Long realTimeIterateInterval; 
         private TrainingSetConfig trainingSetConfig; 
 
         private Builder() {
@@ -121,6 +134,7 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
             this.regionId = request.regionId;
             this.featureViewConfig = request.featureViewConfig;
             this.labelInputConfig = request.labelInputConfig;
+            this.realTimeIterateInterval = request.realTimeIterateInterval;
             this.trainingSetConfig = request.trainingSetConfig;
         } 
 
@@ -166,6 +180,15 @@ public class ExportModelFeatureTrainingSetTableRequest extends Request {
         public Builder labelInputConfig(LabelInputConfig labelInputConfig) {
             this.putBodyParameter("LabelInputConfig", labelInputConfig);
             this.labelInputConfig = labelInputConfig;
+            return this;
+        }
+
+        /**
+         * RealTimeIterateInterval.
+         */
+        public Builder realTimeIterateInterval(Long realTimeIterateInterval) {
+            this.putBodyParameter("RealTimeIterateInterval", realTimeIterateInterval);
+            this.realTimeIterateInterval = realTimeIterateInterval;
             return this;
         }
 
