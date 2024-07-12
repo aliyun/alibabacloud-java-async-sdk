@@ -16,6 +16,10 @@ public class UpdatePublicNetworkStatusRequest extends Request {
     private String regionId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Cidr")
+    private String cidr;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ComponentType")
     @com.aliyun.core.annotation.Validation(required = true)
     private String componentType;
@@ -32,6 +36,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
     private UpdatePublicNetworkStatusRequest(Builder builder) {
         super(builder);
         this.regionId = builder.regionId;
+        this.cidr = builder.cidr;
         this.componentType = builder.componentType;
         this.instanceId = builder.instanceId;
         this.publicNetworkEnabled = builder.publicNetworkEnabled;
@@ -58,6 +63,13 @@ public class UpdatePublicNetworkStatusRequest extends Request {
     }
 
     /**
+     * @return cidr
+     */
+    public String getCidr() {
+        return this.cidr;
+    }
+
+    /**
      * @return componentType
      */
     public String getComponentType() {
@@ -80,6 +92,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdatePublicNetworkStatusRequest, Builder> {
         private String regionId; 
+        private String cidr; 
         private String componentType; 
         private String instanceId; 
         private Boolean publicNetworkEnabled; 
@@ -91,6 +104,7 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         private Builder(UpdatePublicNetworkStatusRequest request) {
             super(request);
             this.regionId = request.regionId;
+            this.cidr = request.cidr;
             this.componentType = request.componentType;
             this.instanceId = request.instanceId;
             this.publicNetworkEnabled = request.publicNetworkEnabled;
@@ -102,6 +116,15 @@ public class UpdatePublicNetworkStatusRequest extends Request {
         public Builder regionId(String regionId) {
             this.putHostParameter("RegionId", regionId);
             this.regionId = regionId;
+            return this;
+        }
+
+        /**
+         * Cidr.
+         */
+        public Builder cidr(String cidr) {
+            this.putQueryParameter("Cidr", cidr);
+            this.cidr = cidr;
             return this;
         }
 
