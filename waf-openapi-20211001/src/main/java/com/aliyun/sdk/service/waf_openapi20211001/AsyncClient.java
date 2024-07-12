@@ -19,6 +19,8 @@ public interface AsyncClient extends SdkAutoCloseable {
         return builder().build();
     }
 
+    CompletableFuture<ChangeResourceGroupResponse> changeResourceGroup(ChangeResourceGroupRequest request);
+
     CompletableFuture<ClearMajorProtectionBlackIpResponse> clearMajorProtectionBlackIp(ClearMajorProtectionBlackIpRequest request);
 
     CompletableFuture<CopyDefenseTemplateResponse> copyDefenseTemplate(CopyDefenseTemplateRequest request);
@@ -80,6 +82,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<DescribeCertsResponse> describeCerts(DescribeCertsRequest request);
 
     CompletableFuture<DescribeCloudResourcesResponse> describeCloudResources(DescribeCloudResourcesRequest request);
+
+    CompletableFuture<DescribeCnameCountResponse> describeCnameCount(DescribeCnameCountRequest request);
 
     CompletableFuture<DescribeDDoSStatusResponse> describeDDoSStatus(DescribeDDoSStatusRequest request);
 

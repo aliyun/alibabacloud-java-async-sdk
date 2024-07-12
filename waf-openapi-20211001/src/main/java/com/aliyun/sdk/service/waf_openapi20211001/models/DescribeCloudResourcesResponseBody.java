@@ -91,6 +91,12 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
     } 
 
     public static class CloudResources extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("HttpPortCount")
+        private Integer httpPortCount;
+
+        @com.aliyun.core.annotation.NameInMap("HttpsPortCount")
+        private Integer httpsPortCount;
+
         @com.aliyun.core.annotation.NameInMap("OwnerUserId")
         private String ownerUserId;
 
@@ -101,9 +107,20 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         private String resourceFunction;
 
         @com.aliyun.core.annotation.NameInMap("ResourceInstance")
+        @Deprecated
         private String resourceInstance;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
+        private String resourceInstanceId;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceIp")
+        private String resourceInstanceIp;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceName")
+        private String resourceInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("ResourceName")
+        @Deprecated
         private String resourceName;
 
         @com.aliyun.core.annotation.NameInMap("ResourceProduct")
@@ -119,10 +136,15 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         private String resourceService;
 
         private CloudResources(Builder builder) {
+            this.httpPortCount = builder.httpPortCount;
+            this.httpsPortCount = builder.httpsPortCount;
             this.ownerUserId = builder.ownerUserId;
             this.resourceDomain = builder.resourceDomain;
             this.resourceFunction = builder.resourceFunction;
             this.resourceInstance = builder.resourceInstance;
+            this.resourceInstanceId = builder.resourceInstanceId;
+            this.resourceInstanceIp = builder.resourceInstanceIp;
+            this.resourceInstanceName = builder.resourceInstanceName;
             this.resourceName = builder.resourceName;
             this.resourceProduct = builder.resourceProduct;
             this.resourceRegionId = builder.resourceRegionId;
@@ -136,6 +158,20 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
 
         public static CloudResources create() {
             return builder().build();
+        }
+
+        /**
+         * @return httpPortCount
+         */
+        public Integer getHttpPortCount() {
+            return this.httpPortCount;
+        }
+
+        /**
+         * @return httpsPortCount
+         */
+        public Integer getHttpsPortCount() {
+            return this.httpsPortCount;
         }
 
         /**
@@ -164,6 +200,27 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
          */
         public String getResourceInstance() {
             return this.resourceInstance;
+        }
+
+        /**
+         * @return resourceInstanceId
+         */
+        public String getResourceInstanceId() {
+            return this.resourceInstanceId;
+        }
+
+        /**
+         * @return resourceInstanceIp
+         */
+        public String getResourceInstanceIp() {
+            return this.resourceInstanceIp;
+        }
+
+        /**
+         * @return resourceInstanceName
+         */
+        public String getResourceInstanceName() {
+            return this.resourceInstanceName;
         }
 
         /**
@@ -202,15 +259,36 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
         }
 
         public static final class Builder {
+            private Integer httpPortCount; 
+            private Integer httpsPortCount; 
             private String ownerUserId; 
             private String resourceDomain; 
             private String resourceFunction; 
             private String resourceInstance; 
+            private String resourceInstanceId; 
+            private String resourceInstanceIp; 
+            private String resourceInstanceName; 
             private String resourceName; 
             private String resourceProduct; 
             private String resourceRegionId; 
             private String resourceRouteName; 
             private String resourceService; 
+
+            /**
+             * HttpPortCount.
+             */
+            public Builder httpPortCount(Integer httpPortCount) {
+                this.httpPortCount = httpPortCount;
+                return this;
+            }
+
+            /**
+             * HttpsPortCount.
+             */
+            public Builder httpsPortCount(Integer httpsPortCount) {
+                this.httpsPortCount = httpsPortCount;
+                return this;
+            }
 
             /**
              * The ID of the Alibaba Cloud account to which the resource belongs.
@@ -241,6 +319,30 @@ public class DescribeCloudResourcesResponseBody extends TeaModel {
              */
             public Builder resourceInstance(String resourceInstance) {
                 this.resourceInstance = resourceInstance;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceId.
+             */
+            public Builder resourceInstanceId(String resourceInstanceId) {
+                this.resourceInstanceId = resourceInstanceId;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceIp.
+             */
+            public Builder resourceInstanceIp(String resourceInstanceIp) {
+                this.resourceInstanceIp = resourceInstanceIp;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceName.
+             */
+            public Builder resourceInstanceName(String resourceInstanceName) {
+                this.resourceInstanceName = resourceInstanceName;
                 return this;
             }
 

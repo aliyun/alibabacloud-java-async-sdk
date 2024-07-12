@@ -243,10 +243,18 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("ResourceInstanceId")
         private String resourceInstanceId;
 
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceIp")
+        private String resourceInstanceIp;
+
+        @com.aliyun.core.annotation.NameInMap("ResourceInstanceName")
+        private String resourceInstanceName;
+
         @com.aliyun.core.annotation.NameInMap("ResourceIp")
+        @Deprecated
         private String resourceIp;
 
         @com.aliyun.core.annotation.NameInMap("ResourceName")
+        @Deprecated
         private String resourceName;
 
         @com.aliyun.core.annotation.NameInMap("ResourcePorts")
@@ -261,6 +269,8 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         private ProductInstances(Builder builder) {
             this.ownerUserId = builder.ownerUserId;
             this.resourceInstanceId = builder.resourceInstanceId;
+            this.resourceInstanceIp = builder.resourceInstanceIp;
+            this.resourceInstanceName = builder.resourceInstanceName;
             this.resourceIp = builder.resourceIp;
             this.resourceName = builder.resourceName;
             this.resourcePorts = builder.resourcePorts;
@@ -288,6 +298,20 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
          */
         public String getResourceInstanceId() {
             return this.resourceInstanceId;
+        }
+
+        /**
+         * @return resourceInstanceIp
+         */
+        public String getResourceInstanceIp() {
+            return this.resourceInstanceIp;
+        }
+
+        /**
+         * @return resourceInstanceName
+         */
+        public String getResourceInstanceName() {
+            return this.resourceInstanceName;
         }
 
         /**
@@ -328,6 +352,8 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
         public static final class Builder {
             private String ownerUserId; 
             private String resourceInstanceId; 
+            private String resourceInstanceIp; 
+            private String resourceInstanceName; 
             private String resourceIp; 
             private String resourceName; 
             private java.util.List < ResourcePorts> resourcePorts; 
@@ -347,6 +373,22 @@ public class DescribeProductInstancesResponseBody extends TeaModel {
              */
             public Builder resourceInstanceId(String resourceInstanceId) {
                 this.resourceInstanceId = resourceInstanceId;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceIp.
+             */
+            public Builder resourceInstanceIp(String resourceInstanceIp) {
+                this.resourceInstanceIp = resourceInstanceIp;
+                return this;
+            }
+
+            /**
+             * ResourceInstanceName.
+             */
+            public Builder resourceInstanceName(String resourceInstanceName) {
+                this.resourceInstanceName = resourceInstanceName;
                 return this;
             }
 

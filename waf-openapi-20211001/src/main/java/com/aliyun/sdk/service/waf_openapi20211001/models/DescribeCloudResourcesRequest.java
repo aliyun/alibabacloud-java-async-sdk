@@ -46,11 +46,16 @@ public class DescribeCloudResourcesRequest extends Request {
     private String resourceInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceName")
+    private String resourceInstanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @Deprecated
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
@@ -75,6 +80,7 @@ public class DescribeCloudResourcesRequest extends Request {
         this.resourceDomain = builder.resourceDomain;
         this.resourceFunction = builder.resourceFunction;
         this.resourceInstanceId = builder.resourceInstanceId;
+        this.resourceInstanceName = builder.resourceInstanceName;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceName = builder.resourceName;
         this.resourceProduct = builder.resourceProduct;
@@ -152,6 +158,13 @@ public class DescribeCloudResourcesRequest extends Request {
     }
 
     /**
+     * @return resourceInstanceName
+     */
+    public String getResourceInstanceName() {
+        return this.resourceInstanceName;
+    }
+
+    /**
      * @return resourceManagerResourceGroupId
      */
     public String getResourceManagerResourceGroupId() {
@@ -195,6 +208,7 @@ public class DescribeCloudResourcesRequest extends Request {
         private String resourceDomain; 
         private String resourceFunction; 
         private String resourceInstanceId; 
+        private String resourceInstanceName; 
         private String resourceManagerResourceGroupId; 
         private String resourceName; 
         private String resourceProduct; 
@@ -215,6 +229,7 @@ public class DescribeCloudResourcesRequest extends Request {
             this.resourceDomain = request.resourceDomain;
             this.resourceFunction = request.resourceFunction;
             this.resourceInstanceId = request.resourceInstanceId;
+            this.resourceInstanceName = request.resourceInstanceName;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceName = request.resourceName;
             this.resourceProduct = request.resourceProduct;
@@ -298,6 +313,15 @@ public class DescribeCloudResourcesRequest extends Request {
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
             this.resourceInstanceId = resourceInstanceId;
+            return this;
+        }
+
+        /**
+         * ResourceInstanceName.
+         */
+        public Builder resourceInstanceName(String resourceInstanceName) {
+            this.putQueryParameter("ResourceInstanceName", resourceInstanceName);
+            this.resourceInstanceName = resourceInstanceName;
             return this;
         }
 

@@ -38,7 +38,16 @@ public class DescribeProductInstancesRequest extends Request {
     private String resourceInstanceId;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceIp")
+    private String resourceInstanceIp;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ResourceInstanceName")
+    private String resourceInstanceName;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceIp")
+    @Deprecated
     private String resourceIp;
 
     @com.aliyun.core.annotation.Query
@@ -47,6 +56,7 @@ public class DescribeProductInstancesRequest extends Request {
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceName")
+    @Deprecated
     private String resourceName;
 
     @com.aliyun.core.annotation.Query
@@ -65,6 +75,8 @@ public class DescribeProductInstancesRequest extends Request {
         this.pageSize = builder.pageSize;
         this.regionId = builder.regionId;
         this.resourceInstanceId = builder.resourceInstanceId;
+        this.resourceInstanceIp = builder.resourceInstanceIp;
+        this.resourceInstanceName = builder.resourceInstanceName;
         this.resourceIp = builder.resourceIp;
         this.resourceManagerResourceGroupId = builder.resourceManagerResourceGroupId;
         this.resourceName = builder.resourceName;
@@ -128,6 +140,20 @@ public class DescribeProductInstancesRequest extends Request {
     }
 
     /**
+     * @return resourceInstanceIp
+     */
+    public String getResourceInstanceIp() {
+        return this.resourceInstanceIp;
+    }
+
+    /**
+     * @return resourceInstanceName
+     */
+    public String getResourceInstanceName() {
+        return this.resourceInstanceName;
+    }
+
+    /**
      * @return resourceIp
      */
     public String getResourceIp() {
@@ -169,6 +195,8 @@ public class DescribeProductInstancesRequest extends Request {
         private Long pageSize; 
         private String regionId; 
         private String resourceInstanceId; 
+        private String resourceInstanceIp; 
+        private String resourceInstanceName; 
         private String resourceIp; 
         private String resourceManagerResourceGroupId; 
         private String resourceName; 
@@ -187,6 +215,8 @@ public class DescribeProductInstancesRequest extends Request {
             this.pageSize = request.pageSize;
             this.regionId = request.regionId;
             this.resourceInstanceId = request.resourceInstanceId;
+            this.resourceInstanceIp = request.resourceInstanceIp;
+            this.resourceInstanceName = request.resourceInstanceName;
             this.resourceIp = request.resourceIp;
             this.resourceManagerResourceGroupId = request.resourceManagerResourceGroupId;
             this.resourceName = request.resourceName;
@@ -252,6 +282,24 @@ public class DescribeProductInstancesRequest extends Request {
         public Builder resourceInstanceId(String resourceInstanceId) {
             this.putQueryParameter("ResourceInstanceId", resourceInstanceId);
             this.resourceInstanceId = resourceInstanceId;
+            return this;
+        }
+
+        /**
+         * ResourceInstanceIp.
+         */
+        public Builder resourceInstanceIp(String resourceInstanceIp) {
+            this.putQueryParameter("ResourceInstanceIp", resourceInstanceIp);
+            this.resourceInstanceIp = resourceInstanceIp;
+            return this;
+        }
+
+        /**
+         * ResourceInstanceName.
+         */
+        public Builder resourceInstanceName(String resourceInstanceName) {
+            this.putQueryParameter("ResourceInstanceName", resourceInstanceName);
+            this.resourceInstanceName = resourceInstanceName;
             return this;
         }
 

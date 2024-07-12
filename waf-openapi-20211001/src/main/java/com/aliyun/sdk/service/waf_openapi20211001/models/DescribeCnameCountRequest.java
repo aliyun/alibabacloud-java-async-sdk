@@ -6,26 +6,24 @@ import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
 
 /**
- * {@link ReleaseInstanceRequest} extends {@link RequestModel}
+ * {@link DescribeCnameCountRequest} extends {@link RequestModel}
  *
- * <p>ReleaseInstanceRequest</p>
+ * <p>DescribeCnameCountRequest</p>
  */
-public class ReleaseInstanceRequest extends Request {
+public class DescribeCnameCountRequest extends Request {
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("InstanceId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String instanceId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
-    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
     @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("ResourceManagerResourceGroupId")
     private String resourceManagerResourceGroupId;
 
-    private ReleaseInstanceRequest(Builder builder) {
+    private DescribeCnameCountRequest(Builder builder) {
         super(builder);
         this.instanceId = builder.instanceId;
         this.regionId = builder.regionId;
@@ -36,7 +34,7 @@ public class ReleaseInstanceRequest extends Request {
         return new Builder();
     }
 
-    public static ReleaseInstanceRequest create() {
+    public static DescribeCnameCountRequest create() {
         return builder().build();
     }
 
@@ -66,7 +64,7 @@ public class ReleaseInstanceRequest extends Request {
         return this.resourceManagerResourceGroupId;
     }
 
-    public static final class Builder extends Request.Builder<ReleaseInstanceRequest, Builder> {
+    public static final class Builder extends Request.Builder<DescribeCnameCountRequest, Builder> {
         private String instanceId; 
         private String regionId; 
         private String resourceManagerResourceGroupId; 
@@ -75,7 +73,7 @@ public class ReleaseInstanceRequest extends Request {
             super();
         } 
 
-        private Builder(ReleaseInstanceRequest request) {
+        private Builder(DescribeCnameCountRequest request) {
             super(request);
             this.instanceId = request.instanceId;
             this.regionId = request.regionId;
@@ -83,10 +81,7 @@ public class ReleaseInstanceRequest extends Request {
         } 
 
         /**
-         * The ID of the Web Application Firewall (WAF) instance.
-         * <p>
-         * 
-         * >  You can call the [DescribeInstance](~~433756~~) operation to obtain the ID of the WAF instance.
+         * InstanceId.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("InstanceId", instanceId);
@@ -95,11 +90,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The region in which the WAF instance is deployed. Valid values:
-         * <p>
-         * 
-         * *   **cn-hangzhou**: the Chinese mainland.
-         * *   **ap-southeast-1**: outside the Chinese mainland.
+         * RegionId.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -108,7 +99,7 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         /**
-         * The ID of the Alibaba Cloud resource group.
+         * ResourceManagerResourceGroupId.
          */
         public Builder resourceManagerResourceGroupId(String resourceManagerResourceGroupId) {
             this.putQueryParameter("ResourceManagerResourceGroupId", resourceManagerResourceGroupId);
@@ -117,8 +108,8 @@ public class ReleaseInstanceRequest extends Request {
         }
 
         @Override
-        public ReleaseInstanceRequest build() {
-            return new ReleaseInstanceRequest(this);
+        public DescribeCnameCountRequest build() {
+            return new DescribeCnameCountRequest(this);
         } 
 
     } 
