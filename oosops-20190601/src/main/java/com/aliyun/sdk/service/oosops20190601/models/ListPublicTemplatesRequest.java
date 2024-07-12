@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,52 +11,56 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListPublicTemplatesRequest</p>
  */
 public class ListPublicTemplatesRequest extends Request {
-    @Query
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @Query
-    @NameInMap("CreatedDateAfter")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateAfter")
     private String createdDateAfter;
 
-    @Query
-    @NameInMap("CreatedDateBefore")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CreatedDateBefore")
     private String createdDateBefore;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsExample")
+    private Boolean isExample;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Popularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Popularity")
     private Integer popularity;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("ShareType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ShareType")
     private String shareType;
 
-    @Query
-    @NameInMap("SortField")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortField")
     private String sortField;
 
-    @Query
-    @NameInMap("SortOrder")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("SortOrder")
     private String sortOrder;
 
-    @Query
-    @NameInMap("TemplateFormat")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateFormat")
     private String templateFormat;
 
-    @Query
-    @NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
     private String templateName;
 
     private ListPublicTemplatesRequest(Builder builder) {
@@ -65,6 +68,7 @@ public class ListPublicTemplatesRequest extends Request {
         this.createdBy = builder.createdBy;
         this.createdDateAfter = builder.createdDateAfter;
         this.createdDateBefore = builder.createdDateBefore;
+        this.isExample = builder.isExample;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.popularity = builder.popularity;
@@ -108,6 +112,13 @@ public class ListPublicTemplatesRequest extends Request {
      */
     public String getCreatedDateBefore() {
         return this.createdDateBefore;
+    }
+
+    /**
+     * @return isExample
+     */
+    public Boolean getIsExample() {
+        return this.isExample;
     }
 
     /**
@@ -177,6 +188,7 @@ public class ListPublicTemplatesRequest extends Request {
         private String createdBy; 
         private String createdDateAfter; 
         private String createdDateBefore; 
+        private Boolean isExample; 
         private Integer maxResults; 
         private String nextToken; 
         private Integer popularity; 
@@ -196,6 +208,7 @@ public class ListPublicTemplatesRequest extends Request {
             this.createdBy = request.createdBy;
             this.createdDateAfter = request.createdDateAfter;
             this.createdDateBefore = request.createdDateBefore;
+            this.isExample = request.isExample;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.popularity = request.popularity;
@@ -231,6 +244,15 @@ public class ListPublicTemplatesRequest extends Request {
         public Builder createdDateBefore(String createdDateBefore) {
             this.putQueryParameter("CreatedDateBefore", createdDateBefore);
             this.createdDateBefore = createdDateBefore;
+            return this;
+        }
+
+        /**
+         * IsExample.
+         */
+        public Builder isExample(Boolean isExample) {
+            this.putQueryParameter("IsExample", isExample);
+            this.isExample = isExample;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListUserExecutionsResponseBody</p>
  */
 public class ListUserExecutionsResponseBody extends TeaModel {
-    @NameInMap("Executions")
+    @com.aliyun.core.annotation.NameInMap("Executions")
     private java.util.List < Executions> executions;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListUserExecutionsResponseBody(Builder builder) {
@@ -112,13 +111,13 @@ public class ListUserExecutionsResponseBody extends TeaModel {
     } 
 
     public static class CurrentTasks extends TeaModel {
-        @NameInMap("TaskAction")
+        @com.aliyun.core.annotation.NameInMap("TaskAction")
         private String taskAction;
 
-        @NameInMap("TaskExecutionId")
+        @com.aliyun.core.annotation.NameInMap("TaskExecutionId")
         private String taskExecutionId;
 
-        @NameInMap("TaskName")
+        @com.aliyun.core.annotation.NameInMap("TaskName")
         private String taskName;
 
         private CurrentTasks(Builder builder) {
@@ -193,67 +192,67 @@ public class ListUserExecutionsResponseBody extends TeaModel {
 
     }
     public static class Executions extends TeaModel {
-        @NameInMap("Counters")
+        @com.aliyun.core.annotation.NameInMap("Counters")
         private String counters;
 
-        @NameInMap("CreateDate")
+        @com.aliyun.core.annotation.NameInMap("CreateDate")
         private String createDate;
 
-        @NameInMap("CurrentTasks")
+        @com.aliyun.core.annotation.NameInMap("CurrentTasks")
         private java.util.List < CurrentTasks> currentTasks;
 
-        @NameInMap("EndDate")
+        @com.aliyun.core.annotation.NameInMap("EndDate")
         private String endDate;
 
-        @NameInMap("ExecutedBy")
+        @com.aliyun.core.annotation.NameInMap("ExecutedBy")
         private String executedBy;
 
-        @NameInMap("ExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ExecutionId")
         private String executionId;
 
-        @NameInMap("IsParent")
+        @com.aliyun.core.annotation.NameInMap("IsParent")
         private Boolean isParent;
 
-        @NameInMap("Mode")
+        @com.aliyun.core.annotation.NameInMap("Mode")
         private String mode;
 
-        @NameInMap("Outputs")
+        @com.aliyun.core.annotation.NameInMap("Outputs")
         private String outputs;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private String parameters;
 
-        @NameInMap("ParentExecutionId")
+        @com.aliyun.core.annotation.NameInMap("ParentExecutionId")
         private String parentExecutionId;
 
-        @NameInMap("RamRole")
+        @com.aliyun.core.annotation.NameInMap("RamRole")
         private String ramRole;
 
-        @NameInMap("SafetyCheck")
+        @com.aliyun.core.annotation.NameInMap("SafetyCheck")
         private String safetyCheck;
 
-        @NameInMap("StartDate")
+        @com.aliyun.core.annotation.NameInMap("StartDate")
         private String startDate;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("StatusMessage")
+        @com.aliyun.core.annotation.NameInMap("StatusMessage")
         private String statusMessage;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateVersion")
+        @com.aliyun.core.annotation.NameInMap("TemplateVersion")
         private String templateVersion;
 
-        @NameInMap("UpdateDate")
+        @com.aliyun.core.annotation.NameInMap("UpdateDate")
         private String updateDate;
 
-        @NameInMap("WaitingStatus")
+        @com.aliyun.core.annotation.NameInMap("WaitingStatus")
         private String waitingStatus;
 
         private Executions(Builder builder) {

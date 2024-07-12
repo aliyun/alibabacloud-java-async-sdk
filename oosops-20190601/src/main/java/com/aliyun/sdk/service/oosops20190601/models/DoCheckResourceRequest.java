@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,60 +11,60 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DoCheckResourceRequest</p>
  */
 public class DoCheckResourceRequest extends Request {
-    @Query
-    @NameInMap("bid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("bid")
     private String bid;
 
-    @Query
-    @NameInMap("country")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("country")
     private String country;
 
-    @Query
-    @NameInMap("gmtWakeup")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("gmtWakeup")
     private String gmtWakeup;
 
-    @Query
-    @NameInMap("hid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("hid")
     private Integer hid;
 
-    @Query
-    @NameInMap("interrupt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("interrupt")
     private Boolean interrupt;
 
-    @Query
-    @NameInMap("invoker")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("invoker")
     private String invoker;
 
-    @Query
-    @NameInMap("level")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("level")
     private Integer level;
 
-    @Query
-    @NameInMap("message")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @Query
-    @NameInMap("pk")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("pk")
     private String pk;
 
-    @Query
-    @NameInMap("prompt")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("prompt")
     private String prompt;
 
-    @Query
-    @NameInMap("success")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @Query
-    @NameInMap("taskExtraData")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taskExtraData")
     private String taskExtraData;
 
-    @Query
-    @NameInMap("taskIdentifier")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("taskIdentifier")
     private String taskIdentifier;
 
-    @Query
-    @NameInMap("url")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
     private DoCheckResourceRequest(Builder builder) {

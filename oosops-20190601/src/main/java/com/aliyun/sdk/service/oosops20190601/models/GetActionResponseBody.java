@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetActionResponseBody</p>
  */
 public class GetActionResponseBody extends TeaModel {
-    @NameInMap("ActionName")
+    @com.aliyun.core.annotation.NameInMap("ActionName")
     private String actionName;
 
-    @NameInMap("ActionType")
+    @com.aliyun.core.annotation.NameInMap("ActionType")
     private String actionType;
 
-    @NameInMap("Content")
+    @com.aliyun.core.annotation.NameInMap("Content")
     private byte[] content;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private String createTime;
 
-    @NameInMap("ModifiedTime")
+    @com.aliyun.core.annotation.NameInMap("ModifiedTime")
     private String modifiedTime;
 
-    @NameInMap("Popularity")
+    @com.aliyun.core.annotation.NameInMap("Popularity")
     private String popularity;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetActionResponseBody(Builder builder) {

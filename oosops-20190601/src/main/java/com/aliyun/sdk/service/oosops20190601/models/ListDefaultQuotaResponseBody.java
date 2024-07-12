@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDefaultQuotaResponseBody</p>
  */
 public class ListDefaultQuotaResponseBody extends TeaModel {
-    @NameInMap("Quotas")
+    @com.aliyun.core.annotation.NameInMap("Quotas")
     private java.util.List < Quotas> quotas;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListDefaultQuotaResponseBody(Builder builder) {
@@ -72,13 +71,13 @@ public class ListDefaultQuotaResponseBody extends TeaModel {
     } 
 
     public static class Quotas extends TeaModel {
-        @NameInMap("ConcurrentExecution")
+        @com.aliyun.core.annotation.NameInMap("ConcurrentExecution")
         private Integer concurrentExecution;
 
-        @NameInMap("DailyTasks")
+        @com.aliyun.core.annotation.NameInMap("DailyTasks")
         private Integer dailyTasks;
 
-        @NameInMap("TotalTemplate")
+        @com.aliyun.core.annotation.NameInMap("TotalTemplate")
         private Integer totalTemplate;
 
         private Quotas(Builder builder) {

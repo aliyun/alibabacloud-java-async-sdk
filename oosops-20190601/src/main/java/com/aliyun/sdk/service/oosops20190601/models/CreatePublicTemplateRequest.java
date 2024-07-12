@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,41 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePublicTemplateRequest</p>
  */
 public class CreatePublicTemplateRequest extends Request {
-    @Query
-    @NameInMap("Category")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Category")
     private String category;
 
-    @Query
-    @NameInMap("Content")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Content")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String content;
 
-    @Query
-    @NameInMap("Popularity")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsExample")
+    private Boolean isExample;
+
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Popularity")
     private Integer popularity;
 
-    @Query
-    @NameInMap("Publisher")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Publisher")
     private String publisher;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("TemplateName")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("TemplateName")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String templateName;
 
     private CreatePublicTemplateRequest(Builder builder) {
         super(builder);
         this.category = builder.category;
         this.content = builder.content;
+        this.isExample = builder.isExample;
         this.popularity = builder.popularity;
         this.publisher = builder.publisher;
         this.regionId = builder.regionId;
@@ -76,6 +80,13 @@ public class CreatePublicTemplateRequest extends Request {
     }
 
     /**
+     * @return isExample
+     */
+    public Boolean getIsExample() {
+        return this.isExample;
+    }
+
+    /**
      * @return popularity
      */
     public Integer getPopularity() {
@@ -106,6 +117,7 @@ public class CreatePublicTemplateRequest extends Request {
     public static final class Builder extends Request.Builder<CreatePublicTemplateRequest, Builder> {
         private String category; 
         private String content; 
+        private Boolean isExample; 
         private Integer popularity; 
         private String publisher; 
         private String regionId; 
@@ -119,6 +131,7 @@ public class CreatePublicTemplateRequest extends Request {
             super(request);
             this.category = request.category;
             this.content = request.content;
+            this.isExample = request.isExample;
             this.popularity = request.popularity;
             this.publisher = request.publisher;
             this.regionId = request.regionId;
@@ -140,6 +153,15 @@ public class CreatePublicTemplateRequest extends Request {
         public Builder content(String content) {
             this.putQueryParameter("Content", content);
             this.content = content;
+            return this;
+        }
+
+        /**
+         * IsExample.
+         */
+        public Builder isExample(Boolean isExample) {
+            this.putQueryParameter("IsExample", isExample);
+            this.isExample = isExample;
             return this;
         }
 

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.oosops20190601.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,49 +11,49 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DoCheckResourceResponseBody</p>
  */
 public class DoCheckResourceResponseBody extends TeaModel {
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("bid")
+    @com.aliyun.core.annotation.NameInMap("bid")
     private String bid;
 
-    @NameInMap("country")
+    @com.aliyun.core.annotation.NameInMap("country")
     private String country;
 
-    @NameInMap("gmtWakeup")
+    @com.aliyun.core.annotation.NameInMap("gmtWakeup")
     private String gmtWakeup;
 
-    @NameInMap("hid")
+    @com.aliyun.core.annotation.NameInMap("hid")
     private Integer hid;
 
-    @NameInMap("interrupt")
+    @com.aliyun.core.annotation.NameInMap("interrupt")
     private Boolean interrupt;
 
-    @NameInMap("invoker")
+    @com.aliyun.core.annotation.NameInMap("invoker")
     private String invoker;
 
-    @NameInMap("level")
+    @com.aliyun.core.annotation.NameInMap("level")
     private Integer level;
 
-    @NameInMap("message")
+    @com.aliyun.core.annotation.NameInMap("message")
     private String message;
 
-    @NameInMap("pk")
+    @com.aliyun.core.annotation.NameInMap("pk")
     private String pk;
 
-    @NameInMap("prompt")
+    @com.aliyun.core.annotation.NameInMap("prompt")
     private String prompt;
 
-    @NameInMap("success")
+    @com.aliyun.core.annotation.NameInMap("success")
     private Boolean success;
 
-    @NameInMap("taskExtraData")
+    @com.aliyun.core.annotation.NameInMap("taskExtraData")
     private String taskExtraData;
 
-    @NameInMap("taskIdentifier")
+    @com.aliyun.core.annotation.NameInMap("taskIdentifier")
     private String taskIdentifier;
 
-    @NameInMap("url")
+    @com.aliyun.core.annotation.NameInMap("url")
     private String url;
 
     private DoCheckResourceResponseBody(Builder builder) {
