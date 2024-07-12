@@ -1398,6 +1398,531 @@ public class CreateEventStreamingRequest extends Request {
         } 
 
     }
+    public static class DashVectorSchemaParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private DashVectorSchemaParameters(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static DashVectorSchemaParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public DashVectorSchemaParameters build() {
+                return new DashVectorSchemaParameters(this);
+            } 
+
+        } 
+
+    }
+    public static class Partition extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Partition(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Partition create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Partition build() {
+                return new Partition(this);
+            } 
+
+        } 
+
+    }
+    public static class PrimaryKeyId extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private PrimaryKeyId(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static PrimaryKeyId create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public PrimaryKeyId build() {
+                return new PrimaryKeyId(this);
+            } 
+
+        } 
+
+    }
+    public static class Vector extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("Form")
+        private String form;
+
+        @com.aliyun.core.annotation.NameInMap("Template")
+        private String template;
+
+        @com.aliyun.core.annotation.NameInMap("Value")
+        private String value;
+
+        private Vector(Builder builder) {
+            this.form = builder.form;
+            this.template = builder.template;
+            this.value = builder.value;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static Vector create() {
+            return builder().build();
+        }
+
+        /**
+         * @return form
+         */
+        public String getForm() {
+            return this.form;
+        }
+
+        /**
+         * @return template
+         */
+        public String getTemplate() {
+            return this.template;
+        }
+
+        /**
+         * @return value
+         */
+        public String getValue() {
+            return this.value;
+        }
+
+        public static final class Builder {
+            private String form; 
+            private String template; 
+            private String value; 
+
+            /**
+             * Form.
+             */
+            public Builder form(String form) {
+                this.form = form;
+                return this;
+            }
+
+            /**
+             * Template.
+             */
+            public Builder template(String template) {
+                this.template = template;
+                return this;
+            }
+
+            /**
+             * Value.
+             */
+            public Builder value(String value) {
+                this.value = value;
+                return this;
+            }
+
+            public Vector build() {
+                return new Vector(this);
+            } 
+
+        } 
+
+    }
+    public static class SinkDashVectorParameters extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("ApiKey")
+        private String apiKey;
+
+        @com.aliyun.core.annotation.NameInMap("Collection")
+        private String collection;
+
+        @com.aliyun.core.annotation.NameInMap("DashVectorSchemaParameters")
+        private DashVectorSchemaParameters dashVectorSchemaParameters;
+
+        @com.aliyun.core.annotation.NameInMap("InstanceId")
+        private String instanceId;
+
+        @com.aliyun.core.annotation.NameInMap("Network")
+        private String network;
+
+        @com.aliyun.core.annotation.NameInMap("Operation")
+        private String operation;
+
+        @com.aliyun.core.annotation.NameInMap("Partition")
+        private Partition partition;
+
+        @com.aliyun.core.annotation.NameInMap("PrimaryKeyId")
+        private PrimaryKeyId primaryKeyId;
+
+        @com.aliyun.core.annotation.NameInMap("Vector")
+        private Vector vector;
+
+        private SinkDashVectorParameters(Builder builder) {
+            this.apiKey = builder.apiKey;
+            this.collection = builder.collection;
+            this.dashVectorSchemaParameters = builder.dashVectorSchemaParameters;
+            this.instanceId = builder.instanceId;
+            this.network = builder.network;
+            this.operation = builder.operation;
+            this.partition = builder.partition;
+            this.primaryKeyId = builder.primaryKeyId;
+            this.vector = builder.vector;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SinkDashVectorParameters create() {
+            return builder().build();
+        }
+
+        /**
+         * @return apiKey
+         */
+        public String getApiKey() {
+            return this.apiKey;
+        }
+
+        /**
+         * @return collection
+         */
+        public String getCollection() {
+            return this.collection;
+        }
+
+        /**
+         * @return dashVectorSchemaParameters
+         */
+        public DashVectorSchemaParameters getDashVectorSchemaParameters() {
+            return this.dashVectorSchemaParameters;
+        }
+
+        /**
+         * @return instanceId
+         */
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        /**
+         * @return network
+         */
+        public String getNetwork() {
+            return this.network;
+        }
+
+        /**
+         * @return operation
+         */
+        public String getOperation() {
+            return this.operation;
+        }
+
+        /**
+         * @return partition
+         */
+        public Partition getPartition() {
+            return this.partition;
+        }
+
+        /**
+         * @return primaryKeyId
+         */
+        public PrimaryKeyId getPrimaryKeyId() {
+            return this.primaryKeyId;
+        }
+
+        /**
+         * @return vector
+         */
+        public Vector getVector() {
+            return this.vector;
+        }
+
+        public static final class Builder {
+            private String apiKey; 
+            private String collection; 
+            private DashVectorSchemaParameters dashVectorSchemaParameters; 
+            private String instanceId; 
+            private String network; 
+            private String operation; 
+            private Partition partition; 
+            private PrimaryKeyId primaryKeyId; 
+            private Vector vector; 
+
+            /**
+             * ApiKey.
+             */
+            public Builder apiKey(String apiKey) {
+                this.apiKey = apiKey;
+                return this;
+            }
+
+            /**
+             * Collection.
+             */
+            public Builder collection(String collection) {
+                this.collection = collection;
+                return this;
+            }
+
+            /**
+             * DashVectorSchemaParameters.
+             */
+            public Builder dashVectorSchemaParameters(DashVectorSchemaParameters dashVectorSchemaParameters) {
+                this.dashVectorSchemaParameters = dashVectorSchemaParameters;
+                return this;
+            }
+
+            /**
+             * InstanceId.
+             */
+            public Builder instanceId(String instanceId) {
+                this.instanceId = instanceId;
+                return this;
+            }
+
+            /**
+             * Network.
+             */
+            public Builder network(String network) {
+                this.network = network;
+                return this;
+            }
+
+            /**
+             * Operation.
+             */
+            public Builder operation(String operation) {
+                this.operation = operation;
+                return this;
+            }
+
+            /**
+             * Partition.
+             */
+            public Builder partition(Partition partition) {
+                this.partition = partition;
+                return this;
+            }
+
+            /**
+             * PrimaryKeyId.
+             */
+            public Builder primaryKeyId(PrimaryKeyId primaryKeyId) {
+                this.primaryKeyId = primaryKeyId;
+                return this;
+            }
+
+            /**
+             * Vector.
+             */
+            public Builder vector(Vector vector) {
+                this.vector = vector;
+                return this;
+            }
+
+            public SinkDashVectorParameters build() {
+                return new SinkDashVectorParameters(this);
+            } 
+
+        } 
+
+    }
     public static class SinkDataHubParametersBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("Form")
         private String form;
@@ -8088,6 +8613,9 @@ public class CreateEventStreamingRequest extends Request {
         @com.aliyun.core.annotation.NameInMap("SinkCustomizedKafkaParameters")
         private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters;
 
+        @com.aliyun.core.annotation.NameInMap("SinkDashVectorParameters")
+        private SinkDashVectorParameters sinkDashVectorParameters;
+
         @com.aliyun.core.annotation.NameInMap("SinkDataHubParameters")
         private SinkDataHubParameters sinkDataHubParameters;
 
@@ -8118,6 +8646,7 @@ public class CreateEventStreamingRequest extends Request {
         private Sink(Builder builder) {
             this.sinkCustomizedKafkaConnectorParameters = builder.sinkCustomizedKafkaConnectorParameters;
             this.sinkCustomizedKafkaParameters = builder.sinkCustomizedKafkaParameters;
+            this.sinkDashVectorParameters = builder.sinkDashVectorParameters;
             this.sinkDataHubParameters = builder.sinkDataHubParameters;
             this.sinkFcParameters = builder.sinkFcParameters;
             this.sinkFnfParameters = builder.sinkFnfParameters;
@@ -8149,6 +8678,13 @@ public class CreateEventStreamingRequest extends Request {
          */
         public SinkCustomizedKafkaParameters getSinkCustomizedKafkaParameters() {
             return this.sinkCustomizedKafkaParameters;
+        }
+
+        /**
+         * @return sinkDashVectorParameters
+         */
+        public SinkDashVectorParameters getSinkDashVectorParameters() {
+            return this.sinkDashVectorParameters;
         }
 
         /**
@@ -8217,6 +8753,7 @@ public class CreateEventStreamingRequest extends Request {
         public static final class Builder {
             private SinkCustomizedKafkaConnectorParameters sinkCustomizedKafkaConnectorParameters; 
             private SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters; 
+            private SinkDashVectorParameters sinkDashVectorParameters; 
             private SinkDataHubParameters sinkDataHubParameters; 
             private SinkFcParameters sinkFcParameters; 
             private SinkFnfParameters sinkFnfParameters; 
@@ -8240,6 +8777,14 @@ public class CreateEventStreamingRequest extends Request {
              */
             public Builder sinkCustomizedKafkaParameters(SinkCustomizedKafkaParameters sinkCustomizedKafkaParameters) {
                 this.sinkCustomizedKafkaParameters = sinkCustomizedKafkaParameters;
+                return this;
+            }
+
+            /**
+             * SinkDashVectorParameters.
+             */
+            public Builder sinkDashVectorParameters(SinkDashVectorParameters sinkDashVectorParameters) {
+                this.sinkDashVectorParameters = sinkDashVectorParameters;
                 return this;
             }
 
