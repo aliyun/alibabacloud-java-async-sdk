@@ -11,7 +11,7 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateApplicationConfigsRequest</p>
  */
 public class UpdateApplicationConfigsRequest extends Request {
-    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("ApplicationConfigs")
     @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < UpdateApplicationConfig > applicationConfigs;
@@ -183,10 +183,10 @@ public class UpdateApplicationConfigsRequest extends Request {
         } 
 
         /**
-         * The application configurations.
+         * 应用配置列表。
          */
         public Builder applicationConfigs(java.util.List < UpdateApplicationConfig > applicationConfigs) {
-            this.putQueryParameter("ApplicationConfigs", applicationConfigs);
+            this.putBodyParameter("ApplicationConfigs", applicationConfigs);
             this.applicationConfigs = applicationConfigs;
             return this;
         }

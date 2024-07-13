@@ -99,7 +99,7 @@ public class DeleteScriptRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class DeleteScriptRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,7 @@ public class DeleteScriptRequest extends Request {
         }
 
         /**
-         * 脚本ID。
+         * The script ID.
          */
         public Builder scriptId(String scriptId) {
             this.putQueryParameter("ScriptId", scriptId);
@@ -126,7 +126,11 @@ public class DeleteScriptRequest extends Request {
         }
 
         /**
-         * 集群脚本类型。
+         * The type of the script. Valid values:
+         * <p>
+         * 
+         * *   BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.
+         * *   NORMAL: indicates a common script.
          */
         public Builder scriptType(String scriptType) {
             this.putQueryParameter("ScriptType", scriptType);

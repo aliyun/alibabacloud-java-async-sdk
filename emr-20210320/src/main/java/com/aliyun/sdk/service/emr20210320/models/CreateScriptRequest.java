@@ -99,7 +99,7 @@ public class CreateScriptRequest extends Request {
         } 
 
         /**
-         * 集群ID。
+         * The cluster ID.
          */
         public Builder clusterId(String clusterId) {
             this.putQueryParameter("ClusterId", clusterId);
@@ -108,7 +108,7 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * 区域ID。
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -117,7 +117,11 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * 集群脚本类型。
+         * The type of the script. Valid values:
+         * <p>
+         * 
+         * *   BOOTSTRAP: indicates a bootstrap action of the Elastic Compute Service (ECS) instance.
+         * *   NORMAL: indicates a common script.
          */
         public Builder scriptType(String scriptType) {
             this.putQueryParameter("ScriptType", scriptType);
@@ -126,7 +130,7 @@ public class CreateScriptRequest extends Request {
         }
 
         /**
-         * 集群脚本列表。
+         * The scripts.
          */
         public Builder scripts(java.util.List < Script > scripts) {
             this.putQueryParameter("Scripts", scripts);

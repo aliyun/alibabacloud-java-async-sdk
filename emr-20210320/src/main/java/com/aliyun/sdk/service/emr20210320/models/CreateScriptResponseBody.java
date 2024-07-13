@@ -49,7 +49,7 @@ public class CreateScriptResponseBody extends TeaModel {
         private String scriptId; 
 
         /**
-         * 请求ID。
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class CreateScriptResponseBody extends TeaModel {
         }
 
         /**
-         * ScriptId.
+         * The script ID.
          */
         public Builder scriptId(String scriptId) {
             this.scriptId = scriptId;
