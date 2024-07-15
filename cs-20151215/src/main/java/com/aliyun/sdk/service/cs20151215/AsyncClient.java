@@ -49,6 +49,10 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CheckServiceRoleResponse> checkServiceRole(CheckServiceRoleRequest request);
 
+    CompletableFuture<CleanClusterUserPermissionsResponse> cleanClusterUserPermissions(CleanClusterUserPermissionsRequest request);
+
+    CompletableFuture<CleanUserPermissionsResponse> cleanUserPermissions(CleanUserPermissionsRequest request);
+
     CompletableFuture<CreateAutoscalingConfigResponse> createAutoscalingConfig(CreateAutoscalingConfigRequest request);
 
     /**
@@ -290,9 +294,13 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<ListClusterChecksResponse> listClusterChecks(ListClusterChecksRequest request);
 
+    CompletableFuture<ListClusterKubeconfigStatesResponse> listClusterKubeconfigStates(ListClusterKubeconfigStatesRequest request);
+
     CompletableFuture<ListOperationPlansResponse> listOperationPlans(ListOperationPlansRequest request);
 
     CompletableFuture<ListTagResourcesResponse> listTagResources(ListTagResourcesRequest request);
+
+    CompletableFuture<ListUserKubeConfigStatesResponse> listUserKubeConfigStates(ListUserKubeConfigStatesRequest request);
 
     CompletableFuture<MigrateClusterResponse> migrateCluster(MigrateClusterRequest request);
 
