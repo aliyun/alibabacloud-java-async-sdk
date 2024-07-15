@@ -73,7 +73,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         private java.util.List < String > upgradeRequiredParameters; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +81,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -89,7 +89,17 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The deployment state of the service instance. Valid values:
+         * <p>
+         * 
+         * *   Created
+         * *   Deploying
+         * *   DeployedFailed
+         * *   Deployed
+         * *   Upgrading
+         * *   Deleting
+         * *   Deleted
+         * *   DeletedFailed
          */
         public Builder status(String status) {
             this.status = status;
@@ -97,7 +107,7 @@ public class UpgradeServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeRequiredParameters.
+         * The parameters required for the upgrade.
          */
         public Builder upgradeRequiredParameters(java.util.List < String > upgradeRequiredParameters) {
             this.upgradeRequiredParameters = upgradeRequiredParameters;

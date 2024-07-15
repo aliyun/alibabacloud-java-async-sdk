@@ -68,7 +68,7 @@ public class GetUploadCredentialsRequest extends Request {
         } 
 
         /**
-         * FileName.
+         * The file name to upload.
          */
         public Builder fileName(String fileName) {
             this.putQueryParameter("FileName", fileName);
@@ -77,7 +77,7 @@ public class GetUploadCredentialsRequest extends Request {
         }
 
         /**
-         * Visibility.
+         * Specifies whether the file is publicly accessible. Valid values: **public** or **private**. The default value is **private**.
          */
         public Builder visibility(String visibility) {
             this.putQueryParameter("Visibility", visibility);

@@ -169,7 +169,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -178,7 +178,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * DeployRegionId.
+         * The ID of the region in which the service instance is deployed.
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);
@@ -187,7 +187,11 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * EnablePrivateVpcConnection.
+         * Specifies whether to enable the private connection feature. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
             this.putQueryParameter("EnablePrivateVpcConnection", enablePrivateVpcConnection);
@@ -196,7 +200,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters in the template.
          */
         public Builder parameters(java.util.List < Parameters> parameters) {
             this.putQueryParameter("Parameters", parameters);
@@ -205,7 +209,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -214,7 +218,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -223,7 +227,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -232,7 +236,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -241,7 +245,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -295,7 +299,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             private String parameterValue; 
 
             /**
-             * ParameterKey.
+             * The parameter name.
              */
             public Builder parameterKey(String parameterKey) {
                 this.parameterKey = parameterKey;
@@ -303,7 +307,7 @@ public class GetServiceTemplateParameterConstraintsRequest extends Request {
             }
 
             /**
-             * ParameterValue.
+             * The parameter value.
              */
             public Builder parameterValue(String parameterValue) {
                 this.parameterValue = parameterValue;

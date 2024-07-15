@@ -61,7 +61,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         private java.util.Map < String, ? > resources; 
 
         /**
-         * Commodity.
+         * The subscription duration information about the purchase order of Alibaba Cloud Marketplace.
          */
         public Builder commodity(java.util.Map < String, ? > commodity) {
             this.commodity = commodity;
@@ -69,7 +69,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -77,7 +77,7 @@ public class GetServiceEstimateCostResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The list of resources.
          */
         public Builder resources(java.util.Map < String, ? > resources) {
             this.resources = resources;

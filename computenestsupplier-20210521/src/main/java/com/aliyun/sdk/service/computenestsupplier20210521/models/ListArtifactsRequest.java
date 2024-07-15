@@ -109,7 +109,7 @@ public class ListArtifactsRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -118,7 +118,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -127,7 +127,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -136,7 +136,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -145,7 +145,7 @@ public class ListArtifactsRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -199,7 +199,12 @@ public class ListArtifactsRequest extends Request {
             private java.util.List < String > values; 
 
             /**
-             * Name.
+             * The parameter name of the filter. You can specify one or more filters. Valid values:
+             * <p>
+             * 
+             * *   *Name*: The name of the deployment package. Fuzzy match is used.
+             * *   ArtifactId: The ID of the deployment package.
+             * *   ArtifactType: The type of the deployment package.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -207,7 +212,7 @@ public class ListArtifactsRequest extends Request {
             }
 
             /**
-             * Values.
+             * The parameter values of the filter.
              */
             public Builder values(java.util.List < String > values) {
                 this.values = values;
@@ -260,7 +265,7 @@ public class ListArtifactsRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -268,7 +273,7 @@ public class ListArtifactsRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

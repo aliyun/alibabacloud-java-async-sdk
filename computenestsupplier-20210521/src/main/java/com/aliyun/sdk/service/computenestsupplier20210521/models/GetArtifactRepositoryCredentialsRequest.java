@@ -68,7 +68,11 @@ public class GetArtifactRepositoryCredentialsRequest extends Request {
         } 
 
         /**
-         * ArtifactType.
+         * The type of the deployment package. Valid values:
+         * <p>
+         * 
+         * *   File: Object Storage Service (OSS) object.
+         * *   AcrImage: container image.
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -77,7 +81,7 @@ public class GetArtifactRepositoryCredentialsRequest extends Request {
         }
 
         /**
-         * DeployRegionId.
+         * The region ID.
          */
         public Builder deployRegionId(String deployRegionId) {
             this.putQueryParameter("DeployRegionId", deployRegionId);

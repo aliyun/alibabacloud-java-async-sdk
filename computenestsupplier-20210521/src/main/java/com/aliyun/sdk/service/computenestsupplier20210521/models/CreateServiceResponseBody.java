@@ -73,7 +73,7 @@ public class CreateServiceResponseBody extends TeaModel {
         private String version; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -81,7 +81,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -89,7 +89,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service.
          */
         public Builder status(String status) {
             this.status = status;
@@ -97,7 +97,7 @@ public class CreateServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The service version.
          */
         public Builder version(String version) {
             this.version = version;

@@ -85,7 +85,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceUsages.
+         * The service applications.
          */
         public Builder serviceUsages(java.util.List < ServiceUsages> serviceUsages) {
             this.serviceUsages = serviceUsages;
@@ -117,7 +117,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -253,7 +253,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             private java.util.Map < String, String > userInformation; 
 
             /**
-             * Comments.
+             * The comment on the approval.
              */
             public Builder comments(String comments) {
                 this.comments = comments;
@@ -261,7 +261,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the application was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -269,7 +269,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -277,7 +277,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceName.
+             * The service name.
              */
             public Builder serviceName(String serviceName) {
                 this.serviceName = serviceName;
@@ -285,7 +285,13 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service application. Valid values:
+             * <p>
+             * 
+             * *   Submitted: The application is submitted or is to be approved.
+             * *   Approved: The application is approved.
+             * *   Rejected: The application is rejected.
+             * *   Canceled: The application is canceled.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -293,7 +299,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * The name of the service provider.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -301,7 +307,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the application was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -309,7 +315,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserAliUid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder userAliUid(Long userAliUid) {
                 this.userAliUid = userAliUid;
@@ -317,7 +323,7 @@ public class ListServiceUsagesResponseBody extends TeaModel {
             }
 
             /**
-             * UserInformation.
+             * The user information.
              */
             public Builder userInformation(java.util.Map < String, String > userInformation) {
                 this.userInformation = userInformation;

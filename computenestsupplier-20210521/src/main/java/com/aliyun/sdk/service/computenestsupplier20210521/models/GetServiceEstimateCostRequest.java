@@ -166,7 +166,7 @@ public class GetServiceEstimateCostRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -175,7 +175,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * Commodity.
+         * The subscription duration information about the purchase order of Alibaba Cloud Marketplace.
          */
         public Builder commodity(Commodity commodity) {
             String commodityShrink = shrink(commodity, "Commodity", "json");
@@ -185,7 +185,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The parameters that are specified to deploy the service instance.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -195,7 +195,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -204,7 +204,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -213,7 +213,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -222,7 +222,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -231,7 +231,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * SpecificationName.
+         * The package name.
          */
         public Builder specificationName(String specificationName) {
             this.putQueryParameter("SpecificationName", specificationName);
@@ -240,7 +240,7 @@ public class GetServiceEstimateCostRequest extends Request {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.putQueryParameter("TemplateName", templateName);
@@ -294,7 +294,7 @@ public class GetServiceEstimateCostRequest extends Request {
             private String payPeriodUnit; 
 
             /**
-             * PayPeriod.
+             * The subscription duration.
              */
             public Builder payPeriod(Integer payPeriod) {
                 this.payPeriod = payPeriod;
@@ -302,7 +302,12 @@ public class GetServiceEstimateCostRequest extends Request {
             }
 
             /**
-             * PayPeriodUnit.
+             * The unit of the subscription duration. Valid values:
+             * <p>
+             * 
+             * *   Year
+             * *   Month
+             * *   Day
              */
             public Builder payPeriodUnit(String payPeriodUnit) {
                 this.payPeriodUnit = payPeriodUnit;

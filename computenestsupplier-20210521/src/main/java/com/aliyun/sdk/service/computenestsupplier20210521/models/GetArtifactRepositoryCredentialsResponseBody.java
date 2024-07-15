@@ -73,7 +73,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * AvailableResources.
+         * The information about the resources that can be uploaded.
          */
         public Builder availableResources(java.util.List < AvailableResources> availableResources) {
             this.availableResources = availableResources;
@@ -81,7 +81,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Credentials.
+         * The credentials.
          */
         public Builder credentials(Credentials credentials) {
             this.credentials = credentials;
@@ -89,7 +89,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * ExpireDate.
+         * The time when the credentials expired.
          */
         public Builder expireDate(String expireDate) {
             this.expireDate = expireDate;
@@ -97,7 +97,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -161,7 +161,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String repositoryName; 
 
             /**
-             * Path.
+             * The path.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -169,7 +169,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -177,7 +177,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RepositoryName.
+             * The repository name.
              */
             public Builder repositoryName(String repositoryName) {
                 this.repositoryName = repositoryName;
@@ -266,7 +266,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             private String username; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -274,7 +274,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -282,7 +282,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Password.
+             * The password.
              */
             public Builder password(String password) {
                 this.password = password;
@@ -290,7 +290,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The Security Token Service (STS) token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;
@@ -298,7 +298,7 @@ public class GetArtifactRepositoryCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Username.
+             * The username.
              */
             public Builder username(String username) {
                 this.username = username;

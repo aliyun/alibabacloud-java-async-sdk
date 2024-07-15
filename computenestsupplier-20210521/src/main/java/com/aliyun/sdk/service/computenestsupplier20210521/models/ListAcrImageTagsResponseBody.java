@@ -85,7 +85,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Images.
+         * The list of images.
          */
         public Builder images(java.util.List < Images> images) {
             this.images = images;
@@ -93,7 +93,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,7 +193,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             private String tag; 
 
             /**
-             * CreateTime.
+             * The time when the image was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +201,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageSize.
+             * The image size. Unit: bytes.
              */
             public Builder imageSize(String imageSize) {
                 this.imageSize = imageSize;
@@ -209,7 +209,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the image was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -217,7 +217,7 @@ public class ListAcrImageTagsResponseBody extends TeaModel {
             }
 
             /**
-             * Tag.
+             * The image version.
              */
             public Builder tag(String tag) {
                 this.tag = tag;

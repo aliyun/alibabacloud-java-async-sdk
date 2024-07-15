@@ -421,7 +421,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         private Long userId; 
 
         /**
-         * BizStatus.
+         * The business status of the service instance. Valid values:
+         * <p>
+         * 
+         * *   Normal: The service instance is normal.
+         * *   Renewing: The service instance is being renewed.
+         * *   RenewFailed: The service instance failed to be renewed.
+         * *   Expired: The service instance expired.
          */
         public Builder bizStatus(String bizStatus) {
             this.bizStatus = bizStatus;
@@ -429,7 +435,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the service instance was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -437,7 +443,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableInstanceOps.
+         * Indicates whether the service instance supports the hosted O\&M feature. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder enableInstanceOps(Boolean enableInstanceOps) {
             this.enableInstanceOps = enableInstanceOps;
@@ -445,7 +455,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EnableUserPrometheus.
+         * Indicates whether the Prometheus monitoring feature is enabled on the user side.
          */
         public Builder enableUserPrometheus(Boolean enableUserPrometheus) {
             this.enableUserPrometheus = enableUserPrometheus;
@@ -453,7 +463,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * EndTime.
+         * The time when the service instance expires.
          */
         public Builder endTime(String endTime) {
             this.endTime = endTime;
@@ -461,7 +471,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * GrafanaDashBoardUrl.
+         * The URL of the Grafana dashboard.
          */
         public Builder grafanaDashBoardUrl(String grafanaDashBoardUrl) {
             this.grafanaDashBoardUrl = grafanaDashBoardUrl;
@@ -469,7 +479,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * IsOperated.
+         * Indicates whether the hosted O\&M feature is enabled for the service instance. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder isOperated(Boolean isOperated) {
             this.isOperated = isOperated;
@@ -477,7 +491,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseMetadata.
+         * The license metadata.
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
@@ -485,7 +499,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the service instance.
          */
         public Builder name(String name) {
             this.name = name;
@@ -493,7 +507,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * NetworkConfig.
+         * The network configurations.
+         * <p>
+         * 
+         * >  This parameter is discontinued.
          */
         public Builder networkConfig(NetworkConfig networkConfig) {
             this.networkConfig = networkConfig;
@@ -501,7 +518,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperatedServiceInstanceId.
+         * The ID of the service instance that is used to implement hosted O\&M.
          */
         public Builder operatedServiceInstanceId(String operatedServiceInstanceId) {
             this.operatedServiceInstanceId = operatedServiceInstanceId;
@@ -509,7 +526,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationEndTime.
+         * The end of the time range during which hosted O\&M is implemented.
          */
         public Builder operationEndTime(String operationEndTime) {
             this.operationEndTime = operationEndTime;
@@ -517,7 +534,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationStartTime.
+         * The beginning of the time range during which hosted O\&M is implemented.
          */
         public Builder operationStartTime(String operationStartTime) {
             this.operationStartTime = operationStartTime;
@@ -525,7 +542,11 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Outputs.
+         * The outputs returned from creating the service instance.
+         * <p>
+         * 
+         * *   If the service is deployed by using a ROS template, all output fields of the template are returned.
+         * *   If the service is deployed by calling an SPI operation, the output fields of the service provider and for the Compute Nest additional features are returned.
          */
         public Builder outputs(String outputs) {
             this.outputs = outputs;
@@ -533,7 +554,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Parameters.
+         * The parameters that are specified to deploy the service instance.
          */
         public Builder parameters(String parameters) {
             this.parameters = parameters;
@@ -541,7 +562,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the service. Valid values:
+         * <p>
+         * 
+         * *   Permanent: Once you purchase the service, you can use it permanently.
+         * *   Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.
+         * *   PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.
+         * *   CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -549,7 +576,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * PredefinedParameterName.
+         * The package name.
          */
         public Builder predefinedParameterName(String predefinedParameterName) {
             this.predefinedParameterName = predefinedParameterName;
@@ -557,7 +584,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The deployment progress of the service instance. Unit: percentage.
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -565,7 +592,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RdAccountLoginUrl.
+         * The logon URL for the accounts in the resource directory corresponding to the service instance.
          */
         public Builder rdAccountLoginUrl(String rdAccountLoginUrl) {
             this.rdAccountLoginUrl = rdAccountLoginUrl;
@@ -573,7 +600,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -581,7 +608,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -589,7 +616,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Resources.
+         * The list of resources.
          */
         public Builder resources(String resources) {
             this.resources = resources;
@@ -597,7 +624,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Service.
+         * The information about the service to which the service instance belongs.
          */
         public Builder service(Service service) {
             this.service = service;
@@ -605,7 +632,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -613,7 +640,13 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * The type of the service. Valid values:
+         * <p>
+         * 
+         * *   private: The service is a private service and is deployed within the account of a customer.
+         * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+         * *   operation: The service is a hosted O\&M service.
+         * *   poc: The service is a trial service.
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -621,7 +654,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Source.
+         * The source of the service instance. Valid values:
+         * <p>
+         * 
+         * *   User: Compute Nest customer
+         * *   Market: Alibaba Cloud Marketplace
+         * *   Supplier: Compute Nest service provider
          */
         public Builder source(String source) {
             this.source = source;
@@ -629,7 +667,17 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The deployment state of the service instance. Valid values:
+         * <p>
+         * 
+         * *   Created
+         * *   Deploying
+         * *   DeployedFailed
+         * *   Deployed
+         * *   Upgrading
+         * *   Deleting
+         * *   Deleted
+         * *   DeletedFailed
          */
         public Builder status(String status) {
             this.status = status;
@@ -637,7 +685,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusDetail.
+         * The description of the deployment state of the service instance.
          */
         public Builder statusDetail(String statusDetail) {
             this.statusDetail = statusDetail;
@@ -645,7 +693,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierUid.
+         * The Alibaba Cloud account ID of the service provider.
          */
         public Builder supplierUid(Long supplierUid) {
             this.supplierUid = supplierUid;
@@ -653,7 +701,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The custom tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -661,7 +709,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * TemplateName.
+         * The template name.
          */
         public Builder templateName(String templateName) {
             this.templateName = templateName;
@@ -669,7 +717,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the service instance was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -677,7 +725,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * UserId.
+         * The Alibaba Cloud account ID of the user.
          */
         public Builder userId(Long userId) {
             this.userId = userId;
@@ -801,7 +849,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String vpcId; 
 
             /**
-             * ConnectBandwidth.
+             * The bandwidth limit for the private connection established based on the private network interconnection mode of Compute Nest.
              */
             public Builder connectBandwidth(Integer connectBandwidth) {
                 this.connectBandwidth = connectBandwidth;
@@ -809,7 +857,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DomainName.
+             * The domain name.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -817,7 +865,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointIps.
+             * The IP addresses of the endpoints for private connections.
              */
             public Builder endpointIps(java.util.List < String > endpointIps) {
                 this.endpointIps = endpointIps;
@@ -825,7 +873,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * IngressEndpointStatus.
+             * The status of the Ingress endpoint. Valid values:
+             * <p>
+             * 
+             * *   Ready: The Ingress endpoint is connected.
+             * *   Pending: The Ingress endpoint is being connected.
+             * *   Failed: The Ingress endpoint fails to be connected.
+             * *   Deleted: The Ingress endpoint is deleted.
+             * *   Deleting: The Ingress endpoint is being deleted.
              */
             public Builder ingressEndpointStatus(String ingressEndpointStatus) {
                 this.ingressEndpointStatus = ingressEndpointStatus;
@@ -833,7 +888,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * NetworkServiceStatus.
+             * The status of the network service. Valid values:
+             * <p>
+             * 
+             * *   Ready: The network service is connected.
+             * *   Pending: The network service is being connected.
+             * *   Failed: The network service fails to be connected.
+             * *   Deleted: The network service is deleted.
+             * *   Deleting: The network service is being deleted.
              */
             public Builder networkServiceStatus(String networkServiceStatus) {
                 this.networkServiceStatus = networkServiceStatus;
@@ -841,7 +903,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityGroups.
+             * The names of the security groups.
              */
             public Builder securityGroups(java.util.List < String > securityGroups) {
                 this.securityGroups = securityGroups;
@@ -849,7 +911,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VSwitches.
+             * The names of the vSwitches.
              */
             public Builder vSwitches(java.util.List < String > vSwitches) {
                 this.vSwitches = vSwitches;
@@ -857,7 +919,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VpcId.
+             * The virtual private cloud (VPC) ID.
              */
             public Builder vpcId(String vpcId) {
                 this.vpcId = vpcId;
@@ -934,7 +996,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String privateZoneName; 
 
             /**
-             * ConnectionConfigs.
+             * The network configurations, which are mainly used for the private connection.
              */
             public Builder connectionConfigs(java.util.List < ConnectionConfigs> connectionConfigs) {
                 this.connectionConfigs = connectionConfigs;
@@ -942,7 +1004,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointId.
+             * The ID of the endpoint for the private connection.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -950,7 +1012,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * The ID of the endpoint service for the private connection.
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -958,7 +1020,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateZoneName.
+             * The custom domain name.
              */
             public Builder privateZoneName(String privateZoneName) {
                 this.privateZoneName = privateZoneName;
@@ -1011,7 +1073,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String endpointServiceId; 
 
             /**
-             * EndpointId.
+             * The ID of the endpoint for the reverse private connection.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -1019,7 +1081,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * The ID of the endpoint service for the reverse private connection.
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -1096,7 +1158,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections; 
 
             /**
-             * EndpointId.
+             * The ID of the endpoint for the private connection.
+             * <p>
+             * 
+             * >  This parameter is discontinued.
              */
             public Builder endpointId(String endpointId) {
                 this.endpointId = endpointId;
@@ -1104,7 +1169,10 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * EndpointServiceId.
+             * The ID of the endpoint service for the private connection.
+             * <p>
+             * 
+             * >  This parameter is discontinued.
              */
             public Builder endpointServiceId(String endpointServiceId) {
                 this.endpointServiceId = endpointServiceId;
@@ -1112,7 +1180,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PrivateVpcConnections.
+             * The information about private connections.
              */
             public Builder privateVpcConnections(java.util.List < PrivateVpcConnections> privateVpcConnections) {
                 this.privateVpcConnections = privateVpcConnections;
@@ -1120,7 +1188,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ReversePrivateVpcConnections.
+             * The information about the reverse private connection.
              */
             public Builder reversePrivateVpcConnections(java.util.List < ReversePrivateVpcConnections> reversePrivateVpcConnections) {
                 this.reversePrivateVpcConnections = reversePrivateVpcConnections;
@@ -1197,7 +1265,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * Image.
+             * The URL of the service icon.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -1205,7 +1273,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * The language of the service instance.
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -1213,7 +1281,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The service name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1221,7 +1289,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * The description of the service.
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -1418,7 +1486,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * DeployMetadata.
+             * The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
              */
             public Builder deployMetadata(String deployMetadata) {
                 this.deployMetadata = deployMetadata;
@@ -1426,7 +1494,14 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
+             * The deployment type of the service. Valid values:
+             * <p>
+             * 
+             * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
+             * *   terraform: The service is deployed by using Terraform.
+             * *   ack: The service is deployed by using Container Service for Kubernetes (ACK).
+             * *   spi: The service is deployed by calling a service provider interface (SPI).
+             * *   operation: The service is deployed by using a hosted O\&M service.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -1434,7 +1509,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * The time when the service was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -1442,7 +1517,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDocUrl.
+             * The URL of the service documentation.
              */
             public Builder serviceDocUrl(String serviceDocUrl) {
                 this.serviceDocUrl = serviceDocUrl;
@@ -1450,7 +1525,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -1458,7 +1533,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInfos.
+             * The information about the service.
              */
             public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -1466,7 +1541,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceProductUrl.
+             * The URL of the service page.
              */
             public Builder serviceProductUrl(String serviceProductUrl) {
                 this.serviceProductUrl = serviceProductUrl;
@@ -1474,7 +1549,12 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   private: The service is a private service and is deployed within the account of a customer.
+             * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+             * *   operation: The service is a hosted O\&M service.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -1482,7 +1562,22 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service. Valid values:
+             * <p>
+             * 
+             * Draft: The registration request of the service is pending to be submitted.
+             * 
+             * Submitted: The registration request of the service is submitted.
+             * 
+             * Approved: The registration request of the service is approved.
+             * 
+             * Online: The service is published.
+             * 
+             * Offline: The service is unpublished.
+             * 
+             * Deleted: The service is deleted.
+             * 
+             * Launching: The service is being published.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1490,7 +1585,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * The name of the service provider.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1498,7 +1593,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierUrl.
+             * The URL of the service provider.
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
@@ -1506,7 +1601,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * UpgradableServiceVersions.
+             * The service versions that can be updated.
              */
             public Builder upgradableServiceVersions(java.util.List < String > upgradableServiceVersions) {
                 this.upgradableServiceVersions = upgradableServiceVersions;
@@ -1514,7 +1609,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The service version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1522,7 +1617,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The custom version name defined by the service provider.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1575,7 +1670,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -1583,7 +1678,7 @@ public class GetServiceInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

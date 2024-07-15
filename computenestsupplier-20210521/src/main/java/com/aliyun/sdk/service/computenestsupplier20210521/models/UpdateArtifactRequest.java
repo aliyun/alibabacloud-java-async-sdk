@@ -112,7 +112,7 @@ public class UpdateArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * The ID of the deployment package.
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -121,7 +121,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactProperty.
+         * The properties of the deployment package.
          */
         public Builder artifactProperty(ArtifactProperty artifactProperty) {
             String artifactPropertyShrink = shrink(artifactProperty, "ArtifactProperty", "json");
@@ -131,7 +131,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the deployment package.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -140,7 +140,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * SupportRegionIds.
+         * The IDs of the regions that support the deployment package.
          */
         public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
@@ -149,7 +149,7 @@ public class UpdateArtifactRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * The version name of the deployment package.
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -263,7 +263,10 @@ public class UpdateArtifactRequest extends Request {
             private String url; 
 
             /**
-             * CommodityCode.
+             * The commodity code of the service in Alibaba Cloud Marketplace.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -271,7 +274,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * CommodityVersion.
+             * The commodity version of the service in Alibaba Cloud Marketplace.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder commodityVersion(String commodityVersion) {
                 this.commodityVersion = commodityVersion;
@@ -279,7 +285,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * FileScriptMetadata.
+             * The metadata of the Object Storage Service (OSS) object.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an OSS object.
              */
             public Builder fileScriptMetadata(String fileScriptMetadata) {
                 this.fileScriptMetadata = fileScriptMetadata;
@@ -287,7 +296,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * The image ID.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -295,7 +307,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * The region ID.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -303,7 +318,10 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * ScriptMetadata.
+             * The script content of the deployment package.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is a script.
              */
             public Builder scriptMetadata(String scriptMetadata) {
                 this.scriptMetadata = scriptMetadata;
@@ -311,7 +329,11 @@ public class UpdateArtifactRequest extends Request {
             }
 
             /**
-             * Url.
+             * The URL of the deployment package object.
+             * <p>
+             * 
+             * 
+             * > Note This parameter is available only if the deployment package is an file.
              */
             public Builder url(String url) {
                 this.url = url;

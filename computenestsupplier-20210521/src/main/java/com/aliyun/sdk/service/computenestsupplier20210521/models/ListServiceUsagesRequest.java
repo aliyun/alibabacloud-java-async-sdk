@@ -95,7 +95,7 @@ public class ListServiceUsagesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -104,7 +104,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -113,7 +113,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -122,7 +122,7 @@ public class ListServiceUsagesRequest extends Request {
         }
 
         /**
-         * SupplierRole.
+         * The role of the service provider.
          */
         public Builder supplierRole(String supplierRole) {
             this.putQueryParameter("SupplierRole", supplierRole);
@@ -176,7 +176,13 @@ public class ListServiceUsagesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The parameter name of the filter. You can specify one or more filters. Valid values:
+             * <p>
+             * 
+             * *   ServiceId: the ID of the service.
+             * *   ServiceName: the service name.
+             * *   Status: the state of the service.
+             * *   SupplierName: the name of the service provider.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -184,7 +190,7 @@ public class ListServiceUsagesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The parameter value N of the filter. Valid values of N: 1 to 10.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;

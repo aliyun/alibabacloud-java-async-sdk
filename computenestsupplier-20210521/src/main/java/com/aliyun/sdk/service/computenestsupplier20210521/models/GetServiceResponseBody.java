@@ -685,7 +685,10 @@ public class GetServiceResponseBody extends TeaModel {
         private String virtualInternetServiceId; 
 
         /**
-         * AlarmMetadata.
+         * The alert configurations of the service.
+         * <p>
+         * 
+         * >  This parameter takes effect only when you specify an alert policy for **PolicyNames**.
          */
         public Builder alarmMetadata(String alarmMetadata) {
             this.alarmMetadata = alarmMetadata;
@@ -693,7 +696,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ApprovalType.
+         * The approval type of the service usage application. Valid values:
+         * <p>
+         * 
+         * *   Manual: The application is manually approved.
+         * *   AutoPass: The application is automatically approved.
          */
         public Builder approvalType(String approvalType) {
             this.approvalType = approvalType;
@@ -701,7 +708,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * BuildInfo.
+         * The information of build service information.
          */
         public Builder buildInfo(String buildInfo) {
             this.buildInfo = buildInfo;
@@ -709,7 +716,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Categories.
+         * The category of the service.
          */
         public Builder categories(String categories) {
             this.categories = categories;
@@ -717,7 +724,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Commodity.
+         * The commodity details.
          */
         public Builder commodity(Commodity commodity) {
             this.commodity = commodity;
@@ -725,7 +732,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CommodityCode.
+         * The commodity code of the service in Alibaba Cloud Marketplace.
          */
         public Builder commodityCode(String commodityCode) {
             this.commodityCode = commodityCode;
@@ -733,7 +740,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CreateTime.
+         * The time when the service was created.
          */
         public Builder createTime(String createTime) {
             this.createTime = createTime;
@@ -741,7 +748,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * CrossRegionConnectionStatus.
+         * The binding configurations of the commodity module.
          */
         public Builder crossRegionConnectionStatus(String crossRegionConnectionStatus) {
             this.crossRegionConnectionStatus = crossRegionConnectionStatus;
@@ -749,7 +756,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DefaultLicenseDays.
+         * The validity period of the default license. Unit: day. Valid values: 1 to 1000.
          */
         public Builder defaultLicenseDays(Long defaultLicenseDays) {
             this.defaultLicenseDays = defaultLicenseDays;
@@ -757,7 +764,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DeployMetadata.
+         * The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
          */
         public Builder deployMetadata(String deployMetadata) {
             this.deployMetadata = deployMetadata;
@@ -765,7 +772,15 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * DeployType.
+         * The deployment type of the service. Valid values:
+         * <p>
+         * 
+         * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
+         * *   terraform: The service is deployed by using Terraform.
+         * *   spi: The service is deployed by calling a service provider interface (SPI).
+         * *   operation: The service is deployed by using a hosted O\&M service.
+         * *   container: The service is deployed by using a container.
+         * *   pkg: The service is deployed by using a package.
          */
         public Builder deployType(String deployType) {
             this.deployType = deployType;
@@ -773,7 +788,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Duration.
+         * The duration for which hosted O\&M is implemented. Unit: seconds.
          */
         public Builder duration(Long duration) {
             this.duration = duration;
@@ -781,7 +796,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * EntitySource.
+         * The report source.
          */
         public Builder entitySource(java.util.Map < String, String > entitySource) {
             this.entitySource = entitySource;
@@ -789,7 +804,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * IsSupportOperated.
+         * Indicates whether the hosted O\&M feature is enabled for the service. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * >  This parameter is returned if you set **ServiceType** to **private**.
          */
         public Builder isSupportOperated(Boolean isSupportOperated) {
             this.isSupportOperated = isSupportOperated;
@@ -797,7 +818,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * LicenseMetadata.
+         * The license metadata.
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.licenseMetadata = licenseMetadata;
@@ -805,7 +826,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * LogMetadata.
+         * The logging configurations.
          */
         public Builder logMetadata(String logMetadata) {
             this.logMetadata = logMetadata;
@@ -813,7 +834,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * OperationMetadata.
+         * The hosted O\&M configurations.
          */
         public Builder operationMetadata(String operationMetadata) {
             this.operationMetadata = operationMetadata;
@@ -821,7 +842,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PayFromType.
+         * The source for which fees are generated. Valid values:
+         * <p>
+         * 
+         * *   None: No fees are generated.
+         * *   Marketplace: Fees are generated for Alibaba Cloud Marketplace.
+         * *   Custom: The custom fees.
          */
         public Builder payFromType(String payFromType) {
             this.payFromType = payFromType;
@@ -829,7 +855,13 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PayType.
+         * The billing method of the service. Valid values:
+         * <p>
+         * 
+         * *   Permanent: Once you purchase the service, you can use it permanently.
+         * *   Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.
+         * *   PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.
+         * *   CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.
          */
         public Builder payType(String payType) {
             this.payType = payType;
@@ -837,7 +869,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Permission.
+         * The permissions on the service. Valid values:
+         * <p>
+         * 
+         * *   Deployable: Permissions to deploy the service.
+         * *   Accessible: Permissions to access the service.
          */
         public Builder permission(String permission) {
             this.permission = permission;
@@ -845,7 +881,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PolicyNames.
+         * The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&M policies are supported.
          */
         public Builder policyNames(String policyNames) {
             this.policyNames = policyNames;
@@ -853,7 +889,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Progress.
+         * The deployment progress of the service instance. Unit: percentage.
          */
         public Builder progress(Long progress) {
             this.progress = progress;
@@ -861,7 +897,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * PublishTime.
+         * The time when the service was published.
          */
         public Builder publishTime(String publishTime) {
             this.publishTime = publishTime;
@@ -869,7 +905,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RegistrationId.
+         * The registration ID.
          */
         public Builder registrationId(String registrationId) {
             this.registrationId = registrationId;
@@ -877,7 +913,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -885,7 +921,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Resellable.
+         * Indicates whether the distribution is supported. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder resellable(Boolean resellable) {
             this.resellable = resellable;
@@ -893,7 +933,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.resourceGroupId = resourceGroupId;
@@ -901,7 +941,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceAuditDocumentUrl.
+         * The URL of the service audit file.
          */
         public Builder serviceAuditDocumentUrl(String serviceAuditDocumentUrl) {
             this.serviceAuditDocumentUrl = serviceAuditDocumentUrl;
@@ -909,7 +949,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDiscoverable.
+         * Indicates whether the service is visible. Valid values:
+         * <p>
+         * 
+         * *   INVISIBLE
+         * *   DISCOVERABLE
          */
         public Builder serviceDiscoverable(String serviceDiscoverable) {
             this.serviceDiscoverable = serviceDiscoverable;
@@ -917,7 +961,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceDocUrl.
+         * The URL of the service documentation.
          */
         public Builder serviceDocUrl(String serviceDocUrl) {
             this.serviceDocUrl = serviceDocUrl;
@@ -925,7 +969,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.serviceId = serviceId;
@@ -933,7 +977,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInfos.
+         * The information about the service.
          */
         public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
             this.serviceInfos = serviceInfos;
@@ -941,7 +985,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceProductUrl.
+         * The URL of the service page.
          */
         public Builder serviceProductUrl(String serviceProductUrl) {
             this.serviceProductUrl = serviceProductUrl;
@@ -949,7 +993,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceType.
+         * The type of the service. Valid values:
+         * <p>
+         * 
+         * *   private: The service is a private service and is deployed within the account of a customer.
+         * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+         * *   operation: The service is a hosted O\&M service.
          */
         public Builder serviceType(String serviceType) {
             this.serviceType = serviceType;
@@ -957,7 +1006,14 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ShareType.
+         * The permission type of the deployment URL. Valid values:
+         * <p>
+         * 
+         * *   Public: All users can go to the URL to create a service instance or a trial service instance.
+         * *   Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.
+         * *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.
+         * *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
+         * *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
          */
         public Builder shareType(String shareType) {
             this.shareType = shareType;
@@ -965,7 +1021,10 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * ShareTypeStatus.
+         * The share status of the instance.
+         * <p>
+         * 
+         * > This parameter is discontinued.
          */
         public Builder shareTypeStatus(String shareTypeStatus) {
             this.shareTypeStatus = shareTypeStatus;
@@ -973,7 +1032,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SourceServiceId.
+         * The ID of the distribution source service.
          */
         public Builder sourceServiceId(String sourceServiceId) {
             this.sourceServiceId = sourceServiceId;
@@ -981,7 +1040,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SourceServiceVersion.
+         * The version of the distribution source service.
          */
         public Builder sourceServiceVersion(String sourceServiceVersion) {
             this.sourceServiceVersion = sourceServiceVersion;
@@ -989,7 +1048,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SourceSupplierName.
+         * The name of the distribution source service provider.
          */
         public Builder sourceSupplierName(String sourceSupplierName) {
             this.sourceSupplierName = sourceSupplierName;
@@ -997,7 +1056,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Statistic.
+         * The statistics.
          */
         public Builder statistic(Statistic statistic) {
             this.statistic = statistic;
@@ -1005,7 +1064,15 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service. Valid values:
+         * <p>
+         * 
+         * *   Draft: The service is a draft.
+         * *   Submitted: The service is submitted for review. You cannot modify services in this state.
+         * *   Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.
+         * *   Launching: The service is being published.
+         * *   Online: The service is published.
+         * *   Offline: The service is unpublished.
          */
         public Builder status(String status) {
             this.status = status;
@@ -1013,7 +1080,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * StatusDetail.
+         * The description of the service status.
          */
         public Builder statusDetail(String statusDetail) {
             this.statusDetail = statusDetail;
@@ -1021,7 +1088,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierName.
+         * The name of the service provider.
          */
         public Builder supplierName(String supplierName) {
             this.supplierName = supplierName;
@@ -1029,7 +1096,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * SupplierUrl.
+         * The URL of the service provider.
          */
         public Builder supplierUrl(String supplierUrl) {
             this.supplierUrl = supplierUrl;
@@ -1037,7 +1104,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Tags.
+         * The service tags.
          */
         public Builder tags(java.util.List < Tags> tags) {
             this.tags = tags;
@@ -1045,7 +1112,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TenantType.
+         * The type of the tenant. Valid values:
+         * <p>
+         * 
+         * *   SingleTenant
+         * *   MultiTenant
          */
         public Builder tenantType(String tenantType) {
             this.tenantType = tenantType;
@@ -1053,7 +1124,12 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TestStatus.
+         * The status of the test. Valid values:
+         * <p>
+         * 
+         * *   `CONFIG_IS_NULL`: No test configurations exist.
+         * *   `SERVICE_TEST_SUCCEED`: The service passed the test.
+         * *   `SERVICE_TSET_DOING`: The service does not pass the test.
          */
         public Builder testStatus(String testStatus) {
             this.testStatus = testStatus;
@@ -1061,7 +1137,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TrialDuration.
+         * The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.
          */
         public Builder trialDuration(Long trialDuration) {
             this.trialDuration = trialDuration;
@@ -1069,7 +1145,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * TrialType.
+         * The trial policy. Valid values:
+         * <p>
+         * 
+         * *   Trial: Trials are supported.
+         * *   NotTrial: Trials are not supported.
          */
         public Builder trialType(String trialType) {
             this.trialType = trialType;
@@ -1077,7 +1157,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * UpdateTime.
+         * The time when the service was updated.
          */
         public Builder updateTime(String updateTime) {
             this.updateTime = updateTime;
@@ -1085,7 +1165,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * UpgradeMetadata.
+         * The metadata about the upgrade.
          */
         public Builder upgradeMetadata(String upgradeMetadata) {
             this.upgradeMetadata = upgradeMetadata;
@@ -1093,7 +1173,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * Version.
+         * The service version.
          */
         public Builder version(String version) {
             this.version = version;
@@ -1101,7 +1181,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * The version name.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;
@@ -1109,7 +1189,11 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualInternetService.
+         * Indicates whether the service is a virtual Internet service. Valid values:
+         * <p>
+         * 
+         * *   false
+         * *   true
          */
         public Builder virtualInternetService(String virtualInternetService) {
             this.virtualInternetService = virtualInternetService;
@@ -1117,7 +1201,7 @@ public class GetServiceResponseBody extends TeaModel {
         }
 
         /**
-         * VirtualInternetServiceId.
+         * The ID of the virtual Internet service.
          */
         public Builder virtualInternetServiceId(String virtualInternetServiceId) {
             this.virtualInternetServiceId = virtualInternetServiceId;
@@ -1169,7 +1253,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * Mappings.
+             * The mappings.
              */
             public Builder mappings(java.util.Map < String, String > mappings) {
                 this.mappings = mappings;
@@ -1177,7 +1261,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1254,7 +1338,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * EntityId.
+             * The ID of the entity.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -1262,7 +1346,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * Name of a measurement indicator.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1270,7 +1354,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Promql.
+             * Custom PromQL.
              */
             public Builder promql(String promql) {
                 this.promql = promql;
@@ -1278,7 +1362,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * Measurement indicators.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1343,7 +1427,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * EntityIds.
+             * The ID of the entity.
              */
             public Builder entityIds(String entityIds) {
                 this.entityIds = entityIds;
@@ -1351,7 +1435,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificationName.
+             * The package name.
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -1359,7 +1443,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1424,7 +1508,7 @@ public class GetServiceResponseBody extends TeaModel {
             private java.util.List < MeteringEntityMappings> meteringEntityMappings; 
 
             /**
-             * ComponentsMappings.
+             * The mapping information about the billing items.
              */
             public Builder componentsMappings(java.util.List < ComponentsMappings> componentsMappings) {
                 this.componentsMappings = componentsMappings;
@@ -1432,7 +1516,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MeteringEntityExtraInfos.
+             * Metering item configuration information.
              */
             public Builder meteringEntityExtraInfos(java.util.List < MeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
@@ -1440,7 +1524,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MeteringEntityMappings.
+             * The binding relationship between package and measurement dimension.
              */
             public Builder meteringEntityMappings(java.util.List < MeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
@@ -1517,7 +1601,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * EntityId.
+             * The ID of the billable item.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -1525,7 +1609,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MetricName.
+             * The metric name.
              */
             public Builder metricName(String metricName) {
                 this.metricName = metricName;
@@ -1533,7 +1617,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Promql.
+             * The custom prometheus statement.
              */
             public Builder promql(String promql) {
                 this.promql = promql;
@@ -1541,7 +1625,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The metric.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -1606,7 +1690,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String templateName; 
 
             /**
-             * EntityIds.
+             * The ID of the billable item.
              */
             public Builder entityIds(String entityIds) {
                 this.entityIds = entityIds;
@@ -1614,7 +1698,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificationName.
+             * The name of the specification package.
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -1622,7 +1706,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1699,7 +1783,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String trialType; 
 
             /**
-             * SpecificationCode.
+             * The specification code of the service in Alibaba Cloud Marketplace.
              */
             public Builder specificationCode(String specificationCode) {
                 this.specificationCode = specificationCode;
@@ -1707,7 +1791,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificationName.
+             * The name of the specification package.
              */
             public Builder specificationName(String specificationName) {
                 this.specificationName = specificationName;
@@ -1715,7 +1799,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1723,7 +1807,11 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * TrialType.
+             * The trial policy. Valid values:
+             * <p>
+             * 
+             * *   Trial: Trials are supported.
+             * *   NotTrial: Trials are not supported.
              */
             public Builder trialType(String trialType) {
                 this.trialType = trialType;
@@ -1788,7 +1876,7 @@ public class GetServiceResponseBody extends TeaModel {
             private java.util.List < SpecificationMappings> specificationMappings; 
 
             /**
-             * MeteringEntityExtraInfos.
+             * The configurations of the billable items.
              */
             public Builder meteringEntityExtraInfos(java.util.List < MarketplaceMetadataMeteringEntityExtraInfos> meteringEntityExtraInfos) {
                 this.meteringEntityExtraInfos = meteringEntityExtraInfos;
@@ -1796,7 +1884,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MeteringEntityMappings.
+             * The billable items that are associated with the package.
              */
             public Builder meteringEntityMappings(java.util.List < MarketplaceMetadataMeteringEntityMappings> meteringEntityMappings) {
                 this.meteringEntityMappings = meteringEntityMappings;
@@ -1804,7 +1892,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SpecificationMappings.
+             * The mappings between the service specifications and the template or package.
              */
             public Builder specificationMappings(java.util.List < SpecificationMappings> specificationMappings) {
                 this.specificationMappings = specificationMappings;
@@ -1857,7 +1945,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * EntityId.
+             * The ID of the billable item.
              */
             public Builder entityId(String entityId) {
                 this.entityId = entityId;
@@ -1865,7 +1953,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the billable item.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1930,7 +2018,7 @@ public class GetServiceResponseBody extends TeaModel {
             private java.util.List < String > times; 
 
             /**
-             * Code.
+             * The commodity code.
              */
             public Builder code(String code) {
                 this.code = code;
@@ -1938,7 +2026,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The specification name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1946,7 +2034,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Times.
+             * The subscription duration. Unit: week or year.
              */
             public Builder times(java.util.List < String > times) {
                 this.times = times;
@@ -2083,7 +2171,11 @@ public class GetServiceResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * ChargeType.
+             * The billing method of the service. Valid values:
+             * <p>
+             * 
+             * *   **PREPAY** (default): subscription.
+             * *   **POSTPAY**: pay-as-you-go.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -2091,7 +2183,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The commodity code of the service in Alibaba Cloud Marketplace.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -2099,7 +2191,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Components.
+             * The commodity modules.
              */
             public Builder components(java.util.List < String > components) {
                 this.components = components;
@@ -2107,7 +2199,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * CssMetadata.
+             * The configuration metadata related to Lingxiao.
              */
             public Builder cssMetadata(CssMetadata cssMetadata) {
                 this.cssMetadata = cssMetadata;
@@ -2115,7 +2207,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MarketplaceMetadata.
+             * The metadata of Alibaba Cloud Marketplace.
              */
             public Builder marketplaceMetadata(MarketplaceMetadata marketplaceMetadata) {
                 this.marketplaceMetadata = marketplaceMetadata;
@@ -2123,7 +2215,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * MeteringEntities.
+             * The information about the billable item.
              */
             public Builder meteringEntities(java.util.List < MeteringEntities> meteringEntities) {
                 this.meteringEntities = meteringEntities;
@@ -2131,7 +2223,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SaasBoostMetadata.
+             * The configuration metadata related to Saas Boost.
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
                 this.saasBoostMetadata = saasBoostMetadata;
@@ -2139,7 +2231,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Specifications.
+             * The specification details of the service in Alibaba Cloud Marketplace.
              */
             public Builder specifications(java.util.List < Specifications> specifications) {
                 this.specifications = specifications;
@@ -2147,7 +2239,11 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The service type. Valid values:
+             * <p>
+             * 
+             * *   marketplace: Alibaba Cloud Marketplace.
+             * *   Css: Lingxiao.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -2200,7 +2296,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String url; 
 
             /**
-             * Name.
+             * The agreement name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2208,7 +2304,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Url.
+             * The agreement URL.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -2309,7 +2405,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * Agreements.
+             * The agreement information about the service.
              */
             public Builder agreements(java.util.List < Agreements> agreements) {
                 this.agreements = agreements;
@@ -2317,7 +2413,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Image.
+             * The URL of the service icon.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -2325,7 +2421,11 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * The language of the service. Valid values:
+             * <p>
+             * 
+             * *   zh-CN: Chinese
+             * *   en-US: English
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -2333,7 +2433,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * LongDescriptionUrl.
+             * The URL of the detailed description of the service.
              */
             public Builder longDescriptionUrl(String longDescriptionUrl) {
                 this.longDescriptionUrl = longDescriptionUrl;
@@ -2341,7 +2441,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The service name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -2349,7 +2449,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * The description of the service.
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -2486,7 +2586,7 @@ public class GetServiceResponseBody extends TeaModel {
             private Integer submittedUsageCount; 
 
             /**
-             * AccumulativeInstanceCount.
+             * The total number of service instances that belong to the service. The service instances that are deleted are counted.
              */
             public Builder accumulativeInstanceCount(Integer accumulativeInstanceCount) {
                 this.accumulativeInstanceCount = accumulativeInstanceCount;
@@ -2494,7 +2594,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AccumulativePocAmount.
+             * The total amount consumed for trial service instances. Unit: CNY.
              */
             public Builder accumulativePocAmount(Double accumulativePocAmount) {
                 this.accumulativePocAmount = accumulativePocAmount;
@@ -2502,7 +2602,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AccumulativeUserCount.
+             * The total number of users who use the service. The historical users are counted.
              */
             public Builder accumulativeUserCount(Integer accumulativeUserCount) {
                 this.accumulativeUserCount = accumulativeUserCount;
@@ -2510,7 +2610,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AveragePocAmount.
+             * The average amount consumed for trial service instances per instance. Unit: CNY.
              */
             public Builder averagePocAmount(Double averagePocAmount) {
                 this.averagePocAmount = averagePocAmount;
@@ -2518,7 +2618,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AveragePocDuration.
+             * The average duration for which trial service instances are in use. Unit: Hour.
              */
             public Builder averagePocDuration(Double averagePocDuration) {
                 this.averagePocDuration = averagePocDuration;
@@ -2526,7 +2626,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * AveragePocUnitAmount.
+             * The average amount consumed for trial service instances per a period of time. Unit: CNY.
              */
             public Builder averagePocUnitAmount(Double averagePocUnitAmount) {
                 this.averagePocUnitAmount = averagePocUnitAmount;
@@ -2534,7 +2634,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedServiceInstanceCount.
+             * The number of online service instances. It means the number of service instances that are successfully deployed.
              */
             public Builder deployedServiceInstanceCount(Integer deployedServiceInstanceCount) {
                 this.deployedServiceInstanceCount = deployedServiceInstanceCount;
@@ -2542,7 +2642,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * DeployedUserCount.
+             * The number of online users. It means the number of users who successfully deployed the service instances.
              */
             public Builder deployedUserCount(Integer deployedUserCount) {
                 this.deployedUserCount = deployedUserCount;
@@ -2550,7 +2650,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * SubmittedUsageCount.
+             * The number of service applications that are in the Submitted state.
              */
             public Builder submittedUsageCount(Integer submittedUsageCount) {
                 this.submittedUsageCount = submittedUsageCount;
@@ -2603,7 +2703,7 @@ public class GetServiceResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -2611,7 +2711,7 @@ public class GetServiceResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

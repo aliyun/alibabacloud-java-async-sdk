@@ -81,7 +81,7 @@ public class GetArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * The ID of the deployment package.
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -90,7 +90,7 @@ public class GetArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactName.
+         * The name of the deployment package.
          */
         public Builder artifactName(String artifactName) {
             this.putQueryParameter("ArtifactName", artifactName);
@@ -99,7 +99,7 @@ public class GetArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactVersion.
+         * The version of the deployment package.
          */
         public Builder artifactVersion(String artifactVersion) {
             this.putQueryParameter("ArtifactVersion", artifactVersion);

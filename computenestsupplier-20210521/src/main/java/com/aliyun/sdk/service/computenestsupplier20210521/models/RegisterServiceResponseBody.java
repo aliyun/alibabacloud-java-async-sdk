@@ -49,7 +49,7 @@ public class RegisterServiceResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * RegistrationId.
+         * The registration ID.
          */
         public Builder registrationId(String registrationId) {
             this.registrationId = registrationId;
@@ -57,7 +57,7 @@ public class RegisterServiceResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;

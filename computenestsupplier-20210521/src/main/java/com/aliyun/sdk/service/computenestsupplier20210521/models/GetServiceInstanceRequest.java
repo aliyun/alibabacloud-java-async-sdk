@@ -69,7 +69,7 @@ public class GetServiceInstanceRequest extends Request {
         } 
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -78,7 +78,7 @@ public class GetServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);

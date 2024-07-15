@@ -16,6 +16,10 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     private String endTime;
 
     @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("LicenseData")
+    private LicenseData licenseData;
+
+    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("RegionId")
     @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
@@ -28,6 +32,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     private UpdateServiceInstanceAttributeRequest(Builder builder) {
         super(builder);
         this.endTime = builder.endTime;
+        this.licenseData = builder.licenseData;
         this.regionId = builder.regionId;
         this.serviceInstanceId = builder.serviceInstanceId;
     }
@@ -53,6 +58,13 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
     }
 
     /**
+     * @return licenseData
+     */
+    public LicenseData getLicenseData() {
+        return this.licenseData;
+    }
+
+    /**
      * @return regionId
      */
     public String getRegionId() {
@@ -68,6 +80,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
 
     public static final class Builder extends Request.Builder<UpdateServiceInstanceAttributeRequest, Builder> {
         private String endTime; 
+        private LicenseData licenseData; 
         private String regionId; 
         private String serviceInstanceId; 
 
@@ -78,12 +91,13 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         private Builder(UpdateServiceInstanceAttributeRequest request) {
             super(request);
             this.endTime = request.endTime;
+            this.licenseData = request.licenseData;
             this.regionId = request.regionId;
             this.serviceInstanceId = request.serviceInstanceId;
         } 
 
         /**
-         * EndTime.
+         * The time when the service instance expires.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("EndTime", endTime);
@@ -92,7 +106,17 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * LicenseData.
+         */
+        public Builder licenseData(LicenseData licenseData) {
+            String licenseDataShrink = shrink(licenseData, "LicenseData", "json");
+            this.putQueryParameter("LicenseData", licenseDataShrink);
+            this.licenseData = licenseData;
+            return this;
+        }
+
+        /**
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -101,7 +125,7 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The service instance ID.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -116,4 +140,45 @@ public class UpdateServiceInstanceAttributeRequest extends Request {
 
     } 
 
+    public static class LicenseData extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("CustomData")
+        private String customData;
+
+        private LicenseData(Builder builder) {
+            this.customData = builder.customData;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static LicenseData create() {
+            return builder().build();
+        }
+
+        /**
+         * @return customData
+         */
+        public String getCustomData() {
+            return this.customData;
+        }
+
+        public static final class Builder {
+            private String customData; 
+
+            /**
+             * CustomData.
+             */
+            public Builder customData(String customData) {
+                this.customData = customData;
+                return this;
+            }
+
+            public LicenseData build() {
+                return new LicenseData(this);
+            } 
+
+        } 
+
+    }
 }

@@ -85,7 +85,7 @@ public class ListServicesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * Services.
+         * The services.
          */
         public Builder services(java.util.List < Services> services) {
             this.services = services;
@@ -117,7 +117,7 @@ public class ListServicesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -181,7 +181,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * CommodityCode.
+             * The commodity code.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -189,7 +189,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SaasBoostMetadata.
+             * The configuration metadata related to Saas Boost.
              */
             public Builder saasBoostMetadata(String saasBoostMetadata) {
                 this.saasBoostMetadata = saasBoostMetadata;
@@ -197,7 +197,12 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Type.
+             * The platform type. Valid values:
+             * <p>
+             * 
+             * *   marketplace: Alibaba Cloud Marketplace.
+             * *   Css: Lingxiao.
+             * *   SaasBoost: Saas Boost.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -274,7 +279,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * Image.
+             * The URL of the service icon.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -282,7 +287,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * The language of the service. Valid values:
+             * <p>
+             * 
+             * *   zh-CN: Chinese.
+             * *   en-US: English.
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -290,7 +299,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -298,7 +307,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * The description of the service.
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -351,7 +360,7 @@ public class ListServicesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -359,7 +368,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -832,7 +841,11 @@ public class ListServicesResponseBody extends TeaModel {
             private String virtualInternetService; 
 
             /**
-             * ApprovalType.
+             * The approval type for applications for using the service. Valid values:
+             * <p>
+             * 
+             * *   Manual: The applications are manual reviewed.
+             * *   AutoPass: The applications are automatically approved.
              */
             public Builder approvalType(String approvalType) {
                 this.approvalType = approvalType;
@@ -840,7 +853,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactId.
+             * The ID of the artifact.
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -848,7 +861,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactVersion.
+             * The version of the artifact.
              */
             public Builder artifactVersion(String artifactVersion) {
                 this.artifactVersion = artifactVersion;
@@ -856,7 +869,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * BuildInfo.
+             * The informathon for build service.
              */
             public Builder buildInfo(String buildInfo) {
                 this.buildInfo = buildInfo;
@@ -864,7 +877,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Categories.
+             * The category of the service.
              */
             public Builder categories(String categories) {
                 this.categories = categories;
@@ -872,7 +885,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Commodity.
+             * The commodity details.
              */
             public Builder commodity(Commodity commodity) {
                 this.commodity = commodity;
@@ -880,7 +893,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * CommodityCode.
+             * The commodity code of the service in Alibaba Cloud Marketplace.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -888,7 +901,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the service was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -896,7 +909,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * DefaultVersion.
+             * Indicates whether the version is the default version. Valid values:
+             * <p>
+             * 
+             * *   false
+             * *   true
              */
             public Builder defaultVersion(Boolean defaultVersion) {
                 this.defaultVersion = defaultVersion;
@@ -904,7 +921,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
+             * The deployment type of the service. Valid values:
+             * <p>
+             * 
+             * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
+             * *   terraform: The service is deployed by using Terraform.
+             * *   spi: The service is deployed by calling the Service Provider Interface (SPI).
+             * *   operation: The service is deployed by using a hosted O\&M service.
+             * *   container: The service is deployed by using a container.
+             * *
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -912,7 +937,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * HasBeta.
+             * Indicates whether the service has a beta version. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder hasBeta(Boolean hasBeta) {
                 this.hasBeta = hasBeta;
@@ -920,7 +949,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * HasDraft.
+             * Indicates whether the service has a draft version. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder hasDraft(Boolean hasDraft) {
                 this.hasDraft = hasDraft;
@@ -928,7 +961,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * LatestResellSourceServiceVersion.
+             * The latest version of the distribution source service.
              */
             public Builder latestResellSourceServiceVersion(String latestResellSourceServiceVersion) {
                 this.latestResellSourceServiceVersion = latestResellSourceServiceVersion;
@@ -936,7 +969,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * The time when the service was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -944,7 +977,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * RelationType.
+             * The purpose of the artifact. Valid values:
+             * <p>
+             * 
+             * *   ServiceDeployment: The artifact is used to create service instances.
+             * *   ServiceUpgrade: The artifact is used to upgrade service instances.
              */
             public Builder relationType(String relationType) {
                 this.relationType = relationType;
@@ -952,7 +989,12 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ResellApplyStatus.
+             * The state of distribution authorization of the service. Valid values:
+             * <p>
+             * 
+             * *   CanApply: Distributors can apply for distribution permissions.
+             * *   Applied: The application for distribution permissions is submitted.
+             * *   Approved: The application for distribution permissions is approved.
              */
             public Builder resellApplyStatus(String resellApplyStatus) {
                 this.resellApplyStatus = resellApplyStatus;
@@ -960,7 +1002,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ResellServiceId.
+             * The ID of the distribution service.
              */
             public Builder resellServiceId(String resellServiceId) {
                 this.resellServiceId = resellServiceId;
@@ -968,7 +1010,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The resource group ID.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -976,7 +1018,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceDiscoverable.
+             * Indicates whether the service is visible. Valid values:
+             * <p>
+             * 
+             * *   INVISIBLE
+             * *   DISCOVERABLE
              */
             public Builder serviceDiscoverable(String serviceDiscoverable) {
                 this.serviceDiscoverable = serviceDiscoverable;
@@ -984,7 +1030,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -992,7 +1038,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInfos.
+             * The information about the service.
              */
             public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -1000,7 +1046,12 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   private: The service is a private service and is deployed within the account of a customer.
+             * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+             * *   operation: The service is a hosted O\&M service.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -1008,7 +1059,14 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * ShareType.
+             * The permission type of the deployment URL. Valid values:
+             * <p>
+             * 
+             * *   Public: All users can go to the URL to create a formal service instance or a trial service instance.
+             * *   Restricted: Only users in the whitelist can go to the URL to create a formal service instance or a trial service instance.
+             * *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a formal service instance.
+             * *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
+             * *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
              */
             public Builder shareType(String shareType) {
                 this.shareType = shareType;
@@ -1016,7 +1074,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceImage.
+             * The source image.
              */
             public Builder sourceImage(String sourceImage) {
                 this.sourceImage = sourceImage;
@@ -1024,7 +1082,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceServiceId.
+             * The ID of the distribution source service.
              */
             public Builder sourceServiceId(String sourceServiceId) {
                 this.sourceServiceId = sourceServiceId;
@@ -1032,7 +1090,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceServiceVersion.
+             * The version of the distribution source service.
              */
             public Builder sourceServiceVersion(String sourceServiceVersion) {
                 this.sourceServiceVersion = sourceServiceVersion;
@@ -1040,7 +1098,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSupplierName.
+             * The name of the distribution source service provider.
              */
             public Builder sourceSupplierName(String sourceSupplierName) {
                 this.sourceSupplierName = sourceSupplierName;
@@ -1048,7 +1106,15 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The state of the service. Valid values:
+             * <p>
+             * 
+             * *   Draft: The service is a draft.
+             * *   Submitted: The service is submitted for review. You cannot modify services in this state.
+             * *   Approved: The service is approved. You cannot modify services in this state. You can publish services in this state.
+             * *   Launching: The service is being published.
+             * *   Online: The service is published.
+             * *   Offline: The service is unpublished.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1056,7 +1122,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * The name of the service provider.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -1064,7 +1130,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierUrl.
+             * The URL of the service provider.
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
@@ -1072,7 +1138,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The service tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1080,7 +1146,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * TenantType.
+             * The tenant type of the managed service. Valid values:
+             * <p>
+             * 
+             * *   SingleTenant
+             * *   MultiTenant
              */
             public Builder tenantType(String tenantType) {
                 this.tenantType = tenantType;
@@ -1088,7 +1158,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * TrialType.
+             * The trial policy. Valid values:
+             * <p>
+             * 
+             * *   Trial: Trials are supported.
+             * *   NotTrial: Trials are not supported.
              */
             public Builder trialType(String trialType) {
                 this.trialType = trialType;
@@ -1096,7 +1170,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the service was modified.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1104,7 +1178,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The version of the service.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -1112,7 +1186,7 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The custom version name defined by the service provider.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -1120,7 +1194,11 @@ public class ListServicesResponseBody extends TeaModel {
             }
 
             /**
-             * VirtualInternetService.
+             * Indicates whether the service is a virtual Internet service. Valid values:
+             * <p>
+             * 
+             * *   false
+             * *   true
              */
             public Builder virtualInternetService(String virtualInternetService) {
                 this.virtualInternetService = virtualInternetService;

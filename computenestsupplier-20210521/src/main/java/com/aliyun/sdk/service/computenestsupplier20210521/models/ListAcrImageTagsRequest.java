@@ -95,7 +95,11 @@ public class ListAcrImageTagsRequest extends Request {
         } 
 
         /**
-         * ArtifactType.
+         * The type of the deployment package. Default value: AcrImage. Valid values:
+         * <p>
+         * 
+         * *   HelmChart: Helm chart image.
+         * *   AcrImage: container image.
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -104,7 +108,7 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -113,7 +117,7 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -122,7 +126,7 @@ public class ListAcrImageTagsRequest extends Request {
         }
 
         /**
-         * RepoId.
+         * The image ID.
          */
         public Builder repoId(String repoId) {
             this.putQueryParameter("RepoId", repoId);

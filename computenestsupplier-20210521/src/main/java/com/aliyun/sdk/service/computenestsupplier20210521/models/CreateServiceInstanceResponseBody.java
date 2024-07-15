@@ -61,7 +61,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         private String status; 
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -69,7 +69,7 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.serviceInstanceId = serviceInstanceId;
@@ -77,7 +77,17 @@ public class CreateServiceInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the service instance. Valid values:
+         * <p>
+         * 
+         * *   Created
+         * *   Deploying
+         * *   DeployedFailed
+         * *   Deployed
+         * *   Upgrading
+         * *   Deleting
+         * *   Deleted
+         * *   DeletedFailed
          */
         public Builder status(String status) {
             this.status = status;

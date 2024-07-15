@@ -97,7 +97,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         private Boolean success; 
 
         /**
-         * Code.
+         * The response code.
          */
         public Builder code(String code) {
             this.code = code;
@@ -105,7 +105,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Data.
+         * The response parameters.
          */
         public Builder data(Data data) {
             this.data = data;
@@ -113,7 +113,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * HttpStatusCode.
+         * The HTTP status code.
          */
         public Builder httpStatusCode(Integer httpStatusCode) {
             this.httpStatusCode = httpStatusCode;
@@ -121,7 +121,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Message.
+         * The message returned.
          */
         public Builder message(String message) {
             this.message = message;
@@ -129,7 +129,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -137,7 +137,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
         }
 
         /**
-         * Success.
+         * Indicates whether the request was successful. A value of true indicates the request was successful. A value of false indicates the request failed.
          */
         public Builder success(Boolean success) {
             this.success = success;
@@ -249,7 +249,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             private String securityToken; 
 
             /**
-             * AccessKeyId.
+             * The AccessKey ID.
              */
             public Builder accessKeyId(String accessKeyId) {
                 this.accessKeyId = accessKeyId;
@@ -257,7 +257,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * AccessKeySecret.
+             * The AccessKey secret.
              */
             public Builder accessKeySecret(String accessKeySecret) {
                 this.accessKeySecret = accessKeySecret;
@@ -265,7 +265,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * BucketName.
+             * The bucket name.
              */
             public Builder bucketName(String bucketName) {
                 this.bucketName = bucketName;
@@ -273,7 +273,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * ExpireDate.
+             * The time when the AccessKey pair expires.
              */
             public Builder expireDate(String expireDate) {
                 this.expireDate = expireDate;
@@ -281,7 +281,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * Key.
+             * The name of the key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -289,7 +289,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * RegionId.
+             * The region ID.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -297,7 +297,7 @@ public class GetUploadCredentialsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityToken.
+             * The security token.
              */
             public Builder securityToken(String securityToken) {
                 this.securityToken = securityToken;

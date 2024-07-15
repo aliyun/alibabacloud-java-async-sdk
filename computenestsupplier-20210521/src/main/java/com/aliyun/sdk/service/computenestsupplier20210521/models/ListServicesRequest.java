@@ -138,7 +138,7 @@ public class ListServicesRequest extends Request {
         } 
 
         /**
-         * AllVersions.
+         * Specifies whether to return all versions of a service. Default value: false, which specifies that only the default version of a service is returned.
          */
         public Builder allVersions(Boolean allVersions) {
             this.putQueryParameter("AllVersions", allVersions);
@@ -147,7 +147,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Filter.
+         * The filters.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -156,7 +156,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -165,7 +165,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -174,7 +174,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -183,7 +183,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The resource group ID.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -192,7 +192,7 @@ public class ListServicesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The custom tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -246,7 +246,13 @@ public class ListServicesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The parameter name of the filter. You can specify one or more parameter names to query services. Valid values:
+             * <p>
+             * 
+             * *   ServiceId: the ID of the service.
+             * *   Name: the name of the service.
+             * *   Status: the state of the service.
+             * *   SupplierName: the name of the service provider.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -254,7 +260,7 @@ public class ListServicesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The parameter values of the filter.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -307,7 +313,7 @@ public class ListServicesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -315,7 +321,7 @@ public class ListServicesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

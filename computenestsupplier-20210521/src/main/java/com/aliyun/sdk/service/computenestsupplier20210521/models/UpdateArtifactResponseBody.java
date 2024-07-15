@@ -145,7 +145,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * ArtifactId.
+         * The ID of the deployment package.
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -153,7 +153,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactProperty.
+         * The properties of the deployment package.
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -161,7 +161,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactType.
+         * The type of the deployment package.
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -169,7 +169,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactVersion.
+         * The version of the deployment package.
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -177,7 +177,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the deployment package.
          */
         public Builder description(String description) {
             this.description = description;
@@ -185,7 +185,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * The time when the deployment package was modified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -193,7 +193,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -201,7 +201,15 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the deployment package. Valid values:
+         * <p>
+         * 
+         * *   Created: The deployment package is created.
+         * *   Scanning: The deployment package is being scanned.
+         * *   ScanFailed: The deployment package failed to be scanned.
+         * *   Delivering: The deployment package is being distributed.
+         * *   Available: The deployment package is available.
+         * *   Deleted: The deployment package is deleted.
          */
         public Builder status(String status) {
             this.status = status;
@@ -209,7 +217,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegionIds.
+         * The ID of the region that supports the deployment package.
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
@@ -217,7 +225,7 @@ public class UpdateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * The name of the deployment package.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

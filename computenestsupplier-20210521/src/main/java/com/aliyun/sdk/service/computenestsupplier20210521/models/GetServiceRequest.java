@@ -124,7 +124,7 @@ public class GetServiceRequest extends Request {
         } 
 
         /**
-         * FilterAliUid.
+         * Specifies whether to filter information based on Alibaba Cloud account IDs.
          */
         public Builder filterAliUid(Boolean filterAliUid) {
             this.putQueryParameter("FilterAliUid", filterAliUid);
@@ -133,7 +133,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -142,7 +142,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -151,7 +151,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);
@@ -160,7 +160,11 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * SharedAccountType.
+         * The share type of the service. Default value: SharedAccount. Valid values:
+         * <p>
+         * 
+         * *   SharedAccount: The service is shared by multiple accounts.
+         * *   Resell: The service is distributed.
          */
         public Builder sharedAccountType(String sharedAccountType) {
             this.putQueryParameter("SharedAccountType", sharedAccountType);
@@ -169,7 +173,7 @@ public class GetServiceRequest extends Request {
         }
 
         /**
-         * ShowDetail.
+         * The information that you want to query.
          */
         public Builder showDetail(java.util.List < String > showDetail) {
             this.putQueryParameter("ShowDetail", showDetail);

@@ -85,7 +85,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Artifacts.
+         * The information about deployment packages.
          */
         public Builder artifacts(java.util.List < Artifacts> artifacts) {
             this.artifacts = artifacts;
@@ -93,7 +93,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListArtifactsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -169,7 +169,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -177,7 +177,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -314,7 +314,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             private java.util.List < Tags> tags; 
 
             /**
-             * ArtifactId.
+             * The ID of the deployment package.
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -322,7 +322,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactType.
+             * The type of the deployment package.
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -330,7 +330,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Description.
+             * The description of the deployment package.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -338,7 +338,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the deployment package was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -346,7 +346,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * MaxVersion.
+             * The latest version of the deployment package.
              */
             public Builder maxVersion(String maxVersion) {
                 this.maxVersion = maxVersion;
@@ -354,7 +354,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the deployment package.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -362,7 +362,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -370,7 +370,15 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deployment package. Valid values:
+             * <p>
+             * 
+             * *   Created: The deployment package is created.
+             * *   Scanning: The deployment package is being scanned.
+             * *   ScanFailed: The deployment package failed to be scanned.
+             * *   Delivering: The deployment package is being distributed.
+             * *   Available: The deployment package is available.
+             * *   Deleted: The deployment package is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -378,7 +386,7 @@ public class ListArtifactsResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;

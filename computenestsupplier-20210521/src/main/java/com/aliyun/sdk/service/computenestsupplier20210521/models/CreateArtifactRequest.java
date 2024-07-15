@@ -168,7 +168,7 @@ public class CreateArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * The ID of the deployment package.
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -177,7 +177,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactProperty.
+         * The properties of the deployment object.
          */
         public Builder artifactProperty(ArtifactProperty artifactProperty) {
             String artifactPropertyShrink = shrink(artifactProperty, "ArtifactProperty", "json");
@@ -187,7 +187,13 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactType.
+         * The type of the deployment package. Valid values:
+         * <p>
+         * 
+         * *   EcsImage: Elastic Compute Service (ECS) image.
+         * *   AcrImage: container image.
+         * *   File: Object Storage Service (OSS) object.
+         * *   Script: script.
          */
         public Builder artifactType(String artifactType) {
             this.putQueryParameter("ArtifactType", artifactType);
@@ -196,7 +202,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * Description.
+         * The description of the deployment package.
          */
         public Builder description(String description) {
             this.putQueryParameter("Description", description);
@@ -205,7 +211,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * Name.
+         * The name of the deployment package.
          */
         public Builder name(String name) {
             this.putQueryParameter("Name", name);
@@ -214,7 +220,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -223,7 +229,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * SupportRegionIds.
+         * The supported regions.
          */
         public Builder supportRegionIds(java.util.List < String > supportRegionIds) {
             this.putQueryParameter("SupportRegionIds", supportRegionIds);
@@ -232,7 +238,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The custom tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -241,7 +247,7 @@ public class CreateArtifactRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * The version name of the deployment package.
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -391,7 +397,10 @@ public class CreateArtifactRequest extends Request {
             private String url; 
 
             /**
-             * CommodityCode.
+             * The commodity code of the service in Alibaba Cloud Marketplace.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -399,7 +408,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * CommodityVersion.
+             * The commodity version of the service in Alibaba Cloud Marketplace.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder commodityVersion(String commodityVersion) {
                 this.commodityVersion = commodityVersion;
@@ -407,7 +419,7 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * FileScriptMetadata.
+             * The script metadata.
              */
             public Builder fileScriptMetadata(String fileScriptMetadata) {
                 this.fileScriptMetadata = fileScriptMetadata;
@@ -415,7 +427,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * ImageId.
+             * The image ID.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder imageId(String imageId) {
                 this.imageId = imageId;
@@ -423,7 +438,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * RegionId.
+             * The region ID.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is an image.
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;
@@ -431,7 +449,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * RepoId.
+             * The ID of the image repository.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is a container image or of the Helm chart type.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -439,7 +460,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * RepoName.
+             * The name of the image repository.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is a container image or of the Helm chart type.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;
@@ -447,7 +471,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * ScriptMetadata.
+             * The script content.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is a script.
              */
             public Builder scriptMetadata(String scriptMetadata) {
                 this.scriptMetadata = scriptMetadata;
@@ -455,7 +482,10 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * Tag.
+             * The version tag of the image repository.
+             * <p>
+             * 
+             * >  This parameter is available only if the deployment package is a container image or of the Helm chart type.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -463,7 +493,7 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * Url.
+             * The object URL of the deployment package.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -516,7 +546,7 @@ public class CreateArtifactRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -524,7 +554,7 @@ public class CreateArtifactRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

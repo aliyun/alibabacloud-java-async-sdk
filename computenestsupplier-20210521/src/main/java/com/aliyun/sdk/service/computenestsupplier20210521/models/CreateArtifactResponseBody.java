@@ -169,7 +169,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         private String versionName; 
 
         /**
-         * ArtifactId.
+         * The ID of the deployment package.
          */
         public Builder artifactId(String artifactId) {
             this.artifactId = artifactId;
@@ -177,7 +177,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactProperty.
+         * The properties of the deployment object.
          */
         public Builder artifactProperty(String artifactProperty) {
             this.artifactProperty = artifactProperty;
@@ -185,7 +185,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactType.
+         * The type of the deployment package.
          */
         public Builder artifactType(String artifactType) {
             this.artifactType = artifactType;
@@ -193,7 +193,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * ArtifactVersion.
+         * The version of the deployment package.
          */
         public Builder artifactVersion(String artifactVersion) {
             this.artifactVersion = artifactVersion;
@@ -201,7 +201,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Description.
+         * The description of the deployment package.
          */
         public Builder description(String description) {
             this.description = description;
@@ -209,7 +209,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * GmtModified.
+         * The time when the deployment package was modified.
          */
         public Builder gmtModified(String gmtModified) {
             this.gmtModified = gmtModified;
@@ -217,7 +217,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * MaxVersion.
+         * The latest version of the deployment package.
          */
         public Builder maxVersion(Long maxVersion) {
             this.maxVersion = maxVersion;
@@ -225,7 +225,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Name.
+         * The name of the deployment package.
          */
         public Builder name(String name) {
             this.name = name;
@@ -233,7 +233,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -241,7 +241,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * Status.
+         * The status of the deployment package. Valid values:
          */
         public Builder status(String status) {
             this.status = status;
@@ -249,7 +249,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * SupportRegionIds.
+         * The ID of the region that supports the deployment package.
          */
         public Builder supportRegionIds(String supportRegionIds) {
             this.supportRegionIds = supportRegionIds;
@@ -257,7 +257,7 @@ public class CreateArtifactResponseBody extends TeaModel {
         }
 
         /**
-         * VersionName.
+         * The name of the deployment package.
          */
         public Builder versionName(String versionName) {
             this.versionName = versionName;

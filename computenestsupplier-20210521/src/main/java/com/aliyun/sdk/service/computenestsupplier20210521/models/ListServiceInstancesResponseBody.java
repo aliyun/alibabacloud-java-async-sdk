@@ -85,7 +85,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -109,7 +109,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * ServiceInstances.
+         * The information about service instances.
          */
         public Builder serviceInstances(java.util.List < ServiceInstances> serviceInstances) {
             this.serviceInstances = serviceInstances;
@@ -117,7 +117,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,7 +193,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String shortDescription; 
 
             /**
-             * Image.
+             * The URL of the service icon.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -201,7 +201,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Locale.
+             * The language of the service instance.
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -209,7 +209,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The service name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -217,7 +217,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ShortDescription.
+             * The description of the service.
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -402,7 +402,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * DeployMetadata.
+             * The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
              */
             public Builder deployMetadata(String deployMetadata) {
                 this.deployMetadata = deployMetadata;
@@ -410,7 +410,14 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * DeployType.
+             * The deployment type of the service. Valid values:
+             * <p>
+             * 
+             * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
+             * *   terraform: The service is deployed by using Terraform.
+             * *   ack: The service is deployed by using Container Service for Kubernetes (ACK).
+             * *   spi: The service is deployed by calling a service provider interface (SPI).
+             * *   operation: The service is deployed by using a hosted O\&M service.
              */
             public Builder deployType(String deployType) {
                 this.deployType = deployType;
@@ -418,7 +425,11 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnablePrivateVpcConnection.
+             * Indicates whether the private connection feature is enabled. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enablePrivateVpcConnection(Boolean enablePrivateVpcConnection) {
                 this.enablePrivateVpcConnection = enablePrivateVpcConnection;
@@ -426,7 +437,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PublishTime.
+             * The time when the service was published.
              */
             public Builder publishTime(String publishTime) {
                 this.publishTime = publishTime;
@@ -434,7 +445,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceId.
+             * The service ID.
              */
             public Builder serviceId(String serviceId) {
                 this.serviceId = serviceId;
@@ -442,7 +453,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInfos.
+             * The information about the service.
              */
             public Builder serviceInfos(java.util.List < ServiceInfos> serviceInfos) {
                 this.serviceInfos = serviceInfos;
@@ -450,7 +461,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   private: The service is a private service and is deployed within the account of a customer.
+             * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+             * *   operation: The service is a hosted O\&M service.
+             * *   poc: The service is a trial service.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -458,7 +475,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SourceSupplierName.
+             * The name of the distribution source service provider.
              */
             public Builder sourceSupplierName(String sourceSupplierName) {
                 this.sourceSupplierName = sourceSupplierName;
@@ -466,7 +483,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -474,7 +491,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierName.
+             * The name of the service provider.
              */
             public Builder supplierName(String supplierName) {
                 this.supplierName = supplierName;
@@ -482,7 +499,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * SupplierUrl.
+             * The URL of the service provider.
              */
             public Builder supplierUrl(String supplierUrl) {
                 this.supplierUrl = supplierUrl;
@@ -490,7 +507,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Version.
+             * The service version.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -498,7 +515,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The custom version name defined by the service provider.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;
@@ -551,7 +568,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -559,7 +576,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;
@@ -864,7 +881,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             private Long userId; 
 
             /**
-             * BizStatus.
+             * The business status of the service instance. Valid values:
+             * <p>
+             * 
+             * *   Normal: The service instance is normal.
+             * *   Renewing: The service instance is being renewed.
+             * *   RenewFailed: The service instance failed to be renewed.
+             * *   Expired: The service instance expired.
              */
             public Builder bizStatus(String bizStatus) {
                 this.bizStatus = bizStatus;
@@ -872,7 +895,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * CreateTime.
+             * The time when the service instance was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -880,7 +903,11 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EnableInstanceOps.
+             * Indicates whether the service instance supports the hosted O\&M feature. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder enableInstanceOps(Boolean enableInstanceOps) {
                 this.enableInstanceOps = enableInstanceOps;
@@ -888,7 +915,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * EndTime.
+             * The time when the service instance expires.
              */
             public Builder endTime(String endTime) {
                 this.endTime = endTime;
@@ -896,7 +923,11 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * IsOperated.
+             * Indicates whether the hosted O\&M feature is enabled for the service instance. Valid values:
+             * <p>
+             * 
+             * *   true
+             * *   false
              */
             public Builder isOperated(Boolean isOperated) {
                 this.isOperated = isOperated;
@@ -904,7 +935,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Name.
+             * The name of the service instance.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -912,7 +943,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OperatedServiceInstanceId.
+             * The ID of the service instance that is used to implement hosted O\&M.
              */
             public Builder operatedServiceInstanceId(String operatedServiceInstanceId) {
                 this.operatedServiceInstanceId = operatedServiceInstanceId;
@@ -920,7 +951,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationEndTime.
+             * The end of the time range during which hosted O\&M is implemented.
              */
             public Builder operationEndTime(String operationEndTime) {
                 this.operationEndTime = operationEndTime;
@@ -928,7 +959,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * OperationStartTime.
+             * The beginning of the time range during which hosted O\&M is implemented.
              */
             public Builder operationStartTime(String operationStartTime) {
                 this.operationStartTime = operationStartTime;
@@ -936,7 +967,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Parameters.
+             * The parameters of the service instance.
              */
             public Builder parameters(String parameters) {
                 this.parameters = parameters;
@@ -944,7 +975,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * PayType.
+             * The billing method of the service. Valid values:
+             * <p>
+             * 
+             * *   Permanent: Once you purchase the service, you can use it permanently.
+             * *   Subscription: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a subscription basis.
+             * *   PayAsYouGo: You purchase the service from Alibaba Cloud Marketplace and are charged for the service on a pay-as-you-go basis.
+             * *   CustomFixTime: You are charged for the service based on a custom duration fixed by the service provider.
              */
             public Builder payType(String payType) {
                 this.payType = payType;
@@ -952,7 +989,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The deployment progress of the service instance. Unit: percentage.
              */
             public Builder progress(Long progress) {
                 this.progress = progress;
@@ -960,7 +997,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ResourceGroupId.
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -968,7 +1005,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Service.
+             * The information about the service.
              */
             public Builder service(Service service) {
                 this.service = service;
@@ -976,7 +1013,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceInstanceId.
+             * The ID of the service instance.
              */
             public Builder serviceInstanceId(String serviceInstanceId) {
                 this.serviceInstanceId = serviceInstanceId;
@@ -984,7 +1021,13 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * ServiceType.
+             * The type of the service. Valid values:
+             * <p>
+             * 
+             * *   private: The service is a private service and is deployed within the account of a customer.
+             * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+             * *   operation: The service is a hosted O\&M service.
+             * *   poc: The service is a trial service.
              */
             public Builder serviceType(String serviceType) {
                 this.serviceType = serviceType;
@@ -992,7 +1035,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Source.
+             * The source from which the service instance is created.
              */
             public Builder source(String source) {
                 this.source = source;
@@ -1000,7 +1043,16 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the service instance. Valid values:
+             * <p>
+             * 
+             * *   Created
+             * *   Deploying
+             * *   DeployedFailed
+             * *   Deployed
+             * *   Upgrading
+             * *   Deleting
+             * *   Deleted
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1008,7 +1060,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * StatusDetail.
+             * The description of the deployment of the service instance.
              */
             public Builder statusDetail(String statusDetail) {
                 this.statusDetail = statusDetail;
@@ -1016,7 +1068,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * Tags.
+             * The custom tags.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -1024,7 +1076,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * TemplateName.
+             * The template name.
              */
             public Builder templateName(String templateName) {
                 this.templateName = templateName;
@@ -1032,7 +1084,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UpdateTime.
+             * The time when the service instance was updated.
              */
             public Builder updateTime(String updateTime) {
                 this.updateTime = updateTime;
@@ -1040,7 +1092,7 @@ public class ListServiceInstancesResponseBody extends TeaModel {
             }
 
             /**
-             * UserId.
+             * The Alibaba Cloud account ID of the user.
              */
             public Builder userId(Long userId) {
                 this.userId = userId;

@@ -85,7 +85,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -93,7 +93,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * A pagination token.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -101,7 +101,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * Repositories.
+         * The images.
          */
         public Builder repositories(java.util.List < Repositories> repositories) {
             this.repositories = repositories;
@@ -109,7 +109,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -193,7 +193,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             private String repoName; 
 
             /**
-             * CreateTime.
+             * The time when the image was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -201,7 +201,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * ModifiedTime.
+             * The time when the image was modified.
              */
             public Builder modifiedTime(String modifiedTime) {
                 this.modifiedTime = modifiedTime;
@@ -209,7 +209,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoId.
+             * The image repo ID.
              */
             public Builder repoId(String repoId) {
                 this.repoId = repoId;
@@ -217,7 +217,7 @@ public class ListAcrImageRepositoriesResponseBody extends TeaModel {
             }
 
             /**
-             * RepoName.
+             * The image repo name.
              */
             public Builder repoName(String repoName) {
                 this.repoName = repoName;

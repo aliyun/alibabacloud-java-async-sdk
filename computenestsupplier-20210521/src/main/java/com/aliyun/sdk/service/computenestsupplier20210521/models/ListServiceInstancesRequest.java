@@ -137,7 +137,7 @@ public class ListServiceInstancesRequest extends Request {
         } 
 
         /**
-         * Filter.
+         * The filter.
          */
         public Builder filter(java.util.List < Filter> filter) {
             this.putQueryParameter("Filter", filter);
@@ -146,7 +146,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.putQueryParameter("MaxResults", maxResults);
@@ -155,7 +155,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * NextToken.
+         * The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.
          */
         public Builder nextToken(String nextToken) {
             this.putQueryParameter("NextToken", nextToken);
@@ -164,7 +164,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -173,7 +173,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -182,7 +182,11 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * ShowDeleted.
+         * Specifies whether to display the information that the service instance is deleted. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder showDeleted(Boolean showDeleted) {
             this.putQueryParameter("ShowDeleted", showDeleted);
@@ -191,7 +195,7 @@ public class ListServiceInstancesRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The custom tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -245,7 +249,24 @@ public class ListServiceInstancesRequest extends Request {
             private java.util.List < String > value; 
 
             /**
-             * Name.
+             * The parameter name of the filter. You can specify one or more filters. Valid values:
+             * <p>
+             * 
+             * *   Name: The service name. If you want to perform a fuzzy match, specify the service name in the *xxx* format. For example, if the service name is My Service, you can set the filter value to *My* or *Service*.
+             * *   ServiceInstanceId: The ID of the service instance.
+             * *   ServiceId: The service ID.
+             * *   UserId: The user ID.
+             * *   Version: The service version.
+             * *   Status: The status of the service instance.
+             * *   DeployType: The deployment type of the service.
+             * *   ServiceType: The service type.
+             * *   OperationStartTimeBefore: The time before the hosted O\&M starts.
+             * *   OperationStartTimeAfter: The time after the hosted O\&M starts.
+             * *   OperationEndTimeBefore: The time before the hosted O\&M ends.
+             * *   OperationEndTimeAfter: The time after the hosted O\&M ends.
+             * *   OperatedServiceInstanceId: The ID of the hosted O\&M instance that belongs to a private service.
+             * *   OperationServiceInstanceId: The ID of the hosted O\&M service instance that belongs to a hosted O\&M service.
+             * *   EnableInstanceOps: Whether the hosted O\&M feature is enabled for service instances.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -253,7 +274,7 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The parameter values of the filter.
              */
             public Builder value(java.util.List < String > value) {
                 this.value = value;
@@ -306,7 +327,7 @@ public class ListServiceInstancesRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -314,7 +335,7 @@ public class ListServiceInstancesRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

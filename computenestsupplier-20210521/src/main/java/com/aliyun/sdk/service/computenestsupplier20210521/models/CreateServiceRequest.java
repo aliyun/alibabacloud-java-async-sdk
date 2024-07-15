@@ -405,7 +405,10 @@ public class CreateServiceRequest extends Request {
         } 
 
         /**
-         * AlarmMetadata.
+         * The alert configurations of the service.
+         * <p>
+         * 
+         * >  This parameter takes effect only when you specify an alert policy for **PolicyNames**.
          */
         public Builder alarmMetadata(String alarmMetadata) {
             this.putQueryParameter("AlarmMetadata", alarmMetadata);
@@ -414,7 +417,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ApprovalType.
+         * The approval type of the service usage application. Valid values:
+         * <p>
+         * 
+         * *   Manual: The application is manually approved.
+         * *   AutoPass: The application is automatically approved.
          */
         public Builder approvalType(String approvalType) {
             this.putQueryParameter("ApprovalType", approvalType);
@@ -423,7 +430,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * BuildParameters.
+         * The parameters for building the service
          */
         public Builder buildParameters(String buildParameters) {
             this.putQueryParameter("BuildParameters", buildParameters);
@@ -432,7 +439,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -441,7 +448,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * DeployMetadata.
+         * The storage configurations of the service. The format in which the deployment information of a service is stored varies based on the deployment type of the service. In this case, the deployment information is stored in the JSON string format.
          */
         public Builder deployMetadata(String deployMetadata) {
             this.putQueryParameter("DeployMetadata", deployMetadata);
@@ -450,7 +457,14 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * DeployType.
+         * The deployment type of the service. Valid values:
+         * <p>
+         * 
+         * *   ros: The service is deployed by using Resource Orchestration Service (ROS).
+         * *   terraform: The service is deployed by using Terraform.
+         * *   ack: The service is deployed by using Container Service for Kubernetes (ACK).
+         * *   spi: The service is deployed by calling a service provider interface (SPI).
+         * *   operation: The service is deployed by using a hosted O\&M service.
          */
         public Builder deployType(String deployType) {
             this.putQueryParameter("DeployType", deployType);
@@ -459,7 +473,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Duration.
+         * The duration for which hosted O\&M is implemented. Unit: seconds.
          */
         public Builder duration(Long duration) {
             this.putQueryParameter("Duration", duration);
@@ -468,7 +482,13 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * IsSupportOperated.
+         * Specifies whether to enable the hosted O\&M feature for the service. Default value: false. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
+         * 
+         * >  This parameter is required if you set **ServiceType** to **private**.
          */
         public Builder isSupportOperated(Boolean isSupportOperated) {
             this.putQueryParameter("IsSupportOperated", isSupportOperated);
@@ -477,7 +497,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * LicenseMetadata.
+         * The license metadata.
          */
         public Builder licenseMetadata(String licenseMetadata) {
             this.putQueryParameter("LicenseMetadata", licenseMetadata);
@@ -486,7 +506,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * LogMetadata.
+         * The logging configurations.
          */
         public Builder logMetadata(String logMetadata) {
             this.putQueryParameter("LogMetadata", logMetadata);
@@ -495,7 +515,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * OperationMetadata.
+         * The hosted O\&M configurations.
          */
         public Builder operationMetadata(String operationMetadata) {
             this.putQueryParameter("OperationMetadata", operationMetadata);
@@ -504,7 +524,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * PolicyNames.
+         * The policy name. The name can be up to 128 characters in length. Separate multiple names with commas (,). Only hosted O\&M policies are supported.
          */
         public Builder policyNames(String policyNames) {
             this.putQueryParameter("PolicyNames", policyNames);
@@ -513,7 +533,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -522,7 +542,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Resellable.
+         * Whether resell is supported.
          */
         public Builder resellable(Boolean resellable) {
             this.putQueryParameter("Resellable", resellable);
@@ -531,7 +551,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ResourceGroupId.
+         * The ID of the resource group.
          */
         public Builder resourceGroupId(String resourceGroupId) {
             this.putQueryParameter("ResourceGroupId", resourceGroupId);
@@ -540,7 +560,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ServiceId.
+         * The service ID.
          */
         public Builder serviceId(String serviceId) {
             this.putQueryParameter("ServiceId", serviceId);
@@ -549,7 +569,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ServiceInfo.
+         * The service details.
          */
         public Builder serviceInfo(java.util.List < ServiceInfo> serviceInfo) {
             this.putQueryParameter("ServiceInfo", serviceInfo);
@@ -558,7 +578,13 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ServiceType.
+         * The service type. Valid values:
+         * <p>
+         * 
+         * *   private: The service is a private service and is deployed within the account of a customer.
+         * *   managed: The service is a fully managed service and is deployed within the account of a service provider.
+         * *   operation: The service is a hosted O\&M service.
+         * *   poc: The service is a trial service.
          */
         public Builder serviceType(String serviceType) {
             this.putQueryParameter("ServiceType", serviceType);
@@ -567,7 +593,14 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * ShareType.
+         * The permission type of the deployment URL. Valid values:
+         * <p>
+         * 
+         * *   Public: All users can go to the URL to create a service instance or a trial service instance.
+         * *   Restricted: Only users in the whitelist can go to the URL to create a service instance or a trial service instance.
+         * *   OnlyFormalRestricted: Only users in the whitelist can go to the URL to create a service instance.
+         * *   OnlyTrailRestricted: Only users in the whitelist can go to the URL to create a trial service instance.
+         * *   Hidden: Users not in the whitelist cannot see the service details page when they go to the URL and cannot request deployment permissions.
          */
         public Builder shareType(String shareType) {
             this.putQueryParameter("ShareType", shareType);
@@ -576,7 +609,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * SourceServiceId.
+         * The source service ID for resell。
          */
         public Builder sourceServiceId(String sourceServiceId) {
             this.putQueryParameter("SourceServiceId", sourceServiceId);
@@ -585,7 +618,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * SourceServiceVersion.
+         * The source service version for resell。
          */
         public Builder sourceServiceVersion(String sourceServiceVersion) {
             this.putQueryParameter("SourceServiceVersion", sourceServiceVersion);
@@ -594,7 +627,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * Tag.
+         * The custom tags.
          */
         public Builder tag(java.util.List < Tag> tag) {
             this.putQueryParameter("Tag", tag);
@@ -603,7 +636,11 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * TenantType.
+         * The type of the tenant. Valid values:
+         * <p>
+         * 
+         * *   SingleTenant
+         * *   MultiTenant
          */
         public Builder tenantType(String tenantType) {
             this.putQueryParameter("TenantType", tenantType);
@@ -612,7 +649,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * TrialDuration.
+         * The trial duration. Unit: day. The maximum trial duration cannot exceed 30 days.
          */
         public Builder trialDuration(Long trialDuration) {
             this.putQueryParameter("TrialDuration", trialDuration);
@@ -621,7 +658,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * UpgradeMetadata.
+         * The metadata about the upgrade.
          */
         public Builder upgradeMetadata(String upgradeMetadata) {
             this.putQueryParameter("UpgradeMetadata", upgradeMetadata);
@@ -630,7 +667,7 @@ public class CreateServiceRequest extends Request {
         }
 
         /**
-         * VersionName.
+         * The version name.
          */
         public Builder versionName(String versionName) {
             this.putQueryParameter("VersionName", versionName);
@@ -684,7 +721,7 @@ public class CreateServiceRequest extends Request {
             private String url; 
 
             /**
-             * Name.
+             * Protocol name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -692,7 +729,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Url.
+             * Protocol url.
              */
             public Builder url(String url) {
                 this.url = url;
@@ -795,7 +832,7 @@ public class CreateServiceRequest extends Request {
             private String shortDescription; 
 
             /**
-             * Agreements.
+             * Protocol document information about the service.
              */
             public Builder agreements(java.util.List < Agreements> agreements) {
                 this.agreements = agreements;
@@ -803,7 +840,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Image.
+             * The URL of the service icon.
              */
             public Builder image(String image) {
                 this.image = image;
@@ -811,7 +848,11 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Locale.
+             * The language of the service. Valid values:
+             * <p>
+             * 
+             * *   zh-CN: Chinese
+             * *   en-US: English
              */
             public Builder locale(String locale) {
                 this.locale = locale;
@@ -819,7 +860,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * LongDescriptionUrl.
+             * The URL of the detailed description of the service.
              */
             public Builder longDescriptionUrl(String longDescriptionUrl) {
                 this.longDescriptionUrl = longDescriptionUrl;
@@ -827,7 +868,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Name.
+             * The service name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -835,7 +876,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * ShortDescription.
+             * The description of the service.
              */
             public Builder shortDescription(String shortDescription) {
                 this.shortDescription = shortDescription;
@@ -888,7 +929,7 @@ public class CreateServiceRequest extends Request {
             private String value; 
 
             /**
-             * Key.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -896,7 +937,7 @@ public class CreateServiceRequest extends Request {
             }
 
             /**
-             * Value.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

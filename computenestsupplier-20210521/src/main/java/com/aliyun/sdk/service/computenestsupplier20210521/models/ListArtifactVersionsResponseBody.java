@@ -85,7 +85,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         private Integer totalCount; 
 
         /**
-         * Artifacts.
+         * The version information about the deployment package.
          */
         public Builder artifacts(java.util.List < Artifacts> artifacts) {
             this.artifacts = artifacts;
@@ -93,7 +93,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * MaxResults.
+         * The number of entries per page. Valid values: 1 to 100. Default value: 20.
          */
         public Builder maxResults(Integer maxResults) {
             this.maxResults = maxResults;
@@ -101,7 +101,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * NextToken.
+         * The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.
          */
         public Builder nextToken(String nextToken) {
             this.nextToken = nextToken;
@@ -109,7 +109,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * RequestId.
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -117,7 +117,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
         }
 
         /**
-         * TotalCount.
+         * The total number of entries returned.
          */
         public Builder totalCount(Integer totalCount) {
             this.totalCount = totalCount;
@@ -301,7 +301,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             private String versionName; 
 
             /**
-             * ArtifactId.
+             * The ID of the deployment package.
              */
             public Builder artifactId(String artifactId) {
                 this.artifactId = artifactId;
@@ -309,7 +309,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactProperty.
+             * The properties of the deployment package.
              */
             public Builder artifactProperty(String artifactProperty) {
                 this.artifactProperty = artifactProperty;
@@ -317,7 +317,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactType.
+             * The type of the deployment package.
              */
             public Builder artifactType(String artifactType) {
                 this.artifactType = artifactType;
@@ -325,7 +325,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ArtifactVersion.
+             * The version of the deployment package.
              */
             public Builder artifactVersion(String artifactVersion) {
                 this.artifactVersion = artifactVersion;
@@ -333,7 +333,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtCreate.
+             * The time when the certificate was created.
              */
             public Builder gmtCreate(String gmtCreate) {
                 this.gmtCreate = gmtCreate;
@@ -341,7 +341,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * GmtModified.
+             * The time when the deployment package was modified.
              */
             public Builder gmtModified(String gmtModified) {
                 this.gmtModified = gmtModified;
@@ -349,7 +349,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ImageDelivery.
+             * The distribution result of the image.
              */
             public Builder imageDelivery(java.util.Map < String, String > imageDelivery) {
                 this.imageDelivery = imageDelivery;
@@ -357,7 +357,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Progress.
+             * The distribution progress of the deployment package.
              */
             public Builder progress(String progress) {
                 this.progress = progress;
@@ -365,7 +365,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * ResultFile.
+             * The result file of the security scan.
              */
             public Builder resultFile(String resultFile) {
                 this.resultFile = resultFile;
@@ -373,7 +373,12 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SecurityAuditResult.
+             * The result of the security scan. Valid values:
+             * <p>
+             * 
+             * *   Normal: No risks exist on the deployment package.
+             * *   AtRisk: Risks exist on the deployment package.
+             * *   Processing: The deployment package is being scanned.
              */
             public Builder securityAuditResult(String securityAuditResult) {
                 this.securityAuditResult = securityAuditResult;
@@ -381,7 +386,15 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * Status.
+             * The status of the deployment package. Valid values:
+             * <p>
+             * 
+             * *   Created: The deployment package is created.
+             * *   Scanning: The deployment package is being scanned.
+             * *   ScanFailed: The deployment package failed to be scanned.
+             * *   Delivering: The deployment package is being distributed.
+             * *   Available: The deployment package is available.
+             * *   Deleted: The deployment package is deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -389,7 +402,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * SupportRegionIds.
+             * The ID of the region that supports the deployment package.
              */
             public Builder supportRegionIds(String supportRegionIds) {
                 this.supportRegionIds = supportRegionIds;
@@ -397,7 +410,7 @@ public class ListArtifactVersionsResponseBody extends TeaModel {
             }
 
             /**
-             * VersionName.
+             * The version name of the deployment package.
              */
             public Builder versionName(String versionName) {
                 this.versionName = versionName;

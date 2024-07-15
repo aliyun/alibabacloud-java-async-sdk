@@ -82,7 +82,7 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         } 
 
         /**
-         * Resources.
+         * The imported resources.
          */
         public Builder resources(String resources) {
             this.putQueryParameter("Resources", resources);
@@ -91,7 +91,7 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -100,7 +100,11 @@ public class ModifyServiceInstanceResourcesRequest extends Request {
         }
 
         /**
-         * ServiceInstanceResourcesAction.
+         * The type of operation performed on the service instance resource. Valid values:
+         * <p>
+         * 
+         * *   Import: The resource is imported.
+         * *   UnImport: The resource import is canceled.
          */
         public Builder serviceInstanceResourcesAction(String serviceInstanceResourcesAction) {
             this.putQueryParameter("ServiceInstanceResourcesAction", serviceInstanceResourcesAction);

@@ -123,7 +123,7 @@ public class UpgradeServiceInstanceRequest extends Request {
         } 
 
         /**
-         * ClientToken.
+         * The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.
          */
         public Builder clientToken(String clientToken) {
             this.putQueryParameter("ClientToken", clientToken);
@@ -132,7 +132,11 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * DryRun.
+         * Specifies whether to perform only a dry run for the request to check information such as the permissions and instance status. Valid values:
+         * <p>
+         * 
+         * *   true: performs a dry run for the request, but does not create a service instance.
+         * *   false: performs a dry run for the request, and creates a service instance if the request passes the dry run.
          */
         public Builder dryRun(String dryRun) {
             this.putQueryParameter("DryRun", dryRun);
@@ -141,7 +145,7 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * Parameters.
+         * The configuration parameters of the service instance.
          */
         public Builder parameters(java.util.Map < String, ? > parameters) {
             String parametersShrink = shrink(parameters, "Parameters", "json");
@@ -151,7 +155,7 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * RegionId.
+         * The region ID.
          */
         public Builder regionId(String regionId) {
             this.putQueryParameter("RegionId", regionId);
@@ -160,7 +164,7 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceInstanceId.
+         * The ID of the service instance.
          */
         public Builder serviceInstanceId(String serviceInstanceId) {
             this.putQueryParameter("ServiceInstanceId", serviceInstanceId);
@@ -169,7 +173,7 @@ public class UpgradeServiceInstanceRequest extends Request {
         }
 
         /**
-         * ServiceVersion.
+         * The service version.
          */
         public Builder serviceVersion(String serviceVersion) {
             this.putQueryParameter("ServiceVersion", serviceVersion);

@@ -68,7 +68,7 @@ public class DeleteArtifactRequest extends Request {
         } 
 
         /**
-         * ArtifactId.
+         * The ID of the artifact.
          */
         public Builder artifactId(String artifactId) {
             this.putQueryParameter("ArtifactId", artifactId);
@@ -77,7 +77,7 @@ public class DeleteArtifactRequest extends Request {
         }
 
         /**
-         * ArtifactVersion.
+         * The version of the artifact.
          */
         public Builder artifactVersion(String artifactVersion) {
             this.putQueryParameter("ArtifactVersion", artifactVersion);
