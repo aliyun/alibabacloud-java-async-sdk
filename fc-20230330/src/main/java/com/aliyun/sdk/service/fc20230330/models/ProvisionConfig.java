@@ -14,6 +14,9 @@ public class ProvisionConfig extends TeaModel {
     @com.aliyun.core.annotation.NameInMap("alwaysAllocateCPU")
     private Boolean alwaysAllocateCPU;
 
+    @com.aliyun.core.annotation.NameInMap("alwaysAllocateGPU")
+    private Boolean alwaysAllocateGPU;
+
     @com.aliyun.core.annotation.NameInMap("current")
     private Long current;
 
@@ -34,6 +37,7 @@ public class ProvisionConfig extends TeaModel {
 
     private ProvisionConfig(Builder builder) {
         this.alwaysAllocateCPU = builder.alwaysAllocateCPU;
+        this.alwaysAllocateGPU = builder.alwaysAllocateGPU;
         this.current = builder.current;
         this.currentError = builder.currentError;
         this.functionArn = builder.functionArn;
@@ -55,6 +59,13 @@ public class ProvisionConfig extends TeaModel {
      */
     public Boolean getAlwaysAllocateCPU() {
         return this.alwaysAllocateCPU;
+    }
+
+    /**
+     * @return alwaysAllocateGPU
+     */
+    public Boolean getAlwaysAllocateGPU() {
+        return this.alwaysAllocateGPU;
     }
 
     /**
@@ -101,6 +112,7 @@ public class ProvisionConfig extends TeaModel {
 
     public static final class Builder {
         private Boolean alwaysAllocateCPU; 
+        private Boolean alwaysAllocateGPU; 
         private Long current; 
         private String currentError; 
         private String functionArn; 
@@ -113,6 +125,14 @@ public class ProvisionConfig extends TeaModel {
          */
         public Builder alwaysAllocateCPU(Boolean alwaysAllocateCPU) {
             this.alwaysAllocateCPU = alwaysAllocateCPU;
+            return this;
+        }
+
+        /**
+         * alwaysAllocateGPU.
+         */
+        public Builder alwaysAllocateGPU(Boolean alwaysAllocateGPU) {
+            this.alwaysAllocateGPU = alwaysAllocateGPU;
             return this;
         }
 
