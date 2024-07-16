@@ -25,9 +25,19 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
+    CompletableFuture<DeleteIndexResponse> deleteIndex(DeleteIndexRequest request);
+
+    CompletableFuture<DeleteIndexDocumentResponse> deleteIndexDocument(DeleteIndexDocumentRequest request);
+
     CompletableFuture<DescribeFileResponse> describeFile(DescribeFileRequest request);
 
     CompletableFuture<GetIndexJobStatusResponse> getIndexJobStatus(GetIndexJobStatusRequest request);
+
+    CompletableFuture<ListChunksResponse> listChunks(ListChunksRequest request);
+
+    CompletableFuture<ListIndexDocumentsResponse> listIndexDocuments(ListIndexDocumentsRequest request);
+
+    CompletableFuture<ListIndicesResponse> listIndices(ListIndicesRequest request);
 
     CompletableFuture<RetrieveResponse> retrieve(RetrieveRequest request);
 
