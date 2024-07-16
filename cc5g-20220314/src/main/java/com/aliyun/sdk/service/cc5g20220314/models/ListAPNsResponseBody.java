@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListAPNsResponseBody</p>
  */
 public class ListAPNsResponseBody extends TeaModel {
-    @NameInMap("APNs")
+    @com.aliyun.core.annotation.NameInMap("APNs")
     private java.util.List < APNs> APNs;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListAPNsResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListAPNsResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * 数组，返回示例目录。
+         * APNs.
          */
         public Builder APNs(java.util.List < APNs> APNs) {
             this.APNs = APNs;
@@ -110,7 +109,7 @@ public class ListAPNsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,19 +131,19 @@ public class ListAPNsResponseBody extends TeaModel {
     } 
 
     public static class APNs extends TeaModel {
-        @NameInMap("APN")
+        @com.aliyun.core.annotation.NameInMap("APN")
         private String APN;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("ISP")
+        @com.aliyun.core.annotation.NameInMap("ISP")
         private String ISP;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Zones")
+        @com.aliyun.core.annotation.NameInMap("Zones")
         private java.util.List < String > zones;
 
         private APNs(Builder builder) {

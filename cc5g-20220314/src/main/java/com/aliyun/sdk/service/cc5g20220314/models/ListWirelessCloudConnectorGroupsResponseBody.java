@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWirelessCloudConnectorGroupsResponseBody</p>
  */
 public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
-    @NameInMap("WirelessCloudConnectorGroups")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroups")
     private java.util.List < WirelessCloudConnectorGroups> wirelessCloudConnectorGroups;
 
     private ListWirelessCloudConnectorGroupsResponseBody(Builder builder) {
@@ -102,7 +101,7 @@ public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -118,7 +117,7 @@ public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
         }
 
         /**
-         * 数组，返回示例目录。
+         * WirelessCloudConnectorGroups.
          */
         public Builder wirelessCloudConnectorGroups(java.util.List < WirelessCloudConnectorGroups> wirelessCloudConnectorGroups) {
             this.wirelessCloudConnectorGroups = wirelessCloudConnectorGroups;
@@ -132,40 +131,40 @@ public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
     } 
 
     public static class WirelessCloudConnectors extends TeaModel {
-        @NameInMap("BusinessType")
+        @com.aliyun.core.annotation.NameInMap("BusinessType")
         private String businessType;
 
-        @NameInMap("CardCount")
+        @com.aliyun.core.annotation.NameInMap("CardCount")
         private String cardCount;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("DataPackageId")
+        @com.aliyun.core.annotation.NameInMap("DataPackageId")
         private String dataPackageId;
 
-        @NameInMap("DataPackageType")
+        @com.aliyun.core.annotation.NameInMap("DataPackageType")
         private String dataPackageType;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("ServiceType")
+        @com.aliyun.core.annotation.NameInMap("ServiceType")
         private String serviceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UseCase")
+        @com.aliyun.core.annotation.NameInMap("UseCase")
         private String useCase;
 
-        @NameInMap("WirelessCloudConnectorId")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
         private String wirelessCloudConnectorId;
 
         private WirelessCloudConnectors(Builder builder) {
@@ -393,25 +392,25 @@ public class ListWirelessCloudConnectorGroupsResponseBody extends TeaModel {
 
     }
     public static class WirelessCloudConnectorGroups extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("WirelessCloudConnectorGroupId")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroupId")
         private String wirelessCloudConnectorGroupId;
 
-        @NameInMap("WirelessCloudConnectors")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectors")
         private java.util.List < WirelessCloudConnectors> wirelessCloudConnectors;
 
         private WirelessCloudConnectorGroups(Builder builder) {

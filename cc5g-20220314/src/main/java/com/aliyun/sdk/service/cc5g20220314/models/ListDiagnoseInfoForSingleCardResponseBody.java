@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListDiagnoseInfoForSingleCardResponseBody</p>
  */
 public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
-    @NameInMap("DiagnoseInfo")
+    @com.aliyun.core.annotation.NameInMap("DiagnoseInfo")
     private java.util.List < DiagnoseInfo> diagnoseInfo;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Long totalCount;
 
     private ListDiagnoseInfoForSingleCardResponseBody(Builder builder) {
@@ -132,40 +131,40 @@ public class ListDiagnoseInfoForSingleCardResponseBody extends TeaModel {
     } 
 
     public static class DiagnoseInfo extends TeaModel {
-        @NameInMap("BeginTime")
+        @com.aliyun.core.annotation.NameInMap("BeginTime")
         private Long beginTime;
 
-        @NameInMap("CardIp")
+        @com.aliyun.core.annotation.NameInMap("CardIp")
         private String cardIp;
 
-        @NameInMap("Destination")
+        @com.aliyun.core.annotation.NameInMap("Destination")
         private String destination;
 
-        @NameInMap("DestinationType")
+        @com.aliyun.core.annotation.NameInMap("DestinationType")
         private String destinationType;
 
-        @NameInMap("DiagnoseTaskId")
+        @com.aliyun.core.annotation.NameInMap("DiagnoseTaskId")
         private String diagnoseTaskId;
 
-        @NameInMap("DiagnoseTime")
+        @com.aliyun.core.annotation.NameInMap("DiagnoseTime")
         private Long diagnoseTime;
 
-        @NameInMap("EndTime")
+        @com.aliyun.core.annotation.NameInMap("EndTime")
         private Long endTime;
 
-        @NameInMap("IccId")
+        @com.aliyun.core.annotation.NameInMap("IccId")
         private String iccId;
 
-        @NameInMap("Source")
+        @com.aliyun.core.annotation.NameInMap("Source")
         private String source;
 
-        @NameInMap("SourceType")
+        @com.aliyun.core.annotation.NameInMap("SourceType")
         private String sourceType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("WirelessCloudConnectorId")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
         private String wirelessCloudConnectorId;
 
         private DiagnoseInfo(Builder builder) {

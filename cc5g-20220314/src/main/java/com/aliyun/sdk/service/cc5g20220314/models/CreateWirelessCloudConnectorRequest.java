@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,43 +11,43 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreateWirelessCloudConnectorRequest</p>
  */
 public class CreateWirelessCloudConnectorRequest extends Request {
-    @Query
-    @NameInMap("BusinessType")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("BusinessType")
     private String businessType;
 
-    @Query
-    @NameInMap("ClientToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ClientToken")
     private String clientToken;
 
-    @Query
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @Query
-    @NameInMap("DryRun")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("DryRun")
     private Boolean dryRun;
 
-    @Query
-    @NameInMap("ISP")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("ISP")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String ISP;
 
-    @Query
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @Query
-    @NameInMap("NetLinks")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetLinks")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < NetLinks> netLinks;
 
-    @Query
-    @NameInMap("RegionId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String regionId;
 
-    @Query
-    @NameInMap("UseCase")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UseCase")
     private String useCase;
 
     private CreateWirelessCloudConnectorRequest(Builder builder) {
@@ -257,19 +256,20 @@ public class CreateWirelessCloudConnectorRequest extends Request {
     } 
 
     public static class NetLinks extends TeaModel {
-        @NameInMap("APN")
+        @com.aliyun.core.annotation.NameInMap("APN")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String APN;
 
-        @NameInMap("RegionId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("RegionId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String regionId;
 
-        @NameInMap("VSwitchs")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VSwitchs")
+        @com.aliyun.core.annotation.Validation(required = true)
         private java.util.List < String > vSwitchs;
 
-        @NameInMap("VpcId")
-        @Validation(required = true)
+        @com.aliyun.core.annotation.NameInMap("VpcId")
+        @com.aliyun.core.annotation.Validation(required = true)
         private String vpcId;
 
         private NetLinks(Builder builder) {

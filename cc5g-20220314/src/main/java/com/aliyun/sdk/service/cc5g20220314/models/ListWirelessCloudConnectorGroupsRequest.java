@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListWirelessCloudConnectorGroupsRequest</p>
  */
 public class ListWirelessCloudConnectorGroupsRequest extends Request {
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("WirelessCloudConnectorGroupIds")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroupIds")
     private java.util.List < String > wirelessCloudConnectorGroupIds;
 
-    @Query
-    @NameInMap("WirelessCloudConnectorGroupNames")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroupNames")
     private java.util.List < String > wirelessCloudConnectorGroupNames;
 
-    @Query
-    @NameInMap("WirelessCloudConnectorGroupStatus")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorGroupStatus")
     private java.util.List < String > wirelessCloudConnectorGroupStatus;
 
     private ListWirelessCloudConnectorGroupsRequest(Builder builder) {

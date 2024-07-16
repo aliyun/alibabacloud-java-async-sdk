@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListIoTCloudConnectorBackhaulRouteResponseBody</p>
  */
 public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
-    @NameInMap("NetLinkId")
+    @com.aliyun.core.annotation.NameInMap("NetLinkId")
     private String netLinkId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Routes")
+    @com.aliyun.core.annotation.NameInMap("Routes")
     private java.util.List < Routes> routes;
 
     private ListIoTCloudConnectorBackhaulRouteResponseBody(Builder builder) {
@@ -62,7 +61,7 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
         private java.util.List < Routes> routes; 
 
         /**
-         * Id of the request
+         * NetLinkId.
          */
         public Builder netLinkId(String netLinkId) {
             this.netLinkId = netLinkId;
@@ -70,7 +69,7 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -78,7 +77,7 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
         }
 
         /**
-         * 数组，返回示例目录。
+         * Routes.
          */
         public Builder routes(java.util.List < Routes> routes) {
             this.routes = routes;
@@ -92,19 +91,19 @@ public class ListIoTCloudConnectorBackhaulRouteResponseBody extends TeaModel {
     } 
 
     public static class Routes extends TeaModel {
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("DestinationCidrBlock")
+        @com.aliyun.core.annotation.NameInMap("DestinationCidrBlock")
         private String destinationCidrBlock;
 
-        @NameInMap("NextHopId")
+        @com.aliyun.core.annotation.NameInMap("NextHopId")
         private String nextHopId;
 
-        @NameInMap("NextHopType")
+        @com.aliyun.core.annotation.NameInMap("NextHopType")
         private String nextHopType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Routes(Builder builder) {

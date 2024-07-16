@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListBatchOperateCardsTasksResponseBody</p>
  */
 public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
-    @NameInMap("BatchOperateCardsTasks")
+    @com.aliyun.core.annotation.NameInMap("BatchOperateCardsTasks")
     private java.util.List < BatchOperateCardsTasks> batchOperateCardsTasks;
 
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListBatchOperateCardsTasksResponseBody(Builder builder) {
@@ -86,7 +85,7 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
         private String totalCount; 
 
         /**
-         * 数组，返回示例目录。
+         * BatchOperateCardsTasks.
          */
         public Builder batchOperateCardsTasks(java.util.List < BatchOperateCardsTasks> batchOperateCardsTasks) {
             this.batchOperateCardsTasks = batchOperateCardsTasks;
@@ -110,7 +109,7 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,10 +131,10 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
     } 
 
     public static class WirelessCloudConnectors extends TeaModel {
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("WirelessCloudConnectorId")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
         private String wirelessCloudConnectorId;
 
         private WirelessCloudConnectors(Builder builder) {
@@ -193,37 +192,37 @@ public class ListBatchOperateCardsTasksResponseBody extends TeaModel {
 
     }
     public static class BatchOperateCardsTasks extends TeaModel {
-        @NameInMap("BatchOperateCardsTaskId")
+        @com.aliyun.core.annotation.NameInMap("BatchOperateCardsTaskId")
         private String batchOperateCardsTaskId;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("EffectType")
+        @com.aliyun.core.annotation.NameInMap("EffectType")
         private String effectType;
 
-        @NameInMap("IccidsOssFilePath")
+        @com.aliyun.core.annotation.NameInMap("IccidsOssFilePath")
         private String iccidsOssFilePath;
 
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("OperateResultOssFilePath")
+        @com.aliyun.core.annotation.NameInMap("OperateResultOssFilePath")
         private String operateResultOssFilePath;
 
-        @NameInMap("OperateType")
+        @com.aliyun.core.annotation.NameInMap("OperateType")
         private String operateType;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("Threshold")
+        @com.aliyun.core.annotation.NameInMap("Threshold")
         private String threshold;
 
-        @NameInMap("WirelessCloudConnectors")
+        @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectors")
         private java.util.List < WirelessCloudConnectors> wirelessCloudConnectors;
 
         private BatchOperateCardsTasks(Builder builder) {

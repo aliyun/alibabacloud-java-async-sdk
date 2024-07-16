@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRegionsResponseBody</p>
  */
 public class ListRegionsResponseBody extends TeaModel {
-    @NameInMap("Regions")
+    @com.aliyun.core.annotation.NameInMap("Regions")
     private java.util.List < Regions> regions;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private ListRegionsResponseBody(Builder builder) {
@@ -50,7 +49,7 @@ public class ListRegionsResponseBody extends TeaModel {
         private String requestId; 
 
         /**
-         * 数组，返回示例目录。
+         * Regions.
          */
         public Builder regions(java.util.List < Regions> regions) {
             this.regions = regions;
@@ -58,7 +57,7 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -72,18 +71,14 @@ public class ListRegionsResponseBody extends TeaModel {
     } 
 
     public static class Regions extends TeaModel {
-        @NameInMap("LocalName")
+        @com.aliyun.core.annotation.NameInMap("LocalName")
         private String localName;
 
-        @NameInMap("RegionEndpoint")
-        private String regionEndpoint;
-
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
         private Regions(Builder builder) {
             this.localName = builder.localName;
-            this.regionEndpoint = builder.regionEndpoint;
             this.regionId = builder.regionId;
         }
 
@@ -103,13 +98,6 @@ public class ListRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * @return regionEndpoint
-         */
-        public String getRegionEndpoint() {
-            return this.regionEndpoint;
-        }
-
-        /**
          * @return regionId
          */
         public String getRegionId() {
@@ -118,7 +106,6 @@ public class ListRegionsResponseBody extends TeaModel {
 
         public static final class Builder {
             private String localName; 
-            private String regionEndpoint; 
             private String regionId; 
 
             /**
@@ -126,14 +113,6 @@ public class ListRegionsResponseBody extends TeaModel {
              */
             public Builder localName(String localName) {
                 this.localName = localName;
-                return this;
-            }
-
-            /**
-             * 代表创建时间的资源属性字段
-             */
-            public Builder regionEndpoint(String regionEndpoint) {
-                this.regionEndpoint = regionEndpoint;
                 return this;
             }
 

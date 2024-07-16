@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,37 +11,37 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetDiagnoseResultForSingleCardResponseBody</p>
  */
 public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
-    @NameInMap("BeginTime")
+    @com.aliyun.core.annotation.NameInMap("BeginTime")
     private Long beginTime;
 
-    @NameInMap("CardIp")
+    @com.aliyun.core.annotation.NameInMap("CardIp")
     private String cardIp;
 
-    @NameInMap("Destination")
+    @com.aliyun.core.annotation.NameInMap("Destination")
     private String destination;
 
-    @NameInMap("DestinationType")
+    @com.aliyun.core.annotation.NameInMap("DestinationType")
     private String destinationType;
 
-    @NameInMap("DiagnoseItem")
+    @com.aliyun.core.annotation.NameInMap("DiagnoseItem")
     private java.util.List < DiagnoseItem> diagnoseItem;
 
-    @NameInMap("EndTime")
+    @com.aliyun.core.annotation.NameInMap("EndTime")
     private Long endTime;
 
-    @NameInMap("ErrorResult")
+    @com.aliyun.core.annotation.NameInMap("ErrorResult")
     private java.util.List < ErrorResult> errorResult;
 
-    @NameInMap("IccId")
+    @com.aliyun.core.annotation.NameInMap("IccId")
     private String iccId;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
     private String wirelessCloudConnectorId;
 
     private GetDiagnoseResultForSingleCardResponseBody(Builder builder) {
@@ -251,16 +250,101 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
 
     } 
 
+    public static class SubItems extends TeaModel {
+        @com.aliyun.core.annotation.NameInMap("SubItem")
+        private String subItem;
+
+        @com.aliyun.core.annotation.NameInMap("SubItemInfo")
+        private String subItemInfo;
+
+        @com.aliyun.core.annotation.NameInMap("SubItemStatus")
+        private String subItemStatus;
+
+        private SubItems(Builder builder) {
+            this.subItem = builder.subItem;
+            this.subItemInfo = builder.subItemInfo;
+            this.subItemStatus = builder.subItemStatus;
+        }
+
+        public static Builder builder() {
+            return new Builder();
+        }
+
+        public static SubItems create() {
+            return builder().build();
+        }
+
+        /**
+         * @return subItem
+         */
+        public String getSubItem() {
+            return this.subItem;
+        }
+
+        /**
+         * @return subItemInfo
+         */
+        public String getSubItemInfo() {
+            return this.subItemInfo;
+        }
+
+        /**
+         * @return subItemStatus
+         */
+        public String getSubItemStatus() {
+            return this.subItemStatus;
+        }
+
+        public static final class Builder {
+            private String subItem; 
+            private String subItemInfo; 
+            private String subItemStatus; 
+
+            /**
+             * SubItem.
+             */
+            public Builder subItem(String subItem) {
+                this.subItem = subItem;
+                return this;
+            }
+
+            /**
+             * SubItemInfo.
+             */
+            public Builder subItemInfo(String subItemInfo) {
+                this.subItemInfo = subItemInfo;
+                return this;
+            }
+
+            /**
+             * SubItemStatus.
+             */
+            public Builder subItemStatus(String subItemStatus) {
+                this.subItemStatus = subItemStatus;
+                return this;
+            }
+
+            public SubItems build() {
+                return new SubItems(this);
+            } 
+
+        } 
+
+    }
     public static class DiagnoseItem extends TeaModel {
-        @NameInMap("Part")
+        @com.aliyun.core.annotation.NameInMap("Part")
         private String part;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
+
+        @com.aliyun.core.annotation.NameInMap("SubItems")
+        private java.util.List < SubItems> subItems;
 
         private DiagnoseItem(Builder builder) {
             this.part = builder.part;
             this.status = builder.status;
+            this.subItems = builder.subItems;
         }
 
         public static Builder builder() {
@@ -285,9 +369,17 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
             return this.status;
         }
 
+        /**
+         * @return subItems
+         */
+        public java.util.List < SubItems> getSubItems() {
+            return this.subItems;
+        }
+
         public static final class Builder {
             private String part; 
             private String status; 
+            private java.util.List < SubItems> subItems; 
 
             /**
              * Part.
@@ -305,6 +397,14 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
                 return this;
             }
 
+            /**
+             * SubItems.
+             */
+            public Builder subItems(java.util.List < SubItems> subItems) {
+                this.subItems = subItems;
+                return this;
+            }
+
             public DiagnoseItem build() {
                 return new DiagnoseItem(this);
             } 
@@ -313,20 +413,24 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
 
     }
     public static class ErrorResult extends TeaModel {
-        @NameInMap("ErrorDesc")
+        @com.aliyun.core.annotation.NameInMap("ErrorDesc")
         private String errorDesc;
 
-        @NameInMap("ErrorLevel")
+        @com.aliyun.core.annotation.NameInMap("ErrorItem")
+        private String errorItem;
+
+        @com.aliyun.core.annotation.NameInMap("ErrorLevel")
         private String errorLevel;
 
-        @NameInMap("ErrorPart")
+        @com.aliyun.core.annotation.NameInMap("ErrorPart")
         private String errorPart;
 
-        @NameInMap("ErrorSuggestion")
+        @com.aliyun.core.annotation.NameInMap("ErrorSuggestion")
         private String errorSuggestion;
 
         private ErrorResult(Builder builder) {
             this.errorDesc = builder.errorDesc;
+            this.errorItem = builder.errorItem;
             this.errorLevel = builder.errorLevel;
             this.errorPart = builder.errorPart;
             this.errorSuggestion = builder.errorSuggestion;
@@ -345,6 +449,13 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
          */
         public String getErrorDesc() {
             return this.errorDesc;
+        }
+
+        /**
+         * @return errorItem
+         */
+        public String getErrorItem() {
+            return this.errorItem;
         }
 
         /**
@@ -370,6 +481,7 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
 
         public static final class Builder {
             private String errorDesc; 
+            private String errorItem; 
             private String errorLevel; 
             private String errorPart; 
             private String errorSuggestion; 
@@ -379,6 +491,14 @@ public class GetDiagnoseResultForSingleCardResponseBody extends TeaModel {
              */
             public Builder errorDesc(String errorDesc) {
                 this.errorDesc = errorDesc;
+                return this;
+            }
+
+            /**
+             * ErrorItem.
+             */
+            public Builder errorItem(String errorItem) {
+                this.errorItem = errorItem;
                 return this;
             }
 

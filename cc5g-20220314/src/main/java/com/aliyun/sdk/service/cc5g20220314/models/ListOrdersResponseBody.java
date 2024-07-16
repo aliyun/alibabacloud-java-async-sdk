@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListOrdersResponseBody</p>
  */
 public class ListOrdersResponseBody extends TeaModel {
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private String maxResults;
 
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @NameInMap("Orders")
+    @com.aliyun.core.annotation.NameInMap("Orders")
     private java.util.List < Orders> orders;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private String totalCount;
 
     private ListOrdersResponseBody(Builder builder) {
@@ -102,7 +101,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * 数组，返回示例目录。
+         * Orders.
          */
         public Builder orders(java.util.List < Orders> orders) {
             this.orders = orders;
@@ -110,7 +109,7 @@ public class ListOrdersResponseBody extends TeaModel {
         }
 
         /**
-         * Id of the request
+         * RequestId.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -132,55 +131,55 @@ public class ListOrdersResponseBody extends TeaModel {
     } 
 
     public static class Orders extends TeaModel {
-        @NameInMap("Action")
+        @com.aliyun.core.annotation.NameInMap("Action")
         private String action;
 
-        @NameInMap("CardCount")
+        @com.aliyun.core.annotation.NameInMap("CardCount")
         private String cardCount;
 
-        @NameInMap("CardNetType")
+        @com.aliyun.core.annotation.NameInMap("CardNetType")
         private String cardNetType;
 
-        @NameInMap("CardType")
+        @com.aliyun.core.annotation.NameInMap("CardType")
         private String cardType;
 
-        @NameInMap("ContactName")
+        @com.aliyun.core.annotation.NameInMap("ContactName")
         private String contactName;
 
-        @NameInMap("ContactPhone")
+        @com.aliyun.core.annotation.NameInMap("ContactPhone")
         private String contactPhone;
 
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("Description")
+        @com.aliyun.core.annotation.NameInMap("Description")
         private String description;
 
-        @NameInMap("LogisticsId")
+        @com.aliyun.core.annotation.NameInMap("LogisticsId")
         private String logisticsId;
 
-        @NameInMap("LogisticsStatus")
+        @com.aliyun.core.annotation.NameInMap("LogisticsStatus")
         private String logisticsStatus;
 
-        @NameInMap("LogisticsType")
+        @com.aliyun.core.annotation.NameInMap("LogisticsType")
         private String logisticsType;
 
-        @NameInMap("LogisticsUpdateTime")
+        @com.aliyun.core.annotation.NameInMap("LogisticsUpdateTime")
         private String logisticsUpdateTime;
 
-        @NameInMap("OrderId")
+        @com.aliyun.core.annotation.NameInMap("OrderId")
         private String orderId;
 
-        @NameInMap("PayTime")
+        @com.aliyun.core.annotation.NameInMap("PayTime")
         private String payTime;
 
-        @NameInMap("PostAddress")
+        @com.aliyun.core.annotation.NameInMap("PostAddress")
         private String postAddress;
 
-        @NameInMap("RegionId")
+        @com.aliyun.core.annotation.NameInMap("RegionId")
         private String regionId;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
         private Orders(Builder builder) {

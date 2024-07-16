@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.cc5g20220314.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,53 +11,53 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListCardsRequest</p>
  */
 public class ListCardsRequest extends Request {
-    @Query
-    @NameInMap("Apn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Apn")
     private String apn;
 
-    @Query
-    @NameInMap("Iccid")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Iccid")
     private String iccid;
 
-    @Query
-    @NameInMap("Iccids")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Iccids")
     private java.util.List < String > iccids;
 
-    @Query
-    @NameInMap("IpAddress")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IpAddress")
     private String ipAddress;
 
-    @Query
-    @NameInMap("Lock")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Lock")
     private Boolean lock;
 
-    @Query
-    @NameInMap("MaxResults")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Long maxResults;
 
-    @Query
-    @NameInMap("Msisdn")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Msisdn")
     private String msisdn;
 
-    @Query
-    @NameInMap("NetLinkId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NetLinkId")
     private String netLinkId;
 
-    @Query
-    @NameInMap("NextToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextToken")
     private String nextToken;
 
-    @Query
-    @NameInMap("Online")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Online")
     private Boolean online;
 
-    @Query
-    @NameInMap("Statuses")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("Statuses")
     private java.util.List < String > statuses;
 
-    @Query
-    @NameInMap("WirelessCloudConnectorId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("WirelessCloudConnectorId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String wirelessCloudConnectorId;
 
     private ListCardsRequest(Builder builder) {
