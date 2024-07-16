@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetAccountListResponseBody</p>
  */
 public class GetAccountListResponseBody extends TeaModel {
-    @NameInMap("PageNo")
+    @com.aliyun.core.annotation.NameInMap("PageNo")
     private Integer pageNo;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Integer total;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private GetAccountListResponseBody(Builder builder) {
@@ -132,13 +131,13 @@ public class GetAccountListResponseBody extends TeaModel {
     } 
 
     public static class AccountNotificationInfo extends TeaModel {
-        @NameInMap("Region")
+        @com.aliyun.core.annotation.NameInMap("Region")
         private String region;
 
-        @NameInMap("Status")
+        @com.aliyun.core.annotation.NameInMap("Status")
         private String status;
 
-        @NameInMap("UpdateTime")
+        @com.aliyun.core.annotation.NameInMap("UpdateTime")
         private String updateTime;
 
         private AccountNotificationInfo(Builder builder) {
@@ -213,7 +212,7 @@ public class GetAccountListResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("accountNotificationInfo")
+        @com.aliyun.core.annotation.NameInMap("accountNotificationInfo")
         private java.util.List < AccountNotificationInfo> accountNotificationInfo;
 
         private Data(Builder builder) {

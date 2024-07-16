@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>QueryTemplateByParamResponseBody</p>
  */
 public class QueryTemplateByParamResponseBody extends TeaModel {
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Integer pageNumber;
 
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("TotalCount")
+    @com.aliyun.core.annotation.NameInMap("TotalCount")
     private Integer totalCount;
 
-    @NameInMap("data")
+    @com.aliyun.core.annotation.NameInMap("data")
     private Data data;
 
     private QueryTemplateByParamResponseBody(Builder builder) {
@@ -132,34 +131,34 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
     } 
 
     public static class Template extends TeaModel {
-        @NameInMap("CreateTime")
+        @com.aliyun.core.annotation.NameInMap("CreateTime")
         private String createTime;
 
-        @NameInMap("SmsStatus")
+        @com.aliyun.core.annotation.NameInMap("SmsStatus")
         private Integer smsStatus;
 
-        @NameInMap("SmsTemplateCode")
+        @com.aliyun.core.annotation.NameInMap("SmsTemplateCode")
         private Integer smsTemplateCode;
 
-        @NameInMap("Smsrejectinfo")
+        @com.aliyun.core.annotation.NameInMap("Smsrejectinfo")
         private Integer smsrejectinfo;
 
-        @NameInMap("TemplateComment")
+        @com.aliyun.core.annotation.NameInMap("TemplateComment")
         private String templateComment;
 
-        @NameInMap("TemplateId")
+        @com.aliyun.core.annotation.NameInMap("TemplateId")
         private String templateId;
 
-        @NameInMap("TemplateName")
+        @com.aliyun.core.annotation.NameInMap("TemplateName")
         private String templateName;
 
-        @NameInMap("TemplateStatus")
+        @com.aliyun.core.annotation.NameInMap("TemplateStatus")
         private String templateStatus;
 
-        @NameInMap("TemplateType")
+        @com.aliyun.core.annotation.NameInMap("TemplateType")
         private Integer templateType;
 
-        @NameInMap("UtcCreatetime")
+        @com.aliyun.core.annotation.NameInMap("UtcCreatetime")
         private Long utcCreatetime;
 
         private Template(Builder builder) {
@@ -353,7 +352,7 @@ public class QueryTemplateByParamResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("template")
+        @com.aliyun.core.annotation.NameInMap("template")
         private java.util.List < Template> template;
 
         private Data(Builder builder) {

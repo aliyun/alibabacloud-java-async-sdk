@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GetMailAddressMsgCallBackUrlResponseBody</p>
  */
 public class GetMailAddressMsgCallBackUrlResponseBody extends TeaModel {
-    @NameInMap("NotifyUrl")
+    @com.aliyun.core.annotation.NameInMap("NotifyUrl")
     private Integer notifyUrl;
 
-    @NameInMap("NotifyUrlStatus")
+    @com.aliyun.core.annotation.NameInMap("NotifyUrlStatus")
     private Integer notifyUrlStatus;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
     private GetMailAddressMsgCallBackUrlResponseBody(Builder builder) {

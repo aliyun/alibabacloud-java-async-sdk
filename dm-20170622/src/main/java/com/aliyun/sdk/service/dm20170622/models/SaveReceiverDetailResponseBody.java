@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.dm20170622.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SaveReceiverDetailResponseBody</p>
  */
 public class SaveReceiverDetailResponseBody extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Data data;
 
-    @NameInMap("ErrorCount")
+    @com.aliyun.core.annotation.NameInMap("ErrorCount")
     private Integer errorCount;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("SuccessCount")
+    @com.aliyun.core.annotation.NameInMap("SuccessCount")
     private Integer successCount;
 
     private SaveReceiverDetailResponseBody(Builder builder) {
@@ -112,7 +111,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
     } 
 
     public static class Detail extends TeaModel {
-        @NameInMap("Email")
+        @com.aliyun.core.annotation.NameInMap("Email")
         private String email;
 
         private Detail(Builder builder) {
@@ -153,7 +152,7 @@ public class SaveReceiverDetailResponseBody extends TeaModel {
 
     }
     public static class Data extends TeaModel {
-        @NameInMap("Detail")
+        @com.aliyun.core.annotation.NameInMap("Detail")
         private java.util.List < Detail> detail;
 
         private Data(Builder builder) {
