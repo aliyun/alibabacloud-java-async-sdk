@@ -185,10 +185,6 @@ public interface AsyncClient extends SdkAutoCloseable {
      */
     CompletableFuture<ListComponentInstancesResponse> listComponentInstances(ListComponentInstancesRequest request);
 
-    /**
-      * 查询组件列表。
-      *
-     */
     CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request);
 
     /**

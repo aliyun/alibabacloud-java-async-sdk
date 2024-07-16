@@ -29,10 +29,6 @@ public class ListComponentsRequest extends Request {
     private java.util.List < String > componentStates;
 
     @com.aliyun.core.annotation.Query
-    @com.aliyun.core.annotation.NameInMap("IncludeExpiredConfig")
-    private Boolean includeExpiredConfig;
-
-    @com.aliyun.core.annotation.Query
     @com.aliyun.core.annotation.NameInMap("MaxResults")
     private Integer maxResults;
 
@@ -51,7 +47,6 @@ public class ListComponentsRequest extends Request {
         this.clusterId = builder.clusterId;
         this.componentNames = builder.componentNames;
         this.componentStates = builder.componentStates;
-        this.includeExpiredConfig = builder.includeExpiredConfig;
         this.maxResults = builder.maxResults;
         this.nextToken = builder.nextToken;
         this.regionId = builder.regionId;
@@ -99,13 +94,6 @@ public class ListComponentsRequest extends Request {
     }
 
     /**
-     * @return includeExpiredConfig
-     */
-    public Boolean getIncludeExpiredConfig() {
-        return this.includeExpiredConfig;
-    }
-
-    /**
      * @return maxResults
      */
     public Integer getMaxResults() {
@@ -131,7 +119,6 @@ public class ListComponentsRequest extends Request {
         private String clusterId; 
         private java.util.List < String > componentNames; 
         private java.util.List < String > componentStates; 
-        private Boolean includeExpiredConfig; 
         private Integer maxResults; 
         private String nextToken; 
         private String regionId; 
@@ -146,7 +133,6 @@ public class ListComponentsRequest extends Request {
             this.clusterId = request.clusterId;
             this.componentNames = request.componentNames;
             this.componentStates = request.componentStates;
-            this.includeExpiredConfig = request.includeExpiredConfig;
             this.maxResults = request.maxResults;
             this.nextToken = request.nextToken;
             this.regionId = request.regionId;
@@ -185,15 +171,6 @@ public class ListComponentsRequest extends Request {
         public Builder componentStates(java.util.List < String > componentStates) {
             this.putQueryParameter("ComponentStates", componentStates);
             this.componentStates = componentStates;
-            return this;
-        }
-
-        /**
-         * 是否包含过期配置。
-         */
-        public Builder includeExpiredConfig(Boolean includeExpiredConfig) {
-            this.putQueryParameter("IncludeExpiredConfig", includeExpiredConfig);
-            this.includeExpiredConfig = includeExpiredConfig;
             return this;
         }
 

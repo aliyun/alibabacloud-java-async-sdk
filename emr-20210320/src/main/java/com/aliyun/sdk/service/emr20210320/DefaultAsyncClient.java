@@ -692,10 +692,6 @@ public final class DefaultAsyncClient implements AsyncClient {
         }
     }
 
-    /**
-      * 查询组件列表。
-      *
-     */
     @Override
     public CompletableFuture<ListComponentsResponse> listComponents(ListComponentsRequest request) {
         try {
