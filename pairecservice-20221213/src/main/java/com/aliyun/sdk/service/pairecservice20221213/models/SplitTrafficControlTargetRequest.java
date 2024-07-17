@@ -28,6 +28,10 @@ public class SplitTrafficControlTargetRequest extends Request {
     private String instanceId;
 
     @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SetPoints")
+    private java.util.List < Long > setPoints;
+
+    @com.aliyun.core.annotation.Body
     @com.aliyun.core.annotation.NameInMap("SetValues")
     private java.util.List < Long > setValues;
 
@@ -41,6 +45,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         this.regionId = builder.regionId;
         this.environment = builder.environment;
         this.instanceId = builder.instanceId;
+        this.setPoints = builder.setPoints;
         this.setValues = builder.setValues;
         this.timePoints = builder.timePoints;
     }
@@ -87,6 +92,13 @@ public class SplitTrafficControlTargetRequest extends Request {
     }
 
     /**
+     * @return setPoints
+     */
+    public java.util.List < Long > getSetPoints() {
+        return this.setPoints;
+    }
+
+    /**
      * @return setValues
      */
     public java.util.List < Long > getSetValues() {
@@ -105,6 +117,7 @@ public class SplitTrafficControlTargetRequest extends Request {
         private String regionId; 
         private String environment; 
         private String instanceId; 
+        private java.util.List < Long > setPoints; 
         private java.util.List < Long > setValues; 
         private java.util.List < Long > timePoints; 
 
@@ -118,6 +131,7 @@ public class SplitTrafficControlTargetRequest extends Request {
             this.regionId = request.regionId;
             this.environment = request.environment;
             this.instanceId = request.instanceId;
+            this.setPoints = request.setPoints;
             this.setValues = request.setValues;
             this.timePoints = request.timePoints;
         } 
@@ -155,6 +169,15 @@ public class SplitTrafficControlTargetRequest extends Request {
         public Builder instanceId(String instanceId) {
             this.putBodyParameter("InstanceId", instanceId);
             this.instanceId = instanceId;
+            return this;
+        }
+
+        /**
+         * SetPoints.
+         */
+        public Builder setPoints(java.util.List < Long > setPoints) {
+            this.putBodyParameter("SetPoints", setPoints);
+            this.setPoints = setPoints;
             return this;
         }
 

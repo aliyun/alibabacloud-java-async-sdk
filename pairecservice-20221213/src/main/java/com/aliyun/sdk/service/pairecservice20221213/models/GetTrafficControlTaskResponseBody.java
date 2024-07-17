@@ -634,11 +634,15 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         @com.aliyun.core.annotation.NameInMap("SetPoints")
         private java.util.List < Integer > setPoints;
 
+        @com.aliyun.core.annotation.NameInMap("SetValues")
+        private java.util.List < Long > setValues;
+
         @com.aliyun.core.annotation.NameInMap("TimePoints")
         private java.util.List < Integer > timePoints;
 
         private SplitParts(Builder builder) {
             this.setPoints = builder.setPoints;
+            this.setValues = builder.setValues;
             this.timePoints = builder.timePoints;
         }
 
@@ -658,6 +662,13 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
         }
 
         /**
+         * @return setValues
+         */
+        public java.util.List < Long > getSetValues() {
+            return this.setValues;
+        }
+
+        /**
          * @return timePoints
          */
         public java.util.List < Integer > getTimePoints() {
@@ -666,6 +677,7 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
 
         public static final class Builder {
             private java.util.List < Integer > setPoints; 
+            private java.util.List < Long > setValues; 
             private java.util.List < Integer > timePoints; 
 
             /**
@@ -673,6 +685,14 @@ public class GetTrafficControlTaskResponseBody extends TeaModel {
              */
             public Builder setPoints(java.util.List < Integer > setPoints) {
                 this.setPoints = setPoints;
+                return this;
+            }
+
+            /**
+             * SetValues.
+             */
+            public Builder setValues(java.util.List < Long > setValues) {
+                this.setValues = setValues;
                 return this;
             }
 
