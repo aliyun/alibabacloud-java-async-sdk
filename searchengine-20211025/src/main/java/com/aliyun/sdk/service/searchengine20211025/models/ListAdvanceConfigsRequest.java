@@ -110,7 +110,7 @@ public class ListAdvanceConfigsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +119,7 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -128,7 +128,7 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putQueryParameter("indexName", indexName);
@@ -137,7 +137,7 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * newMode.
+         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);
@@ -146,7 +146,7 @@ public class ListAdvanceConfigsRequest extends Request {
         }
 
         /**
-         * The type of the advanced configurations. Valid values: online and offline. - online The default value is offline.
+         * The type of advanced configurations that you want to query. Valid values: - online -offline (default)
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

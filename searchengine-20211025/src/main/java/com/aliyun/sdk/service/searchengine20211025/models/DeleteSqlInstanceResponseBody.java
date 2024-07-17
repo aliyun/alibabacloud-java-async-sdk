@@ -117,7 +117,7 @@ public class DeleteSqlInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * Response<Map<String, String>>
+             * The result.
              */
             public Builder result(java.util.Map < String, String > result) {
                 this.result = result;

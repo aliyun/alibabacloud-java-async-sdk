@@ -103,9 +103,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#method)Method
       * `POST`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/clusters`
       *
      */
@@ -205,9 +205,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `POST`
-      * ### URI
+      * ### [](#uri)URI
       * `/api/instances?dryRun=false`
       *
      */
@@ -973,11 +973,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * ```java
       * GET
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/data-source-tasks
       * ```
@@ -1110,10 +1110,10 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `GET`
-      * ### URI
-      * `/openapi/[code]/instances`
+      * ### [](#uri)URI
+      * `/openapi/ha3/instances`
       *
      */
     @Override
@@ -1198,9 +1198,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `GET`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
       *
      */
@@ -1366,9 +1366,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `PUT`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
      */
@@ -1511,9 +1511,9 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ## Method
+      * ## [](#)Method
       *     PUT
-      * ## URI
+      * ## [](#uri)URI
       *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
       *
      */
@@ -1807,11 +1807,11 @@ public final class DefaultAsyncClient implements AsyncClient {
     }
 
     /**
-      * ### Method
+      * ### [](#)Method
       * ```java
       * PUT
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
       * ```

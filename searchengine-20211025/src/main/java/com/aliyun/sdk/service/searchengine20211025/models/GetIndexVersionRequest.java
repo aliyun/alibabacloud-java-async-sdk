@@ -69,7 +69,7 @@ public class GetIndexVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

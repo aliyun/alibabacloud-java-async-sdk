@@ -49,7 +49,7 @@ public class ConfigValue extends TeaModel {
         private java.util.List < Files> files; 
 
         /**
-         * desc.
+         * The description of the offline configuration.
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -57,7 +57,7 @@ public class ConfigValue extends TeaModel {
         }
 
         /**
-         * files.
+         * The files to be modified.
          */
         public Builder files(java.util.List < Files> files) {
             this.files = files;
@@ -109,7 +109,7 @@ public class ConfigValue extends TeaModel {
             private java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables; 
 
             /**
-             * content.
+             * The file content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -117,7 +117,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * variables.
+             * The variables.
              */
             public Builder variables(java.util.Map < String, ConfigValueFilesConfigVariablesValue > variables) {
                 this.variables = variables;
@@ -206,7 +206,7 @@ public class ConfigValue extends TeaModel {
             private String dirName; 
 
             /**
-             * operateType.
+             * The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -214,7 +214,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * parentFullPath.
+             * The path of the parent directory.
              */
             public Builder parentFullPath(String parentFullPath) {
                 this.parentFullPath = parentFullPath;
@@ -222,7 +222,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * fileName.
+             * The file name.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -230,7 +230,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * config.
+             * The configuration to be modified.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -238,7 +238,7 @@ public class ConfigValue extends TeaModel {
             }
 
             /**
-             * dirName.
+             * The directory name.
              */
             public Builder dirName(String dirName) {
                 this.dirName = dirName;

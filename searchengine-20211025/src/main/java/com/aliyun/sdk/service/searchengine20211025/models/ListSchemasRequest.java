@@ -167,7 +167,7 @@ public class ListSchemasRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -176,7 +176,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * AK
+         * The AccessKey ID of the MaxCompute data source.
          */
         public Builder accessKey(String accessKey) {
             this.putQueryParameter("accessKey", accessKey);
@@ -185,7 +185,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * AS
+         * The AccessKey secret of the MaxCompute data source.
          */
         public Builder accessSecret(String accessSecret) {
             this.putQueryParameter("accessSecret", accessSecret);
@@ -194,7 +194,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * odps endpoint
+         * The endpoint of the MaxCompute data source.
          */
         public Builder endpoint(String endpoint) {
             this.putQueryParameter("endpoint", endpoint);
@@ -203,7 +203,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * namespace.
+         * The namespace of the SARO data source.
          */
         public Builder namespace(String namespace) {
             this.putQueryParameter("namespace", namespace);
@@ -212,7 +212,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * partition.
+         * The shard name.
          */
         public Builder partition(String partition) {
             this.putQueryParameter("partition", partition);
@@ -221,7 +221,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * project.
+         * The name of the MaxCompute project that is used as the data source.
          */
         public Builder project(String project) {
             this.putQueryParameter("project", project);
@@ -230,7 +230,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * table.
+         * The name of the MaxCompute table that is used as the data source.
          */
         public Builder table(String table) {
             this.putQueryParameter("table", table);
@@ -239,7 +239,7 @@ public class ListSchemasRequest extends Request {
         }
 
         /**
-         * odps, swift, saro, oss, unKnow
+         * The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

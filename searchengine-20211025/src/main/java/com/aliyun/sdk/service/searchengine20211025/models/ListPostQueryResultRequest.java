@@ -96,7 +96,7 @@ public class ListPostQueryResultRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +105,7 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * address.
+         * The instance endpoint.
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -114,7 +114,7 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -123,7 +123,7 @@ public class ListPostQueryResultRequest extends Request {
         }
 
         /**
-         * type.
+         * The query type. Valid values: sql: SQL query. ha3: Havenask query.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

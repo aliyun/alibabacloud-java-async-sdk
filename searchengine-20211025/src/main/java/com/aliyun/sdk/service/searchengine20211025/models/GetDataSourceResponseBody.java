@@ -57,7 +57,7 @@ public class GetDataSourceResponseBody extends TeaModel {
         }
 
         /**
-         * The list of information about the data source
+         * The information about the data source.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -173,7 +173,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The time when an index for full data was last built
+             * The time when the full data of the data source was last queried.
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -181,7 +181,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -189,7 +189,7 @@ public class GetDataSourceResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the data source
+             * The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

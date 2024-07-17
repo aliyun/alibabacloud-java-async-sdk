@@ -57,7 +57,7 @@ public class GetIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the index.
+         * The index information.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -205,7 +205,7 @@ public class GetIndexResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * accessKey.
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -213,7 +213,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * accessSecret.
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -221,7 +221,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -229,7 +229,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * A parameter related to MaxCompute.
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -237,7 +237,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * A parameter related to SARO.
+             * The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -245,7 +245,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * A parameter related to OSS.
+             * The Object Storage Service (OSS) path.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -253,7 +253,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table. Example: ds=20180102.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -261,7 +261,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * A parameter related to Apsara File Storage for HDFS.
+             * The file path in the Apsara File Storage for HDFS file system.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -269,7 +269,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -277,7 +277,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * A parameter related to SARO and MaxCompute.
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -330,7 +330,7 @@ public class GetIndexResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * A parameter related to SARO.
+             * The namespace of the SARO data source.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -338,7 +338,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * The name of the SARO table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -479,7 +479,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The offline deployment name of the data source.
+             * The data center in which the data source is deployed.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -495,7 +495,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * processParallelNum.
+             * The maximum number of full indexes that can be concurrently processed.
              */
             public Builder processParallelNum(Integer processParallelNum) {
                 this.processParallelNum = processParallelNum;
@@ -511,7 +511,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of SARO data sources.
+             * The configurations of the SARO data source.
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -620,7 +620,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data source.
+             * The file name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -737,7 +737,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the version.
+             * The version name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -745,7 +745,16 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the version.
+             * The status of the index version. Valid values:
+             * <p>
+             * 
+             * *   NEW: The index version is created.
+             * *   PUBLISH: The index version is normal.
+             * *   IN_USE: The index version is in use.
+             * *   NOT_USE: The index version is not used.
+             * *   STOP_USE: The index version is being stopped.
+             * *   RESTORE_USE: The index version is being restored.
+             * *   FAIL: The index version failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -753,7 +762,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when the version was updated.
+             * The time when the index version was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -761,7 +770,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version.
+             * The version ID.
              */
             public Builder versionId(Integer versionId) {
                 this.versionId = versionId;
@@ -982,7 +991,7 @@ public class GetIndexResponseBody extends TeaModel {
             private java.util.List < Versions> versions; 
 
             /**
-             * cluster.
+             * The cluster information.
              */
             public Builder cluster(java.util.Map < String, ResultClusterValue > cluster) {
                 this.cluster = cluster;
@@ -990,7 +999,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The configuration of MaxCompute data sources.
+             * The configuration information.
              */
             public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
                 this.config = config;
@@ -998,7 +1007,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * configWhenBuild.
+             * The configuration that takes effect next time.
              */
             public Builder configWhenBuild(java.util.Map < String, java.util.Map<String, ?>> configWhenBuild) {
                 this.configWhenBuild = configWhenBuild;
@@ -1006,7 +1015,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The content of the index.
+             * The file content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -1014,7 +1023,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * dataSource.
+             * The name of the data source.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -1030,7 +1039,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The remarks.
+             * The description of the index version.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -1038,7 +1047,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The offline deployment name of the data source.
+             * The deployment name of the index.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -1046,7 +1055,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when full data in the index was updated.
+             * The time when full data in the index was last updated.
              */
             public Builder fullUpdateTime(String fullUpdateTime) {
                 this.fullUpdateTime = fullUpdateTime;
@@ -1054,7 +1063,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the data.
+             * The data version.
              */
             public Builder fullVersion(Long fullVersion) {
                 this.fullVersion = fullVersion;
@@ -1062,7 +1071,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The last time when incremental data in the index was updated.
+             * The time when incremental data in the index was last updated.
              */
             public Builder incUpdateTime(String incUpdateTime) {
                 this.incUpdateTime = incUpdateTime;
@@ -1078,7 +1087,16 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the index. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, and RESTORE_USE. After a Retrieval Engine Edition instance is created, it enters the IN_USE state.
+             * The status of the index version. Valid values:
+             * <p>
+             * 
+             * *   NEW: The index version is created.
+             * *   PUBLISH: The index version is normal.
+             * *   IN_USE: The index version is in use.
+             * *   NOT_USE: The index version is not used.
+             * *   STOP_USE: The index version is being stopped.
+             * *   RESTORE_USE: The index version is being restored.
+             * *   FAIL: The index version failed to be created.
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -1086,7 +1104,7 @@ public class GetIndexResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the version.
+             * The index name.
              */
             public Builder name(String name) {
                 this.name = name;

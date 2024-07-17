@@ -68,7 +68,7 @@ public class ListIndexesRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +77,7 @@ public class ListIndexesRequest extends Request {
         }
 
         /**
-         * 是否为新版本控制台页面
+         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

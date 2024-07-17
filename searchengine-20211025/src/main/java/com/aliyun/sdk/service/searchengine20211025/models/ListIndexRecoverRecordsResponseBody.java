@@ -61,7 +61,7 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         private String generationId; 
 
         /**
-         * desc.
+         * The description.
          */
         public Builder desc(String desc) {
             this.desc = desc;
@@ -69,7 +69,7 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * finishedTime.
+         * The time when the index version was published.
          */
         public Builder finishedTime(String finishedTime) {
             this.finishedTime = finishedTime;
@@ -77,7 +77,7 @@ public class ListIndexRecoverRecordsResponseBody extends TeaModel {
         }
 
         /**
-         * generationId
+         * The ID of the full index version.
          */
         public Builder generationId(String generationId) {
             this.generationId = generationId;

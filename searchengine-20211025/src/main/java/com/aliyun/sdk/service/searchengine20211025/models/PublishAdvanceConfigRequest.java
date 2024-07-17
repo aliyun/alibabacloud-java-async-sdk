@@ -97,7 +97,7 @@ public class PublishAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +106,7 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * The name of the configuration
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -115,7 +115,7 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * desc.
+         * The description of the advanced configuration.
          */
         public Builder desc(String desc) {
             this.putBodyParameter("desc", desc);
@@ -124,7 +124,7 @@ public class PublishAdvanceConfigRequest extends Request {
         }
 
         /**
-         * files.
+         * The files.
          */
         public Builder files(java.util.List < Files> files) {
             this.putBodyParameter("files", files);
@@ -178,7 +178,7 @@ public class PublishAdvanceConfigRequest extends Request {
             private java.util.Map < String, FilesConfigVariablesValue > variables; 
 
             /**
-             * content.
+             * The file content.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -186,7 +186,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * variables.
+             * The variables.
              */
             public Builder variables(java.util.Map < String, FilesConfigVariablesValue > variables) {
                 this.variables = variables;
@@ -287,7 +287,7 @@ public class PublishAdvanceConfigRequest extends Request {
             private String parentFullPath; 
 
             /**
-             * config.
+             * The information about the advanced configuration.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -295,7 +295,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * dirName.
+             * The directory name.
              */
             public Builder dirName(String dirName) {
                 this.dirName = dirName;
@@ -303,7 +303,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * fileName.
+             * The file name.
              */
             public Builder fileName(String fileName) {
                 this.fileName = fileName;
@@ -311,7 +311,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * operateType.
+             * The operation type. Valid values: UPDATE and DELETE. Default value: UPDATE.
              */
             public Builder operateType(String operateType) {
                 this.operateType = operateType;
@@ -319,7 +319,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The path of the Object Storage Service (OSS) object.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -327,7 +327,7 @@ public class PublishAdvanceConfigRequest extends Request {
             }
 
             /**
-             * parentFullPath.
+             * The path of the parent directory.
              */
             public Builder parentFullPath(String parentFullPath) {
                 this.parentFullPath = parentFullPath;

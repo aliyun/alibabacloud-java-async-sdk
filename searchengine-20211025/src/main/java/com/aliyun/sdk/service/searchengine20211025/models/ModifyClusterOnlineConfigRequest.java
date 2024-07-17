@@ -82,7 +82,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +91,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         }
 
         /**
-         * The information about the cluster
+         * The cluster information.
          */
         public Builder clusters(java.util.List < String > clusters) {
             this.putBodyParameter("clusters", clusters);
@@ -100,7 +100,7 @@ public class ModifyClusterOnlineConfigRequest extends Request {
         }
 
         /**
-         * 配置信息
+         * The configuration information.
          */
         public Builder config(java.util.Map < String, Integer > config) {
             this.putBodyParameter("config", config);

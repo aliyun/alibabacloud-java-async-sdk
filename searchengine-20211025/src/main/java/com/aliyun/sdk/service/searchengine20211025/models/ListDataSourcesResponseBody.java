@@ -57,7 +57,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned.
+         * The results returned.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * The data center where the data source is deployed in offline mode.
+             * The data center in which the data source is deployed.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -165,7 +165,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The information about indexes.
+             * The indexes.
              */
             public Builder indexes(java.util.List < String > indexes) {
                 this.indexes = indexes;
@@ -173,7 +173,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when an index for full data was last built.
+             * The time when the full data of the data source was last queried.
              */
             public Builder lastFulTime(Long lastFulTime) {
                 this.lastFulTime = lastFulTime;
@@ -189,7 +189,7 @@ public class ListDataSourcesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the data source.
+             * The status of the data source. Valid values: new: The data source is being created. publish: The data source is in the normal state. trash: The data source is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;

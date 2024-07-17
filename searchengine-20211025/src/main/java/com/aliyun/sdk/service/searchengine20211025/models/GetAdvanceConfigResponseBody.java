@@ -57,7 +57,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The returned results.
+         * The result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -133,7 +133,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the file path.
+             * The file path.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -141,7 +141,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a directory.
+             * Indicates whether the file is a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -149,7 +149,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a template.
+             * Indicates whether the file is a container.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -157,7 +157,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The file name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -270,7 +270,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * The content of the configuration that is returned.
+             * The content of the advanced configuration that is returned.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -286,7 +286,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the advanced configuration.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -294,7 +294,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The information about files.
+             * The files.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -302,7 +302,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The name.
+             * The name of the advanced configuration.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -310,7 +310,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -318,7 +318,7 @@ public class GetAdvanceConfigResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The time when the advanced configuration was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

@@ -99,7 +99,7 @@ public class DeleteConfigDirRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +108,7 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * configName.
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -117,7 +117,7 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * dirName.
+         * The directory name.
          */
         public Builder dirName(String dirName) {
             this.putQueryParameter("dirName", dirName);
@@ -126,7 +126,7 @@ public class DeleteConfigDirRequest extends Request {
         }
 
         /**
-         * parentFullPath.
+         * The path of the parent directory.
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putQueryParameter("parentFullPath", parentFullPath);

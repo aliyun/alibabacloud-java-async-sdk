@@ -35,9 +35,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateAliasResponse> createAlias(CreateAliasRequest request);
 
     /**
-      * ### Method
+      * ### [](#method)Method
       * `POST`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/clusters`
       *
      */
@@ -65,9 +65,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<CreateIndexResponse> createIndex(CreateIndexRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `POST`
-      * ### URI
+      * ### [](#uri)URI
       * `/api/instances?dryRun=false`
       *
      */
@@ -317,11 +317,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListDataSourceSchemasResponse> listDataSourceSchemas(ListDataSourceSchemasRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * ```java
       * GET
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/data-source-tasks
       * ```
@@ -370,10 +370,10 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListInstanceSpecsResponse> listInstanceSpecs(ListInstanceSpecsRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `GET`
-      * ### URI
-      * `/openapi/[code]/instances`
+      * ### [](#uri)URI
+      * `/openapi/ha3/instances`
       *
      */
     CompletableFuture<ListInstancesResponse> listInstances(ListInstancesRequest request);
@@ -398,9 +398,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPostQueryResultResponse> listPostQueryResult(ListPostQueryResultRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `GET`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/query?query=xxxx`
       *
      */
@@ -434,9 +434,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyAliasResponse> modifyAlias(ModifyAliasRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * `PUT`
-      * ### URI
+      * ### [](#uri)URI
       * `/openapi/ha3/instances/{instanceId}/clusters/{clusterName}/desc`
       *
      */
@@ -483,9 +483,9 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ModifyIndexPartitionResponse> modifyIndexPartition(ModifyIndexPartitionRequest request);
 
     /**
-      * ## Method
+      * ## [](#)Method
       *     PUT
-      * ## URI
+      * ## [](#uri)URI
       *     /openapi/ha3/instances/{instanceId}/clusters/{clusterName}/index-version
       *
      */
@@ -587,11 +587,11 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<StopIndexResponse> stopIndex(StopIndexRequest request);
 
     /**
-      * ### Method
+      * ### [](#)Method
       * ```java
       * PUT
       * ```
-      * ### URI
+      * ### [](#uri)URI
       * ```java
       * /openapi/ha3/instances/{instanceId}/stop-task/{fsmId}
       * ```

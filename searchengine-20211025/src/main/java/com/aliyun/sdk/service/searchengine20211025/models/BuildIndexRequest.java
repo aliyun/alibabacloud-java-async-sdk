@@ -152,7 +152,7 @@ public class BuildIndexRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -161,7 +161,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The reindexing mode.
+         * The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -197,7 +197,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source resides.
+         * The data center in which the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -215,7 +215,7 @@ public class BuildIndexRequest extends Request {
         }
 
         /**
-         * The data partition. This parameter is required if dataSourceType is set to odps.
+         * The partition in the MaxCompute table. This parameter is required if type is set to odps.
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

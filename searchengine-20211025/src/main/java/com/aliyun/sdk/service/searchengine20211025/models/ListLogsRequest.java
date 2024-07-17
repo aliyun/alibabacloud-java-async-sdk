@@ -138,7 +138,7 @@ public class ListLogsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -147,7 +147,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * endTime.
+         * The end tim. The value is a timestamp in seconds.
          */
         public Builder endTime(String endTime) {
             this.putQueryParameter("endTime", endTime);
@@ -156,7 +156,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * pageNum.
+         * The number of entries per num. Default value: 1.
          */
         public Builder pageNum(String pageNum) {
             this.putQueryParameter("pageNum", pageNum);
@@ -165,7 +165,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * pageSize.
+         * The number of entries per page. Default value: 10.
          */
         public Builder pageSize(String pageSize) {
             this.putQueryParameter("pageSize", pageSize);
@@ -174,7 +174,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * query.
+         * The query statement
          */
         public Builder query(String query) {
             this.putQueryParameter("query", query);
@@ -183,7 +183,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * startTime.
+         * The start time. The value is a timestamp in seconds.
          */
         public Builder startTime(String startTime) {
             this.putQueryParameter("startTime", startTime);
@@ -192,7 +192,7 @@ public class ListLogsRequest extends Request {
         }
 
         /**
-         * type.
+         * -push   -select
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

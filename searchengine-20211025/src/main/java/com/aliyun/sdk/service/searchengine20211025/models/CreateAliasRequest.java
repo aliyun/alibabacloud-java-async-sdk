@@ -96,7 +96,7 @@ public class CreateAliasRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +105,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * alias.
+         * alias name
          */
         public Builder alias(String alias) {
             this.putBodyParameter("alias", alias);
@@ -114,7 +114,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * index.
+         * index name
          */
         public Builder index(String index) {
             this.putBodyParameter("index", index);
@@ -123,7 +123,7 @@ public class CreateAliasRequest extends Request {
         }
 
         /**
-         * newMode.
+         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

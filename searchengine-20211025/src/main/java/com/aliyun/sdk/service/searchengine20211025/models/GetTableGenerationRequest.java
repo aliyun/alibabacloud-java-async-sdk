@@ -84,7 +84,7 @@ public class GetTableGenerationRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class GetTableGenerationRequest extends Request {
         }
 
         /**
-         * tableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -102,7 +102,7 @@ public class GetTableGenerationRequest extends Request {
         }
 
         /**
-         * generationId
+         * The ID of the full index version.
          */
         public Builder generationId(Long generationId) {
             this.putPathParameter("generationId", generationId);

@@ -83,7 +83,7 @@ public class PublishIndexVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -92,7 +92,7 @@ public class PublishIndexVersionRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -101,7 +101,7 @@ public class PublishIndexVersionRequest extends Request {
         }
 
         /**
-         * The query result
+         * The request body.
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);

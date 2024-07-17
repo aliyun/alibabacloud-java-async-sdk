@@ -98,7 +98,7 @@ public class ModifyOnlineConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the edge instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +107,7 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The name of the document
+         * The node name.
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);
@@ -116,7 +116,7 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -125,7 +125,7 @@ public class ModifyOnlineConfigRequest extends Request {
         }
 
         /**
-         * ashortdescriptionofstruct
+         * The request body.
          */
         public Builder body(java.util.Map < String, String > body) {
             this.putBodyParameter("body", body);

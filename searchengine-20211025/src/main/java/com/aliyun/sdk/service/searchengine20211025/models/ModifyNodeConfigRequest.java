@@ -196,7 +196,7 @@ public class ModifyNodeConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -268,7 +268,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the data source. Valid values: search and not_search. search indicates to search data. not_search indicates not to search data.
+         * The name of the data source. Valid values: -search: search for data. -not_search: do not search for data.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putQueryParameter("dataSourceName", dataSourceName);
@@ -277,7 +277,7 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The original name of the node.
+         * The name of the configuration before the modification.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -286,14 +286,14 @@ public class ModifyNodeConfigRequest extends Request {
         }
 
         /**
-         * The type of the algorithm. Valid values: pop, cp, hot, hint, and suggest.
+         * The type of the algorithm. Valid values:
          * <p>
          * 
-         * *   pop indicates the popularity model.
-         * *   cp indicates the category prediction model.
-         * *   hot indicates the top search model.
-         * *   hint indicates the hint model.
-         * *   suggest indicates the drop-down suggestion model.
+         * *   pop: a popularity model.
+         * *   cp: a category prediction model.
+         * *   hot: a top search model.
+         * *   hint: a hint model.
+         * *   suggest: a drop-down suggestions model.
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

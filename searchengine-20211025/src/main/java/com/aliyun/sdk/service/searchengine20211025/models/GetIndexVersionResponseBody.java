@@ -57,7 +57,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
         }
 
         /**
-         * The list of cluster details
+         * The clusters.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -133,7 +133,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < Long > versions; 
 
             /**
-             * The ID of the index deployed in offline mode
+             * The ID of the offline deployment.
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -141,7 +141,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * currentVersion.
+             * The current online version number.
              */
             public Builder currentVersion(Long currentVersion) {
                 this.currentVersion = currentVersion;
@@ -149,7 +149,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index table
+             * The name of the index table.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -157,7 +157,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The version of the index
+             * The index versions.
              */
             public Builder versions(java.util.List < Long > versions) {
                 this.versions = versions;
@@ -210,7 +210,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             private java.util.List < IndexVersions> indexVersions; 
 
             /**
-             * The name of the cluster
+             * The cluster name.
              */
             public Builder cluster(String cluster) {
                 this.cluster = cluster;
@@ -218,7 +218,7 @@ public class GetIndexVersionResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the cluster was updated
+             * The index versions.
              */
             public Builder indexVersions(java.util.List < IndexVersions> indexVersions) {
                 this.indexVersions = indexVersions;

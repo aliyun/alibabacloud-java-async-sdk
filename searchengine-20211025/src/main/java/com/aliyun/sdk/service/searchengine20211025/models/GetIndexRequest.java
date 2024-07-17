@@ -69,10 +69,7 @@ public class GetIndexRequest extends Request {
         } 
 
         /**
-         * ## Sample requests
-         * <p>
-         * 
-         *     GET  /openapi/ha3/instances/ose-test1/indexes/index1?dataSource=xxx
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -81,62 +78,7 @@ public class GetIndexRequest extends Request {
         }
 
         /**
-         * ## Sample responses
-         * <p>
-         * 
-         * Success responses
-         * 
-         *     {
-         *       "requestId": "e1eef569-1ff7-4bf8-acf7-1cecca9894ce",
-         *       "result": {
-         *         "name": "index1",
-         *         "dataSource": "test_yyds_data1",
-         *         "versions": [
-         *           {
-         *             "name": "my_index_1",
-         *             "versionId": 1,
-         *             "status": "drafting",
-         *             "updateTime": "1631070464000",
-         *             "desc": "test",
-         *             "files": [
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               },
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               }
-         *             ]
-         *           },
-         *           {
-         *             "name": "my_index_2",
-         *             "versionId": 1,
-         *             "status": "drafting",
-         *             "updateTime": "1631070464000",
-         *             "desc": "test",
-         *             "files": [
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               },
-         *               {
-         *                 "fullPathName": "/",
-         *                 "isDir": true,
-         *                 "isTemplate": true,
-         *                 "name": "cava"
-         *               }
-         *             ]        
-         *           }
-         *         ]
-         *       }
-         *     }
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);

@@ -49,7 +49,7 @@ public class ListPostQueryResultResponseBody extends TeaModel {
         private Object result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ListPostQueryResultResponseBody extends TeaModel {
         }
 
         /**
-         * Object
+         * The result.
          */
         public Builder result(Object result) {
             this.result = result;

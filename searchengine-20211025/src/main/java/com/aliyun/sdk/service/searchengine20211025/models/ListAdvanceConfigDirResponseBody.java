@@ -57,7 +57,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
         }
 
         /**
-         * The file list in the advanced configuration directory.
+         * The advanced configuration files.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -133,7 +133,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the absolute path.
+             * The absolute path in which the file is stored.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -141,7 +141,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
+             * Indicates whether the file is a directory. Valid values: true and false.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -149,7 +149,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a template. Valid values: **true** and **false**. true indicates that it is a template, and false indicates that it is not a template.
+             * Indicates whether the file is a template. Valid values: **true** and **false**.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -157,7 +157,7 @@ public class ListAdvanceConfigDirResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;

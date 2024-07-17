@@ -181,7 +181,7 @@ public class ModifyTableRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -190,7 +190,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * tableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -199,7 +199,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * dataProcessConfig.
+         * The configurations about field processing.
          */
         public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
             this.putBodyParameter("dataProcessConfig", dataProcessConfig);
@@ -208,7 +208,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * dataSource.
+         * The configurations of the data source.
          */
         public Builder dataSource(DataSource dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -217,7 +217,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * fieldSchema.
+         * The fields.
          */
         public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
             this.putBodyParameter("fieldSchema", fieldSchema);
@@ -226,7 +226,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * partitionCount.
+         * The number of data shards.
          */
         public Builder partitionCount(Integer partitionCount) {
             this.putBodyParameter("partitionCount", partitionCount);
@@ -235,7 +235,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * primaryKey.
+         * The primary key field.
          */
         public Builder primaryKey(String primaryKey) {
             this.putBodyParameter("primaryKey", primaryKey);
@@ -244,7 +244,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * rawSchema.
+         * The instance schema. If this parameter is specified, the parameters about the index are not required.
          */
         public Builder rawSchema(String rawSchema) {
             this.putBodyParameter("rawSchema", rawSchema);
@@ -253,7 +253,7 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * vectorIndex.
+         * The index schema.
          */
         public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
             this.putBodyParameter("vectorIndex", vectorIndex);
@@ -262,7 +262,11 @@ public class ModifyTableRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -328,7 +332,7 @@ public class ModifyTableRequest extends Request {
             private String uid; 
 
             /**
-             * ossBucket.
+             * The name of the OSS bucket.
              */
             public Builder ossBucket(String ossBucket) {
                 this.ossBucket = ossBucket;
@@ -336,7 +340,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * ossEndpoint.
+             * The OSS endpoint.
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -344,7 +348,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * uid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -409,7 +413,7 @@ public class ModifyTableRequest extends Request {
             private String vectorModel; 
 
             /**
-             * srcFieldConfig.
+             * The source of the data to be vectorized.
              */
             public Builder srcFieldConfig(SrcFieldConfig srcFieldConfig) {
                 this.srcFieldConfig = srcFieldConfig;
@@ -417,7 +421,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * vectorModal.
+             * The data type.
              */
             public Builder vectorModal(String vectorModal) {
                 this.vectorModal = vectorModal;
@@ -425,7 +429,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * vectorModel.
+             * The vectorization model.
              */
             public Builder vectorModel(String vectorModel) {
                 this.vectorModel = vectorModel;
@@ -502,7 +506,7 @@ public class ModifyTableRequest extends Request {
             private String srcField; 
 
             /**
-             * dstField.
+             * The destination field.
              */
             public Builder dstField(String dstField) {
                 this.dstField = dstField;
@@ -510,7 +514,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * operator.
+             * The method used to process the field. Valid values: copy and vectorize. A value of copy specifies that the value of the source field is copied to the destination field. A value of vectorize specifies that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -518,7 +522,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * params.
+             * The information about the model.
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -526,7 +530,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * srcField.
+             * The source field.
              */
             public Builder srcField(String srcField) {
                 this.srcField = srcField;
@@ -651,7 +655,7 @@ public class ModifyTableRequest extends Request {
             private String table; 
 
             /**
-             * AK
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -659,7 +663,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * AS
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -667,7 +671,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * oss bucket
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -675,7 +679,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -683,7 +687,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The path of the Object Storage Service (OSS) object.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -691,7 +695,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -699,7 +703,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -707,7 +711,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * table.
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -772,7 +776,7 @@ public class ModifyTableRequest extends Request {
             private Integer dataTimeSec; 
 
             /**
-             * autoBuildIndex.
+             * Specifies whether to automatically rebuild the index.
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -780,7 +784,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * config.
+             * The configurations of the data source.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -788,7 +792,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * dataTimeSec.
+             * The start timestamp from which incremental data is retrieved.
              */
             public Builder dataTimeSec(Integer dataTimeSec) {
                 this.dataTimeSec = dataTimeSec;
@@ -865,7 +869,7 @@ public class ModifyTableRequest extends Request {
             private String searchIndexParams; 
 
             /**
-             * buildIndexParams.
+             * The index building parameters.
              */
             public Builder buildIndexParams(String buildIndexParams) {
                 this.buildIndexParams = buildIndexParams;
@@ -873,7 +877,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * linearBuildThreshold.
+             * The threshold for linear building.
              */
             public Builder linearBuildThreshold(String linearBuildThreshold) {
                 this.linearBuildThreshold = linearBuildThreshold;
@@ -881,7 +885,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * minScanDocCnt.
+             * The minimum number of retrieved candidate sets.
              */
             public Builder minScanDocCnt(String minScanDocCnt) {
                 this.minScanDocCnt = minScanDocCnt;
@@ -889,7 +893,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * searchIndexParams.
+             * The index retrieval parameters.
              */
             public Builder searchIndexParams(String searchIndexParams) {
                 this.searchIndexParams = searchIndexParams;
@@ -1026,7 +1030,7 @@ public class ModifyTableRequest extends Request {
             private String vectorIndexType; 
 
             /**
-             * advanceParams.
+             * The configurations of the index schema.
              */
             public Builder advanceParams(AdvanceParams advanceParams) {
                 this.advanceParams = advanceParams;
@@ -1034,7 +1038,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * dimension.
+             * The dimension of the vector.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -1042,7 +1046,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * distanceType.
+             * The distance type.
              */
             public Builder distanceType(String distanceType) {
                 this.distanceType = distanceType;
@@ -1050,7 +1054,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * indexName.
+             * The name of the index schema.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -1058,7 +1062,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace field.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -1066,7 +1070,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * sparseIndexField.
+             * The field that stores the indexes of the elements in sparse vectors.
              */
             public Builder sparseIndexField(String sparseIndexField) {
                 this.sparseIndexField = sparseIndexField;
@@ -1074,7 +1078,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * sparseValueField.
+             * The field that stores the elements in sparse vectors.
              */
             public Builder sparseValueField(String sparseValueField) {
                 this.sparseValueField = sparseValueField;
@@ -1082,7 +1086,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * vectorField.
+             * The vector field.
              */
             public Builder vectorField(String vectorField) {
                 this.vectorField = vectorField;
@@ -1090,7 +1094,7 @@ public class ModifyTableRequest extends Request {
             }
 
             /**
-             * vectorIndexType.
+             * The vector retrieval algorithm.
              */
             public Builder vectorIndexType(String vectorIndexType) {
                 this.vectorIndexType = vectorIndexType;

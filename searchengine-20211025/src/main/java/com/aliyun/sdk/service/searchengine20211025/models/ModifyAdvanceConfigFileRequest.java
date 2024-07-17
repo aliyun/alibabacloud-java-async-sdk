@@ -112,7 +112,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -121,7 +121,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The name of the configuration.
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -130,7 +130,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The content of the file.
+         * The file content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -139,7 +139,7 @@ public class ModifyAdvanceConfigFileRequest extends Request {
         }
 
         /**
-         * The variable.
+         * The variables.
          */
         public Builder variables(java.util.Map < String, VariablesValue > variables) {
             this.putBodyParameter("variables", variables);

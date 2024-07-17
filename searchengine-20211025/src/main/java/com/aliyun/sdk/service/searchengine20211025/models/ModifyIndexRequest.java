@@ -251,7 +251,7 @@ public class ModifyIndexRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -260,7 +260,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -269,7 +269,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * buildParallelNum.
+         * The maximum number of full indexes that can be concurrently built.
          */
         public Builder buildParallelNum(Integer buildParallelNum) {
             this.putBodyParameter("buildParallelNum", buildParallelNum);
@@ -278,7 +278,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * cluster.
+         * The cluster information.
          */
         public Builder cluster(java.util.Map < String, java.util.Map<String, ?>> cluster) {
             this.putBodyParameter("cluster", cluster);
@@ -287,7 +287,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * clusterConfigName.
+         * The name of the configuration file.
          */
         public Builder clusterConfigName(String clusterConfigName) {
             this.putBodyParameter("clusterConfigName", clusterConfigName);
@@ -296,7 +296,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * config.
+         * The information about the offline configuration.
          */
         public Builder config(java.util.Map < String, ConfigValue > config) {
             this.putBodyParameter("config", config);
@@ -305,7 +305,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * content.
+         * The file content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -314,7 +314,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * dataSource.
+         * The name of the data source.
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -323,7 +323,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * dataSourceInfo.
+         * The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.
          */
         public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
             this.putBodyParameter("dataSourceInfo", dataSourceInfo);
@@ -332,7 +332,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * description.
+         * The description of the data source.
          */
         public Builder description(String description) {
             this.putBodyParameter("description", description);
@@ -341,7 +341,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * domain.
+         * The name of the data center in which the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -350,7 +350,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * mergeParallelNum.
+         * The maximum number of full indexes that can be concurrently merged.
          */
         public Builder mergeParallelNum(Integer mergeParallelNum) {
             this.putBodyParameter("mergeParallelNum", mergeParallelNum);
@@ -359,7 +359,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * partition.
+         * The number of shards.
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);
@@ -368,7 +368,7 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * pushMode.
+         * The push mode of the configuration. By default, only the configuration is pushed.
          */
         public Builder pushMode(String pushMode) {
             this.putBodyParameter("pushMode", pushMode);
@@ -377,7 +377,13 @@ public class ModifyIndexRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to check the validity of input parameters. Default value: false.
+         * <p>
+         * 
+         * Valid values:
+         * 
+         * *   **true**: checks only the validity of input parameters.
+         * *   **false**: checks the validity of input parameters and creates an attribution configuration.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -527,7 +533,7 @@ public class ModifyIndexRequest extends Request {
             private String table; 
 
             /**
-             * accessKey.
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -535,7 +541,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * accessSecret.
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -543,7 +549,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -551,7 +557,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -559,7 +565,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -567,7 +573,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The Object Storage Service (OSS) path.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -575,7 +581,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table. Example: ds=20180102.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -583,7 +589,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * path.
+             * The file path in the Apsara File Storage for HDFS file system.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -591,7 +597,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -599,7 +605,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * table.
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -652,7 +658,7 @@ public class ModifyIndexRequest extends Request {
             private String tableName; 
 
             /**
-             * namespace.
+             * The namespace to which the SARO data source belongs.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -660,7 +666,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * tableName.
+             * The name of the SARO table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -821,7 +827,7 @@ public class ModifyIndexRequest extends Request {
             private String type; 
 
             /**
-             * autoBuildIndex.
+             * Specifies whether to enable the automatic full indexing feature.
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -829,7 +835,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * buildMode.
+             * The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
              */
             public Builder buildMode(String buildMode) {
                 this.buildMode = buildMode;
@@ -837,7 +843,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * config.
+             * The configurations of the MaxCompute data source.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -845,7 +851,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * dataTimeSec.
+             * The start timestamp from which incremental data is retrieved.
              */
             public Builder dataTimeSec(Integer dataTimeSec) {
                 this.dataTimeSec = dataTimeSec;
@@ -853,7 +859,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * domain.
+             * The offline deployment name of the data source.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -861,7 +867,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * generation.
+             * The ID of the index version from which data is restored.
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -869,7 +875,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * name.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -877,7 +883,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * processParallelNum.
+             * The maximum number of full indexes that can be concurrently processed.
              */
             public Builder processParallelNum(Integer processParallelNum) {
                 this.processParallelNum = processParallelNum;
@@ -885,7 +891,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * processPartitionCount.
+             * The number of resources used for data update.
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -893,7 +899,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * saroConfig.
+             * The configurations of the SARO data source.
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -901,7 +907,7 @@ public class ModifyIndexRequest extends Request {
             }
 
             /**
-             * type.
+             * The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
              */
             public Builder type(String type) {
                 this.type = type;

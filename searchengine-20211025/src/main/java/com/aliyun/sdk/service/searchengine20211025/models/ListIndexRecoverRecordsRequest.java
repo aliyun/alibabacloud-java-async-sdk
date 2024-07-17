@@ -68,7 +68,7 @@ public class ListIndexRecoverRecordsRequest extends Request {
         } 
 
         /**
-         * indexName.
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -77,7 +77,7 @@ public class ListIndexRecoverRecordsRequest extends Request {
         }
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);

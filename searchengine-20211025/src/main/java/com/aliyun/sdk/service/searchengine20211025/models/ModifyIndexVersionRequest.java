@@ -82,7 +82,7 @@ public class ModifyIndexVersionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -100,7 +100,7 @@ public class ModifyIndexVersionRequest extends Request {
         }
 
         /**
-         * The keyword used to search for a version. Fuzzy match is supported.
+         * The request body.
          */
         public Builder body(java.util.List < ModifyIndexVersionRequestBody> body) {
             this.putBodyParameter("body", body);
@@ -166,7 +166,7 @@ public class ModifyIndexVersionRequest extends Request {
             private String version; 
 
             /**
-             * The ID of the index deployed in offline mode.
+             * The deployment ID of the data source.
              */
             public Builder buildDeployId(String buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -174,7 +174,7 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The name of the index.
+             * The index name.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -182,7 +182,7 @@ public class ModifyIndexVersionRequest extends Request {
             }
 
             /**
-             * The version of the index.
+             * The index version.
              */
             public Builder version(String version) {
                 this.version = version;

@@ -57,7 +57,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
         }
 
         /**
-         * Deploy
+         * The result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -394,7 +394,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String resource; 
 
             /**
-             * args.
+             * The startup parameters of the process.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -402,7 +402,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * resource.
+             * The resource information.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -551,7 +551,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * AK
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -559,7 +559,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * AS
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -567,7 +567,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * oss bucket
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -575,7 +575,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * odps endpoint
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -591,7 +591,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * ossPath.
+             * The Object Storage Service (OSS) path.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -599,7 +599,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table. Example: ds=20180102.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -676,7 +676,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             private String zk; 
 
             /**
-             * topic
+             * The topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;
@@ -789,7 +789,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * processor.
+             * The parameters of the process.
              */
             public Builder processor(Processor processor) {
                 this.processor = processor;
@@ -797,7 +797,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * storage.
+             * The information about the data source.
              */
             public Builder storage(Storage storage) {
                 this.storage = storage;
@@ -805,7 +805,7 @@ public class GetDataSourceDeployResponseBody extends TeaModel {
             }
 
             /**
-             * swift.
+             * The information about the incremental data source Swift.
              */
             public Builder swift(Swift swift) {
                 this.swift = swift;

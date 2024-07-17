@@ -53,7 +53,7 @@ public class DescribeRegionsRequest extends Request {
         } 
 
         /**
-         * acceptLanguage.
+         * The language of the response. Default value: zh-cn.
          */
         public Builder acceptLanguage(String acceptLanguage) {
             this.putQueryParameter("acceptLanguage", acceptLanguage);

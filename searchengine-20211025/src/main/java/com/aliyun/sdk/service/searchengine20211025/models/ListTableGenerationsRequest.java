@@ -69,7 +69,7 @@ public class ListTableGenerationsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class ListTableGenerationsRequest extends Request {
         }
 
         /**
-         * tableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);

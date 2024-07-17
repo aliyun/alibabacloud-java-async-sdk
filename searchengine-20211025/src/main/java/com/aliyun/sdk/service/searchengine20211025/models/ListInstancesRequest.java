@@ -146,7 +146,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The Instance type, vector (vector index version),engine (recall engine version)
+         * The instance type. Valid values: vector: OpenSearch Vector Search Edition instance. engine: OpenSearch Retrieval Engine Edition instance.
          */
         public Builder edition(String edition) {
             this.putQueryParameter("edition", edition);
@@ -155,7 +155,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putQueryParameter("instanceId", instanceId);
@@ -191,7 +191,7 @@ public class ListInstancesRequest extends Request {
         }
 
         /**
-         * The tag dictionary.
+         * The tags of the instance.
          */
         public Builder tags(java.util.List < Tags> tags) {
             String tagsShrink = shrink(tags, "tags", "json");
@@ -246,7 +246,7 @@ public class ListInstancesRequest extends Request {
             private String value; 
 
             /**
-             * The key of the tag.
+             * The tag key.
              */
             public Builder key(String key) {
                 this.key = key;
@@ -254,7 +254,7 @@ public class ListInstancesRequest extends Request {
             }
 
             /**
-             * The value of the tag.
+             * The tag value.
              */
             public Builder value(String value) {
                 this.value = value;

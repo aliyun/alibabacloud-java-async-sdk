@@ -84,7 +84,7 @@ public class ModifyAliasRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class ModifyAliasRequest extends Request {
         }
 
         /**
-         * alias.
+         * alias name
          */
         public Builder alias(String alias) {
             this.putPathParameter("alias", alias);
@@ -103,7 +103,7 @@ public class ModifyAliasRequest extends Request {
         }
 
         /**
-         * index.
+         * index name
          */
         public Builder index(String index) {
             this.putBodyParameter("index", index);

@@ -96,7 +96,7 @@ public class GetNodeConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -114,7 +114,7 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * The name of the cluster.
+         * The node name.
          */
         public Builder name(String name) {
             this.putQueryParameter("name", name);
@@ -123,7 +123,13 @@ public class GetNodeConfigRequest extends Request {
         }
 
         /**
-         * The type of the node. Valid values: qrs, search, index, and cluster. qrs indicates a query node, search indicates a data node, index indicates an index node, and cluster indicates a cluster node.
+         * The node type. Valid values:
+         * <p>
+         * 
+         * *   qrs: Query Result Searcher (QRS) worker
+         * *   search: Search worker
+         * *   index: index
+         * *   cluster: cluster
          */
         public Builder type(String type) {
             this.putQueryParameter("type", type);

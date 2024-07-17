@@ -109,7 +109,7 @@ public class ListAliasesResponseBody extends TeaModel {
             private String index; 
 
             /**
-             * alias.
+             * alias name
              */
             public Builder alias(String alias) {
                 this.alias = alias;
@@ -117,7 +117,7 @@ public class ListAliasesResponseBody extends TeaModel {
             }
 
             /**
-             * index.
+             * index name
              */
             public Builder index(String index) {
                 this.index = index;

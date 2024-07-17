@@ -167,7 +167,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -176,7 +176,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * configName.
+         * The name of the advanced configuration.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -185,7 +185,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * content.
+         * The content of the advanced configuration that is returned.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -194,7 +194,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * contentType.
+         * The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.
          */
         public Builder contentType(String contentType) {
             this.putBodyParameter("contentType", contentType);
@@ -203,7 +203,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * desc.
+         * The description of the advanced configuration.
          */
         public Builder desc(String desc) {
             this.putBodyParameter("desc", desc);
@@ -212,7 +212,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * files.
+         * The files.
          */
         public Builder files(java.util.List < Files> files) {
             this.putBodyParameter("files", files);
@@ -221,7 +221,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the advanced configuration.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -230,7 +230,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * status.
+         * The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.
          */
         public Builder status(String status) {
             this.putBodyParameter("status", status);
@@ -239,7 +239,7 @@ public class ModifyAdvanceConfigRequest extends Request {
         }
 
         /**
-         * updateTime.
+         * The time when the advanced configuration was updated.
          */
         public Builder updateTime(Long updateTime) {
             this.putBodyParameter("updateTime", updateTime);
@@ -317,7 +317,7 @@ public class ModifyAdvanceConfigRequest extends Request {
             private String name; 
 
             /**
-             * fullPathName.
+             * The full path of the file.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -325,7 +325,7 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * isDir.
+             * Specifies whether the file is a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -333,7 +333,7 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * isTemplate.
+             * Specifies whether the file is a template.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -341,7 +341,7 @@ public class ModifyAdvanceConfigRequest extends Request {
             }
 
             /**
-             * name.
+             * The node name.
              */
             public Builder name(String name) {
                 this.name = name;

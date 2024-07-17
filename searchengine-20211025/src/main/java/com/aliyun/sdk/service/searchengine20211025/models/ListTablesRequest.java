@@ -68,7 +68,7 @@ public class ListTablesRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +77,7 @@ public class ListTablesRequest extends Request {
         }
 
         /**
-         * newMode.
+         * Specifies whether the OpenSearch Vector Search Edition instance is of the new version.
          */
         public Builder newMode(Boolean newMode) {
             this.putQueryParameter("newMode", newMode);

@@ -49,7 +49,7 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
         private Result result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
         }
 
         /**
-         * IndexOnlineStrategy
+         * The result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -97,7 +97,7 @@ public class GetIndexOnlineStrategyResponseBody extends TeaModel {
             private Integer changeRate; 
 
             /**
-             * changeRate.
+             * The index change rate.
              */
             public Builder changeRate(Integer changeRate) {
                 this.changeRate = changeRate;

@@ -182,7 +182,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The cluster ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -191,7 +191,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * deployName.
+         * The name of the data center.
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);
@@ -200,7 +200,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -209,7 +209,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * autoBuildIndex.
+         * Specifies whether to enable the automatic full indexing feature.
          */
         public Builder autoBuildIndex(Boolean autoBuildIndex) {
             this.putBodyParameter("autoBuildIndex", autoBuildIndex);
@@ -218,7 +218,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * extend.
+         * The extended information.
          */
         public Builder extend(Extend extend) {
             this.putBodyParameter("extend", extend);
@@ -227,7 +227,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * processor.
+         * The parameters of the process.
          */
         public Builder processor(Processor processor) {
             this.putBodyParameter("processor", processor);
@@ -236,7 +236,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * storage.
+         * The information about the data source.
          */
         public Builder storage(Storage storage) {
             this.putBodyParameter("storage", storage);
@@ -245,7 +245,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * swift.
+         * The information about the incremental data source Swift.
          */
         public Builder swift(Swift swift) {
             this.putBodyParameter("swift", swift);
@@ -254,7 +254,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values: true and false.
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -263,7 +263,7 @@ public class ModifyDataSourceDeployRequest extends Request {
         }
 
         /**
-         * generationId
+         * The ID of the full index version.
          */
         public Builder generationId(Long generationId) {
             this.putQueryParameter("generationId", generationId);
@@ -305,7 +305,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String path; 
 
             /**
-             * path.
+             * The path of the Apsara File Storage for HDFS data source.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -346,7 +346,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private java.util.Map < String, String > partitions; 
 
             /**
-             * partitions.
+             * The partitions in the MaxCompute table.
              */
             public Builder partitions(java.util.Map < String, String > partitions) {
                 this.partitions = partitions;
@@ -387,7 +387,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String path; 
 
             /**
-             * path.
+             * The path of the OSS data source.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -440,7 +440,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String version; 
 
             /**
-             * path.
+             * The path of the SARO data source.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -448,7 +448,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * version.
+             * The version number of the SARO data source.
              */
             public Builder version(String version) {
                 this.version = version;
@@ -525,7 +525,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private Saro saro; 
 
             /**
-             * hdfs.
+             * The information about the Apsara File Storage for HDFS data source.
              */
             public Builder hdfs(Hdfs hdfs) {
                 this.hdfs = hdfs;
@@ -533,7 +533,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * odps.
+             * The information about the MaxCompute data source.
              */
             public Builder odps(Odps odps) {
                 this.odps = odps;
@@ -541,7 +541,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * oss.
+             * The information about the OSS data source.
              */
             public Builder oss(Oss oss) {
                 this.oss = oss;
@@ -549,7 +549,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * saro.
+             * The information about the SARO data source. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
              */
             public Builder saro(Saro saro) {
                 this.saro = saro;
@@ -602,7 +602,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String resource; 
 
             /**
-             * args.
+             * The startup parameters of the process.
              */
             public Builder args(String args) {
                 this.args = args;
@@ -610,7 +610,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * resource.
+             * The resource information.
              */
             public Builder resource(String resource) {
                 this.resource = resource;
@@ -759,7 +759,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String table; 
 
             /**
-             * AK
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -767,7 +767,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * AS
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -775,7 +775,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -783,7 +783,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -791,7 +791,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -799,7 +799,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The Object Storage Service (OSS) path.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -807,7 +807,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -815,7 +815,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * path.
+             * The file path in the Apsara File Storage for HDFS file system.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -823,7 +823,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -831,7 +831,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             }
 
             /**
-             * table.
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -884,7 +884,7 @@ public class ModifyDataSourceDeployRequest extends Request {
             private String zk; 
 
             /**
-             * topic
+             * The topic.
              */
             public Builder topic(String topic) {
                 this.topic = topic;

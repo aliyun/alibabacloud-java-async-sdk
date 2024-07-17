@@ -180,7 +180,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -189,7 +189,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The mode of reindexing. Valid values: api and indexRecover. api indicates to push incremental data to a data source by calling the API operations. indexRecover indicates that the data source is restored from the index.
+         * The reindexing method. Valid values: api: API data source. indexRecover: data recovery by using indexing.
          */
         public Builder buildMode(String buildMode) {
             this.putBodyParameter("buildMode", buildMode);
@@ -216,7 +216,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The type of the data source. Valid values: odps, swift, saro, and unKnow.
+         * The type of the data source. Valid values: odps: MaxCompute. swift: Swift. unKnow: unknown type.
          */
         public Builder dataSourceType(String dataSourceType) {
             this.putBodyParameter("dataSourceType", dataSourceType);
@@ -234,7 +234,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The domain where the data source is deployed.
+         * The data center in which the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -243,7 +243,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * The data restoration version.
+         * The ID of the full index version.
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -261,7 +261,7 @@ public class ModifyClusterOfflineConfigRequest extends Request {
         }
 
         /**
-         * pushMode.
+         * The push mode of the configuration. By default, only the configuration is pushed.
          */
         public Builder pushMode(String pushMode) {
             this.putBodyParameter("pushMode", pushMode);

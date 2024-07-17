@@ -57,7 +57,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
         }
 
         /**
-         * The configurations of the node.
+         * The result set.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             private Boolean published; 
 
             /**
-             * Indicates whether the expression is the default one.
+             * Indicates whether the index is effective online.
              */
             public Builder active(Boolean active) {
                 this.active = active;
@@ -197,7 +197,7 @@ public class GetNodeConfigResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the node is associated with the cluster.
+             * Indicates whether the cluster is mounted.
              */
             public Builder published(Boolean published) {
                 this.published = published;

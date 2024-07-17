@@ -49,7 +49,7 @@ public class CreateIndexResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class CreateIndexResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the index
+         * The results returned.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

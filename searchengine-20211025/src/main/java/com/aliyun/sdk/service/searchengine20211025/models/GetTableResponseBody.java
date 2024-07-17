@@ -57,7 +57,7 @@ public class GetTableResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The results returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -129,7 +129,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * ossEndpoint.
+             * The Object Storage Service (OSS) endpoint.
              */
             public Builder ossEndpoint(String ossEndpoint) {
                 this.ossEndpoint = ossEndpoint;
@@ -137,7 +137,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * uid.
+             * The ID of the Alibaba Cloud account.
              */
             public Builder uid(String uid) {
                 this.uid = uid;
@@ -202,7 +202,7 @@ public class GetTableResponseBody extends TeaModel {
             private String vectorModel; 
 
             /**
-             * srcFieldConfig.
+             * The source of the data to be vectorized.
              */
             public Builder srcFieldConfig(SrcFieldConfig srcFieldConfig) {
                 this.srcFieldConfig = srcFieldConfig;
@@ -210,7 +210,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * vectorModal.
+             * The data type.
              */
             public Builder vectorModal(String vectorModal) {
                 this.vectorModal = vectorModal;
@@ -218,7 +218,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * vectorModel.
+             * The vectorization model.
              */
             public Builder vectorModel(String vectorModel) {
                 this.vectorModel = vectorModel;
@@ -295,7 +295,7 @@ public class GetTableResponseBody extends TeaModel {
             private String srcField; 
 
             /**
-             * dstField.
+             * The destination field.
              */
             public Builder dstField(String dstField) {
                 this.dstField = dstField;
@@ -303,7 +303,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * operator.
+             * The method used to process the field. Valid values: copy and vectorize. A value of copy indicates that the value of the source field is copied to the destination field. A value of vectorize indicates that the value of the source field is vectorized by a vectorization model and the output vector is stored in the destination field.
              */
             public Builder operator(String operator) {
                 this.operator = operator;
@@ -311,7 +311,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * params.
+             * The information about the model.
              */
             public Builder params(Params params) {
                 this.params = params;
@@ -319,7 +319,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * srcField.
+             * The source field.
              */
             public Builder srcField(String srcField) {
                 this.srcField = srcField;
@@ -718,7 +718,7 @@ public class GetTableResponseBody extends TeaModel {
             private String searchIndexParams; 
 
             /**
-             * buildIndexParams.
+             * The index building parameters.
              */
             public Builder buildIndexParams(String buildIndexParams) {
                 this.buildIndexParams = buildIndexParams;
@@ -726,7 +726,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * linearBuildThreshold.
+             * The threshold for linear building.
              */
             public Builder linearBuildThreshold(String linearBuildThreshold) {
                 this.linearBuildThreshold = linearBuildThreshold;
@@ -734,7 +734,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * minScanDocCnt.
+             * The minimum number of retrieved candidate sets.
              */
             public Builder minScanDocCnt(String minScanDocCnt) {
                 this.minScanDocCnt = minScanDocCnt;
@@ -742,7 +742,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * searchIndexParams.
+             * The index retrieval parameters.
              */
             public Builder searchIndexParams(String searchIndexParams) {
                 this.searchIndexParams = searchIndexParams;
@@ -879,7 +879,7 @@ public class GetTableResponseBody extends TeaModel {
             private String vectorIndexType; 
 
             /**
-             * advanceParams.
+             * The configurations of the index schema.
              */
             public Builder advanceParams(AdvanceParams advanceParams) {
                 this.advanceParams = advanceParams;
@@ -887,7 +887,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * dimension.
+             * The dimension of the vector.
              */
             public Builder dimension(String dimension) {
                 this.dimension = dimension;
@@ -895,7 +895,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * distanceType.
+             * The distance type.
              */
             public Builder distanceType(String distanceType) {
                 this.distanceType = distanceType;
@@ -903,7 +903,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * indexName.
+             * The name of the index schema.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -911,7 +911,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * namespace.
+             * The namespace field.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -919,7 +919,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * sparseIndexField.
+             * The field that stores the indexes of the elements in sparse vectors.
              */
             public Builder sparseIndexField(String sparseIndexField) {
                 this.sparseIndexField = sparseIndexField;
@@ -927,7 +927,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * sparseValueField.
+             * The field that stores the elements in sparse vectors.
              */
             public Builder sparseValueField(String sparseValueField) {
                 this.sparseValueField = sparseValueField;
@@ -935,7 +935,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * vectorField.
+             * The vector field.
              */
             public Builder vectorField(String vectorField) {
                 this.vectorField = vectorField;
@@ -943,7 +943,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * vectorIndexType.
+             * The vector retrieval algorithm.
              */
             public Builder vectorIndexType(String vectorIndexType) {
                 this.vectorIndexType = vectorIndexType;
@@ -1092,7 +1092,7 @@ public class GetTableResponseBody extends TeaModel {
             private java.util.List < VectorIndex> vectorIndex; 
 
             /**
-             * dataProcessConfig.
+             * The configurations about field processing.
              */
             public Builder dataProcessConfig(java.util.List < DataProcessConfig> dataProcessConfig) {
                 this.dataProcessConfig = dataProcessConfig;
@@ -1116,7 +1116,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * fieldSchema.
+             * The field. The value is a key-value pair in which the key indicates the field name and value indicates the field type.
              */
             public Builder fieldSchema(java.util.Map < String, String > fieldSchema) {
                 this.fieldSchema = fieldSchema;
@@ -1156,7 +1156,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -1164,7 +1164,7 @@ public class GetTableResponseBody extends TeaModel {
             }
 
             /**
-             * vectorIndex.
+             * The index schema.
              */
             public Builder vectorIndex(java.util.List < VectorIndex> vectorIndex) {
                 this.vectorIndex = vectorIndex;

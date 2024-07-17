@@ -57,7 +57,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned
+         * The results returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -157,7 +157,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String zoneName; 
 
             /**
-             * domainName.
+             * The name of the data center.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -165,7 +165,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The index name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -173,7 +173,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tableDeployId.
+             * The deployment ID of the table.
              */
             public Builder tableDeployId(Long tableDeployId) {
                 this.tableDeployId = tableDeployId;
@@ -181,7 +181,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tableName.
+             * The name of the data source.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -189,7 +189,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -197,7 +197,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * zoneName.
+             * The name of the QRS worker.
              */
             public Builder zoneName(String zoneName) {
                 this.zoneName = zoneName;
@@ -274,7 +274,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * domainName.
+             * The name of the data center.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -282,7 +282,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * hippoId.
+             * The resource ID.
              */
             public Builder hippoId(String hippoId) {
                 this.hippoId = hippoId;
@@ -290,7 +290,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * id.
+             * The ID of the data center.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -298,7 +298,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the online cluster.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -399,7 +399,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * buildDeployId.
+             * The ID of the offline deployment.
              */
             public Builder buildDeployId(Long buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -407,7 +407,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * domainName.
+             * The name of the data center.
              */
             public Builder domainName(String domainName) {
                 this.domainName = domainName;
@@ -415,7 +415,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -423,7 +423,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tableDeployId.
+             * The deployment ID of the table.
              */
             public Builder tableDeployId(Long tableDeployId) {
                 this.tableDeployId = tableDeployId;
@@ -431,7 +431,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -439,7 +439,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The type of the data source.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -528,7 +528,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * domainInfo.
+             * The name of the data center.
              */
             public Builder domainInfo(String domainInfo) {
                 this.domainInfo = domainInfo;
@@ -536,7 +536,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The name of the Query Result Searcher (QRS) worker.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -544,7 +544,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * suezAdminName.
+             * The name of the service that is used to manage the relationships between online clusters and indexes.
              */
             public Builder suezAdminName(String suezAdminName) {
                 this.suezAdminName = suezAdminName;
@@ -552,7 +552,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * tag.
+             * The tag.
              */
             public Builder tag(String tag) {
                 this.tag = tag;
@@ -560,7 +560,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * type.
+             * The node type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -661,7 +661,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private java.util.List < ZoneMetas> zoneMetas; 
 
             /**
-             * 索引元信息
+             * The index metadata.
              */
             public Builder indexMetas(java.util.List < IndexMetas> indexMetas) {
                 this.indexMetas = indexMetas;
@@ -669,7 +669,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 在线集群元信息
+             * The metadata of online clusters.
              */
             public Builder onlineMaster(java.util.List < OnlineMaster> onlineMaster) {
                 this.onlineMaster = onlineMaster;
@@ -677,7 +677,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源和索引关联关系
+             * The association relationships between data sources and indexes.
              */
             public Builder tableIndexRelation(java.util.Map < String, java.util.List<String>> tableIndexRelation) {
                 this.tableIndexRelation = tableIndexRelation;
@@ -685,7 +685,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源元信息
+             * The metadata of data sources.
              */
             public Builder tableMetas(java.util.List < TableMetas> tableMetas) {
                 this.tableMetas = tableMetas;
@@ -693,7 +693,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * zone和索引关联关系
+             * The association relationships between zones and indexes.
              */
             public Builder zoneIndexRelation(java.util.Map < String, java.util.List<String>> zoneIndexRelation) {
                 this.zoneIndexRelation = zoneIndexRelation;
@@ -701,7 +701,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             }
 
             /**
-             * zone元信息
+             * The zone metadata.
              */
             public Builder zoneMetas(java.util.List < ZoneMetas> zoneMetas) {
                 this.zoneMetas = zoneMetas;
@@ -742,7 +742,7 @@ public class GetDeployGraphResponseBody extends TeaModel {
             private Graph graph; 
 
             /**
-             * graph.
+             * The deployment information.
              */
             public Builder graph(Graph graph) {
                 this.graph = graph;

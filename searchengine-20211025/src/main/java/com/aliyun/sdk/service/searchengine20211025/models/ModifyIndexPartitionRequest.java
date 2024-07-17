@@ -110,7 +110,7 @@ public class ModifyIndexPartitionRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -128,7 +128,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The name of the data center.
+         * The data center.
          */
         public Builder domainName(String domainName) {
             this.putBodyParameter("domainName", domainName);
@@ -137,7 +137,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The primary key of generation.
+         * The primary key.
          */
         public Builder generation(Long generation) {
             this.putBodyParameter("generation", generation);
@@ -146,7 +146,7 @@ public class ModifyIndexPartitionRequest extends Request {
         }
 
         /**
-         * The information about shards of the index.
+         * The index information.
          */
         public Builder indexInfos(java.util.List < IndexInfos> indexInfos) {
             this.putBodyParameter("indexInfos", indexInfos);
@@ -212,7 +212,7 @@ public class ModifyIndexPartitionRequest extends Request {
             private Integer partitionCount; 
 
             /**
-             * The name of the index.
+             * The index name.
              */
             public Builder indexName(String indexName) {
                 this.indexName = indexName;
@@ -220,7 +220,7 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The number of concurrency. The default value is 1.
+             * The concurrency. Default value: 1.
              */
             public Builder parallelNum(Integer parallelNum) {
                 this.parallelNum = parallelNum;
@@ -228,7 +228,7 @@ public class ModifyIndexPartitionRequest extends Request {
             }
 
             /**
-             * The number of shards of the index.
+             * The number of shards.
              */
             public Builder partitionCount(Integer partitionCount) {
                 this.partitionCount = partitionCount;

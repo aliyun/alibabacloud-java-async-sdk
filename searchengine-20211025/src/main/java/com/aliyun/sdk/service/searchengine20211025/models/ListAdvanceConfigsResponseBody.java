@@ -57,7 +57,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
         }
 
         /**
-         * The list of advanced configurations.
+         * The advanced configurations.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -133,7 +133,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the absolute path.
+             * The absolute path in which the file is stored.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -141,7 +141,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a directory. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
+             * Indicates whether the file is a directory. Valid values: true and false.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -149,7 +149,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a template. Valid values: true and false. true indicates that it is a directory, and false indicates that it is not a directory.
+             * Indicates whether the file is a template. Valid values: true and false.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -157,7 +157,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * The file name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -294,7 +294,16 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             private Long updateTime; 
 
             /**
-             * advanceConfigType.
+             * *   The type of the advanced configuration. Valid values: -ONLINE: online configuration
+             * <p>
+             * *   \-ONLINE_CAVA: online Cava configuration
+             * *   \-ONLINE_PLUGIN: online plug-in configuration
+             * *   \-ONLINE_QUERY: query configuration
+             * *   \-OFFLINE_DICT: offline dictionary configuration
+             * *   \-OFFLINE_TABLE: offline table configuration
+             * *   \-OFFLINE_COMMON: offline configuration
+             * *   \-OFFLINE_PLUGIN: offline plug-in configuration
+             * *   \-OFFLINE_INDEX: index configuration
              */
             public Builder advanceConfigType(String advanceConfigType) {
                 this.advanceConfigType = advanceConfigType;
@@ -302,7 +311,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * content.
+             * The content of the advanced configuration that is returned.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -310,7 +319,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * contentType.
+             * The type of the configuration content. Valid values: FILE, GIT, HTTP, and ODPS.
              */
             public Builder contentType(String contentType) {
                 this.contentType = contentType;
@@ -318,7 +327,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * creator.
+             * The Alibaba Cloud account ID of the user who created the advanced configuration.
              */
             public Builder creator(String creator) {
                 this.creator = creator;
@@ -326,7 +335,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The description.
+             * The description of the advanced configuration.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -334,7 +343,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The list of file names.
+             * The files.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -350,7 +359,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the advanced configuration. Valid values: drafting, used, unused, and trash. drafting indicates that the advanced configuration is a draft. used indicates that the advanced configuration is in use. unused indicates that the advanced configuration is unused. trash indicates that the advanced configuration is being deleted.
+             * The status of the advanced configuration. Valid values: drafting: The advanced configuration is in the draft state. used: The advanced configuration is being used. unused: The advanced configuration is not used. trash: The advanced configuration is being deleted.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -358,7 +367,7 @@ public class ListAdvanceConfigsResponseBody extends TeaModel {
             }
 
             /**
-             * The update time.
+             * The time when the advanced configuration was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;

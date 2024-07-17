@@ -85,7 +85,7 @@ public class ResultValue extends TeaModel {
         private Boolean pauseRuntime; 
 
         /**
-         * pauseAll.
+         * Indicates whether all pushes are suspended.
          */
         public Builder pauseAll(Boolean pauseAll) {
             this.pauseAll = pauseAll;
@@ -93,7 +93,7 @@ public class ResultValue extends TeaModel {
         }
 
         /**
-         * pauseIndex.
+         * Indicates whether the push is suspended for the new full index version.
          */
         public Builder pauseIndex(Boolean pauseIndex) {
             this.pauseIndex = pauseIndex;
@@ -101,7 +101,7 @@ public class ResultValue extends TeaModel {
         }
 
         /**
-         * pauseIndexBatch.
+         * Indicates whether the push is suspended for the incremental indexes.
          */
         public Builder pauseIndexBatch(Boolean pauseIndexBatch) {
             this.pauseIndexBatch = pauseIndexBatch;
@@ -109,7 +109,7 @@ public class ResultValue extends TeaModel {
         }
 
         /**
-         * pauseBiz.
+         * Indicates whether the push is suspended for the configuration.
          */
         public Builder pauseBiz(Boolean pauseBiz) {
             this.pauseBiz = pauseBiz;
@@ -117,7 +117,7 @@ public class ResultValue extends TeaModel {
         }
 
         /**
-         * pauseRuntime.
+         * Indicates whether the push is suspended for the real-time incremental indexes.
          */
         public Builder pauseRuntime(Boolean pauseRuntime) {
             this.pauseRuntime = pauseRuntime;

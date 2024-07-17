@@ -127,7 +127,7 @@ public class ModifyFileRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -136,7 +136,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -145,7 +145,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The name of the version
+         * The version name.
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);
@@ -154,7 +154,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * The content of the file.
+         * The file content.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -163,7 +163,7 @@ public class ModifyFileRequest extends Request {
         }
 
         /**
-         * This parameter is required when index building for full data in a MaxCompute data source is triggered.
+         * The number of shards.
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);

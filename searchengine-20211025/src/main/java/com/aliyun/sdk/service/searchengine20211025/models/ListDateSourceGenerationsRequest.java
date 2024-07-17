@@ -98,7 +98,7 @@ public class ListDateSourceGenerationsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -125,11 +125,11 @@ public class ListDateSourceGenerationsRequest extends Request {
         }
 
         /**
-         * The valid state of the data source. Valid values: true and false. The default value of this parameter is true.
+         * Specifies the index versions to be returned. Valid values:
          * <p>
          * 
-         * 1.  true indicates that the generations that have not expired and of which the tasks have been executed are returned.
-         * 2.  false indicates that all generations are returned.
+         * 1.  true (default): returns the index versions that are complete and not expired.
+         * 2.  false: returns all index versions.
          */
         public Builder validStatus(Boolean validStatus) {
             this.putQueryParameter("validStatus", validStatus);

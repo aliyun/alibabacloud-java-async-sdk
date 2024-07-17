@@ -97,7 +97,7 @@ public class PushDocumentsRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -106,7 +106,7 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -115,7 +115,7 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.List < ? > body) {
             this.putBodyParameter("body", body);
@@ -124,7 +124,7 @@ public class PushDocumentsRequest extends Request {
         }
 
         /**
-         * pkField.
+         * The primary key field.
          */
         public Builder pkField(String pkField) {
             this.putQueryParameter("pkField", pkField);

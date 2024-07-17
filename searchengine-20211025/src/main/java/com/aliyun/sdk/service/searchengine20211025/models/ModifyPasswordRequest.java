@@ -82,7 +82,7 @@ public class ModifyPasswordRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +91,7 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The password
+         * The password.
          */
         public Builder password(String password) {
             this.putBodyParameter("password", password);
@@ -100,7 +100,7 @@ public class ModifyPasswordRequest extends Request {
         }
 
         /**
-         * The username
+         * The username.
          */
         public Builder username(String username) {
             this.putBodyParameter("username", username);

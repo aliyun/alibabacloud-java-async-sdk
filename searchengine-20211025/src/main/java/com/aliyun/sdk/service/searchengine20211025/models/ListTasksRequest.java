@@ -82,7 +82,7 @@ public class ListTasksRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -91,7 +91,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * end.
+         * The timestamp that indicates the end of the time range to query.
          */
         public Builder end(Long end) {
             this.putQueryParameter("end", end);
@@ -100,7 +100,7 @@ public class ListTasksRequest extends Request {
         }
 
         /**
-         * start.
+         * The timestamp that indicates the beginning of the time range to query.
          */
         public Builder start(Long start) {
             this.putQueryParameter("start", start);

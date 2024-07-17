@@ -99,7 +99,7 @@ public class GetFileRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +108,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -117,7 +117,7 @@ public class GetFileRequest extends Request {
         }
 
         /**
-         * The name of the version
+         * The version name.
          */
         public Builder versionName(String versionName) {
             this.putPathParameter("versionName", versionName);

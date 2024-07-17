@@ -57,7 +57,7 @@ public class ListTableGenerationsResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * The result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -97,7 +97,7 @@ public class ListTableGenerationsResponseBody extends TeaModel {
             private Long generationId; 
 
             /**
-             * generationId
+             * The ID of the full index version.
              */
             public Builder generationId(Long generationId) {
                 this.generationId = generationId;

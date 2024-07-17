@@ -85,7 +85,7 @@ public class BodyValue extends TeaModel {
         private Boolean pauseRuntime; 
 
         /**
-         * pauseAll.
+         * Specifies whether to suspend all pushes.
          */
         public Builder pauseAll(Boolean pauseAll) {
             this.pauseAll = pauseAll;
@@ -93,7 +93,7 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * pauseIndex.
+         * Specifies whether to suspend the push for the new full index version.
          */
         public Builder pauseIndex(Boolean pauseIndex) {
             this.pauseIndex = pauseIndex;
@@ -101,7 +101,7 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * pauseIndexBatch.
+         * Specifies whether to suspend the push for the incremental indexes.
          */
         public Builder pauseIndexBatch(Boolean pauseIndexBatch) {
             this.pauseIndexBatch = pauseIndexBatch;
@@ -109,7 +109,7 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * pauseBiz.
+         * Specifies whether to suspend the push for the configuration.
          */
         public Builder pauseBiz(Boolean pauseBiz) {
             this.pauseBiz = pauseBiz;
@@ -117,7 +117,7 @@ public class BodyValue extends TeaModel {
         }
 
         /**
-         * pauseRuntime.
+         * Specifies whether to suspend the push for the real-time incremental indexes.
          */
         public Builder pauseRuntime(Boolean pauseRuntime) {
             this.pauseRuntime = pauseRuntime;

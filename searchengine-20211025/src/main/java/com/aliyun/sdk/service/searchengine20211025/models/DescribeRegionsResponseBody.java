@@ -49,7 +49,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * requestId.
+         * id of request
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -121,7 +121,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             private String regionId; 
 
             /**
-             * endpoint.
+             * The endpoint of the region.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -129,7 +129,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * localName.
+             * The name of the region.
              */
             public Builder localName(String localName) {
                 this.localName = localName;
@@ -137,7 +137,36 @@ public class DescribeRegionsResponseBody extends TeaModel {
             }
 
             /**
-             * regionId.
+             * The ID of the region. Valid values:
+             * <p>
+             * 
+             * cn-hangzhou: China (Hangzhou)
+             * 
+             * cn-shanghai: China (Shanghai)
+             * 
+             * cn-qingdao: China (Qingdao)
+             * 
+             * cn-beijing: China (Beijing)
+             * 
+             * cn-zhangjiakou: China (Zhangjiakou)
+             * 
+             * cn-shenzhen: China (Shenzhen)
+             * 
+             * ap-southeast-1: Singapore (Singapore)
+             * 
+             * cn-internal: Internal Center
+             * 
+             * cn-zhangbei-in: Internal Center (Zhangjiakou)
+             * 
+             * us-west-1-in: Internal Center (US)
+             * 
+             * rus-west-1-in: Internal Center (Russia)
+             * 
+             * cn-daily: Daily Environment
+             * 
+             * cn-test: Joint Debugging
+             * 
+             * pre-hangzhou: China (Hangzhou)-Staging
              */
             public Builder regionId(String regionId) {
                 this.regionId = regionId;

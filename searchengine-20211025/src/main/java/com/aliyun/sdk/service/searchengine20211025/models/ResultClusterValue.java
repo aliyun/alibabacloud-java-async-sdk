@@ -49,7 +49,7 @@ public class ResultClusterValue extends TeaModel {
         private Integer mergeParallelNum; 
 
         /**
-         * buildParallelNum.
+         * The maximum number of full indexes that can be concurrently built.
          */
         public Builder buildParallelNum(Integer buildParallelNum) {
             this.buildParallelNum = buildParallelNum;
@@ -57,7 +57,7 @@ public class ResultClusterValue extends TeaModel {
         }
 
         /**
-         * mergeParallelNum.
+         * The maximum number of full indexes that can be concurrently merged.
          */
         public Builder mergeParallelNum(Integer mergeParallelNum) {
             this.mergeParallelNum = mergeParallelNum;

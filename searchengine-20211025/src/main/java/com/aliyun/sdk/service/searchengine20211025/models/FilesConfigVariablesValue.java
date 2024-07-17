@@ -85,7 +85,7 @@ public class FilesConfigVariablesValue extends TeaModel {
         private String value; 
 
         /**
-         * description.
+         * The description of the variable.
          */
         public Builder description(String description) {
             this.description = description;
@@ -93,7 +93,7 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * disableModify.
+         * Specifies whether the variable is not allowed to be modified.
          */
         public Builder disableModify(Boolean disableModify) {
             this.disableModify = disableModify;
@@ -101,7 +101,7 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * isModify.
+         * Specifies whether the variable is modified.
          */
         public Builder isModify(Boolean isModify) {
             this.isModify = isModify;
@@ -109,7 +109,7 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * type.
+         * The variable type. Valid values: NORMAL: common variable. FUNCTION: function variable.
          */
         public Builder type(String type) {
             this.type = type;
@@ -117,7 +117,7 @@ public class FilesConfigVariablesValue extends TeaModel {
         }
 
         /**
-         * value.
+         * The variable value.
          */
         public Builder value(String value) {
             this.value = value;

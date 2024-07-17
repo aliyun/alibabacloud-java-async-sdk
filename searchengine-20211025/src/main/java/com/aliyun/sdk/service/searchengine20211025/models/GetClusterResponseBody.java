@@ -57,7 +57,7 @@ public class GetClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The list of the cluster details.
+         * The clusters.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -121,7 +121,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the node.
+             * The name of the Searcher worker.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -202,7 +202,7 @@ public class GetClusterResponseBody extends TeaModel {
             private Integer partition; 
 
             /**
-             * The name of the node.
+             * The name of the QRS worker.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -391,7 +391,7 @@ public class GetClusterResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * config.
+             * The configuration information.
              */
             public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
                 this.config = config;
@@ -407,7 +407,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -431,7 +431,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the data node.
+             * The specifications of Searcher workers.
              */
             public Builder dataNode(DataNode dataNode) {
                 this.dataNode = dataNode;
@@ -463,7 +463,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster.
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -471,7 +471,7 @@ public class GetClusterResponseBody extends TeaModel {
             }
 
             /**
-             * The specifications of the query node.
+             * The specifications of Query Result Searcher (QRS) workers.
              */
             public Builder queryNode(QueryNode queryNode) {
                 this.queryNode = queryNode;

@@ -57,7 +57,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
         }
 
         /**
-         * The result set
+         * The result set.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -121,7 +121,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The description of the cluster
+             * The description of the cluster.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -129,7 +129,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the cluster
+             * The cluster ID.
              */
             public Builder id(Long id) {
                 this.id = id;
@@ -137,7 +137,7 @@ public class ListClusterNamesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the cluster
+             * The cluster name.
              */
             public Builder name(String name) {
                 this.name = name;

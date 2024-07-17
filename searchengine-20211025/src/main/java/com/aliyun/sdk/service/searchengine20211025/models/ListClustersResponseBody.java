@@ -439,7 +439,7 @@ public class ListClustersResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * config.
+             * The configuration information.
              */
             public Builder config(java.util.Map < String, java.util.Map<String, ?>> config) {
                 this.config = config;
@@ -455,7 +455,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * createTime.
+             * The time when the cluster was created.
              */
             public Builder createTime(String createTime) {
                 this.createTime = createTime;
@@ -559,7 +559,7 @@ public class ListClustersResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the cluster. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
+             * The cluster status. Valid values: running: The cluster is running. starting: The cluster is being started. stopping: The cluster is being stopped. stopped: The cluster is stopped.
              */
             public Builder status(String status) {
                 this.status = status;

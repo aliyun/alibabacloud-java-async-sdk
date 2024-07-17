@@ -57,7 +57,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
         }
 
         /**
-         * The information about the index.
+         * The index information.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -109,7 +109,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String tagLevel; 
 
             /**
-             * The content of the tag.
+             * The tag content.
              */
             public Builder msg(String msg) {
                 this.msg = msg;
@@ -117,7 +117,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The level of the tag.
+             * The tag level.
              */
             public Builder tagLevel(String tagLevel) {
                 this.tagLevel = tagLevel;
@@ -194,7 +194,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * The date when the task was completed.
+             * The time when the task was complete.
              */
             public Builder finishDate(String finishDate) {
                 this.finishDate = finishDate;
@@ -202,7 +202,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The sequence number of the task.
+             * The ordinal number of the task.
              */
             public Builder index(Long index) {
                 this.index = index;
@@ -210,7 +210,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the task.
+             * The task name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -218,7 +218,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the task.
+             * The task status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -387,7 +387,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The field3 field that is passed through when you create a state machine.
+             * The field3 field that was passed when the FSM was created.
              */
             public Builder field3(String field3) {
                 this.field3 = field3;
@@ -395,7 +395,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * fsmId
+             * The ID of the finite state machine (FSM).
              */
             public Builder fsmId(String fsmId) {
                 this.fsmId = fsmId;
@@ -403,7 +403,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether the change is a data source task change or a cluster task change.
+             * The change group type.
              */
             public Builder groupType(String groupType) {
                 this.groupType = groupType;
@@ -411,7 +411,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The task name on the card.
+             * The card name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -419,7 +419,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The overall status of FSM.
+             * The FSM status.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -427,7 +427,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The status tag of the progress bar chart.
+             * The tags of the progress bar.
              */
             public Builder tags(java.util.List < Tags> tags) {
                 this.tags = tags;
@@ -435,7 +435,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The information about the task.
+             * The task information.
              */
             public Builder taskNodes(java.util.List < TaskNodes> taskNodes) {
                 this.taskNodes = taskNodes;
@@ -443,7 +443,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp of the task on the card.
+             * The timestamp of the card.
              */
             public Builder time(String time) {
                 this.time = time;
@@ -451,7 +451,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The type of the task on the card.
+             * The card type.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -459,7 +459,7 @@ public class ListDataSourceTasksResponseBody extends TeaModel {
             }
 
             /**
-             * The user who triggered the finite-state machine (FSM) process.
+             * The user who triggered the generation of the FSM process.
              */
             public Builder user(String user) {
                 this.user = user;

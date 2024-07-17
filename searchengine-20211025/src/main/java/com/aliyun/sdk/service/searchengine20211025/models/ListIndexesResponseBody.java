@@ -49,7 +49,7 @@ public class ListIndexesResponseBody extends TeaModel {
         private java.util.List < Result> result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class ListIndexesResponseBody extends TeaModel {
         }
 
         /**
-         * The index list.
+         * The details of indexes.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -205,7 +205,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String table; 
 
             /**
-             * odps数据源ak
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -213,7 +213,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * odps数据源ak secret
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -221,7 +221,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * oss命名空间
+             * The OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -229,7 +229,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * odps相关
+             * The endpoint of the MaxCompute data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -237,7 +237,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * saro相关
+             * The namespace. This parameter is applicable to the SARO data source used in the intranet of Alibaba Group.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -245,7 +245,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * oss数据源相关
+             * The Object Storage Service (OSS) path.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -253,7 +253,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据分片
+             * The shard name.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -261,7 +261,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * hdfs相关
+             * The file path in the Apsara File Storage for HDFS file system.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -269,7 +269,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * odps数据源项目名称
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -277,7 +277,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * saro、odps相关
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -330,7 +330,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String tableName; 
 
             /**
-             * saro数据源的namespace
+             * The namespace of the SARO data source.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -338,7 +338,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * saro数据表名称
+             * The name of the SARO table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -451,7 +451,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String type; 
 
             /**
-             * 是否开启自动全量
+             * Indicates whether the automatic full indexing feature is enabled.
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -459,7 +459,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * odps 数据源配置
+             * The configuration of MaxCompute data sources.
              */
             public Builder config(Config config) {
                 this.config = config;
@@ -467,7 +467,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 离线部署
+             * The data center in which the data source is deployed.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -475,7 +475,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源名
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -483,7 +483,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据更新资源数
+             * The number of resources used for data update.
              */
             public Builder processPartitionCount(Integer processPartitionCount) {
                 this.processPartitionCount = processPartitionCount;
@@ -491,7 +491,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * saro数据源配置
+             * The configurations of the SARO data source.
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -499,7 +499,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源类型 (odps, swift, saro, oss, unKnow)
+             * The type of the data source. Valid values: odps, swift, saro, oss, and unKnow.
              */
             public Builder type(String type) {
                 this.type = type;
@@ -576,7 +576,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private String name; 
 
             /**
-             * The name of the directory for the index.
+             * The full path of the file.
              */
             public Builder fullPathName(String fullPathName) {
                 this.fullPathName = fullPathName;
@@ -584,7 +584,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether a directory exists.
+             * Indicates whether the file is a directory.
              */
             public Builder isDir(Boolean isDir) {
                 this.isDir = isDir;
@@ -592,7 +592,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * Indicates whether it is a template.
+             * Indicates whether the file is a template.
              */
             public Builder isTemplate(Boolean isTemplate) {
                 this.isTemplate = isTemplate;
@@ -600,7 +600,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the file.
+             * The file name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -701,7 +701,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private Integer versionId; 
 
             /**
-             * The description.
+             * The description of the index version.
              */
             public Builder desc(String desc) {
                 this.desc = desc;
@@ -709,7 +709,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of file names.
+             * The files.
              */
             public Builder files(java.util.List < Files> files) {
                 this.files = files;
@@ -717,7 +717,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the version.
+             * The name of the index version.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -725,7 +725,16 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The state of the version. Valid values: drafting, used, unused and trash. drafting indicates that the version is a draft, used indicates that the version is used online, unused indicates that the version is not used, and trash indicates that the version is being deleted.
+             * The status of the index version. Valid values:
+             * <p>
+             * 
+             * *   NEW: The index version is created.
+             * *   PUBLISH: The index version is normal.
+             * *   IN_USE: The index version is in use.
+             * *   NOT_USE: The index version is not used.
+             * *   STOP_USE: The index version is being stopped.
+             * *   RESTORE_USE: The index version is being restored.
+             * *   FAIL: The index version failed to be created.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -733,7 +742,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The time when the version was updated.
+             * The time when the index version was updated.
              */
             public Builder updateTime(Long updateTime) {
                 this.updateTime = updateTime;
@@ -741,7 +750,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the version. The value of this parameter is null for the edit version.
+             * The ID of the index version. If the index version is modified, the returned value is null.
              */
             public Builder versionId(Integer versionId) {
                 this.versionId = versionId;
@@ -926,7 +935,7 @@ public class ListIndexesResponseBody extends TeaModel {
             private java.util.List < Versions> versions; 
 
             /**
-             * schema JSON
+             * The index schema, which is a JSON string.
              */
             public Builder content(String content) {
                 this.content = content;
@@ -934,7 +943,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The data source.
+             * The name of the data source.
              */
             public Builder dataSource(String dataSource) {
                 this.dataSource = dataSource;
@@ -942,7 +951,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据源相关信息
+             * The information about the data source.
              */
             public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
                 this.dataSourceInfo = dataSourceInfo;
@@ -950,7 +959,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 备注
+             * The description.
              */
             public Builder description(String description) {
                 this.description = description;
@@ -958,7 +967,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the data center where the data source is deployed.
+             * The deployment name of the index.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -966,7 +975,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 全量切换时间
+             * The time when full data in the index was last updated.
              */
             public Builder fullUpdateTime(String fullUpdateTime) {
                 this.fullUpdateTime = fullUpdateTime;
@@ -974,7 +983,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 全量版本  即：索引版本
+             * The full version of the index.
              */
             public Builder fullVersion(Long fullVersion) {
                 this.fullVersion = fullVersion;
@@ -982,7 +991,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 增量更新时间
+             * The time when incremental data in the index was last updated.
              */
             public Builder incUpdateTime(String incUpdateTime) {
                 this.incUpdateTime = incUpdateTime;
@@ -990,7 +999,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 索引大小
+             * The index size.
              */
             public Builder indexSize(Long indexSize) {
                 this.indexSize = indexSize;
@@ -998,7 +1007,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * NEW, PUBLISH
+             * The index ststus. Valid values: NEW and PUBLISH.
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -1006,7 +1015,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The name of the index.
+             * The index name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -1014,7 +1023,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * 数据分片
+             * The number of shards.
              */
             public Builder partition(Integer partition) {
                 this.partition = partition;
@@ -1022,7 +1031,7 @@ public class ListIndexesResponseBody extends TeaModel {
             }
 
             /**
-             * The list of version information.
+             * The index versions.
              */
             public Builder versions(java.util.List < Versions> versions) {
                 this.versions = versions;

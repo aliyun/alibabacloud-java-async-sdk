@@ -169,7 +169,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             private Long timestamp; 
 
             /**
-             * buildDeployId
+             * The ID of the offline deployment.
              */
             public Builder buildDeployId(Integer buildDeployId) {
                 this.buildDeployId = buildDeployId;
@@ -177,7 +177,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The time to start index building.
+             * The timestamp that was generated when the index building was started.
              */
             public Builder createTime(Long createTime) {
                 this.createTime = createTime;
@@ -185,7 +185,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The directory where the index file created by using the dump table is saved.
+             * The path of the dumped index in the Apsara File Storage for HDFS file system.
              */
             public Builder dataDumpRoot(String dataDumpRoot) {
                 this.dataDumpRoot = dataDumpRoot;
@@ -193,7 +193,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The primary key of the generation.
+             * The ID of the full index version.
              */
             public Builder generation(Long generation) {
                 this.generation = generation;
@@ -201,7 +201,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * Key indicates the name of the index. value indicates the number of shards.
+             * The shards of the index version. The value is a key-value pair in which the key indicates the index name and the value indicates the number of shards. The number of value shards.
              */
             public Builder partition(java.util.Map < String, Integer > partition) {
                 this.partition = partition;
@@ -209,7 +209,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The status.
+             * The status of the index version.
              */
             public Builder status(String status) {
                 this.status = status;
@@ -217,7 +217,7 @@ public class ListDateSourceGenerationsResponseBody extends TeaModel {
             }
 
             /**
-             * The timestamp when the offline indexing was initiated.
+             * The start timestamp from which incremental data is retrieved.
              */
             public Builder timestamp(Long timestamp) {
                 this.timestamp = timestamp;

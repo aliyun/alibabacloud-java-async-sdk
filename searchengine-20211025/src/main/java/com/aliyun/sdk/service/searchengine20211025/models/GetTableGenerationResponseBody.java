@@ -57,7 +57,7 @@ public class GetTableGenerationResponseBody extends TeaModel {
         }
 
         /**
-         * result.
+         * The result returned.
          */
         public Builder result(Result result) {
             this.result = result;

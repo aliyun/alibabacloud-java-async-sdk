@@ -161,7 +161,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * autoBuildIndex.
+         * Specifies whether to automatically rebuild the index.
          */
         public Builder autoBuildIndex(Boolean autoBuildIndex) {
             this.putBodyParameter("autoBuildIndex", autoBuildIndex);
@@ -170,7 +170,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * config.
+         * The configuration information.
          */
         public Builder config(Config config) {
             this.putBodyParameter("config", config);
@@ -179,7 +179,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * domain.
+         * The data center in which the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -188,7 +188,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * name.
+         * The name of the data source.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -197,7 +197,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * saroConfig.
+         * The configurations of the SARO data source.
          */
         public Builder saroConfig(SaroConfig saroConfig) {
             this.putBodyParameter("saroConfig", saroConfig);
@@ -206,7 +206,7 @@ public class CreateDataSourceRequest extends Request {
         }
 
         /**
-         * type.
+         * The type of the data source. Valid values: odps, oss, and swift.
          */
         public Builder type(String type) {
             this.putBodyParameter("type", type);
@@ -365,7 +365,7 @@ public class CreateDataSourceRequest extends Request {
             private String table; 
 
             /**
-             * accessKey.
+             * The AccessKey ID of the MaxCompute data source.
              */
             public Builder accessKey(String accessKey) {
                 this.accessKey = accessKey;
@@ -373,7 +373,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * accessSecret.
+             * The AccessKey secret of the MaxCompute data source.
              */
             public Builder accessSecret(String accessSecret) {
                 this.accessSecret = accessSecret;
@@ -381,7 +381,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * bucket.
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -389,7 +389,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * endpoint.
+             * The endpoint of the MaxCompute or Object Storage Service (OSS) data source.
              */
             public Builder endpoint(String endpoint) {
                 this.endpoint = endpoint;
@@ -397,7 +397,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -405,7 +405,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The path of the OSS object.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -413,7 +413,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * partition.
+             * The partition in the MaxCompute table.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -421,7 +421,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * path.
+             * The file path in the Apsara File Storage for HDFS file system.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -429,7 +429,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * project.
+             * The name of the MaxCompute project that is used as the data source.
              */
             public Builder project(String project) {
                 this.project = project;
@@ -437,7 +437,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * table.
+             * The name of the MaxCompute table that is used as the data source.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -490,7 +490,7 @@ public class CreateDataSourceRequest extends Request {
             private String tableName; 
 
             /**
-             * namespace.
+             * The namespace of the SARO data source.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -498,7 +498,7 @@ public class CreateDataSourceRequest extends Request {
             }
 
             /**
-             * tableName.
+             * The name of the SARO table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;

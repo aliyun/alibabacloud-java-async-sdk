@@ -109,7 +109,7 @@ public class ListLogsResponseBody extends TeaModel {
             private Integer totalCount; 
 
             /**
-             * ListResult
+             * The result.
              */
             public Builder result(java.util.List < ? > result) {
                 this.result = result;
@@ -117,7 +117,7 @@ public class ListLogsResponseBody extends TeaModel {
             }
 
             /**
-             * totalCount.
+             * The total number of entries returned
              */
             public Builder totalCount(Integer totalCount) {
                 this.totalCount = totalCount;

@@ -111,7 +111,7 @@ public class ReindexRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +120,7 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * tableName.
+         * The name of the table.
          */
         public Builder tableName(String tableName) {
             this.putPathParameter("tableName", tableName);
@@ -129,7 +129,7 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * dataTimeSec.
+         * The timestamp in seconds. The value must be of the INTEGER type. This parameter is required if you specify an API data source.
          */
         public Builder dataTimeSec(Integer dataTimeSec) {
             this.putBodyParameter("dataTimeSec", dataTimeSec);
@@ -138,7 +138,7 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * ossDataPath.
+         * oss data path
          */
         public Builder ossDataPath(String ossDataPath) {
             this.putBodyParameter("ossDataPath", ossDataPath);
@@ -147,7 +147,7 @@ public class ReindexRequest extends Request {
         }
 
         /**
-         * partition.
+         * The partition in the MaxCompute table. This parameter is required if type is set to odps.
          */
         public Builder partition(String partition) {
             this.putBodyParameter("partition", partition);

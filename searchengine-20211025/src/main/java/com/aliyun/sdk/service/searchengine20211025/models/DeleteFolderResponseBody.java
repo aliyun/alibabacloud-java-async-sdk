@@ -109,7 +109,7 @@ public class DeleteFolderResponseBody extends TeaModel {
             private java.util.Map < String, String > result; 
 
             /**
-             * id of request
+             * The request ID.
              */
             public Builder requestId(String requestId) {
                 this.requestId = requestId;
@@ -117,7 +117,7 @@ public class DeleteFolderResponseBody extends TeaModel {
             }
 
             /**
-             * Response<Map<String, String>>
+             * The result
              */
             public Builder result(java.util.Map < String, String > result) {
                 this.result = result;

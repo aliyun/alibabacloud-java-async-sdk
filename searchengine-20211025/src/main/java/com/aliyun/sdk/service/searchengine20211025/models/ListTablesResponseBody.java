@@ -57,7 +57,7 @@ public class ListTablesResponseBody extends TeaModel {
         }
 
         /**
-         * List
+         * The result.
          */
         public Builder result(java.util.List < Result> result) {
             this.result = result;
@@ -121,7 +121,7 @@ public class ListTablesResponseBody extends TeaModel {
             private String status; 
 
             /**
-             * indexStatus.
+             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
              */
             public Builder indexStatus(String indexStatus) {
                 this.indexStatus = indexStatus;
@@ -129,7 +129,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * name.
+             * The index name.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -137,7 +137,7 @@ public class ListTablesResponseBody extends TeaModel {
             }
 
             /**
-             * status.
+             * The state of the index table. Valid values: NEW, PUBLISH, IN_USE, NOT_USE, STOP_USE, RESTORE_USE, and FAIL. After an index is created in an OpenSearch Retrieval Engine Edition instance, the index enters the IN_USE state. If the first full index fails to be created in an OpenSearch Vector Search Edition instance of the new version, the index is in the FAIL state.
              */
             public Builder status(String status) {
                 this.status = status;

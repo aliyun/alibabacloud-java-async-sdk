@@ -57,7 +57,7 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
         }
 
         /**
-         * The result
+         * The result.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -97,7 +97,7 @@ public class GetAdvanceConfigFileResponseBody extends TeaModel {
             private String content; 
 
             /**
-             * The content of the file
+             * The file content.
              */
             public Builder content(String content) {
                 this.content = content;

@@ -68,7 +68,7 @@ public class ModifyPublicUrlIpListRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +77,7 @@ public class ModifyPublicUrlIpListRequest extends Request {
         }
 
         /**
-         * body
+         * The request parameters.
          */
         public Builder body(java.util.Map < String, String > body) {
             this.putBodyParameter("body", body);

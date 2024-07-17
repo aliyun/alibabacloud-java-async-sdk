@@ -67,7 +67,7 @@ public class GetDataSourceRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -76,7 +76,7 @@ public class GetDataSourceRequest extends Request {
         }
 
         /**
-         * The name of the data source
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);

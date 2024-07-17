@@ -84,7 +84,7 @@ public class ListOnlineConfigsRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class ListOnlineConfigsRequest extends Request {
         }
 
         /**
-         * The name of the node
+         * The name of the Query Result Searcher (QRS) worker.
          */
         public Builder nodeName(String nodeName) {
             this.putPathParameter("nodeName", nodeName);

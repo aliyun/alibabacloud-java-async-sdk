@@ -111,7 +111,7 @@ public class CreateConfigFileRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -120,7 +120,7 @@ public class CreateConfigFileRequest extends Request {
         }
 
         /**
-         * configName.
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);
@@ -129,7 +129,7 @@ public class CreateConfigFileRequest extends Request {
         }
 
         /**
-         * fileName.
+         * The name of the directory.
          */
         public Builder fileName(String fileName) {
             this.putBodyParameter("fileName", fileName);
@@ -138,7 +138,7 @@ public class CreateConfigFileRequest extends Request {
         }
 
         /**
-         * ossPath.
+         * The Object Storage Service (OSS) URL of the file.
          */
         public Builder ossPath(String ossPath) {
             this.putBodyParameter("ossPath", ossPath);
@@ -147,7 +147,7 @@ public class CreateConfigFileRequest extends Request {
         }
 
         /**
-         * parentFullPath.
+         * The path of the parent directory.
          */
         public Builder parentFullPath(String parentFullPath) {
             this.putBodyParameter("parentFullPath", parentFullPath);

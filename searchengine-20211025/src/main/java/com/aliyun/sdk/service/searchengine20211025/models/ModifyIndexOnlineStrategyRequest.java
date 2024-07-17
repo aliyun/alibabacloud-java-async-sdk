@@ -113,7 +113,7 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -122,7 +122,7 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -131,7 +131,7 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * deployName.
+         * The data center in which the data source is deployed.
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);
@@ -140,7 +140,7 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -149,7 +149,7 @@ public class ModifyIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * changeRate.
+         * The index change rate.
          */
         public Builder changeRate(Integer changeRate) {
             this.putBodyParameter("changeRate", changeRate);

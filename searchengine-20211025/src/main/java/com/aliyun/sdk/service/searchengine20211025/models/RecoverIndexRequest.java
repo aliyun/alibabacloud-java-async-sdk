@@ -110,7 +110,7 @@ public class RecoverIndexRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +119,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The ID of the index deployed in offline mode.
+         * The deployment ID of the data source.
          */
         public Builder buildDeployId(Integer buildDeployId) {
             this.putBodyParameter("buildDeployId", buildDeployId);
@@ -128,7 +128,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The name of the data source
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putBodyParameter("dataSourceName", dataSourceName);
@@ -137,7 +137,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The primary key of generation.
+         * The ID of the full index version.
          */
         public Builder generation(String generation) {
             this.putBodyParameter("generation", generation);
@@ -146,7 +146,7 @@ public class RecoverIndexRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putBodyParameter("indexName", indexName);

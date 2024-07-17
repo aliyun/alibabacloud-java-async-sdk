@@ -57,7 +57,7 @@ public class ModifyClusterDescResponseBody extends TeaModel {
         }
 
         /**
-         * Map
+         * The result.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

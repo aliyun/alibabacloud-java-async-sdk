@@ -84,7 +84,7 @@ public class DeleteSqlInstanceRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class DeleteSqlInstanceRequest extends Request {
         }
 
         /**
-         * database.
+         * database name
          */
         public Builder database(String database) {
             this.putPathParameter("database", database);
@@ -102,7 +102,7 @@ public class DeleteSqlInstanceRequest extends Request {
         }
 
         /**
-         * sqlInstanceId.
+         * sqlInstanceId
          */
         public Builder sqlInstanceId(Long sqlInstanceId) {
             this.putPathParameter("sqlInstanceId", sqlInstanceId);

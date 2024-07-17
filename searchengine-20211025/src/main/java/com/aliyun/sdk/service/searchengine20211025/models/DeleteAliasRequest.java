@@ -69,7 +69,7 @@ public class DeleteAliasRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class DeleteAliasRequest extends Request {
         }
 
         /**
-         * alias.
+         * alias
          */
         public Builder alias(String alias) {
             this.putPathParameter("alias", alias);

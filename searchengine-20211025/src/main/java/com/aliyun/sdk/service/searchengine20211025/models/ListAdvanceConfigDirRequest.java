@@ -84,7 +84,7 @@ public class ListAdvanceConfigDirRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -93,7 +93,7 @@ public class ListAdvanceConfigDirRequest extends Request {
         }
 
         /**
-         * The name of the configuration
+         * The configuration name.
          */
         public Builder configName(String configName) {
             this.putPathParameter("configName", configName);

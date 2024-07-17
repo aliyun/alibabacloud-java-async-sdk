@@ -110,7 +110,7 @@ public class ListVectorQueryResultRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -119,7 +119,7 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * address.
+         * The instance endpoint.
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -128,7 +128,7 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.Map < String, ? > body) {
             this.putBodyParameter("body", body);
@@ -137,7 +137,7 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * queryType.
+         * The query type. Valid values: vector, primary_key, and vector_text.
          */
         public Builder queryType(String queryType) {
             this.putQueryParameter("queryType", queryType);
@@ -146,7 +146,7 @@ public class ListVectorQueryResultRequest extends Request {
         }
 
         /**
-         * vectorQueryType.
+         * The vector query type. Valid values: vector, image, and text.
          */
         public Builder vectorQueryType(String vectorQueryType) {
             this.putQueryParameter("vectorQueryType", vectorQueryType);

@@ -49,7 +49,7 @@ public class CreateClusterResponseBody extends TeaModel {
         private java.util.Map < String, ? > result; 
 
         /**
-         * id of request
+         * The request ID.
          */
         public Builder requestId(String requestId) {
             this.requestId = requestId;
@@ -57,7 +57,7 @@ public class CreateClusterResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned
+         * The result.
          */
         public Builder result(java.util.Map < String, ? > result) {
             this.result = result;

@@ -98,7 +98,7 @@ public class DeleteIndexRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -107,7 +107,7 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * The name of the index
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);
@@ -116,7 +116,7 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * The data source
+         * The data source.
          */
         public Builder dataSource(String dataSource) {
             this.putQueryParameter("dataSource", dataSource);
@@ -125,7 +125,7 @@ public class DeleteIndexRequest extends Request {
         }
 
         /**
-         * deleteDataSource.
+         * Specifies whether to delete the data source.
          */
         public Builder deleteDataSource(Boolean deleteDataSource) {
             this.putQueryParameter("deleteDataSource", deleteDataSource);

@@ -109,7 +109,7 @@ public class VariablesValue extends TeaModel {
         private FuncValue funcValue; 
 
         /**
-         * Specifies whether the variable cannot be modified.
+         * Specifies whether the variable is not allowed to be modified.
          */
         public Builder disableModify(Boolean disableModify) {
             this.disableModify = disableModify;
@@ -125,7 +125,7 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The value of the variable.
+         * The variable value.
          */
         public Builder value(String value) {
             this.value = value;
@@ -133,7 +133,7 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The description about the variable.
+         * The description of the variable.
          */
         public Builder description(String description) {
             this.description = description;
@@ -141,7 +141,7 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The value of the template.
+         * The template value of the variable.
          */
         public Builder templateValue(String templateValue) {
             this.templateValue = templateValue;
@@ -149,11 +149,11 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The type of the variable. Valid values:
+         * The variable type. Valid values:
          * <p>
          * 
-         * *   NORMAL: a normal variable
-         * *   FUNCTION: a function variable
+         * *   NORMAL: common variable
+         * *   FUNCTION: function variable
          */
         public Builder type(String type) {
             this.type = type;
@@ -161,7 +161,7 @@ public class VariablesValue extends TeaModel {
         }
 
         /**
-         * The function variable.
+         * The function variables.
          */
         public Builder funcValue(FuncValue funcValue) {
             this.funcValue = funcValue;
@@ -213,7 +213,7 @@ public class VariablesValue extends TeaModel {
             private String template; 
 
             /**
-             * The class name.
+             * The class name of the function variable.
              */
             public Builder funcClassName(String funcClassName) {
                 this.funcClassName = funcClassName;
@@ -221,7 +221,7 @@ public class VariablesValue extends TeaModel {
             }
 
             /**
-             * The template of the variable.
+             * The template of the function variable.
              */
             public Builder template(String template) {
                 this.template = template;

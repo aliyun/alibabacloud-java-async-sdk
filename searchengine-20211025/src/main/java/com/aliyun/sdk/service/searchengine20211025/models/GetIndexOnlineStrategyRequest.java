@@ -99,7 +99,7 @@ public class GetIndexOnlineStrategyRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -108,7 +108,7 @@ public class GetIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * dataSourceName.
+         * The name of the data source.
          */
         public Builder dataSourceName(String dataSourceName) {
             this.putPathParameter("dataSourceName", dataSourceName);
@@ -117,7 +117,7 @@ public class GetIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * deployName.
+         * The data center in which the data source is deployed.
          */
         public Builder deployName(String deployName) {
             this.putPathParameter("deployName", deployName);
@@ -126,7 +126,7 @@ public class GetIndexOnlineStrategyRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The index name.
          */
         public Builder indexName(String indexName) {
             this.putPathParameter("indexName", indexName);

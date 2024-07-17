@@ -57,7 +57,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
         }
 
         /**
-         * The result returned
+         * The results returned.
          */
         public Builder result(Result result) {
             this.result = result;
@@ -217,7 +217,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             private String updateTime; 
 
             /**
-             * The billing method
+             * The billing method.
              */
             public Builder chargeType(String chargeType) {
                 this.chargeType = chargeType;
@@ -225,7 +225,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The product code
+             * The commodity code of the instance.
              */
             public Builder commodityCode(String commodityCode) {
                 this.commodityCode = commodityCode;
@@ -265,7 +265,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource
+             * The instance ID.
              */
             public Builder instanceId(String instanceId) {
                 this.instanceId = instanceId;
@@ -281,7 +281,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The ID of the resource group
+             * The ID of the resource group.
              */
             public Builder resourceGroupId(String resourceGroupId) {
                 this.resourceGroupId = resourceGroupId;
@@ -289,7 +289,7 @@ public class UpdateInstanceResponseBody extends TeaModel {
             }
 
             /**
-             * The status of the instance
+             * The instance status.
              */
             public Builder status(String status) {
                 this.status = status;

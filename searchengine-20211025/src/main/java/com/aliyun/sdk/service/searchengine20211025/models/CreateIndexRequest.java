@@ -194,7 +194,7 @@ public class CreateIndexRequest extends Request {
         } 
 
         /**
-         * The ID of the instance.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -203,7 +203,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * buildParallelNum.
+         * The maximum number of full indexes that can be concurrently built.
          */
         public Builder buildParallelNum(Integer buildParallelNum) {
             this.putBodyParameter("buildParallelNum", buildParallelNum);
@@ -212,7 +212,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The content of the index.
+         * The index schema.
          */
         public Builder content(String content) {
             this.putBodyParameter("content", content);
@@ -221,7 +221,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * Optional. The data source, which can be MaxCompute, Message Service (MNS), Realtime Compute for Apache Flink, or StreamCompute.
+         * The name of the data source.
          */
         public Builder dataSource(String dataSource) {
             this.putBodyParameter("dataSource", dataSource);
@@ -230,7 +230,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The information about the data source, which is required for the new version of OpenSearch Vector Search Edition.
+         * The information about the data source. This parameter is required for an OpenSearch Vector Search Edition instance of the new version.
          */
         public Builder dataSourceInfo(DataSourceInfo dataSourceInfo) {
             this.putBodyParameter("dataSourceInfo", dataSourceInfo);
@@ -239,7 +239,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data center in which the data source resides.
+         * The data center in which the data source is deployed.
          */
         public Builder domain(String domain) {
             this.putBodyParameter("domain", domain);
@@ -248,7 +248,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The extended configurations of the field. Keys such as vector and embedding are included. Vector indicates the vector field. Embedding indicates the field that requires embedding.
+         * The extended content of the field configuration. key specifies the vector field and the field that requires embedding.
          */
         public Builder extend(java.util.Map < String, ? > extend) {
             this.putBodyParameter("extend", extend);
@@ -257,7 +257,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * mergeParallelNum.
+         * The maximum number of full indexes that can be concurrently merged.
          */
         public Builder mergeParallelNum(Integer mergeParallelNum) {
             this.putBodyParameter("mergeParallelNum", mergeParallelNum);
@@ -266,7 +266,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The name of the index.
+         * The index name.
          */
         public Builder name(String name) {
             this.putBodyParameter("name", name);
@@ -275,7 +275,7 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * The data partition.
+         * The number of data shards.
          */
         public Builder partition(Integer partition) {
             this.putBodyParameter("partition", partition);
@@ -284,7 +284,11 @@ public class CreateIndexRequest extends Request {
         }
 
         /**
-         * dryRun.
+         * Specifies whether to perform only a dry run, without performing the actual request. The system only checks the validity of the data source. Valid values:
+         * <p>
+         * 
+         * *   true
+         * *   false
          */
         public Builder dryRun(Boolean dryRun) {
             this.putQueryParameter("dryRun", dryRun);
@@ -450,7 +454,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * oss bucket
+             * The name of the OSS bucket.
              */
             public Builder bucket(String bucket) {
                 this.bucket = bucket;
@@ -466,7 +470,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * namespace.
+             * The namespace name.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -474,7 +478,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * ossPath.
+             * The path of the OSS object.
              */
             public Builder ossPath(String ossPath) {
                 this.ossPath = ossPath;
@@ -482,7 +486,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The data partition. This parameter is required if type is set to odps.
+             * The partition in the MaxCompute table. This parameter is required if type is set to odps.
              */
             public Builder partition(String partition) {
                 this.partition = partition;
@@ -490,7 +494,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * path.
+             * The path of the Apsara File Storage for HDFS data source.
              */
             public Builder path(String path) {
                 this.path = path;
@@ -506,7 +510,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the table.
+             * The table name.
              */
             public Builder table(String table) {
                 this.table = table;
@@ -559,7 +563,7 @@ public class CreateIndexRequest extends Request {
             private String tableName; 
 
             /**
-             * namespace.
+             * The namespace of the SARO data source.
              */
             public Builder namespace(String namespace) {
                 this.namespace = namespace;
@@ -567,7 +571,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * tableName.
+             * The name of the SARO table.
              */
             public Builder tableName(String tableName) {
                 this.tableName = tableName;
@@ -704,7 +708,7 @@ public class CreateIndexRequest extends Request {
             private String type; 
 
             /**
-             * Specifies whether to enable the automatic full indexing feature.
+             * Specifies whether to enable automatic full indexing.
              */
             public Builder autoBuildIndex(Boolean autoBuildIndex) {
                 this.autoBuildIndex = autoBuildIndex;
@@ -720,7 +724,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * dataTimeSec.
+             * The start timestamp from which incremental data is retrieved.
              */
             public Builder dataTimeSec(Integer dataTimeSec) {
                 this.dataTimeSec = dataTimeSec;
@@ -728,7 +732,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The data center where the data source is deployed.
+             * The data center in which the data source is deployed.
              */
             public Builder domain(String domain) {
                 this.domain = domain;
@@ -736,7 +740,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The name of the index.
+             * The name of the data source.
              */
             public Builder name(String name) {
                 this.name = name;
@@ -744,7 +748,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * processParallelNum.
+             * The maximum number of full indexes that can be concurrently processed.
              */
             public Builder processParallelNum(Integer processParallelNum) {
                 this.processParallelNum = processParallelNum;
@@ -760,7 +764,7 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * saroConfig.
+             * The configurations of the SARO data source.
              */
             public Builder saroConfig(SaroConfig saroConfig) {
                 this.saroConfig = saroConfig;
@@ -768,7 +772,13 @@ public class CreateIndexRequest extends Request {
             }
 
             /**
-             * The type of the data source. Valid values: odps, swift, saro, and oss.
+             * The type of the data source. Valid values:
+             * <p>
+             * 
+             * *   odps
+             * *   swift
+             * *   saro
+             * *   oss
              */
             public Builder type(String type) {
                 this.type = type;

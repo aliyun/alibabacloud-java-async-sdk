@@ -69,7 +69,7 @@ public class StopTaskRequest extends Request {
         } 
 
         /**
-         * The ID of the instance
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -78,7 +78,7 @@ public class StopTaskRequest extends Request {
         }
 
         /**
-         * The ID of the device that has stopped
+         * The ID of the finite state machine (FSM).
          */
         public Builder fsmId(String fsmId) {
             this.putPathParameter("fsmId", fsmId);

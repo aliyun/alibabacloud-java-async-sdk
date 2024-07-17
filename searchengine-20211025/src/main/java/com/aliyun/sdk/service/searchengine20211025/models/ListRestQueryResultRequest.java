@@ -96,7 +96,7 @@ public class ListRestQueryResultRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -105,7 +105,7 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * address.
+         * The instance endpoint.
          */
         public Builder address(String address) {
             this.putQueryParameter("address", address);
@@ -114,7 +114,7 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * indexName.
+         * The name of the index table.
          */
         public Builder indexName(String indexName) {
             this.putBodyParameter("indexName", indexName);
@@ -123,7 +123,7 @@ public class ListRestQueryResultRequest extends Request {
         }
 
         /**
-         * query.
+         * The rest query statement.
          */
         public Builder query(java.util.Map < String, ? > query) {
             this.putBodyParameter("query", query);

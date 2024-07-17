@@ -68,7 +68,7 @@ public class ModifyPausePolicyRequest extends Request {
         } 
 
         /**
-         * instanceId.
+         * The instance ID.
          */
         public Builder instanceId(String instanceId) {
             this.putPathParameter("instanceId", instanceId);
@@ -77,7 +77,7 @@ public class ModifyPausePolicyRequest extends Request {
         }
 
         /**
-         * body.
+         * The request body.
          */
         public Builder body(java.util.Map < String, BodyValue > body) {
             this.putBodyParameter("body", body);
