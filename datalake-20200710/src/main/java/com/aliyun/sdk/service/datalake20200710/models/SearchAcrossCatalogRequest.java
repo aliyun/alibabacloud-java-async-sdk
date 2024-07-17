@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAcrossCatalogRequest</p>
  */
 public class SearchAcrossCatalogRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CatalogIds")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatalogIds")
     private java.util.List < String > catalogIds;
 
-    @Body
-    @NameInMap("PageNumber")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageNumber")
     private Long pageNumber;
 
-    @Body
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Long pageSize;
 
-    @Body
-    @NameInMap("SearchText")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchText")
     private String searchText;
 
-    @Body
-    @NameInMap("SearchTypes")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SearchTypes")
     private java.util.List < String > searchTypes;
 
-    @Body
-    @NameInMap("SortCriteria")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("SortCriteria")
     private java.util.List < SortCriterion > sortCriteria;
 
     private SearchAcrossCatalogRequest(Builder builder) {

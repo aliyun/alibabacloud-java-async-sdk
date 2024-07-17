@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,40 +11,40 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageDescriptor</p>
  */
 public class StorageDescriptor extends TeaModel {
-    @NameInMap("BucketCols")
+    @com.aliyun.core.annotation.NameInMap("BucketCols")
     private java.util.List < String > bucketCols;
 
-    @NameInMap("Cols")
+    @com.aliyun.core.annotation.NameInMap("Cols")
     private java.util.List < FieldSchema > cols;
 
-    @NameInMap("Compressed")
+    @com.aliyun.core.annotation.NameInMap("Compressed")
     private Boolean compressed;
 
-    @NameInMap("InputFormat")
+    @com.aliyun.core.annotation.NameInMap("InputFormat")
     private String inputFormat;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("NumBuckets")
+    @com.aliyun.core.annotation.NameInMap("NumBuckets")
     private Integer numBuckets;
 
-    @NameInMap("OutputFormat")
+    @com.aliyun.core.annotation.NameInMap("OutputFormat")
     private String outputFormat;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("SerDeInfo")
+    @com.aliyun.core.annotation.NameInMap("SerDeInfo")
     private SerDeInfo serDeInfo;
 
-    @NameInMap("SkewedInfo")
+    @com.aliyun.core.annotation.NameInMap("SkewedInfo")
     private SkewedInfo skewedInfo;
 
-    @NameInMap("SortCols")
+    @com.aliyun.core.annotation.NameInMap("SortCols")
     private java.util.List < Order > sortCols;
 
-    @NameInMap("StoredAsSubDirectories")
+    @com.aliyun.core.annotation.NameInMap("StoredAsSubDirectories")
     private Boolean storedAsSubDirectories;
 
     private StorageDescriptor(Builder builder) {

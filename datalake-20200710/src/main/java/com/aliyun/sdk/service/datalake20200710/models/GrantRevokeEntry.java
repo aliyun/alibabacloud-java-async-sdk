@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>GrantRevokeEntry</p>
  */
 public class GrantRevokeEntry extends TeaModel {
-    @NameInMap("Accesses")
+    @com.aliyun.core.annotation.NameInMap("Accesses")
     private java.util.List < String > accesses;
 
-    @NameInMap("DelegateAccesses")
+    @com.aliyun.core.annotation.NameInMap("DelegateAccesses")
     private java.util.List < String > delegateAccesses;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("MetaResource")
+    @com.aliyun.core.annotation.NameInMap("MetaResource")
     private MetaResource metaResource;
 
-    @NameInMap("Principal")
+    @com.aliyun.core.annotation.NameInMap("Principal")
     private Principal principal;
 
     private GrantRevokeEntry(Builder builder) {

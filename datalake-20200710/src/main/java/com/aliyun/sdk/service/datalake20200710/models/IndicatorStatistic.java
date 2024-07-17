@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>IndicatorStatistic</p>
  */
 public class IndicatorStatistic extends TeaModel {
-    @NameInMap("Data")
+    @com.aliyun.core.annotation.NameInMap("Data")
     private Long data;
 
-    @NameInMap("Date")
+    @com.aliyun.core.annotation.NameInMap("Date")
     private String date;
 
     private IndicatorStatistic(Builder builder) {

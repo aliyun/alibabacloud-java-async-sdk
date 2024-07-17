@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,28 +11,28 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UpdateTablePartitionColumnStatisticsRequest</p>
  */
 public class UpdateTablePartitionColumnStatisticsRequest extends Request {
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("ColumnStatisticsList")
+    @com.aliyun.core.annotation.NameInMap("ColumnStatisticsList")
     private java.util.List < ColumnStatistics > columnStatisticsList;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("Engine")
+    @com.aliyun.core.annotation.NameInMap("Engine")
     private String engine;
 
-    @NameInMap("IsStatsCompliant")
+    @com.aliyun.core.annotation.NameInMap("IsStatsCompliant")
     private Boolean isStatsCompliant;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("ValidWriteIdList")
+    @com.aliyun.core.annotation.NameInMap("ValidWriteIdList")
     private String validWriteIdList;
 
-    @NameInMap("WriteId")
+    @com.aliyun.core.annotation.NameInMap("WriteId")
     private String writeId;
 
     private UpdateTablePartitionColumnStatisticsRequest(Builder builder) {

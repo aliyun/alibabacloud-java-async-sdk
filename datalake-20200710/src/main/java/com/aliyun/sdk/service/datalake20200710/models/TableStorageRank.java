@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableStorageRank</p>
  */
 public class TableStorageRank extends TeaModel {
-    @NameInMap("DbName")
+    @com.aliyun.core.annotation.NameInMap("DbName")
     private String dbName;
 
-    @NameInMap("Quantity")
+    @com.aliyun.core.annotation.NameInMap("Quantity")
     private Long quantity;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private TableStorageRank(Builder builder) {

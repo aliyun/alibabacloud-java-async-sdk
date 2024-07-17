@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrivilegeResource</p>
  */
 public class PrivilegeResource extends TeaModel {
-    @NameInMap("Access")
+    @com.aliyun.core.annotation.NameInMap("Access")
     private String access;
 
-    @NameInMap("MetaResource")
+    @com.aliyun.core.annotation.NameInMap("MetaResource")
     private MetaResource metaResource;
 
     private PrivilegeResource(Builder builder) {

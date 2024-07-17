@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UnarchiveDetail</p>
  */
 public class UnarchiveDetail extends TeaModel {
-    @NameInMap("ApiCallTimes")
+    @com.aliyun.core.annotation.NameInMap("ApiCallTimes")
     private Long apiCallTimes;
 
-    @NameInMap("Cost")
+    @com.aliyun.core.annotation.NameInMap("Cost")
     private Long cost;
 
-    @NameInMap("StorageSize")
+    @com.aliyun.core.annotation.NameInMap("StorageSize")
     private Long storageSize;
 
-    @NameInMap("StorageType")
+    @com.aliyun.core.annotation.NameInMap("StorageType")
     private String storageType;
 
-    @NameInMap("UnarchiveTaskStatus")
+    @com.aliyun.core.annotation.NameInMap("UnarchiveTaskStatus")
     private String unarchiveTaskStatus;
 
     private UnarchiveDetail(Builder builder) {

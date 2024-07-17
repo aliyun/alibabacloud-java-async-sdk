@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,25 +11,25 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SearchAcrossCatalogResponseBody</p>
  */
 public class SearchAcrossCatalogResponseBody extends TeaModel {
-    @NameInMap("CatalogResult")
+    @com.aliyun.core.annotation.NameInMap("CatalogResult")
     private CatalogResult catalogResult;
 
-    @NameInMap("Code")
+    @com.aliyun.core.annotation.NameInMap("Code")
     private String code;
 
-    @NameInMap("DatabaseResult")
+    @com.aliyun.core.annotation.NameInMap("DatabaseResult")
     private DatabaseResult databaseResult;
 
-    @NameInMap("Message")
+    @com.aliyun.core.annotation.NameInMap("Message")
     private String message;
 
-    @NameInMap("RequestId")
+    @com.aliyun.core.annotation.NameInMap("RequestId")
     private String requestId;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TableResult")
+    @com.aliyun.core.annotation.NameInMap("TableResult")
     private TableResult tableResult;
 
     private SearchAcrossCatalogResponseBody(Builder builder) {
@@ -172,10 +171,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
     } 
 
     public static class Catalogs extends TeaModel {
-        @NameInMap("Catalog")
+        @com.aliyun.core.annotation.NameInMap("Catalog")
         private Catalog catalog;
 
-        @NameInMap("HighLightList")
+        @com.aliyun.core.annotation.NameInMap("HighLightList")
         private java.util.List < HighLight > highLightList;
 
         private Catalogs(Builder builder) {
@@ -233,10 +232,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
 
     }
     public static class CatalogResult extends TeaModel {
-        @NameInMap("Catalogs")
+        @com.aliyun.core.annotation.NameInMap("Catalogs")
         private java.util.List < Catalogs> catalogs;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private CatalogResult(Builder builder) {
@@ -294,10 +293,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
 
     }
     public static class Databases extends TeaModel {
-        @NameInMap("Database")
+        @com.aliyun.core.annotation.NameInMap("Database")
         private Database database;
 
-        @NameInMap("HighLightList")
+        @com.aliyun.core.annotation.NameInMap("HighLightList")
         private java.util.List < HighLight > highLightList;
 
         private Databases(Builder builder) {
@@ -355,10 +354,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
 
     }
     public static class DatabaseResult extends TeaModel {
-        @NameInMap("Databases")
+        @com.aliyun.core.annotation.NameInMap("Databases")
         private java.util.List < Databases> databases;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private DatabaseResult(Builder builder) {
@@ -416,10 +415,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
 
     }
     public static class Tables extends TeaModel {
-        @NameInMap("HighLightList")
+        @com.aliyun.core.annotation.NameInMap("HighLightList")
         private java.util.List < HighLight > highLightList;
 
-        @NameInMap("Table")
+        @com.aliyun.core.annotation.NameInMap("Table")
         private Table table;
 
         private Tables(Builder builder) {
@@ -477,10 +476,10 @@ public class SearchAcrossCatalogResponseBody extends TeaModel {
 
     }
     public static class TableResult extends TeaModel {
-        @NameInMap("Tables")
+        @com.aliyun.core.annotation.NameInMap("Tables")
         private java.util.List < Tables> tables;
 
-        @NameInMap("TotalCount")
+        @com.aliyun.core.annotation.NameInMap("TotalCount")
         private Long totalCount;
 
         private TableResult(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LifecycleTask</p>
  */
 public class LifecycleTask extends TeaModel {
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("LifecycleRule")
+    @com.aliyun.core.annotation.NameInMap("LifecycleRule")
     private LifecycleRule lifecycleRule;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("WorkflowInstance")
+    @com.aliyun.core.annotation.NameInMap("WorkflowInstance")
     private WorkflowInstance workflowInstance;
 
     private LifecycleTask(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,24 +11,24 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ListRoleUsersRequest</p>
  */
 public class ListRoleUsersRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("NextPageToken")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("NextPageToken")
     private String nextPageToken;
 
-    @Query
-    @NameInMap("PageSize")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("PageSize")
     private Integer pageSize;
 
-    @Query
-    @NameInMap("RoleName")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("RoleName")
     private String roleName;
 
-    @Query
-    @NameInMap("UserNamePattern")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("UserNamePattern")
     private String userNamePattern;
 
     private ListRoleUsersRequest(Builder builder) {

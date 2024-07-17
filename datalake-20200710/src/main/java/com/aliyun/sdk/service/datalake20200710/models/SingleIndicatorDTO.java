@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SingleIndicatorDTO</p>
  */
 public class SingleIndicatorDTO extends TeaModel {
-    @NameInMap("DayIncrement")
+    @com.aliyun.core.annotation.NameInMap("DayIncrement")
     private Long dayIncrement;
 
-    @NameInMap("DayOnDay")
+    @com.aliyun.core.annotation.NameInMap("DayOnDay")
     private Double dayOnDay;
 
-    @NameInMap("MonthIncrement")
+    @com.aliyun.core.annotation.NameInMap("MonthIncrement")
     private Long monthIncrement;
 
-    @NameInMap("MonthOnMonth")
+    @com.aliyun.core.annotation.NameInMap("MonthOnMonth")
     private Double monthOnMonth;
 
-    @NameInMap("Total")
+    @com.aliyun.core.annotation.NameInMap("Total")
     private Long total;
 
     private SingleIndicatorDTO(Builder builder) {

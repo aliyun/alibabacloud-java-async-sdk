@@ -3,6 +3,7 @@ package com.aliyun.sdk.service.datalake20200710;
 
 import com.aliyun.core.utils.SdkAutoCloseable;
 import com.aliyun.sdk.service.datalake20200710.models.*;
+import darabonba.core.*;
 import darabonba.core.async.*;
 import darabonba.core.sync.*;
 
@@ -92,6 +93,8 @@ public interface AsyncClient extends SdkAutoCloseable {
 
     CompletableFuture<GetDatabaseResponse> getDatabase(GetDatabaseRequest request);
 
+    CompletableFuture<GetDatabaseProfileResponse> getDatabaseProfile(GetDatabaseProfileRequest request);
+
     CompletableFuture<GetFunctionResponse> getFunction(GetFunctionRequest request);
 
     CompletableFuture<GetLifecycleRuleResponse> getLifecycleRule(GetLifecycleRuleRequest request);
@@ -139,6 +142,8 @@ public interface AsyncClient extends SdkAutoCloseable {
     CompletableFuture<ListPartitionsByExprResponse> listPartitionsByExpr(ListPartitionsByExprRequest request);
 
     CompletableFuture<ListPartitionsByFilterResponse> listPartitionsByFilter(ListPartitionsByFilterRequest request);
+
+    CompletableFuture<ListPartitionsProfileResponse> listPartitionsProfile(ListPartitionsProfileRequest request);
 
     CompletableFuture<ListPermissionsResponse> listPermissions(ListPermissionsRequest request);
 

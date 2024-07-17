@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>AccessRequest</p>
  */
 public class AccessRequest extends Request {
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("Principal")
+    @com.aliyun.core.annotation.NameInMap("Principal")
     private Principal principal;
 
-    @NameInMap("PrivilegeResources")
+    @com.aliyun.core.annotation.NameInMap("PrivilegeResources")
     private java.util.List < PrivilegeResource > privilegeResources;
 
     private AccessRequest(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>ColumnStatisticsObj</p>
  */
 public class ColumnStatisticsObj extends TeaModel {
-    @NameInMap("ColumnName")
+    @com.aliyun.core.annotation.NameInMap("ColumnName")
     private String columnName;
 
-    @NameInMap("ColumnStatisticsData")
+    @com.aliyun.core.annotation.NameInMap("ColumnStatisticsData")
     private ColumnStatisticsData columnStatisticsData;
 
-    @NameInMap("ColumnType")
+    @com.aliyun.core.annotation.NameInMap("ColumnType")
     private String columnType;
 
     private ColumnStatisticsObj(Builder builder) {
@@ -92,10 +91,10 @@ public class ColumnStatisticsObj extends TeaModel {
     } 
 
     public static class ColumnStatisticsData extends TeaModel {
-        @NameInMap("StatisticsData")
+        @com.aliyun.core.annotation.NameInMap("StatisticsData")
         private String statisticsData;
 
-        @NameInMap("StatisticsType")
+        @com.aliyun.core.annotation.NameInMap("StatisticsType")
         private String statisticsType;
 
         private ColumnStatisticsData(Builder builder) {

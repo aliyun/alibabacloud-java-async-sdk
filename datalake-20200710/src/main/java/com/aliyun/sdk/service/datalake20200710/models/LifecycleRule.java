@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,55 +11,55 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LifecycleRule</p>
  */
 public class LifecycleRule extends TeaModel {
-    @NameInMap("ArchiveDays")
+    @com.aliyun.core.annotation.NameInMap("ArchiveDays")
     private Integer archiveDays;
 
-    @NameInMap("BindCount")
+    @com.aliyun.core.annotation.NameInMap("BindCount")
     private Integer bindCount;
 
-    @NameInMap("BizId")
+    @com.aliyun.core.annotation.NameInMap("BizId")
     private String bizId;
 
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("ColdArchiveDays")
+    @com.aliyun.core.annotation.NameInMap("ColdArchiveDays")
     private Integer coldArchiveDays;
 
-    @NameInMap("Config")
+    @com.aliyun.core.annotation.NameInMap("Config")
     private String config;
 
-    @NameInMap("Description")
+    @com.aliyun.core.annotation.NameInMap("Description")
     private String description;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("IaDays")
+    @com.aliyun.core.annotation.NameInMap("IaDays")
     private Integer iaDays;
 
-    @NameInMap("Name")
+    @com.aliyun.core.annotation.NameInMap("Name")
     private String name;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("RuleType")
+    @com.aliyun.core.annotation.NameInMap("RuleType")
     private String ruleType;
 
-    @NameInMap("ScheduleStatus")
+    @com.aliyun.core.annotation.NameInMap("ScheduleStatus")
     private String scheduleStatus;
 
-    @NameInMap("Workflow")
+    @com.aliyun.core.annotation.NameInMap("Workflow")
     private Workflow workflow;
 
-    @NameInMap("WorkflowId")
+    @com.aliyun.core.annotation.NameInMap("WorkflowId")
     private String workflowId;
 
-    @NameInMap("WorkflowInstance")
+    @com.aliyun.core.annotation.NameInMap("WorkflowInstance")
     private WorkflowInstance workflowInstance;
 
     private LifecycleRule(Builder builder) {

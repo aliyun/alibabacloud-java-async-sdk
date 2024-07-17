@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DatabaseResource</p>
  */
 public class DatabaseResource extends TeaModel {
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("DatabaseWildcard")
+    @com.aliyun.core.annotation.NameInMap("DatabaseWildcard")
     private String databaseWildcard;
 
     private DatabaseResource(Builder builder) {

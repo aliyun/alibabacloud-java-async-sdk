@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,31 +11,31 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageFormat</p>
  */
 public class StorageFormat extends TeaModel {
-    @NameInMap("Avro")
+    @com.aliyun.core.annotation.NameInMap("Avro")
     private Long avro;
 
-    @NameInMap("Csv")
+    @com.aliyun.core.annotation.NameInMap("Csv")
     private Long csv;
 
-    @NameInMap("Delta")
+    @com.aliyun.core.annotation.NameInMap("Delta")
     private Long delta;
 
-    @NameInMap("Hudi")
+    @com.aliyun.core.annotation.NameInMap("Hudi")
     private Long hudi;
 
-    @NameInMap("Iceberg")
+    @com.aliyun.core.annotation.NameInMap("Iceberg")
     private Long iceberg;
 
-    @NameInMap("Json")
+    @com.aliyun.core.annotation.NameInMap("Json")
     private Long json;
 
-    @NameInMap("Orc")
+    @com.aliyun.core.annotation.NameInMap("Orc")
     private Long orc;
 
-    @NameInMap("Parquet")
+    @com.aliyun.core.annotation.NameInMap("Parquet")
     private Long parquet;
 
-    @NameInMap("Uncategorized")
+    @com.aliyun.core.annotation.NameInMap("Uncategorized")
     private Long uncategorized;
 
     private StorageFormat(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,17 +11,17 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>DeleteCatalogRequest</p>
  */
 public class DeleteCatalogRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("CatalogId")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String catalogId;
 
-    @Query
-    @NameInMap("IsAsync")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("IsAsync")
     private Boolean isAsync;
 
     private DeleteCatalogRequest(Builder builder) {

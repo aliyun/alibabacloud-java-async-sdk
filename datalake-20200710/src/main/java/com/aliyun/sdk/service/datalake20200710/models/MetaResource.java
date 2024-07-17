@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>MetaResource</p>
  */
 public class MetaResource extends TeaModel {
-    @NameInMap("CatalogResource")
+    @com.aliyun.core.annotation.NameInMap("CatalogResource")
     private CatalogResource catalogResource;
 
-    @NameInMap("ColumnResource")
+    @com.aliyun.core.annotation.NameInMap("ColumnResource")
     private ColumnResource columnResource;
 
-    @NameInMap("DatabaseResource")
+    @com.aliyun.core.annotation.NameInMap("DatabaseResource")
     private DatabaseResource databaseResource;
 
-    @NameInMap("FunctionResource")
+    @com.aliyun.core.annotation.NameInMap("FunctionResource")
     private FunctionResource functionResource;
 
-    @NameInMap("ResourceType")
+    @com.aliyun.core.annotation.NameInMap("ResourceType")
     private String resourceType;
 
-    @NameInMap("TableResource")
+    @com.aliyun.core.annotation.NameInMap("TableResource")
     private TableResource tableResource;
 
     private MetaResource(Builder builder) {

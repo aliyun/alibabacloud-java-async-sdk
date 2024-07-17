@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageSummary</p>
  */
 public class StorageSummary extends TeaModel {
-    @NameInMap("DatabaseNum")
+    @com.aliyun.core.annotation.NameInMap("DatabaseNum")
     private Integer databaseNum;
 
-    @NameInMap("PartitionNum")
+    @com.aliyun.core.annotation.NameInMap("PartitionNum")
     private Integer partitionNum;
 
-    @NameInMap("TableNum")
+    @com.aliyun.core.annotation.NameInMap("TableNum")
     private Integer tableNum;
 
     private StorageSummary(Builder builder) {

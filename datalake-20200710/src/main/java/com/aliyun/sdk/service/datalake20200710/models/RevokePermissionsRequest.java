@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,36 +11,36 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>RevokePermissionsRequest</p>
  */
 public class RevokePermissionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("Accesses")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Accesses")
+    @com.aliyun.core.annotation.Validation(required = true)
     private java.util.List < String > accesses;
 
-    @Body
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @Body
-    @NameInMap("DelegateAccesses")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DelegateAccesses")
     private java.util.List < String > delegateAccesses;
 
-    @Body
-    @NameInMap("MetaResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("MetaResource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private MetaResource metaResource;
 
-    @Body
-    @NameInMap("Principal")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Principal")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Principal principal;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private RevokePermissionsRequest(Builder builder) {

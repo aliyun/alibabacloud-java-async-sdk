@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,32 +11,32 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CreatePartitionRequest</p>
  */
 public class CreatePartitionRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @Body
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @Body
-    @NameInMap("IfNotExists")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("IfNotExists")
     private Boolean ifNotExists;
 
-    @Body
-    @NameInMap("NeedResult")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("NeedResult")
     private Boolean needResult;
 
-    @Body
-    @NameInMap("PartitionInput")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("PartitionInput")
     private PartitionInput partitionInput;
 
-    @Body
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private CreatePartitionRequest(Builder builder) {

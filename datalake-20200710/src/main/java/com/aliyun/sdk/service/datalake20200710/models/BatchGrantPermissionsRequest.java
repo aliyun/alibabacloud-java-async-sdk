@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,21 +11,21 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>BatchGrantPermissionsRequest</p>
  */
 public class BatchGrantPermissionsRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @Body
-    @NameInMap("GrantRevokeEntries")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("GrantRevokeEntries")
     private java.util.List < GrantRevokeEntry > grantRevokeEntries;
 
-    @Body
-    @NameInMap("Type")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("Type")
+    @com.aliyun.core.annotation.Validation(required = true)
     private String type;
 
     private BatchGrantPermissionsRequest(Builder builder) {

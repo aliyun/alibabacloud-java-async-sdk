@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,10 +11,10 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LockStatus</p>
  */
 public class LockStatus extends TeaModel {
-    @NameInMap("LockId")
+    @com.aliyun.core.annotation.NameInMap("LockId")
     private Long lockId;
 
-    @NameInMap("LockState")
+    @com.aliyun.core.annotation.NameInMap("LockState")
     private String lockState;
 
     private LockStatus(Builder builder) {

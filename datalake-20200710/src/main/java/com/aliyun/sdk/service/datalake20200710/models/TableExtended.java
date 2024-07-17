@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,67 +11,67 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>TableExtended</p>
  */
 public class TableExtended extends TeaModel {
-    @NameInMap("Cascade")
+    @com.aliyun.core.annotation.NameInMap("Cascade")
     private Boolean cascade;
 
-    @NameInMap("CreateTime")
+    @com.aliyun.core.annotation.NameInMap("CreateTime")
     private Integer createTime;
 
-    @NameInMap("CreatedBy")
+    @com.aliyun.core.annotation.NameInMap("CreatedBy")
     private String createdBy;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("LastAccessTime")
+    @com.aliyun.core.annotation.NameInMap("LastAccessTime")
     private Integer lastAccessTime;
 
-    @NameInMap("LastAnalyzedTime")
+    @com.aliyun.core.annotation.NameInMap("LastAnalyzedTime")
     private Integer lastAnalyzedTime;
 
-    @NameInMap("Owner")
+    @com.aliyun.core.annotation.NameInMap("Owner")
     private String owner;
 
-    @NameInMap("OwnerType")
+    @com.aliyun.core.annotation.NameInMap("OwnerType")
     private String ownerType;
 
-    @NameInMap("Parameters")
+    @com.aliyun.core.annotation.NameInMap("Parameters")
     private java.util.Map < String, String > parameters;
 
-    @NameInMap("PartitionKeys")
+    @com.aliyun.core.annotation.NameInMap("PartitionKeys")
     private java.util.List < FieldSchema > partitionKeys;
 
-    @NameInMap("Privileges")
+    @com.aliyun.core.annotation.NameInMap("Privileges")
     private Privileges privileges;
 
-    @NameInMap("Retention")
+    @com.aliyun.core.annotation.NameInMap("Retention")
     private Integer retention;
 
-    @NameInMap("RewriteEnabled")
+    @com.aliyun.core.annotation.NameInMap("RewriteEnabled")
     private Boolean rewriteEnabled;
 
-    @NameInMap("Sd")
+    @com.aliyun.core.annotation.NameInMap("Sd")
     private Sd sd;
 
-    @NameInMap("TableFormat")
+    @com.aliyun.core.annotation.NameInMap("TableFormat")
     private String tableFormat;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
-    @NameInMap("TableType")
+    @com.aliyun.core.annotation.NameInMap("TableType")
     private String tableType;
 
-    @NameInMap("Temporary")
+    @com.aliyun.core.annotation.NameInMap("Temporary")
     private Boolean temporary;
 
-    @NameInMap("UpdateTime")
+    @com.aliyun.core.annotation.NameInMap("UpdateTime")
     private Integer updateTime;
 
-    @NameInMap("ViewExpandedText")
+    @com.aliyun.core.annotation.NameInMap("ViewExpandedText")
     private String viewExpandedText;
 
-    @NameInMap("ViewOriginalText")
+    @com.aliyun.core.annotation.NameInMap("ViewOriginalText")
     private String viewOriginalText;
 
     private TableExtended(Builder builder) {
@@ -452,13 +451,13 @@ public class TableExtended extends TeaModel {
     } 
 
     public static class Privileges extends TeaModel {
-        @NameInMap("RolePrivileges")
+        @com.aliyun.core.annotation.NameInMap("RolePrivileges")
         private java.util.Map < String, java.util.List<TableExtendedPrivilegesRolePrivilegesValue>> rolePrivileges;
 
-        @NameInMap("UserPrivileges")
+        @com.aliyun.core.annotation.NameInMap("UserPrivileges")
         private java.util.Map < String, java.util.List<TableExtendedPrivilegesUserPrivilegesValue>> userPrivileges;
 
-        @NameInMap("groupPrivileges")
+        @com.aliyun.core.annotation.NameInMap("groupPrivileges")
         private java.util.Map < String, java.util.List<TableExtendedPrivilegesGroupPrivilegesValue>> groupPrivileges;
 
         private Privileges(Builder builder) {
@@ -533,13 +532,13 @@ public class TableExtended extends TeaModel {
 
     }
     public static class SerDeInfo extends TeaModel {
-        @NameInMap("Name")
+        @com.aliyun.core.annotation.NameInMap("Name")
         private String name;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, String > parameters;
 
-        @NameInMap("SerializationLib")
+        @com.aliyun.core.annotation.NameInMap("SerializationLib")
         private String serializationLib;
 
         private SerDeInfo(Builder builder) {
@@ -614,13 +613,13 @@ public class TableExtended extends TeaModel {
 
     }
     public static class SkewedInfo extends TeaModel {
-        @NameInMap("SkewedColNames")
+        @com.aliyun.core.annotation.NameInMap("SkewedColNames")
         private java.util.List < String > skewedColNames;
 
-        @NameInMap("SkewedColValueLocationMaps")
+        @com.aliyun.core.annotation.NameInMap("SkewedColValueLocationMaps")
         private java.util.Map < String, String > skewedColValueLocationMaps;
 
-        @NameInMap("SkewedColValues")
+        @com.aliyun.core.annotation.NameInMap("SkewedColValues")
         private java.util.List < java.util.List < String > > skewedColValues;
 
         private SkewedInfo(Builder builder) {
@@ -695,40 +694,40 @@ public class TableExtended extends TeaModel {
 
     }
     public static class Sd extends TeaModel {
-        @NameInMap("BucketCols")
+        @com.aliyun.core.annotation.NameInMap("BucketCols")
         private java.util.List < String > bucketCols;
 
-        @NameInMap("Cols")
+        @com.aliyun.core.annotation.NameInMap("Cols")
         private java.util.List < FieldSchema > cols;
 
-        @NameInMap("Compressed")
+        @com.aliyun.core.annotation.NameInMap("Compressed")
         private Boolean compressed;
 
-        @NameInMap("InputFormat")
+        @com.aliyun.core.annotation.NameInMap("InputFormat")
         private String inputFormat;
 
-        @NameInMap("Location")
+        @com.aliyun.core.annotation.NameInMap("Location")
         private String location;
 
-        @NameInMap("NumBuckets")
+        @com.aliyun.core.annotation.NameInMap("NumBuckets")
         private Integer numBuckets;
 
-        @NameInMap("OutputFormat")
+        @com.aliyun.core.annotation.NameInMap("OutputFormat")
         private String outputFormat;
 
-        @NameInMap("Parameters")
+        @com.aliyun.core.annotation.NameInMap("Parameters")
         private java.util.Map < String, String > parameters;
 
-        @NameInMap("SerDeInfo")
+        @com.aliyun.core.annotation.NameInMap("SerDeInfo")
         private SerDeInfo serDeInfo;
 
-        @NameInMap("SkewedInfo")
+        @com.aliyun.core.annotation.NameInMap("SkewedInfo")
         private SkewedInfo skewedInfo;
 
-        @NameInMap("SortCols")
+        @com.aliyun.core.annotation.NameInMap("SortCols")
         private java.util.List < Order > sortCols;
 
-        @NameInMap("StoredAsSubDirectories")
+        @com.aliyun.core.annotation.NameInMap("StoredAsSubDirectories")
         private Boolean storedAsSubDirectories;
 
         private Sd(Builder builder) {

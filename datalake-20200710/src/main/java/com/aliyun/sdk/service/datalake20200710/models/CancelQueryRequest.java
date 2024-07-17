@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,12 +11,12 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>CancelQueryRequest</p>
  */
 public class CancelQueryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Query
-    @NameInMap("QueryId")
+    @com.aliyun.core.annotation.Query
+    @com.aliyun.core.annotation.NameInMap("QueryId")
     private String queryId;
 
     private CancelQueryRequest(Builder builder) {

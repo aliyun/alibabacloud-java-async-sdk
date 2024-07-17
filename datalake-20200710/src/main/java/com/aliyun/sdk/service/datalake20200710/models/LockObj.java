@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,16 +11,16 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>LockObj</p>
  */
 public class LockObj extends TeaModel {
-    @NameInMap("CatalogId")
+    @com.aliyun.core.annotation.NameInMap("CatalogId")
     private String catalogId;
 
-    @NameInMap("DatabaseName")
+    @com.aliyun.core.annotation.NameInMap("DatabaseName")
     private String databaseName;
 
-    @NameInMap("PartitionName")
+    @com.aliyun.core.annotation.NameInMap("PartitionName")
     private String partitionName;
 
-    @NameInMap("TableName")
+    @com.aliyun.core.annotation.NameInMap("TableName")
     private String tableName;
 
     private LockObj(Builder builder) {

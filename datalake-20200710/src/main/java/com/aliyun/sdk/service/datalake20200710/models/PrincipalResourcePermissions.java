@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,18 +11,18 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>PrincipalResourcePermissions</p>
  */
 public class PrincipalResourcePermissions extends TeaModel {
-    @NameInMap("Accesses")
+    @com.aliyun.core.annotation.NameInMap("Accesses")
     private java.util.List < String > accesses;
 
-    @NameInMap("DelegateAccesses")
+    @com.aliyun.core.annotation.NameInMap("DelegateAccesses")
     private java.util.List < String > delegateAccesses;
 
-    @NameInMap("MetaResource")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("MetaResource")
+    @com.aliyun.core.annotation.Validation(required = true)
     private MetaResource metaResource;
 
-    @NameInMap("Principal")
-    @Validation(required = true)
+    @com.aliyun.core.annotation.NameInMap("Principal")
+    @com.aliyun.core.annotation.Validation(required = true)
     private Principal principal;
 
     private PrincipalResourcePermissions(Builder builder) {

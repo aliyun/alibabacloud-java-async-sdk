@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,34 +11,34 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StrogeCollectTask</p>
  */
 public class StrogeCollectTask extends TeaModel {
-    @NameInMap("DestinationBucketName")
+    @com.aliyun.core.annotation.NameInMap("DestinationBucketName")
     private String destinationBucketName;
 
-    @NameInMap("DestinationPrefix")
+    @com.aliyun.core.annotation.NameInMap("DestinationPrefix")
     private String destinationPrefix;
 
-    @NameInMap("DlfCreated")
+    @com.aliyun.core.annotation.NameInMap("DlfCreated")
     private Boolean dlfCreated;
 
-    @NameInMap("GmtCreate")
+    @com.aliyun.core.annotation.NameInMap("GmtCreate")
     private String gmtCreate;
 
-    @NameInMap("GmtModified")
+    @com.aliyun.core.annotation.NameInMap("GmtModified")
     private String gmtModified;
 
-    @NameInMap("Id")
+    @com.aliyun.core.annotation.NameInMap("Id")
     private String id;
 
-    @NameInMap("InventoryId")
+    @com.aliyun.core.annotation.NameInMap("InventoryId")
     private String inventoryId;
 
-    @NameInMap("Location")
+    @com.aliyun.core.annotation.NameInMap("Location")
     private String location;
 
-    @NameInMap("Status")
+    @com.aliyun.core.annotation.NameInMap("Status")
     private String status;
 
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
     private StrogeCollectTask(Builder builder) {

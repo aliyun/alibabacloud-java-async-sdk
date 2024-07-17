@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,20 +11,20 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>SubmitQueryRequest</p>
  */
 public class SubmitQueryRequest extends Request {
-    @Host
-    @NameInMap("RegionId")
+    @com.aliyun.core.annotation.Host
+    @com.aliyun.core.annotation.NameInMap("RegionId")
     private String regionId;
 
-    @Body
-    @NameInMap("catalogId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("catalogId")
     private String catalogId;
 
-    @Body
-    @NameInMap("sql")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("sql")
     private String sql;
 
-    @Body
-    @NameInMap("workspaceId")
+    @com.aliyun.core.annotation.Body
+    @com.aliyun.core.annotation.NameInMap("workspaceId")
     private String workspaceId;
 
     private SubmitQueryRequest(Builder builder) {

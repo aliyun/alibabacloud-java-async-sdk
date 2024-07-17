@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,22 +11,22 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageCollectTaskOperationResult</p>
  */
 public class StorageCollectTaskOperationResult extends TeaModel {
-    @NameInMap("DlfCreated")
+    @com.aliyun.core.annotation.NameInMap("DlfCreated")
     private Boolean dlfCreated;
 
-    @NameInMap("ErrCode")
+    @com.aliyun.core.annotation.NameInMap("ErrCode")
     private String errCode;
 
-    @NameInMap("ErrMessage")
+    @com.aliyun.core.annotation.NameInMap("ErrMessage")
     private String errMessage;
 
-    @NameInMap("Success")
+    @com.aliyun.core.annotation.NameInMap("Success")
     private Boolean success;
 
-    @NameInMap("TaskId")
+    @com.aliyun.core.annotation.NameInMap("TaskId")
     private String taskId;
 
-    @NameInMap("TaskType")
+    @com.aliyun.core.annotation.NameInMap("TaskType")
     private String taskType;
 
     private StorageCollectTaskOperationResult(Builder builder) {

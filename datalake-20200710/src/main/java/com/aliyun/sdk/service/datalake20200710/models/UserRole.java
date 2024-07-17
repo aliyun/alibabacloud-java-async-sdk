@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,13 +11,13 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>UserRole</p>
  */
 public class UserRole extends TeaModel {
-    @NameInMap("GrantTime")
+    @com.aliyun.core.annotation.NameInMap("GrantTime")
     private Long grantTime;
 
-    @NameInMap("Role")
+    @com.aliyun.core.annotation.NameInMap("Role")
     private Role role;
 
-    @NameInMap("User")
+    @com.aliyun.core.annotation.NameInMap("User")
     private Principal user;
 
     private UserRole(Builder builder) {

@@ -1,7 +1,6 @@
 // This file is auto-generated, don't edit it. Thanks.
 package com.aliyun.sdk.service.datalake20200710.models;
 
-import com.aliyun.core.annotation.*;
 import darabonba.core.RequestModel;
 import darabonba.core.TeaModel;
 import com.aliyun.sdk.gateway.pop.models.*;
@@ -12,19 +11,19 @@ import com.aliyun.sdk.gateway.pop.models.*;
  * <p>StorageLayer</p>
  */
 public class StorageLayer extends TeaModel {
-    @NameInMap("Archive")
+    @com.aliyun.core.annotation.NameInMap("Archive")
     private Long archive;
 
-    @NameInMap("ColdArchive")
+    @com.aliyun.core.annotation.NameInMap("ColdArchive")
     private Long coldArchive;
 
-    @NameInMap("Infrequent")
+    @com.aliyun.core.annotation.NameInMap("Infrequent")
     private Long infrequent;
 
-    @NameInMap("Standard")
+    @com.aliyun.core.annotation.NameInMap("Standard")
     private Long standard;
 
-    @NameInMap("Unknown")
+    @com.aliyun.core.annotation.NameInMap("Unknown")
     private Long unknown;
 
     private StorageLayer(Builder builder) {
